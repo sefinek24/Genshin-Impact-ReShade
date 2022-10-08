@@ -1,0 +1,35 @@
+[submodule "Stella-Mod-Launcher"]
+	path = Stella.Launcher
+	url = https://github.com/sefinek24/Stella-Mod-Launcher.git
+
+[submodule "Genshin-Stella-Mod"]
+	path = Stella.Worker
+	url = https://github.com/sefinek24/Genshin-Stella-Mod.git
+
+[submodule "Stella-Mod-Prepare"]
+    path = Stella.Prepare
+    url = https://github.com/sefinek24/Stella-Mod-Prepare.git
+
+[submodule "Stella-Mod-Telemetry"]
+	path = Stella.Telemetry
+	url = https://github.com/sefinek24/Stella-Mod-Telemetry.git
+
+[submodule "Stella-Mod-Scripts"]
+	path = Stella.Scripts
+	url = https://github.com/sefinek24/Stella-Mod-Scripts.git
+
+[submodule "Stella-Mod-Injector"]
+	path = Stella.Injector
+	url = https://github.com/sefinek24/Stella-Mod-Injector.git
+
+[submodule "Stella-Mod-DeviceIdentifier"]
+	path = Stella.DeviceIdentifier
+	url = https://github.com/sefinek24/Stella-Mod-DeviceIdentifier.git
+
+[submodule "Stella-Mod-Build"]
+	path = Stella.Build
+	url = https://github.com/sefinek24/Stella-Mod-Build.git
+
+[submodule "Stella-Mod-Setup"]
+	path = InnoSetup
+	url = https://github.com/sefinek24/Stella-Mod-InnoSetup.git

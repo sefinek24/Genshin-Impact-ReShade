@@ -1,0 +1,72 @@
+# Workspace
+.vs
+.idea
+*.cache
+*.bin
+*.user
+*.csproj.user
+
+# Build
+Build
+packages
+unlocker.config.json
+data/unlocker/unlocker.config.json
+data/sounds/*.mp3
+Screenshots/*.png
+Screenshots/*.jpg
+Screenshots/*.jpeg
+Screenshots/*.bmp
+
+# InnoSetup
+InnoSetup/*.exe
+InnoSetup/Output
+
+# Configs
+.eslintrc.js
+
+# Solutions
+## Configuration Window
+Stella.Configuration/bin
+Stella.Configuration/obj
+
+## Prepare Stella Mod
+Stella.Prepare/bin
+Stella.Prepare/obj
+
+## Information 48793142
+Stella.Info-48793142/bin
+Stella.Info-48793142/obj
+
+## Device Identifier
+Stella.DeviceIdentifier/bin
+Stella.DeviceIdentifier/obj
+
+## Sefin Anti Cheat
+Stella.SefinAntiCheat/bin
+Stella.SefinAntiCheat/obj
+
+## Stella ClassLibrary
+Stella.Scripts/bin
+Stella.Scripts/obj
+
+## Stella Telemetry
+Stella.Telemetry/bin
+Stella.Telemetry/obj
+
+## Genshin test file
+Test.Genshin/bin
+Test.Genshin/obj
+
+## Win App Packaging Project
+Win App Packaging Project/AppPackages
+Win App Packaging Project/bin
+Win App Packaging Project/BundleArtifacts
+Win App Packaging Project/obj/Debug
+Win App Packaging Project/obj/Release
+Win App Packaging Project/obj/x64
+Win App Packaging Project/obj/x86
+Win App Packaging Project/obj/project.nuget
+
+## Build project
+Stella.Build/bin
+Stella.Build/obj

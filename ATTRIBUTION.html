@@ -1,0 +1,843 @@
+<html>
+  <head>
+  <style>
+    @font-face {
+  font-family: 'Open Sauce Two';
+  src:
+    url('/font/OpenSauceTwo-Regular.woff2') format('woff2'),
+    url('/font/OpenSauceTwo-Regular.woff') format('woff'),
+    url('/font/OpenSauceTwo-Regular.ttf') format('truetype'),
+    url('/font/OpenSauceTwo-Regular.svg#OpenSauceTwo-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sauce Two';
+  src:
+    url('/font/OpenSauceTwo-Bold.woff2') format('woff2'),
+    url('/font/OpenSauceTwo-Bold.woff') format('woff'),
+    url('/font/OpenSauceTwo-Bold.ttf') format('truetype'),
+    url('/font/OpenSauceTwo-Bold.svg#OpenSauceTwo-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.fossa-header-card {
+  background-color: #F3F3F5;
+  padding: 80px;
+  border-radius: 32px;
+}
+
+.fossa-header-card .project-title-and-org {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 64px;
+  gap: 50px;
+  align-items: center;
+}
+
+.fossa-header-card .project-title-and-org .created-with {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  color: #9BA1AB;
+}
+
+.fossa-header-card .report-title {
+  font-family: 'Open Sauce Two', 'Open Sauce', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 78px;
+  line-height: 78px;
+  word-wrap: break-word;
+}
+
+.fossa-header-card .report-title a {
+  color: #1F60E0;
+}
+
+.fossa-header-card .thanks {
+  font-family: 'Open Sauce Two', 'Open Sauce', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  margin-top: 16px;
+}
+
+.fossa-header-card footer {
+  display: flex;
+  gap: 300px;
+  margin-top: 32px
+}
+
+/* Main content */
+.main-content-container {
+  display: flex;
+  gap: 32px;
+}
+
+.main-content-container .table-of-contents {
+  width: 250px;
+  flex-shrink: 0;
+  height: min-content;
+  position: sticky;
+  top: 25px;
+}
+
+.main-content-container .table-of-contents .table-of-contents__row {
+  padding: 12px 16px;
+}
+
+.highlight {
+  background-color: #E9F5F0;
+  border: 1px solid #E9F5F0;
+  border-radius: 8px;
+}
+
+.highlight a {
+  color: #289E6D !important;
+}
+
+.main-content-container .table-of-contents a {
+  font-family: 'Open Sauce Two', 'Open Sauce', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #6A7181;
+  text-decoration: none;
+}
+
+.main-content-container .name-pill {
+  background: #F3F3F5;
+  border-radius: 113px;
+  font-size: 20px;
+  line-height: 32px;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-content-container .name-pill a {
+  color: #06132D;
+}
+
+.main-content-container .content-container {
+  max-width: 100%;
+}
+
+.main-content-container .dependency-description {
+  font-size: 20px;
+}
+
+.main-content-container .dependency-info {
+  margin: 0 0 45px 25px;
+}
+
+.main-content-container .package-info {
+  margin: 18px 0;
+}
+
+.main-content-container .show-more {
+  display:flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-height: 120px;
+  overflow: hidden;
+  border: 1px solid #CDD0D5;
+  border-radius: 8px;
+}
+
+.main-content-container .show-more.neutral-gray {
+  background-color: #F3F3F5;
+  border: 1px solid #F3F3F5;
+}
+
+.main-content-container .show-more.expanded {
+  max-height: 100%;
+}
+
+.main-content-container div.show-more-button {
+  float: right;
+  margin: 15px 24px;
+  padding: 12px 24px;
+  background-color: #F5F5FA;
+  border: 1px solid #CDD0D5;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.main-content-container div.show-more-button svg {
+  vertical-align: middle;
+}
+
+.main-content-container pre.content {
+  font-family: 'Open Sauce Two', 'Open Sauce', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  word-break: break-word;
+  word-wrap: break-word;
+  white-space: pre-line;
+  padding: 0 12px;
+  font-size: 14px;
+}
+
+.margin-top-lg {
+  margin-top: 80px;
+}
+
+.margin-bottom-xs {
+  margin-bottom: 8px;
+}
+
+.margin-bottom-md {
+  margin-bottom: 25px;
+}
+
+.margin-bottom-lg {
+  margin-bottom: 64px;
+}
+
+.margin-bottom-xl {
+  margin-bottom: 80px;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.bolded {
+  font-weight: 800;
+}
+
+.dep-locator {
+  font-size: 14px;
+  text-align: right;
+  color: #9BA1AB;
+}
+
+.main-content-container div.content-section:not(:last-child){
+  margin-bottom: 80px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid #CDD0D5;
+}
+
+div.copyright {
+  border: 1px solid #CDD0D5;
+  border-radius: 8px;
+}
+
+div.copyright pre {
+  font-family: 'Open Sauce Two', 'Open Sauce', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  word-break: break-word;
+  white-space: pre-line;
+  padding: 0 12px;
+  font-size: 14px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Open Sauce Two', 'Open Sauce', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0 0 24px;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0 0 16px;
+}
+
+li {
+  margin: 10px 0;
+  word-wrap: break-word;
+}
+
+/*
+  *Table
+  */
+.div-table {
+  border: 1px solid #CDD0D5;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.ellipses-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.div-table div.row, div.header {
+  padding: 24px;
+  display: grid;
+  justify-content: space-between;
+}
+
+.div-table div.header {
+  font-weight: 600;
+}
+
+.div-table div.row a {
+  color: #06132D;
+}
+
+.div-table div:not(:last-child) {
+  border-bottom: 1px solid #CDD0D5;
+}
+
+/* First Party Licenses table */
+.div-table.first-party-licenses div {
+  grid-template-columns: 1.5fr 1fr 3fr;
+}
+
+/* Dependencies Summary table */
+.div-table.dependency-summary div {
+  grid-template-columns: 1fr 1fr;
+}
+
+body {
+  font-family: 'Open Sauce Two', 'Open Sauce', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 80px 32px;
+  background-color: white;
+}
+
+@media print {
+  .main-content-container .content-container {
+    max-width: 100%;
+  }
+
+  .main-content-container .show-more {
+    max-height: 100%;
+  }
+
+  .main-content-container div.show-more-button {
+    display: none;
+  }
+
+  /* Everything below here is for making PDF generation better. */
+  .fossa-header-card {
+    clear: both;
+    page-break-after: always;
+    background-color: initial;
+    padding: 0;
+  }
+
+  .fossa-header-card .thanks {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .fossa-header-card footer {
+    margin-top: 100px;
+  }
+
+  .main-content-container .content-container .content-section {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border: none;
+    clear: both;
+    page-break-after: always;
+    max-width: 100%;
+  }
+
+  .main-content-container div.content-section:not(:last-child){
+    border-bottom: none;
+  }
+
+  .main-content-container .table-of-contents {
+    display: none !important;
+  }
+
+  .fossa-header-card .report-title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .main-content-container .name-pill,
+  .main-content-container .dependency-description,
+  .main-content-container pre.content,
+  h3, h4, h5,
+  ul li,
+  .div-table div.row,
+  div.header,
+  .main-content-container .copyright pre  {
+    font-size: 10px;
+  }
+
+  .main-content-container .name-pill {
+    padding: 8px 12px;
+    line-height: 10px;
+  }
+
+
+  .div-table div.row, div.header {
+    padding: 12px;
+  }
+
+  .margin-bottom-xs {
+    margin-bottom: 8px;
+  }
+
+  .margin-bottom-md {
+    margin-bottom: 12px;
+  }
+
+  ul li {
+    margin: initial;
+  }
+
+  .dep-locator {
+    font-size: 8px;
+  }
+
+  h4 {
+    margin: 0 0 8px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin: 0 0 8px;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    margin: 56px 45px;
+  }
+}
+  </style>
+    <script>
+      function toggleMore(target, className) {
+        // toggle data-expand so we can replace the text
+        const elem = document.querySelector(`.show-more.${className}`)
+        if (elem) {
+          const isExpanded = elem.classList.contains('expanded')
+          if (isExpanded) {
+            elem.classList.remove('expanded');
+            target.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg> Show More`;
+          } else {
+            elem.classList.add( 'expanded' );
+            target.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg> Show less`;
+          }
+        }
+      }
+
+      function highlight(element) {
+        var tableOfContentsLinks = document.querySelectorAll(".table-of-contents__row");
+
+        for(var i=0; i< tableOfContentsLinks.length; i++) {
+          tableOfContentsLinks[i].classList.remove("highlight");
+        }
+
+        element.parentElement.classList.add("highlight");
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Report Header -->
+    <div class="fossa-header-card margin-bottom-xl">
+      <div class="project-title-and-org">
+        <h2 class="no-margin">
+          Genshin-Impact-ReShade
+        </h2>
+        <div class="created-with">
+          
+          <div>
+            Created with
+            <!-- The FOSSA logo. -->
+            <svg width="66" height="15" viewBox="0 0 66 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.03845 8.68936H3.21317V13.8801C3.21317 13.9694 3.17769 14.0551 3.11454 14.1182C3.05139 14.1814 2.96574 14.2169 2.87643 14.2169H0.769727C0.680417 14.2169 0.594765 14.1814 0.531613 14.1182C0.468462 14.0551 0.432983 13.9694 0.432983 13.8801V0.73893C0.435127 0.651052 0.47155 0.567495 0.534471 0.506109C0.597391 0.444723 0.681822 0.410374 0.769727 0.4104H9.47988C9.56919 0.4104 9.65484 0.445879 9.71799 0.50903C9.78114 0.572182 9.81662 0.657834 9.81662 0.747144V2.6403C9.81662 2.72961 9.78114 2.81526 9.71799 2.87841C9.65484 2.94156 9.56919 2.97704 9.47988 2.97704H3.21317V6.13093H8.03845C8.12776 6.13093 8.21341 6.16641 8.27657 6.22956C8.33972 6.29271 8.3752 6.37836 8.3752 6.46767V8.36083C8.37305 8.4487 8.33663 8.53226 8.27371 8.59365C8.21079 8.65503 8.12636 8.68938 8.03845 8.68936Z" fill="#9BA1AB"/>
+              <path d="M19.0381 0.17102C19.9631 0.157442 20.8825 0.317637 21.7484 0.643282C22.4767 0.909019 23.1442 1.31818 23.7114 1.84652C24.2098 2.34266 24.6257 2.91522 24.9434 3.54256C25.2605 4.13919 25.4954 4.77603 25.6415 5.43571C25.7719 6.04447 25.838 6.66524 25.8386 7.2878C25.8383 7.91988 25.7723 8.55022 25.6415 9.16863C25.4965 9.83125 25.2616 10.471 24.9434 11.07C24.6258 11.6974 24.2099 12.27 23.7114 12.766C23.1452 13.2928 22.4772 13.6981 21.7484 13.957C20.881 14.2763 19.9623 14.4336 19.0381 14.421C18.107 14.4348 17.1814 14.2775 16.3072 13.957C15.5784 13.6982 14.9103 13.2929 14.3442 12.766C13.8378 12.2701 13.4124 11.6978 13.0835 11.07C12.7586 10.4727 12.5194 9.83262 12.373 9.16863C12.2422 8.55023 12.1761 7.91989 12.1759 7.2878C12.1765 6.66523 12.2425 6.04445 12.373 5.43571C12.5205 4.77466 12.7597 4.13745 13.0835 3.54256C13.4138 2.91454 13.8406 2.34224 14.3483 1.84652C14.9155 1.31809 15.583 0.908919 16.3113 0.643282C17.1828 0.317118 18.1076 0.15694 19.0381 0.17102ZM19.0381 11.842C19.6357 11.8505 20.2273 11.7212 20.767 11.4642C21.2173 11.258 21.6148 10.9518 21.9291 10.569C22.2145 10.2029 22.4429 9.7959 22.6067 9.36164C22.7573 8.98215 22.8701 8.58875 22.9435 8.18715C22.9932 7.88714 23.0193 7.58369 23.0215 7.27959C23.0193 6.97549 22.9932 6.67203 22.9435 6.37202C22.8705 5.97431 22.7577 5.58496 22.6067 5.20985C22.4455 4.78407 22.2227 4.38422 21.9456 4.02303C21.6277 3.63902 21.2239 3.33517 20.767 3.136C20.2237 2.89333 19.6329 2.77546 19.0381 2.79105C18.4269 2.77932 17.8208 2.90418 17.264 3.15654C16.8117 3.35025 16.4109 3.64697 16.0936 4.02303C15.8168 4.38816 15.5929 4.79046 15.4283 5.21806C15.2713 5.59104 15.1583 5.98107 15.0916 6.38024C14.9995 6.98177 14.9995 7.59383 15.0916 8.19536C15.1591 8.59566 15.2721 8.98695 15.4283 9.36164C15.5928 9.79268 15.8182 10.1979 16.0977 10.5649C16.415 10.9498 16.817 11.2562 17.2722 11.4601C17.8254 11.7146 18.4293 11.8396 19.0381 11.8256V11.842Z" fill="#9BA1AB"/>
+              <path d="M31.2651 4.07266C31.2706 4.28311 31.3346 4.48788 31.4499 4.66401C31.612 4.87236 31.8218 5.03857 32.0618 5.14859C32.3492 5.29917 32.5929 5.41416 32.7928 5.49355C32.9926 5.57295 33.328 5.69067 33.7989 5.84672L34.7639 6.18346C34.9474 6.24917 35.2526 6.371 35.6797 6.54895C36.0085 6.67672 36.3247 6.83482 36.6242 7.02121C36.8268 7.1581 37.0801 7.34838 37.384 7.59204C37.6497 7.7938 37.8741 8.04474 38.0451 8.33123C38.2099 8.61998 38.3395 8.92743 38.4311 9.24701C38.5306 9.62306 38.5666 10.0131 38.5379 10.401C38.5108 10.9548 38.3626 11.496 38.1036 11.9863C37.8446 12.4766 37.4812 12.9041 37.039 13.2386C36.028 14.0151 34.777 14.4132 33.5032 14.3639C31.7463 14.3647 30.0151 13.9421 28.4562 13.1319C28.4174 13.1123 28.3834 13.0845 28.3565 13.0505C28.3295 13.0164 28.3103 12.977 28.3001 12.9348C28.2676 12.853 28.2676 12.7619 28.3001 12.6801L29.2077 10.9636C29.226 10.9231 29.2521 10.8867 29.2845 10.8564C29.3169 10.8261 29.355 10.8025 29.3966 10.787C29.4367 10.7693 29.48 10.7602 29.5239 10.7602C29.5677 10.7602 29.6111 10.7693 29.6512 10.787C30.7977 11.3782 32.0585 11.7144 33.3471 11.7726C33.8752 11.7924 34.3989 11.669 34.8625 11.4153C35.0428 11.3195 35.199 11.1839 35.3192 11.0189C35.4395 10.8538 35.5206 10.6636 35.5565 10.4626C35.5999 10.2481 35.5781 10.0255 35.4939 9.82355C35.4098 9.62156 35.2671 9.44937 35.0842 9.32914C34.5552 8.97316 33.971 8.70677 33.3554 8.54067C32.3808 8.27644 31.4313 7.92742 30.5177 7.49758C29.1488 6.76113 28.4644 5.66603 28.4644 4.21228C28.4379 3.66198 28.5348 3.11272 28.7479 2.60469C28.9611 2.09665 29.2851 1.6427 29.6964 1.27605C30.6019 0.526296 31.7538 0.139893 32.9283 0.191898C34.5702 0.230803 36.1858 0.612681 37.6714 1.31301C37.7149 1.32807 37.7544 1.35281 37.787 1.38536C37.8195 1.41792 37.8442 1.45744 37.8592 1.50095C37.8743 1.54445 37.8792 1.5908 37.8737 1.6365C37.8682 1.68219 37.8524 1.72604 37.8275 1.76474L37.0965 3.4813C37.0811 3.52492 37.057 3.56491 37.0255 3.59878C36.994 3.63265 36.9559 3.65967 36.9135 3.67816C36.8711 3.69666 36.8254 3.70622 36.7792 3.70627C36.7329 3.70631 36.6872 3.69683 36.6448 3.67842C35.5415 3.16609 34.3519 2.86521 33.1377 2.79139C31.9304 2.79139 31.3062 3.21848 31.2651 4.07266Z" fill="#9BA1AB"/>
+              <path d="M43.9205 4.07273C43.9296 4.28439 43.9979 4.48926 44.1176 4.66408C44.2797 4.87242 44.4895 5.03864 44.7295 5.14866C45.0169 5.29924 45.2606 5.41422 45.4605 5.49362C45.6603 5.57301 45.9957 5.69074 46.4666 5.84679L47.4316 6.18353C47.6151 6.24924 47.9203 6.37107 48.3474 6.54902C48.6763 6.67661 48.9925 6.83472 49.2919 7.02128C49.4945 7.15817 49.7478 7.34844 50.0517 7.5921C50.3175 7.79379 50.5419 8.04475 50.7128 8.3313C50.866 8.62166 50.9846 8.92903 51.066 9.24707C51.1656 9.62309 51.2017 10.0131 51.1728 10.401C51.1457 10.9549 50.9974 11.496 50.7384 11.9863C50.4795 12.4766 50.1161 12.9042 49.6739 13.2387C48.665 14.0134 47.4173 14.4114 46.1463 14.3639C44.3894 14.3648 42.6581 13.9422 41.0992 13.1319C41.0605 13.1123 41.0265 13.0846 40.9995 13.0505C40.9726 13.0165 40.9534 12.977 40.9432 12.9348C40.9107 12.8531 40.9107 12.762 40.9432 12.6802L41.8507 10.9636C41.8708 10.9239 41.8986 10.8886 41.9324 10.8597C41.9663 10.8308 42.0055 10.8089 42.0479 10.7953C42.088 10.7776 42.1313 10.7685 42.1752 10.7685C42.219 10.7685 42.2623 10.7776 42.3025 10.7953C43.449 11.3865 44.7098 11.7227 45.9984 11.7809C46.5234 11.8005 47.044 11.6785 47.5056 11.4277C47.6881 11.3311 47.846 11.1939 47.9671 11.0265C48.0881 10.8592 48.1691 10.6663 48.2037 10.4626C48.2465 10.2482 48.2244 10.0258 48.1403 9.82394C48.0562 9.62207 47.9138 9.44983 47.7314 9.32921C47.2048 8.97418 46.6235 8.70782 46.0107 8.54073C45.0362 8.27649 44.0867 7.92746 43.1731 7.49765C41.8042 6.7612 41.1198 5.6661 41.1198 4.21235C41.0933 3.66205 41.1902 3.11279 41.4033 2.60475C41.6165 2.09672 41.9405 1.64277 42.3517 1.27611C43.2571 0.526013 44.4091 0.139564 45.5837 0.191965C47.2298 0.229035 48.8498 0.61096 50.3391 1.31307C50.3826 1.32813 50.4221 1.35287 50.4547 1.38543C50.4872 1.41799 50.5119 1.45751 50.5269 1.50101C50.542 1.54452 50.5469 1.59087 50.5414 1.63656C50.5359 1.68226 50.5201 1.72611 50.4952 1.7648L49.7642 3.48137C49.7489 3.52499 49.7247 3.56498 49.6932 3.59885C49.6617 3.63271 49.6236 3.65974 49.5812 3.67823C49.5389 3.69672 49.4931 3.70629 49.4469 3.70633C49.4006 3.70638 49.3549 3.6969 49.3125 3.67849C48.2054 3.16466 47.0115 2.86375 45.7931 2.79146C44.583 2.79146 43.9588 3.21855 43.9205 4.07273Z" fill="#9BA1AB"/>
+              <path d="M59.9064 0.414918L65.976 13.8846C65.9924 13.9193 66.0009 13.9572 66.0009 13.9955C66.0009 14.0339 65.9924 14.0718 65.976 14.1064C65.9599 14.1405 65.9343 14.1692 65.9022 14.1889C65.8701 14.2086 65.8329 14.2185 65.7953 14.2173H63.3313C63.2291 14.2278 63.1264 14.2019 63.0415 14.144C62.9565 14.0861 62.8948 14.0001 62.8672 13.9011L61.6763 10.9854H57.3603L56.1816 13.8846C56.1499 13.9819 56.0866 14.0658 56.0018 14.1231C55.917 14.1804 55.8156 14.2077 55.7135 14.2009H53.2126C53.1749 14.202 53.1377 14.1921 53.1056 14.1724C53.0735 14.1527 53.0479 14.1241 53.0319 14.09C53.0123 14.056 53.0004 14.0183 52.9968 13.9793C52.9933 13.9403 52.9982 13.901 53.0113 13.8641L59.044 0.410812C59.0949 0.352551 59.1582 0.306444 59.2292 0.275885C59.3003 0.245325 59.3773 0.23109 59.4546 0.234227C59.5391 0.223489 59.6249 0.234444 59.7039 0.266058C59.7829 0.297673 59.8526 0.348904 59.9064 0.414918ZM59.4957 5.6755L58.2637 8.7719H60.7277L59.4957 5.6755Z" fill="#9BA1AB"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="report-title">
+        3rd-Party
+      </div>
+      <div class="report-title">
+        Software Report for
+      </div>
+      <div class="report-title">
+                  <span class="bolded">Genshin-Impact-ReShade</span>
+              </div>
+            <div class="thanks">
+        The following 3rd-party software packages may be used by or distributed with <b>Genshin-Impact-ReShade</b>. Any information relevant to third-party vendors listed below are collected using common, reasonable means.
+      </div>
+      <footer>
+        <span>
+          <div class="bolded">
+            Generated
+          </div>
+          <div>
+            6/28/2024
+          </div>
+        </span>
+        <span>
+          <div class="bolded">
+            Revision
+          </div>
+          <div class="ellipses-truncate">
+            1953a714be2a9d0c54c7395f87510a0fe75714f4
+          </div>
+        </span>
+      </footer>
+    </div>
+
+    <!-- Main Content! -->
+    <div class="main-content-container">
+      <!-- Table of Contents -->
+      <div class="table-of-contents">
+        <h4>
+          Table of Contents
+        </h4>
+        
+        
+        
+                  <div class="table-of-contents__row">
+            <a href="#dependencies" onclick="highlight(this)">
+              Dependencies
+            </a>
+          </div>
+        
+                <div class="table-of-contents__row">
+          <a href="#licenses" onclick="highlight(this)">
+              Licenses
+          </a>
+        </div>
+        
+              </div>
+
+      <!-- Content container -->
+      <div class="content-container">
+                                
+                                
+                                
+                                          <div class="content-section">
+            <a name="dependencies">
+              <h2>
+                Dependencies
+              </h2>
+            </a>
+
+                                                
+                                                              
+<div class="name-pill margin-bottom-md" id="NAudio">
+      <a href="https://github.com/naudio/NAudio"> NAudio (2.2.1)</a> <span class="dep-locator">nuget+NAudio</span>
+  </div>
+<div class="dependency-info">
+  
+              <h4 class="bolded">
+      Declared License(s)
+    </h4>
+    <h4>
+              
+                  
+                      MIT
+                            </h4>
+
+                                                      
+<div class="show-more margin-bottom-xs direct-attribution-notice-0-0 neutral-gray">
+  <pre class="content">
+    Copyright (c) 2020 Mark Heath
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &#34;Software&#34;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED &#34;AS IS&#34;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+  </pre>
+  <div class="show-more-button" onclick="toggleMore(this, 'direct-attribution-notice-0-0')">
+    <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+      viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+      <path
+        d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
+    </svg> Show More
+  </div>
+</div>
+
+        
+                                            
+          
+                              </div>
+
+                          
+<div class="name-pill margin-bottom-md" id="NLog">
+      <a href="https://nlog-project.org/"> NLog (5.3.2)</a> <span class="dep-locator">nuget+NLog</span>
+  </div>
+<div class="dependency-info">
+  
+              <h4 class="bolded">
+      Declared License(s)
+    </h4>
+    <h4>
+              
+                  
+                      BSD-3-Clause
+                            </h4>
+
+                                                      
+<div class="show-more margin-bottom-xs direct-attribution-notice-1-0 neutral-gray">
+  <pre class="content">
+    Copyright (c)  Copyright (c) 2004-2024 NLog Project - https://nlog-project.org/&lt;/copyright&gt; . All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+   1. Redistributions of source code must retain the above copyright notice,
+      this list of conditions and the following disclaimer.
+
+   2. Redistributions in binary form must reproduce the above copyright notice,
+      this list of conditions and the following disclaimer in the documentation
+      and/or other materials provided with the distribution.
+
+   3. Neither the name of the copyright holder nor the names of its
+      contributors may be used to endorse or promote products derived from
+      this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &#34;AS IS&#34;
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  </pre>
+  <div class="show-more-button" onclick="toggleMore(this, 'direct-attribution-notice-1-0')">
+    <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+      viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+      <path
+        d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
+    </svg> Show More
+  </div>
+</div>
+
+        
+                                            
+          
+                              </div>
+
+                      </div>
+        
+                                          <div class="content-section">
+            <a name="licenses">
+              <h2 class="margin-top-lg">
+                Licenses
+              </h2>
+            </a>
+
+                          <div class="name-pill margin-bottom-md">BSD-3-Clause</div>
+
+<div class="show-more margin-bottom-xs license-0 ">
+  <pre class="content">
+    Copyright (c) &lt;year&gt; &lt;owner&gt;
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+   1. Redistributions of source code must retain the above copyright notice,
+      this list of conditions and the following disclaimer.
+
+   2. Redistributions in binary form must reproduce the above copyright notice,
+      this list of conditions and the following disclaimer in the documentation
+      and/or other materials provided with the distribution.
+
+   3. Neither the name of the copyright holder nor the names of its
+      contributors may be used to endorse or promote products derived from
+      this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &#34;AS IS&#34;
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  </pre>
+  <div class="show-more-button" onclick="toggleMore(this, 'license-0')">
+    <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+      viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+      <path
+        d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
+    </svg> Show More
+  </div>
+</div>
+
+<br />
+
+                          <div class="name-pill margin-bottom-md">CC-BY-NC-SA-4.0</div>
+
+<div class="show-more margin-bottom-xs license-1 ">
+  <pre class="content">
+    Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Creative Commons Corporation (&#34;Creative Commons&#34;) is not a law firm and does not provide legal services or legal advice. Distribution of Creative Commons public licenses does not create a lawyer-client or other relationship. Creative Commons makes its licenses and related information available on an &#34;as-is&#34; basis. Creative Commons gives no warranties regarding its licenses, any material licensed under their terms and conditions, or any related information. Creative Commons disclaims all liability for damages resulting from their use to the fullest extent possible.
+Using Creative Commons Public Licenses
+Creative Commons public licenses provide a standard set of terms and conditions that creators and other rights holders may use to share original works of authorship and other material subject to copyright and certain other rights specified in the public license below. The following considerations are for informational purposes only, are not exhaustive, and do not form part of our licenses.
+Considerations for licensors: Our public licenses are intended for use by those authorized to give the public permission to use material in ways otherwise restricted by copyright and certain other rights. Our licenses are irrevocable. Licensors should read and understand the terms and conditions of the license they choose before applying it. Licensors should also secure all rights necessary before applying our licenses so that the public can reuse the material as expected. Licensors should clearly mark any material not subject to the license. This includes other CC-licensed material, or material used under an exception or limitation to copyright. More considerations for licensors : wiki.creativecommons.org/Considerations_for_licensors
+Considerations for the public: By using one of our public licenses, a licensor grants the public permission to use the licensed material under specified terms and conditions. If the licensor&#39;s permission is not necessary for any reason–for example, because of any applicable exception or limitation to copyright–then that use is not regulated by the license. Our licenses grant only permissions under copyright and certain other rights that a licensor has authority to grant. Use of the licensed material may still be restricted for other reasons, including because others have copyright or other rights in the material. A licensor may make special requests, such as asking that all changes be marked or described. Although not required by our licenses, you are encouraged to respect those requests where reasonable. More considerations for the public : wiki.creativecommons.org/Considerations_for_licensees
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License
+By exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License (&#34;Public License&#34;). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.
+Section 1 – Definitions.
+   a. Adapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.
+   b. Adapter&#39;s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.
+   c. BY-NC-SA Compatible License means a license listed at creativecommons.org/compatiblelicenses, approved by Creative Commons as essentially the equivalent of this Public License.
+   d. Copyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.
+   e. Effective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.
+   f. Exceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.
+   g. License Elements means the license attributes listed in the name of a Creative Commons Public License. The License Elements of this Public License are Attribution, NonCommercial, and ShareAlike.
+   h. Licensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.
+   i. Licensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.
+   j. Licensor means the individual(s) or entity(ies) granting rights under this Public License.
+   k. NonCommercial means not primarily intended for or directed towards commercial advantage or monetary compensation. For purposes of this Public License, the exchange of the Licensed Material for other material subject to Copyright and Similar Rights by digital file-sharing or similar means is NonCommercial provided there is no payment of monetary compensation in connection with the exchange.
+   l. Share means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.
+   m. Sui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.
+   n. You means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.
+Section 2 – Scope.
+   a. License grant.
+      1. Subject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:
+         A. reproduce and Share the Licensed Material, in whole or in part, for NonCommercial purposes only; and
+         B. produce, reproduce, and Share Adapted Material for NonCommercial purposes only.
+      2. Exceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.
+      3. Term. The term of this Public License is specified in Section 6(a).
+      4. Media and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)(4) never produces Adapted Material.
+      5. Downstream recipients.
+         A. Offer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.
+         B. Additional offer from the Licensor – Adapted Material. Every recipient of Adapted Material from You automatically receives an offer from the Licensor to exercise the Licensed Rights in the Adapted Material under the conditions of the Adapter&#39;s License You apply.
+         C. No downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.
+      6. No endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).
+   b. Other rights.
+      1. Moral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.
+      2. Patent and trademark rights are not licensed under this Public License.
+      3. To the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties, including when the Licensed Material is used other than for NonCommercial purposes.
+Section 3 – License Conditions.
+Your exercise of the Licensed Rights is expressly made subject to the following conditions.
+   a. Attribution.
+      1. If You Share the Licensed Material (including in modified form), You must:
+         A. retain the following if it is supplied by the Licensor with the Licensed Material:
+            i. identification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);
+            ii. a copyright notice;
+            iii. a notice that refers to this Public License;
+            iv. a notice that refers to the disclaimer of warranties;
+            
+            v. a URI or hyperlink to the Licensed Material to the extent reasonably practicable;
+         B. indicate if You modified the Licensed Material and retain an indication of any previous modifications; and
+         C. indicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.
+      2. You may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.
+      3. If requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.
+   b. ShareAlike.In addition to the conditions in Section 3(a), if You Share Adapted Material You produce, the following conditions also apply.
+      1. The Adapter&#39;s License You apply must be a Creative Commons license with the same License Elements, this version or later, or a BY-NC-SA Compatible License.
+      2. You must include the text of, or the URI or hyperlink to, the Adapter&#39;s License You apply. You may satisfy this condition in any reasonable manner based on the medium, means, and context in which You Share Adapted Material.
+      3. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, Adapted Material that restrict exercise of the rights granted under the Adapter&#39;s License You apply.
+Section 4 – Sui Generis Database Rights.
+Where the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:
+   a. for the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database for NonCommercial purposes only;
+   b. if You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material, including for purposes of Section 3(b); and
+   c. You must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.
+   For the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.
+Section 5 – Disclaimer of Warranties and Limitation of Liability.
+   a. Unless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.
+   b. To the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.
+   c. The disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.
+Section 6 – Term and Termination.
+   a. This Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.
+   b. Where Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:
+      1. automatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or
+      2. upon express reinstatement by the Licensor.
+   For the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.
+   c. For the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.
+   d. Sections 1, 5, 6, 7, and 8 survive termination of this Public License.
+Section 7 – Other Terms and Conditions.
+   a. The Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.
+   b. Any arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.
+Section 8 – Interpretation.
+   a. For the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.
+   b. To the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.
+   c. No term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.
+   d. Nothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.
+Creative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the &#34;Licensor.&#34; The text of the Creative Commons public licenses is dedicated to the public domain under the CC0 Public Domain Dedication. Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark &#34;Creative Commons&#34; or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.
+Creative Commons may be contacted at creativecommons.org.
+  </pre>
+  <div class="show-more-button" onclick="toggleMore(this, 'license-1')">
+    <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+      viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+      <path
+        d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
+    </svg> Show More
+  </div>
+</div>
+
+<br />
+
+                          <div class="name-pill margin-bottom-md">MIT</div>
+
+<div class="show-more margin-bottom-xs license-2 ">
+  <pre class="content">
+    MIT License
+Copyright (c) &lt;year&gt; &lt;copyright holders&gt;
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &#34;Software&#34;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED &#34;AS IS&#34;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+  </pre>
+  <div class="show-more-button" onclick="toggleMore(this, 'license-2')">
+    <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+      viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+      <path
+        d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
+    </svg> Show More
+  </div>
+</div>
+
+<br />
+
+                      </div>
+        
+                                      </div>
+    </div>
+  </body>
+</html>
+
+<!--FOSSA: Do not touch content below. -->
+
+<!--FOSSA: ==depsig=7aa437aa2214286827e120823f2c8c9907423b7a612589850af8658113ee6145== -->
+
+
