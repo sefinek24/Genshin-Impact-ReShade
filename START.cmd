@@ -4,7 +4,7 @@ echo                  GENSHIN IMPACT MOD PACK MADE BY SEFINEK
 echo ==========================================================================
 echo.
 
-echo Downloaded version: v1.0.0 from 10/03/2022
+echo Downloaded version: v1.0.1 from 11/01/2022
 echo ReShade version: v5.4.2
 echo.
 
@@ -32,7 +32,7 @@ echo.
 echo Starting...
 powershell.exe -file "ReShade.ps1"
 echo Done! If you need help, please create a new Issue on GitHub.
-echo https://github.com/sefinek24/genshin-impact-reshade-2022/issues && echo.
+echo https://github.com/sefinek24/genshin-impact-reshade-2023/issues && echo.
 
 
 pause
