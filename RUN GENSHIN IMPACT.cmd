@@ -6,6 +6,7 @@ echo.
 
 echo * Downloaded version: v1.0.1 from 11/01/2022
 echo * ReShade version: v5.4.2
+echo * FPS Unlocker version: v2.0.0
 echo.
 
 
