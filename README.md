@@ -15,6 +15,7 @@ Click [here](https://github.com/34736384/genshin-fps-unlock#usage) for more info
 <img src="Screenshots/for-readme/2.png" alt="Screenshot number 2">
 <img src="Screenshots/for-readme/3.png" alt="Screenshot number 3">
 <img src="Screenshots/for-readme/4.png" alt="Screenshot number 4">
+<img src="Screenshots/for-readme/5.png" alt="Screenshot number 5">
 
 ## 📥 Last update
 > **v1.0.1:** 11/01/2022  
