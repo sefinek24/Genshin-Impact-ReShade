@@ -13,7 +13,7 @@ Make sure you have the [Visual C++ 2019 Redistributable (x64)](https://aka.ms/vs
 Click [here](https://github.com/34736384/genshin-fps-unlock#usage) for more information.
 
 ## 📷 Screenshots
-<img src="Screenshots/for-readme/1.png" alt="1">
-<img src="Screenshots/for-readme/2.png" alt="2">
-<img src="Screenshots/for-readme/3.png" alt="3">
-<img src="Screenshots/for-readme/4.png" alt="4">
+<img src="Screenshots/for-readme/1.png" alt="Screenshot number 1">
+<img src="Screenshots/for-readme/2.png" alt="Screenshot number 2">
+<img src="Screenshots/for-readme/3.png" alt="Screenshot number 3">
+<img src="Screenshots/for-readme/4.png" alt="Screenshot number 4">
