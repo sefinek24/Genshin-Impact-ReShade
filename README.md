@@ -11,11 +11,21 @@ Make sure you have the [Visual C++ 2019 Redistributable (x64)](https://aka.ms/vs
 Click [here](https://github.com/34736384/genshin-fps-unlock#usage) for more information.
 
 ## 📷 Screenshots
-<img src="Screenshots/for-readme/1.png" alt="Screenshot number 1">
-<img src="Screenshots/for-readme/2.png" alt="Screenshot number 2">
-<img src="Screenshots/for-readme/3.png" alt="Screenshot number 3">
-<img src="Screenshots/for-readme/4.png" alt="Screenshot number 4">
-<img src="Screenshots/for-readme/5.png" alt="Screenshot number 5">
+<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/for-readme/1.png">
+    <img src="Screenshots/for-readme/1.png" alt="Screenshot number 1">
+</a>
+<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/for-readme/2.png">
+    <img src="Screenshots/for-readme/2.png" alt="Screenshot number 2">
+</a>
+<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/for-readme/3.png">
+    <img src="Screenshots/for-readme/3.png" alt="Screenshot number 3">
+</a>
+<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/for-readme/4.png">
+    <img src="Screenshots/for-readme/4.png" alt="Screenshot number 4">
+</a>
+<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/for-readme/5.png">
+    <img src="Screenshots/for-readme/5.png" alt="Screenshot number 5">
+</a>
 
 ## 📥 Last update
 > **v1.0.1:** 11/01/2022  
