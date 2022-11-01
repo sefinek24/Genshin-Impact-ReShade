@@ -2,7 +2,7 @@
     <h1>✨ Genshin Impact ReShade 2023 Mod Pack ✨</h1>
 </div>
 
-## 📂 Includes:
+## 📂 Includes
 - [FPS Unlocker](https://github.com/34736384/genshin-fps-unlock)
 - [The best preset for game](Data/Reshade/Preset/Default-Preset_by_Sefinek.ini)
 
