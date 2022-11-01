@@ -10,7 +10,7 @@
 > **v1.0.0:** 10/03/2022 (First release)
 
 ## 📷 Screenshots
-<img src="Screenshots/1.png" alt="1">
-<img src="Screenshots/2.png" alt="2">
-<img src="Screenshots/3.png" alt="3">
-<img src="Screenshots/4.png" alt="4">
+<img src="Screenshots/for-readme/1.png" alt="1">
+<img src="Screenshots/for-readme/2.png" alt="2">
+<img src="Screenshots/for-readme/3.png" alt="3">
+<img src="Screenshots/for-readme/4.png" alt="4">
