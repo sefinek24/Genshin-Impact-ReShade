@@ -1,4 +1,6 @@
-# ✨ Genshin Impact ReShade 2023 Mod Pack
+<div align="center">
+    <h1>✨ Genshin Impact ReShade 2023 Mod Pack ✨</h1>
+</div>
 
 ## 📂 Includes:
 - [FPS Unlocker](https://github.com/34736384/genshin-fps-unlock)
