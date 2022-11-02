@@ -12,7 +12,6 @@ Click [here](https://github.com/34736384/genshin-fps-unlock#usage) for more info
 
 ## 🤔 Tutorial on YouTube
 https://www.youtube.com/watch?v=rDeO26RapAk
-![test](https://www.youtube.com/watch?v=rDeO26RapAk)
 
 ## 📝 Tested versions
 | Game version | It works? |
