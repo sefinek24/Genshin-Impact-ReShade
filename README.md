@@ -4,7 +4,7 @@
 
 ## 📂 Includes
 - [FPS Unlocker](https://github.com/34736384/genshin-fps-unlock)
-- [The best preset for game](Data/Reshade/Preset/Default-Preset_by_Sefinek.ini)
+- [The best presets for game](Data/Reshade/Preset/Default-Preset_by_Sefinek.ini)
 
 ## ⚠️ Warning
 Make sure you have the [Visual C++ 2019 Redistributable (x64)](https://aka.ms/vs/16/release/vc_redist.x64.exe) and [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48) installed.  
@@ -12,6 +12,16 @@ Click [here](https://github.com/34736384/genshin-fps-unlock#usage) for more info
 
 ## 🤔 Tutorial on YouTube
 https://www.youtube.com/watch?v=rDeO26RapAk
+
+<p align="center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/rDeO26RapAk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
+## 📝 Tested versions
+| Game version | It works? |
+|--------------|-----------|
+| v3.2.0       | ✅         |
+| v3.1.0       | ✅         |
 
 ## 📷 Screenshots
 <a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/for-readme/1.png" title="See preview">
