@@ -14,10 +14,10 @@ Click [here](https://github.com/34736384/genshin-fps-unlock#usage) for more info
 https://www.youtube.com/watch?v=rDeO26RapAk
 
 ## 📝 Tested versions
-| Game version | It works? |
-|--------------|-----------|
-| v3.2.0       | ✅         |
-| v3.1.0       | ✅         |
+| Game version | It works? | Date       |
+|--------------|-----------|------------|
+| v3.2.0       | ✅         | 02.11.2022 |
+| v3.1.0       | ✅         | 01.11.2022 |
 
 ## 📷 Screenshots
 <a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/for-readme/1.png" title="See preview">
