@@ -4,7 +4,7 @@ echo                  GENSHIN IMPACT MOD PACK MADE BY SEFINEK
 echo ==========================================================================
 echo.
 
-echo * Downloaded version: v1.0.2 from 11/05/2022
+echo * Downloaded mod version: v1.0.2 from 11/05/2022
 echo * ReShade version: v5.4.2
 echo * FPS Unlocker version: v2.0.0
 echo.
@@ -26,7 +26,7 @@ echo.
 
 echo 3/5 - Checking game localization...
 if exist "C:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact.exe" (
-    echo Found. Everything is ready to run FPS Unlocker!
+    echo Found.
     echo Game patch: C:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact.exe
 ) else (
     echo Not found. Where is the game installed?
@@ -40,7 +40,7 @@ if "%ERRORLEVEL%"=="0" (
 
     pause && exit
 ) else (
-    echo Ok.
+    echo Ok. Everything is ready to run FPS Unlocker!
 )
 echo.
 
