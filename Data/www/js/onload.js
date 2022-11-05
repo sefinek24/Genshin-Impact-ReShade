@@ -55,9 +55,9 @@ window.onload = async () => {
                     <div class="updates-header">
                          <img src="Data/www/images/error.gif" alt="❌"><br>
                         🌍 ${err.message}
-                         </div>
-                        Something went wrong. Are you connected to the internet?
-                    `;
+                    </div>
+                    Something went wrong. Are you connected to the internet?
+                `;
             }
 
             default: {
