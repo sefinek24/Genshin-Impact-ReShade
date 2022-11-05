@@ -1,0 +1,17 @@
+body {
+    background-color: #313131;
+    color: #fff;
+    font-family: "Comic Sans MS",sans-serif;
+    text-align: center
+}
+
+a {
+    color: red;
+    text-decoration: none;
+    transition: .2s
+}
+
+a:hover {
+    color: rgba(255, 0, 0, 0.67);
+    text-decoration: underline
+}
