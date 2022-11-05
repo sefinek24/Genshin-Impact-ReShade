@@ -1,23 +1,22 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Sorry for my bad english ;c -->
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <title>Home - Genshin Impact Reshade Mod</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="stylesheet" href="Data/www/css/default.css">
     <link rel="stylesheet" href="Data/www/css/tutorial.css">
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="buttons">
         📝 <a href="https://github.com/sefinek24/genshin-impact-reshade-2023#readme">Check README</a> ||
         🌍 <a href="https://github.com/sefinek24/genshin-impact-reshade-2023">GitHub Repo</a> ||
-
         📷 <a href="Data/www/screenshots.html">Gallery</a>
 
-        <p>Subscribe my channel 💗<br>Remember to have the latest version of the modification!</p>
+        <p>Subscribe my YouTube channel 💗<br>Remember to have the latest version of the modification!</p>
     </div>
 
     <div style="padding-bottom:19px">
@@ -25,79 +24,13 @@
     </div>
 
     <div id="updates">
-        <div class="updates-header">📥 Checking new updates...</div>
+        <img src="Data/www/images/loading.gif" alt="Loading...">
 
-        <img src="Data/www/images/loading.gif" alt="Loading..." id="loading">
+        <div class="updates-header">Checking new updates...</div>
     </div>
 
-
-
-    <!-- Local -->
+    <!-- Scripts -->
     <script src="Data/www/api/local.js"></script>
-
-    <script>
-        window.onload = async () => {
-            const footer = document.getElementById('updates');
-
-            try {
-                // Remote
-                const res = await axios.get('https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Data/www/api/remote.json');
-
-                // Instruction
-                if (local.version === res.data.version) {
-                    footer.innerHTML = `
-                    <div class="updates-header">✅ The modification is up-to-date!</div>
-
-                    <p>
-                        🌍 Version: <code style="color:#00ff00">v${local.version}</code> from <code>${local.date}</code><br>
-                        ⏰ Last update: <code>${local.lastUpdate}</code>
-                    </p>`
-                } else {
-                    footer.innerHTML = `
-                    <div class="updates-header">📥 New updates found!</div>
-
-                    <code style="color:#00fff7">v${local.version}</code> -> <code style="color:#00ff00">v${res.data.version}</code>
-                    <p>🤔 Run the file <code>"RUN GENSHIN IMPACT.cmd"</code> to synchronize the local repository with the remote one.</p>
-                    <p>
-                        📂 Your version: <code>v${local.version}</code> from <code>${local.date}</code><br>
-                        ⏰ Last update: <code>${local.lastUpdate}</code>
-                    </p>`
-                }
-            } catch (err) {
-                console.log('=========================== DEBUG ===========================')
-                console.error(err)
-                console.log(window.navigator.userAgent)
-                console.log('=========================== DEBUG ===========================')
-
-                switch (true) {
-                    case err.response ? err.response.status === 404 : false: {
-                        footer.innerHTML =
-                            `<div class="updates-header">❌ ${err.message}</div>
-                            A required file was not found. Report this error on GitHub.
-
-                            <p><a href="https://github.com/sefinek24/genshin-impact-reshade-2023/issues" target="_blank">Issues · sefinek24/genshin-impact-reshade-2023</a></p>`;
-
-                        return;
-                    }
-
-                    case err.code === 'ERR_NETWORK': {
-                        footer.innerHTML =
-                            `<div class="updates-header">🌍 ${err}</div>
-                            Something went wrong. Are you connected to the internet?`
-
-                        return;
-                    }
-
-                    default: {
-                        footer.innerHTML =
-                            `<div class="updates-header">❌ ${err}</div>
-                            Something went wrong. Re-clone the files from the repository using the <b>git clone</b> command.
-
-                            <p><code>git clone https://github.com/sefinek24/genshin-impact-reshade-2023.git</code></p>`
-                    }
-                }
-            }
-        }
-    </script>
+    <script src="Data/www/js/onload.js"></script>
 </body>
 </html>

@@ -1,39 +1,21 @@
-body {
-    font-family: "Comic Sans MS", sans-serif;
-    background-color: #313131;
-    color: #fff;
-    text-align: center;
-}
-
-/* URLs */
-a {
-    color: #ff0000;
-    text-decoration: none;
-    transition: .2s;
-}
-a:hover {
-    color: rgba(255, 0, 0, 0.67);
-    text-decoration: underline;
-}
-
-/* Buttons */
 #buttons {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-bottom: 24px;
+    padding-top: 24px
 }
 
-/* Code */
 code {
-    font-size: 17px;
     font-family: Calibri, "Segoe UI Black", sans-serif;
+    font-size: 17px
 }
 
-/* New updates */
-#updates {padding-top:25px}
-
-#loading {
-    padding-top: 14px;
-    height: 52px;
+#updates {
+    padding-top: 24px
 }
 
-.updates-header {font-size:19px}
+#updates img {
+    height: 55px
+}
+
+.updates-header {
+    font-size: 19px
+}

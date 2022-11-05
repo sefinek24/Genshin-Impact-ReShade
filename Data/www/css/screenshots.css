@@ -1,24 +1,9 @@
-body {
-    font-family: "Comic Sans MS", sans-serif;
-    background-color: #3b3b3b;
-    color: #fff;
-    text-align: center;
-}
-a {
-    color: #ff0000;
-    text-decoration: none;
-    transition: .2s;
-}
-a:hover {
-    color: rgba(255, 0, 0, 0.67);
-    text-decoration: underline;
-}
 img {
     height: 512px;
     margin: 5px
 }
 
 #buttons {
-    padding-top: 35px;
     padding-bottom: 35px;
+    padding-top: 35px
 }
