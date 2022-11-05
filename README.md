@@ -37,5 +37,6 @@ https://www.youtube.com/watch?v=rDeO26RapAk
 </a>
 
 ## 📥 Last update
+> **v1.0.2:** 11/05/2022  
 > **v1.0.1:** 11/01/2022  
 > **v1.0.0:** 10/03/2022 (First release)
