@@ -41,7 +41,7 @@
 
             try {
                 // Remote
-                const res = await axios.get('https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Data/api.json');
+                const res = await axios.get('https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Data/www/api/remote.json');
 
                 // Instruction
                 if (local.version === res.data.version) {
