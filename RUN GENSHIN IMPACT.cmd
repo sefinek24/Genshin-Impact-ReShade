@@ -4,7 +4,7 @@ echo                  GENSHIN IMPACT MOD PACK MADE BY SEFINEK
 echo ==========================================================================
 echo.
 
-echo * Downloaded mod version: v1.0.2 from 11/05/2022
+echo * Downloaded mod version: v1.0.2 from 05.11.2022
 echo * ReShade version: v5.4.2
 echo * FPS Unlocker version: v2.0.0
 echo.

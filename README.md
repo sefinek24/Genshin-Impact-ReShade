@@ -3,7 +3,7 @@
 </div>
 
 <a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/for-readme/1.png" title="See preview">
-    <img src="Screenshots/for-readme/1.png" alt="Screenshot number 1">
+    <img src="Screenshots/main/1.png" alt="Screenshot number 1">
 </a>
 
 ## 📂 Includes
@@ -15,7 +15,7 @@
 Click [here](https://github.com/34736384/genshin-fps-unlock#usage) for more information.
 2. Remember to have the latest version of the modification!
 
-## 🤔 Tutorial on YouTube
+## 🎥 Tutorial on YouTube
 https://www.youtube.com/watch?v=rDeO26RapAk
 
 ## 📝 Tested versions
@@ -27,19 +27,17 @@ https://www.youtube.com/watch?v=rDeO26RapAk
 
 ## 📷 Other screenshots
 <a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/for-readme/2.png" title="See preview">
-    <img src="Screenshots/for-readme/2.png" alt="Screenshot number 2">
+    <img src="Screenshots/main/2.png" alt="Screenshot number 2">
 </a>
 <a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/for-readme/3.png" title="See preview">
-    <img src="Screenshots/for-readme/3.png" alt="Screenshot number 3">
+    <img src="Screenshots/main/3.png" alt="Screenshot number 3">
 </a>
 <a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/for-readme/4.png" title="See preview">
-    <img src="Screenshots/for-readme/4.png" alt="Screenshot number 4">
+    <img src="Screenshots/main/4.png" alt="Screenshot number 4">
 </a>
 <a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/for-readme/5.png" title="See preview">
-    <img src="Screenshots/for-readme/5.png" alt="Screenshot number 5">
+    <img src="Screenshots/main/5.png" alt="Screenshot number 5">
 </a>
 
-## 📥 Last update
-> **v1.0.2:** 11/05/2022  
-> **v1.0.1:** 11/01/2022  
-> **v1.0.0:** 10/03/2022 (First release)
+## 📥 Last updates
+> [VERSIONS.md](VERSIONS.md)
