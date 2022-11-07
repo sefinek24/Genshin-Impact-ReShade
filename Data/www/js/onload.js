@@ -25,7 +25,7 @@ window.onload = async () => {
                 </div>
 
                 <code style="color:#00fff7">v${local.version}</code> → <code style="color:#00ff00">v${res.data.version}</code>
-                <p>🤔 Run the file <code>"RUN GENSHIN IMPACT.cmd"</code> to synchronize the local repository with the remote one.</p>
+                <p>🤔 Run the file <u>RUN GENSHIN IMPACT.cmd</u> to synchronize the local repository with the remote one.</p>
                 <p>
                     📂 Your version: <code>v${local.version}</code> from <code>${local.date}</code><br>
                     ⏰ Last update: <code>${local.lastUpdate}</code>
