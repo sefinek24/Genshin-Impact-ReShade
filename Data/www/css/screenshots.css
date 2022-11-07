@@ -1,9 +1,9 @@
+#buttons {
+    padding-bottom: 24px;
+    padding-top: 24px
+}
+
 img {
     height: 512px;
     margin: 5px
-}
-
-#buttons {
-    padding-bottom: 35px;
-    padding-top: 35px
 }

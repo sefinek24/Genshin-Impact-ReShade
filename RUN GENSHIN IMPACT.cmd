@@ -1,14 +1,26 @@
 @echo off
-echo ==========================================================================
-echo                  GENSHIN IMPACT MOD PACK MADE BY SEFINEK
-echo ==========================================================================
-echo.
+chcp 65001 > NUL
 
-echo * Downloaded mod version: v1.0.2 from 11/05/2022
-echo * ReShade version: v5.4.2
-echo * FPS Unlocker version: v2.0.0
-echo.
-
+echo.               Genshin Impact ReShade 2023 Mod Pack
+echo.                   Made by Sefienk - Start game & echo.
+echo.⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⢶⣦⡀
+echo.⠀  ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿
+echo.⠀⠀  ⠀⣿⡄⠀⠀⠀⠈⠀⠀⠀⠀⣾⡿
+echo.⠀  ⠀⠀⠹⣿⣦⡀⠀⠀⠀⠀⢀⣾⣿
+echo.⠀⠀  ⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿
+echo.⠀⠀  ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟
+echo.⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀
+echo.⠀⠀⠀  ⠀⠀⡟⢦⡀⠇⠀⠀⣀⠞⠀⠀⠘⡀⢀⡠⠚⣉⠤⠂⠀⠀⠀⠈⠙⢦⡀
+echo.⠀  ⠀⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆
+echo.⠀⠀  ⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆
+echo.⠀  ⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇
+echo.  ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉⠀⠀⠀⠀⣠⠟
+echo.⠀  ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟
+echo ================================================================ & echo.
+echo * Downloaded mod version:  v1.1.0 [SV_07112022_110-001]
+echo * ReShade version:         v5.4.2
+echo * FPS Unlocker version:    v2.0.0 & echo.
+echo ================================================================ & echo.
 
 echo 1/5 - Checking if git is installed...
 if exist "C:\Program Files\Git\cmd\git.exe" (
@@ -19,43 +31,45 @@ if exist "C:\Program Files\Git\cmd\git.exe" (
     git fetch
     git pull
 ) else (
-    echo Not installed! I can't check for new updates.
-    echo Please download: https://git-scm.com/downloads
+    echo [x] Not installed! I can't check for new updates.
+    echo [i] Please download: https://git-scm.com/downloads
 )
 echo.
 
 echo 3/5 - Checking game localization...
 if exist "C:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact.exe" (
-    echo Found.
-    echo Game patch: C:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact.exe
+    echo [✓] Found.
+    echo [i] Patch: C:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact.exe
 ) else (
-    echo Not found. Where is the game installed?
+    echo [x] Not found. Where is the game installed?
 )
 echo.
 
-echo 4/5 - Checking the required processes...
+echo 4/5 - Checking required processes...
 tasklist /fi "ImageName eq unlockfps_clr.exe" /fo csv 2>NUL | find /I "unlockfps_clr.exe">NUL
 if "%ERRORLEVEL%"=="0" (
-    echo The application "unlockfps_clr.exe" [FPS Unlocker] is already running.
+    echo [x] The application "unlockfps_clr.exe" [Genshin FPS Unlocker] is already running. & echo.
 
     pause && exit
 ) else (
-    echo Ok. Everything is ready to run FPS Unlocker!
+    echo [✓] Ok. Everything is ready to run FPS Unlocker!
 )
 echo.
 
 echo 5/5 - Starting...
-echo Click "Yes" in the two "User Account Control" (UAC) notifications. File inject.exe and unlockfps_clr.exe. & echo.
+echo [i] Click "Yes" in the two "User Account Control" (UAC) notifications. File inject.exe and unlockfps_clr.exe. & echo.
 powershell.exe -file "ReShade.ps1"
 
 tasklist /fi "ImageName eq unlockfps_clr.exe" /fo csv 2>NUL | find /I "unlockfps_clr.exe">NUL
 if "%ERRORLEVEL%"=="0" (
-    echo Done! If you need help, please create a new Issue on GitHub.
+    echo [✓] Done! If you need help, please create a new Issue on GitHub. Thank you.
 ) else (
-    echo Ohh. For some reason, the application "unlockfps_clr.exe" failed to start.
-    echo If you need help, please create a new Issue on GitHub.
+    echo [x] Oh, sorry. For some reason, the application "unlockfps_clr.exe" failed to start.
+    echo [i] If you need help, please create a new Issue on GitHub.
 )
 
-echo https://github.com/sefinek24/genshin-impact-reshade-2023/issues
+echo [i] https://github.com/sefinek24/genshin-impact-reshade-2023/issues
 
-echo. && pause
+echo.
+set /p null="Press ENTER to close this window ..."
+exit
