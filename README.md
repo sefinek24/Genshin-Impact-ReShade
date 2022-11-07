@@ -40,4 +40,4 @@ https://www.youtube.com/watch?v=rDeO26RapAk
 </a>
 
 ## 📥 Last updates
-> [VERSIONS.md](VERSIONS.md)
+> [genshin-impact-reshade-2023/VERSIONS.md](VERSIONS.md)
