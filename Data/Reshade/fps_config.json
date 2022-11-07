@@ -1,7 +1,7 @@
 ﻿{
   "DllList": [],
   "Priority": 3,
-  "MonitorNum": 0,
+  "MonitorNum": 1,
   "CustomResY": 1080,
   "CustomResX": 1920,
   "FPSTarget": 165,
