@@ -20,7 +20,7 @@ FV_03102022_100-001
 ### 1:  
 `BV` -> Beta version  
 `SV` -> Stable version  
-`FV` -> First version
+`FV` -> First release
 
 ### 2: Date
 ### 3: Version
