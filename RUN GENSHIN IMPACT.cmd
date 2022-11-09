@@ -2,7 +2,7 @@
 chcp 65001 > NUL
 
 echo.               Genshin Impact ReShade 2023 Mod Pack
-echo.                   Made by Sefienk - Start game & echo.
+echo.                   Made by Sefinek - Start game & echo.
 echo.⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⢶⣦⡀
 echo.⠀  ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿
 echo.⠀⠀  ⠀⣿⡄⠀⠀⠀⠈⠀⠀⠀⠀⣾⡿
@@ -17,7 +17,7 @@ echo.⠀  ⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀�
 echo.  ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉⠀⠀⠀⠀⣠⠟
 echo.⠀  ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟
 echo ================================================================ & echo.
-echo * Downloaded mod version:  v1.1.0 [SV_07112022_110-001]
+echo * Downloaded mod version:  v1.1.1 [BV_09112022_111-002]
 echo * ReShade version:         v5.4.2
 echo * FPS Unlocker version:    v2.0.0 & echo.
 echo ================================================================ & echo.
@@ -64,6 +64,7 @@ tasklist /fi "ImageName eq unlockfps_clr.exe" /fo csv 2>NUL | find /I "unlockfps
 if "%ERRORLEVEL%"=="0" (
     echo [✓] Done! If you need help, please create a new Issue on GitHub. Thank you.
 ) else (
+    echo.
     echo [x] Oh, sorry. For some reason, the application "unlockfps_clr.exe" failed to start.
     echo [i] If you need help, please create a new Issue on GitHub.
 )
