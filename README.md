@@ -29,12 +29,12 @@ Soon...
 > ✅ = Yes┃❎ = No┃🤔 = Not tested
 
 ## 🔧・Supported operating systems
-| System          | OS Build  | Status |
-|-----------------|-----------|:-------|
-| Windows 11 22H2 | 22621.755 | ✅      |
-| Windows 10      | ❓         | 🤔     | 
-| Windows 8 / 8.1 | ❓         | 🤔     | 
-| Windows 7       | ❓         | 🤔     | 
+| System                        | OS Build   | Status |
+|-------------------------------|------------|:-------|
+| Windows 11 22H2 (recommended) | 22621.755  | ✅      |
+| Windows 10 22H2               | 19045.2251 | 🤔     | 
+| Windows 8 / 8.1               | ❓          | 🤔     | 
+| Windows 7                     | ❓          | 🤔     | 
 > ✅ = Supported┃⚠️ = Not supported┃🤔 = Not tested┃❓= I don't know
 
 ## 📥・Last updates
