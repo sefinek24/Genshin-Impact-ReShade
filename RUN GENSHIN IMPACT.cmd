@@ -64,6 +64,7 @@ tasklist /fi "ImageName eq unlockfps_clr.exe" /fo csv 2>NUL | find /I "unlockfps
 if "%ERRORLEVEL%"=="0" (
     echo [✓] Done! If you need help, please create a new Issue on GitHub. Thank you.
 ) else (
+    echo.
     echo [x] Oh, sorry. For some reason, the application "unlockfps_clr.exe" failed to start.
     echo [i] If you need help, please create a new Issue on GitHub.
 )
