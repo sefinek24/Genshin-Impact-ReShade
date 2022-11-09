@@ -19,3 +19,7 @@ code {
 .updates-header {
     font-size: 19px
 }
+
+span {
+    cursor: pointer
+}

@@ -14,7 +14,7 @@ window.onload = async () => {
                 </div>
 
                 <p>
-                    🌍 Version: <code style="color:#00ff00">v${local.version}</code> from <code>${local.date}</code><br>
+                    🌍 Version: <code style="color:#00ff00"><span title="This version was released on ${local.date}.">v${local.version}</span> </code> from <code>${local.date}</code><br>
                     ⏰ Last update: <code>${local.lastUpdate}</code>
                 </p>`;
 		} else {

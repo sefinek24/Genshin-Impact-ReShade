@@ -1,4 +1,5 @@
 @echo off
+title Genshin Impact ReShade 2023 Mod Pack - Cache removal tool
 chcp 65001 > nul
 
 echo.               Genshin Impact ReShade 2023 Mod Pack
