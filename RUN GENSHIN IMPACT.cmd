@@ -18,6 +18,17 @@ if exist "C:\Program Files\Git\cmd\git.exe" (
     echo 2/8 - Checking for new updates...
     git fetch
     git pull
+
+
+
+
+
+
+
+
+
+
+
 ) else (
     echo [x] NOT INSTALLED! I CAN'T CHECK FOR NEW UPDATES.
     echo [i] PLEASE DOWNLOAD: https://git-scm.com/downloads
