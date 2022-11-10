@@ -78,7 +78,7 @@ window.onload = async () => {
                 </div>
 
                 <p>
-                    🌍 Version: <code style="color:#00ff00"><span title="This version was released on ${local.releaseVersion}.">v${local.version}</span> </code> from <code>${local.releaseVersion}</code><br>
+                    🌍 Version: <code style="color:#00ff00"><span title="Build ${local.build}">v${local.version}</span> </code> from <code>${local.releaseVersion}</code><br>
                     ⏰ Last update: <code>${local.lastUpdate}</code>
                 </p>`;
 		}
