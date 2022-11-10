@@ -1,12 +1,76 @@
+function debug(err) {
+	console.log('=========================== DEBUG ===========================');
+	console.log(window.navigator.userAgent);
+	console.error(err);
+	console.log('=========================== DEBUG ===========================');
+}
+
+
 window.onload = async () => {
 	const footer = document.getElementById('updates');
 
 	try {
-		// Remote
 		const res = await axios.get('https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Data/www/api/remote.json');
 
-		// Instruction
-		if (local.version === res.data.version) {
+		const msg = `
+			<code style="color:#00fff7">${local.build ? local.build : 'Unknown'}</code> → <code style="color:#00ff00">${res.data.build ? res.data.build : 'Unknown'}</code>
+            <p>🤔 Run the file <u>UPDATE.cmd</u> to synchronize the local repository with the remote one.</p>
+            <p>
+            	📂 Your version: <code><span title="Build ${local.build}">v${local.version}</span></code> from <code>${local.releaseVersion}</code><br>
+                ⏰ Last update: <code>${local.lastUpdate}</code>
+            </p>
+		`;
+
+		switch (true) {
+		// 1
+		case !res.data.build: case !res.data.version: {
+			footer.innerHTML = `
+                <div class="updates-header">
+                    <img src="Data/www/images/error.gif" alt="❌"><br>
+                    😿 Your version is not supported.
+                </div>
+
+                <code style="color:#f04947">${local.build ? local.build : 'Unknown'}</code></code>
+                <p>
+                	Download the module again from the GitHub repository using the git command in Terminal.<br>
+                	<code>git clone https://github.com/sefinek24/genshin-impact-reshade-2023.git</code>
+                </p>
+                <p>
+                    📂 Your version: <code>v${local.version}</code> from <code>${local.releaseVersion}</code><br>
+                    ⏰ Last update: <code>${local.lastUpdate}</code>
+                </p>`;
+
+			debug(res.data);
+
+			break;
+		}
+
+		// 2
+		case local.build !== res.data.build: {
+			footer.innerHTML = `
+                <div class="updates-header">
+                    ${Math.floor(Math.random() * 2) ? '<img src="Data/www/images/blobcat.gif" alt="✅">' : '<img src="Data/www/images/dancing-anime-girl.gif" alt="✅">'}<br>
+                    📥 New build is available!
+                </div>
+
+                ${msg}`;
+			break;
+		}
+
+		// 3
+		case local.version !== res.data.version: {
+			footer.innerHTML = `
+                <div class="updates-header">
+                    ${Math.floor(Math.random() * 2) ? '<img src="Data/www/images/blobcat.gif" alt="✅">' : '<img src="Data/www/images/dancing-anime-girl.gif" alt="✅">'}<br>
+                    📥 New version is available!
+                </div>
+
+                ${msg}`;
+			break;
+		}
+
+		// 4
+		default: {
 			footer.innerHTML = `
                 <div class="updates-header">
                     ${Math.floor(Math.random() * 2) ? '<img src="Data/www/images/thumbsup.gif" alt="✅">' : '<img src="Data/www/images/success.gif" alt="✅">'}<br>
@@ -14,28 +78,13 @@ window.onload = async () => {
                 </div>
 
                 <p>
-                    🌍 Version: <code style="color:#00ff00"><span title="This version was released on ${local.date}.">v${local.version}</span> </code> from <code>${local.date}</code><br>
-                    ⏰ Last update: <code>${local.lastUpdate}</code>
-                </p>`;
-		} else {
-			footer.innerHTML = `
-                <div class="updates-header">
-                    ${Math.floor(Math.random() * 2) ? '<img src="Data/www/images/blobcat.gif" alt="✅">' : '<img src="Data/www/images/dancing-anime-girl.gif" alt="✅">'}<br>
-                    📥 New version is available!
-                </div>
-
-                <code style="color:#00fff7">v${local.version}</code> → <code style="color:#00ff00">v${res.data.version}</code>
-                <p>🤔 Run the file <u>RUN GENSHIN IMPACT.cmd</u> to synchronize the local repository with the remote one.</p>
-                <p>
-                    📂 Your version: <code>v${local.version}</code> from <code>${local.date}</code><br>
+                    🌍 Version: <code style="color:#00ff00"><span title="This version was released on ${local.releaseVersion}.">v${local.version}</span> </code> from <code>${local.releaseVersion}</code><br>
                     ⏰ Last update: <code>${local.lastUpdate}</code>
                 </p>`;
 		}
+		}
 	} catch (err) {
-		console.log('=========================== DEBUG ===========================');
-		console.error(err);
-		console.log(window.navigator.userAgent);
-		console.log('=========================== DEBUG ===========================');
+		debug(err);
 
 		switch (true) {
 		case err.response ? err.response.status === 404 : false: {

@@ -4,24 +4,7 @@ chcp 65001 > NUL
 
 echo.               Genshin Impact ReShade 2023 Mod Pack
 echo.                   Made by Sefinek - Start game & echo.
-echo.⠀⠀   ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⢶⣦⡀
-echo.⠀   ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿
-echo.⠀⠀   ⠀⣿⡄⠀⠀⠀⠈⠀⠀⠀⠀⣾⡿
-echo.⠀   ⠀⠀⠹⣿⣦⡀⠀⠀⠀⠀⢀⣾⣿
-echo.⠀⠀   ⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿
-echo.⠀⠀   ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟
-echo.⠀⠀ ⠀  ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀
-echo.⠀⠀ ⠀  ⠀⠀⡟⢦⡀⠇⠀⠀⣀⠞⠀⠀⠘⡀⢀⡠⠚⣉⠤⠂⠀⠀⠀⠈⠙⢦⡀
-echo.⠀   ⠀⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆
-echo.⠀⠀   ⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆
-echo.⠀   ⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇
-echo.   ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉⠀⠀⠀⠀⣠⠟
-echo.⠀   ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟
-echo ================================================================ & echo.
-echo * Downloaded mod version:  v1.1.1 [BV_09112022_111-003]
-echo * ReShade version:         v5.4.2
-echo * FPS Unlocker version:    v2.0.0 & echo.
-echo ================================================================ & echo.
+call Data\header.cmd
 echo                        * Information *
 echo         If you're using Windows 10, I recommend download
 echo       Windows Terminal from the Microsoft Store. Good luck! & echo.

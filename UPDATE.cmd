@@ -4,24 +4,7 @@ chcp 65001 > NUL
 
 echo.               Genshin Impact ReShade 2023 Mod Pack
 echo.                   Made by Sefinek - Update & echo.
-echo.⠀⠀   ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⢶⣦⡀
-echo.⠀   ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿
-echo.⠀⠀   ⠀⣿⡄⠀⠀⠀⠈⠀⠀⠀⠀⣾⡿
-echo.⠀   ⠀⠀⠹⣿⣦⡀⠀⠀⠀⠀⢀⣾⣿
-echo.⠀⠀   ⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿
-echo.⠀⠀   ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟
-echo.⠀⠀ ⠀  ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀
-echo.⠀⠀ ⠀  ⠀⠀⡟⢦⡀⠇⠀⠀⣀⠞⠀⠀⠘⡀⢀⡠⠚⣉⠤⠂⠀⠀⠀⠈⠙⢦⡀
-echo.⠀   ⠀⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆
-echo.⠀⠀   ⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆
-echo.⠀   ⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇
-echo.   ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉⠀⠀⠀⠀⣠⠟
-echo.⠀   ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟
-echo ================================================================ & echo.
-echo * Downloaded mod version:  v1.1.1 [BV_09112022_111-003]
-echo * ReShade version:         v5.4.2
-echo * FPS Unlocker version:    v2.0.0 & echo.
-echo ================================================================ & echo.
+call Data\header.cmd
 
 echo 1/2 - Checking if git is installed...
 if exist "C:\Program Files\Git\cmd\git.exe" (

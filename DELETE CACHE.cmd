@@ -4,20 +4,12 @@ chcp 65001 > nul
 
 echo.               Genshin Impact ReShade 2023 Mod Pack
 echo.                  Cache removal tool for ReShade & echo.
-echo.⠀⠀   ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⢶⣦⡀
-echo.⠀   ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿
-echo.⠀⠀   ⠀⣿⡄⠀⠀⠀⠈⠀⠀⠀⠀⣾⡿
-echo.⠀   ⠀⠀⠹⣿⣦⡀⠀⠀⠀⠀⢀⣾⣿
-echo.⠀⠀   ⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿
-echo.⠀⠀   ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟
-echo.⠀⠀ ⠀  ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀
-echo.⠀⠀ ⠀  ⠀⠀⡟⢦⡀⠇⠀⠀⣀⠞⠀⠀⠘⡀⢀⡠⠚⣉⠤⠂⠀⠀⠀⠈⠙⢦⡀
-echo.⠀   ⠀⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆
-echo.⠀⠀   ⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆
-echo.⠀   ⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇
-echo.   ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉⠀⠀⠀⠀⣠⠟
-echo.⠀   ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟
-echo ================================================================ & echo.
+
+if exist "C:\genshin-impact-reshade-2023\Data\header.cmd" (
+    call C:\genshin-impact-reshade-2023\Data\header.cmd
+) else (
+    call Data\header.cmd
+)
 
 echo [i] Administrative permissions are required. Please wait...
 
