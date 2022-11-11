@@ -44,7 +44,7 @@ Soon...
 Give a star if you can.
 
 ## 📷・Other screenshots
-<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/main/2.png" title="See preview">
+<a href="Screenshots/new/2.png" title="See preview">
     <img src="Screenshots/new/2.png" alt="Screenshot number 2">
 </a>
 <a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/main/3.png" title="See preview">
