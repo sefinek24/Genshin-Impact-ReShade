@@ -2,7 +2,7 @@
     <h1>✨ Genshin Impact ReShade 2023 Mod Pack ✨</h1>
 </div>
 
-<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/main/1.png" title="See preview">
+<a href="Screenshots/new/1.png" title="See preview [1]">
     <img src="Screenshots/new/1.png" alt="Screenshot number 1">
 </a>
 
@@ -44,33 +44,33 @@ Soon...
 Give a star if you can.
 
 ## 📷・Other screenshots
-<a href="Screenshots/new/2.png" title="See preview">
+<a href="Screenshots/new/2.png" title="See preview [1]">
     <img src="Screenshots/new/2.png" alt="Screenshot number 2">
 </a>
-<a href="Screenshots/new/3.png" title="See preview">
+<a href="Screenshots/new/3.png" title="See preview [3]">
     <img src="Screenshots/new/3.png" alt="Screenshot number 3">
 </a>
-<a href="Screenshots/new/4.png" title="See preview">
+<a href="Screenshots/new/4.png" title="See preview [4]">
     <img src="Screenshots/new/4.png" alt="Screenshot number 4">
 </a>
-<a href="Screenshots/new/5.png" title="See preview">
+<a href="Screenshots/new/5.png" title="See preview [5]">
     <img src="Screenshots/new/5.png" alt="Screenshot number 5">
 </a>
-<a href="Screenshots/new/6.png" title="See preview">
-    <img src="Screenshots/new/6.png" alt="Screenshot number 5">
+<a href="Screenshots/new/6.png" title="See preview [6]">
+    <img src="Screenshots/new/6.png" alt="Screenshot number 6">
 </a>
-<a href="Screenshots/new/7.png" title="See preview">
-    <img src="Screenshots/new/7.png" alt="Screenshot number 5">
+<a href="Screenshots/new/7.png" title="See preview [7]">
+    <img src="Screenshots/new/7.png" alt="Screenshot number 7">
 </a>
-<a href="Screenshots/new/8.png" title="See preview">
-    <img src="Screenshots/new/8.png" alt="Screenshot number 5">
+<a href="Screenshots/new/8.png" title="See preview [8]">
+    <img src="Screenshots/new/8.png" alt="Screenshot number 8">
 </a>
-<a href="Screenshots/new/9.png" title="See preview">
-    <img src="Screenshots/new/9.png" alt="Screenshot number 5">
+<a href="Screenshots/new/9.png" title="See preview [9]">
+    <img src="Screenshots/new/9.png" alt="Screenshot number 9">
 </a>
-<a href="Screenshots/new/10.png" title="See preview">
-    <img src="Screenshots/new/10.png" alt="Screenshot number 5">
+<a href="Screenshots/new/10.png" title="See preview [10]">
+    <img src="Screenshots/new/10.png" alt="Screenshot number 10">
 </a>
-<a href="Screenshots/new/11.png" title="See preview">
+<a href="Screenshots/new/11.png" title="See preview [11]">
     <img src="Screenshots/new/11.png" alt="Screenshot number 11">
 </a>
