@@ -31,15 +31,17 @@ if exist "C:\Program Files\Git\cmd\git.exe" (
 
 ) else (
     echo [x] NOT INSTALLED! I CAN'T CHECK FOR NEW UPDATES.
-    echo [i] PLEASE DOWNLOAD: https://git-scm.com/downloads
+    echo [i] PLEASE DOWNLOAD: https://git-scm.com/downloads & echo.
+
+    echo 2/8 - Checking for new updates...
+    echo [x] Canceled.
 )
 echo.
 
 
 echo 3/8 - Checking game localization...
 if exist "C:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact.exe" (
-    echo [✓] Found.
-    echo [i] Patch: C:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact.exe
+    echo [✓] Found: C:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact.exe
 ) else (
     echo [x] Not found. Where is the game installed?
 )
@@ -54,14 +56,14 @@ if "%ERRORLEVEL%"=="0" (
 
     goto close-window
 ) else (
-    echo [✓] Ok. Everything is ready to run FPS Unlocker.
+    echo [✓] Done.
 )
 echo.
 
 
 echo 5/8 - Setting execution policy...
 powershell.exe Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
-echo [✓] Done. & echo.
+echo [✓] Done. Everything is ready to run FPS Unlocker. & echo.
 
 
 echo 6/8 - Starting...
