@@ -66,7 +66,7 @@ echo [✓] Done. & echo.
 
 echo 6/8 - Starting...
 echo [i] Click "Yes" in the two "User Account Control" (UAC) notifications. File inject.exe and unlockfps_clr.exe. & echo.
-powershell.exe Data\ReShade.ps1
+powershell.exe Data\mod.ps1
 
 
 echo 7/8 - Waiting for unlockfps_clr.exe...
