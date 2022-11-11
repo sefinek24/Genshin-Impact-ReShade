@@ -47,30 +47,30 @@ Give a star if you can.
 <a href="Screenshots/new/2.png" title="See preview">
     <img src="Screenshots/new/2.png" alt="Screenshot number 2">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/main/3.png" title="See preview">
+<a href="Screenshots/new/3.png" title="See preview">
     <img src="Screenshots/new/3.png" alt="Screenshot number 3">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/main/4.png" title="See preview">
+<a href="Screenshots/new/4.png" title="See preview">
     <img src="Screenshots/new/4.png" alt="Screenshot number 4">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/main/5.png" title="See preview">
+<a href="Screenshots/new/5.png" title="See preview">
     <img src="Screenshots/new/5.png" alt="Screenshot number 5">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/main/6.png" title="See preview">
+<a href="Screenshots/new/6.png" title="See preview">
     <img src="Screenshots/new/6.png" alt="Screenshot number 5">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/main/7.png" title="See preview">
+<a href="Screenshots/new/7.png" title="See preview">
     <img src="Screenshots/new/7.png" alt="Screenshot number 5">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/main/8.png" title="See preview">
+<a href="Screenshots/new/8.png" title="See preview">
     <img src="Screenshots/new/8.png" alt="Screenshot number 5">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/main/9.png" title="See preview">
+<a href="Screenshots/new/9.png" title="See preview">
     <img src="Screenshots/new/9.png" alt="Screenshot number 5">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/main/10.png" title="See preview">
+<a href="Screenshots/new/10.png" title="See preview">
     <img src="Screenshots/new/10.png" alt="Screenshot number 5">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/main/11.png" title="See preview">
+<a href="Screenshots/new/11.png" title="See preview">
     <img src="Screenshots/new/11.png" alt="Screenshot number 11">
 </a>
