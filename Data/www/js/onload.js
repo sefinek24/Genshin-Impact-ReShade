@@ -11,6 +11,8 @@ window.onload = async () => {
 
 	try {
 		const res = await axios.get('https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Data/www/api/remote.json');
+		console.log(local.version);
+		console.log(res.data.version);
 
 		const msg = `
 			<code style="color:#00fff7">${local.build ? local.build : 'Unknown'}</code> → <code style="color:#00ff00">${res.data.build ? res.data.build : 'Unknown'}</code>
@@ -22,7 +24,7 @@ window.onload = async () => {
 		`;
 
 		switch (true) {
-		// 1
+		// new
 		case !res.data.build: case !res.data.version: {
 			footer.innerHTML = `
                 <div class="updates-header">

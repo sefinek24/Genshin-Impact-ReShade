@@ -2,8 +2,8 @@
     <h1>✨ Genshin Impact ReShade 2023 Mod Pack ✨</h1>
 </div>
 
-<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/for-readme/1.png" title="See preview">
-    <img src="Screenshots/main/1.png" alt="Screenshot number 1">
+<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/dev/Screenshots/new/header.png" title="See preview [header.png]">
+    <img src="Screenshots/new/header.png" alt="Header image">
 </a>
 
 ## 📂・Includes
@@ -44,15 +44,30 @@ Soon...
 Give a star if you can.
 
 ## 📷・Other screenshots
-<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/for-readme/2.png" title="See preview">
-    <img src="Screenshots/main/2.png" alt="Screenshot number 2">
+<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/dev/Screenshots/new/1.png" title="See preview [1.png]">
+    <img src="Screenshots/new/1.png" alt="Screenshot number 1">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/for-readme/3.png" title="See preview">
-    <img src="Screenshots/main/3.png" alt="Screenshot number 3">
+<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/dev/Screenshots/new/2.png" title="See preview [2.png]">
+    <img src="Screenshots/new/2.png" alt="Screenshot number 2">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/for-readme/4.png" title="See preview">
-    <img src="Screenshots/main/4.png" alt="Screenshot number 4">
+<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/dev/Screenshots/new/3.png" title="See preview [3.png]">
+    <img src="Screenshots/new/4.png" alt="Screenshot number 3">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Screenshots/for-readme/5.png" title="See preview">
-    <img src="Screenshots/main/5.png" alt="Screenshot number 5">
+<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/dev/Screenshots/new/4.png" title="See preview [4.png]">
+    <img src="Screenshots/new/3.png" alt="Screenshot number 3">
+</a>
+<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/dev/Screenshots/new/5.png" title="See preview [5.png]">
+    <img src="Screenshots/new/5.png" alt="Screenshot number 5">
+</a>
+<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/dev/Screenshots/new/6.png" title="See preview [6.png]">
+    <img src="Screenshots/new/6.png" alt="Screenshot number 6">
+</a>
+<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/dev/Screenshots/new/7.png" title="See preview [7.png]">
+    <img src="Screenshots/new/7.png" alt="Screenshot number 7">
+</a>
+<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/dev/Screenshots/new/8.png" title="See preview [8.png]">
+    <img src="Screenshots/new/8.png" alt="Screenshot number 8">
+</a>
+<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/dev/Screenshots/new/9.png" title="See preview [9.png]">
+    <img src="Screenshots/new/9.png" alt="Screenshot number 9">
 </a>
