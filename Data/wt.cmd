@@ -11,11 +11,11 @@ winget install Microsoft.WindowsTerminal --accept-source-agreements --accept-pac
 if %ERRORLEVEL% EQU 0 (
     echo.
     echo 2/2 - Configuring...
-    echo 1 > Data\configure
+    echo true> Data\configured
     echo Done. You can now go to the application. Enjoy!
 ) else (
     echo Error occurred. Please try again or contact with me on Discord.
-    echo 0 > Data\configure
+    echo false> Data\configured
 )
 
 timeout /t 8 /nobreak
