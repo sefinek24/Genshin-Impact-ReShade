@@ -1,5 +1,5 @@
 <div align="center">
-    <h1>✨ Genshin Impact ReShade 2023 Mod Pack ✨</h1>
+    <h1>✨ Genshin Impact ReShade Mod Pack - 2023 ✨</h1>
 </div>
 
 <a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/dev/Screenshots/new/header.png" title="See preview [header.png]">
