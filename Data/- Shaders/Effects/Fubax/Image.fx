@@ -1,5 +1,6 @@
-/*
-DisplayImage PS (c) 2019 Jacob Maximilian Fober
+/* Display Image PS, version 1.2.0
+
+This code © 2019 Jakub Maksymilian Fober
 
 This work is licensed under the Creative Commons
 Attribution-ShareAlike 4.0 International License.
@@ -7,109 +8,136 @@ To view a copy of this license, visit
 http://creativecommons.org/licenses/by-sa/4.0/.
 */
 
-// version 1.1.1
-
-  ////////////
- /// MENU ///
-////////////
+	/* MACROS */
 
 // Image file name
-#ifndef TEST_IMAGE_FILE
-	#define TEST_IMAGE_FILE "image.png"
+#ifndef TEST_IMAGE_PATH
+	#define TEST_IMAGE_PATH "image.png"
 #endif
 // Image horizontal resolution
-#ifndef TEST_IMAGE_X
-	#define TEST_IMAGE_X 1440
+#ifndef TEST_IMAGE_SIZE_X
+	#define TEST_IMAGE_SIZE_X 1440
 #endif
 // Image vertical resolution
-#ifndef TEST_IMAGE_Y
-	#define TEST_IMAGE_Y 1080
+#ifndef TEST_IMAGE_SIZE_Y
+	#define TEST_IMAGE_SIZE_Y 1080
 #endif
 
-uniform bool AspectCorrect <
-	ui_label = "Preserve aspect ratio";
-	ui_tooltip =
-		"To change image source add following to preprocessor definitions:\n"
-		"TEST_IMAGE_FILE 'filename.jpg'\n"
-		"TEST_IMAGE_X [horizontal resolution]\n"
-		"TEST_IMAGE_Y [vertical resolution]";
-> = true;
-
-  //////////////
- /// SHADER ///
-//////////////
+	/* COMMONS */
 
 #include "ReShade.fxh"
+#include "ReShadeUI.fxh"
+#include "ColorAndDither.fxh"
+
+	/* MENU */
+
+uniform bool AspectCorrect < __UNIFORM_INPUT_BOOL1
+	ui_label = "Original aspect ratio";
+> = true;
+
+uniform bool FillImage < __UNIFORM_INPUT_BOOL1
+	ui_label = "Fill image";
+> = false;
+
+uniform float DimBackground < __UNIFORM_SLIDER_FLOAT1
+	ui_min = 0.25; ui_max = 1f; ui_step = 0.01;
+	ui_label = "Dim background image";
+> = 1f;
+
+	/* TEXTURES */
 
 // Define image texture
-texture ImageTex < source = TEST_IMAGE_FILE; > {Width = TEST_IMAGE_X; Height = TEST_IMAGE_Y;};
-sampler ImageSampler { Texture = ImageTex; };
-
-// Anti-aliased border
-float Border(float2 Coordinates)
+texture TestImageTex < source = TEST_IMAGE_PATH; >
 {
-	Coordinates = abs(Coordinates*2-1); // Radial Coordinates
-	float2 Pixel = fwidth(Coordinates);
-	Coordinates = smoothstep(1.0+Pixel, 1.0-Pixel, Coordinates);
-	return min(Coordinates.x, Coordinates.y);
+	Width  = TEST_IMAGE_SIZE_X;
+	Height = TEST_IMAGE_SIZE_Y;
+};
+sampler TestImageSampler
+{
+	Texture = TestImageTex;
+#if BUFFER_COLOR_SPACE<=2 // Linear gamma workflow
+	SRGBTexture = true;
+#endif
+};
+
+// Linear pixel step function for anti-aliasing by Jakub Max Fober
+float Border(float2 coord)
+{
+	// Get pixel size
+	float2 del = float2(ddx(coord.x), ddy(coord.y));
+	// Convert to centered coordinates
+	coord = 0.5-abs(coord-0.5);
+	// Scale to pixel size and clamp values
+	coord = saturate(coord/del);
+	// Combine masks
+	return min(coord.x, coord.y);
 }
+
+	/* SHADER */
 
 // Draw Image
-float3 ImagePS(float4 vois : SV_Position, float2 texcoord : TexCoord) : SV_Target
+void ImagePS(float4 pixelPos : SV_Position, float2 texCoord : TEXCOORD, out float3 color : SV_Target)
 {
-	float3 Display = tex2D(ReShade::BackBuffer, texcoord).rgb;
-	float4 ImageTex;
-	// Bypass aspect ratio correction
-	if(!AspectCorrect)
+	color = tex2Dfetch(ReShade::BackBuffer, uint2(pixelPos.xy)).rgb;
+#if BUFFER_COLOR_SPACE<=2 // Linear gamma workflow
+	color = TO_LINEAR_GAMMA_HQ(color);
+#endif
+	color *= DimBackground;
+
+	if (!AspectCorrect) // bypass aspect ratio correction
 	{
-		ImageTex = tex2D(ImageSampler, texcoord);
-		return lerp(Display, ImageTex.rgb, ImageTex.a);
+		float4 TestImageTex = tex2D(TestImageSampler, texCoord);
+		color = lerp(color, TestImageTex.rgb, TestImageTex.a);
+	}
+	else // correct aspect ratio
+	{
+		// Gate test image aspect ratio
+		float ImageAspect = float(TEST_IMAGE_SIZE_X)/float(TEST_IMAGE_SIZE_Y);
+		// Test image aspect ratio
+		if (ReShade::AspectRatio == ImageAspect) // Same aspect ratio
+		{
+			float4 TestImageTex = tex2D(TestImageSampler, texCoord);
+			color = lerp(color, TestImageTex.rgb, TestImageTex.a);
+		}
+		else
+		{
+			if ((ReShade::AspectRatio > ImageAspect) ^ FillImage) // Image is narrower
+				texCoord.x = (texCoord.x-0.5)*ReShade::AspectRatio/ImageAspect+0.5;
+			else // Image is wider
+				texCoord.y = (texCoord.y-0.5)*ImageAspect/ReShade::AspectRatio+0.5;
+			// Sample test image
+			float4 TestImageTex = tex2D(TestImageSampler, texCoord);
+			// Blend image
+			color = lerp(
+				color,
+				TestImageTex.rgb,
+				min(Border(texCoord), TestImageTex.a)
+			);
+		}
 	}
 
-	float DisplayAspect = ReShade::AspectRatio;
-	float ImageAspect = float(TEST_IMAGE_X)/float(TEST_IMAGE_Y);
-	float AspectDifference = DisplayAspect / ImageAspect;
-
-	if(AspectDifference > 1.0)
-	{
-		texcoord.x -= 0.5;
-		texcoord.x *= AspectDifference;
-		texcoord.x += 0.5;
-	}
-	else if(AspectDifference < 1.0)
-	{
-		texcoord.y -= 0.5;
-		texcoord.y /= AspectDifference;
-		texcoord.y += 0.5;
-	}
-	else
-	{
-		ImageTex = tex2D(ImageSampler, texcoord);
-		return lerp(Display, ImageTex.rgb, ImageTex.a);
-	}
-
-	ImageTex = tex2D(ImageSampler, texcoord);
-
-	// Sample image
-	return lerp(
-		0.0,
-		lerp(Display, ImageTex.rgb, ImageTex.a),
-		Border(texcoord)
-	);
+#if BUFFER_COLOR_SPACE<=2 // Linear gamma workflow
+	color = TO_DISPLAY_GAMMA_HQ(color);
+	color = BlueNoise::dither(uint2(pixelPos.xy), color); // Dither
+#endif
 }
 
-  //////////////
- /// OUTPUT ///
-//////////////
+	/* OUTPUT */
 
-technique ImageTest <
-	ui_label = "TEST image";
+technique Image
+<
 	ui_tooltip =
-		"To change image file,\n"
-		"define global preprocessor definition:\n"
-		"  TEST_IMAGE 'image.png'\n"
-		"  TEST_IMAGE_X 1440\n"
-		"  TEST_IMAGE_Y 1080";
+		"Display image for testing.\n"
+		"\n"
+		"Source image can be changed with\n"
+		"following preprocessor definitions:\n"
+		"\n"
+		"  TEST_IMAGE_PATH 'image.png'\n"
+		"  TEST_IMAGE_SIZE_X 1440\n"
+		"  TEST_IMAGE_SIZE_Y 1080\n"
+		"\n"
+		"This effect © 2019 Jakub Maksymilian Fober\n"
+		"Licensed under CC BY-SA 4.0.";
 >
 {
 	pass

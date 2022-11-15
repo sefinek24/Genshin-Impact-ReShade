@@ -32,6 +32,13 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //
 // Version history:
+// 11-nov-2022:    v1.2.6:  Added bokeh sharpening. 
+// 28-mar-2022:    v1.2.5:  Made the pre-blur pass optional, as it's not really needed anymore for qualities higher than 4 and reasonable blur values. 
+// 15-mar-2022:    v1.2.4:  Corrected the LDR to HDR and HDR to LDR conversion functions so they now apply proper gamma correct and boost, so hue shifts are limited now as long 
+//                          as the highlight boost is kept <= 1 
+//                          Added Gamma factor for advanced highlight tweaking.
+// 11-mar-2022:    v1.2.3:  Changed the sampling stages to use full HDR so there's no more back/forth calculations to SDR along the way. Highlight boost is now 
+//                          better and upper range has been cranked up.
 // 26-feb-2022:    v1.2.2:  Made the highlight boost also be able to go to -1 to dim highlights a bit in bright scenes.
 // 22-feb-2022:    v1.2.1:  Removed highlight amplification and properly implemented reinhard-esk de/re-tonemapping for proper highlight calculations. Thanks Marty McFly for the tips.
 //                          (1.2.1) small adjustment, added a boost for the highlights which could help in dimly lit scenes. Based on simple levels math.
@@ -99,7 +106,7 @@
 
 namespace CinematicDOF
 {
-	#define CINEMATIC_DOF_VERSION "v1.2.2"
+	#define CINEMATIC_DOF_VERSION "v1.2.6"
 
 // Uncomment line below for debug info / code / controls
 //	#define CD_DEBUG 1
@@ -240,10 +247,10 @@ namespace CinematicDOF
 		ui_category = "Blur tweaking";
 		ui_label = "Overall blur quality";
 		ui_type = "drag";
-		ui_min = 2.0; ui_max = 12.0;
+		ui_min = 2.0; ui_max = 20.0;
 		ui_tooltip = "The number of rings to use in the disc-blur algorithm. The more rings the better\nthe blur results, but also the slower it will get.";
 		ui_step = 1;
-	> = 5.0;
+	> = 7.0;
 	uniform float BokehBusyFactor <
 		ui_category = "Blur tweaking";
 		ui_label="Bokeh busy factor";
@@ -289,11 +296,33 @@ namespace CinematicDOF
 		ui_category = "Highlight tweaking";
 		ui_label="Highlight boost factor";
 		ui_type = "drag";
-		ui_min = -1.00; ui_max = 1.00;
-		ui_tooltip = "Will boost the highlights a small amount";
+		ui_min = 0.00; ui_max = 1.00;
+		ui_tooltip = "Will boost/dim the highlights a small amount";
+		ui_step = 0.001;
+	> = 0.90;
+	uniform float HighlightGammaFactor <
+		ui_category = "Highlight tweaking";
+		ui_label="Highlight gamma factor";
+		ui_type = "drag";
+		ui_min = 0.001; ui_max = 5.00;
+		ui_tooltip = "Controls the gamma factor to boost/dim highlights\n2.2, the default, gives natural colors and brightness";
+		ui_step = 0.01;
+	> = 2.2;
+	uniform float HighlightSharpeningFactor <
+		ui_category = "Highlight tweaking";
+		ui_label="Highlight sharpening factor";
+		ui_type = "drag";
+		ui_min = 0.000; ui_max = 1.00;
+		ui_tooltip = "Controls the sharpness of the bokeh highlight edges.";
 		ui_step = 0.01;
 	> = 0.0;
+	
 	// ------------- ADVANCED SETTINGS
+	uniform bool MitigateUndersampling <
+		ui_category = "Advanced";
+		ui_label = "Mitigate undersampling";
+		ui_tooltip = "If you see bright pixels in the highlights,\ncheck this checkbox to smoothen the highlights.\nOnly needed with high blur factors and low blur quality.";
+	> = false;	
 	uniform bool ShowCoCValues <
 		ui_category = "Advanced";
 		ui_label = "Show CoC values and focus plane";
@@ -316,9 +345,15 @@ namespace CinematicDOF
 	uniform float DBVal4f <
 		ui_category = "Debugging";
 		ui_type = "drag";
-		ui_min = 0.00; ui_max = 10.00;
+		ui_min = 0.00; ui_max = 20.00;
 		ui_step = 0.01;
 	> = 1.0;
+	uniform float DBVal5f <
+		ui_category = "Debugging";
+		ui_type = "drag";
+		ui_min = -1.00; ui_max = 1.00;
+		ui_step = 0.01;
+	> = 0.0;
 	uniform int DBVal5i <
 		ui_category = "Debugging";
 		ui_type = "drag";
@@ -434,18 +469,21 @@ namespace CinematicDOF
 	// Functions
 	//
 	//////////////////////////////////////////////////
-	
-	float3 AccentuateWhites(float3 fragment, float highlightBoostFactor)
+
+	float3 AccentuateWhites(float3 fragment)
 	{
 		// apply small tow to the incoming fragment, so the whitepoint gets slightly lower than max.
 		// De-tonemap color (reinhard). Thanks Marty :) 
-		return fragment / (1.001 - saturate(highlightBoostFactor * fragment.rgb));
+		fragment = pow(abs(fragment), HighlightGammaFactor);
+		return fragment / max((1.001 - (HighlightBoost * fragment)), 0.001);
 	}
+	
 	
 	float3 CorrectForWhiteAccentuation(float3 fragment)
 	{
 		// Re-tonemap color (reinhard). Thanks Marty :) 
-		return fragment / (1.001 + fragment);
+		float3 toReturn = fragment / (1.001 + (HighlightBoost * fragment));
+		return pow(abs(toReturn), 1.0/ HighlightGammaFactor);
 	}
 	
 	// returns 2 vectors, (x,y) are up vector, (z,w) are right vector. 
@@ -608,7 +646,7 @@ namespace CinematicDOF
 		float pointsFirstRing = 7;
 		// luma is stored in alpha
 		float bokehBusyFactorToUse = saturate(1.0-BokehBusyFactor);		// use the busy factor as an edge bias on the blur, not the highlights
-		float4 average = float4(AccentuateWhites(fragment.rgb * fragmentRadiusToUse * bokehBusyFactorToUse, blurInfo.highlightBoostFactor), bokehBusyFactorToUse);
+		float4 average = float4(fragment.rgb * fragmentRadiusToUse * bokehBusyFactorToUse, bokehBusyFactorToUse);
 		float2 pointOffset = float2(0,0);
 		float nearPlaneBlurInPixels = blurInfo.nearPlaneMaxBlurInPixels * fragmentRadiusToUse;
 		float2 ringRadiusDeltaCoords = BUFFER_PIXEL_SIZE * (nearPlaneBlurInPixels / (numberOfRings-1));
@@ -633,7 +671,7 @@ namespace CinematicDOF
 				// r contains blurred CoC, g contains original CoC. Original can be negative
 				float2 sampleRadii = tex2Dlod(SamplerCDCoCBlurred, tapCoords).rg;
 				float blurredSampleRadius = sampleRadii.r;
-				average.rgb += AccentuateWhites(tap.rgb, blurInfo.highlightBoostFactor) * weight;
+				average.rgb += tap.rgb * weight;
 				average.w += weight ;
 				angle+=anglePerPoint;
 			}
@@ -651,7 +689,6 @@ namespace CinematicDOF
 			fragment = float4(alpha, alpha, alpha, 1.0);
 		}
 #endif
-		fragment.rgb = CorrectForWhiteAccentuation(fragment.rgb);
 #if CD_DEBUG
 		if(ShowNearPlaneBlurred)
 		{
@@ -665,7 +702,7 @@ namespace CinematicDOF
 	// Calculates the new RGBA fragment for a pixel at texcoord in source using a disc based blur technique described in [Jimenez2014] 
 	// (Though without using tiles). Blurs far plane.
 	// In:	blurInfo, the pre-calculated disc blur information from the vertex shader.
-	// 		source, the source buffer to read RGBA data from. A contains luma.
+	// 		source, the source buffer to read RGBA data from. RGB is in HDR. A not used.
 	// Out: RGBA fragment that's the result of the disc-blur on the pixel at texcoord in source. A contains luma of pixel.
 	float4 PerformDiscBlur(VSDISCBLURINFO blurInfo, sampler2D source)
 	{
@@ -678,9 +715,8 @@ namespace CinematicDOF
 			// near plane fragment, will be done in near plane pass 
 			return fragment;
 		}
-		// luma is stored in alpha
 		float bokehBusyFactorToUse = saturate(1.0-BokehBusyFactor);		// use the busy factor as an edge bias on the blur, not the highlights
-		float4 average = float4(AccentuateWhites(fragment.rgb * fragmentRadius * bokehBusyFactorToUse, blurInfo.highlightBoostFactor), bokehBusyFactorToUse);
+		float4 average = float4(fragment.rgb * fragmentRadius * bokehBusyFactorToUse, bokehBusyFactorToUse);
 		float2 pointOffset = float2(0,0);
 		float2 ringRadiusDeltaCoords =  (BUFFER_PIXEL_SIZE * blurInfo.farPlaneMaxBlurInPixels * fragmentRadius) / blurInfo.numberOfRings;
 		float2 currentRingRadiusCoords = ringRadiusDeltaCoords;
@@ -703,14 +739,15 @@ namespace CinematicDOF
 				float4 tapCoords = float4(blurInfo.texcoord + (pointOffset * currentRingRadiusCoords), 0, 0);
 				float sampleRadius = tex2Dlod(SamplerCDCoC, tapCoords).r;
 				float weight = (sampleRadius >=0) * ringWeight * CalculateSampleWeight(sampleRadius * FarPlaneMaxBlur, ringDistance);
-				average.rgb += AccentuateWhites(tex2Dlod(source, tapCoords).rgb, blurInfo.highlightBoostFactor) * weight;
+				float4 tap = tex2Dlod(source, tapCoords);
+				average.rgb += tap.rgb * weight;
 				average.w += weight;
 				angle+=anglePerPoint;
 			}
 			pointsOnRing+=pointsFirstRing;
 			currentRingRadiusCoords += ringRadiusDeltaCoords;
 		}
-		fragment.rgb = CorrectForWhiteAccentuation(average.rgb / (average.w + (average.w==0)));
+		fragment.rgb = average.rgb / (average.w + (average.w==0));
 		return fragment;
 	}
 
@@ -724,8 +761,15 @@ namespace CinematicDOF
 	{
 		const float radiusFactor = 1.0/max(blurInfo.numberOfRings, 1);
 		const float pointsFirstRing = max(blurInfo.numberOfRings-3, 2); 	// each ring has a multiple of this value of sample points. 
+		
 		float4 fragment = tex2Dlod(source, float4(blurInfo.texcoord, 0, 0));
-		fragment.rgb = AccentuateWhites(fragment.rgb, blurInfo.highlightBoostFactor);
+		fragment.rgb = AccentuateWhites(fragment.rgb);
+		if(!MitigateUndersampling)
+		{
+			// early out as we don't need this step
+			return fragment;
+		}
+
 		float signedFragmentRadius = tex2Dlod(SamplerCDCoC, float4(blurInfo.texcoord, 0, 0)).x * radiusFactor;
 		float absoluteFragmentRadius = abs(signedFragmentRadius);
 		bool isNearPlaneFragment = signedFragmentRadius < 0;
@@ -756,17 +800,14 @@ namespace CinematicDOF
 				float weight = CalculateSampleWeight(absoluteSampleRadius * blurFactorToUse, ringDistance) * isSamePlaneAsFragment * 
 								(absoluteFragmentRadius - absoluteSampleRadius < 0.001);
 				float3 tap = tex2Dlod(source, tapCoords).rgb;
-				average.rgb += AccentuateWhites(tap.rgb, blurInfo.highlightBoostFactor) * weight;
+				average.rgb += AccentuateWhites(tap.rgb) * weight;
 				average.w += weight;
 				angle+=anglePerPoint;
 			}
 			pointsOnRing+=pointsFirstRing;
 			currentRingRadiusCoords += ringRadiusDeltaCoords;
 		}
-		average.rgb = average.rgb/(average.w + (average.w==0));
-		fragment.rgb = CorrectForWhiteAccentuation(average.rgb);
-		// store luma of new rgb in alpha so we don't need to calculate it again.
-		fragment.a = dot(fragment.rgb, float3(0.3, 0.59, 0.11));
+		fragment.rgb = average.rgb/(average.w + (average.w==0));
 		return fragment;
 	}
 
@@ -873,10 +914,73 @@ namespace CinematicDOF
 		// HyperFocal calculation, see https://photo.stackexchange.com/a/33898. Useful to calculate the edges of the depth of field area
 		float hyperFocal = (FocalLength * FocalLength) / (FNumber * SENSOR_SIZE);
 		float hyperFocalFocusDepthFocus = (hyperFocal * toFill.focusDepthInMM);
-		toFill.nearPlaneInMM = hyperFocalFocusDepthFocus / (hyperFocal + (toFill.focusDepthInMM - FocalLength));	// in mm
+		toFill.nearPlaneInMM = (hyperFocalFocusDepthFocus / (hyperFocal + (toFill.focusDepthInMM - FocalLength)));	// in mm
 		toFill.farPlaneInMM = hyperFocalFocusDepthFocus / (hyperFocal - (toFill.focusDepthInMM - FocalLength));		// in mm
 	}
 
+	// From: https://www.shadertoy.com/view/4lfGDs
+	// Adjusted for dof usage. Returns in a the # of taps accepted: a tap is accepted if it has a coc in the same plane as center.
+	float4 SharpeningPass_BlurSample(in sampler2D source, in float2 texcoord, in float2 xoff, in float2 yoff, in float centerCoC, inout float3 minv, inout float3 maxv)
+	{
+		float3 v11 = tex2D(source, texcoord + xoff).rgb;
+		float3 v12 = tex2D(source, texcoord + yoff).rgb;
+		float3 v21 = tex2D(source, texcoord - xoff).rgb;
+		float3 v22 = tex2D(source, texcoord - yoff).rgb;
+		float3 center = tex2D(source, texcoord).rgb;
+		
+		float v11CoC = tex2D(SamplerCDCoC, texcoord + xoff).r;
+		float v12CoC = tex2D(SamplerCDCoC, texcoord + yoff).r;
+		float v21CoC = tex2D(SamplerCDCoC, texcoord - xoff).r;
+		float v22CoC = tex2D(SamplerCDCoC, texcoord - yoff).r;
+		float accepted = sign(centerCoC)==sign(v11CoC)? 1.0f: 0.0f;
+		accepted+= sign(centerCoC)==sign(v12CoC)? 1.0f: 0.0f;
+		accepted+= sign(centerCoC)==sign(v21CoC)? 1.0f: 0.0f;
+		accepted+= sign(centerCoC)==sign(v22CoC)? 1.0f: 0.0f;
+	
+		// keep track of min/max for clamping later on so we don't get dark halos.
+		minv = min(minv, v11);
+		minv = min(minv, v12);
+		minv = min(minv, v21);
+		minv = min(minv, v22);
+	
+		maxv = max(maxv, v11);
+		maxv = max(maxv, v12);
+		maxv = max(maxv, v21);
+		maxv = max(maxv, v22);
+		return float4((v11 + v12 + v21 + v22 + 2.0 * center) * 0.166667, accepted);
+	}
+
+	// From: https://www.shadertoy.com/view/4lfGDs
+	// Adjusted for dof usage. Returns in a the # of taps accepted: a tap is accepted if it has a coc in the same plane as center.
+	float3 SharpeningPass_EdgeStrength(in float3 fragment, in sampler2D source, in float2 texcoord, in float sharpeningFactor)
+	{
+		const float spread = 0.5;
+		float2 offset = float2(1.0, 1.0) / BUFFER_SCREEN_SIZE.xy;
+		float2 up    = float2(0.0, offset.y) * spread;
+		float2 right = float2(offset.x, 0.0) * spread;
+
+		float3 minv = 1000000000;
+		float3 maxv = 0;
+
+		float centerCoC = tex2D(SamplerCDCoC, texcoord).r;
+		float4 v12 = SharpeningPass_BlurSample(source, texcoord + up, 			right, up, centerCoC, minv, maxv);
+		float4 v21 = SharpeningPass_BlurSample(source, texcoord - right, 		right, up, centerCoC, minv, maxv);
+		float4 v22 = SharpeningPass_BlurSample(source, texcoord, 				right, up, centerCoC, minv, maxv);
+		float4 v23 = SharpeningPass_BlurSample(source, texcoord + right, 		right, up, centerCoC, minv, maxv);
+		float4 v32 = SharpeningPass_BlurSample(source, texcoord - up, 			right, up, centerCoC, minv, maxv);
+		// rest of the pixels aren't used
+		float accepted = v12.a + v21.a + v23.a + v32.a;
+		if(accepted < 15.5)
+		{
+			// contains rejected tap, reject the entire operation. This is ok, as it's not necessary for the final pixel color.
+			return fragment;
+		}
+		// all pixels accepted, calculated edge strength.
+		float3 laplacian_of_g = v12.rgb + v21.rgb + v22.rgb * -4.0 + v23.rgb + v32.rgb;
+		return clamp(fragment - laplacian_of_g.rgb * sharpeningFactor, minv, maxv);
+	}
+	
+	
 	//////////////////////////////////////////////////
 	//
 	// Vertex Shaders
@@ -921,7 +1025,6 @@ namespace CinematicDOF
 		blurInfo.farPlaneMaxBlurInPixels = (FarPlaneMaxBlur / 100.0) / pixelSizeLength;
 		blurInfo.nearPlaneMaxBlurInPixels = (NearPlaneMaxBlur / 100.0) / pixelSizeLength;
 		blurInfo.cocFactorPerPixel = length(BUFFER_PIXEL_SIZE) * blurInfo.farPlaneMaxBlurInPixels;	// not needed for near plane.
-		blurInfo.highlightBoostFactor = ((HighlightBoost * 24.0) / 1000.0) + 1.0f;
 		return blurInfo;
 	}
 
@@ -1020,10 +1123,19 @@ namespace CinematicDOF
 	{
 		// first blend far plane with original buffer, then near plane on top of that. 
 		float4 originalFragment = tex2D(ReShade::BackBuffer, texcoord);
+		originalFragment.rgb = AccentuateWhites(originalFragment.rgb);
 		float4 farFragment = tex2D(SamplerCDBuffer3, texcoord);
 		float4 nearFragment = tex2D(SamplerCDBuffer1, texcoord);
+		float pixelCoC = tex2D(SamplerCDCoC, texcoord).r;
 		// multiply with far plane max blur so if we need to have 0 blur we get full res 
-		float realCoC = tex2D(SamplerCDCoC, texcoord).r * clamp(0, 1, FarPlaneMaxBlur);
+		float realCoC = pixelCoC * clamp(0, 1, FarPlaneMaxBlur);
+		if(HighlightSharpeningFactor > 0.0f)
+		{
+			// sharpen the fragments pre-combining
+			float sharpeningFactor = abs(pixelCoC) * 80.0 * HighlightSharpeningFactor;		// 80 is a handpicked number, just to get high sharpening.
+			farFragment.rgb = SharpeningPass_EdgeStrength(farFragment.rgb, SamplerCDBuffer3, texcoord, sharpeningFactor * realCoC);
+			nearFragment.rgb = SharpeningPass_EdgeStrength(nearFragment.rgb, SamplerCDBuffer1, texcoord, sharpeningFactor * (abs(pixelCoC) * clamp(0, 1, NearPlaneMaxBlur)));
+		}
 		// all CoC's > 0.1 are full far fragment, below that, we're going to blend. This avoids shimmering far plane without the need of a 
 		// 'magic' number to boost up the alpha.
 		float blendFactor = (realCoC > 0.1) ? 1 : smoothstep(0, 1, (realCoC / 0.1));
@@ -1035,6 +1147,7 @@ namespace CinematicDOF
 			fragment = farFragment;
 		}
 #endif
+		fragment.rgb = CorrectForWhiteAccentuation(fragment.rgb);
 		fragment.a = 1.0;
 	}
 
@@ -1056,7 +1169,8 @@ namespace CinematicDOF
 		average += tex2D(SamplerCDBuffer2, texcoord + coord.xy);
 		fragment = average / 16;
 	}
-	
+
+
 	// Pixel shader which performs the first part of the gaussian post-blur smoothing pass, to iron out undersampling issues with the disc blur
 	void PS_PostSmoothing1(float4 vpos : SV_Position, float2 texcoord : TEXCOORD, out float4 fragment : SV_Target0)
 	{
@@ -1146,6 +1260,7 @@ namespace CinematicDOF
 				fragment = lerp(fragment, FocusCrosshairColor, FocusCrosshairColor.w * saturate(exp(-BUFFER_HEIGHT * length(focusInfo.texcoord - float2(focusInfo.texcoord.x, focusPointCoords.y)))));
 			}
 		}
+
 	}
 
 	//////////////////////////////////////////////////

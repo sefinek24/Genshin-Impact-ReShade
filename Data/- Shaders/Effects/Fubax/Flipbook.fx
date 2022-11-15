@@ -1,13 +1,13 @@
 /*
 Flipbook Animation PS (c) 2018 Jacob Maximilian Fober
 
-This work is licensed under the Creative Commons 
-Attribution-ShareAlike 4.0 International License. 
-To view a copy of this license, visit 
+This work is licensed under the Creative Commons
+Attribution-ShareAlike 4.0 International License.
+To view a copy of this license, visit
 http://creativecommons.org/licenses/by-sa/4.0/
 */
 
-// version 1.1.1
+// version 1.2.3
 
 
 	  ////////////
@@ -16,24 +16,14 @@ http://creativecommons.org/licenses/by-sa/4.0/
 
 #include "ReShadeUI.fxh"
 
-#ifndef flipbook
-	#define flipbook "waow.png" // Texture file name
-#endif
-#ifndef flipbookX
-	#define flipbookX 2550 // Texture horizontal resolution
-#endif
-#ifndef flipbookY
-	#define flipbookY 1710 // Texture vertical resolution
-#endif
-
 uniform int3 Size < __UNIFORM_INPUT_INT3
 	ui_label = "X frames, Y frames, FPS";
 	ui_tooltip = "Adjust flipbook texture dimensions and framerate\n"
 		"To change texture resolution and name,\n"
 		"add following preprocessor definition:\n"
-		"  flipbook 'name.png'\n"
-		"  flipbookX [ResolutionX]\n"
-		"  flipbookY [ResolutionY]";
+		"  FLIPBOOK_TEXTURE 'name.png'\n"
+		"  FLIPBOOK_SIZE_X [ResolutionX]\n"
+		"  FLIPBOOK_SIZE_Y [ResolutionY]";
 	#if __RESHADE__ < 40000
 		ui_step = 0.2;
 	#endif
@@ -54,13 +44,43 @@ uniform float3 Position < __UNIFORM_SLIDER_FLOAT3
 // Get time in milliseconds from start
 uniform float timer < source = "timer"; >;
 
+//-------------------------------------------------------------------------------------------------
+
+#ifndef FLIPBOOK_PIXELATED
+	#define FLIPBOOK_PIXELATED 0
+#endif
+
+#ifndef FLIPBOOK_TEXTURE
+	#define FLIPBOOK_TEXTURE "waow.png" // Texture file name
+#endif
+
+#ifndef FLIPBOOK_SIZE_X
+	#define FLIPBOOK_SIZE_X 2550 // Texture horizontal resolution
+#endif
+
+#ifndef FLIPBOOK_SIZE_Y
+	#define FLIPBOOK_SIZE_Y 1710 // Texture vertical resolution
+#endif
+
+//-------------------------------------------------------------------------------------------------
+
 
 	  //////////////
 	 /// SHADER ///
 	//////////////
 
-texture FlipbookTex < source = flipbook; > {Width = flipbookX; Height = flipbookY;};
-sampler FlipbookSampler { Texture = FlipbookTex; AddressU = REPEAT; AddressV = REPEAT;};
+texture FlipbookTex < source = FLIPBOOK_TEXTURE; > {Width = FLIPBOOK_SIZE_X; Height = FLIPBOOK_SIZE_Y;};
+sampler FlipbookSampler
+{
+	Texture = FlipbookTex;
+	AddressU = REPEAT;
+	AddressV = REPEAT;
+	#if FLIPBOOK_PIXELATED==1
+		MagFilter = POINT;
+		MinFilter = POINT;
+		MipFilter = POINT;
+	#endif
+};
 
 #include "ReShade.fxh"
 
@@ -76,7 +96,7 @@ float3 FlipbookPS(float4 vois : SV_Position, float2 texcoord : TexCoord) : SV_Ta
 {
 	float ScreenAspect = ReShade::AspectRatio;
 	// Screen aspect divided by animation frame aspect
-	float AspectDifference = (ScreenAspect*float(Size.x*flipbookY))/float(Size.y*flipbookX);
+	float AspectDifference = (ScreenAspect*float(Size.x*FLIPBOOK_SIZE_Y))/float(Size.y*FLIPBOOK_SIZE_X);
 
 	// Scale coordinates
 	float2 Scale = 1.0/Position.z;
@@ -123,8 +143,8 @@ technique Flipbook < ui_tooltip = "Flipbook animation FX:\n"
 	"To change texture resolution and name,\n"
 	"add following preprocessor definition:\n"
 	"  flipbook 'name.png'\n"
-	"  flipbookX [ResolutionX]\n"
-	"  flipbookY [ResolutionY]"; >
+	"  FLIPBOOK_SIZE_X [ResolutionX]\n"
+	"  FLIPBOOK_SIZE_Y [ResolutionY]"; >
 {
 	pass
 	{

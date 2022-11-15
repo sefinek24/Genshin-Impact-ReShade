@@ -6,7 +6,7 @@
 //
 // This shader has been released under the following license:
 //
-// Copyright (c) 2020 Frans Bouma
+// Copyright (c) 2022 Frans Bouma
 // All rights reserved.
 // 
 // Redistribution and use in source and binary forms, with or without
@@ -32,6 +32,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // 
 // Version History
+// 30-aug-2022: 	v1.3: Added filter circle with feather support for focus point strokes mode, and tweaked some defaults.
 // 18-apr-2020:		v1.2: Added blend factor for blur
 // 13-apr-2020:		v1.1: Added highlight control (I know it flips the hue in focus point mode, it's a bug that actually looks great), 
 //					      higher precision in buffers, better defaults
@@ -47,7 +48,7 @@ namespace DirectionalDepthBlur
 // Uncomment line below for debug info / code / controls
 //	#define CD_DEBUG 1
 	
-	#define DIRECTIONAL_DEPTH_BLUR_VERSION "v1.2"
+	#define DIRECTIONAL_DEPTH_BLUR_VERSION "v1.3"
 
 	//////////////////////////////////////////////////
 	//
@@ -120,7 +121,7 @@ namespace DirectionalDepthBlur
 		ui_tooltip = "The blur type. Focus Point Targeting Strokes means the blur directions\nper pixel are towards the Focus Point.";
 	> = 0;
 	uniform float2 FocusPoint <
-		ui_category = "Blur tweaking";
+		ui_category = "Blur tweaking, Focus Point";
 		ui_label = "Blur focus point";
 		ui_type = "drag";
 		ui_step = 0.001;
@@ -128,27 +129,70 @@ namespace DirectionalDepthBlur
 		ui_tooltip = "The X and Y coordinates of the blur focus point, which is used for\nthe Blur type 'Focus Point Targeting Strokes'. 0,0 is the\nupper left corner, and 0.5, 0.5 is at the center of the screen.";
 	> = float2(0.5, 0.5);
 	uniform float3 FocusPointBlendColor <
-		ui_category = "Blur tweaking";
-		ui_label = "Focus point color";
+		ui_category = "Blur tweaking, Focus Point";
+		ui_label = "Color";
 		ui_type= "color";
 		ui_tooltip = "The color of the focus point in Point focused mode. The closer a\npixel is to the focus point, the more it will become this color.\nIn (red , green, blue)";
 	> = float3(0.0,0.0,0.0);
 	uniform float FocusPointBlendFactor <
-		ui_category = "Blur tweaking";
-		ui_label = "Focus point color blend factor";
+		ui_category = "Blur tweaking, Focus Point";
+		ui_label = "Color blend factor";
 		ui_type = "drag";
 		ui_min = 0.000; ui_max = 1.000;
 		ui_step = 0.001;
 		ui_tooltip = "The factor with which the focus point color is blended with the final image";
 	> = 1.000;
+	uniform bool FocusPointViewFilterCircleOnMouseDown <
+		ui_category = "Blur tweaking, Focus Point";
+		ui_label = "Show filter circle on mouse down";
+		ui_tooltip = "For Focus Point Targeting Strokes blur type:\nIf checked, an overlay is shown with the current filter circle.\nWhite means blur will be present,\ntransparent means no blur will be present";
+	> = false;
+	uniform bool FocusPointFadeBlurInFeatherBand <
+		ui_category = "Blur tweaking, Focus Point";
+		ui_label = "Fade blur in feather band";
+		ui_tooltip = "For Focus Point Targeting Strokes blur type:\nIf checked, it'll fade out the blur in the feather area in the filter circle";
+	> = false;
+	uniform float FilterCircleRadius <
+		ui_category = "Blur tweaking, Focus Point";
+		ui_label = "Filter circle radius";
+		ui_type = "drag";
+		ui_min = 0.000; ui_max = 2.000;
+		ui_step = 0.001;
+		ui_tooltip = "For Focus Point Targeting Strokes blur type:\nThe radius of the filter circle.\nAll points within this circle are not or only partially blurred";
+	> = 0.1;
+	uniform float2 FilterCircleDeformFactors <
+		ui_category = "Blur tweaking, Focus Point";
+		ui_label = "Filter circle deform factors";
+		ui_type = "drag";
+		ui_min = 0.000; ui_max = 2.000;
+		ui_step = 0.001;
+		ui_tooltip = "For Focus Point Targeting Strokes blur type:\nThe radius factors for width and height of the filter circle.\n1.0 means no deformation, another value means deformation in that direction";
+	> = float2(1.0, 1.0);
+	uniform float FilterCircleRotationFactor <
+		ui_category = "Blur tweaking, Focus Point";
+		ui_label = "Filter circle rotation factor";
+		ui_type = "drag";
+		ui_min = 0.000; ui_max = 1.000;
+		ui_step = 0.001;
+		ui_tooltip = "For Focus Point Targeting Strokes blur type:\nThe rotation factor of the filter circle";
+	> = 0.0;
+	uniform float FilterCircleFeather <
+		ui_category = "Blur tweaking, Focus Point";
+		ui_label = "Filter circle feather";
+		ui_type = "drag";
+		ui_min = 0.000; ui_max = 1.000;
+		ui_step = 0.001;
+		ui_tooltip = "For Focus Point Targeting Strokes blur type:\nThe feather area within the filter circle.\n1.0 means the whole inner area is feathered,\n0.0 means no feather area.";
+	> = 0.1;
+	
 	uniform float HighlightGain <
 		ui_category = "Blur tweaking";
 		ui_label="Highlight gain";
 		ui_type = "drag";
-		ui_min = 0.00; ui_max = 5.00;
+		ui_min = 0.00; ui_max = 10.00;
 		ui_tooltip = "The gain for highlights in the strokes plane. The higher the more a highlight gets\nbrighter.";
 		ui_step = 0.01;
-	> = 0.500;	
+	> = 0.5;	
 	uniform float BlendFactor <
 		ui_category = "Blur tweaking";
 		ui_label="Blend factor";
@@ -190,14 +234,17 @@ namespace DirectionalDepthBlur
 #ifndef BUFFER_SCREEN_SIZE
 	#define BUFFER_SCREEN_SIZE	ReShade::ScreenSize
 #endif
-
+	
 	uniform float2 MouseCoords < source = "mousepoint"; >;
+	uniform bool LeftMouseDown < source = "mousebutton"; keycode = 0; toggle = false; >;
 	
 	texture texDownsampledBackBuffer { Width = BUFFER_WIDTH; Height = BUFFER_HEIGHT; Format = RGBA16F; };
 	texture texBlurDestination { Width = BUFFER_WIDTH; Height = BUFFER_HEIGHT; Format = RGBA16F; }; 
+	texture texFilterCircle { Width = BUFFER_WIDTH; Height = BUFFER_HEIGHT; Format = R16F; };
 	
 	sampler samplerDownsampledBackBuffer { Texture = texDownsampledBackBuffer; AddressU = MIRROR; AddressV = MIRROR; AddressW = MIRROR;};
 	sampler samplerBlurDestination { Texture = texBlurDestination; };
+	sampler samplerFilterCircle { Texture = texFilterCircle; };
 	
 	struct VSPIXELINFO
 	{
@@ -208,6 +255,9 @@ namespace DirectionalDepthBlur
 		float focusPlane: TEXCOORD3;
 		float focusRange: TEXCOORD4;
 		float4 texCoordsScaled: TEXCOORD5;
+		float2x2 rotationMatrix: TEXCOORD6;
+		float2 centerDisplacementDelta: TEXCOORD8;
+		float featherRadius: TEXCOORD9;
 	};
 	
 	//////////////////////////////////////////////////
@@ -267,6 +317,13 @@ namespace DirectionalDepthBlur
 		pixelInfo.focusPlane = (FocusPlane * FocusPlaneMaxRange) / 1000.0; 
 		pixelInfo.focusRange = (FocusRange * FocusPlaneMaxRange) / 1000.0;
 		pixelInfo.texCoordsScaled = float4(pixelInfo.texCoords * ScaleFactor, pixelInfo.texCoords / ScaleFactor);
+		// rotation matrix for focus point filter circle rotation
+		float2 sincosFactor = float2(0,0);
+		sincos(6.28318530717958 * FilterCircleRotationFactor, sincosFactor.x, sincosFactor.y);
+		pixelInfo.rotationMatrix = float2x2(sincosFactor.y, sincosFactor.x, -sincosFactor.x, sincosFactor.y);
+		// displacement delta for focus point to properly apply deformation
+		pixelInfo.centerDisplacementDelta = FocusPoint - float2(0.5, 0.5);
+		pixelInfo.featherRadius = FilterCircleRadius - (FilterCircleRadius * FilterCircleFeather); 
 		return pixelInfo;
 	}
 
@@ -279,32 +336,43 @@ namespace DirectionalDepthBlur
 	void PS_Blur(VSPIXELINFO pixelInfo, out float4 fragment : SV_Target0)
 	{
 		const float3 lumaDotWeight = float3(0.3, 0.59, 0.11);
+
+		float filterCircleValue = tex2Dlod(samplerFilterCircle, float4(pixelInfo.texCoords, 0, 0)).r;
 		// pixelInfo.texCoordsScaled.xy is for scaled down UV, pixelInfo.texCoordsScaled.zw is for scaled up UV
 		float3 color = tex2Dlod(samplerDownsampledBackBuffer, float4(pixelInfo.texCoordsScaled.xy, 0, 0)).rgb;
 		float4 average = float4(color, 1.0);
 		float3 averageGained = AccentuateWhites(average.rgb);
 		float2 pixelDelta = BlurType==0 ? pixelInfo.pixelDelta : CalculatePixelDeltas(pixelInfo.texCoords);
 		float maxLuma = dot(averageGained.rgb, lumaDotWeight);
-		for(float tapIndex=0.0;tapIndex<pixelInfo.blurLengthInPixels;tapIndex+=(1/BlurQuality))
+		float blurLengthInPixels = pixelInfo.blurLengthInPixels;
+		float alpha = 0.0f;
+		float highlightGainToUse = HighlightGain;
+		if(BlurType==1)
+		{
+			blurLengthInPixels *= filterCircleValue;
+			highlightGainToUse *= filterCircleValue;
+		}
+		for(float tapIndex=0.0;tapIndex<blurLengthInPixels;tapIndex+=(1/BlurQuality))
 		{
 			float2 tapCoords = (pixelInfo.texCoords + (pixelDelta * tapIndex));
 			float3 tapColor = tex2Dlod(samplerDownsampledBackBuffer, float4(tapCoords * ScaleFactor, 0, 0)).rgb;
 			float tapDepth = ReShade::GetLinearizedDepth(tapCoords);
-			float weight = tapDepth <= pixelInfo.focusPlane ? 0.0 : 1-(tapIndex/ pixelInfo.blurLengthInPixels);
+			float weight = tapDepth <= pixelInfo.focusPlane ? 0.0 : 1-(tapIndex / (blurLengthInPixels + (blurLengthInPixels==0)));
 			average.rgb+=(tapColor * weight);
 			average.a+=weight;
 			float3 gainedTap = AccentuateWhites(tapColor.rgb);
 			averageGained += gainedTap * weight;
 			float lumaSample = saturate(dot(gainedTap, lumaDotWeight));
 			maxLuma = weight > 0 ? max(maxLuma, lumaSample) : maxLuma;
+			alpha = 1.0f;
 		}
 		float distanceToFocusPoint = distance(pixelInfo.texCoords, FocusPoint);
 		fragment.rgb = average.rgb / (average.a + (average.a==0));
 		fragment.rgb = BlurType==0 
 							? fragment.rgb
-							: lerp(fragment, lerp(FocusPointBlendColor, fragment.rgb, smoothstep(0, 1, distanceToFocusPoint)), FocusPointBlendFactor);
-		fragment.rgb = lerp(color, PostProcessBlurredFragment(fragment.rgb, saturate(maxLuma), (averageGained / (average.a + (average.a==0))), HighlightGain), BlendFactor);
-		fragment.a = 1.0;
+							: lerp(fragment.rgb, saturate(lerp(FocusPointBlendColor, fragment.rgb, smoothstep(0, 1, distanceToFocusPoint))), FocusPointBlendFactor);
+		fragment.rgb = lerp(color, PostProcessBlurredFragment(fragment.rgb, saturate(maxLuma), (averageGained / (average.a + (average.a==0))), highlightGainToUse), BlendFactor);
+		fragment.a = alpha;
 	}
 
 
@@ -312,17 +380,27 @@ namespace DirectionalDepthBlur
 	{
 		float colorDepth = ReShade::GetLinearizedDepth(pixelInfo.texCoords);
 		float4 realColor = tex2Dlod(ReShade::BackBuffer, float4(pixelInfo.texCoords, 0, 0));
+		float filterCircleValue = tex2Dlod(samplerFilterCircle, float4(pixelInfo.texCoords, 0, 0)).r;
 		if(colorDepth <= pixelInfo.focusPlane || (BlurLength <= 0.0))
 		{
 			fragment = realColor;
 			return;
 		}
-		float3 color = tex2Dlod(samplerBlurDestination, float4(pixelInfo.texCoords, 0, 0)).rgb;
+		float4 color = tex2Dlod(samplerBlurDestination, float4(pixelInfo.texCoords, 0, 0));
 		float rangeEnd = (pixelInfo.focusPlane+pixelInfo.focusRange);
 		float blendFactor = rangeEnd < colorDepth 
 								? 1.0 
 								: smoothstep(0, 1, 1-((rangeEnd-colorDepth) / pixelInfo.focusRange));
-		fragment.rgb = lerp(realColor.rgb, color, blendFactor);
+
+		if(BlurType==1 && FocusPointFadeBlurInFeatherBand)
+		{
+			blendFactor *= filterCircleValue;
+		}
+		fragment.rgb = lerp(realColor.rgb, color.rgb, blendFactor * color.a);
+		if(FocusPointViewFilterCircleOnMouseDown && LeftMouseDown && BlurType==1)
+		{
+			fragment.rgb = lerp(fragment.rgb, float3(1.0f, 1.0f, 1.0f), filterCircleValue * 0.7f);
+		}
 	}
 	
 	void PS_DownSample(VSPIXELINFO pixelInfo, out float4 fragment : SV_Target0)
@@ -335,6 +413,43 @@ namespace DirectionalDepthBlur
 			discard;
 		}
 		fragment = tex2D(ReShade::BackBuffer, sourceCoords);
+	}
+	
+	
+	void PS_CreateFilterCircle(VSPIXELINFO pixelInfo, out float4 fragment : SV_Target0)
+	{
+		fragment = 0.0f;
+		if(BlurType!=1)
+		{
+			return;
+		}
+		// apply deform factors to the texcoord
+		// rotate the texcoord with the matrix we constructed so a pixel which normally wouldn't end up in the filter circle will potentially do now
+		// so we rotate the frame instead of the circle (as we do cheap deformation with a single vector)
+		float2 texcoordCenterNormalized = mul(((pixelInfo.texCoords-pixelInfo.centerDisplacementDelta) - 0.5), pixelInfo.rotationMatrix) * FilterCircleDeformFactors;
+		float2 focusPointCenterNormalized = (FocusPoint-pixelInfo.centerDisplacementDelta) - 0.5;
+		float texcoordDistance = distance(texcoordCenterNormalized, focusPointCenterNormalized);
+		// if the distance is larger than the filter circle radius, blur is always done. If it's smaller, we have to
+		// take into account the feather width. So radius-feather is the feather band
+		if(texcoordDistance < pixelInfo.featherRadius)
+		{
+			// inside the feather band start, so always transparent
+			fragment = 0.0f;
+		}
+		else
+		{
+			if(texcoordDistance > FilterCircleRadius)
+			{
+				// outside the filter circle
+				fragment = 1.0f;
+			}
+			else
+			{
+				// within the featherband
+				float featherbandWidth = FilterCircleRadius - pixelInfo.featherRadius;
+				fragment = lerp(0.0f, 1.0f, (texcoordDistance - pixelInfo.featherRadius) / (featherbandWidth + (featherbandWidth==0)));
+			}
+		}
 	}
 	
 	//////////////////////////////////////////////////
@@ -354,6 +469,7 @@ namespace DirectionalDepthBlur
 			"https://fransbouma.com | https://github.com/FransBouma/OtisFX"; >
 #endif	
 	{
+		pass CreateFilterCircle { VertexShader = VS_PixelInfo; PixelShader = PS_CreateFilterCircle; RenderTarget = texFilterCircle; }
 		pass Downsample { VertexShader = VS_PixelInfo ; PixelShader = PS_DownSample; RenderTarget = texDownsampledBackBuffer; }
 		pass BlurPass { VertexShader = VS_PixelInfo; PixelShader = PS_Blur; RenderTarget = texBlurDestination; }
 		pass Combiner { VertexShader = VS_PixelInfo; PixelShader = PS_Combiner; }

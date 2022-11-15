@@ -1,5 +1,5 @@
 /*
-Simple Grain PS v1.0.6 (c) 2018 Jacob Maximilian Fober
+Simple Grain PS v1.0.8 (c) 2018 Jacob Maximilian Fober
 
 This work is licensed under the Creative Commons 
 Attribution-ShareAlike 4.0 International License. 
@@ -78,11 +78,12 @@ void SimpleGrainPS(float4 vois : SV_Position, float2 TexCoord : TEXCOORD, out fl
 	Image = tex2D(ReShade::BackBuffer, TexCoord).rgb;
 	// Mask out bright pixels  gamma: (sqrt(5)+1)/2
 	const float GoldenAB = sqrt(5.0) * 0.5 + 0.5;
-	float Mask = pow(1.0 - dot(Image.rgb, LumaCoefficient), GoldenAB);
+	float Mask = pow(abs(1.0 - dot(Image.rgb, LumaCoefficient)), GoldenAB);
 	// Calculate seed change
 	float Seed = Framerate == 0 ? FrameCount : floor(Timer * 0.001 * Framerate);
 	// Protect from enormous numbers
-	Seed = frac(Seed * 0.0001) * 10000;
+	// Seed = frac(Seed * 0.0001) * 10000;
+	Seed %= 10000;
 	// Generate noise *  (sqrt(5) + 1) / 4  (to remain brightness)
 	const float GoldenABh = sqrt(5.0) * 0.25 + 0.25;
 	float Noise = saturate(SimpleNoise(Seed * TexCoord.x * TexCoord.y) * GoldenABh);
