@@ -8,7 +8,7 @@ echo.                  Cache removal tool for ReShade & echo.
 if exist "C:\genshin-impact-reshade-2023\Data\header.cmd" (
     call C:\genshin-impact-reshade-2023\Data\header.cmd
 ) else (
-    call Data\header.cmd
+    call header.cmd
 )
 
 echo [i] Administrative permissions are required. Please wait...
