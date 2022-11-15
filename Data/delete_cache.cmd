@@ -1,15 +1,10 @@
 @echo off
-title Genshin Impact ReShade 2023 Mod Pack - Cache removal tool
+title Cache removal tool - Genshin Impact Mod Pack 2023
 chcp 65001 > nul
 
 echo.               Genshin Impact ReShade 2023 Mod Pack
 echo.                  Cache removal tool for ReShade & echo.
-
-if exist "C:\genshin-impact-reshade-2023\Data\header.cmd" (
-    call C:\genshin-impact-reshade-2023\Data\header.cmd
-) else (
-    call header.cmd
-)
+call Data\header.cmd
 
 echo [i] Administrative permissions are required. Please wait...
 

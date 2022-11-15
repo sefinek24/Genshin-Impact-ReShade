@@ -1,5 +1,5 @@
 @echo off
-title Genshin Impact ReShade 2023 Mod Pack - Update
+title Update - Genshin Impact Mod Pack 2023
 chcp 65001 > NUL
 
 echo.               Genshin Impact ReShade 2023 Mod Pack
@@ -30,5 +30,4 @@ echo [i] You can close this window.
 
 echo [i] The process was ended.
 timeout /t 6 /nobreak
-
 exit

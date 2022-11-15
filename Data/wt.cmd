@@ -1,10 +1,10 @@
 @echo off
-title Genshin Impact ReShade 2023 Mod Pack - Update
+title Download Windows Terminal - Genshin Impact Mod Pack 2023
 chcp 65001 > NUL
 
 echo.               Genshin Impact ReShade 2023 Mod Pack
-echo.                    Download Windows Terminal & echo.
-call Data\header.cmd
+echo.                    Download Windows Terminal
+echo ================================================================ & echo.
 
 echo 1/2 - Downloading Windows Terminal...
 winget install Microsoft.WindowsTerminal --accept-source-agreements --accept-package-agreements
@@ -12,11 +12,11 @@ if %ERRORLEVEL% EQU 0 (
     echo.
     echo 2/2 - Configuring...
     echo 1 > Data\configure
-    echo Done.
+    echo Done. You can now go to the application. Enjoy!
 ) else (
-    echo Error occurred.
+    echo Error occurred. Please try again or contact with me on Discord.
     echo 0 > Data\configure
 )
 
-timeout /t 6 /nobreak
+timeout /t 8 /nobreak
 exit
