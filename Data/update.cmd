@@ -11,7 +11,11 @@ if exist "C:\Program Files\Git\cmd\git.exe" (
     git -v
     echo.
 
-    echo 2/4 - Checking for new updates...
+    echo 2/4 - End process "Genshin Impact Mod Pack.exe"...
+    taskkill /IM "Genshin Impact Mod Pack.exe"
+    echo.
+
+    echo 3/4 - Checking for new updates...
     git fetch
     git pull
 ) else (
@@ -20,16 +24,11 @@ if exist "C:\Program Files\Git\cmd\git.exe" (
 )
 echo.
 
-echo 3/4 - End process "Genshin Impact Mod Pack.exe"...
-taskkill /IM "Genshin Impact Mod Pack.exe"
-echo.
-
-echo 4/4 - Relaunch...
+echo 4/4 - Relaunching...
 echo [i] You can close this window.
 "Genshin Impact Mod Pack.exe"
 
 echo [i] The process was ended.
-echo.
+timeout /t 6 /nobreak
 
-set /p null=
 exit
