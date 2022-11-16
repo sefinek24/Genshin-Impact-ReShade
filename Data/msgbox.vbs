@@ -1,0 +1,1 @@
+Response = MsgBox("New app for this mod etc. will be added soon. Leave a comment below my video 'How to install Genshin Impact Reshade Mod to get better graphics quality and unlock frames' and check screenshots of the new version in 'TUTORIAL.html' file! Thank you for using this <3", vbOKOnly + vbInformation, "Genshin Impact 2022 Mod")

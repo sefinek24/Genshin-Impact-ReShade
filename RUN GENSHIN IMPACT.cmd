@@ -67,6 +67,7 @@ echo [✓] Done. Everything is ready to run FPS Unlocker. & echo.
 
 
 echo 6/8 - Starting...
+Data\msgbox.vbs
 echo [i] Click "Yes" in the two "User Account Control" (UAC) notifications. File inject.exe and unlockfps_clr.exe. & echo.
 powershell.exe Data\mod.ps1
 
