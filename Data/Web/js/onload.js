@@ -11,12 +11,10 @@ window.onload = async () => {
 
 	try {
 		const res = await axios.get('https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Data/www/api/remote.json');
-		console.log(local.version);
-		console.log(res.data.version);
 
-		const msg = `
+		const msg = () => `
 			<code style="color:#00fff7">${local.build ? local.build : 'Unknown'}</code> → <code style="color:#00ff00">${res.data.build ? res.data.build : 'Unknown'}</code>
-            <p>🤔 Run the file <u>UPDATE.cmd</u> to synchronize the local repository with the remote one.</p>
+            <p>🤔 Go to the application Genshin Impact Mod Pack and click Check for updates.</p>
             <p>
             	📂 Your version: <code><span title="Build ${local.build}">v${local.version}</span></code> from <code>${local.releaseVersion}</code><br>
                 ⏰ Last update: <code>${local.lastUpdate}</code>
@@ -24,7 +22,6 @@ window.onload = async () => {
 		`;
 
 		switch (true) {
-		// new
 		case !res.data.build: case !res.data.version: {
 			footer.innerHTML = `
                 <div class="updates-header">
@@ -34,7 +31,7 @@ window.onload = async () => {
 
                 <code style="color:#f04947">${local.build ? local.build : 'Unknown'}</code></code>
                 <p>
-                	Download the module again from the GitHub repository using the git command in Terminal.<br>
+                	Download module again from the GitHub repository using git command in Terminal.<br>
                 	<code>git clone https://github.com/sefinek24/genshin-impact-reshade-2023.git</code>
                 </p>
                 <p>
@@ -55,7 +52,7 @@ window.onload = async () => {
                     📥 New build is available!
                 </div>
 
-                ${msg}`;
+                ${msg()}`;
 			break;
 		}
 
@@ -67,7 +64,7 @@ window.onload = async () => {
                     📥 New version is available!
                 </div>
 
-                ${msg}`;
+                ${msg()}`;
 			break;
 		}
 
