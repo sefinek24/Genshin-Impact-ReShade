@@ -1,7 +1,7 @@
 ---
 name: Question
 about: Create a new question
-title: ''
+title: "[QUESTION]"
 labels: question
 assignees: ''
 
