@@ -15,9 +15,10 @@ if %ERRORLEVEL% EQU 0 (
 
     echo Done. You can now go to the application. Enjoy!
 ) else (
+    echo.
     echo Error occurred. Please try again or contact with me on Discord.
     echo false> "%AppData%\Genshin Impact MP by Sefinek\configured"
 )
 
-timeout /t 9 /nobreak
+timeout /t 99 /nobreak
 exit
