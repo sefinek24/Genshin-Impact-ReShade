@@ -4,14 +4,14 @@ chcp 65001 > NUL
 
 echo.               Genshin Impact ReShade 2023 Mod Pack
 echo.                   Made by Sefinek - Update & echo.
-call Data\header.cmd
+call Data\Cmd\info.cmd
 
 echo 1/4 - Checking if git is installed...
 if exist "C:\Program Files\Git\cmd\git.exe" (
     git -v
     echo.
 
-    echo 2/4 - End process "Genshin Impact Mod Pack.exe"...
+    echo 2/4 - Ending process "Genshin Impact Mod Pack.exe"...
     taskkill /IM "Genshin Impact Mod Pack.exe"
     echo.
 
@@ -29,5 +29,5 @@ echo [i] You can close this window.
 "Genshin Impact Mod Pack.exe"
 
 echo [i] The process was ended.
-timeout /t 6 /nobreak
+timeout /t 7 /nobreak
 exit

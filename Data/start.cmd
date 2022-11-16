@@ -4,17 +4,24 @@ chcp 65001 > NUL
 
 echo.               Genshin Impact ReShade 2023 Mod Pack
 echo.                   Made by Sefinek - Start game & echo.
-call Data\header.cmd
+call Data\Cmd\info.cmd
 
-echo 1/8 - Checking if git is installed...
+echo 1/8 - Checking game localization...
+if exist "C:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact.exe" (
+    echo [✓] Found: C:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact.exe
+) else (
+    echo [x] Not found. Where is the game installed?
+)
+echo.
+
+echo 2/8 - Checking if git is installed...
 if exist "C:\Program Files\Git\cmd\git.exe" (
     git -v
     echo.
 
-    echo 2/8 - Checking for new updates...
+    echo 3/8 - Checking for new updates...
     git fetch
     git pull
-
 
 
 
@@ -29,19 +36,13 @@ if exist "C:\Program Files\Git\cmd\git.exe" (
     echo [x] NOT INSTALLED! I CAN'T CHECK FOR NEW UPDATES.
     echo [i] PLEASE DOWNLOAD: https://git-scm.com/downloads & echo.
 
-    echo 2/8 - Checking for new updates...
+    echo 3/8 - Checking for new updates...
     echo [x] Canceled.
 )
 echo.
 
 
-echo 3/8 - Checking game localization...
-if exist "C:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact.exe" (
-    echo [✓] Found: C:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact.exe
-) else (
-    echo [x] Not found. Where is the game installed?
-)
-echo.
+
 
 
 echo 4/8 - Checking required processes...
@@ -52,55 +53,41 @@ if "%ERRORLEVEL%"=="0" (
 
     goto close-window
 ) else (
-    echo [✓] Done.
+    echo [✓] unlockfps_clr.exe - OK
 )
+tasklist /fi "ImageName eq Genshin Impact Mod Pack.exe" /fo csv 2>NUL | find /I "Genshin Impact Mod Pack.exe">NUL
+if "%ERRORLEVEL%"=="0" (
+    echo [i] Closing Genshin Impact Mod Pack.exe...
+    taskkill /IM "Genshin Impact Mod Pack.exe"
+)
+echo [✓] Genshin Impact Mod Pack.exe - OK
 echo.
 
 
 echo 5/8 - Setting execution policy...
 powershell.exe Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
-echo [✓] Done. Everything is ready to run FPS Unlocker. & echo.
+echo [✓] Done. Everything is ready! & echo.
 
 
 echo 6/8 - Starting...
-echo [i] Click "Yes" in the two "User Account Control" (UAC) notifications. File inject.exe and unlockfps_clr.exe. & echo.
-powershell.exe Data\mod.ps1
-
-
-echo 7/8 - Waiting for unlockfps_clr.exe...
-tasklist /fi "ImageName eq unlockfps_clr.exe" /fo csv 2>NUL | find /I "unlockfps_clr.exe">NUL
-if "%ERRORLEVEL%"=="0" (
-    echo [✓] Ok.
+set /p RunID=< "%AppData%\Genshin Impact MP by Sefinek\run"
+if %RunID% == 1 (
+    echo [i] Click 'Yes' in the two 'User Account Control' UAC notifications. File inject.exe and unlockfps_clr.exe. & echo.
+    powershell.exe Data\PowerShell\mod.ps1
+    call Data\Cmd\start\1.cmd
+) else if %RunID% == 2 (
+    echo [i] Click 'Yes' in the 'User Account Control' UAC notification. File inject.exe. & echo.
+    powershell.exe Data\PowerShell\only-reshade.ps1
+    call Data\Cmd\start\2.cmd
+) else if %RunID% == 3 (
+    echo [i] Click 'Yes' in the 'User Account Control' UAC notification. File unlockfps_clr.exe. & echo.
+    powershell.exe Data\PowerShell\only-fps_unlocker.ps1
+    call Data\Cmd\start\3.cmd
 ) else (
     goto error
 )
-echo.
-
-
-echo 8/8 - Waiting for inject.exe...
-tasklist /fi "ImageName eq inject.exe" /fo csv 2>NUL | find /I "inject.exe">NUL
-if "%ERRORLEVEL%"=="0" (
-    echo [✓] Done! If you need help, add me on Discord Sefinek#0001.
-    echo [i] Visit my YouTube channel. Thank you.
-    echo [i] https://www.youtube.com/channel/UClrAIcAzcqIMbvGXZqK7e0A
-    goto close-window
-) else (
-    goto error
-)
-
-
-
-
-:error
-    echo [x] Oh, sorry. For some reason, the application failed to start.
-    echo [i] If you need help, please create a new Issue on GitHub or add me on Discord.
-    echo [i] My username: Sefinek#0001
-    echo [i] GitHub: https://github.com/sefinek24/genshin-impact-reshade-2023/issues
-    echo.
-
-    goto close-window
 
 :close-window
     echo.
-    set /p null="[i] Press ENTER to close this window."
+    timeout /t 16 /nobreak
     exit

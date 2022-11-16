@@ -4,31 +4,31 @@ chcp 65001 > nul
 
 echo.               Genshin Impact ReShade 2023 Mod Pack
 echo.                  Cache removal tool for ReShade & echo.
-call Data\header.cmd
+call Data\Cmd\header.cmd
 
-echo [i] Administrative permissions are required. Please wait...
+echo 1/3 - Administrative permissions are required. Please wait...
 
 net session >nul 2>&1
 if %errorLevel% == 0 (
-    echo [✓] Ok. No problems found. & echo.
+    echo [✓] No problems found. & echo.
 ) else (
     echo [x] Error. Run this file as administrator.
     goto nothing_to_do
 )
 
 
-echo [i] ReShade cache path: %temp%\ReShade
-
+echo 2/3 - Checking %temp%\ReShade...
 if exist "%temp%\ReShade" (
     goto question
+    echo.
 ) else (
-    echo [x] Cache folder for ReShade does not exist.
-    goto nothing_to_do
+    echo [x] Cache folder for ReShade does not exist. & echo.
+    goto log_file
 )
 
 
 :question
-    set /p deleteFolder="[i] Are you sure? (y/n): "
+    set /p deleteFolder="[i] Delete cache? (y/n): "
     if "%deleteFolder%" == "y" (
         goto delete
     ) else if "%deleteFolder%" == "n" (
@@ -42,20 +42,22 @@ if exist "%temp%\ReShade" (
     rmdir /s /q %temp%\ReShade
     echo [✓] Done.
 
-    if exist "C:\Program Files\Genshin Impact\Genshin Impact game\ReShade.log" (
-        goto log_file
-    )
-
-    goto nothing_to_do
+    goto log_file
 
 :log_file
-    echo.
-    echo [i] Found: C:\Program Files\Genshin Impact\Genshin Impact game\ReShade.log
+    echo 2/3 - Checking %ProgramFiles%\Genshin Impact\Genshin Impact game\ReShade.log...
+    if exist "%ProgramFiles%\Genshin Impact\Genshin Impact game\ReShade.log" (
+        goto delete_log_file
+    ) else (
+        goto nothing_to_do
+    )
+
+:delete_log_file
     set /p deleteLogFile="[i] Delete log file? (y/n): "
 
     if "%deleteLogFile%" == "y" (
         echo [i] Please wait...
-        del "C:\Program Files\Genshin Impact\Genshin Impact game\ReShade.log"
+        del "%ProgramFiles%\Genshin Impact\Genshin Impact game\ReShade.log"
         echo [✓] Done.
 
         goto nothing_to_do
@@ -66,18 +68,20 @@ if exist "%temp%\ReShade" (
     )
 
 :no
-    echo.
     echo [i] Bruh. Okay, no problem.
+    echo.
     goto nothing_to_do
 
 :bad_answer
     echo.
-    echo [x] Wrong answer. Expected: 'y' or 'n'. Close this window and please try again.
+    echo [x] Wrong answer. Expected: 'y' or 'n'. Click ENTER to try again.
     echo [i] y = yes
     echo [i] n = no
+    set /p null=
+    cls
+    call Data\delete_cache.cmd
 
 :nothing_to_do
-    echo.
     echo [i] You can close this window.
     set /p null=
     exit

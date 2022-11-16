@@ -51,7 +51,7 @@ window.onload = async () => {
 		case local.build !== res.data.build: {
 			footer.innerHTML = `
                 <div class="updates-header">
-                    ${Math.floor(Math.random() * 2) ? '<img src="Data/www/images/blobcat.gif" alt="✅">' : '<img src="Data/www/images/dancing-anime-girl.gif" alt="✅">'}<br>
+                    ${Math.floor(Math.random() * 2) ? '<img src="Data/Web/images/blobcat.gif" alt="✅">' : '<img src="Data/Web/images/dancing-anime-girl.gif" alt="✅">'}<br>
                     📥 New build is available!
                 </div>
 
@@ -63,7 +63,7 @@ window.onload = async () => {
 		case local.version !== res.data.version: {
 			footer.innerHTML = `
                 <div class="updates-header">
-                    ${Math.floor(Math.random() * 2) ? '<img src="Data/www/images/blobcat.gif" alt="✅">' : '<img src="Data/www/images/dancing-anime-girl.gif" alt="✅">'}<br>
+                    ${Math.floor(Math.random() * 2) ? '<img src="Data/Web/images/blobcat.gif" alt="✅">' : '<img src="Data/Web/images/dancing-anime-girl.gif" alt="✅">'}<br>
                     📥 New version is available!
                 </div>
 
@@ -75,7 +75,7 @@ window.onload = async () => {
 		default: {
 			footer.innerHTML = `
                 <div class="updates-header">
-                    ${Math.floor(Math.random() * 2) ? '<img src="Data/www/images/thumbsup.gif" alt="✅">' : '<img src="Data/www/images/success.gif" alt="✅">'}<br>
+                    ${Math.floor(Math.random() * 2) ? '<img src="Data/Web/images/thumbsup.gif" alt="✅">' : '<img src="Data/Web/images/success.gif" alt="✅">'}<br>
                     ✅ Your downloaded release is up-to-date!
                 </div>
 

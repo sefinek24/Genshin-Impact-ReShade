@@ -11,12 +11,13 @@ winget install Microsoft.WindowsTerminal --accept-source-agreements --accept-pac
 if %ERRORLEVEL% EQU 0 (
     echo.
     echo 2/2 - Configuring...
-    echo true> Data\configured
+    echo true> "%AppData%\Genshin Impact MP by Sefinek\configured"
+
     echo Done. You can now go to the application. Enjoy!
 ) else (
     echo Error occurred. Please try again or contact with me on Discord.
-    echo false> Data\configured
+    echo false> "%AppData%\Genshin Impact MP by Sefinek\configured"
 )
 
-timeout /t 8 /nobreak
+timeout /t 9 /nobreak
 exit
