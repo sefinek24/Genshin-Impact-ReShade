@@ -15,7 +15,7 @@
 Click [here](https://github.com/34736384/genshin-fps-unlock#usage) for more information.
 2. Remember to have the latest version of the modification!
 
-## 🎥・Tutorial on YouTube, kinda outdated ^-^
+## 🎥・Tutorial on YouTube - kinda outdated <:
 https://www.youtube.com/watch?v=rDeO26RapAk
 
 ## 🎮・Gameplay
@@ -71,3 +71,6 @@ Give a star if you can.
 <a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/dev/Screenshots/new/9.png" title="See preview [9.png]">
     <img src="Screenshots/new/9.png" alt="Screenshot number 9">
 </a>
+
+## 🧶・Sources
+Icons were taken from website <a href="https://icons8.com" target="_blank">Icons8</a>.
