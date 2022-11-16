@@ -25,6 +25,6 @@ SV_07112022_110-001
 `PR` -> Pre-release  
 `FR` -> First release
 
-### • 2: Date
+### • 2: Date (DD.MM.YYYY)
 ### • 3: Version
 ### • 4: Compilation
