@@ -8,7 +8,7 @@
 
 ## 📂・Includes
 - [FPS Unlocker](https://github.com/34736384/genshin-fps-unlock)
-- [The best presets for game](Data/-%20Presets/1.%20Default%20preset%20by%20Sefinek%20(Recommended).ini)
+- [The best presets for game](Data/-%20Presets)
 
 ## 📝️・Warning
 1. Make sure you have the [Visual C++ 2019 Redistributable (x64)](https://aka.ms/vs/16/release/vc_redist.x64.exe) and [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48) installed.  
