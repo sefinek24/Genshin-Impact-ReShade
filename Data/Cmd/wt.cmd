@@ -19,6 +19,7 @@ echo ===========================================================================
 
 echo 1/3 - Uninstalling old Windows Terminal...
 winget uninstall Microsoft.WindowsTerminal
+echo.
 
 echo 2/3 - Downloading Windows Terminal from Microsoft Store...
 winget install 9N0DX20HK701 --source "msstore" --accept-source-agreements --accept-package-agreements
