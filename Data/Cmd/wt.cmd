@@ -17,7 +17,7 @@ echo. ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉�
 echo.  ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟
 echo ========================================================================================= & echo.
 
-echo 1/2 - Downloading new Windows Terminal from Microsoft Store...
+echo 1/2 - Downloading Windows Terminal from Microsoft Store...
 winget install 9N0DX20HK701 --source "msstore" --accept-source-agreements --accept-package-agreements
 if %ERRORLEVEL% EQU 0 (
     echo.
