@@ -58,7 +58,7 @@ if exist "%temp%\ReShade" (
     if "%deleteLogFile%" == "y" (
         echo [i] Please wait...
         del "%ProgramFiles%\Genshin Impact\Genshin Impact game\ReShade.log"
-        echo [✓] Done.
+        echo [✓] Done. & echo.
 
         goto nothing_to_do
     ) else if "%deleteLogFile%" == "n" (
