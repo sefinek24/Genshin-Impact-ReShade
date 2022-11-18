@@ -17,22 +17,18 @@ echo. ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉�
 echo.  ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟
 echo ========================================================================================= & echo.
 
-echo 1/4 - Uninstalling old Windows Terminal...
+echo 1/3 - Uninstalling old Windows Terminal...
 winget uninstall Microsoft.WindowsTerminal
 echo.
 
-echo 2/4 - Downloading new Windows Terminal from Microsoft Store...
+echo 2/3 - Downloading new Windows Terminal from Microsoft Store...
 winget install 9N0DX20HK701 --source "msstore" --accept-source-agreements --accept-package-agreements
 if %ERRORLEVEL% EQU 0 (
     echo.
-    echo 3/4 - Scanning and repairing system files (recommended, safe command)...
-    sfc /SCANNOW
-
-    echo.
-    echo 4/4 - Configuring...
+    echo 3/3 - Configuring...
     echo true> "%AppData%\Genshin Impact MP by Sefinek\configured"
 
-    echo Done. You can now go to the application. Enjoy!
+    echo Done. You can now go to the application!
 ) else (
     echo.
     echo Error occurred. Please try again or contact with me on Discord.
