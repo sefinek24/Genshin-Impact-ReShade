@@ -18,7 +18,7 @@ echo.  ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀�
 echo ========================================================================================= & echo.
 
 echo 1/3 - Uninstalling old Windows Terminal...
-winget uninstall Microsoft.WindowsTerminal
+
 echo.
 
 echo 2/3 - Downloading new Windows Terminal from Microsoft Store...
