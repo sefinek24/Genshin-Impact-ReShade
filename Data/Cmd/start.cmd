@@ -4,7 +4,7 @@ chcp 65001 > NUL
 
 echo.               Genshin Impact ReShade 2023 Mod Pack
 echo.                   Made by Sefinek - Start game & echo.
-call Data\Cmd\info.cmd
+call Data\Cmd\header\cat.cmd
 
 echo 1/8 - Checking game localization...
 if exist "C:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact.exe" (

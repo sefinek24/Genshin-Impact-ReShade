@@ -3,8 +3,8 @@ title Update - Genshin Impact Mod Pack 2023
 chcp 65001 > NUL
 
 echo.               Genshin Impact ReShade 2023 Mod Pack
-echo.                   Made by Sefinek - Update & echo.
-call Data\Cmd\info.cmd
+echo.                    Made by Sefinek - Update & echo.
+call Data\Cmd\header\all.cmd
 
 echo 1/4 - Checking if git is installed...
 if exist "C:\Program Files\Git\cmd\git.exe" (
