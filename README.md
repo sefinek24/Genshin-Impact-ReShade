@@ -25,7 +25,7 @@ Soon...
 ## 🔧・Supported operating systems
 | System                        | OS Build   | Status |
 |-------------------------------|------------|:-------|
-| Windows 11 22H2 (recommended) | 22621.755  | ✅      |
+| Windows 11 22H2 (recommended) | 22621.812  | ✅      |
 | Windows 10 22H2               | 19045.2311 | ✅      | 
 | Windows 8 / 8.1               | ❓          | 🤔     | 
 | Windows 7                     | ❓          | 🤔     | 
