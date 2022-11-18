@@ -17,15 +17,11 @@ echo. ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉�
 echo.  ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟
 echo ========================================================================================= & echo.
 
-echo 1/3 - Uninstalling old Windows Terminal...
-
-echo.
-
-echo 2/3 - Downloading new Windows Terminal from Microsoft Store...
+echo 1/2 - Downloading new Windows Terminal from Microsoft Store...
 winget install 9N0DX20HK701 --source "msstore" --accept-source-agreements --accept-package-agreements
 if %ERRORLEVEL% EQU 0 (
     echo.
-    echo 3/3 - Configuring...
+    echo 2/2 - Configuring...
     echo true> "%AppData%\Genshin Impact MP by Sefinek\configured"
 
     echo Done. You can now go to the application!
