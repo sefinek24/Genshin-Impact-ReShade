@@ -1,10 +1,20 @@
 @echo off
 title Start game - Genshin Impact Mod Pack 2023
 chcp 65001 > NUL
-
-echo.               Genshin Impact ReShade 2023 Mod Pack
-echo.                   Made by Sefinek - Start game & echo.
-call Data\Cmd\header\cat.cmd
+echo.⠀  ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⢶⣦⡀
+echo.⠀ ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿
+echo.⠀  ⠀⣿⡄⠀⠀⠀⠈⠀⠀⠀⠀⣾⡿                           Genshin Impact ReShade 2023 Mod Pack
+echo.  ⠀⠀⠹⣿⣦⡀⠀⠀⠀⠀⢀⣾⣿                                Made by Sefinek - Start game
+echo.⠀  ⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿
+echo.   ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟
+echo. ⠀  ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀
+echo. ⠀  ⠀⠀⡟⢦⡀⠇⠀⠀⣀⠞⠀⠀⠘⡀⢀⡠⠚⣉⠤⠂⠀⠀⠀⠈⠙⢦⡀
+echo.  ⠀⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆      * Mod version: v1.2.0 [SV_15112022_120-003]
+echo.   ⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆    * ReShade version: v5.4.2
+echo.  ⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇     * FPS unlocker version: v2.0.1
+echo. ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉⠀⠀⠀⠀⣠⠟
+echo.  ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟
+echo ========================================================================================= & echo.
 
 echo 1/8 - Checking game localization...
 if exist "C:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact.exe" (
@@ -66,21 +76,21 @@ echo.
 
 echo 5/8 - Setting execution policy...
 powershell.exe Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
-echo [✓] Done. Everything is ready! & echo.
+echo [✓] Done. Everything is ready (=^･ω･^=)! & echo.
 
 
 echo 6/8 - Starting...
 set /p RunID=< "%AppData%\Genshin Impact MP by Sefinek\run"
 if %RunID% == 1 (
-    echo [i] Click 'Yes' in the two 'User Account Control' UAC notifications. File inject.exe and unlockfps_clr.exe. & echo.
+    echo [i] Click 'Yes' in the two UAC (User Account Control) notifications. File inject.exe and unlockfps_clr.exe. & echo.
     powershell.exe Data\PowerShell\mod.ps1
     call Data\Cmd\start\1.cmd
 ) else if %RunID% == 2 (
-    echo [i] Click 'Yes' in the 'User Account Control' UAC notification. File inject.exe. & echo.
+    echo [i] Click 'Yes' in the UAC (User Account Control) notification. File inject.exe. & echo.
     powershell.exe Data\PowerShell\only-reshade.ps1
     call Data\Cmd\start\2.cmd
 ) else if %RunID% == 3 (
-    echo [i] Click 'Yes' in the 'User Account Control' UAC notification. File unlockfps_clr.exe. & echo.
+    echo [i] Click 'Yes' in the UAC (User Account Control) notification. File unlockfps_clr.exe. & echo.
     powershell.exe Data\PowerShell\only-fps_unlocker.ps1
     call Data\Cmd\start\3.cmd
 ) else (

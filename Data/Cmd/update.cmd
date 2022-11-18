@@ -1,10 +1,20 @@
 @echo off
-title Update - Genshin Impact Mod Pack 2023
+title Update tool - Genshin Impact Mod Pack 2023
 chcp 65001 > NUL
-
-echo.               Genshin Impact ReShade 2023 Mod Pack
-echo.                    Made by Sefinek - Update & echo.
-call Data\Cmd\header\all.cmd
+echo.⠀  ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⢶⣦⡀
+echo.⠀ ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿
+echo.⠀  ⠀⣿⡄⠀⠀⠀⠈⠀⠀⠀⠀⣾⡿                           Genshin Impact ReShade 2023 Mod Pack
+echo.  ⠀⠀⠹⣿⣦⡀⠀⠀⠀⠀⢀⣾⣿                                        Update tool
+echo.⠀  ⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿
+echo.   ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟
+echo. ⠀  ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀
+echo. ⠀  ⠀⠀⡟⢦⡀⠇⠀⠀⣀⠞⠀⠀⠘⡀⢀⡠⠚⣉⠤⠂⠀⠀⠀⠈⠙⢦⡀
+echo.  ⠀⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆      * Mod version: v1.2.0 [SV_15112022_120-003]
+echo.   ⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆    * ReShade version: v5.4.2
+echo.  ⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇     * FPS unlocker version: v2.0.1
+echo. ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉⠀⠀⠀⠀⣠⠟
+echo.  ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟
+echo ========================================================================================= & echo.
 
 echo 1/4 - Checking if git is installed...
 if exist "C:\Program Files\Git\cmd\git.exe" (
@@ -19,15 +29,15 @@ if exist "C:\Program Files\Git\cmd\git.exe" (
     git fetch
     git pull
 ) else (
-    echo [x] Not installed! I can't check for new updates.
-    echo [i] Please download: https://git-scm.com/downloads
+    echo Not installed! I can't check for new updates.
+    echo Please download: https://git-scm.com/downloads
 )
 echo.
 
 echo 4/4 - Relaunching...
-echo [i] You can close this window.
+echo You can close this window ฅ^˙Ⱉ˙^ฅ rawr!
 "Genshin Impact Mod Pack.exe"
 
-echo [i] The process was ended.
+echo The process was ended.
 timeout /t 7 /nobreak
 exit

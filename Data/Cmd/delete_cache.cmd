@@ -1,10 +1,20 @@
 @echo off
 title Cache removal tool - Genshin Impact Mod Pack 2023
 chcp 65001 > nul
-
-echo.               Genshin Impact ReShade 2023 Mod Pack
-echo.                  Cache removal tool for ReShade & echo.
-call Data\Cmd\header\cat.cmd
+echo.⠀  ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⢶⣦⡀
+echo.⠀ ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿
+echo.⠀  ⠀⣿⡄⠀⠀⠀⠈⠀⠀⠀⠀⣾⡿                           Genshin Impact ReShade 2023 Mod Pack
+echo.  ⠀⠀⠹⣿⣦⡀⠀⠀⠀⠀⢀⣾⣿                                     Cache removal tool
+echo.⠀  ⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿
+echo.   ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟
+echo. ⠀  ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀
+echo. ⠀  ⠀⠀⡟⢦⡀⠇⠀⠀⣀⠞⠀⠀⠘⡀⢀⡠⠚⣉⠤⠂⠀⠀⠀⠈⠙⢦⡀
+echo.  ⠀⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆      * Mod version: v1.2.0 [SV_15112022_120-003]
+echo.   ⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆    * ReShade version: v5.4.2
+echo.  ⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇     * FPS unlocker version: v2.0.1
+echo. ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉⠀⠀⠀⠀⣠⠟
+echo.  ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟
+echo ========================================================================================= & echo.
 
 echo 1/3 - Administrative permissions are required. Please wait...
 
@@ -22,7 +32,7 @@ if exist "%temp%\ReShade" (
     goto question
     echo.
 ) else (
-    echo [i] Not found. & echo.
+    echo [✓] Not found. & echo.
     goto log_file
 )
 
@@ -49,7 +59,7 @@ if exist "%temp%\ReShade" (
     if exist "%ProgramFiles%\Genshin Impact\Genshin Impact game\ReShade.log" (
         goto delete_log_file
     ) else (
-        echo [i] Not found.
+        echo [✓] Not found.
         goto nothing_to_do
     )
 
