@@ -22,7 +22,7 @@ if exist "%temp%\ReShade" (
     goto question
     echo.
 ) else (
-    echo [x] Cache folder for ReShade does not exist. & echo.
+    echo [i] Not found. & echo.
     goto log_file
 )
 
@@ -49,6 +49,7 @@ if exist "%temp%\ReShade" (
     if exist "%ProgramFiles%\Genshin Impact\Genshin Impact game\ReShade.log" (
         goto delete_log_file
     ) else (
+        echo [i] Not found.
         goto nothing_to_do
     )
 
