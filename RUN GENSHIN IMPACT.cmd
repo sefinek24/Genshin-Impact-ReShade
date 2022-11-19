@@ -52,9 +52,9 @@ echo 4/8 - Checking required processes...
 tasklist /fi "ImageName eq unlockfps_clr.exe" /fo csv 2>NUL | find /I "unlockfps_clr.exe">NUL
 if "%ERRORLEVEL%"=="0" (
     echo [x] The application "unlockfps_clr.exe" [Genshin FPS Unlocker] is already running.
-    echo [i] Close it and try again.
+    echo [i] Close it and try again. & echo.
 
-    goto close-window
+    pause
 ) else (
     echo [✓] Done.
 )
