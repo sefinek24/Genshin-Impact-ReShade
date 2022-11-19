@@ -6,7 +6,7 @@
 
 ## 📝️・Warning
 1. Make sure you have the [Microsoft Visual C++ 2019-2022 Redistributable (x64)](https://aka.ms/vs/17/release/vc_redist.x64.exe) and [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48) installed.  
-Click [here](https://github.com/34736384/genshin-fps-unlock#usage) for more information.
+Click [here](https://github.com/sefinek24/genshin-fps-unlock#usage) for more information.
 2. Remember to have the latest version of the modification!
 
 ## 🎥・Tutorial on YouTube - kinda outdated <:
