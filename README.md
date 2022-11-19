@@ -5,7 +5,7 @@
 - [The best presets for game](Data/-%20Presets)
 
 ## 📝️・Warning
-1. Make sure you have the [Visual C++ 2019 Redistributable (x64)](https://aka.ms/vs/16/release/vc_redist.x64.exe) and [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48) installed.  
+1. Make sure you have the [Microsoft Visual C++ 2019-2022 Redistributable (x64)](https://aka.ms/vs/17/release/vc_redist.x64.exe) and [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48) installed.  
 Click [here](https://github.com/34736384/genshin-fps-unlock#usage) for more information.
 2. Remember to have the latest version of the modification!
 
