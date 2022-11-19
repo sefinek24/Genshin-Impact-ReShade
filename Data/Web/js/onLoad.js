@@ -10,7 +10,7 @@ window.onload = async () => {
 	const footer = document.getElementById('updates');
 
 	try {
-		const res = await axios.get('https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/main/Data/www/api/remote.json');
+		const res = await axios.get('https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Data/www/api/remote.json');
 
 		const msg = () => `
 			<code style="color:#00fff7">${local.build ? local.build : 'Unknown'}</code> → <code style="color:#00ff00">${res.data.build ? res.data.build : 'Unknown'}</code>
@@ -32,7 +32,7 @@ window.onload = async () => {
                 <code style="color:#f04947">${local.build ? local.build : 'Unknown'}</code></code>
                 <p>
                 	Download module again from the GitHub repository using git command in Terminal.<br>
-                	<code>git clone https://github.com/sefinek24/genshin-impact-reshade-2023.git</code>
+                	<code>git clone https://github.com/sefinek24/Genshin-Impact-ReShade.git</code>
                 </p>
                 <p>
                     📂 Your version: <code>v${local.version}</code> from <code>${local.releaseVersion}</code><br>
@@ -94,7 +94,7 @@ window.onload = async () => {
                 </div>
                 A required file was not found. Report this error on GitHub.
 
-                <p><a href="https://github.com/sefinek24/genshin-impact-reshade-2023/issues" target="_blank">Issues · sefinek24/genshin-impact-reshade-2023</a></p>
+                <p><a href="https://github.com/sefinek24/Genshin-Impact-ReShade/issues" target="_blank">Issues · sefinek24/Genshin-Impact-ReShade</a></p>
             `;
 		}
 
@@ -116,7 +116,7 @@ window.onload = async () => {
                 </div>
                 Something went wrong. Re-clone the files from the repository using the <b>git clone</b> command.
 
-                <p><code>git clone https://github.com/sefinek24/genshin-impact-reshade-2023.git</code></p>
+                <p><code>git clone https://github.com/sefinek24/Genshin-Impact-ReShade.git</code></p>
             `;
 		}
 		}

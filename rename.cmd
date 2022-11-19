@@ -1,6 +1,8 @@
 @echo off
+cd ..\
 ren genshin-impact-reshade-2023 Genshin-Impact-ReShade
 echo.
+cd Genshin-Impact-ReShade
 echo [✓] Done!
-"C:\Genshin-Impact-ReShade\Genshin Impact Mod Pack.exe"
+"Genshin Impact Mod Pack.exe"
 pause
