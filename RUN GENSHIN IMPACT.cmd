@@ -85,5 +85,5 @@ echo.
 
 echo 4/8 - Finalizing the update...
 copy rename.cmd %temp%\rename.cmd
-call %temp%\ rename.cmd
+call %temp%\rename.cmd
 exit
