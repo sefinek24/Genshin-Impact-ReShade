@@ -1,21 +1,15 @@
-<div align="center">
-    <h1>✨ Genshin Impact ReShade 2023 Mod Pack ✨</h1>
-</div>
-
-<a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/dev/Screenshots/new/header.png" title="See preview [header.png]">
-    <img src="Screenshots/new/header.png" alt="Header image">
-</a>
+<div align="center"><h1>✨ Genshin Impact ReShade Mod Pack - 2023 ✨</h1><a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/dev/Screenshots/new/header.png" title="See preview [header.png]"><img src="Screenshots/new/header.png" alt="Header image"></a></div>
 
 ## 📂・Includes
-- [FPS Unlocker](https://github.com/34736384/genshin-fps-unlock)
-- [The best presets for game](Data/Reshade/Preset/1.%20Default%20preset%20by%20Sefinek%20(Recommended).ini)
+- [FPS Unlocker](https://github.com/sefinek24/genshin-fps-unlock)
+- [The best presets for game](Data/-%20Presets)
 
 ## 📝️・Warning
-1. Make sure you have the [Visual C++ 2019 Redistributable (x64)](https://aka.ms/vs/16/release/vc_redist.x64.exe) and [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48) installed.  
-Click [here](https://github.com/34736384/genshin-fps-unlock#usage) for more information.
+1. Make sure you have the [Microsoft Visual C++ 2019-2022 Redistributable (x64)](https://aka.ms/vs/17/release/vc_redist.x64.exe) and [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48) installed.  
+Click [here](https://github.com/sefinek24/genshin-fps-unlock#usage) for more information.
 2. Remember to have the latest version of the modification!
 
-## 🎥・Tutorial on YouTube
+## 🎥・Tutorial on YouTube - kinda outdated <:
 https://www.youtube.com/watch?v=rDeO26RapAk
 
 ## 🎮・Gameplay
@@ -31,8 +25,8 @@ Soon...
 ## 🔧・Supported operating systems
 | System                        | OS Build   | Status |
 |-------------------------------|------------|:-------|
-| Windows 11 22H2 (recommended) | 22621.755  | ✅      |
-| Windows 10 22H2               | 19045.2251 | ✅      | 
+| Windows 11 22H2 (recommended) | 22621.812  | ✅      |
+| Windows 10 22H2               | 19045.2311 | ✅      | 
 | Windows 8 / 8.1               | ❓          | 🤔     | 
 | Windows 7                     | ❓          | 🤔     | 
 > ✅ = Supported┃⚠️ = Not supported┃🤔 = Not tested┃❓= I don't know
@@ -71,3 +65,6 @@ Give a star if you can.
 <a href="https://raw.githubusercontent.com/sefinek24/genshin-impact-reshade-2023/dev/Screenshots/new/9.png" title="See preview [9.png]">
     <img src="Screenshots/new/9.png" alt="Screenshot number 9">
 </a>
+
+## 🧶・Sources
+Icons were taken from website <a href="https://icons8.com" target="_blank">Icons8</a>.

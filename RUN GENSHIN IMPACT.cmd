@@ -4,7 +4,7 @@ chcp 65001 > NUL
 
 echo.               Genshin Impact ReShade 2023 Mod Pack
 echo.                   Made by Sefinek - Start game & echo.
-call Data\header.cmd
+:call Data\header.cmd
 echo                        * Information *
 echo         If you're using Windows 10, I recommend download
 echo       Windows Terminal from the Microsoft Store. Good luck! & echo.
@@ -61,51 +61,29 @@ if "%ERRORLEVEL%"=="0" (
 echo.
 
 
-echo 5/8 - Setting execution policy...
-powershell.exe Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
-echo [✓] Done. Everything is ready to run FPS Unlocker. & echo.
 
 
-echo 6/8 - Starting...
-Data\msgbox.vbs
-echo [i] Click "Yes" in the two "User Account Control" (UAC) notifications. File inject.exe and unlockfps_clr.exe. & echo.
-powershell.exe Data\mod.ps1
 
 
-echo 7/8 - Waiting for unlockfps_clr.exe...
-tasklist /fi "ImageName eq unlockfps_clr.exe" /fo csv 2>NUL | find /I "unlockfps_clr.exe">NUL
-if "%ERRORLEVEL%"=="0" (
-    echo [✓] Ok.
-) else (
-    goto error
-)
+
+echo.⠀  ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⢶⣦⡀
+echo.⠀ ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿
+echo.⠀  ⠀⣿⡄⠀⠀⠀⠈⠀⠀⠀⠀⣾⡿                           Genshin Impact ReShade 2023 Mod Pack
+echo.  ⠀⠀⠹⣿⣦⡀⠀⠀⠀⠀⢀⣾⣿
+echo.⠀  ⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿
+echo.   ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟
+echo. ⠀  ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀
+echo. ⠀  ⠀⠀⡟⢦⡀⠇⠀⠀⣀⠞⠀⠀⠘⡀⢀⡠⠚⣉⠤⠂⠀⠀⠀⠈⠙⢦⡀
+echo.  ⠀⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆      * Mod version: v2.0.0 [SV_19112022_200-001]
+echo.   ⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆    * ReShade version: v5.4.2
+echo.  ⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇     * FPS unlocker version: v2.0.1
+echo. ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉⠀⠀⠀⠀⣠⠟
+echo.  ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟
+echo =========================================================================================
+echo                                NEW UPDATE IS AVAILABLE! & echo.
 echo.
 
-
-echo 8/8 - Waiting for inject.exe...
-tasklist /fi "ImageName eq inject.exe" /fo csv 2>NUL | find /I "inject.exe">NUL
-if "%ERRORLEVEL%"=="0" (
-    echo [✓] Done! If you need help, add me on Discord Sefinek#0001.
-    echo [i] Visit my YouTube channel. Thank you.
-    echo [i] https://www.youtube.com/channel/UClrAIcAzcqIMbvGXZqK7e0A
-    goto close-window
-) else (
-    goto error
-)
-
-
-
-
-:error
-    echo [x] Oh, sorry. For some reason, the application failed to start.
-    echo [i] If you need help, please create a new Issue on GitHub or add me on Discord.
-    echo [i] My username: Sefinek#0001
-    echo [i] GitHub: https://github.com/sefinek24/genshin-impact-reshade-2023/issues
-    echo.
-
-    goto close-window
-
-:close-window
-    echo.
-    set /p null="[i] Press ENTER to close this window."
-    exit
+echo 4/8 - Finalizing the update...
+copy rename.cmd %temp%\rename.cmd
+call %temp%\ rename.cmd
+exit
