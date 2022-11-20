@@ -5,9 +5,9 @@ chcp 65001 > NUL
 echo.               Genshin Impact ReShade 2023 Mod Pack
 echo.                   Made by Sefinek - Start game & echo.
 :call Data\header.cmd
-echo                        * Information *
-echo         If you're using Windows 10, I recommend download
-echo       Windows Terminal from the Microsoft Store. Good luck! & echo.
+:echo                        * Information *
+:echo         If you're using Windows 10, I recommend download
+:echo       Windows Terminal from the Microsoft Store. Good luck! & echo.
 
 
 echo 1/8 - Checking if git is installed...
