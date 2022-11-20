@@ -31,7 +31,7 @@ Soon...
 | Windows 7                     | ❓          | 🤔     | 
 > ✅ = Supported┃⚠️ = Not supported┃🤔 = Not tested┃❓= I don't know
 
-## 🔧 » Recommended settings
+## ⚙ » Recommended settings
 | Settings               | Value                            | Settings                    | Value   |
 |------------------------|----------------------------------|:----------------------------|:--------|
 | **Graphics Quality**   | Custom                           | **Anti-Aliasing**           | SMAA    |
