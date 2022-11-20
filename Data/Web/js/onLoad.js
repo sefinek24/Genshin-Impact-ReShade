@@ -10,7 +10,7 @@ window.onload = async () => {
 	const footer = document.getElementById('updates');
 
 	try {
-		const res = await axios.get('https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Data/www/api/remote.json');
+		const res = await axios.get('https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Data/Web/api/remote.json');
 
 		const msg = () => `
 			<code style="color:#00fff7">${local.build ? local.build : 'Unknown'}</code> → <code style="color:#00ff00">${res.data.build ? res.data.build : 'Unknown'}</code>
@@ -25,7 +25,7 @@ window.onload = async () => {
 		case !res.data.build: case !res.data.version: {
 			footer.innerHTML = `
                 <div class="updates-header">
-                    <img src="Data/www/images/error.gif" alt="❌"><br>
+                    <img src="Data/Web/images/error.gif" alt=""><br>
                     😿 Your version is not supported.
                 </div>
 
@@ -48,7 +48,7 @@ window.onload = async () => {
 		case local.build !== res.data.build: {
 			footer.innerHTML = `
                 <div class="updates-header">
-                    ${Math.floor(Math.random() * 2) ? '<img src="Data/Web/images/blobcat.gif" alt="✅">' : '<img src="Data/Web/images/dancing-anime-girl.gif" alt="✅">'}<br>
+                    ${Math.floor(Math.random() * 2) ? '<img src="Data/Web/images/blobcat.gif" alt="">' : '<img src="Data/Web/images/dancing-anime-girl.gif" alt="">'}<br>
                     📥 New build is available!
                 </div>
 
@@ -60,7 +60,7 @@ window.onload = async () => {
 		case local.version !== res.data.version: {
 			footer.innerHTML = `
                 <div class="updates-header">
-                    ${Math.floor(Math.random() * 2) ? '<img src="Data/Web/images/blobcat.gif" alt="✅">' : '<img src="Data/Web/images/dancing-anime-girl.gif" alt="✅">'}<br>
+                    ${Math.floor(Math.random() * 2) ? '<img src="Data/Web/images/blobcat.gif" alt="">' : '<img src="Data/Web/images/dancing-anime-girl.gif" alt="">'}<br>
                     📥 New version is available!
                 </div>
 
@@ -72,7 +72,7 @@ window.onload = async () => {
 		default: {
 			footer.innerHTML = `
                 <div class="updates-header">
-                    ${Math.floor(Math.random() * 2) ? '<img src="Data/Web/images/thumbsup.gif" alt="✅">' : '<img src="Data/Web/images/success.gif" alt="✅">'}<br>
+                    ${Math.floor(Math.random() * 2) ? '<img src="Data/Web/images/thumbsup.gif" alt="">' : '<img src="Data/Web/images/success.gif" alt="">'}<br>
                     ✅ Your downloaded release is up-to-date!
                 </div>
 
@@ -89,7 +89,7 @@ window.onload = async () => {
 		case err.response ? err.response.status === 404 : false: {
 			return footer.innerHTML = `
                 <div class="updates-header">
-                    <img src="Data/www/images/error.gif" alt="❌"><br>
+                    <img src="Data/Web/images/error.gif" alt=""><br>
                     ❌ ${err.message}
                 </div>
                 A required file was not found. Report this error on GitHub.
@@ -101,7 +101,7 @@ window.onload = async () => {
 		case err.code === 'ERR_NETWORK': {
 			return footer.innerHTML = `
                 <div class="updates-header">
-                    <img src="Data/www/images/error.gif" alt="❌"><br>
+                    <img src="Data/Web/images/error.gif" alt=""><br>
                     🌍 ${err.message}
                 </div>
                 Something went wrong. Are you connected to the internet?
@@ -111,7 +111,7 @@ window.onload = async () => {
 		default: {
 			footer.innerHTML = `
                 <div class="updates-header">
-                    <img src="Data/www/images/error.gif" alt="❌"><br>
+                    <img src="Data/Web/images/error.gif" alt=""><br>
                     ❌ ${err.message}
                 </div>
                 Something went wrong. Re-clone the files from the repository using the <b>git clone</b> command.

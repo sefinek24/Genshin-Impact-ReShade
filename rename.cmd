@@ -9,7 +9,7 @@ echo.
 cd Genshin-Impact-ReShade
 echo [✓] Done! & echo.
 
-echo [i] New paths!
+echo [i] == NEW PATHS ==
 echo [i] Presets: C:\Genshin-Impact-ReShade\Data\- Presets
 echo [i] Effects: C:\Genshin-Impact-ReShade\Data\- Shaders\Effects
 echo [i] Textures: C:\Genshin-Impact-ReShade\Data\- Shaders\Textures
