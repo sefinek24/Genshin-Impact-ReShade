@@ -1,28 +1,28 @@
 <div align="center"><h1>✨ Genshin Impact ReShade Mod Pack - 2023 ✨</h1><a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/dev/Screenshots/new/header.png" title="See preview [header.png]"><img src="Screenshots/new/header.png" alt="Header image"></a></div>
 
-## 📂・Includes
-- [FPS Unlocker](https://github.com/sefinek24/genshin-fps-unlock)
+## 📂 » Includes
+- [FPS Unlocker](https://github.com/sefinek24/genshin-fps-unlock) [[More information]](https://github.com/sefinek24/genshin-fps-unlock#usage)
 - [The best presets for game](Data/-%20Presets)
 
-## 📝️・Warning
-1. Make sure you have the [Microsoft Visual C++ 2019-2022 Redistributable (x64)](https://aka.ms/vs/17/release/vc_redist.x64.exe) and [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48) installed.  
-Click [here](https://github.com/sefinek24/genshin-fps-unlock#usage) for more information.
+## 📝️ » Information
+1. Make sure you have the [Microsoft Visual C++ 2019-2022 Redistributable (x64)](https://aka.ms/vs/17/release/vc_redist.x64.exe) and [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48) installed. 
 2. Remember to have the latest version of the modification!
+3. Check the list of all versions [here](VERSIONS.md).
 
-## 🎥・Tutorial on YouTube - kinda outdated <:
+## 🎥 » Tutorial on YouTube (kinda outdated)
 https://www.youtube.com/watch?v=rDeO26RapAk
 
-## 🎮・Gameplay
+## 🎮 » Gameplay
 Soon...
 
-## 🛠️・Tested game versions
+## 🛠️ » Tested game versions
 | Game version | It works? | Date       |
 |--------------|-----------|------------|
 | v3.2.0       | ✅         | 02.11.2022 |
 | v3.1.0       | ✅         | 01.11.2022 |
 > ✅ = Yes┃❎ = No┃🤔 = Not tested
 
-## 🔧・Supported operating systems
+## 🔧 » Supported operating systems
 | System                        | OS Build   | Status |
 |-------------------------------|------------|:-------|
 | Windows 11 22H2 (recommended) | 22621.812  | ✅      |
@@ -31,13 +31,23 @@ Soon...
 | Windows 7                     | ❓          | 🤔     | 
 > ✅ = Supported┃⚠️ = Not supported┃🤔 = Not tested┃❓= I don't know
 
-## 📥・Last updates
-[Genshin-Impact-ReShade/VERSIONS.md](VERSIONS.md)
+## 🔧 » Recommended settings
+| Settings               | Value                            | Settings                    | Value   |
+|------------------------|----------------------------------|:----------------------------|:--------|
+| **Graphics Quality**   | Custom                           | **Anti-Aliasing**           | SMAA    |
+| **Display Mode**       | 1920x1080 (or higher) Fullscreen | **Volumetric Fog**          | On      | 
+| **Brightness**         | Default                          | **Reflections**             | On      | 
+| **FPS**                | 60                               | **Motion Blur**             | Extreme | 
+| **Render Resolution**  | 1.0 or higher                    | **Bloom**                   | On      | 
+| **Shadow Quality**     | High                             | **Crowd Density**           | High    | 
+| **Visual Effects**     | High                             | **Co-Op Teammates Effects** | On      | 
+| **SFX Quality**        | High                             | **Subsurface Scattering**   | High    | 
+| **Environment Detail** | Highest                          | **Anisotropic Filtering**   | 16x     | 
 
-## ⭐・Thank you
+## ⭐ » Thank you
 Give a star if you can.
 
-## 📷・Other screenshots
+## 📷 » Other screenshots
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/dev/Screenshots/new/1.png" title="See preview [1.png]">
     <img src="Screenshots/new/1.png" alt="Screenshot number 1">
 </a>
