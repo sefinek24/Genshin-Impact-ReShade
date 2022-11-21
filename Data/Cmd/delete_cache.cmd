@@ -9,7 +9,7 @@ echo.⠀  ⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿
 echo.   ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟
 echo. ⠀  ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀
 echo. ⠀  ⠀⠀⡟⢦⡀⠇⠀⠀⣀⠞⠀⠀⠘⡀⢀⡠⠚⣉⠤⠂⠀⠀⠀⠈⠙⢦⡀
-echo.  ⠀⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆      * Mod version: v2.0.0 [SV_19112022_200-002]
+echo.  ⠀⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆      * Mod version: v3.0.0 [SV_21112022_300-001]
 echo.   ⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆    * ReShade version: v5.5.0
 echo.  ⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇     * FPS unlocker version: v2.0.1
 echo. ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉⠀⠀⠀⠀⣠⠟
@@ -55,7 +55,7 @@ if exist "%temp%\ReShade" (
     goto log_file
 
 :log_file
-    echo 2/3 - Checking %ProgramFiles%\Genshin Impact\Genshin Impact game\ReShade.log...
+    echo 3/3 - Checking %ProgramFiles%\Genshin Impact\Genshin Impact game\ReShade.log...
     if exist "%ProgramFiles%\Genshin Impact\Genshin Impact game\ReShade.log" (
         goto delete_log_file
     ) else (
