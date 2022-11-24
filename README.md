@@ -2,18 +2,23 @@
 
 ## 📂 » Includes
 - [FPS Unlocker](https://github.com/sefinek24/genshin-fps-unlock) [[More information]](https://github.com/sefinek24/genshin-fps-unlock#usage)
-- [The best presets for game](Data/-%20Presets)
+- [Presets for game [Best graphics quality]](Data/-%20Presets)
 
-## 📝️ » Information
-1. Make sure you have the [Microsoft Visual C++ 2019-2022 Redistributable (x64)](https://aka.ms/vs/17/release/vc_redist.x64.exe) and [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48) installed. 
-2. Remember to have the latest version of the modification!
-3. Check the list of all versions [here](VERSIONS.md).
+## 📥 » How to install?
+Download the latest installer from [my official website](https://sefinek.net/genshin-impact-reshade).
 
 ## 🎥 » Tutorial on YouTube (kinda outdated)
 https://www.youtube.com/watch?v=rDeO26RapAk
 
-## 🎮 » Gameplay
-Soon...
+## 📝️ » Notes and other information
+1. Remember to have the latest version of the modification.
+2. This mod requires:
+- [Git](https://git-scm.com)
+- [Visual C++ 2019-2022 Redistributable (x64)](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+- [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48)
+- [Windows Terminal from MS Store](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701)  
+> ✔ All dependencies will be installed automatically by the installer.
+3. Gameplay will be available soon.
 
 ## 🛠️ » Tested game versions
 | Game version | It works? | Date       |
@@ -28,21 +33,21 @@ Soon...
 | Windows 11 22H2 (recommended) | 22621.812  | ✅      |
 | Windows 10 22H2               | 19045.2311 | ✅      | 
 | Windows 8 / 8.1               | ❓          | 🤔     | 
-| Windows 7                     | ❓          | 🤔     | 
-> ✅ = Supported┃⚠️ = Not supported┃🤔 = Not tested┃❓= I don't know
+| Windows 7                     | ❓          | 🎯️    | 
+> ✅ = Supported ┃ ⚠️ = Not supported ┃ 🎯️ = Default not supported ┃ 🤔 = Not tested ┃ ❓ = I don't know
 
-## ⚙ » Recommended settings
-| Settings               | Value                            | Settings                    | Value   |
-|------------------------|----------------------------------|:----------------------------|:--------|
-| **Graphics Quality**   | Custom                           | **Anti-Aliasing**           | SMAA    |
-| **Display Mode**       | 1920x1080 (or higher) Fullscreen | **Volumetric Fog**          | On      | 
-| **Brightness**         | Default                          | **Reflections**             | On      | 
-| **FPS**                | 60                               | **Motion Blur**             | Extreme | 
-| **Render Resolution**  | 1.0 or higher                    | **Bloom**                   | On      | 
-| **Shadow Quality**     | High                             | **Crowd Density**           | High    | 
-| **Visual Effects**     | High                             | **Co-Op Teammates Effects** | On      | 
-| **SFX Quality**        | High                             | **Subsurface Scattering**   | High    | 
-| **Environment Detail** | Highest                          | **Anisotropic Filtering**   | 16x     | 
+## ⚙ » Recommended settings for game
+| Settings               | Value                              | Settings                    | Value                           |
+|------------------------|------------------------------------|:----------------------------|:--------------------------------|
+| **Graphics Quality**   | Custom                             | **Anti-Aliasing**           | SMAA (I do not recommend FSR 2) |
+| **Display Mode**       | 1920x1080 (or higher) Fullscreen   | **Volumetric Fog**          | On                              | 
+| **Brightness**         | Default                            | **Reflections**             | On                              | 
+| **FPS**                | 60 or higher (based on monitor Hz) | **Motion Blur**             | Extreme                         | 
+| **Render Resolution**  | 1.1 or higher                      | **Bloom**                   | On                              | 
+| **Shadow Quality**     | High                               | **Crowd Density**           | High                            | 
+| **Visual Effects**     | High                               | **Co-Op Teammates Effects** | On                              | 
+| **SFX Quality**        | High                               | **Subsurface Scattering**   | High                            | 
+| **Environment Detail** | Highest                            | **Anisotropic Filtering**   | 16x                             | 
 
 ## ⭐ » Thank you
 Give a star if you can.
