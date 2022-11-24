@@ -81,5 +81,5 @@ Give a star if you can.
     <img src="Screenshots/new/9.png" alt="Screenshot number 9">
 </a>
 
-## 🧶・Sources
+## 🧶 » Sources
 Icons were taken from website <a href="https://icons8.com" target="_blank">Icons8</a>.
