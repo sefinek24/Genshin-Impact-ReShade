@@ -12,12 +12,12 @@ https://www.youtube.com/watch?v=rDeO26RapAk
 
 ## 📝️ » Notes and other information
 1. Remember to have the latest version of the modification.
-2. This mod requires:
-- [Git](https://git-scm.com)
-- [Visual C++ 2019-2022 Redistributable (x64)](https://aka.ms/vs/17/release/vc_redist.x64.exe)
-- [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48)
-- [Windows Terminal from MS Store](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701)  
-> ✔ All dependencies will be installed automatically by the installer.
+2. This mod requires:  
+   • [Git](https://git-scm.com)  
+   • [Visual C++ 2019-2022 Redistributable (x64)](https://aka.ms/vs/17/release/vc_redist.x64.exe)  
+   • [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48)  
+   • [Windows Terminal from MS Store](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701)  
+    > ✔ All dependencies will be installed automatically by the installer.
 3. Gameplay will be available soon.
 
 ## 🛠️ » Tested game versions
