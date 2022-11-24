@@ -25,7 +25,7 @@ https://www.youtube.com/watch?v=rDeO26RapAk
 |--------------|-----------|------------|
 | v3.2.0       | ✅         | 02.11.2022 |
 | v3.1.0       | ✅         | 01.11.2022 |
-> ✅ = Yes┃❎ = No┃🤔 = Not tested
+> ✅ = Yes ┃ ❎ = No ┃ 🤔 = Not tested
 
 ## 🔧 » Supported operating systems
 | System                        | OS Build   | Status |
