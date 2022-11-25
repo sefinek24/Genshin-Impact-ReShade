@@ -15,9 +15,9 @@
    </a>
    <br>
 
-   <img src="https://shields.io/github/repo-size/sefinek24/Genshin-Impact-ReShade" alt="Repo size">
-   <img src="https://shields.io/github/directory-file-count/sefinek24/Genshin-Impact-ReShade" alt="Files">
-   <img src="https://shields.io/website?down_color=lightgrey&down_message=offline&up_color=blue&up_message=online&url=https://sefinek.net" alt="https://sefinek.net status">
+   <img src="https://img.shields.io/github/repo-size/sefinek24/Genshin-Impact-ReShade?label=Repo%20size" alt="Repo size">
+   <img src="https://img.shields.io/github/commit-activity/w/sefinek24/Genshin-Impact-ReShade?label=Commit%20activity" alt="Files">
+   <img src="https://img.shields.io/website?down_message=Offline&label=Website&up_message=Online&url=https%3A%2F%2Fsefinek.net" alt="https://sefinek.net status">
 </div>
 
 ## 📂 » Includes
