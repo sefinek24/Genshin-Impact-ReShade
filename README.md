@@ -1,4 +1,24 @@
-<div align="center"><h1>✨ Genshin Impact ReShade Mod Pack - 2023 ✨</h1><a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/dev/Screenshots/new/header.png" title="See preview [header.png]"><img src="Screenshots/new/header.png" alt="Header image"></a></div>
+<div align="center">
+   <h1>✨ Genshin Impact ReShade Mod Pack - 2023 ✨</h1>
+   
+   <p>
+      <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/dev/Screenshots/new/header.png" title="See preview [header.png]">
+         <img src="Screenshots/new/header.png" alt="Header image">
+      </a>
+   </p>
+
+   <a href="https://ko-fi.com/sefinek">
+      <img src="https://storage.ko-fi.com/cdn/brandasset/kofi_button_blue.png" height="28" alt="Support me on Ko-fi">
+   </a>
+   <a href="https://patreon.com/sefinek">
+      <img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dsefinek%26type%3Dpledges&style=for-the-badge" alt="Support me on Patreon">
+   </a>
+   <br>
+
+   <img src="https://shields.io/github/repo-size/sefinek24/Genshin-Impact-ReShade" alt="Repo size">
+   <img src="https://shields.io/github/directory-file-count/sefinek24/Genshin-Impact-ReShade" alt="Files">
+   <img src="https://shields.io/website?down_color=lightgrey&down_message=offline&up_color=blue&up_message=online&url=https://sefinek.net" alt="https://sefinek.net status">
+</div>
 
 ## 📂 » Includes
 - [FPS Unlocker](https://github.com/sefinek24/genshin-fps-unlock) [[More information]](https://github.com/sefinek24/genshin-fps-unlock#genshin-impact-fps-unlocker-modified-by-sefinek)
@@ -14,7 +34,7 @@ https://www.youtube.com/watch?v=rDeO26RapAk
 1. Remember to have the latest version of the modification.
 2. This mod requires:  
    • [Git](https://git-scm.com)  
-   • [Visual C++ 2019-2022 Redistributable (x64)](https://aka.ms/vs/17/release/vc_redist.x64.exe)  
+   • [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)  
    • [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48)  
    • [Windows Terminal from MS Store](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701)  
     > ✔ All dependencies will be installed automatically by the installer.
