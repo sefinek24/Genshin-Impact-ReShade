@@ -7,13 +7,8 @@
       </a>
    </p>
 
-   <a href="https://ko-fi.com/sefinek">
-      <img src="https://storage.ko-fi.com/cdn/brandasset/kofi_button_blue.png" height="28" alt="Support me on Ko-fi">
-   </a>
-   <a href="https://patreon.com/sefinek">
-      <img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dsefinek%26type%3Dpledges&style=for-the-badge" alt="Support me on Patreon">
-   </a>
-   <br>
+   <a href="https://ko-fi.com/sefinek" target="_blank"><img src="https://storage.ko-fi.com/cdn/brandasset/kofi_button_blue.png" height="28" alt="Support me on Ko-fi"></a>
+   <a href="https://patreon.com/sefinek" target="_blank"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dsefinek%26type%3Dpledges&style=for-the-badge" alt="Support me on Patreon"></a>
 
    <img src="https://img.shields.io/github/repo-size/sefinek24/Genshin-Impact-ReShade?label=Repo%20size" alt="Repo size">
    <img src="https://img.shields.io/github/commit-activity/w/sefinek24/Genshin-Impact-ReShade?label=Commit%20activity" alt="Files">
@@ -102,4 +97,4 @@ Give a star if you can.
 </a>
 
 ## 🧶 » Sources
-Icons were taken from website <a href="https://icons8.com" target="_blank">Icons8</a>.
+Icons were taken from <a href="https://icons8.com" target="_blank">Icons8</a> and <a href="https://www.flaticon.com" target="_blank">FlatIcon</a>.
