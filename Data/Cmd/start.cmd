@@ -16,20 +16,12 @@ echo. ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉�
 echo.  ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟
 echo ========================================================================================= & echo.
 
-echo 1/8 - Checking game localization...
-if exist "C:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact.exe" (
-    echo [✓] Found: C:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact.exe
-) else (
-    echo [x] Not found. Where is the game installed?
-)
-echo.
-
-echo 2/8 - Checking if git is installed...
+echo 1/8 - Checking if git is installed...
 if exist "C:\Program Files\Git\cmd\git.exe" (
     git -v
     echo.
 
-    echo 3/8 - Checking for new updates...
+    echo 2/8 - Checking for new updates...
     git fetch
     git pull
 
@@ -46,12 +38,20 @@ if exist "C:\Program Files\Git\cmd\git.exe" (
     echo [x] NOT INSTALLED! I CAN'T CHECK FOR NEW UPDATES.
     echo [i] PLEASE DOWNLOAD: https://git-scm.com/downloads & echo.
 
-    echo 3/8 - Checking for new updates...
+    echo 2/8 - Checking for new updates...
     echo [x] Canceled.
 )
 echo.
 
 
+
+echo 3/8 - Checking game localization...
+if exist "C:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact.exe" (
+    echo [✓] Found: C:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact.exe
+) else (
+    echo [x] Not found. Where is the game installed?
+)
+echo.
 
 
 
@@ -76,7 +76,7 @@ echo.
 
 echo 5/8 - Setting execution policy...
 powershell.exe Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
-echo [✓] Done. Everything is ready (=^･ω･^=)! & echo.
+echo [✓] Done. Everything is ready! (=^･ω･^=) & echo.
 
 
 echo 6/8 - Starting...
@@ -99,5 +99,5 @@ if %RunID% == 1 (
 
 :close-window
     echo.
-    timeout /t 16 /nobreak
+    timeout /t 20 /nobreak
     exit

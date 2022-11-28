@@ -1,21 +1,19 @@
-echo 7/8 - Waiting for unlockfps_clr.exe...
+echo 7/7 - Waiting for processes...
 tasklist /fi "ImageName eq unlockfps_clr.exe" /fo csv 2>NUL | find /I "unlockfps_clr.exe">NUL
 if "%ERRORLEVEL%"=="0" (
-    echo [✓] Ok.
+    echo [✓] unlockfps_clr.exe - OK
 ) else (
-    echo [x] Error.
+    echo [x] unlockfps_clr.exe - ERROR
     call Data\Cmd\start\error.cmd
     pause
 )
-echo.
 
-echo 8/8 - Waiting for inject.exe...
 tasklist /fi "ImageName eq inject.exe" /fo csv 2>NUL | find /I "inject.exe">NUL
 if "%ERRORLEVEL%"=="0" (
-    echo [✓] Ok.
+    echo [✓] inject.exe - OK
     call Data\Cmd\start\done.cmd
 ) else (
-    echo [x] Error.
+    echo [x] inject.exe - ERROR
     call Data\Cmd\start\error.cmd
     pause
 )

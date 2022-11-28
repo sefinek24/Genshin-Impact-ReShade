@@ -21,8 +21,10 @@ if exist "C:\Program Files\Git\cmd\git.exe" (
     git -v
     echo.
 
-    echo 2/4 - Ending process "Genshin Impact Mod Pack.exe"...
+    echo 2/4 - Ending required processes...
     taskkill /IM "Genshin Impact Mod Pack.exe"
+    taskkill /IM "inject.exe"
+    taskkill /IM "unlockfps_clr.exe"
     echo.
 
     echo 3/4 - Checking for new updates...
@@ -39,5 +41,5 @@ echo You can close this window ฅ^˙Ⱉ˙^ฅ rawr!
 "Genshin Impact Mod Pack.exe"
 
 echo The process was ended.
-timeout /t 7 /nobreak
+timeout /t 9 /nobreak
 exit

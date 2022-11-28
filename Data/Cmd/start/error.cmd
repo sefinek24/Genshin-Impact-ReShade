@@ -5,4 +5,4 @@ echo [i] If you need help, please create a new Issue on GitHub or add me on Disc
 echo [i] My username: Sefinek#0001
 echo [i] GitHub: https://github.com/sefinek24/Genshin-Impact-ReShade/issues
 
-timeout /t 24 /nobreak
+timeout /t 30 /nobreak

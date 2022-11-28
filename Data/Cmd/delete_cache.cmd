@@ -22,7 +22,7 @@ net session >nul 2>&1
 if %errorLevel% == 0 (
     echo [✓] No problems found. & echo.
 ) else (
-    echo [x] Error. Run this file as administrator.
+    echo [x] Error. This command must be run as administrator.
     goto nothing_to_do
 )
 
@@ -87,12 +87,12 @@ if exist "%temp%\ReShade" (
     echo [x] Wrong answer. Expected: 'y' or 'n'. Click ENTER to try again.
     echo [i] y = yes
     echo [i] n = no
-    set /p null=
+    set /p 0=
     cls
     call Data\delete_cache.cmd
 
 :nothing_to_do
     echo.
     echo [i] You can close this window.
-    set /p null=
+    set /p 0=
     exit
