@@ -16,14 +16,21 @@ echo. ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉�
 echo.  ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟
 echo ========================================================================================= & echo.
 
-echo 1/8 - Checking if git is installed...
+echo 1/6 - Checking if git is installed...
 if exist "C:\Program Files\Git\cmd\git.exe" (
     git -v
     echo.
 
-    echo 2/8 - Checking for new updates...
+    echo 2/6 - Checking for new updates...
     git fetch
     git pull
+
+
+
+
+
+
+
 
 
 
@@ -38,14 +45,14 @@ if exist "C:\Program Files\Git\cmd\git.exe" (
     echo [x] NOT INSTALLED! I CAN'T CHECK FOR NEW UPDATES.
     echo [i] PLEASE DOWNLOAD: https://git-scm.com/downloads & echo.
 
-    echo 2/8 - Checking for new updates...
+    echo 2/6 - Checking for new updates...
     echo [x] Canceled.
 )
 echo.
 
 
 
-echo 3/8 - Checking game localization...
+echo 3/6 - Checking game localization...
 if exist "C:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact.exe" (
     echo [✓] Found: C:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact.exe
 ) else (
@@ -55,31 +62,35 @@ echo.
 
 
 
-echo 4/8 - Checking required processes...
-tasklist /fi "ImageName eq unlockfps_clr.exe" /fo csv 2>NUL | find /I "unlockfps_clr.exe">NUL
-if "%ERRORLEVEL%"=="0" (
-    echo [x] The application "unlockfps_clr.exe" [Genshin FPS Unlocker] is already running.
-    echo [i] Close it and try again.
-
-    goto close-window
-) else (
-    echo [✓] unlockfps_clr.exe - OK
-)
+echo 4/6 - Checking required processes...
 tasklist /fi "ImageName eq Genshin Impact Mod Pack.exe" /fo csv 2>NUL | find /I "Genshin Impact Mod Pack.exe">NUL
 if "%ERRORLEVEL%"=="0" (
     echo [i] Closing Genshin Impact Mod Pack.exe...
     taskkill /IM "Genshin Impact Mod Pack.exe"
 )
 echo [✓] Genshin Impact Mod Pack.exe - OK
+tasklist /fi "ImageName eq inject.exe" /fo csv 2>NUL | find /I "inject.exe">NUL
+if "%ERRORLEVEL%"=="0" (
+    echo [x] The application "inject.exe" [Genshin FPS Unlocker] is already running. Close it and try again.
+
+    goto pause
+) else (
+    echo [✓] inject.exe - OK
+)
+tasklist /fi "ImageName eq unlockfps_clr.exe" /fo csv 2>NUL | find /I "unlockfps_clr.exe">NUL
+if "%ERRORLEVEL%"=="0" (
+    echo [x] The application "unlockfps_clr.exe" [Genshin FPS Unlocker] is already running. Close it and try again.
+
+    goto pause
+) else (
+    echo [✓] unlockfps_clr.exe - OK
+)
+
 echo.
 
 
-echo 5/8 - Setting execution policy...
-powershell.exe Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
-echo [✓] Done. Everything is ready! (=^･ω･^=) & echo.
 
-
-echo 6/8 - Starting...
+echo 5/6 - Everything is ready! Starting... (=^･ω･^=)
 set /p RunID=< "%AppData%\Genshin Impact MP by Sefinek\run"
 if %RunID% == 1 (
     echo [i] Click 'Yes' in the two UAC [User Account Control] notifications. File inject.exe and unlockfps_clr.exe. & echo.
@@ -100,4 +111,9 @@ if %RunID% == 1 (
 :close-window
     echo.
     timeout /t 20 /nobreak
+    exit
+
+:pause
+    echo.
+    set /p null=
     exit
