@@ -1,10 +1,10 @@
 @echo off
-title Cache removal tool - Genshin Impact Mod Pack 2023
+title Scan and repair system files - Genshin Impact Mod Pack 2023
 chcp 65001 > nul
 echo.⠀  ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⢶⣦⡀
 echo.⠀ ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿
 echo.⠀  ⠀⣿⡄⠀⠀⠀⠈⠀⠀⠀⠀⣾⡿                           Genshin Impact ReShade 2023 Mod Pack
-echo.  ⠀⠀⠹⣿⣦⡀⠀⠀⠀⠀⢀⣾⣿                                Cache and logs removal tool
+echo.  ⠀⠀⠹⣿⣦⡀⠀⠀⠀⠀⢀⣾⣿                               Scan and repair system files
 echo.⠀  ⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿
 echo.   ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟
 echo. ⠀  ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀
@@ -16,7 +16,7 @@ echo. ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉�
 echo.  ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟
 echo ========================================================================================= & echo.
 
-echo 1/5 - Administrative permissions are required. Please wait...
+echo 1/7 - Administrative permissions are required. Please wait...
 
 net session >nul 2>&1
 if %errorLevel% == 0 (
@@ -26,21 +26,28 @@ if %errorLevel% == 0 (
     goto nothing_to_do
 )
 
-
-echo 2/5 - Deleting %temp%\ReShade...
-rmdir /s /q %temp%\ReShade
+echo 2/7 - sfc /SCANNOW...
+sfc /SCANNOW
 echo.
 
-echo 3/5 - Deleting %ProgramFiles%\Genshin Impact\Genshin Impact game\ReShade.log...
-rmdir /s /q "%ProgramFiles%\Genshin Impact\Genshin Impact game\ReShade.log"
+echo 3/7 - CHKDSK /F /R /X...
+CHKDSK /F /R /X
 echo.
 
-echo 4/5 - Deleting %AppData%\Genshin Impact MP by Sefinek\EBWebView...
-rmdir /s /q "%AppData%\Genshin Impact MP by Sefinek\EBWebView"
+echo 4/7 - DISM /Online /Cleanup-Image /CheckHealth...
+DISM /Online /Cleanup-Image /CheckHealth
 echo.
 
-echo 5/5 - Deleting %AppData%\Genshin Impact MP by Sefinek\error.log...
-rmdir /s /q "%AppData%\Genshin Impact MP by Sefinek\error.log"
+echo 5/7 - DISM /Online /Cleanup-Image /ScanHealth...
+DISM /Online /Cleanup-Image /ScanHealth
+echo.
+
+echo 6/7 - DISM /Online /Cleanup-Image /RestoreHealth...
+DISM /Online /Cleanup-Image /RestoreHealth
+echo.
+
+echo 7/7 - sfc /SCANNOW...
+sfc /SCANNOW
 echo.
 
 echo [i] You can close this window.

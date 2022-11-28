@@ -1,10 +1,10 @@
 @echo off
-title Cache removal tool - Genshin Impact Mod Pack 2023
+title Delete WebView2 cache - Genshin Impact Mod Pack 2023
 chcp 65001 > nul
 echo.⠀  ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⢶⣦⡀
 echo.⠀ ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿
 echo.⠀  ⠀⣿⡄⠀⠀⠀⠈⠀⠀⠀⠀⣾⡿                           Genshin Impact ReShade 2023 Mod Pack
-echo.  ⠀⠀⠹⣿⣦⡀⠀⠀⠀⠀⢀⣾⣿                                Cache and logs removal tool
+echo.  ⠀⠀⠹⣿⣦⡀⠀⠀⠀⠀⢀⣾⣿                                  Delete WebView2 cache
 echo.⠀  ⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿
 echo.   ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟
 echo. ⠀  ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀
@@ -16,7 +16,7 @@ echo. ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉�
 echo.  ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟
 echo ========================================================================================= & echo.
 
-echo 1/5 - Administrative permissions are required. Please wait...
+echo 1/2 - Administrative permissions are required. Please wait...
 
 net session >nul 2>&1
 if %errorLevel% == 0 (
@@ -26,21 +26,8 @@ if %errorLevel% == 0 (
     goto nothing_to_do
 )
 
-
-echo 2/5 - Deleting %temp%\ReShade...
-rmdir /s /q %temp%\ReShade
-echo.
-
-echo 3/5 - Deleting %ProgramFiles%\Genshin Impact\Genshin Impact game\ReShade.log...
-rmdir /s /q "%ProgramFiles%\Genshin Impact\Genshin Impact game\ReShade.log"
-echo.
-
-echo 4/5 - Deleting %AppData%\Genshin Impact MP by Sefinek\EBWebView...
+echo 2/2 - Deleting %AppData%\Genshin Impact MP by Sefinek\EBWebView...
 rmdir /s /q "%AppData%\Genshin Impact MP by Sefinek\EBWebView"
-echo.
-
-echo 5/5 - Deleting %AppData%\Genshin Impact MP by Sefinek\error.log...
-rmdir /s /q "%AppData%\Genshin Impact MP by Sefinek\error.log"
 echo.
 
 echo [i] You can close this window.
