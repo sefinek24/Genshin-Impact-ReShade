@@ -249,7 +249,13 @@ Class Settings: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldI
     Boolean AutoDisableVSync 'get set' : 
     Boolean AutoStart 'get set' : 
     System.String GamePath 'get set' : 
+    System.String ConfigDate 'get set' : 
+    System.String ConfigVersion 'get set' : 
   Methods:
+    get_ConfigVersion(): PrivateScope, Public, HideBySig, SpecialName
+    set_ConfigVersion(String): PrivateScope, Public, HideBySig, SpecialName
+    get_ConfigDate(): PrivateScope, Public, HideBySig, SpecialName
+    set_ConfigDate(String): PrivateScope, Public, HideBySig, SpecialName
     get_GamePath(): PrivateScope, Public, HideBySig, SpecialName
     set_GamePath(String): PrivateScope, Public, HideBySig, SpecialName
     get_AutoStart(): PrivateScope, Public, HideBySig, SpecialName
