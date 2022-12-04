@@ -20,7 +20,6 @@ echo ===========================================================================
 echo 1/6 - Checking if git is installed...
 if exist "C:\Program Files\Git\cmd\git.exe" (
     git -v
-    echo.
 ) else (
     echo Not installed! I can't check for new updates.
     echo Please download: https://git-scm.com/downloads
@@ -38,7 +37,7 @@ echo.
 
 echo 3/6 - git branch --show-current
 set branch=
-for /F "delims=" %%n in ("git branch --show-current") do set "branch=%%n"
+for /F "delims=" %%n in ('git branch --show-current') do set "branch=%%n"
 if "%branch%"=="" echo Not a git branch. && goto :EOF
 echo %branch%
 echo.
