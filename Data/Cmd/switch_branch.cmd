@@ -60,11 +60,11 @@ echo 5/6 - Changing branch...
 if "%branch%" == "main" (
     git pull . origin/dev
     echo. && echo.
-    echo 🎉 You are in main branch.
+    echo 🎉 You are in dev branch. !! BETA RELEASES !!
 ) else if "%branch%" == "dev" (
     git pull . origin/main
     echo. && echo.
-    echo 🎉 You are in dev branch. !! BETA RELEASES !!
+    echo 🎉 You are in main branch.
 ) else (
     echo Unknown branch.
     goto nothing_to_do
