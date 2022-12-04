@@ -1,4 +1,7 @@
 @echo off
+
 git fetch
 git pull
-pause
+
+set /p 0=
+exit
