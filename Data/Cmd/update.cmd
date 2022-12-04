@@ -21,7 +21,7 @@ if exist "C:\Program Files\Git\cmd\git.exe" (
     git -v
     echo.
 
-    echo 2/4 - Ending required processes...
+    echo 2/4 - Killing required processes...
     taskkill /IM "Genshin Impact Mod Pack.exe"
     taskkill /IM "inject.exe"
     taskkill /IM "unlockfps_clr.exe"

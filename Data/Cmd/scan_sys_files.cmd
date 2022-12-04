@@ -17,7 +17,6 @@ echo.   ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀
 echo ========================================================================================= & echo.
 
 echo 1/7 - Administrative permissions are required. Please wait...
-
 net session >nul 2>&1
 if %errorLevel% == 0 (
     echo [✓] No problems found. & echo.

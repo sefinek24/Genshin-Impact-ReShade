@@ -17,7 +17,6 @@ echo.   ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀
 echo ========================================================================================= & echo.
 
 echo 1/2 - Administrative permissions are required. Please wait...
-
 net session >nul 2>&1
 if %errorLevel% == 0 (
     echo [✓] No problems found. & echo.
@@ -26,10 +25,14 @@ if %errorLevel% == 0 (
     goto nothing_to_do
 )
 
+
 echo 2/2 - Deleting %AppData%\Genshin Impact MP by Sefinek\EBWebView...
 rmdir /s /q "%AppData%\Genshin Impact MP by Sefinek\EBWebView"
-echo.
 
-echo [i] You can close this window.
+
+echo.
+echo [i] Success. You can close this window.
+
+:nothing_to_do
 set /p 0=
 exit
