@@ -17,7 +17,7 @@ echo.   ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀
 echo ========================================================================================= & echo.
 
 
-echo 1/6 - Checking if git is installed...
+echo 1/7 - Checking if git is installed...
 if exist "C:\Program Files\Git\cmd\git.exe" (
     git -v
 ) else (
@@ -28,14 +28,14 @@ if exist "C:\Program Files\Git\cmd\git.exe" (
 echo.
 
 
-echo 2/6 - Killing required processes...
+echo 2/7 - Killing required processes...
 taskkill /IM "Genshin Impact Mod Pack.exe"
 taskkill /IM "inject.exe"
 taskkill /IM "unlockfps_clr.exe"
 echo.
 
 
-echo 3/6 - git branch --show-current
+echo 3/7 - git branch --show-current
 set branch=
 for /F "delims=" %%n in ('git branch --show-current') do set "branch=%%n"
 if "%branch%"=="" echo Not a git branch. && goto :EOF
@@ -43,20 +43,20 @@ echo %branch%
 echo.
 
 if "%branch%" == "main" (
-    echo 4/6 - Git checkout dev
+    echo 4/7 - Git checkout dev
     git checkout dev
 ) else if "%branch%" == "dev" (
-    echo 4/6 - Git checkout main
+    echo 4/7 - Git checkout main
     git checkout main
 ) else (
-    echo 4/6 - Git checkout
+    echo 4/7 - Git checkout
     echo Error: Unknown branch.
     goto nothing_to_do
 )
 echo.
 
 
-echo 5/6 - Changing branch...
+echo 5/7 - Changing branch...
 if "%branch%" == "main" (
     git pull . origin/dev
     echo. && echo.
@@ -72,7 +72,13 @@ if "%branch%" == "main" (
 echo.
 
 
-echo 6/6 - Relaunching...
+echo 6/7 - Updating...
+git fetch
+git pull
+echo.
+
+
+echo 7/7 - Relaunching...
 echo You can close this window ฅ^˙Ⱉ˙^ฅ rawr!
 "Genshin Impact Mod Pack.exe"
 
