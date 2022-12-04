@@ -9,7 +9,7 @@ echo.⠀   ⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿
 echo.    ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟
 echo. ⠀   ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀
 echo. ⠀   ⠀⠀⡟⢦⡀⠇⠀⠀⣀⠞⠀⠀⠘⡀⢀⡠⠚⣉⠤⠂⠀⠀⠀⠈⠙⢦⡀
-echo.  ⠀ ⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆      * Mod version: v3.0.0 [SV_21112022_300N-001]
+echo.  ⠀ ⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆      * Mod version: v3.0.0 [SV_DEV_04122022_300X-001]
 echo.    ⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆    * ReShade version: v5.5.1
 echo.   ⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇     * FPS unlocker version: v2.0.5
 echo.  ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉⠀⠀⠀⠀⣠⠟
@@ -91,7 +91,7 @@ echo.
 
 
 echo 5/6 - Everything is ready! Starting... (=^･ω･^=)
-set /p RunID=< "%AppData%\Genshin Impact MP by Sefinek\run"
+set /p RunID=<"%AppData%\Genshin Impact MP by Sefinek\launch-mode.sfn"
 if %RunID% == 1 (
     echo [i] Click 'Yes' in the two UAC [User Account Control] notifications. File inject.exe and unlockfps_clr.exe. & echo.
     powershell.exe Data\PowerShell\mod.ps1
