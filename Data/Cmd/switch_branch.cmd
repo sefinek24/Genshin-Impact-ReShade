@@ -17,26 +17,47 @@ echo.   ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀
 echo ========================================================================================= & echo.
 
 
-echo 1/3 - git branch --show-current
-git rev-parse --abbrev-ref HEAD
-set branch=
-for /F "delims=" %%n in ('git branch --show-current') do set "branch=%%n"
-if "%branch%"=="" echo Not a git branch! && goto :EOF
-echo.
-
-if "%branch%" == "main" (
-    echo 2/3 - Git checkout dev
-    git checkout dev
-) else if "%branch%" == "dev" (
-    echo 2/3 - Git checkout main
-    git checkout main
+echo 1/6 - Checking if git is installed...
+if exist "C:\Program Files\Git\cmd\git.exe" (
+    git -v
+    echo.
 ) else (
-    echo Unknown branch.
+    echo Not installed! I can't check for new updates.
+    echo Please download: https://git-scm.com/downloads
     goto nothing_to_do
 )
 echo.
 
-echo 3/3 - Changing branch...
+
+echo 2/6 - Killing required processes...
+taskkill /IM "Genshin Impact Mod Pack.exe"
+taskkill /IM "inject.exe"
+taskkill /IM "unlockfps_clr.exe"
+echo.
+
+
+echo 3/6 - git branch --show-current
+git rev-parse --abbrev-ref HEAD
+set branch=
+for /F "delims=" %%n in ("git branch --show-current") do set "branch=%%n"
+if "%branch%"=="" echo Not a git branch. && goto :EOF
+echo.
+
+if "%branch%" == "main" (
+    echo 4/6 - Git checkout dev
+    git checkout dev
+) else if "%branch%" == "dev" (
+    echo 4/6 - Git checkout main
+    git checkout main
+) else (
+    echo 4/6 - Git checkout
+    echo Error: Unknown branch.
+    goto nothing_to_do
+)
+echo.
+
+
+echo 5/6 - Changing branch...
 if "%branch%" == "main" (
     git pull . origin/dev
     echo. && echo.
@@ -51,7 +72,10 @@ if "%branch%" == "main" (
 )
 echo.
 
-echo [i] Success. You can close this window.
+
+echo 6/6 - Relaunching...
+echo You can close this window ฅ^˙Ⱉ˙^ฅ rawr!
+"Genshin Impact Mod Pack.exe"
 
 :nothing_to_do
 set /p 0=
