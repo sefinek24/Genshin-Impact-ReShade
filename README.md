@@ -36,6 +36,9 @@ https://www.youtube.com/watch?v=rDeO26RapAk
    • [Windows Terminal from MS Store](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701)  
     > ✔ All dependencies will be installed automatically by the installer.
 3. Gameplay will be available soon.
+4. How to change branch? [`main` » `dev` or `dev` » `main`]  
+   • Go to Tools  
+   • Double-click on Collei's notebook
 
 ## 🌠 » Main gallery
 https://sefinek.net/genshin-impact-reshade/gallery
