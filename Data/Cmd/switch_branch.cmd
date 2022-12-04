@@ -37,10 +37,10 @@ echo.
 
 
 echo 3/6 - git branch --show-current
-git rev-parse --abbrev-ref HEAD
 set branch=
 for /F "delims=" %%n in ("git branch --show-current") do set "branch=%%n"
 if "%branch%"=="" echo Not a git branch. && goto :EOF
+echo %branch%
 echo.
 
 if "%branch%" == "main" (
