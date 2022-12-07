@@ -90,18 +90,17 @@ echo.
 
 
 
-echo 5/6 - Everything is ready! Starting... (=^･ω･^=)
+echo 5/6 - Starting...
+echo [i] Everything is ready! Please wait a moment (=^･ω･^=) & echo.
+
 set /p RunID=<"%AppData%\Genshin Impact MP by Sefinek\launch-mode.sfn"
 if %RunID% == 1 (
-    echo [i] Click 'Yes' in the two UAC [User Account Control] notifications. File inject.exe and unlockfps_clr.exe. & echo.
     powershell.exe Data\PowerShell\mod.ps1
     call Data\Cmd\start\1.cmd
 ) else if %RunID% == 2 (
-    echo [i] Click 'Yes' in the UAC [User Account Control] notification. File inject.exe. & echo.
     powershell.exe Data\PowerShell\only-reshade.ps1
     call Data\Cmd\start\2.cmd
 ) else if %RunID% == 3 (
-    echo [i] Click 'Yes' in the UAC [User Account Control] notification. File unlockfps_clr.exe. & echo.
     powershell.exe Data\PowerShell\only-fps_unlocker.ps1
     call Data\Cmd\start\3.cmd
 ) else (
