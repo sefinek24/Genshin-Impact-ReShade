@@ -1,4 +1,5 @@
 .idea
 .eslintrc.js
 Data/Screenshots
-Data/ReShade/unlocker_config.json
+Data/ReShade/unlocker.config.json
+Data/unlocker.config.json
