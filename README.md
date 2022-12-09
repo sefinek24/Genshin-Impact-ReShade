@@ -46,6 +46,7 @@ https://sefinek.net/genshin-impact-reshade/gallery
 ## 🛠️ » Tested game versions
 | Game version | It works? | Date       |
 |--------------|-----------|------------|
+| v3.3.0       | ✅         | 09.11.2022 |
 | v3.2.0       | ✅         | 02.11.2022 |
 | v3.1.0       | ✅         | 01.11.2022 |
 > ✅ = Yes ┃ ❎ = No ┃ 🤔 = Not tested
