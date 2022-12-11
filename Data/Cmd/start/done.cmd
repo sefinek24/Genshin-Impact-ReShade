@@ -1,3 +1,5 @@
+powershell.exe Set-ExecutionPolicy Restricted -Scope CurrentUser
+
 echo.
 echo ========================================================================================= & echo.
 echo [✓] Done! If you need help, add me on Discord Sefinek#0001.

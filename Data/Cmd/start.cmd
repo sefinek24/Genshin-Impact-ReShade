@@ -9,7 +9,7 @@ echo.⠀   ⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿
 echo.    ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟
 echo. ⠀   ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀
 echo. ⠀   ⠀⠀⡟⢦⡀⠇⠀⠀⣀⠞⠀⠀⠘⡀⢀⡠⠚⣉⠤⠂⠀⠀⠀⠈⠙⢦⡀
-echo.  ⠀ ⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆      * Mod version: v3.0.0 [SV_DEV_04122022_300X-001]
+echo.  ⠀ ⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆      * Mod version: v3.0.0 [SV_DEV_11122022_300X-001]
 echo.    ⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆    * ReShade version: v5.5.1
 echo.   ⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇     * FPS unlocker version: v2.0.6
 echo.  ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉⠀⠀⠀⠀⣠⠟
@@ -93,6 +93,8 @@ echo.
 echo 5/6 - Starting...
 echo [i] Everything is ready! Please wait a moment (=^･ω･^=) & echo.
 
+powershell.exe Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
 set /p RunID=<"%AppData%\Genshin Impact MP by Sefinek\launch-mode.sfn"
 if %RunID% == 1 (
     powershell.exe Data\PowerShell\mod.ps1
@@ -106,6 +108,7 @@ if %RunID% == 1 (
 ) else (
     goto error
 )
+
 
 :close-window
     echo.

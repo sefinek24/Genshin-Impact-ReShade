@@ -32,8 +32,9 @@ https://www.youtube.com/watch?v=rDeO26RapAk
 2. This mod requires:  
    • [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)  
    • [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48)  
+   • [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2)  
    • [Git](https://git-scm.com)  
-   • [Windows Terminal from MS Store](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701)  
+   • [Windows Terminal from MS Store](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701)
     > ✔ All dependencies will be installed automatically by the installer.
 3. Gameplay will be available soon.
 4. How to change branch? [`main` » `dev` or `dev` » `main`]  
@@ -58,7 +59,8 @@ https://sefinek.net/genshin-impact-reshade/gallery
 | Windows 10 22H2               | 19045.2311 | ✅      | 
 | Windows 8 / 8.1               | ❓          | 🤔     | 
 | Windows 7                     | ❓          | 🎯️    | 
-> ✅ = Supported ┃ ⚠️ = Not supported ┃ 🎯️ = Default not supported ┃ 🤔 = Not tested ┃ ❓ = I don't know
+> ✅ = Supported ┃ ⚠️ = Not supported ┃ 🎯️ = Default not supported  
+> 🤔 = Not tested ┃ ❓ = I don't know
 
 ## ⚙ » Recommended settings for game
 | Settings               | Value                              | Settings                    | Value                           |
@@ -73,8 +75,7 @@ https://sefinek.net/genshin-impact-reshade/gallery
 | **SFX Quality**        | High                               | **Subsurface Scattering**   | High                            | 
 | **Environment Detail** | Highest                            | **Anisotropic Filtering**   | 16x                             | 
 
-## ⭐ » Thank you
-Give a star if you can.
+## ⭐ » Star the repo if you liked it!
 
 ## 📷 » Other screenshots
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/dev/Screenshots/for-readme/1.png" title="See preview [1.png]">
