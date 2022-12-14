@@ -17,7 +17,7 @@ window.onload = async () => {
             <p>🤔 Go to the application Genshin Impact Mod Pack and click Check for updates.</p>
             <p>
             	📂 Your version: <code><span title="Build ${local.build}">v${local.version}</span></code> from <code>${local.releaseVersion}</code><br>
-                ⏰ Last update: <code>${local.lastUpdate}</code>
+                ⏰ Last update: <code>${res.data.lastUpdate}</code>
             </p>
 		`;
 
@@ -31,12 +31,12 @@ window.onload = async () => {
 
                 <code style="color:#f04947">${local.build ? local.build : 'Unknown'}</code></code>
                 <p>
-                	Download module again from the GitHub repository using git command in Terminal.<br>
-                	<code>git clone https://github.com/sefinek24/Genshin-Impact-ReShade.git</code>
+                	Download module again using our installer.<br>
+                	<a href="https://sefinek.net/genshin-impact-reshade" style="color:dodgerblue">sefinek.net/genshin-impact-reshade</a>
                 </p>
                 <p>
                     📂 Your version: <code>v${local.version}</code> from <code>${local.releaseVersion}</code><br>
-                    ⏰ Last update: <code>${local.lastUpdate}</code>
+                    ⏰ Last update: <code>${res.data.lastUpdate}</code>
                 </p>`;
 
 			debug(res.data);
@@ -114,9 +114,10 @@ window.onload = async () => {
                     <img src="Data/Web/images/error.gif" alt=""><br>
                     ❌ ${err.message}
                 </div>
-                Something went wrong. Re-clone the files from the repository using the <b>git clone</b> command.
-
-                <p><code>git clone https://github.com/sefinek24/Genshin-Impact-ReShade.git</code></p>
+                <p>
+                	Something went wrong. Download module again using our installer.<br>
+                	<a href="https://sefinek.net/genshin-impact-reshade" style="color:dodgerblue">sefinek.net/genshin-impact-reshade</a>
+                </p>
             `;
 		}
 		}
