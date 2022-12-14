@@ -10,7 +10,7 @@
    <a href="https://ko-fi.com/sefinek" target="_blank"><img src="https://storage.ko-fi.com/cdn/brandasset/kofi_button_blue.png" height="32" alt="Support me on Ko-fi"></a>
    <a href="https://patreon.com/sefinek" target="_blank"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dsefinek%26type%3Dpledges&style=for-the-badge" height="32" alt="Support me on Patreon"></a>
 
-   <p style="font-size:18px">⭐ » Star the repo if you liked it! « ⭐</p>
+   <p style="font-size:27px">⭐ » Star the repo if you liked it! « ⭐</p>
 
    <img src="https://img.shields.io/github/repo-size/sefinek24/Genshin-Impact-ReShade?label=Repo%20size" alt="Repo size">
    <img src="https://img.shields.io/github/commit-activity/w/sefinek24/Genshin-Impact-ReShade?label=Commit%20activity" alt="Files">
@@ -58,7 +58,7 @@ https://sefinek.net/genshin-impact-reshade/gallery
 | System                        | OS Build   | Status |
 |-------------------------------|------------|:-------|
 | Windows 11 22H2 (recommended) | 22621.900  | ✅      |
-| Windows 10 22H2               | 19045.2311 | ✅      | 
+| Windows 10 22H2               | 19045.2364 | ✅      | 
 | Windows 8 / 8.1               | ❓          | 🤔     | 
 | Windows 7                     | ❓          | 🎯️    | 
 > ✅ = Supported ┃ ⚠️ = Not supported ┃ 🎯️ = Default not supported  
