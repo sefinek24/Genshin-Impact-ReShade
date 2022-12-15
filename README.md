@@ -65,17 +65,17 @@ https://sefinek.net/genshin-impact-reshade/gallery
 > 🤔 = Not tested ┃ ❓ = I don't know
 
 ## ⚙ » Recommended settings for game
-| Settings               | Value                              | Settings                    | Value                           |
-|------------------------|------------------------------------|:----------------------------|:--------------------------------|
-| **Graphics Quality**   | Custom                             | **Anti-Aliasing**           | SMAA (I do not recommend FSR 2) |
-| **Display Mode**       | 1920x1080 (or higher) Fullscreen   | **Volumetric Fog**          | On                              | 
-| **Brightness**         | Default                            | **Reflections**             | On                              | 
-| **FPS**                | 60 or higher (based on monitor Hz) | **Motion Blur**             | Extreme                         | 
-| **Render Resolution**  | 1.1 or higher                      | **Bloom**                   | On                              | 
-| **Shadow Quality**     | High                               | **Crowd Density**           | High                            | 
-| **Visual Effects**     | High                               | **Co-Op Teammates Effects** | On                              | 
-| **SFX Quality**        | High                               | **Subsurface Scattering**   | High                            | 
-| **Environment Detail** | Highest                            | **Anisotropic Filtering**   | 16x                             | 
+| Settings               | Value                              | Settings                    | Value                                |
+|------------------------|------------------------------------|:----------------------------|:-------------------------------------|
+| **Graphics Quality**   | Custom                             | **Anti-Aliasing**           | SMAA (Use FSR 2 if you have low FPS) |
+| **Display Mode**       | 1920x1080 (or higher) Fullscreen   | **Volumetric Fog**          | On                                   | 
+| **Brightness**         | Default                            | **Reflections**             | On                                   | 
+| **FPS**                | 60 or higher (based on monitor Hz) | **Motion Blur**             | Extreme                              | 
+| **Render Resolution**  | 1.1 or higher                      | **Bloom**                   | On                                   | 
+| **Shadow Quality**     | High                               | **Crowd Density**           | High                                 | 
+| **Visual Effects**     | High                               | **Co-Op Teammates Effects** | On                                   | 
+| **SFX Quality**        | High                               | **Subsurface Scattering**   | High                                 | 
+| **Environment Detail** | Highest                            | **Anisotropic Filtering**   | 16x                                  | 
 
 ## 📷 » Other screenshots
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/dev/Screenshots/for-readme/1.png" title="See preview [1.png]">
