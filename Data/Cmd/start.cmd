@@ -9,7 +9,7 @@ echo.⠀   ⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿
 echo.    ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟
 echo. ⠀   ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀
 echo. ⠀   ⠀⠀⡟⢦⡀⠇⠀⠀⣀⠞⠀⠀⠘⡀⢀⡠⠚⣉⠤⠂⠀⠀⠀⠈⠙⢦⡀
-echo.  ⠀ ⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆      * Mod version: v3.0.0 [BV_15122022_300.02]
+echo.  ⠀ ⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆      * Mod version: v3.0.1 [BV_20122022_301.01]
 echo.    ⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆    * ReShade version: v5.5.2
 echo.   ⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇     * FPS unlocker version: v2.0.6
 echo.  ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉⠀⠀⠀⠀⣠⠟
@@ -93,17 +93,20 @@ echo.
 echo 5/6 - Starting...
 echo [i] Everything is ready! Please wait a moment (=^･ω･^=) & echo.
 
-powershell.exe Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+powershell.exe Set-ExecutionPolicy Undefined -Scope CurrentUser
 
 set /p RunID=<"%AppData%\Genshin Impact MP by Sefinek\launch-mode.sfn"
 if %RunID% == 1 (
-    powershell.exe Data\PowerShell\mod.ps1
+    powershell.exe Set-Location -Path "Data\Reshade"; Start-Process -FilePath "inject.exe" "GenshinImpact.exe" -verb RunAs; Set-Location -Path "\"..\FPS Unlocker\""; Start-Process -FilePath "..\unlockfps_clr.exe" -verb RunAs
+
     call Data\Cmd\start\1.cmd
 ) else if %RunID% == 2 (
-    powershell.exe Data\PowerShell\only-reshade.ps1
+    powershell.exe Set-Location -Path "Data\Reshade"; Start-Process -FilePath "inject.exe" "GenshinImpact.exe" -verb RunAs
+
     call Data\Cmd\start\2.cmd
 ) else if %RunID% == 3 (
-    powershell.exe Data\PowerShell\only-fps_unlocker.ps1
+    powershell.exe Set-Location -Path "\"Data\FPS Unlocker\""; Start-Process -FilePath "..\unlockfps_clr.exe" -verb RunAs
+
     call Data\Cmd\start\3.cmd
 ) else (
     goto error
