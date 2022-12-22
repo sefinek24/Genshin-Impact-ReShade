@@ -22,10 +22,10 @@ MAIN_SV_07112022_110-01
 ```
 ### • 1: Branch (MAIN or DEV)
 ### • 2:
-`SV` -> SV: Stable version  
-`BV` -> BV: Beta version  
-`PR` -> PR: Pre-release  
-`FR` -> FR: First release
+`SV` -> Stable version  
+`BV` -> Beta version  
+`PR` -> Pre-release  
+`FR` -> First release
 ### • 3: Date (DD.MM.YYYY)
 ### • 4: Version
 ### • 5: Compilation number
