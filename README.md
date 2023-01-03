@@ -1,17 +1,14 @@
 <div align="center">
    <h1>✨ Genshin Impact ReShade Mod Pack - 2023 ✨</h1>
-   
    <p>
-      <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/dev/Screenshots/for-readme/header.png" title="See preview [header.png]">
-         <img src="Screenshots/for-readme/header.png" alt="Header image">
-      </a>
+      <a href="https://ko-fi.com/sefinek" target="_blank"><img src="https://storage.ko-fi.com/cdn/brandasset/kofi_button_blue.png" height="32" alt="Support me on Ko-fi"></a>
+      <a href="https://patreon.com/sefinek" target="_blank"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dsefinek%26type%3Dpledges&style=for-the-badge" height="32" alt="Support me on Patreon"></a>
    </p>
+   <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/dev/Screenshots/for-readme/header.png" title="See preview [header.png]">
+      <img src="Screenshots/for-readme/header.png" alt="Header image">
+   </a>
 
-   <a href="https://ko-fi.com/sefinek" target="_blank"><img src="https://storage.ko-fi.com/cdn/brandasset/kofi_button_blue.png" height="32" alt="Support me on Ko-fi"></a>
-   <a href="https://patreon.com/sefinek" target="_blank"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dsefinek%26type%3Dpledges&style=for-the-badge" height="32" alt="Support me on Patreon"></a>
-
-   <h2>⭐ » Star the repo if you liked it « ⭐</p>
-
+   <h2>⭐ » Star the repo if you liked it « ⭐</h2>
    <img src="https://img.shields.io/github/repo-size/sefinek24/Genshin-Impact-ReShade?label=Repo%20size" alt="Repo size">
    <img src="https://img.shields.io/github/commit-activity/w/sefinek24/Genshin-Impact-ReShade?label=Commit%20activity" alt="Files">
    <img src="https://img.shields.io/website?down_message=Offline&label=Website&up_message=Online&url=https%3A%2F%2Fsefinek.net" alt="www.sefinek.net status">
@@ -20,8 +17,9 @@
 </div>
 
 ## 📂 » Includes
-- [FPS Unlocker](https://github.com/sefinek24/genshin-fps-unlock) [[More information]](https://github.com/sefinek24/genshin-fps-unlock#genshin-impact-fps-unlocker-modified-by-sefinek)
 - [Presets for game [Best graphics quality]](Data/-%20Presets)
+- [FPS Unlocker](https://github.com/sefinek24/genshin-fps-unlock) [[More information]](https://github.com/sefinek24/genshin-fps-unlock#genshin-impact-fps-unlocker-modified-by-sefinek)
+- Own launcher
 
 ## 📥 » How to install?
 Download the latest installer from [my official website](https://sefinek.net/genshin-impact-reshade).
@@ -32,11 +30,11 @@ https://www.youtube.com/watch?v=rDeO26RapAk
 ## 📝️ » Notes and other information
 1. Remember to have the latest version of the modification.
 2. This mod requires:  
+   • [Git](https://git-scm.com)  
    • [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)  
    • [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48)  
-   • [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2)  
-   • [Git](https://git-scm.com)  
-   • [Windows Terminal from MS Store](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701)
+   • [Windows Terminal from MS Store](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701)  
+   • [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional)
     > ✔ All dependencies will be installed automatically by the installer.
 3. Gameplay will be available soon.
 4. How to change branch? [`main` » `dev` or `dev` » `main`]  
@@ -44,7 +42,7 @@ https://www.youtube.com/watch?v=rDeO26RapAk
    • Double-click on Collei's notebook
 
 ## 🌠 » Main gallery
-https://sefinek.net/genshin-impact-reshade/gallery
+https://sefinek.net/genshin-impact-reshade/gallery?page=1
 
 ## 🛠️ » Tested game versions
 | Game version | It works? | Date       |
@@ -59,8 +57,8 @@ https://sefinek.net/genshin-impact-reshade/gallery
 |-------------------------------|------------|:-------|
 | Windows 11 22H2 (recommended) | 22621.900  | ✅      |
 | Windows 10 22H2               | 19045.2364 | ✅      | 
-| Windows 8 / 8.1               | ❓          | 🤔     | 
-| Windows 7                     | ❓          | 🎯️    | 
+| Windows 8 / 8.1               | 🎯️        | 🎯️    | 
+| Windows 7                     | 🎯️        | 🎯️    | 
 > ✅ = Supported ┃ ⚠️ = Not supported ┃ 🎯️ = Default not supported  
 > 🤔 = Not tested ┃ ❓ = I don't know
 

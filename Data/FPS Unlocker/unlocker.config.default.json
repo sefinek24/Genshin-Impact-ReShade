@@ -14,7 +14,7 @@
   "AutoClose": false,
   "AutoDisableVSync": true,
   "AutoStart": false,
-  "GamePath": "C:\\Program Files\\Genshin Impact\\Genshin Impact game\\GenshinImpact.exe",
-  "ConfigDate": "02.12.2022",
-  "ConfigVersion": "1.0.0"
+  "GamePath": "{GamePath}",
+  "ConfigDate": "02.01.2023",
+  "ConfigVersion": "1.1.0"
 }
