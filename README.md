@@ -100,9 +100,6 @@ https://sefinek.net/genshin-impact-reshade/gallery?page=1
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/dev/Screenshots/for-readme/8.png" title="See preview [8.png]">
     <img src="Screenshots/for-readme/8.png" alt="Screenshot number 8">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/dev/Screenshots/for-readme/9.png" title="See preview [9.png]">
-    <img src="Screenshots/for-readme/9.png" alt="Screenshot number 9">
-</a>
 
 ## 🧶 » Sources
 Icons were taken from <a href="https://icons8.com" target="_blank">Icons8</a> and <a href="https://www.flaticon.com" target="_blank">FlatIcon</a>.
