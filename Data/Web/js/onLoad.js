@@ -16,7 +16,7 @@ window.onload = async () => {
 			<code style="color:#00fff7">${local.version ? `v${local.version}` : 'Unknown'}</code> → <code style="color:#00ff00">${res.data.version ? `v${res.data.version}` : 'Unknown'}</code>
             <p>🤔 Go to the application Genshin Impact Mod Pack and click Check for updates.</p>
             <p>
-            	📂 Your version: <code><span title="Build ${local.build}">v${local.version}</span></code> from <code>${local.releaseVersion}</code><br>
+            	📂 Your version: <code>v${local.version}</code> from <code>${local.releaseVersion}</code><br>
                 ⏰ Last update: <code>${res.data.lastUpdate}</code>
             </p>
 		`;
@@ -26,12 +26,12 @@ window.onload = async () => {
 			footer.innerHTML = `
                 <div class="updates-header">
                     <img src="Data/Web/images/error.gif" alt=""><br>
-                    😿 Your version is not supported.
+                    😿 Your version is deprecated
                 </div>
 
                 <code style="color:#f04947">${local.version ? `v${local.version}` : 'Unknown'}</code></code>
                 <p>
-                	Download module again using our installer.<br>
+                	Download this software again using our installer.<br>
                 	<a href="https://sefinek.net/genshin-impact-reshade" style="color:dodgerblue">sefinek.net/genshin-impact-reshade</a>
                 </p>
                 <p>
@@ -44,19 +44,17 @@ window.onload = async () => {
 			break;
 		}
 
-		// 3
 		case local.version !== res.data.version: {
 			footer.innerHTML = `
                 <div class="updates-header">
                     ${Math.floor(Math.random() * 2) ? '<img src="Data/Web/images/blobcat.gif" alt="">' : '<img src="Data/Web/images/dancing-anime-girl.gif" alt="">'}<br>
-                    📥 New version is available!
+                    📥 New version is available
                 </div>
 
                 ${msg()}`;
 			break;
 		}
 
-		// 4
 		default: {
 			footer.innerHTML = `
                 <div class="updates-header">
