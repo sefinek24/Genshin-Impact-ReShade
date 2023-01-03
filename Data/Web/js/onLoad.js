@@ -13,7 +13,7 @@ window.onload = async () => {
 		const res = await axios.get('https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Data/Web/api/remote.json');
 
 		const msg = () => `
-			<code style="color:#00fff7">${local.build ? local.build : 'Unknown'}</code> → <code style="color:#00ff00">${res.data.build ? res.data.build : 'Unknown'}</code>
+			<code style="color:#00fff7">${local.version ? `v${local.version}` : 'Unknown'}</code> → <code style="color:#00ff00">${res.data.version ? `v${res.data.version}` : 'Unknown'}</code>
             <p>🤔 Go to the application Genshin Impact Mod Pack and click Check for updates.</p>
             <p>
             	📂 Your version: <code><span title="Build ${local.build}">v${local.version}</span></code> from <code>${local.releaseVersion}</code><br>
@@ -22,14 +22,14 @@ window.onload = async () => {
 		`;
 
 		switch (true) {
-		case !res.data.build: case !res.data.version: {
+		case !res.data.version: {
 			footer.innerHTML = `
                 <div class="updates-header">
                     <img src="Data/Web/images/error.gif" alt=""><br>
                     😿 Your version is not supported.
                 </div>
 
-                <code style="color:#f04947">${local.build ? local.build : 'Unknown'}</code></code>
+                <code style="color:#f04947">${local.version ? `v${local.version}` : 'Unknown'}</code></code>
                 <p>
                 	Download module again using our installer.<br>
                 	<a href="https://sefinek.net/genshin-impact-reshade" style="color:dodgerblue">sefinek.net/genshin-impact-reshade</a>
@@ -41,18 +41,6 @@ window.onload = async () => {
 
 			debug(res.data);
 
-			break;
-		}
-
-		// 2
-		case local.build !== res.data.build: {
-			footer.innerHTML = `
-                <div class="updates-header">
-                    ${Math.floor(Math.random() * 2) ? '<img src="Data/Web/images/blobcat.gif" alt="">' : '<img src="Data/Web/images/dancing-anime-girl.gif" alt="">'}<br>
-                    📥 New build is available!
-                </div>
-
-                ${msg()}`;
 			break;
 		}
 
