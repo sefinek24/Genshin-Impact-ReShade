@@ -1,4 +1,4 @@
-/* Display Image PS, version 1.2.0
+/* Display Image PS, version 1.2.1
 
 This code © 2019 Jakub Maksymilian Fober
 
@@ -43,6 +43,12 @@ uniform float DimBackground < __UNIFORM_SLIDER_FLOAT1
 	ui_min = 0.25; ui_max = 1f; ui_step = 0.01;
 	ui_label = "Dim background image";
 > = 1f;
+
+	/* FUNCTIONS */
+
+// Emulate bitwise XOR '^' for compatibility with older APi
+bool xor(bool a, bool b)
+{ return (a||b)-(a&&b); }
 
 	/* TEXTURES */
 
@@ -101,7 +107,7 @@ void ImagePS(float4 pixelPos : SV_Position, float2 texCoord : TEXCOORD, out floa
 		}
 		else
 		{
-			if ((ReShade::AspectRatio > ImageAspect) ^ FillImage) // Image is narrower
+			if (xor(ReShade::AspectRatio > ImageAspect, FillImage)) // Image is narrower
 				texCoord.x = (texCoord.x-0.5)*ReShade::AspectRatio/ImageAspect+0.5;
 			else // Image is wider
 				texCoord.y = (texCoord.y-0.5)*ImageAspect/ReShade::AspectRatio+0.5;
