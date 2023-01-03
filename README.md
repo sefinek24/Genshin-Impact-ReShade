@@ -57,8 +57,8 @@ https://sefinek.net/genshin-impact-reshade/gallery?page=1
 |-------------------------------|------------|:-------|
 | Windows 11 22H2 (recommended) | 22621.900  | ✅      |
 | Windows 10 22H2               | 19045.2364 | ✅      | 
-| Windows 8 / 8.1               | 🎯️        | 🎯️    | 
-| Windows 7                     | 🎯️        | 🎯️    | 
+| Windows 8 / 8.1               | ❓          | 🎯️    | 
+| Windows 7                     | ❓️         | 🎯️    | 
 > ✅ = Supported ┃ ⚠️ = Not supported ┃ 🎯️ = Default not supported  
 > 🤔 = Not tested ┃ ❓ = I don't know
 
