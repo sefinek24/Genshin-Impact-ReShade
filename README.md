@@ -77,25 +77,25 @@ https://sefinek.net/genshin-impact-reshade/gallery?page=1
 | **Environment Detail** | Highest                            | **Anisotropic Filtering**   | 16x                                  | 
 
 ## 📷 » Other screenshots
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/11.png" title="See preview [11.png]">
-    <img src="Screenshots/Default/Backgrounds/11.png" alt="Screenshot number 1">
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/kokomi_2.png" title="See preview [kokomi_2.png]">
+    <img src="Screenshots/Default/Backgrounds/kokomi_2.png" alt="Screenshot number 1">
 </a>
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/2.png" title="See preview [2.png]">
     <img src="Screenshots/Default/Backgrounds/0.png" alt="Screenshot number 2">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/for-readme/4.png" title="See preview [4.png]">
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/4.png" title="See preview [4.png]">
     <img src="Screenshots/Default/Backgrounds/3.png" alt="Screenshot number 3">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/for-readme/5.png" title="See preview [5.png]">
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/5.png" title="See preview [5.png]">
     <img src="Screenshots/Default/Backgrounds/5.png" alt="Screenshot number 4">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/for-readme/9.png" title="See preview [9.png]">
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/9.png" title="See preview [9.png]">
     <img src="Screenshots/Default/Backgrounds/9.png" alt="Screenshot number 5">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/for-readme/7.png" title="See preview [7.png]">
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/7.png" title="See preview [7.png]">
     <img src="Screenshots/Default/Backgrounds/7.png" alt="Screenshot number 6">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/for-readme/8.png" title="See preview [8.png]">
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/8.png" title="See preview [8.png]">
     <img src="Screenshots/Default/Backgrounds/8.png" alt="Screenshot number 7">
 </a>
 
