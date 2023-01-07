@@ -4,8 +4,8 @@
       <a href="https://ko-fi.com/sefinek" target="_blank"><img src="https://storage.ko-fi.com/cdn/brandasset/kofi_button_blue.png" height="32" alt="Support me on Ko-fi"></a>
       <a href="https://patreon.com/sefinek" target="_blank"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dsefinek%26type%3Dpledges&style=for-the-badge" height="32" alt="Support me on Patreon"></a>
    </p>
-   <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/dev/Screenshots/for-readme/header.png" title="See preview [header.png]">
-      <img src="Screenshots/for-readme/header.png" alt="Header image">
+   <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/youtube_video_border.png" title="See preview [youtube_video_border.png]">
+      <img src="Screenshots/Default/youtube_video_border.png" alt="Header image">
    </a>
 
    <h2>⭐ » Star the repo if you liked it « ⭐</h2>
@@ -17,15 +17,19 @@
 </div>
 
 ## 📂 » Includes
+- Own launcher
 - [Presets for game [Best graphics quality]](Data/-%20Presets)
 - [FPS Unlocker](https://github.com/sefinek24/genshin-fps-unlock) [[More information]](https://github.com/sefinek24/genshin-fps-unlock#genshin-impact-fps-unlocker-modified-by-sefinek)
-- Own launcher
 
 ## 📥 » How to install?
 Download the latest installer from [my official website](https://sefinek.net/genshin-impact-reshade).
 
-## 🎥 » Tutorial on YouTube (kinda outdated)
-https://www.youtube.com/watch?v=rDeO26RapAk
+## 🎥 » YouTube videos
+Tutorial (kinda outdated): https://www.youtube.com/watch?v=rDeO26RapAk  
+Watch new video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
+
+## 🌠 » Main gallery (more screenshots)
+https://sefinek.net/genshin-impact-reshade/gallery?page=1
 
 ## 📝️ » Notes and other information
 1. Remember to have the latest version of the modification.
@@ -40,9 +44,6 @@ https://www.youtube.com/watch?v=rDeO26RapAk
 4. How to change branch? [`main` » `dev` or `dev` » `main`]  
    • Go to Tools  
    • Double-click on Collei's notebook
-
-## 🌠 » Main gallery
-https://sefinek.net/genshin-impact-reshade/gallery?page=1
 
 ## 🛠️ » Tested game versions
 | Game version | It works? | Date       |
@@ -76,29 +77,26 @@ https://sefinek.net/genshin-impact-reshade/gallery?page=1
 | **Environment Detail** | Highest                            | **Anisotropic Filtering**   | 16x                                  | 
 
 ## 📷 » Other screenshots
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/dev/Screenshots/for-readme/1.png" title="See preview [1.png]">
-    <img src="Screenshots/for-readme/1.png" alt="Screenshot number 1">
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/11.png" title="See preview [11.png]">
+    <img src="Screenshots/Default/Backgrounds/11.png" alt="Screenshot number 1">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/dev/Screenshots/for-readme/2.png" title="See preview [2.png]">
-    <img src="Screenshots/for-readme/2.png" alt="Screenshot number 2">
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/2.png" title="See preview [2.png]">
+    <img src="Screenshots/Default/Backgrounds/0.png" alt="Screenshot number 2">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/dev/Screenshots/for-readme/3.png" title="See preview [3.png]">
-    <img src="Screenshots/for-readme/4.png" alt="Screenshot number 3">
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/for-readme/4.png" title="See preview [4.png]">
+    <img src="Screenshots/Default/Backgrounds/3.png" alt="Screenshot number 3">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/dev/Screenshots/for-readme/4.png" title="See preview [4.png]">
-    <img src="Screenshots/for-readme/3.png" alt="Screenshot number 3">
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/for-readme/5.png" title="See preview [5.png]">
+    <img src="Screenshots/Default/Backgrounds/5.png" alt="Screenshot number 4">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/dev/Screenshots/for-readme/5.png" title="See preview [5.png]">
-    <img src="Screenshots/for-readme/5.png" alt="Screenshot number 5">
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/for-readme/9.png" title="See preview [9.png]">
+    <img src="Screenshots/Default/Backgrounds/9.png" alt="Screenshot number 5">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/dev/Screenshots/for-readme/6.png" title="See preview [6.png]">
-    <img src="Screenshots/for-readme/6.png" alt="Screenshot number 6">
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/for-readme/7.png" title="See preview [7.png]">
+    <img src="Screenshots/Default/Backgrounds/7.png" alt="Screenshot number 6">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/dev/Screenshots/for-readme/7.png" title="See preview [7.png]">
-    <img src="Screenshots/for-readme/7.png" alt="Screenshot number 7">
-</a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/dev/Screenshots/for-readme/8.png" title="See preview [8.png]">
-    <img src="Screenshots/for-readme/8.png" alt="Screenshot number 8">
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/for-readme/8.png" title="See preview [8.png]">
+    <img src="Screenshots/Default/Backgrounds/8.png" alt="Screenshot number 7">
 </a>
 
 ## 🧶 » Sources
