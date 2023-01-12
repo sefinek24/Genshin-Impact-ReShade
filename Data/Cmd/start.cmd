@@ -52,16 +52,6 @@ echo.
 
 
 
-echo 3/6 - Checking game localization...
-if exist "C:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact.exe" (
-    echo [✓] Found: C:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact.exe
-) else (
-    echo [x] Not found. Where is the game installed?
-)
-echo.
-
-
-
 echo 4/6 - Checking required processes...
 tasklist /fi "ImageName eq Genshin Impact Mod Pack.exe" /fo csv 2>NUL | find /I "Genshin Impact Mod Pack.exe">NUL
 if "%ERRORLEVEL%"=="0" (
@@ -85,7 +75,6 @@ if "%ERRORLEVEL%"=="0" (
 ) else (
     echo [✓] unlockfps_clr.exe - OK
 )
-
 echo.
 
 
@@ -93,15 +82,13 @@ echo.
 echo 5/6 - Starting...
 echo [i] Everything is ready! Please wait a moment (=^･ω･^=) & echo.
 
-powershell.exe Set-ExecutionPolicy Undefined -Scope CurrentUser
-
 set /p RunID=<"%AppData%\Genshin Impact MP by Sefinek\launch-mode.sfn"
 if %RunID% == 1 (
-    powershell.exe Set-Location -Path "Data\Reshade"; Start-Process -FilePath "inject.exe" "GenshinImpact.exe" -verb RunAs; Set-Location -Path "\"..\FPS Unlocker\""; Start-Process -FilePath "..\unlockfps_clr.exe" -verb RunAs
+    powershell.exe Set-Location -Path "Data\ReShade"; Start-Process -FilePath "inject.exe" "GenshinImpact.exe" -verb RunAs; Set-Location -Path "\"..\FPS Unlocker\""; Start-Process -FilePath "..\unlockfps_clr.exe" -verb RunAs
 
     call Data\Cmd\start\1.cmd
 ) else if %RunID% == 2 (
-    powershell.exe Set-Location -Path "Data\Reshade"; Start-Process -FilePath "inject.exe" "GenshinImpact.exe" -verb RunAs
+    powershell.exe Set-Location -Path "Data\ReShade"; Start-Process -FilePath "inject.exe" "GenshinImpact.exe" -verb RunAs
 
     call Data\Cmd\start\2.cmd
 ) else if %RunID% == 3 (
