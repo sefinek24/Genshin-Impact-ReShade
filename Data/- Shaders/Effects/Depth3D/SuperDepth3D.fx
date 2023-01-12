@@ -2,7 +2,7 @@
 	///**SuperDepth3D**///
 	//----------------////
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	//* Depth Map Based 3D post-process shader v3.5.7
+	//* Depth Map Based 3D post-process shader v3.6.1
 	//* For Reshade 3.0+
 	//* ---------------------------------
 	//*
@@ -77,7 +77,7 @@ namespace SuperDepth3D
 		#define OW_WP "WP Off\0Custom WP\0"
 		static const int WSM = 0;
 		//Triggers
-		static const int OIL = 0, MMS = 0, NVK = 0, NDG = 0, FTM = 0, SPO = 0, MMD = 0, SMP = 0, LBR = 0, HQT = 0, AFD = 0, MDD = 0, FPS = 1, SMS = 1, OIF = 0, NCW = 0, RHW = 0, NPW = 0, IDF = 0, SPF = 0, BDF = 0, HMT = 0, HMC = 0, DFW = 0, NFM = 0, DSW = 0, BMT = 0, LBC = 0, LBS = 0, LBM = 0, DAA = 0, NDW = 0, PEW = 0, WPW = 0, FOV = 0, EDW = 0, SDT = 0;
+		static const int MAC = 0, ARW = 0, OIL = 0, MMS = 0, NVK = 0, NDG = 0, FTM = 0, SPO = 0, MMD = 0, SMP = 0, LBR = 0, HQT = 0, AFD = 0, MDD = 0, FPS = 1, SMS = 1, OIF = 0, NCW = 0, RHW = 0, NPW = 0, IDF = 0, SPF = 0, BDF = 0, HMT = 0, HMC = 0, DFW = 0, NFM = 0, DSW = 0, BMT = 0, LBC = 0, LBS = 0, LBM = 0, DAA = 0, NDW = 0, PEW = 0, WPW = 0, FOV = 0, EDW = 0, SDT = 0;
 		//Overwatch.fxh State
 		#define OSW 1
 	#endif
@@ -1340,15 +1340,16 @@ namespace SuperDepth3D
 		return tex2Dlod(SamplerzBufferN_L,float4(TCLocations,0, MipLevel)).y;
 	}
 	
-	float LBDetection()//Active RGB Detection
-	{   float MipLevel = 5,Center = SLLTresh(float2(0.5,0.5), 8) > 0, Top_Left = LBSensitivity(SLLTresh(float2(0.1,0.1), MipLevel));
-		if ( LetterBox_Masking == 2 || LB_Correction == 2 || LBC == 2 || LBM == 2 )
-			return Top_Left && LBSensitivity(SLLTresh(float2(0.1,0.5), MipLevel)) && LBSensitivity(SLLTresh(float2(0.9,0.5), MipLevel)) && Center ? 1 : 0; //Vert
-		else                   //Left_Center                                  //Right_Center
-			return Top_Left && LBSensitivity(SLLTresh(float2(0.5,0.9), MipLevel)) && Center ? 1 : 0; //Hoz
-	}			              //Bottom_Center
+	bool LBDetection()//Active RGB Detection
+	{   float2 Letter_Box_Reposition = LBR ? float2(0.250,0.875) : float2(0.1,0.5);   
+		float MipLevel = 5,Center = SLLTresh(float2(0.5,0.5), 8) > 0, Top_Left = LBSensitivity(SLLTresh(float2(Letter_Box_Reposition.x,0.09), MipLevel));
+		if ( LetterBox_Masking == 2 || LB_Correction == 2 || LBC == 2 || LBM == 2 || SMP == 2)//Left_Center | Right_Center | Center
+			return LBSensitivity(SLLTresh(float2(0.1,0.5), MipLevel)) && LBSensitivity(SLLTresh(float2(0.9,0.5), MipLevel)) && Center; //Vert
+		else       //Top | Bottom | Center
+			return Top_Left && LBSensitivity(SLLTresh(float2(Letter_Box_Reposition.y,0.91), MipLevel)) && Center; //Hoz
+	}
 	#else
-	float LBDetection()//Stand in for not crashing when not in use
+	bool LBDetection()//Stand in for not crashing when not in use
 	{	
 		return 0;
 	}	
@@ -1382,7 +1383,7 @@ namespace SuperDepth3D
 	
 	bool Check_Color(float2 Pos_IN, float C_Value)
 	{	float3 RGB_IN = C_Tresh(Pos_IN);
-		return RN_Value(RGB_IN.r + RGB_IN.g + RGB_IN.b) == C_Value ? 1 : 0;
+		return RN_Value(RGB_IN.r + RGB_IN.g + RGB_IN.b) == C_Value;
 	}
 	#endif
 	
@@ -1407,7 +1408,14 @@ namespace SuperDepth3D
 			float4 MT_Values = DJ_Y;
 			float3 SMT_Values = DJ_Z;
 			#endif		
-			float Menu_Detection = (Check_Color(Pos_A, MT_Values.x) || Check_Color(Pos_A, MT_Values.w)) && Check_Color(Pos_B, MT_Values.y) && (Check_Color(Pos_C, MT_Values.w) || Check_Color(Pos_C, MT_Values.z)),
+			#if MAC
+			float Menu_AC_To_C = Check_Color(Pos_A, MT_Values.x);
+			#else
+			float Menu_AC_To_C = Check_Color(Pos_A, MT_Values.x) || Check_Color(Pos_A, MT_Values.w);
+			#endif
+			float Menu_Detection = Menu_AC_To_C &&                                      //X & W is wiled Card. If MAC is enabled this is Disabled.
+				   Check_Color(Pos_B, MT_Values.y) &&                                   //Y
+				  (Check_Color(Pos_C, MT_Values.z) || Check_Color(Pos_C, MT_Values.w)), //Z & W is wiled Card.
 				  Menu_Change = Menu_Detection + Color_Likelyhood(Pos_D, SMT_Values.x , 1) + Color_Likelyhood(Pos_E, SMT_Values.y , 2) + Color_Likelyhood(Pos_F, SMT_Values.z, 3);
 	
 			return Menu_Detection > 0 ? Menu_Size_Selection[clamp((int)Menu_Change,0,4)] : 0;
@@ -1418,17 +1426,17 @@ namespace SuperDepth3D
 	bool Check_Color_MinMax_A(float2 Pos_IN)
 	{	float3 RGB_IN = C_Tresh(Pos_IN);
 		if ( MMS == 1 || MMS == 2)
-			return RN_Value(RGB_IN.r + RGB_IN.g + RGB_IN.b) >= 29.0? 1 : 0;
+			return RN_Value(RGB_IN.r + RGB_IN.g + RGB_IN.b) >= 29.0;
 		else
-			return RN_Value(RGB_IN.r + RGB_IN.g + RGB_IN.b) <= 1.0 ? 1 : 0;
+			return RN_Value(RGB_IN.r + RGB_IN.g + RGB_IN.b) <= 1.0;
 	}
 	
 	bool Check_Color_MinMax_B(float2 Pos_IN)
 	{	float3 RGB_IN = C_Tresh(Pos_IN);
 		if ( MMS == 2)
-			return RN_Value(RGB_IN.r + RGB_IN.g + RGB_IN.b) >= 29.0? 1 : 0;
+			return RN_Value(RGB_IN.r + RGB_IN.g + RGB_IN.b) >= 29.0;
 		else
-			return RN_Value(RGB_IN.r + RGB_IN.g + RGB_IN.b) <= 1.0 ? 1 : 0;
+			return RN_Value(RGB_IN.r + RGB_IN.g + RGB_IN.b) <= 1.0;
 	}	
 	float4 Simple_Menu_Detection()//Active RGB Detection
 	{ 
@@ -1720,7 +1728,7 @@ namespace SuperDepth3D
 		//texcoord = float2((texcoord.x*X)-midW,(texcoord.y*Y)-midH);	
 		
 		texcoord.xy -= DLSS_FSR_Offset.xy * pix;
-		
+
 		float4 DM = Depth(TC_SP(texcoord).xy).xxxx;
 		float R, G, B, A, WD = WeaponDepth(TC_SP(texcoord).xy).x, CoP = WeaponDepth(TC_SP(texcoord).xy).y, CutOFFCal = (CoP/DMA()) * 0.5; //Weapon Cutoff Calculation
 		CutOFFCal = step(DM.x,CutOFFCal);
@@ -1740,7 +1748,7 @@ namespace SuperDepth3D
 		G = DM.y > saturate(smoothstep(0,2.5,DM.w)); //Weapon Mask
 		B = DM.z; //Weapon Hand
 		A = ZPD_Boundary >= 4 ? max( G, R) : R; //Grid Depth
-	
+			
 		return float3x3( saturate(float3(R, G, B)), 	                                                      			//[0][0] = R | [0][1] = G | [0][2] = B
 						 saturate(float3(A, Depth( SDT == 1 || SD_Trigger == 1 ? texcoord : TC_SP(texcoord).xy).x, DM.w)),//[1][0] = A | [1][1] = D | [1][2] = DM
 								  float3(Weapon_Masker > saturate(smoothstep(0,2.5,DM.w)),0,0) );                         //[2][0] = 0 | [2][1] = 0 | [2][2] = 0
@@ -1786,16 +1794,22 @@ namespace SuperDepth3D
 	{   //Check Depth
 		float CD, Detect, Detect_Out_of_Range;
 		if(ZPD_Boundary > 0)
-		{   float4 Switch_Array = ZPD_Boundary == 6 ? float4(0.825,0.850,0.875,0.900) : float4(1.0,0.875,0.75,0.625);
+		{
+			#if LBM || LetterBox_Masking
+			const float2 LB_Dir = float2(0.150,0.850);
+			#else
+			const float2 LB_Dir = float2(0.125,0.875);
+			#endif   
+			float4 Switch_Array = ZPD_Boundary == 6 ? float4(0.825,0.850,0.875,0.900) : float4(1.0,0.875,0.75,0.625);
 			//Normal A & B for both	
-			const float CDArray_A0[7] = { 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875}, CDArray_B0[7] = { 0.25, 0.375, 0.4375, 0.5, 0.5625, 0.625, 0.75}, CDArray_C0[9] = { 0.0625, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 0.9375};
-			const float CDArray_A1[6] = { 0.125, 0.25, 0.375, 0.5, 0.625, 0.75}, CDArray_B1[6] = { 0.25, 0.375, 0.4375, 0.5625, 0.625, 0.75};
-			//const float CDArray_A1[5] = { 0.125, 0.25, 0.375, 0.625, 0.75}, CDArray_B1[5] = { 0.25, 0.375, 0.4375, 0.625, 0.75}; // Don't check Center.
+			const float CDArray_A0[7] = { LB_Dir.x, 0.25, 0.375, 0.5, 0.625, 0.75, LB_Dir.y}, CDArray_B0[7] = { 0.25, 0.375, 0.4375, 0.5, 0.5625, 0.625, 0.75}, CDArray_C0[9] = { 0.0625, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 0.9375};
+			const float CDArray_A1[6] = { 0.25, 0.375, 0.5, 0.625, 0.75, 0.875}, CDArray_B1[6] = { 0.25, 0.375, 0.4375, 0.5625, 0.625, 0.75};
+
 			const float CDArray_C1[4] = { 0.25, 0.375, 0.75, 0.875};
 
 			float CDArrayZPD_A[7] = { ZPD_Separation.x * Switch_Array.w, ZPD_Separation.x * Switch_Array.z, ZPD_Separation.x * Switch_Array.y, ZPD_Separation.x * Switch_Array.x, ZPD_Separation.x * Switch_Array.y, ZPD_Separation.x * Switch_Array.z, ZPD_Separation.x * Switch_Array.w },
 				  CDArrayZPD_B[7] = { ZPD_Separation.x * 0.3, ZPD_Separation.x * 0.5, ZPD_Separation.x * 0.75, ZPD_Separation.x, ZPD_Separation.x * 0.75, ZPD_Separation.x * 0.5, ZPD_Separation.x * 0.3},
-	 			  CDArrayZPD_C[10] = { ZPD_Separation.x * 0.5625, ZPD_Separation.x * 0.75, ZPD_Separation.x * 0.875, ZPD_Separation.x * 0.9375, 
+	 			 CDArrayZPD_C[10] = { ZPD_Separation.x * 0.5625, ZPD_Separation.x * 0.75, ZPD_Separation.x * 0.875, ZPD_Separation.x * 0.9375, 
 									   ZPD_Separation.x, ZPD_Separation.x, 
 									   ZPD_Separation.x * 0.9375, ZPD_Separation.x * 0.875, ZPD_Separation.x * 0.75, ZPD_Separation.x * 0.5625 };	
 			//Screen Space Detector 7x6 Grid from between 0 to 1 and ZPD Detection becomes stronger as it gets closer to the Center.
@@ -1816,8 +1830,8 @@ namespace SuperDepth3D
 						GridXY = float2( CDArray_A0[iX], CDArray_B1[iY]);
 					if( AFD )
 						GridXY += Shift_Per_Frame;
-					float ZPD_I = ZPD_Boundary == 3 ?  CDArrayZPD_C[iX] : (ZPD_Boundary == 2 || ZPD_Boundary == 5  ? CDArrayZPD_B[iX] : CDArrayZPD_A[iX]);
-	
+					float ZPD_I = ZPD_Boundary == 3 ?  CDArrayZPD_C[iX] : (ZPD_Boundary == 2 || ZPD_Boundary == 5  ? CDArrayZPD_B[iX] : CDArrayZPD_A[iX]);		
+
 					if(ZPD_Boundary >= 4)
 					{
 						if ( PrepDepth(GridXY)[1][0] == 1 )
@@ -1855,17 +1869,17 @@ namespace SuperDepth3D
 		}
 		int Sat_D_O_R = saturate(Detect_Out_of_Range);
 		float ZPD_BnF = Auto_Adjust_Cal(Fast_Trigger_Mode && Sat_D_O_R ? 0.5 : ZPD_Boundary_n_Fade.y);		
-		float Trigger_Fade_A = Detect, Trigger_Fade_B = Detect_Out_of_Range >= 1 ? 1 : 0, Trigger_Fade_C = Detect_Out_of_Range >= 2 ? 1 : 0, Trigger_Fade_D = Detect_Out_of_Range >= 3 ? 1 : 0, AA = Auto_Adjust_Cal(ZPD_Boundary_n_Fade.y), 
-			  PStoredfade_A = tex2D(SamplerLumN,float2(0, 0.250)).z, PStoredfade_B = tex2D(SamplerLumN,float2(0, 0.416)).z, PStoredfade_C = tex2D(SamplerLumN,float2(1, 0.416)).z, PStoredfade_D = tex2D(SamplerLumN,float2(1, 0.250)).z;
+		float Trigger_Fade_A = Detect, Trigger_Fade_B = Detect_Out_of_Range >= 1, Trigger_Fade_C = Detect_Out_of_Range >= 2, Trigger_Fade_D = Detect_Out_of_Range >= 3, Trigger_Fade_E = Detect_Out_of_Range >= 4, AA = Auto_Adjust_Cal(ZPD_Boundary_n_Fade.y), 
+			  PStoredfade_A = tex2D(SamplerLumN,float2(0, 0.250)).z, PStoredfade_B = tex2D(SamplerLumN,float2(0, 0.416)).z, PStoredfade_C = tex2D(SamplerLumN,float2(1, 0.416)).z, PStoredfade_D = tex2D(SamplerLumN,float2(1, 0.250)).z, PStoredfade_E = tex2D(SamplerLumN,float2(1, 0.583)).z;
 
 		//Fade in toggle.
-		return float3x3( float3(PStoredfade_A + (Trigger_Fade_A - PStoredfade_A) * (1.0 - exp(-frametime/AA )),    ///exp2 would be even slower
-								PStoredfade_B + (Trigger_Fade_B - PStoredfade_B) * (1.0 - exp(-frametime/ZPD_BnF)), 
-								PStoredfade_C + (Trigger_Fade_C - PStoredfade_C) * (1.0 - exp(-frametime/ZPD_BnF))),
-						 float3(PStoredfade_D + (Trigger_Fade_D - PStoredfade_D) * (1.0 - exp(-frametime/ZPD_BnF)),
-								saturate(Detect_Out_of_Range * 0.25),
-								0),
-						 float3(0,0,0) ); 
+		return float3x3( float3( PStoredfade_A + (Trigger_Fade_A - PStoredfade_A) * (1.0 - exp(-frametime/AA )),    ///exp2 would be even slower
+								 PStoredfade_B + (Trigger_Fade_B - PStoredfade_B) * (1.0 - exp(-frametime/ZPD_BnF)), 
+								 PStoredfade_C + (Trigger_Fade_C - PStoredfade_C) * (1.0 - exp(-frametime/ZPD_BnF)) ),
+						 float3( PStoredfade_D + (Trigger_Fade_D - PStoredfade_D) * (1.0 - exp(-frametime/ZPD_BnF)),
+								 PStoredfade_E + (Trigger_Fade_E - PStoredfade_E) * (1.0 - exp(-frametime/ZPD_BnF)),
+								 saturate(Detect_Out_of_Range * 0.25)                                               ),
+						 float3(0,0,0)                                                                              ); 
 	}
 	#define FadeSpeed_AW 0.375
 	float AltWeapon_Fade()
@@ -1929,6 +1943,8 @@ namespace SuperDepth3D
 		if( 1-texcoord.x < pix.x * 2 &&   texcoord.y < pix.y * 2)//TR
 			G = Fade_Pass[1][0];
 		if(   texcoord.x < pix.x * 2 &&   texcoord.y < pix.y * 2)//TL
+			G = Fade_Pass[1][2];
+		if( 1-texcoord.x < pix.x * 2 && 1-texcoord.y < pix.y * 2)//BR
 			G = Fade_Pass[1][1];
 			
 		float Luma_Map = dot(0.333, tex2D(BackBufferCLAMP,texcoord).rgb);
@@ -1986,39 +2002,47 @@ namespace SuperDepth3D
 			float DOoR_A = smoothstep(0,1,tex2D(SamplerLumN,float2(0, 0.250)).z), //ZPD_Boundary
 				  DOoR_B = smoothstep(0,1,tex2D(SamplerLumN,float2(0, 0.416)).z),  //Set_Adjustments X
 				  DOoR_C = smoothstep(0,1,tex2D(SamplerLumN,float2(1, 0.416)).z),    //Set_Adjustments Y
-				  DOoR_D = smoothstep(0,1,tex2D(SamplerLumN,float2(1, 0.250)).z);      //Set_Adjustments Z
+				  DOoR_D = smoothstep(0,1,tex2D(SamplerLumN,float2(1, 0.250)).z),      //Set_Adjustments Z
+				  DOoR_E = smoothstep(0,1,tex2D(SamplerLumN,float2(1, 0.583)).z);        //Set_Adjustments W
 				  
 			float2 Detection_Switch_Amount = RE_Set(tex2D(SamplerLumN,float2(1,0.750)).z).yz;																   
 
 			if(RE_Set(0).x)
 			{
-				if(Detection_Switch_Amount.y >= 3)
+				if(Fast_Trigger_Mode && Detection_Switch_Amount.y > 0)
 					Set_Adjustments = Detection_Switch_Amount.x;
 	
 	
 				DOoR_B = lerp(ZPD_Boundary, Set_Adjustments.x, DOoR_B);
 					#if OIL == 0
-					DOoR_D = DOoR_B;
+					DOoR_E = DOoR_B;
 					#endif
 	
 				#if OIL >= 1
 				DOoR_C = lerp(DOoR_B, Set_Adjustments.y, DOoR_C);
 					#if OIL == 1
-					DOoR_D = DOoR_C;
+					DOoR_E = DOoR_C;
 					#endif	
 				#endif
 				
 				#if OIL >= 2	
 				DOoR_D = lerp(DOoR_C, Set_Adjustments.z, DOoR_D);
+					#if OIL == 2
+					DOoR_E = DOoR_D;
+					#endif	
+				#endif		
+				
+				#if OIL >= 3	
+				DOoR_E = lerp(DOoR_D, Set_Adjustments.w, DOoR_E);
 				#endif		
 			}
 			else
-			DOoR_D = lerp(ZPD_Boundary, Detection_Switch_Amount.x, DOoR_B);
+			DOoR_E = lerp(ZPD_Boundary, Detection_Switch_Amount.x, DOoR_B);
 		
 			if(Fast_Trigger_Mode)
-				DOoR_A = saturate(DOoR_A+DOoR_B+DOoR_C+DOoR_D);
+				DOoR_A = saturate(DOoR_A+DOoR_B+DOoR_C+DOoR_D+DOoR_E);
 			
-			Z *= lerp( 1, DOoR_D, DOoR_A);
+			Z *= lerp( 1, DOoR_E, DOoR_A);
 			
 			float Convergence = 1 - Z / D;
 			if (ZPD_Separation.x == 0)
@@ -2142,7 +2166,8 @@ namespace SuperDepth3D
 		#endif
 	
 		#if LBM || LetterBox_Masking
-			float LB_Detection = tex2D(SamplerLumN,float2(0.5,0.5)).x,LB_Masked = texcoord.y > DI_Y && texcoord.y < DI_X ? DM.y : 0.0125;
+			float LB_Dir = LetterBox_Masking == 2 || LBM == 2 ? texcoord.x : texcoord.y;
+			float LB_Detection = tex2D(SamplerLumN,float2(0.5,0.5)).x,LB_Masked = LB_Dir > DI_Y && LB_Dir < DI_X ? DM.y : 0.0125;
 			
 			if(LB_Detection)
 				DM.y = LB_Masked;	
@@ -2356,9 +2381,9 @@ namespace SuperDepth3D
 		    else
 		        Mask_Tex = tex2Dlod(SamplerMaskA,float4(texcoord.xy,0,0)).a;
 	
-			float MAC = step(1.0-Mask_Tex,0.5); //Mask Adjustment Calculation
+			float MACV = step(1.0-Mask_Tex,0.5); //Mask Adjustment Calculation Variable
 			//This code is for hud segregation.
-			HUD = MAC > 0 ? tex2D(BackBufferCLAMP,texcoord).rgb : HUD;
+			HUD = MACV > 0 ? tex2D(BackBufferCLAMP,texcoord).rgb : HUD;
 		#endif
 		return  texcoord.x < 0.001 || 1-texcoord.x < 0.001 ? StoredHUD : HUD;
 	}
@@ -2796,7 +2821,7 @@ namespace SuperDepth3D
 		float Storage_Array_B[Num_of_Values] = { 1.0,                                   //0.083
 	                                			 tex2D(SamplerDMN,int2(1,0)).y,         //0.250 //TR Fade Z Level 3
 	                               			  tex2D(SamplerDMN,int2(1,0)).x,         //0.416 //TR Fade Z Level 2
-	                                			 0.0,                                   //0.583
+	                                			 tex2D(SamplerDMN,1).y,                 //0.583 //BR Fade Z Level 4
 												 tex2D(SamplerDMN,0).y,                 //0.750 //TL Fade W The Switch
 												 1.0};                                  //0.916												 
 		//Set a avr size for the Number of lines needed in texture storage.
@@ -2918,14 +2943,14 @@ namespace SuperDepth3D
 		#else
 		Color.rgb = PS_calcLR(texcoord, position.xy).rgb; //Color = texcoord.x+texcoord.y > 1 ? Color : LBDetection();
 		#endif
-		//Color = GetDB(texcoord).w;//tex2Dlod(SamplerDMN,float4(texcoord,0,9)).w;
+		//Color = LBDetection();
 		return timer <= Text_Timer || Text_Info ? Color.rgb + Color.w : Color.rgb;
 	}
 		
 	float3 InfoOut(float4 position : SV_Position, float2 texcoord : TEXCOORD) : SV_Target
 	{   float3 Color;
 		float2 TC = float2(texcoord.x,1-texcoord.y);
-		float BT = smoothstep(0,1,sin(timer*(3.75/1000))), Size = 1.1, Depth3D, Read_Help, Emu, SetFoV, PostEffects, NoPro, NotCom, ModFix, Needs, Network, OW_State, SetAA, SetWP, DGDX, DXVK;
+		float BT = smoothstep(0,1,sin(timer*(3.75/1000))), Size = 1.1, Depth3D, Read_Help, Emu, SetFoV, PostEffects, NoPro, NotCom, ModFix, Needs, AspectRaito, Network, OW_State, SetAA, SetWP, DGDX, DXVK;
 		//Text Information
 		float2 charSize = float2(.00875, .0125) * Size;// Set a general character size...
 		// Starting position.
@@ -2983,20 +3008,38 @@ namespace SuperDepth3D
 			Needs += drawChar( CH_A, charPos.xy, charSize, TC, Shift_Adjust.x ); 
 			Needs += drawChar( CH_M, charPos.xy, charSize, TC, Shift_Adjust.x );
 			Needs += drawChar( CH_E, charPos.xy, charSize, TC, Shift_Adjust.x );
-		#endif
-		/* Empthy		
-		#if DSO
+		#endif		
+		#if ARW 
 			charPos = float2( 0.009, 0.955);
-			//Network += drawChar( CH_N, charPos.xy, charSize, TC, 0 );
-			//Network += drawChar( CH_E, charPos.xy, charSize, TC, Shift_Adjust.x );
-			//Network += drawChar( CH_T, charPos.xy, charSize, TC, Shift_Adjust.x );
-			//Network += drawChar( CH_BLNK, charPos.xy, charSize, TC, Shift_Adjust.x );
-			//Network += drawChar( CH_P, charPos.xy, charSize, TC, Shift_Adjust.x );
-			//Network += drawChar( CH_L, charPos.xy, charSize, TC, Shift_Adjust.x );
-			//Network += drawChar( CH_A, charPos.xy, charSize, TC, Shift_Adjust.x );
-			//Network += drawChar( CH_Y, charPos.xy, charSize, TC, Shift_Adjust.x );
+			AspectRaito += drawChar( CH_C, charPos.xy, charSize, TC, 0 );
+			AspectRaito += drawChar( CH_H, charPos.xy, charSize, TC, Shift_Adjust.x );
+			AspectRaito += drawChar( CH_E, charPos.xy, charSize, TC, Shift_Adjust.x ); 
+			AspectRaito += drawChar( CH_C, charPos.xy, charSize, TC, Shift_Adjust.x );
+			AspectRaito += drawChar( CH_K, charPos.xy, charSize, TC, Shift_Adjust.x );
+			AspectRaito += drawChar( CH_BLNK, charPos.xy, charSize, TC, Shift_Adjust.x ); 
+			AspectRaito += drawChar( CH_A, charPos.xy, charSize, TC, Shift_Adjust.x );
+			AspectRaito += drawChar( CH_S, charPos.xy, charSize, TC, Shift_Adjust.x );
+			AspectRaito += drawChar( CH_P, charPos.xy, charSize, TC, Shift_Adjust.x ); 
+			AspectRaito += drawChar( CH_E, charPos.xy, charSize, TC, Shift_Adjust.x );
+			AspectRaito += drawChar( CH_C, charPos.xy, charSize, TC, Shift_Adjust.x );
+			AspectRaito += drawChar( CH_T, charPos.xy, charSize, TC, Shift_Adjust.x );
+			AspectRaito += drawChar( CH_BLNK, charPos.xy, charSize, TC, Shift_Adjust.x );
+			AspectRaito += drawChar( CH_R, charPos.xy, charSize, TC, Shift_Adjust.x );
+			AspectRaito += drawChar( CH_A, charPos.xy, charSize, TC, Shift_Adjust.x );
+			AspectRaito += drawChar( CH_I, charPos.xy, charSize, TC, Shift_Adjust.x ); 
+			AspectRaito += drawChar( CH_T, charPos.xy, charSize, TC, Shift_Adjust.x );
+			AspectRaito += drawChar( CH_O, charPos.xy, charSize, TC, Shift_Adjust.x );
+			AspectRaito += drawChar( CH_BLNK, charPos.xy, charSize, TC, Shift_Adjust.x );
+			AspectRaito += drawChar( CH_I, charPos.xy, charSize, TC, Shift_Adjust.x );
+			AspectRaito += drawChar( CH_N, charPos.xy, charSize, TC, Shift_Adjust.x );
+			AspectRaito += drawChar( CH_BLNK, charPos.xy, charSize, TC, Shift_Adjust.x );			
+			AspectRaito += drawChar( CH_A, charPos.xy, charSize, TC, Shift_Adjust.x ); 
+			AspectRaito += drawChar( CH_D, charPos.xy, charSize, TC, Shift_Adjust.x ); 
+			AspectRaito += drawChar( CH_D, charPos.xy, charSize, TC, Shift_Adjust.x ); 
+			AspectRaito += drawChar( CH_UNDS, charPos.xy, charSize, TC, Shift_Adjust.x ); 
+			AspectRaito += drawChar( CH_O, charPos.xy, charSize, TC, Shift_Adjust.x ); 
+			AspectRaito += drawChar( CH_N, charPos.xy, charSize, TC, Shift_Adjust.x );
 		#endif
-		*/
 		//Emulator Detected
 		#if (EDW)
 			charPos = float2( 0.009, 0.9375);
@@ -3045,7 +3088,7 @@ namespace SuperDepth3D
 			PostEffects += drawChar( CH_I, charPos.xy, charSize, TC, Shift_Adjust.x );
 			PostEffects += drawChar( CH_N, charPos.xy, charSize, TC, Shift_Adjust.x );
 		#endif
-		//Check TAA/MSAA/SS		
+		//Check TAA/MSAA/SS/DLSS/FSR/XeSS		
 		#if DAA
 			charPos = float2( 0.009, 0.9025);
 			SetAA += drawChar( CH_C, charPos.xy, charSize, TC, 0 ); 
@@ -3062,7 +3105,18 @@ namespace SuperDepth3D
 			SetAA += drawChar( CH_S, charPos.xy, charSize, TC, Shift_Adjust.x ); 
 			SetAA += drawChar( CH_A, charPos.xy, charSize, TC, Shift_Adjust.x ); 
 			SetAA += drawChar( CH_A, charPos.xy, charSize, TC, Shift_Adjust.x ); 
-			SetAA += drawChar( CH_SLSH, charPos.xy, charSize, TC, Shift_Adjust.x ); 
+			SetAA += drawChar( CH_SLSH, charPos.xy, charSize, TC, Shift_Adjust.x );
+			SetAA += drawChar( CH_D, charPos.xy, charSize, TC, Shift_Adjust.x ); 
+			SetAA += drawChar( CH_L, charPos.xy, charSize, TC, Shift_Adjust.x );
+			SetAA += drawChar( CH_S, charPos.xy, charSize, TC, Shift_Adjust.x ); 
+			SetAA += drawChar( CH_S, charPos.xy, charSize, TC, Shift_Adjust.x );
+			SetAA += drawChar( CH_SLSH, charPos.xy, charSize, TC, Shift_Adjust.x );
+			SetAA += drawChar( CH_F, charPos.xy, charSize, TC, Shift_Adjust.x ); 
+			SetAA += drawChar( CH_S, charPos.xy, charSize, TC, Shift_Adjust.x );
+			SetAA += drawChar( CH_R, charPos.xy, charSize, TC, Shift_Adjust.x ); 
+			SetAA += drawChar( CH_SLSH, charPos.xy, charSize, TC, Shift_Adjust.x );
+			SetAA += drawChar( CH_X, charPos.xy, charSize, TC, Shift_Adjust.x ); 
+			SetAA += drawChar( CH_E, charPos.xy, charSize, TC, Shift_Adjust.x );
 			SetAA += drawChar( CH_S, charPos.xy, charSize, TC, Shift_Adjust.x ); 
 			SetAA += drawChar( CH_S, charPos.xy, charSize, TC, Shift_Adjust.x );
 		#endif
@@ -3236,7 +3290,7 @@ namespace SuperDepth3D
 		Depth3D += drawChar( CH_O, charPos.xy, charSize_B, TC, Shift_Adjust.x );
 
 		//Website
-		return Depth3D+Read_Help+PostEffects+NoPro+NotCom+Network+ModFix+Needs+OW_State+SetAA+SetWP+SetFoV+Emu+DGDX+DXVK ? (1-texcoord.y*50.0+48.85)*texcoord.y-0.500: 0;
+		return Depth3D+Read_Help+PostEffects+NoPro+NotCom+Network+ModFix+Needs+OW_State+SetAA+SetWP+SetFoV+Emu+DGDX+DXVK+AspectRaito ? (1-texcoord.y*50.0+48.85)*texcoord.y-0.500: 0;
 	}	
 	
 	///////////////////////////////////////////////////////////////////ReShade.fxh//////////////////////////////////////////////////////////////////////

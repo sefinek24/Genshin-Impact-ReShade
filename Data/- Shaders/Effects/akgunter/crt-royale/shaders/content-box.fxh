@@ -33,36 +33,107 @@ void contentCropVS(
     out float4 position : SV_Position,
     out float2 texcoord : TEXCOORD0
 ) {
-	texcoord.x = (id & 1) ? content_right : content_left;
-	texcoord.y = (id & 2) ? content_lower : content_upper;
+    #if _DX9_ACTIVE
+        texcoord.x = (id == 1 || id == 3) ? content_right : content_left;
+        texcoord.y = (id > 1) ? content_lower : content_upper;
 
-	position.x = (id & 1) ?  1 : -1;
-	position.y = (id & 2) ? -1 :  1;
-	position.zw = 1;
+        position.x = (id == 1 || id == 3) ?  1 : -1;
+        position.y = (id > 1) ? -1 :  1;
+        position.zw = 1;
+    #else
+        texcoord.x = (id & 1) ? content_right : content_left;
+        texcoord.y = (id & 2) ? content_lower : content_upper;
+
+        position.x = (id & 1) ?  1 : -1;
+        position.y = (id & 2) ? -1 :  1;
+        position.zw = 1;
+    #endif
 }
 
-void contentUncropVS(
-    in uint id : SV_VertexID,
+#if USE_VERTEX_UNCROPPING
+/*
+ *  Using the vertex shader for uncropping can save about 0.1ms in some apps.
+ *  However, some apps like SNES9X w/ DX9 don't trigger a refresh of the entire screen,
+ *  which in turn causes the ReShade UI to "stick around" after it's closed.
+ *  
+ *  The slower algorithm forces the entire screen to refresh, which forces the
+ *  area outside the content box to be black. I assume most users will prefer
+ *  the results of the slower algorithm and won't notice the 0.1ms. Users who
+ *  need that 0.1ms can use a preprocessor def to recover that time.
+ */
+    void contentUncropVS(
+        in uint id : SV_VertexID,
 
-    out float4 position : SV_Position,
-    out float2 texcoord : TEXCOORD0
-) {
-	texcoord.x = id & 1;
-	texcoord.y = !(id & 2);
-	
-	position.x = (id & 1) ? content_scale.x : -content_scale.x;
-	position.y = (id & 2) ? content_scale.y : -content_scale.y;
-	position.zw = 1;
-}
+        out float4 position : SV_Position,
+        out float2 texcoord : TEXCOORD0
+    ) {
+        #if _DX9_ACTIVE
+            texcoord.x = id == 1 || id == 3;
+            texcoord.y = id < 2;
 
-void uncropContentPixelShader(
-    in float4 pos : SV_Position,
-    in float2 texcoord : TEXCOORD0,
+            position.x = (id == 1 || id == 3) ? content_scale.x : -content_scale.x;
+            position.y = (id > 1) ? content_scale.y : -content_scale.y;
+            position.zw = 1;
+        #else
+            texcoord.x = id & 1;
+            texcoord.y = !(id & 2);
+            
+            position.x = (id & 1) ? content_scale.x : -content_scale.x;
+            position.y = (id & 2) ? content_scale.y : -content_scale.y;
+            position.zw = 1;
+        #endif
+    }
 
-    out float4 color : SV_Target
-) {
-    color = tex2D(samplerGeometry, texcoord);
-}
+    void uncropContentPixelShader(
+        in float4 pos : SV_Position,
+        in float2 texcoord : TEXCOORD0,
+
+        out float4 color : SV_Target
+    ) {
+        color = tex2D(samplerGeometry, texcoord);
+    }
+#else
+    void contentUncropVS(
+        in uint id : SV_VertexID,
+
+        out float4 position : SV_Position,
+        out float2 texcoord : TEXCOORD0
+    ) {
+        // TODO: There's probably a better way to code this.
+        // I'll figure it out later.
+        #if _DX9_ACTIVE
+            texcoord.x = id == 1 || id == 3;
+            texcoord.y = id < 2;
+
+            position.x = (id == 1 || id == 3) ? 1 : -1;
+            position.y = (id > 1) ? 1 : -1;
+            position.zw = 1;
+        #else
+            texcoord.x = id & 1;
+            texcoord.y = !(id & 2);
+            
+            position.x = (id & 1) ? 1 : -1;
+            position.y = (id & 2) ? 1 : -1;
+            position.zw = 1;
+        #endif
+    }
+
+    void uncropContentPixelShader(
+        in float4 pos : SV_Position,
+        in float2 texcoord : TEXCOORD0,
+
+        out float4 color : SV_Target
+    ) {
+        const bool is_in_boundary = float(
+            texcoord.x >= content_left && texcoord.x <= content_right &&
+            texcoord.y >= content_upper && texcoord.y <= content_lower
+        );
+        const float2 texcoord_uncropped = ((texcoord - content_offset) * buffer_size + 0) / content_size;
+
+        const float4 raw_color = tex2D(samplerGeometry, texcoord_uncropped);
+        color = float4(is_in_boundary * raw_color.rgb, raw_color.a);
+    }
+#endif
 
 
 #if CONTENT_BOX_VISIBLE

@@ -24,6 +24,11 @@
 //  IN THE SOFTWARE.
 
 
+float4 tex2D_nograd(sampler2D tex, float2 tex_coords)
+{
+    return tex2Dlod(tex, float4(tex_coords, 0, 0), 0.0);
+}
+
 // ReShade 4 does not permit the use of functions or the ternary operator
 // outside of a function definition. This is a problem for this port
 // because the original crt-royale shader makes heavy use of these

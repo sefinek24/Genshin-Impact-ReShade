@@ -213,8 +213,11 @@ float4 tex2D_linearize(const sampler2D tex, const float3 tex_coords, const float
 // {   return decode_input(tex2Dlod(tex, float4(tex_coords.x, tex_coords.y, 0, 0), texel_off), gamma);    }
 
 //  tex2Dlod:
+float4 tex2Dlod_linearize(const sampler2D tex, const float2 tex_coords, const float gamma)
+{   return decode_input(tex2Dlod(tex, float4(tex_coords, 0, 0), 0.0), gamma);    }
+
 float4 tex2Dlod_linearize(const sampler2D tex, const float4 tex_coords, const float gamma)
-{   return decode_input(tex2Dlod(tex, float4(tex_coords.x, tex_coords.y, 0, 0), 0.0), gamma);    }
+{   return decode_input(tex2Dlod(tex, float4(tex_coords.xy, 0, 0), 0.0), gamma);    }
 
 // float4 tex2Dlod_linearize(const sampler2D tex, const float4 tex_coords, const int texel_off, const float gamma)
 // {   return decode_input(tex2Dlod(tex, float4(tex_coords.x, tex_coords.y, 0, 0), texel_off), gamma);     }

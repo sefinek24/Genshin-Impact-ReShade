@@ -35,7 +35,7 @@ float3 opaque_linear_downsample(
     float3 acc = 0;
     for(int i = 0; i < total_num_samples; i++) {
         const float2 coord = coord_left + i * delta_uv;
-        acc += tex2Dlod(tex, float4(coord, 0, 0)).rgb;
+        acc += tex2D_nograd(tex, coord).rgb;
     }
     
     return acc / total_num_samples;
@@ -64,7 +64,7 @@ float3 opaque_lanczos_downsample(
             num_sinc_lobes * sin(pi*sinc_x) * sin(pi*sinc_x/num_sinc_lobes) / (pi*pi * sinc_x*sinc_x) :
             weight_at_center;
 
-        acc += weight * tex2Dlod(tex, float4(coord, 0, 0)).rgb;
+        acc += weight * tex2D_nograd(tex, coord).rgb;
         w_sum += weight;
     }
     

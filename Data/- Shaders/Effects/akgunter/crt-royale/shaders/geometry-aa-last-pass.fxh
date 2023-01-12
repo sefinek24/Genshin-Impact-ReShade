@@ -199,7 +199,6 @@ void geometryPS(
         //  Sample the input with antialiasing (due to sharp phosphors, etc.):
         raw_color = tex2Daa(samplerBloomHorizontal, tex_uv, pixel_to_tex_uv, float(frame_count), get_intermediate_gamma());
     }
-
     else if(antialias_level > 0.5 && need_subpixel_aa)
     {
         //  Sample at each subpixel location:

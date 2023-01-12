@@ -100,8 +100,8 @@ void deinterlacePS(
         // const float cur_scanline_idx = get_curr_scanline_idx(texcoord.y, content_size.y);
         // const float wrong_field = curr_line_is_wrong_field(cur_scanline_idx);
         
-        const float4 cur_line_color = tex2D(samplerBeamConvergence, texcoord);
-        const float4 cur_line_prev_color = tex2D(samplerFreezeFrame, texcoord);
+        const float4 cur_line_color = tex2D_nograd(samplerBeamConvergence, texcoord);
+        const float4 cur_line_prev_color = tex2D_nograd(samplerFreezeFrame, texcoord);
 
         const float4 avg_color = (cur_line_color + cur_line_prev_color) / 2.0;
 
@@ -121,8 +121,8 @@ void deinterlacePS(
         const float2 curr_offset = lerp(0, raw_offset, interpolation_data.wrong_field);
         const float2 prev_offset = lerp(raw_offset, 0, interpolation_data.wrong_field);
 
-        const float4 cur_line_color = tex2D(samplerBeamConvergence, texcoord + curr_offset);
-        const float4 prev_line_color = tex2D(samplerFreezeFrame, texcoord + prev_offset);
+        const float4 cur_line_color = tex2D_nograd(samplerBeamConvergence, texcoord + curr_offset);
+        const float4 prev_line_color = tex2D_nograd(samplerFreezeFrame, texcoord + prev_offset);
 
         const float4 avg_color = (cur_line_color + prev_line_color) / 2.0;
         const float4 raw_out_color = lerp(cur_line_color, avg_color, interpolation_data.wrong_field);
@@ -130,7 +130,7 @@ void deinterlacePS(
     }
     // No temporal blending
     else {
-        color = tex2D(samplerBeamConvergence, texcoord);
+        color = tex2D_nograd(samplerBeamConvergence, texcoord);
     }
 }
 

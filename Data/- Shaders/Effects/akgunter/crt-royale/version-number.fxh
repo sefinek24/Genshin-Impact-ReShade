@@ -26,7 +26,7 @@
 
 #define MAJOR_VERSION 2
 #define MINOR_VERSION 0
-#define PATCH_VERSION 0
+#define PATCH_VERSION 1
 
 // Yes, both sibling preprocessor functions are necessary.
 // Don't "simplify" this, or the substitution won't work.

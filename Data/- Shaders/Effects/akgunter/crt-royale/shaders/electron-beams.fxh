@@ -257,15 +257,15 @@ void simulateEletronBeamsPS(
 	
 	[branch]
     if (beam_shape_mode < 3) {
-		const float4 scanline_color = tex2D_linearize(
+		const float4 scanline_color = tex2Dlod_linearize(
             source_sampler,
             texcoord_uncropped,
             get_input_gamma()
         );
 
-        const float beam_strength_r = tex2D(samplerBeamDist, float2(scanline_color.r, ypos)).x;
-        const float beam_strength_g = tex2D(samplerBeamDist, float2(scanline_color.g, ypos)).x;
-        const float beam_strength_b = tex2D(samplerBeamDist, float2(scanline_color.b, ypos)).x;
+        const float beam_strength_r = tex2D_nograd(samplerBeamDist, float2(scanline_color.r, ypos)).x;
+        const float beam_strength_g = tex2D_nograd(samplerBeamDist, float2(scanline_color.g, ypos)).x;
+        const float beam_strength_b = tex2D_nograd(samplerBeamDist, float2(scanline_color.b, ypos)).x;
         const float4 beam_strength = float4(beam_strength_r, beam_strength_g, beam_strength_b, 1);
 
         color = beam_strength;
@@ -273,33 +273,33 @@ void simulateEletronBeamsPS(
     else {
         const float2 offset = float2(0, scanline_thickness) * (1 + enable_interlacing) * rcp(content_size);
 
-		const float4 curr_scanline_color = tex2D_linearize(
+		const float4 curr_scanline_color = tex2Dlod_linearize(
             source_sampler,
             texcoord_uncropped,
             get_input_gamma()
         );
-        const float4 upper_scanline_color = tex2D_linearize(
+        const float4 upper_scanline_color = tex2Dlod_linearize(
             source_sampler,
             texcoord_uncropped - offset,
             get_input_gamma()
         );
-        const float4 lower_scanline_color = tex2D_linearize(
+        const float4 lower_scanline_color = tex2Dlod_linearize(
             source_sampler,
             texcoord_uncropped + offset,
             get_input_gamma()
         );
 
-        const float curr_beam_strength_r = tex2D(samplerBeamDist, float2(curr_scanline_color.r, ypos)).x;
-        const float curr_beam_strength_g = tex2D(samplerBeamDist, float2(curr_scanline_color.g, ypos)).x;
-        const float curr_beam_strength_b = tex2D(samplerBeamDist, float2(curr_scanline_color.b, ypos)).x;
+        const float curr_beam_strength_r = tex2D_nograd(samplerBeamDist, float2(curr_scanline_color.r, ypos)).x;
+        const float curr_beam_strength_g = tex2D_nograd(samplerBeamDist, float2(curr_scanline_color.g, ypos)).x;
+        const float curr_beam_strength_b = tex2D_nograd(samplerBeamDist, float2(curr_scanline_color.b, ypos)).x;
         
-        const float upper_beam_strength_r = tex2D(samplerBeamDist, float2(upper_scanline_color.r, ypos)).y;
-        const float upper_beam_strength_g = tex2D(samplerBeamDist, float2(upper_scanline_color.g, ypos)).y;
-        const float upper_beam_strength_b = tex2D(samplerBeamDist, float2(upper_scanline_color.b, ypos)).y;
+        const float upper_beam_strength_r = tex2D_nograd(samplerBeamDist, float2(upper_scanline_color.r, ypos)).y;
+        const float upper_beam_strength_g = tex2D_nograd(samplerBeamDist, float2(upper_scanline_color.g, ypos)).y;
+        const float upper_beam_strength_b = tex2D_nograd(samplerBeamDist, float2(upper_scanline_color.b, ypos)).y;
         
-        const float lower_beam_strength_r = tex2D(samplerBeamDist, float2(lower_scanline_color.r, ypos)).z;
-        const float lower_beam_strength_g = tex2D(samplerBeamDist, float2(lower_scanline_color.g, ypos)).z;
-        const float lower_beam_strength_b = tex2D(samplerBeamDist, float2(lower_scanline_color.b, ypos)).z;
+        const float lower_beam_strength_r = tex2D_nograd(samplerBeamDist, float2(lower_scanline_color.r, ypos)).z;
+        const float lower_beam_strength_g = tex2D_nograd(samplerBeamDist, float2(lower_scanline_color.g, ypos)).z;
+        const float lower_beam_strength_b = tex2D_nograd(samplerBeamDist, float2(lower_scanline_color.b, ypos)).z;
 
         color = float4(
             curr_beam_strength_r + upper_beam_strength_r + lower_beam_strength_r,

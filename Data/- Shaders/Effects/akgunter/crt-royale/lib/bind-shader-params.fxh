@@ -66,6 +66,12 @@
 #endif
 
 #if ADVANCED_SETTINGS == 1
+    // Using vertex uncropping is marginally faster, but vulnerable to DX9 weirdness.
+    // Most users will likely prefer the slower algorithm.
+    #ifndef USE_VERTEX_UNCROPPING
+        #define USE_VERTEX_UNCROPPING 0
+    #endif
+
     #ifndef NUM_BEAMDIST_COLOR_SAMPLES
         #define NUM_BEAMDIST_COLOR_SAMPLES 1024
     #endif
@@ -85,6 +91,7 @@
     static const uint num_beamdist_dist_samples = uint(NUM_BEAMDIST_DIST_SAMPLES);
     static const float bloomapprox_downsizing_factor = float(BLOOMAPPROX_DOWNSIZING_FACTOR);
 #else
+    static const uint USE_VERTEX_CROPPING = 0;
     static const uint num_beamdist_color_samples = 1024;
     static const uint num_beamdist_dist_samples = 120;
     static const float bloomapprox_downsizing_factor = 4.0;
