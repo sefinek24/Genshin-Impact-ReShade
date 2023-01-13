@@ -1,5 +1,7 @@
 # Folders
 .idea
+.vs
+Data/- Presets/New
 
 # Files
 .eslintrc.js
