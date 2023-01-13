@@ -33,12 +33,12 @@ New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 Remember to have the latest version of the modification. Gameplay will be available soon. Click [here](https://sefinek.net/genshin-impact-reshade/gallery?page=1) if you want to see more screenshots.
 
 ## ✨ » Requirements
-| 💻 Your PC & internet                 | 📂 Dependencies • Use installation wizard for automatic install                                             |
-|:--------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| Windows 10/11 (build 19041 or higher) | [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)                      |
-| 64-bit processor and system           | [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48)                    |
-| Good network connection               | [Windows Terminal from MS Store](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701)     |||
-|                                       | [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional) |
+| 💻 Your PC & internet                 | 📂 Dependencies • Use installation wizard for automatic install                                                  |
+|:--------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| Windows 10/11 (build 19041 or higher) | [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)                           |
+| 64-bit processor and system           | [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer) |
+| Good network connection               | [Windows Terminal from MS Store](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701)          |||
+|                                       | [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional)      |
 
 ## 🛠️ » Tested game versions
 | Game version | It works? | Date       |
