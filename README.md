@@ -17,7 +17,8 @@
 </div>
 
 ## 📂 » Includes
-- Own launcher
+- Launcher and setup wizard
+- [Always the latest shaders and ReShade [Unlocked]](https://github.com/sefinek24/reshade-unlocked)
 - [Presets for game [Best graphics quality]](Data/-%20Presets)
 - [FPS Unlocker](https://github.com/sefinek24/genshin-fps-unlock) [[More information]](https://github.com/sefinek24/genshin-fps-unlock#genshin-impact-fps-unlocker-modified-by-sefinek)
 
@@ -25,25 +26,19 @@
 Download the latest installer from [my official website](https://sefinek.net/genshin-impact-reshade).
 
 ## 🎥 » YouTube videos
-Tutorial (kinda outdated): https://www.youtube.com/watch?v=rDeO26RapAk  
-Watch new video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
-
-## 🌠 » Main gallery (more screenshots)
-https://sefinek.net/genshin-impact-reshade/gallery?page=1
+Tutorial (outdated): https://www.youtube.com/watch?v=rDeO26RapAk  
+New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 
 ## 📝️ » Notes and other information
-1. Remember to have the latest version of the modification.
-2. This mod requires:  
-   • [Git](https://git-scm.com)  
-   • [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)  
-   • [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48)  
-   • [Windows Terminal from MS Store](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701)  
-   • [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional)
-    > ✔ All dependencies will be installed automatically by the installer.
-3. Gameplay will be available soon.
-4. How to change branch? [`main` » `dev` or `dev` » `main`]  
-   • Go to Tools  
-   • Double-click on Collei's notebook
+Remember to have the latest version of the modification. Gameplay will be available soon. Click [here](https://sefinek.net/genshin-impact-reshade/gallery?page=1) if you want to see more screenshots.
+
+## ✨ » Requirements
+| 💻 Your PC & internet                 | 📂 Dependencies • Use installation wizard for automatic install                                             |
+|:--------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| Windows 10/11 (build 19041 or higher) | [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)                      |
+| 64-bit processor and system           | [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48)                    |
+| Good network connection               | [Windows Terminal from MS Store](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701)     |||
+|                                       | [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional) |
 
 ## 🛠️ » Tested game versions
 | Game version | It works? | Date       |
@@ -51,17 +46,19 @@ https://sefinek.net/genshin-impact-reshade/gallery?page=1
 | v3.3.0       | ✅         | 09.11.2022 |
 | v3.2.0       | ✅         | 02.11.2022 |
 | v3.1.0       | ✅         | 01.11.2022 |
-> ✅ = Yes ┃ ❎ = No ┃ 🤔 = Not tested
+> ✅ Yes ┃ ❎ No ┃ 🤔 Not tested
 
 ## 🔧 » Supported operating systems
 | System                        | OS Build   | Status |
 |-------------------------------|------------|:-------|
 | Windows 11 22H2 (recommended) | 22621.900  | ✅      |
-| Windows 10 22H2               | 19045.2364 | ✅      | 
+| Windows 10 22H2               | 19045.2486 | ✅      | 
 | Windows 8 / 8.1               | ❓          | 🎯️    | 
 | Windows 7                     | ❓️         | 🎯️    | 
-> ✅ = Supported ┃ ⚠️ = Not supported ┃ 🎯️ = Default not supported  
-> 🤔 = Not tested ┃ ❓ = I don't know
+| Android / Linux               | ❓️         | ⚠️     | 
+| iOS / macOS                   | ❓️         | ⚠️     | 
+> ✅ Supported ┃ ⚠️ Not supported ┃ 🎯️ Default not supported  
+> 🤔 Not tested ┃ ❓ I don't know
 
 ## ⚙ » Recommended settings for game
 | Settings               | Value                              | Settings                    | Value                                |
