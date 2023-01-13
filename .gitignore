@@ -1,5 +1,8 @@
+# Folders
 .idea
+
+# Files
 .eslintrc.js
-Data/Screenshots
+Screenshots/*.png
 Data/FPS Unlocker/unlocker.config.json
 Data/unlocker.config.json
