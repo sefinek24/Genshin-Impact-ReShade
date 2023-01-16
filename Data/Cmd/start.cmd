@@ -61,7 +61,7 @@ if "%ERRORLEVEL%"=="0" (
 echo [✓] Genshin Impact Mod Pack.exe - OK
 tasklist /fi "ImageName eq inject.exe" /fo csv 2>NUL | find /I "inject.exe">NUL
 if "%ERRORLEVEL%"=="0" (
-    echo [x] The application "inject.exe" [Genshin FPS Unlocker] is already running. Close it and try again.
+    echo [x] The application "inject.exe" (injector for ReShade) is already running. Close it and try again.
 
     goto pause
 ) else (
@@ -69,7 +69,7 @@ if "%ERRORLEVEL%"=="0" (
 )
 tasklist /fi "ImageName eq unlockfps_clr.exe" /fo csv 2>NUL | find /I "unlockfps_clr.exe">NUL
 if "%ERRORLEVEL%"=="0" (
-    echo [x] The application "unlockfps_clr.exe" [Genshin FPS Unlocker] is already running. Close it and try again.
+    echo [x] The application "unlockfps_clr.exe" (Genshin FPS Unlocker) is already running. Close it and try again.
 
     goto pause
 ) else (
@@ -99,11 +99,6 @@ if %RunID% == 1 (
     goto error
 )
 
-
-:close-window
-    echo.
-    timeout /t 20 /nobreak
-    exit
 
 :pause
     echo.
