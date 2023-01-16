@@ -84,15 +84,15 @@ echo [i] Everything is ready! Please wait a moment (=^･ω･^=) & echo.
 
 set /p RunID=<"%AppData%\Genshin Impact MP by Sefinek\launch-mode.sfn"
 if %RunID% == 1 (
-    powershell.exe Set-Location -Path "Data\ReShade"; Start-Process -FilePath "inject.exe" "GenshinImpact.exe" -verb RunAs; Set-Location -Path "\"..\FPS Unlocker\""; Start-Process -FilePath "..\unlockfps_clr.exe" -verb RunAs
+    powershell.exe Cd "Data\ReShade"; Start-Process -FilePath "inject.exe" "GenshinImpact.exe"; Cd "\"..\Unlocker\""; Start-Process -FilePath ".\unlockfps_clr.exe"
 
     call Data\Cmd\start\1.cmd
 ) else if %RunID% == 2 (
-    powershell.exe Set-Location -Path "Data\ReShade"; Start-Process -FilePath "inject.exe" "GenshinImpact.exe" -verb RunAs
+    powershell.exe Cd "Data\ReShade"; Start-Process -FilePath "inject.exe" "GenshinImpact.exe"
 
     call Data\Cmd\start\2.cmd
 ) else if %RunID% == 3 (
-    powershell.exe Set-Location -Path "\"Data\FPS Unlocker\""; Start-Process -FilePath "..\unlockfps_clr.exe" -verb RunAs
+    powershell.exe Cd "\"Data\Unlocker\""; Start-Process -FilePath ".\unlockfps_clr.exe"
 
     call Data\Cmd\start\3.cmd
 ) else (
