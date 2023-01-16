@@ -8,12 +8,12 @@
       <img src="Screenshots/Default/youtube_video_border.png" alt="Header image">
    </a>
 
-   <h2>⭐ » Star the repo if you liked it « ⭐</h2>
-   <img src="https://img.shields.io/github/repo-size/sefinek24/Genshin-Impact-ReShade?label=Repo%20size" alt="Repo size">
-   <img src="https://img.shields.io/github/commit-activity/w/sefinek24/Genshin-Impact-ReShade?label=Commit%20activity" alt="Files">
-   <img src="https://img.shields.io/website?down_message=Offline&label=Website&up_message=Online&url=https%3A%2F%2Fsefinek.net" alt="www.sefinek.net status">
-   <br>
-   <a href="https://discord.gg/SVcbaRc7gH" target="_blank"><img src="https://img.shields.io/discord/1044713077125435492?label=Join%20our%20Discord" alt="Official Discord server"></a>
+<h2>⭐ » Star the repo if you liked it « ⭐</h2>
+<img src="https://img.shields.io/github/repo-size/sefinek24/Genshin-Impact-ReShade?label=Repo%20size" alt="Repo size">
+<img src="https://img.shields.io/github/commit-activity/w/sefinek24/Genshin-Impact-ReShade?label=Commit%20activity" alt="Files">
+<img src="https://img.shields.io/website?down_message=Offline&label=Website&up_message=Online&url=https%3A%2F%2Fsefinek.net" alt="www.sefinek.net status">
+<br>
+<a href="https://discord.gg/SVcbaRc7gH" target="_blank"><img src="https://img.shields.io/discord/1044713077125435492?label=Join%20our%20Discord" alt="Official Discord server"></a>
 </div>
 
 ## 📂 » Includes
@@ -51,8 +51,8 @@ Remember to have the latest version of the modification. Gameplay will be availa
 ## 🔧 » Supported operating systems
 | System                        | OS Build   | Status |
 |-------------------------------|------------|:-------|
-| Windows 11 22H2 (recommended) | 22621.900  | ✅      |
-| Windows 10 22H2               | 19045.2486 | ✅      | 
+| Windows 11 22H2               | 22621.900  | ✅      |
+| Windows 10 22H2 (recommended) | 19045.2486 | ✅      | 
 | Windows 8 / 8.1               | ❓          | 🎯️    | 
 | Windows 7                     | ❓️         | 🎯️    | 
 | Android / Linux               | ❓️         | ⚠️     | 
@@ -77,23 +77,17 @@ Remember to have the latest version of the modification. Gameplay will be availa
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/kokomi_2.png" title="See preview [kokomi_2.png]">
     <img src="Screenshots/Default/Backgrounds/kokomi_2.png" alt="Screenshot number 1">
 </a>
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/kokomi_2.png" title="See preview [kokomi_2.png]">
+    <img src="Screenshots/Default/Backgrounds/kokomi_4.png" alt="Screenshot number 2">
+</a>
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/2.png" title="See preview [2.png]">
-    <img src="Screenshots/Default/Backgrounds/0.png" alt="Screenshot number 2">
+    <img src="Screenshots/Default/Backgrounds/collei_1.png" alt="Screenshot number 3">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/4.png" title="See preview [4.png]">
-    <img src="Screenshots/Default/Backgrounds/3.png" alt="Screenshot number 3">
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/2.png" title="See preview [2.png]">
+    <img src="Screenshots/Default/Backgrounds/hutao_1.png" alt="Screenshot number 5">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/5.png" title="See preview [5.png]">
-    <img src="Screenshots/Default/Backgrounds/5.png" alt="Screenshot number 4">
-</a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/9.png" title="See preview [9.png]">
-    <img src="Screenshots/Default/Backgrounds/9.png" alt="Screenshot number 5">
-</a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/7.png" title="See preview [7.png]">
-    <img src="Screenshots/Default/Backgrounds/7.png" alt="Screenshot number 6">
-</a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/8.png" title="See preview [8.png]">
-    <img src="Screenshots/Default/Backgrounds/8.png" alt="Screenshot number 7">
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/2.png" title="See preview [2.png]">
+    <img src="Screenshots/Default/Backgrounds/yoimiya_1.png" alt="Screenshot number 6">
 </a>
 
 ## 🧶 » Sources
