@@ -40,14 +40,6 @@ Remember to have the latest version of the modification. Gameplay will be availa
 | Good network connection               | [Windows Terminal from MS Store](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701)          |||
 |                                       | [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional)      |
 
-## 🛠️ » Tested game versions
-| Game version | It works? | Date       |
-|--------------|-----------|------------|
-| v3.3.0       | ✅         | 09.11.2022 |
-| v3.2.0       | ✅         | 02.11.2022 |
-| v3.1.0       | ✅         | 01.11.2022 |
-> ✅ Yes ┃ ❎ No ┃ 🤔 Not tested
-
 ## 🔧 » Supported operating systems
 | System                        | OS Build   | Status |
 |-------------------------------|------------|:-------|
@@ -59,6 +51,14 @@ Remember to have the latest version of the modification. Gameplay will be availa
 | iOS / macOS                   | ❓️         | ⚠️     | 
 > ✅ Supported ┃ ⚠️ Not supported ┃ 🎯️ Default not supported  
 > 🤔 Not tested ┃ ❓ I don't know
+
+## 🛠️ » Tested game versions
+| Game version | It works? | Date       |
+|--------------|-----------|------------|
+| v3.3.0       | ✅         | 09.11.2022 |
+| v3.2.0       | ✅         | 02.11.2022 |
+| v3.1.0       | ✅         | 01.11.2022 |
+> ✅ Yes ┃ ❎ No ┃ 🤔 Not tested
 
 ## ⚙ » Recommended settings for game
 | Settings               | Value                              | Settings                    | Value                                |
