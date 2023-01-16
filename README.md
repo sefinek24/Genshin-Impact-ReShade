@@ -37,7 +37,7 @@ New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 Remember to have the latest version of the modification. Gameplay will be available soon. Click [here](https://sefinek.net/genshin-impact-reshade/gallery?page=1) if you want to see more screenshots.
 
 ## ✨ » Requirements
-| 💻 » Your PC • internet               | 📂 » Dependencies • Use installation wizard for automatic install                                                |
+| 💻 Your PC & internet                 | 📂 Dependencies • Use installation wizard for automatic install                                                  |
 |:--------------------------------------|------------------------------------------------------------------------------------------------------------------|
 | Windows 10/11 (build 19041 or higher) | [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)                           |
 | 64-bit processor and system           | [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer) |
@@ -45,27 +45,27 @@ Remember to have the latest version of the modification. Gameplay will be availa
 |                                       | [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional)      |
 
 ## 🔧 » Supported operating systems
-| System                        | OS Build   | Status |
-|-------------------------------|------------|:-------|
-| Windows 11 22H2               | 22621.900  | ✅      |
-| Windows 10 22H2 (recommended) | 19045.2486 | ✅      | 
-| Windows 8 / 8.1               | ❓          | 🎯️    | 
-| Windows 7                     | ❓️         | 🎯️    | 
-| Android / Linux               | ❓️         | ⚠️     | 
-| iOS / macOS                   | ❓️         | ⚠️     | 
+| 💻 System                     | 📝 OS Build | 🤔 Status |
+|-------------------------------|-------------|:----------|
+| Windows 11 22H2               | 22621.900   | ✅         |
+| Windows 10 22H2 (recommended) | 19045.2486  | ✅         | 
+| Windows 8 / 8.1               | ❓           | 🎯️       | 
+| Windows 7                     | ❓️          | 🎯️       | 
+| Android / Linux               | ❓️          | ⚠️        | 
+| iOS / macOS                   | ❓️          | ⚠️        | 
 > ✅ Supported ┃ ⚠️ Not supported ┃ 🎯️ Default not supported  
 > 🤔 Not tested ┃ ❓ I don't know
 
 ## 🛠️ » Tested game versions
-| Game version | It works? | Date       |
-|--------------|-----------|------------|
-| v3.3.0       | ✅         | 09.11.2022 |
-| v3.2.0       | ✅         | 02.11.2022 |
-| v3.1.0       | ✅         | 01.11.2022 |
+| 🎮 Game version | 😅 It works? | 📆 Date    |
+|-----------------|--------------|------------|
+| v3.3.0          | ✅            | 09.11.2022 |
+| v3.2.0          | ✅            | 02.11.2022 |
+| v3.1.0          | ✅            | 01.11.2022 |
 > ✅ Yes ┃ ❎ No ┃ 🤔 Not tested
 
 ## ⚙ » Recommended settings for game
-| Settings               | Value                              | Settings                    | Value                                |
+| 📑 Settings            | 📋 Value                           | 📑 Settings                 | 📋 Value                             |
 |------------------------|------------------------------------|:----------------------------|:-------------------------------------|
 | **Graphics Quality**   | Custom                             | **Anti-Aliasing**           | SMAA (Use FSR 2 if you have low FPS) |
 | **Display Mode**       | 1920x1080 (or higher) Fullscreen   | **Volumetric Fog**          | On                                   | 
