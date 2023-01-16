@@ -4,10 +4,10 @@
         <a href="https://ko-fi.com/sefinek" target="_blank"><img src="https://storage.ko-fi.com/cdn/brandasset/kofi_button_blue.png" height="32" alt="Support me on Ko-fi"></a>
         <a href="https://patreon.com/sefinek" target="_blank"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dsefinek%26type%3Dpledges&style=for-the-badge" height="32" alt="Support me on Patreon"></a>
     </p>
-    <p>
+    <h3>
         ❤ » If you want Ray Tracing in game, become my patron « ❤<br>
         ⭐ » Star the repo if you liked it « ⭐
-    </p>
+    </h3>
     <p>
         <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/youtube_video_border.png" title="See preview [youtube_video_border.png]">
             <img src="Screenshots/Default/youtube_video_border.png" alt="Header image">
