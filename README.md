@@ -21,7 +21,7 @@
 </div>
 
 ## 📂 » Includes
-- Launcher and setup wizard
+- Own launcher and setup wizard
 - [Always the latest shaders and ReShade unlocked](https://github.com/sefinek24/reshade-unlocked)
 - [Presets for game [Best graphics quality]](Data/-%20Presets)
 - [FPS Unlocker](https://github.com/sefinek24/genshin-fps-unlock) [[More information]](https://github.com/sefinek24/genshin-fps-unlock#genshin-impact-fps-unlocker-modified-by-sefinek)
@@ -37,7 +37,7 @@ New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 Remember to have the latest version of the modification. Gameplay will be available soon. Click [here](https://sefinek.net/genshin-impact-reshade/gallery?page=1) if you want to see more screenshots.
 
 ## ✨ » Requirements
-| 💻 Your PC & internet                 | 📂 Dependencies • Use installation wizard for automatic install                                                  |
+| 💻 » Your PC • internet               | 📂 » Dependencies • Use installation wizard for automatic install                                                |
 |:--------------------------------------|------------------------------------------------------------------------------------------------------------------|
 | Windows 10/11 (build 19041 or higher) | [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)                           |
 | 64-bit processor and system           | [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer) |
