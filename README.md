@@ -1,5 +1,5 @@
 <div align="center">
-    <h1>🌠 Genshin Impact ReShade Mod Pack - 2023 🌠</h1>
+    <h1>🌠 Genshin Impact ReShade Mod Pack [2023] 🌠</h1>
     <h3>
         💙 » If you want Ray Tracing in game, become my <a href="https://www.patreon.com/sefinek" target="_blank">Patron</a> « 💙<br>
         ⭐ » Star the repo if you liked it « ⭐
