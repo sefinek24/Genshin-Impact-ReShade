@@ -1,4 +1,4 @@
-## 📥 » v3.2.0 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v3.1.0...v3.2.0)
+## 📥 » v4.0.0 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v3.1.0...v3.2.0)
 ⏰ • **Published:** 12.01.2023  
 🎊 • **Last update:** 16.01.2023
 1. Git is no longer required. We have other method for updates.
