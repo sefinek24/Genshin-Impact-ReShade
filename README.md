@@ -1,9 +1,9 @@
 <div align="center">
     <h1>✨ Genshin Impact ReShade Mod Pack - 2023 ✨</h1>
-    <div>
+    <p>
         <a href="https://ko-fi.com/sefinek" target="_blank"><img src="https://storage.ko-fi.com/cdn/brandasset/kofi_button_blue.png" height="32" alt="Support me on Ko-fi"></a>
         <a href="https://patreon.com/sefinek" target="_blank"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dsefinek%26type%3Dpledges&style=for-the-badge" height="32" alt="Support me on Patreon"></a>
-    </div>
+    </p>
     <p>
         ❤ » If you want Ray Tracing in game, become my patron « ❤<br>
         ⭐ » Star the repo if you liked it « ⭐
