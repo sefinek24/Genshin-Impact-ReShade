@@ -9,37 +9,46 @@ echo.⠀   ⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿
 echo.    ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟
 echo.  ⠀  ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀
 echo. ⠀   ⠀⠀⡟⢦⡀⠇⠀⠀⣀⠞⠀⠀⠘⡀⢀⡠⠚⣉⠤⠂⠀⠀⠀⠈⠙⢦⡀
-echo.   ⠀⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆      * Mod version: v3.1.0.0
-echo.    ⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆    * ReShade version: v5.5.2
+echo.   ⠀⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆      * Mod version: v4.0.0.0
+echo.    ⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆    * ReShade version: v5.6.0
 echo.   ⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇     * FPS unlocker version: v2.0.6
 echo.  ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉⠀⠀⠀⠀⣠⠟
 echo.   ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟
 echo ========================================================================================= & echo.
 
-echo 1/4 - Checking if git is installed...
-if exist "C:\Program Files\Git\cmd\git.exe" (
-    git -v
-    echo.
 
-    echo 2/4 - Killing required processes...
-    taskkill /IM "Genshin Impact Mod Pack.exe"
-    taskkill /IM "inject.exe"
-    taskkill /IM "unlockfps_clr.exe"
-    echo.
-
-    echo 3/4 - Checking for new updates...
-    git fetch
-    git pull
-) else (
-    echo Not installed! I can't check for new updates.
-    echo Please download: https://git-scm.com/downloads
-)
+echo 1/4 - Downloading new setup from cdn.sefinek.net...
+cd "%temp%"
+if exist "Genshin Impact Mod Pack Setup.exe" del "Genshin Impact Mod Pack Setup.exe"
+curl -o "Genshin Impact Mod Pack Setup.exe" https://cdn.sefinek.net/resources/genshin-impact-reshade/launcher/download.exe
 echo.
 
-echo 4/4 - Relaunching...
-echo You can close this window ฅ^˙Ⱉ˙^ฅ rawr!
+
+echo 2/4 - Killing required processes...
+taskkill /F /IM "Genshin Impact Mod Pack.exe"
+taskkill /F /IM "inject.exe"
+taskkill /F /IM "unlockfps_clr.exe"
+echo.
+
+
+echo 3/4 - Installing...
+for /f "tokens=2-4 delims=/ " %%a in ('date /t') do (set date=%%c-%%a-%%b)
+for /f "tokens=1-2 delims=/:" %%a in ("%TIME%") do (set time=%%a%%b)
+
+if not exist "%AppData%\Genshin Impact MP by Sefinek\logs" mkdir "%AppData%\Genshin Impact MP by Sefinek\logs"
+if not exist "%AppData%\Genshin Impact MP by Sefinek\logs\updates" mkdir "%AppData%\Genshin Impact MP by Sefinek\logs\updates"
+
+"%temp%\Genshin Impact Mod Pack Setup.exe" /SILENT /NORESTART /LOG="%AppData%\Genshin Impact MP by Sefinek\logs\updates\%time%_%date%.log"
+echo Done. & echo.
+
+
+echo 4/4 - Finishing...
+del "Genshin Impact Mod Pack Setup.exe"
+echo Done. & echo.
+
+echo Nice! This process has been completed. You can close this window.
+cd C:\Genshin-Impact-ReShade
 "Genshin Impact Mod Pack.exe"
 
-echo This process has been completed.
 timeout /t 9 /nobreak
 exit
