@@ -8,6 +8,7 @@
 5. Updated shaders and ReShade.
 6. Added missing textures.
 7. Removed 1 bugged shader.
+8. Updated presets. See new [screenshots](https://sefinek.net/genshin-impact-reshade/gallery/v4.0.0).
 
 ## 📥 » v3.1.0 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v3.0.1...v3.1.0)
 ⏰ • **Published:** 03.01.2023  
