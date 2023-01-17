@@ -16,43 +16,8 @@ echo.  ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉�
 echo.   ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟
 echo ========================================================================================= & echo.
 
-echo 1/5 - Checking if git is installed...
-if exist "C:\Program Files\Git\cmd\git.exe" (
-    git -v
-    echo.
 
-    echo 2/5 - Checking for new updates...
-    git fetch
-    git pull
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-) else (
-    echo [x] NOT INSTALLED! I CAN'T CHECK FOR NEW UPDATES.
-    echo [i] PLEASE DOWNLOAD: https://git-scm.com/downloads & echo.
-
-    echo 2/5 - Checking for new updates...
-    echo [x] Canceled.
-)
-echo.
-
-
-
-echo 3/5 - Checking required processes...
+echo 1/3 - Checking required processes...
 tasklist /fi "ImageName eq Genshin Impact Mod Pack.exe" /fo csv 2>NUL | find /I "Genshin Impact Mod Pack.exe">NUL
 if "%ERRORLEVEL%"=="0" (
     echo [i] Closing Genshin Impact Mod Pack.exe...
@@ -79,7 +44,7 @@ echo.
 
 
 
-echo 4/5 - Starting...
+echo 2/3 - Starting...
 echo [i] Everything is ready! Please wait a moment (=^･ω･^=) & echo.
 
 set /p RunID=<"%AppData%\Genshin Impact MP by Sefinek\launch-mode.sfn"
