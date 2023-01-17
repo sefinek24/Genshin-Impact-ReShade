@@ -490,6 +490,8 @@ float4 PS_DoF_Main(in ADOF_VSOUT IN) : SV_Target0
 	BokehMax *= weightSum;
 #endif
 
+    int densityScale = max(1, 6 - iADOF_ShapeVertices);
+
 	[loop]
     for (int iVertices = 0; iVertices < iADOF_ShapeVertices && iVertices < 10; iVertices++)
     {
@@ -497,9 +499,15 @@ float4 PS_DoF_Main(in ADOF_VSOUT IN) : SV_Target0
         for(float iRings = 1; iRings <= nRings && iRings < 26; iRings++)
         {
             [loop]
-            for(float iSamplesPerRing = 0; iSamplesPerRing < iRings && iSamplesPerRing < 26; iSamplesPerRing++)
+            for(float iSamplesPerRing = 0; iSamplesPerRing < iRings * densityScale && iSamplesPerRing < 26*2; iSamplesPerRing++)
             {
-                float2 sampleOffset = lerp(IN.offset0.xy,IN.offset0.zw,iSamplesPerRing/iRings);
+                float x = iSamplesPerRing/(iRings * densityScale);
+                float a = x * x * (3.0 - 2.0 * x);
+                float l = 2.55 * rcp(iADOF_ShapeVertices * iADOF_ShapeVertices * 0.4 - 1.0);
+                x = lerp(x, (1.0 + l) * x - a * l, fADOF_ShapeCurvatureAmount);
+
+                float2 sampleOffset = lerp(IN.offset0.xy,IN.offset0.zw, x);
+           
                 ShapeRoundness(sampleOffset,fADOF_ShapeCurvatureAmount);
 
                 float4 sampleBokeh 	= tex2Dlod(sCommonTex0, float4(IN.txcoord.zw + sampleOffset.xy * (bokehRadiusScaled * iRings),0,0));
