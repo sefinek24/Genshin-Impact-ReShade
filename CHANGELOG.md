@@ -1,3 +1,12 @@
+## 📥 » v4.1.0 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v4.0.0...v4.1.0)
+⏰ • **Published:** 20.01.2023  
+🎊 • **Last update:** 20.01.2023
+1. Added new music.
+2. Updated FPS Unlocker.
+3. Improvements.
+4. Updated WebView2.
+5. Other changes.
+
 ## 📥 » v4.0.0 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v3.1.0...v4.0.0)
 ⏰ • **Published:** 12.01.2023  
 🎊 • **Last update:** 18.01.2023
