@@ -9,4 +9,4 @@ Official website and setup: https://sefinek.net/genshin-impact-reshade
 https://discord.gg/SVcbaRc7gH
 
 ❤ Author
-Sefinek (sefinek.net / contact@sefinek.net)
+Sefinek (https://sefinek.net) <contact@sefinek.net>
