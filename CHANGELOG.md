@@ -1,3 +1,8 @@
+## 📥 » v4.1.1 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v4.1.0...v4.1.1)
+⏰ • **Published:** 21.01.2023  
+🎊 • **Last update:** 21.01.2023
+1. Small fixes.
+
 ## 📥 » v4.1.0 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v4.0.0...v4.1.0)
 ⏰ • **Published:** 20.01.2023  
 🎊 • **Last update:** 20.01.2023
