@@ -28,14 +28,21 @@
 - [FPS Unlocker](https://github.com/sefinek24/genshin-fps-unlock) [[More information]](https://github.com/sefinek24/genshin-fps-unlock#genshin-impact-fps-unlocker-modified-by-sefinek)
 
 ## 📥 » How to install?
-Download the latest installer from [my official website](https://sefinek.net/genshin-impact-reshade).
+Download the latest setup from [my official website](https://sefinek.net/genshin-impact-reshade).
+
+## 📝️ » Information
+* Remember to have the latest version of the modification.
+* Gameplay will be available soon.
+* Click [here](https://sefinek.net/genshin-impact-reshade/gallery?page=1) if you want to see more screenshots.
+* Main server localization: Poland
+* Proxy: WAW, FRA [Cloudflare]
 
 ## 🎥 » YouTube videos
 Tutorial (outdated): https://www.youtube.com/watch?v=rDeO26RapAk  
 New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 
-## 📝️ » Notes and other information
-Remember to have the latest version of the modification. Gameplay will be available soon. Click [here](https://sefinek.net/genshin-impact-reshade/gallery?page=1) if you want to see more screenshots.
+## ⚠ » Warning
+Do not share screenshots from game with your UID with visible shaders or ReShade overlay!
 
 ## ✨ » Requirements
 | 💻 Your PC & network                  | 📂 Dependencies • Use installation wizard for automatic install                                                  |
