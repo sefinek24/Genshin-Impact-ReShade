@@ -1,26 +1,26 @@
 <div align="center">
     <h1>🌠 Genshin Impact ReShade Mod Pack [2023] 🌠</h1>
     <h3>
-        💙 » If you want Ray Tracing in game, become my <a href="https://www.patreon.com/sefinek" target="_blank">Patron</a> « 💙<br>
+        💙 » If you want Ray Tracing in game, become my <a href="https://www.patreon.com/sefinek" target="_blank" title="www.patreon.com/sefinek">Patron</a> « 💙<br>
         ⭐ » Star the repo if you liked it « ⭐
     </h3>
     <p>
-        <a href="https://ko-fi.com/sefinek" target="_blank"><img src="https://storage.ko-fi.com/cdn/brandasset/kofi_button_blue.png" height="32" alt="Support me on Ko-fi"></a>
-        <a href="https://patreon.com/sefinek" target="_blank"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dsefinek%26type%3Dpledges&style=for-the-badge" height="32" alt="Support me on Patreon"></a>
+        <a href="https://ko-fi.com/sefinek" target="_blank" title="Ko-fi"><img src="https://storage.ko-fi.com/cdn/brandasset/kofi_button_blue.png" height="32" alt="Support me on Ko-fi"></a>
+        <a href="https://patreon.com/sefinek" target="_blank" title="Patreon"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dsefinek%26type%3Dpledges&style=for-the-badge" height="32" alt="Support me on Patreon"></a>
     </p>
     <p>
         <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/youtube_video_border.png" title="See preview [youtube_video_border.png]">
             <img src="Screenshots/Default/youtube_video_border.png" alt="Header image">
         </a>
     </p>
-    <img src="https://img.shields.io/github/repo-size/sefinek24/Genshin-Impact-ReShade?label=Repo%20size" alt="Repo size">
-    <img src="https://img.shields.io/github/commit-activity/w/sefinek24/Genshin-Impact-ReShade?label=Commit%20activity" alt="Files">
-    <a href="https://discord.gg/SVcbaRc7gH" target="_blank"><img src="https://img.shields.io/discord/1044713077125435492?label=Discord%20server" title="Official Discord server" alt="Our Discord server"></a>
+    <a href="https://github.com/sefinek24/Genshin-Impact-ReShade" target="_blank" title="Commit activity"><img src="https://img.shields.io/github/repo-size/sefinek24/Genshin-Impact-ReShade?label=Repo%20size" alt="Repo size"></a>
+    <a href="https://github.com/sefinek24/Genshin-Impact-ReShade/commits/main" target="_blank" title="Commit activity"><img src="https://img.shields.io/github/commit-activity/w/sefinek24/Genshin-Impact-ReShade?label=Commit%20activity" alt="Commit activity"></a>
+    <a href="https://discord.gg/SVcbaRc7gH" target="_blank" title="Official Discord server"><img src="https://img.shields.io/discord/1044713077125435492?label=Discord%20server" alt="Our Discord server"></a>
     <br>
-    <img src="https://img.shields.io/website?down_message=Offline&label=Website&up_message=Online&url=https%3A%2F%2Fsefinek.net" title="sefinek.net status" alt="Website status">
-    <img src="https://img.shields.io/website?down_message=Offline&label=API&up_message=Online&url=https%3A%2F%2Fapi.sefinek.net" title="api.sefinek.net status" alt="Website status">
-    <img src="https://img.shields.io/website?down_message=Offline&label=CDN&up_message=Online&url=https%3A%2F%2Fcdn.sefinek.net" title="cdn.sefinek.net status" alt="Website status">
-    <img src="https://img.shields.io/uptimerobot/ratio/7/m793533681-b79b8280de15efcd9bc83d7d?label=Uptime" title="Webserver uptime" alt="Website uptime">
+    <a href="https://sefinek.net" target="_blank" title="sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=Website&up_message=Online&url=https%3A%2F%2Fsefinek.net" alt="Website status"></a>
+    <a href="https://api.sefinek.net" target="_blank" title="api.sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=API&up_message=Online&url=https%3A%2F%2Fapi.sefinek.net" alt="Website status"></a>
+    <a href="https://cdn.sefinek.net" target="_blank" title="cdn.sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=CDN&up_message=Online&url=https%3A%2F%2Fcdn.sefinek.net" alt="Website status"></a>
+    <a href="https://stats.uptimerobot.com/kLXYEukEwW" target="_blank" title="Service uptime"><img src="https://img.shields.io/uptimerobot/ratio/7/m793533681-b79b8280de15efcd9bc83d7d?label=Uptime" alt="Website uptime"></a>
 </div>
 
 ## 📂 » Includes
