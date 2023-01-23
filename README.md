@@ -15,9 +15,10 @@
     </p>
     <img src="https://img.shields.io/github/repo-size/sefinek24/Genshin-Impact-ReShade?label=Repo%20size" alt="Repo size">
     <img src="https://img.shields.io/github/commit-activity/w/sefinek24/Genshin-Impact-ReShade?label=Commit%20activity" alt="Files">
-    <img src="https://img.shields.io/website?down_message=Offline&label=Website&up_message=Online&url=https%3A%2F%2Fsefinek.net" alt="www.sefinek.net status">
+    <a href="https://discord.gg/SVcbaRc7gH" target="_blank"><img src="https://img.shields.io/discord/1044713077125435492?label=Discord%20server" alt="Official Discord server"></a>
     <br>
-    <a href="https://discord.gg/SVcbaRc7gH" target="_blank"><img src="https://img.shields.io/discord/1044713077125435492?label=Join%20our%20Discord" alt="Official Discord server"></a>
+    <img src="https://img.shields.io/website?down_message=Offline&label=Website&up_message=Online&url=https%3A%2F%2Fsefinek.net" alt="sefinek.net status">
+    <img src="https://img.shields.io/website?down_message=Offline&label=API&up_message=Online&url=https%3A%2F%2Fapi.sefinek.net" alt="api.sefinek.net status">
 </div>
 
 ## 📂 » Includes
