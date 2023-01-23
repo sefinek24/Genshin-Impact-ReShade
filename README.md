@@ -22,7 +22,8 @@
 
 ## 📂 » Includes
 - Own launcher and setup wizard
-- [Always the latest shaders and ReShade unlocked](https://github.com/sefinek24/reshade-unlocked)
+- [Unlocked ReShade](https://github.com/sefinek24/reshade-unlocked)
+- [Always the latest shaders](Data/Shaders)
 - [Presets for game [Best graphics quality]](Data/Presets)
 - [FPS Unlocker](https://github.com/sefinek24/genshin-fps-unlock) [[More information]](https://github.com/sefinek24/genshin-fps-unlock#genshin-impact-fps-unlocker-modified-by-sefinek)
 
