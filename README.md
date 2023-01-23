@@ -20,7 +20,7 @@
     <a href="https://sefinek.net" target="_blank" title="sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=Website&up_message=Online&url=https%3A%2F%2Fsefinek.net" alt="Website status"></a>
     <a href="https://api.sefinek.net" target="_blank" title="api.sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=API&up_message=Online&url=https%3A%2F%2Fapi.sefinek.net" alt="Website status"></a>
     <a href="https://cdn.sefinek.net" target="_blank" title="cdn.sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=CDN&up_message=Online&url=https%3A%2F%2Fcdn.sefinek.net" alt="Website status"></a>
-    <a href="https://stats.uptimerobot.com/kLXYEukEwW" target="_blank" title="Service uptime"><img src="https://img.shields.io/uptimerobot/ratio/7/m793533681-b79b8280de15efcd9bc83d7d?label=Uptime" alt="Website uptime"></a>
+    <a href="https://stats.uptimerobot.com/kLXYEukEwW" target="_blank" title="sefinek.net uptime"><img src="https://img.shields.io/uptimerobot/ratio/7/m793533681-b79b8280de15efcd9bc83d7d?label=Uptime" alt="Website uptime"></a>
 </div>
 
 ## 📂 » Includes
