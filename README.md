@@ -41,7 +41,7 @@ Download the latest setup from [my official website](https://sefinek.net/genshin
 Tutorial (outdated): https://www.youtube.com/watch?v=rDeO26RapAk  
 New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 
-## ⚠ » Warning
+## ⚠️ » Warning
 Do not share screenshots from game with your UID with visible shaders or ReShade overlay!
 
 ## ✨ » Requirements
