@@ -1,10 +1,18 @@
-# Folders
-Data/Presets/Patrons
-Data/Presets/Other/Previous versions
+# Directories
 .idea
 .vs
 
+# For my patrons
+Data/Patrons
+Data/Presets/New
+Data/Presets/Patrons
+Data/Presets/Other/Previous versions
+
 # Files
-Screenshots/*.png
 Data/Unlocker/unlocker.config.json
+Screenshots/*.png
+Screenshots/*.jpg
+Screenshots/*.jpeg
+
+# Configs
 .eslintrc.js
