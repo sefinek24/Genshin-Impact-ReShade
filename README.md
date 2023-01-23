@@ -55,23 +55,23 @@ Do not share screenshots from game with your UID with visible shaders or ReShade
 ## 🔧 » Supported operating systems
 | 💻 System                     | 📝 OS Build | 🤔 Status |
 |-------------------------------|-------------|:----------|
-| Windows 11 22H2               | 22621.900   | ✅         |
-| Windows 10 22H2 (recommended) | 19045.2486  | ✅         | 
+| Windows 11 22H2               | 22621.900   | ✔️        |
+| Windows 10 22H2 (recommended) | 19045.2486  | ✔️        | 
 | Windows 8 / 8.1               | ❓           | 🎯️       | 
 | Windows 7                     | ❓️          | 🎯️       | 
 | Android / Linux               | ❓️          | ⚠️        | 
 | iOS / macOS                   | ❓️          | ⚠️        | 
-> ✅ Supported ┃ ⚠️ Not supported ┃ 🎯️ Default not supported  
+> ✔️ Supported ┃ ⚠️ Not supported ┃ 🎯️ Default not supported  
 > 🤔 Not tested ┃ ❓ I don't know
 
 ## 🛠️ » Tested game versions
 | 🎮 Game version | 😅 It works? | 📆 Date    |
 |-----------------|--------------|------------|
-| v3.4.0          | ✅            | 18.01.2023 |
-| v3.3.0          | ✅            | 09.11.2022 |
-| v3.2.0          | ✅            | 02.11.2022 |
-| v3.1.0          | ✅            | 01.11.2022 |
-> ✅ Yes ┃ ❎ No ┃ 🤔 Not tested
+| v3.4.0          | ✔️           | 18.01.2023 |
+| v3.3.0          | ✔️           | 09.11.2022 |
+| v3.2.0          | ✔️           | 02.11.2022 |
+| v3.1.0          | ✔️           | 01.11.2022 |
+> ✔️ Yes ┃ ❎ No ┃ 🤔 Not tested
 
 ## ⚙ » Recommended settings for game
 | 📑 Settings            | 📋 Value                           | 📑 Settings                 | 📋 Value                             |
