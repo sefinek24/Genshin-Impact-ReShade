@@ -32,8 +32,8 @@ Download the latest setup from [my official website](https://sefinek.net/genshin
 
 ## 📝️ » Information
 * Remember to have the latest version of the modification.
-* Gameplay will be available soon.
 * Click [here](https://sefinek.net/genshin-impact-reshade/gallery?page=1) if you want to see more screenshots.
+* Gameplay will be available soon.
 * Main server localization: Poland
 * Proxy: WAW, FRA [Cloudflare]
 
