@@ -2,7 +2,7 @@
 Do not share screenshots with your UID and visible shaders or ReShade overlay!
 
 » RAY TRACING
-If you want Ray Tracing (beta release) in Genshin Impact, become my patron. You don't need to have RTX graphic card.
+If you want Ray Tracing (beta release) in Genshin Impact, become my patron. You don't need to have Nvidia RTX graphic card.
 
 » DISCORD SERVER
 https://discord.gg/SVcbaRc7gH
