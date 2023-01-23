@@ -20,6 +20,7 @@
     <img src="https://img.shields.io/website?down_message=Offline&label=Website&up_message=Online&url=https%3A%2F%2Fsefinek.net" title="sefinek.net status" alt="Website status">
     <img src="https://img.shields.io/website?down_message=Offline&label=API&up_message=Online&url=https%3A%2F%2Fapi.sefinek.net" title="api.sefinek.net status" alt="Website status">
     <img src="https://img.shields.io/website?down_message=Offline&label=CDN&up_message=Online&url=https%3A%2F%2Fcdn.sefinek.net" title="cdn.sefinek.net status" alt="Website status">
+    <img src="https://img.shields.io/uptimerobot/ratio/7/m793533681-b79b8280de15efcd9bc83d7d?label=Uptime" title="Webserver uptime" alt="Website uptime">
 </div>
 
 ## 📂 » Includes
