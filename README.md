@@ -58,7 +58,7 @@ Do not share screenshots from game with your UID with visible shaders or ReShade
 | 💻 System                     | 📝 OS Build | 🤔 Status |
 |-------------------------------|-------------|:----------|
 | Windows 11 22H2               | 22621.900   | ✔️        |
-| Windows 10 22H2 (recommended) | 19045.2486  | ✔️        | 
+| Windows 10 22H2 (recommended) | 19045.2546  | ✔️        | 
 | Windows 8 / 8.1               | ❓           | 🎯️       | 
 | Windows 7                     | ❓️          | 🎯️       | 
 | Android / Linux               | ❓️          | ❌         | 
