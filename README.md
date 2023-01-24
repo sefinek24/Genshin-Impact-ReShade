@@ -63,7 +63,7 @@ Do not share screenshots from game with your UID with visible shaders or ReShade
 | Windows 7                     | ❓️          | 🎯️       | 
 | Android / Linux               | ❓️          | ⚠️        | 
 | iOS / macOS                   | ❓️          | ⚠️        | 
-> ✔️ Supported ┃ ⚠️ Not supported ┃ 🎯️ Default not supported  
+> ✔️ Supported ┃ ❌ Not supported ┃ 🎯️ Default not supported  
 > 🤔 Not tested ┃ ❓ I don't know
 
 ## 🛠️ » Tested game versions
@@ -73,7 +73,7 @@ Do not share screenshots from game with your UID with visible shaders or ReShade
 | v3.3.0          | ✔️           | 09.11.2022 |
 | v3.2.0          | ✔️           | 02.11.2022 |
 | v3.1.0          | ✔️           | 01.11.2022 |
-> ✔️ Yes ┃ ❎ No ┃ 🤔 Not tested
+> ✔️ Yes ┃ ❌ No ┃ 🤔 Not tested
 
 ## ⚙ » Recommended settings for game
 | 📑 Settings            | 📋 Value                           | 📑 Settings                 | 📋 Value                             |
