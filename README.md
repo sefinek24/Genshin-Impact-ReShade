@@ -61,8 +61,8 @@ Do not share screenshots from game with your UID with visible shaders or ReShade
 | Windows 10 22H2 (recommended) | 19045.2486  | ✔️        | 
 | Windows 8 / 8.1               | ❓           | 🎯️       | 
 | Windows 7                     | ❓️          | 🎯️       | 
-| Android / Linux               | ❓️          | ⚠️        | 
-| iOS / macOS                   | ❓️          | ⚠️        | 
+| Android / Linux               | ❓️          | ❌         | 
+| iOS / macOS                   | ❓️          | ❌         | 
 > ✔️ Supported ┃ ❌ Not supported ┃ 🎯️ Default not supported  
 > 🤔 Not tested ┃ ❓ I don't know
 
