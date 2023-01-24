@@ -55,7 +55,7 @@ Do not share screenshots from game with your UID with visible shaders or ReShade
 |                                       | [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional)      |
 
 ## 🔧 » Supported operating systems
-| 💻 System                     | 📝 OS Build | 🤔 Status |
+| 💻 System                     | 📝 OS Build | 🙀 Status |
 |-------------------------------|-------------|:----------|
 | Windows 11 22H2               | 22621.900   | ✔️        |
 | Windows 10 22H2 (recommended) | 19045.2546  | ✔️        | 
