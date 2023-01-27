@@ -36,7 +36,7 @@ Download the latest setup from [my official website](https://sefinek.net/genshin
 
 ## 📝️ » Information
 * If you need help, please join to our [Discord server](https://discord.gg/SVcbaRc7gH).
-* Click [here](https://sefinek.net/genshin-impact-reshade/gallery?page=1) if you want to see more screenshots.
+* Click [here](https://sefinek.net/genshin-impact-reshade/gallery?page=1) if you want to see more and latest screenshots.
 * Gameplay will be available soon.
 * Main server localization: Poland [Cloudflare - WAW, FRA]
 
