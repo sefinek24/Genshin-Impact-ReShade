@@ -8,7 +8,7 @@ if "%ERRORLEVEL%"=="0" (
     pause
 )
 
-tasklist /fi "ImageName eq inject.exe" /fo csv 2>NUL | find /I "inject.exe">NUL
-echo [✓] inject.exe - SKIPPED
+tasklist /fi "ImageName eq inject64.exe" /fo csv 2>NUL | find /I "inject64.exe">NUL
+echo [✓] inject64.exe - SKIPPED
 
 call Data\Cmd\start\done.cmd

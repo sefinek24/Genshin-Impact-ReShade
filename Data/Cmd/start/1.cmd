@@ -8,12 +8,12 @@ if "%ERRORLEVEL%"=="0" (
     pause
 )
 
-tasklist /fi "ImageName eq inject.exe" /fo csv 2>NUL | find /I "inject.exe">NUL
+tasklist /fi "ImageName eq inject64.exe" /fo csv 2>NUL | find /I "inject64.exe">NUL
 if "%ERRORLEVEL%"=="0" (
-    echo [✓] inject.exe - OK
+    echo [✓] inject64.exe - OK
     call Data\Cmd\start\done.cmd
 ) else (
-    echo [x] inject.exe - ERROR
+    echo [x] inject64.exe - ERROR
     call Data\Cmd\start\error.cmd
     pause
 )
