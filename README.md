@@ -34,18 +34,18 @@
 ## 📥 » How to install?
 Download the latest setup from [my official website](https://sefinek.net/genshin-impact-reshade).
 
-## 📝️ » Information
-* If you need help, please join to our [Discord server](https://discord.gg/SVcbaRc7gH).
-* Click [here](https://sefinek.net/genshin-impact-reshade/gallery?page=1) if you want to see more and latest screenshots.
-* Gameplay will be available soon.
-* Main server localization: Poland [Cloudflare - WAW, FRA]
+## ⚠️ » Important
+Do not share screenshots from game with your UID with visible shaders or ReShade overlay!
 
 ## 🎥 » YouTube videos
 Tutorial (outdated): https://www.youtube.com/watch?v=rDeO26RapAk  
 New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 
-## ⚠️ » Warning
-Do not share screenshots from game with your UID with visible shaders or ReShade overlay!
+## 📝️ » Information
+* If you need help, please join to our [Discord server](https://discord.gg/SVcbaRc7gH).
+* Click [here](https://sefinek.net/genshin-impact-reshade/gallery?page=1) if you want to see more and latest screenshots.
+* Gameplay will be available soon.
+* Main server localization: Poland [Cloudflare - WAW, FRA]
 
 ## ✨ » Requirements
 | 💻 Your PC & network                  | 📂 Dependencies • Use installation wizard for automatic install                                                  |
