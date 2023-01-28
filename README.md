@@ -78,17 +78,17 @@ New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 > ✔️ Yes ┃ ❌ No ┃ 🤔 Not tested
 
 ## ⚙ » Recommended settings for game
-| 📑 Settings            | 📋 Value                               | 📑 Settings                 | 📋 Value                             |
-|------------------------|----------------------------------------|:----------------------------|:-------------------------------------|
-| **Graphics Quality**   | Custom                                 | **Anti-Aliasing**           | SMAA (Use FSR 2 if you have low FPS) |
-| **Display Mode**       | 1920x1080 (or higher) Fullscreen       | **Volumetric Fog**          | On                                   | 
-| **Brightness**         | Default                                | **Reflections**             | On                                   | 
-| **FPS**                | 60 (Do not change if you using unlock) | **Motion Blur**             | Extreme                              | 
-| **Render Resolution**  | 1.1 or higher                          | **Bloom**                   | On                                   | 
-| **Shadow Quality**     | High                                   | **Crowd Density**           | High                                 | 
-| **Visual Effects**     | High                                   | **Co-Op Teammates Effects** | On                                   | 
-| **SFX Quality**        | High                                   | **Subsurface Scattering**   | High                                 | 
-| **Environment Detail** | Highest                                | **Anisotropic Filtering**   | 16x                                  | 
+| 📑 Settings            | 📋 Value                                | 📑 Settings                 | 📋 Value                              |
+|------------------------|-----------------------------------------|:----------------------------|:--------------------------------------|
+| **Graphics Quality**   | Custom                                  | **Anti-Aliasing**           | SMAA<br>Use FSR 2 if you have low FPS |
+| **Display Mode**       | 1920x1080 (or higher) Fullscreen        | **Volumetric Fog**          | On                                    | 
+| **Brightness**         | Default                                 | **Reflections**             | On                                    | 
+| **FPS**                | 60<br>Do not change if you using unlock | **Motion Blur**             | Extreme                               | 
+| **Render Resolution**  | 1.1 or higher                           | **Bloom**                   | On                                    | 
+| **Shadow Quality**     | High                                    | **Crowd Density**           | High                                  | 
+| **Visual Effects**     | High                                    | **Co-Op Teammates Effects** | On                                    | 
+| **SFX Quality**        | High                                    | **Subsurface Scattering**   | High                                  | 
+| **Environment Detail** | Highest                                 | **Anisotropic Filtering**   | 16x                                   | 
 
 ## 📷 » Other screenshots (without Ray Tracing)
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/kokomi_2.png" title="See preview [kokomi_2.png]">
