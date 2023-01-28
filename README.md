@@ -90,7 +90,7 @@ New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 | **SFX Quality**        | High                               | **Subsurface Scattering**   | High                                 | 
 | **Environment Detail** | Highest                            | **Anisotropic Filtering**   | 16x                                  | 
 
-## 📷 » Other screenshots
+## 📷 » Other screenshots (without Ray Tracing)
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/kokomi_2.png" title="See preview [kokomi_2.png]">
     <img src="Screenshots/Default/Backgrounds/kokomi_2.png" alt="Screenshot number 1">
 </a>
