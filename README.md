@@ -52,7 +52,7 @@ Do not share screenshots from game with your UID with visible shaders or ReShade
 |:--------------------------------------|------------------------------------------------------------------------------------------------------------------|
 | Windows 10/11 (build 19041 or higher) | [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)                           |
 | 64-bit processor and system           | [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer) |
-| Good internet connection              | [Windows Terminal from MS Store](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701)          |||
+| Good internet connection              | [Windows Terminal](https://github.com/microsoft/terminal/releases)                                               |||
 |                                       | [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional)      |
 
 ## 🔧 » Supported operating systems
