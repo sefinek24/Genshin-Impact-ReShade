@@ -42,8 +42,9 @@ Tutorial (outdated): https://www.youtube.com/watch?v=rDeO26RapAk
 New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 
 ## 📝️ » Information
-* If you need help, please join to our [Discord server](https://discord.gg/SVcbaRc7gH).
-* Click [here](https://sefinek.net/genshin-impact-reshade/gallery?page=1) if you want to see more and latest screenshots.
+* Need help? Please join to our [Discord server](https://discord.gg/SVcbaRc7gH).
+* Click [here](https://sefinek.net/genshin-impact-reshade/gallery?page=1) for more and latest screenshots.
+* If you want to become contributor, just create a new [Pull Request](https://github.com/sefinek24/Genshin-Impact-ReShade/pulls). Thanks.
 * Gameplay will be available soon.
 * Main server localization: Poland [Cloudflare - WAW, FRA]
 
