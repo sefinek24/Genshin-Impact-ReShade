@@ -2,13 +2,9 @@ echo 3/3 - Waiting for processes...
 tasklist /fi "ImageName eq unlockfps_clr.exe" /fo csv 2>NUL | find /I "unlockfps_clr.exe">NUL
 if "%ERRORLEVEL%"=="0" (
     echo [✓] unlockfps_clr.exe - OK
+    call done.cmd
 ) else (
     echo [x] unlockfps_clr.exe - ERROR
-    call Data\Cmd\start\error.cmd
+    call error.cmd
     pause
 )
-
-tasklist /fi "ImageName eq inject64.exe" /fo csv 2>NUL | find /I "inject64.exe">NUL
-echo [✓] inject64.exe - SKIPPED
-
-call Data\Cmd\start\done.cmd

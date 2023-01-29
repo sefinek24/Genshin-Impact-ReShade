@@ -20,23 +20,32 @@ echo ===========================================================================
 echo 1/3 - Checking required processes...
 tasklist /fi "ImageName eq Genshin Impact Mod Pack.exe" /fo csv 2>NUL | find /I "Genshin Impact Mod Pack.exe">NUL
 if "%ERRORLEVEL%"=="0" (
-    echo [i] Closing Genshin Impact Mod Pack.exe...
+    echo [i] Genshin Impact Mod Pack.exe - Closing...
     taskkill /IM "Genshin Impact Mod Pack.exe"
+) else (
+    echo [✓] Genshin Impact Mod Pack.exe - OK
 )
-echo [✓] Genshin Impact Mod Pack.exe - OK
+
+tasklist /fi "ImageName eq GenshinImpact.exe" /fo csv 2>NUL | find /I "GenshinImpact.exe">NUL
+if "%ERRORLEVEL%"=="0" (
+    echo [i] GenshinImpact.exe - Closing...
+    taskkill /IM "GenshinImpact.exe"
+) else (
+    echo [✓] GenshinImpact.exe - OK
+)
+
 tasklist /fi "ImageName eq inject64.exe" /fo csv 2>NUL | find /I "inject64.exe">NUL
 if "%ERRORLEVEL%"=="0" (
-    echo [x] The application "inject64.exe" [injector for ReShade] is already running. Close it and try again.
-
-    goto pause
+    echo [i] inject64.exe - Closing...
+    taskkill /IM "inject64.exe"
 ) else (
     echo [✓] inject64.exe - OK
 )
+
 tasklist /fi "ImageName eq unlockfps_clr.exe" /fo csv 2>NUL | find /I "unlockfps_clr.exe">NUL
 if "%ERRORLEVEL%"=="0" (
-    echo [x] The application "unlockfps_clr.exe" [Genshin FPS Unlocker] is already running. Close it and try again.
-
-    goto pause
+    echo [i] unlockfps_clr.exe - Closing...
+    taskkill /IM "unlockfps_clr.exe"
 ) else (
     echo [✓] unlockfps_clr.exe - OK
 )
@@ -49,17 +58,30 @@ echo [i] Everything is ready! Please wait a moment (=^･ω･^=) & echo.
 
 set /p RunID=<"%AppData%\Genshin Impact MP by Sefinek\launch-mode.sfn"
 if %RunID% == 1 (
-    powershell.exe Cd "Data\ReShade"; Start-Process -FilePath "inject64.exe" "GenshinImpact.exe"; Cd "\"..\Unlocker\""; Start-Process -FilePath ".\unlockfps_clr.exe"
+	cd "Data\Unlocker"
+	start .\unlockfps_clr.exe
+	
+    cd "..\ReShade"
+	"inject64.exe" "GenshinImpact.exe"
 
-    call Data\Cmd\start\1.cmd
+	echo.
+	cd ..\Cmd\start
+    call unlockfps_clr.cmd
 ) else if %RunID% == 2 (
-    powershell.exe Cd "Data\ReShade"; Start-Process -FilePath "inject64.exe" "GenshinImpact.exe"
+    echo Please start the game now.
 
-    call Data\Cmd\start\2.cmd
+    cd "Data\ReShade"
+    "inject64.exe" "GenshinImpact.exe"
+
+    echo.
+    cd ..\Cmd\start
+    call done.cmd
 ) else if %RunID% == 3 (
-    powershell.exe Cd "\"Data\Unlocker\""; Start-Process -FilePath ".\unlockfps_clr.exe"
+    cd "Data\Unlocker"
+    start .\unlockfps_clr.exe
 
-    call Data\Cmd\start\3.cmd
+    cd ..\Cmd\start
+    call unlockfps_clr.cmd
 ) else (
     goto error
 )
