@@ -177,6 +177,9 @@ technique CRT_Royale
 
 			// This lets us improve performance by only computing the mask every k frames
 			ClearRenderTargets = false;
+			
+			PrimitiveTopology = TRIANGLESTRIP;
+			VertexCount = 4;
 		}
 		pass applyPhosphormask
 		{

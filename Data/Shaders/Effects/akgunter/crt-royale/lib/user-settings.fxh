@@ -324,8 +324,9 @@ static const float aa_cubic_c_static = 0.5;             //  range [0, 4]
 static const float aa_gauss_sigma_static = 0.5;     //  range [0.0625, 1.0]
 
 //  PHOSPHOR MASK:
-//  Mask type: 0 = aperture grille, 1 = slot mask, 2 = EDP shadow mask
-static const float mask_type_static = 1.0;                  //  range [0, 2]
+//  Mask type: 0 = aperture grille, 1 = slot mask, 2 = shadow mask
+//  3 = lowres grille, 4 = lowres slot, 5 = lowres shadow
+static const float mask_type_static = 4.0;                  //  range [0, 5]
 //  We can sample the mask three ways.  Pick 2/3 from: Pretty/Fast/Flexible.
 //  0.) Sinc-resize to the desired dot pitch manually (pretty/slow/flexible).
 //      This requires _PHOSPHOR_MASK_MANUALLY_RESIZE to be #defined.
