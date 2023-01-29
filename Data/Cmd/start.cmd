@@ -54,7 +54,7 @@ echo.
 
 
 echo 2/3 - Starting...
-echo [i] Everything is ready! Please wait a moment (=^･ω･^=) & echo.
+echo [i] Everything is ready! Please wait a moment ᕱ⑅︎ᕱ & echo.
 
 set /p RunID=<"%AppData%\Genshin Impact MP by Sefinek\launch-mode.sfn"
 if %RunID% == 1 (
