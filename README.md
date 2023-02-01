@@ -1,42 +1,44 @@
 <div align="center">
     <h1>🌠 Genshin Impact ReShade Mod Pack [2023] 🌠</h1>
     <h3>
-        💙 » If you want Ray Tracing in game, become my <a href="https://www.patreon.com/sefinek" target="_blank" title="www.patreon.com/sefinek">Patron</a> « 💙<br>
+        💙 » If you want Ray Tracing in game, become my <a href="https://www.patreon.com/sefinek" title="www.patreon.com/sefinek">Patron</a> « 💙<br>
         ⭐ » Star the repo if you liked it « ⭐
     </h3>
     <p>
-        <a href="https://ko-fi.com/sefinek" target="_blank" title="Ko-fi"><img src="https://storage.ko-fi.com/cdn/brandasset/kofi_button_blue.png" height="32" alt="Support me on Ko-fi"></a>
-        <a href="https://patreon.com/sefinek" target="_blank" title="Patreon"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dsefinek%26type%3Dpledges&style=for-the-badge" height="32" alt="Support me on Patreon"></a>
+        <a href="https://ko-fi.com/sefinek" title="Ko-fi"><img src="https://storage.ko-fi.com/cdn/brandasset/kofi_button_blue.png" height="32" alt="Support me on Ko-fi"></a>
+        <a href="https://patreon.com/sefinek" title="Patreon"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dsefinek%26type%3Dpledges&style=for-the-badge" height="32" alt="Support me on Patreon"></a>
     </p>
     <p>
         <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/youtube_video.png" title="See preview [Screenshots/Default/youtube_video.png]">
             <img src="Screenshots/Default/youtube_video_border.png" alt="Header image">
         </a>
     </p>
-    <a href="https://github.com/sefinek24/Genshin-Impact-ReShade" target="_blank" title="Repository size"><img src="https://img.shields.io/github/repo-size/sefinek24/Genshin-Impact-ReShade?label=Repo%20size" alt="Repo size"></a>
-    <a href="https://github.com/sefinek24/Genshin-Impact-ReShade/commits/main" target="_blank" title="Commit activity"><img src="https://img.shields.io/github/commit-activity/w/sefinek24/Genshin-Impact-ReShade?label=Commit%20activity" alt="Commit activity"></a>
-    <a href="https://discord.gg/SVcbaRc7gH" target="_blank" title="Official Discord server"><img src="https://img.shields.io/discord/1044713077125435492?label=Discord%20server" alt="Our Discord server"></a>
+    <a href="https://github.com/sefinek24/Genshin-Impact-ReShade" title="Repository size"><img src="https://img.shields.io/github/repo-size/sefinek24/Genshin-Impact-ReShade?label=Repo%20size" alt="Repo size"></a>
+    <a href="https://github.com/sefinek24/Genshin-Impact-ReShade/commits/main" title="Commit activity"><img src="https://img.shields.io/github/commit-activity/w/sefinek24/Genshin-Impact-ReShade?label=Commit%20activity" alt="Commit activity"></a>
+    <a href="https://discord.gg/SVcbaRc7gH" title="Official Discord server"><img src="https://img.shields.io/discord/1044713077125435492?label=Discord%20server" alt="Our Discord server"></a>
     <br>
-    <a href="https://sefinek.net" target="_blank" title="sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=Website&up_message=Online&url=https%3A%2F%2Fsefinek.net" alt="Website status"></a>
-    <a href="https://api.sefinek.net" target="_blank" title="api.sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=API&up_message=Online&url=https%3A%2F%2Fapi.sefinek.net" alt="Website status"></a>
-    <a href="https://cdn.sefinek.net" target="_blank" title="cdn.sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=CDN&up_message=Online&url=https%3A%2F%2Fcdn.sefinek.net" alt="Website status"></a>
-    <a href="https://stats.uptimerobot.com/kLXYEukEwW" target="_blank" title="sefinek.net uptime"><img src="https://img.shields.io/uptimerobot/ratio/7/m793533681-b79b8280de15efcd9bc83d7d?label=Uptime" alt="Website uptime"></a>
+    <a href="https://sefinek.net" title="sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=Website&up_message=Online&url=https%3A%2F%2Fsefinek.net" alt="Website status"></a>
+    <a href="https://api.sefinek.net" title="api.sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=API&up_message=Online&url=https%3A%2F%2Fapi.sefinek.net" alt="Website status"></a>
+    <a href="https://cdn.sefinek.net" title="cdn.sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=CDN&up_message=Online&url=https%3A%2F%2Fcdn.sefinek.net" alt="Website status"></a>
+    <a href="https://stats.uptimerobot.com/kLXYEukEwW" title="sefinek.net uptime"><img src="https://img.shields.io/uptimerobot/ratio/7/m793533681-b79b8280de15efcd9bc83d7d?label=Uptime" alt="Website uptime"></a>
 </div>
 
 ## 📂 » Includes
-- [Own launcher](https://github.com/sefinek24/genshin-mod-launcher/)
-- [Easy installation wizard](https://github.com/sefinek24/genshin-mod-setup)
-- [Crosire's DLL injector](https://framedsc.com/ReshadeGuides/reshadeuwp.htm)
-- [Unlocked ReShade [No depth buffer detection]](https://github.com/sefinek24/unlocked-reshade)
-- [Always the latest shaders [Ray Tracing is only available for Patrons]](Data/Shaders)
-- [Presets for game [Best graphics quality]](Data/Presets)
-- [FPS Unlocker](https://github.com/sefinek24/genshin-fps-unlock) [[More information]](https://github.com/sefinek24/genshin-fps-unlock#genshin-impact-fps-unlocker-modified-by-sefinek)
+| 🔍 Name                   | 📃 Description                                                                                                      | 📂 Source code or link                            | 📑 License           |
+|:--------------------------|:--------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|:---------------------|
+| Own launcher              |                                                                                                                     | https://github.com/sefinek24/genshin-mod-launcher | CC BY-NC-SA 4.0      |
+| Easy installation wizard  |                                                                                                                     | https://github.com/sefinek24/genshin-mod-setup    | CC BY-NC-SA 4.0      |
+| Crosire's DLL injector    |                                                                                                                     | https://reshade.me/downloads/inject64.exe         |                      |
+| Unlocked ReShade          | No depth buffer detection.                                                                                          | https://github.com/sefinek24/unlocked-reshade     | BSD 3-clause license |
+| Always the latest shaders | Ray Tracing is only available for Patrons.                                                                          | [Data/Shaders](Data/Shaders)                      |                      |
+| Presets for game          | Best graphics quality.                                                                                              | [Data/Presets](Data/Presets)                      |                      |
+| FPS Unlocker              | [More information](https://github.com/sefinek24/genshin-fps-unlock#genshin-impact-fps-unlocker-modified-by-sefinek) | https://github.com/sefinek24/genshin-fps-unlock   |                      |
 
 ## 📥 » How to install?
 Download the latest setup from [my official website](https://sefinek.net/genshin-impact-reshade).
 
 ## ⚠️ » Important
-Do not share screenshots from game with your UID with visible shaders or ReShade overlay!
+Do not share screenshots from game with your UID and visible shaders or ReShade overlay!
 
 ## 🎥 » YouTube videos
 Tutorial (outdated): https://www.youtube.com/watch?v=rDeO26RapAk  
@@ -54,7 +56,7 @@ New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 |:--------------------------------------|------------------------------------------------------------------------------------------------------------------|
 | Windows 10/11 (build 19041 or higher) | [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)                           |
 | 64-bit processor and system           | [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer) |
-| Good internet connection              | [Windows Terminal](https://github.com/microsoft/terminal/releases)                                               |||
+| Good internet connection              | [Windows Terminal](https://github.com/microsoft/terminal/releases)                                               |
 |                                       | [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional)      |
 
 ## 🔧 » Supported operating systems
