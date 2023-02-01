@@ -1,3 +1,12 @@
+## 📥 » v4.2.0 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v4.1.1...v4.2.0)
+⏰ • **Published:** 01.02.2023  
+🎊 • **Last update:** 01.02.2023
+1. Major changes in launcher.
+2. Updated ReShade.
+3. Updated all shaders.
+4. Changed method of injecting ReShade.
+5. [Launcher](https://github.com/sefinek24/genshin-mod-launcher) and [setup](https://github.com/sefinek24/genshin-mod-setup) is now open source.
+
 ## 📥 » v4.1.1 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v4.1.0...v4.1.1)
 ⏰ • **Published:** 21.01.2023  
 🎊 • **Last update:** 21.01.2023
