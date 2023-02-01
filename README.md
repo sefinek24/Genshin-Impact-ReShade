@@ -24,7 +24,8 @@
 </div>
 
 ## 📂 » Includes
-- [Own launcher and easy setup wizard](https://www.youtube.com/watch?v=NH8VXLZwBWg)
+- [Own launcher](https://github.com/sefinek24/genshin-mod-launcher/)
+- [Easy installation wizard](https://github.com/sefinek24/genshin-mod-setup)
 - [Crosire's DLL injector](https://framedsc.com/ReshadeGuides/reshadeuwp.htm)
 - [Unlocked ReShade [No depth buffer detection]](https://github.com/sefinek24/unlocked-reshade)
 - [Always the latest shaders [Ray Tracing is only available for Patrons]](Data/Shaders)
