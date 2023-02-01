@@ -24,15 +24,15 @@
 </div>
 
 ## 📂 » Includes
-| 🔍 Name                   | 📃 Description                                                                                                      | 📂 Source code or link                            | 📑 License           |
-|:--------------------------|:--------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|:---------------------|
-| Own launcher              |                                                                                                                     | https://github.com/sefinek24/genshin-mod-launcher | CC BY-NC-SA 4.0      |
-| Easy installation wizard  |                                                                                                                     | https://github.com/sefinek24/genshin-mod-setup    | CC BY-NC-SA 4.0      |
-| Crosire's DLL injector    |                                                                                                                     | https://reshade.me/downloads/inject64.exe         |                      |
-| Unlocked ReShade          | No depth buffer detection.                                                                                          | https://github.com/sefinek24/unlocked-reshade     | BSD 3-clause license |
-| Always the latest shaders | Ray Tracing is only available for Patrons.                                                                          | [Data/Shaders](Data/Shaders)                      |                      |
-| Presets for game          | Best graphics quality.                                                                                              | [Data/Presets](Data/Presets)                      |                      |
-| FPS Unlocker              | [More information](https://github.com/sefinek24/genshin-fps-unlock#genshin-impact-fps-unlocker-modified-by-sefinek) | https://github.com/sefinek24/genshin-fps-unlock   |                      |
+| 🔍 Name                   | 📃 Description                                                                                                      | 📂 Source code or link                                                              | 📑 License           |
+|:--------------------------|:--------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|:---------------------|
+| Own launcher              |                                                                                                                     | [sefinek24/genshin-mod-launcher](https://github.com/sefinek24/genshin-mod-launcher) | CC BY-NC-SA 4.0      |
+| Easy installation wizard  |                                                                                                                     | [sefinek24/genshin-mod-setup](https://github.com/sefinek24/genshin-mod-setup)       | CC BY-NC-SA 4.0      |
+| Crosire's DLL injector    |                                                                                                                     | [Download injector](https://reshade.me/downloads/inject64.exe)                      |                      |
+| Unlocked ReShade          | No depth buffer detection.                                                                                          | [sefinek24/unlocked-reshade](https://github.com/sefinek24/unlocked-reshade)         | BSD 3-clause license |
+| Always the latest shaders | Ray Tracing is only available for Patrons.                                                                          | [Data/Shaders](Data/Shaders)                                                        |                      |
+| Presets for game          | Best graphics quality.                                                                                              | [Data/Presets](Data/Presets)                                                        |                      |
+| FPS Unlocker              | [More information](https://github.com/sefinek24/genshin-fps-unlock#genshin-impact-fps-unlocker-modified-by-sefinek) | [sefinek24/genshin-fps-unlock](https://github.com/sefinek24/genshin-fps-unlock)     |                      |
 
 ## 📥 » How to install?
 Download the latest setup from [my official website](https://sefinek.net/genshin-impact-reshade).
