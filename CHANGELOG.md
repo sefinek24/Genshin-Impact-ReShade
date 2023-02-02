@@ -1,29 +1,27 @@
-## 📥 » v4.2.0 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v4.1.1...v4.2.0)
-⏰ • **Published:** 01.02.2023  
-🎊 • **Last update:** 01.02.2023
+## 📥 » Version v5.0.0 from 02.02.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v4.2.0...v5.0.0)
+1. Updated API and CDN.
+2. Installation via our setup is now not required. You can use git clone command.
+3. Improved log system.
+4. Other changes and fixes.
+
+## 📥 » Version v4.2.0 from 01.02.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v4.1.1...v4.2.0)
 1. Major changes in launcher.
 2. Updated ReShade.
 3. Updated all shaders.
 4. Changed method of injecting ReShade.
 5. [Launcher](https://github.com/sefinek24/genshin-mod-launcher) and [setup](https://github.com/sefinek24/genshin-mod-setup) is now open source.
 
-## 📥 » v4.1.1 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v4.1.0...v4.1.1)
-⏰ • **Published:** 21.01.2023  
-🎊 • **Last update:** 21.01.2023
+## 📥 » Version v4.1.1 from 21.01.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v4.1.0...v4.1.1)
 1. Small fixes.
 
-## 📥 » v4.1.0 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v4.0.0...v4.1.0)
-⏰ • **Published:** 20.01.2023  
-🎊 • **Last update:** 20.01.2023
+## 📥 » Version v4.1.0 from 20.01.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v4.0.0...v4.1.0)
 1. Added new background music.
 2. Updated FPS Unlocker.
 3. Improvements.
 4. Updated WebView2.
 5. Other changes.
 
-## 📥 » v4.0.0 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v3.1.0...v4.0.0)
-⏰ • **Published:** 12.01.2023  
-🎊 • **Last update:** 18.01.2023
+## 📥 » Version v4.0.0 from 18.01.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v3.1.0...v4.0.0)
 1. Git is no longer required. We have other method for updates.
 2. ReShade is now unlocked (the latest version).
 3. Added beta Ray Tracing for [Patrons](https://www.patreon.com/sefinek).
@@ -37,9 +35,7 @@
 11. Added new screenshots.
 12. Other changes.
 
-## 📥 » v3.1.0 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v3.0.1...v3.1.0)
-⏰ • **Published:** 03.01.2023  
-🎊 • **Last update:** 03.01.2023
+## 📥 » Version v3.1.0 from- 03.01.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v3.0.1...v3.1.0)
 1. Added Discord RPC.
 2. Added ability to disable telemetry and error reporting.
 3. Removed automatic update of FPS Unlocker configuration.
