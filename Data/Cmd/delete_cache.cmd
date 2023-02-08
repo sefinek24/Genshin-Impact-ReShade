@@ -9,14 +9,14 @@ echo.⠀   ⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿
 echo.    ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟
 echo. ⠀   ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀
 echo. ⠀   ⠀⠀⡟⢦⡀⠇⠀⠀⣀⠞⠀⠀⠘⡀⢀⡠⠚⣉⠤⠂⠀⠀⠀⠈⠙⢦⡀
-echo.   ⠀⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆      * Mod version: v5.0.0.0
+echo.   ⠀⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆      * Mod version: v6.0.0.0
 echo.    ⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆    * ReShade version: v5.6.0
 echo.   ⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇     * FPS unlocker version: v2.0.7
 echo.  ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉⠀⠀⠀⠀⣠⠟
 echo.   ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟
 echo ========================================================================================= & echo.
 
-echo 1/6 - Administrative permissions are required. Please wait...
+echo 1/5 - Checking administrative permissions. Please wait...
 net session >nul 2>&1
 if %errorLevel% == 0 (
     echo [✓] No problems found. & echo.
@@ -26,20 +26,21 @@ if %errorLevel% == 0 (
 )
 
 
-echo 2/6 - Deleting %temp%\ReShade...
-rmdir /s /q %temp%\ReShade >nul 2>&1
+echo 2/5 - Deleting %temp%\ReShade...
+rmdir /s /q %temp%\ReShade
+echo.
 
-echo 3/6 - Deleting %AppData%\Genshin Impact MP by Sefinek\EBWebView...
-rmdir /s /q "%AppData%\Genshin Impact MP by Sefinek\EBWebView" >nul 2>&1
+echo 3/5 - Deleting %AppData%\Genshin Impact MP by Sefinek\EBWebView...
+rmdir /s /q "%AppData%\Genshin Impact MP by Sefinek\EBWebView"
+echo.
 
-echo 4/6 - Deleting %ProgramFiles%\Genshin Impact\Genshin Impact game\ReShade.log...
-rmdir /s /q "%ProgramFiles%\Genshin Impact\Genshin Impact game\ReShade.log" >nul 2>&1
+set /p GamePath=<"%AppData%\Genshin Impact MP by Sefinek\game-path.sfn"
+echo 4/5 - Deleting %GamePath%\ReShade.log...
+del "%GamePath%\ReShade.log"
+echo.
 
-echo 5/6 - Deleting %AppData%\Genshin Impact MP by Sefinek\error.log...
-rmdir /s /q "%AppData%\Genshin Impact MP by Sefinek\error.log" >nul 2>&1
-
-echo 6/6 - Deleting %AppData%\Genshin Impact MP by Sefinek\logs...
-rmdir /s /q "%AppData%\Genshin Impact MP by Sefinek\logs" >nul 2>&1
+echo 5/5 - Deleting %AppData%\Genshin Impact MP by Sefinek\logs..
+rmdir /s /q "%AppData%\Genshin Impact MP by Sefinek\logs"
 
 
 echo.

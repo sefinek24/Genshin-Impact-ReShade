@@ -9,7 +9,7 @@ echo.⠀   ⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿
 echo.    ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟
 echo. ⠀   ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀
 echo. ⠀   ⠀⠀⡟⢦⡀⠇⠀⠀⣀⠞⠀⠀⠘⡀⢀⡠⠚⣉⠤⠂⠀⠀⠀⠈⠙⢦⡀
-echo.  ⠀ ⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆      * Mod version: v5.0.0.0
+echo.  ⠀ ⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆      * Mod version: v6.0.0.0
 echo.    ⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆    * ReShade version: v5.6.0
 echo.   ⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇     * FPS unlocker version: v2.0.7
 echo.  ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉⠀⠀⠀⠀⣠⠟
@@ -56,8 +56,8 @@ echo.
 echo 2/3 - Starting...
 echo [i] Everything is ready! Please wait a moment ᕱ⑅︎ᕱ & echo.
 
-set /p RunID=<"%AppData%\Genshin Impact MP by Sefinek\launch-mode.sfn"
-if %RunID% == 1 (
+set /p LMode=<"%AppData%\Genshin Impact MP by Sefinek\launch-mode.sfn"
+if %LMode% == 1 (
 	cd "Data\Unlocker"
 	start .\unlockfps_clr.exe
 	
@@ -66,8 +66,8 @@ if %RunID% == 1 (
 
 	echo.
 	cd ..\Cmd\start
-    call unlockfps_clr.cmd
-) else if %RunID% == 2 (
+    call wait_for_unlockfps.cmd
+) else if %LMode% == 2 (
     echo Please start the game now.
 
     cd "Data\ReShade"
@@ -76,12 +76,12 @@ if %RunID% == 1 (
     echo.
     cd ..\Cmd\start
     call done.cmd
-) else if %RunID% == 3 (
+) else if %LMode% == 3 (
     cd "Data\Unlocker"
     start .\unlockfps_clr.exe
 
     cd ..\Cmd\start
-    call unlockfps_clr.cmd
+    call wait_for_unlockfps.cmd
 ) else (
     goto error
 )
