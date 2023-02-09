@@ -97,17 +97,17 @@ New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/kokomi_2.png" title="See preview [kokomi_2.png]">
     <img src="Screenshots/Default/Backgrounds/kokomi_2.png" alt="Screenshot number 1">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/kokomi_4.png" title="See preview [kokomi_4.png]">
-    <img src="Screenshots/Default/Backgrounds/kokomi_4.png" alt="Screenshot number 2">
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/collei_1.png" title="See preview [collei_1.png]">
+    <img src="Screenshots/Default/Backgrounds/collei_1.png" alt="Screenshot number 2">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/collei_3.png" title="See preview [collei_3.png]">
-    <img src="Screenshots/Default/Backgrounds/collei_3.png" alt="Screenshot number 3">
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/kokomi_4.png" title="See preview [kokomi_4.png]">
+    <img src="Screenshots/Default/Backgrounds/kokomi_4.png" alt="Screenshot number 3">
 </a>
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/hutao_4.png" title="See preview [hutao_4.png]">
-    <img src="Screenshots/Default/Backgrounds/hutao_4.png" alt="Screenshot number 5">
+    <img src="Screenshots/Default/Backgrounds/hutao_4.png" alt="Screenshot number 4">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/collei_1.png" title="See preview [collei_1.png]">
-    <img src="Screenshots/Default/Backgrounds/collei_1.png" alt="Screenshot number 4">
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/collei_3.png" title="See preview [collei_3.png]">
+    <img src="Screenshots/Default/Backgrounds/collei_3.png" alt="Screenshot number 5">
 </a>
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/yoimiya_1.png" title="See preview [yoimiya_1.png]">
     <img src="Screenshots/Default/Backgrounds/yoimiya_1.png" alt="Screenshot number 6">
