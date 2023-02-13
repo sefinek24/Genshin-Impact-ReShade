@@ -57,3 +57,7 @@ echo.
 echo [i] Done. You can close this window.
 set /p 0=
 exit
+
+:nothing_to_do
+set /p 0=
+exit
