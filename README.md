@@ -23,6 +23,9 @@
     <a href="https://stats.uptimerobot.com/kLXYEukEwW" title="sefinek.net uptime"><img src="https://img.shields.io/uptimerobot/ratio/7/m793533681-b79b8280de15efcd9bc83d7d?label=Uptime" alt="Website uptime"></a>
 </div>
 
+## ⚠️ » Important
+Do not share screenshots from game with your UID and visible shaders or ReShade overlay! If you want to record some video for YouTube or something else, please hide or censor UID and username. Make sure you have the latest drivers for your graphics card.
+
 ## 📂 » Includes
 | 🔍 Name                   | 📃 Description                                                                                                                      | 🌍 Link                                                         | 📑 License           |
 |:--------------------------|:------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|:---------------------|
@@ -38,9 +41,6 @@
 
 ## 📥 » How to install?
 Download the latest setup from [my official website](https://sefinek.net/genshin-impact-reshade).
-
-## ⚠️ » Important
-Do not share screenshots from game with your UID and visible shaders or ReShade overlay! If you want to record some video for YouTube or something else, please hide or censor UID and username. Make sure you have the latest drivers for your graphics card.
 
 ## 🎥 » YouTube videos
 Tutorial (outdated): https://www.youtube.com/watch?v=rDeO26RapAk  
