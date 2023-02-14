@@ -1,20 +1,35 @@
-/** Lens Distortion PS, version 1.3.4
+/** Lens Distortion PS, version 1.3.7
 
 This code © 2022 Jakub Maksymilian Fober
 
-This work is licensed under the Creative Commons
+This work is licensed under the Creative Commons,
 Attribution-NonCommercial-NoDerivs 3.0 Unported License.
 To view a copy of this license, visit
 http://creativecommons.org/licenses/by-nc-nd/3.0/.
 
-Copyright owner further grants permission for commercial reuse of
-image recordings derived from the Work (e.g. let's play video,
-gameplay stream with ReShade filters, screenshots with ReShade
-filters) provided that any use is accompanied by the name of the
-shader used and a link to ReShade website https://reshade.me.
+§ The copyright owner further grants permission for commercial reuse
+of image recordings based on the work (e.g. Let's Play videos,
+gameplay streams, and screenshots featuring ReShade filters) provided
+that any use is accompanied by the name of the used shader and a link
+to the ReShade website https://reshade.me.
+§ This is intended to make the effect available free of charge for
+non-corporate, common use.
+§ The desired outcome is for the work to be easily recognizable in any
+derivative images.
 
 If you need additional licensing for your commercial product, contact
 me at jakub.m.fober@protonmail.com.
+
+██████████▀▀▀▀▀      ▄▄▄▄▄▄▄      ▀▀▀▀▀███████████
+██▀▀▀           █████▀▀▀▀▀▀▀█████            ▀▀▀██
+▀               ███           ███                ▀
+                ██             ██
+                ██             ██
+                ██             ██
+▄               ███           ███                ▄
+██▄▄▄           █████▄▄▄▄▄▄▄█████            ▄▄▄██
+██████████▄▄▄▄▄      ▀▀▀▀▀▀▀      ▄▄▄▄▄███████████
+  P   A   N   T   O   M   O   R   P   H   I   C
 
 For updates visit GitHub repository at
 https://github.com/Fubaxiusz/fubax-shaders.
@@ -429,7 +444,7 @@ void ParallaxPS(float4 pixelPos : SV_Position, float2 viewCoord : TEXCOORD, out 
 
 	color = tex2D(BackBuffer, texCoord).rgb;
 	#if BUFFER_COLOR_SPACE <= 2 && BUFFER_COLOR_BIT_DEPTH != 10 // Linear workflow
-	color = to_display_gamma_hq(color); // Correct gamma
+	color = to_display_gamma(color); // Correct gamma
 	#endif
 	color = BlueNoise::dither(uint2(pixelPos.xy), color); // Dither
 }
@@ -519,7 +534,7 @@ void LensDistortPS(float4 pixelPos : SV_Position, float2 viewCoord : TEXCOORD, o
 		color = 0f; // initialize color
 		for (uint i=0u; i<evenSampleCount; i++)
 #if BUFFER_COLOR_SPACE <= 2 && BUFFER_COLOR_BIT_DEPTH == 10 // Manual gamma correction
-			color += to_linear_gamma_hq(tex2Dlod(
+			color += to_linear_gamma(tex2Dlod(
 #else
 			color += tex2Dlod(
 #endif
@@ -542,7 +557,7 @@ void LensDistortPS(float4 pixelPos : SV_Position, float2 viewCoord : TEXCOORD, o
 	{
 		// Sample background without distortion
 #if BUFFER_COLOR_SPACE <= 2 && BUFFER_COLOR_BIT_DEPTH == 10 // Manual gamma correction
-		color = to_linear_gamma_hq(tex2Dfetch(BackBuffer, uint2(pixelPos.xy)).rgb);
+		color = to_linear_gamma(tex2Dfetch(BackBuffer, uint2(pixelPos.xy)).rgb);
 #else
 		color = tex2Dfetch(BackBuffer, uint2(pixelPos.xy)).rgb;
 #endif
@@ -584,7 +599,7 @@ void LensDistortPS(float4 pixelPos : SV_Position, float2 viewCoord : TEXCOORD, o
 		// Adjust grid look
 		color = lerp(
 	#if BUFFER_COLOR_SPACE <= 2 // Linear workflow
-			to_linear_gamma_hq(16f/255f),
+			to_linear_gamma(16f/255f),
 	#else
 			16f/255f,
 	#endif
@@ -593,22 +608,29 @@ void LensDistortPS(float4 pixelPos : SV_Position, float2 viewCoord : TEXCOORD, o
 		);
 		switch (GridLook)
 		{
-			// Yellow
-			default: color  = lerp(float3(1f, 1f, 0f), color, (1f-viewCoord.x)*(1f-viewCoord.y)); break;
 			// Black
-			case  1: color *= (1f-viewCoord.x)*(1f-viewCoord.y); break;
+			case 1:
+				color *= (1f-viewCoord.x)*(1f-viewCoord.y);
+				break;
 			// White
-			case  2: color  = 1f-(1f-viewCoord.x)*(1f-viewCoord.y)*(1f-color); break;
+			case 2:
+				color = 1f-(1f-viewCoord.x)*(1f-viewCoord.y)*(1f-color);
+				break;
 			// Color red-green
-			case  3:
+			case 3:
+			{
 				color = lerp(color, float3(1f, 0f, 0f), viewCoord.y);
 				color = lerp(color, float3(0f, 1f, 0f), viewCoord.x);
-			break;
+			}  break;
+			// Yellow
+			default:
+				color = lerp(float3(1f, 1f, 0f), color, (1f-viewCoord.x)*(1f-viewCoord.y));
+				break;
 		}
 	}
 	else // sample background with distortion
 #if BUFFER_COLOR_SPACE <= 2 && BUFFER_COLOR_BIT_DEPTH == 10 // Manual gamma correction
-		color = to_linear_gamma_hq(tex2D(BackBuffer, texCoord).rgb);
+		color = to_linear_gamma(tex2D(BackBuffer, texCoord).rgb);
 #else
 		color = tex2D(BackBuffer, texCoord).rgb;
 #endif
@@ -626,13 +648,13 @@ void LensDistortPS(float4 pixelPos : SV_Position, float2 viewCoord : TEXCOORD, o
 		float3 border = lerp(
 			// Border background
 #if BUFFER_COLOR_SPACE <= 2 && BUFFER_COLOR_BIT_DEPTH == 10 // Manual gamma correction
-			MirrorBorder? color : to_linear_gamma_hq(tex2Dfetch(BackBuffer, uint2(pixelPos.xy)).rgb),
+			MirrorBorder? color : to_linear_gamma(tex2Dfetch(BackBuffer, uint2(pixelPos.xy)).rgb),
 #else
 			MirrorBorder? color : tex2Dfetch(BackBuffer, uint2(pixelPos.xy)).rgb,
 #endif
 #if BUFFER_COLOR_SPACE <= 2 // Linear workflow
-			to_linear_gamma_hq(BorderColor.rgb), // Border color
-			to_linear_gamma_hq(BorderColor.a)    // Border alpha
+			to_linear_gamma(BorderColor.rgb), // Border color
+			to_linear_gamma(BorderColor.a)    // Border alpha
 #else
 			BorderColor.rgb, // Border color
 			BorderColor.a    // Border alpha
@@ -647,7 +669,7 @@ void LensDistortPS(float4 pixelPos : SV_Position, float2 viewCoord : TEXCOORD, o
 	}
 
 #if BUFFER_COLOR_SPACE <= 2 // Linear workflow
-	color = to_display_gamma_hq(color); // Correct gamma
+	color = to_display_gamma(color); // Correct gamma
 #endif
 	color = BlueNoise::dither(uint2(pixelPos.xy), color); // Dither
 }

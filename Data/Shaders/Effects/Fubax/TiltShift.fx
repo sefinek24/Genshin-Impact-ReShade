@@ -1,4 +1,4 @@
-/** Tilt-Shift PS, version 2.0.2
+/** Tilt-Shift PS, version 2.0.5
 
 This code © 2018-2023 Jakub Maksymilian Fober
 
@@ -80,11 +80,21 @@ sampler BackBuffer
 
 	/* FUNCTIONS */
 
-/* Exponential bell weight falloff.
-   Generates smooth bell falloff for blur.
-   Input is in [0, 1] range. */
-float bellWeight(float2 position)
-{ return exp(-dot(position, position)*5f); }
+/* Exponential bell weight falloff by JMF
+   Generates smooth bell falloff for blur, with perfect weights
+   distribution for a given number of samples.
+   Input: position ∈ [-1, 1] */
+float bellWeight(float position)
+{
+	// Get deviation for minimum value for a given step size
+#if BUFFER_COLOR_BIT_DEPTH == 10
+	const float deviation = log(rcp(1024u)); // Logarithm of base e
+#else
+	const float deviation = log(rcp(256u)); // Logarithm of base e
+#endif
+	// Get smooth bell falloff without aliasing or zero value at the last sample
+	return exp(position*position*deviation); // Gaussian bell falloff
+}
 
 // Get coordinates rotation matrix
 float2x2 get2dRotationMatrix(int angle)
@@ -105,7 +115,7 @@ float getBlurRadius(float2 viewCoord)
 	// Get rotation axis matrix
 	const float2x2 rotationMtx = get2dRotationMatrix(BlurAngle);
 	// Get offset vector
-	float2 offsetDir = mul(rotationMtx, float2(0f, BlurOffset)); // Get rotated offset
+	static float2 offsetDir = mul(rotationMtx, float2(0f, BlurOffset)); // Get rotated offset
 	offsetDir.x *= -BUFFER_ASPECT_RATIO; // Scale offset to horizontal bounds
 	// Offset and rotate coordinates
 	viewCoord = mul(rotationMtx, viewCoord+offsetDir);
@@ -160,7 +170,7 @@ void TiltShiftPassHorizontalPS(
 		// Convert to even number and clamp to maximum sample count
 		blurPixelCount = min(
 			blurPixelCount+blurPixelCount%2u, // Convert to even
-			TILT_SHIFT_MAX_SAMPLES-TILT_SHIFT_MAX_SAMPLES%2u // Convert to even
+			abs(TILT_SHIFT_MAX_SAMPLES)-abs(TILT_SHIFT_MAX_SAMPLES)%2u // Convert to even
 		);
 		// Map blur horizontal radius to texture coordinates
 		blurRadius *= BUFFER_HEIGHT*BUFFER_RCP_WIDTH; // Divide by aspect ratio
@@ -187,7 +197,7 @@ void TiltShiftPassHorizontalPS(
 	color = saturate(color); // Clamp values
 
 #if BUFFER_COLOR_SPACE <= 2 && BUFFER_COLOR_BIT_DEPTH != 10 // Manual gamma
-	color = to_display_gamma_hq(color);
+	color = to_display_gamma(color);
 #endif
 	// Dither output to increase perceivable picture bit-depth
 	color = BlueNoise::dither(uint2(pixCoord.xy), color);
@@ -210,7 +220,7 @@ void TiltShiftPassVerticalPS(
 		// Convert to even number and clamp to maximum sample count
 		blurPixelCount = min(
 			blurPixelCount+blurPixelCount%2u, // Convert to even
-			TILT_SHIFT_MAX_SAMPLES-TILT_SHIFT_MAX_SAMPLES%2u // Convert to even
+			abs(TILT_SHIFT_MAX_SAMPLES)-abs(TILT_SHIFT_MAX_SAMPLES)%2u // Convert to even
 		);
 		float rcpWeightStep = rcp(blurPixelCount);
 		float rcpOffsetStep = rcp(blurPixelCount*2u-1u);
@@ -230,9 +240,11 @@ void TiltShiftPassVerticalPS(
 		// Restore brightness
 		color /= cumulativeWeight;
 	}
-	// Bypass blur
-	else color = tex2Dfetch(BackBuffer, uint2(pixCoord.xy)).rgb;
-	color = saturate(color); // Clamp values
+	else // Bypass blur
+		color = tex2Dfetch(BackBuffer, uint2(pixCoord.xy)).rgb;
+
+	// Clamp values
+	color = saturate(color);
 
 	// Draw tilt-shift line
 	if (VisibleLine)
@@ -259,7 +271,7 @@ void TiltShiftPassVerticalPS(
 		color = lerp(
 			color,
 #if BUFFER_COLOR_SPACE <= 2 && BUFFER_COLOR_BIT_DEPTH != 10 // manual gamma
-			to_linear_gamma_hq(lineColor),
+			to_linear_gamma(lineColor),
 #else
 			lineColor,
 #endif
@@ -268,7 +280,7 @@ void TiltShiftPassVerticalPS(
 	}
 
 #if BUFFER_COLOR_SPACE <= 2 && BUFFER_COLOR_BIT_DEPTH != 10 // Manual gamma
-	color = to_display_gamma_hq(color);
+	color = to_display_gamma(color);
 #endif
 	// Dither output to increase perceivable picture bit-depth
 	color = BlueNoise::dither(uint2(pixCoord.xy), color);
