@@ -124,9 +124,6 @@ New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/collei_3.png" title="See preview [collei_3.png]">
     <img src="Screenshots/Default/Backgrounds/collei_3.png" alt="Screenshot number 5">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/yoimiya_1.png" title="See preview [yoimiya_1.png]">
-    <img src="Screenshots/Default/Backgrounds/yoimiya_1.png" alt="Screenshot number 6">
-</a>
 
 ## <div id="legend">🧀 » Legend</div>
 | Emoji | Description           | Emoji | Description  |
