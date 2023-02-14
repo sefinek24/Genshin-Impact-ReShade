@@ -32,8 +32,8 @@
 | FPS Unlocker              | [Click here for more information.](https://github.com/sefinek24/genshin-fps-unlock#genshin-impact-fps-unlocker-modified-by-sefinek) | [Repository](https://github.com/sefinek24/genshin-fps-unlock)   |                      |
 | Always the latest shaders | The best experience.                                                                                                                | [Folder](Data/Shaders)                                          |                      |
 | Own presets for game      | Best graphics quality.                                                                                                              | [Folder](Data/Presets)                                          |                      |
-| Community presets         | Presets created by our community.                                                                                                   | [Folder](Data/Presets/Made by community)                        |                      |
-| Preset with Ray Tracing   | Only available for Patrons.                                                                                                         | [Folder](Data/Presets)                                          |                      |
+| Community presets         | Presets created by our community.                                                                                                   | [Folder](Data/Presets/Made%20by%20community)                    |                      |
+| Preset with Ray Tracing   | Only available for Patrons.                                                                                                         | [Patreon](https://www.patreon.com/sefinek)                      |                      |
 | Crosire's DLL injector    | Just an injector.                                                                                                                   | [Download injector](https://reshade.me/downloads/inject64.exe)  |                      |
 
 ## 📥 » How to install?
