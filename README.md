@@ -52,7 +52,7 @@ New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 - Click [here](https://sefinek.net/genshin-impact-reshade/gallery?page=1) for more and latest screenshots.
 - If you want to become contributor, just create a new [Pull Request](https://github.com/sefinek24/Genshin-Impact-ReShade/pulls). Thanks.
 - Gameplay will be available soon.
-- Main server localization: Poland [Cloudflare - WAW, FRA]
+- Main server localization [sefinek.net](https://sefinek.net): Poland [Cloudflare - WAW, FRA]
 
 ## ✨ » Requirements
 | 💻 Your PC & network                  | 📂 Dependencies • Use installation wizard for automatic install                                                  |
