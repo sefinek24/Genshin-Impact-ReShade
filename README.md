@@ -27,7 +27,7 @@
 Do not share screenshots from game with your UID and visible shaders or ReShade overlay! If you want to record some video for YouTube or something else, please hide or censor UID and username. Make sure you have the latest drivers for your graphics card.
 
 ## 📂 » Includes
-| 🔍 Name                   | 📃 Description                                                                                                                      | 🌍 Link                                                         | 📑 License           |
+| 🔍 Name                   | 📃 Description                                                                                                                      | 🌍 URL address                                                  | 📑 License           |
 |:--------------------------|:------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|:---------------------|
 | Own launcher              | Always the latest releases.                                                                                                         | [Repository](https://github.com/sefinek24/genshin-mod-launcher) | CC BY-NC-SA 4.0      |
 | Unlocked ReShade          | No depth buffer detection.                                                                                                          | [~~Repository~~](https://github.com/sefinek24/unlocked-reshade) | BSD 3-clause license |
