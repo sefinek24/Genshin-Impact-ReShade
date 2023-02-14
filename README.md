@@ -24,7 +24,7 @@
 </div>
 
 ## 📂 » Includes
-| 🔍 Name                   | 📃 Description                                                                                                                      | 📂 Source code or link                                                    | 📑 License           |
+| 🔍 Name                   | 📃 Description                                                                                                                      | 🌍 Link                                                                   | 📑 License           |
 |:--------------------------|:------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|:---------------------|
 | Own launcher              | Always the latest releases.                                                                                                         | [genshin-mod-launcher](https://github.com/sefinek24/genshin-mod-launcher) | CC BY-NC-SA 4.0      |
 | Unlocked ReShade          | No depth buffer detection.                                                                                                          | [unlocked-reshade](https://github.com/sefinek24/unlocked-reshade)         | BSD 3-clause license |
