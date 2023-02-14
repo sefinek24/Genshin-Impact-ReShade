@@ -21,7 +21,7 @@ echo 1/3 - Checking required processes...
 tasklist /fi "ImageName eq Genshin Impact Mod Pack.exe" /fo csv 2>NUL | find /I "Genshin Impact Mod Pack.exe">NUL
 if "%ERRORLEVEL%"=="0" (
     echo [i] Genshin Impact Mod Pack.exe - Closing...
-    taskkill /IM "Genshin Impact Mod Pack.exe"
+    taskkill /F /IM "Genshin Impact Mod Pack.exe"
 ) else (
     echo [✓] Genshin Impact Mod Pack.exe - OK
 )
@@ -29,7 +29,7 @@ if "%ERRORLEVEL%"=="0" (
 tasklist /fi "ImageName eq GenshinImpact.exe" /fo csv 2>NUL | find /I "GenshinImpact.exe">NUL
 if "%ERRORLEVEL%"=="0" (
     echo [i] GenshinImpact.exe - Closing...
-    taskkill /IM "GenshinImpact.exe"
+    taskkill /F /IM "GenshinImpact.exe"
 ) else (
     echo [✓] GenshinImpact.exe - OK
 )
@@ -37,7 +37,7 @@ if "%ERRORLEVEL%"=="0" (
 tasklist /fi "ImageName eq inject64.exe" /fo csv 2>NUL | find /I "inject64.exe">NUL
 if "%ERRORLEVEL%"=="0" (
     echo [i] inject64.exe - Closing...
-    taskkill /IM "inject64.exe"
+    taskkill /F /IM "inject64.exe"
 ) else (
     echo [✓] inject64.exe - OK
 )
@@ -45,7 +45,7 @@ if "%ERRORLEVEL%"=="0" (
 tasklist /fi "ImageName eq unlockfps_clr.exe" /fo csv 2>NUL | find /I "unlockfps_clr.exe">NUL
 if "%ERRORLEVEL%"=="0" (
     echo [i] unlockfps_clr.exe - Closing...
-    taskkill /IM "unlockfps_clr.exe"
+    taskkill /F /IM "unlockfps_clr.exe"
 ) else (
     echo [✓] unlockfps_clr.exe - OK
 )
