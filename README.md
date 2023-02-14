@@ -70,12 +70,12 @@ New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 - Main server localization [sefinek.net](https://sefinek.net): Poland [Cloudflare - WAW, FRA]
 
 ## <div id="pc-requrmients"></div>✨ » Requirements
-| 💻 Your PC & network                  | 📂 Dependencies • Use installation wizard for automatic install                                                  |
-|:--------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| Windows 10/11 (build 19041 or higher) | [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)                           |
-| 64-bit processor and system           | [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer) |
-| Good internet connection              | [Windows Terminal](https://github.com/microsoft/terminal/releases)                                               |
-|                                       | [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional)      |
+| 💻 Your PC & network                    | 📂 Dependencies • Use installation wizard for automatic install                                                  |
+|:----------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| Windows 10/11 (build higher than 19041) | [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)                           |
+| 64-bit processor and system             | [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer) |
+| Good internet connection                | [Windows Terminal](https://github.com/microsoft/terminal/releases)                                               |
+|                                         | [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional)      |
 
 ## <div id="supported-systems"></div>🔧 » Supported operating systems
 | 💻 System                     | 📝 OS Build   | 🙀 Status |
