@@ -2,7 +2,7 @@
 
 1. IMPORTANT
 - Do not share screenshots from game with your UID and visible shaders or ReShade overlay!
-- If you want to record some video for YouTube or something else, please hide or censor your UID.
+- If you want to record some video for YouTube or something else, please hide or censor your UID and username.
 - Make sure you have the latest drivers for your graphics card.
 
 2. RAY TRACING

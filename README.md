@@ -15,7 +15,7 @@
     </p>
     <a href="https://github.com/sefinek24/Genshin-Impact-ReShade" title="Repository size"><img src="https://img.shields.io/github/repo-size/sefinek24/Genshin-Impact-ReShade?label=Repo%20size" alt="Repo size"></a>
     <a href="https://github.com/sefinek24/Genshin-Impact-ReShade/commits/main" title="Commit activity"><img src="https://img.shields.io/github/commit-activity/w/sefinek24/Genshin-Impact-ReShade?label=Commit%20activity" alt="Commit activity"></a>
-    <a href="https://discord.gg/SVcbaRc7gH" title="Official Discord server"><img src="https://img.shields.io/discord/1044713077125435492?label=Discord%20server" alt="Our Discord server"></a>
+    <a href="https://discord.com/invite/SVcbaRc7gH" title="Official Discord server"><img src="https://img.shields.io/discord/1044713077125435492?label=Discord%20server" alt="Our Discord server"></a>
     <br>
     <a href="https://sefinek.net" title="sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=Website&up_message=Online&url=https%3A%2F%2Fsefinek.net" alt="Website status"></a>
     <a href="https://api.sefinek.net" title="api.sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=API&up_message=Online&url=https%3A%2F%2Fapi.sefinek.net" alt="Website status"></a>
@@ -38,18 +38,18 @@
 Download the latest setup from [my official website](https://sefinek.net/genshin-impact-reshade).
 
 ## ⚠️ » Important
-Do not share screenshots from game with your UID and visible shaders or ReShade overlay!
+Do not share screenshots from game with your UID and visible shaders or ReShade overlay! If you want to record some video for YouTube or something else, please hide or censor UID and username. Make sure you have the latest drivers for your graphics card.
 
 ## 🎥 » YouTube videos
 Tutorial (outdated): https://www.youtube.com/watch?v=rDeO26RapAk  
 New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 
 ## 📝️ » Information
-* Need help? Please join to our [Discord server](https://discord.gg/SVcbaRc7gH).
-* Click [here](https://sefinek.net/genshin-impact-reshade/gallery?page=1) for more and latest screenshots.
-* If you want to become contributor, just create a new [Pull Request](https://github.com/sefinek24/Genshin-Impact-ReShade/pulls). Thanks.
-* Gameplay will be available soon.
-* Main server localization: Poland [Cloudflare - WAW, FRA]
+- Need help? Please join to our [Discord server](https://discord.gg/SVcbaRc7gH).
+- Click [here](https://sefinek.net/genshin-impact-reshade/gallery?page=1) for more and latest screenshots.
+- If you want to become contributor, just create a new [Pull Request](https://github.com/sefinek24/Genshin-Impact-ReShade/pulls). Thanks.
+- Gameplay will be available soon.
+- Main server localization: Poland [Cloudflare - WAW, FRA]
 
 ## ✨ » Requirements
 | 💻 Your PC & network                  | 📂 Dependencies • Use installation wizard for automatic install                                                  |
