@@ -128,12 +128,12 @@ New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
     <img src="Screenshots/Default/Backgrounds/yoimiya_1.png" alt="Screenshot number 6">
 </a>
 
-## <div id="legend"></div>🧀 » Legend
+## <div id="legend">🧀 » Legend</div>
 | Emoji | Description           | Emoji | Description  |
 |-------|-----------------------|:------|:-------------|
 | ✔️    | Supported             | 🤔    | Not tested   |
 | ❌     | Not supported         | ❓     | I don't know |
 | 🎯️   | Default not supported |       |              |
 
-## <div id="sources"></div>🧶 » Sources
+## <div id="sources">🧶 » Sources</div>
 Icons were taken from <a href="https://icons8.com" target="_blank">Icons8</a> and <a href="https://www.flaticon.com" target="_blank">FlatIcon</a>.
