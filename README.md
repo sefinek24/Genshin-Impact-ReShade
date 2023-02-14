@@ -24,7 +24,8 @@
 </div>
 
 ## ⚠️ » Important
-Do not share screenshots from game with your UID and visible shaders or ReShade overlay! If you want to record some video for YouTube or something else, please hide or censor UID and username. Make sure you have the latest drivers for your graphics card.
+Do not share screenshots from game with your UID and visible shaders or ReShade overlay! If you want to record some video for YouTube or something else, please hide or censor UID and username.  
+Make sure you have the latest drivers for your graphics card.
 
 ## 📂 » Includes
 | 🔍 Name                   | 📃 Description                                                                                                                      | 🌍 URL address                                                  | 📑 License                                                                                 |
