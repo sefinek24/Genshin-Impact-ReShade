@@ -75,13 +75,16 @@ New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 > 🤔 Not tested ┃ ❓ I don't know
 
 ## 🛠️ » Tested game versions
+<div align="right">
+✔️ Yes ┃ ❌ No ┃ 🤔 Not tested
+</div>
+
 | 🎮 Game version | 😅 It works? | 📆 Date    |
 |-----------------|--------------|------------|
 | v3.4.0          | ✔️           | 18.01.2023 |
 | v3.3.0          | ✔️           | 09.11.2022 |
 | v3.2.0          | ✔️           | 02.11.2022 |
 | v3.1.0          | ✔️           | 01.11.2022 |
-> ✔️ Yes ┃ ❌ No ┃ 🤔 Not tested
 
 ## ⚙ » Recommended settings for game
 | 📑 Settings            | 📋 Value                               | 📑 Settings                 | 📋 Value                             |
