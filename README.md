@@ -5,6 +5,10 @@
             <img src="Screenshots/Default/youtube_video_border.png" alt="Header image">
         </a>
     </div>
+    <h3>
+        💙 » If you want Ray Tracing in game, become my <a href="https://www.patreon.com/sefinek" title="www.patreon.com/sefinek">Patron</a> « 💙<br>
+        ⭐ » Star the repo if you liked it « ⭐
+    </h3>
     <br>
     <a href="https://ko-fi.com/sefinek" title="Ko-fi"><img src="https://storage.ko-fi.com/cdn/brandasset/kofi_button_blue.png" height="32" alt="Support me on Ko-fi"></a>
     <a href="https://patreon.com/sefinek" title="Patreon"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dsefinek%26type%3Dpledges&style=for-the-badge" height="32" alt="Support me on Patreon"></a>
@@ -17,10 +21,6 @@
     <a href="https://api.sefinek.net" title="api.sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=API&up_message=Online&url=https%3A%2F%2Fapi.sefinek.net" alt="Website status"></a>
     <a href="https://cdn.sefinek.net" title="cdn.sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=CDN&up_message=Online&url=https%3A%2F%2Fcdn.sefinek.net" alt="Website status"></a>
     <a href="https://stats.uptimerobot.com/kLXYEukEwW" title="sefinek.net uptime"><img src="https://img.shields.io/uptimerobot/ratio/7/m793533681-b79b8280de15efcd9bc83d7d?label=Uptime" alt="Website uptime"></a>
-    <h3>
-        💙 » If you want Ray Tracing in game, become my <a href="https://www.patreon.com/sefinek" title="www.patreon.com/sefinek">Patron</a> « 💙<br>
-        ⭐ » Star the repo if you liked it « ⭐
-    </h3>
 </div>
 
 ## <div id="list">📋 » List</div>
