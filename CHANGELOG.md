@@ -1,3 +1,23 @@
+## 📥 » Version v6.0.0 from --.--.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v5.0.0...v6.0.0)
+1. Updated API to version v2.
+2. Added WindowsAPICodePack - show progress in your taskbar.
+3. Major improvements in log system.
+4. Improvements in Discord RPC and telemetry.
+5. Updated all shaders.
+6. Created new [directory](Data/Presets/Made%20by%20community) for ReShade addons.
+7. Major changes in [README.md](README.md) file.
+8. Updated FPS Unlocker to v2.0.8.
+9. Added new preset made by community.
+10. Improvement [Data/Cmd/delete_cache.cmd](Data/Cmd/delete_cache.cmd).
+11. Fixes in `*.cmd` files.
+12. Deleted useless files.
+13. Moved some files to other folders.
+14. Launcher is now blocked in Russia. War doesn't have any matter for me.
+15. Updated [official website](https://sefinek.net).
+16. Updated setup to v1.9.0.
+17. Added random YouTube videos in "Random images".
+18. Other improvements and fixes.
+
 ## 📥 » Version v5.0.0 from 02.02.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v4.2.0...v5.0.0)
 1. Updated API and CDN.
 2. Installation via our setup is now not required. You can use git clone command.
