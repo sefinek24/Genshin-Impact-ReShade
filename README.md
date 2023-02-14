@@ -1,5 +1,10 @@
 <div align="center" id="header">
     <h1>🌠 Genshin Impact ReShade Mod Pack [2023] 🌠</h1>
+    <p>
+        <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/youtube_video.png" title="See preview [Screenshots/Default/youtube_video.png]">
+            <img src="Screenshots/Default/youtube_video_border.png" alt="Header image">
+        </a>
+    </p>
     <h3>
         💙 » If you want Ray Tracing in game, become my <a href="https://www.patreon.com/sefinek" title="www.patreon.com/sefinek">Patron</a> « 💙<br>
         ⭐ » Star the repo if you liked it « ⭐
@@ -7,11 +12,6 @@
     <p>
         <a href="https://ko-fi.com/sefinek" title="Ko-fi"><img src="https://storage.ko-fi.com/cdn/brandasset/kofi_button_blue.png" height="32" alt="Support me on Ko-fi"></a>
         <a href="https://patreon.com/sefinek" title="Patreon"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dsefinek%26type%3Dpledges&style=for-the-badge" height="32" alt="Support me on Patreon"></a>
-    </p>
-    <p>
-        <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/youtube_video.png" title="See preview [Screenshots/Default/youtube_video.png]">
-            <img src="Screenshots/Default/youtube_video_border.png" alt="Header image">
-        </a>
     </p>
     <a href="https://github.com/sefinek24/Genshin-Impact-ReShade" title="Repository size"><img src="https://img.shields.io/github/repo-size/sefinek24/Genshin-Impact-ReShade?label=Repo%20size" alt="Repo size"></a>
     <a href="https://github.com/sefinek24/Genshin-Impact-ReShade/commits/main" title="Commit activity"><img src="https://img.shields.io/github/commit-activity/w/sefinek24/Genshin-Impact-ReShade?label=Commit%20activity" alt="Commit activity"></a>
