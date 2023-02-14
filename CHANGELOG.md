@@ -4,11 +4,11 @@
 3. Major improvements in log system.
 4. Improvements in Discord RPC and telemetry.
 5. Updated all shaders.
-6. Created new [directory](Data/Presets/Made%20by%20community) for ReShade addons.
+6. Created new [directory](data/presets/Made%20by%20community) for ReShade addons.
 7. Major changes in [README.md](README.md) file.
 8. Updated FPS Unlocker to v2.0.8.
 9. Added new preset made by community.
-10. Improvement [Data/Cmd/delete_cache.cmd](Data/Cmd/delete_cache.cmd).
+10. Improvement [Data/Cmd/delete_cache.cmd](data/cmd/delete_cache.cmd).
 11. Fixes in `*.cmd` files.
 12. Deleted useless files.
 13. Moved some files to other folders.

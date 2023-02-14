@@ -2,7 +2,7 @@
     <h1>🌠 Genshin Impact ReShade Mod Pack [2023] 🌠</h1>
     <div>
         <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/youtube_video.png" title="See preview [Screenshots/Default/youtube_video.png]">
-            <img src="Screenshots/Default/youtube_video_border.png" alt="Header image">
+            <img src="screenshots/default/youtube_video_border.png" alt="Header image">
         </a>
     </div>
     <h3>
@@ -49,9 +49,9 @@ Make sure you have the latest drivers for your graphics card.
 | Unlocked ReShade          | No depth buffer detection.                                                                                                          | [~~Repository~~](https://github.com/sefinek24/unlocked-reshade) | [BSD 3-clause license](https://github.com/sefinek24/unlocked-reshade/blob/main/LICENSE.md) |
 | Easy installation wizard  | Safe and automatic installation.                                                                                                    | [Repository](https://github.com/sefinek24/genshin-mod-setup)    | [CC BY-NC-SA 4.0](https://github.com/sefinek24/genshin-mod-setup)                          |
 | FPS Unlocker              | [Click here for more information.](https://github.com/sefinek24/genshin-fps-unlock#genshin-impact-fps-unlocker-modified-by-sefinek) | [Repository](https://github.com/sefinek24/genshin-fps-unlock)   |                                                                                            |
-| Always the latest shaders | The best experience.                                                                                                                | [Folder](Data/Shaders)                                          |                                                                                            |
-| Own presets for game      | Best graphics quality.                                                                                                              | [Folder](Data/Presets)                                          |                                                                                            |
-| Community presets         | Presets created by our community.                                                                                                   | [Folder](Data/Presets/Made%20by%20community)                    |                                                                                            |
+| Always the latest shaders | The best experience.                                                                                                                | [Folder](data/shaders)                                          |                                                                                            |
+| Own presets for game      | Best graphics quality.                                                                                                              | [Folder](data/presets)                                          |                                                                                            |
+| Community presets         | Presets created by our community.                                                                                                   | [Folder](data/presets/Made%20by%20community)                    |                                                                                            |
 | Preset with Ray Tracing   | Only available for Patrons.                                                                                                         | [Patreon](https://www.patreon.com/sefinek)                      |                                                                                            |
 | Crosire's DLL injector    | Just an injector.                                                                                                                   | [Download injector](https://reshade.me/downloads/inject64.exe)  |                                                                                            |
 
@@ -110,19 +110,19 @@ New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 
 ## <div id="other-screenshots">📷 » Other screenshots (without Ray Tracing)</div>
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/kokomi_2.png" title="See preview [kokomi_2.png]">
-    <img src="Screenshots/Default/Backgrounds/kokomi_2.png" alt="Screenshot number 1">
+    <img src="screenshots/default/background/kokomi_2.png" alt="Screenshot number 1">
 </a>
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/collei_1.png" title="See preview [collei_1.png]">
-    <img src="Screenshots/Default/Backgrounds/collei_1.png" alt="Screenshot number 2">
+    <img src="screenshots/default/background/collei_1.png" alt="Screenshot number 2">
 </a>
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/kokomi_4.png" title="See preview [kokomi_4.png]">
-    <img src="Screenshots/Default/Backgrounds/kokomi_4.png" alt="Screenshot number 3">
+    <img src="screenshots/default/background/kokomi_4.png" alt="Screenshot number 3">
 </a>
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/hutao_4.png" title="See preview [hutao_4.png]">
-    <img src="Screenshots/Default/Backgrounds/hutao_4.png" alt="Screenshot number 4">
+    <img src="screenshots/default/background/hutao_4.png" alt="Screenshot number 4">
 </a>
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/collei_3.png" title="See preview [collei_3.png]">
-    <img src="Screenshots/Default/Backgrounds/collei_3.png" alt="Screenshot number 5">
+    <img src="screenshots/default/background/collei_3.png" alt="Screenshot number 5">
 </a>
 
 ## <div id="legend">🧀 » Legend</div>

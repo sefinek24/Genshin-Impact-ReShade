@@ -3,13 +3,14 @@
 .vs
 
 # For my patrons
-Data/Patrons
-Data/Presets/New
-Data/Presets/Patrons
-Data/Presets/Other/Previous versions
+data/Patrons
+data/presets/New
+data/presets/Patrons
+data/presets/For Patrons
+data/presets/Other/Previous versions
 
 # Files
-Data/Unlocker/unlocker.config.json
+data/unlocker/unlocker.config.json
 Screenshots/*.png
 Screenshots/*.jpg
 Screenshots/*.jpeg
