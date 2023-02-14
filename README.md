@@ -63,22 +63,16 @@ New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 |                                       | [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional)      |
 
 ## 🔧 » Supported operating systems
-| 💻 System                     | 📝 OS Build | 🙀 Status |
-|-------------------------------|-------------|:----------|
-| Windows 11 22H2               | 22621.900   | ✔️        |
-| Windows 10 22H2 (recommended) | 19045.2546  | ✔️        | 
-| Windows 8 / 8.1               | ❓           | 🎯️       | 
-| Windows 7                     | ❓️          | 🎯️       | 
-| Android / Linux               | ❓️          | ❌         | 
-| iOS / macOS                   | ❓️          | ❌         | 
-> ✔️ Supported ┃ ❌ Not supported ┃ 🎯️ Default not supported  
-> 🤔 Not tested ┃ ❓ I don't know
+| 💻 System                     | 📝 OS Build   | 🙀 Status |
+|-------------------------------|---------------|:----------|
+| Windows 11 22H2               | 22621.900     | ✔️        |
+| Windows 10 22H2 (recommended) | 19045.2546    | ✔️        | 
+| Windows 8 / 8.1               | [❓](#legend)  | 🎯️       | 
+| Windows 7                     | [❓](#legend)  | 🎯️       | 
+| Android / Linux               | [❓](#legend)  | ❌         | 
+| iOS / macOS                   | [❓](#legend)️ | ❌         |
 
 ## 🛠️ » Tested game versions
-<div align="right">
-✔️ Yes ┃ ❌ No ┃ 🤔 Not tested
-</div>
-
 | 🎮 Game version | 😅 It works? | 📆 Date    |
 |-----------------|--------------|------------|
 | v3.4.0          | ✔️           | 18.01.2023 |
@@ -121,3 +115,10 @@ New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 
 ## 🧶 » Sources
 Icons were taken from <a href="https://icons8.com" target="_blank">Icons8</a> and <a href="https://www.flaticon.com" target="_blank">FlatIcon</a>.
+
+## <div id="legend"></div> 🧀 » Legend
+✔️ Supported  
+❌ Not supported  
+🎯️ Default not supported  
+🤔 Not tested  
+❓ I don't know
