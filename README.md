@@ -23,7 +23,7 @@
     <a href="https://stats.uptimerobot.com/kLXYEukEwW" title="sefinek.net uptime"><img src="https://img.shields.io/uptimerobot/ratio/7/m793533681-b79b8280de15efcd9bc83d7d?label=Uptime" alt="Website uptime"></a>
 </div>
 
-## <div id="list"></div>📋 » List
+## <div id="list">📋 » List</div>
 - [🌠 Genshin Impact ReShade Mod Pack](#header)
 - [⚠️ Important](#important)
 - [📂 Includes](#includes)
@@ -38,11 +38,11 @@
 - [🧀 Legend](#legend)
 - [🧶 Sources](#sources)
 
-## <div id="important"></div>⚠️ » Important
+## <div id="important">⚠️ » Important</div>
 Do not share screenshots from game with your UID and visible shaders or ReShade overlay! If you want to record some video for YouTube or something else, please hide or censor UID and username.  
 Make sure you have the latest drivers for your graphics card.
 
-## <div id="includes"></div>📂 » Includes
+## <div id="includes">📂 » Includes</div>
 | 🔍 Name                   | 📃 Description                                                                                                                      | 🌍 URL address                                                  | 📑 License                                                                                 |
 |:--------------------------|:------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|:-------------------------------------------------------------------------------------------|
 | Own launcher              | Always the latest releases.                                                                                                         | [Repository](https://github.com/sefinek24/genshin-mod-launcher) | [CC BY-NC-SA 4.0](https://github.com/sefinek24/genshin-mod-launcher/blob/main/LICENSE)     |
@@ -55,21 +55,21 @@ Make sure you have the latest drivers for your graphics card.
 | Preset with Ray Tracing   | Only available for Patrons.                                                                                                         | [Patreon](https://www.patreon.com/sefinek)                      |                                                                                            |
 | Crosire's DLL injector    | Just an injector.                                                                                                                   | [Download injector](https://reshade.me/downloads/inject64.exe)  |                                                                                            |
 
-## <div id="installation"></div>📥 » How to install?
+## <div id="installation">📥 » How to install?</div>
 Download the latest setup from [my official website](https://sefinek.net/genshin-impact-reshade).
 
-## <div id="yt-videos"></div>🎥 » YouTube videos
+## <div id="yt-videos">🎥 » YouTube videos</div>
 Tutorial (outdated): https://www.youtube.com/watch?v=rDeO26RapAk  
 New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 
-## <div id="information"></div>📝️ » Information
+## <div id="information">📝️ » Information</div>
 - Need help? Please join to our [Discord server](https://discord.gg/SVcbaRc7gH).
 - Click [here](https://sefinek.net/genshin-impact-reshade/gallery?page=1) for more and latest screenshots.
 - If you want to become contributor, just create a new [Pull Request](https://github.com/sefinek24/Genshin-Impact-ReShade/pulls). Thanks.
 - Gameplay will be available soon.
 - Main server localization [sefinek.net](https://sefinek.net): Poland [Cloudflare - WAW, FRA]
 
-## <div id="pc-requrmients"></div>✨ » Requirements
+## <div id="pc-requrmients">✨ » Requirements</div>
 | 💻 Your PC & network                    | 📂 Dependencies • Use installation wizard for automatic install                                                  |
 |:----------------------------------------|------------------------------------------------------------------------------------------------------------------|
 | Windows 10/11 (build higher than 19041) | [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)                           |
@@ -77,7 +77,7 @@ New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 | Good internet connection                | [Windows Terminal](https://github.com/microsoft/terminal/releases)                                               |
 |                                         | [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional)      |
 
-## <div id="supported-systems"></div>🔧 » Supported operating systems
+## <div id="supported-systems">🔧 » Supported operating systems</div>
 | 💻 System                     | 📝 OS Build   | 🙀 Status |
 |-------------------------------|---------------|:----------|
 | Windows 11 22H2               | 22621.900     | ✔️        |
@@ -87,7 +87,7 @@ New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 | Android / Linux               | [❓](#legend)  | ❌         | 
 | iOS / macOS                   | [❓](#legend)️ | ❌         |
 
-## <div id="tested-game-versions"></div>🛠️ » Tested game versions
+## <div id="tested-game-versions">🛠️ » Tested game versions</div>
 | 🎮 Game version | 😅 It works? | 📆 Date    |
 |-----------------|--------------|------------|
 | v3.4.0          | ✔️           | 18.01.2023 |
@@ -95,7 +95,7 @@ New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 | v3.2.0          | ✔️           | 02.11.2022 |
 | v3.1.0          | ✔️           | 01.11.2022 |
 
-## <div id="settings-for-game"></div>⚙️ » Recommended settings for game
+## <div id="settings-for-game">⚙️ » Recommended settings for game</div>
 | 📑 Settings            | 📋 Value                               | 📑 Settings                 | 📋 Value                             |
 |------------------------|----------------------------------------|:----------------------------|:-------------------------------------|
 | **Graphics Quality**   | Custom                                 | **Anti-Aliasing**           | SMAA (Use FSR 2 if you have low FPS) |
@@ -108,7 +108,7 @@ New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 | **SFX Quality**        | High                                   | **Subsurface Scattering**   | High                                 | 
 | **Environment Detail** | Highest                                | **Anisotropic Filtering**   | 16x                                  | 
 
-## <div id="other-screenshots"></div>📷 » Other screenshots (without Ray Tracing)
+## <div id="other-screenshots">📷 » Other screenshots (without Ray Tracing)</div>
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/Backgrounds/kokomi_2.png" title="See preview [kokomi_2.png]">
     <img src="Screenshots/Default/Backgrounds/kokomi_2.png" alt="Screenshot number 1">
 </a>
