@@ -8,8 +8,8 @@
 7. Made major changes to the [README.md](README.md) file to provide clearer instructions and guidelines for using the project.
 8. Updated the FPS Unlocker to v2.0.8.
 9. Added a new preset made by the community to the presets directory.
-10. Made improvements to the [data/cmd/delete_cache.cmd](data/cmd/delete_cache.cmd) file
-11. Fixed several issues with *.cmd files.
+10. Made improvements to the [data/cmd/delete_cache.cmd](data/cmd/delete_cache.cmd) file.
+11. Fixed several issues with `*.cmd` files.
 12. Removed several useless files that were no longer needed.
 13. Moved some files to other folders to improve organization.
 14. The launcher is now blocked in Russia. The war does not matter to me.
@@ -17,7 +17,7 @@
 16. Updated the setup to v1.9.0, which includes several bug fixes and usability improvements.
 17. Added random YouTube videos to the "Random images" section for a bit of fun.
 18. Made various other improvements and bug fixes to improve the overall quality of the project.
-- ⚠️ **Important information:** The new version of the application is not compatible with the previous version and requires a fresh installation. Please uninstall the old version and install the new one to continue using the application.
+- ⚠️ **IMPORTANT:** This new version of the application is not compatible with the previous version and requires a fresh installation. Please uninstall the old version and install the new one to continue using the application.
 
 ## 📥 » Version v5.0.0 from 02.02.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v4.2.0...v5.0.0)
 1. Updated API and CDN.
