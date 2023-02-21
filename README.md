@@ -1,12 +1,12 @@
 <div align="center" id="header">
-    <h1>🌠 Genshin Impact ReShade Mod Pack [2023] 🌠</h1>
+    <h1>✨ Genshin Impact Stella Mod [2023] ✨</h1>
     <div>
         <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/youtube_video.png" title="See preview [Screenshots/Default/youtube_video.png]">
             <img src="screenshots/default/youtube_video_border.png" alt="Header image">
         </a>
     </div>
     <h3>
-        💙 » If you want Ray Tracing in game, become my <a href="https://www.patreon.com/sefinek" title="www.patreon.com/sefinek">Patron</a> « 💙<br>
+        🌠 » If you want Ray Tracing in game, become my <a href="https://www.patreon.com/sefinek" title="www.patreon.com/sefinek">Patron</a> « 🌠<br>
         ⭐ » Star the repo if you liked it « ⭐
     </h3>
     <br>
@@ -48,7 +48,7 @@ Make sure you have the latest drivers for your graphics card.
 - If you want to become contributor, just create a new [Pull Request](https://github.com/sefinek24/Genshin-Impact-ReShade/pulls). Thanks.
 - Gameplay will be available soon.
 - Main server localization [sefinek.net](https://sefinek.net): Poland [Cloudflare - WAW, FRA]
-- 
+
 ## <div id="includes">📂 » Includes</div>
 | 🔍 Name                   | 📃 Description                                                                                                                      | 🌍 URL address                                                  | 📑 License                                                                                 |
 |:--------------------------|:------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|:-------------------------------------------------------------------------------------------|
