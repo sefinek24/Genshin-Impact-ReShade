@@ -12,7 +12,7 @@
 11. Fixed several issues with *.cmd files.
 12. Removed several useless files that were no longer needed.
 13. Moved some files to other folders to improve organization.
-14. Launcher is now blocked in Russia. War doesn't have any matter for me.
+14. The launcher is now blocked in Russia. The war does not matter to me.
 15. Updated the [official website](https://sefinek.net) with the latest information about the project.
 16. Updated the setup to v1.9.0, which includes several bug fixes and usability improvements.
 17. Added random YouTube videos to the "Random images" section for a bit of fun.
