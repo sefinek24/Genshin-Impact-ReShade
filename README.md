@@ -126,11 +126,11 @@ New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 </a>
 
 ## <div id="legend">🧀 » Legend</div>
-| Emoji | Description           | Emoji | Description  |
-|-------|-----------------------|:------|:-------------|
-| ✔️    | Supported             | 🤔    | Not tested   |
-| ❌     | Not supported         | ❓     | I don't know |
-| 🎯️   | Default not supported |       |              |
+| Emoji | Description           | Emoji | Description   |
+|-------|-----------------------|:------|:--------------|
+| ✔️    | Supported             | ❌     | Not supported |
+| 🎯️   | Default not supported | 🤔    | Not tested    |
+| ❓     | I don't know          | 🤔    |               |
 
 ## <div id="sources">🧶 » Sources</div>
 Icons were taken from <a href="https://icons8.com" target="_blank">Icons8</a> and <a href="https://www.flaticon.com" target="_blank">FlatIcon</a>.
