@@ -66,8 +66,7 @@ Make sure you have the latest drivers for your graphics card.
 Download the latest setup from [my official website](https://sefinek.net/genshin-impact-reshade).
 
 ## <div id="yt-videos">🎥 » YouTube videos</div>
-Tutorial (outdated): https://www.youtube.com/watch?v=rDeO26RapAk  
-New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
+Click [here](https://sefinek.net/genshin-impact-reshade/videos).
 
 ## <div id="pc-requrmients">✨ » Requirements</div>
 | 💻 Your PC & network                    | 📂 Dependencies • Use installation wizard for automatic install                                                  |
