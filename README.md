@@ -78,14 +78,14 @@ New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 |                                         | [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional)      |
 
 ## <div id="supported-systems">🔧 » Supported operating systems</div>
-| 💻 System                     | 📝 OS Build   | 🙀 Status |
-|-------------------------------|---------------|:----------|
-| Windows 11 22H2               | 22621.900     | ✔️        |
-| Windows 10 22H2 (recommended) | 19045.2546    | ✔️        | 
-| Windows 8 / 8.1               | [❓](#legend)  | 🎯️       | 
-| Windows 7                     | [❓](#legend)  | 🎯️       | 
-| Android / Linux               | [❓](#legend)  | ❌         | 
-| iOS / macOS                   | [❓](#legend)️ | ❌         |
+| 💻 System       | 🔖 Version | 📝 OS Build   | 🙀 Status      | 🤔 Recommended? |
+|-----------------|:-----------|---------------|:---------------|:----------------|
+| Windows 11      | 22H2       | 22621.900     | [✔️](#legend)  | [❌](#legend)    |
+| Windows 10      | 22H2       | 19045.2546    | [✔️](#legend)  | [️✔️](#legend)  | 
+| Windows 8 / 8.1 |            | [❓](#legend)  | [🎯️](#legend) | [❌](#legend)    | 
+| Windows 7       |            | [❓](#legend)  | [🎯️](#legend) | [❌](#legend)    | 
+| Android / Linux |            | [❓](#legend)  | [❌](#legend)   | [❌](#legend)    | 
+| iOS / macOS     |            | [❓](#legend)️ | [❌](#legend)   | [❌](#legend)    |
 
 ## <div id="tested-game-versions">🛠️ » Tested game versions</div>
 | 🎮 Game version | 😅 It works? | 📆 Date    |
@@ -126,10 +126,10 @@ New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 </a>
 
 ## <div id="legend">🧀 » Legend</div>
-| Emoji | Meaning               | Emoji | Meaning       | Emoji | Meaning      |
-|-------|-----------------------|:------|:--------------|:------|:-------------|
-| ✔️    | Supported             | ❌     | Not supported | ❓     | I don't know |
-| 🎯️   | Default not supported | 🤔    | Not tested    |       |              |
+| Emoji | Meaning               | Emoji | Meaning            | Emoji | Meaning      |
+|-------|-----------------------|:------|:-------------------|:------|:-------------|
+| ✔️    | Supported / Yes       | ❌     | Not supported / No | ❓     | I don't know |
+| 🎯️   | Default not supported | 🤔    | Not tested         |       |              |
 
 ## <div id="sources">🧶 » Sources</div>
 Icons were taken from <a href="https://icons8.com" target="_blank">Icons8</a> and <a href="https://www.flaticon.com" target="_blank">FlatIcon</a>.
