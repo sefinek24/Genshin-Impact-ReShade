@@ -81,7 +81,7 @@ New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 | 💻 System       | 🔖 Version | 📝 OS Build   | 🙀 Status      | 🤔 Recommended? |
 |-----------------|:-----------|---------------|:---------------|:----------------|
 | Windows 11      | 22H2       | 22621.900     | [✔️](#legend)  | [❌](#legend)    |
-| Windows 10      | 22H2       | 19045.2546    | [✔️](#legend)  | [️✔️](#legend)  | 
+| Windows 10      | 22H2       | 19045.2604    | [✔️](#legend)  | [️✔️](#legend)  | 
 | Windows 8 / 8.1 |            | [❓](#legend)  | [🎯️](#legend) | [❌](#legend)    | 
 | Windows 7       |            | [❓](#legend)  | [🎯️](#legend) | [❌](#legend)    | 
 | Android / Linux |            | [❓](#legend)  | [❌](#legend)   | [❌](#legend)    | 
