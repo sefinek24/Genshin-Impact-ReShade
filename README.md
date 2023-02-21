@@ -88,12 +88,12 @@ New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 | iOS / macOS     |            | [❓](#legend)️ | [❌](#legend)   | [❌](#legend)    |
 
 ## <div id="tested-game-versions">🛠️ » Tested game versions</div>
-| 🎮 Game version | 😅 It works? | 📆 Date    |
-|-----------------|--------------|------------|
-| v3.4.0          | ✔️           | 18.01.2023 |
-| v3.3.0          | ✔️           | 09.11.2022 |
-| v3.2.0          | ✔️           | 02.11.2022 |
-| v3.1.0          | ✔️           | 01.11.2022 |
+| 🎮 Game version | 😅 It works?  | 📆 Date    |
+|-----------------|---------------|------------|
+| v3.4.0          | [✔️](#legend) | 18.01.2023 |
+| v3.3.0          | [✔️](#legend) | 09.11.2022 |
+| v3.2.0          | [✔️](#legend) | 02.11.2022 |
+| v3.1.0          | [✔️](#legend) | 01.11.2022 |
 
 ## <div id="settings-for-game">⚙️ » Recommended settings for game</div>
 | 📑 Settings            | 📋 Value                               | 📑 Settings                 | 📋 Value                             |
@@ -109,10 +109,10 @@ New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 | **Environment Detail** | Highest                                | **Anisotropic Filtering**   | 16x                                  | 
 
 ## <div id="legend">🧀 » Legend</div>
-| Emoji | Meaning               | Emoji | Meaning            | Emoji | Meaning      |
-|-------|-----------------------|:------|:-------------------|:------|:-------------|
-| ✔️    | Supported / Yes       | ❌     | Not supported / No | ❓     | I don't know |
-| 🎯️   | Default not supported | 🤔    | Not tested         |       |              |
+| Emoji          | Meaning               | Emoji         | Meaning            | Emoji        | Meaning      |
+|----------------|-----------------------|:--------------|:-------------------|:-------------|:-------------|
+| [✔️](#legend)  | Yes / Supported       | [❌](#legend)  | No / Not supported | [❓](#legend) | I don't know |
+| [🎯️](#legend) | Default not supported | [🤔](#legend) | Not tested         |              |              |
 
 ## <div id="other-screenshots">📷 » Other screenshots (without Ray Tracing)</div>
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/backgrounds/kokomi_2.png" title="See preview [kokomi_2.png]">
