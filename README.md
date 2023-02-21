@@ -29,7 +29,6 @@
 - [📝️ Information](#information)
 - [📂 Includes](#includes)
 - [📥 How to install](#installation)
-- [🎥 YouTube videos](#yt-videos)
 - [✨ Requirements](#pc-requrmients)
 - [🔧 Supported systems](#supported-systems)
 - [🛠️ Tested game versions](#tested-game-versions)
@@ -46,6 +45,7 @@ Make sure you have the latest drivers for your graphics card.
 - Need help? Please join to our [Discord server](https://discord.gg/SVcbaRc7gH).
 - If you want to become contributor, just create a new [Pull Request](https://github.com/sefinek24/Genshin-Impact-ReShade/pulls). Thanks.
 - Click [here](https://sefinek.net/genshin-impact-reshade/gallery?page=1) for more and latest screenshots.
+- Videos on YouTube are available [here](https://sefinek.net/genshin-impact-reshade/videos).
 - Gameplay will be soon available on YouTube.
 - Main server localization [sefinek.net](https://sefinek.net): Poland [Cloudflare - WAW, FRA]
 
@@ -64,9 +64,6 @@ Make sure you have the latest drivers for your graphics card.
 
 ## <div id="installation">📥 » How to install?</div>
 Download the latest setup from [my official website](https://sefinek.net/genshin-impact-reshade).
-
-## <div id="yt-videos">🎥 » YouTube videos</div>
-Click [here](https://sefinek.net/genshin-impact-reshade/videos).
 
 ## <div id="pc-requrmients">✨ » Requirements</div>
 | 💻 Your PC & network                    | 📂 Dependencies • Use installation wizard for automatic install                                                  |
