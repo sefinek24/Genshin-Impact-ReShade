@@ -1,22 +1,25 @@
 ## 📥 » Version v6.0.0 from --.--.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v5.0.0...v6.0.0)
+```
+Important information: The new version of the application is not compatible with the previous version and requires a fresh installation. Please uninstall the old version and install the new one to continue using the application.
+```
 1. Updated API to version v2.
-2. Added WindowsAPICodePack - show progress in your taskbar.
-3. Major improvements in log system.
-4. Improvements in Discord RPC and telemetry.
-5. Updated all shaders.
-6. Created new [directory](data/presets/Made%20by%20community) for ReShade addons.
-7. Major changes in [README.md](README.md) file.
-8. Updated FPS Unlocker to v2.0.8.
-9. Added new preset made by community.
-10. Improvement [Data/Cmd/delete_cache.cmd](data/cmd/delete_cache.cmd).
-11. Fixes in `*.cmd` files.
-12. Deleted useless files.
-13. Moved some files to other folders.
+2. Added WindowsAPICodePack to show progress in your taskbar.
+3. Made major improvements to the log system, including faster and more detailed logging.
+4. Improved Discord RPC and telemetry to provide more accurate and reliable data.
+5. Updated all shaders to improve performance and visuals.
+6. Created a new [directory](data/presets/Made%20by%20community) for ReShade addons, where community members can upload their own presets and other addons.
+7. Made major changes to the [README.md](README.md) file to provide clearer instructions and guidelines for using the project.
+8. Updated the FPS Unlocker to v2.0.8.
+9. Added a new preset made by the community to the presets directory.
+10. Made improvements to the [data/cmd/delete_cache.cmd](data/cmd/delete_cache.cmd) file
+11. Fixed several issues with *.cmd files.
+12. Removed several useless files that were no longer needed.
+13. Moved some files to other folders to improve organization.
 14. Launcher is now blocked in Russia. War doesn't have any matter for me.
-15. Updated [official website](https://sefinek.net).
-16. Updated setup to v1.9.0.
-17. Added random YouTube videos in "Random images".
-18. Other improvements and fixes.
+15. Updated the[official website](https://sefinek.net) with the latest information about the project.
+16. Updated the setup to v1.9.0, which includes several bug fixes and usability improvements.
+17. Added random YouTube videos to the "Random images" section for a bit of fun.
+18. Made various other improvements and bug fixes to improve the overall quality of the project.
 
 ## 📥 » Version v5.0.0 from 02.02.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v4.2.0...v5.0.0)
 1. Updated API and CDN.
