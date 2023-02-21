@@ -46,7 +46,7 @@ Make sure you have the latest drivers for your graphics card.
 - Need help? Please join to our [Discord server](https://discord.gg/SVcbaRc7gH).
 - Click [here](https://sefinek.net/genshin-impact-reshade/gallery?page=1) for more and latest screenshots.
 - If you want to become contributor, just create a new [Pull Request](https://github.com/sefinek24/Genshin-Impact-ReShade/pulls). Thanks.
-- Gameplay will be available soon.
+- Gameplay will be soon available on YouTube.
 - Main server localization [sefinek.net](https://sefinek.net): Poland [Cloudflare - WAW, FRA]
 
 ## <div id="includes">📂 » Includes</div>
