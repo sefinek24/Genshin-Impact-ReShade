@@ -1,7 +1,6 @@
 ## 📥 » Version v6.0.0 from --.--.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v5.0.0...v6.0.0)
-```
-Important information: The new version of the application is not compatible with the previous version and requires a fresh installation. Please uninstall the old version and install the new one to continue using the application.
-```
+* **Important information:** The new version of the application is not compatible with the previous version and requires a fresh installation. Please uninstall the old version and install the new one to continue using the application.
+
 1. Updated API to version v2.
 2. Added WindowsAPICodePack to show progress in your taskbar.
 3. Made major improvements to the log system, including faster and more detailed logging.
