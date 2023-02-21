@@ -34,8 +34,8 @@
 - [🔧 Supported systems](#supported-systems)
 - [🛠️ Tested game versions](#tested-game-versions)
 - [⚙️ Recommended settings for game](#settings-for-game)
-- [📷 Other screenshots](#other-screenshots)
 - [🧀 Legend](#legend)
+- [📷 Other screenshots](#other-screenshots)
 - [🧶 Sources](#sources)
 
 ## <div id="important">⚠️ » Important</div>
@@ -108,6 +108,12 @@ New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 | **SFX Quality**        | High                                   | **Subsurface Scattering**   | High                                 | 
 | **Environment Detail** | Highest                                | **Anisotropic Filtering**   | 16x                                  | 
 
+## <div id="legend">🧀 » Legend</div>
+| Emoji | Meaning               | Emoji | Meaning            | Emoji | Meaning      |
+|-------|-----------------------|:------|:-------------------|:------|:-------------|
+| ✔️    | Supported / Yes       | ❌     | Not supported / No | ❓     | I don't know |
+| 🎯️   | Default not supported | 🤔    | Not tested         |       |              |
+
 ## <div id="other-screenshots">📷 » Other screenshots (without Ray Tracing)</div>
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/backgrounds/kokomi_2.png" title="See preview [kokomi_2.png]">
     <img src="screenshots/default/backgrounds/kokomi_2.png" alt="Screenshot number 1">
@@ -124,12 +130,6 @@ New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/backgrounds/collei_3.png" title="See preview [collei_3.png]">
     <img src="screenshots/default/backgrounds/collei_3.png" alt="Screenshot number 5">
 </a>
-
-## <div id="legend">🧀 » Legend</div>
-| Emoji | Meaning               | Emoji | Meaning            | Emoji | Meaning      |
-|-------|-----------------------|:------|:-------------------|:------|:-------------|
-| ✔️    | Supported / Yes       | ❌     | Not supported / No | ❓     | I don't know |
-| 🎯️   | Default not supported | 🤔    | Not tested         |       |              |
 
 ## <div id="sources">🧶 » Sources</div>
 Icons were taken from <a href="https://icons8.com" target="_blank">Icons8</a> and <a href="https://www.flaticon.com" target="_blank">FlatIcon</a>.
