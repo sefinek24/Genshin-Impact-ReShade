@@ -25,5 +25,5 @@ Official website : https://sefinek.net/genshin-impact-reshade
 Support me       : https://sefinek.net/support-me (here is link to my Patreon and Ko-fi)
 
 7. LICENSE
-GNU General Public License v3.0
+This project is licensed under the GNU General Public License v3.0.
 * https://github.com/sefinek24/Genshin-Impact-ReShade/blob/main/LICENSE
