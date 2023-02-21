@@ -20,17 +20,17 @@
 - ⚠️ **IMPORTANT:** This new version of the application is not compatible with the previous version and requires a fresh installation. Please uninstall the old version and install the new one to continue using the application.
 
 ## 📥 » Version v5.0.0 from 02.02.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v4.2.0...v5.0.0)
-1. Updated API and CDN.
-2. Installation via our setup is now not required. You can use git clone command.
-3. Improved log system.
-4. Other changes and fixes.
+1. Updated the API and CDN for improved performance and stability.
+2. ~~Removed the requirement to use the setup for installation. Users can now use the git clone command to install.~~
+3. Made significant improvements to the log system to provide more detailed and accurate information.
+4. Made various other changes and bug fixes to improve the overall quality of the project.
 
 ## 📥 » Version v4.2.0 from 01.02.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v4.1.1...v4.2.0)
-1. Major changes in launcher.
-2. Updated ReShade.
-3. Updated all shaders.
-4. Changed method of injecting ReShade.
-5. [Launcher](https://github.com/sefinek24/genshin-mod-launcher) and [setup](https://github.com/sefinek24/genshin-mod-setup) is now open source.
+1. Made major changes to the launcher for improved usability and performance.
+2. Updated ReShade to the latest version for improved compatibility and functionality.
+3. Updated all shaders for improved visuals and performance.
+4. Changed the method of injecting ReShade.
+5. [Launcher](https://github.com/sefinek24/genshin-mod-launcher) and [setup](https://github.com/sefinek24/genshin-mod-setup) are now open source to encourage community contributions and improvements.
 
 ## 📥 » Version v4.1.1 from 21.01.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v4.1.0...v4.1.1)
 1. Small fixes.
