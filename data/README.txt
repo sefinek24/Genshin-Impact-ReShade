@@ -6,7 +6,7 @@
 - Make sure to use the latest operating system build, update your graphics card drivers, and chipset drivers.
 
 2. CAN I ADD MY PRESET?
-Absolutely! You can create a new Pull Request on our GitHub repository at:
+Absolutely yes! You can create a new Pull Request on our GitHub repository at:
 * https://github.com/sefinek24/Genshin-Impact-ReShade/pulls
 * https://github.com/sefinek24/Genshin-Impact-ReShade/tree/main/data/presets/Made%20by%20community
 
