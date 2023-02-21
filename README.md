@@ -26,10 +26,10 @@
 ## <div id="list">📋 » List</div>
 - [🌠 Genshin Impact ReShade Mod Pack](#header)
 - [⚠️ Important](#important)
+- [📝️ Information](#information)
 - [📂 Includes](#includes)
 - [📥 How to install](#installation)
 - [🎥 YouTube videos](#yt-videos)
-- [📝️ Information](#information)
 - [✨ Requirements](#pc-requrmients)
 - [🔧 Supported systems](#supported-systems)
 - [🛠️ Tested game versions](#tested-game-versions)
@@ -42,6 +42,13 @@
 Do not share screenshots from game with your UID and visible shaders or ReShade overlay! If you want to record some video for YouTube or something else, please hide or censor UID and username.  
 Make sure you have the latest drivers for your graphics card.
 
+## <div id="information">📝️ » Information</div>
+- Need help? Please join to our [Discord server](https://discord.gg/SVcbaRc7gH).
+- Click [here](https://sefinek.net/genshin-impact-reshade/gallery?page=1) for more and latest screenshots.
+- If you want to become contributor, just create a new [Pull Request](https://github.com/sefinek24/Genshin-Impact-ReShade/pulls). Thanks.
+- Gameplay will be available soon.
+- Main server localization [sefinek.net](https://sefinek.net): Poland [Cloudflare - WAW, FRA]
+- 
 ## <div id="includes">📂 » Includes</div>
 | 🔍 Name                   | 📃 Description                                                                                                                      | 🌍 URL address                                                  | 📑 License                                                                                 |
 |:--------------------------|:------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|:-------------------------------------------------------------------------------------------|
@@ -61,13 +68,6 @@ Download the latest setup from [my official website](https://sefinek.net/genshin
 ## <div id="yt-videos">🎥 » YouTube videos</div>
 Tutorial (outdated): https://www.youtube.com/watch?v=rDeO26RapAk  
 New video about launcher: https://www.youtube.com/watch?v=NH8VXLZwBWg
-
-## <div id="information">📝️ » Information</div>
-- Need help? Please join to our [Discord server](https://discord.gg/SVcbaRc7gH).
-- Click [here](https://sefinek.net/genshin-impact-reshade/gallery?page=1) for more and latest screenshots.
-- If you want to become contributor, just create a new [Pull Request](https://github.com/sefinek24/Genshin-Impact-ReShade/pulls). Thanks.
-- Gameplay will be available soon.
-- Main server localization [sefinek.net](https://sefinek.net): Poland [Cloudflare - WAW, FRA]
 
 ## <div id="pc-requrmients">✨ » Requirements</div>
 | 💻 Your PC & network                    | 📂 Dependencies • Use installation wizard for automatic install                                                  |
