@@ -3,7 +3,7 @@
 1. IMPORTANT
 - Do not share screenshots from game with your UID and visible shaders or ReShade overlay!
 - If you want to record some video for YouTube or something else, please hide or censor your UID and username.
-- Make sure you have the latest drivers for your graphics card.
+- Make sure you have the latest operating system build, drivers for your graphics card and chipset.
 
 2. CAN I ADD MY PRESET?
 Of course! Just create a new Pull Request on GitHub repository.
