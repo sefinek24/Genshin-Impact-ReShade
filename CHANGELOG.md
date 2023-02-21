@@ -13,11 +13,11 @@
 12. Removed several useless files that were no longer needed.
 13. Moved some files to other folders to improve organization.
 14. Launcher is now blocked in Russia. War doesn't have any matter for me.
-15. Updated the[official website](https://sefinek.net) with the latest information about the project.
+15. Updated the [official website](https://sefinek.net) with the latest information about the project.
 16. Updated the setup to v1.9.0, which includes several bug fixes and usability improvements.
 17. Added random YouTube videos to the "Random images" section for a bit of fun.
 18. Made various other improvements and bug fixes to improve the overall quality of the project.
-- **Important information:** The new version of the application is not compatible with the previous version and requires a fresh installation. Please uninstall the old version and install the new one to continue using the application.
+- ⚠️ **Important information:** The new version of the application is not compatible with the previous version and requires a fresh installation. Please uninstall the old version and install the new one to continue using the application.
 
 ## 📥 » Version v5.0.0 from 02.02.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v4.2.0...v5.0.0)
 1. Updated API and CDN.

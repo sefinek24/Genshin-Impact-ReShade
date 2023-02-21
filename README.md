@@ -25,6 +25,7 @@
 
 ## <div id="list">📋 » List</div>
 - [🌠 Genshin Impact Stella Mod Pack](#header)
+- [📃 Changelog](CHANGELOG.md)
 - [⚠️ Important](#important)
 - [📂 Includes](#includes)
 - [📝️ Information](#information)
