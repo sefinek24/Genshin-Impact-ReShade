@@ -9,7 +9,7 @@
 8. Updated the FPS Unlocker to v2.0.8.
 9. Added a new preset made by the community to the presets directory.
 10. Made improvements to the [data/cmd/delete_cache.cmd](data/cmd/delete_cache.cmd) file.
-11. Fixed several issues with `*.cmd` files.
+11. Fixed several issues in `*.cmd` files.
 12. Removed several useless files that were no longer needed.
 13. Moved some files to other folders to improve organization.
 14. The launcher is now blocked in Russia. The war does not matter to me.
