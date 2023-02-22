@@ -58,7 +58,7 @@ echo [i] Everything is ready! Please wait a moment ᕱ⑅︎ᕱ & echo.
 
 set /p LMode=<"%AppData%\Genshin Impact MP by Sefinek\launch-mode.sfn"
 if %LMode% == 1 (
-	cd "Data\Unlocker"
+	cd "data\unlocker"
 	start .\unlockfps_clr.exe
 	
     cd "..\ReShade"
@@ -70,14 +70,14 @@ if %LMode% == 1 (
 ) else if %LMode% == 2 (
     echo Please start the game now.
 
-    cd "Data\ReShade"
+    cd "data\reshade"
     "inject64.exe" "GenshinImpact.exe"
 
     echo.
     cd ..\Cmd\start
     call done.cmd
 ) else if %LMode% == 3 (
-    cd "Data\Unlocker"
+    cd "data\unlocker"
     start .\unlockfps_clr.exe
 
     cd ..\Cmd\start
