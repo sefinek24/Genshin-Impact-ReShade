@@ -1,5 +1,7 @@
 ## 📥 » Version v6.0.0 from --.--.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v5.0.0...v6.0.0)
-> ⚠️ **IMPORTANT:** This new version of the application is not compatible with the previous version and requires a fresh installation. Please uninstall the old version and install the new one to continue using the application.
+> 🎉 **Notice:** I have changed the name of the mod to `Genshin Impact Stella Mod` Please make sure to update your mod and any references to the old name accordingly.
+> 
+> ⚠️ **Important:** This new version of the application is not compatible with the previous version and requires a fresh installation. Please uninstall the old version and install the new one to continue using the application.
 
 ### 🆕 Added
 1. Added support for API version v2, which brings new features and improved performance.
