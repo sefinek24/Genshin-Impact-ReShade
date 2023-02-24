@@ -2,7 +2,7 @@
 	///**SuperDepth3D_VR+**///
 	//--------------------////
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	//* Depth Map Based 3D post-process shader v3.6.2
+	//* Depth Map Based 3D post-process shader v3.6.6
 	//* For Reshade 4.4+ I think...
 	//* ---------------------------------
 	//*
@@ -801,11 +801,16 @@ namespace SuperDepth3DVR
 		ui_category = "Image Adjustment";
 	> = float3(0.24, 0.24, 0.24);
 	
-	uniform bool Theater_Mode <
-		ui_label = " Theater Mode";
-		ui_tooltip = "Sets the VR Shader into Theater mode.";
+	uniform int Theater_Mode <
+		ui_type = "combo";
+		ui_items = "Off\0Theater Mode Normal\0Theater Mode AR\0";
+		ui_label = " Theater Modes";
+		ui_tooltip = "Sets the VR Shader into Theater mode for CellPhone VR or Nreal Glasses.\n"
+					 "The 2nd Option is the same as the first. But, Zoomed in.\n"
+				     "Default is Off.\n";
 		ui_category = "Image Adjustment";
-	> = false;
+	> = 0;
+	
 	#else
 	static const int Barrel_Distortion = 0;
 	static const float FoV = 0;
@@ -1070,7 +1075,7 @@ namespace SuperDepth3DVR
 	
 		};
 		
-	texture texzBufferVR_L  { Width = BUFFER_WIDTH; Height = BUFFER_HEIGHT; Format = RG16F; MipLevels = 8; };
+	texture texzBufferVR_L  { Width = BUFFER_WIDTH; Height = BUFFER_HEIGHT; Format = R16F; MipLevels = 8; };
 	//not doing mips here?
 	sampler SamplerzBufferVR_L
 		{
@@ -1080,7 +1085,7 @@ namespace SuperDepth3DVR
 			AddressW = MIRROR;
 		};
 		
-	texture texzBufferBlurVR < pooled = true; > { Width = BUFFER_WIDTH / 2.0 ; Height = BUFFER_HEIGHT / 2.0; Format = R16F; MipLevels = 6; };
+	texture texzBufferBlurVR < pooled = true; > { Width = BUFFER_WIDTH / 2.0 ; Height = BUFFER_HEIGHT / 2.0; Format = RG16F; MipLevels = 6; };
 	
 	sampler SamplerzBuffer_BlurVR
 		{
@@ -1280,12 +1285,12 @@ namespace SuperDepth3DVR
 	
 	float SLLTresh(float2 TCLocations, float MipLevel)
 	{ 
-		return tex2Dlod(SamplerzBufferVR_L,float4(TCLocations,0, MipLevel)).y;
+		return tex2Dlod(SamplerDMVR,float4(TCLocations,0, MipLevel)).w;
 	}
 	
 	bool LBDetection()//Active RGB Detection
 	{   float2 Letter_Box_Reposition = LBR ? float2(0.250,0.875) : float2(0.1,0.5);   
-		float MipLevel = 5,Center = SLLTresh(float2(0.5,0.5), 8) > 0, Top_Left = LBSensitivity(SLLTresh(float2(Letter_Box_Reposition.x,0.09), MipLevel));
+		float MipLevel = 5,Center = SLLTresh(float2(0.5,0.5), 7) > 0, Top_Left = LBSensitivity(SLLTresh(float2(Letter_Box_Reposition.x,0.09), MipLevel));
 		if ( LetterBox_Masking == 2 || LB_Correction == 2 || LBC == 2 || LBM == 2 || SMP == 2)//Left_Center | Right_Center | Center
 			return LBSensitivity(SLLTresh(float2(0.1,0.5), MipLevel)) && LBSensitivity(SLLTresh(float2(0.9,0.5), MipLevel)) && Center; //Vert
 		else       //Top | Bottom | Center
@@ -1540,7 +1545,7 @@ namespace SuperDepth3DVR
 	}
 	
 	float4 TC_SP(float2 texcoord)
-	{
+	{   float LBDetect = tex2D(SamplerLumVR,float2(1, 0.083)).z;
 		float2 H_V_A, H_V_B, X_Y_A, X_Y_B, S_texcoord = texcoord;
 		#if BD_Correction || BDF
 		if(BD_Options == 0 || BD_Options == 2)
@@ -1557,9 +1562,9 @@ namespace SuperDepth3DVR
 			#endif
 
 			#if LBC || LB_Correction
-				X_Y_A = Image_Position_Adjust + (LBDetection() && LB_Correction_Switch ? Image_Pos_Offset : 0.0f );
+				X_Y_A = Image_Position_Adjust + (LBDetect && LB_Correction_Switch ? Image_Pos_Offset : 0.0f );
 				X_Y_B = Image_Position_Adjust + Image_Pos_Offset;
-					if((SDT == 2 || SD_Trigger == 2) && SDTriggers() && LBDetection())
+					if((SDT == 2 || SD_Trigger == 2) && SDTriggers() && LBDetect)
 					   X_Y_A = float2(Image_Position_Adjust.x,Image_Position_Adjust.y); 
 			#else
 				X_Y_A = float2(Image_Position_Adjust.x,Image_Position_Adjust.y);
@@ -1571,9 +1576,9 @@ namespace SuperDepth3DVR
 		S_texcoord.xy += float2(-X_Y_B.x,X_Y_B.y)*0.5;
 		
 			#if LBC || LB_Correction
-				H_V_A = Horizontal_and_Vertical * (LBDetection() && LB_Correction_Switch ? H_V_Offset : 1.0f );
+				H_V_A = Horizontal_and_Vertical * (LBDetect && LB_Correction_Switch ? H_V_Offset : 1.0f );
 				H_V_B = Horizontal_and_Vertical * H_V_Offset;
-					if((SDT == 2 || SD_Trigger == 2) && SDTriggers() && LBDetection())
+					if((SDT == 2 || SD_Trigger == 2) && SDTriggers() && LBDetect)
 						H_V_A = Horizontal_and_Vertical;	
 			#else
 				H_V_A = Horizontal_and_Vertical;
@@ -1710,7 +1715,7 @@ namespace SuperDepth3DVR
 		return (1-(Val*2.))*1000;
 	}
 	
-	float2x4 Fade(float2 texcoord) // Maybe make it float2 and pass the 2nd switch to swap it with grater strength onlu if it's beyond -1.0
+	float2x4 Fade(float2 texcoord)
 	{   //Check Depth
 		float CD, Detect, Detect_Out_of_Range;
 		if(ZPD_Boundary > 0)
@@ -1722,17 +1727,21 @@ namespace SuperDepth3DVR
 			#endif   
 			float4 Switch_Array = ZPD_Boundary == 6 ? float4(0.825,0.850,0.875,0.900) : float4(1.0,0.875,0.75,0.625);
 			//Normal A & B for both	
-			const float CDArray_A0[7] = { LB_Dir.x, 0.25, 0.375, 0.5, 0.625, 0.75, LB_Dir.y}, CDArray_B0[7] = { 0.25, 0.375, 0.4375, 0.5, 0.5625, 0.625, 0.75}, CDArray_C0[9] = { 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9};
-			const float CDArray_A1[5] = { 0.3, 0.5, 0.625, 0.75, 0.875}, CDArray_B1[5] = { 0.3, 0.4, 0.5, 0.625, 0.75};
-			const float CDArray_C1[4] = { 0.25, 0.5, 0.75, 0.875};
+			const float CDArray_X_A0[7] = { LB_Dir.x, 0.25, 0.375, 0.5, 0.625, 0.75, LB_Dir.y}, 
+						CDArray_X_B0[7] = { 0.25, 0.375, 0.4375, 0.5, 0.5625, 0.625, 0.75}, 
+						CDArray_X_C0[9] = { 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9};
+							
+			const float CDArray_Y_A0[5] = { 0.3, 0.5, 0.625, 0.75, 0.875}, 
+						CDArray_Y_B0[5] = { 0.3, 0.4, 0.5, 0.625, 0.75},
+						CDArray_Y_C0[4] = { 0.25, 0.5, 0.75, 0.875};
 
 			float CDArrayZPD_A[7] = { ZPD_Separation.x * Switch_Array.w, ZPD_Separation.x * Switch_Array.z, ZPD_Separation.x * Switch_Array.y, ZPD_Separation.x * Switch_Array.x, ZPD_Separation.x * Switch_Array.y, ZPD_Separation.x * Switch_Array.z, ZPD_Separation.x * Switch_Array.w },
 				  CDArrayZPD_B[7] = { ZPD_Separation.x * 0.3, ZPD_Separation.x * 0.5, ZPD_Separation.x * 0.75, ZPD_Separation.x, ZPD_Separation.x * 0.75, ZPD_Separation.x * 0.5, ZPD_Separation.x * 0.3},
-	 			 CDArrayZPD_C[10] = { ZPD_Separation.x * 0.5625, ZPD_Separation.x * 0.75, ZPD_Separation.x * 0.875, ZPD_Separation.x * 0.9375, 
-									   ZPD_Separation.x, ZPD_Separation.x, 
+	 			 CDArrayZPD_C[9] = { ZPD_Separation.x * 0.5625, ZPD_Separation.x * 0.75, ZPD_Separation.x * 0.875, ZPD_Separation.x * 0.9375, 
+									   ZPD_Separation.x,
 									   ZPD_Separation.x * 0.9375, ZPD_Separation.x * 0.875, ZPD_Separation.x * 0.75, ZPD_Separation.x * 0.5625 };	
 			//Screen Space Detector 7x6 Grid from between 0 to 1 and ZPD Detection becomes stronger as it gets closer to the Center.
-			float Shift_Per_Frame = AFD ? Alternate ? 0 : 0.0625 : 0;
+			float Shift_Per_Frame = Alternate ? 0 : 0.0625;
 			float2 GridXY; int2 iXY = ( ZPD_Boundary == 3 ? int2( 9, 4) : int2( 7, 5) );//was 12/4 and 7/7 This reduction saves 0.1 ms and should show no diff to the user.
 			[loop]                                                                       //I was thinking the lowest I can go would be 9/4 along with 7/5
 			for( int iX = 0 ; iX < iXY.x; iX++ )                                         //7 * 7 = 49 | 12 * 4 = 48 | 7 * 6 = 42 | 9 * 4 = 36 | 7 * 5 = 35
@@ -1740,29 +1749,30 @@ namespace SuperDepth3DVR
 				for( int iY = 0 ; iY < iXY.y; iY++ )
 				{
 					if(ZPD_Boundary == 1 || ZPD_Boundary == 6 || ZPD_Boundary == 7)
-						GridXY = float2( CDArray_A0[iX], CDArray_A1[iY]);
+						GridXY = float2( CDArray_X_A0[iX], CDArray_Y_A0[iY]);
 					else if(ZPD_Boundary == 2 || ZPD_Boundary == 5)
-						GridXY = float2( CDArray_B0[iX], CDArray_A1[iY]);
+						GridXY = float2( CDArray_X_B0[iX], CDArray_Y_A0[iY]);
 					else if(ZPD_Boundary == 3)
-						GridXY = float2(CDArray_C0[iX],CDArray_C1[min(3,iY)]);
+						GridXY = float2( CDArray_X_C0[iX], CDArray_Y_C0[min(3,iY)]);
 					else if(ZPD_Boundary == 4)
-						GridXY = float2( CDArray_A0[iX], CDArray_B1[iY]);
+						GridXY = float2( CDArray_X_A0[iX], CDArray_Y_B0[iY]);
+					//GridXY.x += fmod(CDArray_Y_C0[min(3,iY)],0.25) ? 0.05 : 0;
 					if( AFD )
-						GridXY += Shift_Per_Frame;
+						GridXY.x += Shift_Per_Frame;
+
 					float ZPD_I = ZPD_Boundary == 3 ?  CDArrayZPD_C[iX] : (ZPD_Boundary == 2 || ZPD_Boundary == 5  ? CDArrayZPD_B[iX] : CDArrayZPD_A[iX]);		
 
+					float PDepth = PrepDepth(GridXY)[1][0];
+					
 					if(ZPD_Boundary >= 4)
 					{
-						if ( PrepDepth(GridXY)[1][0] == 1 )
+						if ( PDepth == 1 )
 							ZPD_I = 0;
 					}
 					// CDArrayZPD[i] reads across prepDepth.......
-					CD = 1 - ZPD_I / PrepDepth(GridXY)[1][0];
+					CD = 1 - ZPD_I / PDepth;
 	
-					#if UI_MASK //need to rework this
-						CD = max( 1 - ZPD_I / HUD_Mask(GridXY), CD );
-					#endif
-					if ( CD < -Set_Pop_Min().x )//may lower this to like -0.1
+					if ( CD < -Set_Pop_Min().x )
 						Detect = 1;
 					//Used if Depth Buffer is way out of range or if you need granuality.
 					if(RE_Set(0).x)
@@ -1791,11 +1801,12 @@ namespace SuperDepth3DVR
 		float Trigger_Fade_A = Detect, Trigger_Fade_B = Detect_Out_of_Range >= 1, Trigger_Fade_C = Detect_Out_of_Range >= 2, Trigger_Fade_D = Detect_Out_of_Range, Trigger_Fade_E = Detect_Out_of_Range >= 4, AA = Auto_Adjust_Cal(ZPD_Boundary_n_Fade.y), 
 			  PStoredfade_A = tex2D(SamplerLumVR,float2(0, 0.250)).z, PStoredfade_B = tex2D(SamplerLumVR,float2(0, 0.416)).z, PStoredfade_C = tex2D(SamplerLumVR,float2(1, 0.416)).z, PStoredfade_D = tex2D(SamplerLumVR,float2(1, 0.250)).z, PStoredfade_E = tex2D(SamplerLumVR,float2(1, 0.583)).z;
 		//Fade in toggle.
-		return float2x4( float4(PStoredfade_A + (Trigger_Fade_A - PStoredfade_A) * (1.0 - exp(-frametime/AA)), //exp2 would be even slower 
-								PStoredfade_B + (Trigger_Fade_B - PStoredfade_B) * (1.0 - exp(-frametime/ZPD_BnF)),
-								PStoredfade_C + (Trigger_Fade_C - PStoredfade_C) * (1.0 - exp(-frametime/ZPD_BnF)), 
-								PStoredfade_D + (Trigger_Fade_D - PStoredfade_D) * (1.0 - exp(-frametime/ZPD_BnF))),
-						 float4(PStoredfade_E + (Trigger_Fade_E - PStoredfade_E) * (1.0 - exp(-frametime/ZPD_BnF)),
+		float2 CallFT = 1.0 - exp(float2(-frametime/AA,-frametime/ZPD_BnF));//exp2 would be even slower
+		return float2x4( float4(PStoredfade_A + (Trigger_Fade_A - PStoredfade_A) * CallFT.x,  
+								PStoredfade_B + (Trigger_Fade_B - PStoredfade_B) * CallFT.y,
+								PStoredfade_C + (Trigger_Fade_C - PStoredfade_C) * CallFT.y, 
+								PStoredfade_D + (Trigger_Fade_D - PStoredfade_D) * CallFT.y),
+						 float4(PStoredfade_E + (Trigger_Fade_E - PStoredfade_E) * CallFT.y,
 								0,
 								0,
 								saturate(Detect_Out_of_Range * 0.25)) );
@@ -1840,7 +1851,12 @@ namespace SuperDepth3DVR
 		float R = DM.x, G = DM.y, B = DM.z, Auto_Scale = WZPD_and_WND.z > 0 ? lerp(lerp(1.0,0.625,saturate(WZPD_and_WND.z * 2)),1.0,lerp(Auto_Balance_Selection().y , smoothstep(0,0.5,tex2D(SamplerLumVR,float2(0,0.750)).z), 0.5)) : 1;
 		float2 Min_Trim = float2(Set_Pop_Min().y, WZPD_and_WND.w * Auto_Scale);
 		//Fade Storage
-		float2x4 Fade_Pass = Fade(texcoord);
+		float3 Fade_Pass_A = float3( tex2D(SamplerzBuffer_BlurVR,float2(0,0.083)).y,
+									 tex2D(SamplerzBuffer_BlurVR,float2(0,0.250)).y,
+									 tex2D(SamplerzBuffer_BlurVR,float2(0,0.416)).y );
+		float3 Fade_Pass_B = float3( tex2D(SamplerzBuffer_BlurVR,float2(0,0.583)).y,
+									 tex2D(SamplerzBuffer_BlurVR,float2(0,0.750)).y,
+									 tex2D(SamplerzBuffer_BlurVR,float2(0,0.916)).y );
 		float ScaleND = saturate(lerp(R,1.0f,smoothstep(min(-Min_Trim.x,0),1.0f,R)));
 	
 		if (Min_Trim.x > 0)
@@ -1852,22 +1868,24 @@ namespace SuperDepth3DVR
 		if(   texcoord.x < pix.x * 2 &&   texcoord.y < pix.y * 2)//TL
 			R = Fade_in_out(texcoord);
 		if( 1-texcoord.x < pix.x * 2 && 1-texcoord.y < pix.y * 2)//BR
-			R = Fade_Pass[0][0];
+			R = Fade_Pass_A.x;
 		if(   texcoord.x < pix.x * 2 && 1-texcoord.y < pix.y * 2)//BL
-			R = Fade_Pass[0][1];
+			R = Fade_Pass_A.y;
 		if( 1-texcoord.x < pix.x * 2 &&   texcoord.y < pix.y * 2)//TR
-			R = Fade_Pass[0][2];
+			R = Fade_Pass_A.z;
 
 		if( 1-texcoord.x < pix.x * 2 &&   texcoord.y < pix.y * 2)//TR
-			G = Fade_Pass[0][3];
+			G = Fade_Pass_B.x;
 		if(   texcoord.x < pix.x * 2 &&   texcoord.y < pix.y * 2)//TL
-			G = Fade_Pass[1][3];
+			G = Fade_Pass_B.y;
 		if( 1-texcoord.x < pix.x * 2 && 1-texcoord.y < pix.y * 2)//BR
-			G = Fade_Pass[1][0];
+			G = Fade_Pass_B.z;
 			
-		float Luma_Map = dot(0.333, tex2D(BackBufferCLAMP,texcoord).rgb);
+				//Luma Map
+		float3 Color = tex2D(BackBufferCLAMP,texcoord ).rgb;
+			   Color.x = max(Color.r, max(Color.g, Color.b)); 
 	
-		return saturate(float4(R,G,B,Luma_Map));
+		return saturate(float4(R,G,B,Color.x));
 	}
 	
 	float AutoDepthRange(float d, float2 texcoord )
@@ -2091,7 +2109,7 @@ namespace SuperDepth3DVR
 	}
 	#define Adapt_Adjust 0.7 //[0 - 1]
 	////////////////////////////////////////////////////Depth & Special Depth Triggers//////////////////////////////////////////////////////////////////
-	void zBuffer(in float4 position : SV_Position, in float2 texcoord : TEXCOORD, out float2 Point_Out : SV_Target0 , out float2 Linear_Out : SV_Target1)
+	void zBuffer(in float4 position : SV_Position, in float2 texcoord : TEXCOORD, out float2 Point_Out : SV_Target0 , out float Linear_Out : SV_Target1)
 	{  //Temporal adaptation https://knarkowicz.wordpress.com/2016/01/09/automatic-exposure/
 		float  ExAd = (1-Adapt_Adjust)*1250, Lum = tex2Dlod(SamplerDMVR,float4(texcoord,0,12)).w, PastLum = tex2D(SamplerLumVR,float2(0,0.583)).z;
 	
@@ -2105,12 +2123,9 @@ namespace SuperDepth3DVR
 			Set_Depth.y = Weapon_ZPD_Fade(Set_Depth.z);
 		if( 1-texcoord.x < pix.x * 2 &&   texcoord.y < pix.y * 2)//TR
 			Set_Depth.y = Motion_Blinders(texcoord);	
-		//Luma Map
-		float3 Color = tex2D(BackBufferCLAMP,texcoord ).rgb;
-			   Color.x = max(Color.r, max(Color.g, Color.b)); 
 		
 		Point_Out = Set_Depth.xy; 
-		Linear_Out = float2(Set_Depth.x,Color.x);//is z when above code is on.	
+		Linear_Out = Set_Depth.x;	
 	}
 	static const float Blur_Adjust = 3.0;
 		
@@ -2126,8 +2141,19 @@ namespace SuperDepth3DVR
 		
 		float Corners = tex2Dlod(SamplerzBufferVR_P,float4(StoredTC * float2( 2, 1) - float2( 1 , 0),0, 2)).x;
 			  Corners = ddx(Corners) * ddy(Corners);
-			  
-		Blur_Out = StoredTC.x < 0.5 ? min(1,simple_Blur * 0.2) : saturate(Corners > 0.001);//,PrepDepth(texcoord)[2][0]);
+		//Fade Storage
+		float2x4 Fade_Pass = Fade(StoredTC);	
+		const int Num_of_Values = 6; //4 total array values that map to the textures width.
+		float Storage_Array[Num_of_Values] = { Fade_Pass[0][0],
+	                                		   Fade_Pass[0][1],
+	                                		   Fade_Pass[0][2], 
+	                                		   Fade_Pass[0][3],
+											   Fade_Pass[1][3],
+											   Fade_Pass[1][0] };
+		//Set a avr size for the Number of lines needed in texture storage.
+		float Grid = floor(texcoord.y * BUFFER_HEIGHT * BUFFER_RCP_HEIGHT * Num_of_Values);	
+		  
+		Blur_Out = float2(StoredTC.x < 0.5 ? min(1,simple_Blur * 0.2) : saturate(Corners > 0.001), Storage_Array[int(fmod(Grid,Num_of_Values))]);
 	}		
 	float4 GetDB(float2 texcoord)
 	{
@@ -2286,7 +2312,7 @@ namespace SuperDepth3DVR
 		//Field of View
 		float fov = FoV-(FoV*0.2), F = -fov + 1,HA = (F - 1)*(BUFFER_WIDTH*0.5)*pix.x;
 		//Field of View Application
-		float2 Z_A = float2(1.0,1.0); //Theater Mode
+		float2 Z_A = float2(Theater_Mode == 2 ? 0.75 : 1.0,1.0); //Theater Mode
 		if(!Theater_Mode)
 		{
 			Z_A = float2(1.0,0.5); //Full Screen Mode

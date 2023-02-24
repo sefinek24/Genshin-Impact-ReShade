@@ -1,26 +1,20 @@
-/** Tilt-Shift PS, version 2.0.1
+/** Tilt-Shift PS, version 2.0.5
 
-This code © 2022 Jakub Maksymilian Fober
+This code © 2018-2023 Jakub Maksymilian Fober
 
-This work is licensed under the Creative Commons
-Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+This work is licensed under the Creative Commons,
+Attribution 3.0 Unported License.
 To view a copy of this license, visit
-http://creativecommons.org/licenses/by-nc-nd/3.0/.
-
-Copyright owner further grants permission for commercial reuse of
-image recordings derived from the Work (e.g. let's play video,
-gameplay stream with ReShade filters, screenshots with ReShade
-filters) provided that any use is accompanied by the name of the
-shader used and a link to ReShade website https://reshade.me.
-
-If you need additional licensing for your commercial product, contact
-me at jakub.m.fober@protonmail.com.
+http://creativecommons.org/licenses/by/3.0/.
 */
 
 	/* MACROS */
 
-// Maximum number of samples for chromatic aberration
-#define TILT_SHIFT_MAX_SAMPLES 128u
+// Maximum number of samples for blur
+#ifndef TILT_SHIFT_MAX_SAMPLES
+	#define TILT_SHIFT_MAX_SAMPLES 128u
+#endif
+// ITU REC 601 YCbCr
 #define ITU_REC 601
 
 	/* COMMONS */
@@ -86,17 +80,22 @@ sampler BackBuffer
 
 	/* FUNCTIONS */
 
-/* S curve by JMF
-   Generates smooth bell falloff for blur.
-   Preserves brightness.
-   Input is in [0, 1] range. */
-float bell_curve(float gradient)
+/* Exponential bell weight falloff by JMF
+   Generates smooth bell falloff for blur, with perfect weights
+   distribution for a given number of samples.
+   Input: position ∈ [-1, 1] */
+float bellWeight(float position)
 {
-	gradient = 1f-abs(gradient*2f-1f);
-	float top = max(gradient, 0.5);
-	float bottom = min(gradient, 0.5);
-	return 4f*((bottom*bottom+top)-(top*top-top))-3f;
+	// Get deviation for minimum value for a given step size
+#if BUFFER_COLOR_BIT_DEPTH == 10
+	const float deviation = log(rcp(1024u)); // Logarithm of base e
+#else
+	const float deviation = log(rcp(256u)); // Logarithm of base e
+#endif
+	// Get smooth bell falloff without aliasing or zero value at the last sample
+	return exp(position*position*deviation); // Gaussian bell falloff
 }
+
 // Get coordinates rotation matrix
 float2x2 get2dRotationMatrix(int angle)
 {
@@ -116,7 +115,7 @@ float getBlurRadius(float2 viewCoord)
 	// Get rotation axis matrix
 	const float2x2 rotationMtx = get2dRotationMatrix(BlurAngle);
 	// Get offset vector
-	float2 offsetDir = mul(rotationMtx, float2(0f, BlurOffset)); // Get rotated offset
+	static float2 offsetDir = mul(rotationMtx, float2(0f, BlurOffset)); // Get rotated offset
 	offsetDir.x *= -BUFFER_ASPECT_RATIO; // Scale offset to horizontal bounds
 	// Offset and rotate coordinates
 	viewCoord = mul(rotationMtx, viewCoord+offsetDir);
@@ -171,33 +170,34 @@ void TiltShiftPassHorizontalPS(
 		// Convert to even number and clamp to maximum sample count
 		blurPixelCount = min(
 			blurPixelCount+blurPixelCount%2u, // Convert to even
-			TILT_SHIFT_MAX_SAMPLES-TILT_SHIFT_MAX_SAMPLES%2u // Convert to even
+			abs(TILT_SHIFT_MAX_SAMPLES)-abs(TILT_SHIFT_MAX_SAMPLES)%2u // Convert to even
 		);
 		// Map blur horizontal radius to texture coordinates
 		blurRadius *= BUFFER_HEIGHT*BUFFER_RCP_WIDTH; // Divide by aspect ratio
-		float rcpWeightStep = rcp(blurPixelCount*2u);
+		float rcpWeightStep = rcp(blurPixelCount);
 		float rcpOffsetStep = rcp(blurPixelCount*2u-1u);
-		color = 0f; // Initialize
+		color = 0f; float cumulativeWeight = 0f; // Initialize
 		for (uint i=1u; i<blurPixelCount*2u; i+=2u)
 		{
 			// Get step weight
-			float weight = bell_curve(i*rcpWeightStep);
+			float weight = bellWeight(mad(i, rcpWeightStep, -1f));
 			// Get step offset
 			float offset = (i-1u)*rcpOffsetStep-0.5;
 			color += tex2Dlod(
 				BackBuffer,
 				float4(blurRadius*offset+texCoord.x, texCoord.y, 0f, 0f) // Offset coordinates
 			).rgb*weight;
+			cumulativeWeight += weight;
 		}
 		// Restore brightness
-		color /= blurPixelCount;
+		color /= cumulativeWeight;
 	}
 	// Bypass blur
 	else color = tex2Dfetch(BackBuffer, uint2(pixCoord.xy)).rgb;
 	color = saturate(color); // Clamp values
 
 #if BUFFER_COLOR_SPACE <= 2 && BUFFER_COLOR_BIT_DEPTH != 10 // Manual gamma
-	color = to_display_gamma_hq(color);
+	color = to_display_gamma(color);
 #endif
 	// Dither output to increase perceivable picture bit-depth
 	color = BlueNoise::dither(uint2(pixCoord.xy), color);
@@ -220,28 +220,31 @@ void TiltShiftPassVerticalPS(
 		// Convert to even number and clamp to maximum sample count
 		blurPixelCount = min(
 			blurPixelCount+blurPixelCount%2u, // Convert to even
-			TILT_SHIFT_MAX_SAMPLES-TILT_SHIFT_MAX_SAMPLES%2u // Convert to even
+			abs(TILT_SHIFT_MAX_SAMPLES)-abs(TILT_SHIFT_MAX_SAMPLES)%2u // Convert to even
 		);
-		float rcpWeightStep = rcp(blurPixelCount*2u);
+		float rcpWeightStep = rcp(blurPixelCount);
 		float rcpOffsetStep = rcp(blurPixelCount*2u-1u);
-		color = 0f; // Initialize
+		color = 0f; float cumulativeWeight = 0f; // Initialize
 		for (uint i=1u; i<blurPixelCount*2u; i+=2u)
 		{
 			// Get step weight
-			float weight = bell_curve(i*rcpWeightStep);
+			float weight = bellWeight(mad(i, rcpWeightStep, -1f));
 			// Get step offset
 			float offset = (i-1u)*rcpOffsetStep-0.5;
 			color += tex2Dlod(
 				BackBuffer,
 				float4(texCoord.x, blurRadius*offset+texCoord.y, 0f, 0f) // Offset coordinates
 			).rgb*weight;
+			cumulativeWeight += weight;
 		}
 		// Restore brightness
-		color /= blurPixelCount;
+		color /= cumulativeWeight;
 	}
-	// Bypass blur
-	else color = tex2Dfetch(BackBuffer, uint2(pixCoord.xy)).rgb;
-	color = saturate(color); // Clamp values
+	else // Bypass blur
+		color = tex2Dfetch(BackBuffer, uint2(pixCoord.xy)).rgb;
+
+	// Clamp values
+	color = saturate(color);
 
 	// Draw tilt-shift line
 	if (VisibleLine)
@@ -268,7 +271,7 @@ void TiltShiftPassVerticalPS(
 		color = lerp(
 			color,
 #if BUFFER_COLOR_SPACE <= 2 && BUFFER_COLOR_BIT_DEPTH != 10 // manual gamma
-			to_linear_gamma_hq(lineColor),
+			to_linear_gamma(lineColor),
 #else
 			lineColor,
 #endif
@@ -277,7 +280,7 @@ void TiltShiftPassVerticalPS(
 	}
 
 #if BUFFER_COLOR_SPACE <= 2 && BUFFER_COLOR_BIT_DEPTH != 10 // Manual gamma
-	color = to_display_gamma_hq(color);
+	color = to_display_gamma(color);
 #endif
 	// Dither output to increase perceivable picture bit-depth
 	color = BlueNoise::dither(uint2(pixCoord.xy), color);
@@ -294,8 +297,8 @@ technique TiltShift
 		"	· dynamic per-pixel sampling.\n"
 		"	· minimal sample count.\n"
 		"\n"
-		"This effect © 2018-2022 Jakub Maksymilian Fober\n"
-		"Licensed under CC BY-NC-ND 3.0 + additional permissions (see source).";
+		"This effect © 2018-2023 Jakub Maksymilian Fober\n"
+		"Licensed under CC BY 3.0 (see source).";
 >
 {
 	pass GaussianBlurHorizontal

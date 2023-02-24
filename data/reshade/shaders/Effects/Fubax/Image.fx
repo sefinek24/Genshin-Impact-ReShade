@@ -1,4 +1,4 @@
-/* Display Image PS, version 1.2.1
+/* Display Image PS, version 1.2.2
 
 This code © 2019 Jakub Maksymilian Fober
 
@@ -86,7 +86,7 @@ void ImagePS(float4 pixelPos : SV_Position, float2 texCoord : TEXCOORD, out floa
 {
 	color = tex2Dfetch(ReShade::BackBuffer, uint2(pixelPos.xy)).rgb;
 #if BUFFER_COLOR_SPACE<=2 // Linear gamma workflow
-	color = TO_LINEAR_GAMMA_HQ(color);
+	color = to_linear_gamma(color);
 #endif
 	color *= DimBackground;
 
@@ -123,7 +123,7 @@ void ImagePS(float4 pixelPos : SV_Position, float2 texCoord : TEXCOORD, out floa
 	}
 
 #if BUFFER_COLOR_SPACE<=2 // Linear gamma workflow
-	color = TO_DISPLAY_GAMMA_HQ(color);
+	color = to_display_gamma(color);
 	color = BlueNoise::dither(uint2(pixelPos.xy), color); // Dither
 #endif
 }
