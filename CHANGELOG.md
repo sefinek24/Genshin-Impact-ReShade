@@ -17,6 +17,7 @@
 16. Updated the setup to v1.9.0, which includes several bug fixes and usability improvements.
 17. Added random YouTube videos to the "Random images" section for a bit of fun.
 18. Made various other improvements and bug fixes to improve the overall quality of the project.
+19. Added new addon `ReshadeEffectShaderToggler`.
 - ⚠️ **IMPORTANT:** This new version of the application is not compatible with the previous version and requires a fresh installation. Please uninstall the old version and install the new one to continue using the application.
 
 ## 📥 » Version v5.0.0 from 02.02.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v4.2.0...v5.0.0)
