@@ -1,24 +1,35 @@
 ## 📥 » Version v6.0.0 from --.--.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v5.0.0...v6.0.0)
-1. Updated API to version v2.
-2. Added WindowsAPICodePack to show progress in your taskbar.
-3. Made major improvements to the log system, including faster and more detailed logging.
-4. Improved Discord RPC and telemetry to provide more accurate and reliable data.
-5. Updated all shaders to improve performance and visuals.
-6. Created a new [directory](data/presets/Made%20by%20community) for ReShade addons, where community members can upload their own presets and other addons.
-7. Made major changes to the [README.md](README.md) file to provide clearer instructions and guidelines for using the project.
-8. Updated the FPS Unlocker to v2.0.8.
-9. Added a new preset made by the community to the presets directory.
-10. Made improvements to the [data/cmd/delete_cache.cmd](data/cmd/delete_cache.cmd) file.
-11. Fixed several issues in `*.cmd` files.
-12. Removed several useless files that were no longer needed.
-13. Moved some files to other folders to improve organization.
-14. The launcher is now blocked in Russia. The war does not matter to me.
-15. Updated the [official website](https://sefinek.net) with the latest information about the project.
-16. Updated the setup to v1.9.0, which includes several bug fixes and usability improvements.
-17. Added random YouTube videos to the "Random images" section for a bit of fun.
-18. Made various other improvements and bug fixes to improve the overall quality of the project.
-19. Added new addon `ReshadeEffectShaderToggler`.
-- ⚠️ **IMPORTANT:** This new version of the application is not compatible with the previous version and requires a fresh installation. Please uninstall the old version and install the new one to continue using the application.
+
+### 🆕 Added
+1. Added support for API version v2, which brings new features and improved performance.
+2. Added WindowsAPICodePack to show progress in your taskbar, providing a more user-friendly experience.
+3. Created a new directory for ReShade [addons](data/reshade/addons) and [presets](data/presets/Made%20by%20community), where community members can upload their own presets and other addons.
+4. Added a new addon ReshadeEffectShaderToggler.
+5. Added random YouTube videos to the "Random images" section for a bit of fun.
+
+### 🔑 Improved
+6. Made major improvements to the log system, including faster and more detailed logging for easier debugging.
+7. Improved Discord RPC and telemetry to provide more accurate and reliable data.
+8. Updated all shaders to improve performance and visuals, providing a more polished and refined experience.
+9. Made major changes to the README.md file to provide clearer instructions and guidelines for using the project, making it more accessible to users.
+10. Updated the FPS Unlocker to v2.0.8.
+11. Added a new preset made by the community to the [presets directory](data/presets/Made%20by%20community), providing users with more options to customize their experience.
+12. Made improvements to the data/cmd/delete_cache.cmd file, which helps users clear the cache and improve performance.
+13. Fixed several issues in *.cmd files, which improves the overall stability of the application.
+14. Moved some files to other folders to improve organization, making it easier for users to find what they need.
+15. Updated the setup to v1.9.0, which includes several bug fixes and usability improvements, providing a better experience for users.
+
+### 🗑️ Removed
+16. Removed compatibility with the previous version of the application. This new version requires a fresh installation, as it is not compatible with the previous version.
+17. Removed several useless files that were no longer needed, streamlining the project and making it easier to manage.
+
+### 🌠 Other
+18. The launcher is now blocked in Russia. This change is due to personal reasons and does not affect the functionality of the application for users outside of Russia.
+19. Updated the official website (https://sefinek.net) with the latest information about the project, keeping users up-to-date with the latest developments.
+
+> Overall, this release includes several important updates and improvements that improve the functionality, performance, and user experience of the application.
+
+> ⚠️ **IMPORTANT:** This new version of the application is not compatible with the previous version and requires a fresh installation. Please uninstall the old version and install the new one to continue using the application.
 
 ## 📥 » Version v5.0.0 from 02.02.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v4.2.0...v5.0.0)
 1. Updated the API and CDN for improved performance and stability.
