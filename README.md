@@ -30,7 +30,7 @@
 - [📂 Includes](#includes)
 - [📝️ Information](#information)
 - [📥 How to install](#installation)
-- [✨ Requirements](#pc-requrmients)
+- [✨ Requirements](#pc-requirements)
 - [🔧 Supported systems](#supported-systems)
 - [🛠️ Tested game versions](#tested-game-versions)
 - [⚙️ Recommended settings for game](#settings-for-game)
@@ -39,32 +39,38 @@
 - [🧶 Sources](#sources)
 
 ## <div id="important">⚠️ » Important</div>
-Do not share screenshots from game with your UID and visible shaders or ReShade overlay! If you want to record some video for YouTube or something else, please hide or censor UID and username.  
-Make sure you have the latest drivers for your graphics card.
+Please do not share any screenshots of the game that display your UID or visible shaders or ReShade overlay. If you want to record a video of the game for purposes such as uploading to YouTube or other platforms, please be sure to hide or censor your UID and username.
+
+It is also recommended to make sure that you have the latest drivers installed for your graphics card and chipset. This can help to ensure that your gameplay runs smoothly and that any graphics-related issues are minimized. Keeping your drivers up to date can also help to prevent any potential conflicts or performance issues.
 
 ## <div id="includes">📂 » Includes</div>
 | 🔍 Name                   | 📃 Description                                                                                                                      | 🌍 URL address                                                  | 📑 License                                                                                 |
 |:--------------------------|:------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|:-------------------------------------------------------------------------------------------|
 | Own launcher              | Always the latest releases.                                                                                                         | [Repository](https://github.com/sefinek24/genshin-mod-launcher) | [CC BY-NC-SA 4.0](https://github.com/sefinek24/genshin-mod-launcher/blob/main/LICENSE)     |
-| Unlocked ReShade          | No depth buffer detection.                                                                                                          | [~~Repository~~](https://github.com/sefinek24/unlocked-reshade) | [BSD 3-clause license](https://github.com/sefinek24/unlocked-reshade/blob/main/LICENSE.md) |
+| Unlocked ReShade          | No depth buffer detection.                                                                                                          | [~~Repository~~](https://github.com/sefinek24/unlocked-reshade) | [BSD 3-Clause License](https://github.com/sefinek24/unlocked-reshade/blob/main/LICENSE.md) |
 | Easy installation wizard  | Safe and automatic installation.                                                                                                    | [Repository](https://github.com/sefinek24/genshin-mod-setup)    | [CC BY-NC-SA 4.0](https://github.com/sefinek24/genshin-mod-setup)                          |
-| FPS Unlocker              | [Click here for more information.](https://github.com/sefinek24/genshin-fps-unlock#genshin-impact-fps-unlocker-modified-by-sefinek) | [Repository](https://github.com/sefinek24/genshin-fps-unlock)   |                                                                                            |
-| Always the latest shaders | The best experience.                                                                                                                | [Folder](data/reshade/shaders)                                  |                                                                                            |
-| Own presets for game      | Best graphics quality.                                                                                                              | [Folder](data/presets)                                          |                                                                                            |
-| Community presets         | Presets created by our community.                                                                                                   | [Folder](data/presets/Made%20by%20community)                    |                                                                                            |
-| Preset with Ray Tracing   | Only available for Patrons.                                                                                                         | [Patreon](https://www.patreon.com/sefinek)                      |                                                                                            |
-| Crosire's DLL injector    | Just an injector.                                                                                                                   | [Download file](https://reshade.me/downloads/inject64.exe)      |                                                                                            |
+| FPS Unlocker              | [Click here for more information.](https://github.com/sefinek24/genshin-fps-unlock#genshin-impact-fps-unlocker-modified-by-sefinek) | [Repository](https://github.com/sefinek24/genshin-fps-unlock)   | -                                                                                          |
+| Always the latest shaders | The best experience.                                                                                                                | [Folder](data/reshade/shaders)                                  | -                                                                                          |
+| Own presets for game      | Best graphics quality.                                                                                                              | [Folder](data/presets)                                          | -                                                                                          |
+| Community presets         | Presets created by our community.                                                                                                   | [Folder](data/presets/Made%20by%20community)                    | -                                                                                          |
+| Preset with Ray Tracing   | Only available for Patrons.                                                                                                         | [Patreon](https://www.patreon.com/sefinek)                      | -                                                                                          |
+| Crosire's DLL injector    | Just an injector.                                                                                                                   | [Download file](https://reshade.me/downloads/inject64.exe)      | -                                                                                          |
 
 ## <div id="information">📝️ » Information</div>
-- Need help? Please join to our [Discord server](https://discord.gg/SVcbaRc7gH).
-- If you want to become contributor, just create a new [Pull Request](https://github.com/sefinek24/Genshin-Impact-ReShade/pulls). Thanks.
-- Click [here](https://sefinek.net/genshin-impact-reshade/gallery?page=1) for more and latest screenshots. Videos on YouTube are available [here](https://sefinek.net/genshin-impact-reshade/videos).
-- Main server localization [sefinek.net](https://sefinek.net): Poland [Cloudflare - WAW, FRA]
+- Need help? Please join our [Discord server](https://discord.gg/SVcbaRc7gH).
+- If you would like to become a contributor, please create a new [Pull Request](https://github.com/sefinek24/Genshin-Impact-ReShade/pulls). Thanks.
+- Check out the latest screenshots [here](https://sefinek.net/genshin-impact-reshade/gallery?page=1) and our YouTube videos [here](https://sefinek.net/genshin-impact-reshade/videos).
+- Our main server is located in Poland with Cloudflare servers in Warsaw and Frankfurt [sefinek.net](https://sefinek.net).
 
 ## <div id="installation">📥 » How to install?</div>
-Download the latest setup from [my official website](https://sefinek.net/genshin-impact-reshade).
+1. Download the latest setup from [my official website](https://sefinek.net/genshin-impact-reshade).
+2. Extract the downloaded file to a convenient location on your computer.
+3. Run the setup file `Genshin Impact Mod Setup.exe` and follow the on-screen instructions to install the mod.
+4. Once the installation is complete, launch Genshin Impact and enjoy the enhanced graphics and visual effects.
 
-## <div id="pc-requrmients">✨ » Requirements</div>
+## <div id="pc-requirements">✨ » Requirements</div>
+> 📝 **Note:** Make sure your PC meets the requirements mentioned above before attempting to install the mod.
+
 | 💻 Your PC & network                    | 📂 Dependencies • Use installation wizard for automatic install                                                  |
 |:----------------------------------------|------------------------------------------------------------------------------------------------------------------|
 | Windows 10/11 (build higher than 19041) | [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)                           |
@@ -83,12 +89,12 @@ Download the latest setup from [my official website](https://sefinek.net/genshin
 | iOS / macOS     |            | [❓](#legend)️ | [❌](#legend)   | [❌](#legend)    |
 
 ## <div id="tested-game-versions">🛠️ » Tested game versions</div>
-| 🎮 Game version | 😅 It works?  | 📆 Date    |
-|-----------------|---------------|------------|
-| v3.4.0          | [✔️](#legend) | 18.01.2023 |
-| v3.3.0          | [✔️](#legend) | 09.11.2022 |
-| v3.2.0          | [✔️](#legend) | 02.11.2022 |
-| v3.1.0          | [✔️](#legend) | 01.11.2022 |
+| 🎮 Game version | 😅 Works with mod? | 📆 Date tested   |
+|-----------------|--------------------|------------------|
+| v3.4.0          | [✔️](#legend)      | January 18, 2023 |
+| v3.3.0          | [✔️](#legend)      | November 9, 2022 |
+| v3.2.0          | [✔️](#legend)      | November 2, 2022 |
+| v3.1.0          | [✔️](#legend)      | November 1, 2022 |
 
 ## <div id="settings-for-game">⚙️ » Recommended settings for game</div>
 | 📑 Settings            | 📋 Value                               | 📑 Settings                 | 📋 Value                             |
@@ -96,12 +102,14 @@ Download the latest setup from [my official website](https://sefinek.net/genshin
 | **Graphics Quality**   | Custom                                 | **Anti-Aliasing**           | SMAA (Use FSR 2 if you have low FPS) |
 | **Display Mode**       | 1920x1080 (or higher) Fullscreen       | **Volumetric Fog**          | On                                   | 
 | **Brightness**         | Default                                | **Reflections**             | On                                   | 
-| **FPS**                | 60 (Do not change if you using unlock) | **Motion Blur**             | Extreme                              | 
+| **FPS**                | 60 (Do not change if you using unlock) | **Motion Blur**             | Low                                  | 
 | **Render Resolution**  | 1.1 or higher                          | **Bloom**                   | On                                   | 
 | **Shadow Quality**     | High                                   | **Crowd Density**           | High                                 | 
 | **Visual Effects**     | High                                   | **Co-Op Teammates Effects** | On                                   | 
 | **SFX Quality**        | High                                   | **Subsurface Scattering**   | High                                 | 
 | **Environment Detail** | Highest                                | **Anisotropic Filtering**   | 16x                                  | 
+
+> 📝 Please note that these recommended settings are a general guideline and may vary based on individual player preferences and system specs. It is recommended that players adjust the settings accordingly for their own optimal experience.
 
 ## <div id="legend">🧀 » Legend</div>
 | Emoji          | Meaning               | Emoji         | Meaning            | Emoji        | Meaning      |
