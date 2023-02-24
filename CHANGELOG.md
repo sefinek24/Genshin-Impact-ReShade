@@ -16,7 +16,7 @@
 10. Updated recommended graphics settings for the game.
 11. Updated the FPS Unlocker to v2.0.8.
 12. Added a new preset made by the community to the [presets directory](data/presets/Made%20by%20community), providing users with more options to customize their experience.
-13. Made improvements to the data/cmd/delete_cache.cmd file, which helps users clear the cache and improve performance.
+13. Made improvements to the [data/cmd/delete_cache.cmd](data/cmd/delete_cache.cmd) file, which helps users clear the cache and improve performance.
 14. Fixed several issues in *.cmd files, which improves the overall stability of the application.
 15. Moved some files to other folders to improve organization, making it easier for users to find what they need.
 16. Updated the setup to v1.9.0, which includes several bug fixes and usability improvements, providing a better experience for users.
