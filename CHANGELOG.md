@@ -27,7 +27,7 @@
 
 ### 🌠 Other
 19. The launcher is now blocked in Russia. This change is due to personal reasons and does not affect the functionality of the application for users outside of Russia.
-20. Updated the official website (https://sefinek.net) with the latest information about the project, keeping users up-to-date with the latest developments.
+20. Updated the [official website](https://sefinek.net) with the latest information about the project, keeping users up-to-date with the latest developments.
 
 > Overall, this release includes several important updates and improvements that improve the functionality, performance, and user experience of the application.
 
