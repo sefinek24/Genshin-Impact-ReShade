@@ -1,4 +1,5 @@
 ## 📥 » Version v6.0.0 from --.--.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v5.0.0...v6.0.0)
+> ⚠️ **IMPORTANT:** This new version of the application is not compatible with the previous version and requires a fresh installation. Please uninstall the old version and install the new one to continue using the application.
 
 ### 🆕 Added
 1. Added support for API version v2, which brings new features and improved performance.
@@ -28,8 +29,6 @@
 19. Updated the official website (https://sefinek.net) with the latest information about the project, keeping users up-to-date with the latest developments.
 
 > Overall, this release includes several important updates and improvements that improve the functionality, performance, and user experience of the application.
-
-> ⚠️ **IMPORTANT:** This new version of the application is not compatible with the previous version and requires a fresh installation. Please uninstall the old version and install the new one to continue using the application.
 
 ## 📥 » Version v5.0.0 from 02.02.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v4.2.0...v5.0.0)
 1. Updated the API and CDN for improved performance and stability.
