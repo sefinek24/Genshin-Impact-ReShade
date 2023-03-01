@@ -82,7 +82,7 @@ It is also recommended to make sure that you have the latest drivers installed f
 | 💻 System       | 🔖 Version | 📝 OS Build   | 🙀 Status      | 🤔 Recommended? |
 |-----------------|:-----------|---------------|:---------------|:----------------|
 | Windows 11      | 22H2       | 22621.900     | [✔️](#legend)  | [❌](#legend)    |
-| Windows 10      | 22H2       | 19045.2604    | [✔️](#legend)  | [️✔️](#legend)  | 
+| Windows 10      | 22H2       | 19045.2673    | [✔️](#legend)  | [️✔️](#legend)  | 
 | Windows 8 / 8.1 |            | [❓](#legend)  | [🎯️](#legend) | [❌](#legend)    | 
 | Windows 7       |            | [❓](#legend)  | [🎯️](#legend) | [❌](#legend)    | 
 | Android / Linux |            | [❓](#legend)  | [❌](#legend)   | [❌](#legend)    | 
@@ -91,6 +91,7 @@ It is also recommended to make sure that you have the latest drivers installed f
 ## <div id="tested-game-versions">🛠️ » Tested game versions</div>
 | 🎮 Game version | 😅 Works with mod? | 📆 Date tested   |
 |-----------------|--------------------|------------------|
+| v3.5.0          | [✔️](#legend)      | March 01, 2023   |
 | v3.4.0          | [✔️](#legend)      | January 18, 2023 |
 | v3.3.0          | [✔️](#legend)      | November 9, 2022 |
 | v3.2.0          | [✔️](#legend)      | November 2, 2022 |
@@ -102,7 +103,7 @@ It is also recommended to make sure that you have the latest drivers installed f
 | **Graphics Quality**   | Custom                                 | **Anti-Aliasing**           | SMAA (Use FSR 2 if you have low FPS) |
 | **Display Mode**       | 1920x1080 (or higher) Fullscreen       | **Volumetric Fog**          | On                                   | 
 | **Brightness**         | Default                                | **Reflections**             | On                                   | 
-| **FPS**                | 60 (Do not change if you using unlock) | **Motion Blur**             | Low                                  | 
+| **FPS**                | 60 (Do not change if you using unlock) | **Motion Blur**             | Low or Off                           | 
 | **Render Resolution**  | 1.1 or higher                          | **Bloom**                   | On                                   | 
 | **Shadow Quality**     | High                                   | **Crowd Density**           | High                                 | 
 | **Visual Effects**     | High                                   | **Co-Op Teammates Effects** | On                                   | 

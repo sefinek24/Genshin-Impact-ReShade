@@ -1,35 +1,43 @@
 ## 📥 » Version v6.0.0 from --.--.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v5.0.0...v6.0.0)
-> 🎉 **Notice:** I have changed the name of the mod to `Genshin Impact Stella Mod` Please make sure to update your mod and any references to the old name accordingly.
+> 🎉 **Announcement:** The mod name has been changed to `Genshin Impact Stella Mod`. Please update your mod and any references to the old name accordingly.
 > 
-> ⚠️ **Important:** This new version of the application is not compatible with the previous version and requires a fresh installation. Please uninstall the old version and install the new one to continue using the application.
+> ⚠️ **Important:** This new version of the application is not backward compatible. It is recommended to uninstall the old version and perform a fresh installation for uninterrupted use of the application.
 
-### 🆕 Added
-1. Added support for API version v2, which brings new features and improved performance.
-2. Added WindowsAPICodePack to show progress in your taskbar, providing a more user-friendly experience.
+### 🆕 New Features
+1. Added support for API version v2, introducing new features and improved performance.
+2. Added WindowsAPICodePack to display progress in the taskbar, providing a more user-friendly experience.
 3. Created a new directory for ReShade [addons](data/reshade/addons) and [presets](data/presets/Made%20by%20community), where community members can upload their own presets and other addons.
-4. Added a new addon ReshadeEffectShaderToggler.
-5. Added random YouTube videos to the "Random images" section for a bit of fun.
+4. Added a new addon, [ReshadeEffectShaderToggler](data/reshade/addons/ReshadeEffectShaderToggler.addon).
+5. Added random YouTube videos to the "Random images" section for added entertainment.
 
-### 🔑 Improved
-6. Made major improvements to the log system, including faster and more detailed logging for easier debugging.
-7. Improved Discord RPC and telemetry to provide more accurate and reliable data.
+### 🔑 Improvements
+6. Significantly improved the log system, including faster and more detailed logging for easier debugging.
+7. Enhanced Discord RPC and telemetry to provide more accurate and reliable data.
 8. Updated all shaders to improve performance and visuals, providing a more polished and refined experience.
-9. Made major changes to the README.md file to provide clearer instructions and guidelines for using the project, making it more accessible to users.
+9. Major changes were made to the README.md file to provide clearer instructions and guidelines for using the project, making it more accessible to users.
 10. Updated recommended graphics settings for the game.
 11. Updated the FPS Unlocker to v2.0.8.
-12. Added a new preset made by the community to the [presets directory](data/presets/Made%20by%20community), providing users with more options to customize their experience.
-13. Made improvements to the [data/cmd/delete_cache.cmd](data/cmd/delete_cache.cmd) file, which helps users clear the cache and improve performance.
-14. Fixed several issues in *.cmd files, which improves the overall stability of the application.
-15. Moved some files to other folders to improve organization, making it easier for users to find what they need.
-16. Updated the setup to v1.9.0, which includes several bug fixes and usability improvements, providing a better experience for users.
+11. Updated presets.
+    - Improved contrast.
+    - Removed the "yellowing" effect.
+    - Improved the appearance of shadows.
+    - Eliminated an issue where some textures may have looked poor from a distance, which could have confused players.
+    - Other graphic enhancements.
+13. Added a new preset made by the community to the [presets directory](data/presets/Made%20by%20community), providing users with more options to customize their experience.
+14. Improved the [data/cmd/delete_cache.cmd](data/cmd/delete_cache.cmd) file, which helps users clear the cache and improve performance.
+15. Fixed several issues in `*.cmd` files, improving the overall stability of the application.
+16. Moved some files to other folders to improve organization, making it easier for users to find what they need.
+17. Updated the installation wizard to v1.9.0, including several bug fixes and usability improvements, providing a better experience for users.
 
 ### 🗑️ Removed
-17. Removed compatibility with the previous version of the application. This new version requires a fresh installation, as it is not compatible with the previous version.
-18. Removed several useless files that were no longer needed, streamlining the project and making it easier to manage.
+18. Removed backward compatibility with the previous version of the application. A fresh installation is required as this new version is not compatible with the previous version.
+19. Removed several unnecessary files that were no longer needed, streamlining the project and making it easier to manage.
 
 ### 🌠 Other
-19. The launcher is now blocked in Russia. This change is due to personal reasons and does not affect the functionality of the application for users outside of Russia.
-20. Updated the [official website](https://sefinek.net) with the latest information about the project, keeping users up-to-date with the latest developments.
+20. The launcher is now unavailable in Russia for personal reasons. This change does not affect the functionality of the application for users outside of Russia.
+21. Updated the [official website](https://sefinek.net) with the latest information about the project, keeping users up-to-date with the latest developments.
+22. The "Support me" window will no longer be shown to supporters.
+23. Updated ReShade.
 
 > Overall, this release includes several important updates and improvements that improve the functionality, performance, and user experience of the application.
 
