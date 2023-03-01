@@ -21,7 +21,7 @@ Join our Discord Server for discussions and support: https://discord.gg/SVcbaRc7
 
 6. ABOUT THE AUTHOR
 Username         : Sefinek (https://sefinek.net) <contact@sefinek.net>
-Official website : https://sefinek.net/genshin-impact-reshade
+Official website : https://genshin.sefinek.net
 Support me       : https://sefinek.net/support-me (here is a link to my Patreon and Ko-fi)
 
 7. LICENSE
