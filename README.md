@@ -69,20 +69,21 @@ It is also recommended to make sure that you have the latest drivers installed f
 4. Once the installation is complete, launch Genshin Impact and enjoy the enhanced graphics and visual effects.
 
 ## <div id="pc-requirements">✨ » Requirements</div>
-> 📝 **Note:** Make sure your PC meets the requirements mentioned above before attempting to install the mod.
+> 📝 **Note:** Please ensure that your PC meets the requirements listed above before attempting to install the mod.
 
-| 💻 Your PC & network                    | 📂 Dependencies • Use installation wizard for automatic install                                                  |
-|:----------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| Windows 10/11 (build higher than 19041) | [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)                           |
-| 64-bit processor and system             | [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer) |
-| Good internet connection                | [Windows Terminal](https://github.com/microsoft/terminal/releases)                                               |
-|                                         | [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional)      |
+| 💻 Your PC & Network Requirements                             | 📂 Dependencies • Use installation wizard for automatic installation                                             |
+|:--------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| **Operating System:** Windows 10/11 (build higher than 19041) | [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)                           |
+| **Processor:** 64-bit processor and system                    | [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer) |
+| **Disk Space:** At least 1 GB of free disk space              | [Windows Terminal](https://github.com/microsoft/terminal/releases)                                               |
+| **BIOS:** UEFI mode enabled                                   | [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional)      |
+| **Network:** Good internet connection                         |                                                                                                                  |
 
 ## <div id="supported-systems">🔧 » Supported operating systems</div>
 | 💻 System       | 🔖 Version | 📝 OS Build   | 🙀 Status      | 🤔 Recommended? |
 |-----------------|:-----------|---------------|:---------------|:----------------|
 | Windows 11      | 22H2       | 22621.900     | [✔️](#legend)  | [❌](#legend)    |
-| Windows 10      | 22H2       | 19045.2673    | [✔️](#legend)  | [️✔️](#legend)  | 
+| Windows 10      | 22H2, 21H2 | 19045.2673    | [✔️](#legend)  | [️✔️](#legend)  | 
 | Windows 8 / 8.1 |            | [❓](#legend)  | [🎯️](#legend) | [❌](#legend)    | 
 | Windows 7       |            | [❓](#legend)  | [🎯️](#legend) | [❌](#legend)    | 
 | Android / Linux |            | [❓](#legend)  | [❌](#legend)   | [❌](#legend)    | 
