@@ -28,7 +28,6 @@
 - [📃 Changelog](CHANGELOG.md)
 - [⚠️ Important](#important)
 - [📂 Includes](#includes)
-- [📝️ Information](#information)
 - [📥 How to install](#installation)
 - [✨ Requirements](#pc-requirements)
 - [🔧 Supported systems](#supported-systems)
@@ -39,9 +38,19 @@
 - [🧶 Sources](#sources)
 
 ## <div id="important">⚠️ » Important</div>
-Please do not share any screenshots of the game that display your UID or visible shaders or ReShade overlay. If you want to record a video of the game for purposes such as uploading to YouTube or other platforms, please be sure to hide or censor your UID and username.
+Please note that sharing any game screenshots that display your UID, visible shaders or ReShade overlay can lead to a ban in the game.
+If you intend to record a video of the game for purposes such as uploading to YouTube or other platforms, make sure to hide or censor your UID and username to avoid a ban.
 
-It is also recommended to make sure that you have the latest drivers installed for your graphics card and chipset. This can help to ensure that your gameplay runs smoothly and that any graphics-related issues are minimized. Keeping your drivers up to date can also help to prevent any potential conflicts or performance issues.
+Additionally, we strongly recommend updating your graphics card and chipset drivers to ensure smooth gameplay and minimize any graphics-related issues or potential crashes.
+Please also familiarize yourself with the system requirements.
+
+If you need further assistance, feel free to join our [Discord server](https://discord.gg/SVcbaRc7gH).
+Also, if you wish to contribute to the project, please create a new [Pull Request](https://github.com/sefinek24/Genshin-Impact-ReShade/pulls).
+You can also check out the latest [screenshots](https://sefinek.net/genshin-impact-reshade/gallery?page=1) on our website and watch our [videos](https://sefinek.net/genshin-impact-reshade/videos) on YouTube for more information.
+Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and [Cloudflare](https://www.cloudflare.com) servers are located in Warsaw and Frankfurt.
+
+> By using this software, you agree to the terms of the [license agreement](LICENSE).
+> In addition, we are not responsible for any potential bans in the game. Although the chances of this happening are negligible.
 
 ## <div id="includes">📂 » Includes</div>
 | 🔍 Name                   | 📃 Description                                                                                                                      | 🌍 URL address                                                  | 📑 License                                                                                 |
@@ -55,12 +64,6 @@ It is also recommended to make sure that you have the latest drivers installed f
 | Community presets         | Presets created by our community.                                                                                                   | [Folder](data/presets/Made%20by%20community)                    | -                                                                                          |
 | Preset with Ray Tracing   | Only available for Patrons.                                                                                                         | [Patreon](https://www.patreon.com/sefinek)                      | -                                                                                          |
 | Crosire's DLL injector    | Just an injector.                                                                                                                   | [Download file](https://reshade.me/downloads/inject64.exe)      | -                                                                                          |
-
-## <div id="information">📝️ » Information</div>
-- Need help? Please join our [Discord server](https://discord.gg/SVcbaRc7gH).
-- If you would like to become a contributor, please create a new [Pull Request](https://github.com/sefinek24/Genshin-Impact-ReShade/pulls). Thanks.
-- Check out the latest screenshots [here](https://sefinek.net/genshin-impact-reshade/gallery?page=1) and our YouTube videos [here](https://sefinek.net/genshin-impact-reshade/videos).
-- Our main server is located in Poland with Cloudflare servers in Warsaw and Frankfurt [sefinek.net](https://sefinek.net).
 
 ## <div id="installation">📥 » How to install?</div>
 1. Download the latest setup from [my official website](https://sefinek.net/genshin-impact-reshade).
@@ -111,7 +114,8 @@ It is also recommended to make sure that you have the latest drivers installed f
 | **SFX Quality**        | High                                   | **Subsurface Scattering**   | High                                 | 
 | **Environment Detail** | Highest                                | **Anisotropic Filtering**   | 16x                                  | 
 
-> 📝 Please note that these recommended settings are a general guideline and may vary based on individual player preferences and system specs. It is recommended that players adjust the settings accordingly for their own optimal experience.
+> 📝 Please note that these recommended settings are a general guideline and may vary based on individual player preferences and system specs.
+> It is recommended that players adjust the settings accordingly for their own optimal experience.
 
 ## <div id="legend">🧀 » Legend</div>
 | Emoji          | Meaning               | Emoji         | Meaning            | Emoji        | Meaning      |
