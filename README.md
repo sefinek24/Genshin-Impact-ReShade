@@ -22,7 +22,6 @@
     <a href="https://cdn.sefinek.net" title="cdn.sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=CDN&up_message=Online&url=https%3A%2F%2Fcdn.sefinek.net" alt="Website status"></a>
     <a href="https://stats.uptimerobot.com/kLXYEukEwW" title="sefinek.net uptime"><img src="https://img.shields.io/uptimerobot/ratio/7/m793533681-b79b8280de15efcd9bc83d7d?label=Uptime" alt="Website uptime"></a>
 </div>
-<br>
 
 ## <div id="list">📋 » List</div>
 - [🌠 Genshin Impact Stella Mod Pack](#header)
