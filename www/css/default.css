@@ -1,17 +1,21 @@
 body {
-    background-color: #313131;
+    background-color: #232328;
     color: #fff;
     font-family: "Comic Sans MS", sans-serif;
-    text-align: center
+    text-align: center;
 }
 
 a {
-    color: red;
+    color: #5b6bf3;
     text-decoration: none;
-    transition: .2s
+    transition: 0.2s;
 }
 
 a:hover {
-    color: rgba(255, 0, 0, 0.67);
-    text-decoration: underline
+    color: rgba(91, 107, 243, 0.7);
+    text-decoration: underline;
+}
+
+a:active {
+    color: rgba(86, 98, 246, 0.6);
 }
