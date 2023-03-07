@@ -38,16 +38,10 @@
 - [🧶 Sources](#sources)
 
 <div align="center">
-    <a href="https://sefinek.net/api/v1/genshin-impact-reshade/installer/download">
-        <img src="www/images/readme/download.png" alt="Download" height="150px">
-    </a>
+    <a href="https://sefinek.net/api/v1/genshin-impact-reshade/installer/download"><img src="www/images/readme/download.png" alt="Download" height="150px"></a>
     <br>
-    <a href="https://sefinek.net/api/v1/genshin-impact-reshade/installer/download">
-        <img src="www/images/readme/download.png" alt="Download" height="150px">
-    </a>
-    <a href="https://sefinek.net/api/v1/genshin-impact-reshade/installer/download">
-        <img src="www/images/readme/download.png" alt="Download" height="150px">
-    </a>
+    <a href="https://sefinek.net/api/v1/genshin-impact-reshade/installer/download"><img src="www/images/readme/download.png" alt="Download" height="150px"></a>
+    <a href="https://sefinek.net/api/v1/genshin-impact-reshade/installer/download"><img src="www/images/readme/download.png" alt="Download" height="150px"></a>
 </div>
 
 ## <div id="important">⚠️ » Important</div>
