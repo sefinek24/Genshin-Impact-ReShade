@@ -38,13 +38,10 @@
 - [🧶 Sources](#sources)
 
 <div align="center">
-    <a href="https://sefinek.net/api/v1/genshin-impact-reshade/installer/download"><img src="www/images/readme/download.png" alt="Download" height="150px"></a>
-
-[//]: # (    <br>)
-
-[//]: # (    <a href="https://sefinek.net/api/v1/genshin-impact-reshade/installer/download"><img src="www/images/readme/download.png" alt="Download" height="150px"></a>)
-
-[//]: # (    <a href="https://sefinek.net/api/v1/genshin-impact-reshade/installer/download"><img src="www/images/readme/download.png" alt="Download" height="150px"></a>)
+    <a href="https://sefinek.net/api/v1/genshin-impact-reshade/installer/download" title="Download now"><img src="www/images/readme/download.png" alt="Download" height="150px"></a>
+    <br>
+    <a href="https://genshin.sefinek.net"><img src="www/images/readme/website.png" alt="Official website" height="150px"></a>
+    <a href="https://discord.gg/8GbXtnYQKd"><img src="www/images/readme/discord.png" alt="Our Discord server" height="150px"></a>
 </div>
 
 ## <div id="important">⚠️ » Important</div>
@@ -112,7 +109,7 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 | v3.1.0          | [✔️](#legend)      | November 1, 2022 |
 
 ## <div id="settings-for-game">⚙️ » Recommended settings for game</div>
-| 📑 Settings            | 📋 Value                               | 📑 Settings                 | 📋 Value                             |
+| 🔧 Settings            | 📄 Value                               | 🔧 Settings                 | 📄 Value                             |
 |------------------------|----------------------------------------|:----------------------------|:-------------------------------------|
 | **Graphics Quality**   | Custom                                 | **Anti-Aliasing**           | SMAA (Use FSR 2 if you have low FPS) |
 | **Display Mode**       | 1920x1080 (or higher) Fullscreen       | **Volumetric Fog**          | On                                   | 
@@ -127,7 +124,7 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 > 📝 **Note:** These recommended settings are provided as a general guideline and may vary based on individual player preferences and system specifications. It is recommended that players adjust the settings accordingly to optimize their own experience.
 
 ## <div id="legend">🧀 » Legend</div>
-| Emoji          | Meaning               | Emoji         | Meaning            | Emoji        | Meaning      |
+| 🐈 Emoji       | 🤔 Meaning            | 🐈 Emoji      | 🤔 Meaning         | 🐈 Emoji     | 🤔 Meaning   |
 |----------------|-----------------------|:--------------|:-------------------|:-------------|:-------------|
 | [✔️](#legend)  | Yes / Supported       | [❌](#legend)  | No / Not supported | [❓](#legend) | I don't know |
 | [🎯️](#legend) | Default not supported | [🤔](#legend) | Not tested         |              |              |
@@ -149,5 +146,12 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
     <img src="screenshots/default/backgrounds/collei_3.png" alt="Screenshot number 5">
 </a>
 
+> ⚠️ **Warning:**
+> It is worth noting that relying solely on the screenshots or videos provided may not necessarily provide the most accurate or up-to-date representation of the software or application.
+> This is because the presets, or default settings, are constantly being reviewed and refined by the developers to ensure optimal user experience and address any issues or bugs that may arise.
+
 ## <div id="sources">🧶 » Sources</div>
-Icons were taken from <a href="https://icons8.com" target="_blank">Icons8</a> and <a href="https://www.flaticon.com" target="_blank">FlatIcon</a>.
+Please note that the icons and stickers used in this project were obtained from different sources.
+
+- The icons were sourced from <a href="https://icons8.com" target="_blank">Icons8</a> and <a href="https://www.flaticon.com" target="_blank">FlatIcon</a>, which offer a variety of high-quality icons in formats including PNG, SVG, and EPS.
+- The stickers used in the project were obtained from <a href="https://stickers.wiki" target="_blank">stickers.wiki</a>, a website that provides a large collection of digital stickers for personal use.
