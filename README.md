@@ -24,19 +24,6 @@
 </div>
 <br>
 
-<div align="center">
-    <a href="https://sefinek.net/api/v1/genshin-impact-reshade/installer/download">
-        <img src="www/images/readme/download.png" alt="Download" height="150px">
-    </a>
-    <br>
-    <a href="https://sefinek.net/api/v1/genshin-impact-reshade/installer/download">
-        <img src="www/images/readme/download.png" alt="Download" height="150px">
-    </a>
-    <a href="https://sefinek.net/api/v1/genshin-impact-reshade/installer/download">
-        <img src="www/images/readme/download.png" alt="Download" height="150px">
-    </a>
-</div>
-
 ## <div id="list">📋 » List</div>
 - [🌠 Genshin Impact Stella Mod Pack](#header)
 - [📃 Changelog](CHANGELOG.md)
@@ -50,6 +37,19 @@
 - [🧀 Legend](#legend)
 - [📷 Other screenshots](#other-screenshots)
 - [🧶 Sources](#sources)
+
+<div align="center">
+    <a href="https://sefinek.net/api/v1/genshin-impact-reshade/installer/download">
+        <img src="www/images/readme/download.png" alt="Download" height="150px">
+    </a>
+    <br>
+    <a href="https://sefinek.net/api/v1/genshin-impact-reshade/installer/download">
+        <img src="www/images/readme/download.png" alt="Download" height="150px">
+    </a>
+    <a href="https://sefinek.net/api/v1/genshin-impact-reshade/installer/download">
+        <img src="www/images/readme/download.png" alt="Download" height="150px">
+    </a>
+</div>
 
 ## <div id="important">⚠️ » Important</div>
 Please note that sharing any game screenshots that display your UID, visible shaders or ReShade overlay can lead to a ban in the game.
