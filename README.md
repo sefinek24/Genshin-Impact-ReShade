@@ -38,10 +38,10 @@
 - [🧶 Sources](#sources)
 
 <div align="center">
-    <a href="https://sefinek.net/api/v1/genshin-impact-reshade/installer/download" title="Download now"><img src="www/images/readme/download.png" alt="Download" height="150px"></a>
+    <a href="https://sefinek.net/api/v1/genshin-impact-reshade/installer/download" title="Download now"><img src="www/images/readme/download.png" alt="Download" height="148px"></a>
     <br>
-    <a href="https://genshin.sefinek.net"><img src="www/images/readme/website.png" alt="Official website" height="150px"></a>
-    <a href="https://discord.gg/8GbXtnYQKd"><img src="www/images/readme/discord.png" alt="Our Discord server" height="150px"></a>
+    <a href="https://genshin.sefinek.net" title="Official website"><img src="www/images/readme/website.png" alt="Website" height="148px"></a>
+    <a href="https://discord.gg/8GbXtnYQKd" title="Our Discord server"><img src="www/images/readme/discord.png" alt="Discord" height="148px"></a>
 </div>
 
 ## <div id="important">⚠️ » Important</div>
