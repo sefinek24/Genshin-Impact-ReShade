@@ -76,7 +76,7 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 | Crosire's DLL injector    | Just an injector.                                                                                                                   | [Download file](https://reshade.me/downloads/inject64.exe)      | -                                                                                          |
 
 ## <div id="installation">📥 » How to install?</div>
-1. Download the latest setup from [my official website](https://sefinek.net/genshin-impact-reshade).
+1. Download the latest setup from [my official website](https://genshin.sefinek.net).
 2. Extract the downloaded file to a convenient location on your computer.
 3. Run the setup file `Genshin Impact Mod Setup.exe` and follow the on-screen instructions to install the mod.
 4. Once the installation is complete, launch Genshin Impact and enjoy the enhanced graphics and visual effects.
@@ -124,8 +124,7 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 | **SFX Quality**        | High                                   | **Subsurface Scattering**   | High                                 | 
 | **Environment Detail** | Highest                                | **Anisotropic Filtering**   | 16x                                  | 
 
-> 📝 Please note that these recommended settings are a general guideline and may vary based on individual player preferences and system specs.
-> It is recommended that players adjust the settings accordingly for their own optimal experience.
+> 📝 **Note:** These recommended settings are provided as a general guideline and may vary based on individual player preferences and system specifications. It is recommended that players adjust the settings accordingly to optimize their own experience.
 
 ## <div id="legend">🧀 » Legend</div>
 | Emoji          | Meaning               | Emoji         | Meaning            | Emoji        | Meaning      |
