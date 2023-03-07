@@ -4,7 +4,7 @@
 > ⚠️ **Important:** This new version of the application is not backward compatible. It is recommended to uninstall the old version and perform a fresh installation for uninterrupted use of the application.
 
 ### 🆕 New Features
-1. Added support for API version v2, introducing new features and improved performance.
+1. Added support for [API version v2](https://api.sefinek.net/docs/v2), introducing new features and improved performance.
 2. Added WindowsAPICodePack to display progress in the taskbar, providing a more user-friendly experience.
 3. Created a new directory for ReShade [addons](data/reshade/addons) and [presets](data/presets/Made%20by%20community), where community members can upload their own presets and other addons.
 4. Added a new addon, [ReshadeEffectShaderToggler](data/reshade/addons/ReshadeEffectShaderToggler.addon).
