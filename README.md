@@ -39,9 +39,12 @@
 
 <div align="center">
     <a href="https://sefinek.net/api/v1/genshin-impact-reshade/installer/download"><img src="www/images/readme/download.png" alt="Download" height="150px"></a>
-    <br>
-    <a href="https://sefinek.net/api/v1/genshin-impact-reshade/installer/download"><img src="www/images/readme/download.png" alt="Download" height="150px"></a>
-    <a href="https://sefinek.net/api/v1/genshin-impact-reshade/installer/download"><img src="www/images/readme/download.png" alt="Download" height="150px"></a>
+
+[//]: # (    <br>)
+
+[//]: # (    <a href="https://sefinek.net/api/v1/genshin-impact-reshade/installer/download"><img src="www/images/readme/download.png" alt="Download" height="150px"></a>)
+
+[//]: # (    <a href="https://sefinek.net/api/v1/genshin-impact-reshade/installer/download"><img src="www/images/readme/download.png" alt="Download" height="150px"></a>)
 </div>
 
 ## <div id="important">⚠️ » Important</div>
@@ -54,7 +57,7 @@ Please also familiarize yourself with the system requirements.
 If you need further assistance, feel free to join our [Discord server](https://discord.gg/SVcbaRc7gH).
 Also, if you wish to contribute to the project, please create a new [Pull Request](https://github.com/sefinek24/Genshin-Impact-ReShade/pulls).  
 You can also check out the latest [screenshots](https://sefinek.net/genshin-impact-reshade/gallery?page=1) on our website and watch our [videos](https://sefinek.net/genshin-impact-reshade/videos) on YouTube for more information.
-Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and [Cloudflare](https://www.cloudflare.com) servers are located in Warsaw and Frankfurt. Have fun!
+Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and [Cloudflare](https://www.cloudflare.com) servers are located in Warsaw and Frankfurt.
 
 > By using this software, you agree to the terms of the [license agreement](LICENSE).
 > In addition, we are not responsible for any potential bans in the game. Although the chances of this happening are negligible.
