@@ -14,8 +14,8 @@
 6. Significantly improved the log system, including faster and more detailed logging for easier debugging.
 7. Enhanced Discord RPC and telemetry to provide more accurate and reliable data.
 8. Updated all shaders to improve performance and visuals, providing a more polished and refined experience.
-9. Major changes were made to the README.md file to provide clearer instructions and guidelines for using the project, making it more accessible to users.
-10. Updated recommended graphics settings for the game.
+9. Major changes were made to the [README.md](README.md) file to provide clearer instructions and guidelines for using the project, making it more accessible to users.
+10. Updated [recommended graphics settings](https://github.com/sefinek24/Genshin-Impact-ReShade#settings-for-game) for the game.
 11. Updated the FPS Unlocker to v2.0.8.
 11. Updated presets.
     - Improved contrast.
