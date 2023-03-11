@@ -112,6 +112,9 @@ namespace CinematicDOF
 // Uncomment line below for debug info / code / controls
 //	#define CD_DEBUG 1
 
+// Not enough sampler slots in dx9 for bokeh shape support
+	#define CD_BOKEH_SHAPE (__RENDERER__ >= 0xa000)
+
 	//////////////////////////////////////////////////
 	//
 	// User interface controls
@@ -317,6 +320,7 @@ namespace CinematicDOF
 		ui_tooltip = "Controls the sharpness of the bokeh highlight edges.";
 		ui_step = 0.01;
 	> = 0.0;
+#if CD_BOKEH_SHAPE	
 	uniform int HighlightShape <
 		ui_category = "Highlight shape settings";
 		ui_type = "combo";
@@ -340,6 +344,11 @@ namespace CinematicDOF
 		ui_tooltip = "Controls the gamma of the shape.\nNormally this should be 2.20";
 		ui_step = 0.01;
 	> = 2.20;
+#else
+	static const int HighlightShape = false;
+	static const float HighlightShapeRotationAngle = 0.0;
+	static const float HighlightShapeGamma = 0.0;
+#endif
 	
 	
 	// ------------- ADVANCED SETTINGS
@@ -444,12 +453,14 @@ namespace CinematicDOF
 	texture texCDBuffer4 			{ Width = BUFFER_WIDTH; Height = BUFFER_HEIGHT; Format = RGBA16F; }; 	// Full res upscale buffer
 	texture texCDBuffer5 			{ Width = BUFFER_WIDTH; Height = BUFFER_HEIGHT; Format = RGBA16F; }; 	// Full res upscale buffer. We need 2 as post smooth needs 2
 	texture texCDNoise				< source = "monochrome_gaussnoise.png"; > { Width = 512; Height = 512; Format = RGBA8; };
+#if CD_BOKEH_SHAPE
 	texture texBokehShape1			< source = "bokehshapes/moyheart.png"; > { Width = 512; Height = 512; Format = RGBA8; };
 	texture texBokehShape2			< source = "bokehshapes/hex.png"; > { Width = 512; Height = 512; Format = RGBA8; };
 	texture texBokehShape3			< source = "bokehshapes/fringy_soft_chr_rb.png"; > { Width = 512; Height = 512; Format = RGBA8; };
 	texture texBokehShape4			< source = "bokehshapes/hex_fringy_soft.png"; > { Width = 512; Height = 512; Format = RGBA8; };
 	texture texBokehShape5			< source = "bokehshapes/cutestar.png"; > { Width = 512; Height = 512; Format = RGBA8; };
 	texture texBokehShape6			< source = "bokehshapes/square.png"; > { Width = 512; Height = 512; Format = RGBA8; };
+#endif
 
 	sampler	SamplerCDCurrentFocus		{ Texture = texCDCurrentFocus; };
 	sampler SamplerCDPreviousFocus		{ Texture = texCDPreviousFocus; };
@@ -465,12 +476,14 @@ namespace CinematicDOF
 	sampler SamplerCDCoCTile			{ Texture = texCDCoCTile; MagFilter = POINT; MinFilter = POINT; MipFilter = POINT; AddressU = MIRROR; AddressV = MIRROR; AddressW = MIRROR;};
 	sampler SamplerCDCoCTileNeighbor	{ Texture = texCDCoCTileNeighbor; MagFilter = POINT; MinFilter = POINT; MipFilter = POINT; AddressU = MIRROR; AddressV = MIRROR; AddressW = MIRROR;};
 	sampler SamplerCDNoise				{ Texture = texCDNoise; MipFilter = POINT; MinFilter = POINT; MagFilter = POINT; AddressU = WRAP; AddressV = WRAP; AddressW = WRAP;};
+#if CD_BOKEH_SHAPE
 	sampler SamplerCDBokehShape1		{ Texture = texBokehShape1; };
 	sampler SamplerCDBokehShape2		{ Texture = texBokehShape2; };
 	sampler SamplerCDBokehShape3		{ Texture = texBokehShape3; };
 	sampler SamplerCDBokehShape4		{ Texture = texBokehShape4; };
 	sampler SamplerCDBokehShape5		{ Texture = texBokehShape5; };
 	sampler SamplerCDBokehShape6		{ Texture = texBokehShape6; };
+#endif
 
 #ifndef __RESHADE_FXC__		// Freestyle
 	uniform float2 MouseCoords < source = "mousepoint"; >;
@@ -1140,6 +1153,7 @@ namespace CinematicDOF
 	// Pixel shader which performs the far plane blur pass.
 	void PS_BokehBlur(VSDISCBLURINFO blurInfo, out float4 fragment : SV_Target0)
 	{
+#if CD_BOKEH_SHAPE
 		// yay for functions... but alas, samplers have to be hardcoded.
 		bool useShape = HighlightShape > 0;
 		if(useShape)
@@ -1170,12 +1184,16 @@ namespace CinematicDOF
 		{
 			fragment = PerformDiscBlur(blurInfo, SamplerCDBuffer1, SamplerCDBokehShape1);
 		}
+#else
+		fragment = PerformDiscBlur(blurInfo, SamplerCDBuffer1, SamplerCDBuffer1);
+#endif
 	}
 
 	// Pixel shader which performs the near plane blur pass. Uses a blurred buffer of blur disc radii, based on a combination of [Jimenez2014] (tiles)
 	// and [Nilsson2012] (blurred CoC).
 	void PS_NearBokehBlur(VSDISCBLURINFO blurInfo, out float4 fragment : SV_Target0)
 	{
+#if CD_BOKEH_SHAPE
 		// yay for functions... but alas, samplers have to be hardcoded.
 		bool useShape = HighlightShape > 0;
 		if(useShape)
@@ -1206,6 +1224,9 @@ namespace CinematicDOF
 		{
 			fragment = PerformNearPlaneDiscBlur(blurInfo, SamplerCDBuffer2, SamplerCDBokehShape1);
 		}
+#else
+		fragment = PerformNearPlaneDiscBlur(blurInfo, SamplerCDBuffer2, SamplerCDBuffer2);
+#endif
 	}
 	
 	// Pixel shader which performs the CoC tile creation (horizontal gather of min CoC)
