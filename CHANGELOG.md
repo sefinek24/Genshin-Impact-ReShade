@@ -46,11 +46,13 @@
 
 > Overall, this release includes several important updates and improvements that improve the functionality, performance, and user experience of the application.
 
+
 ## 📥 » Version v5.0.0 from 02.02.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v4.2.0...v5.0.0)
 1. Updated the API and CDN for improved performance and stability.
 2. ~~Removed the requirement to use the setup for installation. Users can now use the git clone command to install.~~
 3. Made significant improvements to the log system to provide more detailed and accurate information.
 4. Made various other changes and bug fixes to improve the overall quality of the project.
+
 
 ## 📥 » Version v4.2.0 from 01.02.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v4.1.1...v4.2.0)
 1. Made major changes to the launcher for improved usability and performance.
@@ -59,8 +61,10 @@
 4. Changed the method of injecting ReShade.
 5. [Launcher](https://github.com/sefinek24/genshin-mod-launcher) and [setup](https://github.com/sefinek24/genshin-mod-setup) are now open source to encourage community contributions and improvements.
 
+
 ## 📥 » Version v4.1.1 from 21.01.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v4.1.0...v4.1.1)
 1. Small fixes.
+
 
 ## 📥 » Version v4.1.0 from 20.01.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v4.0.0...v4.1.0)
 1. Added new background music.
@@ -68,6 +72,7 @@
 3. Improvements.
 4. Updated WebView2.
 5. Other changes.
+
 
 ## 📥 » Version v4.0.0 from 18.01.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v3.1.0...v4.0.0)
 1. Git is no longer required. We have other method for updates.
@@ -83,12 +88,14 @@
 11. Added new screenshots.
 12. Other changes.
 
+
 ## 📥 » Version v3.1.0 from- 03.01.2023 [[Compare]](https://github.com/sefinek24/Genshin-Impact-ReShade/compare/v3.0.1...v3.1.0)
 1. Added Discord RPC.
 2. Added ability to disable telemetry and error reporting.
 3. Removed automatic update of FPS Unlocker configuration.
 4. Optimization.
 5. Bug fixes.
+
 
 ## 📝 » Semantic Versioning 2.0.0
 > https://semver.org
