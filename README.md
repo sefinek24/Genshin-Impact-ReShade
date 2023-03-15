@@ -38,10 +38,10 @@
 - [🧶 Sources](#sources)
 
 <div align="center">
-    <a href="https://sefinek.net/api/v1/genshin-impact-reshade/installer/download" title="Download now"><img src="www/images/readme/download.png" alt="Download" height="148px"></a>
+    <a href="https://sefinek.net/genshin-impact-reshade/download" title="Download stable release"><img src="www/images/readme/download.png" alt="Download" height="148px"></a>
     <br>
     <a href="https://genshin.sefinek.net" title="Official website"><img src="www/images/readme/website.png" alt="Website" height="148px"></a>
-    <a href="https://discord.gg/8GbXtnYQKd" title="Our Discord server"><img src="www/images/readme/discord.png" alt="Discord" height="148px"></a>
+    <a href="https://discord.com/invite/SVcbaRc7gH" title="Our Discord server"><img src="www/images/readme/discord.png" alt="Discord" height="148px"></a>
 </div>
 
 ## <div id="important">⚠️ » Important</div>
@@ -93,7 +93,7 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 | 💻 System       | 🔖 Version | 📝 OS Build   | 🙀 Status      | 🤔 Recommended? |
 |-----------------|:-----------|---------------|:---------------|:----------------|
 | Windows 11      | 22H2       | 22621.900     | [✔️](#legend)  | [❌](#legend)    |
-| Windows 10      | 22H2, 21H2 | 19045.2673    | [✔️](#legend)  | [️✔️](#legend)  | 
+| Windows 10      | 21H2, 22H2 | 19045.2673    | [✔️](#legend)  | [️✔️](#legend)  | 
 | Windows 8 / 8.1 |            | [❓](#legend)  | [🎯️](#legend) | [❌](#legend)    | 
 | Windows 7       |            | [❓](#legend)  | [🎯️](#legend) | [❌](#legend)    | 
 | Android / Linux |            | [❓](#legend)  | [❌](#legend)   | [❌](#legend)    | 
@@ -154,4 +154,4 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 Please note that the icons and stickers used in this project were obtained from different sources.
 
 - The icons were sourced from <a href="https://icons8.com" target="_blank">Icons8</a> and <a href="https://www.flaticon.com" target="_blank">FlatIcon</a>, which offer a variety of high-quality icons in formats including PNG, SVG, and EPS.
-- The stickers used in the project were obtained from <a href="https://stickers.wiki" target="_blank">stickers.wiki</a>, a website that provides a large collection of digital stickers for personal use.
+- The stickers used in the project were obtained from <a href="https://stickers.wiki" target="_blank">stickers.wiki</a>, a website that provides a large collection of digital stickers.
