@@ -84,7 +84,7 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 
 | 💻 Your PC & Network Requirements                   | 📂 Dependencies • Use installation wizard for automatic installation                                             |
 |:----------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| **Operating System:** Windows 10/11 (build > 19041) | [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)                           |
+| **System:** Windows 10/11 (build higher than 19041) | [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)                           |
 | **Processor:** 64-bit processor and system          | [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer) |
 | **Disk Space:** At least 1 GB of free disk space    | [Windows Terminal](https://github.com/microsoft/terminal/releases)                                               |
 | **BIOS:** UEFI mode enabled                         | [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional)      |
