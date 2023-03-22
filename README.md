@@ -83,7 +83,7 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 > It is recommended to use the installer to automatically install all the required dependencies, which is suitable for most cases.
 > 
 > 📝 **Note:**
-> Before attempting to install the mod, please make sure that your PC meets the following requirements:
+> Make sure your PC meets the following requirements before installing the mod:
 
 | 💻 Your PC & Network Requirements          | 📂 Dependencies                                                                                                                                                                                                       |
 |:-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
