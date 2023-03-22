@@ -82,13 +82,13 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 > 📝 **Note:**
 > Please ensure that your PC meets the requirements listed above before attempting to install the mod.
 
-| 💻 Your PC & Network Requirements                | 📂 Dependencies • Use installation wizard for automatic installation                                             |
-|:-------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| **System:** Windows 10/11 (build > 19041)        | [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)                           |
-| **Processor:** 64-bit processor and system       | [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer) |
-| **Disk Space:** At least 1 GB of free disk space | [Windows Terminal](https://github.com/microsoft/terminal/releases)                                               |
-| **BIOS:** UEFI mode enabled                      | [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional)      |
-| **Network:** Good internet connection            |                                                                                                                  |
+| 💻 Your PC & Network Requirements               | 📂 Dependencies • Use installation wizard for automatic installation                                             |
+|:------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| **System:** Windows 10/11 (build > 19041)       | [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)                           |
+| **Processor:** 64-bit processor and system      | [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer) |
+| **Disk:** At least 1 GB of free disk space      | [Windows Terminal](https://github.com/microsoft/terminal/releases)                                               |
+| **BIOS:** UEFI mode enabled                     | [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional)      |
+| **Network:** Good internet connection           |                                                                                                                  |
 
 ## <div id="supported-systems">🔧 » Supported operating systems</div>
 | 💻 System       | 🔖 Version | 📝 OS Build   | 🙀 Status      | 🤔 Recommended? |
