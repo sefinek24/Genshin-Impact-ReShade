@@ -86,9 +86,9 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 |:-------------------------------------------|------------------------------------------------------------------------------------------------------------------|
 | **OS:** Windows 10/11 (build > 19041)      | [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)                           |
 | **CPU:** 64-bit processor and system       | [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer) |
-| **GPU:** DirectX 11 support                | [Windows Terminal](https://github.com/microsoft/terminal/releases)                                               |
-| **Disk:** At least 1 GB of free disk space | [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional)      |
-| **Network:** Good internet connection      |                                                                                                                  |
+| **GPU:** DirectX 11 support                | [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) (Only for patrons)                            |
+| **Disk:** At least 1 GB of free disk space | [Windows Terminal](https://github.com/microsoft/terminal/releases)                                               |
+| **Network:** Good internet connection      | [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional)      |
 | **BIOS:** UEFI mode enabled                |                                                                                                                  |
 
 ## <div id="supported-systems">🔧 » Supported operating systems</div>
