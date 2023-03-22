@@ -130,20 +130,20 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 | [🎯️](#legend) | Default not supported | [🤔](#legend) | Not tested         |              |              |
 
 ## <div id="other-screenshots">📷 » Other screenshots (without Ray Tracing)</div>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/backgrounds/kokomi_2.png" title="See preview [kokomi_2.png]">
-    <img src="screenshots/default/backgrounds/kokomi_2.png" alt="Screenshot number 1">
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/backgrounds/hutao_4.png" title="See preview [hutao_1.png]">
+    <img src="screenshots/default/backgrounds/hutao_1.png" alt="Screenshot number 1">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/backgrounds/collei_1.png" title="See preview [collei_1.png]">
-    <img src="screenshots/default/backgrounds/collei_1.png" alt="Screenshot number 2">
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/backgrounds/outdated/kokomi_2.png" title="See preview [kokomi_2.png]">
+    <img src="screenshots/default/backgrounds/outdated/kokomi_2.png" alt="Screenshot number 2">
+</a>
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/backgrounds/outdated/collei_3.png" title="See preview [collei_3.png]">
+    <img src="screenshots/default/backgrounds/outdated/collei_3.png" alt="Screenshot number 3">
+</a>
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/backgrounds/outdated/collei_1.png" title="See preview [collei_1.png]">
+    <img src="screenshots/default/backgrounds/outdated/collei_1.png" alt="Screenshot number 4">
 </a>
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/backgrounds/kokomi_4.png" title="See preview [kokomi_4.png]">
-    <img src="screenshots/default/backgrounds/kokomi_4.png" alt="Screenshot number 3">
-</a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/backgrounds/hutao_4.png" title="See preview [hutao_4.png]">
-    <img src="screenshots/default/backgrounds/hutao_4.png" alt="Screenshot number 4">
-</a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/backgrounds/collei_3.png" title="See preview [collei_3.png]">
-    <img src="screenshots/default/backgrounds/collei_3.png" alt="Screenshot number 5">
+    <img src="screenshots/default/backgrounds/outdated/kokomi_4.png" alt="Screenshot number 5">
 </a>
 
 > ⚠️ **Warning:**
