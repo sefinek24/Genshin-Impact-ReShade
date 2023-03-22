@@ -79,10 +79,13 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 4. Once the installation is complete, launch Genshin Impact and enjoy the enhanced graphics and visual effects.
 
 ## <div id="pc-requirements">✨ » Requirements</div>
+> 🤔 **Suggestion:**
+> It is recommended to use the installer to automatically install all the required dependencies, which is suitable for most cases.
+> 
 > 📝 **Note:**
-> Please ensure that your PC meets the requirements listed above before attempting to install the mod.
+> Before attempting to install the mod, please make sure that your PC meets the following requirements:
 
-| 💻 Your PC & Network Requirements          | 📂 Dependencies • Use installation wizard for automatic installation                                                                                                                                                  |
+| 💻 Your PC & Network Requirements          | 📂 Dependencies                                                                                                                                                                                                       |
 |:-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **OS:** Windows 10/11 (build > 19041)      | [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)                                                                                                                                |
 | **CPU:** 64-bit processor and system       | [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer)                                                                                                      |
