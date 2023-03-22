@@ -1,7 +1,7 @@
 <div align="center" id="header">
     <h1>✨ Genshin Impact Stella Mod Pack - 2023 ✨</h1>
     <div>
-        <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Screenshots/Default/youtube_video.png" title="See preview [Screenshots/Default/youtube_video.png]">
+        <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/youtube_video.png" title="See preview [Screenshots/Default/youtube_video.png]">
             <img src="screenshots/default/youtube_video_border.png" alt="Header image">
         </a>
     </div>
@@ -17,9 +17,9 @@
     <a href="https://github.com/sefinek24/Genshin-Impact-ReShade/commits/main" title="Commit activity"><img src="https://img.shields.io/github/commit-activity/w/sefinek24/Genshin-Impact-ReShade?label=Commit%20activity" alt="Commit activity"></a>
     <a href="https://discord.com/invite/SVcbaRc7gH" title="Official Discord server"><img src="https://img.shields.io/discord/1044713077125435492?label=Discord%20server" alt="Our Discord server"></a>
     <br>
-    <a href="https://sefinek.net" title="sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=Website&up_message=Online&url=https%3A%2F%2Fsefinek.net" alt="Website status"></a>
-    <a href="https://api.sefinek.net" title="api.sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=API&up_message=Online&url=https%3A%2F%2Fapi.sefinek.net" alt="Website status"></a>
-    <a href="https://cdn.sefinek.net" title="cdn.sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=CDN&up_message=Online&url=https%3A%2F%2Fcdn.sefinek.net" alt="Website status"></a>
+    <a href="https://sefinek.net" title="sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=Website&up_message=Online&url=https%3A%2F%2Fsefinek.net" alt="Status page"></a>
+    <a href="https://api.sefinek.net" title="api.sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=API&up_message=Online&url=https%3A%2F%2Fapi.sefinek.net" alt="Status page"></a>
+    <a href="https://cdn.sefinek.net" title="cdn.sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=CDN&up_message=Online&url=https%3A%2F%2Fcdn.sefinek.net" alt="Status page"></a>
     <a href="https://stats.uptimerobot.com/kLXYEukEwW" title="sefinek.net uptime"><img src="https://img.shields.io/uptimerobot/ratio/7/m793533681-b79b8280de15efcd9bc83d7d?label=Uptime" alt="Website uptime"></a>
 </div>
 
@@ -79,7 +79,8 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 4. Once the installation is complete, launch Genshin Impact and enjoy the enhanced graphics and visual effects.
 
 ## <div id="pc-requirements">✨ » Requirements</div>
-> 📝 **Note:** Please ensure that your PC meets the requirements listed above before attempting to install the mod.
+> 📝 **Note:**
+> Please ensure that your PC meets the requirements listed above before attempting to install the mod.
 
 | 💻 Your PC & Network Requirements                             | 📂 Dependencies • Use installation wizard for automatic installation                                             |
 |:--------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -121,7 +122,8 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 | **SFX Quality**        | High                                   | **Subsurface Scattering**   | High                                 | 
 | **Environment Detail** | Highest                                | **Anisotropic Filtering**   | 16x                                  | 
 
-> 📝 **Note:** These recommended settings are provided as a general guideline and may vary based on individual player preferences and system specifications. It is recommended that players adjust the settings accordingly to optimize their own experience.
+> 📝 **Note:**  
+> These recommended settings are provided as a general guideline and may vary based on individual player preferences and system specifications. It is recommended that players adjust the settings accordingly to optimize their own experience.
 
 ## <div id="legend">🧀 » Legend</div>
 | 🐈 Emoji       | 🤔 Meaning            | 🐈 Emoji      | 🤔 Meaning         | 🐈 Emoji     | 🤔 Meaning   |
@@ -146,7 +148,7 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
     <img src="screenshots/default/backgrounds/outdated/kokomi_4.png" alt="Screenshot number 5">
 </a>
 
-> ⚠️ **Warning:**
+> ⚠️ **Warning:**  
 > It is worth noting that relying solely on the screenshots or videos provided may not necessarily provide the most accurate or up-to-date representation of the software or application.
 > This is because the presets, or default settings, are constantly being reviewed and refined by the developers to ensure optimal user experience and address any issues or bugs that may arise.
 

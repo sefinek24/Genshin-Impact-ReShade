@@ -8,11 +8,11 @@ body {
 a {
     color: #5b6bf3;
     text-decoration: none;
-    transition: 0.2s;
+    transition: .2s;
 }
 
 a:hover {
-    color: rgba(91, 107, 243, 0.7);
+    color: rgba(91, 107, 243, .7);
     text-decoration: underline;
 }
 
