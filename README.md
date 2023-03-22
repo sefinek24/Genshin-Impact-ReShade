@@ -82,14 +82,14 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 > 📝 **Note:**
 > Please ensure that your PC meets the requirements listed above before attempting to install the mod.
 
-| 💻 Your PC & Network Requirements          | 📂 Dependencies • Use installation wizard for automatic installation                                             |
-|:-------------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| **OS:** Windows 10/11 (build > 19041)      | [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)                           |
-| **CPU:** 64-bit processor and system       | [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer) |
-| **GPU:** DirectX 11 support                | [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) (Only for patrons)                            |
-| **Disk:** At least 1 GB of free disk space | [Windows Terminal](https://github.com/microsoft/terminal/releases)                                               |
-| **Network:** Good internet connection      | [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional)      |
-| **BIOS:** UEFI mode enabled                |                                                                                                                  |
+| 💻 Your PC & Network Requirements          | 📂 Dependencies • Use installation wizard for automatic installation                                                                                                                                                  |
+|:-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **OS:** Windows 10/11 (build > 19041)      | [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)                                                                                                                                |
+| **CPU:** 64-bit processor and system       | [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer)                                                                                                      |
+| **GPU:** DirectX 11 support                | [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) (Only for patrons)                                                                                                                                 |
+| **Disk:** At least 1 GB of free disk space | [Windows Terminal](https://github.com/microsoft/terminal/releases)                                                                                                                                                    |
+| **Network:** Good internet connection      | [Microsoft VCLibs](https://learn.microsoft.com/en-us/troubleshoot/developer/visualstudio/cpp/libraries/c-runtime-packages-desktop-bridge#how-to-install-and-update-desktop-framework-packages) (For Windows Terminal) |
+| **BIOS:** UEFI mode enabled                | [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional)                                                                                                           |
 
 ## <div id="supported-systems">🔧 » Supported operating systems</div>
 | 💻 System       | 🔖 Version | 📝 OS Build   | 🙀 Status      | 🤔 Recommended? |
