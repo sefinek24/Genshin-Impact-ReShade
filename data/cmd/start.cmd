@@ -1,6 +1,7 @@
 @echo off
 title Start game - Genshin Impact Mod Pack 2023
 chcp 65001 > NUL
+setlocal EnableDelayedExpansion
 echo.⠀   ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⢶⣦⡀
 echo.⠀  ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿
 echo.⠀   ⠀⣿⡄⠀⠀⠀⠈⠀⠀⠀⠀⣾⡿                           Genshin Impact ReShade 2023 Mod Pack
@@ -18,35 +19,31 @@ echo ===========================================================================
 
 
 echo 1/3 - Checking required processes...
-tasklist /fi "ImageName eq Genshin Impact Mod Pack.exe" /fo csv 2>NUL | find /I "Genshin Impact Mod Pack.exe">NUL
-if "%ERRORLEVEL%"=="0" (
+tasklist /fi "ImageName eq Genshin Impact Mod Pack.exe" /fo csv | find /I "Genshin Impact Mod Pack.exe" >NUL && (
     echo [i] Genshin Impact Mod Pack.exe - Closing...
     taskkill /F /IM "Genshin Impact Mod Pack.exe"
-) else (
+) || (
     echo [✓] Genshin Impact Mod Pack.exe - OK
 )
 
-tasklist /fi "ImageName eq GenshinImpact.exe" /fo csv 2>NUL | find /I "GenshinImpact.exe">NUL
-if "%ERRORLEVEL%"=="0" (
+tasklist /fi "ImageName eq GenshinImpact.exe" /fo csv | find /I "GenshinImpact.exe" >NUL && (
     echo [i] GenshinImpact.exe - Closing...
     taskkill /F /IM "GenshinImpact.exe"
-) else (
+) || (
     echo [✓] GenshinImpact.exe - OK
 )
 
-tasklist /fi "ImageName eq inject64.exe" /fo csv 2>NUL | find /I "inject64.exe">NUL
-if "%ERRORLEVEL%"=="0" (
+tasklist /fi "ImageName eq inject64.exe" /fo csv | find /I "inject64.exe" >NUL && (
     echo [i] inject64.exe - Closing...
     taskkill /F /IM "inject64.exe"
-) else (
+) || (
     echo [✓] inject64.exe - OK
 )
 
-tasklist /fi "ImageName eq unlockfps_clr.exe" /fo csv 2>NUL | find /I "unlockfps_clr.exe">NUL
-if "%ERRORLEVEL%"=="0" (
+tasklist /fi "ImageName eq unlockfps_clr.exe" /fo csv | find /I "unlockfps_clr.exe" >NUL && (
     echo [i] unlockfps_clr.exe - Closing...
     taskkill /F /IM "unlockfps_clr.exe"
-) else (
+) || (
     echo [✓] unlockfps_clr.exe - OK
 )
 echo.
@@ -56,34 +53,35 @@ echo.
 echo 2/3 - Starting...
 echo [i] Everything is ready! Please wait a moment ᕱ⑅︎ᕱ & echo.
 
-set /p LMode=<"%AppData%\Genshin Impact MP by Sefinek\launch-mode.sfn"
-if %LMode% == 1 (
-	cd "data\unlocker"
-	start .\unlockfps_clr.exe
+set /p LMode=<"%AppData%\Genshin Stella Mod by Sefinek\launch-mode.sfn"
+if %LMode% equ 1 (
+    cd "data\unlocker"
+    start "" "unlockfps_clr.exe"
 
-    cd "..\ReShade"
-	"inject64.exe" "GenshinImpact.exe"
+    cd "..\reshade"
+    start "" /wait "inject64.exe" "GenshinImpact.exe"
 
-	echo.
-	cd ..\Cmd\start
+    echo.
+    cd "..\cmd\start"
     call wait_for_unlockfps.cmd
-) else if %LMode% == 2 (
+) else if %LMode% equ 2 (
     echo Please start the game now.
 
     cd "data\reshade"
-    "inject64.exe" "GenshinImpact.exe"
+    start "" /wait "inject64.exe" "GenshinImpact.exe"
 
     echo.
-    cd ..\Cmd\start
+    cd "..\cmd\start"
     call done.cmd
-) else if %LMode% == 3 (
+) else if %LMode% equ 3 (
     cd "data\unlocker"
-    start .\unlockfps_clr.exe
+    start "" "unlockfps_clr.exe"
 
-    cd ..\Cmd\start
+    cd "..\cmd\start"
     call wait_for_unlockfps.cmd
 ) else (
-    goto error
+    echo Error: Invalid launch mode: %LMode%
+    pause
 )
 
 
