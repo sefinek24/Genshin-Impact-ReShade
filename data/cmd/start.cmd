@@ -17,13 +17,22 @@ echo.  ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉�
 echo.   ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟
 echo ========================================================================================= & echo.
 
+echo 1/4 - Checking administrative permissions...
+net session >nul 2>&1
+if %errorLevel% == 0 (
+    echo [✓] No problems found. & echo.
+) else (
+    echo [x] Error. This command must be run as administrator.
+    goto :missing_perms
+)
 
-echo 1/3 - Checking required processes...
-tasklist /fi "ImageName eq Genshin Impact Mod Pack.exe" /fo csv | find /I "Genshin Impact Mod Pack.exe" >NUL && (
-    echo [i] Genshin Impact Mod Pack.exe - Closing...
-    taskkill /F /IM "Genshin Impact Mod Pack.exe"
+
+echo 2/4 - Checking required processes...
+tasklist /fi "ImageName eq Genshin Stella Mod Launcher.exe" /fo csv | find /I "Genshin Stella Mod Launcher.exe" >NUL && (
+    echo [i] Genshin Stella Mod Launcher.exe - Closing...
+    taskkill /F /IM "Genshin Stella Mod Launcher.exe"
 ) || (
-    echo [✓] Genshin Impact Mod Pack.exe - OK
+    echo [✓] Genshin Stella Mod Launcher.exe - OK
 )
 
 tasklist /fi "ImageName eq GenshinImpact.exe" /fo csv | find /I "GenshinImpact.exe" >NUL && (
@@ -49,8 +58,7 @@ tasklist /fi "ImageName eq unlockfps_clr.exe" /fo csv | find /I "unlockfps_clr.e
 echo.
 
 
-
-echo 2/3 - Starting...
+echo 3/4 - Starting...
 echo [i] Everything is ready! Please wait a moment ᕱ⑅︎ᕱ & echo.
 
 set /p LMode=<"%AppData%\Genshin Stella Mod by Sefinek\launch-mode.sfn"
@@ -88,4 +96,10 @@ if %LMode% equ 1 (
 :pause
     echo.
     set /p null=
+    exit
+
+:missing_perms
+    echo.
+    echo [!] Error: The script must be run as an administrator.
+    pause
     exit

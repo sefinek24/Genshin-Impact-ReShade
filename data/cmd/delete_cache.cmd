@@ -16,36 +16,85 @@ echo.  ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉�
 echo.   ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟
 echo ========================================================================================= & echo.
 
-echo 1/5 - Checking administrative permissions. Please wait...
+echo 1/6 - Checking administrative permissions...
 net session >nul 2>&1
 if %errorLevel% == 0 (
-    echo [✓] No problems found. & echo.
+    echo [✓] No problems found.
 ) else (
-    echo [x] Error. This command must be run as administrator.
+    goto :missing_perms
+)
+echo.
+
+
+echo 2/6 - Checking required files and folders...
+set GamePathSFN="%AppData%\Genshin Stella Mod by Sefinek\game-path.sfn"
+if not exist %GamePathSFN% (
+    echo [!] File %GamePathSFN% was not found.
     goto nothing_to_do
+) else (
+    echo [✓] %GamePathSFN%
 )
 
-
-echo 2/5 - Deleting %temp%\ReShade...
-rmdir /s /q %temp%\ReShade
+set /p GamePath=<%GamePathSFN%
+if not exist %GamePath% (
+    echo [!] Folder %GamePath% was not found.
+    goto nothing_to_do
+) else (
+    echo [✓] %GamePath%
+)
 echo.
 
-echo 3/5 - Deleting %AppData%\Genshin Impact MP by Sefinek\EBWebView...
-rmdir /s /q "%AppData%\Genshin Impact MP by Sefinek\EBWebView"
+
+echo 3/6 - Deleting %temp%\ReShade...
+if exist %temp%\ReShade (
+    rmdir /s /q %temp%\ReShade
+    echo [i] Deleted %temp%\ReShade
+) else (
+    echo [!] Folder not found: %temp%\ReShade
+)
 echo.
 
-set /p GamePath=<"%AppData%\Genshin Impact MP by Sefinek\game-path.sfn"
-echo 4/5 - Deleting %GamePath%\ReShade.log...
-del "%GamePath%\ReShade.log"
+
+echo 4/6 - Deleting %AppData%\Genshin Stella Mod by Sefinek\EBWebView...
+if exist "%AppData%\Genshin Stella Mod by Sefinek\EBWebView" (
+    rmdir /s /q "%AppData%\Genshin Stella Mod by Sefinek\EBWebView"
+    echo [i] Deleted "%AppData%\Genshin Stella Mod by Sefinek\EBWebView"
+) else (
+    echo [!] Folder not found: "%AppData%\Genshin Stella Mod by Sefinek\EBWebView"
+)
 echo.
 
-echo 5/5 - Deleting %AppData%\Genshin Impact MP by Sefinek\logs..
-rmdir /s /q "%AppData%\Genshin Impact MP by Sefinek\logs"
 
-
+echo 5/6 - Deleting %GamePath%\ReShade.log...
+if exist "%GamePath%\ReShade.log" (
+    del "%GamePath%\ReShade.log"
+    echo [i] Deleted "%GamePath%\ReShade.log"
+) else (
+    echo [!] File not found: "%GamePath%\ReShade.log"
+)
 echo.
-echo [i] Success. You can close this window.
+
+
+echo 6/6 - Deleting %AppData%\Genshin Stella Mod by Sefinek\logs..
+if exist "%AppData%\Genshin Stella Mod by Sefinek\logs" (
+    rmdir /s /q "%AppData%\Genshin Stella Mod by Sefinek\logs"
+    echo [i] Deleted "%AppData%\Genshin Stella Mod by Sefinek\logs"
+) else (
+    echo [!] Folder not found: "%AppData%\Genshin Stella Mod by Sefinek\logs"
+)
+echo.
+
+
+echo. && echo [✓] Success. You can close this window.
+pause
+exit
 
 :nothing_to_do
-set /p 0=
-exit
+    set /p 0=
+    exit
+
+:missing_perms
+    echo.
+    echo [!] Error: The script must be run as an administrator.
+    pause
+    exit

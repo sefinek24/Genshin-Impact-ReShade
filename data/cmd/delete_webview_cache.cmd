@@ -16,23 +16,33 @@ echo.  ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉�
 echo.   ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟
 echo ========================================================================================= & echo.
 
-echo 1/2 - Checking administrative permissions. Please wait...
+echo 1/2 - Checking administrative permissions...
 net session >nul 2>&1
 if %errorLevel% == 0 (
     echo [✓] No problems found. & echo.
 ) else (
     echo [x] Error. This command must be run as administrator.
-    goto nothing_to_do
+    goto :missing_perms
 )
 
+echo 2/2 - Deleting %AppData%\Genshin Stella Mod by Sefinek\EBWebView...
+if exist "%AppData%\Genshin Stella Mod by Sefinek\EBWebView" (
+    rmdir /s /q "%AppData%\Genshin Stella Mod by Sefinek\EBWebView"
+    echo.
+    echo [i] Success. You can close this window.
+) else (
+    echo [!] Folder not found: %AppData%\Genshin Stella Mod by Sefinek\EBWebView
+)
 
-echo 2/2 - Deleting %AppData%\Genshin Impact MP by Sefinek\EBWebView...
-rmdir /s /q "%AppData%\Genshin Impact MP by Sefinek\EBWebView"
-
-
-echo.
-echo [i] Success. You can close this window.
+pause
+exit
 
 :nothing_to_do
-set /p 0=
-exit
+    set /p 0=
+    exit
+
+:missing_perms
+    echo.
+    echo [!] Error: The script must be run as an administrator.
+    pause
+    exit
