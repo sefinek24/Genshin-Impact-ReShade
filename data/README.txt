@@ -3,18 +3,19 @@
 1. IMPORTANT
 - Do not share screenshots from the game that display your UID, visible shaders, or ReShade overlay.
 - If you want to record a video for YouTube or any other platform, please hide or censor your UID and username.
-- Make sure to use the latest operating system build, update your graphics card drivers, and chipset drivers.
+- Make sure to use the latest operating system build, update your graphics card drivers, and chipset drivers to ensure the best performance.
 
 2. CAN I ADD MY PRESET?
-Absolutely yes! You can create a new Pull Request on our GitHub repository at:
+Absolutely yes! We welcome community contributions and invite you to create a new Pull Request on our GitHub repository at:
 * https://github.com/sefinek24/Genshin-Impact-ReShade/pulls
-* https://github.com/sefinek24/Genshin-Impact-ReShade/tree/main/data/presets/Made%20by%20community
 
 3. WANT TO BECOME A CONTRIBUTOR?
-That's great! You can always create a new Pull Request to help improve the project.
+We are always looking for new contributors to help improve the project.
+If you're interested, you can create a new Pull Request on our GitHub repository.
 
 4. RAY TRACING
-If you're interested in trying out our Ray Tracing feature (beta release) in Genshin Impact, consider becoming a patron. You don't need an Nvidia RTX graphics card to enjoy this feature.
+If you're interested in trying out our Ray Tracing feature (beta release) in Genshin Impact, consider becoming a patron.
+You don't need an Nvidia RTX graphics card to enjoy this feature.
 
 5. DISCORD SERVER
 Join our Discord Server for discussions and support: https://discord.gg/SVcbaRc7gH

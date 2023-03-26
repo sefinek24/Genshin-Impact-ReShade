@@ -95,11 +95,11 @@ if %LMode% equ 1 (
 
 :pause
     echo.
-    set /p null=
+    set /p 0=
     exit
 
 :missing_perms
     echo.
-    echo [!] Error: The script must be run as an administrator.
+    echo [x] Error: The script must be run as an administrator.
     pause
     exit

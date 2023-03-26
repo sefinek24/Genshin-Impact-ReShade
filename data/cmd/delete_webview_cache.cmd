@@ -27,15 +27,18 @@ if %errorLevel% == 0 (
 
 echo 2/2 - Deleting %AppData%\Genshin Stella Mod by Sefinek\EBWebView...
 if exist "%AppData%\Genshin Stella Mod by Sefinek\EBWebView" (
-    rmdir /s /q "%AppData%\Genshin Stella Mod by Sefinek\EBWebView"
+    rd /s /q "%AppData%\Genshin Stella Mod by Sefinek\EBWebView"
     echo.
-    echo [i] Success. You can close this window.
+
+    echo [i] Success.
 ) else (
-    echo [!] Folder not found: %AppData%\Genshin Stella Mod by Sefinek\EBWebView
+    echo [x] Folder was not found.
 )
 
-pause
-exit
+echo. && echo.
+
+echo [i] Done! You can close this window.
+goto nothing_to_do
 
 :nothing_to_do
     set /p 0=
@@ -43,6 +46,6 @@ exit
 
 :missing_perms
     echo.
-    echo [!] Error: The script must be run as an administrator.
+    echo [x] Error: The script must be run as an administrator.
     pause
     exit
