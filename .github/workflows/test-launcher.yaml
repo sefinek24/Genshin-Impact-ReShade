@@ -21,10 +21,10 @@ name: Open Stella Launcher
       - '**.html'
 
 env:
-  LAUNCHER_EXE: './Genshin Stella Mod Launcher.exe'
+  LAUNCHER_EXE: '"./Genshin Stella Mod Launcher.exe"'
 
 jobs:
-  test-launcher:
+  open-launcher:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -37,4 +37,4 @@ jobs:
           echo "Processor architecture: $(uname -m)"
           echo "Number of CPU cores:    $(nproc)"
       - name: Run Stella Launcher
-        run: "${{ env.LAUNCHER_EXE }}"
+        run: '${{ env.LAUNCHER_EXE }}'
