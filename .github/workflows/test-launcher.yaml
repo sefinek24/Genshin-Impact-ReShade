@@ -28,7 +28,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [windows-7, windows-8.1, windows-10, windows-11, windows-latest]
+        os: [windows-10, windows-11, windows-latest]
     steps:
       - uses: actions/checkout@v3
       - name: Display system information
