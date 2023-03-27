@@ -6,11 +6,11 @@ assignees: ''
 
 ---
 <!--
-    * Purpose:
+    - Purpose:
     This report is intended to be used as a starting point for creating issue reports.
     It provides blank fields to be filled in later, and can be used to ensure that all necessary information is included in the report.
 
-    * Instructions:
+    - Instructions:
     Please fill in the following fields to the best of your ability:
 -->
 

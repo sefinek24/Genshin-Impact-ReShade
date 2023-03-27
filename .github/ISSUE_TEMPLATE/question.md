@@ -7,11 +7,11 @@ assignees: ''
 ---
 
 <!--
-    Guidelines for asking a good question:
-    - Be clear and specific about what you are asking.
-    - Provide enough background information for others to understand the context of your question.
-    - Make sure your question is relevant to the project or topic at hand.
-    - Use proper grammar and spelling to make your question easy to understand.
+    - Guidelines for asking a good question:
+    Be clear and specific about what you are asking.
+    Provide enough background information for others to understand the context of your question.
+    Make sure your question is relevant to the project or topic at hand.
+    Use proper grammar and spelling to make your question easy to understand.
 -->
 
 ### Please describe your question in detail.
