@@ -2,7 +2,7 @@
 
 name: Open Stella Launcher
 
-on:
+"on":
   push:
     branches:
       - main
