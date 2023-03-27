@@ -1,6 +1,6 @@
 ---
 
-name: Open Stella Launcher
+name: Test executable files
 
 "on":
   push:
@@ -22,6 +22,8 @@ name: Open Stella Launcher
 
 env:
   LAUNCHER_EXE: '"./Genshin Stella Mod Launcher.exe"'
+  UNLOCKER_EXE: './data/unlocker/unlockfps_clr.exe'
+  INJECTOR_EXE: './data/reshade/inject64.exe'
 
 jobs:
   open-launcher:
@@ -36,5 +38,9 @@ jobs:
           echo "Operating system:       ${{ matrix.os }}"
           echo "Processor architecture: $(uname -m)"
           echo "Number of CPU cores:    $(nproc)"
-      - name: Run Stella Launcher
+      - name: Run Stella Mod Launcher
         run: '${{ env.LAUNCHER_EXE }}'
+      - name: Run FPS Unlocker
+        run: '${{ env.UNLOCKER_EXE }}'
+      - name: Run ReShade injector
+        run: '${{ env.INJECTOR_EXE }}'
