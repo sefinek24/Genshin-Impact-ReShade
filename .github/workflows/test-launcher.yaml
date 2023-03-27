@@ -6,9 +6,19 @@ name: Open Stella Launcher
   push:
     branches:
       - main
+    paths-ignore:
+      - '**.yaml'
+      - '**.yml'
+      - '**.md'
+      - '**.html'
   pull_request:
     branches:
       - main
+    paths-ignore:
+      - '**.yaml'
+      - '**.yml'
+      - '**.md'
+      - '**.html'
 
 jobs:
   run-app:

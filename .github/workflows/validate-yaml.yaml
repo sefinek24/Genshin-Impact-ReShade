@@ -6,9 +6,15 @@ name: Validate YAML files
   push:
     branches:
       - main
+    paths:
+      - '**/*.yml'
+      - '**/*.yaml'
   pull_request:
     branches:
       - main
+    paths:
+      - '**/*.yml'
+      - '**/*.yaml'
 
 jobs:
   validate-yaml:
