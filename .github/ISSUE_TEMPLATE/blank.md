@@ -1,7 +1,7 @@
 ---
-name: Blank report
-about: Create a report with blank fields to fill in later.
-labels: issue
+name: Help report
+about: Choose this option if you need help. Create a report with blank fields to fill in later.
+labels: Help
 assignees: ''
 
 ---
