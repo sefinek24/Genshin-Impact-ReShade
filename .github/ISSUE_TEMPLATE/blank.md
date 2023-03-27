@@ -1,6 +1,7 @@
 ---
 name: Blank report
 about: Create a report with blank fields to fill in later.
+labels: issue
 assignees: ''
 
 ---
@@ -14,17 +15,17 @@ assignees: ''
 -->
 
 
-## Description of the issue:
+### Description of the issue:
 
-## Steps to reproduce:
+### Steps to reproduce:
 
-## Expected behavior:
+### Expected behavior:
 
-## Actual behavior:
+### Actual behavior:
 
-## Screenshots (if applicable):
+### Screenshots (if applicable):
 
-## Additional context:
+### Additional context:
 
 
 <!-- Thank you for taking the time to fill out this report! -->
