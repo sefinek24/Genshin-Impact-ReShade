@@ -14,17 +14,12 @@ jobs:
     strategy:
       matrix:
         os: [windows-7, windows-8.1, windows-10, windows-11, windows-latest]
-      steps:
-        - name: Set up Node.js 18
-          uses: actions/setup-node@v2
-          with:
-            node-version: '18'
-        - uses: actions/checkout@v2
-        - name: Run Stella Launcher
-          run: |
-            "./Genshin Stella Mod Launcher.exe" || exit 0
-          continue-on-error: true
-        - name: Do something else
-          if: ${{ success() }}
-          run: |
-            echo "Program ran successfully!"
+    steps:
+      - name: Set up Node.js 18
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+      - uses: actions/checkout@v2
+      - name: Run Stella Launcher
+        run: |
+          "./Genshin Stella Mod Launcher.exe"
