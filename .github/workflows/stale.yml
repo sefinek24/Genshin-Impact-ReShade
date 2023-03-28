@@ -3,9 +3,12 @@
 # You can adjust the behavior by modifying this file.
 # For more information, see:
 # https://github.com/actions/stale
+
+---
+
 name: Mark stale issues and pull requests
 
-on:
+"on":
   schedule:
   - cron: '16 23 * * *'
 
