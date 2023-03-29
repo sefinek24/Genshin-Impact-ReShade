@@ -1,6 +1,12 @@
 <div align="center">
    <h1>📝 » Semantic Versioning 2.0.0</h1>
-   https://semver.org
+   [<a href="https://semver.org">EN</a>]
+   [<a href="https://semver.org/lang/pl">PL</a>]
+   [<a href="https://semver.org/lang/de">DE</a>]
+   [<a href="https://semver.org/lang/nl">NL</a>]
+   [<a href="https://semver.org/lang/ro">RO</a>]
+   [<a href="https://semver.org/lang/jp">JP</a>]
+   [<a href="https://semver.org/lang/ko">KO</a>]
 </div>
 
 ## 📥 Changelog for v6.x.x
