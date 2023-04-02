@@ -18,7 +18,7 @@ echo ===========================================================================
 
 echo 1/2 - Checking administrative permissions...
 net session >nul 2>&1
-if %errorLevel% == 0 (
+if %ErrorLevel% == 0 (
     echo [✓] No problems found. & echo.
 ) else (
     echo [x] Error. This command must be run as administrator.

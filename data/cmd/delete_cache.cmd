@@ -18,7 +18,7 @@ echo ===========================================================================
 
 echo 1/6 - Checking administrative permissions...
 net session >nul 2>&1
-if %errorLevel% == 0 (
+if %ErrorLevel% == 0 (
     echo [✓] No problems found.
 ) else (
     goto missing_perms

@@ -18,7 +18,7 @@ echo ===========================================================================
 
 echo 1/7 - Checking for administrative permissions...
 net session >nul 2>&1
-if %errorLevel% == 0 (
+if %ErrorLevel% == 0 (
     echo [✓] Administrative permissions verified.
     echo.
 ) else (
