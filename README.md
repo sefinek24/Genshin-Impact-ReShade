@@ -92,7 +92,7 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 | 💻 System       | 🔖 Version | 📝 OS Build   | 🙀 Status      | 🤔 Recommended? |
 |-----------------|:-----------|---------------|:---------------|:----------------|
 | Windows 11      | 22H2       | 22621.900     | [✔️](#legend)  | [❌](#legend)    |
-| Windows 10      | 21H2, 22H2 | 19045.2673    | [✔️](#legend)  | [️✔️](#legend)  | 
+| Windows 10      | 21H2       | 19044.2788    | [✔️](#legend)  | [️✔️](#legend)  | 
 | Windows 8 / 8.1 |            | [❓](#legend)  | [🎯️](#legend) | [❌](#legend)    | 
 | Windows 7       |            | [❓](#legend)  | [🎯️](#legend) | [❌](#legend)    | 
 | Android / Linux |            | [❓](#legend)  | [❌](#legend)   | [❌](#legend)    | 
