@@ -107,7 +107,9 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 4. Once the installation is complete, launch Genshin Impact and enjoy the enhanced graphics and visual effects.
 
 ### 📃 GitHub Wiki (extended tutorial)
-> https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-Installation
+1. [Main page](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-Installation)
+2. [Automatic installation](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-Installation#-automatic-installation)
+3. [Manual installation](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-Installation#-manually-installation)
 
 ### ✋ Suggestion
 Kindly avoid downloading files from this repository, including any branches, as the current versions are still in the beta testing phase.
