@@ -100,7 +100,7 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 
 
 ## <div id="installation">📥 » How to install?</div>
-### 📦 Short tutorial
+### 📦 Short tutorial (installation via setup)
 1. Download the latest setup from [my official website](https://genshin.sefinek.net).
 2. Extract the downloaded file to a convenient location on your computer.
 3. Run the setup file `Genshin Impact Mod Setup.exe` and follow the on-screen instructions to install the mod.
