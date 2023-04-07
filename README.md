@@ -24,6 +24,8 @@
 </div>
 
 ## <div id="list">📋 » List</div>
+- [🌠 Genshin Impact Stella Mod Pack](#header)
+- [📃 Changelog](CHANGELOG.md)
 - [⚠️ Important](#important)
 - [📂 Includes](#includes)
 - [📥 How to install](#installation)
@@ -76,6 +78,32 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 2. Extract the downloaded file to a convenient location on your computer.
 3. Run the setup file `Genshin Impact Mod Setup.exe` and follow the on-screen instructions to install the mod.
 4. Once the installation is complete, launch Genshin Impact and enjoy the enhanced graphics and visual effects.
+
+## <div id="pc-requirements">✨ » Requirements</div>
+> 🤔 **Suggestion:**
+> It is recommended to use the installer to automatically install all the required dependencies, which is suitable for most cases.
+> 
+> 📝 **Note:**
+> Make sure your PC meets the following requirements before installing the mod:
+
+| 💻 Your PC & Network Requirements          | 📂 Dependencies                                                                                                                                                                                                       |
+|:-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **OS:** Windows 10/11 (build > 19041)      | [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)                                                                                                                                |
+| **CPU:** 64-bit processor and system       | [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer)                                                                                                      |
+| **GPU:** DirectX 11 support                | [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) (Only for patrons)                                                                                                                                 |
+| **Disk:** At least 1 GB of free disk space | [Windows Terminal](https://github.com/microsoft/terminal/releases)                                                                                                                                                    |
+| **Network:** Good internet connection      | [Microsoft VCLibs](https://learn.microsoft.com/en-us/troubleshoot/developer/visualstudio/cpp/libraries/c-runtime-packages-desktop-bridge#how-to-install-and-update-desktop-framework-packages) (For Windows Terminal) |
+| **BIOS:** UEFI mode enabled                | [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional)                                                                                                           |
+
+## <div id="supported-systems">🔧 » Supported operating systems</div>
+| 💻 System       | 🔖 Version | 📝 OS Build   | 🙀 Status      | 🤔 Recommended? |
+|-----------------|:-----------|---------------|:---------------|:----------------|
+| Windows 11      | 22H2       | 22621.900     | [✔️](#legend)  | [❌](#legend)    |
+| Windows 10      | 21H2, 22H2 | 19045.2673    | [✔️](#legend)  | [️✔️](#legend)  | 
+| Windows 8 / 8.1 |            | [❓](#legend)  | [🎯️](#legend) | [❌](#legend)    | 
+| Windows 7       |            | [❓](#legend)  | [🎯️](#legend) | [❌](#legend)    | 
+| Android / Linux |            | [❓](#legend)  | [❌](#legend)   | [❌](#legend)    | 
+| iOS / macOS     |            | [❓](#legend)️ | [❌](#legend)   | [❌](#legend)    |
 
 ## <div id="tested-game-versions">🛠️ » Tested game versions</div>
 | 🎮 Game version | 😅 Works with mod? | 📆 Date tested   |
