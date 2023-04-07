@@ -77,12 +77,14 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 3. Run the setup file `Genshin Impact Mod Setup.exe` and follow the on-screen instructions to install the mod.
 4. Once the installation is complete, launch Genshin Impact and enjoy the enhanced graphics and visual effects.
 
+> ✋ **Suggestion:**
+> Kindly avoid downloading files from this repository, including any branches, as the current versions are still in the beta testing phase.
+> There is a high likelihood of the mod not functioning properly or encountering other problems.
+> It is strongly recommended that you opt for the installer instead, as it guarantees access to the stable and fully operational version of the mod.
+
 ## <div id="pc-requirements">✨ » Requirements</div>
-> 🤔 **Suggestion:**
-> It is recommended to use the installer to automatically install all the required dependencies, which is suitable for most cases.
-> 
 > 📝 **Note:**
-> Make sure your PC meets the following requirements before installing the mod:
+> Make sure your PC meets the following requirements before installing the mod.
 
 | 💻 Your PC & Network Requirements          | 📂 Dependencies                                                                                                                                                                                                       |
 |:-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
