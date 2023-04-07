@@ -26,12 +26,12 @@
 ## <div id="list">📋 » List</div>
 - [⚠️ Important](#important)
 - [📂 Includes](#includes)
-- [📥 How to install](#installation)
+- [📃 Changelog](CHANGELOG.md)
 - [✨ Requirements](#pc-requirements)
 - [🔧 Supported systems](#supported-systems)
+- [📥 How to install](#installation)
 - [🛠️ Tested game versions](#tested-game-versions)
 - [⚙️ Recommended settings for game](#settings-for-game)
-- [📃 Changelog](CHANGELOG.md)
 - [📷 Other screenshots](#other-screenshots)
 - [🧀 Legend](#legend)
 - [🧶 Sources](#sources)
@@ -42,6 +42,7 @@
     <a href="https://genshin.sefinek.net" title="Official website"><img src="www/images/readme/website.png" alt="Website" height="148px"></a>
     <a href="https://discord.com/invite/SVcbaRc7gH" title="Our Discord server"><img src="www/images/readme/discord.png" alt="Discord" height="148px"></a>
 </div>
+
 
 ## <div id="important">⚠️ » Important</div>
 Please note that sharing any game screenshots that display your UID, visible shaders or ReShade overlay can lead to a ban in the game.
@@ -58,6 +59,7 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 > By using this software, you agree to the terms of the [license agreement](LICENSE).
 > In addition, we are not responsible for any potential bans in the game. Although the chances of this happening are negligible.
 
+
 ## <div id="includes">📂 » Includes</div>
 | 🔍 Name                   | 📃 More information                                                                                                                 | 🌍 URL address                                                  | 📑 License                                                                                 |
 |:--------------------------|:------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|:-------------------------------------------------------------------------------------------|
@@ -70,6 +72,7 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 | Community presets         | Presets created by our community.                                                                                                   | [Folder](data/presets/Made%20by%20community)                    | [CC BY-SA 4.0](data/presets/LICENSE)                                                       |
 | Preset with Ray Tracing   | Only available for Patrons.                                                                                                         | [Patreon](https://www.patreon.com/sefinek)                      |                                                                                            |
 | Crosire's DLL injector    | Just an injector.                                                                                                                   | [Download file](data/reshade/inject64.exe)                      |                                                                                            |
+
 
 ## <div id="pc-requirements">✨ » Requirements</div>
 > 📝 **Note:**
@@ -84,6 +87,7 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 | **Network:** Good internet connection      | [Microsoft VCLibs](https://learn.microsoft.com/en-us/troubleshoot/developer/visualstudio/cpp/libraries/c-runtime-packages-desktop-bridge#how-to-install-and-update-desktop-framework-packages) (For Windows Terminal) |
 | **BIOS:** UEFI mode enabled                | [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional)                                                                                                           |
 
+
 ## <div id="supported-systems">🔧 » Supported operating systems</div>
 | 💻 System       | 🔖 Version | 📝 OS Build   | 🙀 Status      | 🤔 Recommended? |
 |-----------------|:-----------|---------------|:---------------|:----------------|
@@ -94,14 +98,6 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 | Android / Linux |            | [❓](#legend)  | [❌](#legend)   | [❌](#legend)    | 
 | iOS / macOS     |            | [❓](#legend)️ | [❌](#legend)   | [❌](#legend)    |
 
-## <div id="tested-game-versions">🛠️ » Tested game versions</div>
-| 🎮 Game version | 😅 Works with mod? | 📆 Date tested   |
-|-----------------|--------------------|------------------|
-| v3.5.0          | [✔️](#legend)      | March 01, 2023   |
-| v3.4.0          | [✔️](#legend)      | January 18, 2023 |
-| v3.3.0          | [✔️](#legend)      | November 9, 2022 |
-| v3.2.0          | [✔️](#legend)      | November 2, 2022 |
-| v3.1.0          | [✔️](#legend)      | November 1, 2022 |
 
 ## <div id="installation">📥 » How to install?</div>
 1. Download the latest setup from [my official website](https://genshin.sefinek.net).
@@ -120,6 +116,17 @@ Once the game has launched, it is crucial to verify that [the recommended graphi
 Then, adjust the settings according to the recommended values based on your system's capabilities.
 This will help to ensure that the game runs smoothly and looks its best.
 
+
+## <div id="tested-game-versions">🛠️ » Tested game versions</div>
+| 🎮 Game version | 😅 Works with mod? | 📆 Date tested   |
+|-----------------|--------------------|------------------|
+| v3.5.0          | [✔️](#legend)      | March 01, 2023   |
+| v3.4.0          | [✔️](#legend)      | January 18, 2023 |
+| v3.3.0          | [✔️](#legend)      | November 9, 2022 |
+| v3.2.0          | [✔️](#legend)      | November 2, 2022 |
+| v3.1.0          | [✔️](#legend)      | November 1, 2022 |
+
+
 ## <div id="settings-for-game">⚙️ » Recommended settings for game</div>
 | 🔧 Settings            | 📄 Value                               | 🔧 Settings                 | 📄 Value                             |
 |------------------------|----------------------------------------|:----------------------------|:-------------------------------------|
@@ -136,11 +143,6 @@ This will help to ensure that the game runs smoothly and looks its best.
 > 📝 **Note:**  
 > These recommended settings are provided as a general guideline and may vary based on individual player preferences and system specifications. It is recommended that players adjust the settings accordingly to optimize their own experience.
 
-## <div id="legend">🧀 » Legend</div>
-| 🐈 Emoji       | 🤔 Meaning            | 🐈 Emoji      | 🤔 Meaning         | 🐈 Emoji     | 🤔 Meaning   |
-|----------------|-----------------------|:--------------|:-------------------|:-------------|:-------------|
-| [✔️](#legend)  | Yes / Supported       | [❌](#legend)  | No / Not supported | [❓](#legend) | I don't know |
-| [🎯️](#legend) | Default not supported | [🤔](#legend) | Not tested         |              |              |
 
 ## <div id="other-screenshots">📷 » Other screenshots (without Ray Tracing)</div>
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/backgrounds/hutao_1.png" title="See preview [hutao_1.png]">
@@ -159,9 +161,18 @@ This will help to ensure that the game runs smoothly and looks its best.
     <img src="screenshots/default/backgrounds/outdated/kokomi_4.png" alt="Screenshot number 5">
 </a>
 
-> ⚠️ **Warning:**  
-> It is worth noting that relying solely on the screenshots or videos provided may not necessarily provide the most accurate or up-to-date representation of the software or application.
-> This is because the presets, or default settings, are constantly being reviewed and refined by the developers to ensure optimal user experience and address any issues or bugs that may arise.
+
+### ⚠️ Warning
+It is worth noting that relying solely on the screenshots or videos provided may not necessarily provide the most accurate or up-to-date representation of the software or application.
+This is because the presets, or default settings, are constantly being reviewed and refined by the developers to ensure optimal user experience and address any issues or bugs that may arise.
+
+
+## <div id="legend">🧀 » Legend</div>
+| 🐈 Emoji       | 🤔 Meaning            | 🐈 Emoji      | 🤔 Meaning         | 🐈 Emoji     | 🤔 Meaning   |
+|----------------|-----------------------|:--------------|:-------------------|:-------------|:-------------|
+| [✔️](#legend)  | Yes / Supported       | [❌](#legend)  | No / Not supported | [❓](#legend) | I don't know |
+| [🎯️](#legend) | Default not supported | [🤔](#legend) | Not tested         |              |              |
+
 
 ## <div id="sources">🧶 » Sources</div>
 Please note that the icons and stickers used in this project were obtained from different sources.
