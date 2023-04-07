@@ -106,7 +106,7 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 3. Run the setup file `Genshin Impact Mod Setup.exe` and follow the on-screen instructions to install the mod.
 4. Once the installation is complete, launch Genshin Impact and enjoy the enhanced graphics and visual effects.
 
-### 📃 GitHub Wiki (extended tutorial)
+### 📃 Extended tutorial (GitHub Wiki)
 1. [Main page](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-Installation)
 2. [Automatic installation](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-Installation#-automatic-installation)
 3. [Manual installation](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-Installation#-manually-installation)
