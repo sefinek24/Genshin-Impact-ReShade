@@ -109,16 +109,18 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 3. Run the setup file `Genshin Impact Mod Setup.exe` and follow the on-screen instructions to install the mod.
 4. Once the installation is complete, launch Genshin Impact and enjoy the enhanced graphics and visual effects.
 
-> ✋ **Suggestion:**  
-> Kindly avoid downloading files from this repository, including any branches, as the current versions are still in the beta testing phase.
-> There is a high likelihood of the mod not functioning properly or encountering other problems.
-> It is strongly recommended that you opt for the installer instead, as it guarantees access to the stable and fully operational version of the mod.
+> ✋ **Suggestion:**
 
-> 📝 **Note:**  
-> After the installation is complete, you should open the Stella Launcher and start the game by clicking on the "Start game" button.
-> Once the game has launched, it is crucial to verify that [the recommended graphics settings](#settings-for-game) are configured correctly.
-> Then, adjust the settings according to the recommended values based on your system's capabilities.
-> This will help to ensure that the game runs smoothly and looks its best.
+Kindly avoid downloading files from this repository, including any branches, as the current versions are still in the beta testing phase.
+There is a high likelihood of the mod not functioning properly or encountering other problems.
+It is strongly recommended that you opt for the installer instead, as it guarantees access to the stable and fully operational version of the mod.
+
+> 📝 **Note:**
+
+After the installation is complete, you should open the Stella Launcher and start the game by clicking on the "Start game" button.
+Once the game has launched, it is crucial to verify that [the recommended graphics settings](#settings-for-game) are configured correctly.
+Then, adjust the settings according to the recommended values based on your system's capabilities.
+This will help to ensure that the game runs smoothly and looks its best.
 
 ## <div id="settings-for-game">⚙️ » Recommended settings for game</div>
 | 🔧 Settings            | 📄 Value                               | 🔧 Settings                 | 📄 Value                             |
