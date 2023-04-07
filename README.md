@@ -24,17 +24,15 @@
 </div>
 
 ## <div id="list">📋 » List</div>
-- [🌠 Genshin Impact Stella Mod Pack](#header)
-- [📃 Changelog](CHANGELOG.md)
 - [⚠️ Important](#important)
 - [📂 Includes](#includes)
 - [📥 How to install](#installation)
-- [✨ Requirements](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-Installation#-requirements)
-- [🔧 Supported systems](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-Installation#-supported-operating-systems)
+- [✨ Requirements](#pc-requirements)
+- [🔧 Supported systems](#supported-systems)
 - [🛠️ Tested game versions](#tested-game-versions)
 - [⚙️ Recommended settings for game](#settings-for-game)
-- [📷 Other screenshots](#other-screenshots)
 - [📃 Changelog](CHANGELOG.md)
+- [📷 Other screenshots](#other-screenshots)
 - [🧀 Legend](#legend)
 - [🧶 Sources](#sources)
 
