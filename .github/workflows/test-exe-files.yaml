@@ -27,13 +27,8 @@ env:
 
 jobs:
   open-launcher:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os:
-          - windows-10
-          - windows-11
-          - windows-latest
+    runs-on: windows-latest
+
     steps:
       - uses: actions/checkout@v3
       - name: Display system information
