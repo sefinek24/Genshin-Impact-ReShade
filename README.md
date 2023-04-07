@@ -24,17 +24,16 @@
 </div>
 
 ## <div id="list">📋 » List</div>
-- [🌠 Genshin Impact Stella Mod Pack](#header)
-- [📃 Changelog](CHANGELOG.md)
 - [⚠️ Important](#important)
 - [📂 Includes](#includes)
 - [📥 How to install](#installation)
-- [✨ Requirements](#pc-requirements)
-- [🔧 Supported systems](#supported-systems)
+- [✨ Requirements](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-Installation#-requirements)
+- [🔧 Supported systems](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-Installation#-supported-operating-systems)
 - [🛠️ Tested game versions](#tested-game-versions)
 - [⚙️ Recommended settings for game](#settings-for-game)
-- [🧀 Legend](#legend)
 - [📷 Other screenshots](#other-screenshots)
+- [📃 Changelog](CHANGELOG.md)
+- [🧀 Legend](#legend)
 - [🧶 Sources](#sources)
 
 <div align="center">
@@ -77,12 +76,6 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 2. Extract the downloaded file to a convenient location on your computer.
 3. Run the setup file `Genshin Impact Mod Setup.exe` and follow the on-screen instructions to install the mod.
 4. Once the installation is complete, launch Genshin Impact and enjoy the enhanced graphics and visual effects.
-
-## <div id="pc-requirements">✨ » Requirements</div>
-https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-Installation#-requirements
-
-## <div id="supported-systems">🔧 » Supported operating systems</div>
-https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-Installation#-supported-operating-systems
 
 ## <div id="tested-game-versions">🛠️ » Tested game versions</div>
 | 🎮 Game version | 😅 Works with mod? | 📆 Date tested   |
