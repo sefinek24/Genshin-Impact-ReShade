@@ -1,5 +1,5 @@
 <div align="center" id="header">
-    <h1>✨ Genshin Impact Stella Mod Pack - 2023 ✨</h1>
+    <h1>🌟 Genshin Impact Stella Mod Pack - 2023 🌟</h1>
     <div>
         <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/youtube_video.png" title="See preview [Screenshots/Default/youtube_video.png]">
             <img src="screenshots/default/youtube_video_border.png" alt="Header image">
