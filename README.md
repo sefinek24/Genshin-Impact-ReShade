@@ -7,7 +7,7 @@
     </div>
     <h3>
         🌠 » If you want Ray Tracing in game or  private DNS server, become <a href="https://www.patreon.com/sefinek" title="www.patreon.com/sefinek">my Patron</a> « 🌠<br>
-        ⭐ » Star the repo if you liked it « ⭐
+        ⭐ » Star the repo if you liked it! « ⭐
     </h3>
     <br>
     <a href="https://ko-fi.com/sefinek" title="Ko-fi"><img src="https://storage.ko-fi.com/cdn/brandasset/kofi_button_blue.png" height="32" alt="Support me on Ko-fi"></a>
