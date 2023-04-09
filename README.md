@@ -75,8 +75,7 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 
 
 ## <div id="pc-requirements">✨ » Requirements</div>
-> 📝 **Note:**
-> Make sure your PC meets the following requirements before installing the mod.
+> 📝 **Note:** Make sure your PC meets the following requirements before installing the mod.
 
 | 💻 Your PC & Network Requirements          | 📂 Dependencies                                                                                                                                                                                                       |
 |:-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
