@@ -6,7 +6,7 @@
         </a>
     </div>
     <h3>
-        🌠 » If you want Ray Tracing in game and private DNS server, become <a href="https://www.patreon.com/sefinek" title="www.patreon.com/sefinek">my Patron</a> « 🌠<br>
+        🌠 » If you want Ray Tracing in game or  private DNS server, become <a href="https://www.patreon.com/sefinek" title="www.patreon.com/sefinek">my Patron</a> « 🌠<br>
         ⭐ » Star the repo if you liked it « ⭐
     </h3>
     <br>
