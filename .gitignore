@@ -1,7 +1,7 @@
 # Directories
 .vs
 
-# For my patrons
+# For patrons
 data/Patrons
 data/presets/New
 data/presets/Patrons
@@ -10,9 +10,7 @@ data/presets/Other/Previous versions
 
 # Files
 data/unlocker/unlocker.config.json
-Screenshots/*.png
-Screenshots/*.jpg
-Screenshots/*.jpeg
+Screenshots/*
 
 # Configs
 .eslintrc.js
