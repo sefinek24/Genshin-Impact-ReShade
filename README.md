@@ -13,7 +13,7 @@
     <a href="https://github.com/sefinek24/Genshin-Impact-ReShade" title="Repository size"><img src="https://img.shields.io/github/repo-size/sefinek24/Genshin-Impact-ReShade?label=Repo%20size" alt="Repo size"></a>
     <a href="https://github.com/sefinek24/Genshin-Impact-ReShade/commits/main" title="Commit activity"><img src="https://img.shields.io/github/commit-activity/w/sefinek24/Genshin-Impact-ReShade?label=Commit%20activity" alt="Commit activity"></a>
     <a href="https://discord.com/invite/SVcbaRc7gH" title="Official Discord server"><img src="https://img.shields.io/discord/1044713077125435492?label=Discord%20server" alt="Our Discord server"></a>
-    <br><br>
+    <br>
     <h3>
         🌠 » If you want Ray Tracing in game or  private DNS server, become <a href="https://www.patreon.com/sefinek" title="www.patreon.com/sefinek">my Patron</a> « 🌠<br>
         ⭐ » Star the repo if you liked it! « ⭐
