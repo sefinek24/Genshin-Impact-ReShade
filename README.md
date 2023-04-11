@@ -55,7 +55,7 @@ It includes a comprehensive guide on how to install and use ReShade, as well as 
 
 If you need further assistance, feel free to join our [Discord server](https://discord.gg/SVcbaRc7gH).
 Additionally, if you wish to contribute to the project, please create a new [Pull request](https://github.com/sefinek24/Genshin-Impact-ReShade/pulls).
-You can also check out the latest [screenshots](https://sefinek.net/genshin-impact-reshade/gallery?page=1 on our website and watch our [videos](https://sefinek.net/genshin-impact-reshade/videos) on YouTube for more information.
+You can also check out the latest [screenshots](https://sefinek.net/genshin-impact-reshade/gallery?page=1 on our website and watch [videos](https://sefinek.net/genshin-impact-reshade/videos) on YouTube for more information.
 
 Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and [Cloudflare](https://www.cloudflare.com) servers are located in Warsaw and Frankfurt.
 
