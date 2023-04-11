@@ -19,3 +19,8 @@ a:hover {
 a:active {
     color: rgba(86, 98, 246, 0.6);
 }
+
+iframe {
+    width: 700px;
+    height: 400px;
+}
