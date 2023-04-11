@@ -44,19 +44,23 @@
 
 
 ## <div id="important">⚠️ » Important</div>
-Please note that sharing any game screenshots that display your UID, visible shaders or ReShade overlay can lead to a ban in the game.
-If you intend to record a video of the game for purposes such as uploading to YouTube or other platforms, make sure to hide or censor your UID and username to avoid a ban.
+Please note that sharing any game screenshots that display your UID, visible shaders, or ReShade overlay can result in a ban in the game.
+If you plan to record a video of the game for purposes such as uploading to YouTube or other platforms, make sure to hide or censor your UID and username to avoid a ban.
 
 Additionally, we strongly recommend updating your graphics card and chipset drivers to ensure smooth gameplay and minimize any graphics-related issues or potential crashes.
-Please also familiarize yourself with the system requirements.
+Please familiarize yourself with the system requirements as well.
 
-If you need further assistance, feel free to join our [Discord server](https://discord.gg/SVcbaRc7gH).  
-Also, if you wish to contribute to the project, please create a new [Pull Request](https://github.com/sefinek24/Genshin-Impact-ReShade/pulls).  
-You can also check out the latest [screenshots](https://sefinek.net/genshin-impact-reshade/gallery?page=1) on our website and watch our [videos](https://sefinek.net/genshin-impact-reshade/videos) on YouTube for more information.
+Furthermore, for more information and details regarding the Genshin Stella Mod project, you can check out our GitHub wiki.
+It contains a comprehensive guide on how to install and use the ReShade preset, frequently asked questions, and troubleshooting tips.
+
+If you need further assistance, feel free to join our [Discord server](https://discord.gg/SVcbaRc7gH).
+Additionally, if you wish to contribute to the project, please create a new [Pull request](https://github.com/sefinek24/Genshin-Impact-ReShade/pulls).
+You can also check out the latest [screenshots](https://sefinek.net/genshin-impact-reshade/gallery?page=1 on our website and watch our [videos](https://sefinek.net/genshin-impact-reshade/videos) on YouTube for more information.
+
 Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and [Cloudflare](https://www.cloudflare.com) servers are located in Warsaw and Frankfurt.
 
 > By using this software, you agree to the terms of the [license agreement](LICENSE).
-> In addition, we are not responsible for any potential bans in the game. Although the chances of this happening are negligible.
+> In addition, we are not responsible for any potential bans in the game, although the chances of this happening are negligible.
 
 
 ## <div id="includes">📂 » Includes</div>
