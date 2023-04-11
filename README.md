@@ -51,7 +51,7 @@ Additionally, we strongly recommend updating your graphics card and chipset driv
 Please familiarize yourself with the system requirements as well.
 
 Furthermore, for more information and details regarding the Genshin Stella Mod project, you can check out our GitHub wiki.
-It contains a comprehensive guide on how to install and use the ReShade preset, frequently asked questions, and troubleshooting tips.
+It includes a comprehensive guide on how to install and use ReShade, as well as frequently asked questions and troubleshooting tips.
 
 If you need further assistance, feel free to join our [Discord server](https://discord.gg/SVcbaRc7gH).
 Additionally, if you wish to contribute to the project, please create a new [Pull request](https://github.com/sefinek24/Genshin-Impact-ReShade/pulls).
