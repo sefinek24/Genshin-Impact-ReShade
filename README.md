@@ -127,6 +127,7 @@ This will help to ensure that the game runs smoothly and looks its best.
 ## <div id="tested-game-versions">🛠️ » Tested game versions</div>
 | 🎮 Game version | 😅 Works with mod? | 📆 Date tested   |
 |-----------------|--------------------|------------------|
+| v3.6.0          | [✔️](#legend)      | April 12, 2023   |
 | v3.5.0          | [✔️](#legend)      | March 01, 2023   |
 | v3.4.0          | [✔️](#legend)      | January 18, 2023 |
 | v3.3.0          | [✔️](#legend)      | November 9, 2022 |
@@ -141,7 +142,7 @@ This will help to ensure that the game runs smoothly and looks its best.
 | **Display Mode**       | 1920x1080 (or higher) Fullscreen       | **Volumetric Fog**          | On                                   | 
 | **Brightness**         | Default                                | **Reflections**             | On                                   | 
 | **FPS**                | 60 (Do not change if you using unlock) | **Motion Blur**             | Low or Off                           | 
-| **Render Resolution**  | 1.1 or higher                          | **Bloom**                   | On                                   | 
+| **Render Resolution**  | 1.2 or higher                          | **Bloom**                   | On                                   | 
 | **Shadow Quality**     | High                                   | **Crowd Density**           | High                                 | 
 | **Visual Effects**     | High                                   | **Co-Op Teammates Effects** | On                                   | 
 | **SFX Quality**        | High                                   | **Subsurface Scattering**   | High                                 | 
