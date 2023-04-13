@@ -42,7 +42,7 @@ goto nothing_to_do
 
 :nothing_to_do
     set /p 0=
-    exit
+    goto nothing_to_do
 
 :missing_perms
     echo.
