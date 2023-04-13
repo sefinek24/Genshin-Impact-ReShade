@@ -1,6 +1,7 @@
 # Directories
 .vs
 temp
+data/reshade/addons
 
 # For patrons
 data/Patrons
