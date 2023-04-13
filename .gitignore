@@ -1,5 +1,6 @@
 # Directories
 .vs
+temp
 
 # For patrons
 data/Patrons
