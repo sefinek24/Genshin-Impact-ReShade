@@ -31,7 +31,7 @@ set "GamePathSFN=%AppData%\Genshin Stella Mod by Sefinek\game-path.sfn"
 if exist "%GamePathSFN%" (
     echo [✓] %GamePathSFN%
 ) else (
-    echo [x] File "%GamePathSFN%" was not found.
+    echo [x] Not found.
     goto nothing_to_do
 )
 
@@ -39,57 +39,66 @@ set /p GamePath=<"%GamePathSFN%"
 if exist "%GamePath%" (
     echo [✓] %GamePath%
 ) else (
-    echo [x] Folder "%GamePath%" was not found.
+    echo [x] Not found.
     goto nothing_to_do
 )
 echo.
 
 
-echo 3/6 - Deleting %temp%\ReShade...
-if exist "%temp%\ReShade" (
-    rd /s /q "%temp%\ReShade"
-    echo [✓] Deleted ReShade cache.
+echo 3/6 - Deleting temp files...
+set "temp_dir=C:\Genshin-Impact-ReShade\temp"
+echo [i] Path: %temp_dir%
+if exist "%temp_dir%" (
+    del /q "%temp_dir%"
+    echo [✓] Success.
 ) else (
-    echo [x] Folder was not found.
+    echo [x] Not found.
 )
 echo.
 
 
-echo 4/6 - Deleting %AppData%\Genshin Stella Mod by Sefinek\EBWebView...
-if exist "%AppData%\Genshin Stella Mod by Sefinek\EBWebView" (
-    rd /s /q "%AppData%\Genshin Stella Mod by Sefinek\EBWebView"
-    echo [✓] Deleted folder.
+echo 4/6 - Deleting WebView2 cache...
+set "webview_dir=%AppData%\Genshin Stella Mod by Sefinek\EBWebView"
+echo [i] Path: %webview_dir%
+if exist "%webview_dir%" (
+    rd /s /q "%webview_dir%"
+    echo [✓] Success.
 ) else (
-    echo [x] Folder was not found.
+    echo [x] Not found.
 )
 echo.
 
 
-echo 5/6 - Deleting %GamePath%\ReShade.log...
-if exist "%GamePath%\ReShade.log" (
-    del "%GamePath%\ReShade.log"
-    echo [✓] Deleted file.
+echo 5/6 - Deleting ReShade log file...
+set "reshadeLog_file=%GamePath%\Genshin Impact game\ReShade.log"
+echo [i] Path: %reshadeLog_file%
+if exist "%reshadeLog_file%" (
+    del "%reshadeLog_file%"
+    echo [✓] Success.
 ) else (
-    echo [x] File was not found.
+    echo [x] Not found.
 )
 echo.
 
 
-echo 6/6 - Deleting %AppData%\Genshin Stella Mod by Sefinek\logs...
-if exist "%AppData%\Genshin Stella Mod by Sefinek\logs" (
-    rd /s /q "%AppData%\Genshin Stella Mod by Sefinek\logs"
-    echo [✓] Deleted folder.
+echo 6/6 - Deleting Stella Mod logs...
+set "stellaModLogs_dir=%AppData%\Genshin Stella Mod by Sefinek\logs"
+echo [i] Path: %stellaModLogs_dir%
+if exist "%stellaModLogs_dir%" (
+    rd /s /q "%stellaModLogs_dir%"
+    echo [✓] Success.
 ) else (
-    echo [x] Folder was not found.
+    echo [x] Not found.
 )
 echo. && echo.
+
 
 echo [i] Done! You can close this window.
 goto nothing_to_do
 
 :nothing_to_do
     set /p 0=
-    exit
+    goto nothing_to_do
 
 :missing_perms
     echo.
