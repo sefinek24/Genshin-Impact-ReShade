@@ -1,1 +1,0 @@
-Here is path for your ReShade addons.

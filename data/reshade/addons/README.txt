@@ -1,3 +1,5 @@
+Here is path for your ReShade addons.
+
 Addon config should be located in your game files.
 C:\Program Files\Genshin Impact\Genshin Impact game
 
