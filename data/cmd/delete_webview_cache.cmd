@@ -1,5 +1,5 @@
 @echo off
-title Delete WebView2 cache - Genshin Impact Mod Pack 2023
+title Delete WebView2 cache
 chcp 65001 > nul
 echo.⠀   ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⢶⣦⡀
 echo.⠀  ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿

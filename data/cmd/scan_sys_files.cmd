@@ -1,5 +1,5 @@
 @echo off
-title Scan and repair system files - Genshin Impact Mod Pack 2023
+title Scan and repair system files
 chcp 65001 > nul
 echo.⠀   ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⢶⣦⡀
 echo.⠀  ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿

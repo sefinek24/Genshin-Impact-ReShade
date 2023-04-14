@@ -2,7 +2,7 @@
 REM This batch file waits for the Genshin Impact Mod Launcher to start up.
 REM It then exits.
 
-title Waiting for launcher - Genshin Impact Mod Pack 2023
+title Waiting for launcher
 chcp 65001 > nul
 
 REM Wait for the launcher to start up.

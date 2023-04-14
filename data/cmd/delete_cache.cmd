@@ -1,5 +1,5 @@
 @echo off
-title Cache removal tool - Genshin Impact Mod Pack 2023
+title Cache removal tool
 chcp 65001 > nul
 echo.⠀   ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⢶⣦⡀
 echo.⠀  ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿
