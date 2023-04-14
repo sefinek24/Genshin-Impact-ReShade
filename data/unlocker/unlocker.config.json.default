@@ -11,10 +11,10 @@
   "UseCustomRes": false,
   "Fullscreen": true,
   "PopupWindow": false,
-  "AutoClose": false,
+  "AutoClose": true,
   "AutoDisableVSync": true,
   "AutoStart": false,
   "GamePath": null,
-  "ConfigDate": "02.01.2023",
-  "ConfigVersion": "1.1.0"
+  "ConfigDate": "15.04.2023",
+  "ConfigVersion": "1.1.1"
 }
