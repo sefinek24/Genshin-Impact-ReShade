@@ -1,8 +1,8 @@
 <div align="center" id="header">
     <h1>🌟 Genshin Impact Stella Mod Pack - 2023 🌟</h1>
     <p>
-        <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/youtube_video.png" title="See preview [Screenshots/Default/youtube_video.png]">
-            <img src="screenshots/default/youtube_video_border.png" alt="Header image">
+        <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/data/images/banner/border/1.png" title="See preview [data/images/banner/border/1.png]">
+            <img src="data/images/banner/border/1.png" alt="Header image">
         </a>
     </p>
     <a href="https://sefinek.net" title="sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=Website&up_message=Online&url=https%3A%2F%2Fsefinek.net" alt="Status page"></a>
