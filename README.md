@@ -139,33 +139,35 @@ This will help to ensure that the game runs smoothly and looks its best.
 | v3.1.0          | [✔️](#legend)      | November 1, 2022 |
 
 
-## <div id="settings-for-game">⚙️ » Recommended settings for game ()</div>
-| 🔧 Settings                                 | 📄 Value                         | 📄 Value                              |
-|---------------------------------------------|----------------------------------|:--------------------------------------|
-| **Specs**                                   | Intel Core i3-10100 + GTX 1650   | AMD Ryzen 5 3600 + RTX 2060           |
-|                                             |                                  |                                       |
-| **Display Mode**                            | 1920x1080 (or higher) Fullscreen | 1920x1080 (or higher) Fullscreen      |
-| **Brightness**                              | Default                          | Default                               |
-| **FPS (Do not change if you using unlock)** | 60                               | 60                                    |
-| **Render Resolution**                       | 1.0                              | 1.1 or higher                         |
-| **Shadow Quality**                          | Medium                           | Medium                                |
-| **Visual Effects**                          | Medium                           | High                                  |
-| **SFX Quality**                             | Medium                           | High                                  |
-| **Environment Detail**                      | Medium                           | High                                  |
-| **Anti-Aliasing**                           | FSR 2                            | SMAA (Use FSR 2 if you have low FPS)  |
-| **Volumetric Fog**                          | On                               | On                                    |
-| **Reflections**                             | On                               | On                                    |
-| **Motion Blur**                             | Low or Off                       | Low or Off                            |
-| **Bloom**                                   | On                               | On                                    |
-| **Crowd Density**                           | High                             | High                                  |
-| **Co-Op Teammates Effects**                 | On                               | On                                    |
-| **Subsurface Scattering**                   | High                             | High                                  |
-| **Anisotropic Filtering**                   | 4x                               | 16x                                   |
+## <div id="settings-for-game">⚙️ » Recommended settings for game</div>
+| 🔧 Settings                 | 📄 Value                         | 📄 Value                             |
+|-----------------------------|----------------------------------|:-------------------------------------|
+| **Specs**                   | Intel Core i3-10100 + GTX 1650   | AMD Ryzen 5 3600 + RTX 2060          |
+|                             |                                  |                                      |
+| **Display Mode**            | 1920x1080 (or higher) Fullscreen | 1920x1080 (or higher) Fullscreen     |
+| **Brightness**              | Default                          | Default                              |
+| **FPS**                     | 60                               | 60                                   |
+| **Render Resolution**       | 1.0                              | 1.1 or higher                        |
+| **Shadow Quality**          | Medium                           | Medium                               |
+| **Visual Effects**          | Medium                           | High                                 |
+| **SFX Quality**             | Medium                           | High                                 |
+| **Environment Detail**      | Medium                           | High                                 |
+| **Anti-Aliasing**           | FSR 2                            | SMAA (Use FSR 2 if you have low FPS) |
+| **Volumetric Fog**          | On                               | On                                   |
+| **Reflections**             | On                               | On                                   |
+| **Motion Blur**             | Low or Off                       | Low or Off                           |
+| **Bloom**                   | On                               | On                                   |
+| **Crowd Density**           | High                             | High                                 |
+| **Co-Op Teammates Effects** | On                               | On                                   |
+| **Subsurface Scattering**   | High                             | High                                 |
+| **Anisotropic Filtering**   | 4x                               | 16x                                  |
 
 > 📝 **Note:**  
 > These recommended settings are provided as a general guideline and may vary based on individual player preferences and system specifications.
 > It is recommended that players adjust the settings accordingly to optimize their own experience.
 
+> ⚠️ **Warning:**
+> Do not change FPS settings in the game if you are using FPS unlock.
 
 ## <div id="other-screenshots">📷 » Other screenshots (without Ray Tracing)</div>
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/backgrounds/hutao_1.png" title="See preview [hutao_1.png]">
