@@ -174,19 +174,19 @@ You can adjust the presets from very low to very high, which will significantly 
 Do not change FPS settings in the game if you are using FPS unlock.
 
 ## <div id="other-screenshots">📷 » Other screenshots (without Ray Tracing)</div>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/backgrounds/hutao_1.png" title="See preview [hutao_1.png]">
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/data/images/launcher/backgrounds/outdated/hutao_1.png" title="See preview [hutao_1.png]">
     <img src="data/images/launcher/backgrounds/hutao_1.png" alt="Screenshot number 1">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/backgrounds/outdated/kokomi_2.png" title="See preview [kokomi_2.png]">
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/data/images/launcher/backgrounds/outdated/kokomi_2.png" title="See preview [kokomi_2.png]">
     <img src="data/images/launcher/backgrounds/outdated/kokomi_2.png" alt="Screenshot number 2">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/backgrounds/outdated/collei_3.png" title="See preview [collei_3.png]">
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/data/images/launcher/backgrounds/outdated/collei_3.png" title="See preview [collei_3.png]">
     <img src="data/images/launcher/backgrounds/outdated/collei_3.png" alt="Screenshot number 3">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/backgrounds/outdated/collei_1.png" title="See preview [collei_1.png]">
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/data/images/launcher/backgrounds/outdated/collei_1.png" title="See preview [collei_1.png]">
     <img src="data/images/launcher/backgrounds/outdated/collei_1.png" alt="Screenshot number 4">
 </a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/backgrounds/kokomi_4.png" title="See preview [kokomi_4.png]">
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/data/images/launcher/backgrounds/outdated/kokomi_4.png" title="See preview [kokomi_4.png]">
     <img src="data/images/launcher/backgrounds/outdated/kokomi_4.png" alt="Screenshot number 5">
 </a>
 
