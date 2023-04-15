@@ -80,7 +80,7 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 ## <div id="pc-requirements">✨ » Requirements</div>
 > 📝 **Note:** Make sure your PC meets the following requirements before installing the mod.
 
-| 💻 Your PC & Network Requirements          | 📂 Dependencies                                                                                                                                                                                                       |
+| 🗝️ Your PC & Network Requirements         | 📂 Dependencies                                                                                                                                                                                                       |
 |:-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **OS:** Windows 10/11 (build > 19041)      | [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)                                                                                                                                |
 | **CPU:** 64-bit processor and system       | [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer)                                                                                                      |
@@ -91,7 +91,7 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 
 
 ## <div id="supported-systems">🔧 » Supported operating systems</div>
-| 💻 System       | 🔖 Version | 📝 OS Build   | 🙀 Status      | 🤔 Recommended? |
+| 🌌 System       | 🔖 Version | 📝 OS Build   | 🙀 Status      | 🤔 Recommended? |
 |-----------------|:-----------|---------------|:---------------|:----------------|
 | Windows 11      | 22H2       | 22621.900     | [✔️](#legend)  | [❌](#legend)    |
 | Windows 10      | 21H2       | 19044.2788    | [✔️](#legend)  | [️✔️](#legend)  | 
@@ -111,12 +111,12 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 
 After a moment, the game should launch with [ReShade](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/04.-What-is...#-reshade) injected and [FPS Unlocker](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/04.-What-is...#-fps-unlocker).
 
-### 📃 Extended tutorial (GitHub Wiki)
+### 📘 Extended tutorial (GitHub Wiki)
 1. [Main page](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-Installation)
 2. [Automatic installation](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-Installation#-automatic-installation)
 3. [Manual installation](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-Installation#-manually-installation)
 
-### ✋ Suggestion
+### 😼 Suggestion
 Kindly avoid downloading files from this repository, including any branches, as the current versions are still in the beta testing phase.
 There is a high likelihood of the mod not functioning properly or encountering other problems.
 It is strongly recommended that you opt for the installer instead, as it guarantees access to the stable and fully operational version of the mod.
@@ -140,27 +140,25 @@ This will help to ensure that the game runs smoothly and looks its best.
 
 
 ## <div id="settings-for-game">⚙️ » Recommended settings for game</div>
-| 🔧 Settings                 | 📄 Value                         | 📄 Value                             |
-|-----------------------------|----------------------------------|:-------------------------------------|
-| **Specs**                   | Intel Core i3-10100 + GTX 1650   | AMD Ryzen 5 3600 + RTX 2060          |
-|                             |                                  |                                      |
-| **Display Mode**            | 1920x1080 (or higher) Fullscreen | 1920x1080 (or higher) Fullscreen     |
-| **Brightness**              | Default                          | Default                              |
-| **FPS**                     | 60                               | 60                                   |
-| **Render Resolution**       | 1.0                              | 1.1 or higher                        |
-| **Shadow Quality**          | Medium                           | Medium                               |
-| **Visual Effects**          | Medium                           | High                                 |
-| **SFX Quality**             | Medium                           | High                                 |
-| **Environment Detail**      | Medium                           | High                                 |
-| **Anti-Aliasing**           | FSR 2                            | SMAA (Use FSR 2 if you have low FPS) |
-| **Volumetric Fog**          | On                               | On                                   |
-| **Reflections**             | On                               | On                                   |
-| **Motion Blur**             | Low or Off                       | Low or Off                           |
-| **Bloom**                   | On                               | On                                   |
-| **Crowd Density**           | High                             | High                                 |
-| **Co-Op Teammates Effects** | On                               | On                                   |
-| **Subsurface Scattering**   | High                             | High                                 |
-| **Anisotropic Filtering**   | 4x                               | 16x                                  |
+| 🔧 Settings                 | 💻 Intel Core i3-10100 + GTX 1650 | 💻 AMD Ryzen 5 3600 + RTX 2060       |
+|-----------------------------|-----------------------------------|:-------------------------------------|
+| **Display Mode**            | 1920x1080 (or higher) Fullscreen  | 1920x1080 (or higher) Fullscreen     |
+| **Brightness**              | Default                           | Default                              |
+| **FPS**                     | 60                                | 60                                   |
+| **Render Resolution**       | 1.0                               | 1.1 or higher                        |
+| **Shadow Quality**          | Medium                            | Medium                               |
+| **Visual Effects**          | Medium                            | High                                 |
+| **SFX Quality**             | Medium                            | High                                 |
+| **Environment Detail**      | Medium                            | High                                 |
+| **Anti-Aliasing**           | FSR 2                             | SMAA (Use FSR 2 if you have low FPS) |
+| **Volumetric Fog**          | On                                | On                                   |
+| **Reflections**             | On                                | On                                   |
+| **Motion Blur**             | Low or Off                        | Low or Off                           |
+| **Bloom**                   | On                                | On                                   |
+| **Crowd Density**           | High                              | High                                 |
+| **Co-Op Teammates Effects** | On                                | On                                   |
+| **Subsurface Scattering**   | High                              | High                                 |
+| **Anisotropic Filtering**   | 4x                                | 16x                                  |
 
 ### 📝 Note
 These recommended settings are provided as a general guideline and may vary based on individual player preferences and system specifications.
