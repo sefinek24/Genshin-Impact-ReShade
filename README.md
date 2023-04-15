@@ -162,16 +162,16 @@ This will help to ensure that the game runs smoothly and looks its best.
 | **Subsurface Scattering**   | High                             | High                                 |
 | **Anisotropic Filtering**   | 4x                               | 16x                                  |
 
-### 📝 Note:
-> These recommended settings are provided as a general guideline and may vary based on individual player preferences and system specifications.
-> It is recommended that players adjust the settings accordingly to optimize their own experience.
+### 📝 Note
+These recommended settings are provided as a general guideline and may vary based on individual player preferences and system specifications.
+It is recommended that players adjust the settings accordingly to optimize their own experience.
 
-### ⚠️ Warning:
-> Do not change FPS settings in the game if you are using FPS unlock.
+### ⚠️ Warning
+Do not change FPS settings in the game if you are using FPS unlock.
 
-### ⚠️ Important:
-> Please note that there is an additional graphics settings option available in the reshade overlay by changing presets.
-> You can adjust the presets from very low to very high, which will significantly impact the shadows in the game.
+### ⚠️ Important
+Please note that there is an additional graphics settings option available in the reshade overlay by changing presets.
+You can adjust the presets from very low to very high, which will significantly impact the shadows in the game.
 
 ## <div id="other-screenshots">📷 » Other screenshots (without Ray Tracing)</div>
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/backgrounds/hutao_1.png" title="See preview [hutao_1.png]">
