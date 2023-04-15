@@ -36,10 +36,10 @@
 - [🧶 Sources](#sources)
 
 <div align="center">
-    <a href="https://sefinek.net/genshin-impact-reshade/download" title="Download stable release"><img src="www/images/readme/download.png" alt="Download" height="148px"></a>
+    <a href="https://sefinek.net/genshin-impact-reshade/download" title="Download stable release"><img src="data/images/readme/download.png" alt="Download" height="148px"></a>
     <br>
-    <a href="https://genshin.sefinek.net" title="Official website"><img src="www/images/readme/website.png" alt="Website" height="148px"></a>
-    <a href="https://discord.com/invite/SVcbaRc7gH" title="Our Discord server"><img src="www/images/readme/discord.png" alt="Discord" height="148px"></a>
+    <a href="https://genshin.sefinek.net" title="Official website"><img src="data/images/readme/website.png" alt="Website" height="148px"></a>
+    <a href="https://discord.com/invite/SVcbaRc7gH" title="Our Discord server"><img src="data/images/readme/discord.png" alt="Discord" height="148px"></a>
 </div>
 
 
@@ -175,19 +175,19 @@ Do not change FPS settings in the game if you are using FPS unlock.
 
 ## <div id="other-screenshots">📷 » Other screenshots (without Ray Tracing)</div>
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/backgrounds/hutao_1.png" title="See preview [hutao_1.png]">
-    <img src="screenshots/default/backgrounds/hutao_1.png" alt="Screenshot number 1">
+    <img src="data/images/launcher/backgrounds/hutao_1.png" alt="Screenshot number 1">
 </a>
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/backgrounds/outdated/kokomi_2.png" title="See preview [kokomi_2.png]">
-    <img src="screenshots/default/backgrounds/outdated/kokomi_2.png" alt="Screenshot number 2">
+    <img src="data/images/launcher/backgrounds/outdated/kokomi_2.png" alt="Screenshot number 2">
 </a>
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/backgrounds/outdated/collei_3.png" title="See preview [collei_3.png]">
-    <img src="screenshots/default/backgrounds/outdated/collei_3.png" alt="Screenshot number 3">
+    <img src="data/images/launcher/backgrounds/outdated/collei_3.png" alt="Screenshot number 3">
 </a>
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/backgrounds/outdated/collei_1.png" title="See preview [collei_1.png]">
-    <img src="screenshots/default/backgrounds/outdated/collei_1.png" alt="Screenshot number 4">
+    <img src="data/images/launcher/backgrounds/outdated/collei_1.png" alt="Screenshot number 4">
 </a>
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/screenshots/default/backgrounds/kokomi_4.png" title="See preview [kokomi_4.png]">
-    <img src="screenshots/default/backgrounds/outdated/kokomi_4.png" alt="Screenshot number 5">
+    <img src="data/images/launcher/backgrounds/outdated/kokomi_4.png" alt="Screenshot number 5">
 </a>
 
 
