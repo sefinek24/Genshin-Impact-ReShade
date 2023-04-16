@@ -8,7 +8,7 @@ chcp 65001 > nul
 REM Wait for the launcher to start up.
 echo Waiting for launcher...
 cd "...."
-start "" /b "Genshin Impact Mod Launcher.exe"
+start "" /b "Genshin Stella Mod.exe"
 timeout /t 10 > nul
 
 REM Exit.
