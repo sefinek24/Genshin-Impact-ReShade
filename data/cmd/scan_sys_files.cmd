@@ -18,15 +18,14 @@ echo.  ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉�
 echo.   ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟                                          ~ Made by Sefinek
 echo ========================================================================================= & echo.
 
-echo 1/7 - Checking for administrative permissions...
+REM Check if the script is running with administrative permissions
+echo 1/7 - Checking administrative permissions...
 net session >nul 2>&1
-if %ErrorLevel% == 0 (
-    echo [✓] Administrative permissions verified.
-    echo.
+if "%ERRORLEVEL%"=="0" (
+    echo [✓] No problems found. & echo.
 ) else (
-    echo [x] Error: This command must be run as administrator.
-    pause
-    exit
+    echo [x] Error. This command must be run as administrator.
+    goto pause
 )
 
 REM Run System File Checker tool to repair missing or corrupted system files.
@@ -64,5 +63,10 @@ sfc /SCANNOW && echo.
 echo.
 
 echo [i] Done. You can close this window.
-pause
-exit
+goto pause
+
+REM Pause the batch file
+:pause
+    echo.
+    set /p 0=
+    goto pause

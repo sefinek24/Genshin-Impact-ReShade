@@ -20,11 +20,11 @@ echo ===========================================================================
 
 echo 1/2 - Checking administrative permissions...
 net session >nul 2>&1
-if %ErrorLevel% == 0 (
+if "%ERRORLEVEL%"=="0" (
     echo [✓] No problems found. & echo.
 ) else (
     echo [x] Error. This command must be run as administrator.
-    goto :missing_perms
+    goto pause
 )
 
 echo 2/2 - Deleting %AppData%\Genshin Stella Mod by Sefinek\EBWebView...
@@ -42,9 +42,10 @@ echo. && echo.
 echo [i] Done! You can close this window.
 goto nothing_to_do
 
-:nothing_to_do
+:pause
+    echo.
     set /p 0=
-    goto nothing_to_do
+    goto pause
 
 :missing_perms
     echo.

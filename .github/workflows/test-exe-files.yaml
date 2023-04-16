@@ -21,7 +21,7 @@ name: Test executable files
       - '**.html'
 
 env:
-  LAUNCHER_EXE: '"./Genshin Stella Mod Launcher.exe"'
+  LAUNCHER_EXE: '"./Genshin Stella Mod.exe"'
   UNLOCKER_EXE: './data/unlocker/unlockfps_clr.exe'
   INJECTOR_EXE: './data/reshade/inject64.exe'
 

@@ -20,10 +20,11 @@ echo ===========================================================================
 
 echo 1/6 - Checking administrative permissions...
 net session >nul 2>&1
-if %ErrorLevel% == 0 (
-    echo [✓] No problems found.
+if "%ERRORLEVEL%"=="0" (
+    echo [✓] No problems found. & echo.
 ) else (
-    goto missing_perms
+    echo [x] Error. This command must be run as administrator.
+    goto pause
 )
 echo.
 
@@ -101,9 +102,3 @@ goto nothing_to_do
 :nothing_to_do
     set /p 0=
     goto nothing_to_do
-
-:missing_perms
-    echo.
-    echo [x] Error: The script must be run as an administrator.
-    pause
-    exit
