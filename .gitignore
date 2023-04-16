@@ -12,7 +12,10 @@ data/presets/Other/Previous versions
 
 # Files
 data/unlocker/unlocker.config.json
-Screenshots/*
+Screenshots/*.png
+Screenshots/*.jpg
+Screenshots/*.jpeg
+Screenshots/*.bmp
 
 # Configs
 .eslintrc.js
