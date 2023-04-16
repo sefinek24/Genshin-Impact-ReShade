@@ -171,12 +171,17 @@ You can adjust the presets from very low to very high, which will significantly 
 ### ⚠️ Warning
 Do not change FPS settings in the game if you are using FPS unlock.
 
+
 ## <div id="other-screenshots">📷 » Other screenshots (without Ray Tracing)</div>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/data/images/readme/hutao_1.png" title="See preview [hutao_1.png]">
-    <img src="data/images/readme/hutao_1.png" alt="Screenshot number 1">
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/data/images/launcher/backgrounds/nahida/1.png" title="See preview [1.png]">
+    <img src="data/images/launcher/backgrounds/nahida/1.png" alt="Screenshot number 1">
 </a>
-
-
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/data/images/launcher/backgrounds/hutao/4.png" title="See preview [4.png]">
+    <img src="data/images/launcher/backgrounds/hutao/4.png" alt="Screenshot number 2">
+</a>
+<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/data/images/launcher/backgrounds/yaoyao/2.png" title="See preview [2.png]">
+    <img src="data/images/launcher/backgrounds/yaoyao/2.png" alt="Screenshot number 3">
+</a>
 
 ### ⚠️ Warning
 It is worth noting that relying solely on the screenshots or videos provided may not necessarily provide the most accurate or up-to-date representation of the software or application.
