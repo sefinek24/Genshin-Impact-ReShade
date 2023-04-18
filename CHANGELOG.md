@@ -9,6 +9,9 @@
    [<a href="https://semver.org/lang/ko">KO</a>]
 </div>
 
+## 📥 Changelog for v7.x.x
+https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/13.-Changelog-for-v7.x.x
+
 ## 📥 Changelog for v6.x.x
 https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/13.-Changelog-for-v6.x.x
 
