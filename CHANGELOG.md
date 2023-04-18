@@ -10,7 +10,7 @@
 </div>
 
 ## 📥 Changelog for v7.x.x
-https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/13.-Changelog-for-v7.x.x
+https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/14.-Changelog-for-v7.x.x
 
 ## 📥 Changelog for v6.x.x
 https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/13.-Changelog-for-v6.x.x
