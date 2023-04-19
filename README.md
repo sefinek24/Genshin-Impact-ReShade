@@ -105,7 +105,7 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 ### 📦 Short tutorial (installation via setup)
 1. Download the latest setup from [my official website](https://genshin.sefinek.net).
 2. Extract the downloaded file to a convenient location on your computer.
-3. Run the setup file `Genshin Impact Mod Setup.exe` and follow the on-screen instructions to install the mod.
+3. Run the setup file `Genshin Stella Mod Setup.exe` and follow the on-screen instructions to install the mod.
 4. After installing the mod, launch the Stella Launcher and click the `Start game` button.
 5. Select the appropriate number of [frames per second](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/04.-What-is...#-considerations).
 > After a moment, the game should launch with [ReShade](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/04.-What-is...#-reshade) injected and [FPS Unlocker](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/04.-What-is...#-fps-unlocker).
