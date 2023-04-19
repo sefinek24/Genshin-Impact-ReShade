@@ -22,10 +22,11 @@ Steps to reproduce the behavior:
 ### Screenshots
 <!-- If applicable, add screenshots to help explain your problem. -->
 
-### Desktop (please complete the following information):
-- **OS:** [e.g. Windows]
-- **Version:** [e.g. 11]
-- **Build:** [e.g. 19045.2788]
+### Desktop
+<!-- Please complete the following information. -->
+- **OS:** [e.g. Windows 10 22H2]
+- **Build:** [e.g. 19045.2846]
+- **Stella version:** [e.g. v7.0.0.0]
 
 ### Additional context
 <!-- Add any other context about the problem here. -->

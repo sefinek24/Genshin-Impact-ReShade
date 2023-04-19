@@ -11,11 +11,11 @@ Absolutely yes! We welcome community contributions and invite you to create a ne
 
 3. WANT TO BECOME A CONTRIBUTOR?
 We are always looking for new contributors to help improve the project.
-If you're interested, you can create a new Pull Request on our GitHub repository.
+If you are interested, you can create a new Pull Request on our GitHub repository.
 
 4. RAY TRACING
-If you're interested in trying out our Ray Tracing feature (beta release) in Genshin Impact, consider becoming a patron.
-You don't need an Nvidia RTX graphics card to enjoy this feature.
+If you are interested in trying out our Ray Tracing feature (beta release) in Genshin Impact, consider becoming a patron.
+You do not need an Nvidia RTX graphics card to enjoy this feature.
 
 5. DISCORD SERVER
 Join our Discord Server for discussions and support: https://discord.gg/SVcbaRc7gH

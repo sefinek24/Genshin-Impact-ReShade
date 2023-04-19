@@ -1,7 +1,6 @@
 # Directories
 .vs
 data/reshade/cache
-data/reshade/addons
 
 # For patrons
 data/Patrons
