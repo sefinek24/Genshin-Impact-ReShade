@@ -17,4 +17,4 @@ Set outFile = fso.CreateTextFile(appDataPath & "\Genshin Stella Mod by Sefinek\g
 outFile.Write(userInput)
 outFile.Close
 
-MsgBox "Your game version has been saved! You may now close this.", vbInformation, "Genshin Stella Mod
+MsgBox "Your game version has been saved! You may now close this.", vbInformation, "Genshin Stella Mod"
