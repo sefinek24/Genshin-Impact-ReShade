@@ -6,7 +6,7 @@ chcp 65001 > NUL
 echo.⠀   ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⢶⣦⡀
 echo.⠀  ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿
 echo.⠀   ⠀⣿⡄⠀⠀⠀⠈⠀⠀⠀⠀⣾⡿                              Genshin Impact Stella Mod 2023
-echo.   ⠀⠀⠹⣿⣦⡀⠀⠀⠀⠀⢀⣾⣿                                       Start the game
+echo.   ⠀⠀⠹⣿⣦⡀⠀⠀⠀⠀⢀⣾⣿                                   Delete WebView2 cache
 echo.⠀   ⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿
 echo.    ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟
 echo. ⠀   ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀
@@ -23,7 +23,7 @@ net session >nul 2>&1
 if "%ERRORLEVEL%"=="0" (
     echo [✓] No problems found. & echo.
 ) else (
-    echo [x] Error. This command must be run as administrator.
+    echo [x] Error: This file needs to be executed with administrative privileges.
     goto pause
 )
 
@@ -40,7 +40,7 @@ if exist "%AppData%\Genshin Stella Mod by Sefinek\EBWebView" (
 echo. && echo.
 
 echo [i] Done! You can close this window.
-goto nothing_to_do
+goto pause
 
 :pause
     echo.

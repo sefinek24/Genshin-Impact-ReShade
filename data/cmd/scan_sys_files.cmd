@@ -24,7 +24,7 @@ net session >nul 2>&1
 if "%ERRORLEVEL%"=="0" (
     echo [✓] No problems found. & echo.
 ) else (
-    echo [x] Error. This command must be run as administrator.
+    echo [x] Error: This file needs to be executed with administrative privileges.
     goto pause
 )
 

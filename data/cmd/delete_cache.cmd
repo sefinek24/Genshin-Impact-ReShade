@@ -23,7 +23,7 @@ net session >nul 2>&1
 if "%ERRORLEVEL%"=="0" (
     echo [✓] No problems found. & echo.
 ) else (
-    echo [x] Error. This command must be run as administrator.
+    echo [x] Error: This file needs to be executed with administrative privileges.
     goto pause
 )
 echo.
@@ -35,7 +35,7 @@ if exist "%GamePathSFN%" (
     echo [✓] %GamePathSFN%
 ) else (
     echo [x] Not found.
-    goto nothing_to_do
+    goto pause
 )
 
 set /p GamePath=<"%GamePathSFN%"
@@ -43,16 +43,23 @@ if exist "%GamePath%" (
     echo [✓] %GamePath%
 ) else (
     echo [x] Not found.
-    goto nothing_to_do
+    goto pause
 )
 echo.
 
 
 echo 3/6 - Deleting temp files...
-set "temp_dir=C:\Genshin-Impact-ReShade\temp"
-echo [i] Path: %temp_dir%
-if exist "%temp_dir%" (
-    del /q "%temp_dir%"
+set "TempDir=C:\Genshin-Impact-ReShade\data\reshade\cache"
+echo [i] Path: %TempDir%
+if exist "%TempDir%" (
+    pushd "%TempDir%"
+    for %%I in (*) do (
+      if not "%%~nxI"=="null" (
+        del /f /q "%%I"
+      )
+    )
+    popd
+
     echo [✓] Success.
 ) else (
     echo [x] Not found.
@@ -61,10 +68,10 @@ echo.
 
 
 echo 4/6 - Deleting WebView2 cache...
-set "webview_dir=%AppData%\Genshin Stella Mod by Sefinek\EBWebView"
-echo [i] Path: %webview_dir%
-if exist "%webview_dir%" (
-    rd /s /q "%webview_dir%"
+set "WebviewDir=%AppData%\Genshin Stella Mod by Sefinek\EBWebView"
+echo [i] Path: %WebviewDir%
+if exist "%WebviewDir%" (
+    rd /s /q "%WebviewDir%"
     echo [✓] Success.
 ) else (
     echo [x] Not found.
@@ -73,10 +80,10 @@ echo.
 
 
 echo 5/6 - Deleting ReShade log file...
-set "reshadeLog_file=%GamePath%\Genshin Impact game\ReShade.log"
-echo [i] Path: %reshadeLog_file%
-if exist "%reshadeLog_file%" (
-    del "%reshadeLog_file%"
+set "ReShadeLogFile=%GamePath%\Genshin Impact game\ReShade.log"
+echo [i] Path: %ReShadeLogFile%
+if exist "%ReShadeLogFile%" (
+    del "%ReShadeLogFile%"
     echo [✓] Success.
 ) else (
     echo [x] Not found.
@@ -85,10 +92,10 @@ echo.
 
 
 echo 6/6 - Deleting Stella Mod logs...
-set "stellaModLogs_dir=%AppData%\Genshin Stella Mod by Sefinek\logs"
-echo [i] Path: %stellaModLogs_dir%
-if exist "%stellaModLogs_dir%" (
-    rd /s /q "%stellaModLogs_dir%"
+set "StellaModLogsDir=%AppData%\Genshin Stella Mod by Sefinek\logs"
+echo [i] Path: %StellaModLogsDir%
+if exist "%StellaModLogsDir%" (
+    rd /s /q "%StellaModLogsDir%"
     echo [✓] Success.
 ) else (
     echo [x] Not found.
@@ -97,8 +104,8 @@ echo. && echo.
 
 
 echo [i] Done! You can close this window.
-goto nothing_to_do
+goto pause
 
-:nothing_to_do
+:pause
     set /p 0=
-    goto nothing_to_do
+    goto pause
