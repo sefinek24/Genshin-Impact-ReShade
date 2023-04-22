@@ -8,6 +8,9 @@ data/presets/New
 data/presets/Patrons
 data/presets/For Patrons
 data/presets/Other/Previous versions
+data/reshade/addons/licenses/ReshadeEffectShaderToggler.md
+data/reshade/addons/ReshadeEffectShaderToggler.addon64
+data/reshade/addons/ReshadeEffectShaderToggler.ini
 
 # Files
 data/unlocker/unlocker.config.json
