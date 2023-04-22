@@ -26,7 +26,6 @@ if "%ERRORLEVEL%"=="0" (
     echo [x] Error: This file needs to be executed with administrative privileges.
     goto pause
 )
-echo.
 
 
 echo 2/6 - Checking required files and folders...
