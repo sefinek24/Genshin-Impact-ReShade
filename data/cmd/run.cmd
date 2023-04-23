@@ -29,13 +29,13 @@ if "%ERRORLEVEL%"=="0" (
     goto pause
 )
 
-set "OutputFilePath=%AppData%\Genshin Stella Mod by Sefinek\logs\cmd_output.log"
+set "OutputLog=%AppData%\Genshin Stella Mod by Sefinek\logs\cmd.output.log"
 
 REM Check for required processes
 echo 2/4 - Checking required processes...
 tasklist /fi "ImageName eq Genshin Stella Mod.exe" /fo csv | find /I "Genshin Stella Mod.exe" >NUL && (
-    echo [%DATE% %TIME%]: Killing "Genshin Stella Mod.exe" process... >> "%OutputFilePath%"
-    taskkill /F /IM "Genshin Stella Mod.exe" >> "%OutputFilePath%"
+    echo [%DATE% %TIME%]: Killing "Genshin Stella Mod.exe" process... >> "%OutputLog%"
+    taskkill /F /IM "Genshin Stella Mod.exe" >> "%OutputLog%"
 
     echo [i] Genshin Stella Mod.exe - Closed
 ) || (
@@ -43,8 +43,8 @@ tasklist /fi "ImageName eq Genshin Stella Mod.exe" /fo csv | find /I "Genshin St
 )
 
 tasklist /fi "ImageName eq GenshinImpact.exe" /fo csv | find /I "GenshinImpact.exe" >NUL && (
-    echo [%DATE% %TIME%]: Killing "GenshinImpact.exe" process... >> "%OutputFilePath%"
-    taskkill /F /IM "GenshinImpact.exe" >> "%OutputFilePath%"
+    echo [%DATE% %TIME%]: Killing "GenshinImpact.exe" process... >> "%OutputLog%"
+    taskkill /F /IM "GenshinImpact.exe" >> "%OutputLog%"
 
     echo [i] GenshinImpact.exe      - Closed
 ) || (
@@ -52,17 +52,26 @@ tasklist /fi "ImageName eq GenshinImpact.exe" /fo csv | find /I "GenshinImpact.e
 )
 
 tasklist /fi "ImageName eq YuanShen.exe" /fo csv | find /I "YuanShen.exe" >NUL && (
-    echo [%DATE% %TIME%]: Killing "YuanShen.exe" process... >> "%OutputFilePath%"
-    taskkill /F /IM "YuanShen.exe" >> "%OutputFilePath%"
+    echo [%DATE% %TIME%]: Killing "YuanShen.exe" process... >> "%OutputLog%"
+    taskkill /F /IM "YuanShen.exe" >> "%OutputLog%"
 
     echo [i] YuanShen.exe           - Closed
 ) || (
     echo [✓] YuanShen.exe           - OK
 )
 
+tasklist /fi "ImageName eq launcher.exe" /fo csv | find /I "launcher.exe" >NUL && (
+    echo [%DATE% %TIME%]: Killing "launcher.exe" process... >> "%OutputLog%"
+    taskkill /F /IM "Ylauncher.exe" >> "%OutputLog%"
+
+    echo [i] launcher.exe           - Closed
+) || (
+    echo [✓] launcher.exe           - OK
+)
+
 tasklist /fi "ImageName eq unlockfps_clr.exe" /fo csv | find /I "unlockfps_clr.exe" >NUL && (
-    echo [%DATE% %TIME%]: Killing "unlockfps_clr.exe" process... >> "%OutputFilePath%"
-    taskkill /F /IM "unlockfps_clr.exe" >> "%OutputFilePath%"
+    echo [%DATE% %TIME%]: Killing "unlockfps_clr.exe" process... >> "%OutputLog%"
+    taskkill /F /IM "unlockfps_clr.exe" >> "%OutputLog%"
 
     echo [i] unlockfps_clr.exe      - Closed
 ) || (
@@ -70,8 +79,8 @@ tasklist /fi "ImageName eq unlockfps_clr.exe" /fo csv | find /I "unlockfps_clr.e
 )
 
 tasklist /fi "ImageName eq inject64.exe" /fo csv | find /I "inject64.exe" >NUL && (
-    echo [%DATE% %TIME%]: Killing "inject64.exe" process... >> "%OutputFilePath%"
-    taskkill /F /IM "inject64.exe" >> "%OutputFilePath%"
+    echo [%DATE% %TIME%]: Killing "inject64.exe" process... >> "%OutputLog%"
+    taskkill /F /IM "inject64.exe" >> "%OutputLog%"
 
     echo [i] inject64.exe           - Closed
 ) || (
