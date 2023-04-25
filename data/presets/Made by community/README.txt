@@ -1,4 +1,4 @@
-.-* Genshin Impact Stella Mod Presets *-.
+.-* Genshin Stella Mod - Community presets *-.
 
 This folder contains community-made ReShade presets for Genshin Impact, a popular open-world action RPG.
 Valid filename: <Discord username> <Discord tag>.txt
