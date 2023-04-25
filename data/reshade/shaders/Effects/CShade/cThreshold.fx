@@ -38,7 +38,7 @@ float4 PS_Threshold(VS2PS_Quad Input) : SV_TARGET0
 {
     const float Knee = mad(_Threshold, _Smooth, 1e-5f);
     const float3 Curve = float3(_Threshold - Knee, Knee * 2.0, 0.25 / Knee);
-    float4 Color = tex2D(SampleColorTex, Input.Tex0);
+    float4 Color = tex2D(CShade_SampleColorTex, Input.Tex0);
 
     // Under-threshold
     float Brightness = Med3(Color.r, Color.g, Color.b);
@@ -51,13 +51,11 @@ float4 PS_Threshold(VS2PS_Quad Input) : SV_TARGET0
     return saturate(lerp(Brightness, Color, _Saturation) * _Intensity);
 }
 
-technique cThreshold
+technique CShade_Threshold
 {
     pass
     {
-        #if BUFFER_COLOR_BIT_DEPTH == 8
-            SRGBWriteEnable = TRUE;
-        #endif
+        SRGBWriteEnable = WRITE_SRGB;
 
         VertexShader = VS_Quad;
         PixelShader = PS_Threshold;

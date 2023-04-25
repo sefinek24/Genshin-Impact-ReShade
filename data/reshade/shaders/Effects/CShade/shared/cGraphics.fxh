@@ -2,13 +2,15 @@
 #if !defined(CGRAPHICS_FXH)
     #define CGRAPHICS_FXH
 
+    #include "cMacros.fxh"
+
     static const float Pi = 3.1415926535897932384626433832795;
 
-    texture2D ColorTex : COLOR;
+    texture2D CShade_ColorTex : COLOR;
 
-    sampler2D SampleColorTex
+    sampler2D CShade_SampleColorTex
     {
-        Texture = ColorTex;
+        Texture = CShade_ColorTex;
         MagFilter = LINEAR;
         MinFilter = LINEAR;
         MipFilter = LINEAR;
