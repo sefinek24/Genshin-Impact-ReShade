@@ -16,6 +16,7 @@ data/reshade/addons/ReshadeEffectShaderToggler.ini
 
 # Files
 data/unlocker/unlocker.config.json
+data/sounds/*.mp3
 Screenshots/*.png
 Screenshots/*.jpg
 Screenshots/*.jpeg
