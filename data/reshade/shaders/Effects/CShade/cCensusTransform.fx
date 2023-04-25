@@ -40,15 +40,15 @@ float4 PS_Census(VS2PS_Census Input) : SV_TARGET0
     const int Neighbors = 8;
     float SampleNeighbor[Neighbors];
 
-    float CenterSample = GetGreyScale(tex2D(CShade_SampleColorTex, Input.Tex1.xz));
-    SampleNeighbor[0] = GetGreyScale(tex2D(CShade_SampleColorTex, Input.Tex0.xy));
-    SampleNeighbor[1] = GetGreyScale(tex2D(CShade_SampleColorTex, Input.Tex1.xy));
-    SampleNeighbor[2] = GetGreyScale(tex2D(CShade_SampleColorTex, Input.Tex2.xy));
-    SampleNeighbor[3] = GetGreyScale(tex2D(CShade_SampleColorTex, Input.Tex0.xz));
-    SampleNeighbor[4] = GetGreyScale(tex2D(CShade_SampleColorTex, Input.Tex2.xz));
-    SampleNeighbor[5] = GetGreyScale(tex2D(CShade_SampleColorTex, Input.Tex0.xw));
-    SampleNeighbor[6] = GetGreyScale(tex2D(CShade_SampleColorTex, Input.Tex1.xw));
-    SampleNeighbor[7] = GetGreyScale(tex2D(CShade_SampleColorTex, Input.Tex2.xw));
+    float CenterSample = GetGreyScale(tex2D(SampleColorTex, Input.Tex1.xz));
+    SampleNeighbor[0] = GetGreyScale(tex2D(SampleColorTex, Input.Tex0.xy));
+    SampleNeighbor[1] = GetGreyScale(tex2D(SampleColorTex, Input.Tex1.xy));
+    SampleNeighbor[2] = GetGreyScale(tex2D(SampleColorTex, Input.Tex2.xy));
+    SampleNeighbor[3] = GetGreyScale(tex2D(SampleColorTex, Input.Tex0.xz));
+    SampleNeighbor[4] = GetGreyScale(tex2D(SampleColorTex, Input.Tex2.xz));
+    SampleNeighbor[5] = GetGreyScale(tex2D(SampleColorTex, Input.Tex0.xw));
+    SampleNeighbor[6] = GetGreyScale(tex2D(SampleColorTex, Input.Tex1.xw));
+    SampleNeighbor[7] = GetGreyScale(tex2D(SampleColorTex, Input.Tex2.xw));
 
     // Generate 8-bit integer from the 8-pixel neighborhood
     for(int i = 0; i < Neighbors; i++)
@@ -61,11 +61,13 @@ float4 PS_Census(VS2PS_Census Input) : SV_TARGET0
     return OutputColor0 * (1.0 / (exp2(8) - 1));
 }
 
-technique CShade_CensusTransform
+technique cCensusTransform
 {
     pass
     {
-        SRGBWriteEnable = WRITE_SRGB;
+        #if BUFFER_COLOR_BIT_DEPTH == 8
+            SRGBWriteEnable = TRUE;
+        #endif
 
         VertexShader = VS_Census;
         PixelShader = PS_Census;

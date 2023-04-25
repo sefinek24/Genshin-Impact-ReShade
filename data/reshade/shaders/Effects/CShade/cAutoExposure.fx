@@ -1,4 +1,5 @@
 
+#include "shared/cMacros.fxh"
 #include "shared/cGraphics.fxh"
 
 uniform float _TimeRate <
@@ -25,7 +26,7 @@ CREATE_SAMPLER(SampleLumaTex, LumaTex, LINEAR, CLAMP)
 
 float4 PS_Blit(VS2PS_Quad Input) : SV_TARGET0
 {
-    float4 Color = tex2D(CShade_SampleColorTex, Input.Tex0);
+    float4 Color = tex2D(SampleColorTex, Input.Tex0);
 
     // OutputColor0.rgb = Output the highest brightness out of red/green/blue component
     // OutputColor0.a = Output the weight for temporal blending
@@ -36,7 +37,7 @@ float4 PS_Exposure(VS2PS_Quad Input) : SV_TARGET0
 {
     // Average Luma = Average value (1x1) for all of the pixels
     float AverageLuma = tex2Dlod(SampleLumaTex, float4(Input.Tex0, 0.0, 8.0)).r;
-    float4 Color = tex2D(CShade_SampleColorTex, Input.Tex0);
+    float4 Color = tex2D(SampleColorTex, Input.Tex0);
 
     // KeyValue is an exposure compensation curve
     // Source: https://knarkowicz.wordpress.com/2016/01/09/automatic-exposure/
@@ -45,7 +46,7 @@ float4 PS_Exposure(VS2PS_Quad Input) : SV_TARGET0
     return Color * exp2(ExposureValue);
 }
 
-technique CShade_AutoExposure
+technique cAutoExposure
 {
     pass
     {
@@ -62,7 +63,9 @@ technique CShade_AutoExposure
 
     pass
     {
-        SRGBWriteEnable = WRITE_SRGB;
+        #if BUFFER_COLOR_BIT_DEPTH == 8
+            SRGBWriteEnable = TRUE;
+        #endif
 
         VertexShader = VS_Quad;
         PixelShader = PS_Exposure;

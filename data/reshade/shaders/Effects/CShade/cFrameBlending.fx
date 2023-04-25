@@ -1,4 +1,5 @@
 
+#include "shared/cMacros.fxh"
 #include "shared/cGraphics.fxh"
 
 uniform float _BlendFactor <
@@ -17,7 +18,7 @@ CREATE_SRGB_SAMPLER(SampleBlendTex, BlendTex, 1, CLAMP)
 float4 PS_Blend(VS2PS_Quad Input) : SV_TARGET0
 {
     // Copy backbuffer to a that continuously blends with its previous result 
-    return float4(tex2D(CShade_SampleColorTex, Input.Tex0).rgb, _BlendFactor);
+    return float4(tex2D(SampleColorTex, Input.Tex0).rgb, _BlendFactor);
 }
 
 float4 PS_Display(VS2PS_Quad Input) : SV_TARGET0
@@ -26,7 +27,7 @@ float4 PS_Display(VS2PS_Quad Input) : SV_TARGET0
     return tex2D(SampleBlendTex, Input.Tex0);
 }
 
-technique CShade_FrameBlending
+technique cFrameBlending
 {
     pass
     {
@@ -35,7 +36,9 @@ technique CShade_FrameBlending
         BlendOp = ADD;
         SrcBlend = INVSRCALPHA;
         DestBlend = SRCALPHA;
-        SRGBWriteEnable = WRITE_SRGB;
+        #if BUFFER_COLOR_BIT_DEPTH == 8
+            SRGBWriteEnable = TRUE;
+        #endif
 
         VertexShader = VS_Quad;
         PixelShader = PS_Blend;
@@ -44,7 +47,9 @@ technique CShade_FrameBlending
 
     pass
     {
-        SRGBWriteEnable = WRITE_SRGB;
+        #if BUFFER_COLOR_BIT_DEPTH == 8
+            SRGBWriteEnable = TRUE;
+        #endif
 
         VertexShader = VS_Quad;
         PixelShader = PS_Display;

@@ -17,7 +17,7 @@ float4 PS_Color(VS2PS_Quad Input) : SV_TARGET0
 }
 
 // Use BlendOp to multiple the backbuffer with this quad's color
-technique CShade_ColorBlendOp
+technique cColorBlendOp
 {
     pass
     {
@@ -25,7 +25,9 @@ technique CShade_ColorBlendOp
         BlendOp = ADD;
         SrcBlend = DESTCOLOR;
         DestBlend = SRCALPHA;
-        SRGBWriteEnable = WRITE_SRGB;
+        #if BUFFER_COLOR_BIT_DEPTH == 8
+            SRGBWriteEnable = TRUE;
+        #endif
 
         VertexShader = VS_Quad;
         PixelShader = PS_Color;

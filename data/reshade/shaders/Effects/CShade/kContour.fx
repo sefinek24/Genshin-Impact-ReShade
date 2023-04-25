@@ -224,7 +224,7 @@ float3 PS_Grad(VS2PS_Grad Input) : SV_TARGET0
         1.0 / 16.0, // 3x3 Scharr
     };
 
-    Grad Grad = GetGrad(Input, CShade_SampleColorTex);
+    Grad Grad = GetGrad(Input, SampleColorTex);
     Grad.Ix = Grad.Ix * GradWeights[_Method];
     Grad.Iy = Grad.Iy * GradWeights[_Method];
 
@@ -234,17 +234,19 @@ float3 PS_Grad(VS2PS_Grad Input) : SV_TARGET0
     // Thresholding
     I = I * _ColorSensitivity;
 
-    float3 Base = tex2D(CShade_SampleColorTex, Input.Tex0.xy).rgb;
+    float3 Base = tex2D(SampleColorTex, Input.Tex0.xy).rgb;
     I = saturate((I - _Threshold) * _InverseRange);
     float3 BackgoundColor = lerp(Base.rgb, _BackColor.rgb, _BackColor.a);
     return lerp(BackgoundColor, _FrontColor.rgb, I.a * _FrontColor.a);
 }
 
-technique CShade_KinoContour
+technique kContour
 {
     pass
     {
-        SRGBWriteEnable = WRITE_SRGB;
+        #if BUFFER_COLOR_BIT_DEPTH == 8
+            SRGBWriteEnable = TRUE;
+        #endif
         
         VertexShader = VS_Grad;
         PixelShader = PS_Grad;

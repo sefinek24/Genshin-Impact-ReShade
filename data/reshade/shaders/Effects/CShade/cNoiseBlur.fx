@@ -36,17 +36,19 @@ float4 PS_NoiseBlur(VS2PS_Quad Input) : SV_TARGET0
     for(int i = 0; i < _Samples; i++)
     {
         float2 SampleOffset = mul(SampleVogel(i, _Samples) * _Radius, RotationMatrix);
-        OutputColor += tex2Dlod(CShade_SampleColorTex, float4(Input.Tex0 + (SampleOffset * PixelSize), 0.0, 0.0));
+        OutputColor += tex2Dlod(SampleColorTex, float4(Input.Tex0 + (SampleOffset * PixelSize), 0.0, 0.0));
     }
 
     return OutputColor / _Samples;
 }
 
-technique CShade_NoiseBlur
+technique cNoiseBlur
 {
     pass
     {
-        SRGBWriteEnable = WRITE_SRGB;
+        #if BUFFER_COLOR_BIT_DEPTH == 8
+            SRGBWriteEnable = TRUE;
+        #endif
 
         VertexShader = VS_Quad;
         PixelShader = PS_NoiseBlur;

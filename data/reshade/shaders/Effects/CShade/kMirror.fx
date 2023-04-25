@@ -58,14 +58,16 @@ float4 PS_Mirror(VS2PS_Quad Input) : SV_TARGET0
 
     // Reflection at the border of the screen.
     Input.Tex0 = max(min(Input.Tex0, 2.0 - Input.Tex0), -Input.Tex0);
-    return tex2D(CShade_SampleColorTex, Input.Tex0);
+    return tex2D(SampleColorTex, Input.Tex0);
 }
 
-technique CShade_KinoMirror
+technique kMirror
 {
     pass
     {
-        SRGBWriteEnable = WRITE_SRGB;
+        #if BUFFER_COLOR_BIT_DEPTH == 8
+            SRGBWriteEnable = TRUE;
+        #endif
 
         VertexShader = VS_Quad;
         PixelShader = PS_Mirror;

@@ -1,6 +1,7 @@
 
 namespace cDiscBlur
 {
+    #include "shared/cMacros.fxh"
     #include "shared/cGraphics.fxh"
     #include "shared/cImageProcessing.fxh"
 
@@ -36,7 +37,7 @@ namespace cDiscBlur
 
     float4 PS_GenMipLevels(VS2PS_Quad Input) : SV_TARGET0
     {
-        return tex2D(CShade_SampleColorTex, Input.Tex0);
+        return tex2D(SampleColorTex, Input.Tex0);
     }
 
     float4 PS_VogelBlur(VS2PS_Quad Input) : SV_TARGET0
@@ -63,7 +64,7 @@ namespace cDiscBlur
         return OutputColor;
     }
 
-    technique CShade_Blur
+    technique cBlur
     {
         pass GenMipLevels
         {

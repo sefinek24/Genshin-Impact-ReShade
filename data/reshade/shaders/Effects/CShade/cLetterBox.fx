@@ -16,7 +16,7 @@ float4 PS_Letterbox(VS2PS_Quad Input) : SV_TARGET0
     return Shaper.xxxx * Shaper.yyyy;
 }
 
-technique CShade_LetterBox
+technique cLetterBox
 {
     pass
     {
@@ -26,7 +26,9 @@ technique CShade_LetterBox
         BlendOp = ADD;
         SrcBlend = DESTCOLOR;
         DestBlend = ZERO;
-        SRGBWriteEnable = WRITE_SRGB;
+        #if BUFFER_COLOR_BIT_DEPTH == 8
+            SRGBWriteEnable = TRUE;
+        #endif
 
         VertexShader = VS_Quad;
         PixelShader = PS_Letterbox;

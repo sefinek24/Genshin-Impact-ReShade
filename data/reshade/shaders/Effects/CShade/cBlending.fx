@@ -1,4 +1,5 @@
 
+#include "shared/cMacros.fxh"
 #include "shared/cGraphics.fxh"
 
 uniform int _Blend <
@@ -22,13 +23,13 @@ CREATE_TEXTURE(SrcTex, BUFFER_SIZE_0, RGBA8, 1)
 
 // Inputs in cBlendBuffer
 CREATE_SRGB_SAMPLER(SampleSrcTex, SrcTex, LINEAR, CLAMP)
-CREATE_SRGB_SAMPLER(SampleDestTex, CShade_ColorTex, LINEAR, CLAMP)
+CREATE_SRGB_SAMPLER(SampleDestTex, ColorTex, LINEAR, CLAMP)
 
 // Pixel shaders
 
 float4 PS_Copy(VS2PS_Quad Input) : SV_TARGET0
 {
-    return tex2D(CShade_SampleColorTex, Input.Tex0);
+    return tex2D(SampleColorTex, Input.Tex0);
 }
 
 float4 PS_Blend(VS2PS_Quad Input) : SV_TARGET0
@@ -66,11 +67,13 @@ float4 PS_Blend(VS2PS_Quad Input) : SV_TARGET0
     return OutputColor;
 }
 
-technique CShade_CopyBuffer
+technique cCopyBuffer
 {
     pass
     {
-        SRGBWriteEnable = WRITE_SRGB;
+        #if BUFFER_COLOR_BIT_DEPTH == 8
+            SRGBWriteEnable = TRUE;
+        #endif
 
         VertexShader = VS_Quad;
         PixelShader = PS_Copy;
@@ -78,11 +81,13 @@ technique CShade_CopyBuffer
     }
 }
 
-technique CShade_BlendBuffer
+technique cBlendBuffer
 {
     pass
     {
-        SRGBWriteEnable = WRITE_SRGB;
+        #if BUFFER_COLOR_BIT_DEPTH == 8
+            SRGBWriteEnable = TRUE;
+        #endif
 
         VertexShader = VS_Quad;
         PixelShader = PS_Blend;

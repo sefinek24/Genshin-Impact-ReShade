@@ -1,4 +1,5 @@
 
+#include "shared/cMacros.fxh"
 #include "shared/cGraphics.fxh"
 #include "shared/cImageProcessing.fxh"
 #include "shared/cVideoProcessing.fxh"
@@ -11,7 +12,7 @@ uniform float _FrameTime < source = "frametime"; > ;
 
 CREATE_OPTION(float, _MipBias, "Optical flow", "Optical flow mipmap bias", "slider", 7.0, 4.5)
 CREATE_OPTION(float, _BlendFactor, "Optical flow", "Temporal blending factor", "slider", 0.9, 0.25)
-CREATE_OPTION(float, _Scale, "Main", "Blur scale", "slider", 1.0, 0.25)
+CREATE_OPTION(float, _Scale, "Main", "Blur scale", "slider", 1.0, 0.75)
 CREATE_OPTION(bool, _FrameRateScaling, "Other", "Enable frame-rate scaling", "radio", 1.0, false)
 CREATE_OPTION(float, _TargetFrameRate, "Other", "Target frame-rate", "drag", 144.0, 60.0)
 
@@ -30,11 +31,14 @@ CREATE_SAMPLER(SampleTex2c, Tex2c, LINEAR, MIRROR)
 CREATE_TEXTURE(OFlowTex, BUFFER_SIZE_2, RG16F, 1)
 CREATE_SAMPLER(SampleOFlowTex, OFlowTex, LINEAR, MIRROR)
 
-CREATE_TEXTURE(Tex3, BUFFER_SIZE_4, RG16F, 1)
+CREATE_TEXTURE(Tex3, BUFFER_SIZE_3, RG16F, 1)
 CREATE_SAMPLER(SampleTex3, Tex3, LINEAR, MIRROR)
 
-CREATE_TEXTURE(Tex4, BUFFER_SIZE_6, RG16F, 1)
+CREATE_TEXTURE(Tex4, BUFFER_SIZE_4, RG16F, 1)
 CREATE_SAMPLER(SampleTex4, Tex4, LINEAR, MIRROR)
+
+CREATE_TEXTURE(Tex5, BUFFER_SIZE_5, RG16F, 1)
+CREATE_SAMPLER(SampleTex5, Tex5, LINEAR, MIRROR)
 
 // Vertex shaders
 
@@ -57,7 +61,7 @@ VS2PS_Sobel VS_Sobel(APP2VS Input)
 
 float PS_Saturation(VS2PS_Quad Input) : SV_TARGET0
 {
-    float3 Color = tex2D(CShade_SampleColorTex, Input.Tex0).rgb;
+    float3 Color = tex2D(SampleColorTex, Input.Tex0).rgb;
     return SaturateRGB(Color);
 }
 
@@ -80,10 +84,16 @@ float2 PS_Sobel(VS2PS_Sobel Input) : SV_TARGET0
 
 // Run Lucas-Kanade
 
-float2 PS_PyLK_Level3(VS2PS_Quad Input) : SV_TARGET0
+float2 PS_PyLK_Level4(VS2PS_Quad Input) : SV_TARGET0
 {
     float2 Vectors = 0.0;
-    return GetPixelPyLK(Input.Tex0, Vectors, SampleTex2a, SampleTex2c, SampleTex2b, 2, true);
+    return GetPixelPyLK(Input.Tex0, Vectors, SampleTex2a, SampleTex2c, SampleTex2b, 3, true);
+}
+
+float2 PS_PyLK_Level3(VS2PS_Quad Input) : SV_TARGET0
+{
+    float2 Vectors = tex2D(SampleTex5, Input.Tex0).xy;
+    return GetPixelPyLK(Input.Tex0, Vectors, SampleTex2a, SampleTex2c, SampleTex2b, 2, false);
 }
 
 float2 PS_PyLK_Level2(VS2PS_Quad Input) : SV_TARGET0
@@ -137,8 +147,8 @@ float4 PS_MotionBlur(VS2PS_Quad Input) : SV_TARGET0
     for (int k = 0; k < Samples; ++k)
     {
         float2 Offset = ScaledVelocity * ((Noise(Input.HPos.xy + k) * 2.0) - 1.0);
-        OutputColor += tex2D(CShade_SampleColorTex, ScreenCoord + Offset);
-        OutputColor += tex2D(CShade_SampleColorTex, ScreenCoord - Offset);
+        OutputColor += tex2D(SampleColorTex, ScreenCoord + Offset);
+        OutputColor += tex2D(SampleColorTex, ScreenCoord - Offset);
     }
 
     return OutputColor / (Samples * 2.0);
@@ -152,7 +162,7 @@ float4 PS_MotionBlur(VS2PS_Quad Input) : SV_TARGET0
         RenderTarget0 = RENDER_TARGET; \
     }
 
-technique CShade_MotionBlur
+technique cMotionBlur
 {
     // Normalize current frame
     CREATE_PASS(VS_Quad, PS_Saturation, Tex1)
@@ -165,6 +175,7 @@ technique CShade_MotionBlur
     CREATE_PASS(VS_Sobel, PS_Sobel, Tex2a)
 
     // Bilinear Lucas-Kanade Optical Flow
+    CREATE_PASS(VS_Quad, PS_PyLK_Level4, Tex5)
     CREATE_PASS(VS_Quad, PS_PyLK_Level3, Tex4)
     CREATE_PASS(VS_Quad, PS_PyLK_Level2, Tex3)
 
@@ -200,7 +211,9 @@ technique CShade_MotionBlur
     // Motion blur
     pass
     {
-        SRGBWriteEnable = WRITE_SRGB;
+        #if BUFFER_COLOR_BIT_DEPTH == 8
+            SRGBWriteEnable = TRUE;
+        #endif
 
         VertexShader = VS_Quad;
         PixelShader = PS_MotionBlur;

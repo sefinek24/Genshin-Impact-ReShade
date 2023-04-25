@@ -44,11 +44,9 @@
         };
 
     #if BUFFER_COLOR_BIT_DEPTH == 8
-        #define READ_SRGB TRUE
-        #define WRITE_SRGB TRUE
+        #define IS_SRGB TRUE
     #else
-        #define READ_SRGB FALSE
-        #define WRITE_SRGB FALSE
+        #define IS_SRGB FALSE
     #endif
 
     #define CREATE_SRGB_SAMPLER(SAMPLER_NAME, TEXTURE, FILTER, ADDRESS) \
@@ -60,6 +58,6 @@
             MipFilter = FILTER; \
             AddressU = ADDRESS; \
             AddressV = ADDRESS; \
-            SRGBTexture = READ_SRGB; \
+            SRGBTexture = IS_SRGB; \
         };
 #endif

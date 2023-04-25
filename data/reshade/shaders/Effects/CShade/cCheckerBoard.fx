@@ -31,11 +31,13 @@ float4 PS_Checkerboard(VS2PS_Quad Input) : SV_TARGET0
     return Checkerboard;
 }
 
-technique CShade_CheckerBoard
+technique cCheckerBoard
 {
     pass
     {
-        SRGBWriteEnable = WRITE_SRGB;
+        #if BUFFER_COLOR_BIT_DEPTH == 8
+            SRGBWriteEnable = TRUE;
+        #endif
 
         VertexShader = VS_Quad;
         PixelShader = PS_Checkerboard;

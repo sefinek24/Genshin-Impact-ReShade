@@ -38,7 +38,7 @@ float4 PS_Vignette(VS2PS_Quad Input) : SV_TARGET0
     return rcp(Radius_2_1 * Radius_2_1);
 }
 
-technique CShade_KinoVignette
+technique kVignette
 {
     pass
     {
@@ -47,7 +47,9 @@ technique CShade_KinoVignette
         BlendOp = ADD;
         SrcBlend = DESTCOLOR;
         DestBlend = ZERO;
-        SRGBWriteEnable = WRITE_SRGB;
+        #if BUFFER_COLOR_BIT_DEPTH == 8
+            SRGBWriteEnable = TRUE;
+        #endif
 
         VertexShader = VS_Quad;
         PixelShader = PS_Vignette;

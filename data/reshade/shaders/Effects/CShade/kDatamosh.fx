@@ -26,6 +26,7 @@
     For more information, please refer to <http://unlicense.org/>
 */
 
+#include "shared/cMacros.fxh"
 #include "shared/cGraphics.fxh"
 #include "shared/cImageProcessing.fxh"
 #include "shared/cVideoProcessing.fxh"
@@ -39,7 +40,7 @@ uniform float _Time < source = "timer"; >;
 CREATE_OPTION(int, _BlockSize, "Datamosh", "Block Size", "slider", 32, 4)
 CREATE_OPTION(float, _Entropy, "Datamosh", "Entropy", "slider", 1.0, 0.1)
 CREATE_OPTION(float, _Contrast, "Datamosh", "Contrast of noise", "slider", 4.0, 0.1)
-CREATE_OPTION(float, _Scale, "Datamosh", "Velocity scale", "slider", 1.0, 0.25)
+CREATE_OPTION(float, _Scale, "Datamosh", "Velocity scale", "slider", 2.0, 0.5)
 CREATE_OPTION(float, _Diffusion, "Datamosh", "Amount of random displacement", "slider", 4.0, 2.0)
 
 CREATE_OPTION(float, _MipBias, "Optical flow", "Optical flow mipmap bias", "slider", 6.0, 0.0)
@@ -75,11 +76,14 @@ CREATE_SAMPLER(SampleTex2c, Tex2c, LINEAR, MIRROR)
 CREATE_TEXTURE(OFlowTex, BUFFER_SIZE_2, RG16F, 1)
 CREATE_SAMPLER(SampleOFlowTex, OFlowTex, LINEAR, MIRROR)
 
-CREATE_TEXTURE(Tex3, BUFFER_SIZE_4, RG16F, 1)
+CREATE_TEXTURE(Tex3, BUFFER_SIZE_3, RG16F, 1)
 CREATE_SAMPLER(SampleTex3, Tex3, LINEAR, MIRROR)
 
-CREATE_TEXTURE(Tex4, BUFFER_SIZE_6, RG16F, 1)
+CREATE_TEXTURE(Tex4, BUFFER_SIZE_4, RG16F, 1)
 CREATE_SAMPLER(SampleTex4, Tex4, LINEAR, MIRROR)
+
+CREATE_TEXTURE(Tex5, BUFFER_SIZE_5, RG16F, 1)
+CREATE_SAMPLER(SampleTex5, Tex5, LINEAR, MIRROR)
 
 CREATE_TEXTURE(AccumTex, BUFFER_SIZE_0, R16F, 1)
 CREATE_SAMPLER(SampleAccumTex, AccumTex, FILTERING, MIRROR)
@@ -108,7 +112,7 @@ VS2PS_Sobel VS_Sobel(APP2VS Input)
 
 float PS_Saturation(VS2PS_Quad Input) : SV_TARGET0
 {
-    float3 Color = tex2D(CShade_SampleColorTex, Input.Tex0).rgb;
+    float3 Color = tex2D(SampleColorTex, Input.Tex0).rgb;
     return SaturateRGB(Color);
 }
 
@@ -131,10 +135,16 @@ float2 PS_Sobel(VS2PS_Sobel Input) : SV_TARGET0
 
 // Run Lucas-Kanade
 
-float2 PS_PyLK_Level3(VS2PS_Quad Input) : SV_TARGET0
+float2 PS_PyLK_Level4(VS2PS_Quad Input) : SV_TARGET0
 {
     float2 Vectors = 0.0;
-    return GetPixelPyLK(Input.Tex0, Vectors, SampleTex2a, SampleTex2c, SampleTex2b, 2, true);
+    return GetPixelPyLK(Input.Tex0, Vectors, SampleTex2a, SampleTex2c, SampleTex2b, 3, true);
+}
+
+float2 PS_PyLK_Level3(VS2PS_Quad Input) : SV_TARGET0
+{
+    float2 Vectors = tex2D(SampleTex5, Input.Tex0).xy;
+    return GetPixelPyLK(Input.Tex0, Vectors, SampleTex2a, SampleTex2c, SampleTex2b, 2, false);
 }
 
 float2 PS_PyLK_Level2(VS2PS_Quad Input) : SV_TARGET0
@@ -248,7 +258,7 @@ float4 PS_Datamosh(VS2PS_Quad Input) : SV_TARGET0
     MV = EncodeVectors(MV, TexSize);
 
     // Color from the original image
-    float4 Source = tex2D(CShade_SampleColorTex, Input.Tex0);
+    float4 Source = tex2D(SampleColorTex, Input.Tex0);
 
     // Displacement vector
     float Disp = tex2D(SampleAccumTex, Input.Tex0).r;
@@ -258,7 +268,7 @@ float4 PS_Datamosh(VS2PS_Quad Input) : SV_TARGET0
     float4 Rand = frac(float4(1.0, 17.37135, 841.4272, 3305.121) * RandomMotion);
 
     // Generate noise patterns that look like DCT bases.
-    float2 Frequency = Input.HPos.xy * (Rand.x * 80.0 / _Contrast);
+    float2 Frequency = (Input.Tex0 * DisplacementTexel) * (Rand.x * 80.0 / _Contrast);
 
     // Basis wave (vertical or horizontal)
     float DCT = cos(lerp(Frequency.x, Frequency.y, 0.5 < Rand.y));
@@ -278,7 +288,7 @@ float4 PS_Datamosh(VS2PS_Quad Input) : SV_TARGET0
 
 float4 PS_CopyColorTex(VS2PS_Quad Input) : SV_TARGET0
 {
-    return tex2D(CShade_SampleColorTex, Input.Tex0);
+    return tex2D(SampleColorTex, Input.Tex0);
 }
 
 #define CREATE_PASS(VERTEX_SHADER, PIXEL_SHADER, RENDER_TARGET) \
@@ -289,7 +299,7 @@ float4 PS_CopyColorTex(VS2PS_Quad Input) : SV_TARGET0
         RenderTarget0 = RENDER_TARGET; \
     }
 
-technique CShade_KinoDatamosh
+technique kDatamosh
 {
     // Normalize current frame
     CREATE_PASS(VS_Quad, PS_Saturation, Tex1)
@@ -302,10 +312,10 @@ technique CShade_KinoDatamosh
     CREATE_PASS(VS_Sobel, PS_Sobel, Tex2a)
 
     // Bilinear Lucas-Kanade Optical Flow
+    CREATE_PASS(VS_Quad, PS_PyLK_Level4, Tex5)
     CREATE_PASS(VS_Quad, PS_PyLK_Level3, Tex4)
     CREATE_PASS(VS_Quad, PS_PyLK_Level2, Tex3)
-
-    pass GetFineOpticalFlow
+    pass
     {
         ClearRenderTargets = FALSE;
         BlendEnable = TRUE;
@@ -350,7 +360,9 @@ technique CShade_KinoDatamosh
 
     pass
     {
-        SRGBWriteEnable = WRITE_SRGB;
+        #if BUFFER_COLOR_BIT_DEPTH == 8
+            SRGBWriteEnable = TRUE;
+        #endif
 
         VertexShader = VS_Quad;
         PixelShader = PS_Datamosh;
@@ -359,7 +371,9 @@ technique CShade_KinoDatamosh
     // Copy frame for feedback
     pass
     {
-        SRGBWriteEnable = WRITE_SRGB;
+        #if BUFFER_COLOR_BIT_DEPTH == 8
+            SRGBWriteEnable = TRUE;
+        #endif
 
         VertexShader = VS_Quad;
         PixelShader = PS_CopyColorTex;

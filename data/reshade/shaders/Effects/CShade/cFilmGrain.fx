@@ -41,7 +41,7 @@ float4 PS_FilmGrain(VS2PS_Quad Input) : SV_TARGET0
     return GaussianWeights(Noise, _Variance) * _Intensity;
 }
 
-technique CShade_FilmGrain
+technique cFilmGrain
 {
     pass
     {
@@ -51,7 +51,9 @@ technique CShade_FilmGrain
         BlendOp = ADD;
         SrcBlend = INVDESTCOLOR;
         DestBlend = ONE;
-        SRGBWriteEnable = WRITE_SRGB;
+        #if BUFFER_COLOR_BIT_DEPTH == 8
+            SRGBWriteEnable = TRUE;
+        #endif
 
         VertexShader = VS_Quad;
         PixelShader = PS_FilmGrain;
