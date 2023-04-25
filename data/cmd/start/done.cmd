@@ -1,7 +1,7 @@
 echo.
 echo ========================================================================================= & echo.
-echo [✓] Done. If you need help, add me on Discord Sefinek#0001. Thanks!
-echo [i] Visit my YouTube channel: https://www.youtube.com/@sefinek
+echo [✓] Done! If you need help, visit: https://sefinek.net/genshin-impact-reshade/support
+echo [i] Check my YouTube channel: https://www.youtube.com/@sefinek
 
 timeout /t 9 /nobreak
 exit
