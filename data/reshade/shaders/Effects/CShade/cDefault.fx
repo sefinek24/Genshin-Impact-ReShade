@@ -9,7 +9,7 @@ float4 PS_Quad() : SV_TARGET0
     return 0.0;
 }
 
-technique cDefault
+technique CShade_Default
 {
     pass
     {

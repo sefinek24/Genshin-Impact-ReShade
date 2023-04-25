@@ -16,7 +16,7 @@ uniform int _Select <
 
 float4 PS_Chromaticity(VS2PS_Quad Input) : SV_TARGET0
 {
-    float3 Color = tex2D(SampleColorTex, Input.Tex0).rgb;
+    float3 Color = tex2D(CShade_SampleColorTex, Input.Tex0).rgb;
     float Sum = 0.0;
     float3 Chromaticity = 0.0;
 
@@ -60,7 +60,7 @@ float4 PS_Chromaticity(VS2PS_Quad Input) : SV_TARGET0
     return float4(Chromaticity, 1.0);
 }
 
-technique cChromaticity
+technique CShade_Chromaticity
 {
     pass
     {

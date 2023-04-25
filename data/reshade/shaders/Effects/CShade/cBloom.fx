@@ -1,7 +1,6 @@
 
 namespace cBloom
 {
-    #include "shared/cMacros.fxh"
     #include "shared/cGraphics.fxh"
 
     /*
@@ -139,7 +138,7 @@ namespace cBloom
     {
         const float Knee = mad(_Threshold, _Smooth, 1e-5);
         const float3 Curve = float3(_Threshold - Knee, Knee * 2.0, 0.25 / Knee);
-        float4 Color = tex2D(SampleColorTex, Input.Tex0);
+        float4 Color = tex2D(CShade_SampleColorTex, Input.Tex0);
 
         // Under-threshold
         float Brightness = Med3(Color.r, Color.g, Color.b);
@@ -256,7 +255,7 @@ namespace cBloom
 
     float4 PS_Composite(VS2PS_Quad Input) : SV_TARGET0
     {
-        float3 BaseColor = tex2D(SampleColorTex, Input.Tex0).rgb;
+        float3 BaseColor = tex2D(CShade_SampleColorTex, Input.Tex0).rgb;
         float3 BloomColor = tex2D(SampleTex1, Input.Tex0).rgb;
 
         float4 Color = 1.0;
@@ -277,7 +276,7 @@ namespace cBloom
             RenderTarget0 = RENDER_TARGET; \
         }
 
-    technique cBloom
+    technique CShade_Bloom
     {
         CREATE_PASS(VS_Quad, PS_Prefilter, Tex0, FALSE)
 

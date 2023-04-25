@@ -24,24 +24,22 @@ float4 PS_Abberation(VS2PS_Quad Input) : SV_TARGET0
     float4 OutputColor = 0.0;
 
     // Shift red channel
-    OutputColor.r = tex2D(SampleColorTex, Input.Tex0 + _ShiftRed * PixelSize).r;
+    OutputColor.r = tex2D(CShade_SampleColorTex, Input.Tex0 + _ShiftRed * PixelSize).r;
     // Keep green channel to the center
-    OutputColor.g = tex2D(SampleColorTex, Input.Tex0 + _ShiftGreen * PixelSize).g;
+    OutputColor.g = tex2D(CShade_SampleColorTex, Input.Tex0 + _ShiftGreen * PixelSize).g;
     // Shift blue channel
-    OutputColor.b = tex2D(SampleColorTex, Input.Tex0 + _ShiftBlue * PixelSize).b;
+    OutputColor.b = tex2D(CShade_SampleColorTex, Input.Tex0 + _ShiftBlue * PixelSize).b;
     // Write alpha value
     OutputColor.a = 1.0;
 
     return OutputColor;
 }
 
-technique cAbberation
+technique CShade_Abberation
 {
     pass
     {
-        #if BUFFER_COLOR_BIT_DEPTH == 8
-            SRGBWriteEnable = TRUE;
-        #endif
+        SRGBWriteEnable = WRITE_SRGB;
 
         VertexShader = VS_Quad;
         PixelShader = PS_Abberation;

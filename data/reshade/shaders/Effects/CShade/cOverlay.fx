@@ -1,4 +1,6 @@
 
+#include "shared/cGraphics.fxh"
+
 uniform float2 _TexScale <
     ui_label = "Scale";
     ui_category = "Texture";
@@ -24,11 +26,9 @@ uniform float2 _MaskScale <
     #define ENABLE_POINT_SAMPLING 0
 #endif
 
-texture2D ColorTex : COLOR;
-
-sampler2D SampleColorTex
+sampler2D SampleColorTex_Overlay
 {
-    Texture = ColorTex;
+    Texture = CShade_ColorTex;
     #if ENABLE_POINT_SAMPLING
         MagFilter = POINT;
         MinFilter = POINT;
@@ -43,11 +43,6 @@ sampler2D SampleColorTex
     #if BUFFER_COLOR_BIT_DEPTH == 8
         SRGBTexture = TRUE;
     #endif
-};
-
-struct APP2VS
-{
-    uint ID : SV_VERTEXID;
 };
 
 struct VS2PS
@@ -75,7 +70,7 @@ VS2PS VS_Overlay(APP2VS Input)
 
 float4 PS_Overlay(VS2PS Input) : SV_TARGET0
 {
-    float4 Color = tex2D(SampleColorTex, Input.Tex0.zw);
+    float4 Color = tex2D(SampleColorTex_Overlay, Input.Tex0.zw);
 
     // Output a rectangle
     float2 MaskCoord = Input.Tex0.xy;
@@ -86,7 +81,7 @@ float4 PS_Overlay(VS2PS Input) : SV_TARGET0
     return float4(Color.rgb, Crop);
 }
 
-technique cOverlay
+technique CShade_Overlay
 {
     pass
     {
@@ -96,9 +91,7 @@ technique cOverlay
         BlendOp = ADD;
         SrcBlend = SRCALPHA;
         DestBlend = INVSRCALPHA;
-        #if BUFFER_COLOR_BIT_DEPTH == 8
-            SRGBWriteEnable = TRUE;
-        #endif
+        SRGBWriteEnable = WRITE_SRGB;
 
         VertexShader = VS_Overlay;
         PixelShader = PS_Overlay;

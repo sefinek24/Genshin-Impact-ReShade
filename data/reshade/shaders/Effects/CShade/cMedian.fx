@@ -57,27 +57,25 @@ float4 PS_Median(VS2PS_Median Input) : SV_TARGET0
     // [0].xz [1].xz [2].xz
     // [0].xw [1].xw [2].xw
     float4 Sample[9];
-    Sample[0] = tex2D(SampleColorTex, Input.Tex0.xy);
-    Sample[1] = tex2D(SampleColorTex, Input.Tex1.xy);
-    Sample[2] = tex2D(SampleColorTex, Input.Tex2.xy);
-    Sample[3] = tex2D(SampleColorTex, Input.Tex0.xz);
-    Sample[4] = tex2D(SampleColorTex, Input.Tex1.xz);
-    Sample[5] = tex2D(SampleColorTex, Input.Tex2.xz);
-    Sample[6] = tex2D(SampleColorTex, Input.Tex0.xw);
-    Sample[7] = tex2D(SampleColorTex, Input.Tex1.xw);
-    Sample[8] = tex2D(SampleColorTex, Input.Tex2.xw);
+    Sample[0] = tex2D(CShade_SampleColorTex, Input.Tex0.xy);
+    Sample[1] = tex2D(CShade_SampleColorTex, Input.Tex1.xy);
+    Sample[2] = tex2D(CShade_SampleColorTex, Input.Tex2.xy);
+    Sample[3] = tex2D(CShade_SampleColorTex, Input.Tex0.xz);
+    Sample[4] = tex2D(CShade_SampleColorTex, Input.Tex1.xz);
+    Sample[5] = tex2D(CShade_SampleColorTex, Input.Tex2.xz);
+    Sample[6] = tex2D(CShade_SampleColorTex, Input.Tex0.xw);
+    Sample[7] = tex2D(CShade_SampleColorTex, Input.Tex1.xw);
+    Sample[8] = tex2D(CShade_SampleColorTex, Input.Tex2.xw);
     return Med9(Sample[0], Sample[1], Sample[2],
                 Sample[3], Sample[4], Sample[5],
                 Sample[6], Sample[7], Sample[8]);
 }
 
-technique cMedian
+technique CShade_Median
 {
     pass
     {
-        #if BUFFER_COLOR_BIT_DEPTH == 8
-            SRGBWriteEnable = TRUE;
-        #endif
+        SRGBWriteEnable = WRITE_SRGB;
 
         VertexShader = VS_Median;
         PixelShader = PS_Median;

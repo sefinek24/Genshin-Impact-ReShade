@@ -2,8 +2,7 @@
 #if !defined(CVIDEOPROCESSING_FXH)
     #define CVIDEOPROCESSING_FXH
 
-    #include "shared/cMacros.fxh"
-    #include "shared/cGraphics.fxh"
+    #include "cGraphics.fxh"
 
     // Lucas-Kanade optical flow with bilinear fetches
 
@@ -16,14 +15,6 @@
         [ Ix^2/D -IxIy/D] [-IxIt]
         [-IxIy/D  Iy^2/D] [-IyIt]
     */
-
-    float GetEigenValue(float3 G)
-    {
-        float A = (G.x + G.y) * 0.5;
-        float C = sqrt((4.0 * pow(G.z, 2)) + pow(G.x - G.y, 2)) * 0.5;
-        float2 E = float2(A + C, A - C);
-        return min(E[0], E[1]);
-    }
 
     struct Texel
     {
@@ -99,9 +90,11 @@
         // Initialize variables
         float3 A = 0.0;
         float2 B = 0.0;
-        float2 G[WindowSize];
+        float R = 0.0;
+        float IT[WindowSize];
         float Determinant = 0.0;
         float2 NewVectors = 0.0;
+        const float T = 0.5;
 
         // Calculate main texel information (TexelSize, TexelLOD)
         Texel TexInfo;
@@ -120,9 +113,27 @@
         [unroll]
         for(int i = 0; i < WindowSize; i++)
         {
-            // A.x = A11; A.y = A22; A.z = A12/A22
-            G[i] = tex2Dlod(SampleI0_G, Pixel[i].Tex).xy;
-            A.xyz += (G[i].xyx * G[i].xyy);
+            float I0 = tex2Dlod(SampleI0, Pixel[i].Tex).r;
+            float I1 = tex2Dlod(SampleI1, Pixel[i].WarpedTex).r;
+            IT[i] = I0 - I1;
+            R += (IT[i] * IT[i]);
+        }
+
+        bool NoRefine = (Coarse == false) && (sqrt(R / 9.0) <= T);
+
+        [branch]
+        if(!NoRefine)
+        {
+            [unroll]
+            for(int i = 0; i < WindowSize; i++)
+            {
+                // A.x = A11; A.y = A22; A.z = A12/A22
+                float2 G = tex2Dlod(SampleI0_G, Pixel[i].Tex).xy;
+                A.xyz += (G.xyx * G.xyy);
+
+                // B.x = B1; B.y = B2
+                B += (G * IT[i]);
+            }
         }
 
         // Create -IxIy (A12) for A^-1 and its determinant
@@ -133,24 +144,7 @@
 
         // Solve A^-1
         A = A / Determinant;
-
-        bool NoRefine = (Coarse == false) && (GetEigenValue(A) <= 0.001);
-
-        [branch]
-        if(!NoRefine)
-        {
-            [unroll]
-            for(int i = 0; i < WindowSize; i++)
-            {
-                float I0 = tex2Dlod(SampleI0, Pixel[i].Tex).r;
-                float I1 = tex2Dlod(SampleI1, Pixel[i].WarpedTex).r;
-                float IT = I0 - I1;
-
-                // B.x = B1; B.y = B2
-                B += (G[i] * IT);
-            }
-        }
-
+ 
         // Calculate Lucas-Kanade matrix
         // [ Ix^2/D -IxIy/D] [-IxIt]
         // [-IxIy/D  Iy^2/D] [-IyIt]
