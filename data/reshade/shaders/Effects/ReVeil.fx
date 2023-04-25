@@ -2,15 +2,22 @@
 /*
 ReVeil for Reshade
 By: Lord of Lunacy
+
+
 This shader attempts to remove fog using a dark channel prior technique that has been
 refined using 2 passes over an iterative guided Wiener filter ran on the image dark channel.
+
 The purpose of the Wiener filters is to minimize the root mean square error between
 the given dark channel, and the true dark channel, making the removal more accurate.
+
 The airlight of the image is estimated by using the max values that appears in the each
 window of the dark channel. This window is then averaged together with every mip level
 that is larger than the current window size.
+
 Koschmeider's airlight equation is then used to remove the veil from the image, and the inverse
 is applied to reverse this affect, blending any new image components with the fog.
+
+
 This method was adapted from the following paper:
 Gibson, Kristofor & Nguyen, Truong. (2013). Fast single image fog removal using the adaptive Wiener filter.
 2013 IEEE International Conference on Image Processing, ICIP 2013 - Proceedings. 714-718. 10.1109/ICIP.2013.6738147. 
@@ -146,7 +153,7 @@ uniform float DepthMultiplier<
 		ui_label = "Experimental Variable Rate Map Support";
 		ui_category = "Variable Rate Map";
 		ui_tooltip = "Use this to allow ReVeil to use a variable rate map (VariableRateShading must be enabled for it to make a change)";
-	> = false;
+	> = true;
 	
 	uniform int Debug <
 		ui_type = "combo";
@@ -183,7 +190,7 @@ texture Maximum <Pooled = true;> {Width = ((RENDER_WIDTH - 1) / 16) + 1; Height 
 #else
 texture MeanAndVariance <Pooled = true;> {Width = RENDER_WIDTH; Height = RENDER_HEIGHT; Format = RG16f;};
 texture Maximum0 <Pooled = true;> {Width = RENDER_WIDTH; Height = RENDER_HEIGHT; Format = R8;};
-texture Maximum <Pooled = true;> {Width = RENDER_WIDTH; Height = RENDER_HEIGHT; Format = R8; MipLevels = MAX_MIP;};
+texture Maximum <Pooled = true;> {Width = RENDER_WIDTH; Height = RENDER_HEIGHT; Format = R8;};
 
 
 sampler sMeanAndVariance {Texture = MeanAndVariance;};
@@ -301,6 +308,15 @@ void MeanAndVarianceCS(uint3 id : SV_DispatchThreadID, uint3 tid : SV_GroupThrea
 		}
 		barrier();
 		iteration++;
+		
+		/*barrier();
+		[unroll]
+		for(int i = 0; i < 4; i++)
+		{
+			int address = index[i];
+			prefixSums[address] = sum[i];
+		}
+		barrier();*/
 	}
 	
 	//Generating columns of summed area table
@@ -326,6 +342,14 @@ void MeanAndVarianceCS(uint3 id : SV_DispatchThreadID, uint3 tid : SV_GroupThrea
 		if(j != 4)
 			barrier();
 		iteration++;
+		/*barrier();
+		[unroll]
+		for(int i = 0; i < 4; i++)
+		{
+			int address = index[i];
+			prefixSums[address] = sum[i];
+		}
+		barrier();*/
 	}
 
 	//sampling from summed area table, and extractions the desired values
@@ -440,7 +464,7 @@ void WienerFilterPS(float4 vpos : SV_POSITION, float2 texcoord : TEXCOORD, out f
 		{
 			maximum += tex2Dlod(sMaximum, float4(texcoord, 0, i)).r;
 		}
-		maximum /= MAX_MIP - 5;	
+		maximum /= MAX_MIP - 4;	
 		
 		float filter = saturate((max((variance - noise), 0) / variance) * (darkChannel - mean));
 		float veil = saturate(mean + filter);
@@ -518,9 +542,7 @@ void FogReintroductionPS(float4 vpos : SV_POSITION, float2 texcoord : TEXCOORD, 
 }
 
 technique ReVeil_Top <ui_tooltip = "This goes above any shaders you want to apply ReVeil to. \n\n"
-								  "(Don't worry if it looks like its doing nothing, what its doing here won't take effect until ReVeil_Bottom is applied)\n\n"
-								  "Part of Insane Shaders\n"
-								  "By: Lord of Lunacy";>
+								  "(Don't worry if it looks like its doing nothing, what its doing here won't take effect until ReVeil_Bottom is applied)";>
 {
 #if REVEIL_COMPUTE == 1
 	pass MeanAndVariance
