@@ -8,7 +8,8 @@
  */
 
 // Input
-#define _MERGE(a, b) a##b
+#define _CONCAT(a, b) a##b
+#define _MERGE(a, b) _CONCAT(a, b)
 #define PD80_TexName        _MERGE( PD80_Technique_Name, Tex )
 #define PD80_Sampler        _MERGE( PD80_Technique_Name, Samp )
 #define PD80_NameSpace      _MERGE( PD80_Technique_Name, Name )
@@ -132,7 +133,6 @@ namespace PD80_NameSpace
         float newluma    = lerp( labcol.x, lablut.x, PD80_MixLuma );
         float2 newAB     = lerp( labcol.yz, lablut.yz, PD80_MixChroma );
         lutcolor.xyz     = pd80_lab_to_srgb( float3( newluma, newAB ));
-
         color.xyz        = lerp( color.xyz, saturate( lutcolor.xyz + dnoise.wzx ), PD80_Intensity );
     }
 
