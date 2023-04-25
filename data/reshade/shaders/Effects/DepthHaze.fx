@@ -11,33 +11,31 @@
 // By Otis / Infuse Project
 ///////////////////////////////////////////////////////////////////
 
-uniform float EffectStrength <
-	ui_type = "drag";
+#include "ReShadeUI.fxh"
+
+uniform float EffectStrength < __UNIFORM_SLIDER_FLOAT1
 	ui_min = 0.0; ui_max=1.0;
 	ui_tooltip = "The strength of the effect. Range from 0.0, which means no effect, till 1.0 which means pixels are 100% blurred based on depth.";
 > = 0.9;
-uniform float3 FogColor <
-	ui_type= "color";
+uniform float3 FogColor < __UNIFORM_COLOR_FLOAT3
 	ui_tooltip = "Color of the fog, in (red , green, blue)";
 > = float3(0.8,0.8,0.8);
-uniform float FogStart <
-	ui_type = "drag";
+uniform float FogStart < __UNIFORM_SLIDER_FLOAT1
 	ui_min = 0.0; ui_max=1.0;
 	ui_tooltip = "Start of the fog. 0.0 is at the camera, 1.0 is at the horizon, 0.5 is halfway towards the horizon. Before this point no fog will appear.";
 > = 0.2;
-uniform float FogFactor <
-	ui_type = "drag";
+uniform float FogFactor < __UNIFORM_SLIDER_FLOAT1
 	ui_min = 0.0; ui_max=1.0;
 	ui_tooltip = "The amount of fog added to the scene. 0.0 is no fog, 1.0 is the strongest fog possible.";
 > = 0.2;
 
-#include "Reshade.fxh"
+#include "ReShade.fxh"
 
 //////////////////////////////////////
 // textures
 //////////////////////////////////////
 texture   Otis_FragmentBuffer1 	{ Width = BUFFER_WIDTH; Height = BUFFER_HEIGHT; Format = RGBA8;};	
-texture   Otis_FragmentBuffer2 	{ Width = BUFFER_WIDTH; Height = BUFFER_HEIGHT; Format = RGBA8;};	
+texture   Otis_FragmentBuffer2 	< pooled = true; > { Width = BUFFER_WIDTH; Height = BUFFER_HEIGHT; Format = RGBA8;};	
 
 //////////////////////////////////////
 // samplers
@@ -62,12 +60,12 @@ void PS_Otis_DEH_BlockBlurHorizontal(in float4 pos : SV_Position, in float2 texc
 	[loop]
 	for(float i = 1; i < 5; ++i) 
 	{
-		float2 sourceCoords = texcoord + float2(i * ReShade::PixelSize.x, 0.0);
+		float2 sourceCoords = texcoord + float2(i * BUFFER_PIXEL_SIZE.x, 0.0);
 		float weight = CalculateWeight(i, colorDepth, ReShade::GetLinearizedDepth(sourceCoords).r);
 		color += (tex2D(ReShade::BackBuffer, sourceCoords) * weight);
 		n+=weight;
 		
-		sourceCoords = texcoord - float2(i * ReShade::PixelSize.x, 0.0);
+		sourceCoords = texcoord - float2(i * BUFFER_PIXEL_SIZE.x, 0.0);
 		weight = CalculateWeight(i, colorDepth, ReShade::GetLinearizedDepth(sourceCoords).r);
 		color += (tex2D(ReShade::BackBuffer, sourceCoords) * weight);
 		n+=weight;
@@ -84,12 +82,12 @@ void PS_Otis_DEH_BlockBlurVertical(in float4 pos : SV_Position, in float2 texcoo
 	[loop]
 	for(float j = 1; j < 5; ++j) 
 	{
-		float2 sourceCoords = texcoord + float2(0.0, j * ReShade::PixelSize.y);
+		float2 sourceCoords = texcoord + float2(0.0, j * BUFFER_PIXEL_SIZE.y);
 		float weight = CalculateWeight(j, colorDepth, ReShade::GetLinearizedDepth(sourceCoords).r);
 		color += (tex2D(Otis_SamplerFragmentBuffer1, sourceCoords) * weight);
 		n+=weight;
 
-		sourceCoords = texcoord - float2(0.0, j * ReShade::PixelSize.y);
+		sourceCoords = texcoord - float2(0.0, j * BUFFER_PIXEL_SIZE.y);
 		weight = CalculateWeight(j, colorDepth, ReShade::GetLinearizedDepth(sourceCoords).r);
 		color += (tex2D(Otis_SamplerFragmentBuffer1, sourceCoords) * weight);
 		n+=weight;
