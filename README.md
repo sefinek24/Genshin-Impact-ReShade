@@ -111,9 +111,9 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 > After a moment, the game should launch with [ReShade](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/04.-What-is...#-reshade) injected and [FPS Unlocker](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/04.-What-is...#-fps-unlocker).
 
 ### 📘 Extended tutorial (GitHub Wiki)
-1. [Main page](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-Installation)
-2. [Automatic installation](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-Installation#-automatic-installation)
-3. [Manual installation](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-Installation#-manually-installation)
+1. [Main page](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/07.-Installation)
+2. [Automatic installation](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/07.-Installation#-automatic-installation)
+3. [Manual installation](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/07.-Installation#-manually-installation)
 
 ### 😼 Suggestion
 Kindly avoid downloading files from this repository, including any branches, as the current versions are still in the beta testing phase.
