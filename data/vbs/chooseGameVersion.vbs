@@ -5,7 +5,7 @@ Set WshShell = CreateObject("WScript.Shell")
 
 Dim userInput
 Do
-    userInput = InputBox("Please select the game version for your region." & vbCrLf & vbCrLf & "Type the correct number:" & vbCrLf & "1 - GenshinImpact.exe [OS version]" & vbCrLf & "2 - YuanShen.exe [CN version for China]", "Genshin Stella Mod by Sefinek")
+    userInput = InputBox("Please select the game version for your region." & vbCrLf & vbCrLf & "Type the correct number:" & vbCrLf & "1 - GenshinImpact.exe [Default version OS]" & vbCrLf & "2 - YuanShen.exe [Version for China CN]", "Genshin Stella Mod by Sefinek")
     If userInput <> "1" And userInput <> "2" And userInput <> "" And userInput <> "9" Then
         MsgBox "Incorrect number entered. Please enter 1, 2 or 9 to cancel.", vbCritical, "Genshin Stella Mod"
     ElseIf userInput = "" Then
