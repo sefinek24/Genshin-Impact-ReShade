@@ -55,7 +55,7 @@ It includes a comprehensive guide on how to install and use ReShade, as well as 
 
 If you need further assistance, feel free to join our [Discord server](https://discord.gg/SVcbaRc7gH).
 Additionally, if you wish to contribute to the project, please create a new [Pull request](https://github.com/sefinek24/Genshin-Impact-ReShade/pulls).
-You can also check out the latest [screenshots](https://sefinek.net/genshin-impact-reshade/gallery?page=1) on our website and watch [videos](https://sefinek.net/genshin-impact-reshade/videos) on YouTube for more information.
+You can also check out the latest [screenshots](https://sefinek.net/genshin-impact-reshade/gallery?page=1) on our website and watch [YouTube videos](https://sefinek.net/genshin-impact-reshade/videos) for more.
 
 Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and [Cloudflare](https://www.cloudflare.com) servers are located in Warsaw and Frankfurt.
 
@@ -111,9 +111,9 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 > After a moment, the game should launch with [ReShade](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/04.-What-is...#-reshade) injected and [FPS Unlocker](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/04.-What-is...#-fps-unlocker).
 
 ### 📘 Extended tutorial (GitHub Wiki)
-1. [Main page](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-Installation)
-2. [Automatic installation](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-Installation#-automatic-installation)
-3. [Manual installation](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-Installation#-manually-installation)
+1. [Main page](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/07.-Installation)
+2. [Automatic installation](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/07.-Installation#-automatic-installation)
+3. [Manual installation](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/07.-Installation#-manually-installation)
 
 ### 😼 Suggestion
 Kindly avoid downloading files from this repository, including any branches, as the current versions are still in the beta testing phase.
