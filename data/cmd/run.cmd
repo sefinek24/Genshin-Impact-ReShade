@@ -18,19 +18,17 @@ echo.  ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉�
 echo.   ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟                                          ~ Made by Sefinek
 echo ========================================================================================= & echo.
 
+set "OutputLog=%AppData%\Genshin Stella Mod by Sefinek\logs\cmd.output.log"
+
 
 REM Check if the script is running with administrative permissions
 echo 1/4 - Preparing...
 net session >nul 2>&1
-if "%ERRORLEVEL%"=="1" (
+if not "%ERRORLEVEL%"=="0" (
     echo [x] This file needs to be executed with administrative privileges.
     echo [%DATE% %TIME%]: The file must be run as administrator. >> "%OutputLog%"
     goto pause
 )
-
-set "OutputLog=%AppData%\Genshin Stella Mod by Sefinek\logs\cmd.output.log"
-
-
 
 REM Check if the files exist
 set "LaunchModePath=%AppData%\Genshin Stella Mod by Sefinek\launch-mode.sfn"
