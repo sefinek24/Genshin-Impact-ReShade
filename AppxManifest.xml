@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap10="http://schemas.microsoft.com/appx/manifest/uap/windows10/10" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities">
-  <Identity Name="21936Sefinek.GenshinStellaMod" Version="7.2.0.0" Publisher="CN=24508F31-E67A-4211-BCA6-40B385B08A8A" ProcessorArchitecture="x64" />
+  <Identity Name="21936Sefinek.110730C5FA09B" Version="7.2.0.0" Publisher="CN=24508F31-E67A-4211-BCA6-40B385B08A8A" ProcessorArchitecture="x64" />
   <Properties>
-    <DisplayName>Genshin Stella Mod</DisplayName>
+    <DisplayName>Stella Mod Launcher</DisplayName>
     <PublisherDisplayName>Sefinek</PublisherDisplayName>
     <Logo>icons\original.png</Logo>
   </Properties>

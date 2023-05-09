@@ -57,14 +57,15 @@ if not exist "data\reshade\inject64.exe" (
 
 REM Get the launch mode from a file
 set /p LaunchModeContent=<"%AppData%\Genshin Stella Mod by Sefinek\launch-mode.sfn"
-if not exist "%GameVersionPath%" (
-    echo [x] Failed to start. Unknown launch mode.
+if not "%LaunchModeContent%" equ "1" if not "%LaunchModeContent%" equ "2" if not "%LaunchModeContent%" equ "3" (
+    echo [x] Failed to start. Unknown launch mode: %LaunchModeContent%
     goto pause
 )
 
+REM Get the game version from a file
 set /p GameVersionContent=<"%AppData%\Genshin Stella Mod by Sefinek\game-version.sfn"
 if not "%GameVersionContent%" equ "1" if not "%GameVersionContent%" equ "2" (
-    echo [x] Failed to start. Invalid launch mode: %LaunchModeContent%
+    echo [x] Failed to start. Invalid game version: %GameVersionContent%
     goto pause
 )
 
