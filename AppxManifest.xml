@@ -15,7 +15,6 @@
   </Dependencies>
   <Capabilities>
     <rescap:Capability Name="runFullTrust"/>
-    <rescap:Capability Name="internetClient"/>
   </Capabilities>
   <Applications>
     <Application Id="GenshinStellaMod" Executable="Genshin Stella Mod.exe" EntryPoint="Windows.FullTrustApplication">
