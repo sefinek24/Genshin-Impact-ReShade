@@ -106,19 +106,14 @@ namespace Genshin_Stella_Mod.Scripts
 
         public static string GetGameVersion()
         {
-            string path = Path.Combine(MyDocs, "game-version.sfn");
-            if (!File.Exists(path))
-            {
-                string gamePath = File.ReadAllText(FileWithGamePath);
-                string type = Path.GetFileName(gamePath);
-                string number = type == "GenshinImpact.exe" ? "1" : "2";
+            string gvSfn = Path.Combine(MyDocs, "game-version.sfn");
+            string exePath = GetGame("giExe");
+            string exe = Path.GetFileName(exePath);
 
-                File.WriteAllText(path, number);
-                return number;
-            }
+            string number = exe == "GenshinImpact.exe" ? "1" : "2";
+            if (!File.Exists(gvSfn)) File.WriteAllText(gvSfn, number);
 
-            string file = File.ReadAllText(path);
-            return file;
+            return number;
         }
 
         public static void OpenUrl(string url)
