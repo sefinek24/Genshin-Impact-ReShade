@@ -2,6 +2,23 @@
 .vs
 data/reshade/cache
 
+# Solutions
+Genshin Impact Mod Pack/bin
+Genshin Impact Mod Pack/obj
+First app launch/bin
+First app launch/obj
+Install required dependencies/bin
+Install required dependencies/obj
+
+# Files
+unlocker.config.json
+data/unlocker/unlocker.config.json
+data/sounds/*.mp3
+Screenshots/*.png
+Screenshots/*.jpg
+Screenshots/*.jpeg
+Screenshots/*.bmp
+
 # For patrons
 data/Patrons
 data/presets/New
@@ -13,15 +30,6 @@ data/presets/3. Only for patrons/*.ini
 data/reshade/addons/licenses/ReshadeEffectShaderToggler.md
 data/reshade/addons/ReshadeEffectShaderToggler.addon64
 data/reshade/addons/ReshadeEffectShaderToggler.ini
-
-# Files
-unlocker.config.json
-data/unlocker/unlocker.config.json
-data/sounds/*.mp3
-Screenshots/*.png
-Screenshots/*.jpg
-Screenshots/*.jpeg
-Screenshots/*.bmp
 
 # Configs
 .eslintrc.js

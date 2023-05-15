@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap10="http://schemas.microsoft.com/appx/manifest/uap/windows10/10" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities">
+  <Identity Name="21936Sefinek.110730C5FA09B" Version="7.2.0.0" Publisher="CN=24508F31-E67A-4211-BCA6-40B385B08A8A" ProcessorArchitecture="x64" />
+  <Properties>
+    <DisplayName>Stella Mod Launcher</DisplayName>
+    <PublisherDisplayName>Sefinek</PublisherDisplayName>
+    <Logo>icons\original.png</Logo>
+  </Properties>
+  <Resources>
+    <Resource Language="en-us" />
+    <Resource Language="pl-PL" />
+  </Resources>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.18362.0" MaxVersionTested="10.0.18362.0" />
+  </Dependencies>
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust"/>
+  </Capabilities>
+  <Applications>
+    <Application Id="GenshinStellaMod" Executable="Genshin Stella Mod.exe" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements DisplayName="Genshin Stella Mod" Description="Genshin Stella Mod Launcher" Square150x150Logo="icons\original.png" Square44x44Logo="icons\original.png" BackgroundColor="#242424" />
+    </Application>
+  </Applications>
+</Package>
