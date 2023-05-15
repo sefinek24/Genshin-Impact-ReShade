@@ -3,10 +3,10 @@
 data/reshade/cache
 
 # Solutions
-Genshin Impact Mod Pack/bin
-Genshin Impact Mod Pack/obj
 First app launch/bin
 First app launch/obj
+Genshin Impact Mod Pack/bin
+Genshin Impact Mod Pack/obj
 Install required dependencies/bin
 Install required dependencies/obj
 
