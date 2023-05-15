@@ -187,7 +187,7 @@ namespace Genshin_Stella_Mod.Forms
 
         private async void UnlockerConfig_Click(object sender, EventArgs e)
         {
-            await Cmd.CliWrap("notepad", @"data\unlocker\unlocker.config.json", null, true, false);
+            await Cmd.CliWrap("notepad", Path.Combine(Program.AppPath, "data", "unlocker", "unlocker.config.json"), null, true, false);
         }
 
 

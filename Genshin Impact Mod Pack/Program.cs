@@ -17,7 +17,7 @@ namespace Genshin_Stella_Mod
     {
         // Files
         public static string AppData = GetAppData();
-        private static string AppIsConfigured;
+        private static string _appIsConfigured;
         public static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
         private static readonly string PrepareLauncher = Path.Combine(AppPath, "First app launch.exe");
         public static readonly string ReShadePath = Path.Combine(AppPath, "data", "reshade", "ReShade64.dll");
@@ -55,9 +55,7 @@ namespace Genshin_Stella_Mod
         [STAThread]
         private static void Main()
         {
-            MessageBox.Show(AppData);
-
-            AppIsConfigured = Path.Combine(AppData, "configured.sfn");
+            _appIsConfigured = Path.Combine(AppData, "configured.sfn");
             Settings = new IniFile(Path.Combine(AppData, "settings.ini"));
 
 
@@ -67,7 +65,7 @@ namespace Genshin_Stella_Mod
                 $"CPU Serial Number: {Os.CpuId}\n" +
                 $"App dir: {AppPath}\n" +
                 $"App data: {AppData}\n" +
-                $"App is configured: {AppIsConfigured}\n" +
+                $"App is configured: {_appIsConfigured}\n" +
                 $"FPS Unlocker path: {FpsUnlockerCfgPath}\n" +
                 $"Patrons dir: {PatronsDir}"
             );
@@ -88,7 +86,7 @@ namespace Genshin_Stella_Mod
                 Environment.Exit(998765341);
             }
 
-            if (!File.Exists(AppIsConfigured))
+            if (!File.Exists(_appIsConfigured))
             {
                 if (!File.Exists(PrepareLauncher))
                 {
