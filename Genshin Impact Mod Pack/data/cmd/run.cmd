@@ -18,11 +18,19 @@ echo.  ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉�
 echo.   ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟                                          ~ Made by Sefinek
 echo ========================================================================================= & echo.
 
-set "OutputLog=%AppData%\Genshin Stella Mod by Sefinek\logs\cmd.output.log"
 
+echo 1/4 - Preparing...
+set "DocsGSMbS=%UserProfile%\Documents\Genshin Stella Mod by Sefinek"
+if not exist "%DocsGSMbS%" (
+    mkdir "%DocsGSMbS%"
+)
+if not exist "%DocsGSMbS%\logs" (
+    mkdir "%DocsGSMbS%\logs"
+)
+
+set "OutputLog=%DocsGSMbS%\logs\cmd.output.log"
 
 REM Check if the script is running with administrative permissions
-echo 1/4 - Preparing...
 net session >nul 2>&1
 if not "%ERRORLEVEL%"=="0" (
     echo [x] This file needs to be executed with administrative privileges.
@@ -31,17 +39,6 @@ if not "%ERRORLEVEL%"=="0" (
 )
 
 REM Check if the files exist
-set "LaunchModePath=%AppData%\Genshin Stella Mod by Sefinek\launch-mode.sfn"
-if not exist "%LaunchModePath%" (
-    echo [x] Failed to start. The file launch-mode.sfn was not found in launcher appdata.
-    echo [%DATE% %TIME%]: File was not found in: %AppData% >> "%OutputLog%"
-    goto pause
-)
-
-set "GameVersionPath=%AppData%\Genshin Stella Mod by Sefinek\game-version.sfn"
-if not exist "%GameVersionPath%" (
-    call "data\vbs\chooseGameVersion.vbs"
-)
 if not exist "data\unlocker\unlockfps_clr.exe" (
     echo [x] Failed to start. File unlockfps_clr.exe was not found.
     goto pause
@@ -56,16 +53,14 @@ if not exist "data\reshade\inject64.exe" (
 )
 
 REM Get the launch mode from a file
-set /p LaunchModeContent=<"%AppData%\Genshin Stella Mod by Sefinek\launch-mode.sfn"
-if not "%LaunchModeContent%" equ "1" if not "%LaunchModeContent%" equ "2" if not "%LaunchModeContent%" equ "3" (
-    echo [x] Failed to start. Unknown launch mode: %LaunchModeContent%
+if not "%1" equ "1"   if not "%1" equ "2"   if not "%1" equ "3" (
+    echo [x] Failed to start. Unknown launch mode: %1
     goto pause
 )
 
 REM Get the game version from a file
-set /p GameVersionContent=<"%AppData%\Genshin Stella Mod by Sefinek\game-version.sfn"
-if not "%GameVersionContent%" equ "1" if not "%GameVersionContent%" equ "2" (
-    echo [x] Failed to start. Invalid game version: %GameVersionContent%
+if not "%2" equ "1" if not "%2" equ "2" (
+    echo [x] Failed to start. Invalid game version: %2
     goto pause
 )
 
@@ -80,7 +75,7 @@ echo 3/4 - Checking required processes...
 
 tasklist /fi "ImageName eq launcher.exe" /fo csv | find /I "launcher.exe" >NUL && (
     echo [%DATE% %TIME%]: Killing "launcher.exe" process... >> "%OutputLog%"
-    taskkill /F /IM "Ylauncher.exe" >> "%OutputLog%"
+    taskkill /F /IM "launcher.exe" >> "%OutputLog%"
 
     echo [i] launcher.exe           - Closed
 ) || (
@@ -94,7 +89,7 @@ tasklist /fi "ImageName eq Genshin Stella Mod.exe" /fo csv | find /I "Genshin St
 ) || (
     echo [✓] Genshin Stella Mod.exe - OK
 )
-if "%GameVersionContent%" equ "1" (
+if "%2" equ "1" (
     tasklist /fi "ImageName eq GenshinImpact.exe" /fo csv | find /I "GenshinImpact.exe" >NUL && (
         echo [%DATE% %TIME%]: Killing "GenshinImpact.exe" process... >> "%OutputLog%"
         taskkill /F /IM "GenshinImpact.exe" >> "%OutputLog%"
@@ -103,7 +98,7 @@ if "%GameVersionContent%" equ "1" (
     ) || (
         echo [✓] GenshinImpact.exe      - OK
     )
-) else if "%GameVersionContent%" equ "2" (
+) else if "%2" equ "2" (
     tasklist /fi "ImageName eq YuanShen.exe" /fo csv | find /I "YuanShen.exe" >NUL && (
         echo [%DATE% %TIME%]: Killing "YuanShen.exe" process... >> "%OutputLog%"
         taskkill /F /IM "YuanShen.exe" >> "%OutputLog%"
@@ -140,10 +135,13 @@ echo.
 
 REM Start the game
 echo 4/4 - Starting...
-echo [%DATE% %TIME%]: Launch mode %LaunchModeContent%. Starting... >> "%OutputLog%"
+
+set "GameVersion=%2"
+echo [%DATE% %TIME%]: Launch mode %1. Starting... >> "%OutputLog%"
+
 
 REM Choose the correct mode based on the LaunchModeContent variable
-if "%LaunchModeContent%" equ "1" (
+if "%1" equ "1" (
     REM Unlock FPS
     pushd "data\unlocker"
     start "" "unlockfps_clr.exe"
@@ -158,7 +156,7 @@ if "%LaunchModeContent%" equ "1" (
     echo.
     pushd "..\cmd\start"
     call wait_for_unlockfps.cmd
-) else if "%LaunchModeContent%" equ "2" (
+) else if "%1" equ "2" (
     echo [✓] Everything is ready! Thank you for using Stella Mod. Have fun. ᕱ⑅︎ᕱ & echo.
     REM Ask the user to start the game
     echo [i] ~~ Please start the game now. ~~
@@ -172,7 +170,7 @@ if "%LaunchModeContent%" equ "1" (
     pushd "..\cmd\start"
 
     call done.cmd
-) else if "%LaunchModeContent%" equ "3" (
+) else if "%1" equ "3" (
     REM Unlock FPS
     pushd "data\unlocker"
     start "" "unlockfps_clr.exe"
@@ -184,7 +182,7 @@ if "%LaunchModeContent%" equ "1" (
     call wait_for_unlockfps.cmd
 ) else (
     REM Wrong launch mode
-    echo [x] Failed to start. Invalid launch mode: %LaunchModeContent%
+    echo [x] Failed to start. Invalid launch mode: %1
     echo [%DATE% %TIME%]: Failed to start. Launch mode is invalid. >> "%OutputLog%"
     goto pause
 )

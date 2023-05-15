@@ -12,15 +12,18 @@ namespace Genshin_Stella_Mod.Scripts
 {
     internal static class Utils
     {
-        private static readonly string FileWithGamePath = Path.Combine(Program.AppData, "game-path.sfn");
+        public static readonly string MyDocs = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Genshin Stella Mod");
+        public static string FileWithGamePath;
 
         public static string GetGame(string type)
         {
+            FileWithGamePath = Path.Combine(MyDocs, "game-path.sfn");
+
             if (!File.Exists(FileWithGamePath))
             {
                 MessageBox.Show($"File with game path was not found in:\n{FileWithGamePath}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Log.Output($"File with game path was not found in: {FileWithGamePath}");
-                return null;
+                return "";
             }
 
             string gameFilePath = File.ReadAllLines(FileWithGamePath).First();
@@ -29,7 +32,7 @@ namespace Genshin_Stella_Mod.Scripts
             {
                 MessageBox.Show($"Folder does not exists.\n{gamePath}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Log.Output($"Directory {gamePath} does not exists.");
-                return null;
+                return "";
             }
 
 
@@ -47,7 +50,7 @@ namespace Genshin_Stella_Mod.Scripts
                     if (!Directory.Exists(genshinImpactGame))
                     {
                         Log.Output($"Genshin Impact game was not found in: {genshinImpactGame} [giGameDir]");
-                        return null;
+                        return "";
                     }
 
                     Log.Output($"Found Genshin Impact Game dir: {genshinImpactGame} [giGameDir]");
@@ -76,7 +79,7 @@ namespace Genshin_Stella_Mod.Scripts
                     MessageBox.Show($"File {genshinImpactExeYuanShen} does not exists.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Log.Output($"File {genshinImpactExeYuanShen} does not exists. [giExe]");
 
-                    return null;
+                    return "";
                 }
 
                 case "giLauncher":
@@ -86,7 +89,7 @@ namespace Genshin_Stella_Mod.Scripts
                     {
                         MessageBox.Show($"Launcher file does not exists.\n{genshinImpactExe}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         Log.Output($"Launcher file does not exists in: {genshinImpactExe} [giLauncher]");
-                        return null;
+                        return "";
                     }
 
                     Log.Output($"Found Genshin Impact Launcher in: {genshinImpactExe} [giLauncher]");
@@ -96,9 +99,26 @@ namespace Genshin_Stella_Mod.Scripts
                 default:
                 {
                     Log.ThrowError(new Exception("Wrong parameter."));
-                    return null;
+                    return "";
                 }
             }
+        }
+
+        public static string GetGameVersion()
+        {
+            string path = Path.Combine(MyDocs, "game-version.sfn");
+            if (!File.Exists(path))
+            {
+                string gamePath = File.ReadAllText(FileWithGamePath);
+                string type = Path.GetFileName(gamePath);
+                string number = type == "GenshinImpact.exe" ? "1" : "2";
+
+                File.WriteAllText(path, number);
+                return number;
+            }
+
+            string file = File.ReadAllText(path);
+            return file;
         }
 
         public static void OpenUrl(string url)

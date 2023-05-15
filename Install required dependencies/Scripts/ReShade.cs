@@ -2,10 +2,8 @@ using System;
 using System.IO;
 using System.Net;
 using System.Threading.Tasks;
-using Prepare_mod;
-using Prepare_mod.Scripts;
 
-namespace PrepareMod.Scripts
+namespace Prepare_mod.Scripts
 {
     internal abstract class ReShade
     {

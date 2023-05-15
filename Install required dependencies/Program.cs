@@ -27,6 +27,8 @@ namespace Prepare_mod
         public static readonly string AppName = Assembly.GetExecutingAssembly().GetName().Name;
         private static readonly string AppVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
         public static string AppData = GetAppData();
+        public static readonly string MyDocs = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Genshin Stella Mod");
+        public static string GamePathSfn;
 
         // Links
         private static readonly string AppWebsite = "https://genshin.sefinek.net";
@@ -94,9 +96,13 @@ namespace Prepare_mod
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            if (File.Exists(SelectGamePath.SfnFilePath))
+            if (!Directory.Exists(MyDocs)) Directory.CreateDirectory(MyDocs);
+            GamePathSfn = Path.Combine(MyDocs, "game-path.sfn");
+
+
+            if (File.Exists(GamePathSfn))
             {
-                string fileWithGamePath = File.ReadAllText(SelectGamePath.SfnFilePath).Trim();
+                string fileWithGamePath = File.ReadAllText(GamePathSfn).Trim();
                 if (Directory.Exists(fileWithGamePath)) GameDirGlobal = fileWithGamePath;
             }
             else
@@ -110,7 +116,7 @@ namespace Prepare_mod
 
             if (Directory.Exists(GameDirGlobal))
             {
-                File.WriteAllText(SelectGamePath.SfnFilePath, GameDirGlobal);
+                File.WriteAllText(GamePathSfn, GameDirGlobal);
                 Console.WriteLine(GameDirGlobal);
             }
             else
@@ -480,8 +486,7 @@ namespace Prepare_mod
                 if (Regex.Match(rebootPc ?? string.Empty, "(?:y)", RegexOptions.IgnoreCase | RegexOptions.Singleline).Success)
                 {
                     await Cmd.CliWrap("shutdown",
-                        $"/r /t 30 /c \"{AppName} - scheduled reboot, version {AppVersion}.\n\nThank you for installing. If you need help, add me on Discord Sefinek#0001.\n\nGood luck and have fun!\"",
-                        null);
+                        $"/r /t 30 /c \"{AppName} - scheduled reboot, version {AppVersion}.\n\nThank you for installing. If you need help, add me on Discord Sefinek#0001.\n\nGood luck and have fun!\"", null);
 
                     Console.WriteLine(@"Your computer will restart in 30 seconds. Save your work!");
                     Log.Output("PC reboot was scheduled.");

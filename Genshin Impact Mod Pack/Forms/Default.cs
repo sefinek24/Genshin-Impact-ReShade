@@ -31,7 +31,6 @@ namespace Genshin_Stella_Mod.Forms
     public partial class Default : Form
     {
         // Files
-        private static readonly string LaunchModeFile = Path.Combine(Program.AppData, "launch-mode.sfn");
         private static readonly string SetupPathExe = Path.Combine(Path.GetTempPath(), "Genshin_Stella_Mod_Setup.exe");
         private static readonly string ReShadePath = Path.Combine(Utils.GetGame("giGameDir"), "ReShade.ini");
         private static IniFile _reShadeIni;
@@ -81,7 +80,6 @@ namespace Genshin_Stella_Mod.Forms
         {
             // Path
             if (File.Exists(ReShadePath)) _reShadeIni = new IniFile(ReShadePath);
-
 
             // Background
             int bgInt = Program.Settings.ReadInt("Launcher", "Background", 0);
@@ -544,37 +542,19 @@ namespace Genshin_Stella_Mod.Forms
         }
 
         // ------- Start the game -------
-        private async void StartGame_Click(object sender, EventArgs e)
+        private void StartGame_Click(object sender, EventArgs e)
         {
-            using (StreamWriter sw = new StreamWriter(LaunchModeFile))
-            {
-                await sw.WriteAsync("1");
-            }
-
-            Cmd.Execute("wt.exe", Path.Combine(Program.AppPath, "data", "cmd", "run.cmd"), Program.AppPath, true, true);
+            Cmd.Execute("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 1 {Utils.GetGameVersion()}", Program.AppPath, true, true);
         }
 
-        private async void OnlyReShade_Click(object sender, EventArgs e)
+        private void OnlyReShade_Click(object sender, EventArgs e)
         {
-            using (StreamWriter sw = new StreamWriter(LaunchModeFile))
-            {
-                await sw.WriteAsync("2");
-            }
-
-            string path = Utils.GetGame("giLauncher");
-            if (path == null) return;
-
-            Cmd.Execute("wt.exe", Path.Combine(Program.AppPath, "data", "cmd", "run.cmd"), Program.AppPath, true, true);
+            Cmd.Execute("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 2 {Utils.GetGameVersion()}", Program.AppPath, true, true);
         }
 
-        private async void OnlyUnlocker_Click(object sender, EventArgs e)
+        private void OnlyUnlocker_Click(object sender, EventArgs e)
         {
-            using (StreamWriter sw = new StreamWriter(LaunchModeFile))
-            {
-                await sw.WriteAsync("3");
-            }
-
-            Cmd.Execute("wt.exe", Path.Combine(Program.AppPath, "data", "cmd", "run.cmd"), Program.AppPath, true, true);
+            Cmd.Execute("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 3 {Utils.GetGameVersion()}", Program.AppPath, true, true);
         }
 
         private void OpenGILauncher_Click(object sender, EventArgs e)

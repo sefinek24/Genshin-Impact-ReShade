@@ -1,0 +1,1021 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CliWrap</name>
+    </assembly>
+    <members>
+        <member name="T:CliWrap.Buffered.BufferedCommandExtensions">
+            <summary>
+            Buffered execution model.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Buffered.BufferedCommandExtensions.ExecuteBufferedAsync(CliWrap.Command,System.Text.Encoding,System.Text.Encoding,System.Threading.CancellationToken,System.Threading.CancellationToken)">
+            <summary>
+            Executes the command asynchronously with buffering.
+            Data written to the standard output and standard error streams is decoded as text
+            and returned as part of the result object.
+            </summary>
+            <remarks>
+            This method can be awaited.
+            </remarks>
+        </member>
+        <member name="M:CliWrap.Buffered.BufferedCommandExtensions.ExecuteBufferedAsync(CliWrap.Command,System.Text.Encoding,System.Text.Encoding,System.Threading.CancellationToken)">
+            <summary>
+            Executes the command asynchronously with buffering.
+            Data written to the standard output and standard error streams is decoded as text
+            and returned as part of the result object.
+            </summary>
+            <remarks>
+            This method can be awaited.
+            </remarks>
+        </member>
+        <member name="M:CliWrap.Buffered.BufferedCommandExtensions.ExecuteBufferedAsync(CliWrap.Command,System.Text.Encoding,System.Threading.CancellationToken)">
+            <summary>
+            Executes the command asynchronously with buffering.
+            Data written to the standard output and standard error streams is decoded as text
+            and returned as part of the result object.
+            </summary>
+            <remarks>
+            This method can be awaited.
+            </remarks>
+        </member>
+        <member name="M:CliWrap.Buffered.BufferedCommandExtensions.ExecuteBufferedAsync(CliWrap.Command,System.Threading.CancellationToken)">
+            <summary>
+            Executes the command asynchronously with buffering.
+            Data written to the standard output and standard error streams is decoded as text
+            and returned as part of the result object.
+            Uses <see cref="P:System.Console.OutputEncoding" /> for decoding.
+            </summary>
+            <remarks>
+            This method can be awaited.
+            </remarks>
+        </member>
+        <member name="T:CliWrap.Buffered.BufferedCommandResult">
+            <summary>
+            Result of a command execution, with buffered text data from standard output and standard error streams.
+            </summary>
+        </member>
+        <member name="P:CliWrap.Buffered.BufferedCommandResult.StandardOutput">
+            <summary>
+            Standard output data produced by the underlying process.
+            </summary>
+        </member>
+        <member name="P:CliWrap.Buffered.BufferedCommandResult.StandardError">
+            <summary>
+            Standard error data produced by the underlying process.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Buffered.BufferedCommandResult.#ctor(System.Int32,System.DateTimeOffset,System.DateTimeOffset,System.String,System.String)">
+            <summary>
+            Initializes an instance of <see cref="T:CliWrap.Buffered.BufferedCommandResult" />.
+            </summary>
+        </member>
+        <member name="T:CliWrap.Builders.ArgumentsBuilder">
+            <summary>
+            Builder that helps format command-line arguments into a string.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Builders.ArgumentsBuilder.Add(System.String,System.Boolean)">
+            <summary>
+            Adds the specified value to the list of arguments.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Builders.ArgumentsBuilder.Add(System.String)">
+            <summary>
+            Adds the specified value to the list of arguments.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Builders.ArgumentsBuilder.Add(System.Collections.Generic.IEnumerable{System.String},System.Boolean)">
+            <summary>
+            Adds the specified values to the list of arguments.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Builders.ArgumentsBuilder.Add(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Adds the specified values to the list of arguments.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Builders.ArgumentsBuilder.Add(System.IFormattable,System.IFormatProvider,System.Boolean)">
+            <summary>
+            Adds the specified value to the list of arguments.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Builders.ArgumentsBuilder.Add(System.IFormattable,System.Globalization.CultureInfo,System.Boolean)">
+            <summary>
+            Adds the specified value to the list of arguments.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Builders.ArgumentsBuilder.Add(System.IFormattable,System.Globalization.CultureInfo)">
+            <summary>
+            Adds the specified value to the list of arguments.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Builders.ArgumentsBuilder.Add(System.IFormattable,System.Boolean)">
+            <summary>
+            Adds the specified value to the list of arguments.
+            The value is converted to string using invariant culture.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Builders.ArgumentsBuilder.Add(System.IFormattable)">
+            <summary>
+            Adds the specified value to the list of arguments.
+            The value is converted to string using invariant culture.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Builders.ArgumentsBuilder.Add(System.Collections.Generic.IEnumerable{System.IFormattable},System.IFormatProvider,System.Boolean)">
+            <summary>
+            Adds the specified values to the list of arguments.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Builders.ArgumentsBuilder.Add(System.Collections.Generic.IEnumerable{System.IFormattable},System.Globalization.CultureInfo,System.Boolean)">
+            <summary>
+            Adds the specified values to the list of arguments.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Builders.ArgumentsBuilder.Add(System.Collections.Generic.IEnumerable{System.IFormattable},System.Globalization.CultureInfo)">
+            <summary>
+            Adds the specified values to the list of arguments.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Builders.ArgumentsBuilder.Add(System.Collections.Generic.IEnumerable{System.IFormattable},System.Boolean)">
+            <summary>
+            Adds the specified values to the list of arguments.
+            The values are converted to string using invariant culture.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Builders.ArgumentsBuilder.Add(System.Collections.Generic.IEnumerable{System.IFormattable})">
+            <summary>
+            Adds the specified values to the list of arguments.
+            The values are converted to string using invariant culture.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Builders.ArgumentsBuilder.Build">
+            <summary>
+            Builds the resulting arguments string.
+            </summary>
+        </member>
+        <member name="T:CliWrap.Builders.CredentialsBuilder">
+            <summary>
+            Builder that helps configure user credentials.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Builders.CredentialsBuilder.SetDomain(System.String)">
+            <summary>
+            Sets the Active Directory domain used when starting the process.
+            </summary>
+            <remarks>
+            Only supported on Windows.
+            </remarks>
+        </member>
+        <member name="M:CliWrap.Builders.CredentialsBuilder.SetUserName(System.String)">
+            <summary>
+            Sets the username used when starting the process.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Builders.CredentialsBuilder.SetPassword(System.String)">
+            <summary>
+            Sets the password used when starting the process.
+            </summary>
+            <remarks>
+            Only supported on Windows.
+            </remarks>
+        </member>
+        <member name="M:CliWrap.Builders.CredentialsBuilder.LoadUserProfile(System.Boolean)">
+            <summary>
+            Instructs whether to load the user profile when starting the process.
+            </summary>
+            <remarks>
+            Only supported on Windows.
+            </remarks>
+        </member>
+        <member name="M:CliWrap.Builders.CredentialsBuilder.Build">
+            <summary>
+            Builds the resulting credentials.
+            </summary>
+        </member>
+        <member name="T:CliWrap.Builders.EnvironmentVariablesBuilder">
+            <summary>
+            Builder that helps configure environment variables.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Builders.EnvironmentVariablesBuilder.Set(System.String,System.String)">
+            <summary>
+            Sets an environment variable with the specified name to the specified value.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Builders.EnvironmentVariablesBuilder.Set(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            Sets multiple environment variables from the specified sequence of key-value pairs.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Builders.EnvironmentVariablesBuilder.Set(System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})">
+            <summary>
+            Sets multiple environment variables from the specified dictionary.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Builders.EnvironmentVariablesBuilder.Build">
+            <summary>
+            Builds the resulting environment variables.
+            </summary>
+        </member>
+        <member name="T:CliWrap.Cli">
+            <summary>
+            Main entry point for creating new commands.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Cli.Wrap(System.String)">
+            <summary>
+            Creates a new command that targets the specified command-line executable, batch file, or script.
+            </summary>
+        </member>
+        <member name="T:CliWrap.Command">
+            <summary>
+            Instructions for running a process.
+            </summary>
+        </member>
+        <member name="P:CliWrap.Command.TargetFilePath">
+            <inheritdoc />
+        </member>
+        <member name="P:CliWrap.Command.Arguments">
+            <inheritdoc />
+        </member>
+        <member name="P:CliWrap.Command.WorkingDirPath">
+            <inheritdoc />
+        </member>
+        <member name="P:CliWrap.Command.Credentials">
+            <inheritdoc />
+        </member>
+        <member name="P:CliWrap.Command.EnvironmentVariables">
+            <inheritdoc />
+        </member>
+        <member name="P:CliWrap.Command.Validation">
+            <inheritdoc />
+        </member>
+        <member name="P:CliWrap.Command.StandardInputPipe">
+            <inheritdoc />
+        </member>
+        <member name="P:CliWrap.Command.StandardOutputPipe">
+            <inheritdoc />
+        </member>
+        <member name="P:CliWrap.Command.StandardErrorPipe">
+            <inheritdoc />
+        </member>
+        <member name="M:CliWrap.Command.#ctor(System.String,System.String,System.String,CliWrap.Credentials,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},CliWrap.CommandResultValidation,CliWrap.PipeSource,CliWrap.PipeTarget,CliWrap.PipeTarget)">
+            <summary>
+            Initializes an instance of <see cref="T:CliWrap.Command" />.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.#ctor(System.String)">
+            <summary>
+            Initializes an instance of <see cref="T:CliWrap.Command" />.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.WithTargetFile(System.String)">
+            <summary>
+            Creates a copy of this command, setting the target file path to the specified value.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.WithArguments(System.String)">
+            <summary>
+            Creates a copy of this command, setting the arguments to the specified value.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.WithArguments(System.Collections.Generic.IEnumerable{System.String},System.Boolean)">
+            <summary>
+            Creates a copy of this command, setting the arguments to the value
+            obtained by formatting the specified enumeration.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.WithArguments(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a copy of this command, setting the arguments to the value
+            obtained by formatting the specified enumeration.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.WithArguments(System.Action{CliWrap.Builders.ArgumentsBuilder})">
+            <summary>
+            Creates a copy of this command, setting the arguments to the value
+            configured by the specified delegate.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.WithWorkingDirectory(System.String)">
+            <summary>
+            Creates a copy of this command, setting the working directory path to the specified value.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.WithCredentials(CliWrap.Credentials)">
+            <summary>
+            Creates a copy of this command, setting the user credentials to the specified value.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.WithCredentials(System.Action{CliWrap.Builders.CredentialsBuilder})">
+            <summary>
+            Creates a copy of this command, setting the user credentials to the value
+            configured by the specified delegate.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.WithEnvironmentVariables(System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})">
+            <summary>
+            Creates a copy of this command, setting the environment variables to the specified value.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.WithEnvironmentVariables(System.Action{CliWrap.Builders.EnvironmentVariablesBuilder})">
+            <summary>
+            Creates a copy of this command, setting the environment variables to the value
+            configured by the specified delegate.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.WithValidation(CliWrap.CommandResultValidation)">
+            <summary>
+            Creates a copy of this command, setting the validation options to the specified value.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.WithStandardInputPipe(CliWrap.PipeSource)">
+            <summary>
+            Creates a copy of this command, setting the standard input pipe to the specified source.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.WithStandardOutputPipe(CliWrap.PipeTarget)">
+            <summary>
+            Creates a copy of this command, setting the standard output pipe to the specified target.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.WithStandardErrorPipe(CliWrap.PipeTarget)">
+            <summary>
+            Creates a copy of this command, setting the standard error pipe to the specified target.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.ToString">
+            <inheritdoc />
+        </member>
+        <member name="M:CliWrap.Command.ExecuteAsync(System.Threading.CancellationToken,System.Threading.CancellationToken)">
+            <summary>
+            Executes the command asynchronously.
+            </summary>
+            <remarks>
+            This method can be awaited.
+            </remarks>
+        </member>
+        <member name="M:CliWrap.Command.ExecuteAsync(System.Threading.CancellationToken)">
+            <summary>
+            Executes the command asynchronously.
+            </summary>
+            <remarks>
+            This method can be awaited.
+            </remarks>
+        </member>
+        <member name="M:CliWrap.Command.op_BitwiseOr(CliWrap.Command,CliWrap.PipeTarget)">
+            <summary>
+            Creates a new command that pipes its standard output to the specified target.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.op_BitwiseOr(CliWrap.Command,System.IO.Stream)">
+            <summary>
+            Creates a new command that pipes its standard output to the specified stream.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.op_BitwiseOr(CliWrap.Command,System.Text.StringBuilder)">
+            <summary>
+            Creates a new command that pipes its standard output to the specified string builder.
+            Uses <see cref="P:System.Console.OutputEncoding" /> for decoding.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.op_BitwiseOr(CliWrap.Command,System.Action{System.String})">
+            <summary>
+            Creates a new command that pipes its standard output line-by-line to the specified
+            synchronous delegate.
+            Uses <see cref="P:System.Console.OutputEncoding" /> for decoding.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.op_BitwiseOr(CliWrap.Command,System.Func{System.String,System.Threading.Tasks.Task})">
+            <summary>
+            Creates a new command that pipes its standard output line-by-line to the specified
+            asynchronous delegate.
+            Uses <see cref="P:System.Console.OutputEncoding" /> for decoding.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.op_BitwiseOr(CliWrap.Command,System.ValueTuple{CliWrap.PipeTarget,CliWrap.PipeTarget})">
+            <summary>
+            Creates a new command that pipes its standard output and standard error to the
+            specified targets.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.op_BitwiseOr(CliWrap.Command,System.ValueTuple{System.IO.Stream,System.IO.Stream})">
+            <summary>
+            Creates a new command that pipes its standard output and standard error to the
+            specified streams.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.op_BitwiseOr(CliWrap.Command,System.ValueTuple{System.Text.StringBuilder,System.Text.StringBuilder})">
+            <summary>
+            Creates a new command that pipes its standard output and standard error to the
+            specified string builders.
+            Uses <see cref="P:System.Console.OutputEncoding" /> for decoding.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.op_BitwiseOr(CliWrap.Command,System.ValueTuple{System.Action{System.String},System.Action{System.String}})">
+            <summary>
+            Creates a new command that pipes its standard output and standard error line-by-line
+            to the specified synchronous delegates.
+            Uses <see cref="P:System.Console.OutputEncoding" /> for decoding.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.op_BitwiseOr(CliWrap.Command,System.ValueTuple{System.Func{System.String,System.Threading.Tasks.Task},System.Func{System.String,System.Threading.Tasks.Task}})">
+            <summary>
+            Creates a new command that pipes its standard output and standard error line-by-line
+            to the specified asynchronous delegates.
+            Uses <see cref="P:System.Console.OutputEncoding" /> for decoding.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.op_BitwiseOr(CliWrap.PipeSource,CliWrap.Command)">
+            <summary>
+            Creates a new command that pipes its standard input from the specified source.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.op_BitwiseOr(System.IO.Stream,CliWrap.Command)">
+            <summary>
+            Creates a new command that pipes its standard input from the specified stream.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.op_BitwiseOr(System.ReadOnlyMemory{System.Byte},CliWrap.Command)">
+            <summary>
+            Creates a new command that pipes its standard input from the specified memory region.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.op_BitwiseOr(System.Byte[],CliWrap.Command)">
+            <summary>
+            Creates a new command that pipes its standard input from the specified byte array.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.op_BitwiseOr(System.String,CliWrap.Command)">
+            <summary>
+            Creates a new command that pipes its standard input from the specified string.
+            Uses <see cref="P:System.Console.InputEncoding" /> for encoding.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Command.op_BitwiseOr(CliWrap.Command,CliWrap.Command)">
+            <summary>
+            Creates a new command that pipes its standard input from the standard output of the
+            specified command.
+            </summary>
+        </member>
+        <member name="T:CliWrap.CommandResult">
+            <summary>
+            Result of a command execution.
+            </summary>
+        </member>
+        <member name="P:CliWrap.CommandResult.ExitCode">
+            <summary>
+            Exit code set by the underlying process.
+            </summary>
+        </member>
+        <member name="P:CliWrap.CommandResult.StartTime">
+            <summary>
+            When the command started executing.
+            </summary>
+        </member>
+        <member name="P:CliWrap.CommandResult.ExitTime">
+            <summary>
+            When the command finished executing.
+            </summary>
+        </member>
+        <member name="P:CliWrap.CommandResult.RunTime">
+            <summary>
+            Total duration of the command execution.
+            </summary>
+        </member>
+        <member name="M:CliWrap.CommandResult.#ctor(System.Int32,System.DateTimeOffset,System.DateTimeOffset)">
+            <summary>
+            Initializes an instance of <see cref="T:CliWrap.CommandResult" />.
+            </summary>
+        </member>
+        <member name="T:CliWrap.CommandResultValidation">
+            <summary>
+            Strategy used for validating the result of a command execution.
+            </summary>
+        </member>
+        <member name="F:CliWrap.CommandResultValidation.None">
+            <summary>
+            No validation.
+            </summary>
+        </member>
+        <member name="F:CliWrap.CommandResultValidation.ZeroExitCode">
+            <summary>
+            Ensure that the command returned a zero exit code.
+            </summary>
+        </member>
+        <member name="T:CliWrap.CommandTask`1">
+            <summary>
+            Represents an asynchronous execution of a command.
+            </summary>
+        </member>
+        <member name="P:CliWrap.CommandTask`1.Task">
+            <summary>
+            Underlying task.
+            </summary>
+        </member>
+        <member name="P:CliWrap.CommandTask`1.ProcessId">
+            <summary>
+            Underlying process ID.
+            </summary>
+        </member>
+        <member name="M:CliWrap.CommandTask`1.#ctor(System.Threading.Tasks.Task{`0},System.Int32)">
+            <summary>
+            Initializes an instance of <see cref="T:CliWrap.CommandTask`1" />.
+            </summary>
+        </member>
+        <member name="M:CliWrap.CommandTask`1.Select``1(System.Func{`0,``0})">
+            <summary>
+            Lazily maps the result of the task using the specified transform.
+            </summary>
+        </member>
+        <member name="M:CliWrap.CommandTask`1.GetAwaiter">
+            <summary>
+            Gets the awaiter of the underlying task.
+            Used to enable await expressions on this object.
+            </summary>
+        </member>
+        <member name="M:CliWrap.CommandTask`1.ConfigureAwait(System.Boolean)">
+            <summary>
+            Configures an awaiter used to await this task.
+            </summary>
+        </member>
+        <member name="M:CliWrap.CommandTask`1.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="M:CliWrap.CommandTask`1.op_Implicit(CliWrap.CommandTask{`0})~System.Threading.Tasks.Task{`0}">
+            <summary>
+            Casts a command task into a regular task.
+            </summary>
+        </member>
+        <member name="T:CliWrap.Credentials">
+            <summary>
+            User credentials used for starting a process.
+            </summary>
+        </member>
+        <member name="P:CliWrap.Credentials.Domain">
+            <summary>
+            Active Directory domain used when starting the process.
+            </summary>
+            <remarks>
+            Only supported on Windows.
+            </remarks>
+        </member>
+        <member name="P:CliWrap.Credentials.UserName">
+            <summary>
+            Username used when starting the process.
+            </summary>
+        </member>
+        <member name="P:CliWrap.Credentials.Password">
+            <summary>
+            Password used when starting the process.
+            </summary>
+            <remarks>
+            Only supported on Windows.
+            </remarks>
+        </member>
+        <member name="P:CliWrap.Credentials.LoadUserProfile">
+            <summary>
+            Whether to load the user profile when starting the process.
+            </summary>
+            <remarks>
+            Only supported on Windows.
+            </remarks>
+        </member>
+        <member name="M:CliWrap.Credentials.#ctor(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Initializes an instance of <see cref="T:CliWrap.Credentials" />.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Credentials.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes an instance of <see cref="T:CliWrap.Credentials" />.
+            </summary>
+        </member>
+        <member name="P:CliWrap.Credentials.Default">
+            <summary>
+            Empty credentials.
+            </summary>
+        </member>
+        <member name="T:CliWrap.EventStream.CommandEvent">
+            <summary>
+            <para>
+                Abstract event produced by a command.
+                Use pattern matching to handle specific instances of this type.
+            </para>
+            <para>
+                Can be either one of the following:
+                <list type="bullet">
+                    <item><see cref="T:CliWrap.EventStream.StartedCommandEvent" /></item>
+                    <item><see cref="T:CliWrap.EventStream.StandardOutputCommandEvent" /></item>
+                    <item><see cref="T:CliWrap.EventStream.StandardErrorCommandEvent" /></item>
+                    <item><see cref="T:CliWrap.EventStream.ExitedCommandEvent" /></item>
+                </list>
+            </para>
+            </summary>
+        </member>
+        <member name="T:CliWrap.EventStream.StartedCommandEvent">
+            <summary>
+            Event triggered when the command starts executing.
+            May only appear once in the event stream.
+            </summary>
+        </member>
+        <member name="P:CliWrap.EventStream.StartedCommandEvent.ProcessId">
+            <summary>
+            Underlying process ID.
+            </summary>
+        </member>
+        <member name="M:CliWrap.EventStream.StartedCommandEvent.#ctor(System.Int32)">
+            <summary>
+            Initializes an instance of <see cref="T:CliWrap.EventStream.StartedCommandEvent" />.
+            </summary>
+        </member>
+        <member name="M:CliWrap.EventStream.StartedCommandEvent.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:CliWrap.EventStream.StandardOutputCommandEvent">
+            <summary>
+            Event triggered when the underlying process writes a line of text to the standard output stream.
+            </summary>
+        </member>
+        <member name="P:CliWrap.EventStream.StandardOutputCommandEvent.Text">
+            <summary>
+            Line of text written to the standard output stream.
+            </summary>
+        </member>
+        <member name="M:CliWrap.EventStream.StandardOutputCommandEvent.#ctor(System.String)">
+            <summary>
+            Initializes an instance of <see cref="T:CliWrap.EventStream.StandardOutputCommandEvent" />.
+            </summary>
+        </member>
+        <member name="M:CliWrap.EventStream.StandardOutputCommandEvent.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:CliWrap.EventStream.StandardErrorCommandEvent">
+            <summary>
+            Event triggered when the underlying process writes a line of text to the standard error stream.
+            </summary>
+        </member>
+        <member name="P:CliWrap.EventStream.StandardErrorCommandEvent.Text">
+            <summary>
+            Line of text written to the standard error stream.
+            </summary>
+        </member>
+        <member name="M:CliWrap.EventStream.StandardErrorCommandEvent.#ctor(System.String)">
+            <summary>
+            Initializes an instance of <see cref="T:CliWrap.EventStream.StandardErrorCommandEvent" />.
+            </summary>
+        </member>
+        <member name="M:CliWrap.EventStream.StandardErrorCommandEvent.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:CliWrap.EventStream.ExitedCommandEvent">
+            <summary>
+            Event triggered when the command finishes executing.
+            May only appear once in the event stream.
+            </summary>
+        </member>
+        <member name="P:CliWrap.EventStream.ExitedCommandEvent.ExitCode">
+            <summary>
+            Exit code set by the underlying process.
+            </summary>
+        </member>
+        <member name="M:CliWrap.EventStream.ExitedCommandEvent.#ctor(System.Int32)">
+            <summary>
+            Initializes an instance of <see cref="T:CliWrap.EventStream.ExitedCommandEvent" />.
+            </summary>
+        </member>
+        <member name="M:CliWrap.EventStream.ExitedCommandEvent.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:CliWrap.EventStream.EventStreamCommandExtensions">
+            <summary>
+            Event stream execution model.
+            </summary>
+            <summary>
+            Event stream execution model.
+            </summary>
+        </member>
+        <member name="M:CliWrap.EventStream.EventStreamCommandExtensions.ListenAsync(CliWrap.Command,System.Text.Encoding,System.Text.Encoding,System.Threading.CancellationToken,System.Threading.CancellationToken)">
+            <summary>
+            Executes the command as a pull-based event stream.
+            </summary>
+            <remarks>
+            Use pattern matching to handle specific instances of <see cref="T:CliWrap.EventStream.CommandEvent" />.
+            </remarks>
+        </member>
+        <member name="M:CliWrap.EventStream.EventStreamCommandExtensions.ListenAsync(CliWrap.Command,System.Text.Encoding,System.Text.Encoding,System.Threading.CancellationToken)">
+            <summary>
+            Executes the command as a pull-based event stream.
+            </summary>
+            <remarks>
+            Use pattern matching to handle specific instances of <see cref="T:CliWrap.EventStream.CommandEvent" />.
+            </remarks>
+        </member>
+        <member name="M:CliWrap.EventStream.EventStreamCommandExtensions.ListenAsync(CliWrap.Command,System.Text.Encoding,System.Threading.CancellationToken)">
+            <summary>
+            Executes the command as a pull-based event stream.
+            </summary>
+            <remarks>
+            Use pattern matching to handle specific instances of <see cref="T:CliWrap.EventStream.CommandEvent" />.
+            </remarks>
+        </member>
+        <member name="M:CliWrap.EventStream.EventStreamCommandExtensions.ListenAsync(CliWrap.Command,System.Threading.CancellationToken)">
+            <summary>
+            Executes the command as a pull-based event stream.
+            Uses <see cref="P:System.Console.OutputEncoding" /> for decoding.
+            </summary>
+            <remarks>
+            Use pattern matching to handle specific instances of <see cref="T:CliWrap.EventStream.CommandEvent" />.
+            </remarks>
+        </member>
+        <member name="M:CliWrap.EventStream.EventStreamCommandExtensions.Observe(CliWrap.Command,System.Text.Encoding,System.Text.Encoding,System.Threading.CancellationToken,System.Threading.CancellationToken)">
+            <summary>
+            Executes the command as a push-based event stream.
+            </summary>
+            <remarks>
+            Use pattern matching to handle specific instances of <see cref="T:CliWrap.EventStream.CommandEvent" />.
+            </remarks>
+        </member>
+        <member name="M:CliWrap.EventStream.EventStreamCommandExtensions.Observe(CliWrap.Command,System.Text.Encoding,System.Text.Encoding,System.Threading.CancellationToken)">
+            <summary>
+            Executes the command as a push-based event stream.
+            </summary>
+            <remarks>
+            Use pattern matching to handle specific instances of <see cref="T:CliWrap.EventStream.CommandEvent" />.
+            </remarks>
+        </member>
+        <member name="M:CliWrap.EventStream.EventStreamCommandExtensions.Observe(CliWrap.Command,System.Text.Encoding,System.Threading.CancellationToken)">
+            <summary>
+            Executes the command as a push-based event stream.
+            </summary>
+            <remarks>
+            Use pattern matching to handle specific instances of <see cref="T:CliWrap.EventStream.CommandEvent" />.
+            </remarks>
+        </member>
+        <member name="M:CliWrap.EventStream.EventStreamCommandExtensions.Observe(CliWrap.Command,System.Threading.CancellationToken)">
+            <summary>
+            Executes the command as a push-based event stream.
+            Uses <see cref="P:System.Console.OutputEncoding" /> for decoding.
+            </summary>
+            <remarks>
+            Use pattern matching to handle specific instances of <see cref="T:CliWrap.EventStream.CommandEvent" />.
+            </remarks>
+        </member>
+        <member name="T:CliWrap.Exceptions.CliWrapException">
+            <summary>
+            Parent class for exceptions thrown by <see cref="N:CliWrap" />.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Exceptions.CliWrapException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes an instance of <see cref="T:CliWrap.Exceptions.CliWrapException" />.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Exceptions.CliWrapException.#ctor(System.String)">
+            <summary>
+            Initializes an instance of <see cref="T:CliWrap.Exceptions.CliWrapException" />.
+            </summary>
+        </member>
+        <member name="T:CliWrap.Exceptions.CommandExecutionException">
+            <summary>
+            Exception thrown when the command fails to execute correctly.
+            </summary>
+        </member>
+        <member name="P:CliWrap.Exceptions.CommandExecutionException.Command">
+            <summary>
+            Command that triggered the exception.
+            </summary>
+        </member>
+        <member name="P:CliWrap.Exceptions.CommandExecutionException.ExitCode">
+            <summary>
+            Exit code returned by the process.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Exceptions.CommandExecutionException.#ctor(CliWrap.ICommandConfiguration,System.Int32,System.String,System.Exception)">
+            <summary>
+            Initializes an instance of <see cref="T:CliWrap.Exceptions.CommandExecutionException" />.
+            </summary>
+        </member>
+        <member name="M:CliWrap.Exceptions.CommandExecutionException.#ctor(CliWrap.ICommandConfiguration,System.Int32,System.String)">
+            <summary>
+            Initializes an instance of <see cref="T:CliWrap.Exceptions.CommandExecutionException" />.
+            </summary>
+        </member>
+        <member name="T:CliWrap.ICommandConfiguration">
+            <summary>
+            Instructions for running a process.
+            </summary>
+        </member>
+        <member name="P:CliWrap.ICommandConfiguration.TargetFilePath">
+            <summary>
+            File path of the executable, batch file, or script, that this command runs.
+            </summary>
+        </member>
+        <member name="P:CliWrap.ICommandConfiguration.Arguments">
+            <summary>
+            Command-line arguments passed to the underlying process.
+            </summary>
+        </member>
+        <member name="P:CliWrap.ICommandConfiguration.WorkingDirPath">
+            <summary>
+            Working directory path set for the underlying process.
+            </summary>
+        </member>
+        <member name="P:CliWrap.ICommandConfiguration.Credentials">
+            <summary>
+            User credentials set for the underlying process.
+            </summary>
+        </member>
+        <member name="P:CliWrap.ICommandConfiguration.EnvironmentVariables">
+            <summary>
+            Environment variables set for the underlying process.
+            </summary>
+        </member>
+        <member name="P:CliWrap.ICommandConfiguration.Validation">
+            <summary>
+            Configured result validation strategy.
+            </summary>
+        </member>
+        <member name="P:CliWrap.ICommandConfiguration.StandardInputPipe">
+            <summary>
+            Configured standard input pipe source.
+            </summary>
+        </member>
+        <member name="P:CliWrap.ICommandConfiguration.StandardOutputPipe">
+            <summary>
+            Configured standard output pipe target.
+            </summary>
+        </member>
+        <member name="P:CliWrap.ICommandConfiguration.StandardErrorPipe">
+            <summary>
+            Configured standard error pipe target.
+            </summary>
+        </member>
+        <member name="T:CliWrap.PipeSource">
+            <summary>
+            Abstraction that represents an inwards-facing pipe.
+            </summary>
+        </member>
+        <member name="M:CliWrap.PipeSource.CopyToAsync(System.IO.Stream,System.Threading.CancellationToken)">
+            <summary>
+            Reads the binary content pushed into the pipe and writes it to the destination stream.
+            Destination stream represents the process's standard input stream.
+            </summary>
+        </member>
+        <member name="P:CliWrap.PipeSource.Null">
+            <summary>
+            Pipe source that does not provide any data.
+            Functionally equivalent to a null device.
+            </summary>
+        </member>
+        <member name="M:CliWrap.PipeSource.Create(System.Func{System.IO.Stream,System.Threading.CancellationToken,System.Threading.Tasks.Task})">
+            <summary>
+            Creates an anonymous pipe source with the <see cref="M:CliWrap.PipeSource.CopyToAsync(System.IO.Stream,System.Threading.CancellationToken)" /> method
+            implemented by the specified asynchronous delegate.
+            </summary>
+        </member>
+        <member name="M:CliWrap.PipeSource.Create(System.Action{System.IO.Stream})">
+            <summary>
+            Creates an anonymous pipe source with the <see cref="M:CliWrap.PipeSource.CopyToAsync(System.IO.Stream,System.Threading.CancellationToken)" /> method
+            implemented by the specified synchronous delegate.
+            </summary>
+        </member>
+        <member name="M:CliWrap.PipeSource.FromStream(System.IO.Stream,System.Boolean)">
+            <summary>
+            Creates a pipe source that reads from the specified stream.
+            </summary>
+        </member>
+        <member name="M:CliWrap.PipeSource.FromStream(System.IO.Stream)">
+            <summary>
+            Creates a pipe source that reads from the specified stream.
+            </summary>
+        </member>
+        <member name="M:CliWrap.PipeSource.FromFile(System.String)">
+            <summary>
+            Creates a pipe source that reads from the specified file.
+            </summary>
+        </member>
+        <member name="M:CliWrap.PipeSource.FromMemory(System.ReadOnlyMemory{System.Byte})">
+            <summary>
+            Creates a pipe source that reads from the specified memory region.
+            </summary>
+        </member>
+        <member name="M:CliWrap.PipeSource.FromBytes(System.Byte[])">
+            <summary>
+            Creates a pipe source that reads from the specified byte array.
+            </summary>
+        </member>
+        <member name="M:CliWrap.PipeSource.FromString(System.String,System.Text.Encoding)">
+            <summary>
+            Creates a pipe source that reads from the specified string.
+            </summary>
+        </member>
+        <member name="M:CliWrap.PipeSource.FromString(System.String)">
+            <summary>
+            Creates a pipe source that reads from the specified string.
+            Uses <see cref="P:System.Console.InputEncoding" /> for encoding.
+            </summary>
+        </member>
+        <member name="M:CliWrap.PipeSource.FromCommand(CliWrap.Command)">
+            <summary>
+            Creates a pipe source that reads from the standard output of the specified command.
+            </summary>
+        </member>
+        <member name="T:CliWrap.PipeTarget">
+            <summary>
+            Abstraction that represents an outwards-facing pipe.
+            </summary>
+        </member>
+        <member name="M:CliWrap.PipeTarget.CopyFromAsync(System.IO.Stream,System.Threading.CancellationToken)">
+            <summary>
+            Reads the binary content from the origin stream and pushes it into the pipe.
+            Origin stream represents the process's standard output or standard error stream.
+            </summary>
+        </member>
+        <member name="P:CliWrap.PipeTarget.Null">
+            <summary>
+            Pipe target that discards all data.
+            Functionally equivalent to a null device.
+            </summary>
+            <remarks>
+            Using this target results in the corresponding stream (standard output or standard error)
+            not being opened for the underlying process at all.
+            In the vast majority of cases, this behavior should be functionally equivalent to piping
+            to a null stream, but without the performance overhead of consuming and discarding unneeded data.
+            This may be undesirable in certain situations — in which case it's recommended to pipe to a
+            null stream explicitly using <see cref="M:CliWrap.PipeTarget.ToStream(System.IO.Stream)" /> with <see cref="F:System.IO.Stream.Null" />.
+            </remarks>
+        </member>
+        <member name="M:CliWrap.PipeTarget.Create(System.Func{System.IO.Stream,System.Threading.CancellationToken,System.Threading.Tasks.Task})">
+            <summary>
+            Creates an anonymous pipe target with the <see cref="M:CliWrap.PipeTarget.CopyFromAsync(System.IO.Stream,System.Threading.CancellationToken)" /> method
+            implemented by the specified asynchronous delegate.
+            </summary>
+        </member>
+        <member name="M:CliWrap.PipeTarget.Create(System.Action{System.IO.Stream})">
+            <summary>
+            Creates an anonymous pipe target with the <see cref="M:CliWrap.PipeTarget.CopyFromAsync(System.IO.Stream,System.Threading.CancellationToken)" /> method
+            implemented by the specified synchronous delegate.
+            </summary>
+        </member>
+        <member name="M:CliWrap.PipeTarget.ToStream(System.IO.Stream,System.Boolean)">
+            <summary>
+            Creates a pipe target that writes to the specified stream.
+            </summary>
+        </member>
+        <member name="M:CliWrap.PipeTarget.ToStream(System.IO.Stream)">
+            <summary>
+            Creates a pipe target that writes to the specified stream.
+            </summary>
+        </member>
+        <member name="M:CliWrap.PipeTarget.ToFile(System.String)">
+            <summary>
+            Creates a pipe target that writes to the specified file.
+            </summary>
+        </member>
+        <member name="M:CliWrap.PipeTarget.ToStringBuilder(System.Text.StringBuilder,System.Text.Encoding)">
+            <summary>
+            Creates a pipe target that writes to the specified string builder.
+            </summary>
+        </member>
+        <member name="M:CliWrap.PipeTarget.ToStringBuilder(System.Text.StringBuilder)">
+            <summary>
+            Creates a pipe target that writes to the specified string builder.
+            Uses <see cref="P:System.Console.OutputEncoding" /> for decoding.
+            </summary>
+        </member>
+        <member name="M:CliWrap.PipeTarget.ToDelegate(System.Func{System.String,System.Threading.Tasks.Task},System.Text.Encoding)">
+            <summary>
+            Creates a pipe target that invokes the specified asynchronous delegate on every line written to the stream.
+            </summary>
+        </member>
+        <member name="M:CliWrap.PipeTarget.ToDelegate(System.Func{System.String,System.Threading.Tasks.Task})">
+            <summary>
+            Creates a pipe target that invokes the specified asynchronous delegate on every line written to the stream.
+            Uses <see cref="P:System.Console.OutputEncoding" /> for decoding.
+            </summary>
+        </member>
+        <member name="M:CliWrap.PipeTarget.ToDelegate(System.Action{System.String},System.Text.Encoding)">
+            <summary>
+            Creates a pipe target that invokes the specified synchronous delegate on every line written to the stream.
+            </summary>
+        </member>
+        <member name="M:CliWrap.PipeTarget.ToDelegate(System.Action{System.String})">
+            <summary>
+            Creates a pipe target that invokes the specified synchronous delegate on every line written to the stream.
+            Uses <see cref="P:System.Console.OutputEncoding" /> for decoding.
+            </summary>
+        </member>
+        <member name="M:CliWrap.PipeTarget.Merge(System.Collections.Generic.IEnumerable{CliWrap.PipeTarget})">
+            <summary>
+            Creates a pipe target that replicates data over multiple inner targets.
+            </summary>
+        </member>
+        <member name="M:CliWrap.PipeTarget.Merge(CliWrap.PipeTarget[])">
+            <summary>
+            Creates a pipe target that replicates data over multiple inner targets.
+            </summary>
+        </member>
+    </members>
+</doc>

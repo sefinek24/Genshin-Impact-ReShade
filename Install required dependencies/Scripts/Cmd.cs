@@ -4,9 +4,8 @@ using System.Threading.Tasks;
 using CliWrap;
 using CliWrap.Buffered;
 using Microsoft.Toolkit.Uwp.Notifications;
-using Prepare_mod.Scripts;
 
-namespace PrepareMod.Scripts
+namespace Prepare_mod.Scripts
 {
     internal abstract class Cmd
     {

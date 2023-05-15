@@ -1,0 +1,12 @@
+D:\GitHub\Stella\Genshin-Stella-Mod\Injector\bin\Release\Injector.exe.config
+D:\GitHub\Stella\Genshin-Stella-Mod\Injector\bin\Release\Injector.exe
+D:\GitHub\Stella\Genshin-Stella-Mod\Injector\bin\Release\Injector.pdb
+D:\GitHub\Stella\Genshin-Stella-Mod\Injector\obj\Release\Injector.csproj.AssemblyReference.cache
+D:\GitHub\Stella\Genshin-Stella-Mod\Injector\obj\Release\Injector.csproj.SuggestedBindingRedirects.cache
+D:\GitHub\Stella\Genshin-Stella-Mod\Injector\obj\Release\Injector.csproj.CoreCompileInputs.cache
+D:\GitHub\Stella\Genshin-Stella-Mod\Injector\obj\Release\Injector.exe
+D:\GitHub\Stella\Genshin-Stella-Mod\Injector\obj\Release\Injector.pdb
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Impact Mod Pack\bin\Release\Injector.exe.config
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Impact Mod Pack\bin\Release\Injector.exe
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Impact Mod Pack\bin\Release\Injector.pdb
+D:\GitHub\Stella\Genshin-Stella-Mod\Injector\obj\Release\Injector.csproj.CopyComplete

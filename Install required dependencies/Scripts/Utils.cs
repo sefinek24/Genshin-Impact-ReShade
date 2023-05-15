@@ -1,10 +1,8 @@
 using System;
 using System.Diagnostics;
 using System.IO;
-using Prepare_mod;
-using Prepare_mod.Scripts;
 
-namespace PrepareMod.Scripts
+namespace Prepare_mod.Scripts
 {
     internal static class Utils
     {

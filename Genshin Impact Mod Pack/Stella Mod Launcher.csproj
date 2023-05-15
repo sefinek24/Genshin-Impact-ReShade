@@ -288,7 +288,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="data\cmd\run.cmd">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="data\cmd\scan_sys_files.cmd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

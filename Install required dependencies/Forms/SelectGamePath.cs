@@ -8,8 +8,6 @@ namespace Prepare_mod.Forms
 {
     public partial class SelectGamePath : Form
     {
-        public static readonly string SfnFilePath = Path.Combine(Program.AppData, "game-path.sfn");
-
         public SelectGamePath()
         {
             InitializeComponent();
@@ -17,9 +15,9 @@ namespace Prepare_mod.Forms
 
         private void SelectPath_Load(object sender, EventArgs e)
         {
-            if (File.Exists(SfnFilePath))
+            if (File.Exists(Program.GamePathSfn))
             {
-                string path = File.ReadAllText(SfnFilePath).Trim();
+                string path = File.ReadAllText(Program.GamePathSfn).Trim();
                 label4.Text += path;
             }
             else
@@ -89,9 +87,12 @@ namespace Prepare_mod.Forms
                 return;
             }
 
+
+            File.WriteAllText(Path.Combine(Program.MyDocs, "game-version.sfn"), Path.GetFileName(selectedFile) == "GenshinImpact.exe" ? "1" : "2");
+
             Program.GameExeGlobal = selectedFile;
             Program.GameDirGlobal = Path.GetDirectoryName(Path.GetDirectoryName(selectedFile));
-            File.WriteAllText(SfnFilePath, Program.GameDirGlobal);
+            File.WriteAllText(Program.GamePathSfn, Program.GameDirGlobal);
 
             Console.WriteLine(Program.GameDirGlobal);
 
