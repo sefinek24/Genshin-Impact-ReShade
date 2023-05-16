@@ -27,7 +27,6 @@ namespace Prepare_mod
         public static readonly string AppName = Assembly.GetExecutingAssembly().GetName().Name;
         private static readonly string AppVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
         public static string AppData = GetAppData();
-        public static readonly string MyDocs = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Genshin Stella Mod");
         public static string GamePathSfn;
 
         // Links
@@ -96,8 +95,8 @@ namespace Prepare_mod
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            if (!Directory.Exists(MyDocs)) Directory.CreateDirectory(MyDocs);
-            GamePathSfn = Path.Combine(MyDocs, "game-path.sfn");
+            if (!Directory.Exists(AppData)) Directory.CreateDirectory(AppData);
+            GamePathSfn = Path.Combine(AppData, "game-path.sfn");
 
 
             if (File.Exists(GamePathSfn))
