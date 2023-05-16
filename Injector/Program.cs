@@ -3,7 +3,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 using Injector.Scripts;
 
 namespace Injector;
@@ -23,13 +22,13 @@ internal static class Program
     private static readonly string FpsUnlockerExe = Path.Combine(AppPath, "data", "unlocker", "unlockfps_clr.exe");
 
     // Links
-    private static readonly string AppWebsite = "https://genshin.sefinek.net";
+    // private static readonly string AppWebsite = "https://genshin.sefinek.net";
     public static readonly string DiscordUrl = "https://discord.gg/SVcbaRc7gH";
 
     // Other
     private static readonly string Line = "===============================================================================================";
 
-    private static async Task Main()
+    private static void Main()
     {
         Console.OutputEncoding = Encoding.UTF8;
 

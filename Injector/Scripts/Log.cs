@@ -28,13 +28,11 @@ internal abstract class Log
         if (!Directory.Exists(Program.AppData)) Directory.CreateDirectory(Program.AppData);
         if (!Directory.Exists(Folder)) Directory.CreateDirectory(Folder);
 
-        using (StreamWriter sw = File.AppendText(OutputFile))
-        {
-            sw.WriteLine($"[{DateTime.Now}]: {Console.Title}\n{log.Trim()}\n");
-        }
+        using StreamWriter sw = File.AppendText(OutputFile);
+        sw.WriteLine($"[{DateTime.Now}]: {Console.Title}\n{log.Trim()}\n");
     }
 
-    public static async void SaveErrorLog(Exception log, bool sendTelemetry)
+    private static async void SaveErrorLog(Exception log, bool sendTelemetry)
     {
         if (!Directory.Exists(Program.AppData)) Directory.CreateDirectory(Program.AppData);
         if (!Directory.Exists(Folder)) Directory.CreateDirectory(Folder);

@@ -1,11 +1,32 @@
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Security.Principal;
+using Windows.Storage;
 
 namespace Prepare_mod.Scripts
 {
     internal static class Utils
     {
+        public static bool IsRunAsAdmin()
+        {
+            WindowsIdentity identity = WindowsIdentity.GetCurrent();
+            WindowsPrincipal principal = new WindowsPrincipal(identity);
+            return principal.IsInRole(WindowsBuiltInRole.Administrator);
+        }
+
+        public static string GetAppData()
+        {
+            try
+            {
+                return Path.Combine(ApplicationData.Current?.LocalFolder?.Path);
+            }
+            catch (InvalidOperationException)
+            {
+                return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Genshin Stella Mod");
+            }
+        }
+
         public static void OpenUrl(string url)
         {
             if (string.IsNullOrEmpty(url))
@@ -25,7 +46,7 @@ namespace Prepare_mod.Scripts
             }
         }
 
-        public static string GetAppData()
+        public static string GetWtAppData()
         {
             if (!Directory.Exists(Program.Packages))
             {
@@ -41,7 +62,7 @@ namespace Prepare_mod.Scripts
             return path;
         }
 
-        public static string GetProgramFiles()
+        public static string GetWtProgramFiles()
         {
             if (!Directory.Exists(Program.WindowsApps))
             {
