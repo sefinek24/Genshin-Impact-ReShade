@@ -27,9 +27,9 @@ if "%ERRORLEVEL%"=="0" (
     goto pause
 )
 
-echo 2/2 - Deleting %AppData%\Genshin Stella Mod by Sefinek\EBWebView...
-if exist "%AppData%\Genshin Stella Mod by Sefinek\EBWebView" (
-    rd /s /q "%AppData%\Genshin Stella Mod by Sefinek\EBWebView"
+echo 2/2 - Deleting %AppData%\Genshin Stella Mod\EBWebView...
+if exist "%AppData%\Genshin Stella Mod\EBWebView" (
+    rd /s /q "%AppData%\Genshin Stella Mod\EBWebView"
     echo.
 
     echo [i] Success.

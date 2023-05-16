@@ -12,13 +12,10 @@ namespace Genshin_Stella_Mod.Scripts
 {
     internal static class Utils
     {
-        public static readonly string MyDocs = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Genshin Stella Mod");
-        public static string FileWithGamePath;
+        private static readonly string FileWithGamePath = Path.Combine(Program.AppData, "game-path.sfn");
 
         public static string GetGame(string type)
         {
-            FileWithGamePath = Path.Combine(MyDocs, "game-path.sfn");
-
             if (!File.Exists(FileWithGamePath))
             {
                 MessageBox.Show($"File with game path was not found in:\n{FileWithGamePath}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -106,7 +103,7 @@ namespace Genshin_Stella_Mod.Scripts
 
         public static string GetGameVersion()
         {
-            string gvSfn = Path.Combine(MyDocs, "game-version.sfn");
+            string gvSfn = Path.Combine(Program.AppData, "game-version.sfn");
             string exePath = GetGame("giExe");
             string exe = Path.GetFileName(exePath);
 

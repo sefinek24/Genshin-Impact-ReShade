@@ -29,29 +29,29 @@ if "%ERRORLEVEL%"=="0" (
 
 
 echo 2/6 - Checking required files and folders...
-set "GamePathSFN=%AppData%\Genshin Stella Mod by Sefinek\game-path.sfn"
-if exist "%GamePathSFN%" (
-    echo [✓] %GamePathSFN%
+
+if exist %1 (
+    echo [✓] %1
 ) else (
-    echo [x] Not found.
+    echo [x] Not found game-path.sfn.
     goto pause
 )
 
-set /p GamePath=<"%GamePathSFN%"
+set /p GamePath=<%1
 if exist "%GamePath%" (
-    echo [✓] %GamePath%
+    echo [✓] "%GamePath%"
 ) else (
-    echo [x] Not found.
+    echo [x] Not found main game folder.
     goto pause
 )
 echo.
 
 
+
 echo 3/6 - Deleting temp files...
-set "TempDir=C:\Genshin-Impact-ReShade\data\reshade\cache"
-echo [i] Path: %TempDir%
-if exist "%TempDir%" (
-    pushd "%TempDir%"
+echo [i] Path: %2
+if exist %2 (
+    pushd %2
     for %%I in (*) do (
       if not "%%~nxI"=="null" (
         del /f /q "%%I"
@@ -67,10 +67,9 @@ echo.
 
 
 echo 4/6 - Deleting WebView2 cache...
-set "WebviewDir=%AppData%\Genshin Stella Mod by Sefinek\EBWebView"
-echo [i] Path: %WebviewDir%
-if exist "%WebviewDir%" (
-    rd /s /q "%WebviewDir%"
+echo [i] Path: %3
+if exist %3 (
+    rd /s /q %3
     echo [✓] Success.
 ) else (
     echo [x] Not found.
@@ -79,10 +78,9 @@ echo.
 
 
 echo 5/6 - Deleting ReShade log file...
-set "ReShadeLogFile=%GamePath%\Genshin Impact game\ReShade.log"
-echo [i] Path: %ReShadeLogFile%
-if exist "%ReShadeLogFile%" (
-    del "%ReShadeLogFile%"
+echo [i] Path: %4
+if exist %4 (
+    del %4
     echo [✓] Success.
 ) else (
     echo [x] Not found.
@@ -91,10 +89,9 @@ echo.
 
 
 echo 6/6 - Deleting Stella Mod logs...
-set "StellaModLogsDir=%AppData%\Genshin Stella Mod by Sefinek\logs"
-echo [i] Path: %StellaModLogsDir%
-if exist "%StellaModLogsDir%" (
-    rd /s /q "%StellaModLogsDir%"
+echo [i] Path: %5
+if exist %5 (
+    rd /s /q %5
     echo [✓] Success.
 ) else (
     echo [x] Not found.

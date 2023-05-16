@@ -38,7 +38,7 @@ namespace Genshin_Stella_Mod.Scripts
                 // StandardOutput
                 string stdoutLine = !string.IsNullOrEmpty(stdout) ? $"\n✅ STDOUT: {stdout}" : "";
                 string stderrLine = !string.IsNullOrEmpty(stderr) ? $"\n❌ STDERR: {stderr}" : "";
-                Log.Output($": CliWrapSuccessfully executed {app}; Exit code: {result.ExitCode}; Start time: {result.StartTime}; Exit time: {result.ExitTime}{stdoutLine}{stderrLine};");
+                Log.Output($"CliWrap: Successfully executed {app}; Exit code: {result.ExitCode}; Start time: {result.StartTime}; Exit time: {result.ExitTime}{stdoutLine}{stderrLine};");
 
                 // StandardError
                 if (result.ExitCode != 0)
@@ -110,6 +110,8 @@ namespace Genshin_Stella_Mod.Scripts
                     Verb = runAsAdmin ? "runas" : "",
                     UseShellExecute = true
                 });
+
+                Log.Output($"Process.Start: Successfully executed {app}; Args: {args}; Working dir: {workingDir}; Run as admin: {runAsAdmin}; Exit: {exit};");
             }
             catch (Exception ex)
             {

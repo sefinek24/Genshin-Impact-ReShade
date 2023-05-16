@@ -194,7 +194,16 @@ namespace Genshin_Stella_Mod.Forms
         // --------------------------------- Cache ---------------------------------
         private void DeleteCache_Button(object sender, EventArgs e)
         {
-            Cmd.Execute("wt.exe", Path.Combine(Program.AppPath, "data", "cmd", "delete_cache.cmd"), Program.AppPath, true, false);
+            string resources = File.ReadAllText(Path.Combine(Program.AppData, "resources-path.sfn"));
+            string cache = Path.Combine(resources, "Cache");
+            string webViewCache = Path.Combine(Program.AppData, "EBWebView");
+            string reShadeLog = Path.Combine(Utils.GetGame("giGameDir"), "ReShade.log");
+            string logs = Path.Combine(Log.Folder);
+
+            Cmd.Execute(
+                "wt.exe",
+                $"{Path.Combine(Program.AppPath, "data", "cmd", "delete_cache.cmd")} \"{Path.Combine(Program.AppData, "game-path.sfn")}\" \"{cache}\" \"{webViewCache}\" \"{reShadeLog}\" \"{logs}\"",
+                Program.AppPath, true, false);
         }
 
         private void DeleteWebViewCache_Click(object sender, EventArgs e)

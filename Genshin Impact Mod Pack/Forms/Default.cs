@@ -33,6 +33,7 @@ namespace Genshin_Stella_Mod.Forms
         // Files
         private static readonly string SetupPathExe = Path.Combine(Path.GetTempPath(), "Genshin_Stella_Mod_Setup.exe");
         private static readonly string ReShadePath = Path.Combine(Utils.GetGame("giGameDir"), "ReShade.ini");
+        private static readonly string CmdOutputLogs = Path.Combine(Program.AppData, "logs", "cmd.output.log");
         private static IniFile _reShadeIni;
 
         // New update?
@@ -544,17 +545,17 @@ namespace Genshin_Stella_Mod.Forms
         // ------- Start the game -------
         private void StartGame_Click(object sender, EventArgs e)
         {
-            Cmd.Execute("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 1 {Utils.GetGameVersion()}", Program.AppPath, true, true);
+            Cmd.Execute("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 1 {Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, true, true);
         }
 
         private void OnlyReShade_Click(object sender, EventArgs e)
         {
-            Cmd.Execute("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 2 {Utils.GetGameVersion()}", Program.AppPath, true, true);
+            Cmd.Execute("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 2 {Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, true, true);
         }
 
         private void OnlyUnlocker_Click(object sender, EventArgs e)
         {
-            Cmd.Execute("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 3 {Utils.GetGameVersion()}", Program.AppPath, true, true);
+            Cmd.Execute("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 3 {Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, true, true);
         }
 
         private void OpenGILauncher_Click(object sender, EventArgs e)

@@ -18,23 +18,13 @@ echo.  ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉�
 echo.   ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟                                          ~ Made by Sefinek
 echo ========================================================================================= & echo.
 
-
 echo 1/4 - Preparing...
-set "DocsGSMbS=%UserProfile%\Documents\Genshin Stella Mod by Sefinek"
-if not exist "%DocsGSMbS%" (
-    mkdir "%DocsGSMbS%"
-)
-if not exist "%DocsGSMbS%\logs" (
-    mkdir "%DocsGSMbS%\logs"
-)
-
-set "OutputLog=%DocsGSMbS%\logs\cmd.output.log"
 
 REM Check if the script is running with administrative permissions
 net session >nul 2>&1
 if not "%ERRORLEVEL%"=="0" (
     echo [x] This file needs to be executed with administrative privileges.
-    echo [%DATE% %TIME%]: The file must be run as administrator. >> "%OutputLog%"
+    echo [%DATE% %TIME%]: The file must be run as administrator. >> %3
     goto pause
 )
 
@@ -74,16 +64,16 @@ REM Check for required processes
 echo 3/4 - Checking required processes...
 
 tasklist /fi "ImageName eq launcher.exe" /fo csv | find /I "launcher.exe" >NUL && (
-    echo [%DATE% %TIME%]: Killing "launcher.exe" process... >> "%OutputLog%"
-    taskkill /F /IM "launcher.exe" >> "%OutputLog%"
+    echo [%DATE% %TIME%]: Killing "launcher.exe" process... >> %3
+    taskkill /F /IM "launcher.exe" >> %3
 
     echo [i] launcher.exe           - Closed
 ) || (
     echo [✓] launcher.exe           - OK
 )
 tasklist /fi "ImageName eq Genshin Stella Mod.exe" /fo csv | find /I "Genshin Stella Mod.exe" >NUL && (
-    echo [%DATE% %TIME%]: Killing "Genshin Stella Mod.exe" process... >> "%OutputLog%"
-    taskkill /F /IM "Genshin Stella Mod.exe" >> "%OutputLog%"
+    echo [%DATE% %TIME%]: Killing "Genshin Stella Mod.exe" process... >> %3
+    taskkill /F /IM "Genshin Stella Mod.exe" >> %3
 
     echo [i] Genshin Stella Mod.exe - Closed
 ) || (
@@ -91,8 +81,8 @@ tasklist /fi "ImageName eq Genshin Stella Mod.exe" /fo csv | find /I "Genshin St
 )
 if "%2" equ "1" (
     tasklist /fi "ImageName eq GenshinImpact.exe" /fo csv | find /I "GenshinImpact.exe" >NUL && (
-        echo [%DATE% %TIME%]: Killing "GenshinImpact.exe" process... >> "%OutputLog%"
-        taskkill /F /IM "GenshinImpact.exe" >> "%OutputLog%"
+        echo [%DATE% %TIME%]: Killing "GenshinImpact.exe" process... >> %3
+        taskkill /F /IM "GenshinImpact.exe" >> %3
 
         echo [i] GenshinImpact.exe      - Closed
     ) || (
@@ -100,8 +90,8 @@ if "%2" equ "1" (
     )
 ) else if "%2" equ "2" (
     tasklist /fi "ImageName eq YuanShen.exe" /fo csv | find /I "YuanShen.exe" >NUL && (
-        echo [%DATE% %TIME%]: Killing "YuanShen.exe" process... >> "%OutputLog%"
-        taskkill /F /IM "YuanShen.exe" >> "%OutputLog%"
+        echo [%DATE% %TIME%]: Killing "YuanShen.exe" process... >> %3
+        taskkill /F /IM "YuanShen.exe" >> %3
 
         echo [i] YuanShen.exe           - Closed
     ) || (
@@ -112,16 +102,16 @@ if "%2" equ "1" (
     goto pause
 )
 tasklist /fi "ImageName eq unlockfps_clr.exe" /fo csv | find /I "unlockfps_clr.exe" >NUL && (
-    echo [%DATE% %TIME%]: Killing "unlockfps_clr.exe" process... >> "%OutputLog%"
-    taskkill /F /IM "unlockfps_clr.exe" >> "%OutputLog%"
+    echo [%DATE% %TIME%]: Killing "unlockfps_clr.exe" process... >> %3
+    taskkill /F /IM "unlockfps_clr.exe" >> %3
 
     echo [i] unlockfps_clr.exe      - Closed
 ) || (
     echo [✓] unlockfps_clr.exe      - OK
 )
 tasklist /fi "ImageName eq inject64.exe" /fo csv | find /I "inject64.exe" >NUL && (
-    echo [%DATE% %TIME%]: Killing "inject64.exe" process... >> "%OutputLog%"
-    taskkill /F /IM "inject64.exe" >> "%OutputLog%"
+    echo [%DATE% %TIME%]: Killing "inject64.exe" process... >> %3
+    taskkill /F /IM "inject64.exe" >> %3
 
     echo [i] inject64.exe           - Closed
 ) || (
@@ -137,7 +127,7 @@ REM Start the game
 echo 4/4 - Starting...
 
 set "GameVersion=%2"
-echo [%DATE% %TIME%]: Launch mode %1. Starting... >> "%OutputLog%"
+echo [%DATE% %TIME%]: Launch mode %1. Starting... >> %3
 
 
 REM Choose the correct mode based on the LaunchModeContent variable
@@ -183,7 +173,7 @@ if "%1" equ "1" (
 ) else (
     REM Wrong launch mode
     echo [x] Failed to start. Invalid launch mode: %1
-    echo [%DATE% %TIME%]: Failed to start. Launch mode is invalid. >> "%OutputLog%"
+    echo [%DATE% %TIME%]: Failed to start. Launch mode is invalid. >> %3
     goto pause
 )
 

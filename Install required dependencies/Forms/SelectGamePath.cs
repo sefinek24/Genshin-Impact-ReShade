@@ -88,7 +88,7 @@ namespace Prepare_mod.Forms
             }
 
 
-            File.WriteAllText(Path.Combine(Program.MyDocs, "game-version.sfn"), Path.GetFileName(selectedFile) == "GenshinImpact.exe" ? "1" : "2");
+            File.WriteAllText(Path.Combine(Program.AppData, "game-version.sfn"), Path.GetFileName(selectedFile) == "GenshinImpact.exe" ? "1" : "2");
 
             Program.GameExeGlobal = selectedFile;
             Program.GameDirGlobal = Path.GetDirectoryName(Path.GetDirectoryName(selectedFile));
