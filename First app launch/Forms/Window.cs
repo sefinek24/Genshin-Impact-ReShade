@@ -4,14 +4,14 @@ using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 using Windows.Storage;
-using First_app_launch.Scripts;
+using First_app_launch.Forms;
 
-namespace Conf_window.Forms
+namespace Checkboxes.Forms
 {
-    public partial class Main : Form
+    public partial class Window : Form
     {
         private static readonly string AppData = GetAppData();
-        private static readonly string AppName = Assembly.GetExecutingAssembly().GetName().Name;
+        public static readonly string AppName = Assembly.GetExecutingAssembly().GetName().Name;
         private static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
 
         private static IniFile _prepareIni;
@@ -25,7 +25,7 @@ namespace Conf_window.Forms
         private static int _instOrUpdWt;
 
         // Main
-        public Main()
+        public Window()
         {
             _prepareIni = new IniFile(Path.Combine(AppData, "prepare-stella.ini"));
 

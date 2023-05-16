@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{377E01DA-E164-4E79-A540-23F68FB2CD8B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Prepare_mod</RootNamespace>
+    <RootNamespace>PrepareStella</RootNamespace>
     <AssemblyName>Prepare Stella Mod</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -95,9 +95,9 @@
     <Compile Include="Scripts\Preparing\InternetShortcuts.cs" />
     <Compile Include="Scripts\Preparing\TerminalInstallation.cs" />
     <Compile Include="Scripts\Preparing\UpdateReShadeCfg.cs" />
-    <Compile Include="Scripts\ReShade.cs" />
     <Compile Include="Scripts\Utils.cs" />
     <Compile Include="Scripts\Zip.cs" />
+    <Compile Include="Start.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

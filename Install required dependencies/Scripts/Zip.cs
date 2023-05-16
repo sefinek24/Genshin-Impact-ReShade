@@ -4,7 +4,7 @@ using System.Linq;
 using Ionic.Zip;
 using Ionic.Zlib;
 
-namespace PrepareMod.Scripts
+namespace PrepareStella.Scripts
 {
     internal abstract class Zip
     {

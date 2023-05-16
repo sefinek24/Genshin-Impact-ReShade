@@ -38,7 +38,7 @@ namespace Prepare_mod.Forms
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Prepare_mod.Properties.Resources.launcher_n164rh2IKHOF;
+            this.pictureBox1.Image = global::PrepareStella.Properties.Resources.launcher_n164rh2IKHOF;
             this.pictureBox1.Location = new System.Drawing.Point(170, 201);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(670, 358);
@@ -77,7 +77,7 @@ namespace Prepare_mod.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Prepare_mod.Properties.Resources.bg2;
+            this.BackgroundImage = global::PrepareStella.Properties.Resources.bg2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1011, 573);
             this.Controls.Add(this.pictureBox1);

@@ -5,10 +5,13 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Prepare_mod.Forms;
-using Prepare_mod.Properties;
+using PrepareStella.Properties;
 
-namespace Prepare_mod.Scripts.Preparing
+namespace PrepareStella.Scripts.Preparing
 {
+    /// <summary>
+    ///     Runs the resource download and preparation process.
+    /// </summary>
     internal static class DownloadUpdateResources
     {
         public static async Task Run()
@@ -37,7 +40,6 @@ namespace Prepare_mod.Scripts.Preparing
             if (!Directory.Exists(Program.ResourcesGlobal) && Program.ResourcesGlobal != null)
             {
                 Directory.CreateDirectory(Program.ResourcesGlobal);
-
                 Console.WriteLine($@"Created folder: {Program.ResourcesGlobal}");
             }
             else
@@ -48,9 +50,11 @@ namespace Prepare_mod.Scripts.Preparing
             Console.WriteLine(@"Downloading presets and shaders...");
 
             string zipPath = Path.Combine(Program.ResourcesGlobal, "Resources - Backup.zip");
-            WebClient webClient = new WebClient();
-            webClient.Headers.Add("user-agent", Program.UserAgent);
-            await webClient.DownloadFileTaskAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/zip/resources.zip", zipPath);
+            using (WebClient webClient = new WebClient())
+            {
+                webClient.Headers.Add("user-agent", Program.UserAgent);
+                await webClient.DownloadFileTaskAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/zip/resources.zip", zipPath);
+            }
 
             Console.WriteLine(@"Unpacking resources...");
             await ExtractZipFile(zipPath, Program.ResourcesGlobal);

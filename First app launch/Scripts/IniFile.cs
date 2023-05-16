@@ -1,7 +1,7 @@
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace First_app_launch.Scripts
+namespace First_app_launch.Forms
 {
     public class IniFile
     {

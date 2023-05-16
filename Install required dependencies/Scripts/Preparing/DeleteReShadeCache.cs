@@ -2,12 +2,15 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace Prepare_mod.Scripts.Preparing
+namespace PrepareStella.Scripts.Preparing
 {
+    /// <summary>
+    ///     Deletes the ReShade cache files and displays the space saved.
+    /// </summary>
     internal static class DeleteReShadeCache
     {
-        private const int KbInBytes = 1000;
-        private const int MbInBytes = 1000000;
+        private const int KilobyteInBytes = 1000;
+        private const int MegabyteInBytes = 1000000;
 
         public static async Task Run()
         {
@@ -30,8 +33,8 @@ namespace Prepare_mod.Scripts.Preparing
                 Directory.Delete(cacheDirectoryPath, true);
             }
 
-            string spaceUnit = savedSpace > KbInBytes ? "MB" : "KB";
-            double spaceSaved = savedSpace / (double)(savedSpace > KbInBytes ? MbInBytes : KbInBytes);
+            string spaceUnit = savedSpace > KilobyteInBytes ? "MB" : "KB";
+            double spaceSaved = savedSpace / (double)(savedSpace > KilobyteInBytes ? MegabyteInBytes : KilobyteInBytes);
             Console.WriteLine($@"Deleted {deletedFilesCount} cache files and saved {spaceSaved} {spaceUnit}.");
         }
     }

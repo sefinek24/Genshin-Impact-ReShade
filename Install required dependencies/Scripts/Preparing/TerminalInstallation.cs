@@ -3,11 +3,13 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 using IWshRuntimeLibrary;
-using PrepareMod.Scripts;
 using File = System.IO.File;
 
-namespace Prepare_mod.Scripts.Preparing
+namespace PrepareStella.Scripts.Preparing
 {
+    /// <summary>
+    ///     Runs the Terminal installation process.
+    /// </summary>
     internal static class TerminalInstallation
     {
         public static async Task Run()

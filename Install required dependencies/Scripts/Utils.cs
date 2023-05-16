@@ -4,7 +4,7 @@ using System.IO;
 using System.Security.Principal;
 using Windows.Storage;
 
-namespace Prepare_mod.Scripts
+namespace PrepareStella.Scripts
 {
     internal static class Utils
     {

@@ -1,8 +1,8 @@
 using System;
 using System.Windows.Forms;
-using Conf_window.Forms;
+using Checkboxes.Forms;
 
-namespace Conf_window
+namespace Checkboxes
 {
     internal static class Program
     {
@@ -14,7 +14,15 @@ namespace Conf_window
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+
+            try
+            {
+                Application.Run(new Window());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, Window.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

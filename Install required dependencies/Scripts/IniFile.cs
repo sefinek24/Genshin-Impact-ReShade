@@ -1,7 +1,7 @@
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace PrepareMod.Scripts
+namespace PrepareStella.Scripts
 {
     public class IniFile
     {

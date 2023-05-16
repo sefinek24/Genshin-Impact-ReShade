@@ -1,11 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using IWshRuntimeLibrary;
 
-namespace Prepare_mod.Scripts.Preparing
+namespace PrepareStella.Scripts.Preparing
 {
+    /// <summary>
+    ///     Creates shortcuts for both internet links and executable files in the Start Menu.
+    /// </summary>
     internal static class InternetShortcuts
     {
         public static async Task Run()
@@ -18,14 +21,17 @@ namespace Prepare_mod.Scripts.Preparing
             try
             {
                 // Create shortcut in Start Menu
-                WshShell shell = new WshShell();
-                string shortcutLocation = Path.Combine(appStartMenuPath, "Genshin Stella Mod.lnk");
-                IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(shortcutLocation);
-                shortcut.Description = "Run official Genshin Stella Mod Launcher made by Sefinek.";
-                shortcut.IconLocation = Path.Combine(Program.AppPath, "icons", "52x52.ico");
-                shortcut.WorkingDirectory = Program.AppPath;
-                shortcut.TargetPath = Path.Combine(Program.AppPath, "Genshin Stella Mod.exe");
-                shortcut.Save();
+                await Task.Run(() =>
+                {
+                    WshShell shell = new WshShell();
+                    string shortcutLocation = Path.Combine(appStartMenuPath, "Genshin Stella Mod.lnk");
+                    IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(shortcutLocation);
+                    shortcut.Description = "Run the official Genshin Stella Mod Launcher made by Sefinek.";
+                    shortcut.IconLocation = Path.Combine(Program.AppPath, "icons", "52x52.ico");
+                    shortcut.WorkingDirectory = Program.AppPath;
+                    shortcut.TargetPath = Path.Combine(Program.AppPath, "Genshin Stella Mod.exe");
+                    shortcut.Save();
+                });
 
                 // Create Internet shortcuts
                 Dictionary<string, string> urls = new Dictionary<string, string>
@@ -36,9 +42,10 @@ namespace Prepare_mod.Scripts.Preparing
                     { "Support", "https://sefinek.net/genshin-impact-reshade/support" },
                     { "Leave feedback", "https://sefinek.net/genshin-impact-reshade/feedback" }
                 };
+
                 foreach (KeyValuePair<string, string> kvp in urls)
                 {
-                    string url = Path.Combine(appStartMenuPath, $"{kvp.Key} - Genshin Stella Mod.url");
+                    string url = Path.Combine(appStartMenuPath, $"{kvp.Key} - GenshinStellaMod.url");
                     using (StreamWriter writer = new StreamWriter(url))
                     {
                         await writer.WriteLineAsync($"[InternetShortcut]\nURL={kvp.Value}");
@@ -47,7 +54,7 @@ namespace Prepare_mod.Scripts.Preparing
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                Log.ThrowError(e, false);
             }
         }
     }

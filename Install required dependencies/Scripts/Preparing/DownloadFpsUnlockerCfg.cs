@@ -1,15 +1,18 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace Prepare_mod.Scripts.Preparing
+namespace PrepareStella.Scripts.Preparing
 {
+    /// <summary>
+    ///     Downloads and updates the FPS Unlocker configuration file.
+    /// </summary>
     internal static class DownloadFpsUnlockerCfg
     {
         public static async Task Run()
         {
-            Console.WriteLine(@"Updating FPS Unlocker config...");
+            Console.WriteLine(@"Updating FPS Unlocker configuration...");
 
             try
             {

@@ -2,30 +2,28 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Prepare_mod.Forms;
-using Prepare_mod.Properties;
-using Prepare_mod.Scripts;
-using Prepare_mod.Scripts.Preparing;
-using PrepareMod.Scripts;
+using PrepareStella.Properties;
+using PrepareStella.Scripts;
+using PrepareStella.Scripts.Preparing;
 
-namespace Prepare_mod
+namespace PrepareStella
 {
     internal static class Program
     {
         // App
         public static readonly string AppName = Assembly.GetExecutingAssembly().GetName().Name;
-        private static readonly string AppVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+        public static readonly string AppVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
         public static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
         public static readonly string AppData = Utils.GetAppData();
         public static string GamePathSfn;
 
         // Links
-        private static readonly string AppWebsite = "https://genshin.sefinek.net";
+        public static readonly string AppWebsite = "https://genshin.sefinek.net";
         public static readonly string DiscordUrl = "https://discord.gg/SVcbaRc7gH";
 
         // Files and folders
@@ -43,7 +41,7 @@ namespace Prepare_mod
 
         // Other
         public static readonly string UserAgent = $"Mozilla/5.0 (compatible; GenshinStellaSetup/{AppVersion}; +{AppWebsite})";
-        private static readonly string Line = "===============================================================================================";
+        public static readonly string Line = "===============================================================================================";
 
         // Global variables
         public static string GameExeGlobal;
@@ -53,29 +51,8 @@ namespace Prepare_mod
         public static string ReShadeLogFile;
 
 
-        private static async Task Main()
+        public static async Task Start()
         {
-            Console.OutputEncoding = Encoding.UTF8;
-
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine(@"                             Genshin Impact Stella Mod - Beta release");
-            Console.WriteLine($"                                        Version: v{AppVersion}\n");
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine(@"» Author  : Sefinek [Country: Poland]");
-            Console.WriteLine(@"» Website : " + AppWebsite);
-            Console.WriteLine(@"» Discord : " + DiscordUrl);
-            Console.ResetColor();
-            Console.WriteLine(Line);
-
-            Console.Title = $@"{AppName} • v{AppVersion}";
-
-            if (!Utils.IsRunAsAdmin())
-            {
-                Log.ErrorAndExit(new Exception("» This application requires administrator privileges to run."), false, false);
-                return;
-            }
-
-
             // Game path
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write(@"» Game path: ");
@@ -143,7 +120,7 @@ namespace Prepare_mod
 
 
             // Create or update Desktop icon
-            if (newShortcuts == 1) DesktopIcon.Run();
+            if (newShortcuts == 1) await DesktopIcon.Run();
 
             // Create new Internet shortcuts in menu start
             if (newIntShortcuts == 1) await InternetShortcuts.Run();

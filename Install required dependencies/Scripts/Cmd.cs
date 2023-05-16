@@ -5,7 +5,7 @@ using CliWrap;
 using CliWrap.Buffered;
 using Microsoft.Toolkit.Uwp.Notifications;
 
-namespace Prepare_mod.Scripts
+namespace PrepareStella.Scripts
 {
     internal abstract class Cmd
     {

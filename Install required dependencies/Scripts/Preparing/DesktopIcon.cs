@@ -1,12 +1,16 @@
 using System;
 using System.IO;
+using System.Threading.Tasks;
 using IWshRuntimeLibrary;
 
-namespace Prepare_mod.Scripts.Preparing
+namespace PrepareStella.Scripts.Preparing
 {
+    /// <summary>
+    ///     Provides functionality to create a desktop icon for the Stella Launcher.
+    /// </summary>
     internal static class DesktopIcon
     {
-        public static void Run()
+        public static async Task Run()
         {
             Console.WriteLine(@"Creating Desktop shortcut...");
 
@@ -17,12 +21,12 @@ namespace Prepare_mod.Scripts.Preparing
 
                 WshShell shell = new WshShell();
                 IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(shortcutPath);
-                shortcut.Description = "Run official launcher for Genshin Impact Mod made by Sefinek.";
+                shortcut.Description = "Run the official launcher for Genshin Impact Mod made by Sefinek.";
                 shortcut.IconLocation = Path.Combine(Program.AppPath, "icons", "52x52.ico");
                 shortcut.WorkingDirectory = Program.AppPath;
-                shortcut.TargetPath = Path.Combine(Program.AppPath, "Genshin Stella Mod.exe");
+                shortcut.TargetPath = Path.Combine(Program.AppPath, "GenshinStellaMod.exe");
 
-                shortcut.Save();
+                await Task.Run(() => shortcut.Save());
             }
             catch (Exception e)
             {

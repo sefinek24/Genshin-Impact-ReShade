@@ -3,7 +3,7 @@ using System.IO;
 using System.Threading;
 using Microsoft.WindowsAPICodePack.Taskbar;
 
-namespace Prepare_mod.Scripts
+namespace PrepareStella.Scripts
 {
     internal abstract class Log
     {

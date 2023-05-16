@@ -1,6 +1,6 @@
-namespace Conf_window.Forms
+namespace Checkboxes.Forms
 {
-    partial class Main
+    partial class Window
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@ namespace Conf_window.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Window));
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.MadeBySefinek = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -251,7 +251,7 @@ namespace Conf_window.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Conf_window.Properties.Resources.bg;
+            this.BackgroundImage = global::Checkboxes.Properties.Resources.bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1102, 610);
             this.Controls.Add(this.label4);
