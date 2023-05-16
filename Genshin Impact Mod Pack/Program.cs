@@ -147,7 +147,7 @@ namespace Genshin_Stella_Mod
                             Telemetry.SendLogFiles();
 
                             DialogResult showFilesResult = MessageBox.Show(
-                                "If you wish to send logs to the developer, please send them to me on Discord: Sefinek#0001. API communication is not yet available for the Stella Launcher.\n\nDo you want to see these files?", AppName,
+                                "If you wish to send logs to the developer, please send them to me on Discord: Sefinek#2714. API communication is not yet available for the Stella Launcher.\n\nDo you want to see these files?", AppName,
                                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                             if (showFilesResult == DialogResult.Yes)
                             {
