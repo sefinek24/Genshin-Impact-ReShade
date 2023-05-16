@@ -71,7 +71,7 @@ namespace Prepare_mod
 
             if (!Utils.IsRunAsAdmin())
             {
-                Log.ErrorAndExit(new Exception("This application requires administrator privileges to run."), false, false);
+                Log.ErrorAndExit(new Exception("» This application requires administrator privileges to run."), false, false);
                 return;
             }
 
