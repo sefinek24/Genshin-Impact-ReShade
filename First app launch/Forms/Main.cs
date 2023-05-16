@@ -14,7 +14,7 @@ namespace Conf_window.Forms
         private static readonly string AppName = Assembly.GetExecutingAssembly().GetName().Name;
         private static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
 
-        private static IniFile PrepareIni;
+        private static IniFile _prepareIni;
 
         private static int _newShortcutsOnDesktop;
         private static int _newInternetShortcutsOnDesktop;
@@ -27,7 +27,7 @@ namespace Conf_window.Forms
         // Main
         public Main()
         {
-            PrepareIni = new IniFile(Path.Combine(AppData, "prepare-stella.ini"));
+            _prepareIni = new IniFile(Path.Combine(AppData, "prepare-stella.ini"));
 
             InitializeComponent();
         }
@@ -47,28 +47,28 @@ namespace Conf_window.Forms
 
         private void Main_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(GetAppData());
-
-            int data1 = PrepareIni.ReadInt("PrepareStella", "NewShortcutsOnDesktop", 1);
+            int data1 = _prepareIni.ReadInt("PrepareStella", "NewShortcutsOnDesktop", 1);
             checkBox2.Checked = data1 != 0;
 
-            int data2 = PrepareIni.ReadInt("PrepareStella", "InternetShortcutsInStartMenu", 0);
+            int data2 = _prepareIni.ReadInt("PrepareStella", "InternetShortcutsInStartMenu", 1);
             checkBox3.Checked = data2 != 0;
 
-            int data3 = PrepareIni.ReadInt("PrepareStella", "DownloadOrUpdateShaders", 1);
+            int data3 = _prepareIni.ReadInt("PrepareStella", "DownloadOrUpdateShaders", 1);
             checkBox7.Checked = data3 != 0;
 
-            int data4 = PrepareIni.ReadInt("PrepareStella", "UpdateReShadeConfig", 1);
+            int data4 = _prepareIni.ReadInt("PrepareStella", "UpdateReShadeConfig", 1);
             checkBox4.Checked = data4 != 0;
 
-            int data5 = PrepareIni.ReadInt("PrepareStella", "UpdateFpsUnlockerConfig", 1);
+            int data5 = _prepareIni.ReadInt("PrepareStella", "UpdateFpsUnlockerConfig", 1);
             checkBox5.Checked = data5 != 0;
 
-            int data6 = PrepareIni.ReadInt("PrepareStella", "DeleteReShadeCache", 1);
+            int data6 = _prepareIni.ReadInt("PrepareStella", "DeleteReShadeCache", 0);
             checkBox6.Checked = data6 != 0;
 
-            int data7 = PrepareIni.ReadInt("PrepareStella", "InstOrUpdWT", 1);
+            int data7 = _prepareIni.ReadInt("PrepareStella", "InstOrUpdWT", 1);
             checkBox1.Checked = data7 != 0;
+
+            if (!File.Exists(Path.Combine(AppData, "resources-path.sfn")) && !checkBox7.Checked) checkBox7.Checked = true;
 
             SaveIniData();
         }
@@ -91,8 +91,16 @@ namespace Conf_window.Forms
 
         private void DownloadOrUpdateShaders(object sender, EventArgs e)
         {
-            _downloadOrUpdateShaders = sender is CheckBox checkbox && checkbox.Checked ? 1 : 0;
+            if (!File.Exists(Path.Combine(AppData, "resources-path.sfn")) && !checkBox7.Checked)
+            {
+                checkBox7.Checked = true;
+                MessageBox.Show(@"The directory with mod resources was not found on your computer. You cannot enable this checkbox.", AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            _downloadOrUpdateShaders = checkBox7.Checked ? 1 : 0;
         }
+
 
         private void UpdateReShadeConfig_CheckedChanged(object sender, EventArgs e)
         {
@@ -118,13 +126,13 @@ namespace Conf_window.Forms
         // Done! Save data.
         private static void SaveIniData()
         {
-            PrepareIni.WriteInt("PrepareStella", "NewShortcutsOnDesktop", _newShortcutsOnDesktop);
-            PrepareIni.WriteInt("PrepareStella", "InternetShortcutsInStartMenu", _newInternetShortcutsOnDesktop);
-            PrepareIni.WriteInt("PrepareStella", "DownloadOrUpdateShaders", _downloadOrUpdateShaders);
-            PrepareIni.WriteInt("PrepareStella", "UpdateReShadeConfig", _updateReShadeConfig);
-            PrepareIni.WriteInt("PrepareStella", "UpdateFpsUnlockerConfig", _updateFpsUnlockerConfig);
-            PrepareIni.WriteInt("PrepareStella", "DeleteReShadeCache", _deleteReShadeCache);
-            PrepareIni.WriteInt("PrepareStella", "InstOrUpdWT", _instOrUpdWt);
+            _prepareIni.WriteInt("PrepareStella", "NewShortcutsOnDesktop", _newShortcutsOnDesktop);
+            _prepareIni.WriteInt("PrepareStella", "InternetShortcutsInStartMenu", _newInternetShortcutsOnDesktop);
+            _prepareIni.WriteInt("PrepareStella", "DownloadOrUpdateShaders", _downloadOrUpdateShaders);
+            _prepareIni.WriteInt("PrepareStella", "UpdateReShadeConfig", _updateReShadeConfig);
+            _prepareIni.WriteInt("PrepareStella", "UpdateFpsUnlockerConfig", _updateFpsUnlockerConfig);
+            _prepareIni.WriteInt("PrepareStella", "DeleteReShadeCache", _deleteReShadeCache);
+            _prepareIni.WriteInt("PrepareStella", "InstOrUpdWT", _instOrUpdWt);
         }
 
         private void LetsGo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
