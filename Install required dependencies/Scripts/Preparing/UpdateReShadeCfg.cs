@@ -8,19 +8,18 @@ namespace Prepare_mod.Scripts.Preparing
     {
         public static async Task Run()
         {
-            Console.WriteLine(@"Updating ReShade config... ");
+            Console.WriteLine(@"Updating ReShade config...");
 
             if (Directory.Exists(Program.GameDirGlobal))
             {
-                if (File.Exists(Program.ReShadeConfig)) File.Delete(Program.ReShadeConfig);
-
-                if (File.Exists(Program.ReShadeLogFile)) File.Delete(Program.ReShadeLogFile);
+                File.Delete(Program.ReShadeConfig);
+                File.Delete(Program.ReShadeLogFile);
 
                 await ReShade.DownloadFiles();
             }
             else
             {
-                Console.WriteLine(@"You must configure some settings manually");
+                Console.WriteLine(@"You must configure some settings manually.");
             }
         }
     }

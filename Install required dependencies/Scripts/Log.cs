@@ -2,7 +2,6 @@ using System;
 using System.IO;
 using System.Threading;
 using Microsoft.WindowsAPICodePack.Taskbar;
-using PrepareMod.Scripts;
 
 namespace Prepare_mod.Scripts
 {

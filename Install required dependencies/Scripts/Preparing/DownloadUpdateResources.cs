@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.IO.Compression;
 using System.Net;
@@ -45,21 +45,34 @@ namespace Prepare_mod.Scripts.Preparing
                 Console.WriteLine($@"Found: {Program.ResourcesGlobal}");
             }
 
-
             Console.WriteLine(@"Downloading presets and shaders...");
 
-            string zipPath = $@"{Program.ResourcesGlobal}\Backup.zip";
+            string zipPath = Path.Combine(Program.ResourcesGlobal, "Resources - Backup.zip");
             WebClient webClient = new WebClient();
             webClient.Headers.Add("user-agent", Program.UserAgent);
             await webClient.DownloadFileTaskAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/zip/resources.zip", zipPath);
 
-
             Console.WriteLine(@"Unpacking resources...");
+            await ExtractZipFile(zipPath, Program.ResourcesGlobal);
+
+            Console.WriteLine(@"Configuring ReShade...");
+            ConfigureReShade(Program.ResourcesGlobal);
+
+            string cache = Path.Combine(Program.ResourcesGlobal, "Cache");
+            if (!Directory.Exists(cache))
+            {
+                Console.WriteLine(@"Creating cache folder...");
+                Directory.CreateDirectory(cache);
+            }
+        }
+
+        private static async Task ExtractZipFile(string zipPath, string destinationPath)
+        {
             using (ZipArchive archive = ZipFile.OpenRead(zipPath))
             {
                 foreach (ZipArchiveEntry entry in archive.Entries)
                 {
-                    string fullPath = Path.Combine(Program.ResourcesGlobal, entry.FullName);
+                    string fullPath = Path.Combine(destinationPath, entry.FullName);
 
                     if (entry.Name == "")
                     {
@@ -70,29 +83,23 @@ namespace Prepare_mod.Scripts.Preparing
                     await Task.Run(() => entry.ExtractToFile(fullPath, true));
                 }
             }
+        }
 
-
-            Console.WriteLine(@"Configuring ReShade...");
-
-            string cache = Path.Combine(Program.ResourcesGlobal, "Cache");
+        private static void ConfigureReShade(string resourcesGlobal)
+        {
+            string cache = Path.Combine(resourcesGlobal, "Cache");
 
             string reShadeIniFile = File.ReadAllText(Program.ReShadeConfig);
             string reShadeData = reShadeIniFile?
-                .Replace("{addon.path}", Path.Combine(Program.ResourcesGlobal, "Addons"))
-                .Replace("{general.effects}", Path.Combine(Program.ResourcesGlobal, "Shaders", "Effects"))
+                .Replace("{addon.path}", Path.Combine(resourcesGlobal, "Addons"))
+                .Replace("{general.effects}", Path.Combine(resourcesGlobal, "Shaders", "Effects"))
                 .Replace("{general.cache}", cache)
-                .Replace("{general.preset}", Path.Combine(Program.ResourcesGlobal, "Presets", "3. Preset by Sefinek - Medium settings [Default].ini"))
-                .Replace("{general.textures}", Path.Combine(Program.ResourcesGlobal, "Shaders", "Textures"))
-                .Replace("{screenshot.path}", Path.Combine(Program.ResourcesGlobal, "Screenshots"))
-                .Replace("{screenshot.sound}", Path.Combine(Program.ResourcesGlobal, "data", "sounds", "screenshot.wav"));
+                .Replace("{general.preset}", Path.Combine(resourcesGlobal, "Presets", "3. Preset by Sefinek - Medium settings [Default].ini"))
+                .Replace("{general.textures}", Path.Combine(resourcesGlobal, "Shaders", "Textures"))
+                .Replace("{screenshot.path}", Path.Combine(resourcesGlobal, "Screenshots"))
+                .Replace("{screenshot.sound}", Path.Combine(resourcesGlobal, "data", "sounds", "screenshot.wav"));
 
             File.WriteAllText(Program.ReShadeConfig, reShadeData);
-
-            if (!Directory.Exists(cache))
-            {
-                Console.WriteLine(@"Creating cache folder...");
-                Directory.CreateDirectory(cache);
-            }
         }
     }
 }

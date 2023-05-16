@@ -38,8 +38,8 @@ namespace Prepare_mod
         private static readonly string InstalledViaSetup = Path.Combine(AppData, "configured.sfn");
 
         // Dependencies
-        public static readonly string WtWin10Setup = Path.Combine(AppPath, "dependencies", "WindowsTerminal_Win10.msixbundle");
-        public static readonly string WtWin11Setup = Path.Combine(AppPath, "dependencies", "WindowsTerminal_Win11.msixbundle");
+        public static readonly string WtWin10Setup = Path.Combine("dependencies", "WindowsTerminal_Win10.msixbundle");
+        public static readonly string WtWin11Setup = Path.Combine("dependencies", "WindowsTerminal_Win11.msixbundle");
 
         // Other
         public static readonly string UserAgent = $"Mozilla/5.0 (compatible; GenshinStellaSetup/{AppVersion}; +{AppWebsite})";
@@ -158,7 +158,7 @@ namespace Prepare_mod
             if (updateFpsUnlockerCfg == 1) await DownloadFpsUnlockerCfg.Run();
 
             // Delete ReShade cache
-            if (delReShadeCache == 1) DeleteReShadeCache.Run();
+            if (delReShadeCache == 1) await DeleteReShadeCache.Run();
 
             // Windows Terminal installation
             if (installWtUpdate == 1) await TerminalInstallation.Run();
