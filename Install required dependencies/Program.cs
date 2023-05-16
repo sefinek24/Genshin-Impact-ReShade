@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.WindowsAPICodePack.Taskbar;
 using Prepare_mod.Forms;
 using PrepareStella.Properties;
 using PrepareStella.Scripts;
@@ -40,7 +41,7 @@ namespace PrepareStella
         public static readonly string WtWin11Setup = Path.Combine("dependencies", "WindowsTerminal_Win11.msixbundle");
 
         // Other
-        public static readonly string UserAgent = $"Mozilla/5.0 (compatible; GenshinStellaSetup/{AppVersion}; +{AppWebsite})";
+        public static readonly string UserAgent = $"Mozilla/5.0 (compatible; PrepareStella/{AppVersion}; +{AppWebsite})";
         public static readonly string Line = "===============================================================================================";
 
         // Global variables
@@ -53,6 +54,8 @@ namespace PrepareStella
 
         public static async Task Start()
         {
+            TaskbarManager.Instance.SetProgressValue(12, 100);
+
             // Game path
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write(@"» Game path: ");
@@ -103,9 +106,10 @@ namespace PrepareStella
                 Console.WriteLine();
             }
 
+            TaskbarManager.Instance.SetProgressValue(26, 100);
 
             // Read ini file
-            Console.WriteLine("\nStarting... ");
+            Console.WriteLine("\nStarting...");
 
             // Save AppData path
             File.WriteAllText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "stella-appdata.sfn"), AppData);
@@ -121,24 +125,31 @@ namespace PrepareStella
 
             // Create or update Desktop icon
             if (newShortcuts == 1) await DesktopIcon.Run();
+            TaskbarManager.Instance.SetProgressValue(39, 100);
 
             // Create new Internet shortcuts in menu start
             if (newIntShortcuts == 1) await InternetShortcuts.Run();
+            TaskbarManager.Instance.SetProgressValue(45, 100);
 
             // Download and prepare ReShade config
             if (updateReShadeCfg == 1) await UpdateReShadeCfg.Run();
+            TaskbarManager.Instance.SetProgressValue(51, 100);
 
             // Download shaders, presets and addons (Stella resources)
             if (downloadOrUpdateShaders == 1) await DownloadUpdateResources.Run();
+            TaskbarManager.Instance.SetProgressValue(68, 100);
 
             // Download FPS Unlocker config
             if (updateFpsUnlockerCfg == 1) await DownloadFpsUnlockerCfg.Run();
+            TaskbarManager.Instance.SetProgressValue(76, 100);
 
             // Delete ReShade cache
             if (delReShadeCache == 1) await DeleteReShadeCache.Run();
+            TaskbarManager.Instance.SetProgressValue(82, 100);
 
             // Windows Terminal installation
             if (installWtUpdate == 1) await TerminalInstallation.Run();
+            TaskbarManager.Instance.SetProgressValue(87, 100);
 
 
             // Create files
@@ -163,6 +174,8 @@ namespace PrepareStella
                 }
             }
 
+            TaskbarManager.Instance.SetProgressValue(100, 100);
+
             // Run Genshin Stella Mod
             Console.WriteLine(@"Launching Genshin Stella Mod...");
             Process.Start(Path.Combine(AppPath, "Genshin Stella Mod.exe"));
@@ -174,6 +187,8 @@ namespace PrepareStella
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($@"» The program will close in {seconds} seconds.");
             for (int i = seconds; i >= 1; i--) Thread.Sleep(1000);
+
+            TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
         }
     }
 }
