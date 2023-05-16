@@ -394,7 +394,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AppxManifest.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="data\images\launcher\backgrounds\ayaka\1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

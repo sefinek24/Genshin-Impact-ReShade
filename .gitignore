@@ -11,6 +11,7 @@ Install required dependencies/bin
 Install required dependencies/obj
 
 # Files
+InnoSetup/Output/Genshin Stella Mod Setup.exe
 unlocker.config.json
 data/unlocker/unlocker.config.json
 data/sounds/*.mp3
