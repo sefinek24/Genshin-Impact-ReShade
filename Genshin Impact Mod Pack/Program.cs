@@ -4,20 +4,18 @@ using System.Globalization;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-using Windows.Storage;
 using Genshin_Stella_Mod.Forms;
 using Genshin_Stella_Mod.Forms.Errors;
 using Genshin_Stella_Mod.Forms.Other;
 using Genshin_Stella_Mod.Properties;
 using Genshin_Stella_Mod.Scripts;
+using Microsoft.Win32;
 
 namespace Genshin_Stella_Mod
 {
     internal static class Program
     {
         // Files
-        public static string AppData = GetAppData();
-        private static string _appIsConfigured;
         public static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
         private static readonly string PrepareLauncher = Path.Combine(AppPath, "First app launch.exe");
         public static readonly string ReShadePath = Path.Combine(AppPath, "data", "reshade", "ReShade64.dll");
@@ -32,6 +30,7 @@ namespace Genshin_Stella_Mod
         public static readonly string AppVersion = Application.ProductVersion;
         private static readonly string AppWebsiteSub = "https://genshin.sefinek.net";
         public static readonly string AppWebsiteFull = "https://sefinek.net/genshin-impact-reshade";
+        public static string RegistryPath = @"SOFTWARE\Sefinek\Genshin Stella Mod";
 
         // Web
         public static readonly string UserAgent = $"Mozilla/5.0 (compatible; StellaLauncher/{AppVersion}; +{AppWebsiteSub})";
@@ -39,23 +38,50 @@ namespace Genshin_Stella_Mod
         // Config
         public static IniFile Settings;
 
-        private static string GetAppData()
-        {
-            try
-            {
-                return Path.Combine(ApplicationData.Current?.LocalFolder?.Path);
-            }
-            catch (InvalidOperationException)
-            {
-                return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Genshin Stella Mod");
-            }
-        }
+        // Get AppData
+        public static readonly string AppData = GetAppData();
 
+        public static string GetAppData()
+        {
+            object isConfiguredValue = Registry.CurrentUser.OpenSubKey(RegistryPath)?.GetValue("IsConfigured");
+            if (isConfiguredValue != null && !Convert.ToBoolean(isConfiguredValue))
+            {
+                if (!File.Exists(PrepareLauncher))
+                {
+                    MessageBox.Show("Required file 'First app launch.exe' was not found. Please reinstall this app or join our Discord server for help.", AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Environment.Exit(997890421);
+                }
+
+                Process.Start(PrepareLauncher);
+                Environment.Exit(997890421);
+            }
+
+            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(RegistryPath))
+            {
+                if (key == null)
+                {
+                    MessageBox.Show(@"Key is null.", AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Process.Start(PrepareLauncher);
+                    Environment.Exit(997890421);
+                    return null;
+                }
+
+                object value = key.GetValue("AppData");
+                if (value != null) return value.ToString();
+            }
+
+            MessageBox.Show(@"Registry key with app data path was not found.", AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            Process.Start(PrepareLauncher);
+            Environment.Exit(997890421);
+            return null;
+        }
 
         [STAThread]
         private static void Main()
         {
-            _appIsConfigured = Path.Combine(AppData, "configured.sfn");
+            if (AppData == null) return;
+
+            string appIsConfigured = Path.Combine(AppData, "configured.sfn");
             Settings = new IniFile(Path.Combine(AppData, "settings.ini"));
 
 
@@ -65,7 +91,7 @@ namespace Genshin_Stella_Mod
                 $"CPU Serial Number: {Os.CpuId}\n" +
                 $"App dir: {AppPath}\n" +
                 $"App data: {AppData}\n" +
-                $"App is configured: {_appIsConfigured}\n" +
+                $"App is configured: {appIsConfigured}\n" +
                 $"FPS Unlocker path: {FpsUnlockerCfgPath}\n" +
                 $"Patrons dir: {PatronsDir}"
             );
@@ -84,18 +110,6 @@ namespace Genshin_Stella_Mod
 
                 Log.Output("One instance is currently open.");
                 Environment.Exit(998765341);
-            }
-
-            if (!File.Exists(_appIsConfigured))
-            {
-                if (!File.Exists(PrepareLauncher))
-                {
-                    MessageBox.Show("Required file 'First app launch.exe' was not found. Please reinstall this app or join our Discord server for help.", AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Environment.Exit(997890421);
-                }
-
-                Process.Start(PrepareLauncher);
-                Environment.Exit(997890421);
             }
 
 
