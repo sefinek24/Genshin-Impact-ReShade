@@ -11,6 +11,7 @@ namespace Checkboxes.Forms
     public partial class Window : Form
     {
         private static readonly string AppData = GetAppData();
+        public static bool MsStore;
         public static readonly string AppName = Assembly.GetExecutingAssembly().GetName().Name;
         private static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
 
@@ -24,6 +25,7 @@ namespace Checkboxes.Forms
         private static int _deleteReShadeCache;
         private static int _instOrUpdWt;
 
+
         // Main
         public Window()
         {
@@ -36,25 +38,41 @@ namespace Checkboxes.Forms
         {
             try
             {
+                MsStore = true;
                 return Path.Combine(ApplicationData.Current?.LocalFolder?.Path);
             }
             catch (InvalidOperationException)
             {
+                MsStore = true;
                 return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Genshin Stella Mod");
             }
         }
 
-
         private void Main_Load(object sender, EventArgs e)
         {
-            int data1 = _prepareIni.ReadInt("PrepareStella", "NewShortcutsOnDesktop", 1);
-            checkBox2.Checked = data1 != 0;
+            if (MsStore)
+            {
+                checkBox2.Checked = false;
+                checkBox3.Checked = false;
+            }
+            else
+            {
+                int data1 = _prepareIni.ReadInt("PrepareStella", "NewShortcutsOnDesktop", 1);
+                checkBox2.Checked = data1 != 0;
 
-            int data2 = _prepareIni.ReadInt("PrepareStella", "InternetShortcutsInStartMenu", 1);
-            checkBox3.Checked = data2 != 0;
+                int data2 = _prepareIni.ReadInt("PrepareStella", "InternetShortcutsInStartMenu", 1);
+                checkBox3.Checked = data2 != 0;
+            }
 
-            int data3 = _prepareIni.ReadInt("PrepareStella", "DownloadOrUpdateShaders", 1);
-            checkBox7.Checked = data3 != 0;
+            if (!File.Exists(Path.Combine(AppData, "resources-path.sfn")) && !checkBox7.Checked)
+            {
+                checkBox7.Checked = true;
+            }
+            else
+            {
+                int data3 = _prepareIni.ReadInt("PrepareStella", "DownloadOrUpdateShaders", 1);
+                checkBox7.Checked = data3 != 0;
+            }
 
             int data4 = _prepareIni.ReadInt("PrepareStella", "UpdateReShadeConfig", 1);
             checkBox4.Checked = data4 != 0;
@@ -68,8 +86,6 @@ namespace Checkboxes.Forms
             int data7 = _prepareIni.ReadInt("PrepareStella", "InstOrUpdWT", 1);
             checkBox1.Checked = data7 != 0;
 
-            if (!File.Exists(Path.Combine(AppData, "resources-path.sfn")) && !checkBox7.Checked) checkBox7.Checked = true;
-
             SaveIniData();
         }
 
@@ -81,11 +97,25 @@ namespace Checkboxes.Forms
         // Checkboxes
         private void NewShortcutsOnDesktop_CheckedChanged(object sender, EventArgs e)
         {
+            if (MsStore && checkBox2.Checked)
+            {
+                checkBox2.Checked = false;
+                MessageBox.Show(@"You cannot create a new icon on your Desktop when an application is installed from the Microsoft Store.", AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             _newShortcutsOnDesktop = sender is CheckBox checkbox && checkbox.Checked ? 1 : 0;
         }
 
         private void InternetShortcutsInStartMenu_CheckedChanged(object sender, EventArgs e)
         {
+            if (MsStore && checkBox3.Checked)
+            {
+                checkBox3.Checked = false;
+                MessageBox.Show(@"You cannot create new icons in the Start Menu when an application is installed from the Microsoft Store.", AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             _newInternetShortcutsOnDesktop = sender is CheckBox checkbox && checkbox.Checked ? 1 : 0;
         }
 
@@ -94,7 +124,7 @@ namespace Checkboxes.Forms
             if (!File.Exists(Path.Combine(AppData, "resources-path.sfn")) && !checkBox7.Checked)
             {
                 checkBox7.Checked = true;
-                MessageBox.Show(@"The directory with mod resources was not found on your computer. You cannot enable this checkbox.", AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"The Stella resources directory was not found on your computer, so you cannot uncheck the checkbox.", AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
