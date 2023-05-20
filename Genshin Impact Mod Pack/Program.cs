@@ -34,7 +34,7 @@ namespace Genshin_Stella_Mod
         public static readonly string AppWebsiteFull = "https://sefinek.net/genshin-impact-reshade";
 
         // Web
-        public static readonly string UserAgent = $"Mozilla/5.0 (compatible; StellaModLauncher/{AppVersion}; +{AppWebsiteSub})";
+        public static readonly string UserAgent = $"Mozilla/5.0 (compatible; StellaLauncher/{AppVersion}; +{AppWebsiteSub})";
 
         // Config
         public static IniFile Settings;
