@@ -6,7 +6,6 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.Win32;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using Prepare_mod.Forms;
 using PrepareStella.Properties;
@@ -35,6 +34,7 @@ namespace PrepareStella
         public static readonly string GameYuanShen = Path.Combine(ProgramFiles, "Genshin Impact", "Genshin Impact game", "YuanShen.exe");
         public static readonly string WindowsApps = Path.Combine(ProgramFiles, "WindowsApps");
         public static readonly string Packages = Path.Combine(Environment.GetEnvironmentVariable("LocalAppData") ?? string.Empty, "Packages");
+        private static readonly string InstalledViaSetup = Path.Combine(AppData, "configured.sfn");
 
         // Dependencies
         public static readonly string WtWin10Setup = Path.Combine("dependencies", "WindowsTerminal_Win10.msixbundle");
@@ -42,7 +42,6 @@ namespace PrepareStella
 
         // Other
         public static readonly string UserAgent = $"Mozilla/5.0 (compatible; PrepareStella/{AppVersion}; +{AppWebsite})";
-        public static readonly string RegistryPath = @"SOFTWARE\Sefinek\Genshin Stella Mod";
         public static readonly string Line = "===============================================================================================";
 
         // Global variables
@@ -153,13 +152,9 @@ namespace PrepareStella
             TaskbarManager.Instance.SetProgressValue(87, 100);
 
 
-            Registry.CurrentUser.CreateSubKey(RegistryPath)?.SetValue("Path", AppPath);
-            Registry.CurrentUser.CreateSubKey(RegistryPath)?.SetValue("AppData", AppData);
-            Registry.CurrentUser.CreateSubKey(RegistryPath)?.SetValue("IsConfigured", 1, RegistryValueKind.DWord);
-
-
             // Create files
             if (!Directory.Exists(AppData)) Directory.CreateDirectory(AppData);
+            if (!File.Exists(InstalledViaSetup)) File.Create(InstalledViaSetup);
 
             // Reboot is required?
             if (Cmd.RebootNeeded)
