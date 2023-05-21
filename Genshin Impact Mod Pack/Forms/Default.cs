@@ -546,27 +546,35 @@ namespace Genshin_Stella_Mod.Forms
         }
 
         // ------- Start the game -------
-        private void StartGame_Click(object sender, EventArgs e)
+        private async void StartGame_Click(object sender, EventArgs e)
         {
-            Cmd.Execute("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 1 {Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, true, true);
+            await Cmd.CliWrap("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 1 {Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
+            Environment.Exit(0);
         }
 
-        private void OnlyReShade_Click(object sender, EventArgs e)
-        {
-            Cmd.Execute("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 2 {Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, true, true);
-        }
-
-        private void OnlyUnlocker_Click(object sender, EventArgs e)
-        {
-            Cmd.Execute("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 3 {Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, true, true);
-        }
-
-        private void OpenGILauncher_Click(object sender, EventArgs e)
+        private async void OnlyReShade_Click(object sender, EventArgs e)
         {
             string path = Utils.GetGame("giLauncher");
             if (path == null) return;
 
-            Cmd.Execute(path, null, null, true, false);
+            _ = Cmd.CliWrap(path, null, null, true, false);
+            await Cmd.CliWrap("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 2 {Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
+
+            Environment.Exit(0);
+        }
+
+        private async void OnlyUnlocker_Click(object sender, EventArgs e)
+        {
+            await Cmd.CliWrap("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 3 {Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
+            Environment.Exit(0);
+        }
+
+        private async void OpenGILauncher_Click(object sender, EventArgs e)
+        {
+            string path = Utils.GetGame("giLauncher");
+            if (path == null) return;
+
+            await Cmd.CliWrap(path, null, null, true, false);
         }
 
         // ------- Footer -------

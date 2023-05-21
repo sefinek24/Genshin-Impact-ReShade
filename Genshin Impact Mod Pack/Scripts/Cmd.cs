@@ -1,5 +1,4 @@
 using System;
-using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CliWrap;
@@ -95,31 +94,6 @@ namespace Genshin_Stella_Mod.Scripts
             {
                 Log.ThrowError(ex);
             }
-        }
-
-
-        public static void Execute(string app, string args, string workingDir, bool runAsAdmin, bool exit)
-        {
-            try
-            {
-                Process.Start(new ProcessStartInfo
-                {
-                    FileName = app,
-                    Arguments = args,
-                    WorkingDirectory = workingDir,
-                    Verb = runAsAdmin ? "runas" : "",
-                    UseShellExecute = true
-                });
-
-                Log.Output($"Process.Start: Successfully executed {app}; Args: {args}; Working dir: {workingDir}; Run as admin: {runAsAdmin}; Exit: {exit};");
-            }
-            catch (Exception ex)
-            {
-                Log.ThrowError(ex);
-            }
-
-            // Exit
-            if (exit) Environment.Exit(0);
         }
     }
 }

@@ -63,14 +63,6 @@ echo [✓] Everything looks okay ฅ^•ﻌ•^ฅ & echo.
 REM Check for required processes
 echo 3/4 - Checking required processes...
 
-tasklist /fi "ImageName eq launcher.exe" /fo csv | find /I "launcher.exe" >NUL && (
-    echo [%DATE% %TIME%]: Killing "launcher.exe" process... >> %3
-    taskkill /F /IM "launcher.exe" >> %3
-
-    echo [i] launcher.exe           - Closed
-) || (
-    echo [✓] launcher.exe           - OK
-)
 tasklist /fi "ImageName eq Genshin Stella Mod.exe" /fo csv | find /I "Genshin Stella Mod.exe" >NUL && (
     echo [%DATE% %TIME%]: Killing "Genshin Stella Mod.exe" process... >> %3
     taskkill /F /IM "Genshin Stella Mod.exe" >> %3

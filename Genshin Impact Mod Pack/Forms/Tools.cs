@@ -170,9 +170,9 @@ namespace Genshin_Stella_Mod.Forms
 
 
         // ---------------------------------- Misc ----------------------------------
-        private void ScanSysFiles_Click(object sender, EventArgs e)
+        private async void ScanSysFiles_Click(object sender, EventArgs e)
         {
-            Cmd.Execute("wt.exe", Path.Combine(Program.AppPath, "data", "cmd", "scan_sys_files.cmd"), Program.AppPath, true, false);
+            await Cmd.CliWrap("wt.exe", Path.Combine(Program.AppPath, "data", "cmd", "scan_sys_files.cmd"), Program.AppPath, true, false);
         }
 
 
@@ -192,7 +192,7 @@ namespace Genshin_Stella_Mod.Forms
 
 
         // --------------------------------- Cache ---------------------------------
-        private void DeleteCache_Button(object sender, EventArgs e)
+        private async void DeleteCache_Button(object sender, EventArgs e)
         {
             string resources = File.ReadAllText(Path.Combine(Program.AppData, "resources-path.sfn"));
             string cache = Path.Combine(resources, "Cache");
@@ -200,15 +200,15 @@ namespace Genshin_Stella_Mod.Forms
             string reShadeLog = Path.Combine(Utils.GetGame("giGameDir"), "ReShade.log");
             string logs = Path.Combine(Log.Folder);
 
-            Cmd.Execute(
+            await Cmd.CliWrap(
                 "wt.exe",
                 $"{Path.Combine(Program.AppPath, "data", "cmd", "delete_cache.cmd")} \"{Path.Combine(Program.AppData, "game-path.sfn")}\" \"{cache}\" \"{webViewCache}\" \"{reShadeLog}\" \"{logs}\"",
                 Program.AppPath, true, false);
         }
 
-        private void DeleteWebViewCache_Click(object sender, EventArgs e)
+        private async void DeleteWebViewCache_Click(object sender, EventArgs e)
         {
-            Cmd.Execute("wt.exe", Path.Combine(Program.AppPath, "data", "cmd", "delete_webview_cache.cmd"), Program.AppPath, true, false);
+            await Cmd.CliWrap("wt.exe", Path.Combine(Program.AppPath, "data", "cmd", "delete_webview_cache.cmd"), Program.AppPath, true, false);
         }
 
 
