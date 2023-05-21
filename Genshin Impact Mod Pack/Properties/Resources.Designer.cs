@@ -403,16 +403,6 @@ namespace Genshin_Stella_Mod.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap wrong_dir {
-            get {
-                object obj = ResourceManager.GetObject("wrong-dir", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap wrong_ins_method {
             get {
                 object obj = ResourceManager.GetObject("wrong-ins-method", resourceCulture);

@@ -175,12 +175,6 @@
     <Compile Include="Forms\Links.Designer.cs">
       <DependentUpon>Links.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Errors\WrongDirectory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Errors\WrongDirectory.Designer.cs">
-      <DependentUpon>WrongDirectory.cs</DependentUpon>
-    </Compile>
     <Compile Include="Models\RandomThings.cs" />
     <Compile Include="Models\Remote.cs" />
     <Compile Include="Program.cs" />
@@ -210,9 +204,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Errors\WrongCountry.resx">
       <DependentUpon>WrongCountry.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Errors\WrongDirectory.pl.resx">
-      <DependentUpon>WrongDirectory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Gameplay.pl.resx">
       <DependentUpon>Gameplay.cs</DependentUpon>
@@ -263,9 +254,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Links.resx">
       <DependentUpon>Links.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Errors\WrongDirectory.resx">
-      <DependentUpon>WrongDirectory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.pl.resx">
       <DependentUpon>Resources.resx</DependentUpon>
