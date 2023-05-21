@@ -32,7 +32,6 @@ namespace Genshin_Stella_Mod.Forms
     {
         // Files
         private static readonly string SetupPathExe = Path.Combine(Path.GetTempPath(), "Genshin_Stella_Mod_Setup.exe");
-        private static readonly string ReShadePath = Path.Combine(Utils.GetGame("giGameDir"), "ReShade.ini");
         private static readonly string CmdOutputLogs = Path.Combine(Program.AppData, "logs", "cmd.output.log");
         private static IniFile _reShadeIni;
 
@@ -80,7 +79,8 @@ namespace Genshin_Stella_Mod.Forms
         private void Default_Load(object sender, EventArgs e)
         {
             // Path
-            if (File.Exists(ReShadePath)) _reShadeIni = new IniFile(ReShadePath);
+            string reShadePath = Path.Combine(Utils.GetGame("giGameDir"), "ReShade.ini");
+            if (File.Exists(reShadePath)) _reShadeIni = new IniFile(reShadePath);
 
             // Background
             int bgInt = Program.Settings.ReadInt("Launcher", "Background", 0);
@@ -287,8 +287,9 @@ namespace Genshin_Stella_Mod.Forms
                 }
 
 
+                string reShadePath = Path.Combine(Utils.GetGame("giGameDir"), "ReShade.ini");
                 // Check new updates for ReShade.ini file
-                if (!File.Exists(ReShadePath))
+                if (!File.Exists(reShadePath))
                 {
                     UpdateIsAvailable = false;
 
@@ -299,7 +300,7 @@ namespace Genshin_Stella_Mod.Forms
 
                     TaskbarManager.Instance.SetProgressValue(100, 100);
                     TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
-                    Log.Output($"ReShade.ini was not found in: {ReShadePath}");
+                    Log.Output($"ReShade.ini was not found in: {reShadePath}");
                     return -2;
                 }
 
@@ -408,9 +409,11 @@ namespace Genshin_Stella_Mod.Forms
 
             try
             {
+                string reShadePath = Path.Combine(Utils.GetGame("giGameDir"), "ReShade.ini");
+
                 WebClient client = new WebClient();
                 client.Headers.Add("user-agent", Program.UserAgent);
-                await client.DownloadFileTaskAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini", ReShadePath);
+                await client.DownloadFileTaskAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini", reShadePath);
 
                 int update = await CheckUpdates();
                 if (update == 0)
@@ -637,6 +640,8 @@ namespace Genshin_Stella_Mod.Forms
                     "The ReShade.ini file could not be located in your game files, or it may not be compatible with the current version.\n\nWould you like to download this file now to prevent future errors and manual configuration? Recommended.",
                     Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+                string reShadePath = Path.Combine(Utils.GetGame("giGameDir"), "ReShade.ini");
+
                 switch (msgBoxResult)
                 {
                     case DialogResult.Yes:
@@ -648,19 +653,19 @@ namespace Genshin_Stella_Mod.Forms
 
                             WebClient client = new WebClient();
                             client.Headers.Add("user-agent", Program.UserAgent);
-                            await client.DownloadFileTaskAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini", ReShadePath);
+                            await client.DownloadFileTaskAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini", reShadePath);
 
-                            if (File.Exists(ReShadePath))
+                            if (File.Exists(reShadePath))
                             {
                                 await CheckUpdates();
 
                                 status_Label.Text += "[✓] Successfully downloaded ReShade.ini!\n";
-                                Log.Output($"Successfully downloaded ReShade.ini and saved in: {ReShadePath}");
+                                Log.Output($"Successfully downloaded ReShade.ini and saved in: {reShadePath}");
                             }
                             else
                             {
                                 status_Label.Text += "[x] File was not found.\n";
-                                Log.SaveErrorLog(new Exception($"Downloaded ReShade.ini was not found in: {ReShadePath}"));
+                                Log.SaveErrorLog(new Exception($"Downloaded ReShade.ini was not found in: {reShadePath}"));
 
                                 TaskbarManager.Instance.SetProgressValue(100, 100);
                                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
@@ -673,7 +678,7 @@ namespace Genshin_Stella_Mod.Forms
                             updates_Label.Text = "Failed to download...";
 
                             Log.SaveErrorLog(ex);
-                            if (!File.Exists(ReShadePath)) Log.Output("The ReShade.ini file still does not exist!");
+                            if (!File.Exists(reShadePath)) Log.Output("The ReShade.ini file still does not exist!");
                             TaskbarManager.Instance.SetProgressValue(100, 100);
                             TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
                         }
@@ -683,7 +688,7 @@ namespace Genshin_Stella_Mod.Forms
                         status_Label.Text += "[i] Canceled by the user. Are you sure of what you're doing?\n";
                         Log.Output("File download has been canceled by the user.");
 
-                        if (!File.Exists(ReShadePath)) Log.Output("The ReShade.ini file does not exist.");
+                        if (!File.Exists(reShadePath)) Log.Output("The ReShade.ini file does not exist.");
 
                         TaskbarManager.Instance.SetProgressValue(100, 100);
                         TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);

@@ -94,7 +94,7 @@ namespace Genshin_Stella_Mod
                     Environment.Exit(997890421);
                 }
 
-                Process.Start(PrepareLauncher);
+                _ = Cmd.CliWrap(PrepareLauncher, null, AppPath, true, false);
                 Environment.Exit(997890421);
             }
 
