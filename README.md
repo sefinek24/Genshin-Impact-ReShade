@@ -2,7 +2,7 @@
     <h1>🌟 Genshin Impact Stella Mod Pack - 2023 🌟</h1>
     <p>
         <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/data/images/banner/border/1.png" title="See preview [data/images/banner/border/1.png]">
-            <img src="Genshin Impact Mod Pack/data/images/banner/border/1.png" alt="Header image">
+            <img src="Genshin Stella Mod/data/images/banner/border/1.png" alt="Header image">
         </a>
     </p>
     <a href="https://sefinek.net" title="sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=Website&up_message=Online&url=https%3A%2F%2Fsefinek.net" alt="Status page"></a>
@@ -36,10 +36,10 @@
 - [🧶 Sources](#sources)
 
 <div align="center">
-    <a href="https://sefinek.net/genshin-impact-reshade/download" title="Download stable release"><img src="Genshin Impact Mod Pack/data/images/readme/labels/download.png" alt="Download" height="148px"></a>
+    <a href="https://sefinek.net/genshin-impact-reshade/download" title="Download stable release"><img src="Genshin Stella Mod/data/images/readme/labels/download.png" alt="Download" height="148px"></a>
     <br>
-    <a href="https://genshin.sefinek.net" title="Official website"><img src="Genshin Impact Mod Pack/data/images/readme/labels/website.png" alt="Website" height="148px"></a>
-    <a href="https://discord.com/invite/SVcbaRc7gH" title="Our Discord server"><img src="Genshin Impact Mod Pack/data/images/readme/labels/discord.png" alt="Discord" height="148px"></a>
+    <a href="https://genshin.sefinek.net" title="Official website"><img src="Genshin Stella Mod/data/images/readme/labels/website.png" alt="Website" height="148px"></a>
+    <a href="https://discord.com/invite/SVcbaRc7gH" title="Our Discord server"><img src="Genshin Stella Mod/data/images/readme/labels/discord.png" alt="Discord" height="148px"></a>
 </div>
 
 
@@ -172,13 +172,13 @@ Do not change FPS settings in the game if you are using FPS unlock.
 
 ## <div id="other-screenshots">📷 〢 Other screenshots (without Ray Tracing)</div>
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Genshin%20Impact%20Mod%20Pack/data/images/launcher/backgrounds/nahida/1.png" title="See preview [1.png]">
-    <img src="Genshin Impact Mod Pack/data/images/launcher/backgrounds/nahida/1.png" alt="Screenshot number 1">
+    <img src="Genshin Stella Mod/data/images/launcher/backgrounds/nahida/1.png" alt="Screenshot number 1">
 </a>
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Genshin%20Impact%20Mod%20Pack/data/images/launcher/backgrounds/hutao/4.png" title="See preview [4.png]">
-    <img src="Genshin Impact Mod Pack/data/images/launcher/backgrounds/hutao/4.png" alt="Screenshot number 2">
+    <img src="Genshin Stella Mod/data/images/launcher/backgrounds/hutao/4.png" alt="Screenshot number 2">
 </a>
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Genshin%20Impact%20Mod%20Pack/data/images/launcher/backgrounds/yaoyao/2.png" title="See preview [2.png]">
-    <img src="Genshin Impact Mod Pack/data/images/launcher/backgrounds/yaoyao/2.png" alt="Screenshot number 3">
+    <img src="Genshin Stella Mod/data/images/launcher/backgrounds/yaoyao/2.png" alt="Screenshot number 3">
 </a>
 
 ### ⚠️ Warning
