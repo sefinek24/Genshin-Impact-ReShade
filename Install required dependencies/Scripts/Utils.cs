@@ -23,7 +23,7 @@ namespace PrepareStella.Scripts
             }
             catch (InvalidOperationException)
             {
-                return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Genshin Stella Mod");
+                return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
             }
         }
 

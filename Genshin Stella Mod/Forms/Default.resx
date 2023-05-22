@@ -364,10 +364,10 @@
     <value>None</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>584, 117</value>
+    <value>583, 119</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
+    <value>25, 25</value>
   </data>
   <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -808,6 +808,9 @@ RTX cards are not required.</value>
   <data name="version_Label.TabIndex" type="System.Int32, mscorlib">
     <value>85</value>
   </data>
+  <data name="version_Label.Text" xml:space="preserve">
+    <value>Waiting...</value>
+  </data>
   <data name="version_Label.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
@@ -981,6 +984,9 @@ RTX cards are not required.</value>
   </data>
   <data name="updates_Label.TabIndex" type="System.Int32, mscorlib">
     <value>85</value>
+  </data>
+  <data name="updates_Label.Text" xml:space="preserve">
+    <value>Waiting...</value>
   </data>
   <data name="updates_Label.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
@@ -1259,16 +1265,16 @@ RTX cards are not required.</value>
     <value>Comic Sans MS, 11.25pt, style=Bold</value>
   </data>
   <data name="linkLabel9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>998, 448</value>
+    <value>939, 449</value>
   </data>
   <data name="linkLabel9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 21</value>
+    <value>101, 21</value>
   </data>
   <data name="linkLabel9.TabIndex" type="System.Int32, mscorlib">
     <value>116</value>
   </data>
   <data name="linkLabel9.Text" xml:space="preserve">
-    <value>;w;</value>
+    <value>Click me ;w;</value>
   </data>
   <data name="&gt;&gt;linkLabel9.Name" xml:space="preserve">
     <value>linkLabel9</value>

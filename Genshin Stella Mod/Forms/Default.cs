@@ -140,7 +140,7 @@ namespace Genshin_Stella_Mod.Forms
         }
 
 
-        private void ChangeBackground_Click(object sender, EventArgs e)
+        private void ChangeBg_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             int bgInt = Program.Settings.ReadInt("Launcher", "Background", 0);
 
@@ -537,7 +537,7 @@ namespace Genshin_Stella_Mod.Forms
                 "It appears that this is your first time launching the launcher! Take some time to review the terms of use on the GitHub Wiki for the mod and the rules to avoid any unexpected issues.\n\nREMEMBER NOT TO SHARE YOUR UID WITH VISIBLE GAME SHADERS WITH ANYONE!",
                 Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             Program.Settings.WriteInt("Launcher", "FirstMsgBox", 0);
-            status_Label.Text += "Click 'Start game' button to inject ReShade and use FPS Unlock.\n";
+            status_Label.Text += "[i] Click 'Start game' button to inject ReShade and use FPS Unlock.\n";
         }
 
         // ------- Body -------
@@ -549,24 +549,35 @@ namespace Genshin_Stella_Mod.Forms
         // ------- Start the game -------
         private async void StartGame_Click(object sender, EventArgs e)
         {
+            // Run cmd file
             await Cmd.CliWrap("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 1 {Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
+
+            // Exit Stella with status code 0
             Environment.Exit(0);
         }
 
         private async void OnlyReShade_Click(object sender, EventArgs e)
         {
+            // Find game path
             string path = Utils.GetGame("giLauncher");
             if (path == null) return;
 
+            // Open Genshin Launcher
             _ = Cmd.CliWrap(path, null, null, true, false);
+
+            // Run cmd file
             await Cmd.CliWrap("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 2 {Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
 
+            // Exit Stella with status code 0
             Environment.Exit(0);
         }
 
         private async void OnlyUnlocker_Click(object sender, EventArgs e)
         {
+            // Run cmd file
             await Cmd.CliWrap("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 3 {Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
+
+            // Exit Stella with status code 0
             Environment.Exit(0);
         }
 
@@ -594,7 +605,7 @@ namespace Genshin_Stella_Mod.Forms
             Utils.OpenUrl(Discord.Invitation);
         }
 
-        private void YouTube_LinkClicked(object sender, EventArgs e)
+        private void YouTube_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Utils.OpenUrl("https://www.youtube.com/@sefinek");
         }

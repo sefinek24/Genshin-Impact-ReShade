@@ -57,41 +57,46 @@ namespace Genshin_Stella_Mod.Forms
 
 
         // --------------------------------- Game map ---------------------------------
-        private void TIMap_Click(object sender, EventArgs e)
+        private void GenshinMap1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Utils.OpenUrl("https://act.hoyolab.com/ys/app/interactive-map/index.html");
         }
 
-        private void GIInterWorldMap_Click(object sender, EventArgs e)
+        private void GenshinMap2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Utils.OpenUrl("https://genshin-impact-map.appsample.com");
         }
 
 
         // -------------------------------- Characters --------------------------------
-        private void GIBTierList_Click(object sender, EventArgs e)
+        private void TierList1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Utils.OpenUrl("https://genshin.gg/tier-list");
         }
 
-        private void TLBCHD_Click(object sender, EventArgs e)
+        private void TierList2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Utils.OpenUrl("https://game8.co/games/Genshin-Impact/archives/297465");
         }
 
 
         // ------------------------------- Other links --------------------------------
-        private void Uptimerobot_Click(object sender, EventArgs e)
+        private void Uptimerobot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Utils.OpenUrl("https://stats.uptimerobot.com/kLXYEukEwW");
         }
 
-        private void Api_Click(object sender, EventArgs e)
+        private void DataDog_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Utils.OpenUrl("https://p.datadoghq.eu/sb/4oq87a1ven2jwa4a-7ac3302923e782d617afbbc561d2f88d?theme=dark");
+        }
+
+        private void Api_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Utils.OpenUrl("https://api.sefinek.net");
         }
 
-        private void Cdn_Click(object sender, EventArgs e)
+        private void Cdn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Utils.OpenUrl("https://cdn.sefinek.net");
         }

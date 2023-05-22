@@ -179,10 +179,12 @@ namespace Genshin_Stella_Mod.Forms
         // ------------------------------ Config files ------------------------------
         private async void ReShadeConfig_Click(object sender, EventArgs e)
         {
-            if (!File.Exists(Program.ReShadePath))
-                MessageBox.Show($@"ReShade config file was not found in {Program.ReShadePath}.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            string reShadeIni = Path.Combine(Utils.GetGame("giGameDir"), "ReShade.ini");
+
+            if (!File.Exists(reShadeIni))
+                MessageBox.Show($@"ReShade config file was not found in {reShadeIni}.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
-                await Cmd.CliWrap("notepad", Program.ReShadePath, null, true, false);
+                await Cmd.CliWrap("notepad", reShadeIni, null, true, false);
         }
 
         private async void UnlockerConfig_Click(object sender, EventArgs e)

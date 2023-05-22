@@ -104,7 +104,6 @@ namespace Genshin_Stella_Mod.Forms
             this.pictureBox2.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_animated;
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.ChangeBackground_Click);
             // 
             // ChangeBackground
             // 
@@ -116,7 +115,7 @@ namespace Genshin_Stella_Mod.Forms
             this.ChangeBackground.Name = "ChangeBackground";
             this.ChangeBackground.TabStop = true;
             this.toolTip1.SetToolTip(this.ChangeBackground, resources.GetString("ChangeBackground.ToolTip"));
-            this.ChangeBackground.Click += new System.EventHandler(this.ChangeBackground_Click);
+            this.ChangeBackground.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ChangeBg_LinkClicked);
             // 
             // panel2
             // 
@@ -307,6 +306,7 @@ namespace Genshin_Stella_Mod.Forms
             this.version_Label.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.version_Label.LinkColor = System.Drawing.Color.White;
             this.version_Label.Name = "version_Label";
+            this.version_Label.TabStop = true;
             this.toolTip1.SetToolTip(this.version_Label, resources.GetString("version_Label.ToolTip"));
             this.version_Label.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Version_LinkClicked);
             // 
@@ -365,6 +365,7 @@ namespace Genshin_Stella_Mod.Forms
             this.updates_Label.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.updates_Label.LinkColor = System.Drawing.Color.White;
             this.updates_Label.Name = "updates_Label";
+            this.updates_Label.TabStop = true;
             this.updates_Label.Click += new System.EventHandler(this.CheckUpdates_Click);
             // 
             // pictureBox8

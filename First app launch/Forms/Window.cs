@@ -43,8 +43,8 @@ namespace Checkboxes.Forms
             }
             catch (InvalidOperationException)
             {
-                MsStore = true;
-                return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Genshin Stella Mod");
+                MsStore = false;
+                return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
             }
         }
 
