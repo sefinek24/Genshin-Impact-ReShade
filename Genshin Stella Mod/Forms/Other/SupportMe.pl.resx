@@ -122,10 +122,10 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 405</value>
+    <value>23, 405</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>688, 68</value>
+    <value>713, 68</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Zostając moim patronem możesz zyskać nowe korzyści.
@@ -147,13 +147,13 @@ Wybierz właściwą odpowiedź..</value>
     <value>✔ Okej, zrobione UwU</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>639, 46</value>
+    <value>667, 48</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Podoba ci się mod? Jeśli tak, proszę...</value>
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>376, 29</value>
+    <value>356, 28</value>
   </data>
   <data name="linkLabel1.Text" xml:space="preserve">
     <value>» Wesprzyj moją pracę klikając tutaj</value>
@@ -162,31 +162,46 @@ Wybierz właściwą odpowiedź..</value>
     <value>Wesprzyj moją pracę - Oficjalna Strona Sefinka</value>
   </data>
   <data name="linkLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>310, 29</value>
+    <value>342, 28</value>
   </data>
   <data name="linkLabel3.Text" xml:space="preserve">
-    <value>» Subskrybuj mnie na YouTube</value>
+    <value>» Subskrybuj mój kanał na YouTube</value>
   </data>
   <data name="linkLabel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>436, 29</value>
+    <value>416, 28</value>
   </data>
   <data name="linkLabel4.Text" xml:space="preserve">
     <value>» Oznacz repozytorium gwiazdką na GitHub</value>
   </data>
   <data name="linkLabel7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>277, 29</value>
+    <value>268, 28</value>
   </data>
   <data name="linkLabel7.Text" xml:space="preserve">
     <value>» Dołącz na serwer Discord</value>
   </data>
   <data name="linkLabel8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>302, 29</value>
+    <value>291, 28</value>
   </data>
   <data name="linkLabel8.Text" xml:space="preserve">
     <value>» Zostaw opinię na Discordzie</value>
   </data>
   <data name="linkLabel8.ToolTip" xml:space="preserve">
     <value>Zostaw swoją opinię na kanale Discord</value>
+  </data>
+  <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>561, 28</value>
+  </data>
+  <data name="linkLabel2.Text" xml:space="preserve">
+    <value>» Daj mi swoje bezużyteczne skórki w CS:GO, jeśli możesz</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 502</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>416, 38</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Wybierz właściwą odpowiedź:</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Wesprzyj mnie</value>

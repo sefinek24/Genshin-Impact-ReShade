@@ -42,6 +42,8 @@
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.linkLabel7 = new System.Windows.Forms.LinkLabel();
             this.linkLabel8 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,7 +87,7 @@
             this.linkLabel6.Name = "linkLabel6";
             this.linkLabel6.TabStop = true;
             this.toolTip1.SetToolTip(this.linkLabel6, resources.GetString("linkLabel6.ToolTip"));
-            this.linkLabel6.Click += new System.EventHandler(this.NotThisTime_Click);
+            this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.MaybeLater_LinkClicked);
             // 
             // linkLabel5
             // 
@@ -97,7 +99,7 @@
             this.linkLabel5.Name = "linkLabel5";
             this.linkLabel5.TabStop = true;
             this.toolTip1.SetToolTip(this.linkLabel5, resources.GetString("linkLabel5.ToolTip"));
-            this.linkLabel5.Click += new System.EventHandler(this.WhyNot_Click);
+            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OkayDone_LinkClicked);
             // 
             // label1
             // 
@@ -118,7 +120,7 @@
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.TabStop = true;
             this.toolTip1.SetToolTip(this.linkLabel1, resources.GetString("linkLabel1.ToolTip"));
-            this.linkLabel1.Click += new System.EventHandler(this.SupportMyWork_Click);
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SupportMe_LinkClicked);
             // 
             // linkLabel3
             // 
@@ -131,7 +133,7 @@
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.TabStop = true;
             this.toolTip1.SetToolTip(this.linkLabel3, resources.GetString("linkLabel3.ToolTip"));
-            this.linkLabel3.Click += new System.EventHandler(this.SubscribeMeOnYT_Click);
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SubscribeMe_LinkClicked);
             // 
             // linkLabel4
             // 
@@ -144,7 +146,7 @@
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.TabStop = true;
             this.toolTip1.SetToolTip(this.linkLabel4, resources.GetString("linkLabel4.ToolTip"));
-            this.linkLabel4.Click += new System.EventHandler(this.StarOnGitHub_Click);
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.StarTheRepo_LinkClicked);
             // 
             // linkLabel7
             // 
@@ -157,7 +159,7 @@
             this.linkLabel7.Name = "linkLabel7";
             this.linkLabel7.TabStop = true;
             this.toolTip1.SetToolTip(this.linkLabel7, resources.GetString("linkLabel7.ToolTip"));
-            this.linkLabel7.Click += new System.EventHandler(this.Discord_Click);
+            this.linkLabel7.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.DiscordServer_LinkClicked);
             // 
             // linkLabel8
             // 
@@ -170,7 +172,28 @@
             this.linkLabel8.Name = "linkLabel8";
             this.linkLabel8.TabStop = true;
             this.toolTip1.SetToolTip(this.linkLabel8, resources.GetString("linkLabel8.ToolTip"));
-            this.linkLabel8.Click += new System.EventHandler(this.FeedbackOnDsc_Click);
+            this.linkLabel8.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LeaveFeedback_LinkClicked);
+            // 
+            // linkLabel2
+            // 
+            resources.ApplyResources(this.linkLabel2, "linkLabel2");
+            this.linkLabel2.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            this.linkLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel2.ForeColor = System.Drawing.Color.Transparent;
+            this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.linkLabel2.LinkColor = System.Drawing.Color.DeepSkyBlue;
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.TabStop = true;
+            this.toolTip1.SetToolTip(this.linkLabel2, resources.GetString("linkLabel2.ToolTip"));
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CsGoSkins_LinkClicked);
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.Color.LightGreen;
+            this.label3.Name = "label3";
+            this.toolTip1.SetToolTip(this.label3, resources.GetString("label3.ToolTip"));
             // 
             // SupportMe
             // 
@@ -178,6 +201,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::Genshin_Stella_Mod.Properties.Resources.bg_support_me;
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel8);
             this.Controls.Add(this.linkLabel7);
             this.Controls.Add(this.linkLabel4);
@@ -213,5 +238,7 @@
         private System.Windows.Forms.LinkLabel linkLabel4;
         private System.Windows.Forms.LinkLabel linkLabel7;
         private System.Windows.Forms.LinkLabel linkLabel8;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -48,48 +48,53 @@ namespace Genshin_Stella_Mod.Forms.Other
 
 
         // Content
-        private void SupportMyWork_Click(object sender, EventArgs e)
+        private void SupportMe_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Utils.OpenUrl("https://sefinek.net/support-me");
         }
 
-        private void SubscribeMeOnYT_Click(object sender, EventArgs e)
+        private void CsGoSkins_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Utils.OpenUrl("https://steamcommunity.com/tradeoffer/new/?partner=1156692850&token=smcSsTMe");
+        }
+
+        private void SubscribeMe_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Utils.OpenUrl("https://www.youtube.com/channel/UClrAIcAzcqIMbvGXZqK7e0A?sub_confirmation=1");
         }
 
-        private void StarOnGitHub_Click(object sender, EventArgs e)
+        private void StarTheRepo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Utils.OpenUrl("https://sefinek.net/genshin-impact-reshade/repositories");
         }
 
-        private void Discord_Click(object sender, EventArgs e)
+        private void DiscordServer_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Utils.OpenUrl(Discord.Invitation);
         }
 
-        private void FeedbackOnDsc_Click(object sender, EventArgs e)
+        private void LeaveFeedback_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Utils.OpenUrl(Discord.FeedbackChannel);
         }
 
 
         // Footer
-        private void WhyNot_Click(object sender, EventArgs e)
+        private void MaybeLater_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            new Default { Location = Location, StartPosition = FormStartPosition.Manual, Icon = Resources.icon_52x52 }.Show();
+
+            Log.Output($"Clicked no in form '{Text}'.");
+            Telemetry.SupportMe_AnswNo();
+        }
+
+        private void OkayDone_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             new Default { Location = Location, StartPosition = FormStartPosition.Manual, Icon = Resources.icon_52x52 }.Show();
             MessageBox.Show("Thanks :3", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             Log.Output($"Clicked yes in form '{Text}'.");
             Telemetry.SupportMe_AnswYes();
-        }
-
-        private void NotThisTime_Click(object sender, EventArgs e)
-        {
-            new Default { Location = Location, StartPosition = FormStartPosition.Manual, Icon = Resources.icon_52x52 }.Show();
-
-            Log.Output($"Clicked no in form '{Text}'.");
-            Telemetry.SupportMe_AnswNo();
         }
     }
 }
