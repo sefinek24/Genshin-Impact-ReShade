@@ -71,8 +71,7 @@ that [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel) connects to
 > By using this software, you agree to the terms of the [License agreement](LICENSE),
 > [Terms of use](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-ToS#-1-terms-of-use) and
 > [Rules](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-ToS#-2-rules-etc).
-> In addition, we are not responsible for any potential bans in the game, although the chances of this happening **are
-negligible**.
+> In addition, we are not responsible for any potential bans in the game, although the chances of this happening **are negligible**.
 
 
 ## <div id="includes">📂 〢 Includes</div>
