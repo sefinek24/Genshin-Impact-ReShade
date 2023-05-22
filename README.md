@@ -90,7 +90,8 @@ negligible**.
 
 
 ## <div id="pc-requirements">✨ 〢 Requirements</div>
-> 📝 **Note:** Make sure your PC meets the following requirements before installing the mod.
+> **Note**:
+> Make sure your PC meets the following requirements before installing the mod.
 
 | 🗝️ Your PC & Network                      | 📂 Dependencies                                                                                                                                                                                                       |
 |:-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
