@@ -5054,11 +5054,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\Stella\\Genshin-Stella-Mod\\Genshin Impact Mod Pack\\Stella Mod Launcher.csproj",
+      "projectUniqueName": "D:\\GitHub\\Stella\\Genshin-Stella-Mod\\Genshin Stella Mod\\Stella Mod Launcher.csproj",
       "projectName": "Genshin Stella Mod",
-      "projectPath": "D:\\GitHub\\Stella\\Genshin-Stella-Mod\\Genshin Impact Mod Pack\\Stella Mod Launcher.csproj",
+      "projectPath": "D:\\GitHub\\Stella\\Genshin-Stella-Mod\\Genshin Stella Mod\\Stella Mod Launcher.csproj",
       "packagesPath": "C:\\Users\\Sefinek\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\Stella\\Genshin-Stella-Mod\\Genshin Impact Mod Pack\\obj\\",
+      "outputPath": "D:\\GitHub\\Stella\\Genshin-Stella-Mod\\Genshin Stella Mod\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

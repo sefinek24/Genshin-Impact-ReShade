@@ -178,3 +178,183 @@ D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Impact Mod Pack\obj\Release\Genshin 
 D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Impact Mod Pack\obj\Release\Genshin Stella Mod.pdb
 D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Impact Mod Pack\bin\Release\data\vbs\chooseGameVersion.vbs
 D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Impact Mod Pack\bin\Release\AppxManifest.xml
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\images\launcher\backgrounds\ayaka\1.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\images\launcher\backgrounds\ayaka\2.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\images\launcher\backgrounds\ayaka\3.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\images\launcher\backgrounds\ayaka\4.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\images\launcher\backgrounds\ayaka\other\1.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\images\launcher\backgrounds\ayaka\other\2.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\images\launcher\backgrounds\ayaka\other\3.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\images\launcher\backgrounds\ayaka\other\4.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\images\launcher\backgrounds\forms\gameplay\tutorial.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\images\launcher\backgrounds\forms\links\links.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\images\launcher\backgrounds\forms\support-me\1.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\images\launcher\backgrounds\forms\tools\1.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\images\launcher\backgrounds\forms\tools\2.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\images\launcher\backgrounds\hutao\1.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\images\launcher\backgrounds\hutao\2.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\images\launcher\backgrounds\hutao\3.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\images\launcher\backgrounds\hutao\4.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\images\launcher\backgrounds\nahida\1.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\images\launcher\backgrounds\yaoyao\1.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\images\launcher\backgrounds\yaoyao\2.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\images\launcher\backgrounds\yoimiya\1.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\images\launcher\backgrounds\yoimiya\2.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\images\launcher\backgrounds\yoimiya\3.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\images\launcher\backgrounds\yoimiya\4.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\images\launcher\backgrounds\yoimiya\5.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\images\launcher\backgrounds\yoimiya\6.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\images\launcher\backgrounds\yoimiya\7.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\README.txt
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\reshade\fpng.pdb
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\reshade\gl3w.pdb
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\reshade\ImGui.pdb
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\reshade\inject64.exe
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\reshade\MinHook.pdb
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\reshade\ReShade64.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\reshade\ReShadeFX64.pdb
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\reshade\stb.pdb
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\sounds\bg\1.wav
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\sounds\bg\2.wav
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\sounds\bg\3.wav
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\sounds\bg\4.wav
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\sounds\bg\5.wav
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\sounds\bg\6.wav
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\sounds\screenshot.wav
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\unlocker\Microsoft.Bcl.AsyncInterfaces.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\unlocker\System.Buffers.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\unlocker\System.Memory.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\unlocker\System.Numerics.Vectors.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\unlocker\System.Runtime.CompilerServices.Unsafe.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\unlocker\System.Text.Encodings.Web.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\unlocker\System.Text.Json.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\unlocker\System.Threading.Tasks.Extensions.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\unlocker\unlockfps_clr.exe
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\unlocker\unlockfps_clr.pdb
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\vbs\chooseGameVersion.vbs
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\videos\gengbeng.mp4
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\videos\poland-strong.mp4
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\icons\128x128.ico
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\icons\240x240.ico
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\icons\48x48.ico
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\icons\52x52.ico
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\icons\original.png
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\icons\README.txt
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\icons\setup\52x52.ico
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\www\css\default.css
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\www\css\screenshots.css
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\www\images\blobcat.gif
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\www\images\dancing-anime-girl.gif
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\www\images\error.gif
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\www\images\loading.gif
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\www\images\success.gif
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\www\images\thumbsup.gif
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\www\index.html
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\www\screenshots\deprecated\collei.html
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\www\screenshots\deprecated\hutao.html
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\www\screenshots\deprecated\kokomi.html
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\www\screenshots\deprecated\yoimiya.html
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\www\screenshots\index.html
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\www\screenshots\old.html
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\www\shields.html
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\runtimes\win-x64\native\WebView2Loader.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\cmd\delete_cache.cmd
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\cmd\delete_webview_cache.cmd
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\cmd\scan_sys_files.cmd
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\cmd\start\done.cmd
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\cmd\start\error.cmd
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\cmd\start\run-reshade.cmd
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\cmd\start\wait_for_unlockfps.cmd
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\OLD_CHANGELOG.md
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\reshade\fpng.lib
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\reshade\gl3w.lib
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\reshade\ImGui.lib
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\reshade\MinHook.lib
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\reshade\ReShade64.exp
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\reshade\ReShade64.lib
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\reshade\ReShadeFX64.lib
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\reshade\stb.lib
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\unlocker\unlocker.config.default.json
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\unlocker\unlockfps_clr.exe.config
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\unlocker\unlockfps_clr.exe.metagen
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\dependencies\Microsoft.VCLibs.x64.14.00.Desktop.appx
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\dependencies\WindowsTerminal_Win10.msixbundle
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\dependencies\WindowsTerminal_Win11.msixbundle
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\dev\build.cmd
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\icons\128x128.xcf
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\icons\240x240.xcf
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\icons\48x48.xcf
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\icons\52x52.xcf
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\icons\Source.url
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\www\api\launcher.version.json
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\www\LICENSE
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\AppxManifest.xml
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\data\cmd\run.cmd
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\Genshin Stella Mod.exe.config
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\Genshin Stella Mod.exe
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\Genshin Stella Mod.pdb
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\pl\Genshin Stella Mod.resources.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\ByteSize.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\CliWrap.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\DiscordRPC.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\DiscordRPC.pdb
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\Microsoft.Toolkit.Uwp.Notifications.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\Microsoft.Toolkit.Uwp.Notifications.pdb
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\WebView2Loader.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\Microsoft.Web.WebView2.Core.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\Microsoft.Web.WebView2.WinForms.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\Microsoft.Web.WebView2.Wpf.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\Newtonsoft.Json.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\System.Buffers.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\System.Configuration.ConfigurationManager.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\System.Memory.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\System.Numerics.Vectors.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\System.Security.AccessControl.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\System.Security.Permissions.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\System.Security.Principal.Windows.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\System.Threading.Tasks.Extensions.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\System.ValueTuple.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\Microsoft.WindowsAPICodePack.Core.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\Microsoft.WindowsAPICodePack.Sensors.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\Microsoft.WindowsAPICodePack.Shell.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\System.Windows.Forms.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\bin\Release\WindowsFormsIntegration.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Stella Mod Launcher.csproj.AssemblyReference.cache
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Stella Mod Launcher.csproj.SuggestedBindingRedirects.cache
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Genshin Stella Mod.exe.config
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Interop.IWshRuntimeLibrary.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Stella Mod Launcher.csproj.ResolveComReference.cache
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Genshin_Stella_Mod.Forms.Errors.ErrorOccurred.resources
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Genshin_Stella_Mod.Forms.Errors.WrongCountry.resources
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Genshin_Stella_Mod.Forms.Other.Gallery.resources
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Genshin_Stella_Mod.Forms.Default.resources
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Genshin_Stella_Mod.Forms.Errors.NotCompatible.resources
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Genshin_Stella_Mod.Forms.Errors.NotInstalledViaSetup.resources
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Genshin_Stella_Mod.Forms.Other.Language.resources
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Genshin_Stella_Mod.Forms.Other.RandomThings.resources
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Genshin_Stella_Mod.Forms.Other.SupportMe.resources
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Genshin_Stella_Mod.Forms.Tools.resources
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Genshin_Stella_Mod.Forms.Gameplay.resources
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Genshin_Stella_Mod.Forms.Links.resources
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Genshin_Stella_Mod.Properties.Resources.resources
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Genshin_Stella_Mod.Forms.Default.pl.resources
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Genshin_Stella_Mod.Forms.Errors.ErrorOccurred.pl.resources
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Genshin_Stella_Mod.Forms.Errors.NotCompatible.pl.resources
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Genshin_Stella_Mod.Forms.Errors.NotInstalledViaSetup.pl.resources
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Genshin_Stella_Mod.Forms.Gameplay.pl.resources
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Genshin_Stella_Mod.Forms.Links.pl.resources
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Genshin_Stella_Mod.Forms.Other.Gallery.pl.resources
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Genshin_Stella_Mod.Forms.Other.Language.pl.resources
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Genshin_Stella_Mod.Forms.Other.SupportMe.pl.resources
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Genshin_Stella_Mod.Forms.Tools.pl.resources
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Genshin_Stella_Mod.Properties.Resources.pl.resources
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Stella Mod Launcher.csproj.GenerateResource.cache
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Stella Mod Launcher.csproj.CoreCompileInputs.cache
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\pl\Genshin Stella Mod.resources.dll
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Stella Mod Launcher.csproj.CopyComplete
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Genshin Stella Mod.exe
+D:\GitHub\Stella\Genshin-Stella-Mod\Genshin Stella Mod\obj\Release\Genshin Stella Mod.pdb

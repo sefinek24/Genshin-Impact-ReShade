@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "s8Y1kPaG56Rz7K3rdeQJeaVQ9yD1KbzldzaeEd6fmNGBc/crJkgiVvzSBS6h6otm/92x3rgLghitoRjNtrRXHA==",
+  "dgSpecHash": "wEKpSLNsCmdRnmGBWuclJ+Lzk0TrsNnz9gWPP2O7RCot3Ln2Odh5uAcWGeDdGf/vExHULy6My/Avq6clZIjCsQ==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\Stella\\Genshin-Stella-Mod\\Genshin Impact Mod Pack\\Stella Mod Launcher.csproj",
+  "projectFilePath": "D:\\GitHub\\Stella\\Genshin-Stella-Mod\\Genshin Stella Mod\\Stella Mod Launcher.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sefinek\\.nuget\\packages\\bytesize\\2.1.1\\bytesize.2.1.1.nupkg.sha512",
     "C:\\Users\\Sefinek\\.nuget\\packages\\cliwrap\\3.6.3\\cliwrap.3.6.3.nupkg.sha512",
