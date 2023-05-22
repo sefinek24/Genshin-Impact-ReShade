@@ -80,7 +80,7 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 ## <div id="pc-requirements">✨ 〢 Requirements</div>
 > 📝 **Note:** Make sure your PC meets the following requirements before installing the mod.
 
-| 🗝️ PC & Network                           | 📂 Dependencies                                                                                                                                                                                                       |
+| 🗝️ Your PC & Network                      | 📂 Dependencies                                                                                                                                                                                                       |
 |:-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **OS:** Windows 10/11 (build > 19041)      | [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)                                                                                                                                |
 | **CPU:** 64-bit processor and system       | [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer)                                                                                                      |
