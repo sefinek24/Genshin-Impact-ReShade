@@ -537,6 +537,7 @@ namespace Genshin_Stella_Mod.Forms
                 "It appears that this is your first time launching the launcher! Take some time to review the terms of use on the GitHub Wiki for the mod and the rules to avoid any unexpected issues.\n\nREMEMBER NOT TO SHARE YOUR UID WITH VISIBLE GAME SHADERS WITH ANYONE!",
                 Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             Program.Settings.WriteInt("Launcher", "FirstMsgBox", 0);
+            status_Label.Text += "Click 'Start game' button to inject ReShade and use FPS Unlock.\n";
         }
 
         // ------- Body -------
