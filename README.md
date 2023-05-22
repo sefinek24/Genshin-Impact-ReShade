@@ -102,7 +102,7 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 
 
 ## <div id="installation">📥 〢 How to install?</div>
-### 📦 Short tutorial (installation via setup)
+### 📦 » Short tutorial (installation via setup)
 1. Download the latest setup from [my official website](https://genshin.sefinek.net).
 2. Extract the downloaded file to a convenient location on your computer.
 3. Run the setup file `Genshin Stella Mod Setup.exe` and follow the on-screen instructions to install the mod.
@@ -159,15 +159,15 @@ Then, adjust the settings according to the recommended values based on your syst
 | **Subsurface Scattering**   | High                              | High                                 |
 | **Anisotropic Filtering**   | 4x                                | 16x                                  |
 
-### 📝 Note
+### 📝 » Note
 These recommended settings are provided as a general guideline and may vary based on individual player preferences and system specifications.
 It is recommended that players adjust the settings accordingly to optimize their own experience.
 
-### ✋ Important
+### ✋ » Important
 Please note that there is an additional graphics settings option available in the reshade overlay by changing presets.
 You can adjust the presets from very low to very high, which will significantly impact the shadows in the game.
 
-### ⚠️ Warning
+### ⚠️ » Warning
 Do not change FPS settings in the game if you are using FPS unlock.
 
 
