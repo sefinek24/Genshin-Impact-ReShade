@@ -110,17 +110,17 @@ Our main server of [sefinek.net](https://sefinek.net) is located in Poland, and 
 5. Select the appropriate number of [frames per second](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/04.-What-is...#-considerations).
 > After a moment, the game should launch with [ReShade](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/04.-What-is...#-reshade) injected and [FPS Unlocker](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/04.-What-is...#-fps-unlocker).
 
-### 📘 Extended tutorial (GitHub Wiki)
+### 📘 » Extended tutorial (GitHub Wiki)
 1. [Main page](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/07.-Installation)
 2. [Automatic installation](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/07.-Installation#-automatic-installation)
 3. [Manual installation](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/07.-Installation#-manually-installation)
 
-### 😼 Suggestion
+### 😼 » Suggestion
 Kindly avoid downloading files from this repository, including any branches, as the current versions are still in the beta testing phase.
 There is a high likelihood of the mod not functioning properly or encountering other problems.
 It is strongly recommended that you opt for the installer instead, as it guarantees access to the stable and fully operational version of the mod.
 
-### 📝 Note
+### 📝 » Note
 After the installation is complete, you should open the Stella Launcher and start the game by clicking on the **Start game** button.
 Once the game has launched, it is crucial to verify that [the recommended graphics settings](#settings-for-game) are configured correctly.
 Then, adjust the settings according to the recommended values based on your system's capabilities. This will help to ensure that the game runs smoothly and looks its best.
@@ -129,6 +129,7 @@ Then, adjust the settings according to the recommended values based on your syst
 ## <div id="tested-game-versions">🛠️ 〢 Tested game versions</div>
 | 🎮 Game version | 😅 Works with mod? | 📆 Date tested   |
 |-----------------|--------------------|------------------|
+| v3.7.0          | [✔️](#legend)      | May 22, 2023     |
 | v3.6.0          | [✔️](#legend)      | April 12, 2023   |
 | v3.5.0          | [✔️](#legend)      | March 01, 2023   |
 | v3.4.0          | [✔️](#legend)      | January 18, 2023 |
