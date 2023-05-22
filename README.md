@@ -68,9 +68,9 @@ The main server of [sefinek.net](https://sefinek.net) is located in Poland, whil
 the [Cloudflare](https://www.cloudflare.com) servers
 that [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel) connects to are in Warsaw and Frankfurt.
 
-> By using this software, you agree to the terms of
-> the [License agreement](LICENSE), [Terms of use](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-ToS#-1-terms-of-use)
-> and [Rules](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-ToS#-2-rules-etc).
+> By using this software, you agree to the terms of the [License agreement](LICENSE),
+> [Terms of use](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-ToS#-1-terms-of-use) and
+> [Rules](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-ToS#-2-rules-etc).
 > In addition, we are not responsible for any potential bans in the game, although the chances of this happening **are
 negligible**.
 
@@ -90,7 +90,8 @@ negligible**.
 
 
 ## <div id="pc-requirements">✨ 〢 Requirements</div>
-> **Note:**
+
+> **Note**:
 > Make sure your PC meets the following requirements before installing the mod.
 
 | 🗝️ Your PC & Network                      | 📂 Dependencies                                                                                                                                                                                                       |
