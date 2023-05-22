@@ -44,23 +44,17 @@
 
 
 ## <div id="important">⚠️ 〢 Important</div>
-Please note that sharing game screenshots displaying your UID, visible shaders, or ReShade overlay may result in a game
-ban.
-If you plan to record a video of the game for platforms like YouTube, remember to hide or censor your UID and username
-to avoid being banned.
+Please note that sharing game screenshots displaying your UID, visible shaders, or ReShade overlay may result in a game ban.
+If you plan to record a video of the game for platforms like YouTube, remember to hide or censor your UID and username to avoid being banned.
 
-Also, it is highly recommended to update your graphics card and chipset drivers to ensure smooth gameplay, minimize
-graphics-related issues, and prevent crashes.
+Also, it is highly recommended to update your graphics card and chipset drivers to ensure smooth gameplay, minimize graphics-related issues, and prevent crashes.
 Please familiarize yourself with the [system requirements](#pc-requirements) as well.
 
-For more information and details about the Genshin Stella Mod project, visit
-our [GitHub Wiki](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki).
-The wiki provides a comprehensive installation and usage guide for ReShade, along with frequently asked questions and
-troubleshooting tips.
+For more information and details about the Genshin Stella Mod project, visit our [GitHub Wiki](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki).
+The wiki provides a comprehensive installation and usage guide for ReShade, along with frequently asked questions and troubleshooting tips.
 
 If you need further assistance, feel free to join our [Discord server](https://discord.gg/SVcbaRc7gH).
-Additionally, if you wish to contribute to the project, please create a
-new [Pull request](https://github.com/sefinek24/Genshin-Impact-ReShade/pulls).
+Additionally, if you wish to contribute to the project, please create a new [Pull request](https://github.com/sefinek24/Genshin-Impact-ReShade/pulls).
 You can also check out the latest [screenshots](https://sefinek.net/genshin-impact-reshade/gallery?page=1) on our
 website and watch [YouTube videos](https://sefinek.net/genshin-impact-reshade/videos) for more.
 
