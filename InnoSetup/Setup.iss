@@ -1,5 +1,5 @@
 #define MyAppName "Genshin Stella Mod"
-#define MyAppVersion "7.3.1.0"
+#define MyAppVersion "7.3.0.0"
 #define MyAppPublisher "Sefinek Inc."
 #define MyAppURL "https://genshin.sefinek.net"
 #define MyAppExeName "Genshin Stella Mod.exe"
@@ -26,7 +26,7 @@ DisableProgramGroupPage=no
 InfoBeforeFile=..\Genshin Stella Mod\bin\Release\data\README.txt
 LicenseFile=..\Genshin Stella Mod\bin\Release\LICENSE
 PrivilegesRequired=none
-OutputBaseFilename=Stella-Mod-Setup
+OutputBaseFilename=Genshin Stella Mod Setup
 Compression=lzma
 SolidCompression=yes
 WizardStyle=classic
