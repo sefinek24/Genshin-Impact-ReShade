@@ -12,7 +12,7 @@ namespace PrepareStella.Scripts.Preparing
     {
         public static async Task Run()
         {
-            Console.WriteLine(@"Updating FPS Unlocker configuration...");
+            Console.WriteLine(@"Downloading FPS Unlocker configuration...");
 
             try
             {

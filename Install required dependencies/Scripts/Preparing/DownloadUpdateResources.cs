@@ -53,7 +53,7 @@ namespace PrepareStella.Scripts.Preparing
             using (WebClient webClient = new WebClient())
             {
                 webClient.Headers.Add("user-agent", Program.UserAgent);
-                await webClient.DownloadFileTaskAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/zip/resources.zip", zipPath);
+                await webClient.DownloadFileTaskAsync("https://github.com/sefinek24/Genshin-Stella-Resources/releases/latest/download/resources.zip", zipPath);
             }
 
             Console.WriteLine(@"Unpacking resources...");

@@ -31,7 +31,7 @@ namespace Genshin_Stella_Mod.Forms
     public partial class Default : Form
     {
         // Files
-        private static readonly string SetupPathExe = Path.Combine(Path.GetTempPath(), "Genshin_Stella_Mod_Setup.exe");
+        private static readonly string SetupPathExe = Path.Combine(Path.GetTempPath(), "Stella-Mod-Update.exe");
         private static readonly string CmdOutputLogs = Path.Combine(Program.AppData, "logs", "cmd.output.log");
         private static IniFile _reShadeIni;
 
@@ -234,6 +234,7 @@ namespace Genshin_Stella_Mod.Forms
                 if (Program.AppVersion != remoteVersion)
                 {
                     // 1
+                    UpdateIsAvailable = true;
                     version_Label.Text = $@"v{Program.AppVersion} → v{remoteVersion}";
 
                     // 2
@@ -243,16 +244,7 @@ namespace Genshin_Stella_Mod.Forms
                     Utils.RemoveClickEvent(updates_Label);
                     updates_Label.Click += Update_Event;
 
-                    // 3
-                    WebClient wc = new WebClient();
-                    wc.Headers.Add("user-agent", Program.UserAgent);
-                    await wc.OpenReadTaskAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/setup/default/Genshin%20Stella%20Mod%20Setup.exe");
-                    string updateSize = ByteSize.FromBytes(Convert.ToInt64(wc.ResponseHeaders["Content-Length"])).MegaBytes.ToString("00.00");
-                    status_Label.Text += $"[i] New version from {remoteVerDate} is available.\n[i] Update size: {updateSize} MB\n";
-
-                    // 4
-                    UpdateIsAvailable = true;
-
+                    // ToastContentBuilder
                     try
                     {
                         new ToastContentBuilder()
@@ -264,6 +256,13 @@ namespace Genshin_Stella_Mod.Forms
                     {
                         Log.SaveErrorLog(e);
                     }
+
+                    // WebClient
+                    WebClient wc = new WebClient();
+                    wc.Headers.Add("user-agent", Program.UserAgent);
+                    await wc.OpenReadTaskAsync("https://github.com/sefinek24/Genshin-Impact-ReShade/releases/latest/download/Stella-Mod-Setup.exe");
+                    string updateSize = ByteSize.FromBytes(Convert.ToInt64(wc.ResponseHeaders["Content-Length"])).MegaBytes.ToString("00.00");
+                    status_Label.Text += $"[i] New version from {remoteVerDate} is available.\n[i] Update size: {updateSize} MB\n";
 
                     Log.Output($"New release from {remoteVerDate} is available: v{Program.AppVersion} → v{remoteVersion} [{updateSize} MB]");
 
@@ -281,6 +280,7 @@ namespace Genshin_Stella_Mod.Forms
                     website_Label.Show();
                     progressBar1.Value = 0;
 
+                    // TaskbarManager
                     TaskbarManager.Instance.SetProgressValue(100, 100);
                     TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
                     return 1;
@@ -775,7 +775,7 @@ namespace Genshin_Stella_Mod.Forms
                 client.Headers.Add("user-agent", Program.UserAgent);
                 client.DownloadProgressChanged += Client_DownloadProgressChanged;
                 client.DownloadFileCompleted += Client_DownloadFileCompleted;
-                await client.DownloadFileTaskAsync(new Uri("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/setup/default/Genshin%20Stella%20Mod%20Setup.exe"), SetupPathExe);
+                await client.DownloadFileTaskAsync(new Uri("https://github.com/sefinek24/Genshin-Impact-ReShade/releases/latest/download/Stella-Mod-Setup.exe"), SetupPathExe);
             }
         }
 

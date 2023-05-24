@@ -67,7 +67,6 @@ namespace Genshin_Stella_Mod.Forms
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.PreparingPleaseWait = new System.Windows.Forms.Label();
             this.linkLabel9 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -219,8 +218,8 @@ namespace Genshin_Stella_Mod.Forms
             this.RunOnlyFPSUnlocker.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             resources.ApplyResources(this.RunOnlyFPSUnlocker, "RunOnlyFPSUnlocker");
             this.RunOnlyFPSUnlocker.BackColor = System.Drawing.Color.Transparent;
-            this.RunOnlyFPSUnlocker.DisabledLinkColor = System.Drawing.Color.Silver;
-            this.RunOnlyFPSUnlocker.ForeColor = System.Drawing.Color.Gray;
+            this.RunOnlyFPSUnlocker.DisabledLinkColor = System.Drawing.Color.Black;
+            this.RunOnlyFPSUnlocker.ForeColor = System.Drawing.SystemColors.ControlText;
             this.RunOnlyFPSUnlocker.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.RunOnlyFPSUnlocker.LinkColor = System.Drawing.Color.White;
             this.RunOnlyFPSUnlocker.Name = "RunOnlyFPSUnlocker";
@@ -457,24 +456,12 @@ namespace Genshin_Stella_Mod.Forms
             this.linkLabel9.TabStop = true;
             this.linkLabel9.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.W_LinkClicked);
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
-            resources.ApplyResources(this.linkLabel1, "linkLabel1");
-            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel1, resources.GetString("linkLabel1.ToolTip"));
-            // 
             // Default
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::Genshin_Stella_Mod.Properties.Resources.bg_main;
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.linkLabel9);
             this.Controls.Add(this.PreparingPleaseWait);
             this.Controls.Add(this.progressBar1);
@@ -572,7 +559,6 @@ namespace Genshin_Stella_Mod.Forms
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label PreparingPleaseWait;
         private System.Windows.Forms.LinkLabel linkLabel9;
-        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 

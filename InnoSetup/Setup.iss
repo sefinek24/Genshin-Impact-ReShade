@@ -1,5 +1,5 @@
 #define MyAppName "Genshin Stella Mod"
-#define MyAppVersion "7.3.0.0"
+#define MyAppVersion "7.3.1.0"
 #define MyAppPublisher "Sefinek Inc."
 #define MyAppURL "https://genshin.sefinek.net"
 #define MyAppExeName "Genshin Stella Mod.exe"
@@ -23,10 +23,10 @@ DefaultDirName=C:\Genshin-Impact-ReShade
 DisableDirPage=no
 ChangesAssociations=no
 DisableProgramGroupPage=no
-InfoBeforeFile=..\Genshin Stella Mod\bin\Release\README.txt
-LicenseFile==..\Genshin Stella Mod\bin\Release\LICENSE
+InfoBeforeFile=..\Genshin Stella Mod\bin\Release\data\README.txt
+LicenseFile=..\Genshin Stella Mod\bin\Release\LICENSE
 PrivilegesRequired=none
-OutputBaseFilename=Genshin Stella Mod Setup
+OutputBaseFilename=Stella-Mod-Setup
 Compression=lzma
 SolidCompression=yes
 WizardStyle=classic
@@ -67,8 +67,6 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 [Files]
 Source: "..\Genshin Stella Mod\bin\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\Genshin Stella Mod\bin\Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
-
-Source: "UninsIS.dll"; Flags: dontcopy
 
 [Icons]
 Name: "{autodesktop}\Stella Mod Launcher"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
