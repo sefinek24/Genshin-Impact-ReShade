@@ -1,5 +1,5 @@
 #define MyAppName "Genshin Stella Mod"
-#define MyAppVersion "7.2.1.0"
+#define MyAppVersion "7.3.0.0"
 #define MyAppPublisher "Sefinek Inc."
 #define MyAppURL "https://genshin.sefinek.net"
 #define MyAppExeName "Genshin Stella Mod.exe"
@@ -23,8 +23,8 @@ DefaultDirName=C:\Genshin-Impact-ReShade
 DisableDirPage=no
 ChangesAssociations=no
 DisableProgramGroupPage=no
-InfoBeforeFile=..\Genshin Impact Mod Pack\data\README.txt
-LicenseFile=..\Genshin Impact Mod Pack\LICENSE
+InfoBeforeFile=..\Genshin Stella Mod\bin\Release\README.txt
+LicenseFile==..\Genshin Stella Mod\bin\Release\LICENSE
 PrivilegesRequired=none
 OutputBaseFilename=Genshin Stella Mod Setup
 Compression=lzma
@@ -65,8 +65,8 @@ Name: "ukrainian"; MessagesFile: "compiler:Languages\Ukrainian.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Check: not InstViaSetup and not InstViaLauncher 
 
 [Files]
-Source: "..\Genshin Impact Mod Pack\bin\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\Genshin Impact Mod Pack\bin\Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "..\Genshin Stella Mod\bin\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\Genshin Stella Mod\bin\Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 Source: "UninsIS.dll"; Flags: dontcopy
 
