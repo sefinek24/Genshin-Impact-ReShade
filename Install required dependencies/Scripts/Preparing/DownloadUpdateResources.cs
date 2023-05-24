@@ -4,7 +4,7 @@ using System.IO.Compression;
 using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Prepare_mod.Forms;
+using PrepareStella.Forms;
 using PrepareStella.Properties;
 
 namespace PrepareStella.Scripts.Preparing
@@ -101,7 +101,7 @@ namespace PrepareStella.Scripts.Preparing
                 .Replace("{general.preset}", Path.Combine(resourcesGlobal, "Presets", "3. Preset by Sefinek - Medium settings [Default].ini"))
                 .Replace("{general.textures}", Path.Combine(resourcesGlobal, "Shaders", "Textures"))
                 .Replace("{screenshot.path}", Path.Combine(resourcesGlobal, "Screenshots"))
-                .Replace("{screenshot.sound}", Path.Combine(resourcesGlobal, "data", "sounds", "screenshot.wav"));
+                .Replace("{screenshot.sound}", Path.Combine(Program.AppPath, "data", "sounds", "screenshot.wav"));
 
             File.WriteAllText(Program.ReShadeConfig, reShadeData);
         }

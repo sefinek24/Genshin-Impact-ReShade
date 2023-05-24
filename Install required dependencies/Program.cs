@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.WindowsAPICodePack.Taskbar;
-using Prepare_mod.Forms;
+using PrepareStella.Forms;
 using PrepareStella.Properties;
 using PrepareStella.Scripts;
 using PrepareStella.Scripts.Preparing;

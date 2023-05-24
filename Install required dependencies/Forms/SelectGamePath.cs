@@ -2,10 +2,9 @@ using System;
 using System.IO;
 using System.Threading;
 using System.Windows.Forms;
-using PrepareStella;
 using PrepareStella.Properties;
 
-namespace Prepare_mod.Forms
+namespace PrepareStella.Forms
 {
     public partial class SelectGamePath : Form
     {

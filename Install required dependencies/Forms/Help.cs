@@ -1,6 +1,6 @@
 using System.Windows.Forms;
 
-namespace Prepare_mod.Forms
+namespace PrepareStella.Forms
 {
     public partial class Help : Form
     {

@@ -1,4 +1,4 @@
-namespace Prepare_mod.Forms
+namespace PrepareStella.Forms
 {
     partial class SelectGamePath
     {
