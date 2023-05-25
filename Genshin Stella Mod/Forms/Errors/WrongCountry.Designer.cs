@@ -70,7 +70,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "WrongCountry";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Surprise for russians ХАХАХАХ";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.WrongCountry_FormClosed);

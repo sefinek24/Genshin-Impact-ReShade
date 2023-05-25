@@ -278,18 +278,19 @@ namespace Genshin_Stella_Mod.Forms
                     TaskbarManager.Instance.SetProgressValue(100, 100);
 
                     // Check update size
-                    WebClient wc = new WebClient();
-                    wc.Headers.Add("user-agent", Program.UserAgent);
-                    await wc.OpenReadTaskAsync("https://github.com/sefinek24/Genshin-Impact-ReShade/releases/latest/download/Stella-Mod-Setup.exe");
-                    string updateSize = ByteSize.FromBytes(Convert.ToInt64(wc.ResponseHeaders["Content-Length"])).MegaBytes.ToString("00.00");
-                    status_Label.Text += $"[i] New version from {remoteVerDate} is available.\n[i] Update size: {updateSize} MB\n";
+                    using (WebClient wc = new WebClient())
+                    {
+                        wc.Headers.Add("user-agent", Program.UserAgent);
+                        await wc.OpenReadTaskAsync("https://github.com/sefinek24/Genshin-Impact-ReShade/releases/latest/download/Stella-Mod-Setup.exe");
+                        string updateSize = ByteSize.FromBytes(Convert.ToInt64(wc.ResponseHeaders["Content-Length"])).MegaBytes.ToString("00.00");
+                        status_Label.Text += $"[i] New version from {remoteVerDate} is available.\n[i] Update size: {updateSize} MB\n";
 
-                    // Final
-                    TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
-                    Log.Output($"Update size: {updateSize} MB");
-                    return 1;
+                        // Final
+                        TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
+                        Log.Output($"Update size: {updateSize} MB");
+                        return 1;
+                    }
                 }
-
 
                 // Check new updates for ReShade.ini file
                 string reShadePath = Path.Combine(Utils.GetGame("giGameDir"), "ReShade.ini");
@@ -302,21 +303,29 @@ namespace Genshin_Stella_Mod.Forms
                     status_Label.Text += "[x] File ReShade.ini was not found in your game directory.\n";
                     update_Icon.Image = Resources.icons8_download_from_the_cloud;
 
-                    TaskbarManager.Instance.SetProgressValue(100, 100);
-                    TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
                     Log.Output($"ReShade.ini was not found in: {reShadePath}");
                     return -2;
                 }
-
 
                 WebClient webClient = new WebClient();
                 webClient.Headers.Add("user-agent", Program.UserAgent);
                 string content = await webClient.DownloadStringTaskAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini");
                 NameValueCollection iniData = new NameValueCollection();
-
+                using (StringReader reader = new StringReader(content))
+                {
+                    string line;
+                    while ((line = await reader.ReadLineAsync()) != null)
+                        if (line.Contains("="))
+                        {
+                            int separatorIndex = line.IndexOf("=", StringComparison.Ordinal);
+                            string key = line.Substring(0, separatorIndex).Trim();
+                            string value = line.Substring(separatorIndex + 1).Trim();
+                            iniData.Add(key, value);
+                        }
+                }
 
                 string localIniVersion = _reShadeIni.ReadString("STELLA", "ConfigVersion", null);
-                if (localIniVersion == null || localIniVersion.Length <= 0)
+                if (string.IsNullOrEmpty(localIniVersion))
                 {
                     UpdateIsAvailable = false;
 
@@ -343,19 +352,21 @@ namespace Genshin_Stella_Mod.Forms
                     status_Label.Text += "[i] New ReShade config version is available. Update is required.\n";
                     Log.Output($"New ReShade config version is available: v{localIniVersion} → v{remoteIniVersion}");
 
-                    WebClient wc = new WebClient();
-                    wc.Headers.Add("user-agent", Program.UserAgent);
-                    await wc.OpenReadTaskAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini");
-                    string updateSize = ByteSize.FromBytes(Convert.ToInt64(wc.ResponseHeaders["Content-Length"])).KiloBytes.ToString("0.00");
-                    status_Label.Text += $"[i] Update size: {updateSize} KB\n";
+                    using (WebClient wc = new WebClient())
+                    {
+                        wc.Headers.Add("user-agent", Program.UserAgent);
+                        await wc.OpenReadTaskAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini");
+                        string updateSize = ByteSize.FromBytes(Convert.ToInt64(wc.ResponseHeaders["Content-Length"])).KiloBytes.ToString("0.00");
+                        status_Label.Text += $"[i] Update size: {updateSize} KB\n";
 
-                    Utils.RemoveClickEvent(updates_Label);
-                    updates_Label.Click += UpdateConfig_Event;
+                        Utils.RemoveClickEvent(updates_Label);
+                        updates_Label.Click += UpdateConfig_Event;
 
-                    Log.Output($"Update size: {updateSize} KB");
-                    TaskbarManager.Instance.SetProgressValue(100, 100);
-                    TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
-                    return 1;
+                        Log.Output($"Update size: {updateSize} KB");
+                        TaskbarManager.Instance.SetProgressValue(100, 100);
+                        TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
+                        return 1;
+                    }
                 }
 
                 // Not found any new updates
