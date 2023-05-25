@@ -10,7 +10,7 @@ namespace Genshin_Stella_Mod.Scripts
 {
     internal static class Cmd
     {
-        public static async Task CliWrap(string app, string args, string workingDir, bool bypassUpdates, bool downloadSetup)
+        public static async Task<bool> CliWrap(string app, string args, string workingDir, bool bypassUpdates, bool downloadSetup)
         {
             try
             {
@@ -18,9 +18,11 @@ namespace Genshin_Stella_Mod.Scripts
 
                 if (Default.UpdateIsAvailable && !bypassUpdates)
                 {
-                    MessageBox.Show(@"Sorry. Update is required.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(
+                        "Update is required.\n\nI apologize for any inconvenience caused, but it is necessary to install every update. Each update may contain quality improvements, and some updates might even include important security fixes.\n\nIf, for any reason, you are unable to update Stella Mod through the launcher, please uninstall the previous version and reinstall it from the official website.",
+                        Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Log.Output("CliWrap: Command execution failed. An update is required.");
-                    return;
+                    return false;
                 }
 
                 // CliWrap
@@ -40,59 +42,59 @@ namespace Genshin_Stella_Mod.Scripts
                 Log.Output($"CliWrap: Successfully executed {app}; Exit code: {result.ExitCode}; Start time: {result.StartTime}; Exit time: {result.ExitTime}{stdoutLine}{stderrLine};");
 
                 // StandardError
-                if (result.ExitCode != 0)
+                if (result.ExitCode == 0) return true;
+
+                string showCommand = !string.IsNullOrEmpty(app) ? $"\n\n» Executed command:\n{app} {args}" : "";
+                string showWorkingDir = !string.IsNullOrEmpty(workingDir)
+                    ? $"\n\n» Working directory: {workingDir}"
+                    : "";
+                string showExitCode = !double.IsNaN(result.ExitCode) ? $"\n\n» Exit code: {result.ExitCode}" : "";
+                string showError = !string.IsNullOrEmpty(stderr) ? $"\n\n» Error:\n{stderr}" : "";
+                string info = $"{showCommand}{showWorkingDir}{showExitCode}{showError}";
+
+                switch (result.ExitCode)
                 {
-                    string showCommand = !string.IsNullOrEmpty(app) ? $"\n\n» Executed command:\n{app} {args}" : "";
-                    string showWorkingDir = !string.IsNullOrEmpty(workingDir)
-                        ? $"\n\n» Working directory: {workingDir}"
-                        : "";
-                    string showExitCode = !double.IsNaN(result.ExitCode) ? $"\n\n» Exit code: {result.ExitCode}" : "";
-                    string showError = !string.IsNullOrEmpty(stderr) ? $"\n\n» Error:\n{stderr}" : "";
-                    string info = $"{showCommand}{showWorkingDir}{showExitCode}{showError}";
-
-                    switch (result.ExitCode)
+                    case 3010:
                     {
-                        case 3010:
+                        try
                         {
-                            try
-                            {
-                                new ToastContentBuilder()
-                                    .AddText("Update alert 📄")
-                                    .AddText("Required dependency has been successfully installed, but your computer needs a restart.")
-                                    .Show();
-                            }
-                            catch (Exception ex)
-                            {
-                                Log.SaveErrorLog(ex);
-                            }
-
-                            MessageBox.Show(@"The requested operation is successful, but your PC needs reboot.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Log.Output(
-                                $"CliWrap: {app} installed. Exit code: {result.ExitCode}\nThe requested operation is successful. Changes will not be effective until the system is rebooted.");
-                            return;
+                            new ToastContentBuilder()
+                                .AddText("Reboot is required 📄")
+                                .AddText("Required dependency has been successfully installed, but your computer needs a restart.")
+                                .Show();
+                        }
+                        catch (Exception ex)
+                        {
+                            Log.SaveErrorLog(ex);
                         }
 
-                        case 5:
-                            const string mainInfo = "Failed to update. The software was denied access to a location, preventing it from saving, copying, opening or loading files.";
-                            MessageBox.Show(mainInfo, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(@"The requested operation is successful, but your PC needs reboot.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Log.Output(
+                            $"CliWrap: {app} installed. Exit code: {result.ExitCode}\nThe requested operation is successful. Changes will not be effective until the system is rebooted.");
+                        return false;
+                    }
 
-                            Log.SaveErrorLog(new Exception($"{mainInfo}\nRestart your computer or suspend antivirus program and try again.{info}"));
-                            return;
+                    case 5:
+                        const string mainInfo = "Failed to update. The software was denied access to a location, preventing it from saving, copying, opening or loading files.";
+                        MessageBox.Show(mainInfo, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                        default:
-                        {
-                            if (!downloadSetup)
-                                Log.ErrorAndExit(new Exception($"Command execution failed because the underlying process ({app}) returned a non-zero exit code - {result.ExitCode}.\n{info}"));
-                            else
-                                Log.SaveErrorLog(new Exception(info));
-                            return;
-                        }
+                        Log.SaveErrorLog(new Exception($"{mainInfo}\nRestart your computer or suspend antivirus program and try again.{info}"));
+                        return false;
+
+                    default:
+                    {
+                        if (!downloadSetup)
+                            Log.ErrorAndExit(new Exception($"Command execution failed because the underlying process ({app}) returned a non-zero exit code - {result.ExitCode}.\n{info}"));
+                        else
+                            Log.SaveErrorLog(new Exception(info));
+                        return false;
                     }
                 }
             }
             catch (Exception ex)
             {
                 Log.ThrowError(ex);
+                return false;
             }
         }
     }

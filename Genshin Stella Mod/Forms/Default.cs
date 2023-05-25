@@ -196,10 +196,10 @@ namespace Genshin_Stella_Mod.Forms
 
         private async Task<int> CheckUpdates()
         {
-            TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
-
             updates_Label.LinkColor = Color.White;
             updates_Label.Text = @"Checking for updates...";
+
+            TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
             Log.Output("Checking for new versions...");
 
             try
@@ -244,28 +244,6 @@ namespace Genshin_Stella_Mod.Forms
                     Utils.RemoveClickEvent(updates_Label);
                     updates_Label.Click += Update_Event;
 
-                    // ToastContentBuilder
-                    try
-                    {
-                        new ToastContentBuilder()
-                            .AddText("📥 We found new updates")
-                            .AddText("New release is available. Download now!")
-                            .Show();
-                    }
-                    catch (Exception e)
-                    {
-                        Log.SaveErrorLog(e);
-                    }
-
-                    // WebClient
-                    WebClient wc = new WebClient();
-                    wc.Headers.Add("user-agent", Program.UserAgent);
-                    await wc.OpenReadTaskAsync("https://github.com/sefinek24/Genshin-Impact-ReShade/releases/latest/download/Stella-Mod-Setup.exe");
-                    string updateSize = ByteSize.FromBytes(Convert.ToInt64(wc.ResponseHeaders["Content-Length"])).MegaBytes.ToString("00.00");
-                    status_Label.Text += $"[i] New version from {remoteVerDate} is available.\n[i] Update size: {updateSize} MB\n";
-
-                    Log.Output($"New release from {remoteVerDate} is available: v{Program.AppVersion} → v{remoteVersion} [{updateSize} MB]");
-
                     // Hide and show elements
                     progressBar1.Hide();
                     PreparingPleaseWait.Hide();
@@ -280,9 +258,35 @@ namespace Genshin_Stella_Mod.Forms
                     website_Label.Show();
                     progressBar1.Value = 0;
 
-                    // TaskbarManager
+                    // ToastContentBuilder
+                    try
+                    {
+                        new ToastContentBuilder()
+                            .AddText("📥 We found new updates")
+                            .AddText("New release is available. Download now!")
+                            .Show();
+                    }
+                    catch (Exception e)
+                    {
+                        Log.SaveErrorLog(e);
+                    }
+
+                    // Log
+                    Log.Output($"New release from {remoteVerDate} is available: v{Program.AppVersion} → v{remoteVersion}");
+
+                    // Taskbar
                     TaskbarManager.Instance.SetProgressValue(100, 100);
+
+                    // Check update size
+                    WebClient wc = new WebClient();
+                    wc.Headers.Add("user-agent", Program.UserAgent);
+                    await wc.OpenReadTaskAsync("https://github.com/sefinek24/Genshin-Impact-ReShade/releases/latest/download/Stella-Mod-Setup.exe");
+                    string updateSize = ByteSize.FromBytes(Convert.ToInt64(wc.ResponseHeaders["Content-Length"])).MegaBytes.ToString("00.00");
+                    status_Label.Text += $"[i] New version from {remoteVerDate} is available.\n[i] Update size: {updateSize} MB\n";
+
+                    // Final
                     TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
+                    Log.Output($"Update size: {updateSize} MB");
                     return 1;
                 }
 
@@ -550,23 +554,24 @@ namespace Genshin_Stella_Mod.Forms
         private async void StartGame_Click(object sender, EventArgs e)
         {
             // Run cmd file
-            await Cmd.CliWrap("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 1 {Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
+            bool res = await Cmd.CliWrap("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 1 {Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
 
             // Exit Stella with status code 0
-            Environment.Exit(0);
+            if (res) Environment.Exit(0);
         }
 
         private async void OnlyReShade_Click(object sender, EventArgs e)
         {
+            // Run cmd file
+            bool res = await Cmd.CliWrap("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 2 {Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
+            if (!res) return;
+
             // Find game path
             string path = Utils.GetGame("giLauncher");
             if (path == null) return;
 
             // Open Genshin Launcher
             _ = Cmd.CliWrap(path, null, null, true, false);
-
-            // Run cmd file
-            await Cmd.CliWrap("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 2 {Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
 
             // Exit Stella with status code 0
             Environment.Exit(0);
@@ -575,16 +580,21 @@ namespace Genshin_Stella_Mod.Forms
         private async void OnlyUnlocker_Click(object sender, EventArgs e)
         {
             // Run cmd file
-            await Cmd.CliWrap("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 3 {Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
+            bool res = await Cmd.CliWrap("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 3 {Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
 
             // Exit Stella with status code 0
-            Environment.Exit(0);
+            if (res) Environment.Exit(0);
         }
 
         private async void OpenGILauncher_Click(object sender, EventArgs e)
         {
             string path = Utils.GetGame("giLauncher");
-            if (path == null) return;
+            if (path == string.Empty)
+            {
+                MessageBox.Show(@"Game launcher was not found.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Log.SaveErrorLog(new Exception($"Game launcher was not found. Result: {path}"));
+                return;
+            }
 
             await Cmd.CliWrap(path, null, null, true, false);
         }

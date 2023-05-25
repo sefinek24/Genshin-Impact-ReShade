@@ -20,7 +20,7 @@ namespace Genshin_Stella_Mod.Scripts
             {
                 MessageBox.Show($"File with game path was not found in:\n{FileWithGamePath}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Log.Output($"File with game path was not found in: {FileWithGamePath}");
-                return "";
+                return string.Empty;
             }
 
             string gameFilePath = File.ReadAllLines(FileWithGamePath).First();
@@ -29,7 +29,7 @@ namespace Genshin_Stella_Mod.Scripts
             {
                 MessageBox.Show($"Folder does not exists.\n{gamePath}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Log.Output($"Directory {gamePath} does not exists.");
-                return "";
+                return string.Empty;
             }
 
 
@@ -47,7 +47,7 @@ namespace Genshin_Stella_Mod.Scripts
                     if (!Directory.Exists(genshinImpactGame))
                     {
                         Log.Output($"Genshin Impact game was not found in: {genshinImpactGame} [giGameDir]");
-                        return "";
+                        return string.Empty;
                     }
 
                     Log.Output($"Found Genshin Impact Game dir: {genshinImpactGame} [giGameDir]");
@@ -76,7 +76,7 @@ namespace Genshin_Stella_Mod.Scripts
                     MessageBox.Show($"File {genshinImpactExeYuanShen} does not exists.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Log.Output($"File {genshinImpactExeYuanShen} does not exists. [giExe]");
 
-                    return "";
+                    return string.Empty;
                 }
 
                 case "giLauncher":
@@ -86,7 +86,7 @@ namespace Genshin_Stella_Mod.Scripts
                     {
                         MessageBox.Show($"Launcher file does not exists.\n{genshinImpactExe}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         Log.Output($"Launcher file does not exists in: {genshinImpactExe} [giLauncher]");
-                        return "";
+                        return string.Empty;
                     }
 
                     Log.Output($"Found Genshin Impact Launcher in: {genshinImpactExe} [giLauncher]");
