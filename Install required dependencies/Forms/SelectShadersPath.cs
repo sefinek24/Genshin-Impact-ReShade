@@ -21,14 +21,14 @@ namespace PrepareStella.Forms
                 using (FolderBrowserDialog dialog = new FolderBrowserDialog())
                 {
                     dialog.SelectedPath = Program.ProgramFiles;
-                    dialog.Description = "Select the game folder";
+                    dialog.Description = @"Select the game folder";
 
                     if (dialog.ShowDialog() != DialogResult.OK) return;
                     string selectedFolder = dialog.SelectedPath;
 
                     if (File.Exists(Path.Combine(selectedFolder, "UnityPlayer.dll")))
                     {
-                        MessageBox.Show("That's not the right place.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(@"That's not the right place.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
 
@@ -42,7 +42,7 @@ namespace PrepareStella.Forms
 
             if (string.IsNullOrEmpty(folderPath)) return;
             comboBox1.Items.Clear();
-            comboBox1.Items.Add(Path.Combine(folderPath, "Genshin-Stella-Mod"));
+            comboBox1.Items.Add(Path.Combine(folderPath, "Stella-Mod-Resources"));
             comboBox1.SelectedIndex = 0;
         }
 
