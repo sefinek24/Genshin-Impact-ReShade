@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{91FBB412-D343-4E78-95B5-F18E6EB6001C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Checkboxes</RootNamespace>
+    <RootNamespace>ConfWindow</RootNamespace>
     <AssemblyName>First app launch</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -35,7 +35,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Checkboxes.Program</StartupObject>
+    <StartupObject>ConfWindow.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>

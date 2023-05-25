@@ -43,9 +43,9 @@ namespace PrepareStella.Forms
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(65, 106);
+            this.label4.Location = new System.Drawing.Point(12, 116);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(674, 66);
+            this.label4.Size = new System.Drawing.Size(776, 65);
             this.label4.TabIndex = 14;
             this.label4.Text = ">> in path <<\r\n";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -62,7 +62,7 @@ namespace PrepareStella.Forms
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(203, 369);
+            this.button2.Location = new System.Drawing.Point(195, 369);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(129, 32);
             this.button2.TabIndex = 12;
@@ -77,7 +77,7 @@ namespace PrepareStella.Forms
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(61, 195);
+            this.label2.Location = new System.Drawing.Point(53, 195);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(271, 21);
             this.label2.TabIndex = 11;
@@ -86,7 +86,7 @@ namespace PrepareStella.Forms
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(65, 219);
+            this.button1.Location = new System.Drawing.Point(57, 219);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 21);
             this.button1.TabIndex = 10;
@@ -99,7 +99,7 @@ namespace PrepareStella.Forms
             this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(160, 219);
+            this.comboBox1.Location = new System.Drawing.Point(152, 219);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(579, 21);
             this.comboBox1.TabIndex = 9;
@@ -108,16 +108,16 @@ namespace PrepareStella.Forms
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Ink Free", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Ink Free", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(65, 49);
+            this.label1.Location = new System.Drawing.Point(12, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(674, 55);
+            this.label1.Size = new System.Drawing.Size(776, 61);
             this.label1.TabIndex = 8;
             this.label1.Text = "Aw. Your game was not found...";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // SelectPath
+            // SelectGamePath
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -133,9 +133,9 @@ namespace PrepareStella.Forms
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
-            this.Name = "SelectPath";
+            this.Name = "SelectGamePath";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Select game path";
+            this.Text = "Game localization";
             this.Load += new System.EventHandler(this.SelectPath_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

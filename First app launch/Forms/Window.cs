@@ -4,9 +4,9 @@ using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 using Windows.Storage;
-using First_app_launch.Forms;
+using ConfWindow.Scripts;
 
-namespace Checkboxes.Forms
+namespace ConfWindow.Forms
 {
     public partial class Window : Form
     {
@@ -80,7 +80,7 @@ namespace Checkboxes.Forms
             int data5 = _prepareIni.ReadInt("PrepareStella", "UpdateFpsUnlockerConfig", 1);
             checkBox5.Checked = data5 != 0;
 
-            int data6 = _prepareIni.ReadInt("PrepareStella", "DeleteReShadeCache", 0);
+            int data6 = _prepareIni.ReadInt("PrepareStella", "DeleteReShadeCache", 1);
             checkBox6.Checked = data6 != 0;
 
             int data7 = _prepareIni.ReadInt("PrepareStella", "InstOrUpdWT", 1);

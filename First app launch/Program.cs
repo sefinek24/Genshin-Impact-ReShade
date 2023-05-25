@@ -1,8 +1,8 @@
 using System;
 using System.Windows.Forms;
-using Checkboxes.Forms;
+using ConfWindow.Forms;
 
-namespace Checkboxes
+namespace ConfWindow
 {
     internal static class Program
     {

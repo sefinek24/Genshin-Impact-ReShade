@@ -1,14 +1,15 @@
 using System;
 using System.IO;
 using System.Threading;
+using Microsoft.Toolkit.Uwp.Notifications;
 using Microsoft.WindowsAPICodePack.Taskbar;
 
 namespace PrepareStella.Scripts
 {
     internal abstract class Log
     {
-        private static readonly string Folder = Program.AppData + @"\logs";
-        private static readonly string OutputFile = Folder + @"\configure.output.log";
+        private static readonly string Folder = Path.Combine(Program.AppData, "logs");
+        private static readonly string OutputFile = Path.Combine(Folder, "configure.output.log");
 
         private static void TryAgain(bool tryAgain)
         {
@@ -63,17 +64,17 @@ namespace PrepareStella.Scripts
 
             try
             {
-                //  new ToastContentBuilder()
-                //     .AddText("Oh no! Error occurred 😿")
-                //     .AddText("Go back to the installer.")
-                //     .Show();
+                new ToastContentBuilder()
+                    .AddText("Oh no! Error occurred 😿")
+                    .AddText("Go back to the configuration window.")
+                    .Show();
+
+                TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
             }
             catch (Exception e)
             {
                 SaveErrorLog(e, false);
             }
-
-            TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
 
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(string.IsNullOrEmpty(msg.InnerException?.ToString()) ? msg : msg.InnerException);
@@ -87,14 +88,14 @@ namespace PrepareStella.Scripts
 
             if (!hideError)
             {
-                TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
-
                 try
                 {
-                    // new ToastContentBuilder()
-                    //     .AddText("Failed to prepare setup or install 😿")
-                    //     .AddText("🎶 Sad song... Could you please try again?")
-                    //     .Show();
+                    new ToastContentBuilder()
+                        .AddText("Failed 😿")
+                        .AddText("🎶 Sad song... Could you please try again?")
+                        .Show();
+
+                    TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
                 }
                 catch (Exception e)
                 {

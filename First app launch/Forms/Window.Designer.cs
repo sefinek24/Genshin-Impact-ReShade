@@ -1,4 +1,4 @@
-namespace Checkboxes.Forms
+namespace ConfWindow.Forms
 {
     partial class Window
     {
@@ -58,7 +58,7 @@ namespace Checkboxes.Forms
             this.linkLabel1.Size = new System.Drawing.Size(1078, 63);
             this.linkLabel1.TabIndex = 0;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = ">> I am ready! Continue... <<";
+            this.linkLabel1.Text = ">> I am ready to continue... <<";
             this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LetsGo_LinkClicked);
             // 
@@ -247,11 +247,11 @@ namespace Checkboxes.Forms
     "ure of what you\'re doing, do not uncheck any field.";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Main
+            // Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Checkboxes.Properties.Resources.bg;
+            this.BackgroundImage = global::ConfWindow.Properties.Resources.bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1102, 610);
             this.Controls.Add(this.label4);
@@ -270,9 +270,10 @@ namespace Checkboxes.Forms
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "Main";
+            this.Name = "Window";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "First application start";
+            this.Text = "Prepare Stella Mod Launcher";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
