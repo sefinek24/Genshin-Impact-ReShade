@@ -291,8 +291,8 @@ namespace Genshin_Stella_Mod.Forms
                 }
 
 
-                string reShadePath = Path.Combine(Utils.GetGame("giGameDir"), "ReShade.ini");
                 // Check new updates for ReShade.ini file
+                string reShadePath = Path.Combine(Utils.GetGame("giGameDir"), "ReShade.ini");
                 if (!File.Exists(reShadePath))
                 {
                     UpdateIsAvailable = false;
@@ -313,18 +313,7 @@ namespace Genshin_Stella_Mod.Forms
                 webClient.Headers.Add("user-agent", Program.UserAgent);
                 string content = await webClient.DownloadStringTaskAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini");
                 NameValueCollection iniData = new NameValueCollection();
-                using (StringReader reader = new StringReader(content))
-                {
-                    string line;
-                    while ((line = await reader.ReadLineAsync()) != null)
-                        if (line.Contains("="))
-                        {
-                            int separatorIndex = line.IndexOf("=", StringComparison.Ordinal);
-                            string key = line.Substring(0, separatorIndex).Trim();
-                            string value = line.Substring(separatorIndex + 1).Trim();
-                            iniData.Add(key, value);
-                        }
-                }
+
 
                 string localIniVersion = _reShadeIni.ReadString("STELLA", "ConfigVersion", null);
                 if (localIniVersion == null || localIniVersion.Length <= 0)
