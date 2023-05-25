@@ -86,6 +86,27 @@ namespace Genshin_Stella_Mod.Forms
 
 
         // -------------------------------- Launcher --------------------------------
+        private void OpenConfWindow_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            DialogResult res = MessageBox.Show(@"Are you sure to run Stella Configuration Window again?", Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.No) return;
+
+            string path = Path.Combine(Program.AppPath, "First app launch.exe");
+            if (!File.Exists(path))
+            {
+                string fileName = Path.GetFileName(path);
+                MessageBox.Show($@"Required file '{fileName}' was not found in the main mod directory.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Log.SaveErrorLog(new Exception($"File {fileName} was not found in {path}."));
+                return;
+            }
+
+            string confSfn = Path.Combine(Program.AppData, "configured.sfn");
+            if (File.Exists(confSfn)) File.Delete(confSfn);
+
+            _ = Cmd.CliWrap(path, null, null, true, false);
+            Environment.Exit(0);
+        }
+
         private void CreateShortcut_Button(object sender, EventArgs e)
         {
             bool success = Utils.CreateShortcut();
@@ -220,11 +241,6 @@ namespace Genshin_Stella_Mod.Forms
             await Cmd.CliWrap("notepad", $@"{Log.Folder}\launcher.output.log", null, true, false);
         }
 
-        private async void InnoSetup_Button(object sender, EventArgs e)
-        {
-            await Cmd.CliWrap("notepad", $@"{Log.Folder}\innosetup-logs.install.log", null, true, false);
-        }
-
         private async void ReShadeLogs_Button(object sender, EventArgs e)
         {
             string gameDir = Utils.GetGame("giGameDir");
@@ -236,11 +252,16 @@ namespace Genshin_Stella_Mod.Forms
                 await Cmd.CliWrap("notepad", logFile, null, true, false);
         }
 
-        private async void InstallationLog_Button(object sender, EventArgs e)
+        private async void PreparationLogs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            await Cmd.CliWrap("notepad", $@"{Log.Folder}\setup.output.log", null, true, false);
+            await Cmd.CliWrap("notepad", $@"{Log.Folder}prepare.output.log", null, true, false);
         }
 
+
+        private async void InnoSetup_Button(object sender, EventArgs e)
+        {
+            await Cmd.CliWrap("notepad", $@"{Log.Folder}\innosetup-logs.install.log", null, true, false);
+        }
 
         // -------------------------- Nothing special ((: ---------------------------
         private void Notepad_MouseClick(object sender, MouseEventArgs e)

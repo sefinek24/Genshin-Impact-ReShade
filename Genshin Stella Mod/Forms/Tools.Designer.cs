@@ -70,6 +70,8 @@ namespace Genshin_Stella_Mod.Forms
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.ChangeLanguage = new System.Windows.Forms.LinkLabel();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -85,6 +87,7 @@ namespace Genshin_Stella_Mod.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -146,7 +149,6 @@ namespace Genshin_Stella_Mod.Forms
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox3, resources.GetString("pictureBox3.ToolTip"));
-            this.pictureBox3.Click += new System.EventHandler(this.DeleteCache_Button);
             // 
             // ReShadeLogs
             // 
@@ -169,7 +171,6 @@ namespace Genshin_Stella_Mod.Forms
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox1, resources.GetString("pictureBox1.ToolTip"));
-            this.pictureBox1.Click += new System.EventHandler(this.ReShadeLogs_Button);
             // 
             // LauncherLogs
             // 
@@ -192,7 +193,6 @@ namespace Genshin_Stella_Mod.Forms
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox2, resources.GetString("pictureBox2.ToolTip"));
-            this.pictureBox2.Click += new System.EventHandler(this.LauncherLogs_Click);
             // 
             // LogFiles
             // 
@@ -231,7 +231,6 @@ namespace Genshin_Stella_Mod.Forms
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox4, resources.GetString("pictureBox4.ToolTip"));
-            this.pictureBox4.Click += new System.EventHandler(this.ReShadeConfig_Click);
             // 
             // SeeFPSUnlockerConfig
             // 
@@ -254,7 +253,6 @@ namespace Genshin_Stella_Mod.Forms
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox5, resources.GetString("pictureBox5.ToolTip"));
-            this.pictureBox5.Click += new System.EventHandler(this.UnlockerConfig_Click);
             // 
             // ScanAndRepairSysFiles
             // 
@@ -277,7 +275,6 @@ namespace Genshin_Stella_Mod.Forms
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox6, resources.GetString("pictureBox6.ToolTip"));
-            this.pictureBox6.Click += new System.EventHandler(this.ScanSysFiles_Click);
             // 
             // pictureBox7
             // 
@@ -288,7 +285,6 @@ namespace Genshin_Stella_Mod.Forms
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox7, resources.GetString("pictureBox7.ToolTip"));
-            this.pictureBox7.Click += new System.EventHandler(this.CreateShortcut_Button);
             // 
             // CreateShortcut
             // 
@@ -327,7 +323,6 @@ namespace Genshin_Stella_Mod.Forms
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox8, resources.GetString("pictureBox8.ToolTip"));
-            this.pictureBox8.Click += new System.EventHandler(this.DeleteWebViewCache_Click);
             // 
             // DeleteOnlyWebView2Cache
             // 
@@ -358,7 +353,6 @@ namespace Genshin_Stella_Mod.Forms
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox9, resources.GetString("pictureBox9.ToolTip"));
-            this.pictureBox9.Click += new System.EventHandler(this.InstallationLog_Button);
             // 
             // InstallationLogs
             // 
@@ -370,7 +364,7 @@ namespace Genshin_Stella_Mod.Forms
             this.InstallationLogs.Name = "InstallationLogs";
             this.InstallationLogs.TabStop = true;
             this.toolTip1.SetToolTip(this.InstallationLogs, resources.GetString("InstallationLogs.ToolTip"));
-            this.InstallationLogs.Click += new System.EventHandler(this.InstallationLog_Button);
+            this.InstallationLogs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.PreparationLogs_LinkClicked);
             // 
             // pictureBox10
             // 
@@ -381,7 +375,6 @@ namespace Genshin_Stella_Mod.Forms
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox10, resources.GetString("pictureBox10.ToolTip"));
-            this.pictureBox10.Click += new System.EventHandler(this.InnoSetup_Button);
             // 
             // InnoSetupLogs
             // 
@@ -495,12 +488,36 @@ namespace Genshin_Stella_Mod.Forms
             this.toolTip1.SetToolTip(this.ChangeLanguage, resources.GetString("ChangeLanguage.ToolTip"));
             this.ChangeLanguage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ChangeLang_LinkClicked);
             // 
+            // pictureBox15
+            // 
+            resources.ApplyResources(this.pictureBox15, "pictureBox15");
+            this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox15.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox15.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_shortcut;
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox15, resources.GetString("pictureBox15.ToolTip"));
+            // 
+            // linkLabel1
+            // 
+            resources.ApplyResources(this.linkLabel1, "linkLabel1");
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.linkLabel1.LinkColor = System.Drawing.Color.White;
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.TabStop = true;
+            this.toolTip1.SetToolTip(this.linkLabel1, resources.GetString("linkLabel1.ToolTip"));
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OpenConfWindow_LinkClicked);
+            // 
             // Tools
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::Genshin_Stella_Mod.Properties.Resources.bg_tools;
+            this.Controls.Add(this.pictureBox15);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pictureBox14);
             this.Controls.Add(this.ChangeLanguage);
             this.Controls.Add(this.pictureBox13);
@@ -560,6 +577,7 @@ namespace Genshin_Stella_Mod.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -607,5 +625,7 @@ namespace Genshin_Stella_Mod.Forms
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.LinkLabel ChangeLanguage;
+        private System.Windows.Forms.PictureBox pictureBox15;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

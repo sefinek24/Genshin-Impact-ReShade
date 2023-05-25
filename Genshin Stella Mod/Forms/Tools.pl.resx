@@ -149,16 +149,16 @@
     <value>Pliki konfiguracyjne</value>
   </data>
   <data name="SeeReShadeConfig.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 24</value>
+    <value>268, 24</value>
   </data>
   <data name="SeeReShadeConfig.Text" xml:space="preserve">
-    <value>Wyświetl konfi. ReShade</value>
+    <value>Wyświetl konfiguracje ReShade</value>
   </data>
   <data name="SeeFPSUnlockerConfig.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 24</value>
+    <value>316, 24</value>
   </data>
   <data name="SeeFPSUnlockerConfig.Text" xml:space="preserve">
-    <value>Wyświetl konfi. FPS Unlockera</value>
+    <value>Wyświetl konfiguracje FPS Unlockera</value>
   </data>
   <data name="ScanAndRepairSysFiles.Size" type="System.Drawing.Size, System.Drawing">
     <value>268, 24</value>
@@ -196,6 +196,12 @@
   <data name="DoNotEdit.Text" xml:space="preserve">
     <value>Nie edytuj ich</value>
   </data>
+  <data name="Version.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 23</value>
+  </data>
+  <data name="Version.Text" xml:space="preserve">
+    <value>;w;</value>
+  </data>
   <data name="Misc.Text" xml:space="preserve">
     <value>Różne</value>
   </data>
@@ -213,6 +219,12 @@
   </data>
   <data name="ChangeLanguage.Text" xml:space="preserve">
     <value>Zmień język</value>
+  </data>
+  <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 24</value>
+  </data>
+  <data name="linkLabel1.Text" xml:space="preserve">
+    <value>Otwórz okno konfiguracyjne</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Ustawienia i narzędzia</value>

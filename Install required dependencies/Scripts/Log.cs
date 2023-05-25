@@ -9,7 +9,7 @@ namespace PrepareStella.Scripts
     internal abstract class Log
     {
         private static readonly string Folder = Path.Combine(Program.AppData, "logs");
-        private static readonly string OutputFile = Path.Combine(Folder, "configure.output.log");
+        private static readonly string OutputFile = Path.Combine(Folder, "prepare.output.log");
 
         private static void TryAgain(bool tryAgain)
         {

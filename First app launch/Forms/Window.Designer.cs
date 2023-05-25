@@ -42,6 +42,7 @@ namespace ConfWindow.Forms
             this.label3 = new System.Windows.Forms.Label();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // linkLabel1
@@ -53,9 +54,9 @@ namespace ConfWindow.Forms
             this.linkLabel1.Font = new System.Drawing.Font("Liberation Serif", 42.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel1.LinkColor = System.Drawing.Color.LightSkyBlue;
-            this.linkLabel1.Location = new System.Drawing.Point(12, 534);
+            this.linkLabel1.Location = new System.Drawing.Point(12, 556);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(1078, 63);
+            this.linkLabel1.Size = new System.Drawing.Size(1121, 63);
             this.linkLabel1.TabIndex = 0;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = ">> I am ready to continue... <<";
@@ -71,7 +72,7 @@ namespace ConfWindow.Forms
             this.MadeBySefinek.ForeColor = System.Drawing.Color.MediumBlue;
             this.MadeBySefinek.ImageAlign = System.Drawing.ContentAlignment.TopRight;
             this.MadeBySefinek.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.MadeBySefinek.Location = new System.Drawing.Point(888, 51);
+            this.MadeBySefinek.Location = new System.Drawing.Point(931, 51);
             this.MadeBySefinek.Name = "MadeBySefinek";
             this.MadeBySefinek.Size = new System.Drawing.Size(202, 33);
             this.MadeBySefinek.TabIndex = 78;
@@ -87,7 +88,7 @@ namespace ConfWindow.Forms
             this.label1.ForeColor = System.Drawing.Color.MediumBlue;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopRight;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(639, 9);
+            this.label1.Location = new System.Drawing.Point(682, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(451, 45);
             this.label1.TabIndex = 77;
@@ -102,7 +103,7 @@ namespace ConfWindow.Forms
             this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox1.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox1.Location = new System.Drawing.Point(26, 421);
+            this.checkBox1.Location = new System.Drawing.Point(26, 414);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(334, 24);
             this.checkBox1.TabIndex = 81;
@@ -118,7 +119,7 @@ namespace ConfWindow.Forms
             this.checkBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox2.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBox2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox2.Location = new System.Drawing.Point(26, 277);
+            this.checkBox2.Location = new System.Drawing.Point(26, 270);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(316, 24);
             this.checkBox2.TabIndex = 82;
@@ -134,7 +135,7 @@ namespace ConfWindow.Forms
             this.checkBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox3.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBox3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox3.Location = new System.Drawing.Point(26, 301);
+            this.checkBox3.Location = new System.Drawing.Point(26, 294);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(352, 24);
             this.checkBox3.TabIndex = 83;
@@ -150,7 +151,7 @@ namespace ConfWindow.Forms
             this.checkBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox4.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBox4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox4.Location = new System.Drawing.Point(26, 349);
+            this.checkBox4.Location = new System.Drawing.Point(26, 342);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(236, 24);
             this.checkBox4.TabIndex = 84;
@@ -166,7 +167,7 @@ namespace ConfWindow.Forms
             this.checkBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox5.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBox5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox5.Location = new System.Drawing.Point(26, 373);
+            this.checkBox5.Location = new System.Drawing.Point(26, 366);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(274, 24);
             this.checkBox5.TabIndex = 85;
@@ -182,7 +183,7 @@ namespace ConfWindow.Forms
             this.checkBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox6.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBox6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox6.Location = new System.Drawing.Point(26, 397);
+            this.checkBox6.Location = new System.Drawing.Point(26, 390);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(227, 24);
             this.checkBox6.TabIndex = 86;
@@ -198,7 +199,7 @@ namespace ConfWindow.Forms
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label2.Location = new System.Drawing.Point(12, 87);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1078, 89);
+            this.label2.Size = new System.Drawing.Size(1121, 89);
             this.label2.TabIndex = 87;
             this.label2.Text = "Welcome to the configuration window";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -211,7 +212,7 @@ namespace ConfWindow.Forms
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label3.Location = new System.Drawing.Point(12, 176);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1078, 62);
+            this.label3.Size = new System.Drawing.Size(1121, 62);
             this.label3.TabIndex = 88;
             this.label3.Text = resources.GetString("label3.Text");
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -224,7 +225,7 @@ namespace ConfWindow.Forms
             this.checkBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox7.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBox7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox7.Location = new System.Drawing.Point(26, 325);
+            this.checkBox7.Location = new System.Drawing.Point(26, 318);
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(483, 24);
             this.checkBox7.TabIndex = 89;
@@ -235,17 +236,32 @@ namespace ConfWindow.Forms
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(22, 462);
+            this.label4.Location = new System.Drawing.Point(12, 499);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(971, 23);
+            this.label4.Size = new System.Drawing.Size(1121, 51);
             this.label4.TabIndex = 90;
-            this.label4.Text = "> Fields marked with an asterisk (*) are recommended to be filled. If you are uns" +
-    "ure of what you\'re doing, do not uncheck any field.";
+            this.label4.Text = "You should keep in mind that previous configurations may be lost, including ReSha" +
+    "de and FPS Unlocker.\r\nHowever, your presets and other custom shaders will not be" +
+    " removed.";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label5.Location = new System.Drawing.Point(21, 439);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(959, 23);
+            this.label5.TabIndex = 91;
+            this.label5.Text = "Fields marked with an asterisk (*) are recommended to be filled. If you are unsur" +
+    "e of what you\'re doing, do not uncheck any field.";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Window
             // 
@@ -253,7 +269,8 @@ namespace ConfWindow.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ConfWindow.Properties.Resources.bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1102, 610);
+            this.ClientSize = new System.Drawing.Size(1145, 632);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.checkBox7);
             this.Controls.Add(this.label3);
@@ -296,6 +313,7 @@ namespace ConfWindow.Forms
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox checkBox7;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 
