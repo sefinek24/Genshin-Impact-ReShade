@@ -144,7 +144,7 @@ namespace Genshin_Stella_Mod.Forms
                     break;
                 default:
                     Log.SaveErrorLog(new Exception("Wrong EnableMusic value."));
-                    MessageBox.Show("Wrong EnableMusic value.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(@"Wrong EnableMusic value.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
             }
         }
@@ -158,7 +158,7 @@ namespace Genshin_Stella_Mod.Forms
                     Program.Settings.WriteInt("Launcher", "DiscordRPC", 1);
                     Discord.InitRpc();
                     if (Discord.Username.Length > 0) // Fix
-                        MessageBox.Show($"You're connected as {Discord.Username}. Hello!", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show($@"You're connected as {Discord.Username}. Hello!", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
                 case 1:
                     Program.Settings.WriteInt("Launcher", "DiscordRPC", 0);
@@ -184,7 +184,7 @@ namespace Genshin_Stella_Mod.Forms
                     break;
                 default:
                     Log.SaveErrorLog(new Exception("Wrong DiscordRPC value."));
-                    MessageBox.Show("Wrong DiscordRPC value.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(@"Wrong DiscordRPC value.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
             }
         }
@@ -240,13 +240,13 @@ namespace Genshin_Stella_Mod.Forms
         // ---------------------------------- Logs ---------------------------------
         private async void LauncherLogs_Click(object sender, EventArgs e)
         {
-            await Cmd.CliWrap("notepad", $@"{Log.Folder}\launcher.output.log", null, true, false);
+            await Cmd.CliWrap("notepad", Path.Combine(Log.Folder, "launcher.output.log"), null, true, false);
         }
 
         private async void ReShadeLogs_Button(object sender, EventArgs e)
         {
             string gameDir = await Utils.GetGame("giGameDir");
-            string logFile = $@"{gameDir}\ReShade.log";
+            string logFile = Path.Combine(gameDir, "ReShade.log");
 
             if (!Directory.Exists(gameDir) || !File.Exists(logFile))
                 MessageBox.Show($"ReShade log file was not found in:\n{logFile}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -256,13 +256,13 @@ namespace Genshin_Stella_Mod.Forms
 
         private async void PreparationLogs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            await Cmd.CliWrap("notepad", $@"{Log.Folder}prepare.output.log", null, true, false);
+            await Cmd.CliWrap("notepad", Path.Combine(Log.Folder, "prepare.output.log"), null, true, false);
         }
 
 
         private async void InnoSetup_Button(object sender, EventArgs e)
         {
-            await Cmd.CliWrap("notepad", $@"{Log.Folder}\innosetup-logs.install.log", null, true, false);
+            await Cmd.CliWrap("notepad", Path.Combine(Log.Folder, "innosetup-logs.install.log"), null, true, false);
         }
 
         // -------------------------- Nothing special ((: ---------------------------

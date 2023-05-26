@@ -28,7 +28,7 @@ namespace Genshin_Stella_Mod.Forms
     {
         // Files
         private static readonly string CmdOutputLogs = Path.Combine(Program.AppData, "logs", "cmd.output.log");
-        public static IniFile _reShadeIni;
+        public static IniFile ReShadeIni;
 
         // New update?
         public static bool UpdateIsAvailable;
@@ -73,7 +73,7 @@ namespace Genshin_Stella_Mod.Forms
             // Path
             string mainGameDir = await Utils.GetGame("giGameDir");
             string reShadePath = Path.Combine(mainGameDir, "ReShade.ini");
-            if (File.Exists(reShadePath)) _reShadeIni = new IniFile(reShadePath);
+            if (File.Exists(reShadePath)) ReShadeIni = new IniFile(reShadePath);
 
             // Background
             int bgInt = Program.Settings.ReadInt("Launcher", "Background", 0);
@@ -376,7 +376,7 @@ namespace Genshin_Stella_Mod.Forms
         private async void StartGame_Click(object sender, EventArgs e)
         {
             // Run cmd file
-            bool res = await Cmd.CliWrap("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 1 {Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
+            bool res = await Cmd.CliWrap("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 1 {await Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
 
             // Exit Stella with status code 0
             if (res) Environment.Exit(0);
@@ -385,7 +385,7 @@ namespace Genshin_Stella_Mod.Forms
         private async void OnlyReShade_Click(object sender, EventArgs e)
         {
             // Run cmd file
-            bool res = await Cmd.CliWrap("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 2 {Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
+            bool res = await Cmd.CliWrap("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 2 {await Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
             if (!res) return;
 
             // Find game path
@@ -402,7 +402,7 @@ namespace Genshin_Stella_Mod.Forms
         private async void OnlyUnlocker_Click(object sender, EventArgs e)
         {
             // Run cmd file
-            bool res = await Cmd.CliWrap("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 3 {Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
+            bool res = await Cmd.CliWrap("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 3 {await Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
 
             // Exit Stella with status code 0
             if (res) Environment.Exit(0);

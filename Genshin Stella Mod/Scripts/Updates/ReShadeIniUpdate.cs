@@ -74,7 +74,7 @@ namespace Genshin_Stella_Mod.Scripts.Updates
                     }
             }
 
-            string localIniVersion = Default._reShadeIni.ReadString("STELLA", "ConfigVersion", null);
+            string localIniVersion = Default.ReShadeIni.ReadString("STELLA", "ConfigVersion", null);
             if (string.IsNullOrEmpty(localIniVersion))
             {
                 Default.UpdateIsAvailable = false;
