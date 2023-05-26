@@ -200,7 +200,8 @@ namespace Genshin_Stella_Mod.Forms
         // ------------------------------ Config files ------------------------------
         private async void ReShadeConfig_Click(object sender, EventArgs e)
         {
-            string reShadeIni = Path.Combine(Utils.GetGame("giGameDir"), "ReShade.ini");
+            string gamePath = await Utils.GetGame("giGameDir");
+            string reShadeIni = Path.Combine(gamePath, "ReShade.ini");
 
             if (!File.Exists(reShadeIni))
                 MessageBox.Show($@"ReShade config file was not found in {reShadeIni}.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -220,7 +221,8 @@ namespace Genshin_Stella_Mod.Forms
             string resources = File.ReadAllText(Path.Combine(Program.AppData, "resources-path.sfn"));
             string cache = Path.Combine(resources, "Cache");
             string webViewCache = Path.Combine(Program.AppData, "EBWebView");
-            string reShadeLog = Path.Combine(Utils.GetGame("giGameDir"), "ReShade.log");
+            string gameDir = await Utils.GetGame("giGameDir");
+            string reShadeLog = Path.Combine(gameDir, "ReShade.log");
             string logs = Path.Combine(Log.Folder);
 
             await Cmd.CliWrap(
@@ -243,7 +245,7 @@ namespace Genshin_Stella_Mod.Forms
 
         private async void ReShadeLogs_Button(object sender, EventArgs e)
         {
-            string gameDir = Utils.GetGame("giGameDir");
+            string gameDir = await Utils.GetGame("giGameDir");
             string logFile = $@"{gameDir}\ReShade.log";
 
             if (!Directory.Exists(gameDir) || !File.Exists(logFile))

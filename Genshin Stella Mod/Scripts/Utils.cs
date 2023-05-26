@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using IWshRuntimeLibrary;
 using File = System.IO.File;
@@ -13,13 +14,18 @@ namespace Genshin_Stella_Mod.Scripts
     internal static class Utils
     {
         private static readonly string FileWithGamePath = Path.Combine(Program.AppData, "game-path.sfn");
+        public static readonly string FirstAppLaunch = Path.Combine(Program.AppPath, "First app launch.exe");
 
-        public static string GetGame(string type)
+        public static async Task<string> GetGame(string type)
         {
             if (!File.Exists(FileWithGamePath))
             {
-                MessageBox.Show($"File with game path was not found in:\n{FileWithGamePath}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                DialogResult result = MessageBox.Show($"File with game path was not found in:\n{FileWithGamePath}\n\nDo you want to reset all Stella Mod settings?", Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 Log.Output($"File with game path was not found in: {FileWithGamePath}");
+
+                if (result != DialogResult.Yes) return string.Empty;
+                Directory.Delete(Program.AppData, true);
+                await Cmd.CliWrap(FirstAppLaunch, null, null, true, false);
                 return string.Empty;
             }
 
@@ -27,8 +33,11 @@ namespace Genshin_Stella_Mod.Scripts
             string gamePath = Path.Combine(gameFilePath);
             if (!Directory.Exists(gamePath))
             {
-                MessageBox.Show($"Folder does not exists.\n{gamePath}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Log.Output($"Directory {gamePath} does not exists.");
+                DialogResult result = MessageBox.Show($"Folder with game path does not exists:\n{gamePath}\n\nDo you want to reset all Stella Mod settings?", Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result != DialogResult.Yes) return string.Empty;
+                Directory.Delete(Program.AppData, true);
+                await Cmd.CliWrap(FirstAppLaunch, null, null, true, false);
                 return string.Empty;
             }
 
@@ -101,10 +110,10 @@ namespace Genshin_Stella_Mod.Scripts
             }
         }
 
-        public static string GetGameVersion()
+        public static async Task<string> GetGameVersion()
         {
             string gvSfn = Path.Combine(Program.AppData, "game-version.sfn");
-            string exePath = GetGame("giExe");
+            string exePath = await GetGame("giExe");
             string exe = Path.GetFileName(exePath);
 
             string number = exe == "GenshinImpact.exe" ? "1" : "2";

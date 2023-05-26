@@ -40,14 +40,14 @@ namespace Genshin_Stella_Mod.Forms
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.settings_Label = new System.Windows.Forms.LinkLabel();
-            this.DiscordServer = new System.Windows.Forms.LinkLabel();
-            this.YouTube = new System.Windows.Forms.LinkLabel();
+            this.discordServer_LinkLabel = new System.Windows.Forms.LinkLabel();
+            this.youTube_LinkLabel = new System.Windows.Forms.LinkLabel();
             this.StartGame = new System.Windows.Forms.LinkLabel();
             this.RunOnlyFPSUnlocker = new System.Windows.Forms.LinkLabel();
             this.InjectOnlyReShade = new System.Windows.Forms.LinkLabel();
             this.website_Label = new System.Windows.Forms.LinkLabel();
             this.createShortcut_Label = new System.Windows.Forms.LinkLabel();
-            this.SupportMe = new System.Windows.Forms.LinkLabel();
+            this.supportMe_LinkLabel = new System.Windows.Forms.LinkLabel();
             this.ToGetRTInGameBecomeMyPatron = new System.Windows.Forms.LinkLabel();
             this.OpenGILauncher = new System.Windows.Forms.LinkLabel();
             this.version_Label = new System.Windows.Forms.LinkLabel();
@@ -176,29 +176,29 @@ namespace Genshin_Stella_Mod.Forms
             this.toolTip1.SetToolTip(this.settings_Label, resources.GetString("settings_Label.ToolTip"));
             this.settings_Label.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Tools_LinkClicked);
             // 
-            // DiscordServer
+            // discordServer_LinkLabel
             // 
-            this.DiscordServer.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.DiscordServer, "DiscordServer");
-            this.DiscordServer.BackColor = System.Drawing.Color.Transparent;
-            this.DiscordServer.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.DiscordServer.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.DiscordServer.Name = "DiscordServer";
-            this.DiscordServer.TabStop = true;
-            this.toolTip1.SetToolTip(this.DiscordServer, resources.GetString("DiscordServer.ToolTip"));
-            this.DiscordServer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.DiscordServer_LinkClicked);
+            this.discordServer_LinkLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.discordServer_LinkLabel, "discordServer_LinkLabel");
+            this.discordServer_LinkLabel.BackColor = System.Drawing.Color.Transparent;
+            this.discordServer_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.discordServer_LinkLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.discordServer_LinkLabel.Name = "discordServer_LinkLabel";
+            this.discordServer_LinkLabel.TabStop = true;
+            this.toolTip1.SetToolTip(this.discordServer_LinkLabel, resources.GetString("discordServer_LinkLabel.ToolTip"));
+            this.discordServer_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.DiscordServer_LinkClicked);
             // 
-            // YouTube
+            // youTube_LinkLabel
             // 
-            this.YouTube.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.YouTube, "YouTube");
-            this.YouTube.BackColor = System.Drawing.Color.Transparent;
-            this.YouTube.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.YouTube.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(61)))), ((int)(((byte)(0)))));
-            this.YouTube.Name = "YouTube";
-            this.YouTube.TabStop = true;
-            this.toolTip1.SetToolTip(this.YouTube, resources.GetString("YouTube.ToolTip"));
-            this.YouTube.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.YouTube_LinkClicked);
+            this.youTube_LinkLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.youTube_LinkLabel, "youTube_LinkLabel");
+            this.youTube_LinkLabel.BackColor = System.Drawing.Color.Transparent;
+            this.youTube_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.youTube_LinkLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(61)))), ((int)(((byte)(0)))));
+            this.youTube_LinkLabel.Name = "youTube_LinkLabel";
+            this.youTube_LinkLabel.TabStop = true;
+            this.toolTip1.SetToolTip(this.youTube_LinkLabel, resources.GetString("youTube_LinkLabel.ToolTip"));
+            this.youTube_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.YouTube_LinkClicked);
             // 
             // StartGame
             // 
@@ -263,17 +263,17 @@ namespace Genshin_Stella_Mod.Forms
             this.toolTip1.SetToolTip(this.createShortcut_Label, resources.GetString("createShortcut_Label.ToolTip"));
             this.createShortcut_Label.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Gameplay_LinkClicked);
             // 
-            // SupportMe
+            // supportMe_LinkLabel
             // 
-            this.SupportMe.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.SupportMe, "SupportMe");
-            this.SupportMe.BackColor = System.Drawing.Color.Transparent;
-            this.SupportMe.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.SupportMe.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(228)))), ((int)(((byte)(249)))));
-            this.SupportMe.Name = "SupportMe";
-            this.SupportMe.TabStop = true;
-            this.toolTip1.SetToolTip(this.SupportMe, resources.GetString("SupportMe.ToolTip"));
-            this.SupportMe.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SupportMe_LinkClicked);
+            this.supportMe_LinkLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.supportMe_LinkLabel, "supportMe_LinkLabel");
+            this.supportMe_LinkLabel.BackColor = System.Drawing.Color.Transparent;
+            this.supportMe_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.supportMe_LinkLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(228)))), ((int)(((byte)(249)))));
+            this.supportMe_LinkLabel.Name = "supportMe_LinkLabel";
+            this.supportMe_LinkLabel.TabStop = true;
+            this.toolTip1.SetToolTip(this.supportMe_LinkLabel, resources.GetString("supportMe_LinkLabel.ToolTip"));
+            this.supportMe_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SupportMe_LinkClicked);
             // 
             // ToGetRTInGameBecomeMyPatron
             // 
@@ -470,7 +470,7 @@ namespace Genshin_Stella_Mod.Forms
             this.Controls.Add(this.OpenGILauncher);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.linkLabel5);
-            this.Controls.Add(this.SupportMe);
+            this.Controls.Add(this.supportMe_LinkLabel);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.website_Label);
             this.Controls.Add(this.pictureBox6);
@@ -478,8 +478,8 @@ namespace Genshin_Stella_Mod.Forms
             this.Controls.Add(this.StartGame);
             this.Controls.Add(this.RunOnlyFPSUnlocker);
             this.Controls.Add(this.InjectOnlyReShade);
-            this.Controls.Add(this.YouTube);
-            this.Controls.Add(this.DiscordServer);
+            this.Controls.Add(this.youTube_LinkLabel);
+            this.Controls.Add(this.discordServer_LinkLabel);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.version_Label);
@@ -539,8 +539,8 @@ namespace Genshin_Stella_Mod.Forms
         private System.Windows.Forms.LinkLabel version_Label;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.LinkLabel DiscordServer;
-        private System.Windows.Forms.LinkLabel YouTube;
+        private System.Windows.Forms.LinkLabel discordServer_LinkLabel;
+        private System.Windows.Forms.LinkLabel youTube_LinkLabel;
         private System.Windows.Forms.LinkLabel StartGame;
         private System.Windows.Forms.LinkLabel RunOnlyFPSUnlocker;
         private System.Windows.Forms.LinkLabel InjectOnlyReShade;
@@ -548,7 +548,7 @@ namespace Genshin_Stella_Mod.Forms
         private System.Windows.Forms.LinkLabel website_Label;
         private System.Windows.Forms.LinkLabel createShortcut_Label;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.LinkLabel SupportMe;
+        private System.Windows.Forms.LinkLabel supportMe_LinkLabel;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.LinkLabel linkLabel5;

@@ -423,76 +423,76 @@
   <data name="&gt;&gt;settings_Label.ZOrder" xml:space="preserve">
     <value>27</value>
   </data>
-  <data name="DiscordServer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="discordServer_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="DiscordServer.AutoSize" type="System.Boolean, mscorlib">
+  <data name="discordServer_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="DiscordServer.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="discordServer_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Comic Sans MS, 12pt, style=Bold</value>
   </data>
-  <data name="DiscordServer.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="discordServer_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>40, 480</value>
   </data>
-  <data name="DiscordServer.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="discordServer_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 23</value>
   </data>
-  <data name="DiscordServer.TabIndex" type="System.Int32, mscorlib">
+  <data name="discordServer_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>89</value>
   </data>
-  <data name="DiscordServer.Text" xml:space="preserve">
+  <data name="discordServer_LinkLabel.Text" xml:space="preserve">
     <value>Discord server</value>
   </data>
-  <data name="DiscordServer.ToolTip" xml:space="preserve">
+  <data name="discordServer_LinkLabel.ToolTip" xml:space="preserve">
     <value>Join to our Discord server if you need help.</value>
   </data>
-  <data name="&gt;&gt;DiscordServer.Name" xml:space="preserve">
-    <value>DiscordServer</value>
+  <data name="&gt;&gt;discordServer_LinkLabel.Name" xml:space="preserve">
+    <value>discordServer_LinkLabel</value>
   </data>
-  <data name="&gt;&gt;DiscordServer.Type" xml:space="preserve">
+  <data name="&gt;&gt;discordServer_LinkLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;DiscordServer.Parent" xml:space="preserve">
+  <data name="&gt;&gt;discordServer_LinkLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;DiscordServer.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;discordServer_LinkLabel.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <data name="YouTube.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="youTube_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="YouTube.AutoSize" type="System.Boolean, mscorlib">
+  <data name="youTube_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="YouTube.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="youTube_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Comic Sans MS, 12pt, style=Bold</value>
   </data>
-  <data name="YouTube.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="youTube_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>40, 527</value>
   </data>
-  <data name="YouTube.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="youTube_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 23</value>
   </data>
-  <data name="YouTube.TabIndex" type="System.Int32, mscorlib">
+  <data name="youTube_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>90</value>
   </data>
-  <data name="YouTube.Text" xml:space="preserve">
+  <data name="youTube_LinkLabel.Text" xml:space="preserve">
     <value>YouTube</value>
   </data>
-  <data name="YouTube.ToolTip" xml:space="preserve">
+  <data name="youTube_LinkLabel.ToolTip" xml:space="preserve">
     <value>My YouTube channel. Subscribe me if you like this project.</value>
   </data>
-  <data name="&gt;&gt;YouTube.Name" xml:space="preserve">
-    <value>YouTube</value>
+  <data name="&gt;&gt;youTube_LinkLabel.Name" xml:space="preserve">
+    <value>youTube_LinkLabel</value>
   </data>
-  <data name="&gt;&gt;YouTube.Type" xml:space="preserve">
+  <data name="&gt;&gt;youTube_LinkLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;YouTube.Parent" xml:space="preserve">
+  <data name="&gt;&gt;youTube_LinkLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;YouTube.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;youTube_LinkLabel.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
   <data name="StartGame.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -675,40 +675,40 @@
   <data name="&gt;&gt;createShortcut_Label.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
-  <data name="SupportMe.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="supportMe_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="SupportMe.AutoSize" type="System.Boolean, mscorlib">
+  <data name="supportMe_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="SupportMe.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="supportMe_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Comic Sans MS, 12pt, style=Bold</value>
   </data>
-  <data name="SupportMe.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="supportMe_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>40, 503</value>
   </data>
-  <data name="SupportMe.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="supportMe_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 23</value>
   </data>
-  <data name="SupportMe.TabIndex" type="System.Int32, mscorlib">
+  <data name="supportMe_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>100</value>
   </data>
-  <data name="SupportMe.Text" xml:space="preserve">
+  <data name="supportMe_LinkLabel.Text" xml:space="preserve">
     <value>Support me</value>
   </data>
-  <data name="SupportMe.ToolTip" xml:space="preserve">
+  <data name="supportMe_LinkLabel.ToolTip" xml:space="preserve">
     <value>Support my work.</value>
   </data>
-  <data name="&gt;&gt;SupportMe.Name" xml:space="preserve">
-    <value>SupportMe</value>
+  <data name="&gt;&gt;supportMe_LinkLabel.Name" xml:space="preserve">
+    <value>supportMe_LinkLabel</value>
   </data>
-  <data name="&gt;&gt;SupportMe.Type" xml:space="preserve">
+  <data name="&gt;&gt;supportMe_LinkLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;SupportMe.Parent" xml:space="preserve">
+  <data name="&gt;&gt;supportMe_LinkLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;SupportMe.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;supportMe_LinkLabel.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="ToGetRTInGameBecomeMyPatron.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">

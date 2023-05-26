@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Specialized;
-using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
@@ -12,13 +10,11 @@ using System.Runtime.Caching;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ByteSizeLib;
-using Genshin_Stella_Mod.Forms.Errors;
 using Genshin_Stella_Mod.Forms.Other;
 using Genshin_Stella_Mod.Models;
 using Genshin_Stella_Mod.Properties;
 using Genshin_Stella_Mod.Scripts;
-using Microsoft.Toolkit.Uwp.Notifications;
+using Genshin_Stella_Mod.Scripts.Updates;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using Newtonsoft.Json;
 
@@ -31,9 +27,8 @@ namespace Genshin_Stella_Mod.Forms
     public partial class Default : Form
     {
         // Files
-        private static readonly string SetupPathExe = Path.Combine(Path.GetTempPath(), "Stella-Mod-Update.exe");
         private static readonly string CmdOutputLogs = Path.Combine(Program.AppData, "logs", "cmd.output.log");
-        private static IniFile _reShadeIni;
+        public static IniFile _reShadeIni;
 
         // New update?
         public static bool UpdateIsAvailable;
@@ -49,9 +44,6 @@ namespace Genshin_Stella_Mod.Forms
 
         // Cache
         private readonly ObjectCache _cache = MemoryCache.Default;
-        private double _downloadSpeed;
-        private long _lastBytesReceived;
-        private DateTime _lastUpdateTime = DateTime.Now;
 
         // Window
         private bool _mouseDown;
@@ -76,10 +68,11 @@ namespace Genshin_Stella_Mod.Forms
             InitializeComponent();
         }
 
-        private void Default_Load(object sender, EventArgs e)
+        private async void Default_Load(object sender, EventArgs e)
         {
             // Path
-            string reShadePath = Path.Combine(Utils.GetGame("giGameDir"), "ReShade.ini");
+            string mainGameDir = await Utils.GetGame("giGameDir");
+            string reShadePath = Path.Combine(mainGameDir, "ReShade.ini");
             if (File.Exists(reShadePath)) _reShadeIni = new IniFile(reShadePath);
 
             // Background
@@ -193,8 +186,7 @@ namespace Genshin_Stella_Mod.Forms
             Log.Output($"Changed the launcher background. ID: {bgInt}");
         }
 
-
-        private async Task<int> CheckUpdates()
+        public async Task<int> CheckUpdates()
         {
             updates_Label.LinkColor = Color.White;
             updates_Label.Text = @"Checking for updates...";
@@ -215,159 +207,55 @@ namespace Genshin_Stella_Mod.Forms
                 // Major release
                 if (Program.AppVersion[0] != remoteVersion[0])
                 {
-                    version_Label.Text = $@"v{Program.AppVersion} → v{remoteVersion}";
-                    updates_Label.LinkColor = Color.Cyan;
-                    updates_Label.Text = @"Major version is available";
-                    update_Icon.Image = Resources.icons8_download_from_the_cloud;
-                    Log.Output($"New major version from {remoteVerDate} is available: v{Program.AppVersion} → v{remoteVersion}");
-
                     UpdateIsAvailable = true;
 
-                    TaskbarManager.Instance.SetProgressValue(100, 100);
-                    TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
-                    new NotCompatible { Icon = Resources.icon_52x52 }.ShowDialog();
-
-                    Environment.Exit(0);
+                    MajorRelease.Run(remoteVersion, remoteVerDate, version_Label, updates_Label, update_Icon);
+                    return 1;
                 }
 
                 // Normal release
                 if (Program.AppVersion != remoteVersion)
                 {
-                    // 1
                     UpdateIsAvailable = true;
-                    version_Label.Text = $@"v{Program.AppVersion} → v{remoteVersion}";
 
-                    // 2
-                    updates_Label.LinkColor = Color.Cyan;
-                    updates_Label.Text = @"Click here to update";
-                    update_Icon.Image = Resources.icons8_download_from_the_cloud;
-                    Utils.RemoveClickEvent(updates_Label);
-                    updates_Label.Click += Update_Event;
+                    NormalRelease.Run(
+                        remoteVersion, remoteVerDate, version_Label, status_Label, updates_Label, update_Icon, progressBar1, PreparingPleaseWait, pictureBox3, settings_Label, pictureBox6, createShortcut_Label, pictureBox11, linkLabel5, pictureBox4,
+                        website_Label, pictureBox8, pictureBox9, pictureBox10, discordServer_LinkLabel, youTube_LinkLabel, supportMe_LinkLabel
+                    );
 
-                    // Hide and show elements
-                    progressBar1.Hide();
-                    PreparingPleaseWait.Hide();
-                    PreparingPleaseWait.Text = @"Preparing... If process is stuck, reopen launcher.";
-                    pictureBox3.Show();
-                    settings_Label.Show();
-                    pictureBox6.Show();
-                    createShortcut_Label.Show();
-                    pictureBox11.Show();
-                    linkLabel5.Show();
-                    pictureBox4.Show();
-                    website_Label.Show();
-                    progressBar1.Value = 0;
-
-                    // ToastContentBuilder
-                    try
-                    {
-                        new ToastContentBuilder()
-                            .AddText("📥 We found new updates")
-                            .AddText("New release is available. Download now!")
-                            .Show();
-                    }
-                    catch (Exception e)
-                    {
-                        Log.SaveErrorLog(e);
-                    }
-
-                    // Log
-                    Log.Output($"New release from {remoteVerDate} is available: v{Program.AppVersion} → v{remoteVersion}");
-
-                    // Taskbar
-                    TaskbarManager.Instance.SetProgressValue(100, 100);
-
-                    // Check update size
-                    using (WebClient wc = new WebClient())
-                    {
-                        wc.Headers.Add("user-agent", Program.UserAgent);
-                        await wc.OpenReadTaskAsync("https://github.com/sefinek24/Genshin-Impact-ReShade/releases/latest/download/Stella-Mod-Setup.exe");
-                        string updateSize = ByteSize.FromBytes(Convert.ToInt64(wc.ResponseHeaders["Content-Length"])).MegaBytes.ToString("00.00");
-                        status_Label.Text += $"[i] New version from {remoteVerDate} is available.\n[i] Update size: {updateSize} MB\n";
-
-                        // Final
-                        TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
-                        Log.Output($"Update size: {updateSize} MB");
-                        return 1;
-                    }
+                    return 1;
                 }
 
                 // Check new updates for ReShade.ini file
-                string reShadePath = Path.Combine(Utils.GetGame("giGameDir"), "ReShade.ini");
-                if (!File.Exists(reShadePath))
+                int resultInt = await ReShadeIniUpdate.Run(updates_Label, status_Label, update_Icon, version_Label);
+                switch (resultInt)
                 {
-                    UpdateIsAvailable = false;
+                    case -2:
+                        return resultInt;
 
-                    updates_Label.LinkColor = Color.OrangeRed;
-                    updates_Label.Text = @"Download the required file";
-                    status_Label.Text += "[x] File ReShade.ini was not found in your game directory.\n";
-                    update_Icon.Image = Resources.icons8_download_from_the_cloud;
-
-                    Log.Output($"ReShade.ini was not found in: {reShadePath}");
-                    return -2;
-                }
-
-                WebClient webClient = new WebClient();
-                webClient.Headers.Add("user-agent", Program.UserAgent);
-                string content = await webClient.DownloadStringTaskAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini");
-                NameValueCollection iniData = new NameValueCollection();
-                using (StringReader reader = new StringReader(content))
-                {
-                    string line;
-                    while ((line = await reader.ReadLineAsync()) != null)
-                        if (line.Contains("="))
-                        {
-                            int separatorIndex = line.IndexOf("=", StringComparison.Ordinal);
-                            string key = line.Substring(0, separatorIndex).Trim();
-                            string value = line.Substring(separatorIndex + 1).Trim();
-                            iniData.Add(key, value);
-                        }
-                }
-
-                string localIniVersion = _reShadeIni.ReadString("STELLA", "ConfigVersion", null);
-                if (string.IsNullOrEmpty(localIniVersion))
-                {
-                    UpdateIsAvailable = false;
-
-                    updates_Label.LinkColor = Color.Cyan;
-                    updates_Label.Text = @"Download the required file";
-                    status_Label.Text += "[x] The version of ReShade config was not found.\n";
-                    update_Icon.Image = Resources.icons8_download_from_the_cloud;
-
-                    Log.Output("STELLA.ConfigVersion is null in ReShade.ini.");
-                    TaskbarManager.Instance.SetProgressValue(100, 100);
-                    TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
-                    return -2;
-                }
-
-                string remoteIniVersion = iniData["ConfigVersion"];
-                if (localIniVersion != remoteIniVersion)
-                {
-                    UpdateIsAvailable = true;
-
-                    updates_Label.LinkColor = Color.DodgerBlue;
-                    updates_Label.Text = @"Update ReShade config";
-                    update_Icon.Image = Resources.icons8_download_from_the_cloud;
-                    version_Label.Text = $@"v{localIniVersion} → v{remoteIniVersion}";
-                    status_Label.Text += "[i] New ReShade config version is available. Update is required.\n";
-                    Log.Output($"New ReShade config version is available: v{localIniVersion} → v{remoteIniVersion}");
-
-                    using (WebClient wc = new WebClient())
+                    case 1:
                     {
-                        wc.Headers.Add("user-agent", Program.UserAgent);
-                        await wc.OpenReadTaskAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini");
-                        string updateSize = ByteSize.FromBytes(Convert.ToInt64(wc.ResponseHeaders["Content-Length"])).KiloBytes.ToString("0.00");
-                        status_Label.Text += $"[i] Update size: {updateSize} KB\n";
+                        DialogResult msgReply = MessageBox.Show(
+                            "Are you sure you want to update ReShade configuration?\n\nThis action will result in the loss of any custom configurations you have made. If you do not have any custom configurations, you may proceed by clicking Yes. However, if you have made changes, please ensure that you have backed up the previous ReShade file in your game files.",
+                            Program.AppName, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
 
-                        Utils.RemoveClickEvent(updates_Label);
-                        updates_Label.Click += UpdateConfig_Event;
+                        if (msgReply == DialogResult.No || msgReply == DialogResult.Cancel)
+                        {
+                            Log.Output("The update of ReShade.ini has been cancelled by the user.");
+                            MessageBox.Show(
+                                @"For some reason, you did not give consent for the automatic update of the ReShade file. Please note that older versions of this file may not be compatible with newer versions of Stella Mod. I hope you know what you're doing.",
+                                Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
-                        Log.Output($"Update size: {updateSize} KB");
-                        TaskbarManager.Instance.SetProgressValue(100, 100);
-                        TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
+                            return 1;
+                        }
+
+                        _ = Cmd.CliWrap(Utils.FirstAppLaunch, null, null, true, false);
+                        Environment.Exit(0);
+
                         return 1;
                     }
                 }
+
 
                 // Not found any new updates
                 updates_Label.Text = @"Check for updates";
@@ -389,72 +277,6 @@ namespace Genshin_Stella_Mod.Forms
                 TaskbarManager.Instance.SetProgressValue(100, 100);
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
                 return -1;
-            }
-        }
-
-        private async void UpdateConfig_Event(object sender, EventArgs e)
-        {
-            TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Normal);
-
-            DialogResult msgReply = MessageBox.Show(
-                "Are you sure you want to update ReShade configuration?\n\nThis action will result in the loss of any custom configurations you have made. If you do not have any custom configurations, you may proceed by clicking Yes. However, if you have made changes, please ensure that you have backed up the previous ReShade file in your game files.",
-                Program.AppName, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-
-            if (msgReply == DialogResult.No || msgReply == DialogResult.Cancel)
-            {
-                Log.Output("The update of ReShade.ini has been cancelled by the user.");
-                MessageBox.Show(
-                    @"For some reason, you did not give consent for the automatic update of the ReShade file. Please note that older versions of this file may not be compatible with newer versions of Stella Mod. I hope you know what you're doing.",
-                    Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                return;
-            }
-
-            Log.Output("Downloading ReShade.ini...");
-
-            try
-            {
-                string reShadePath = Path.Combine(Utils.GetGame("giGameDir"), "ReShade.ini");
-
-                WebClient client = new WebClient();
-                client.Headers.Add("user-agent", Program.UserAgent);
-                await client.DownloadFileTaskAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini", reShadePath);
-
-                int update = await CheckUpdates();
-                if (update == 0)
-                {
-                    Utils.RemoveClickEvent(updates_Label);
-                    updates_Label.Click += CheckUpdates_Click;
-
-                    status_Label.Text += "[✓] ReShade.ini was successfully updated to the latest version!\n";
-                    updates_Label.LinkColor = Color.LimeGreen;
-                    updates_Label.Text = @"Nya~~! Successfully!";
-                    update_Icon.Image = Resources.icons8_available_updates;
-
-                    UpdateIsAvailable = false;
-                    Log.Output("Done.");
-                }
-                else
-                {
-                    UpdateIsAvailable = true;
-
-                    status_Label.Text += "[x] Something went wrong. Sad cat...\n";
-                    updates_Label.LinkColor = Color.Red;
-                    updates_Label.Text = @"Failed to update...";
-                    update_Icon.Image = Resources.icons8_download_from_the_cloud;
-
-                    TaskbarManager.Instance.SetProgressValue(100, 100);
-                    TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
-                    Log.Output("Failed to update ReShade.ini.");
-                }
-            }
-            catch (Exception ex)
-            {
-                UpdateIsAvailable = false;
-                status_Label.Text += $"[x] {ex.Message}\n";
-
-                TaskbarManager.Instance.SetProgressValue(100, 100);
-                TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
-                Log.SaveErrorLog(new Exception($"Failed to download ReShade.ini!\n{ex}"));
             }
         }
 
@@ -495,11 +317,11 @@ namespace Genshin_Stella_Mod.Forms
 
             if (status_Label.Text.Length > 0) Log.SaveErrorLog(new Exception(status_Label.Text));
 
-            if (File.Exists(SetupPathExe))
+            if (File.Exists(NormalRelease.SetupPathExe))
             {
-                File.Delete(SetupPathExe);
+                File.Delete(NormalRelease.SetupPathExe);
                 status_Label.Text += "[i] Deleted old setup file from temp directory.\n";
-                Log.Output($"Deleted old setup file from temp folder: {SetupPathExe}");
+                Log.Output($"Deleted old setup file from temp folder: {NormalRelease.SetupPathExe}");
             }
 
             await CheckUpdates();
@@ -567,7 +389,7 @@ namespace Genshin_Stella_Mod.Forms
             if (!res) return;
 
             // Find game path
-            string path = Utils.GetGame("giLauncher");
+            string path = await Utils.GetGame("giLauncher");
             if (path == null) return;
 
             // Open Genshin Launcher
@@ -588,7 +410,7 @@ namespace Genshin_Stella_Mod.Forms
 
         private async void OpenGILauncher_Click(object sender, EventArgs e)
         {
-            string path = Utils.GetGame("giLauncher");
+            string path = await Utils.GetGame("giLauncher");
             if (path == string.Empty)
             {
                 MessageBox.Show(@"Game launcher was not found.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -654,15 +476,8 @@ namespace Genshin_Stella_Mod.Forms
             Utils.OpenUrl("https://www.youtube.com/watch?v=RpDf3XFHVNI");
         }
 
-        private async void CheckUpdates_Click(object sender, EventArgs e)
+        public async void CheckUpdates_Click(object sender, EventArgs e)
         {
-            // The integer value returned from the CheckUpdates() function:
-            // -3 = The file ReShade.ini does not exist in the player's game files.
-            // -2 = The file ReShade.ini does not contain a reference to the version in the properties.
-            // -1 = An error occurred.
-            // 0  = No new updates found.
-            // 1  = Found a minor update.
-
             int update = await CheckUpdates();
             if (update == -2 || update == -3)
             {
@@ -670,7 +485,8 @@ namespace Genshin_Stella_Mod.Forms
                     "The ReShade.ini file could not be located in your game files, or it may not be compatible with the current version.\n\nWould you like to download this file now to prevent future errors and manual configuration? Recommended.",
                     Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                string reShadePath = Path.Combine(Utils.GetGame("giGameDir"), "ReShade.ini");
+                string gameDir = await Utils.GetGame("giGameDir");
+                string reShadePath = Path.Combine(gameDir, "ReShade.ini");
 
                 switch (msgBoxResult)
                 {
@@ -678,7 +494,7 @@ namespace Genshin_Stella_Mod.Forms
                         try
                         {
                             updates_Label.LinkColor = Color.DodgerBlue;
-                            updates_Label.Text = "Downloading...";
+                            updates_Label.Text = @"Downloading...";
                             TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
 
                             WebClient client = new WebClient();
@@ -687,10 +503,10 @@ namespace Genshin_Stella_Mod.Forms
 
                             if (File.Exists(reShadePath))
                             {
-                                await CheckUpdates();
-
                                 status_Label.Text += "[✓] Successfully downloaded ReShade.ini!\n";
                                 Log.Output($"Successfully downloaded ReShade.ini and saved in: {reShadePath}");
+
+                                await CheckUpdates();
                             }
                             else
                             {
@@ -705,7 +521,7 @@ namespace Genshin_Stella_Mod.Forms
                         {
                             status_Label.Text += "[x] Meeow! Failed to download ReShade.ini. Try again.\n";
                             updates_Label.LinkColor = Color.Red;
-                            updates_Label.Text = "Failed to download...";
+                            updates_Label.Text = @"Failed to download...";
 
                             Log.SaveErrorLog(ex);
                             if (!File.Exists(reShadePath)) Log.Output("The ReShade.ini file still does not exist!");
@@ -734,137 +550,6 @@ namespace Genshin_Stella_Mod.Forms
             updates_Label.Text = @"You have the latest version";
             update_Icon.Image = Resources.icons8_available_updates;
         }
-
-        private async void Update_Event(object sender, EventArgs e)
-        {
-            Log.Output("Preparing to download new update...");
-            TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
-
-            updates_Label.LinkColor = Color.DodgerBlue;
-            updates_Label.Text = @"Updating. Please wait...";
-            Utils.RemoveClickEvent(updates_Label);
-
-            progressBar1.Show();
-            PreparingPleaseWait.Show();
-
-            pictureBox3.Hide();
-            settings_Label.Hide();
-            pictureBox6.Hide();
-            createShortcut_Label.Hide();
-            pictureBox11.Hide();
-            linkLabel5.Hide();
-            pictureBox4.Hide();
-            website_Label.Hide();
-
-            try
-            {
-                Log.Output("Starting...");
-                await StartDownload();
-            }
-            catch (Exception ex)
-            {
-                PreparingPleaseWait.Text = @"😥 Something went wrong???";
-                Log.ThrowError(ex);
-            }
-
-            Log.Output($"Output: {SetupPathExe}");
-        }
-
-        private async Task StartDownload()
-        {
-            if (File.Exists(SetupPathExe))
-            {
-                File.Delete(SetupPathExe);
-                status_Label.Text += "[✓] Deleted old setup file from temp directory.\n";
-                Log.Output($"Deleted od setup file from: {SetupPathExe}");
-            }
-
-            Log.Output("Downloading in progress...");
-            using (WebClient client = new WebClient())
-            {
-                client.Headers.Add("user-agent", Program.UserAgent);
-                client.DownloadProgressChanged += Client_DownloadProgressChanged;
-                client.DownloadFileCompleted += Client_DownloadFileCompleted;
-                await client.DownloadFileTaskAsync(new Uri("https://github.com/sefinek24/Genshin-Impact-ReShade/releases/latest/download/Stella-Mod-Setup.exe"), SetupPathExe);
-            }
-        }
-
-        private async void Client_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
-        {
-            int progress = (int)Math.Floor(e.BytesReceived * 100.0 / e.TotalBytesToReceive);
-            progressBar1.Value = progress;
-            TaskbarManager.Instance.SetProgressValue(progress, 100);
-
-            DateTime currentTime = DateTime.Now;
-            TimeSpan elapsedTime = currentTime - _lastUpdateTime;
-            long bytesReceived = e.BytesReceived - _lastBytesReceived;
-
-            if (!(elapsedTime.TotalMilliseconds > 1000)) return;
-
-            _lastUpdateTime = currentTime;
-            _lastBytesReceived = e.BytesReceived;
-
-            double bytesReceivedMb = ByteSize.FromBytes(e.BytesReceived).MegaBytes;
-            double bytesReceiveMb = ByteSize.FromBytes(e.TotalBytesToReceive).MegaBytes;
-            PreparingPleaseWait.Text = $@"Downloading... {bytesReceivedMb:00.00} MB of {bytesReceiveMb:000.00} MB";
-
-            _downloadSpeed = bytesReceived / elapsedTime.TotalSeconds;
-            double downloadSpeedInMb = _downloadSpeed / (1024 * 1024);
-            PreparingPleaseWait.Text += $@" [{downloadSpeedInMb:00.00} MB/s]";
-
-            Log.Output($"Downloading new update... {bytesReceivedMb:000.00} MB of {bytesReceiveMb:000.00} MB / {downloadSpeedInMb:00.00} MB/s");
-            await Task.Delay(1000);
-        }
-
-
-        private async void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
-        {
-            string logDir = Path.Combine(Log.Folder, "updates");
-            if (!Directory.Exists(logDir)) Directory.CreateDirectory(logDir);
-
-            for (int i = 4; i > 0; i--)
-            {
-                PreparingPleaseWait.Text = $@"Just a moment. Please wait {i}s...";
-                Log.Output($"Waiting {i}s...");
-                await Task.Delay(1000);
-            }
-
-            int numFilesDeleted = 0;
-            long spaceSaved = 0;
-            DirectoryInfo cacheDir = new DirectoryInfo(Path.Combine(Program.AppPath, "data", "reshade", "cache"));
-            if (cacheDir.Exists)
-                foreach (FileInfo file in cacheDir.EnumerateFiles())
-                    if (file.Name != "null")
-                    {
-                        spaceSaved += file.Length;
-                        file.Delete();
-                        numFilesDeleted++;
-                    }
-
-            status_Label.Text += $@"[✓] Deleted {numFilesDeleted} cache files and saved {spaceSaved / 1000000} MB.";
-            PreparingPleaseWait.Text = @"Everything is okay! Starting setup...";
-
-            TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
-            _ = Cmd.CliWrap(SetupPathExe, $"/UPDATE /NORESTART /LOG=\"{logDir}\\{DateTime.Now:yyyy-dd-M...HH-mm-ss}.log\"", null, true, true);
-
-            pictureBox9.Visible = false;
-            DiscordServer.Visible = false;
-            pictureBox10.Visible = false;
-            SupportMe.Visible = false;
-            pictureBox8.Visible = false;
-            YouTube.Visible = false;
-
-            for (int i = 20; i > 0; i--)
-            {
-                PreparingPleaseWait.Text = $@"Install a new version in the wizard. Closing launcher in {i}s...";
-                Log.Output($"Closing launcher in {i}s...");
-                await Task.Delay(1000);
-            }
-
-            Log.Output("Closing...");
-            Environment.Exit(0);
-        }
-
 
         private void W_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

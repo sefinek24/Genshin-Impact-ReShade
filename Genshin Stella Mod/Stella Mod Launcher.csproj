@@ -185,6 +185,9 @@
     <Compile Include="Scripts\Log.cs" />
     <Compile Include="Scripts\Os.cs" />
     <Compile Include="Scripts\Telemetry.cs" />
+    <Compile Include="Scripts\Updates\MajorRelease.cs" />
+    <Compile Include="Scripts\Updates\NormalRelease.cs" />
+    <Compile Include="Scripts\Updates\ReShadeIniUpdate.cs" />
     <Compile Include="Scripts\Utils.cs" />
     <Compile Include="Scripts\WebView2Handler.cs" />
     <EmbeddedResource Include="Forms\Default.pl.resx">
