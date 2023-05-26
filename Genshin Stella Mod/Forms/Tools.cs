@@ -38,7 +38,6 @@ namespace Genshin_Stella_Mod.Forms
                 panel3.Visible = false;
             }
 
-
             Version.Text = $@"v{Program.AppVersion}";
 
             MusicLabel_Set();

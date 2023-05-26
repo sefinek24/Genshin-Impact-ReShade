@@ -33,13 +33,9 @@ namespace Genshin_Stella_Mod.Scripts.Updates
             {
                 Default.UpdateIsAvailable = false;
 
-                _updatesLabel.LinkColor = Color.Red;
-                _updatesLabel.Text = @"Oh no~~! Failed.";
                 _statusLabel.Text += "[x] Game path was not found on your PC.\n";
 
                 Log.SaveErrorLog(new Exception("Game path was not found on your PC."));
-                TaskbarManager.Instance.SetProgressValue(100, 100);
-                TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
                 return -1;
             }
 
