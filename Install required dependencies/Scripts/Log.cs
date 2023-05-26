@@ -18,7 +18,7 @@ namespace PrepareStella.Scripts
             Console.WriteLine(tryAgain ? $"{prompt} try again..." : $"{prompt} continue...");
             Console.ReadLine();
 
-            Console.WriteLine(">> Waiting 5 seconds. Please wait... <<");
+            Console.WriteLine(@">> Waiting 5 seconds. Please wait... <<");
             Thread.Sleep(5000);
 
             Console.ResetColor();

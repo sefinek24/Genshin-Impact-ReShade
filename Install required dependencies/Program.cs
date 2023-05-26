@@ -52,6 +52,7 @@ namespace PrepareStella
         public static string ReShadeLogFile;
 
 
+        [STAThread]
         public static async Task Start()
         {
             TaskbarManager.Instance.SetProgressValue(12, 100);

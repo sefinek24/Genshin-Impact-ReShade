@@ -83,7 +83,7 @@ namespace PrepareStella.Forms
             string directory = Path.GetDirectoryName(selectedFile);
             if (!File.Exists($@"{directory}\UnityPlayer.dll"))
             {
-                MessageBox.Show("That's not the right place. UnityPlayer.dll file was not found.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(@"That's not the right place. UnityPlayer.dll file was not found.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

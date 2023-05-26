@@ -21,7 +21,7 @@ namespace Genshin_Stella_Mod.Forms.Errors
         {
             try
             {
-                new SoundPlayer { SoundLocation = @"data\sounds\kurwa.wav" }.Play();
+                new SoundPlayer { SoundLocation = Path.Combine(Program.AppPath, "data", "sounds", "kurwa.wav") }.Play();
             }
             catch (Exception ex)
             {

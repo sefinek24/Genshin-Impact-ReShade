@@ -89,28 +89,5 @@ namespace PrepareStella.Scripts
                 Log.ErrorAndExit(e, false, true);
             }
         }
-
-
-        public static void Execute(string app, string args, string workingDir, bool runAsAdmin, bool exit)
-        {
-            try
-            {
-                Process.Start(new ProcessStartInfo
-                {
-                    FileName = app,
-                    Arguments = args,
-                    WorkingDirectory = workingDir,
-                    Verb = runAsAdmin ? "runas" : "",
-                    UseShellExecute = true
-                });
-            }
-            catch (Exception ex)
-            {
-                Log.ThrowError(ex, false);
-            }
-
-            // Exit
-            if (exit) Environment.Exit(0);
-        }
     }
 }
