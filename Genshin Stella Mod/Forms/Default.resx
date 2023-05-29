@@ -508,7 +508,7 @@
     <value>BottomLeft</value>
   </data>
   <data name="startGame_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 194</value>
+    <value>84, 194</value>
   </data>
   <data name="startGame_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>401, 95</value>
