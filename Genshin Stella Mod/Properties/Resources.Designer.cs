@@ -745,11 +745,29 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Closed..
+        /// </summary>
+        internal static string Main_Closed {
+            get {
+                return ResourceManager.GetString("Main_Closed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Closed form {0}..
         /// </summary>
         internal static string Main_ClosedForm_ {
             get {
                 return ResourceManager.GetString("Main_ClosedForm_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Closing form {0}....
+        /// </summary>
+        internal static string Main_ClosingForm_ {
+            get {
+                return ResourceManager.GetString("Main_ClosingForm_", resourceCulture);
             }
         }
         
@@ -799,6 +817,89 @@ namespace StellaLauncher.Properties {
             get {
                 object obj = ResourceManager.GetObject("poland_flag", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A request to start the program has been received.
+        ///* Debugger is attached: {0}
+        ///* CPU Serial Number: {1}
+        ///* App dir: {2}
+        ///* App data: {3}
+        ///* configured.sfn file: {4}
+        ///* FPS Unlocker config path: {5}
+        ///* Directory for patrons: {6}.
+        /// </summary>
+        internal static string Program_ARequestToStartTheProgramHasBeenReceived {
+            get {
+                return ResourceManager.GetString("Program_ARequestToStartTheProgramHasBeenReceived", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do you want to join our Discord server?.
+        /// </summary>
+        internal static string Program_DoYouWantToJoinOurDiscord {
+            get {
+                return ResourceManager.GetString("Program_DoYouWantToJoinOurDiscord", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do you want to send us anonymous log files?.
+        /// </summary>
+        internal static string Program_DoYouWantToSendUsanonymousLogFiles {
+            get {
+                return ResourceManager.GetString("Program_DoYouWantToSendUsanonymousLogFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If you wish to send logs to the developer, please send them to me on Discord: Sefinek#2714. API communication is not yet available for the Stella Launcher.
+        ///
+        ///Do you want to see these files?.
+        /// </summary>
+        internal static string Program_IfYouWishToSendLogsToTheDeveloperPleaseSendThemToMeOnDiscord {
+            get {
+                return ResourceManager.GetString("Program_IfYouWishToSendLogsToTheDeveloperPleaseSendThemToMeOnDiscord", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Question (MessageBox): Do you want to send log files? Selected: {0}.
+        /// </summary>
+        internal static string Program_QuestionDoYouWantToSendUsanonymousLogFiles_ {
+            get {
+                return ResourceManager.GetString("Program_QuestionDoYouWantToSendUsanonymousLogFiles_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Question (MessageBox): Do you want to join our Discord server? Selected: {0}.
+        /// </summary>
+        internal static string Program_QuestionMessageBox_DoYouWantToJoinOurDiscord_ {
+            get {
+                return ResourceManager.GetString("Program_QuestionMessageBox_DoYouWantToJoinOurDiscord_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Required file &apos;First app launch.exe&apos; was not found. Please reinstall this app or join our Discord server for help..
+        /// </summary>
+        internal static string Program_RequiredFileFisrtAppLaunchExeWasNotFound_ {
+            get {
+                return ResourceManager.GetString("Program_RequiredFileFisrtAppLaunchExeWasNotFound_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sorry, one instance is currently open.
+        ///
+        ///Quit the process with name {0} and try again..
+        /// </summary>
+        internal static string Program_SorryOneInstanceIsCurrentlyOpen_ {
+            get {
+                return ResourceManager.GetString("Program_SorryOneInstanceIsCurrentlyOpen_", resourceCulture);
             }
         }
         

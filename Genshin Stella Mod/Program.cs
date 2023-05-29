@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Reflection;
+using System.Threading;
 using System.Windows.Forms;
 using StellaLauncher.Forms;
 using StellaLauncher.Forms.Errors;
@@ -44,17 +45,30 @@ namespace StellaLauncher
             _appIsConfigured = Path.Combine(AppData, "configured.sfn");
             Settings = new IniFile(Path.Combine(AppData, "settings.ini"));
 
+            int selected = Settings.ReadInt("Launcher", "LanguageID", 0);
+            switch (selected)
+            {
+                case 0:
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+                    break;
+                case 1:
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("pl");
+                    break;
+                default:
+                    Thread.CurrentThread.CurrentUICulture = CultureInfo.InvariantCulture;
+                    break;
+            }
 
-            Log.Output(
-                "A request to start the program has been received.\n" +
-                $"Debugger is attached: {Debugger.IsAttached}\n" +
-                $"CPU Serial Number: {Os.CpuId}\n" +
-                $"App dir: {AppPath}\n" +
-                $"App data: {AppData}\n" +
-                $"App is configured: {_appIsConfigured}\n" +
-                $"FPS Unlocker path: {FpsUnlockerCfgPath}\n" +
-                $"Patrons dir: {PatronsDir}"
-            );
+            Log.Output(string.Format(
+                Resources.Program_ARequestToStartTheProgramHasBeenReceived,
+                Debugger.IsAttached,
+                Os.CpuId,
+                AppPath,
+                AppData,
+                _appIsConfigured,
+                FpsUnlockerCfgPath,
+                PatronsDir
+            ));
 
 
             //if (!Debugger.IsAttached && Environment.CurrentDirectory != Folder)
@@ -65,8 +79,8 @@ namespace StellaLauncher
 
             if (Process.GetProcessesByName(AppName).Length > 1)
             {
-                MessageBox.Show(
-                    $"Sorry, one instance is currently open.\n\nQuit the process with name {Path.GetFileNameWithoutExtension(Assembly.GetEntryAssembly()?.Location)} and try again.", AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(string.Format(Resources.Program_SorryOneInstanceIsCurrentlyOpen_, Path.GetFileNameWithoutExtension(Assembly.GetEntryAssembly()?.Location)),
+                    AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 Log.Output("One instance is currently open.");
                 Environment.Exit(998765341);
@@ -76,7 +90,7 @@ namespace StellaLauncher
             {
                 if (!File.Exists(PrepareLauncher))
                 {
-                    MessageBox.Show("Required file 'First app launch.exe' was not found. Please reinstall this app or join our Discord server for help.", AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(Resources.Program_RequiredFileFisrtAppLaunchExeWasNotFound_, AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Environment.Exit(997890421);
                 }
 
@@ -109,8 +123,8 @@ namespace StellaLauncher
                     case 3:
                     case 10:
                     case 18:
-                        DialogResult discordResult = MessageBox.Show(@"Do you want to join our Discord server?", AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        Log.Output($"Question (MessageBox): Do you want to join our Discord server? Selected: {discordResult}");
+                        DialogResult discordResult = MessageBox.Show(Resources.Program_DoYouWantToJoinOurDiscord, AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        Log.Output(string.Format(Resources.Program_QuestionMessageBox_DoYouWantToJoinOurDiscord_, discordResult));
                         if (discordResult == DialogResult.Yes) Utils.OpenUrl(Discord.Invitation);
                         break;
 
@@ -126,15 +140,14 @@ namespace StellaLauncher
                     case 60:
                     case 100:
                     case 200:
-                        DialogResult logFilesResult = MessageBox.Show(@"Do you want to send us anonymous log files?", AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        Log.Output($"Question (MessageBox): Do you want to send log files? Selected: {logFilesResult}");
+                        DialogResult logFilesResult = MessageBox.Show(Resources.Program_DoYouWantToSendUsanonymousLogFiles, AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        Log.Output(string.Format(Resources.Program_QuestionDoYouWantToSendUsanonymousLogFiles_, logFilesResult));
                         if (logFilesResult == DialogResult.Yes)
                         {
                             Telemetry.SendLogFiles();
 
-                            DialogResult showFilesResult = MessageBox.Show(
-                                "If you wish to send logs to the developer, please send them to me on Discord: Sefinek#2714. API communication is not yet available for the Stella Launcher.\n\nDo you want to see these files?", AppName,
-                                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                            DialogResult showFilesResult = MessageBox.Show(Resources.Program_IfYouWishToSendLogsToTheDeveloperPleaseSendThemToMeOnDiscord,
+                                AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                             if (showFilesResult == DialogResult.Yes)
                             {
                                 Process.Start(Log.Folder);

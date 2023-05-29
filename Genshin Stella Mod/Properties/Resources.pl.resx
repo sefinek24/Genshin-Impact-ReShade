@@ -261,13 +261,54 @@ Czy chciałbyś teraz pobrać ten plik, aby zapobiec przyszłym błędom i ręcz
   <data name="Links_DRPC_OnTheWindowWithLinks" xml:space="preserve">
     <value>W oknie z linkami 🌍</value>
   </data>
+  <data name="Main_Closed" xml:space="preserve">
+    <value>Zamknięto.</value>
+  </data>
   <data name="Main_ClosedForm_" xml:space="preserve">
     <value>Zamknięto formularz {0}.</value>
     <comment>Używane do Log.Output</comment>
   </data>
+  <data name="Main_ClosingForm_" xml:space="preserve">
+    <value>Zamykanie formularzu {0}...</value>
+  </data>
   <data name="Main_LoadedForm_" xml:space="preserve">
     <value>Załadowano formularz {0}.</value>
     <comment>Używane do Log.Output</comment>
+  </data>
+  <data name="Program_ARequestToStartTheProgramHasBeenReceived" xml:space="preserve">
+    <value>Otrzymano żądanie uruchomienia programu.
+* Podłączony debugger: {0}
+* Numer seryjny CPU: {1}
+* Katalog aplikacji: {2}
+* Dane aplikacji: {3}
+* Plik configured.sfn: {4}
+* Ścieżka konfiguracji FPS Unlockera: {5}
+* Katalog dla patronów: {6}</value>
+  </data>
+  <data name="Program_DoYouWantToJoinOurDiscord" xml:space="preserve">
+    <value>Czy chcesz dołączyć na nasz serwer Discord?</value>
+  </data>
+  <data name="Program_DoYouWantToSendUsanonymousLogFiles" xml:space="preserve">
+    <value>Czy chcesz przesłać nam anonimowe pliki dziennika (logi)?</value>
+  </data>
+  <data name="Program_IfYouWishToSendLogsToTheDeveloperPleaseSendThemToMeOnDiscord" xml:space="preserve">
+    <value>Jeśli chcesz przesłać logi do programisty, proszę wyślij je do mnie na Discordzie: Sefinek#2714. Komunikacja przez interfejs API nie jest jeszcze dostępna w Stella Launcher.
+
+Chcesz zobaczyć te pliki?</value>
+  </data>
+  <data name="Program_QuestionDoYouWantToSendUsanonymousLogFiles_" xml:space="preserve">
+    <value>Pytanie (Okno MessageBox): Czy chcesz przesłać pliki dziennika (logi)? Wybrano: {0}</value>
+  </data>
+  <data name="Program_QuestionMessageBox_DoYouWantToJoinOurDiscord_" xml:space="preserve">
+    <value>Pytanie (Okno MessageBox): Czy chcesz dołączyć do naszego serwera Discord? Wybrano: {0}</value>
+  </data>
+  <data name="Program_RequiredFileFisrtAppLaunchExeWasNotFound_" xml:space="preserve">
+    <value>Nie znaleziono wymaganego pliku "First app launch.exe". Proszę ponownie zainstalować tę aplikację lub dołączyć do naszego serwera Discord, aby uzyskać pomoc.</value>
+  </data>
+  <data name="Program_SorryOneInstanceIsCurrentlyOpen_" xml:space="preserve">
+    <value>Przepraszam, obecnie jest uruchomiona jedna instancja.
+
+Zamknij proces o nazwie {0} i spróbuj ponownie.</value>
   </data>
   <data name="Tools_BrowsingUtils" xml:space="preserve">
     <value>Przegląda narzędzia 🔧</value>

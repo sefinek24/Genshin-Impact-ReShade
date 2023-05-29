@@ -7,7 +7,6 @@ using System.Linq;
 using System.Media;
 using System.Net;
 using System.Runtime.Caching;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.WindowsAPICodePack.Taskbar;
@@ -47,20 +46,6 @@ namespace StellaLauncher.Forms
 
         public Default()
         {
-            int selected = Program.Settings.ReadInt("Launcher", "LanguageID", 0);
-            switch (selected)
-            {
-                case 0:
-                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
-                    break;
-                case 1:
-                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("pl");
-                    break;
-                default:
-                    Thread.CurrentThread.CurrentUICulture = CultureInfo.InvariantCulture;
-                    break;
-            }
-
             InitializeComponent();
         }
 
@@ -101,12 +86,12 @@ namespace StellaLauncher.Forms
 
         private void Default_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Log.Output($"Closing form '{Text}'.");
+            Log.Output(string.Format(Resources.Main_ClosingForm_, Text));
         }
 
         private void Default_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Log.Output("Closed.");
+            Log.Output(Resources.Main_Closed);
         }
 
         private void MouseDown_Event(object sender, MouseEventArgs e)

@@ -409,4 +409,45 @@ Would you like to download this file now to prevent future errors and manual con
     <value>File download has been canceled by the user.</value>
     <comment>Used for Log.Output</comment>
   </data>
+  <data name="Program_ARequestToStartTheProgramHasBeenReceived" xml:space="preserve">
+    <value>A request to start the program has been received.
+* Debugger is attached: {0}
+* CPU Serial Number: {1}
+* App dir: {2}
+* App data: {3}
+* configured.sfn file: {4}
+* FPS Unlocker config path: {5}
+* Directory for patrons: {6}</value>
+  </data>
+  <data name="Main_Closed" xml:space="preserve">
+    <value>Closed.</value>
+  </data>
+  <data name="Main_ClosingForm_" xml:space="preserve">
+    <value>Closing form {0}...</value>
+  </data>
+  <data name="Program_DoYouWantToJoinOurDiscord" xml:space="preserve">
+    <value>Do you want to join our Discord server?</value>
+  </data>
+  <data name="Program_DoYouWantToSendUsanonymousLogFiles" xml:space="preserve">
+    <value>Do you want to send us anonymous log files?</value>
+  </data>
+  <data name="Program_IfYouWishToSendLogsToTheDeveloperPleaseSendThemToMeOnDiscord" xml:space="preserve">
+    <value>If you wish to send logs to the developer, please send them to me on Discord: Sefinek#2714. API communication is not yet available for the Stella Launcher.
+
+Do you want to see these files?</value>
+  </data>
+  <data name="Program_QuestionDoYouWantToSendUsanonymousLogFiles_" xml:space="preserve">
+    <value>Question (MessageBox): Do you want to send log files? Selected: {0}</value>
+  </data>
+  <data name="Program_QuestionMessageBox_DoYouWantToJoinOurDiscord_" xml:space="preserve">
+    <value>Question (MessageBox): Do you want to join our Discord server? Selected: {0}</value>
+  </data>
+  <data name="Program_RequiredFileFisrtAppLaunchExeWasNotFound_" xml:space="preserve">
+    <value>Required file 'First app launch.exe' was not found. Please reinstall this app or join our Discord server for help.</value>
+  </data>
+  <data name="Program_SorryOneInstanceIsCurrentlyOpen_" xml:space="preserve">
+    <value>Sorry, one instance is currently open.
+
+Quit the process with name {0} and try again.</value>
+  </data>
 </root>
