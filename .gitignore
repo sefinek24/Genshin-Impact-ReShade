@@ -2,7 +2,8 @@
 .vs
 data/reshade/cache
 
-# Solutions
+# Build
+Build
 First app launch/bin
 First app launch/obj
 Genshin Stella Mod/bin
