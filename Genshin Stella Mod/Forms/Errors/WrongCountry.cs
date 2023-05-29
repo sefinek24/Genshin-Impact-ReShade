@@ -3,8 +3,8 @@ using System.Diagnostics;
 using System.IO;
 using System.Media;
 using System.Windows.Forms;
-using Genshin_Stella_Mod.Scripts;
 using Microsoft.Toolkit.Uwp.Notifications;
+using StellaLauncher.Scripts;
 
 namespace StellaLauncher.Forms.Errors
 {

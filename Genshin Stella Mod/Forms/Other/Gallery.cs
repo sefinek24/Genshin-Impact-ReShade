@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Forms;
-using Genshin_Stella_Mod.Scripts;
 using Microsoft.Web.WebView2.Core;
+using StellaLauncher.Scripts;
 
 namespace StellaLauncher.Forms.Other
 {

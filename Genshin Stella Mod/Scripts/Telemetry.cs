@@ -1,6 +1,5 @@
 using System;
 using System.Reflection;
-using Genshin_Stella_Mod.Scripts;
 
 namespace StellaLauncher.Scripts
 {

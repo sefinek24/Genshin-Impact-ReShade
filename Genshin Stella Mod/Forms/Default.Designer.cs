@@ -32,54 +32,54 @@ namespace StellaLauncher.Forms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Default));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.ChangeBackground = new System.Windows.Forms.LinkLabel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.githubURL_Label = new System.Windows.Forms.LinkLabel();
-            this.MadeBySefinek = new System.Windows.Forms.Label();
+            this.changeBg_LinkLabel = new System.Windows.Forms.LinkLabel();
+            this.close_Panel = new System.Windows.Forms.Panel();
+            this.githubUrl_LinkLabel = new System.Windows.Forms.LinkLabel();
+            this.madeBySefinek_Label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.githubIco_Picturebox = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.settings_Label = new System.Windows.Forms.LinkLabel();
+            this.tools_LinkLabel = new System.Windows.Forms.LinkLabel();
             this.discordServer_LinkLabel = new System.Windows.Forms.LinkLabel();
             this.youTube_LinkLabel = new System.Windows.Forms.LinkLabel();
-            this.StartGame = new System.Windows.Forms.LinkLabel();
-            this.RunOnlyFPSUnlocker = new System.Windows.Forms.LinkLabel();
-            this.InjectOnlyReShade = new System.Windows.Forms.LinkLabel();
-            this.website_Label = new System.Windows.Forms.LinkLabel();
-            this.createShortcut_Label = new System.Windows.Forms.LinkLabel();
+            this.startGame_LinkLabel = new System.Windows.Forms.LinkLabel();
+            this.runFpsUnlocker_LinkLabel = new System.Windows.Forms.LinkLabel();
+            this.injectReShade_LinkLabel = new System.Windows.Forms.LinkLabel();
+            this.website_LinkLabel = new System.Windows.Forms.LinkLabel();
+            this.gameplay_LinkLabel = new System.Windows.Forms.LinkLabel();
             this.supportMe_LinkLabel = new System.Windows.Forms.LinkLabel();
-            this.ToGetRTInGameBecomeMyPatron = new System.Windows.Forms.LinkLabel();
-            this.OpenGILauncher = new System.Windows.Forms.LinkLabel();
-            this.version_Label = new System.Windows.Forms.LinkLabel();
-            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.update_Icon = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.updates_Label = new System.Windows.Forms.LinkLabel();
+            this.becomeMyPatron_LinkLabel = new System.Windows.Forms.LinkLabel();
+            this.runGiLauncher_LinkLabel = new System.Windows.Forms.LinkLabel();
+            this.version_LinkLabel = new System.Windows.Forms.LinkLabel();
+            this.links_LinkLabel = new System.Windows.Forms.LinkLabel();
+            this.toolsIco_PictureBox = new System.Windows.Forms.PictureBox();
+            this.websiteIco_PictureBox = new System.Windows.Forms.PictureBox();
+            this.updateIco_PictureBox = new System.Windows.Forms.PictureBox();
+            this.versionIco_PictureBox = new System.Windows.Forms.PictureBox();
+            this.updates_LinkLabel = new System.Windows.Forms.LinkLabel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.status_Label = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.padIco_PictureBox = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.shortcutIco_PictureBox = new System.Windows.Forms.PictureBox();
+            this.paimon_PictureBox = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.PreparingPleaseWait = new System.Windows.Forms.Label();
-            this.linkLabel9 = new System.Windows.Forms.LinkLabel();
+            this.clickMe_LinkLabel = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.update_Icon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.githubIco_Picturebox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toolsIco_PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.websiteIco_PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updateIco_PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.versionIco_PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padIco_PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shortcutIco_PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paimon_PictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -87,8 +87,8 @@ namespace StellaLauncher.Forms
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.ChangeBackground);
-            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.changeBg_LinkLabel);
+            this.panel1.Controls.Add(this.close_Panel);
             this.panel1.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.panel1.ForeColor = System.Drawing.Color.Transparent;
             this.panel1.Name = "panel1";
@@ -105,47 +105,47 @@ namespace StellaLauncher.Forms
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 
-            // ChangeBackground
+            // changeBg_LinkLabel
             // 
-            this.ChangeBackground.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.ChangeBackground, "ChangeBackground");
-            this.ChangeBackground.BackColor = System.Drawing.Color.Transparent;
-            this.ChangeBackground.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.ChangeBackground.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.ChangeBackground.Name = "ChangeBackground";
-            this.ChangeBackground.TabStop = true;
-            this.toolTip1.SetToolTip(this.ChangeBackground, resources.GetString("ChangeBackground.ToolTip"));
-            this.ChangeBackground.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ChangeBg_LinkClicked);
+            this.changeBg_LinkLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.changeBg_LinkLabel, "changeBg_LinkLabel");
+            this.changeBg_LinkLabel.BackColor = System.Drawing.Color.Transparent;
+            this.changeBg_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.changeBg_LinkLabel.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.changeBg_LinkLabel.Name = "changeBg_LinkLabel";
+            this.changeBg_LinkLabel.TabStop = true;
+            this.toolTip1.SetToolTip(this.changeBg_LinkLabel, resources.GetString("changeBg_LinkLabel.ToolTip"));
+            this.changeBg_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ChangeBg_LinkClicked);
             // 
-            // panel2
+            // close_Panel
             // 
-            resources.ApplyResources(this.panel2, "panel2");
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel2.Name = "panel2";
-            this.toolTip1.SetToolTip(this.panel2, resources.GetString("panel2.ToolTip"));
-            this.panel2.Click += new System.EventHandler(this.Exit_Click);
+            resources.ApplyResources(this.close_Panel, "close_Panel");
+            this.close_Panel.BackColor = System.Drawing.Color.Transparent;
+            this.close_Panel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.close_Panel.Name = "close_Panel";
+            this.toolTip1.SetToolTip(this.close_Panel, resources.GetString("close_Panel.ToolTip"));
+            this.close_Panel.Click += new System.EventHandler(this.Exit_Click);
             // 
-            // githubURL_Label
+            // githubUrl_LinkLabel
             // 
-            this.githubURL_Label.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.githubURL_Label, "githubURL_Label");
-            this.githubURL_Label.BackColor = System.Drawing.Color.Transparent;
-            this.githubURL_Label.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.githubURL_Label.LinkColor = System.Drawing.Color.White;
-            this.githubURL_Label.Name = "githubURL_Label";
-            this.githubURL_Label.TabStop = true;
-            this.toolTip1.SetToolTip(this.githubURL_Label, resources.GetString("githubURL_Label.ToolTip"));
-            this.githubURL_Label.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.GitHub_LinkClicked);
+            this.githubUrl_LinkLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.githubUrl_LinkLabel, "githubUrl_LinkLabel");
+            this.githubUrl_LinkLabel.BackColor = System.Drawing.Color.Transparent;
+            this.githubUrl_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.githubUrl_LinkLabel.LinkColor = System.Drawing.Color.White;
+            this.githubUrl_LinkLabel.Name = "githubUrl_LinkLabel";
+            this.githubUrl_LinkLabel.TabStop = true;
+            this.toolTip1.SetToolTip(this.githubUrl_LinkLabel, resources.GetString("githubUrl_LinkLabel.ToolTip"));
+            this.githubUrl_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.GitHub_LinkClicked);
             // 
-            // MadeBySefinek
+            // madeBySefinek_Label
             // 
-            resources.ApplyResources(this.MadeBySefinek, "MadeBySefinek");
-            this.MadeBySefinek.BackColor = System.Drawing.Color.Transparent;
-            this.MadeBySefinek.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.MadeBySefinek.Name = "MadeBySefinek";
-            this.toolTip1.SetToolTip(this.MadeBySefinek, resources.GetString("MadeBySefinek.ToolTip"));
-            this.MadeBySefinek.Click += new System.EventHandler(this.MadeBySefinek_Click);
+            resources.ApplyResources(this.madeBySefinek_Label, "madeBySefinek_Label");
+            this.madeBySefinek_Label.BackColor = System.Drawing.Color.Transparent;
+            this.madeBySefinek_Label.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.madeBySefinek_Label.Name = "madeBySefinek_Label";
+            this.toolTip1.SetToolTip(this.madeBySefinek_Label, resources.GetString("madeBySefinek_Label.ToolTip"));
+            this.madeBySefinek_Label.Click += new System.EventHandler(this.MadeBySefinek_Click);
             // 
             // label1
             // 
@@ -154,27 +154,27 @@ namespace StellaLauncher.Forms
             this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label1.Name = "label1";
             // 
-            // pictureBox1
+            // githubIco_Picturebox
             // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::StellaLauncher.Properties.Resources.icons8_github;
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox1, resources.GetString("pictureBox1.ToolTip"));
+            resources.ApplyResources(this.githubIco_Picturebox, "githubIco_Picturebox");
+            this.githubIco_Picturebox.BackColor = System.Drawing.Color.Transparent;
+            this.githubIco_Picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.githubIco_Picturebox.Image = global::StellaLauncher.Properties.Resources.icons8_github;
+            this.githubIco_Picturebox.Name = "githubIco_Picturebox";
+            this.githubIco_Picturebox.TabStop = false;
+            this.toolTip1.SetToolTip(this.githubIco_Picturebox, resources.GetString("githubIco_Picturebox.ToolTip"));
             // 
-            // settings_Label
+            // tools_LinkLabel
             // 
-            this.settings_Label.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.settings_Label, "settings_Label");
-            this.settings_Label.BackColor = System.Drawing.Color.Transparent;
-            this.settings_Label.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.settings_Label.LinkColor = System.Drawing.Color.White;
-            this.settings_Label.Name = "settings_Label";
-            this.settings_Label.TabStop = true;
-            this.toolTip1.SetToolTip(this.settings_Label, resources.GetString("settings_Label.ToolTip"));
-            this.settings_Label.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Tools_LinkClicked);
+            this.tools_LinkLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.tools_LinkLabel, "tools_LinkLabel");
+            this.tools_LinkLabel.BackColor = System.Drawing.Color.Transparent;
+            this.tools_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.tools_LinkLabel.LinkColor = System.Drawing.Color.White;
+            this.tools_LinkLabel.Name = "tools_LinkLabel";
+            this.tools_LinkLabel.TabStop = true;
+            this.toolTip1.SetToolTip(this.tools_LinkLabel, resources.GetString("tools_LinkLabel.ToolTip"));
+            this.tools_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Tools_LinkClicked);
             // 
             // discordServer_LinkLabel
             // 
@@ -200,68 +200,68 @@ namespace StellaLauncher.Forms
             this.toolTip1.SetToolTip(this.youTube_LinkLabel, resources.GetString("youTube_LinkLabel.ToolTip"));
             this.youTube_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.YouTube_LinkClicked);
             // 
-            // StartGame
+            // startGame_LinkLabel
             // 
-            this.StartGame.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
-            resources.ApplyResources(this.StartGame, "StartGame");
-            this.StartGame.BackColor = System.Drawing.Color.Transparent;
-            this.StartGame.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.StartGame.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.StartGame.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.StartGame.Name = "StartGame";
-            this.StartGame.TabStop = true;
-            this.toolTip1.SetToolTip(this.StartGame, resources.GetString("StartGame.ToolTip"));
-            this.StartGame.Click += new System.EventHandler(this.StartGame_Click);
+            this.startGame_LinkLabel.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.startGame_LinkLabel, "startGame_LinkLabel");
+            this.startGame_LinkLabel.BackColor = System.Drawing.Color.Transparent;
+            this.startGame_LinkLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.startGame_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.startGame_LinkLabel.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.startGame_LinkLabel.Name = "startGame_LinkLabel";
+            this.startGame_LinkLabel.TabStop = true;
+            this.toolTip1.SetToolTip(this.startGame_LinkLabel, resources.GetString("startGame_LinkLabel.ToolTip"));
+            this.startGame_LinkLabel.Click += new System.EventHandler(this.StartGame_Click);
             // 
-            // RunOnlyFPSUnlocker
+            // runFpsUnlocker_LinkLabel
             // 
-            this.RunOnlyFPSUnlocker.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
-            resources.ApplyResources(this.RunOnlyFPSUnlocker, "RunOnlyFPSUnlocker");
-            this.RunOnlyFPSUnlocker.BackColor = System.Drawing.Color.Transparent;
-            this.RunOnlyFPSUnlocker.DisabledLinkColor = System.Drawing.Color.Black;
-            this.RunOnlyFPSUnlocker.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.RunOnlyFPSUnlocker.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.RunOnlyFPSUnlocker.LinkColor = System.Drawing.Color.White;
-            this.RunOnlyFPSUnlocker.Name = "RunOnlyFPSUnlocker";
-            this.RunOnlyFPSUnlocker.TabStop = true;
-            this.toolTip1.SetToolTip(this.RunOnlyFPSUnlocker, resources.GetString("RunOnlyFPSUnlocker.ToolTip"));
-            this.RunOnlyFPSUnlocker.Click += new System.EventHandler(this.OnlyUnlocker_Click);
+            this.runFpsUnlocker_LinkLabel.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.runFpsUnlocker_LinkLabel, "runFpsUnlocker_LinkLabel");
+            this.runFpsUnlocker_LinkLabel.BackColor = System.Drawing.Color.Transparent;
+            this.runFpsUnlocker_LinkLabel.DisabledLinkColor = System.Drawing.Color.Black;
+            this.runFpsUnlocker_LinkLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.runFpsUnlocker_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.runFpsUnlocker_LinkLabel.LinkColor = System.Drawing.Color.White;
+            this.runFpsUnlocker_LinkLabel.Name = "runFpsUnlocker_LinkLabel";
+            this.runFpsUnlocker_LinkLabel.TabStop = true;
+            this.toolTip1.SetToolTip(this.runFpsUnlocker_LinkLabel, resources.GetString("runFpsUnlocker_LinkLabel.ToolTip"));
+            this.runFpsUnlocker_LinkLabel.Click += new System.EventHandler(this.OnlyUnlocker_Click);
             // 
-            // InjectOnlyReShade
+            // injectReShade_LinkLabel
             // 
-            this.InjectOnlyReShade.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
-            resources.ApplyResources(this.InjectOnlyReShade, "InjectOnlyReShade");
-            this.InjectOnlyReShade.BackColor = System.Drawing.Color.Transparent;
-            this.InjectOnlyReShade.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.InjectOnlyReShade.LinkColor = System.Drawing.Color.White;
-            this.InjectOnlyReShade.Name = "InjectOnlyReShade";
-            this.InjectOnlyReShade.TabStop = true;
-            this.toolTip1.SetToolTip(this.InjectOnlyReShade, resources.GetString("InjectOnlyReShade.ToolTip"));
-            this.InjectOnlyReShade.Click += new System.EventHandler(this.OnlyReShade_Click);
+            this.injectReShade_LinkLabel.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.injectReShade_LinkLabel, "injectReShade_LinkLabel");
+            this.injectReShade_LinkLabel.BackColor = System.Drawing.Color.Transparent;
+            this.injectReShade_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.injectReShade_LinkLabel.LinkColor = System.Drawing.Color.White;
+            this.injectReShade_LinkLabel.Name = "injectReShade_LinkLabel";
+            this.injectReShade_LinkLabel.TabStop = true;
+            this.toolTip1.SetToolTip(this.injectReShade_LinkLabel, resources.GetString("injectReShade_LinkLabel.ToolTip"));
+            this.injectReShade_LinkLabel.Click += new System.EventHandler(this.OnlyReShade_Click);
             // 
-            // website_Label
+            // website_LinkLabel
             // 
-            this.website_Label.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.website_Label, "website_Label");
-            this.website_Label.BackColor = System.Drawing.Color.Transparent;
-            this.website_Label.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.website_Label.LinkColor = System.Drawing.Color.White;
-            this.website_Label.Name = "website_Label";
-            this.website_Label.TabStop = true;
-            this.toolTip1.SetToolTip(this.website_Label, resources.GetString("website_Label.ToolTip"));
-            this.website_Label.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Website_LinkClicked);
+            this.website_LinkLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.website_LinkLabel, "website_LinkLabel");
+            this.website_LinkLabel.BackColor = System.Drawing.Color.Transparent;
+            this.website_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.website_LinkLabel.LinkColor = System.Drawing.Color.White;
+            this.website_LinkLabel.Name = "website_LinkLabel";
+            this.website_LinkLabel.TabStop = true;
+            this.toolTip1.SetToolTip(this.website_LinkLabel, resources.GetString("website_LinkLabel.ToolTip"));
+            this.website_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Website_LinkClicked);
             // 
-            // createShortcut_Label
+            // gameplay_LinkLabel
             // 
-            this.createShortcut_Label.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.createShortcut_Label, "createShortcut_Label");
-            this.createShortcut_Label.BackColor = System.Drawing.Color.Transparent;
-            this.createShortcut_Label.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.createShortcut_Label.LinkColor = System.Drawing.Color.White;
-            this.createShortcut_Label.Name = "createShortcut_Label";
-            this.createShortcut_Label.TabStop = true;
-            this.toolTip1.SetToolTip(this.createShortcut_Label, resources.GetString("createShortcut_Label.ToolTip"));
-            this.createShortcut_Label.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Gameplay_LinkClicked);
+            this.gameplay_LinkLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.gameplay_LinkLabel, "gameplay_LinkLabel");
+            this.gameplay_LinkLabel.BackColor = System.Drawing.Color.Transparent;
+            this.gameplay_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.gameplay_LinkLabel.LinkColor = System.Drawing.Color.White;
+            this.gameplay_LinkLabel.Name = "gameplay_LinkLabel";
+            this.gameplay_LinkLabel.TabStop = true;
+            this.toolTip1.SetToolTip(this.gameplay_LinkLabel, resources.GetString("gameplay_LinkLabel.ToolTip"));
+            this.gameplay_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Gameplay_LinkClicked);
             // 
             // supportMe_LinkLabel
             // 
@@ -275,100 +275,100 @@ namespace StellaLauncher.Forms
             this.toolTip1.SetToolTip(this.supportMe_LinkLabel, resources.GetString("supportMe_LinkLabel.ToolTip"));
             this.supportMe_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SupportMe_LinkClicked);
             // 
-            // ToGetRTInGameBecomeMyPatron
+            // becomeMyPatron_LinkLabel
             // 
-            this.ToGetRTInGameBecomeMyPatron.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.ToGetRTInGameBecomeMyPatron, "ToGetRTInGameBecomeMyPatron");
-            this.ToGetRTInGameBecomeMyPatron.BackColor = System.Drawing.Color.Transparent;
-            this.ToGetRTInGameBecomeMyPatron.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.ToGetRTInGameBecomeMyPatron.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.ToGetRTInGameBecomeMyPatron.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.ToGetRTInGameBecomeMyPatron.Name = "ToGetRTInGameBecomeMyPatron";
-            this.ToGetRTInGameBecomeMyPatron.TabStop = true;
-            this.toolTip1.SetToolTip(this.ToGetRTInGameBecomeMyPatron, resources.GetString("ToGetRTInGameBecomeMyPatron.ToolTip"));
-            this.ToGetRTInGameBecomeMyPatron.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Patreon_LinkClicked);
+            this.becomeMyPatron_LinkLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.becomeMyPatron_LinkLabel, "becomeMyPatron_LinkLabel");
+            this.becomeMyPatron_LinkLabel.BackColor = System.Drawing.Color.Transparent;
+            this.becomeMyPatron_LinkLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.becomeMyPatron_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.becomeMyPatron_LinkLabel.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.becomeMyPatron_LinkLabel.Name = "becomeMyPatron_LinkLabel";
+            this.becomeMyPatron_LinkLabel.TabStop = true;
+            this.toolTip1.SetToolTip(this.becomeMyPatron_LinkLabel, resources.GetString("becomeMyPatron_LinkLabel.ToolTip"));
+            this.becomeMyPatron_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Patreon_LinkClicked);
             // 
-            // OpenGILauncher
+            // runGiLauncher_LinkLabel
             // 
-            this.OpenGILauncher.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
-            resources.ApplyResources(this.OpenGILauncher, "OpenGILauncher");
-            this.OpenGILauncher.BackColor = System.Drawing.Color.Transparent;
-            this.OpenGILauncher.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.OpenGILauncher.LinkColor = System.Drawing.Color.White;
-            this.OpenGILauncher.Name = "OpenGILauncher";
-            this.OpenGILauncher.TabStop = true;
-            this.toolTip1.SetToolTip(this.OpenGILauncher, resources.GetString("OpenGILauncher.ToolTip"));
-            this.OpenGILauncher.Click += new System.EventHandler(this.OpenGILauncher_Click);
+            this.runGiLauncher_LinkLabel.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.runGiLauncher_LinkLabel, "runGiLauncher_LinkLabel");
+            this.runGiLauncher_LinkLabel.BackColor = System.Drawing.Color.Transparent;
+            this.runGiLauncher_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.runGiLauncher_LinkLabel.LinkColor = System.Drawing.Color.White;
+            this.runGiLauncher_LinkLabel.Name = "runGiLauncher_LinkLabel";
+            this.runGiLauncher_LinkLabel.TabStop = true;
+            this.toolTip1.SetToolTip(this.runGiLauncher_LinkLabel, resources.GetString("runGiLauncher_LinkLabel.ToolTip"));
+            this.runGiLauncher_LinkLabel.Click += new System.EventHandler(this.OpenGILauncher_Click);
             // 
-            // version_Label
+            // version_LinkLabel
             // 
-            this.version_Label.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.version_Label, "version_Label");
-            this.version_Label.BackColor = System.Drawing.Color.Transparent;
-            this.version_Label.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.version_Label.LinkColor = System.Drawing.Color.White;
-            this.version_Label.Name = "version_Label";
-            this.version_Label.TabStop = true;
-            this.toolTip1.SetToolTip(this.version_Label, resources.GetString("version_Label.ToolTip"));
-            this.version_Label.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Version_LinkClicked);
+            this.version_LinkLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.version_LinkLabel, "version_LinkLabel");
+            this.version_LinkLabel.BackColor = System.Drawing.Color.Transparent;
+            this.version_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.version_LinkLabel.LinkColor = System.Drawing.Color.White;
+            this.version_LinkLabel.Name = "version_LinkLabel";
+            this.version_LinkLabel.TabStop = true;
+            this.toolTip1.SetToolTip(this.version_LinkLabel, resources.GetString("version_LinkLabel.ToolTip"));
+            this.version_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Version_LinkClicked);
             // 
-            // linkLabel5
+            // links_LinkLabel
             // 
-            this.linkLabel5.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.linkLabel5, "linkLabel5");
-            this.linkLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel5.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel5.LinkColor = System.Drawing.Color.White;
-            this.linkLabel5.Name = "linkLabel5";
-            this.linkLabel5.TabStop = true;
-            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Links_LinkClicked);
+            this.links_LinkLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.links_LinkLabel, "links_LinkLabel");
+            this.links_LinkLabel.BackColor = System.Drawing.Color.Transparent;
+            this.links_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.links_LinkLabel.LinkColor = System.Drawing.Color.White;
+            this.links_LinkLabel.Name = "links_LinkLabel";
+            this.links_LinkLabel.TabStop = true;
+            this.links_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Links_LinkClicked);
             // 
-            // pictureBox3
+            // toolsIco_PictureBox
             // 
-            resources.ApplyResources(this.pictureBox3, "pictureBox3");
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox3.Image = global::StellaLauncher.Properties.Resources.flaticon_settings;
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.TabStop = false;
+            resources.ApplyResources(this.toolsIco_PictureBox, "toolsIco_PictureBox");
+            this.toolsIco_PictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.toolsIco_PictureBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.toolsIco_PictureBox.Image = global::StellaLauncher.Properties.Resources.flaticon_settings;
+            this.toolsIco_PictureBox.Name = "toolsIco_PictureBox";
+            this.toolsIco_PictureBox.TabStop = false;
             // 
-            // pictureBox4
+            // websiteIco_PictureBox
             // 
-            resources.ApplyResources(this.pictureBox4, "pictureBox4");
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox4.Image = global::StellaLauncher.Properties.Resources.web;
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.TabStop = false;
+            resources.ApplyResources(this.websiteIco_PictureBox, "websiteIco_PictureBox");
+            this.websiteIco_PictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.websiteIco_PictureBox.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.websiteIco_PictureBox.Image = global::StellaLauncher.Properties.Resources.web;
+            this.websiteIco_PictureBox.Name = "websiteIco_PictureBox";
+            this.websiteIco_PictureBox.TabStop = false;
             // 
-            // update_Icon
+            // updateIco_PictureBox
             // 
-            resources.ApplyResources(this.update_Icon, "update_Icon");
-            this.update_Icon.BackColor = System.Drawing.Color.Transparent;
-            this.update_Icon.Cursor = System.Windows.Forms.Cursors.Default;
-            this.update_Icon.Image = global::StellaLauncher.Properties.Resources.icons8_available_updates;
-            this.update_Icon.Name = "update_Icon";
-            this.update_Icon.TabStop = false;
+            resources.ApplyResources(this.updateIco_PictureBox, "updateIco_PictureBox");
+            this.updateIco_PictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.updateIco_PictureBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.updateIco_PictureBox.Image = global::StellaLauncher.Properties.Resources.icons8_available_updates;
+            this.updateIco_PictureBox.Name = "updateIco_PictureBox";
+            this.updateIco_PictureBox.TabStop = false;
             // 
-            // pictureBox7
+            // versionIco_PictureBox
             // 
-            resources.ApplyResources(this.pictureBox7, "pictureBox7");
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox7.Image = global::StellaLauncher.Properties.Resources.icons8_support;
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.TabStop = false;
+            resources.ApplyResources(this.versionIco_PictureBox, "versionIco_PictureBox");
+            this.versionIco_PictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.versionIco_PictureBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.versionIco_PictureBox.Image = global::StellaLauncher.Properties.Resources.icons8_support;
+            this.versionIco_PictureBox.Name = "versionIco_PictureBox";
+            this.versionIco_PictureBox.TabStop = false;
             // 
-            // updates_Label
+            // updates_LinkLabel
             // 
-            this.updates_Label.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.updates_Label, "updates_Label");
-            this.updates_Label.BackColor = System.Drawing.Color.Transparent;
-            this.updates_Label.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.updates_Label.LinkColor = System.Drawing.Color.White;
-            this.updates_Label.Name = "updates_Label";
-            this.updates_Label.TabStop = true;
-            this.updates_Label.Click += new System.EventHandler(this.CheckUpdates_Click);
+            this.updates_LinkLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.updates_LinkLabel, "updates_LinkLabel");
+            this.updates_LinkLabel.BackColor = System.Drawing.Color.Transparent;
+            this.updates_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.updates_LinkLabel.LinkColor = System.Drawing.Color.White;
+            this.updates_LinkLabel.Name = "updates_LinkLabel";
+            this.updates_LinkLabel.TabStop = true;
+            this.updates_LinkLabel.Click += new System.EventHandler(this.CheckUpdates_Click);
             // 
             // pictureBox8
             // 
@@ -396,14 +396,14 @@ namespace StellaLauncher.Forms
             this.status_Label.ForeColor = System.Drawing.Color.Snow;
             this.status_Label.Name = "status_Label";
             // 
-            // pictureBox6
+            // padIco_PictureBox
             // 
-            resources.ApplyResources(this.pictureBox6, "pictureBox6");
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox6.Image = global::StellaLauncher.Properties.Resources.flaticon_controller;
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.TabStop = false;
+            resources.ApplyResources(this.padIco_PictureBox, "padIco_PictureBox");
+            this.padIco_PictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.padIco_PictureBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.padIco_PictureBox.Image = global::StellaLauncher.Properties.Resources.flaticon_controller;
+            this.padIco_PictureBox.Name = "padIco_PictureBox";
+            this.padIco_PictureBox.TabStop = false;
             // 
             // pictureBox10
             // 
@@ -414,24 +414,24 @@ namespace StellaLauncher.Forms
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.TabStop = false;
             // 
-            // pictureBox11
+            // shortcutIco_PictureBox
             // 
-            resources.ApplyResources(this.pictureBox11, "pictureBox11");
-            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox11.Image = global::StellaLauncher.Properties.Resources.flaticon_redo;
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.TabStop = false;
+            resources.ApplyResources(this.shortcutIco_PictureBox, "shortcutIco_PictureBox");
+            this.shortcutIco_PictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.shortcutIco_PictureBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.shortcutIco_PictureBox.Image = global::StellaLauncher.Properties.Resources.flaticon_redo;
+            this.shortcutIco_PictureBox.Name = "shortcutIco_PictureBox";
+            this.shortcutIco_PictureBox.TabStop = false;
             // 
-            // pictureBox12
+            // paimon_PictureBox
             // 
-            resources.ApplyResources(this.pictureBox12, "pictureBox12");
-            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.pictureBox12.Image = global::StellaLauncher.Properties.Resources.paimon_gif;
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.TabStop = false;
-            this.pictureBox12.Click += new System.EventHandler(this.Paimon_Click);
+            resources.ApplyResources(this.paimon_PictureBox, "paimon_PictureBox");
+            this.paimon_PictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.paimon_PictureBox.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.paimon_PictureBox.Image = global::StellaLauncher.Properties.Resources.paimon_gif;
+            this.paimon_PictureBox.Name = "paimon_PictureBox";
+            this.paimon_PictureBox.TabStop = false;
+            this.paimon_PictureBox.Click += new System.EventHandler(this.Paimon_Click);
             // 
             // progressBar1
             // 
@@ -445,16 +445,16 @@ namespace StellaLauncher.Forms
             this.PreparingPleaseWait.ForeColor = System.Drawing.Color.White;
             this.PreparingPleaseWait.Name = "PreparingPleaseWait";
             // 
-            // linkLabel9
+            // clickMe_LinkLabel
             // 
-            this.linkLabel9.ActiveLinkColor = System.Drawing.Color.DeepSkyBlue;
-            resources.ApplyResources(this.linkLabel9, "linkLabel9");
-            this.linkLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel9.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel9.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.linkLabel9.Name = "linkLabel9";
-            this.linkLabel9.TabStop = true;
-            this.linkLabel9.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.W_LinkClicked);
+            this.clickMe_LinkLabel.ActiveLinkColor = System.Drawing.Color.DeepSkyBlue;
+            resources.ApplyResources(this.clickMe_LinkLabel, "clickMe_LinkLabel");
+            this.clickMe_LinkLabel.BackColor = System.Drawing.Color.Transparent;
+            this.clickMe_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.clickMe_LinkLabel.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.clickMe_LinkLabel.Name = "clickMe_LinkLabel";
+            this.clickMe_LinkLabel.TabStop = true;
+            this.clickMe_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.W_LinkClicked);
             // 
             // Default
             // 
@@ -462,37 +462,37 @@ namespace StellaLauncher.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::StellaLauncher.Properties.Resources.bg_main;
-            this.Controls.Add(this.linkLabel9);
+            this.Controls.Add(this.clickMe_LinkLabel);
             this.Controls.Add(this.PreparingPleaseWait);
             this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.ToGetRTInGameBecomeMyPatron);
-            this.Controls.Add(this.pictureBox12);
-            this.Controls.Add(this.OpenGILauncher);
-            this.Controls.Add(this.pictureBox11);
-            this.Controls.Add(this.linkLabel5);
+            this.Controls.Add(this.becomeMyPatron_LinkLabel);
+            this.Controls.Add(this.paimon_PictureBox);
+            this.Controls.Add(this.runGiLauncher_LinkLabel);
+            this.Controls.Add(this.shortcutIco_PictureBox);
+            this.Controls.Add(this.links_LinkLabel);
             this.Controls.Add(this.supportMe_LinkLabel);
             this.Controls.Add(this.pictureBox10);
-            this.Controls.Add(this.website_Label);
-            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.website_LinkLabel);
+            this.Controls.Add(this.padIco_PictureBox);
             this.Controls.Add(this.status_Label);
-            this.Controls.Add(this.StartGame);
-            this.Controls.Add(this.RunOnlyFPSUnlocker);
-            this.Controls.Add(this.InjectOnlyReShade);
+            this.Controls.Add(this.startGame_LinkLabel);
+            this.Controls.Add(this.runFpsUnlocker_LinkLabel);
+            this.Controls.Add(this.injectReShade_LinkLabel);
             this.Controls.Add(this.youTube_LinkLabel);
             this.Controls.Add(this.discordServer_LinkLabel);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.version_Label);
-            this.Controls.Add(this.updates_Label);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.update_Icon);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.createShortcut_Label);
-            this.Controls.Add(this.settings_Label);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.githubURL_Label);
-            this.Controls.Add(this.MadeBySefinek);
+            this.Controls.Add(this.version_LinkLabel);
+            this.Controls.Add(this.updates_LinkLabel);
+            this.Controls.Add(this.versionIco_PictureBox);
+            this.Controls.Add(this.updateIco_PictureBox);
+            this.Controls.Add(this.websiteIco_PictureBox);
+            this.Controls.Add(this.toolsIco_PictureBox);
+            this.Controls.Add(this.gameplay_LinkLabel);
+            this.Controls.Add(this.tools_LinkLabel);
+            this.Controls.Add(this.githubIco_Picturebox);
+            this.Controls.Add(this.githubUrl_LinkLabel);
+            this.Controls.Add(this.madeBySefinek_Label);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -504,17 +504,17 @@ namespace StellaLauncher.Forms
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.update_Icon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.githubIco_Picturebox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toolsIco_PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.websiteIco_PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updateIco_PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.versionIco_PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padIco_PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shortcutIco_PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paimon_PictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -523,42 +523,42 @@ namespace StellaLauncher.Forms
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.LinkLabel githubURL_Label;
-        private System.Windows.Forms.Label MadeBySefinek;
+        private System.Windows.Forms.Panel close_Panel;
+        private System.Windows.Forms.LinkLabel githubUrl_LinkLabel;
+        private System.Windows.Forms.Label madeBySefinek_Label;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox githubIco_Picturebox;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.LinkLabel ChangeBackground;
-        private System.Windows.Forms.LinkLabel settings_Label;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox update_Icon;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.LinkLabel updates_Label;
-        private System.Windows.Forms.LinkLabel version_Label;
+        private System.Windows.Forms.LinkLabel changeBg_LinkLabel;
+        private System.Windows.Forms.LinkLabel tools_LinkLabel;
+        private System.Windows.Forms.PictureBox toolsIco_PictureBox;
+        private System.Windows.Forms.PictureBox websiteIco_PictureBox;
+        private System.Windows.Forms.PictureBox updateIco_PictureBox;
+        private System.Windows.Forms.PictureBox versionIco_PictureBox;
+        private System.Windows.Forms.LinkLabel updates_LinkLabel;
+        private System.Windows.Forms.LinkLabel version_LinkLabel;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.LinkLabel discordServer_LinkLabel;
         private System.Windows.Forms.LinkLabel youTube_LinkLabel;
-        private System.Windows.Forms.LinkLabel StartGame;
-        private System.Windows.Forms.LinkLabel RunOnlyFPSUnlocker;
-        private System.Windows.Forms.LinkLabel InjectOnlyReShade;
+        private System.Windows.Forms.LinkLabel startGame_LinkLabel;
+        private System.Windows.Forms.LinkLabel runFpsUnlocker_LinkLabel;
+        private System.Windows.Forms.LinkLabel injectReShade_LinkLabel;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.LinkLabel website_Label;
-        private System.Windows.Forms.LinkLabel createShortcut_Label;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.LinkLabel website_LinkLabel;
+        private System.Windows.Forms.LinkLabel gameplay_LinkLabel;
+        private System.Windows.Forms.PictureBox padIco_PictureBox;
         private System.Windows.Forms.LinkLabel supportMe_LinkLabel;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.LinkLabel linkLabel5;
-        private System.Windows.Forms.LinkLabel OpenGILauncher;
+        private System.Windows.Forms.PictureBox shortcutIco_PictureBox;
+        private System.Windows.Forms.LinkLabel links_LinkLabel;
+        private System.Windows.Forms.LinkLabel runGiLauncher_LinkLabel;
         private System.Windows.Forms.Label status_Label;
-        private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.LinkLabel ToGetRTInGameBecomeMyPatron;
+        private System.Windows.Forms.PictureBox paimon_PictureBox;
+        private System.Windows.Forms.LinkLabel becomeMyPatron_LinkLabel;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label PreparingPleaseWait;
-        private System.Windows.Forms.LinkLabel linkLabel9;
+        private System.Windows.Forms.LinkLabel clickMe_LinkLabel;
     }
 }
 

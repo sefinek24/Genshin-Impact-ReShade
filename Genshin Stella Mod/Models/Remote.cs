@@ -1,4 +1,4 @@
-namespace Genshin_Stella_Mod.Models
+namespace StellaLauncher.Models
 {
     public class LauncherData
     {

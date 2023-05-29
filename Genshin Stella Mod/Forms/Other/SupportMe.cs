@@ -1,7 +1,6 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Genshin_Stella_Mod.Scripts;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
 
@@ -69,6 +68,11 @@ namespace StellaLauncher.Forms.Other
             Utils.OpenUrl("https://sefinek.net/genshin-impact-reshade/repositories");
         }
 
+        private void PullRequest_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Utils.OpenUrl("https://github.com/sefinek24/Genshin-Impact-ReShade/pulls");
+        }
+
         private void DiscordServer_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Utils.OpenUrl(Discord.Invitation);
@@ -92,7 +96,7 @@ namespace StellaLauncher.Forms.Other
         private void OkayDone_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             new Default { Location = Location, StartPosition = FormStartPosition.Manual, Icon = Resources.icon_52x52 }.Show();
-            MessageBox.Show("Thanks :3", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(@"Thanks :3", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             Log.Output($"Clicked yes in form '{Text}'.");
             Telemetry.SupportMe_AnswYes();

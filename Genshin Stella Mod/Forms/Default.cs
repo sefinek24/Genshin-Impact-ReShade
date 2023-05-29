@@ -10,18 +10,13 @@ using System.Runtime.Caching;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Genshin_Stella_Mod.Models;
-using Genshin_Stella_Mod.Scripts;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using Newtonsoft.Json;
 using StellaLauncher.Forms.Other;
+using StellaLauncher.Models;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
 using StellaLauncher.Scripts.Updates;
-
-// 1 = ReShade + FPS Unlocker
-// 2 = ReShade
-// 3 = FPS Unlocker
 
 namespace StellaLauncher.Forms
 {
@@ -96,7 +91,7 @@ namespace StellaLauncher.Forms
             Log.Output($"Cached app background: '{localization}'; ID: {bgInt + 1}");
 
             BackgroundImage = backgroundImage;
-            toolTip1.SetToolTip(ChangeBackground, $"Current background: {_backgroundFiles[bgInt]}");
+            toolTip1.SetToolTip(changeBg_LinkLabel, $"Current background: {_backgroundFiles[bgInt]}");
         }
 
         private void Exit_Click(object sender, EventArgs e)
@@ -146,7 +141,7 @@ namespace StellaLauncher.Forms
                 Program.Settings.WriteInt("Launcher", "Background", 0);
                 Program.Settings.Save();
 
-                toolTip1.SetToolTip(ChangeBackground, "Current background: Default");
+                toolTip1.SetToolTip(changeBg_LinkLabel, "Current background: Default");
 
                 Log.Output($"The application background has been changed to default. ID: {bgInt}");
                 return;
@@ -176,7 +171,7 @@ namespace StellaLauncher.Forms
                 Log.Output($"Cached app background: '{localization}'; ID: {bgInt + 1}");
             }
 
-            toolTip1.SetToolTip(ChangeBackground, $"Current background: {_backgroundFiles[bgInt]}");
+            toolTip1.SetToolTip(changeBg_LinkLabel, $"Current background: {_backgroundFiles[bgInt]}");
 
             BackgroundImage = backgroundImage;
             bgInt++;
@@ -189,8 +184,8 @@ namespace StellaLauncher.Forms
 
         public async Task<int> CheckUpdates()
         {
-            updates_Label.LinkColor = Color.White;
-            updates_Label.Text = @"Checking for updates...";
+            updates_LinkLabel.LinkColor = Color.White;
+            updates_LinkLabel.Text = @"Checking for updates...";
 
             TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
             Log.Output("Checking for new versions...");
@@ -210,7 +205,7 @@ namespace StellaLauncher.Forms
                 {
                     UpdateIsAvailable = true;
 
-                    MajorRelease.Run(remoteVersion, remoteVerDate, version_Label, updates_Label, update_Icon);
+                    MajorRelease.Run(remoteVersion, remoteVerDate, version_LinkLabel, updates_LinkLabel, updateIco_PictureBox);
                     return 1;
                 }
 
@@ -220,15 +215,17 @@ namespace StellaLauncher.Forms
                     UpdateIsAvailable = true;
 
                     NormalRelease.Run(
-                        remoteVersion, remoteVerDate, version_Label, status_Label, updates_Label, update_Icon, progressBar1, PreparingPleaseWait, pictureBox3, settings_Label, pictureBox6, createShortcut_Label, pictureBox11, linkLabel5, pictureBox4,
-                        website_Label, pictureBox8, pictureBox9, pictureBox10, discordServer_LinkLabel, youTube_LinkLabel, supportMe_LinkLabel
+                        remoteVersion, remoteVerDate, version_LinkLabel, status_Label, updates_LinkLabel, updateIco_PictureBox, progressBar1, PreparingPleaseWait, toolsIco_PictureBox, tools_LinkLabel, padIco_PictureBox, gameplay_LinkLabel,
+                        shortcutIco_PictureBox,
+                        links_LinkLabel, websiteIco_PictureBox,
+                        website_LinkLabel, pictureBox8, pictureBox9, pictureBox10, discordServer_LinkLabel, youTube_LinkLabel, supportMe_LinkLabel
                     );
 
                     return 1;
                 }
 
                 // Check new updates for ReShade.ini file
-                int resultInt = await ReShadeIniUpdate.Run(updates_Label, status_Label, update_Icon, version_Label);
+                int resultInt = await ReShadeIniUpdate.Run(updates_LinkLabel, status_Label, updateIco_PictureBox, version_LinkLabel);
                 switch (resultInt)
                 {
                     case -2:
@@ -259,8 +256,8 @@ namespace StellaLauncher.Forms
 
 
                 // Not found any new updates
-                updates_Label.Text = @"Check for updates";
-                update_Icon.Image = Resources.icons8_available_updates;
+                updates_LinkLabel.Text = @"Check for updates";
+                updateIco_PictureBox.Image = Resources.icons8_available_updates;
 
                 Log.Output($"Not found any new updates. Your installed version: v{Program.AppVersion}");
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress);
@@ -270,8 +267,8 @@ namespace StellaLauncher.Forms
             {
                 UpdateIsAvailable = false;
 
-                updates_Label.LinkColor = Color.Red;
-                updates_Label.Text = @"Ohh, something went wrong";
+                updates_LinkLabel.LinkColor = Color.Red;
+                updates_LinkLabel.Text = @"Ohh, something went wrong";
                 status_Label.Text += $"[x] {e.Message}\n";
 
                 Log.SaveErrorLog(new Exception($"Something went wrong while checking for new updates.\n\n{e}"));
@@ -283,7 +280,7 @@ namespace StellaLauncher.Forms
 
         private async void Main_Shown(object sender, EventArgs e)
         {
-            version_Label.Text = $@"v{Program.AppVersion}";
+            version_LinkLabel.Text = $@"v{Program.AppVersion}";
             Log.Output($"Loaded form '{Text}'.");
 
             if (!File.Exists(Program.FpsUnlockerExePath) && !Debugger.IsAttached)
@@ -374,6 +371,9 @@ namespace StellaLauncher.Forms
         }
 
         // ------- Start the game -------
+        // 1 = ReShade + FPS Unlocker
+        // 2 = Only ReShade
+        // 3 = Only FPS Unlocker
         private async void StartGame_Click(object sender, EventArgs e)
         {
             // Run cmd file
@@ -494,8 +494,8 @@ namespace StellaLauncher.Forms
                     case DialogResult.Yes:
                         try
                         {
-                            updates_Label.LinkColor = Color.DodgerBlue;
-                            updates_Label.Text = @"Downloading...";
+                            updates_LinkLabel.LinkColor = Color.DodgerBlue;
+                            updates_LinkLabel.Text = @"Downloading...";
                             TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
 
                             WebClient client = new WebClient();
@@ -521,8 +521,8 @@ namespace StellaLauncher.Forms
                         catch (Exception ex)
                         {
                             status_Label.Text += "[x] Meeow! Failed to download ReShade.ini. Try again.\n";
-                            updates_Label.LinkColor = Color.Red;
-                            updates_Label.Text = @"Failed to download...";
+                            updates_LinkLabel.LinkColor = Color.Red;
+                            updates_LinkLabel.Text = @"Failed to download...";
 
                             Log.SaveErrorLog(ex);
                             if (!File.Exists(reShadePath)) Log.Output("The ReShade.ini file still does not exist!");
@@ -547,9 +547,9 @@ namespace StellaLauncher.Forms
 
             if (update != 0) return;
 
-            updates_Label.LinkColor = Color.LawnGreen;
-            updates_Label.Text = @"You have the latest version";
-            update_Icon.Image = Resources.icons8_available_updates;
+            updates_LinkLabel.LinkColor = Color.LawnGreen;
+            updates_LinkLabel.Text = @"You have the latest version";
+            updateIco_PictureBox.Image = Resources.icons8_available_updates;
         }
 
         private void W_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

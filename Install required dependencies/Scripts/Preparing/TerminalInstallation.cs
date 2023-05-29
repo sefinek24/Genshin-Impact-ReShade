@@ -75,19 +75,26 @@ namespace PrepareStella.Scripts.Preparing
             Process[] wtName = Process.GetProcessesByName("WindowsTerminal");
             if (wtName.Length != 0) await Cmd.CliWrap("taskkill", "/F /IM WindowsTerminal.exe", null);
 
-            if (Environment.OSVersion.Version.Build >= 22000)
+            try
             {
-                await Cmd.CliWrap("powershell", $"Add-AppxPackage -Path \"{Program.WtWin11Setup}\"", Program.AppPath);
-                Log.Output($"Installed WT for Win 11: {Program.WtWin11Setup}");
+                if (Environment.OSVersion.Version.Build >= 22000)
+                {
+                    await Cmd.CliWrap("powershell", $"Add-AppxPackage -Path \"{Program.WtWin11Setup}\"", Program.AppPath);
+                    Log.Output($"Installed WT for Win 11: {Program.WtWin11Setup}");
+                }
+                else
+                {
+                    await Cmd.CliWrap("powershell", $"Add-AppxPackage -Path \"{Program.WtWin10Setup}\"", Program.AppPath);
+                    Log.Output($"Installed WT for Win 10: {Program.WtWin10Setup}");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                await Cmd.CliWrap("powershell", $"Add-AppxPackage -Path \"{Program.WtWin10Setup}\"", Program.AppPath);
-                Log.Output($"Installed WT for Win 10: {Program.WtWin10Setup}");
+                Log.ThrowError(ex, false);
             }
 
             // Check installed WT
-            Console.WriteLine("Checking installed software...");
+            Console.WriteLine(@"Checking installed software...");
             string wtProgramFiles = Utils.GetWtProgramFiles();
             if (string.IsNullOrEmpty(wtProgramFiles))
             {

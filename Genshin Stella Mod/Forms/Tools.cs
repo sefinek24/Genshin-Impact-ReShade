@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using Genshin_Stella_Mod.Scripts;
 using StellaLauncher.Forms.Other;
 using StellaLauncher.Properties;
+using StellaLauncher.Scripts;
 
 namespace StellaLauncher.Forms
 {

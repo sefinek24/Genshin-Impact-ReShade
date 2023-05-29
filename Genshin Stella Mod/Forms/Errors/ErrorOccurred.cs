@@ -1,7 +1,7 @@
 using System;
 using System.Media;
 using System.Windows.Forms;
-using Genshin_Stella_Mod.Scripts;
+using StellaLauncher.Scripts;
 
 namespace StellaLauncher.Forms.Errors
 {

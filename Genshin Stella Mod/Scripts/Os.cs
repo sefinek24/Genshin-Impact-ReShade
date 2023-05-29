@@ -2,7 +2,6 @@ using System;
 using System.Globalization;
 using System.Linq;
 using System.Management;
-using Genshin_Stella_Mod.Scripts;
 using Microsoft.Win32;
 
 namespace StellaLauncher.Scripts

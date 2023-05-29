@@ -1,11 +1,9 @@
 using System;
 using System.IO;
-using StellaLauncher;
 using StellaLauncher.Forms.Errors;
 using StellaLauncher.Properties;
-using StellaLauncher.Scripts;
 
-namespace Genshin_Stella_Mod.Scripts
+namespace StellaLauncher.Scripts
 {
     internal static class Log
     {

@@ -6,11 +6,11 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Windows.Storage;
 using IWshRuntimeLibrary;
-using StellaLauncher;
 using File = System.IO.File;
 
-namespace Genshin_Stella_Mod.Scripts
+namespace StellaLauncher.Scripts
 {
     internal static class Utils
     {
@@ -108,6 +108,18 @@ namespace Genshin_Stella_Mod.Scripts
                     Log.ThrowError(new Exception("Wrong parameter."));
                     return "";
                 }
+            }
+        }
+
+        public static string GetAppData()
+        {
+            try
+            {
+                return Path.Combine(ApplicationData.Current?.LocalFolder?.Path);
+            }
+            catch (InvalidOperationException)
+            {
+                return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
             }
         }
 

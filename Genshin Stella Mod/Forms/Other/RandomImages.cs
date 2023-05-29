@@ -6,10 +6,10 @@ using System.Net;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Genshin_Stella_Mod.Models;
-using Genshin_Stella_Mod.Scripts;
 using Microsoft.Web.WebView2.Core;
 using Newtonsoft.Json;
+using StellaLauncher.Models;
+using StellaLauncher.Scripts;
 
 namespace StellaLauncher.Forms.Other
 {

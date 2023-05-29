@@ -4,8 +4,6 @@ using System.Globalization;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-using Windows.Storage;
-using Genshin_Stella_Mod.Scripts;
 using StellaLauncher.Forms;
 using StellaLauncher.Forms.Errors;
 using StellaLauncher.Forms.Other;
@@ -16,10 +14,14 @@ namespace StellaLauncher
 {
     internal static class Program
     {
-        private const string AppWebsiteSub = "https://genshin.sefinek.net";
+        // App
+        public static readonly string AppName = Assembly.GetExecutingAssembly().GetName().Name;
+        public static readonly string AppVersion = Application.ProductVersion;
+        public static readonly string AppWebsiteSub = "https://genshin.sefinek.net";
+        public static readonly string AppWebsiteFull = "https://sefinek.net/genshin-impact-reshade";
 
-        // Files
-        public static string AppData = GetAppData();
+        // Files and folders
+        public static string AppData = Utils.GetAppData();
         private static string _appIsConfigured;
         public static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
         private static readonly string PrepareLauncher = Path.Combine(AppPath, "First app launch.exe");
@@ -30,29 +32,11 @@ namespace StellaLauncher
         private static readonly string PatronsDir = Path.Combine(AppPath, "data", "presets", "3. Only for patrons");
         private static readonly string TierActivated = Path.Combine(AppPath, "tier-activated.sfn");
 
-        // App
-        public static readonly string AppName = Assembly.GetExecutingAssembly().GetName().Name;
-        public static readonly string AppVersion = Application.ProductVersion;
-        public static readonly string AppWebsiteFull = "https://sefinek.net/genshin-impact-reshade";
-
         // Web
         public static readonly string UserAgent = $"Mozilla/5.0 (compatible; StellaLauncher/{AppVersion}; +{AppWebsiteSub})";
 
         // Config
         public static IniFile Settings;
-
-        private static string GetAppData()
-        {
-            try
-            {
-                return Path.Combine(ApplicationData.Current?.LocalFolder?.Path);
-            }
-            catch (InvalidOperationException)
-            {
-                return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
-            }
-        }
-
 
         [STAThread]
         private static void Main()
@@ -125,7 +109,7 @@ namespace StellaLauncher
                     case 3:
                     case 10:
                     case 18:
-                        DialogResult discordResult = MessageBox.Show("Do you want to join our Discord server?", AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        DialogResult discordResult = MessageBox.Show(@"Do you want to join our Discord server?", AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         Log.Output($"Question (MessageBox): Do you want to join our Discord server? Selected: {discordResult}");
                         if (discordResult == DialogResult.Yes) Utils.OpenUrl(Discord.Invitation);
                         break;
@@ -142,7 +126,7 @@ namespace StellaLauncher
                     case 60:
                     case 100:
                     case 200:
-                        DialogResult logFilesResult = MessageBox.Show("Do you want to send us anonymous log files?", AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        DialogResult logFilesResult = MessageBox.Show(@"Do you want to send us anonymous log files?", AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         Log.Output($"Question (MessageBox): Do you want to send log files? Selected: {logFilesResult}");
                         if (logFilesResult == DialogResult.Yes)
                         {

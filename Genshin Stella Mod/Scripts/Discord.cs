@@ -1,8 +1,7 @@
 using DiscordRPC;
 using DiscordRPC.Logging;
-using StellaLauncher;
 
-namespace Genshin_Stella_Mod.Scripts
+namespace StellaLauncher.Scripts
 {
     internal abstract class Discord
     {

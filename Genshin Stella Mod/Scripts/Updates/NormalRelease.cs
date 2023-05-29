@@ -6,7 +6,6 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ByteSizeLib;
-using Genshin_Stella_Mod.Scripts;
 using Microsoft.Toolkit.Uwp.Notifications;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using StellaLauncher.Properties;

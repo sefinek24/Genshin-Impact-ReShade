@@ -4,10 +4,9 @@ using System.Windows.Forms;
 using CliWrap;
 using CliWrap.Buffered;
 using Microsoft.Toolkit.Uwp.Notifications;
-using StellaLauncher;
 using StellaLauncher.Forms;
 
-namespace Genshin_Stella_Mod.Scripts
+namespace StellaLauncher.Scripts
 {
     internal static class Cmd
     {

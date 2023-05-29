@@ -2,10 +2,10 @@ using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using Genshin_Stella_Mod.Scripts;
 using Microsoft.Web.WebView2.Core;
 using StellaLauncher.Forms.Other;
 using StellaLauncher.Properties;
+using StellaLauncher.Scripts;
 
 namespace StellaLauncher.Forms
 {

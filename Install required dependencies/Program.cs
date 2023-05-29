@@ -115,22 +115,13 @@ namespace PrepareStella
             // Save AppData path
             File.WriteAllText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "stella-appdata.sfn"), AppData);
 
-            int newShortcuts = PrepareIni.ReadInt("PrepareStella", "NewShortcutsOnDesktop", 0);
-            int newIntShortcuts = PrepareIni.ReadInt("PrepareStella", "InternetShortcutsInStartMenu", 1);
             int downloadOrUpdateShaders = PrepareIni.ReadInt("PrepareStella", "DownloadOrUpdateShaders", 1);
             int updateReShadeCfg = PrepareIni.ReadInt("PrepareStella", "UpdateReShadeConfig", 1);
             int updateFpsUnlockerCfg = PrepareIni.ReadInt("PrepareStella", "UpdateFpsUnlockerConfig", 1);
             int delReShadeCache = PrepareIni.ReadInt("PrepareStella", "DeleteReShadeCache", 1);
             int installWtUpdate = PrepareIni.ReadInt("PrepareStella", "InstOrUpdWT", 1);
-
-
-            // Create or update Desktop icon
-            if (newShortcuts == 1) await DesktopIcon.Run();
-            TaskbarManager.Instance.SetProgressValue(39, 100);
-
-            // Create new Internet shortcuts in menu start
-            if (newIntShortcuts == 1) await InternetShortcuts.Run();
-            TaskbarManager.Instance.SetProgressValue(45, 100);
+            int newShortcuts = PrepareIni.ReadInt("PrepareStella", "NewShortcutsOnDesktop", 1);
+            int newIntShortcuts = PrepareIni.ReadInt("PrepareStella", "InternetShortcutsInStartMenu", 1);
 
             // Download and prepare ReShade config
             if (updateReShadeCfg == 1) await UpdateReShadeCfg.Run();
@@ -151,6 +142,14 @@ namespace PrepareStella
             // Windows Terminal installation
             if (installWtUpdate == 1) await TerminalInstallation.Run();
             TaskbarManager.Instance.SetProgressValue(87, 100);
+
+            // Create or update Desktop icon
+            if (newShortcuts == 1) await DesktopIcon.Run();
+            TaskbarManager.Instance.SetProgressValue(39, 100);
+
+            // Create new Internet shortcuts in menu start
+            if (newIntShortcuts == 1) await InternetShortcuts.Run();
+            TaskbarManager.Instance.SetProgressValue(45, 100);
 
 
             // Create files
