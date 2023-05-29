@@ -96,7 +96,7 @@ namespace StellaLauncher.Forms
 
         private void Exit_Click(object sender, EventArgs e)
         {
-            Close();
+            Environment.Exit(0);
         }
 
         private void Default_FormClosing(object sender, FormClosingEventArgs e)
