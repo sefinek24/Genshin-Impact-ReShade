@@ -5,16 +5,19 @@ using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 using Windows.Storage;
-using Genshin_Stella_Mod.Forms;
-using Genshin_Stella_Mod.Forms.Errors;
-using Genshin_Stella_Mod.Forms.Other;
-using Genshin_Stella_Mod.Properties;
 using Genshin_Stella_Mod.Scripts;
+using StellaLauncher.Forms;
+using StellaLauncher.Forms.Errors;
+using StellaLauncher.Forms.Other;
+using StellaLauncher.Properties;
+using StellaLauncher.Scripts;
 
-namespace Genshin_Stella_Mod
+namespace StellaLauncher
 {
     internal static class Program
     {
+        private const string AppWebsiteSub = "https://genshin.sefinek.net";
+
         // Files
         public static string AppData = GetAppData();
         private static string _appIsConfigured;
@@ -30,7 +33,6 @@ namespace Genshin_Stella_Mod
         // App
         public static readonly string AppName = Assembly.GetExecutingAssembly().GetName().Name;
         public static readonly string AppVersion = Application.ProductVersion;
-        private static readonly string AppWebsiteSub = "https://genshin.sefinek.net";
         public static readonly string AppWebsiteFull = "https://sefinek.net/genshin-impact-reshade";
 
         // Web

@@ -1,4 +1,4 @@
-namespace Genshin_Stella_Mod.Forms
+namespace StellaLauncher.Forms
 {
     sealed partial class Default
     {
@@ -101,7 +101,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_animated;
+            this.pictureBox2.Image = global::StellaLauncher.Properties.Resources.icons8_animated;
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 
@@ -159,7 +159,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_github;
+            this.pictureBox1.Image = global::StellaLauncher.Properties.Resources.icons8_github;
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox1, resources.GetString("pictureBox1.ToolTip"));
@@ -328,7 +328,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox3.Image = global::Genshin_Stella_Mod.Properties.Resources.flaticon_settings;
+            this.pictureBox3.Image = global::StellaLauncher.Properties.Resources.flaticon_settings;
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
             // 
@@ -337,7 +337,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox4, "pictureBox4");
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox4.Image = global::Genshin_Stella_Mod.Properties.Resources.web;
+            this.pictureBox4.Image = global::StellaLauncher.Properties.Resources.web;
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.TabStop = false;
             // 
@@ -346,7 +346,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.update_Icon, "update_Icon");
             this.update_Icon.BackColor = System.Drawing.Color.Transparent;
             this.update_Icon.Cursor = System.Windows.Forms.Cursors.Default;
-            this.update_Icon.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_available_updates;
+            this.update_Icon.Image = global::StellaLauncher.Properties.Resources.icons8_available_updates;
             this.update_Icon.Name = "update_Icon";
             this.update_Icon.TabStop = false;
             // 
@@ -355,7 +355,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox7, "pictureBox7");
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox7.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_support;
+            this.pictureBox7.Image = global::StellaLauncher.Properties.Resources.icons8_support;
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.TabStop = false;
             // 
@@ -375,7 +375,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox8, "pictureBox8");
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox8.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_youtube;
+            this.pictureBox8.Image = global::StellaLauncher.Properties.Resources.icons8_youtube;
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.TabStop = false;
             // 
@@ -384,7 +384,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox9, "pictureBox9");
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox9.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_discord;
+            this.pictureBox9.Image = global::StellaLauncher.Properties.Resources.icons8_discord;
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.TabStop = false;
             // 
@@ -401,7 +401,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox6, "pictureBox6");
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox6.Image = global::Genshin_Stella_Mod.Properties.Resources.flaticon_controller;
+            this.pictureBox6.Image = global::StellaLauncher.Properties.Resources.flaticon_controller;
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.TabStop = false;
             // 
@@ -410,7 +410,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox10, "pictureBox10");
             this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox10.Image = global::Genshin_Stella_Mod.Properties.Resources.flaticon_donation;
+            this.pictureBox10.Image = global::StellaLauncher.Properties.Resources.flaticon_donation;
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.TabStop = false;
             // 
@@ -419,7 +419,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox11, "pictureBox11");
             this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox11.Image = global::Genshin_Stella_Mod.Properties.Resources.flaticon_redo;
+            this.pictureBox11.Image = global::StellaLauncher.Properties.Resources.flaticon_redo;
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.TabStop = false;
             // 
@@ -428,7 +428,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox12, "pictureBox12");
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.pictureBox12.Image = global::Genshin_Stella_Mod.Properties.Resources.paimon_gif;
+            this.pictureBox12.Image = global::StellaLauncher.Properties.Resources.paimon_gif;
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.TabStop = false;
             this.pictureBox12.Click += new System.EventHandler(this.Paimon_Click);
@@ -461,7 +461,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = global::Genshin_Stella_Mod.Properties.Resources.bg_main;
+            this.BackgroundImage = global::StellaLauncher.Properties.Resources.bg_main;
             this.Controls.Add(this.linkLabel9);
             this.Controls.Add(this.PreparingPleaseWait);
             this.Controls.Add(this.progressBar1);

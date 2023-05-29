@@ -1,11 +1,12 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Genshin_Stella_Mod.Forms.Errors;
-using Genshin_Stella_Mod.Properties;
+using Genshin_Stella_Mod.Scripts;
 using Microsoft.WindowsAPICodePack.Taskbar;
+using StellaLauncher.Forms.Errors;
+using StellaLauncher.Properties;
 
-namespace Genshin_Stella_Mod.Scripts.Updates
+namespace StellaLauncher.Scripts.Updates
 {
     internal class MajorRelease
     {

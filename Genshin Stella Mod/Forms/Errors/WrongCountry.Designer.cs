@@ -1,4 +1,4 @@
-﻿namespace Genshin_Stella_Mod.Forms.Errors
+namespace StellaLauncher.Forms.Errors
 {
     sealed partial class WrongCountry
 	{
@@ -64,7 +64,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Genshin_Stella_Mod.Properties.Resources.cat;
+            this.BackgroundImage = global::StellaLauncher.Properties.Resources.cat;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(491, 543);
             this.Controls.Add(this.label2);

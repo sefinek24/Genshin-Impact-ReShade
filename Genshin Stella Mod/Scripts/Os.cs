@@ -2,9 +2,10 @@ using System;
 using System.Globalization;
 using System.Linq;
 using System.Management;
+using Genshin_Stella_Mod.Scripts;
 using Microsoft.Win32;
 
-namespace Genshin_Stella_Mod.Scripts
+namespace StellaLauncher.Scripts
 {
     internal static class Os
     {

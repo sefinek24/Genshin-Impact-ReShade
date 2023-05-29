@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A9DDC941-CB15-4B3C-8BA1-8F559F70480D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Genshin_Stella_Mod</RootNamespace>
+    <RootNamespace>StellaLauncher</RootNamespace>
     <AssemblyName>Genshin Stella Mod</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -58,7 +58,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Genshin_Stella_Mod.Program</StartupObject>
+    <StartupObject>StellaLauncher.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Resources\52x52.ico</ApplicationIcon>
@@ -145,11 +145,11 @@
     <Compile Include="Forms\Other\Language.Designer.cs">
       <DependentUpon>Language.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Other\RandomThings.cs">
+    <Compile Include="Forms\Other\RandomImages.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Other\RandomThings.Designer.cs">
-      <DependentUpon>RandomThings.cs</DependentUpon>
+    <Compile Include="Forms\Other\RandomImages.Designer.cs">
+      <DependentUpon>RandomImages.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Other\SupportMe.cs">
       <SubType>Form</SubType>
@@ -235,8 +235,8 @@
     <EmbeddedResource Include="Forms\Other\Language.resx">
       <DependentUpon>Language.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Other\RandomThings.resx">
-      <DependentUpon>RandomThings.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Other\RandomImages.resx">
+      <DependentUpon>RandomImages.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Other\SupportMe.pl.resx">
       <DependentUpon>SupportMe.cs</DependentUpon>

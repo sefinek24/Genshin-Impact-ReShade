@@ -4,11 +4,11 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using Genshin_Stella_Mod.Forms.Other;
-using Genshin_Stella_Mod.Properties;
 using Genshin_Stella_Mod.Scripts;
+using StellaLauncher.Forms.Other;
+using StellaLauncher.Properties;
 
-namespace Genshin_Stella_Mod.Forms
+namespace StellaLauncher.Forms
 {
     public partial class Tools : Form
     {

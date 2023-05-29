@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using Genshin_Stella_Mod.Scripts;
 using Microsoft.Web.WebView2.Core;
 
-namespace Genshin_Stella_Mod.Forms.Other
+namespace StellaLauncher.Forms.Other
 {
     public partial class Gallery : Form
     {

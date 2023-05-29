@@ -11,13 +11,13 @@ using Genshin_Stella_Mod.Scripts;
 using Microsoft.Web.WebView2.Core;
 using Newtonsoft.Json;
 
-namespace Genshin_Stella_Mod.Forms.Other
+namespace StellaLauncher.Forms.Other
 {
-    public partial class RandomThings : Form
+    public partial class RandomImages : Form
     {
         private string _sourceUrl;
 
-        public RandomThings()
+        public RandomImages()
         {
             InitializeComponent();
 
@@ -389,7 +389,7 @@ namespace Genshin_Stella_Mod.Forms.Other
 
         private void RandomHentai_Click(object sender, EventArgs e)
         {
-            webView21.CoreWebView2.Navigate($@"{Directory.GetCurrentDirectory()}\data\videos\gengbeng.mp4");
+            webView21.CoreWebView2.Navigate(Path.Combine(Program.AppPath, "data", "videos", "gengbeng.mp4"));
         }
 
         private void RandomThings_Load(object sender, EventArgs e)

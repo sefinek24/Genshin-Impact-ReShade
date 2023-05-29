@@ -1,4 +1,4 @@
-namespace Genshin_Stella_Mod.Forms.Errors
+namespace StellaLauncher.Forms.Errors
 {
     partial class NotInstalledViaSetup
     {
@@ -46,7 +46,7 @@ namespace Genshin_Stella_Mod.Forms.Errors
             // pictureBox1
             // 
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Image = global::Genshin_Stella_Mod.Properties.Resources.wrong_ins_method;
+            this.pictureBox1.Image = global::StellaLauncher.Properties.Resources.wrong_ins_method;
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 

@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using Genshin_Stella_Mod.Scripts;
 using Microsoft.Toolkit.Uwp.Notifications;
 
-namespace Genshin_Stella_Mod.Forms.Errors
+namespace StellaLauncher.Forms.Errors
 {
     public partial class WrongCountry : Form
     {

@@ -1,4 +1,4 @@
-namespace Genshin_Stella_Mod.Forms.Errors
+namespace StellaLauncher.Forms.Errors
 {
     partial class ErrorOccurred
     {
@@ -79,7 +79,7 @@ namespace Genshin_Stella_Mod.Forms.Errors
             // 
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Genshin_Stella_Mod.Properties.Resources.error;
+            this.pictureBox1.Image = global::StellaLauncher.Properties.Resources.error;
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 

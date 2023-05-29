@@ -1,4 +1,4 @@
-namespace Genshin_Stella_Mod.Forms
+namespace StellaLauncher.Forms
 {
     sealed partial class Gameplay
     {
@@ -142,7 +142,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Help;
-            this.pictureBox3.Image = global::Genshin_Stella_Mod.Properties.Resources.uk_flag;
+            this.pictureBox3.Image = global::StellaLauncher.Properties.Resources.uk_flag;
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox3, resources.GetString("pictureBox3.ToolTip"));
@@ -152,7 +152,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Help;
-            this.pictureBox2.Image = global::Genshin_Stella_Mod.Properties.Resources.poland_flag;
+            this.pictureBox2.Image = global::StellaLauncher.Properties.Resources.poland_flag;
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox2, resources.GetString("pictureBox2.ToolTip"));
@@ -172,7 +172,7 @@ namespace Genshin_Stella_Mod.Forms
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Genshin_Stella_Mod.Properties.Resources.bg_gameplay;
+            this.BackgroundImage = global::StellaLauncher.Properties.Resources.bg_gameplay;
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.webView21);
             this.Controls.Add(this.pictureBox3);

@@ -10,19 +10,20 @@ using System.Runtime.Caching;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Genshin_Stella_Mod.Forms.Other;
 using Genshin_Stella_Mod.Models;
-using Genshin_Stella_Mod.Properties;
 using Genshin_Stella_Mod.Scripts;
-using Genshin_Stella_Mod.Scripts.Updates;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using Newtonsoft.Json;
+using StellaLauncher.Forms.Other;
+using StellaLauncher.Properties;
+using StellaLauncher.Scripts;
+using StellaLauncher.Scripts.Updates;
 
 // 1 = ReShade + FPS Unlocker
 // 2 = ReShade
 // 3 = FPS Unlocker
 
-namespace Genshin_Stella_Mod.Forms
+namespace StellaLauncher.Forms
 {
     public partial class Default : Form
     {
@@ -566,8 +567,8 @@ namespace Genshin_Stella_Mod.Forms
 
         private void Paimon_Click(object sender, EventArgs e)
         {
-            if (Application.OpenForms.OfType<RandomThings>().Any()) return;
-            new RandomThings { Location = Location, Icon = Resources.icon_52x52 }.Show();
+            if (Application.OpenForms.OfType<RandomImages>().Any()) return;
+            new RandomImages { Location = Location, Icon = Resources.icon_52x52 }.Show();
         }
     }
 }

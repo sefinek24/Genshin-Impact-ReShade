@@ -3,8 +3,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CliWrap;
 using CliWrap.Buffered;
-using Genshin_Stella_Mod.Forms;
 using Microsoft.Toolkit.Uwp.Notifications;
+using StellaLauncher;
+using StellaLauncher.Forms;
 
 namespace Genshin_Stella_Mod.Scripts
 {

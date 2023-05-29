@@ -7,6 +7,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using IWshRuntimeLibrary;
+using StellaLauncher;
 using File = System.IO.File;
 
 namespace Genshin_Stella_Mod.Scripts

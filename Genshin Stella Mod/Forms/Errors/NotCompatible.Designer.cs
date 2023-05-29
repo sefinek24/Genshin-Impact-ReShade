@@ -1,4 +1,4 @@
-﻿namespace Genshin_Stella_Mod.Forms.Errors
+namespace StellaLauncher.Forms.Errors
 {
     partial class NotCompatible
     {
@@ -41,7 +41,7 @@
             // pictureBox1
             // 
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Image = global::Genshin_Stella_Mod.Properties.Resources.new_release;
+            this.pictureBox1.Image = global::StellaLauncher.Properties.Resources.new_release;
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
@@ -71,7 +71,7 @@
             // pictureBox2
             // 
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Image = global::Genshin_Stella_Mod.Properties.Resources.party_popper;
+            this.pictureBox2.Image = global::StellaLauncher.Properties.Resources.party_popper;
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 

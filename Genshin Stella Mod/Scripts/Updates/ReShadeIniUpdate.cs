@@ -6,11 +6,12 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ByteSizeLib;
-using Genshin_Stella_Mod.Forms;
-using Genshin_Stella_Mod.Properties;
+using Genshin_Stella_Mod.Scripts;
 using Microsoft.WindowsAPICodePack.Taskbar;
+using StellaLauncher.Forms;
+using StellaLauncher.Properties;
 
-namespace Genshin_Stella_Mod.Scripts.Updates
+namespace StellaLauncher.Scripts.Updates
 {
     internal class ReShadeIniUpdate
     {

@@ -1,4 +1,4 @@
-namespace Genshin_Stella_Mod.Forms
+namespace StellaLauncher.Forms
 {
     sealed partial class Tools
     {
@@ -145,7 +145,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_recycle_bin;
+            this.pictureBox3.Image = global::StellaLauncher.Properties.Resources.icons8_recycle_bin;
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox3, resources.GetString("pictureBox3.ToolTip"));
@@ -167,7 +167,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_notepad;
+            this.pictureBox1.Image = global::StellaLauncher.Properties.Resources.icons8_notepad;
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox1, resources.GetString("pictureBox1.ToolTip"));
@@ -189,7 +189,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_notepad;
+            this.pictureBox2.Image = global::StellaLauncher.Properties.Resources.icons8_notepad;
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox2, resources.GetString("pictureBox2.ToolTip"));
@@ -227,7 +227,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox4, "pictureBox4");
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_edit_property;
+            this.pictureBox4.Image = global::StellaLauncher.Properties.Resources.icons8_edit_property;
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox4, resources.GetString("pictureBox4.ToolTip"));
@@ -249,7 +249,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox5, "pictureBox5");
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_edit_property;
+            this.pictureBox5.Image = global::StellaLauncher.Properties.Resources.icons8_edit_property;
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox5, resources.GetString("pictureBox5.ToolTip"));
@@ -271,7 +271,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox6, "pictureBox6");
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox6.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_tools;
+            this.pictureBox6.Image = global::StellaLauncher.Properties.Resources.icons8_tools;
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox6, resources.GetString("pictureBox6.ToolTip"));
@@ -281,7 +281,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox7, "pictureBox7");
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox7.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_shortcut;
+            this.pictureBox7.Image = global::StellaLauncher.Properties.Resources.icons8_shortcut;
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox7, resources.GetString("pictureBox7.ToolTip"));
@@ -319,7 +319,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox8, "pictureBox8");
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox8.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_recycle_bin;
+            this.pictureBox8.Image = global::StellaLauncher.Properties.Resources.icons8_recycle_bin;
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox8, resources.GetString("pictureBox8.ToolTip"));
@@ -349,7 +349,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox9, "pictureBox9");
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox9.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_notepad;
+            this.pictureBox9.Image = global::StellaLauncher.Properties.Resources.icons8_notepad;
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox9, resources.GetString("pictureBox9.ToolTip"));
@@ -371,7 +371,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox10, "pictureBox10");
             this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox10.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_notepad;
+            this.pictureBox10.Image = global::StellaLauncher.Properties.Resources.icons8_notepad;
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox10, resources.GetString("pictureBox10.ToolTip"));
@@ -417,7 +417,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox11, "pictureBox11");
             this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox11.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_gear;
+            this.pictureBox11.Image = global::StellaLauncher.Properties.Resources.icons8_gear;
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox11, resources.GetString("pictureBox11.ToolTip"));
@@ -439,7 +439,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox12, "pictureBox12");
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox12.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_gear;
+            this.pictureBox12.Image = global::StellaLauncher.Properties.Resources.icons8_gear;
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox12, resources.GetString("pictureBox12.ToolTip"));
@@ -461,7 +461,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox13, "pictureBox13");
             this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox13.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_info_squared;
+            this.pictureBox13.Image = global::StellaLauncher.Properties.Resources.icons8_info_squared;
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox13, resources.GetString("pictureBox13.ToolTip"));
@@ -471,7 +471,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox14, "pictureBox14");
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox14.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_gear;
+            this.pictureBox14.Image = global::StellaLauncher.Properties.Resources.icons8_gear;
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox14, resources.GetString("pictureBox14.ToolTip"));
@@ -493,7 +493,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this.pictureBox15, "pictureBox15");
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox15.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox15.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_shortcut;
+            this.pictureBox15.Image = global::StellaLauncher.Properties.Resources.icons8_shortcut;
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox15, resources.GetString("pictureBox15.ToolTip"));
@@ -515,7 +515,7 @@ namespace Genshin_Stella_Mod.Forms
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = global::Genshin_Stella_Mod.Properties.Resources.bg_tools;
+            this.BackgroundImage = global::StellaLauncher.Properties.Resources.bg_tools;
             this.Controls.Add(this.pictureBox15);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pictureBox14);

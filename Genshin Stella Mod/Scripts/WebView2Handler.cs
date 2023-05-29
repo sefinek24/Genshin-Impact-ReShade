@@ -1,6 +1,7 @@
 using System;
 using System.Diagnostics;
 using System.Windows.Forms;
+using StellaLauncher;
 
 namespace Genshin_Stella_Mod.Scripts
 {

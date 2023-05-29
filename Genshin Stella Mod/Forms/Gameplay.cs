@@ -2,12 +2,12 @@ using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using Genshin_Stella_Mod.Forms.Other;
-using Genshin_Stella_Mod.Properties;
 using Genshin_Stella_Mod.Scripts;
 using Microsoft.Web.WebView2.Core;
+using StellaLauncher.Forms.Other;
+using StellaLauncher.Properties;
 
-namespace Genshin_Stella_Mod.Forms
+namespace StellaLauncher.Forms
 {
     public partial class Gameplay : Form
     {

@@ -1,7 +1,8 @@
 using System;
 using System.Reflection;
+using Genshin_Stella_Mod.Scripts;
 
-namespace Genshin_Stella_Mod.Scripts
+namespace StellaLauncher.Scripts
 {
     internal static class Telemetry
     {

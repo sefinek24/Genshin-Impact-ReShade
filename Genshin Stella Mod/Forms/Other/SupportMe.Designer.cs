@@ -1,4 +1,4 @@
-﻿namespace Genshin_Stella_Mod.Forms.Other
+namespace StellaLauncher.Forms.Other
 {
     partial class SupportMe
     {
@@ -200,7 +200,7 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = global::Genshin_Stella_Mod.Properties.Resources.bg_support_me;
+            this.BackgroundImage = global::StellaLauncher.Properties.Resources.bg_support_me;
             this.Controls.Add(this.label3);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel8);

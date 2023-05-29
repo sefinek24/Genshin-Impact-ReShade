@@ -1,4 +1,4 @@
-﻿namespace Genshin_Stella_Mod.Forms
+namespace StellaLauncher.Forms
 {
     partial class Links
     {
@@ -89,7 +89,7 @@
             // 
             resources.ApplyResources(this.pictureBox7, "pictureBox7");
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_shortcut;
+            this.pictureBox7.Image = global::StellaLauncher.Properties.Resources.icons8_shortcut;
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.TabStop = false;
             // 
@@ -108,7 +108,7 @@
             // 
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_shortcut;
+            this.pictureBox1.Image = global::StellaLauncher.Properties.Resources.icons8_shortcut;
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
@@ -127,7 +127,7 @@
             // 
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_shortcut;
+            this.pictureBox2.Image = global::StellaLauncher.Properties.Resources.icons8_shortcut;
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 
@@ -146,7 +146,7 @@
             // 
             resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_shortcut;
+            this.pictureBox3.Image = global::StellaLauncher.Properties.Resources.icons8_shortcut;
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
             // 
@@ -186,7 +186,7 @@
             // 
             resources.ApplyResources(this.pictureBox4, "pictureBox4");
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_shortcut;
+            this.pictureBox4.Image = global::StellaLauncher.Properties.Resources.icons8_shortcut;
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.TabStop = false;
             // 
@@ -205,7 +205,7 @@
             // 
             resources.ApplyResources(this.pictureBox5, "pictureBox5");
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_shortcut;
+            this.pictureBox5.Image = global::StellaLauncher.Properties.Resources.icons8_shortcut;
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.TabStop = false;
             // 
@@ -224,7 +224,7 @@
             // 
             resources.ApplyResources(this.pictureBox6, "pictureBox6");
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_shortcut;
+            this.pictureBox6.Image = global::StellaLauncher.Properties.Resources.icons8_shortcut;
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.TabStop = false;
             // 
@@ -250,7 +250,7 @@
             // 
             resources.ApplyResources(this.pictureBox8, "pictureBox8");
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_shortcut;
+            this.pictureBox8.Image = global::StellaLauncher.Properties.Resources.icons8_shortcut;
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.TabStop = false;
             // 
@@ -270,7 +270,7 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = global::Genshin_Stella_Mod.Properties.Resources.bg_links;
+            this.BackgroundImage = global::StellaLauncher.Properties.Resources.bg_links;
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.linkLabel7);
             this.Controls.Add(this.panel2);

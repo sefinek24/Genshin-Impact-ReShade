@@ -1,4 +1,4 @@
-﻿namespace Genshin_Stella_Mod.Forms.Other
+namespace StellaLauncher.Forms.Other
 {
     partial class Gallery
     {

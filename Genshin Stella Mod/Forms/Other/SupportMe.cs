@@ -1,10 +1,11 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Genshin_Stella_Mod.Properties;
 using Genshin_Stella_Mod.Scripts;
+using StellaLauncher.Properties;
+using StellaLauncher.Scripts;
 
-namespace Genshin_Stella_Mod.Forms.Other
+namespace StellaLauncher.Forms.Other
 {
     public partial class SupportMe : Form
     {

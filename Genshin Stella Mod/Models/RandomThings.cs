@@ -23,11 +23,6 @@ namespace Genshin_Stella_Mod.Models
         public List<Result> Results { get; set; }
     }
 
-    public class AlexflipnoteApi
-    {
-        public string File { get; set; }
-    }
-
     public class PurrBot
     {
         public string Link { get; set; }

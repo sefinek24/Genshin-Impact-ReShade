@@ -1,7 +1,9 @@
 using System;
 using System.IO;
-using Genshin_Stella_Mod.Forms.Errors;
-using Genshin_Stella_Mod.Properties;
+using StellaLauncher;
+using StellaLauncher.Forms.Errors;
+using StellaLauncher.Properties;
+using StellaLauncher.Scripts;
 
 namespace Genshin_Stella_Mod.Scripts
 {

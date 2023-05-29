@@ -1,5 +1,6 @@
 using DiscordRPC;
 using DiscordRPC.Logging;
+using StellaLauncher;
 
 namespace Genshin_Stella_Mod.Scripts
 {
