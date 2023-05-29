@@ -91,13 +91,11 @@ namespace PrepareStella.Scripts.Preparing
 
         private static void ConfigureReShade(string resourcesGlobal)
         {
-            string cache = Path.Combine(resourcesGlobal, "Cache");
-
             string reShadeIniFile = File.ReadAllText(Program.ReShadeConfig);
             string reShadeData = reShadeIniFile?
                 .Replace("{addon.path}", Path.Combine(resourcesGlobal, "Addons"))
                 .Replace("{general.effects}", Path.Combine(resourcesGlobal, "Shaders", "Effects"))
-                .Replace("{general.cache}", cache)
+                .Replace("{general.cache}", Path.Combine(resourcesGlobal, "Cache"))
                 .Replace("{general.preset}", Path.Combine(resourcesGlobal, "Presets", "3. Preset by Sefinek - Medium settings [Default].ini"))
                 .Replace("{general.textures}", Path.Combine(resourcesGlobal, "Shaders", "Textures"))
                 .Replace("{screenshot.path}", Path.Combine(resourcesGlobal, "Screenshots"))
