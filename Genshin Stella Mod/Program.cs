@@ -82,7 +82,7 @@ namespace StellaLauncher
                 MessageBox.Show(string.Format(Resources.Program_SorryOneInstanceIsCurrentlyOpen_, Path.GetFileNameWithoutExtension(Assembly.GetEntryAssembly()?.Location)),
                     AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                Log.Output("One instance is currently open.");
+                Log.Output(Resources.Program_OneInstanceIsCurrentlyOpen);
                 Environment.Exit(998765341);
             }
 

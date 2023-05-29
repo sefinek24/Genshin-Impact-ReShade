@@ -296,6 +296,9 @@ Czy chciałbyś teraz pobrać ten plik, aby zapobiec przyszłym błędom i ręcz
 
 Chcesz zobaczyć te pliki?</value>
   </data>
+  <data name="Program_OneInstanceIsCurrentlyOpen" xml:space="preserve">
+    <value>Obecnie jest uruchomiona jedna instancja.</value>
+  </data>
   <data name="Program_QuestionDoYouWantToSendUsanonymousLogFiles_" xml:space="preserve">
     <value>Pytanie (Okno MessageBox): Czy chcesz przesłać pliki dziennika (logi)? Wybrano: {0}</value>
   </data>

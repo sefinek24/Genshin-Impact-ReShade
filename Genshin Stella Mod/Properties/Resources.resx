@@ -450,4 +450,7 @@ Do you want to see these files?</value>
 
 Quit the process with name {0} and try again.</value>
   </data>
+  <data name="Program_OneInstanceIsCurrentlyOpen" xml:space="preserve">
+    <value>One instance is currently open.</value>
+  </data>
 </root>

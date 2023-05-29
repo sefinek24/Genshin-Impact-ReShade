@@ -866,6 +866,15 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to One instance is currently open..
+        /// </summary>
+        internal static string Program_OneInstanceIsCurrentlyOpen {
+            get {
+                return ResourceManager.GetString("Program_OneInstanceIsCurrentlyOpen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Question (MessageBox): Do you want to send log files? Selected: {0}.
         /// </summary>
         internal static string Program_QuestionDoYouWantToSendUsanonymousLogFiles_ {
