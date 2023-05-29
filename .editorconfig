@@ -10,8 +10,13 @@ indent_size = 4
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-# Microsoft .NET properties
+# C# properties
+[*.cs]
 csharp_language_version = 7.3
+csharp_style_prefer_expression_bodied_methods = true
+csharp_style_prefer_expression_bodied_constructors = true
+csharp_style_prefer_expression_bodied_operators = true
+csharp_style_prefer_expression_bodied_properties = true
 csharp_preferred_modifier_order = public, private, protected, internal, static, readonly, volatile, override, abstract, sealed, unsafe, extern
 csharp_preferred_modifier_order_for_events = protected, internal, private, public, static
 csharp_preferred_modifier_order_for_indexers = public, private, protected, internal, static, readonly, volatile, override, abstract, sealed, unsafe, extern
@@ -34,7 +39,14 @@ dotnet_style_qualification_for_method = false
 dotnet_style_qualification_for_property = false
 dotnet_style_require_accessibility_modifiers = for_non_interface_members
 
-# ReSharper inspection severities
+# C++ properties
+[*.cpp]
+indent_style = tab
+indent_size = 4
+max_line_length = 250
+
+# ReSharper inspection severities for C#
+[*.cs]
 resharper_arrange_redundant_parentheses_highlighting = hint
 resharper_arrange_this_qualifier_highlighting = hint
 resharper_arrange_type_member_modifiers_highlighting = hint
@@ -46,9 +58,9 @@ resharper_suggest_var_or_type_built_in_types_highlighting = hint
 resharper_suggest_var_or_type_elsewhere_highlighting = hint
 resharper_suggest_var_or_type_simple_types_highlighting = hint
 
-# Code analysis settings
+# Code analysis settings for C#
 [*.cs]
-tab_width = 4
+indent_size = 4
 max_line_length = 250
 dotnet_diagnostic.ca1062.severity = error
 dotnet_diagnostic.ca1303.severity = error
@@ -58,8 +70,14 @@ dotnet_diagnostic.ca2208.severity = error
 dotnet_diagnostic.ca2213.severity = error
 
 # XML Configuration Files
-[*.{xml,config,props,targets,nuspec,resx,ruleset,vsixmanifest,vsct}]
+[*.{xml,props,targets,nuspec,resx,ruleset,vsixmanifest,vsct}]
 indent_size = 2
+
+[*.config]
+indent_size = 2
+max_line_length = off
+trim_trailing_whitespace = false
+insert_final_newline = false
 
 # JSON Files
 [*.{json,json5,webmanifest}]
