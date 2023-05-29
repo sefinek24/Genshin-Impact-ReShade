@@ -117,14 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="comboBox1.Items" xml:space="preserve">
-    <value>English (domyślny)</value>
-  </data>
-  <data name="comboBox1.Items1" xml:space="preserve">
-    <value>Polski</value>
-  </data>
   <data name="ChangeAppLang.Text" xml:space="preserve">
     <value>Zmień język aplikacji</value>
+  </data>
+  <data name="Version.Text" xml:space="preserve">
+    <value>Status: Oczekiwanie...</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Język</value>

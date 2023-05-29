@@ -166,13 +166,13 @@
     <value>1250, 102</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>236, 38</value>
+    <value>197, 38</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>» Random animals</value>
+    <value>» Cute animals</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -339,6 +339,12 @@
   <data name="linkLabel5.Text" xml:space="preserve">
     <value>Fox girl</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="linkLabel5.ToolTip" xml:space="preserve">
+    <value>Lisie anime dziewczynki</value>
+  </data>
   <data name="&gt;&gt;linkLabel5.Name" xml:space="preserve">
     <value>linkLabel5</value>
   </data>
@@ -371,6 +377,9 @@
   </data>
   <data name="linkLabel6.Text" xml:space="preserve">
     <value>Cat girl</value>
+  </data>
+  <data name="linkLabel6.ToolTip" xml:space="preserve">
+    <value>Koto anime dziewczynki</value>
   </data>
   <data name="&gt;&gt;linkLabel6.Name" xml:space="preserve">
     <value>linkLabel6</value>
@@ -1717,7 +1726,7 @@
     <value>webView21</value>
   </data>
   <data name="&gt;&gt;webView21.Type" xml:space="preserve">
-    <value>Microsoft.Web.WebView2.WinForms.WebView2, Microsoft.Web.WebView2.WinForms, Version=1.0.1722.45, Culture=neutral, PublicKeyToken=2a8ab48044d2601e</value>
+    <value>Microsoft.Web.WebView2.WinForms.WebView2, Microsoft.Web.WebView2.WinForms, Version=1.0.1774.30, Culture=neutral, PublicKeyToken=2a8ab48044d2601e</value>
   </data>
   <data name="&gt;&gt;webView21.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1738,13 +1747,13 @@
     <value>1255, 645</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>341, 38</value>
+    <value>313, 38</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>50</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>» Random YouTube videos</value>
+    <value>» Some YouTube videos</value>
   </data>
   <data name="&gt;&gt;label4.Name" xml:space="preserve">
     <value>label4</value>
@@ -1771,13 +1780,13 @@
     <value>1266, 695</value>
   </data>
   <data name="linkLabel45.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 25</value>
+    <value>125, 25</value>
   </data>
   <data name="linkLabel45.TabIndex" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
   <data name="linkLabel45.Text" xml:space="preserve">
-    <value>HL cat</value>
+    <value>Half-Life cat</value>
   </data>
   <data name="&gt;&gt;linkLabel45.Name" xml:space="preserve">
     <value>linkLabel45</value>
@@ -1830,6 +1839,9 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
@@ -1843,10 +1855,16 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Random images</value>
+    <value>Random images and videos</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
+    <value>toolTip1</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>RandomThings</value>
+    <value>RandomImages</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

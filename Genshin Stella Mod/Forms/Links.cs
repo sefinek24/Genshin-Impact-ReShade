@@ -1,6 +1,7 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
 
 namespace StellaLauncher.Forms
@@ -17,15 +18,9 @@ namespace StellaLauncher.Forms
 
         private void URLs_Shown(object sender, EventArgs e)
         {
-            int data = Program.Settings.ReadInt("Launcher", "DiscordRPC", 1);
-            if (data == 1)
-            {
-                Discord.Presence.Details = "On the page with links 🌍";
-                Discord.Client.SetPresence(Discord.Presence);
-            }
+            Discord.SetStatus(Resources.Links_DRPC_OnTheWindowWithLinks);
 
-
-            Log.Output($"Loaded form '{Text}'.");
+            Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
         }
 
         private void MouseDown_Event(object sender, MouseEventArgs e)
@@ -49,7 +44,7 @@ namespace StellaLauncher.Forms
 
         private void Exit_Click(object sender, EventArgs e)
         {
-            Log.Output($"Closed form '{Text}'.");
+            Log.Output(string.Format(Resources.Main_ClosedForm_, Text));
             Close();
 
             Discord.Home();

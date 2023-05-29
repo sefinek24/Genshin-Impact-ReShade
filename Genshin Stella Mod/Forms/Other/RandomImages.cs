@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using Microsoft.Web.WebView2.Core;
 using Newtonsoft.Json;
 using StellaLauncher.Models;
+using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
 
 namespace StellaLauncher.Forms.Other
@@ -39,19 +40,14 @@ namespace StellaLauncher.Forms.Other
                 Close();
             }
 
-            int data = Program.Settings.ReadInt("Launcher", "DiscordRPC", 1);
-            if (data == 1)
-            {
-                Discord.Presence.Details = "Generating beautiful pictures 😻";
-                Discord.Client.SetPresence(Discord.Presence);
-            }
+            Discord.SetStatus("Generating beautiful pictures 😻");
 
-            Log.Output($"Loaded form '{Text}'.");
+            Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
         }
 
         private void RandomImg_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Log.Output($"Closed form '{Text}'.");
+            Log.Output(string.Format(Resources.Main_ClosedForm_, Text));
             Discord.Home();
         }
 

@@ -1,5 +1,4 @@
 using System;
-using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
@@ -29,7 +28,7 @@ namespace StellaLauncher.Forms
                 string pathStr = Path.Combine(Program.AppPath, "data", "images", "launcher", "backgrounds", "forms", "tools", "2.png");
                 if (!Utils.CheckFileExists(pathStr))
                 {
-                    Log.SaveErrorLog(new Exception($"Special background file was not found in '{pathStr}' for Tools."));
+                    Log.SaveErrorLog(new Exception(Resources.Tools_SpecialBackgroundWasNotFoundIn_ForToolsWindow));
                     return;
                 }
 
@@ -38,22 +37,15 @@ namespace StellaLauncher.Forms
                 panel3.Visible = false;
             }
 
-            Version.Text = $@"v{Program.AppVersion}";
-
             MusicLabel_Set();
             RPCLabel_Set();
         }
 
         private void Utils_Shown(object sender, EventArgs e)
         {
-            int data = Program.Settings.ReadInt("Launcher", "DiscordRPC", 1);
-            if (data == 1)
-            {
-                Discord.Presence.Details = "Browsing tools 🔧";
-                Discord.Client.SetPresence(Discord.Presence);
-            }
+            Discord.SetStatus(Resources.Tools_BrowsingUtils);
 
-            Log.Output($"Loaded form '{Text}'.");
+            Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
         }
 
         private void MouseDown_Event(object sender, MouseEventArgs e)
@@ -77,7 +69,7 @@ namespace StellaLauncher.Forms
 
         private void Exit_Click(object sender, EventArgs e)
         {
-            Log.Output($"Closed form '{Text}'.");
+            Log.Output(string.Format(Resources.Main_ClosedForm_, Text));
             Close();
 
             Discord.Home();
@@ -114,6 +106,8 @@ namespace StellaLauncher.Forms
 
         private void MuteMusic_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            MusicLabel_Set();
+
             int data = Program.Settings.ReadInt("Launcher", "EnableMusic", 1);
             switch (data)
             {
@@ -124,32 +118,31 @@ namespace StellaLauncher.Forms
                     Program.Settings.WriteInt("Launcher", "EnableMusic", 0);
                     break;
             }
-
-            MusicLabel_Set();
         }
 
         private void MusicLabel_Set()
         {
             int data = Program.Settings.ReadInt("Launcher", "EnableMusic", 1);
-            ComponentResourceManager resources = new ComponentResourceManager(typeof(Tools));
 
             switch (data)
             {
                 case 0:
-                    MuteMusicOnStart.Text = resources.GetString("UnmuteMusicOnStart.Text");
+                    MuteMusicOnStart.Text = Resources.Tools_UnmuteMusicOnStart;
                     break;
                 case 1:
-                    MuteMusicOnStart.Text = resources.GetString("MuteMusicOnStart.Text");
+                    MuteMusicOnStart.Text = Resources.Tools_MuteMusicOnStart;
                     break;
                 default:
-                    Log.SaveErrorLog(new Exception("Wrong EnableMusic value."));
-                    MessageBox.Show(@"Wrong EnableMusic value.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Log.SaveErrorLog(new Exception(Resources.Tools_WrongEnableMusicValueInTheIniFile));
+                    MessageBox.Show(Resources.Tools_WrongEnableMusicValueInTheIniFile, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
             }
         }
 
         private void DisableRPC_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            RPCLabel_Set();
+
             int iniData = Program.Settings.ReadInt("Launcher", "DiscordRPC", 1);
             switch (iniData)
             {
@@ -157,35 +150,36 @@ namespace StellaLauncher.Forms
                     Program.Settings.WriteInt("Launcher", "DiscordRPC", 1);
                     Discord.InitRpc();
                     if (Discord.Username.Length > 0) // Fix
-                        MessageBox.Show($@"You're connected as {Discord.Username}. Hello!", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(string.Format(Resources.Tools_YoureConnectedAs__HiAndNiceToMeetYou_CheckYourDiscordActivity, Discord.Username), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
                 case 1:
                     Program.Settings.WriteInt("Launcher", "DiscordRPC", 0);
                     Discord.Client.Dispose();
                     break;
             }
-
-            RPCLabel_Set();
         }
 
         private void RPCLabel_Set()
         {
-            ComponentResourceManager resources = new ComponentResourceManager(typeof(Tools));
-
             int iniData = Program.Settings.ReadInt("Launcher", "DiscordRPC", 1);
             switch (iniData)
             {
                 case 0:
-                    DisableDiscordRPC.Text = resources.GetString("EnableDiscordRPC.Text");
+                    DisableDiscordRPC.Text = Resources.Tools_EnableDiscordRPC;
                     break;
                 case 1:
-                    DisableDiscordRPC.Text = resources.GetString("DisableDiscordRPC.Text");
+                    DisableDiscordRPC.Text = Resources.Tools_DisableDiscordRPC;
                     break;
                 default:
-                    Log.SaveErrorLog(new Exception("Wrong DiscordRPC value."));
-                    MessageBox.Show(@"Wrong DiscordRPC value.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Log.SaveErrorLog(new Exception(Resources.Tools_WrongEnableMusicValueInTheIniFile));
+                    MessageBox.Show(Resources.Tools_WrongEnableMusicValueInTheIniFile, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
             }
+        }
+
+        private void ChangeLang_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            new Language { Icon = Resources.icon_52x52 }.ShowDialog();
         }
 
 
@@ -203,7 +197,7 @@ namespace StellaLauncher.Forms
             string reShadeIni = Path.Combine(gamePath, "ReShade.ini");
 
             if (!File.Exists(reShadeIni))
-                MessageBox.Show($@"ReShade config file was not found in {reShadeIni}.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(string.Format(Resources.Tools_ReShadeConfigFileWasNotFoundIn_, reShadeIni), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
                 await Cmd.CliWrap("notepad", reShadeIni, null, true, false);
         }
@@ -248,7 +242,7 @@ namespace StellaLauncher.Forms
             string logFile = Path.Combine(gameDir, "ReShade.log");
 
             if (!Directory.Exists(gameDir) || !File.Exists(logFile))
-                MessageBox.Show($"ReShade log file was not found in:\n{logFile}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(string.Format(Resources.Tools_ReShadeLogFileWasNotFoundIn_, logFile), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
                 await Cmd.CliWrap("notepad", logFile, null, true, false);
         }
@@ -267,12 +261,8 @@ namespace StellaLauncher.Forms
         // -------------------------- Nothing special ((: ---------------------------
         private void Notepad_MouseClick(object sender, MouseEventArgs e)
         {
-            Process.Start($@"{Program.AppPath}\data\videos\poland-strong.mp4");
-        }
-
-        private void ChangeLang_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            new Language { Icon = Resources.icon_52x52 }.ShowDialog();
+            string path = Path.Combine(Program.AppPath, "data", "videos", "poland-strong.mp4");
+            if (Utils.CheckFileExists(path)) Process.Start(path);
         }
     }
 }

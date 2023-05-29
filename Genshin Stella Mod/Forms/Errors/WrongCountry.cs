@@ -4,6 +4,7 @@ using System.IO;
 using System.Media;
 using System.Windows.Forms;
 using Microsoft.Toolkit.Uwp.Notifications;
+using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
 
 namespace StellaLauncher.Forms.Errors
@@ -76,12 +77,12 @@ namespace StellaLauncher.Forms.Errors
                 Log.SaveErrorLog(ex);
             }
 
-            Log.Output($"Loaded form '{Text}'.");
+            Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
         }
 
         private void WrongCountry_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Log.Output($"Closed form '{Text}'.");
+            Log.Output(string.Format(Resources.Main_ClosedForm_, Text));
         }
 
         private void ChangeWindowSize(object sender, EventArgs e)

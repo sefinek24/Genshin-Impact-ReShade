@@ -81,17 +81,17 @@ namespace StellaLauncher.Forms
             string localization = Path.Combine(Program.AppPath, "data", "images", "launcher", "backgrounds", $"{_backgroundFiles[bgInt]}.png");
             if (!Utils.CheckFileExists(localization))
             {
-                MessageBox.Show($@"Sorry. Background {_backgroundFiles[bgInt]} was not found.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Log.SaveErrorLog(new Exception($"Background file was not found in '{localization}'. ID: {bgInt}"));
+                MessageBox.Show(string.Format(Resources.Default_Sorry_Background_WasNotFound, _backgroundFiles[bgInt]), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Log.SaveErrorLog(new Exception(string.Format(Resources.Default_Sorry_Background_WasNotFound, localization, bgInt)));
                 return;
             }
 
             Bitmap backgroundImage = new Bitmap(localization);
             _cache.Add(cacheKey, backgroundImage, new CacheItemPolicy { AbsoluteExpiration = DateTimeOffset.Now.AddMinutes(20) });
-            Log.Output($"Cached app background: '{localization}'; ID: {bgInt + 1}");
+            Log.Output(string.Format(Resources.Default_CachedAppBackground_ID, localization, bgInt + 1));
 
             BackgroundImage = backgroundImage;
-            toolTip1.SetToolTip(changeBg_LinkLabel, $"Current background: {_backgroundFiles[bgInt]}");
+            toolTip1.SetToolTip(changeBg_LinkLabel, string.Format(Resources.Default_CurrentBackground, _backgroundFiles[bgInt]));
         }
 
         private void Exit_Click(object sender, EventArgs e)
@@ -141,9 +141,9 @@ namespace StellaLauncher.Forms
                 Program.Settings.WriteInt("Launcher", "Background", 0);
                 Program.Settings.Save();
 
-                toolTip1.SetToolTip(changeBg_LinkLabel, "Current background: Default");
+                toolTip1.SetToolTip(changeBg_LinkLabel, Resources.Default_CurrentBackground_Default);
 
-                Log.Output($"The application background has been changed to default. ID: {bgInt}");
+                Log.Output(string.Format(Resources.Default_TheApplicationBackgroundHasBeenChangedToDefault_ID, bgInt.ToString()));
                 return;
             }
 
@@ -153,42 +153,41 @@ namespace StellaLauncher.Forms
             if (_cache.Contains(cacheKey))
             {
                 backgroundImage = (Bitmap)_cache.Get(cacheKey);
-                Log.Output($"Successfully retrieved and updated the cached app background with ID {bgInt + 1}.");
+                Log.Output(string.Format(Resources.Default_SuccessfullyRetrievedAndUpdatedTheCachedAppBackgroundWithID_, bgInt + 1));
             }
             else
             {
                 string localization = Path.Combine(Program.AppPath, "data", "images", "launcher", "backgrounds", $"{_backgroundFiles[bgInt]}.png");
                 if (!Utils.CheckFileExists(localization))
                 {
-                    MessageBox.Show($@"Sorry. Background {_backgroundFiles[bgInt]} was not found.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Log.SaveErrorLog(new Exception($"Background file was not found in '{localization}'. ID: {bgInt}"));
+                    MessageBox.Show(string.Format(Resources.Default_Sorry_Background_WasNotFound, _backgroundFiles[bgInt]), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Log.SaveErrorLog(new Exception(string.Format(Resources.Default_Sorry_Background_WasNotFound, localization, bgInt)));
                     return;
                 }
 
                 backgroundImage = new Bitmap(localization);
                 _cache.Add(cacheKey, backgroundImage, new CacheItemPolicy { AbsoluteExpiration = DateTimeOffset.Now.AddMinutes(20) });
 
-                Log.Output($"Cached app background: '{localization}'; ID: {bgInt + 1}");
+                Log.Output(string.Format(Resources.Default_CachedAppBackground_ID, localization, bgInt + 1));
             }
 
-            toolTip1.SetToolTip(changeBg_LinkLabel, $"Current background: {_backgroundFiles[bgInt]}");
+            toolTip1.SetToolTip(changeBg_LinkLabel, string.Format(Resources.Default_CurrentBackground, _backgroundFiles[bgInt]));
 
             BackgroundImage = backgroundImage;
             bgInt++;
-
             Program.Settings.WriteInt("Launcher", "Background", bgInt);
             Program.Settings.Save();
 
-            Log.Output($"Changed the launcher background. ID: {bgInt}");
+            Log.Output(string.Format(Resources.Default_ChangedTheLauncherBackground_ID, bgInt));
         }
 
         public async Task<int> CheckUpdates()
         {
             updates_LinkLabel.LinkColor = Color.White;
-            updates_LinkLabel.Text = @"Checking for updates...";
+            updates_LinkLabel.Text = Resources.Default_CheckingForUpdates;
 
             TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
-            Log.Output("Checking for new versions...");
+            Log.Output(Resources.Default_CheckingForUpdates);
 
             try
             {
@@ -233,16 +232,12 @@ namespace StellaLauncher.Forms
 
                     case 1:
                     {
-                        DialogResult msgReply = MessageBox.Show(
-                            "Are you sure you want to update ReShade configuration?\n\nThis action will result in the loss of any custom configurations you have made. If you do not have any custom configurations, you may proceed by clicking Yes. However, if you have made changes, please ensure that you have backed up the previous ReShade file in your game files.",
-                            Program.AppName, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                        DialogResult msgReply = MessageBox.Show(Resources.Default_AreYouSureWantToUpdateReShadeConfiguration, Program.AppName, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
 
                         if (msgReply == DialogResult.No || msgReply == DialogResult.Cancel)
                         {
-                            Log.Output("The update of ReShade.ini has been cancelled by the user.");
-                            MessageBox.Show(
-                                @"For some reason, you did not give consent for the automatic update of the ReShade file. Please note that older versions of this file may not be compatible with newer versions of Stella Mod. I hope you know what you're doing.",
-                                Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                            Log.Output(Resources.Default_TheUpdateOfReShadIniHasBeenCanceledByTheUser);
+                            MessageBox.Show(Resources.Default_ForSomeReasonYouDidNotGiveConsentForTheAutomaticUpdateOfTheReShadeFile, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
                             return 1;
                         }
@@ -256,10 +251,10 @@ namespace StellaLauncher.Forms
 
 
                 // Not found any new updates
-                updates_LinkLabel.Text = @"Check for updates";
+                updates_LinkLabel.Text = Resources.Default_CheckForUpdates;
                 updateIco_PictureBox.Image = Resources.icons8_available_updates;
 
-                Log.Output($"Not found any new updates. Your installed version: v{Program.AppVersion}");
+                Log.Output(string.Format(Resources.Default_NotFoundAnyNewUpdates_YourInstalledVersion_, Program.AppVersion));
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress);
                 return 0;
             }
@@ -268,10 +263,10 @@ namespace StellaLauncher.Forms
                 UpdateIsAvailable = false;
 
                 updates_LinkLabel.LinkColor = Color.Red;
-                updates_LinkLabel.Text = @"Ohh, something went wrong";
+                updates_LinkLabel.Text = Resources.Default_OhhSomethingWentWrong;
                 status_Label.Text += $"[x] {e.Message}\n";
 
-                Log.SaveErrorLog(new Exception($"Something went wrong while checking for new updates.\n\n{e}"));
+                Log.SaveErrorLog(new Exception(string.Format(Resources.Default_SomethingWentWrongWhileCheckingForNewUpdates, e)));
                 TaskbarManager.Instance.SetProgressValue(100, 100);
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
                 return -1;
@@ -281,18 +276,18 @@ namespace StellaLauncher.Forms
         private async void Main_Shown(object sender, EventArgs e)
         {
             version_LinkLabel.Text = $@"v{Program.AppVersion}";
-            Log.Output($"Loaded form '{Text}'.");
+            Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
 
             if (!File.Exists(Program.FpsUnlockerExePath) && !Debugger.IsAttached)
-                status_Label.Text += "[WARN]: data/unlocker/unlockfps_clr.exe was not found.\n";
+                status_Label.Text += $"[x]: {string.Format(Resources.Default_File_WasNotFound, Program.FpsUnlockerExePath)}\n";
             if (!File.Exists(Program.InjectorPath) && !Debugger.IsAttached)
-                status_Label.Text += "[WARN]: data/reshade/inject64.exe was not found.\n";
+                status_Label.Text += $"[x]: {string.Format(Resources.Default_File_WasNotFound, Program.InjectorPath)}\n";
             if (!File.Exists(Program.ReShadePath) && !Debugger.IsAttached)
-                status_Label.Text += "[WARN]: data/reshade/ReShade64.dll was not found.\n";
+                status_Label.Text += $"[x]: {string.Format(Resources.Default_File_WasNotFound, Program.ReShadePath)}\n";
             if (!File.Exists(Program.FpsUnlockerCfgPath) && !Debugger.IsAttached)
             {
-                status_Label.Text += "[i] Downloading config file for FPS Unlocker...\n";
-                Log.Output("Downloading config file for FPS Unlocker...");
+                status_Label.Text += $"[i] {Resources.Default_DownloadingConfigFileForFPSUnlocker}\n";
+                Log.Output(Resources.Default_DownloadingConfigFileForFPSUnlocker);
 
                 try
                 {
@@ -303,13 +298,13 @@ namespace StellaLauncher.Forms
                     string fpsUnlockerCfg = File.ReadAllText(Program.FpsUnlockerCfgPath);
                     File.WriteAllText(Program.FpsUnlockerCfgPath, fpsUnlockerCfg.Replace("{GamePath}", @"C:\\Program Files\\Genshin Impact\\Genshin Impact game\\GenshinImpact.exe"));
 
-                    status_Label.Text += "[✓] Success!\n";
+                    status_Label.Text += $"[✓] {Resources.Default_Success}\n";
                     Log.Output("Done.");
                 }
                 catch (Exception ex)
                 {
                     status_Label.Text += $"[✖] {ex.Message}\n";
-                    Log.SaveErrorLog(new Exception($"Failed to download unlocker.config.json.\n{ex}"));
+                    Log.SaveErrorLog(new Exception($"{Resources.Default_FailedToDownloadUnlockerConfigJson}\n{ex}"));
                 }
             }
 
@@ -318,8 +313,8 @@ namespace StellaLauncher.Forms
             if (File.Exists(NormalRelease.SetupPathExe))
             {
                 File.Delete(NormalRelease.SetupPathExe);
-                status_Label.Text += "[i] Deleted old setup file from temp directory.\n";
-                Log.Output($"Deleted old setup file from temp folder: {NormalRelease.SetupPathExe}");
+                status_Label.Text += $"[i] {Resources.Default_DeletedOldSetupFromTempDirectory}\n";
+                Log.Output(string.Format(Resources.Default_DeletedOldSetupFromTempFolder, NormalRelease.SetupPathExe));
             }
 
             await CheckUpdates();
@@ -338,15 +333,15 @@ namespace StellaLauncher.Forms
             string wavPath = Path.Combine(Program.AppPath, "data", "sounds", "bg", $"{random.Next(1, 6 + 1)}.wav");
             if (!File.Exists(wavPath))
             {
-                status_Label.Text += "[x]: Background music was not found.\n";
-                Log.SaveErrorLog(new Exception($"Background music file '{wavPath}' was not found."));
+                status_Label.Text += $"[x]: {Resources.Default_TheSoundFileWithMusicWasNotFound}\n";
+                Log.SaveErrorLog(new Exception(string.Format(Resources.Default_TheSoundFileWithMusicWasNotFoundInTheLocalization_, wavPath)));
                 return;
             }
 
             try
             {
                 new SoundPlayer { SoundLocation = wavPath }.Play();
-                Log.Output($"Playing: {wavPath}");
+                Log.Output(string.Format(Resources.Default_PlayingSoundFile_, wavPath));
             }
             catch (Exception ex)
             {
@@ -357,11 +352,9 @@ namespace StellaLauncher.Forms
             int firstMsgBox = Program.Settings.ReadInt("Launcher", "FirstMsgBox", 1);
             if (firstMsgBox != 1) return;
 
-            MessageBox.Show(
-                "It appears that this is your first time launching the launcher! Take some time to review the terms of use on the GitHub Wiki for the mod and the rules to avoid any unexpected issues.\n\nREMEMBER NOT TO SHARE YOUR UID WITH VISIBLE GAME SHADERS WITH ANYONE!",
-                Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(Resources.Default_ItAppersThatIsYourFirstTimeLaunchingTheLauncher, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             Program.Settings.WriteInt("Launcher", "FirstMsgBox", 0);
-            status_Label.Text += "[i] Click 'Start game' button to inject ReShade and use FPS Unlock.\n";
+            status_Label.Text += $"[i] {Resources.Default_ClickStartGameButtonToInjectReShadeAndUseFPSUnlock}\n";
         }
 
         // ------- Body -------
@@ -414,8 +407,8 @@ namespace StellaLauncher.Forms
             string path = await Utils.GetGame("giLauncher");
             if (path == string.Empty)
             {
-                MessageBox.Show(@"Game launcher was not found.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Log.SaveErrorLog(new Exception($"Game launcher was not found. Result: {path}"));
+                MessageBox.Show(Resources.Default_GameLauncherWasNotFound, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Log.SaveErrorLog(new Exception(string.Format(Resources.Default_GameLauncherWasNotFoundIn, path)));
                 return;
             }
 
@@ -473,7 +466,7 @@ namespace StellaLauncher.Forms
 
         private void MadeBySefinek_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(@"It's just text. What more do you want?", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show(Resources.Default_ItsJustText_WhatMoreDoYouWant, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Question);
             Utils.OpenUrl("https://www.youtube.com/watch?v=RpDf3XFHVNI");
         }
 
@@ -482,9 +475,7 @@ namespace StellaLauncher.Forms
             int update = await CheckUpdates();
             if (update == -2 || update == -3)
             {
-                DialogResult msgBoxResult = MessageBox.Show(
-                    "The ReShade.ini file could not be located in your game files, or it may not be compatible with the current version.\n\nWould you like to download this file now to prevent future errors and manual configuration? Recommended.",
-                    Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult msgBoxResult = MessageBox.Show(Resources.Default_TheReShadeIniFileCouldNotBeLocatedInYourGameFiles, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 string gameDir = await Utils.GetGame("giGameDir");
                 string reShadePath = Path.Combine(gameDir, "ReShade.ini");
@@ -495,7 +486,7 @@ namespace StellaLauncher.Forms
                         try
                         {
                             updates_LinkLabel.LinkColor = Color.DodgerBlue;
-                            updates_LinkLabel.Text = @"Downloading...";
+                            updates_LinkLabel.Text = Resources.Default_Downloading;
                             TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
 
                             WebClient client = new WebClient();
@@ -504,15 +495,15 @@ namespace StellaLauncher.Forms
 
                             if (File.Exists(reShadePath))
                             {
-                                status_Label.Text += "[✓] Successfully downloaded ReShade.ini!\n";
-                                Log.Output($"Successfully downloaded ReShade.ini and saved in: {reShadePath}");
+                                status_Label.Text += $"[✓] {Resources.Default_SuccessfullyDownloadedReShadeIni}\n";
+                                Log.Output(string.Format(Resources.Default_SuccessfullyDownloadedReShadeIniAndSavedIn, reShadePath));
 
                                 await CheckUpdates();
                             }
                             else
                             {
-                                status_Label.Text += "[x] File was not found.\n";
-                                Log.SaveErrorLog(new Exception($"Downloaded ReShade.ini was not found in: {reShadePath}"));
+                                status_Label.Text += $"[x] {Resources.Default_FileWasNotFound}\n";
+                                Log.SaveErrorLog(new Exception(string.Format(Resources.Default_DownloadedReShadeIniWasNotFoundIn_, reShadePath)));
 
                                 TaskbarManager.Instance.SetProgressValue(100, 100);
                                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
@@ -520,22 +511,23 @@ namespace StellaLauncher.Forms
                         }
                         catch (Exception ex)
                         {
-                            status_Label.Text += "[x] Meeow! Failed to download ReShade.ini. Try again.\n";
+                            status_Label.Text += $"[x] {Resources.Default_Meeow_FailedToDownloadReShadeIni_TryAgain}\n";
                             updates_LinkLabel.LinkColor = Color.Red;
-                            updates_LinkLabel.Text = @"Failed to download...";
+                            updates_LinkLabel.Text = Resources.Default_FailedToDownload;
 
                             Log.SaveErrorLog(ex);
-                            if (!File.Exists(reShadePath)) Log.Output("The ReShade.ini file still does not exist!");
+                            if (!File.Exists(reShadePath)) Log.Output(Resources.Default_TheReShadeIniFileStillDoesNotExist);
+
                             TaskbarManager.Instance.SetProgressValue(100, 100);
                             TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
                         }
 
                         break;
                     case DialogResult.No:
-                        status_Label.Text += "[i] Canceled by the user. Are you sure of what you're doing?\n";
-                        Log.Output("File download has been canceled by the user.");
+                        status_Label.Text += $"[i] {Resources.Default_CanceledByTheUser_AreYouSureOfWhatYoureDoing}\n";
+                        Log.Output(Resources.Default_FileDownloadHasBeenCanceledByTheUser);
 
-                        if (!File.Exists(reShadePath)) Log.Output("The ReShade.ini file does not exist.");
+                        if (!File.Exists(reShadePath)) Log.Output(Resources.Default_TheReShadeIniFileStillDoesNotExist);
 
                         TaskbarManager.Instance.SetProgressValue(100, 100);
                         TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
@@ -548,7 +540,7 @@ namespace StellaLauncher.Forms
             if (update != 0) return;
 
             updates_LinkLabel.LinkColor = Color.LawnGreen;
-            updates_LinkLabel.Text = @"You have the latest version";
+            updates_LinkLabel.Text = Resources.Default_YouHaveTheLatestVersion;
             updateIco_PictureBox.Image = Resources.icons8_available_updates;
         }
 

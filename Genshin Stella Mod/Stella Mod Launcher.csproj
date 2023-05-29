@@ -237,6 +237,9 @@
     <EmbeddedResource Include="Forms\Other\Language.resx">
       <DependentUpon>Language.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Other\RandomImages.pl.resx">
+      <DependentUpon>RandomImages.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Other\RandomImages.resx">
       <DependentUpon>RandomImages.cs</DependentUpon>
     </EmbeddedResource>
@@ -260,9 +263,6 @@
     <EmbeddedResource Include="Forms\Links.resx">
       <DependentUpon>Links.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.pl.resx">
-      <DependentUpon>Resources.resx</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -273,6 +273,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Properties\Resources.pl.resx" />
     <None Include="data\cmd\delete_cache.cmd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

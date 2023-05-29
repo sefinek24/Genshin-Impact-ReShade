@@ -117,171 +117,238 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="pictureBox2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="ChangeBackground.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 17</value>
+  <data name="changeBg_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 17</value>
   </data>
-  <data name="ChangeBackground.Text" xml:space="preserve">
-    <value>Zmień tło</value>
+  <data name="changeBg_LinkLabel.Text" xml:space="preserve">
+    <value>Zmień tło okna</value>
   </data>
-  <data name="panel2.ToolTip" xml:space="preserve">
+  <data name="changeBg_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Zmień tło tej aplikacji.</value>
+  </data>
+  <data name="close_Panel.ToolTip" xml:space="preserve">
     <value>Wyjdź z programu uruchamiającego</value>
   </data>
-  <data name="githubURL_Label.Location" type="System.Drawing.Point, System.Drawing">
-    <value>626, 117</value>
+  <data name="panel1.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="githubURL_Label.ToolTip" xml:space="preserve">
-    <value>Główne repozytorium GitHub. Oznacz repozytorium gwiazdką, jeśli podoba Ci się moja praca.</value>
+  <data name="madeBySefinek_Label.Location" type="System.Drawing.Point, System.Drawing">
+    <value>808, 84</value>
   </data>
-  <data name="MadeBySefinek.Location" type="System.Drawing.Point, System.Drawing">
-    <value>740, 84</value>
+  <data name="madeBySefinek_Label.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 31</value>
   </data>
-  <data name="MadeBySefinek.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 31</value>
-  </data>
-  <data name="MadeBySefinek.Text" xml:space="preserve">
-    <value>stworzone przez Sefinek</value>
+  <data name="madeBySefinek_Label.Text" xml:space="preserve">
+    <value>autorstwa Sefinek</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>556, 45</value>
   </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>596, 117</value>
+  <data name="label1.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="settings_Label.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 23</value>
+  <data name="tools_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 555</value>
   </data>
-  <data name="settings_Label.Text" xml:space="preserve">
+  <data name="tools_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 23</value>
+  </data>
+  <data name="tools_LinkLabel.Text" xml:space="preserve">
     <value>Narzędzia</value>
   </data>
-  <data name="settings_Label.ToolTip" xml:space="preserve">
+  <data name="tools_LinkLabel.ToolTip" xml:space="preserve">
     <value>Opcje i inne narzędzia dla tego moda</value>
   </data>
-  <data name="DiscordServer.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="discordServer_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 23</value>
   </data>
-  <data name="DiscordServer.Text" xml:space="preserve">
+  <data name="discordServer_LinkLabel.Text" xml:space="preserve">
     <value>Serwer Discord</value>
   </data>
-  <data name="DiscordServer.ToolTip" xml:space="preserve">
+  <data name="discordServer_LinkLabel.ToolTip" xml:space="preserve">
     <value>Dołącz do naszego serwera Discord, jeśli potrzebujesz pomocy.</value>
   </data>
-  <data name="YouTube.ToolTip" xml:space="preserve">
+  <data name="youTube_LinkLabel.ToolTip" xml:space="preserve">
     <value>Mój kanał na YouTubie. Subskrybuj mnie, jeśli podoba Ci się ten projekt.</value>
   </data>
-  <data name="StartGame.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 183</value>
+  <data name="startGame_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>90, 194</value>
   </data>
-  <data name="StartGame.Size" type="System.Drawing.Size, System.Drawing">
-    <value>428, 95</value>
+  <data name="startGame_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>425, 95</value>
   </data>
-  <data name="StartGame.Text" xml:space="preserve">
+  <data name="startGame_LinkLabel.Text" xml:space="preserve">
     <value>Uruchom grę</value>
   </data>
-  <data name="StartGame.ToolTip" xml:space="preserve">
-    <value>Uruchom Genshin z wstrzykniętym ReShade i FPS Unlocker - zalecane.</value>
+  <data name="startGame_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Uruchom Genshin Impact ze wstrzykniętym ReShade i użytym FPS Unlockerem (odblokowywaniem FPS'ów). Zalecane.</value>
   </data>
-  <data name="RunOnlyFPSUnlocker.Location" type="System.Drawing.Point, System.Drawing">
-    <value>325, 292</value>
+  <data name="runFpsUnlocker_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>320, 303</value>
   </data>
-  <data name="RunOnlyFPSUnlocker.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 23</value>
+  <data name="runFpsUnlocker_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 23</value>
   </data>
-  <data name="RunOnlyFPSUnlocker.Text" xml:space="preserve">
-    <value>Uruchom tylko FPS Unlocker</value>
+  <data name="runFpsUnlocker_LinkLabel.Text" xml:space="preserve">
+    <value>Użyj tylko FPS Unlockera</value>
   </data>
-  <data name="RunOnlyFPSUnlocker.ToolTip" xml:space="preserve">
-    <value>Uruchom grę tylko z odblokowaną liczbą klatek na sekundę.</value>
+  <data name="runFpsUnlocker_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Uruchom grę tylko z użytym FPS Unlockerem (odblokowywaniem limitu 60 klatek na sekundę).
+Nie ma sensu używać tego, jeśli Twój monitor nie ma więcej niż 60 Hz.</value>
   </data>
-  <data name="InjectOnlyReShade.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 292</value>
+  <data name="injectReShade_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 23</value>
   </data>
-  <data name="InjectOnlyReShade.Size" type="System.Drawing.Size, System.Drawing">
-    <value>206, 23</value>
+  <data name="injectReShade_LinkLabel.Text" xml:space="preserve">
+    <value>Użyj tylko ReShade</value>
   </data>
-  <data name="InjectOnlyReShade.Text" xml:space="preserve">
-    <value>Wstrzyknij tylko ReShade</value>
+  <data name="injectReShade_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Uruchom Genshin Impact tylko ze wstrzykniętym ReShade.</value>
   </data>
-  <data name="InjectOnlyReShade.ToolTip" xml:space="preserve">
-    <value>Uruchom Genshin Impact tylko z ReShade.</value>
+  <data name="website_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>377, 555</value>
   </data>
-  <data name="website_Label.Location" type="System.Drawing.Point, System.Drawing">
-    <value>355, 555</value>
+  <data name="website_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 23</value>
   </data>
-  <data name="website_Label.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 23</value>
-  </data>
-  <data name="website_Label.Text" xml:space="preserve">
+  <data name="website_LinkLabel.Text" xml:space="preserve">
     <value>Strona www</value>
   </data>
-  <data name="website_Label.ToolTip" xml:space="preserve">
+  <data name="website_LinkLabel.ToolTip" xml:space="preserve">
     <value>Zobacz oficjalną stronę internetową</value>
   </data>
-  <data name="createShortcut_Label.Location" type="System.Drawing.Point, System.Drawing">
-    <value>270, 554</value>
+  <data name="gameplay_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>250, 554</value>
   </data>
-  <data name="createShortcut_Label.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 23</value>
+  <data name="gameplay_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 23</value>
   </data>
-  <data name="createShortcut_Label.Text" xml:space="preserve">
-    <value>Film</value>
+  <data name="gameplay_LinkLabel.Text" xml:space="preserve">
+    <value>Rozgrywka</value>
   </data>
-  <data name="createShortcut_Label.ToolTip" xml:space="preserve">
-    <value>Obejrzyj gameplay</value>
+  <data name="gameplay_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Obejrzyj rozgrywkę</value>
   </data>
-  <data name="SupportMe.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="supportMe_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 23</value>
   </data>
-  <data name="SupportMe.Text" xml:space="preserve">
+  <data name="supportMe_LinkLabel.Text" xml:space="preserve">
     <value>Wesprzyj mnie</value>
   </data>
-  <data name="SupportMe.ToolTip" xml:space="preserve">
+  <data name="supportMe_LinkLabel.ToolTip" xml:space="preserve">
     <value>Wesprzyj moją pracę.</value>
   </data>
-  <data name="ToGetRTInGameBecomeMyPatron.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 388</value>
+  <data name="becomeMyPatron_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 396</value>
   </data>
-  <data name="ToGetRTInGameBecomeMyPatron.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="becomeMyPatron_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>598, 60</value>
   </data>
-  <data name="ToGetRTInGameBecomeMyPatron.Text" xml:space="preserve">
-    <value>Aby uzyskać Ray Tracing w grze, zostań moim Patronem.
+  <data name="becomeMyPatron_LinkLabel.Text" xml:space="preserve">
+    <value>Aby uzyskać Ray Tracing w grze, zostań moim patronem.
 Karty RTX nie są wymagane.</value>
   </data>
-  <data name="ToGetRTInGameBecomeMyPatron.ToolTip" xml:space="preserve">
+  <data name="becomeMyPatron_LinkLabel.ToolTip" xml:space="preserve">
     <value>Przejdź do https://patreon.com/sefinek</value>
   </data>
-  <data name="OpenGILauncher.Location" type="System.Drawing.Point, System.Drawing">
-    <value>178, 329</value>
+  <data name="runGiLauncher_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 340</value>
   </data>
-  <data name="OpenGILauncher.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="runGiLauncher_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>249, 23</value>
   </data>
-  <data name="OpenGILauncher.Text" xml:space="preserve">
+  <data name="runGiLauncher_LinkLabel.Text" xml:space="preserve">
     <value>Otwórz launcher Genshin Impact</value>
   </data>
-  <data name="OpenGILauncher.ToolTip" xml:space="preserve">
-    <value>Otwórz główny program uruchamiający grę.</value>
+  <data name="version_LinkLabel.Text" xml:space="preserve">
+    <value>Oczekiwanie...</value>
   </data>
-  <data name="version_Label.ToolTip" xml:space="preserve">
-    <value>Zobacz listę zmian na GitHub.</value>
+  <data name="version_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Zobacz dziennik zmian (changelog) na GitHubie.</value>
   </data>
-  <data name="linkLabel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 555</value>
+  <data name="links_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>164, 555</value>
   </data>
-  <data name="linkLabel5.Text" xml:space="preserve">
+  <data name="links_LinkLabel.Text" xml:space="preserve">
     <value>Linki</value>
   </data>
-  <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>326, 555</value>
+  <data name="links_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Jakieś linki</value>
   </data>
-  <data name="pictureBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>241, 555</value>
+  <data name="toolsIco_PictureBox.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="pictureBox11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 555</value>
+  <data name="websiteIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>351, 555</value>
+  </data>
+  <data name="websiteIco_PictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="updateIco_PictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="versionIco_PictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="updates_LinkLabel.Text" xml:space="preserve">
+    <value>Oczekiwanie...</value>
+  </data>
+  <data name="updates_LinkLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox9.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="status_Label.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="padIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>224, 555</value>
+  </data>
+  <data name="padIco_PictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox10.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="shortcutIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 555</value>
+  </data>
+  <data name="shortcutIco_PictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="paimon_PictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="progressBar1.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="PreparingPleaseWait.Text" xml:space="preserve">
-    <value>Przygotowywanie. Proszę czekać...</value>
+    <value>Proszę czekać...</value>
+  </data>
+  <data name="PreparingPleaseWait.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="clickMe_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>912, 449</value>
+  </data>
+  <data name="clickMe_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 21</value>
+  </data>
+  <data name="clickMe_LinkLabel.Text" xml:space="preserve">
+    <value>Kliknij mnie ;w;</value>
+  </data>
+  <data name="clickMe_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Tak kurwa tutaj ((:</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
   </data>
 </root>

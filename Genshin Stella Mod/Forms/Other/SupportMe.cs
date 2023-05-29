@@ -37,12 +37,12 @@ namespace StellaLauncher.Forms.Other
 
         private void SupportMe_Shown(object sender, EventArgs e)
         {
-            Log.Output($"Loaded form '{Text}'.");
+            Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
         }
 
         private void Exit_Click(object sender, EventArgs e)
         {
-            Log.Output($"Closed form '{Text}'.");
+            Log.Output(string.Format(Resources.Main_ClosedForm_, Text));
             Close();
         }
 

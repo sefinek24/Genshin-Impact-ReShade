@@ -121,6 +121,392 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to update ReShade configuration?
+        ///
+        ///This action will result in the loss of any custom configurations you have made. If you do not have any custom configurations, you may proceed by clicking Yes. However, if you have made changes, please ensure that you have backed up the previous ReShade file in your game files..
+        /// </summary>
+        internal static string Default_AreYouSureWantToUpdateReShadeConfiguration {
+            get {
+                return ResourceManager.GetString("Default_AreYouSureWantToUpdateReShadeConfiguration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Background file was not found in &apos;{0}&apos;; ID: {1};.
+        /// </summary>
+        internal static string Default_BackgroundFileWasNotFoundIn__ID {
+            get {
+                return ResourceManager.GetString("Default_BackgroundFileWasNotFoundIn_.ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cached app background in RAM memory &apos;{0}&apos;; ID: {1};.
+        /// </summary>
+        internal static string Default_CachedAppBackground_ID {
+            get {
+                return ResourceManager.GetString("Default_CachedAppBackground_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Canceled by the user. Are you sure of what you&apos;re doing?.
+        /// </summary>
+        internal static string Default_CanceledByTheUser_AreYouSureOfWhatYoureDoing {
+            get {
+                return ResourceManager.GetString("Default_CanceledByTheUser_AreYouSureOfWhatYoureDoing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Changed the launcher background. ID: {0}.
+        /// </summary>
+        internal static string Default_ChangedTheLauncherBackground_ID {
+            get {
+                return ResourceManager.GetString("Default_ChangedTheLauncherBackground_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check for updates.
+        /// </summary>
+        internal static string Default_CheckForUpdates {
+            get {
+                return ResourceManager.GetString("Default_CheckForUpdates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Checking for updates....
+        /// </summary>
+        internal static string Default_CheckingForUpdates {
+            get {
+                return ResourceManager.GetString("Default_CheckingForUpdates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Click „Start game” button to inject ReShade and use FPS Unlock..
+        /// </summary>
+        internal static string Default_ClickStartGameButtonToInjectReShadeAndUseFPSUnlock {
+            get {
+                return ResourceManager.GetString("Default_ClickStartGameButtonToInjectReShadeAndUseFPSUnlock", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current background: {0}.
+        /// </summary>
+        internal static string Default_CurrentBackground {
+            get {
+                return ResourceManager.GetString("Default_CurrentBackground", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current background: Default.
+        /// </summary>
+        internal static string Default_CurrentBackground_Default {
+            get {
+                return ResourceManager.GetString("Default_CurrentBackground_Default", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deleted old setup file from temp directory..
+        /// </summary>
+        internal static string Default_DeletedOldSetupFromTempDirectory {
+            get {
+                return ResourceManager.GetString("Default_DeletedOldSetupFromTempDirectory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deleted old setup file from temp folder: {0}.
+        /// </summary>
+        internal static string Default_DeletedOldSetupFromTempFolder {
+            get {
+                return ResourceManager.GetString("Default_DeletedOldSetupFromTempFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Downloaded ReShade.ini was not found in: {0}.
+        /// </summary>
+        internal static string Default_DownloadedReShadeIniWasNotFoundIn_ {
+            get {
+                return ResourceManager.GetString("Default_DownloadedReShadeIniWasNotFoundIn_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Downloading....
+        /// </summary>
+        internal static string Default_Downloading {
+            get {
+                return ResourceManager.GetString("Default_Downloading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Downloading config file for FPS Unlocker....
+        /// </summary>
+        internal static string Default_DownloadingConfigFileForFPSUnlocker {
+            get {
+                return ResourceManager.GetString("Default_DownloadingConfigFileForFPSUnlocker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to download....
+        /// </summary>
+        internal static string Default_FailedToDownload {
+            get {
+                return ResourceManager.GetString("Default_FailedToDownload", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to download unlocker.config.json..
+        /// </summary>
+        internal static string Default_FailedToDownloadUnlockerConfigJson {
+            get {
+                return ResourceManager.GetString("Default_FailedToDownloadUnlockerConfigJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File {0} was not found..
+        /// </summary>
+        internal static string Default_File_WasNotFound {
+            get {
+                return ResourceManager.GetString("Default_File_WasNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File download has been canceled by the user..
+        /// </summary>
+        internal static string Default_FileDownloadHasBeenCanceledByTheUser {
+            get {
+                return ResourceManager.GetString("Default_FileDownloadHasBeenCanceledByTheUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File was not found..
+        /// </summary>
+        internal static string Default_FileWasNotFound {
+            get {
+                return ResourceManager.GetString("Default_FileWasNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to For some reason, you did not give consent for the automatic update of the ReShade file. Please note that older versions of this file may not be compatible with newer versions of Stella Mod. I hope you know what you&apos;re doing..
+        /// </summary>
+        internal static string Default_ForSomeReasonYouDidNotGiveConsentForTheAutomaticUpdateOfTheReShadeFile {
+            get {
+                return ResourceManager.GetString("Default_ForSomeReasonYouDidNotGiveConsentForTheAutomaticUpdateOfTheReShadeFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game launcher was not found..
+        /// </summary>
+        internal static string Default_GameLauncherWasNotFound {
+            get {
+                return ResourceManager.GetString("Default_GameLauncherWasNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game launcher was not found in: {0}.
+        /// </summary>
+        internal static string Default_GameLauncherWasNotFoundIn {
+            get {
+                return ResourceManager.GetString("Default_GameLauncherWasNotFoundIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to It appears that you are launching the launcher for the first time! Take a moment to review the terms of use on the GitHub Wiki and other guidelines for this modification to avoid any unexpected issues.
+        ///
+        ///REMEMBER NOT TO SHARE YOUR UID WITH VISIBLE GAME SHADERS WITH ANYONE!.
+        /// </summary>
+        internal static string Default_ItAppersThatIsYourFirstTimeLaunchingTheLauncher {
+            get {
+                return ResourceManager.GetString("Default_ItAppersThatIsYourFirstTimeLaunchingTheLauncher", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to It&apos;s just text. What more do you want?.
+        /// </summary>
+        internal static string Default_ItsJustText_WhatMoreDoYouWant {
+            get {
+                return ResourceManager.GetString("Default_ItsJustText_WhatMoreDoYouWant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Meeow! Failed to download ReShade.ini. Try again..
+        /// </summary>
+        internal static string Default_Meeow_FailedToDownloadReShadeIni_TryAgain {
+            get {
+                return ResourceManager.GetString("Default_Meeow_FailedToDownloadReShadeIni_TryAgain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not found any new updates. Your installed version: v{0}.
+        /// </summary>
+        internal static string Default_NotFoundAnyNewUpdates_YourInstalledVersion_ {
+            get {
+                return ResourceManager.GetString("Default_NotFoundAnyNewUpdates_YourInstalledVersion_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ohh, something went wrong.
+        /// </summary>
+        internal static string Default_OhhSomethingWentWrong {
+            get {
+                return ResourceManager.GetString("Default_OhhSomethingWentWrong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Playing sound file: {0}.
+        /// </summary>
+        internal static string Default_PlayingSoundFile_ {
+            get {
+                return ResourceManager.GetString("Default_PlayingSoundFile_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Something went wrong while checking for new updates.
+        ///
+        ///{0}.
+        /// </summary>
+        internal static string Default_SomethingWentWrongWhileCheckingForNewUpdates {
+            get {
+                return ResourceManager.GetString("Default_SomethingWentWrongWhileCheckingForNewUpdates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sorry. Background {0} was not found..
+        /// </summary>
+        internal static string Default_Sorry_Background_WasNotFound {
+            get {
+                return ResourceManager.GetString("Default_Sorry.Background_WasNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Success!.
+        /// </summary>
+        internal static string Default_Success {
+            get {
+                return ResourceManager.GetString("Default_Success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successfully downloaded ReShade.ini!.
+        /// </summary>
+        internal static string Default_SuccessfullyDownloadedReShadeIni {
+            get {
+                return ResourceManager.GetString("Default_SuccessfullyDownloadedReShadeIni", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successfully downloaded ReShade.ini and saved in: {0}.
+        /// </summary>
+        internal static string Default_SuccessfullyDownloadedReShadeIniAndSavedIn {
+            get {
+                return ResourceManager.GetString("Default_SuccessfullyDownloadedReShadeIniAndSavedIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successfully retrieved and updated the cached app background with ID {0}..
+        /// </summary>
+        internal static string Default_SuccessfullyRetrievedAndUpdatedTheCachedAppBackgroundWithID_ {
+            get {
+                return ResourceManager.GetString("Default_SuccessfullyRetrievedAndUpdatedTheCachedAppBackgroundWithID_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The application background has been changed to default. ID: {0}.
+        /// </summary>
+        internal static string Default_TheApplicationBackgroundHasBeenChangedToDefault_ID {
+            get {
+                return ResourceManager.GetString("Default_TheApplicationBackgroundHasBeenChangedToDefault_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The ReShade.ini file could not be located in your game files, or it may not be compatible with the current version.
+        ///
+        ///Would you like to download this file now to prevent future errors and manual configuration? Recommended..
+        /// </summary>
+        internal static string Default_TheReShadeIniFileCouldNotBeLocatedInYourGameFiles {
+            get {
+                return ResourceManager.GetString("Default_TheReShadeIniFileCouldNotBeLocatedInYourGameFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The ReShade.ini file still does not exist!.
+        /// </summary>
+        internal static string Default_TheReShadeIniFileStillDoesNotExist {
+            get {
+                return ResourceManager.GetString("Default_TheReShadeIniFileStillDoesNotExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The sound file with music was not found..
+        /// </summary>
+        internal static string Default_TheSoundFileWithMusicWasNotFound {
+            get {
+                return ResourceManager.GetString("Default_TheSoundFileWithMusicWasNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The sound file with music was not found in the location: &apos;{0}&apos;.
+        /// </summary>
+        internal static string Default_TheSoundFileWithMusicWasNotFoundInTheLocalization_ {
+            get {
+                return ResourceManager.GetString("Default_TheSoundFileWithMusicWasNotFoundInTheLocalization_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The update of ReShade.ini has been cancelled by the user..
+        /// </summary>
+        internal static string Default_TheUpdateOfReShadIniHasBeenCanceledByTheUser {
+            get {
+                return ResourceManager.GetString("Default_TheUpdateOfReShadIniHasBeenCanceledByTheUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have the latest version.
+        /// </summary>
+        internal static string Default_YouHaveTheLatestVersion {
+            get {
+                return ResourceManager.GetString("Default_YouHaveTheLatestVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap error {
@@ -177,6 +563,15 @@ namespace StellaLauncher.Properties {
             get {
                 object obj = ResourceManager.GetObject("flaticon_settings", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Watching gameplay 🎮.
+        /// </summary>
+        internal static string Gameplay_WatchingGameplay {
+            get {
+                return ResourceManager.GetString("Gameplay_WatchingGameplay", resourceCulture);
             }
         }
         
@@ -341,6 +736,33 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to On the window with links 🌍.
+        /// </summary>
+        internal static string Links_DRPC_OnTheWindowWithLinks {
+            get {
+                return ResourceManager.GetString("Links_DRPC_OnTheWindowWithLinks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Closed form {0}..
+        /// </summary>
+        internal static string Main_ClosedForm_ {
+            get {
+                return ResourceManager.GetString("Main_ClosedForm_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loaded form {0}..
+        /// </summary>
+        internal static string Main_LoadedForm_ {
+            get {
+                return ResourceManager.GetString("Main_LoadedForm_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap new_release {
@@ -377,6 +799,98 @@ namespace StellaLauncher.Properties {
             get {
                 object obj = ResourceManager.GetObject("poland_flag", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Browsing utils 🔧.
+        /// </summary>
+        internal static string Tools_BrowsingUtils {
+            get {
+                return ResourceManager.GetString("Tools_BrowsingUtils", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Disable Discord RPC.
+        /// </summary>
+        internal static string Tools_DisableDiscordRPC {
+            get {
+                return ResourceManager.GetString("Tools_DisableDiscordRPC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable Discord RPC.
+        /// </summary>
+        internal static string Tools_EnableDiscordRPC {
+            get {
+                return ResourceManager.GetString("Tools_EnableDiscordRPC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mute music on start.
+        /// </summary>
+        internal static string Tools_MuteMusicOnStart {
+            get {
+                return ResourceManager.GetString("Tools_MuteMusicOnStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ReShade config file was not found in:
+        ///{0}.
+        /// </summary>
+        internal static string Tools_ReShadeConfigFileWasNotFoundIn_ {
+            get {
+                return ResourceManager.GetString("Tools_ReShadeConfigFileWasNotFoundIn_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ReShade log file was not found in:
+        ///{0}.
+        /// </summary>
+        internal static string Tools_ReShadeLogFileWasNotFoundIn_ {
+            get {
+                return ResourceManager.GetString("Tools_ReShadeLogFileWasNotFoundIn_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Special background file was not found in &apos;{0}&apos; for Tools window..
+        /// </summary>
+        internal static string Tools_SpecialBackgroundWasNotFoundIn_ForToolsWindow {
+            get {
+                return ResourceManager.GetString("Tools_SpecialBackgroundWasNotFoundIn_ForToolsWindow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unmute music on start.
+        /// </summary>
+        internal static string Tools_UnmuteMusicOnStart {
+            get {
+                return ResourceManager.GetString("Tools_UnmuteMusicOnStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wrong EnableMusic value in the ini file..
+        /// </summary>
+        internal static string Tools_WrongEnableMusicValueInTheIniFile {
+            get {
+                return ResourceManager.GetString("Tools_WrongEnableMusicValueInTheIniFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You are connected as {0}. Hi and nice to meet you! Check your activity on Discord..
+        /// </summary>
+        internal static string Tools_YoureConnectedAs__HiAndNiceToMeetYou_CheckYourDiscordActivity {
+            get {
+                return ResourceManager.GetString("Tools_YoureConnectedAs_.HiAndNiceToMeetYou.CheckYourDiscordActivity", resourceCulture);
             }
         }
         

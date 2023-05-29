@@ -43,7 +43,7 @@ namespace StellaLauncher.Forms.Other
 
         private void ReloadOpenForms()
         {
-            Version.Text = "Status: Please wait...";
+            Version.Text = @"Status: Please wait...";
             foreach (Form form in Application.OpenForms)
             {
                 form.SuspendLayout();
@@ -57,7 +57,7 @@ namespace StellaLauncher.Forms.Other
                 form.PerformLayout();
             }
 
-            Version.Text = $"Status: Changed langauge to {comboBox1.SelectedItem}";
+            Version.Text = $@"Status: Changed to {comboBox1.SelectedItem}. Restart is optional.";
         }
 
         private static void UpdateControlLanguage(ComponentResourceManager resources, Control.ControlCollection controls)

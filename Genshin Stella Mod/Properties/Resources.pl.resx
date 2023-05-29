@@ -1,14 +1,305 @@
-﻿<root>
-	<resheader name="resmimetype">
-		<value>text/microsoft-resx</value>
-	</resheader>
-	<resheader name="version">
-		<value>1.3</value>
-	</resheader>
-	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Default_AreYouSureWantToUpdateReShadeConfiguration" xml:space="preserve">
+    <value>Jesteś pewien, że chcesz zaktualizować konfigurację ReShade?
+
+Ta czynność spowoduje utratę wszelkich niestandardowych konfiguracji, jakie dokonałeś. Jeśli nie masz żadnych niestandardowych konfiguracji, możesz kontynuować, klikając Tak. Jednak jeśli wprowadziłeś zmiany, upewnij się, że utworzyłeś kopię zapasową poprzedniego pliku ReShade w folderze gry.</value>
+  </data>
+  <data name="Default_BackgroundFileWasNotFoundIn_.ID" xml:space="preserve">
+    <value>Nie znaleziono pliku tła w '{0}'; Identyfikator: {1};</value>
+  </data>
+  <data name="Default_CachedAppBackground_ID" xml:space="preserve">
+    <value>Zapisano tło '{0}' w pamięci RAM; Identyfikator: {1};</value>
+    <comment>Używane do Log.Output</comment>
+  </data>
+  <data name="Default_CanceledByTheUser_AreYouSureOfWhatYoureDoing" xml:space="preserve">
+    <value>Anulowane przez użytkownika. Czy jesteś pewien tego, co robisz?</value>
+  </data>
+  <data name="Default_ChangedTheLauncherBackground_ID" xml:space="preserve">
+    <value>Zmieniono tło programu uruchamiającego. Identyfikator: {0}</value>
+  </data>
+  <data name="Default_CheckForUpdates" xml:space="preserve">
+    <value>Wyszukaj aktualizacje</value>
+  </data>
+  <data name="Default_CheckingForUpdates" xml:space="preserve">
+    <value>Sprawdzanie aktualizacji...</value>
+  </data>
+  <data name="Default_ClickStartGameButtonToInjectReShadeAndUseFPSUnlock" xml:space="preserve">
+    <value>Kliknij przycisk "Uruchom grę", aby wstrzyknąć ReShade i użyć odblokowania FPS.</value>
+  </data>
+  <data name="Default_CurrentBackground" xml:space="preserve">
+    <value>Bieżące tło: {0}</value>
+    <comment>Dla toolTip1.SetToolTip</comment>
+  </data>
+  <data name="Default_CurrentBackground_Default" xml:space="preserve">
+    <value>Bieżące tło: Domyślne</value>
+  </data>
+  <data name="Default_DeletedOldSetupFromTempDirectory" xml:space="preserve">
+    <value>Usunięto stary plik instalacyjny z katalogu tymczasowego.</value>
+  </data>
+  <data name="Default_DeletedOldSetupFromTempFolder" xml:space="preserve">
+    <value>Usunięto stary plik instalacyjny z folderu tymczasowego: {0}</value>
+  </data>
+  <data name="Default_DownloadedReShadeIniWasNotFoundIn_" xml:space="preserve">
+    <value>Nie znaleziono pobranego pliku ReShade.ini w: {0}</value>
+  </data>
+  <data name="Default_Downloading" xml:space="preserve">
+    <value>Pobieranie...</value>
+  </data>
+  <data name="Default_DownloadingConfigFileForFPSUnlocker" xml:space="preserve">
+    <value>Pobieranie pliku konfiguracyjnego dla FPS Unlockera...</value>
+  </data>
+  <data name="Default_FailedToDownload" xml:space="preserve">
+    <value>Nie udało się pobrać...</value>
+  </data>
+  <data name="Default_FailedToDownloadUnlockerConfigJson" xml:space="preserve">
+    <value>Nie udało się pobrać pliku unlocker.config.json.</value>
+  </data>
+  <data name="Default_FileDownloadHasBeenCanceledByTheUser" xml:space="preserve">
+    <value>Pobieranie pliku zostało anulowane przez użytkownika.</value>
+  </data>
+  <data name="Default_FileWasNotFound" xml:space="preserve">
+    <value>Plik nie został znaleziony.</value>
+  </data>
+  <data name="Default_File_WasNotFound" xml:space="preserve">
+    <value>[x]: Nie znaleziono pliku {0}.</value>
+  </data>
+  <data name="Default_ForSomeReasonYouDidNotGiveConsentForTheAutomaticUpdateOfTheReShadeFile" xml:space="preserve">
+    <value>Z jakiegoś powodu nie wyraziłeś zgody na automatyczną aktualizację pliku ReShade. Należy pamiętać, że starsze wersje tego pliku mogą nie być kompatybilne z nowszymi wersjami modyfikacji Stella Mod. Mam nadzieję, że wiesz, co robisz.</value>
+  </data>
+  <data name="Default_GameLauncherWasNotFound" xml:space="preserve">
+    <value>Nie znaleziono programu uruchamiającego grę.</value>
+  </data>
+  <data name="Default_GameLauncherWasNotFoundIn" xml:space="preserve">
+    <value>Nie znaleziono programu uruchamiającego grę w: {0}</value>
+  </data>
+  <data name="Default_ItAppersThatIsYourFirstTimeLaunchingTheLauncher" xml:space="preserve">
+    <value>Wygląda na to, że uruchamiasz launcher po raz pierwszy! Przeznacz chwilę na zapoznanie się z zasadami użytkowania na stronie GitHub Wiki oraz innymi wytycznymi dla tej modyfikacji, aby uniknąć nieoczekiwanych problemów.
+
+PAMIĘTAJ, ABY NIE UDOSTĘPNIAĆ NIKOMU SWOJEGO UID Z WIDOCZNYMI SHADERAMI!</value>
+  </data>
+  <data name="Default_ItsJustText_WhatMoreDoYouWant" xml:space="preserve">
+    <value>To tylko tekst. Czego chcesz więcej?</value>
+  </data>
+  <data name="Default_Meeow_FailedToDownloadReShadeIni_TryAgain" xml:space="preserve">
+    <value>Miałł! Nie udało się pobrać ReShade.ini. Spróbuj ponownie.</value>
+  </data>
+  <data name="Default_NotFoundAnyNewUpdates_YourInstalledVersion_" xml:space="preserve">
+    <value>Nie znaleziono żadnych nowych aktualizacji. Twoja zainstalowana wersja: v{0}.</value>
+  </data>
+  <data name="Default_OhhSomethingWentWrong" xml:space="preserve">
+    <value>Ouh, coś poszło nie tak</value>
+  </data>
+  <data name="Default_PlayingSoundFile_" xml:space="preserve">
+    <value>Odtwarzanie pliku dźwiękowego: {0}</value>
+  </data>
+  <data name="Default_SomethingWentWrongWhileCheckingForNewUpdates" xml:space="preserve">
+    <value>Wystąpił problem podczas sprawdzania nowych aktualizacji.
+
+{0}</value>
+  </data>
+  <data name="Default_Sorry.Background_WasNotFound" xml:space="preserve">
+    <value>Przepraszam. Tło {0} nie zostało odnalezione.</value>
+  </data>
+  <data name="Default_Success" xml:space="preserve">
+    <value>Sukces!</value>
+  </data>
+  <data name="Default_SuccessfullyDownloadedReShadeIni" xml:space="preserve">
+    <value>Pomyślnie pobrano plik ReShade.ini!</value>
+  </data>
+  <data name="Default_SuccessfullyDownloadedReShadeIniAndSavedIn" xml:space="preserve">
+    <value>Pomyślnie pobrano plik ReShade.ini i zapisano w: {0}</value>
+    <comment>Używane do Log.Output</comment>
+  </data>
+  <data name="Default_SuccessfullyRetrievedAndUpdatedTheCachedAppBackgroundWithID_" xml:space="preserve">
+    <value>Pomyślnie odebrano i zaktualizowano tło aplikacji z pamięci podręcznej (cache) o identyfikatorze {0}.</value>
+  </data>
+  <data name="Default_TheApplicationBackgroundHasBeenChangedToDefault_ID" xml:space="preserve">
+    <value>Tło aplikacji zostało zmienione na domyślne. Identyfikator: {0}</value>
+  </data>
+  <data name="Default_TheReShadeIniFileCouldNotBeLocatedInYourGameFiles" xml:space="preserve">
+    <value>Nie można zlokalizować pliku ReShade.ini w folderze gry lub może on nie być kompatybilny z obecną wersją.
+
+Czy chciałbyś teraz pobrać ten plik, aby zapobiec przyszłym błędom i ręcznej konfiguracji? Zalecane.</value>
+  </data>
+  <data name="Default_TheReShadeIniFileStillDoesNotExist" xml:space="preserve">
+    <value>Plik ReShade.ini nadal nie istnieje!</value>
+    <comment>Używane do Log.Output</comment>
+  </data>
+  <data name="Default_TheSoundFileWithMusicWasNotFound" xml:space="preserve">
+    <value>Nie odnaleziono pliku dźwiękowego z muzyką.</value>
+  </data>
+  <data name="Default_TheSoundFileWithMusicWasNotFoundInTheLocalization_" xml:space="preserve">
+    <value>Plik dźwiękowy z muzyką nie został odnaleziony w lokalizacji: '{0}' </value>
+  </data>
+  <data name="Default_TheUpdateOfReShadIniHasBeenCanceledByTheUser" xml:space="preserve">
+    <value>Aktualizacja pliku ReShade.ini została anulowana przez użytkownika.</value>
+  </data>
+  <data name="Default_YouHaveTheLatestVersion" xml:space="preserve">
+    <value>Masz najnowszą wersję</value>
+  </data>
+  <data name="Gameplay_WatchingGameplay" xml:space="preserve">
+    <value>Ogląda rozgrywkę 🎮</value>
+  </data>
+  <data name="Links_DRPC_OnTheWindowWithLinks" xml:space="preserve">
+    <value>W oknie z linkami 🌍</value>
+  </data>
+  <data name="Main_ClosedForm_" xml:space="preserve">
+    <value>Zamknięto formularz {0}.</value>
+    <comment>Używane do Log.Output</comment>
+  </data>
+  <data name="Main_LoadedForm_" xml:space="preserve">
+    <value>Załadowano formularz {0}.</value>
+    <comment>Używane do Log.Output</comment>
+  </data>
+  <data name="Tools_BrowsingUtils" xml:space="preserve">
+    <value>Przegląda narzędzia 🔧</value>
+  </data>
+  <data name="Tools_DisableDiscordRPC" xml:space="preserve">
+    <value>Wyłącz Discord RPC</value>
+  </data>
+  <data name="Tools_EnableDiscordRPC" xml:space="preserve">
+    <value>Włącz Discord RPC</value>
+  </data>
+  <data name="Tools_MuteMusicOnStart" xml:space="preserve">
+    <value>Wycisz muzyke na start</value>
+  </data>
+  <data name="Tools_ReShadeConfigFileWasNotFoundIn_" xml:space="preserve">
+    <value>Plik konfiguracyjny ReShade nie został odnaleziony w:
+{0}</value>
+    <comment>.</comment>
+  </data>
+  <data name="Tools_ReShadeLogFileWasNotFoundIn_" xml:space="preserve">
+    <value>Plik z dziennikiem zdarzeń (logami) nie został odnaleziony w:
+{0}</value>
+  </data>
+  <data name="Tools_SpecialBackgroundWasNotFoundIn_ForToolsWindow" xml:space="preserve">
+    <value>Nie znaleziono specjalnego pliku tła w '{0}' dla okna Narzędzia.</value>
+  </data>
+  <data name="Tools_UnmuteMusicOnStart" xml:space="preserve">
+    <value>Odcisz muzyke na start</value>
+  </data>
+  <data name="Tools_WrongEnableMusicValueInTheIniFile" xml:space="preserve">
+    <value>Nieprawidłowa wartość EnableMusic w pliku ini.</value>
+  </data>
+  <data name="Tools_YoureConnectedAs_.HiAndNiceToMeetYou.CheckYourDiscordActivity" xml:space="preserve">
+    <value>Jesteś połączony jako {0}. Cześć i miło mi ciebie poznać! Sprawdź swoją aktywność na Discordzie.</value>
+  </data>
 </root>

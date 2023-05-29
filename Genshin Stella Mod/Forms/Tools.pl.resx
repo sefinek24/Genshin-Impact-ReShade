@@ -121,7 +121,7 @@
     <value>Zamknij</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Genshin Stella Mod autorstwa Sefinka</value>
+    <value>Genshin Stella Mod Launcher 2023</value>
   </data>
   <data name="SettingsAndUtils.Text" xml:space="preserve">
     <value>&gt;&gt; Jakieś ustawienia i narzędzia &lt;&lt;</value>
@@ -196,11 +196,14 @@
   <data name="DoNotEdit.Text" xml:space="preserve">
     <value>Nie edytuj ich</value>
   </data>
-  <data name="Version.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 23</value>
+  <data name="madeWith_Label.Location" type="System.Drawing.Point, System.Drawing">
+    <value>425, 558</value>
   </data>
-  <data name="Version.Text" xml:space="preserve">
-    <value>;w;</value>
+  <data name="madeWith_Label.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 23</value>
+  </data>
+  <data name="madeWith_Label.Text" xml:space="preserve">
+    <value>Zrobione z ♡ przez Sefinka</value>
   </data>
   <data name="Misc.Text" xml:space="preserve">
     <value>Różne</value>

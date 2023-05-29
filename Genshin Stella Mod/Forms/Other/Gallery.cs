@@ -1,6 +1,7 @@
 using System;
 using System.Windows.Forms;
 using Microsoft.Web.WebView2.Core;
+using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
 
 namespace StellaLauncher.Forms.Other
@@ -16,14 +17,9 @@ namespace StellaLauncher.Forms.Other
         {
             InitBrowser();
 
-            int data = Program.Settings.ReadInt("Launcher", "DiscordRPC", 1);
-            if (data == 1)
-            {
-                Discord.Presence.Details = "Browsing the gallery 📷";
-                Discord.Client.SetPresence(Discord.Presence);
-            }
+            Discord.SetStatus("Browsing the gallery 📷");
 
-            Log.Output($"Loaded form '{Text}'.");
+            Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
         }
 
         private async void InitBrowser()
@@ -43,7 +39,7 @@ namespace StellaLauncher.Forms.Other
                 Discord.Client.SetPresence(Discord.Presence);
             }
 
-            Log.Output($"Closed form '{Text}'.");
+            Log.Output(string.Format(Resources.Main_ClosedForm_, Text));
         }
     }
 }

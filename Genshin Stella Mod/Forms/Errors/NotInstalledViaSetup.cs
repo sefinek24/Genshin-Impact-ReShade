@@ -1,6 +1,7 @@
 using System;
 using System.Media;
 using System.Windows.Forms;
+using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
 
 namespace StellaLauncher.Forms.Errors
@@ -16,13 +17,13 @@ namespace StellaLauncher.Forms.Errors
         {
             SystemSounds.Beep.Play();
 
-            Log.Output($"Loaded form '{Text}'.");
+            Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
             Log.SaveErrorLog(new Exception($"Launcher is not installed using our installation wizard.\n\nApplication data: {Program.AppData}"));
         }
 
         private void NotInstalledViaSetup_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Log.Output($"Closed form '{Text}'.");
+            Log.Output(string.Format(Resources.Main_ClosedForm_, Text));
         }
 
         private void Installer_Button(object sender, EventArgs e)

@@ -28,6 +28,7 @@ namespace StellaLauncher.Forms.Other
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RandomImages));
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
@@ -81,6 +82,7 @@ namespace StellaLauncher.Forms.Other
             this.label4 = new System.Windows.Forms.Label();
             this.linkLabel45 = new System.Windows.Forms.LinkLabel();
             this.linkLabel46 = new System.Windows.Forms.LinkLabel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
             this.SuspendLayout();
             // 
@@ -156,6 +158,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel5.LinkColor = System.Drawing.Color.White;
             this.linkLabel5.Name = "linkLabel5";
             this.linkLabel5.TabStop = true;
+            this.toolTip1.SetToolTip(this.linkLabel5, resources.GetString("linkLabel5.ToolTip"));
             this.linkLabel5.Click += new System.EventHandler(this.FoxGirl_Click);
             // 
             // linkLabel6
@@ -168,6 +171,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel6.LinkColor = System.Drawing.Color.White;
             this.linkLabel6.Name = "linkLabel6";
             this.linkLabel6.TabStop = true;
+            this.toolTip1.SetToolTip(this.linkLabel6, resources.GetString("linkLabel6.ToolTip"));
             this.linkLabel6.Click += new System.EventHandler(this.CatGirl_Click);
             // 
             // linkLabel7
@@ -684,7 +688,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel46.TabStop = true;
             this.linkLabel46.Click += new System.EventHandler(this.RandomHentai_Click);
             // 
-            // RandomThings
+            // RandomImages
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -743,7 +747,7 @@ namespace StellaLauncher.Forms.Other
             this.Controls.Add(this.linkLabel1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "RandomThings";
+            this.Name = "RandomImages";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RandomImg_FormClosed);
             this.Load += new System.EventHandler(this.RandomThings_Load);
             this.Shown += new System.EventHandler(this.RandomImg_Shown);
@@ -808,5 +812,6 @@ namespace StellaLauncher.Forms.Other
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.LinkLabel linkLabel45;
         private System.Windows.Forms.LinkLabel linkLabel46;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

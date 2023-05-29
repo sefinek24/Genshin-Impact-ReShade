@@ -152,18 +152,22 @@ Dzięki za korzystanie z tego oprogramowania. Miłej gry (:</value>
   <data name="linkLabel4.ToolTip" xml:space="preserve">
     <value>Sprawdź zrzuty ekranu.</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Twórca: Sefinek#2714</value>
+  </data>
+  <data name="pictureBox3.ToolTip" xml:space="preserve">
+    <value>Angielski</value>
+  </data>
   <data name="pictureBox2.ToolTip" xml:space="preserve">
     <value>Polski
 
 
 Łaaał, polak stworzył coś takiego. Kurwa nie możliwe.
 Chwała Jezusowi Chrystusowi a degeneracji kij w oko.</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 24</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Ten film jest nieaktualny</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Mini filmik z gameplay'u</value>
