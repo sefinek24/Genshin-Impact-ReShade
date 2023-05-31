@@ -1,0 +1,44 @@
+---
+
+name: Test executable files
+
+"on":
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**.yaml'
+      - '**.yml'
+      - '**.md'
+      - '**.html'
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - '**.yaml'
+      - '**.yml'
+      - '**.md'
+      - '**.html'
+
+env:
+  LAUNCHER_EXE: '"./Genshin Stella Mod.exe"'
+  UNLOCKER_EXE: './data/unlocker/unlockfps_clr.exe'
+  INJECTOR_EXE: './data/reshade/inject64.exe'
+
+jobs:
+  open-launcher:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Display system information
+        run: |
+          echo "Operating system:       ${{ matrix.os }}"
+          echo "Processor architecture: $(uname -m)"
+          echo "Number of CPU cores:    $(nproc)"
+      - name: Run Stella Mod Launcher
+        run: '${{ env.LAUNCHER_EXE }}'
+      - name: Run FPS Unlocker
+        run: '${{ env.UNLOCKER_EXE }}'
+      - name: Run ReShade injector
+        run: '${{ env.INJECTOR_EXE }}'

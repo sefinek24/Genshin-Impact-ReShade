@@ -1,0 +1,28 @@
+---
+
+name: Validate YAML files
+
+"on":
+  push:
+    branches:
+      - main
+    paths:
+      - '**/*.yml'
+      - '**/*.yaml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '**/*.yml'
+      - '**/*.yaml'
+
+jobs:
+  validate-yaml:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Validate YAML file
+        run: |
+          for file in $(find . -name '*.yml' -o -name '*.yaml'); do
+            yamllint "$file"
+          done
