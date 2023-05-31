@@ -1,8 +1,8 @@
 <div align="center" id="header">
     <h1>🌟 Genshin Impact Stella Mod Pack - 2023 🌟</h1>
     <p>
-        <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/data/images/banner/border/1.png" title="See preview [data/images/banner/border/1.png]">
-            <img src="Genshin Stella Mod/data/images/banner/border/1.png" alt="Header image">
+        <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/assets/images/banner/rounded-corners/compressed.png" title="See preview [data/images/banner/border/1.png]">
+            <img src="assets/images/banner/rounded-corners/compressed.png" alt="Header image">
         </a>
     </p>
     <a href="https://sefinek.net" title="sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=Website&up_message=Online&url=https%3A%2F%2Fsefinek.net" alt="Status page"></a>
@@ -36,10 +36,10 @@
 - [🧶 Sources](#sources)
 
 <div align="center">
-    <a href="https://sefinek.net/genshin-impact-reshade/download" title="Download stable release"><img src="Genshin Stella Mod/data/images/readme/labels/download.png" alt="Download" height="148px"></a>
+    <a href="https://sefinek.net/genshin-impact-reshade/download" title="Download stable release"><img src="assets/images/readme/labels/download.png" alt="Download" height="148px"></a>
     <br>
-    <a href="https://genshin.sefinek.net" title="Official website"><img src="Genshin Stella Mod/data/images/readme/labels/website.png" alt="Website" height="148px"></a>
-    <a href="https://discord.com/invite/SVcbaRc7gH" title="Our Discord server"><img src="Genshin Stella Mod/data/images/readme/labels/discord.png" alt="Discord" height="148px"></a>
+    <a href="https://genshin.sefinek.net" title="Official website"><img src="assets/images/readme/labels/website.png" alt="Website" height="148px"></a>
+    <a href="https://discord.com/invite/SVcbaRc7gH" title="Our Discord server"><img src="assets/images/readme/labels/discord.png" alt="Discord" height="148px"></a>
 </div>
 
 
@@ -121,11 +121,6 @@ that [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel) connects to
 1. [Main page](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/07.-Installation)
 2. [Automatic installation](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/07.-Installation#-automatic-installation)
 3. [Manual installation](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/07.-Installation#-manually-installation)
-
-### 😼 » Suggestion
-Kindly avoid downloading files from this repository, including any branches, as the current versions are still in the beta testing phase.
-There is a high likelihood of the mod not functioning properly or encountering other problems.
-It is strongly recommended that you opt for the installer instead, as it guarantees access to the stable and fully operational version of the mod.
 
 ### 📝 » Note
 After the installation is complete, you should open the Stella Launcher and start the game by clicking on the **Start game** button.
