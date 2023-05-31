@@ -121,7 +121,6 @@ that [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel) connects to
 ### 📘 » Extended tutorial (GitHub Wiki)
 1. [Main page](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/07.-Installation)
 2. [Automatic installation](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/07.-Installation#-automatic-installation)
-3. [Manual installation](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/07.-Installation#-manually-installation)
 
 ### 📝 » Note
 After the installation is complete, you should open the Stella Launcher and start the game by clicking on the **Start game** button.
