@@ -60,7 +60,7 @@ namespace PrepareStella.Scripts.Preparing
                 shBkpWt.TargetPath = stellaWtBkp;
                 shBkpWt.Save();
 
-                Log.Output($@"Created: {wtAppDataLocal}\Stella WT Backup.lnk");
+                Log.Output($@"Created: {Path.Combine(wtAppDataLocal, "Stella WT Backup.lnk")}");
                 Console.WriteLine(@"Saved in Stella AppData.");
             }
 
