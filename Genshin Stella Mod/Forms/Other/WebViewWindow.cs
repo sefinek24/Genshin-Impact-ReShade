@@ -6,19 +6,22 @@ namespace StellaLauncher.Forms.Other
 {
     public partial class WebViewWindow : Form
     {
-        private readonly Random _random;
-        private readonly Timer _shakeTimer;
+        private static Random _random;
+        private static Timer _shakeTimer;
 
         public WebViewWindow()
         {
             InitializeComponent();
+        }
 
-            _shakeTimer = new Timer();
-            _shakeTimer.Interval = 99;
+        private void WebViewWindow_Load(object sender, EventArgs e)
+        {
+            _shakeTimer = new Timer { Interval = 99 };
             _shakeTimer.Tick += ShakeTimer_Tick;
 
             _random = new Random();
         }
+
 
         public async void WebView2(string webView)
         {
@@ -40,7 +43,7 @@ namespace StellaLauncher.Forms.Other
             WebView2(url);
         }
 
-        private void StartShaking()
+        private static void StartShaking()
         {
             _shakeTimer.Start();
         }
