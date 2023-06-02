@@ -48,6 +48,7 @@ namespace StellaLauncher.Forms.Other
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.webView21);
             this.Name = "WebViewWindow";
+            this.Load += new System.EventHandler(this.WebViewWindow_Load);
             this.Shown += new System.EventHandler(this.WebViewWindow_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).EndInit();
             this.ResumeLayout(false);
