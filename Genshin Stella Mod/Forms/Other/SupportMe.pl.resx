@@ -120,22 +120,31 @@
   <data name="panel2.ToolTip" xml:space="preserve">
     <value>Zamknij</value>
   </data>
+  <data name="panel1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>23, 405</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>713, 68</value>
+    <value>725, 72</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Zostając moim patronem możesz zyskać nowe korzyści.
 Wybierz właściwą odpowiedź..</value>
+  </data>
+  <data name="label2.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="linkLabel6.Size" type="System.Drawing.Size, System.Drawing">
     <value>320, 34</value>
   </data>
   <data name="linkLabel6.Text" xml:space="preserve">
     <value>❌ Może później UnU</value>
+  </data>
+  <data name="linkLabel6.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="linkLabel5.Location" type="System.Drawing.Point, System.Drawing">
     <value>676, 547</value>
@@ -146,11 +155,17 @@ Wybierz właściwą odpowiedź..</value>
   <data name="linkLabel5.Text" xml:space="preserve">
     <value>✔ Okej, zrobione UwU</value>
   </data>
+  <data name="linkLabel5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>667, 48</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Podoba ci się mod? Jeśli tak, proszę...</value>
+  </data>
+  <data name="label1.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>356, 28</value>
@@ -198,12 +213,18 @@ Wybierz właściwą odpowiedź..</value>
     <value>307, 502</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>416, 38</value>
+    <value>430, 39</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Wybierz właściwą odpowiedź:</value>
   </data>
+  <data name="label3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Wesprzyj mnie</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
   </data>
 </root>
