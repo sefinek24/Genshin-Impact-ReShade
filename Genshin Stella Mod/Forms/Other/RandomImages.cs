@@ -40,7 +40,7 @@ namespace StellaLauncher.Forms.Other
                 Close();
             }
 
-            Discord.SetStatus("Generating beautiful pictures 😻");
+            Discord.SetStatus(Resources.RandomImages_GeneratingBeautifulPictures);
 
             Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
         }
@@ -66,8 +66,7 @@ namespace StellaLauncher.Forms.Other
                 else
                     MessageBox.Show(e.Message, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                Log.Output($"Received error from API: {url}");
-                Log.SaveErrorLog(new Exception($"Error with API: {url}\n\n{e}"));
+                Log.SaveErrorLog(new Exception(string.Format(Resources.RandomImages_ErrorWithTheAPI, url, e)));
                 return null;
             }
         }
@@ -82,7 +81,7 @@ namespace StellaLauncher.Forms.Other
             webView21.CoreWebView2.Navigate(res.Message);
             text_Label.Visible = false;
 
-            Log.Output($"Received data from api.sefinek.net: {res.Success} {res.Status} {res.Category} {res.Endpoint} {res.Message}");
+            Log.Output($"{string.Format(Resources.RandomImages_ReceivedDataFrom, "api.sefinek.net")}: {res.Success} {res.Status} {res.Category} {res.Endpoint} {res.Message}");
         }
 
         private async void NekosBest(string url, bool gif) // The best api uwu
@@ -97,20 +96,20 @@ namespace StellaLauncher.Forms.Other
             if (gif)
             {
                 text_Label.ActiveLinkColor = Color.Transparent;
-                text_Label.Text = $"Anime name\n{res.Results[0].Anime_name}";
+                text_Label.Text = $"{Resources.RandomImages_AnimeName}\n{res.Results[0].Anime_name}";
                 text_Label.LinkBehavior = LinkBehavior.NeverUnderline;
             }
             else
             {
                 text_Label.ActiveLinkColor = Color.DodgerBlue;
-                text_Label.Text = $"Source\n{Regex.Replace(res.Results[0].Source_url, @"(?:https?://|www\.)", "")}";
+                text_Label.Text = $"{Resources.RandomImages_Source}\n{Regex.Replace(res.Results[0].Source_url, @"(?:https?://|www\.)", "")}";
                 text_Label.LinkBehavior = LinkBehavior.HoverUnderline;
             }
 
             text_Label.Visible = true;
             _sourceUrl = res.Results[0].Source_url;
 
-            Log.Output($"Received data from nekos.best: {res.Results[0].Anime_name} {res.Results[0].Source_url} {res.Results[0].Url}");
+            Log.Output($"{string.Format(Resources.RandomImages_ReceivedDataFrom, "nekos.best")}: {res.Results[0].Anime_name} {res.Results[0].Source_url} {res.Results[0].Url}");
         }
 
         private async void PurrBot(string url)
@@ -124,7 +123,7 @@ namespace StellaLauncher.Forms.Other
             _sourceUrl = res.Link;
             text_Label.Visible = false;
 
-            Log.Output($"Received data from purrbot.site: {res.Link}");
+            Log.Output($"{string.Format(Resources.RandomImages_ReceivedDataFrom, "purrbot.site")}: {res.Link}");
         }
 
         private async void NekoBot(string url)
@@ -138,13 +137,13 @@ namespace StellaLauncher.Forms.Other
             Color rgbColor = Color.FromArgb(Convert.ToInt16(color.R), Convert.ToInt16(color.G), Convert.ToInt16(color.B));
 
             text_Label.LinkColor = rgbColor;
-            text_Label.Text = ">> Open this image in your browser <<";
+            text_Label.Text = $@">> {Resources.RandomImages_OpenImageInDefaultBrowser} <<";
             text_Label.LinkBehavior = LinkBehavior.HoverUnderline;
 
             text_Label.Visible = true;
             _sourceUrl = res.Message;
 
-            Log.Output($"Received data from nekobot.xyz: {res.Color} {rgbColor} {res.Message}");
+            Log.Output($"{string.Format(Resources.RandomImages_ReceivedDataFrom, "nekobot.xyz")}: {res.Color} {rgbColor} {res.Message}");
         }
 
         /* Random animals */

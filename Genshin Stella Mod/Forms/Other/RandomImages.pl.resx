@@ -120,6 +120,9 @@
   <data name="linkLabel1.Text" xml:space="preserve">
     <value>Kot</value>
   </data>
+  <data name="linkLabel1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>290, 38</value>
@@ -127,11 +130,17 @@
   <data name="label1.Text" xml:space="preserve">
     <value>» Słodkie zwierzaczki</value>
   </data>
+  <data name="label1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 25</value>
   </data>
   <data name="linkLabel2.Text" xml:space="preserve">
     <value>Pies</value>
+  </data>
+  <data name="linkLabel2.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="linkLabel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 25</value>
@@ -139,8 +148,17 @@
   <data name="linkLabel3.Text" xml:space="preserve">
     <value>Lis</value>
   </data>
+  <data name="linkLabel3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="label2.Text" xml:space="preserve">
     <value>» Losowe suczki z anime</value>
+  </data>
+  <data name="label2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="linkLabel4.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="linkLabel7.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 25</value>
@@ -148,11 +166,20 @@
   <data name="linkLabel7.Text" xml:space="preserve">
     <value>Kawa</value>
   </data>
+  <data name="linkLabel7.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="text_Label.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>290, 38</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>» Losowe gify z anime</value>
+  </data>
+  <data name="label3.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="linkLabel8.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 25</value>
@@ -160,11 +187,17 @@
   <data name="linkLabel8.Text" xml:space="preserve">
     <value>Uścisk</value>
   </data>
+  <data name="linkLabel8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="linkLabel9.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 25</value>
   </data>
   <data name="linkLabel9.Text" xml:space="preserve">
     <value>Sczęśliwość</value>
+  </data>
+  <data name="linkLabel9.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="linkLabel10.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 25</value>
@@ -172,11 +205,17 @@
   <data name="linkLabel10.Text" xml:space="preserve">
     <value>Klepanie</value>
   </data>
+  <data name="linkLabel10.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="linkLabel11.Size" type="System.Drawing.Size, System.Drawing">
     <value>116, 25</value>
   </data>
   <data name="linkLabel11.Text" xml:space="preserve">
     <value>Mrugnięcie</value>
+  </data>
+  <data name="linkLabel11.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="linkLabel12.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 25</value>
@@ -184,17 +223,26 @@
   <data name="linkLabel12.Text" xml:space="preserve">
     <value>Płacz</value>
   </data>
+  <data name="linkLabel12.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="linkLabel13.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 25</value>
   </data>
   <data name="linkLabel13.Text" xml:space="preserve">
     <value>Machanie</value>
   </data>
+  <data name="linkLabel13.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="linkLabel14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 25</value>
+    <value>130, 25</value>
   </data>
   <data name="linkLabel14.Text" xml:space="preserve">
-    <value>Kciuk w gó.</value>
+    <value>Kciuk w górę</value>
+  </data>
+  <data name="linkLabel14.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="linkLabel15.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 25</value>
@@ -202,11 +250,17 @@
   <data name="linkLabel15.Text" xml:space="preserve">
     <value>Buziak</value>
   </data>
+  <data name="linkLabel15.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="linkLabel16.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 25</value>
   </data>
   <data name="linkLabel16.Text" xml:space="preserve">
     <value>Przytulas</value>
+  </data>
+  <data name="linkLabel16.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="linkLabel17.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 25</value>
@@ -214,11 +268,20 @@
   <data name="linkLabel17.Text" xml:space="preserve">
     <value>Uśmiech</value>
   </data>
+  <data name="linkLabel17.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="linkLabel18.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 25</value>
   </data>
   <data name="linkLabel18.Text" xml:space="preserve">
     <value>Spanie</value>
+  </data>
+  <data name="linkLabel18.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="linkLabel20.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="linkLabel19.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 25</value>
@@ -226,11 +289,23 @@
   <data name="linkLabel19.Text" xml:space="preserve">
     <value>Śmiech</value>
   </data>
+  <data name="linkLabel19.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="linkLabel21.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 25</value>
   </data>
   <data name="linkLabel21.Text" xml:space="preserve">
     <value>Strzał</value>
+  </data>
+  <data name="linkLabel21.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="linkLabel22.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="linkLabel23.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="linkLabel24.Size" type="System.Drawing.Size, System.Drawing">
     <value>108, 25</value>
@@ -238,11 +313,17 @@
   <data name="linkLabel24.Text" xml:space="preserve">
     <value>Ugryzienie</value>
   </data>
+  <data name="linkLabel24.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="linkLabel25.Size" type="System.Drawing.Size, System.Drawing">
     <value>108, 25</value>
   </data>
   <data name="linkLabel25.Text" xml:space="preserve">
     <value>Znudzenie</value>
+  </data>
+  <data name="linkLabel25.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="linkLabel26.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 25</value>
@@ -250,11 +331,20 @@
   <data name="linkLabel26.Text" xml:space="preserve">
     <value>Taniec</value>
   </data>
+  <data name="linkLabel26.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="linkLabel27.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="linkLabel28.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 25</value>
   </data>
   <data name="linkLabel28.Text" xml:space="preserve">
     <value>Karmienie</value>
+  </data>
+  <data name="linkLabel28.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="linkLabel29.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 25</value>
@@ -262,17 +352,26 @@
   <data name="linkLabel29.Text" xml:space="preserve">
     <value>Uchwyt</value>
   </data>
+  <data name="linkLabel29.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="linkLabel30.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 25</value>
   </data>
   <data name="linkLabel30.Text" xml:space="preserve">
     <value>Piątka</value>
   </data>
+  <data name="linkLabel30.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="linkLabel31.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 25</value>
   </data>
   <data name="linkLabel31.Text" xml:space="preserve">
     <value>Kopinięcie</value>
+  </data>
+  <data name="linkLabel31.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="linkLabel32.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 25</value>
@@ -281,7 +380,7 @@
     <value>Szturcha.</value>
   </data>
   <data name="linkLabel32.ToolTip" xml:space="preserve">
-    <value>Szturchanie</value>
+    <value />
   </data>
   <data name="linkLabel33.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 25</value>
@@ -289,11 +388,17 @@
   <data name="linkLabel33.Text" xml:space="preserve">
     <value>Dąsanie</value>
   </data>
+  <data name="linkLabel33.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="linkLabel34.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 25</value>
   </data>
   <data name="linkLabel34.Text" xml:space="preserve">
     <value>Pięść</value>
+  </data>
+  <data name="linkLabel34.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="linkLabel35.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 25</value>
@@ -302,7 +407,7 @@
     <value>Wzru. ram.</value>
   </data>
   <data name="linkLabel35.ToolTip" xml:space="preserve">
-    <value>Wzruszać ramionami</value>
+    <value />
   </data>
   <data name="linkLabel36.Size" type="System.Drawing.Size, System.Drawing">
     <value>92, 25</value>
@@ -311,16 +416,16 @@
     <value>Policzko.</value>
   </data>
   <data name="linkLabel36.ToolTip" xml:space="preserve">
-    <value>Policzkowanie</value>
+    <value />
   </data>
   <data name="linkLabel37.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 25</value>
+    <value>126, 25</value>
   </data>
   <data name="linkLabel37.Text" xml:space="preserve">
-    <value>Zad. z sie.</value>
+    <value>Zad. z siebie</value>
   </data>
   <data name="linkLabel37.ToolTip" xml:space="preserve">
-    <value>Zadowolonm z siebie</value>
+    <value />
   </data>
   <data name="linkLabel38.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 25</value>
@@ -328,11 +433,17 @@
   <data name="linkLabel38.Text" xml:space="preserve">
     <value>Gapienie</value>
   </data>
+  <data name="linkLabel38.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="linkLabel39.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 25</value>
   </data>
   <data name="linkLabel39.Text" xml:space="preserve">
     <value>Myślenie</value>
+  </data>
+  <data name="linkLabel39.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="linkLabel40.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 25</value>
@@ -340,11 +451,20 @@
   <data name="linkLabel40.Text" xml:space="preserve">
     <value>Łaskotanie</value>
   </data>
+  <data name="linkLabel40.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="linkLabel41.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 25</value>
   </data>
   <data name="linkLabel41.Text" xml:space="preserve">
     <value>Rzucanie</value>
+  </data>
+  <data name="linkLabel41.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="linkLabel42.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="linkLabel43.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 25</value>
@@ -352,11 +472,23 @@
   <data name="linkLabel43.Text" xml:space="preserve">
     <value>Ogon</value>
   </data>
+  <data name="linkLabel43.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="linkLabel44.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="webView21.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>347, 38</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>» Jakieś filmy na YouTube</value>
+  </data>
+  <data name="label4.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="linkLabel45.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 25</value>
@@ -364,13 +496,31 @@
   <data name="linkLabel45.Text" xml:space="preserve">
     <value>Kot Half-Life</value>
   </data>
+  <data name="linkLabel45.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="linkLabel46.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 25</value>
   </data>
   <data name="linkLabel46.Text" xml:space="preserve">
     <value>Losowy hentajec</value>
   </data>
+  <data name="linkLabel46.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="linkLabel47.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 25</value>
+  </data>
+  <data name="linkLabel47.Text" xml:space="preserve">
+    <value>Uśmiech</value>
+  </data>
+  <data name="linkLabel47.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Losowe obrazy i filmy</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
   </data>
 </root>

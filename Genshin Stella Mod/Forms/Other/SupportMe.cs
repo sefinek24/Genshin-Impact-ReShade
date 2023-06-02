@@ -89,16 +89,16 @@ namespace StellaLauncher.Forms.Other
         {
             new Default { Location = Location, StartPosition = FormStartPosition.Manual, Icon = Resources.icon_52x52 }.Show();
 
-            Log.Output($"Clicked no in form '{Text}'.");
+            Log.Output(string.Format(Resources.Main_ClickedNoInForm_, Text));
             Telemetry.SupportMe_AnswNo();
         }
 
         private void OkayDone_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             new Default { Location = Location, StartPosition = FormStartPosition.Manual, Icon = Resources.icon_52x52 }.Show();
-            MessageBox.Show(@"Thanks :3", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(Resources.SupportMe_Thanks, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            Log.Output($"Clicked yes in form '{Text}'.");
+            Log.Output(string.Format(Resources.Main_ClickedYesInForm_, Text));
             Telemetry.SupportMe_AnswYes();
         }
     }

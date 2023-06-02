@@ -453,4 +453,39 @@ Quit the process with name {0} and try again.</value>
   <data name="icon_52x52" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\52x52.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="RandomImages_AnimeName" xml:space="preserve">
+    <value>Anime name</value>
+  </data>
+  <data name="RandomImages_ErrorWithTheAPI" xml:space="preserve">
+    <value>Error with the API: {0}
+
+{1}</value>
+  </data>
+  <data name="RandomImages_GeneratingBeautifulPictures" xml:space="preserve">
+    <value>Generating beautiful pictures 😻</value>
+  </data>
+  <data name="RandomImages_OpenImageInDefaultBrowser" xml:space="preserve">
+    <value>Open image in default browser</value>
+  </data>
+  <data name="RandomImages_ReceivedDataFrom" xml:space="preserve">
+    <value>Received data from {0}</value>
+  </data>
+  <data name="RandomImages_Source" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="Gallery_BrowsingTheGallery" xml:space="preserve">
+    <value>Browsing the gallery 📷</value>
+  </data>
+  <data name="Gallery_ExitedTheGallery" xml:space="preserve">
+    <value>Exited the gallery 🦊</value>
+  </data>
+  <data name="Main_ClickedNoInForm_" xml:space="preserve">
+    <value>Clicked No in form '{0}'.</value>
+  </data>
+  <data name="Main_ClickedYesInForm_" xml:space="preserve">
+    <value>Clicked Yes in form '{0}'.</value>
+  </data>
+  <data name="SupportMe_Thanks" xml:space="preserve">
+    <value>Thanks :3</value>
+  </data>
 </root>

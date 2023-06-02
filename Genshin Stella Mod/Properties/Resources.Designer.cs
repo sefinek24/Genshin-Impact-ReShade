@@ -567,6 +567,24 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Browsing the gallery 📷.
+        /// </summary>
+        internal static string Gallery_BrowsingTheGallery {
+            get {
+                return ResourceManager.GetString("Gallery_BrowsingTheGallery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exited the gallery 🦊.
+        /// </summary>
+        internal static string Gallery_ExitedTheGallery {
+            get {
+                return ResourceManager.GetString("Gallery_ExitedTheGallery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Watching gameplay 🎮.
         /// </summary>
         internal static string Gameplay_WatchingGameplay {
@@ -745,6 +763,24 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Clicked No in form &apos;{0}&apos;..
+        /// </summary>
+        internal static string Main_ClickedNoInForm_ {
+            get {
+                return ResourceManager.GetString("Main_ClickedNoInForm_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clicked Yes in form &apos;{0}&apos;..
+        /// </summary>
+        internal static string Main_ClickedYesInForm_ {
+            get {
+                return ResourceManager.GetString("Main_ClickedYesInForm_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Closed..
         /// </summary>
         internal static string Main_Closed {
@@ -909,6 +945,71 @@ namespace StellaLauncher.Properties {
         internal static string Program_SorryOneInstanceIsCurrentlyOpen_ {
             get {
                 return ResourceManager.GetString("Program_SorryOneInstanceIsCurrentlyOpen_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Anime name.
+        /// </summary>
+        internal static string RandomImages_AnimeName {
+            get {
+                return ResourceManager.GetString("RandomImages_AnimeName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error with the API: {0}
+        ///
+        ///{1}.
+        /// </summary>
+        internal static string RandomImages_ErrorWithTheAPI {
+            get {
+                return ResourceManager.GetString("RandomImages_ErrorWithTheAPI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generating beautiful pictures 😻.
+        /// </summary>
+        internal static string RandomImages_GeneratingBeautifulPictures {
+            get {
+                return ResourceManager.GetString("RandomImages_GeneratingBeautifulPictures", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open image in default browser.
+        /// </summary>
+        internal static string RandomImages_OpenImageInDefaultBrowser {
+            get {
+                return ResourceManager.GetString("RandomImages_OpenImageInDefaultBrowser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Received data from {0}.
+        /// </summary>
+        internal static string RandomImages_ReceivedDataFrom {
+            get {
+                return ResourceManager.GetString("RandomImages_ReceivedDataFrom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Source.
+        /// </summary>
+        internal static string RandomImages_Source {
+            get {
+                return ResourceManager.GetString("RandomImages_Source", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thanks :3.
+        /// </summary>
+        internal static string SupportMe_Thanks {
+            get {
+                return ResourceManager.GetString("SupportMe_Thanks", resourceCulture);
             }
         }
         

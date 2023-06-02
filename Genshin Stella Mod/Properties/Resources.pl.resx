@@ -255,11 +255,23 @@ Czy chciałbyś teraz pobrać ten plik, aby zapobiec przyszłym błędom i ręcz
   <data name="Default_YouHaveTheLatestVersion" xml:space="preserve">
     <value>Masz najnowszą wersję</value>
   </data>
+  <data name="Gallery_BrowsingTheGallery" xml:space="preserve">
+    <value>Przegląda galerie 📷</value>
+  </data>
+  <data name="Gallery_ExitedTheGallery" xml:space="preserve">
+    <value>Zamknięto galerie 🦊</value>
+  </data>
   <data name="Gameplay_WatchingGameplay" xml:space="preserve">
     <value>Ogląda rozgrywkę 🎮</value>
   </data>
   <data name="Links_DRPC_OnTheWindowWithLinks" xml:space="preserve">
     <value>W oknie z linkami 🌍</value>
+  </data>
+  <data name="Main_ClickedNoInForm_" xml:space="preserve">
+    <value>Kliknięto Nie w oknie formularza '{0}'.</value>
+  </data>
+  <data name="Main_ClickedYesInForm_" xml:space="preserve">
+    <value>Kliknięto Tak w oknie formularza '{0}'.</value>
   </data>
   <data name="Main_Closed" xml:space="preserve">
     <value>Zamknięto.</value>
@@ -312,6 +324,29 @@ Chcesz zobaczyć te pliki?</value>
     <value>Przepraszam, obecnie jest uruchomiona jedna instancja.
 
 Zamknij proces o nazwie {0} i spróbuj ponownie.</value>
+  </data>
+  <data name="RandomImages_AnimeName" xml:space="preserve">
+    <value>Nazwa anime</value>
+  </data>
+  <data name="RandomImages_ErrorWithTheAPI" xml:space="preserve">
+    <value>Błąd z API: {0}
+
+{1}</value>
+  </data>
+  <data name="RandomImages_GeneratingBeautifulPictures" xml:space="preserve">
+    <value>Generowanie pięknych obrazów 😻</value>
+  </data>
+  <data name="RandomImages_OpenImageInDefaultBrowser" xml:space="preserve">
+    <value>Otwórz zdjęcie w domyślnej przeglądarce</value>
+  </data>
+  <data name="RandomImages_ReceivedDataFrom" xml:space="preserve">
+    <value>Odebrano dane z {0}</value>
+  </data>
+  <data name="RandomImages_Source" xml:space="preserve">
+    <value>Źródło</value>
+  </data>
+  <data name="SupportMe_Thanks" xml:space="preserve">
+    <value>Dzięki :3</value>
   </data>
   <data name="Tools_BrowsingUtils" xml:space="preserve">
     <value>Przegląda narzędzia 🔧</value>

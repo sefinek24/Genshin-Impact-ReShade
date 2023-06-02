@@ -17,7 +17,7 @@ namespace StellaLauncher.Forms.Other
         {
             InitBrowser();
 
-            Discord.SetStatus("Browsing the gallery 📷");
+            Discord.SetStatus(Resources.Gallery_BrowsingTheGallery);
 
             Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
         }
@@ -32,12 +32,7 @@ namespace StellaLauncher.Forms.Other
 
         private void Gallery_FormClosed(object sender, FormClosedEventArgs e)
         {
-            int data = Program.Settings.ReadInt("Launcher", "DiscordRPC", 1);
-            if (data == 1)
-            {
-                Discord.Presence.Details = "Exited the gallery 🦊";
-                Discord.Client.SetPresence(Discord.Presence);
-            }
+            Discord.SetStatus(Resources.Gallery_ExitedTheGallery);
 
             Log.Output(string.Format(Resources.Main_ClosedForm_, Text));
         }
