@@ -63,7 +63,7 @@
     <StartupObject>StellaLauncher.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\52x52.ico</ApplicationIcon>
+    <ApplicationIcon>icons\52x52.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>Internet</TargetZone>
@@ -346,18 +346,7 @@
     <None Include="dev\build.cmd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="icons\128x128.xcf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="icons\240x240.xcf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="icons\48x48.xcf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="icons\52x52.xcf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Include="icons\gimp.zip" />
     <None Include="icons\Source.url">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -560,21 +549,13 @@
     <Content Include="data\videos\poland-strong.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="icons\128x128.ico">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="icons\240x240.ico">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="icons\48x48.ico">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="icons\52x52.ico">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="icons\original.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="icons\128x128.ico" />
+    <Content Include="icons\240x240.ico" />
+    <Content Include="icons\48x48.ico" />
+    <Content Include="icons\52x52.ico" />
+    <Content Include="icons\discord-icon.gif" />
+    <Content Include="icons\main.png" />
+    <Content Include="icons\main_compressed.png" />
     <Content Include="icons\README.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -639,7 +620,6 @@
     <None Include="Resources\links.png" />
     <None Include="Resources\main.png" />
     <None Include="Resources\donation.png" />
-    <None Include="Resources\52x52.ico" />
     <None Include="Resources\IMG_20220810_133130-1-1.png" />
     <None Include="Resources\random_images.jpg" />
     <None Include="Resources\775295135108825088.gif" />
