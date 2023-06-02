@@ -135,12 +135,6 @@
     <Compile Include="Forms\Errors\NotCompatible.Designer.cs">
       <DependentUpon>NotCompatible.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Errors\NotInstalledViaSetup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Errors\NotInstalledViaSetup.Designer.cs">
-      <DependentUpon>NotInstalledViaSetup.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Other\Language.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,9 +198,6 @@
     <EmbeddedResource Include="Forms\Errors\NotCompatible.pl.resx">
       <DependentUpon>NotCompatible.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Errors\NotInstalledViaSetup.pl.resx">
-      <DependentUpon>NotInstalledViaSetup.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Errors\WrongCountry.resx">
       <DependentUpon>WrongCountry.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,9 +218,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Errors\NotCompatible.resx">
       <DependentUpon>NotCompatible.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Errors\NotInstalledViaSetup.resx">
-      <DependentUpon>NotInstalledViaSetup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Other\Language.pl.resx">
       <DependentUpon>Language.cs</DependentUpon>

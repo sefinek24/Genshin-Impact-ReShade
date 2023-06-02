@@ -190,9 +190,6 @@
   <data name="flaticon_settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\settings1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wrong-ins-method" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\29b20e63b8d94849ed201c4fac3f2312357d088dr1-1024-1015v2_00.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icons8_recycle-bin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-recycle-bin-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

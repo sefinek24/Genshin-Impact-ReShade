@@ -68,7 +68,7 @@ namespace StellaLauncher.Forms.Errors
             try
             {
                 new ToastContentBuilder()
-                    .AddText("slava poland kurwa")
+                    .AddText("slava poland kurwo")
                     .AddText("axaxaxaxaxaxaxa language for monkeys lol")
                     .Show();
             }
