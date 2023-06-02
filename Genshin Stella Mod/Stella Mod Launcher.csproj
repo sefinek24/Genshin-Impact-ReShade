@@ -102,7 +102,9 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Forms\Errors\ErrorOccurred.cs">
@@ -152,6 +154,12 @@
     </Compile>
     <Compile Include="Forms\Other\SupportMe.Designer.cs">
       <DependentUpon>SupportMe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Other\WebViewWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Other\WebViewWindow.Designer.cs">
+      <DependentUpon>WebViewWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Tools.cs">
       <SubType>Form</SubType>
@@ -236,6 +244,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Other\SupportMe.resx">
       <DependentUpon>SupportMe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Other\WebViewWindow.pl.resx">
+      <DependentUpon>WebViewWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Other\WebViewWindow.resx">
+      <DependentUpon>WebViewWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tools.pl.resx">
       <DependentUpon>Tools.cs</DependentUpon>

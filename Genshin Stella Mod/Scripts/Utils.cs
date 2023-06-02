@@ -48,7 +48,7 @@ namespace StellaLauncher.Scripts
             {
                 case "giDir":
                 {
-                    Log.Output($"Found main Genshin Impact dir: {gamePath} [giDir]");
+                    Log.Output(string.Format(Resources.Utils_FoundMainGIDir, gamePath, "giDir"));
                     return gamePath;
                 }
 
@@ -57,11 +57,11 @@ namespace StellaLauncher.Scripts
                     string genshinImpactGame = Path.Combine(gamePath, "Genshin Impact game");
                     if (!Directory.Exists(genshinImpactGame))
                     {
-                        Log.Output($"Genshin Impact game was not found in: {genshinImpactGame} [giGameDir]");
+                        Log.Output(string.Format(Resources.Utils_FoundGIgameDir__, genshinImpactGame, "giGameDir"));
                         return string.Empty;
                     }
 
-                    Log.Output($"Found Genshin Impact Game dir: {genshinImpactGame} [giGameDir]");
+                    Log.Output(string.Format(Resources.Utils_FoundGIgameDir__, genshinImpactGame, "giGameDir"));
                     return genshinImpactGame;
                 }
 
@@ -70,22 +70,22 @@ namespace StellaLauncher.Scripts
                     string genshinImpactExeMain = Path.Combine(gamePath, "Genshin Impact game", "GenshinImpact.exe");
                     if (File.Exists(genshinImpactExeMain))
                     {
-                        Log.Output($"Found GenshinImpact.exe in: {genshinImpactExeMain} [giExe]");
+                        Log.Output(string.Format(Resources.Utils_FoundGiExe, genshinImpactExeMain, "giExe1"));
                         return genshinImpactExeMain;
                     }
 
-                    MessageBox.Show($"File does not exists.\n{genshinImpactExeMain}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Log.Output($"File does not exists in: {genshinImpactExeMain} [giExe]");
+                    MessageBox.Show(string.Format(Resources.Utils_FileDoesntNotExists_, genshinImpactExeMain), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Log.Output(string.Format(Resources.Utils_FileDoesNotExistsIn, genshinImpactExeMain, "giExe"));
 
                     string genshinImpactExeYuanShen = Path.Combine(gamePath, "Genshin Impact game", "YuanShen.exe");
                     if (File.Exists(genshinImpactExeYuanShen))
                     {
-                        Log.Output($"Found GenshinImpact.exe in: {genshinImpactExeMain} [giExe]");
+                        Log.Output(string.Format(Resources.Utils_FoundGiExe, genshinImpactExeMain, "giExe2"));
                         return genshinImpactExeYuanShen;
                     }
 
-                    MessageBox.Show($"File {genshinImpactExeYuanShen} does not exists.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Log.Output($"File {genshinImpactExeYuanShen} does not exists. [giExe]");
+                    MessageBox.Show(string.Format(Resources.Utils_File_DoesntNotExists, genshinImpactExeYuanShen), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Log.Output(string.Format(Resources.Utils_FileDoesNotExistsIn, genshinImpactExeYuanShen, "giExe"));
 
                     return string.Empty;
                 }
@@ -95,19 +95,19 @@ namespace StellaLauncher.Scripts
                     string genshinImpactExe = Path.Combine(gamePath, "launcher.exe");
                     if (!File.Exists(genshinImpactExe))
                     {
-                        MessageBox.Show($"Launcher file does not exists.\n{genshinImpactExe}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        Log.Output($"Launcher file does not exists in: {genshinImpactExe} [giLauncher]");
+                        MessageBox.Show(string.Format(Resources.Utils_LauncherFileDoesNotExists, genshinImpactExe), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        Log.Output(string.Format(Resources.Utils_LauncherFileDoesNotExistsIn_, genshinImpactExe, "giLauncher"));
                         return string.Empty;
                     }
 
-                    Log.Output($"Found Genshin Impact Launcher in: {genshinImpactExe} [giLauncher]");
+                    Log.Output(string.Format(Resources.Utils_FoundGILauncherIn_, genshinImpactExe, "giLauncher"));
                     return genshinImpactExe;
                 }
 
                 default:
                 {
-                    Log.ThrowError(new Exception("Wrong parameter."));
-                    return "";
+                    Log.ThrowError(new Exception(Resources.Utils_WrongParameter));
+                    return string.Empty;
                 }
             }
         }
@@ -189,9 +189,9 @@ namespace StellaLauncher.Scripts
                 WshShell shell = new WshShell();
                 IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(shortcutPath);
                 shortcut.Description = Resources.Utils_RunOfficialLauncherForStellaModMadeBySefinek;
-                shortcut.IconLocation = Path.Combine(Environment.CurrentDirectory, "icons", "52x52.ico");
-                shortcut.WorkingDirectory = Environment.CurrentDirectory;
-                shortcut.TargetPath = Path.Combine(Environment.CurrentDirectory, $"{Program.AppName}.exe");
+                shortcut.IconLocation = Path.Combine(Program.AppPath, "icons", "52x52.ico");
+                shortcut.WorkingDirectory = Program.AppPath;
+                shortcut.TargetPath = Path.Combine(Program.AppPath, $"{Program.AppName}.exe");
                 shortcut.Save();
 
                 Log.Output(Resources.Utils_DesktopShortcutHasBeenCreated);

@@ -415,6 +415,9 @@ Czy chcesz zresetować wszystkie ustawienia Stella Mod?</value>
 
 Czy chcesz zresetować wszystkie ustawienia Stella Mod?</value>
   </data>
+  <data name="Utils_FoundMainGIDir" xml:space="preserve">
+    <value>Znaleziono główny katalog gry Genshin Impact: {0} [{1}]</value>
+  </data>
   <data name="Utils_Opened_InDefaultBrowser" xml:space="preserve">
     <value>Otwarto '{0}' w domyślnej przeglądarce.</value>
   </data>

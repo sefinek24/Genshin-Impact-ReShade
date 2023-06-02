@@ -533,12 +533,17 @@ namespace StellaLauncher.Forms
         {
             if (Os.RegionCode == "PL")
             {
-                Utils.OpenUrl("https://www.youtube.com/watch?v=2F2DdXUNyaQ");
+                WebViewWindow viewer = new WebViewWindow { Location = Location, Icon = Resources.icon_52x52 };
+                viewer.Navigate("https://www.youtube.com/embed/2F2DdXUNyaQ?autoplay=1");
+                viewer.Show();
+
                 MessageBox.Show(@"Pamiętaj by nie grać w lola, gdyż to grzech ciężki.");
             }
             else
             {
-                Utils.OpenUrl("https://www.youtube.com/watch?v=L3ky4gZU5gY");
+                WebViewWindow viewer = new WebViewWindow { Location = Location, Icon = Resources.icon_52x52 };
+                viewer.Navigate("https://www.youtube.com/embed/L3ky4gZU5gY?autoplay=1");
+                viewer.Show();
             }
         }
 

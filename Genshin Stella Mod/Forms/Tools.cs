@@ -1,5 +1,4 @@
 using System;
-using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -262,7 +261,11 @@ namespace StellaLauncher.Forms
         private void Notepad_MouseClick(object sender, MouseEventArgs e)
         {
             string path = Path.Combine(Program.AppPath, "data", "videos", "poland-strong.mp4");
-            if (Utils.CheckFileExists(path)) Process.Start(path);
+            if (!Utils.CheckFileExists(path)) return;
+
+            WebViewWindow viewer = new WebViewWindow { Location = Location, Icon = Resources.icon_52x52 };
+            viewer.Navigate(path);
+            viewer.Show();
         }
     }
 }

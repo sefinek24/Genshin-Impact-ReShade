@@ -498,6 +498,14 @@ Quit the process with name {0} and try again.</value>
 
 {1}</value>
   </data>
+  <data name="Utils_FileDoesNotExistsIn" xml:space="preserve">
+    <value>File does not exists in: {0} [{1}]</value>
+  </data>
+  <data name="Utils_FileDoesntNotExists_" xml:space="preserve">
+    <value>File does not exists.
+
+{0}</value>
+  </data>
   <data name="Utils_FileWithGamePathWasNotFoundIn" xml:space="preserve">
     <value>File with game path was not found in: {0}</value>
   </data>
@@ -506,6 +514,9 @@ Quit the process with name {0} and try again.</value>
 {0}
 
 Do you want to reset all Stella Mod settings?</value>
+  </data>
+  <data name="Utils_File_DoesntNotExists" xml:space="preserve">
+    <value>File {0} does not exists.</value>
   </data>
   <data name="Utils_File_WasFoundAt_" xml:space="preserve">
     <value>File '{0}' was found at '{1}'.</value>
@@ -519,14 +530,37 @@ Do you want to reset all Stella Mod settings?</value>
 
 Do you want to reset all Stella Mod settings?</value>
   </data>
+  <data name="Utils_FoundGiExe" xml:space="preserve">
+    <value>Found Genshin Impact Exe in: {0} [{1}]</value>
+  </data>
+  <data name="Utils_FoundGIgameDir__" xml:space="preserve">
+    <value>Found Genshin Impact Game dir: {0} [{1}]</value>
+  </data>
+  <data name="Utils_FoundGILauncherIn_" xml:space="preserve">
+    <value>Found Genshin Impact Launcher in: {0}</value>
+  </data>
+  <data name="Utils_FoundMainGIDir" xml:space="preserve">
+    <value>Found main Genshin Impact dir: {0} [{1}]</value>
+  </data>
+  <data name="Utils_LauncherFileDoesNotExists" xml:space="preserve">
+    <value>Launcher file does not exists.
+
+{0}</value>
+  </data>
+  <data name="Utils_LauncherFileDoesNotExistsIn_" xml:space="preserve">
+    <value>Launcher file does not exists in: {0} [{1}]</value>
+  </data>
   <data name="Utils_Opened_InDefaultBrowser" xml:space="preserve">
     <value>Opened '{0}' in default browser.</value>
   </data>
   <data name="Utils_RunOfficialLauncherForStellaModMadeBySefinek" xml:space="preserve">
-    <value>Run official launcher for Genshin Impact Mod made by Sefinek.</value>
+    <value>Run the official launcher for Genshin Impact Stella Mod made by Sefinek.</value>
   </data>
   <data name="Utils_URLIsNullOrEmpty" xml:space="preserve">
     <value>URL is null or empty.</value>
+  </data>
+  <data name="Utils_WrongParameter" xml:space="preserve">
+    <value>Wrong parameter.</value>
   </data>
   <data name="WebView2Handler_ChooseEvergreenStandaloneInstaller" xml:space="preserve">
     <value>Wybierz Evergreen Standalone Installer.</value>

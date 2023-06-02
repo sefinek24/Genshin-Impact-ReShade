@@ -1147,6 +1147,15 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to File {0} does not exists..
+        /// </summary>
+        internal static string Utils_File_DoesntNotExists {
+            get {
+                return ResourceManager.GetString("Utils_File_DoesntNotExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to File &apos;{0}&apos; was found at &apos;{1}&apos;..
         /// </summary>
         internal static string Utils_File_WasFoundAt_ {
@@ -1161,6 +1170,26 @@ namespace StellaLauncher.Properties {
         internal static string Utils_File_WasNotFoundAt_ {
             get {
                 return ResourceManager.GetString("Utils_File_WasNotFoundAt_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File does not exists in: {0} [{1}].
+        /// </summary>
+        internal static string Utils_FileDoesNotExistsIn {
+            get {
+                return ResourceManager.GetString("Utils_FileDoesNotExistsIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File does not exists.
+        ///
+        ///{0}.
+        /// </summary>
+        internal static string Utils_FileDoesntNotExists_ {
+            get {
+                return ResourceManager.GetString("Utils_FileDoesntNotExists_", resourceCulture);
             }
         }
         
@@ -1198,6 +1227,62 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Found Genshin Impact Exe in: {0} [{1}].
+        /// </summary>
+        internal static string Utils_FoundGiExe {
+            get {
+                return ResourceManager.GetString("Utils_FoundGiExe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Found Genshin Impact Game dir: {0} [{1}].
+        /// </summary>
+        internal static string Utils_FoundGIgameDir__ {
+            get {
+                return ResourceManager.GetString("Utils_FoundGIgameDir__", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Found Genshin Impact Launcher in: {0}.
+        /// </summary>
+        internal static string Utils_FoundGILauncherIn_ {
+            get {
+                return ResourceManager.GetString("Utils_FoundGILauncherIn_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Found main Genshin Impact dir: {0} [{1}].
+        /// </summary>
+        internal static string Utils_FoundMainGIDir {
+            get {
+                return ResourceManager.GetString("Utils_FoundMainGIDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Launcher file does not exists.
+        ///
+        ///{0}.
+        /// </summary>
+        internal static string Utils_LauncherFileDoesNotExists {
+            get {
+                return ResourceManager.GetString("Utils_LauncherFileDoesNotExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Launcher file does not exists in: {0} [{1}].
+        /// </summary>
+        internal static string Utils_LauncherFileDoesNotExistsIn_ {
+            get {
+                return ResourceManager.GetString("Utils_LauncherFileDoesNotExistsIn_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Opened &apos;{0}&apos; in default browser..
         /// </summary>
         internal static string Utils_Opened_InDefaultBrowser {
@@ -1207,7 +1292,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Run official launcher for Genshin Impact Mod made by Sefinek..
+        ///   Looks up a localized string similar to Run the official launcher for Genshin Impact Stella Mod made by Sefinek..
         /// </summary>
         internal static string Utils_RunOfficialLauncherForStellaModMadeBySefinek {
             get {
@@ -1221,6 +1306,15 @@ namespace StellaLauncher.Properties {
         internal static string Utils_URLIsNullOrEmpty {
             get {
                 return ResourceManager.GetString("Utils_URLIsNullOrEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wrong parameter..
+        /// </summary>
+        internal static string Utils_WrongParameter {
+            get {
+                return ResourceManager.GetString("Utils_WrongParameter", resourceCulture);
             }
         }
         

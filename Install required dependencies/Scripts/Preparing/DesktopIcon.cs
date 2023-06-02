@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 using IWshRuntimeLibrary;
+using PrepareStella.Properties;
 
 namespace PrepareStella.Scripts.Preparing
 {
@@ -21,10 +22,10 @@ namespace PrepareStella.Scripts.Preparing
 
                 WshShell shell = new WshShell();
                 IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(shortcutPath);
-                shortcut.Description = "Run the official launcher for Genshin Impact Mod made by Sefinek.";
+                shortcut.Description = Resources.Utils_RunOfficialLauncherForStellaModMadeBySefinek;
                 shortcut.IconLocation = Path.Combine(Program.AppPath, "icons", "52x52.ico");
                 shortcut.WorkingDirectory = Program.AppPath;
-                shortcut.TargetPath = Path.Combine(Program.AppPath, "GenshinStellaMod.exe");
+                shortcut.TargetPath = Path.Combine(Program.AppPath, "Genshin Stella Mod.exe");
 
                 await Task.Run(() => shortcut.Save());
             }

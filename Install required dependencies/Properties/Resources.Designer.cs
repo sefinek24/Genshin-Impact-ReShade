@@ -99,5 +99,14 @@ namespace PrepareStella.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Run the official launcher for Genshin Impact Stella Mod made by Sefinek..
+        /// </summary>
+        internal static string Utils_RunOfficialLauncherForStellaModMadeBySefinek {
+            get {
+                return ResourceManager.GetString("Utils_RunOfficialLauncherForStellaModMadeBySefinek", resourceCulture);
+            }
+        }
     }
 }
