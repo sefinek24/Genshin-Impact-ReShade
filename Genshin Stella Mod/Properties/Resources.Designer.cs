@@ -1116,7 +1116,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Wystąpił błąd podczas tworzenia skrótu.
+        ///   Looks up a localized string similar to An error occurred while creating the shortcut.
         ///
         ///{0}.
         /// </summary>
@@ -1143,6 +1143,24 @@ namespace StellaLauncher.Properties {
         internal static string Utils_FailedToOpen_InDefaultBrowser {
             get {
                 return ResourceManager.GetString("Utils_FailedToOpen_InDefaultBrowser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File &apos;{0}&apos; was found at &apos;{1}&apos;..
+        /// </summary>
+        internal static string Utils_File_WasFoundAt_ {
+            get {
+                return ResourceManager.GetString("Utils_File_WasFoundAt_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File &apos;{0}&apos; was not found at &apos;{1}&apos;..
+        /// </summary>
+        internal static string Utils_File_WasNotFoundAt_ {
+            get {
+                return ResourceManager.GetString("Utils_File_WasNotFoundAt_", resourceCulture);
             }
         }
         

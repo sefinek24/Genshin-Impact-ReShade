@@ -173,8 +173,8 @@ namespace StellaLauncher.Scripts
             bool fileExists = File.Exists(filePath);
 
             Log.Output(fileExists
-                ? $"File '{fileName}' was found at '{filePath}'."
-                : $"File '{fileName}' was not found at '{filePath}'.");
+                ? string.Format(Resources.Utils_File_WasFoundAt_, fileName, filePath)
+                : string.Format(Resources.Utils_File_WasNotFoundAt_, fileName, filePath));
 
             return fileExists;
         }

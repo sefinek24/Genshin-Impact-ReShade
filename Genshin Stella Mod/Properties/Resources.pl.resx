@@ -381,6 +381,14 @@ Zamknij proces o nazwie {0} i spróbuj ponownie.</value>
   <data name="Tools_YoureConnectedAs_.HiAndNiceToMeetYou.CheckYourDiscordActivity" xml:space="preserve">
     <value>Jesteś połączony jako {0}. Cześć i miło mi ciebie poznać! Sprawdź swoją aktywność na Discordzie.</value>
   </data>
+  <data name="Utils_AnErrorOccurredWhileCreatingTheShortcut" xml:space="preserve">
+    <value>Wystąpił błąd podczas tworzenia skrótu.
+
+{0}</value>
+  </data>
+  <data name="Utils_DesktopShortcutHasBeenCreated" xml:space="preserve">
+    <value>Skrót na pulpicie został utworzony.</value>
+  </data>
   <data name="Utils_FailedToOpen_InDefaultBrowser" xml:space="preserve">
     <value>Nie udało się otworzyć '{0}' w domyślnej przeglądarce.
 
@@ -395,6 +403,12 @@ Zamknij proces o nazwie {0} i spróbuj ponownie.</value>
 
 Czy chcesz zresetować wszystkie ustawienia Stella Mod?</value>
   </data>
+  <data name="Utils_File_WasFoundAt_" xml:space="preserve">
+    <value>Plik '{0}' został znaleziony w '{1}'.</value>
+  </data>
+  <data name="Utils_File_WasNotFoundAt_" xml:space="preserve">
+    <value>Plik '{0}' nie został znaleziony w '{1}'.</value>
+  </data>
   <data name="Utils_FolderWithGamePathDoesNotExists_DoYouWantToResetAllSMSettings" xml:space="preserve">
     <value>Folder ze ścieżką gry nie istnieje:
 {ścieżka gry}
@@ -403,6 +417,9 @@ Czy chcesz zresetować wszystkie ustawienia Stella Mod?</value>
   </data>
   <data name="Utils_Opened_InDefaultBrowser" xml:space="preserve">
     <value>Otwarto '{0}' w domyślnej przeglądarce.</value>
+  </data>
+  <data name="Utils_RunOfficialLauncherForStellaModMadeBySefinek" xml:space="preserve">
+    <value>Uruchom oficjalny launcher do Genshin Stella Mod autorstwa Sefinka.</value>
   </data>
   <data name="Utils_URLIsNullOrEmpty" xml:space="preserve">
     <value>Adres URL jest pusty lub jest po prostu nullem (zerem).</value>

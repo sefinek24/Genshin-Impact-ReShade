@@ -485,6 +485,14 @@ Quit the process with name {0} and try again.</value>
   <data name="SupportMe_Thanks" xml:space="preserve">
     <value>Thanks :3</value>
   </data>
+  <data name="Utils_AnErrorOccurredWhileCreatingTheShortcut" xml:space="preserve">
+    <value>An error occurred while creating the shortcut.
+
+{0}</value>
+  </data>
+  <data name="Utils_DesktopShortcutHasBeenCreated" xml:space="preserve">
+    <value>Desktop shortcut has been created.</value>
+  </data>
   <data name="Utils_FailedToOpen_InDefaultBrowser" xml:space="preserve">
     <value>Failed to open '{0}' in default browser.
 
@@ -499,6 +507,12 @@ Quit the process with name {0} and try again.</value>
 
 Do you want to reset all Stella Mod settings?</value>
   </data>
+  <data name="Utils_File_WasFoundAt_" xml:space="preserve">
+    <value>File '{0}' was found at '{1}'.</value>
+  </data>
+  <data name="Utils_File_WasNotFoundAt_" xml:space="preserve">
+    <value>File '{0}' was not found at '{1}'.</value>
+  </data>
   <data name="Utils_FolderWithGamePathDoesNotExists_DoYouWantToResetAllSMSettings" xml:space="preserve">
     <value>Folder with game path does not exists:
 {gamePath}
@@ -507,6 +521,9 @@ Do you want to reset all Stella Mod settings?</value>
   </data>
   <data name="Utils_Opened_InDefaultBrowser" xml:space="preserve">
     <value>Opened '{0}' in default browser.</value>
+  </data>
+  <data name="Utils_RunOfficialLauncherForStellaModMadeBySefinek" xml:space="preserve">
+    <value>Run official launcher for Genshin Impact Mod made by Sefinek.</value>
   </data>
   <data name="Utils_URLIsNullOrEmpty" xml:space="preserve">
     <value>URL is null or empty.</value>
