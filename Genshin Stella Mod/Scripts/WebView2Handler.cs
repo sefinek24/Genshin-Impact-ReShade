@@ -1,6 +1,7 @@
 using System;
 using System.Diagnostics;
 using System.Windows.Forms;
+using StellaLauncher.Properties;
 
 namespace StellaLauncher.Scripts
 {
@@ -10,16 +11,16 @@ namespace StellaLauncher.Scripts
         {
             if (ex.HResult == -2146233088)
             {
-                DialogResult res = MessageBox.Show($"{ex.Message}\n\nDo you want to download this dependency form Microsoft website?", Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult res = MessageBox.Show(string.Format(Resources.WebView2Handler_DoYouWantToDownloadThisDependencyFromMStore, ex.Message), Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (res == DialogResult.Yes)
                 {
                     Process.Start("https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section");
-                    MessageBox.Show(@"Choose Evergreen Standalone Installer.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(Resources.WebView2Handler_ChooseEvergreenStandaloneInstaller, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
-                MessageBox.Show(@"Ohh, sorry. Something went wrong with WebView2.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Resources.WebView2Handler_OhhSorrySomethingWentWrongWithWV2, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             Log.SaveErrorLog(ex);

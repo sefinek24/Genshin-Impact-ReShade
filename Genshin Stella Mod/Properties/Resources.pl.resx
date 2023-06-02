@@ -381,4 +381,41 @@ Zamknij proces o nazwie {0} i spróbuj ponownie.</value>
   <data name="Tools_YoureConnectedAs_.HiAndNiceToMeetYou.CheckYourDiscordActivity" xml:space="preserve">
     <value>Jesteś połączony jako {0}. Cześć i miło mi ciebie poznać! Sprawdź swoją aktywność na Discordzie.</value>
   </data>
+  <data name="Utils_FailedToOpen_InDefaultBrowser" xml:space="preserve">
+    <value>Nie udało się otworzyć '{0}' w domyślnej przeglądarce.
+
+{1}</value>
+  </data>
+  <data name="Utils_FileWithGamePathWasNotFoundIn" xml:space="preserve">
+    <value>Nie znaleziono pliku ze ścieżką gry w: {0}</value>
+  </data>
+  <data name="Utils_FileWithGamePathWasNotFoundIn_DoYouWantToResetAllSMSettings" xml:space="preserve">
+    <value>Plik ze ścieżką gry nie został znaleziony w:
+{0}
+
+Czy chcesz zresetować wszystkie ustawienia Stella Mod?</value>
+  </data>
+  <data name="Utils_FolderWithGamePathDoesNotExists_DoYouWantToResetAllSMSettings" xml:space="preserve">
+    <value>Folder ze ścieżką gry nie istnieje:
+{ścieżka gry}
+
+Czy chcesz zresetować wszystkie ustawienia Stella Mod?</value>
+  </data>
+  <data name="Utils_Opened_InDefaultBrowser" xml:space="preserve">
+    <value>Otwarto '{0}' w domyślnej przeglądarce.</value>
+  </data>
+  <data name="Utils_URLIsNullOrEmpty" xml:space="preserve">
+    <value>Adres URL jest pusty lub jest po prostu nullem (zerem).</value>
+  </data>
+  <data name="WebView2Handler_ChooseEvergreenStandaloneInstaller" xml:space="preserve">
+    <value>Choose Evergreen Standalone Installer.</value>
+  </data>
+  <data name="WebView2Handler_DoYouWantToDownloadThisDependencyFromMStore" xml:space="preserve">
+    <value>{0}
+
+Czy chcesz pobrać tę zależność z witryny firmy Microsoft?</value>
+  </data>
+  <data name="WebView2Handler_OhhSorrySomethingWentWrongWithWV2" xml:space="preserve">
+    <value>Ohh, sorry. Something went wrong with WebView2.</value>
+  </data>
 </root>

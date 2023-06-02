@@ -485,4 +485,41 @@ Quit the process with name {0} and try again.</value>
   <data name="SupportMe_Thanks" xml:space="preserve">
     <value>Thanks :3</value>
   </data>
+  <data name="Utils_FailedToOpen_InDefaultBrowser" xml:space="preserve">
+    <value>Failed to open '{0}' in default browser.
+
+{1}</value>
+  </data>
+  <data name="Utils_FileWithGamePathWasNotFoundIn" xml:space="preserve">
+    <value>File with game path was not found in: {0}</value>
+  </data>
+  <data name="Utils_FileWithGamePathWasNotFoundIn_DoYouWantToResetAllSMSettings" xml:space="preserve">
+    <value>File with game path was not found in:
+{0}
+
+Do you want to reset all Stella Mod settings?</value>
+  </data>
+  <data name="Utils_FolderWithGamePathDoesNotExists_DoYouWantToResetAllSMSettings" xml:space="preserve">
+    <value>Folder with game path does not exists:
+{gamePath}
+
+Do you want to reset all Stella Mod settings?</value>
+  </data>
+  <data name="Utils_Opened_InDefaultBrowser" xml:space="preserve">
+    <value>Opened '{0}' in default browser.</value>
+  </data>
+  <data name="Utils_URLIsNullOrEmpty" xml:space="preserve">
+    <value>URL is null or empty.</value>
+  </data>
+  <data name="WebView2Handler_ChooseEvergreenStandaloneInstaller" xml:space="preserve">
+    <value>Wybierz Evergreen Standalone Installer.</value>
+  </data>
+  <data name="WebView2Handler_DoYouWantToDownloadThisDependencyFromMStore" xml:space="preserve">
+    <value>{0}
+
+Do you want to download this dependency from Microsoft website?</value>
+  </data>
+  <data name="WebView2Handler_OhhSorrySomethingWentWrongWithWV2" xml:space="preserve">
+    <value>Wybacz. Coś poszło nie tak z WebView2.</value>
+  </data>
 </root>

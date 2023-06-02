@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Windows.Storage;
 using IWshRuntimeLibrary;
+using StellaLauncher.Properties;
 using File = System.IO.File;
 
 namespace StellaLauncher.Scripts
@@ -21,8 +22,8 @@ namespace StellaLauncher.Scripts
         {
             if (!File.Exists(FileWithGamePath))
             {
-                DialogResult result = MessageBox.Show($"File with game path was not found in:\n{FileWithGamePath}\n\nDo you want to reset all Stella Mod settings?", Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                Log.Output($"File with game path was not found in: {FileWithGamePath}");
+                DialogResult result = MessageBox.Show(string.Format(Resources.Utils_FileWithGamePathWasNotFoundIn_DoYouWantToResetAllSMSettings, FileWithGamePath), Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                Log.Output(string.Format(Resources.Utils_FileWithGamePathWasNotFoundIn, FileWithGamePath));
 
                 if (result != DialogResult.Yes) return string.Empty;
                 Directory.Delete(Program.AppData, true);
@@ -34,7 +35,7 @@ namespace StellaLauncher.Scripts
             string gamePath = Path.Combine(gameFilePath);
             if (!Directory.Exists(gamePath))
             {
-                DialogResult result = MessageBox.Show($"Folder with game path does not exists:\n{gamePath}\n\nDo you want to reset all Stella Mod settings?", Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show(string.Format(Resources.Utils_FolderWithGamePathDoesNotExists_DoYouWantToResetAllSMSettings, gamePath), Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (result != DialogResult.Yes) return string.Empty;
                 Directory.Delete(Program.AppData, true);
@@ -139,18 +140,18 @@ namespace StellaLauncher.Scripts
         {
             if (string.IsNullOrEmpty(url))
             {
-                Log.ThrowError(new Exception("URL is null or empty."));
+                Log.ThrowError(new Exception(Resources.Utils_URLIsNullOrEmpty));
                 return;
             }
 
             try
             {
                 Process.Start(url);
-                Log.Output($"Opened '{url}' in default browser.");
+                Log.Output(Resources.Utils_Opened_InDefaultBrowser);
             }
             catch (Exception ex)
             {
-                Log.ThrowError(new Exception($"Failed to open '{url}' in default browser.\n{ex}"));
+                Log.ThrowError(new Exception(string.Format(Resources.Utils_FailedToOpen_InDefaultBrowser, url, ex)));
             }
         }
 
@@ -187,18 +188,18 @@ namespace StellaLauncher.Scripts
 
                 WshShell shell = new WshShell();
                 IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(shortcutPath);
-                shortcut.Description = "Run official launcher for Genshin Impact Mod made by Sefinek.";
+                shortcut.Description = Resources.Utils_RunOfficialLauncherForStellaModMadeBySefinek;
                 shortcut.IconLocation = Path.Combine(Environment.CurrentDirectory, "icons", "52x52.ico");
                 shortcut.WorkingDirectory = Environment.CurrentDirectory;
                 shortcut.TargetPath = Path.Combine(Environment.CurrentDirectory, $"{Program.AppName}.exe");
                 shortcut.Save();
 
-                Log.Output("Desktop shortcut has been created.");
+                Log.Output(Resources.Utils_DesktopShortcutHasBeenCreated);
                 return true;
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Log.ThrowError(new Exception($"An error occurred while creating the shortcut.\n\n{e}"));
+                Log.ThrowError(new Exception(string.Format(Resources.Utils_AnErrorOccurredWhileCreatingTheShortcut, ex)));
                 return false;
             }
         }

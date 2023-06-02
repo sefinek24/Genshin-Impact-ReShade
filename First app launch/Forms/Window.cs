@@ -4,6 +4,7 @@ using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 using Windows.Storage;
+using ConfWindow.Properties;
 using ConfWindow.Scripts;
 
 namespace ConfWindow.Forms
@@ -100,7 +101,7 @@ namespace ConfWindow.Forms
             if (MsStore && checkBox2.Checked)
             {
                 checkBox2.Checked = false;
-                MessageBox.Show(@"You cannot create a new icon on your Desktop when an application is installed from the Microsoft Store.", AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Resources.YouCannotCreateANewIconOnYourDesktopWhenAnAppIsInstalledFromTheMStore, AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -112,7 +113,7 @@ namespace ConfWindow.Forms
             if (MsStore && checkBox3.Checked)
             {
                 checkBox3.Checked = false;
-                MessageBox.Show(@"You cannot create new icons in the Start Menu when an application is installed from the Microsoft Store.", AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Resources.YouCannotCreateANewIconsInTheSMWhenAnAppIsInstalledFromTheMStore, AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -124,7 +125,7 @@ namespace ConfWindow.Forms
             if (!File.Exists(Path.Combine(AppData, "resources-path.sfn")) && !checkBox7.Checked)
             {
                 checkBox7.Checked = true;
-                MessageBox.Show(@"The Stella resources directory was not found on your computer, so you cannot uncheck the checkbox.", AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Resources.TheStellaResourcesDirWasNotFoundOnYourPC, AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -172,7 +173,7 @@ namespace ConfWindow.Forms
             string exeFile = Path.Combine(AppPath, "Prepare Stella Mod.exe");
             if (!File.Exists(exeFile))
             {
-                MessageBox.Show($@"Required file '{exeFile}' was not found. Please reinstall this app or join our Discord server.", AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format(Resources.RequiredFile_WasNotFound, exeFile), AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

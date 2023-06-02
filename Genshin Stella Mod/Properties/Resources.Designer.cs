@@ -1116,12 +1116,132 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Wystąpił błąd podczas tworzenia skrótu.
+        ///
+        ///{0}.
+        /// </summary>
+        internal static string Utils_AnErrorOccurredWhileCreatingTheShortcut {
+            get {
+                return ResourceManager.GetString("Utils_AnErrorOccurredWhileCreatingTheShortcut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Desktop shortcut has been created..
+        /// </summary>
+        internal static string Utils_DesktopShortcutHasBeenCreated {
+            get {
+                return ResourceManager.GetString("Utils_DesktopShortcutHasBeenCreated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to open &apos;{0}&apos; in default browser.
+        ///
+        ///{1}.
+        /// </summary>
+        internal static string Utils_FailedToOpen_InDefaultBrowser {
+            get {
+                return ResourceManager.GetString("Utils_FailedToOpen_InDefaultBrowser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File with game path was not found in: {0}.
+        /// </summary>
+        internal static string Utils_FileWithGamePathWasNotFoundIn {
+            get {
+                return ResourceManager.GetString("Utils_FileWithGamePathWasNotFoundIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File with game path was not found in:
+        ///{0}
+        ///
+        ///Do you want to reset all Stella Mod settings?.
+        /// </summary>
+        internal static string Utils_FileWithGamePathWasNotFoundIn_DoYouWantToResetAllSMSettings {
+            get {
+                return ResourceManager.GetString("Utils_FileWithGamePathWasNotFoundIn_DoYouWantToResetAllSMSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Folder with game path does not exists:
+        ///{gamePath}
+        ///
+        ///Do you want to reset all Stella Mod settings?.
+        /// </summary>
+        internal static string Utils_FolderWithGamePathDoesNotExists_DoYouWantToResetAllSMSettings {
+            get {
+                return ResourceManager.GetString("Utils_FolderWithGamePathDoesNotExists_DoYouWantToResetAllSMSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Opened &apos;{0}&apos; in default browser..
+        /// </summary>
+        internal static string Utils_Opened_InDefaultBrowser {
+            get {
+                return ResourceManager.GetString("Utils_Opened_InDefaultBrowser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Run official launcher for Genshin Impact Mod made by Sefinek..
+        /// </summary>
+        internal static string Utils_RunOfficialLauncherForStellaModMadeBySefinek {
+            get {
+                return ResourceManager.GetString("Utils_RunOfficialLauncherForStellaModMadeBySefinek", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to URL is null or empty..
+        /// </summary>
+        internal static string Utils_URLIsNullOrEmpty {
+            get {
+                return ResourceManager.GetString("Utils_URLIsNullOrEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap web {
             get {
                 object obj = ResourceManager.GetObject("web", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wybierz Evergreen Standalone Installer..
+        /// </summary>
+        internal static string WebView2Handler_ChooseEvergreenStandaloneInstaller {
+            get {
+                return ResourceManager.GetString("WebView2Handler_ChooseEvergreenStandaloneInstaller", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0}
+        ///
+        ///Do you want to download this dependency from Microsoft website?.
+        /// </summary>
+        internal static string WebView2Handler_DoYouWantToDownloadThisDependencyFromMStore {
+            get {
+                return ResourceManager.GetString("WebView2Handler_DoYouWantToDownloadThisDependencyFromMStore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wybacz. Coś poszło nie tak z WebView2..
+        /// </summary>
+        internal static string WebView2Handler_OhhSorrySomethingWentWrongWithWV2 {
+            get {
+                return ResourceManager.GetString("WebView2Handler_OhhSorrySomethingWentWrongWithWV2", resourceCulture);
             }
         }
     }
