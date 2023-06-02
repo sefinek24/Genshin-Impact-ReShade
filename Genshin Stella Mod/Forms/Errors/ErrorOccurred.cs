@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Media;
 using System.Windows.Forms;
 using StellaLauncher.Properties;
@@ -32,7 +33,7 @@ namespace StellaLauncher.Forms.Errors
 
         private void Reinstall_Button(object sender, EventArgs e)
         {
-            Utils.OpenUrl(Program.AppWebsiteFull);
+            Utils.OpenUrl($"{Program.AppWebsiteFull}/download");
         }
 
         private void Discord_Button(object sender, EventArgs e)
@@ -42,7 +43,7 @@ namespace StellaLauncher.Forms.Errors
 
         private async void SfcScan_Click(object sender, EventArgs e)
         {
-            await Cmd.CliWrap("wt", @"data\cmd\scan_sys_files.cmd", null, true, false);
+            await Cmd.CliWrap("wt", Path.Combine(Program.AppPath, "data", "cmd", "scan_sys_files.cmd"), null, true, false);
         }
     }
 }

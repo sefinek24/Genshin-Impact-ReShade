@@ -122,44 +122,47 @@
     <value>230, 21</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>726, 46</value>
+    <value>716, 46</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Przepraszamy, coś poszło nie tak</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>295, 78</value>
+    <value>238, 78</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>708, 42</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Proszę zgłaszać wszelkie błędy na moim serwerze Discord lub przez e-mail.
 Discord: Sefinek#2714 ┃ E-mail: contact@sefinek.net</value>
   </data>
   <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>339, 137</value>
+    <value>339, 139</value>
   </data>
   <data name="button3.Text" xml:space="preserve">
     <value>Zobacz dziennik błędów</value>
   </data>
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>693, 137</value>
+    <value>693, 139</value>
   </data>
   <data name="button2.Text" xml:space="preserve">
     <value>Serwer Discord</value>
   </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>517, 137</value>
+    <value>517, 139</value>
   </data>
   <data name="button1.Text" xml:space="preserve">
     <value>Ponowna instalacja</value>
   </data>
   <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>339, 179</value>
+    <value>339, 181</value>
   </data>
   <data name="button4.Text" xml:space="preserve">
     <value>Przeskanuj i napraw pliki systemowe</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>968, 236</value>
+    <value>958, 236</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Błąd - Stella Mod</value>

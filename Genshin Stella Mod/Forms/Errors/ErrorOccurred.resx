@@ -134,9 +134,6 @@ Discord: Sefinek#2714 ┃ E-mail: contact@sefinek.net</value>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>847, 236</value>
-  </data>
   <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
     <value>278, 179</value>
   </data>
@@ -152,9 +149,6 @@ Discord: Sefinek#2714 ┃ E-mail: contact@sefinek.net</value>
   </data>
   <data name="&gt;&gt;button4.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>504, 34</value>
   </data>
   <data name="&gt;&gt;button4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -172,17 +166,14 @@ Discord: Sefinek#2714 ┃ E-mail: contact@sefinek.net</value>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
   <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
   </data>
   <data name="button2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>594, 46</value>
@@ -208,6 +199,9 @@ Discord: Sefinek#2714 ┃ E-mail: contact@sefinek.net</value>
   <data name="button2.Text" xml:space="preserve">
     <value>Discord server</value>
   </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
   <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
@@ -229,11 +223,8 @@ Discord: Sefinek#2714 ┃ E-mail: contact@sefinek.net</value>
   <data name="button2.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
+  <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>278, 137</value>
   </data>
   <data name="&gt;&gt;button1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -250,10 +241,7 @@ Discord: Sefinek#2714 ┃ E-mail: contact@sefinek.net</value>
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 34</value>
   </data>
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
@@ -280,8 +268,8 @@ Discord: Sefinek#2714 ┃ E-mail: contact@sefinek.net</value>
   <data name="&gt;&gt;label1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -292,17 +280,20 @@ Discord: Sefinek#2714 ┃ E-mail: contact@sefinek.net</value>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
   <data name="label2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
-  </data>
-  <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>278, 137</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Error - Stella Mod</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ErrorOccurred</value>
@@ -313,14 +304,14 @@ Discord: Sefinek#2714 ┃ E-mail: contact@sefinek.net</value>
   <data name="button4.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
-  <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>847, 236</value>
   </data>
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="button3.Text" xml:space="preserve">
     <value>See debug logs</value>
@@ -330,6 +321,15 @@ Discord: Sefinek#2714 ┃ E-mail: contact@sefinek.net</value>
   </data>
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
     <value>632, 137</value>
+  </data>
+  <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 34</value>
+  </data>
+  <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 42</value>
