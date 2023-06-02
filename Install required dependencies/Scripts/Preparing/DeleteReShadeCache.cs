@@ -21,7 +21,6 @@ namespace PrepareStella.Scripts.Preparing
             string cacheDirectoryPath = Path.Combine(Program.ResourcesGlobal, "Cache");
 
             if (Directory.Exists(cacheDirectoryPath))
-            {
                 foreach (string filePath in Directory.EnumerateFiles(cacheDirectoryPath))
                 {
                     FileInfo file = new FileInfo(filePath);
@@ -29,9 +28,6 @@ namespace PrepareStella.Scripts.Preparing
                     await Task.Run(() => File.Delete(filePath));
                     deletedFilesCount++;
                 }
-
-                Directory.Delete(cacheDirectoryPath, true);
-            }
 
             string spaceUnit = savedSpace > KilobyteInBytes ? "MB" : "KB";
             double spaceSaved = savedSpace / (double)(savedSpace > KilobyteInBytes ? MegabyteInBytes : KilobyteInBytes);
