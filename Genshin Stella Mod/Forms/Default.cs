@@ -265,10 +265,13 @@ namespace StellaLauncher.Forms
 
             if (!File.Exists(Program.FpsUnlockerExePath) && !Debugger.IsAttached)
                 status_Label.Text += $"[x]: {string.Format(Resources.Default_File_WasNotFound, Program.FpsUnlockerExePath)}\n";
+                
             if (!File.Exists(Program.InjectorPath) && !Debugger.IsAttached)
                 status_Label.Text += $"[x]: {string.Format(Resources.Default_File_WasNotFound, Program.InjectorPath)}\n";
+
             if (!File.Exists(Program.ReShadePath) && !Debugger.IsAttached)
                 status_Label.Text += $"[x]: {string.Format(Resources.Default_File_WasNotFound, Program.ReShadePath)}\n";
+
             if (!File.Exists(Program.FpsUnlockerCfgPath) && !Debugger.IsAttached)
             {
                 status_Label.Text += $"[i] {Resources.Default_DownloadingConfigFileForFPSUnlocker}\n";

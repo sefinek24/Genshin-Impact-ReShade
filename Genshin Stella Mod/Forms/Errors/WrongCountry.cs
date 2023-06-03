@@ -90,7 +90,7 @@ namespace StellaLauncher.Forms.Errors
             Width = _random.Next(200, 800);
             Height = _random.Next(200, 800);
 
-            if (WindowState == FormWindowState.Maximized) return;
+            if (WindowState == FormWindowState.Maximized) return; // TODO
 
             Left = _random.Next(Screen.PrimaryScreen.Bounds.Width - Width);
             Top = _random.Next(Screen.PrimaryScreen.Bounds.Height - Height);

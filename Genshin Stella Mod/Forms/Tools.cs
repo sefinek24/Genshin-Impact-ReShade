@@ -198,12 +198,12 @@ namespace StellaLauncher.Forms
             if (!File.Exists(reShadeIni))
                 MessageBox.Show(string.Format(Resources.Tools_ReShadeConfigFileWasNotFoundIn_, reShadeIni), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
-                await Cmd.CliWrap("notepad", reShadeIni, null, true, false);
+                await Cmd.CliWrap("notepad.exe", reShadeIni, null, true, false);
         }
 
         private async void UnlockerConfig_Click(object sender, EventArgs e)
         {
-            await Cmd.CliWrap("notepad", Path.Combine(Program.AppPath, "data", "unlocker", "unlocker.config.json"), null, true, false);
+            await Cmd.CliWrap("notepad.exe", Path.Combine(Program.AppPath, "data", "unlocker", "unlocker.config.json"), null, true, false);
         }
 
 
@@ -232,7 +232,7 @@ namespace StellaLauncher.Forms
         // ---------------------------------- Logs ---------------------------------
         private async void LauncherLogs_Click(object sender, EventArgs e)
         {
-            await Cmd.CliWrap("notepad", Path.Combine(Log.Folder, "launcher.output.log"), null, true, false);
+            await Cmd.CliWrap("notepad.exe", Path.Combine(Log.Folder, "launcher.output.log"), null, true, false);
         }
 
         private async void ReShadeLogs_Button(object sender, EventArgs e)
@@ -243,18 +243,18 @@ namespace StellaLauncher.Forms
             if (!Directory.Exists(gameDir) || !File.Exists(logFile))
                 MessageBox.Show(string.Format(Resources.Tools_ReShadeLogFileWasNotFoundIn_, logFile), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
-                await Cmd.CliWrap("notepad", logFile, null, true, false);
+                await Cmd.CliWrap("notepad.exe", logFile, null, true, false);
         }
 
         private async void PreparationLogs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            await Cmd.CliWrap("notepad", Path.Combine(Log.Folder, "prepare.output.log"), null, true, false);
+            await Cmd.CliWrap("notepad.exe", Path.Combine(Log.Folder, "prepare.output.log"), null, true, false);
         }
 
 
         private async void InnoSetup_Button(object sender, EventArgs e)
         {
-            await Cmd.CliWrap("notepad", Path.Combine(Log.Folder, "innosetup-logs.install.log"), null, true, false);
+            await Cmd.CliWrap("notepad.exe", Path.Combine(Log.Folder, "innosetup-logs.install.log"), null, true, false);
         }
 
         // -------------------------- Nothing special ((: ---------------------------
