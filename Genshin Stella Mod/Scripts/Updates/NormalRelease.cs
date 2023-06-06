@@ -15,7 +15,7 @@ namespace StellaLauncher.Scripts.Updates
     internal class NormalRelease
     {
         // Files
-        public static readonly string SetupPathExe = Path.Combine(Path.GetTempPath(), "Stella-Mod-Update.exe");
+        public static readonly string SetupPathExe = Path.Combine(Path.GetTempPath(), "Stella_Mod_Update.exe");
 
         // LinkLabel, Label, ProgressBar etc.
         private static LinkLabel _updatesLabel;
