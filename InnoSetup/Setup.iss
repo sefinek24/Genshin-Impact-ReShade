@@ -19,12 +19,13 @@ AppUpdatesURL=https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/14.-Chang
 ArchitecturesInstallIn64BitMode=x64
 ArchitecturesAllowed=x64
 MinVersion=6.1sp1
-DefaultDirName=C:\Genshin-Stella-Mod
+// DefaultDirName=C:\Genshin-Stella-Mod
+DefaultDirName={autopf}\Sefinek\Genshin-Stella-Mod
 DisableDirPage=no
 ChangesAssociations=no
 DisableProgramGroupPage=no
-InfoBeforeFile=..\Genshin Stella Mod\bin\Release\data\README.txt
-LicenseFile=..\Genshin Stella Mod\bin\Release\LICENSE
+InfoBeforeFile=..\Build\Release\data\README.txt
+LicenseFile=..\Build\Release\LICENSE
 PrivilegesRequired=none
 OutputBaseFilename=Stella-Mod-Setup
 Compression=lzma
@@ -65,8 +66,8 @@ Name: "ukrainian"; MessagesFile: "compiler:Languages\Ukrainian.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Check: not InstViaSetup and not InstViaLauncher 
 
 [Files]
-Source: "..\Genshin Stella Mod\bin\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\Genshin Stella Mod\bin\Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "..\Build\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\Build\Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
 Name: "{autodesktop}\Stella Mod Launcher"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
