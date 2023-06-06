@@ -137,7 +137,7 @@ namespace StellaLauncher.Scripts.Updates
                 wc.Headers.Add("user-agent", Program.UserAgent);
                 await wc.OpenReadTaskAsync("https://github.com/sefinek24/Genshin-Impact-ReShade/releases/latest/download/Stella-Mod-Setup.exe");
                 string updateSize = ByteSize.FromBytes(Convert.ToInt64(wc.ResponseHeaders["Content-Length"])).MegaBytes.ToString("00.00");
-                statusLabel.Text += string.Format(Resources.NormalRelease_NewVersionFrom_IsAvailable_UpdateSize, remoteVerDate, updateSize);
+                statusLabel.Text += $"{string.Format(Resources.NormalRelease_NewVersionFrom_IsAvailable_UpdateSize, remoteVerDate, updateSize)}\n";
 
                 // Final
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
