@@ -265,7 +265,7 @@ namespace StellaLauncher.Forms
 
             if (!File.Exists(Program.FpsUnlockerExePath) && !Debugger.IsAttached)
                 status_Label.Text += $"[x]: {string.Format(Resources.Default_File_WasNotFound, Program.FpsUnlockerExePath)}\n";
-                
+
             if (!File.Exists(Program.InjectorPath) && !Debugger.IsAttached)
                 status_Label.Text += $"[x]: {string.Format(Resources.Default_File_WasNotFound, Program.InjectorPath)}\n";
 
@@ -287,7 +287,7 @@ namespace StellaLauncher.Forms
                     File.WriteAllText(Program.FpsUnlockerCfgPath, fpsUnlockerCfg.Replace("{GamePath}", @"C:\\Program Files\\Genshin Impact\\Genshin Impact game\\GenshinImpact.exe"));
 
                     status_Label.Text += $"[✓] {Resources.Default_Success}\n";
-                    Log.Output("Done.");
+                    Log.Output(Resources.Default_Done);
                 }
                 catch (Exception ex)
                 {

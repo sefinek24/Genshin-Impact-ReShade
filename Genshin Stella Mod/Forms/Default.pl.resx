@@ -136,6 +136,9 @@
   <data name="panel1.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="githubUrl_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Główne repozytorium GitHub. Oznacz repozytorium gwiazdką, jeśli podoba Ci się moja praca.</value>
+  </data>
   <data name="madeBySefinek_Label.Location" type="System.Drawing.Point, System.Drawing">
     <value>808, 84</value>
   </data>
@@ -276,8 +279,14 @@ Karty RTX nie są wymagane.</value>
   <data name="links_LinkLabel.Text" xml:space="preserve">
     <value>Linki</value>
   </data>
-  <data name="links_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Jakieś linki</value>
+  <data name="clickMe_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>912, 449</value>
+  </data>
+  <data name="clickMe_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 21</value>
+  </data>
+  <data name="clickMe_LinkLabel.Text" xml:space="preserve">
+    <value>Kliknij mnie ;w;</value>
   </data>
   <data name="toolsIco_PictureBox.ToolTip" xml:space="preserve">
     <value />
@@ -335,18 +344,6 @@ Karty RTX nie są wymagane.</value>
   </data>
   <data name="PreparingPleaseWait.ToolTip" xml:space="preserve">
     <value />
-  </data>
-  <data name="clickMe_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>912, 449</value>
-  </data>
-  <data name="clickMe_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 21</value>
-  </data>
-  <data name="clickMe_LinkLabel.Text" xml:space="preserve">
-    <value>Kliknij mnie ;w;</value>
-  </data>
-  <data name="clickMe_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Tak kurwa tutaj ((:</value>
   </data>
   <data name="$this.ToolTip" xml:space="preserve">
     <value />

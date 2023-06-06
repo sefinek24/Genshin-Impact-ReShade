@@ -366,6 +366,15 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Done..
+        /// </summary>
+        internal static string Default_Done {
+            get {
+                return ResourceManager.GetString("Default_Done", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Downloaded ReShade.ini was not found in: {0}.
         /// </summary>
         internal static string Default_DownloadedReShadeIniWasNotFoundIn_ {
@@ -642,6 +651,114 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The best mod for Genshin Impact with ReShade, custom graphics presets, FPS unlock, custom launcher, and more!.
+        /// </summary>
+        internal static string Discord_Desc {
+            get {
+                return ResourceManager.GetString("Discord_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Discord server.
+        /// </summary>
+        internal static string Discord_DiscordServer {
+            get {
+                return ResourceManager.GetString("Discord_DiscordServer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to In the main window.
+        /// </summary>
+        internal static string Discord_InTheMainWindow {
+            get {
+                return ResourceManager.GetString("Discord_InTheMainWindow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Official website.
+        /// </summary>
+        internal static string Discord_OfficialWebsite {
+            get {
+                return ResourceManager.GetString("Discord_OfficialWebsite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Discord RPC: Closed..
+        /// </summary>
+        internal static string Discord_OnClose {
+            get {
+                return ResourceManager.GetString("Discord_OnClose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Discord RPC: Connection successfully..
+        /// </summary>
+        internal static string Discord_OnConnectionEstablished {
+            get {
+                return ResourceManager.GetString("Discord_OnConnectionEstablished", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Discord RPC: An error occurred during the transmission of a message..
+        /// </summary>
+        internal static string Discord_OnError {
+            get {
+                return ResourceManager.GetString("Discord_OnError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Discord RPC: Presence has been updated..
+        /// </summary>
+        internal static string Discord_OnPresenceUpdate {
+            get {
+                return ResourceManager.GetString("Discord_OnPresenceUpdate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Discord RPC: Connected to Discord with user {0}..
+        /// </summary>
+        internal static string Discord_OnReady {
+            get {
+                return ResourceManager.GetString("Discord_OnReady", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Discord RPC: Unsubscribed..
+        /// </summary>
+        internal static string Discord_OnUnsubscribe {
+            get {
+                return ResourceManager.GetString("Discord_OnUnsubscribe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Discord Rich Presence was not updated. Data: {0}; IsReady: {1}.
+        /// </summary>
+        internal static string Discord_RPCWasNotUpdated {
+            get {
+                return ResourceManager.GetString("Discord_RPCWasNotUpdated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Version: {0}.
+        /// </summary>
+        internal static string Discord_Version_ {
+            get {
+                return ResourceManager.GetString("Discord_Version_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap error {
@@ -898,6 +1015,33 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to For some reason, I cannot save the action information in the log file..
+        /// </summary>
+        internal static string Log_ForSomeReasonICannotSaveTheActionInfoInTheLogFile {
+            get {
+                return ResourceManager.GetString("Log_ForSomeReasonICannotSaveTheActionInfoInTheLogFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to For some reason, I can&apos;t save the error information in the log file..
+        /// </summary>
+        internal static string Log_ForSomeReasonICantSaveTheErrorInfoInTheLogFile {
+            get {
+                return ResourceManager.GetString("Log_ForSomeReasonICantSaveTheErrorInfoInTheLogFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Something went wrong.
+        /// </summary>
+        internal static string Log_SomethingWentWrong {
+            get {
+                return ResourceManager.GetString("Log_SomethingWentWrong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Clicked No in form &apos;{0}&apos;..
         /// </summary>
         internal static string Main_ClickedNoInForm_ {
@@ -952,12 +1096,238 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Major version is available.
+        /// </summary>
+        internal static string MajorRelease_MajorVersionIsAvailable {
+            get {
+                return ResourceManager.GetString("MajorRelease_MajorVersionIsAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New major version from {0} is available: v{1} → v{2}.
+        /// </summary>
+        internal static string MajorRelease_NewMajorVersionFrom_IsAvailable_v_ {
+            get {
+                return ResourceManager.GetString("MajorRelease_NewMajorVersionFrom_IsAvailable_v_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap new_release {
             get {
                 object obj = ResourceManager.GetObject("new-release", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Click here to update.
+        /// </summary>
+        internal static string NormalRelease_ClickHereToUpdate {
+            get {
+                return ResourceManager.GetString("NormalRelease_ClickHereToUpdate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Closing....
+        /// </summary>
+        internal static string NormalRelease_Closing {
+            get {
+                return ResourceManager.GetString("NormalRelease_Closing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Closing launcher in {0}s....
+        /// </summary>
+        internal static string NormalRelease_ClosingLauncherIn_ {
+            get {
+                return ResourceManager.GetString("NormalRelease_ClosingLauncherIn_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deleted old setup file from temp directory..
+        /// </summary>
+        internal static string NormalRelease_DeletedOldSetupFileFromTempDir {
+            get {
+                return ResourceManager.GetString("NormalRelease_DeletedOldSetupFileFromTempDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deleted od setup file from: {0}.
+        /// </summary>
+        internal static string NormalRelease_DeletedOldSetupFireFrom_ {
+            get {
+                return ResourceManager.GetString("NormalRelease_DeletedOldSetupFireFrom_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Downloading in progress....
+        /// </summary>
+        internal static string NormalRelease_DownloadingInProgress {
+            get {
+                return ResourceManager.GetString("NormalRelease_DownloadingInProgress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Downloading new update... {0} MB of {1} MB / {2} MB/s.
+        /// </summary>
+        internal static string NormalRelease_DownloadingNewUpdate_ {
+            get {
+                return ResourceManager.GetString("NormalRelease_DownloadingNewUpdate_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Downloading update... {0} MB / {1} MB.
+        /// </summary>
+        internal static string NormalRelease_DownloadingUpdate_ {
+            get {
+                return ResourceManager.GetString("NormalRelease_DownloadingUpdate_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Everything is okay! Starting setup....
+        /// </summary>
+        internal static string NormalRelease_EverythingIsOkay_StartingSetup {
+            get {
+                return ResourceManager.GetString("NormalRelease_EverythingIsOkay_StartingSetup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Install a new version in the wizard. Closing launcher in {i}s....
+        /// </summary>
+        internal static string NormalRelease_InstallANewVersionInTheWizard_ClosingLauncherIn_ {
+            get {
+                return ResourceManager.GetString("NormalRelease_InstallANewVersionInTheWizard_ClosingLauncherIn_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Just a moment. Please wait {0}s....
+        /// </summary>
+        internal static string NormalRelease_JustAMoment_PleaseWait {
+            get {
+                return ResourceManager.GetString("NormalRelease_JustAMoment_PleaseWait", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New release from {0} is available: v{1} → v{2}.
+        /// </summary>
+        internal static string NormalRelease_NewReleaseFrom_IsAvailable_v_ {
+            get {
+                return ResourceManager.GetString("NormalRelease_NewReleaseFrom_IsAvailable_v_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New release is available. Download now!.
+        /// </summary>
+        internal static string NormalRelease_NewReleaseIsAvailableDownloadNow {
+            get {
+                return ResourceManager.GetString("NormalRelease_NewReleaseIsAvailableDownloadNow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [i] New version from {0} is available.
+        ///[i] Update size: {1} MB.
+        /// </summary>
+        internal static string NormalRelease_NewVersionFrom_IsAvailable_UpdateSize {
+            get {
+                return ResourceManager.GetString("NormalRelease_NewVersionFrom_IsAvailable_UpdateSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Output: {0}.
+        /// </summary>
+        internal static string NormalRelease_Output_ {
+            get {
+                return ResourceManager.GetString("NormalRelease_Output_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Preparing... If process is stuck, reopen launcher..
+        /// </summary>
+        internal static string NormalRelease_Preparing_IfProcessIsStuckReopenLauncher {
+            get {
+                return ResourceManager.GetString("NormalRelease_Preparing_IfProcessIsStuckReopenLauncher", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Preparing to download new update....
+        /// </summary>
+        internal static string NormalRelease_PreparingToDownloadNewUpdate {
+            get {
+                return ResourceManager.GetString("NormalRelease_PreparingToDownloadNewUpdate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Something went wrong???.
+        /// </summary>
+        internal static string NormalRelease_SomethingWentWrong {
+            get {
+                return ResourceManager.GetString("NormalRelease_SomethingWentWrong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Starting....
+        /// </summary>
+        internal static string NormalRelease_Starting {
+            get {
+                return ResourceManager.GetString("NormalRelease_Starting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update size: {0} MB.
+        /// </summary>
+        internal static string NormalRelease_UpdateSize {
+            get {
+                return ResourceManager.GetString("NormalRelease_UpdateSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Updating. Please wait....
+        /// </summary>
+        internal static string NormalRelease_UpdatingPleaseWait {
+            get {
+                return ResourceManager.GetString("NormalRelease_UpdatingPleaseWait", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Waiting {0}s....
+        /// </summary>
+        internal static string NormalRelease_Waiting_ {
+            get {
+                return ResourceManager.GetString("NormalRelease_Waiting_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to We found new updates.
+        /// </summary>
+        internal static string NormalRelease_WeFoundNewUpdates {
+            get {
+                return ResourceManager.GetString("NormalRelease_WeFoundNewUpdates", resourceCulture);
             }
         }
         
@@ -1149,11 +1519,137 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Download the required file.
+        /// </summary>
+        internal static string ReShadeIniUpdate_DownloadTheRequiredFile {
+            get {
+                return ResourceManager.GetString("ReShadeIniUpdate_DownloadTheRequiredFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File ReShade.ini was not found in your game directory..
+        /// </summary>
+        internal static string ReShadeIniUpdate_FileReShadeIniWasNotFoundInYourGameDir {
+            get {
+                return ResourceManager.GetString("ReShadeIniUpdate_FileReShadeIniWasNotFoundInYourGameDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File size: {0} KB.
+        /// </summary>
+        internal static string ReShadeIniUpdate_FileSize_KB {
+            get {
+                return ResourceManager.GetString("ReShadeIniUpdate_FileSize_KB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game path was not found on your PC..
+        /// </summary>
+        internal static string ReShadeIniUpdate_GamePathWasNotFoundOnYourPC {
+            get {
+                return ResourceManager.GetString("ReShadeIniUpdate_GamePathWasNotFoundOnYourPC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New ReShade config version is available: v{0} → v{1}.
+        /// </summary>
+        internal static string ReShadeIniUpdate_NewReShadeCfgIsAvailable_v_ {
+            get {
+                return ResourceManager.GetString("ReShadeIniUpdate_NewReShadeCfgIsAvailable_v_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New ReShade config version is available. Update is required..
+        /// </summary>
+        internal static string ReShadeIniUpdate_NewReShadeConfigVersionIsAvailable {
+            get {
+                return ResourceManager.GetString("ReShadeIniUpdate_NewReShadeConfigVersionIsAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ReShade.ini was not found in: {0}.
+        /// </summary>
+        internal static string ReShadeIniUpdate_ReShadeIniWasNotFoundIn_ {
+            get {
+                return ResourceManager.GetString("ReShadeIniUpdate_ReShadeIniWasNotFoundIn_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to STELLA.ConfigVersion is null in ReShade.ini..
+        /// </summary>
+        internal static string ReShadeIniUpdate_StellaConfigVersionIsNullInReShadeIni {
+            get {
+                return ResourceManager.GetString("ReShadeIniUpdate_StellaConfigVersionIsNullInReShadeIni", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The version of ReShade config was not found..
+        /// </summary>
+        internal static string ReShadeIniUpdate_TheVersionOfReShadeCfgWasNotFound {
+            get {
+                return ResourceManager.GetString("ReShadeIniUpdate_TheVersionOfReShadeCfgWasNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update ReShade config.
+        /// </summary>
+        internal static string ReShadeIniUpdate_UpdateReShadeCfg {
+            get {
+                return ResourceManager.GetString("ReShadeIniUpdate_UpdateReShadeCfg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [i] Update size: {0} KB.
+        /// </summary>
+        internal static string ReShadeIniUpdate_UpdateSize_KB {
+            get {
+                return ResourceManager.GetString("ReShadeIniUpdate_UpdateSize_KB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Thanks :3.
         /// </summary>
         internal static string SupportMe_Thanks {
             get {
                 return ResourceManager.GetString("SupportMe_Thanks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delivered telemetry data &apos;{0}&apos; [{1}]..
+        /// </summary>
+        internal static string Telemetry_DeliveredTelemetryData {
+            get {
+                return ResourceManager.GetString("Telemetry_DeliveredTelemetryData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Log files was sent to developer..
+        /// </summary>
+        internal static string Telemetry_LogFilesWasSentToDeveloper {
+            get {
+                return ResourceManager.GetString("Telemetry_LogFilesWasSentToDeveloper", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This feature doesn&apos;t do anything in this release because it hasn&apos;t been created yet!.
+        /// </summary>
+        internal static string Telemetry_ThisFeatureDoesntDoAnything {
+            get {
+                return ResourceManager.GetString("Telemetry_ThisFeatureDoesntDoAnything", resourceCulture);
             }
         }
         

@@ -1,5 +1,6 @@
 using DiscordRPC;
 using DiscordRPC.Logging;
+using StellaLauncher.Properties;
 
 namespace StellaLauncher.Scripts
 {
@@ -13,36 +14,36 @@ namespace StellaLauncher.Scripts
 
         public static readonly RichPresence Presence = new RichPresence
         {
-            Details = "In the main window 🏠",
-            State = $"Version: v{Program.AppVersion}",
+            Details = $"{Resources.Discord_InTheMainWindow} 🏠",
+            State = string.Format(Resources.Discord_Version_, Program.AppVersion),
             Assets = new Assets
             {
                 LargeImageKey = "main",
-                LargeImageText = "The best mod for Genshin Impact with ReShade, custom graphics presets, FPS unlock, custom launcher, and more!"
+                LargeImageText = Resources.Discord_Desc
             },
             Timestamps = Timestamps.Now,
             Buttons = new[]
             {
-                new Button { Label = "Official website", Url = Program.AppWebsiteFull },
-                new Button { Label = "Discord server", Url = Invitation }
+                new Button { Label = Resources.Discord_OfficialWebsite, Url = Program.AppWebsiteFull },
+                new Button { Label = Resources.Discord_DiscordServer, Url = Invitation }
             }
         };
 
         public static void InitRpc()
         {
             Client = new DiscordRpcClient("1057407191704940575") { Logger = new ConsoleLogger { Level = LogLevel.Warning } };
-            Client.OnError += (sender, msg) => Log.Output("Discord RPC: An error occurred during the transmission of a message.");
+            Client.OnError += (sender, msg) => Log.Output(Resources.Discord_OnError);
             Client.OnReady += (sender, msg) =>
             {
                 Username = msg.User.Username;
-                Log.Output($"Discord RPC: Connected to Discord with user {Username}.");
+                Log.Output(string.Format(Resources.Discord_OnReady, Username));
 
                 IsReady = true;
             };
-            Client.OnPresenceUpdate += (sender, msg) => Log.Output("Discord RPC: Presence has been updated.");
-            Client.OnClose += (sender, msg) => Log.Output("Discord RPC: Closed.");
-            Client.OnUnsubscribe += (sender, msg) => Log.Output("Discord RPC: Unsubscribed.");
-            Client.OnConnectionEstablished += (sender, msg) => Log.Output("Discord RPC: Connection successfully.");
+            Client.OnPresenceUpdate += (sender, msg) => Log.Output(Resources.Discord_OnPresenceUpdate);
+            Client.OnClose += (sender, msg) => Log.Output(Resources.Discord_OnClose);
+            Client.OnUnsubscribe += (sender, msg) => Log.Output(Resources.Discord_OnUnsubscribe);
+            Client.OnConnectionEstablished += (sender, msg) => Log.Output(Resources.Discord_OnConnectionEstablished);
 
             Client.Initialize();
             Client.SetPresence(Presence);
@@ -53,7 +54,7 @@ namespace StellaLauncher.Scripts
             int data = Program.Settings.ReadInt("Launcher", "DiscordRPC", 1);
             if (data == 0) return;
 
-            Presence.Details = "In the main window 🐈";
+            Presence.Details = $"{Resources.Discord_InTheMainWindow} 🐈";
             Client.SetPresence(Presence);
         }
 
@@ -67,7 +68,7 @@ namespace StellaLauncher.Scripts
             }
             else
             {
-                Log.Output($"Discord Rich Presence was not updated. Data: {data}; isReady: {IsReady}");
+                Log.Output(string.Format(Resources.Discord_RPCWasNotUpdated, data, IsReady));
             }
         }
     }

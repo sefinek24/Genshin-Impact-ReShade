@@ -52,6 +52,7 @@ namespace StellaLauncher.Forms
             this.runGiLauncher_LinkLabel = new System.Windows.Forms.LinkLabel();
             this.version_LinkLabel = new System.Windows.Forms.LinkLabel();
             this.links_LinkLabel = new System.Windows.Forms.LinkLabel();
+            this.clickMe_LinkLabel = new System.Windows.Forms.LinkLabel();
             this.toolsIco_PictureBox = new System.Windows.Forms.PictureBox();
             this.websiteIco_PictureBox = new System.Windows.Forms.PictureBox();
             this.updateIco_PictureBox = new System.Windows.Forms.PictureBox();
@@ -66,7 +67,6 @@ namespace StellaLauncher.Forms
             this.paimon_PictureBox = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.PreparingPleaseWait = new System.Windows.Forms.Label();
-            this.clickMe_LinkLabel = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.githubIco_Picturebox)).BeginInit();
@@ -327,6 +327,18 @@ namespace StellaLauncher.Forms
             this.toolTip1.SetToolTip(this.links_LinkLabel, resources.GetString("links_LinkLabel.ToolTip"));
             this.links_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Links_LinkClicked);
             // 
+            // clickMe_LinkLabel
+            // 
+            resources.ApplyResources(this.clickMe_LinkLabel, "clickMe_LinkLabel");
+            this.clickMe_LinkLabel.ActiveLinkColor = System.Drawing.Color.DeepSkyBlue;
+            this.clickMe_LinkLabel.BackColor = System.Drawing.Color.Transparent;
+            this.clickMe_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.clickMe_LinkLabel.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.clickMe_LinkLabel.Name = "clickMe_LinkLabel";
+            this.clickMe_LinkLabel.TabStop = true;
+            this.toolTip1.SetToolTip(this.clickMe_LinkLabel, resources.GetString("clickMe_LinkLabel.ToolTip"));
+            this.clickMe_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.W_LinkClicked);
+            // 
             // toolsIco_PictureBox
             // 
             resources.ApplyResources(this.toolsIco_PictureBox, "toolsIco_PictureBox");
@@ -462,18 +474,6 @@ namespace StellaLauncher.Forms
             this.PreparingPleaseWait.ForeColor = System.Drawing.Color.White;
             this.PreparingPleaseWait.Name = "PreparingPleaseWait";
             this.toolTip1.SetToolTip(this.PreparingPleaseWait, resources.GetString("PreparingPleaseWait.ToolTip"));
-            // 
-            // clickMe_LinkLabel
-            // 
-            resources.ApplyResources(this.clickMe_LinkLabel, "clickMe_LinkLabel");
-            this.clickMe_LinkLabel.ActiveLinkColor = System.Drawing.Color.DeepSkyBlue;
-            this.clickMe_LinkLabel.BackColor = System.Drawing.Color.Transparent;
-            this.clickMe_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.clickMe_LinkLabel.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.clickMe_LinkLabel.Name = "clickMe_LinkLabel";
-            this.clickMe_LinkLabel.TabStop = true;
-            this.toolTip1.SetToolTip(this.clickMe_LinkLabel, resources.GetString("clickMe_LinkLabel.ToolTip"));
-            this.clickMe_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.W_LinkClicked);
             // 
             // Default
             // 

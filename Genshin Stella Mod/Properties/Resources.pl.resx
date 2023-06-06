@@ -204,6 +204,9 @@ Ta czynność spowoduje utratę wszelkich niestandardowych konfiguracji, jakie d
   <data name="Default_DeletedOldSetupFromTempFolder" xml:space="preserve">
     <value>Usunięto stary plik instalacyjny z folderu tymczasowego: {0}</value>
   </data>
+  <data name="Default_Done" xml:space="preserve">
+    <value>Zrobione.</value>
+  </data>
   <data name="Default_DownloadedReShadeIniWasNotFoundIn_" xml:space="preserve">
     <value>Nie znaleziono pobranego pliku ReShade.ini w: {0}</value>
   </data>
@@ -302,6 +305,42 @@ Czy chciałbyś teraz pobrać ten plik, aby zapobiec przyszłym błędom i ręcz
   <data name="Default_YouHaveTheLatestVersion" xml:space="preserve">
     <value>Masz najnowszą wersję</value>
   </data>
+  <data name="Discord_Desc" xml:space="preserve">
+    <value>Najlepszy mod do Genshin Impact z ReShade, niestandardowym wyglądem graficznym, odblokowywaniem FPS, własnym launcherem itp.!</value>
+  </data>
+  <data name="Discord_DiscordServer" xml:space="preserve">
+    <value>Serwer Discord</value>
+  </data>
+  <data name="Discord_InTheMainWindow" xml:space="preserve">
+    <value>W oknie głównym</value>
+  </data>
+  <data name="Discord_OfficialWebsite" xml:space="preserve">
+    <value>Oficjalna strona internetowa</value>
+  </data>
+  <data name="Discord_OnClose" xml:space="preserve">
+    <value>Discord RPC: Zamknięto.</value>
+  </data>
+  <data name="Discord_OnConnectionEstablished" xml:space="preserve">
+    <value>Discord RPC: Pomyślnie połączono.</value>
+  </data>
+  <data name="Discord_OnError" xml:space="preserve">
+    <value>Discord RPC: Wystąpił błąd podczas przesyłania wiadomości.</value>
+  </data>
+  <data name="Discord_OnPresenceUpdate" xml:space="preserve">
+    <value>Discord RPC: Status został zaktualizowany.</value>
+  </data>
+  <data name="Discord_OnReady" xml:space="preserve">
+    <value>Discord RPC: Połączono się Discordem, użytkownik {0}.</value>
+  </data>
+  <data name="Discord_OnUnsubscribe" xml:space="preserve">
+    <value>Discord RPC: Anulowano subskrypcję.</value>
+  </data>
+  <data name="Discord_RPCWasNotUpdated" xml:space="preserve">
+    <value>Discord Rich Presence nie został zaktualizowany. Data: {0}; IsReady: {1}</value>
+  </data>
+  <data name="Discord_Version_" xml:space="preserve">
+    <value>Wersja: {0}</value>
+  </data>
   <data name="Gallery_BrowsingTheGallery" xml:space="preserve">
     <value>Przegląda galerie 📷</value>
   </data>
@@ -313,6 +352,15 @@ Czy chciałbyś teraz pobrać ten plik, aby zapobiec przyszłym błędom i ręcz
   </data>
   <data name="Links_DRPC_OnTheWindowWithLinks" xml:space="preserve">
     <value>W oknie z linkami 🌍</value>
+  </data>
+  <data name="Log_ForSomeReasonICannotSaveTheActionInfoInTheLogFile" xml:space="preserve">
+    <value>Z jakiegoś powodu nie mogę zapisać informacji o akcji w pliku dziennika.</value>
+  </data>
+  <data name="Log_ForSomeReasonICantSaveTheErrorInfoInTheLogFile" xml:space="preserve">
+    <value>Z jakiegoś powodu nie mogę zapisać informacji o błędzie w pliku dziennika.</value>
+  </data>
+  <data name="Log_SomethingWentWrong" xml:space="preserve">
+    <value>Coś poszło nie tak</value>
   </data>
   <data name="Main_ClickedNoInForm_" xml:space="preserve">
     <value>Kliknięto Nie w oknie formularza '{0}'.</value>
@@ -333,6 +381,82 @@ Czy chciałbyś teraz pobrać ten plik, aby zapobiec przyszłym błędom i ręcz
   <data name="Main_LoadedForm_" xml:space="preserve">
     <value>Załadowano formularz {0}.</value>
     <comment>Używane do Log.Output</comment>
+  </data>
+  <data name="MajorRelease_MajorVersionIsAvailable" xml:space="preserve">
+    <value>Dostępna jest główna aktualizacja</value>
+  </data>
+  <data name="MajorRelease_NewMajorVersionFrom_IsAvailable_v_" xml:space="preserve">
+    <value>Nowe główne wydanie z {0} jest dostępne: v{1} → v{2}</value>
+  </data>
+  <data name="NormalRelease_ClickHereToUpdate" xml:space="preserve">
+    <value>Kliknij by zaktualizować</value>
+  </data>
+  <data name="NormalRelease_Closing" xml:space="preserve">
+    <value>Zamykanie...</value>
+  </data>
+  <data name="NormalRelease_ClosingLauncherIn_" xml:space="preserve">
+    <value>Zamknięcie programu uruchamiającego za {0}s...</value>
+  </data>
+  <data name="NormalRelease_DeletedOldSetupFileFromTempDir" xml:space="preserve">
+    <value>Usunięto stary plik instalacyjny z katalogu tymczasowego.</value>
+  </data>
+  <data name="NormalRelease_DeletedOldSetupFireFrom_" xml:space="preserve">
+    <value>Usunięto plik instalacyjny z: {0}</value>
+  </data>
+  <data name="NormalRelease_DownloadingInProgress" xml:space="preserve">
+    <value>Trwa pobieranie...</value>
+  </data>
+  <data name="NormalRelease_DownloadingNewUpdate_" xml:space="preserve">
+    <value>Pobieranie nowej aktualizacji... {0} MB z {1} MB / {2} MB/s</value>
+  </data>
+  <data name="NormalRelease_DownloadingUpdate_" xml:space="preserve">
+    <value>Pobieranie aktualizacji... {0} MB / {1} MB</value>
+  </data>
+  <data name="NormalRelease_EverythingIsOkay_StartingSetup" xml:space="preserve">
+    <value>Wszystko jest w porządku! Rozpoczywanie instalacji...</value>
+  </data>
+  <data name="NormalRelease_InstallANewVersionInTheWizard_ClosingLauncherIn_" xml:space="preserve">
+    <value>Zainstaluj nową wersję w kreatorze. Launcher zostanie zamknięty za {i}s...</value>
+  </data>
+  <data name="NormalRelease_JustAMoment_PleaseWait" xml:space="preserve">
+    <value>Chwileczkę. Proszę czekać {0}s...</value>
+  </data>
+  <data name="NormalRelease_NewReleaseFrom_IsAvailable_v_" xml:space="preserve">
+    <value>Dostępna jest nowa wersja z {0}: v{1} → v{2}</value>
+  </data>
+  <data name="NormalRelease_NewReleaseIsAvailableDownloadNow" xml:space="preserve">
+    <value>Dostępna jest nowa wersja. Pobierz teraz!</value>
+  </data>
+  <data name="NormalRelease_NewVersionFrom_IsAvailable_UpdateSize" xml:space="preserve">
+    <value>[i] Dostępna jest nowa wersja z {0}.
+[i] Rozmiar aktualizacji: {1} MB.</value>
+  </data>
+  <data name="NormalRelease_Output_" xml:space="preserve">
+    <value>Wyjście: {0}</value>
+  </data>
+  <data name="NormalRelease_PreparingToDownloadNewUpdate" xml:space="preserve">
+    <value>Przygotowanie do pobrania nowej aktualizacji...</value>
+  </data>
+  <data name="NormalRelease_Preparing_IfProcessIsStuckReopenLauncher" xml:space="preserve">
+    <value>Przygotowywanie... Jeśli proces się zawiesi, uruchom ponownie launcher.</value>
+  </data>
+  <data name="NormalRelease_SomethingWentWrong" xml:space="preserve">
+    <value>Coś poszło nie tak???</value>
+  </data>
+  <data name="NormalRelease_Starting" xml:space="preserve">
+    <value>Zaczynanie...</value>
+  </data>
+  <data name="NormalRelease_UpdateSize" xml:space="preserve">
+    <value>Rozmiar aktualizacji: {0} MB</value>
+  </data>
+  <data name="NormalRelease_UpdatingPleaseWait" xml:space="preserve">
+    <value>Trwa aktualizowanie. Proszę czekać...</value>
+  </data>
+  <data name="NormalRelease_Waiting_" xml:space="preserve">
+    <value>Oczekiwanie {0}s...</value>
+  </data>
+  <data name="NormalRelease_WeFoundNewUpdates" xml:space="preserve">
+    <value>Znaleziono nowe aktualizacje.</value>
   </data>
   <data name="Os_FailedToRetrieveDeviceIdentifier" xml:space="preserve">
     <value>Nie udało się uzyskać identyfikatora urządzenia.</value>
@@ -395,8 +519,50 @@ Zamknij proces o nazwie {0} i spróbuj ponownie.</value>
   <data name="RandomImages_Source" xml:space="preserve">
     <value>Źródło</value>
   </data>
+  <data name="ReShadeIniUpdate_DownloadTheRequiredFile" xml:space="preserve">
+    <value>Pobierz wymagany plik</value>
+  </data>
+  <data name="ReShadeIniUpdate_FileReShadeIniWasNotFoundInYourGameDir" xml:space="preserve">
+    <value>Plik ReShade.ini nie został znaleziony w Twoim katalogu gry.</value>
+  </data>
+  <data name="ReShadeIniUpdate_FileSize_KB" xml:space="preserve">
+    <value>Rozmiar pliku: {0} KB</value>
+  </data>
+  <data name="ReShadeIniUpdate_GamePathWasNotFoundOnYourPC" xml:space="preserve">
+    <value>Nie znaleziono ścieżki gry na Twoim komputerze.</value>
+  </data>
+  <data name="ReShadeIniUpdate_NewReShadeCfgIsAvailable_v_" xml:space="preserve">
+    <value>Dostępna jest nowa wersja konfiguracji ReShade: v{0} → v{1}</value>
+  </data>
+  <data name="ReShadeIniUpdate_NewReShadeConfigVersionIsAvailable" xml:space="preserve">
+    <value>Dostępna jest nowa wersja pliku konfiguracyjnego ReShade. Aktualizacja jest wymagana.</value>
+  </data>
+  <data name="ReShadeIniUpdate_ReShadeIniWasNotFoundIn_" xml:space="preserve">
+    <value>Nie znaleziono pliku ReShade.ini w: {0}</value>
+  </data>
+  <data name="ReShadeIniUpdate_StellaConfigVersionIsNullInReShadeIni" xml:space="preserve">
+    <value>STELLA.ConfigVersion jest zerem w ReShade.ini.</value>
+  </data>
+  <data name="ReShadeIniUpdate_TheVersionOfReShadeCfgWasNotFound" xml:space="preserve">
+    <value>Nie znaleziono wersji pliku konfiguracyjnego ReShade.</value>
+  </data>
+  <data name="ReShadeIniUpdate_UpdateReShadeCfg" xml:space="preserve">
+    <value>Zaktualizuj konfigurację ReShade</value>
+  </data>
+  <data name="ReShadeIniUpdate_UpdateSize_KB" xml:space="preserve">
+    <value>[i] Rozmiar aktualizacji: {0} KB</value>
+  </data>
   <data name="SupportMe_Thanks" xml:space="preserve">
     <value>Dzięki :3</value>
+  </data>
+  <data name="Telemetry_DeliveredTelemetryData" xml:space="preserve">
+    <value>Dostarczono dane telemetryczne „{0}” [{1}].</value>
+  </data>
+  <data name="Telemetry_LogFilesWasSentToDeveloper" xml:space="preserve">
+    <value>Pliki dziennika zostały wysłane do programisty.</value>
+  </data>
+  <data name="Telemetry_ThisFeatureDoesntDoAnything" xml:space="preserve">
+    <value>Ta funkcja nie robi nic w tej wersji, ponieważ nie została jeszcze utworzona!</value>
   </data>
   <data name="Tools_BrowsingUtils" xml:space="preserve">
     <value>Przegląda narzędzia 🔧</value>

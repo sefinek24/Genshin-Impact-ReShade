@@ -13,9 +13,9 @@ namespace StellaLauncher.Scripts.Updates
         {
             versionLabel.Text = $@"v{Program.AppVersion} → v{remoteVersion}";
             updatesLabel.LinkColor = Color.Cyan;
-            updatesLabel.Text = @"Major version is available";
+            updatesLabel.Text = Resources.MajorRelease_MajorVersionIsAvailable;
             updateIcon.Image = Resources.icons8_download_from_the_cloud;
-            Log.Output($"New major version from {remoteVerDate} is available: v{Program.AppVersion} → v{remoteVersion}");
+            Log.Output(string.Format(Resources.MajorRelease_NewMajorVersionFrom_IsAvailable_v_, remoteVerDate, Program.AppVersion, remoteVersion));
 
             TaskbarManager.Instance.SetProgressValue(100, 100);
             TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);

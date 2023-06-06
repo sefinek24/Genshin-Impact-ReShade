@@ -33,9 +33,9 @@ namespace StellaLauncher.Scripts.Updates
             {
                 Default.UpdateIsAvailable = false;
 
-                _statusLabel.Text += "[x] Game path was not found on your PC.\n";
+                _statusLabel.Text += $"[x] {Resources.ReShadeIniUpdate_GamePathWasNotFoundOnYourPC}\n";
 
-                Log.SaveErrorLog(new Exception("Game path was not found on your PC."));
+                Log.SaveErrorLog(new Exception(Resources.ReShadeIniUpdate_GamePathWasNotFoundOnYourPC));
                 return -1;
             }
 
@@ -45,11 +45,11 @@ namespace StellaLauncher.Scripts.Updates
                 Default.UpdateIsAvailable = false;
 
                 _updatesLabel.LinkColor = Color.OrangeRed;
-                _updatesLabel.Text = @"Download the required file";
-                _statusLabel.Text += "[x] File ReShade.ini was not found in your game directory.\n";
+                _updatesLabel.Text = Resources.ReShadeIniUpdate_DownloadTheRequiredFile;
+                _statusLabel.Text += $"[x] {Resources.ReShadeIniUpdate_FileReShadeIniWasNotFoundInYourGameDir}\n";
                 _updateIcon.Image = Resources.icons8_download_from_the_cloud;
 
-                Log.Output($"ReShade.ini was not found in: {reShadePath}");
+                Log.Output(string.Format(Resources.ReShadeIniUpdate_ReShadeIniWasNotFoundIn_, reShadePath));
                 return -2;
             }
 
@@ -76,11 +76,11 @@ namespace StellaLauncher.Scripts.Updates
                 Default.UpdateIsAvailable = false;
 
                 _updatesLabel.LinkColor = Color.Cyan;
-                _updatesLabel.Text = @"Download the required file";
-                _statusLabel.Text += "[x] The version of ReShade config was not found.\n";
+                _updatesLabel.Text = Resources.ReShadeIniUpdate_DownloadTheRequiredFile;
+                _statusLabel.Text += $"[x] {Resources.ReShadeIniUpdate_TheVersionOfReShadeCfgWasNotFound}\n";
                 _updateIcon.Image = Resources.icons8_download_from_the_cloud;
 
-                Log.Output("STELLA.ConfigVersion is null in ReShade.ini.");
+                Log.Output(string.Format(Resources.ReShadeIniUpdate_StellaConfigVersionIsNullInReShadeIni));
                 TaskbarManager.Instance.SetProgressValue(100, 100);
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
                 return -2;
@@ -92,20 +92,20 @@ namespace StellaLauncher.Scripts.Updates
             Default.UpdateIsAvailable = true;
 
             _updatesLabel.LinkColor = Color.DodgerBlue;
-            _updatesLabel.Text = @"Update ReShade config";
+            _updatesLabel.Text = Resources.ReShadeIniUpdate_UpdateReShadeCfg;
             _updateIcon.Image = Resources.icons8_download_from_the_cloud;
             _versionLabel.Text = $@"v{localIniVersion} → v{remoteIniVersion}";
-            _statusLabel.Text += "[i] New ReShade config version is available. Update is required.\n";
-            Log.Output($"New ReShade config version is available: v{localIniVersion} → v{remoteIniVersion}");
+            _statusLabel.Text += $"[i] {Resources.ReShadeIniUpdate_NewReShadeConfigVersionIsAvailable}\n";
+            Log.Output(string.Format(Resources.ReShadeIniUpdate_NewReShadeCfgIsAvailable_v_, localIniVersion, remoteIniVersion));
 
             using (WebClient wc = new WebClient())
             {
                 wc.Headers.Add("user-agent", Program.UserAgent);
                 await wc.OpenReadTaskAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini");
                 string updateSize = ByteSize.FromBytes(Convert.ToInt64(wc.ResponseHeaders["Content-Length"])).KiloBytes.ToString("0.00");
-                _statusLabel.Text += $"[i] Update size: {updateSize} KB\n";
+                _statusLabel.Text += $"{string.Format(Resources.ReShadeIniUpdate_UpdateSize_KB, updateSize)}\n";
 
-                Log.Output($"File size: {updateSize} KB");
+                Log.Output(string.Format(Resources.ReShadeIniUpdate_FileSize_KB, updateSize));
                 TaskbarManager.Instance.SetProgressValue(100, 100);
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
                 return 1;

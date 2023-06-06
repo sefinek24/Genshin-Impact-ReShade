@@ -31,8 +31,8 @@ namespace StellaLauncher.Scripts
             catch
             {
                 new ToastContentBuilder()
-                    .AddText("Something went wrong")
-                    .AddText("For some reason, I cannot save the action information in the log file.")
+                    .AddText(Resources.Log_SomethingWentWrong)
+                    .AddText(Resources.Log_ForSomeReasonICannotSaveTheActionInfoInTheLogFile)
                     .Show();
             }
         }
@@ -51,8 +51,8 @@ namespace StellaLauncher.Scripts
             catch
             {
                 new ToastContentBuilder()
-                    .AddText("Something went wrong")
-                    .AddText("For some reason, I can't save the error information in the log file.")
+                    .AddText(Resources.Log_SomethingWentWrong)
+                    .AddText(Resources.Log_ForSomeReasonICantSaveTheErrorInfoInTheLogFile)
                     .Show();
             }
         }

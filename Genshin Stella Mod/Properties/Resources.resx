@@ -623,7 +623,173 @@ If, for any reason, you are unable to update Stella Mod through the Launcher, pl
 
 The requested operation is successful. Changes will not be effective until the system is rebooted.</value>
   </data>
+  <data name="Default_Done" xml:space="preserve">
+    <value>Done.</value>
+  </data>
+  <data name="Discord_Desc" xml:space="preserve">
+    <value>The best mod for Genshin Impact with ReShade, custom graphics presets, FPS unlock, custom launcher, and more!</value>
+  </data>
+  <data name="Discord_DiscordServer" xml:space="preserve">
+    <value>Discord server</value>
+  </data>
+  <data name="Discord_InTheMainWindow" xml:space="preserve">
+    <value>In the main window</value>
+  </data>
+  <data name="Discord_OfficialWebsite" xml:space="preserve">
+    <value>Official website</value>
+  </data>
+  <data name="Discord_OnClose" xml:space="preserve">
+    <value>Discord RPC: Closed.</value>
+  </data>
+  <data name="Discord_OnConnectionEstablished" xml:space="preserve">
+    <value>Discord RPC: Connection successfully.</value>
+  </data>
+  <data name="Discord_OnError" xml:space="preserve">
+    <value>Discord RPC: An error occurred during the transmission of a message.</value>
+  </data>
+  <data name="Discord_OnPresenceUpdate" xml:space="preserve">
+    <value>Discord RPC: Presence has been updated.</value>
+  </data>
+  <data name="Discord_OnReady" xml:space="preserve">
+    <value>Discord RPC: Connected to Discord with user {0}.</value>
+  </data>
+  <data name="Discord_OnUnsubscribe" xml:space="preserve">
+    <value>Discord RPC: Unsubscribed.</value>
+  </data>
+  <data name="Discord_RPCWasNotUpdated" xml:space="preserve">
+    <value>Discord Rich Presence was not updated. Data: {0}; IsReady: {1}</value>
+  </data>
+  <data name="Discord_Version_" xml:space="preserve">
+    <value>Version: {0}</value>
+  </data>
+  <data name="Log_ForSomeReasonICannotSaveTheActionInfoInTheLogFile" xml:space="preserve">
+    <value>For some reason, I cannot save the action information in the log file.</value>
+  </data>
+  <data name="Log_ForSomeReasonICantSaveTheErrorInfoInTheLogFile" xml:space="preserve">
+    <value>For some reason, I can't save the error information in the log file.</value>
+  </data>
+  <data name="Log_SomethingWentWrong" xml:space="preserve">
+    <value>Something went wrong</value>
+  </data>
+  <data name="MajorRelease_MajorVersionIsAvailable" xml:space="preserve">
+    <value>Major version is available</value>
+  </data>
+  <data name="MajorRelease_NewMajorVersionFrom_IsAvailable_v_" xml:space="preserve">
+    <value>New major version from {0} is available: v{1} → v{2}</value>
+  </data>
+  <data name="NormalRelease_ClickHereToUpdate" xml:space="preserve">
+    <value>Click here to update</value>
+  </data>
+  <data name="NormalRelease_Closing" xml:space="preserve">
+    <value>Closing...</value>
+  </data>
+  <data name="NormalRelease_ClosingLauncherIn_" xml:space="preserve">
+    <value>Closing launcher in {0}s...</value>
+  </data>
+  <data name="NormalRelease_DeletedOldSetupFileFromTempDir" xml:space="preserve">
+    <value>Deleted old setup file from temp directory.</value>
+  </data>
+  <data name="NormalRelease_DeletedOldSetupFireFrom_" xml:space="preserve">
+    <value>Deleted od setup file from: {0}</value>
+  </data>
+  <data name="NormalRelease_DownloadingInProgress" xml:space="preserve">
+    <value>Downloading in progress...</value>
+  </data>
+  <data name="NormalRelease_DownloadingNewUpdate_" xml:space="preserve">
+    <value>Downloading new update... {0} MB of {1} MB / {2} MB/s</value>
+  </data>
+  <data name="NormalRelease_DownloadingUpdate_" xml:space="preserve">
+    <value>Downloading update... {0} MB / {1} MB</value>
+  </data>
+  <data name="NormalRelease_EverythingIsOkay_StartingSetup" xml:space="preserve">
+    <value>Everything is okay! Starting setup...</value>
+  </data>
+  <data name="NormalRelease_InstallANewVersionInTheWizard_ClosingLauncherIn_" xml:space="preserve">
+    <value>Install a new version in the wizard. Closing launcher in {i}s...</value>
+  </data>
+  <data name="NormalRelease_JustAMoment_PleaseWait" xml:space="preserve">
+    <value>Just a moment. Please wait {0}s...</value>
+  </data>
+  <data name="NormalRelease_NewReleaseFrom_IsAvailable_v_" xml:space="preserve">
+    <value>New release from {0} is available: v{1} → v{2}</value>
+  </data>
+  <data name="NormalRelease_NewReleaseIsAvailableDownloadNow" xml:space="preserve">
+    <value>New release is available. Download now!</value>
+  </data>
+  <data name="NormalRelease_NewVersionFrom_IsAvailable_UpdateSize" xml:space="preserve">
+    <value>[i] New version from {0} is available.
+[i] Update size: {1} MB</value>
+  </data>
+  <data name="NormalRelease_Output_" xml:space="preserve">
+    <value>Output: {0}</value>
+  </data>
+  <data name="NormalRelease_PreparingToDownloadNewUpdate" xml:space="preserve">
+    <value>Preparing to download new update...</value>
+  </data>
+  <data name="NormalRelease_Preparing_IfProcessIsStuckReopenLauncher" xml:space="preserve">
+    <value>Preparing... If process is stuck, reopen launcher.</value>
+  </data>
+  <data name="NormalRelease_SomethingWentWrong" xml:space="preserve">
+    <value>Something went wrong???</value>
+  </data>
+  <data name="NormalRelease_Starting" xml:space="preserve">
+    <value>Starting...</value>
+  </data>
+  <data name="NormalRelease_UpdateSize" xml:space="preserve">
+    <value>Update size: {0} MB</value>
+  </data>
+  <data name="NormalRelease_UpdatingPleaseWait" xml:space="preserve">
+    <value>Updating. Please wait...</value>
+  </data>
+  <data name="NormalRelease_Waiting_" xml:space="preserve">
+    <value>Waiting {0}s...</value>
+  </data>
+  <data name="NormalRelease_WeFoundNewUpdates" xml:space="preserve">
+    <value>We found new updates</value>
+  </data>
   <data name="Os_FailedToRetrieveDeviceIdentifier" xml:space="preserve">
     <value>Failed to retrieve device identifier.</value>
+  </data>
+  <data name="ReShadeIniUpdate_DownloadTheRequiredFile" xml:space="preserve">
+    <value>Download the required file</value>
+  </data>
+  <data name="ReShadeIniUpdate_FileReShadeIniWasNotFoundInYourGameDir" xml:space="preserve">
+    <value>File ReShade.ini was not found in your game directory.</value>
+  </data>
+  <data name="ReShadeIniUpdate_FileSize_KB" xml:space="preserve">
+    <value>File size: {0} KB</value>
+  </data>
+  <data name="ReShadeIniUpdate_GamePathWasNotFoundOnYourPC" xml:space="preserve">
+    <value>Game path was not found on your PC.</value>
+  </data>
+  <data name="ReShadeIniUpdate_NewReShadeCfgIsAvailable_v_" xml:space="preserve">
+    <value>New ReShade config version is available: v{0} → v{1}</value>
+  </data>
+  <data name="ReShadeIniUpdate_NewReShadeConfigVersionIsAvailable" xml:space="preserve">
+    <value>New ReShade config version is available. Update is required.</value>
+  </data>
+  <data name="ReShadeIniUpdate_ReShadeIniWasNotFoundIn_" xml:space="preserve">
+    <value>ReShade.ini was not found in: {0}</value>
+  </data>
+  <data name="ReShadeIniUpdate_StellaConfigVersionIsNullInReShadeIni" xml:space="preserve">
+    <value>STELLA.ConfigVersion is null in ReShade.ini.</value>
+  </data>
+  <data name="ReShadeIniUpdate_TheVersionOfReShadeCfgWasNotFound" xml:space="preserve">
+    <value>The version of ReShade config was not found.</value>
+  </data>
+  <data name="ReShadeIniUpdate_UpdateReShadeCfg" xml:space="preserve">
+    <value>Update ReShade config</value>
+  </data>
+  <data name="ReShadeIniUpdate_UpdateSize_KB" xml:space="preserve">
+    <value>[i] Update size: {0} KB</value>
+  </data>
+  <data name="Telemetry_DeliveredTelemetryData" xml:space="preserve">
+    <value>Delivered telemetry data '{0}' [{1}].</value>
+  </data>
+  <data name="Telemetry_LogFilesWasSentToDeveloper" xml:space="preserve">
+    <value>Log files was sent to developer.</value>
+  </data>
+  <data name="Telemetry_ThisFeatureDoesntDoAnything" xml:space="preserve">
+    <value>This feature doesn't do anything in this release because it hasn't been created yet!</value>
   </data>
 </root>
