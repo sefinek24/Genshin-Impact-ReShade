@@ -5,6 +5,7 @@ using CliWrap;
 using CliWrap.Buffered;
 using Microsoft.Toolkit.Uwp.Notifications;
 using StellaLauncher.Forms;
+using StellaLauncher.Properties;
 
 namespace StellaLauncher.Scripts
 {
@@ -18,10 +19,8 @@ namespace StellaLauncher.Scripts
 
                 if (Default.UpdateIsAvailable && !bypassUpdates)
                 {
-                    MessageBox.Show(
-                        "Update is required.\n\nI apologize for any inconvenience caused, but it is necessary to install every update. Each update may contain quality improvements, and some updates might even include important security fixes.\n\nIf, for any reason, you are unable to update Stella Mod through the launcher, please uninstall the previous version and reinstall it from the official website.",
-                        Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Log.Output("CliWrap: Command execution failed. An update is required.");
+                    MessageBox.Show(Resources.Cmd_UpdateIsRequired, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Log.Output(Resources.Cmd_CommandExecutionFailed);
                     return false;
                 }
 
@@ -39,17 +38,17 @@ namespace StellaLauncher.Scripts
                 // StandardOutput
                 string stdoutLine = !string.IsNullOrEmpty(stdout) ? $"\n✅ STDOUT: {stdout}" : "";
                 string stderrLine = !string.IsNullOrEmpty(stderr) ? $"\n❌ STDERR: {stderr}" : "";
-                Log.Output($"CliWrap: Successfully executed {app}; Exit code: {result.ExitCode}; Start time: {result.StartTime}; Exit time: {result.ExitTime}{stdoutLine}{stderrLine};");
+                Log.Output(string.Format(Resources.Cmd_SuccessfullyExecutedCommand, app, result.ExitCode, result.StartTime, result.ExitTime, stdoutLine, stderrLine));
 
                 // StandardError
                 if (result.ExitCode == 0) return true;
 
-                string showCommand = !string.IsNullOrEmpty(app) ? $"\n\n» Executed command:\n{app} {args}" : "";
+                string showCommand = !string.IsNullOrEmpty(app) ? $"\n\n» {Resources.Cmd_ExecutedCommand}:\n{app} {args}" : "";
                 string showWorkingDir = !string.IsNullOrEmpty(workingDir)
-                    ? $"\n\n» Working directory: {workingDir}"
+                    ? $"\n\n» {Resources.Cmd_WorkingDirectory}: {workingDir}"
                     : "";
-                string showExitCode = !double.IsNaN(result.ExitCode) ? $"\n\n» Exit code: {result.ExitCode}" : "";
-                string showError = !string.IsNullOrEmpty(stderr) ? $"\n\n» Error:\n{stderr}" : "";
+                string showExitCode = !double.IsNaN(result.ExitCode) ? $"\n\n» ${Resources.Cmd_ExitCode}: {result.ExitCode}" : "";
+                string showError = !string.IsNullOrEmpty(stderr) ? $"\n\n» {Resources.Cmd_Error}:\n{stderr}" : "";
                 string info = $"{showCommand}{showWorkingDir}{showExitCode}{showError}";
 
                 switch (result.ExitCode)
@@ -59,8 +58,8 @@ namespace StellaLauncher.Scripts
                         try
                         {
                             new ToastContentBuilder()
-                                .AddText("Reboot is required 📄")
-                                .AddText("Required dependency has been successfully installed, but your computer needs a restart.")
+                                .AddText($"{Resources.Cmd_RebootIsRequired} 📄")
+                                .AddText(Resources.Cmd_TheRequiredDependencyHasBeenSuccessfullyInstalledButyourComputerNeedsToBeRestart)
                                 .Show();
                         }
                         catch (Exception ex)
@@ -68,23 +67,22 @@ namespace StellaLauncher.Scripts
                             Log.SaveErrorLog(ex);
                         }
 
-                        MessageBox.Show(@"The requested operation is successful, but your PC needs reboot.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Log.Output(
-                            $"CliWrap: {app} installed. Exit code: {result.ExitCode}\nThe requested operation is successful. Changes will not be effective until the system is rebooted.");
+                        MessageBox.Show(Resources.Cmd_TheRequestOperationWasSuccessfulButYourPCNeedsToBeRebooted, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Log.Output(string.Format(Resources.Cmd__AppInstalled, app, result.ExitCode));
                         return false;
                     }
 
                     case 5:
-                        const string mainInfo = "Failed to update. The software was denied access to a location, preventing it from saving, copying, opening or loading files.";
+                        string mainInfo = Resources.Cmd_FailedToUpdate;
                         MessageBox.Show(mainInfo, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                        Log.SaveErrorLog(new Exception($"{mainInfo}\nRestart your computer or suspend antivirus program and try again.{info}"));
+                        Log.SaveErrorLog(new Exception($"{mainInfo}\n{Resources.Cmd_RestartYourComputerOrSuspendAntivirusProgramAndTryAgain}{info}"));
                         return false;
 
                     default:
                     {
                         if (!downloadSetup)
-                            Log.ErrorAndExit(new Exception($"Command execution failed because the underlying process ({app}) returned a non-zero exit code - {result.ExitCode}.\n{info}"));
+                            Log.ErrorAndExit(new Exception(string.Format(Resources.Cmd_CommandExecutionFailedBeacuseTheUnderlyingProcessReturnedANonZeroExitCode, app, result.ExitCode, info)));
                         else
                             Log.SaveErrorLog(new Exception(info));
                         return false;

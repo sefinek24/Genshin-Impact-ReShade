@@ -121,6 +121,141 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CliWrap: {0} installed. Exit code: {1}
+        ///
+        ///The requested operation is successful. Changes will not be effective until the system is rebooted..
+        /// </summary>
+        internal static string Cmd__AppInstalled {
+            get {
+                return ResourceManager.GetString("Cmd__AppInstalled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CliWrap: Command execution failed. An update is required..
+        /// </summary>
+        internal static string Cmd_CommandExecutionFailed {
+            get {
+                return ResourceManager.GetString("Cmd_CommandExecutionFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Command execution failed because the underlying process ({0}) returned a non-zero exit code - {1}.
+        ///
+        ///{2}.
+        /// </summary>
+        internal static string Cmd_CommandExecutionFailedBeacuseTheUnderlyingProcessReturnedANonZeroExitCode {
+            get {
+                return ResourceManager.GetString("Cmd_CommandExecutionFailedBeacuseTheUnderlyingProcessReturnedANonZeroExitCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        internal static string Cmd_Error {
+            get {
+                return ResourceManager.GetString("Cmd_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Executed command.
+        /// </summary>
+        internal static string Cmd_ExecutedCommand {
+            get {
+                return ResourceManager.GetString("Cmd_ExecutedCommand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exit code.
+        /// </summary>
+        internal static string Cmd_ExitCode {
+            get {
+                return ResourceManager.GetString("Cmd_ExitCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to update. The software was denied access to a location, preventing it from saving, copying, opening or loading files..
+        /// </summary>
+        internal static string Cmd_FailedToUpdate {
+            get {
+                return ResourceManager.GetString("Cmd_FailedToUpdate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reboot is required.
+        /// </summary>
+        internal static string Cmd_RebootIsRequired {
+            get {
+                return ResourceManager.GetString("Cmd_RebootIsRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restart your computer or suspend antivirus program and try again..
+        /// </summary>
+        internal static string Cmd_RestartYourComputerOrSuspendAntivirusProgramAndTryAgain {
+            get {
+                return ResourceManager.GetString("Cmd_RestartYourComputerOrSuspendAntivirusProgramAndTryAgain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CliWrap: Successfully executed {0}; Exit code: {1}; Start time: {2}; Exit time: {3}{4}{5};.
+        /// </summary>
+        internal static string Cmd_SuccessfullyExecutedCommand {
+            get {
+                return ResourceManager.GetString("Cmd_SuccessfullyExecutedCommand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Żądane działanie zostało pomyślnie wykonane, lecz Twój komputer wymaga ponownego uruchomienia..
+        /// </summary>
+        internal static string Cmd_TheRequestOperationWasSuccessfulButYourPCNeedsToBeRebooted {
+            get {
+                return ResourceManager.GetString("Cmd_TheRequestOperationWasSuccessfulButYourPCNeedsToBeRebooted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The required dependency has been successfully installed, but your computer needs to be restarted..
+        /// </summary>
+        internal static string Cmd_TheRequiredDependencyHasBeenSuccessfullyInstalledButyourComputerNeedsToBeRestart {
+            get {
+                return ResourceManager.GetString("Cmd_TheRequiredDependencyHasBeenSuccessfullyInstalledButyourComputerNeedsToBeRest" +
+                        "art", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An update is required.
+        ///
+        ///We apologize for any inconvenience caused, but it is necessary to install every new update. These updates may contain quality improvements, and some may even include important security fixes.
+        ///
+        ///If, for any reason, you are unable to update Stella Mod through the Launcher, please uninstall the current version and install the new one from the official website source..
+        /// </summary>
+        internal static string Cmd_UpdateIsRequired {
+            get {
+                return ResourceManager.GetString("Cmd_UpdateIsRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Working directory.
+        /// </summary>
+        internal static string Cmd_WorkingDirectory {
+            get {
+                return ResourceManager.GetString("Cmd_WorkingDirectory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Are you sure you want to update ReShade configuration?
         ///
         ///This action will result in the loss of any custom configurations you have made. If you do not have any custom configurations, you may proceed by clicking Yes. However, if you have made changes, please ensure that you have backed up the previous ReShade file in your game files..
@@ -823,6 +958,15 @@ namespace StellaLauncher.Properties {
             get {
                 object obj = ResourceManager.GetObject("new-release", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to retrieve device identifier..
+        /// </summary>
+        internal static string Os_FailedToRetrieveDeviceIdentifier {
+            get {
+                return ResourceManager.GetString("Os_FailedToRetrieveDeviceIdentifier", resourceCulture);
             }
         }
         

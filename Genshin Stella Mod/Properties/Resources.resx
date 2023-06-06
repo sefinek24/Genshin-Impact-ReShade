@@ -573,4 +573,57 @@ Do you want to download this dependency from Microsoft website?</value>
   <data name="WebView2Handler_OhhSorrySomethingWentWrongWithWV2" xml:space="preserve">
     <value>Wybacz. Coś poszło nie tak z WebView2.</value>
   </data>
+  <data name="Cmd_CommandExecutionFailed" xml:space="preserve">
+    <value>CliWrap: Command execution failed. An update is required.</value>
+  </data>
+  <data name="Cmd_CommandExecutionFailedBeacuseTheUnderlyingProcessReturnedANonZeroExitCode" xml:space="preserve">
+    <value>Command execution failed because the underlying process ({0}) returned a non-zero exit code - {1}.
+
+{2}</value>
+  </data>
+  <data name="Cmd_Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Cmd_ExecutedCommand" xml:space="preserve">
+    <value>Executed command</value>
+  </data>
+  <data name="Cmd_ExitCode" xml:space="preserve">
+    <value>Exit code</value>
+  </data>
+  <data name="Cmd_FailedToUpdate" xml:space="preserve">
+    <value>Failed to update. The software was denied access to a location, preventing it from saving, copying, opening or loading files.</value>
+  </data>
+  <data name="Cmd_RebootIsRequired" xml:space="preserve">
+    <value>Reboot is required</value>
+  </data>
+  <data name="Cmd_RestartYourComputerOrSuspendAntivirusProgramAndTryAgain" xml:space="preserve">
+    <value>Restart your computer or suspend antivirus program and try again.</value>
+  </data>
+  <data name="Cmd_SuccessfullyExecutedCommand" xml:space="preserve">
+    <value>CliWrap: Successfully executed {0}; Exit code: {1}; Start time: {2}; Exit time: {3}{4}{5};</value>
+  </data>
+  <data name="Cmd_TheRequestOperationWasSuccessfulButYourPCNeedsToBeRebooted" xml:space="preserve">
+    <value>Żądane działanie zostało pomyślnie wykonane, lecz Twój komputer wymaga ponownego uruchomienia.</value>
+  </data>
+  <data name="Cmd_TheRequiredDependencyHasBeenSuccessfullyInstalledButyourComputerNeedsToBeRestart" xml:space="preserve">
+    <value>The required dependency has been successfully installed, but your computer needs to be restarted.</value>
+  </data>
+  <data name="Cmd_UpdateIsRequired" xml:space="preserve">
+    <value>An update is required.
+
+We apologize for any inconvenience caused, but it is necessary to install every new update. These updates may contain quality improvements, and some may even include important security fixes.
+
+If, for any reason, you are unable to update Stella Mod through the Launcher, please uninstall the current version and install the new one from the official website source.</value>
+  </data>
+  <data name="Cmd_WorkingDirectory" xml:space="preserve">
+    <value>Working directory</value>
+  </data>
+  <data name="Cmd__AppInstalled" xml:space="preserve">
+    <value>CliWrap: {0} installed. Exit code: {1}
+
+The requested operation is successful. Changes will not be effective until the system is rebooted.</value>
+  </data>
+  <data name="Os_FailedToRetrieveDeviceIdentifier" xml:space="preserve">
+    <value>Failed to retrieve device identifier.</value>
+  </data>
 </root>

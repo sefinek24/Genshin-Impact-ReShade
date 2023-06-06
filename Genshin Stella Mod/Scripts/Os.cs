@@ -3,6 +3,7 @@ using System.Globalization;
 using System.Linq;
 using System.Management;
 using Microsoft.Win32;
+using StellaLauncher.Properties;
 
 namespace StellaLauncher.Scripts
 {
@@ -15,17 +16,17 @@ namespace StellaLauncher.Scripts
         private static readonly RegistryKey RegistryKey = LocalMachine.OpenSubKey(@"SOFTWARE\Wow6432Node\Microsoft\Windows NT\CurrentVersion");
 
         public static readonly string CpuId = GetCpuId();
-        public static readonly string DeviceId = GetDeviceId();
-        private static readonly string Name = GetOs();
-        private static readonly string Build = GetBuild();
-        private static readonly string Version = GetVersion();
-        public static readonly string Bits = Environment.Is64BitOperatingSystem ? "64-bit" : "32-bit";
-        public static readonly string AllInfos = $"{Name} {Version} [{Build}]";
+        // public static readonly string DeviceId = GetDeviceId();
+        // private static readonly string Name = GetOs();
+        // private static readonly string Build = GetBuild();
+        // private static readonly string Version = GetVersion();
+        // public static readonly string Bits = Environment.Is64BitOperatingSystem ? "64-bit" : "32-bit";
+        // public static readonly string AllInfos = $"{Name} {Version} [{Build}]";
 
-        public static readonly string TimeZone = TimeZoneInfo.Local.ToString();
+        // public static readonly string TimeZone = TimeZoneInfo.Local.ToString();
         public static readonly string RegionCode = RegionInfo.CurrentRegion.ToString();
-        public static readonly string RegionEngName = RegionInfo.CurrentRegion.EnglishName;
-        public static readonly string RegionName = RegionInfo.CurrentRegion.Name;
+        // public static readonly string RegionEngName = RegionInfo.CurrentRegion.EnglishName;
+        // public static readonly string RegionName = RegionInfo.CurrentRegion.Name;
 
         private static string GetCpuId()
         {
@@ -59,7 +60,7 @@ namespace StellaLauncher.Scripts
             if (!string.IsNullOrEmpty(deviceId)) return deviceId;
 
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Failed to retrieve device identifier.");
+            Log.SaveErrorLog(new Exception(Resources.Os_FailedToRetrieveDeviceIdentifier));
             while (true) Console.ReadLine();
         }
 

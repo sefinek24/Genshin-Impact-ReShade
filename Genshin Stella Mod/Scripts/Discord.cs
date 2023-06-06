@@ -8,7 +8,7 @@ namespace StellaLauncher.Scripts
         public const string Invitation = "https://discord.com/invite/SVcbaRc7gH";
         public const string FeedbackChannel = "https://discord.gg/X8bt6mkbu7";
         public static string Username = "";
-        public static bool isReady;
+        public static bool IsReady;
         public static DiscordRpcClient Client;
 
         public static readonly RichPresence Presence = new RichPresence
@@ -18,7 +18,7 @@ namespace StellaLauncher.Scripts
             Assets = new Assets
             {
                 LargeImageKey = "main",
-                LargeImageText = "The best Genshin Impact mod pack with ReShade, custom graphics presets, FPS Unlocker, own launcher and more!"
+                LargeImageText = "The best mod for Genshin Impact with ReShade, custom graphics presets, FPS unlock, custom launcher, and more!"
             },
             Timestamps = Timestamps.Now,
             Buttons = new[]
@@ -37,7 +37,7 @@ namespace StellaLauncher.Scripts
                 Username = msg.User.Username;
                 Log.Output($"Discord RPC: Connected to Discord with user {Username}.");
 
-                isReady = true;
+                IsReady = true;
             };
             Client.OnPresenceUpdate += (sender, msg) => Log.Output("Discord RPC: Presence has been updated.");
             Client.OnClose += (sender, msg) => Log.Output("Discord RPC: Closed.");
@@ -60,14 +60,14 @@ namespace StellaLauncher.Scripts
         public static void SetStatus(string status)
         {
             int data = Program.Settings.ReadInt("Launcher", "DiscordRPC", 1);
-            if (data == 1 && isReady)
+            if (data == 1 && IsReady)
             {
                 Presence.Details = status;
                 Client.SetPresence(Presence);
             }
             else
             {
-                Log.Output($"Discord Rich Presence was not updated. Data: {data}; isReady: {isReady}");
+                Log.Output($"Discord Rich Presence was not updated. Data: {data}; isReady: {IsReady}");
             }
         }
     }

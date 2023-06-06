@@ -117,6 +117,53 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Cmd_CommandExecutionFailed" xml:space="preserve">
+    <value>CliWrap: Nieudane wykonanie polecenia. Wymagana jest aktualizacja.</value>
+  </data>
+  <data name="Cmd_CommandExecutionFailedBeacuseTheUnderlyingProcessReturnedANonZeroExitCode" xml:space="preserve">
+    <value>Wystąpił błąd wykonania polecenia, ponieważ zasadniczy proces ({0}) zwrócił kod wyjścia różny od zera - {1}.
+
+{2}</value>
+  </data>
+  <data name="Cmd_Error" xml:space="preserve">
+    <value>Błąd</value>
+  </data>
+  <data name="Cmd_ExecutedCommand" xml:space="preserve">
+    <value>Wykonane polecenie</value>
+  </data>
+  <data name="Cmd_ExitCode" xml:space="preserve">
+    <value>Kod wyjścia</value>
+  </data>
+  <data name="Cmd_FailedToUpdate" xml:space="preserve">
+    <value>Nie udało się zaktualizować. Oprogramowanie zostało pozbawione dostępu do lokalizacji, uniemożliwiając zapisywanie, kopiowanie, otwieranie lub wczytywanie plików.</value>
+  </data>
+  <data name="Cmd_RebootIsRequired" xml:space="preserve">
+    <value>Ponowne uruchomienie jest wymagane</value>
+  </data>
+  <data name="Cmd_RestartYourComputerOrSuspendAntivirusProgramAndTryAgain" xml:space="preserve">
+    <value>Uruchom ponownie komputer lub wstrzymaj program antywirusowy i spróbuj ponownie.</value>
+  </data>
+  <data name="Cmd_TheRequestOperationWasSuccessfulButYourPCNeedsToBeRebooted" xml:space="preserve">
+    <value>The requested operation was successful, but your PC needs to be rebooted.</value>
+  </data>
+  <data name="Cmd_TheRequiredDependencyHasBeenSuccessfullyInstalledButyourComputerNeedsToBeRestart" xml:space="preserve">
+    <value>Wymagana zależność została pomyślnie zainstalowana, lecz Twój komputer wymaga ponownego uruchomienia.</value>
+  </data>
+  <data name="Cmd_UpdateIsRequired" xml:space="preserve">
+    <value>Wymagana jest aktualizacja.
+
+Przepraszamy za wszelkie niedogodności, ale konieczna jest instalacja każdej nowej aktualizacji. Te  aktualizacja może zawierać poprawki jakościowe, a niektóre mogą nawet obejmować istotne poprawki zabezpieczeń.
+
+Jeśli z jakiegoś powodu nie możesz zaktualizować Stella Mod za pomocą Launchera, proszę odinstaluj obecną wersję i zainstaluj nową ze strony internetowej oficjalnego źródła.</value>
+  </data>
+  <data name="Cmd_WorkingDirectory" xml:space="preserve">
+    <value>Katalog roboczy</value>
+  </data>
+  <data name="Cmd__AppInstalled" xml:space="preserve">
+    <value>CliWrap: Zainstalowano {0}. Kod wyjścia: {1}
+
+Żądane działanie zostało pomyślnie wykonane. Zmiany będą obowiązywać dopiero po ponownym uruchomieniu systemu.</value>
+  </data>
   <data name="Default_AreYouSureWantToUpdateReShadeConfiguration" xml:space="preserve">
     <value>Jesteś pewien, że chcesz zaktualizować konfigurację ReShade?
 
@@ -286,6 +333,9 @@ Czy chciałbyś teraz pobrać ten plik, aby zapobiec przyszłym błędom i ręcz
   <data name="Main_LoadedForm_" xml:space="preserve">
     <value>Załadowano formularz {0}.</value>
     <comment>Używane do Log.Output</comment>
+  </data>
+  <data name="Os_FailedToRetrieveDeviceIdentifier" xml:space="preserve">
+    <value>Nie udało się uzyskać identyfikatora urządzenia.</value>
   </data>
   <data name="Program_ARequestToStartTheProgramHasBeenReceived" xml:space="preserve">
     <value>Otrzymano żądanie uruchomienia programu.
