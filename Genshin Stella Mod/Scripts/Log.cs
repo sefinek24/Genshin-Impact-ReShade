@@ -66,9 +66,9 @@ namespace StellaLauncher.Scripts
 
         public static void ErrorAndExit(Exception ex)
         {
-            ThrowError(ex);
-
             Telemetry.Error(ex);
+
+            ThrowError(ex);
             Environment.Exit(999991000);
         }
     }

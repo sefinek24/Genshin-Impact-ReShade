@@ -455,7 +455,7 @@ namespace StellaLauncher.Forms
             resources.ApplyResources(this.pictureBox15, "pictureBox15");
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox15.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox15.Image = global::StellaLauncher.Properties.Resources.icons8_shortcut;
+            this.pictureBox15.Image = global::StellaLauncher.Properties.Resources.icons8_gear;
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.TabStop = false;
             // 
