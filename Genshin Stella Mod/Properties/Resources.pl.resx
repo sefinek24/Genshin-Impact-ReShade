@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -389,7 +389,7 @@ Czy chciałbyś teraz pobrać ten plik, aby zapobiec przyszłym błędom i ręcz
     <value>Nowe główne wydanie z {0} jest dostępne: v{1} → v{2}</value>
   </data>
   <data name="NormalRelease_ClickHereToUpdate" xml:space="preserve">
-    <value>Kliknij by zaktualizować</value>
+    <value>Kliknij, by zaktualizować</value>
   </data>
   <data name="NormalRelease_Closing" xml:space="preserve">
     <value>Zamykanie...</value>
@@ -416,7 +416,7 @@ Czy chciałbyś teraz pobrać ten plik, aby zapobiec przyszłym błędom i ręcz
     <value>Wszystko jest w porządku! Rozpoczywanie instalacji...</value>
   </data>
   <data name="NormalRelease_InstallANewVersionInTheWizard_ClosingLauncherIn_" xml:space="preserve">
-    <value>Zainstaluj nową wersję w kreatorze. Launcher zostanie zamknięty za {i}s...</value>
+    <value>Zainstaluj nową wersję w kreatorze. Launcher zostanie zamknięty za {0}s...</value>
   </data>
   <data name="NormalRelease_JustAMoment_PleaseWait" xml:space="preserve">
     <value>Chwileczkę. Proszę czekać {0}s...</value>
@@ -450,7 +450,7 @@ Czy chciałbyś teraz pobrać ten plik, aby zapobiec przyszłym błędom i ręcz
     <value>Rozmiar aktualizacji: {0} MB</value>
   </data>
   <data name="NormalRelease_UpdatingPleaseWait" xml:space="preserve">
-    <value>Trwa aktualizowanie. Proszę czekać...</value>
+    <value>Trwa aktualizowanie...</value>
   </data>
   <data name="NormalRelease_Waiting_" xml:space="preserve">
     <value>Oczekiwanie {0}s...</value>
@@ -631,8 +631,25 @@ Czy chcesz zresetować wszystkie ustawienia Stella Mod?</value>
 
 Czy chcesz zresetować wszystkie ustawienia Stella Mod?</value>
   </data>
+  <data name="Utils_FoundGiExe" xml:space="preserve">
+    <value>Znaleziono exe Genshin Impact w: {0} [{1}]</value>
+  </data>
+  <data name="Utils_FoundGIgameDir__" xml:space="preserve">
+    <value>Znaleziono folder Genshin Impact game: {0} [{1}]</value>
+  </data>
+  <data name="Utils_FoundGILauncherIn_" xml:space="preserve">
+    <value>Znaleziono Launcher Genshin Impact w: {0}</value>
+  </data>
   <data name="Utils_FoundMainGIDir" xml:space="preserve">
     <value>Znaleziono główny katalog gry Genshin Impact: {0} [{1}]</value>
+  </data>
+  <data name="Utils_LauncherFileDoesNotExists" xml:space="preserve">
+    <value>Plik programu uruchamiającego nie istnieje.
+
+{0}</value>
+  </data>
+  <data name="Utils_LauncherFileDoesNotExistsIn_" xml:space="preserve">
+    <value>Plik programu uruchamiającego nie istnieje w: {0} [{1}]</value>
   </data>
   <data name="Utils_Opened_InDefaultBrowser" xml:space="preserve">
     <value>Otwarto '{0}' w domyślnej przeglądarce.</value>
@@ -642,6 +659,9 @@ Czy chcesz zresetować wszystkie ustawienia Stella Mod?</value>
   </data>
   <data name="Utils_URLIsNullOrEmpty" xml:space="preserve">
     <value>Adres URL jest pusty lub jest po prostu nullem (zerem).</value>
+  </data>
+  <data name="Utils_WrongParameter" xml:space="preserve">
+    <value>Zły parametr.</value>
   </data>
   <data name="WebView2Handler_ChooseEvergreenStandaloneInstaller" xml:space="preserve">
     <value>Choose Evergreen Standalone Installer.</value>

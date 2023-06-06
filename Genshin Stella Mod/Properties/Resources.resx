@@ -534,7 +534,7 @@ Do you want to reset all Stella Mod settings?</value>
     <value>Found Genshin Impact Exe in: {0} [{1}]</value>
   </data>
   <data name="Utils_FoundGIgameDir__" xml:space="preserve">
-    <value>Found Genshin Impact Game dir: {0} [{1}]</value>
+    <value>Found Genshin Impact game dir: {0} [{1}]</value>
   </data>
   <data name="Utils_FoundGILauncherIn_" xml:space="preserve">
     <value>Found Genshin Impact Launcher in: {0}</value>
@@ -563,7 +563,7 @@ Do you want to reset all Stella Mod settings?</value>
     <value>Wrong parameter.</value>
   </data>
   <data name="WebView2Handler_ChooseEvergreenStandaloneInstaller" xml:space="preserve">
-    <value>Wybierz Evergreen Standalone Installer.</value>
+    <value>Select Evergreen Standalone Installer.</value>
   </data>
   <data name="WebView2Handler_DoYouWantToDownloadThisDependencyFromMStore" xml:space="preserve">
     <value>{0}
@@ -571,7 +571,7 @@ Do you want to reset all Stella Mod settings?</value>
 Do you want to download this dependency from Microsoft website?</value>
   </data>
   <data name="WebView2Handler_OhhSorrySomethingWentWrongWithWV2" xml:space="preserve">
-    <value>Wybacz. Coś poszło nie tak z WebView2.</value>
+    <value>Sorry. Something went wrong with WebView2.</value>
   </data>
   <data name="Cmd_CommandExecutionFailed" xml:space="preserve">
     <value>CliWrap: Command execution failed. An update is required.</value>
@@ -603,7 +603,7 @@ Do you want to download this dependency from Microsoft website?</value>
     <value>CliWrap: Successfully executed {0}; Exit code: {1}; Start time: {2}; Exit time: {3}{4}{5};</value>
   </data>
   <data name="Cmd_TheRequestOperationWasSuccessfulButYourPCNeedsToBeRebooted" xml:space="preserve">
-    <value>Żądane działanie zostało pomyślnie wykonane, lecz Twój komputer wymaga ponownego uruchomienia.</value>
+    <value>The requested operation was successful, but your computer needs to be restarted.</value>
   </data>
   <data name="Cmd_TheRequiredDependencyHasBeenSuccessfullyInstalledButyourComputerNeedsToBeRestart" xml:space="preserve">
     <value>The required dependency has been successfully installed, but your computer needs to be restarted.</value>
@@ -705,7 +705,7 @@ The requested operation is successful. Changes will not be effective until the s
     <value>Everything is okay! Starting setup...</value>
   </data>
   <data name="NormalRelease_InstallANewVersionInTheWizard_ClosingLauncherIn_" xml:space="preserve">
-    <value>Install a new version in the wizard. Closing launcher in {i}s...</value>
+    <value>Install a new version in the wizard. Closing launcher in {0}s...</value>
   </data>
   <data name="NormalRelease_JustAMoment_PleaseWait" xml:space="preserve">
     <value>Just a moment. Please wait {0}s...</value>

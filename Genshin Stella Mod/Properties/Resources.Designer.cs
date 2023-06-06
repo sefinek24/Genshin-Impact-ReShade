@@ -215,7 +215,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Żądane działanie zostało pomyślnie wykonane, lecz Twój komputer wymaga ponownego uruchomienia..
+        ///   Looks up a localized string similar to The requested operation was successful, but your computer needs to be restarted..
         /// </summary>
         internal static string Cmd_TheRequestOperationWasSuccessfulButYourPCNeedsToBeRebooted {
             get {
@@ -1205,7 +1205,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Install a new version in the wizard. Closing launcher in {i}s....
+        ///   Looks up a localized string similar to Install a new version in the wizard. Closing launcher in {0}s....
         /// </summary>
         internal static string NormalRelease_InstallANewVersionInTheWizard_ClosingLauncherIn_ {
             get {
@@ -1876,7 +1876,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Found Genshin Impact Game dir: {0} [{1}].
+        ///   Looks up a localized string similar to Found Genshin Impact game dir: {0} [{1}].
         /// </summary>
         internal static string Utils_FoundGIgameDir__ {
             get {
@@ -1969,7 +1969,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Wybierz Evergreen Standalone Installer..
+        ///   Looks up a localized string similar to Select Evergreen Standalone Installer..
         /// </summary>
         internal static string WebView2Handler_ChooseEvergreenStandaloneInstaller {
             get {
@@ -1989,7 +1989,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Wybacz. Coś poszło nie tak z WebView2..
+        ///   Looks up a localized string similar to Sorry. Something went wrong with WebView2..
         /// </summary>
         internal static string WebView2Handler_OhhSorrySomethingWentWrongWithWV2 {
             get {
