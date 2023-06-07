@@ -63,7 +63,8 @@
     <StartupObject>StellaLauncher.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icons\52x52.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>Internet</TargetZone>
@@ -351,10 +352,6 @@
     <None Include="dev\build.cmd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="icons\gimp.zip" />
-    <None Include="icons\Source.url">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="LICENSE">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -552,19 +549,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="data\videos\poland-strong.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="icons\128x128.ico" />
-    <Content Include="icons\240x240.ico" />
-    <Content Include="icons\48x48.ico" />
-    <Content Include="icons\52x52.ico" />
-    <Content Include="icons\discord-icon.gif" />
-    <Content Include="icons\main.png" />
-    <Content Include="icons\main_compressed.png" />
-    <Content Include="icons\README.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="icons\setup\52x52.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="www\css\default.css">
