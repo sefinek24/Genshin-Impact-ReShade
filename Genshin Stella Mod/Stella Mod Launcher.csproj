@@ -63,8 +63,7 @@
     <StartupObject>StellaLauncher.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>..\Assets\Images\Icons\52x52.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>Internet</TargetZone>

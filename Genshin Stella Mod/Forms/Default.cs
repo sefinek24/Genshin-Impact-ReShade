@@ -409,19 +409,19 @@ namespace StellaLauncher.Forms
         private void Tools_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (Application.OpenForms.OfType<Tools>().Any()) return;
-            new Tools { Location = Location, Icon = Resources.icon_52x52 }.Show();
+            new Tools { DesktopLocation = DesktopLocation, Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.Show();
         }
 
         private void Gameplay_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (Application.OpenForms.OfType<Gameplay>().Any()) return;
-            new Gameplay { Location = Location, Icon = Resources.icon_52x52 }.Show();
+            new Gameplay { DesktopLocation = DesktopLocation, Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.Show();
         }
 
         private void Links_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (Application.OpenForms.OfType<Links>().Any()) return;
-            new Links { Location = Location, Icon = Resources.icon_52x52 }.Show();
+            new Links { DesktopLocation = DesktopLocation, Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.Show();
         }
 
         private void Website_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -518,7 +518,7 @@ namespace StellaLauncher.Forms
         {
             if (Os.RegionCode == "PL")
             {
-                WebViewWindow viewer = new WebViewWindow { Location = Location, Icon = Resources.icon_52x52 };
+                WebViewWindow viewer = new WebViewWindow { DesktopLocation = DesktopLocation, Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) };
                 viewer.Navigate("https://www.youtube.com/embed/2F2DdXUNyaQ?autoplay=1");
                 viewer.Show();
 
@@ -526,7 +526,7 @@ namespace StellaLauncher.Forms
             }
             else
             {
-                WebViewWindow viewer = new WebViewWindow { Location = Location, Icon = Resources.icon_52x52 };
+                WebViewWindow viewer = new WebViewWindow { DesktopLocation = DesktopLocation, Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) };
                 viewer.Navigate("https://www.youtube.com/embed/L3ky4gZU5gY?autoplay=1");
                 viewer.Show();
             }
@@ -535,7 +535,9 @@ namespace StellaLauncher.Forms
         private void Paimon_Click(object sender, EventArgs e)
         {
             if (Application.OpenForms.OfType<RandomImages>().Any()) return;
-            new RandomImages { Location = Location, Icon = Resources.icon_52x52 }.Show();
+
+            RandomImages randomImagesForm = new RandomImages { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) };
+            randomImagesForm.Show();
         }
     }
 }

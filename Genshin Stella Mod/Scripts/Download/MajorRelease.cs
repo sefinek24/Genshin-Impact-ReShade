@@ -19,7 +19,7 @@ namespace StellaLauncher.Scripts.Download
 
             TaskbarManager.Instance.SetProgressValue(100, 100);
             TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
-            new NotCompatible { Icon = Resources.icon_52x52 }.ShowDialog();
+            new NotCompatible { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.ShowDialog();
 
             Environment.Exit(0);
         }

@@ -87,7 +87,7 @@ namespace StellaLauncher.Forms.Other
         // Footer
         private void MaybeLater_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            new Default { Location = Location, StartPosition = FormStartPosition.Manual, Icon = Resources.icon_52x52 }.Show();
+            new Default { DesktopLocation = DesktopLocation, StartPosition = FormStartPosition.Manual, Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.Show();
 
             Log.Output(string.Format(Resources.Main_ClickedNoInForm_, Text));
             Telemetry.SupportMe_AnswNo();
@@ -95,7 +95,7 @@ namespace StellaLauncher.Forms.Other
 
         private void OkayDone_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            new Default { Location = Location, StartPosition = FormStartPosition.Manual, Icon = Resources.icon_52x52 }.Show();
+            new Default { DesktopLocation = DesktopLocation, StartPosition = FormStartPosition.Manual, Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.Show();
             MessageBox.Show(Resources.SupportMe_Thanks, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             Log.Output(string.Format(Resources.Main_ClickedYesInForm_, Text));

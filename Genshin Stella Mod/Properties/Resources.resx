@@ -447,9 +447,6 @@ Quit the process with name {0} and try again.</value>
   <data name="Program_OneInstanceIsCurrentlyOpen" xml:space="preserve">
     <value>One instance is currently open.</value>
   </data>
-  <data name="icon_52x52" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons\52x52.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="RandomImages_AnimeName" xml:space="preserve">
     <value>Anime name</value>
   </data>

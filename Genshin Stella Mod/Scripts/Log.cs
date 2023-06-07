@@ -1,5 +1,7 @@
 using System;
+using System.Drawing;
 using System.IO;
+using System.Windows.Forms;
 using Microsoft.Toolkit.Uwp.Notifications;
 using StellaLauncher.Forms.Errors;
 using StellaLauncher.Properties;
@@ -61,7 +63,7 @@ namespace StellaLauncher.Scripts
         {
             SaveErrorLog(log);
 
-            new ErrorOccurred { Icon = Resources.icon_52x52 }.ShowDialog();
+            new ErrorOccurred { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.ShowDialog();
         }
 
         public static void ErrorAndExit(Exception ex)

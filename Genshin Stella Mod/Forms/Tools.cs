@@ -97,7 +97,7 @@ namespace StellaLauncher.Forms
             Environment.Exit(0);
         }
 
-        private void CreateShortcut_Button(object sender, EventArgs e)
+        private void CreateShortcut_Button(object sender, LinkLabelLinkClickedEventArgs e)
         {
             bool success = Utils.CreateShortcut();
             if (success) MessageBox.Show(@"The shortcut has been successfully created.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -180,19 +180,19 @@ namespace StellaLauncher.Forms
 
         private void ChangeLang_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            new Language { Icon = Resources.icon_52x52 }.ShowDialog();
+            new Language { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.ShowDialog();
         }
 
 
         // ---------------------------------- Misc ----------------------------------
-        private async void ScanSysFiles_Click(object sender, EventArgs e)
+        private async void ScanSysFiles_Click(object sender, LinkLabelLinkClickedEventArgs e)
         {
             await Cmd.CliWrap("wt.exe", Path.Combine(Program.AppPath, "data", "cmd", "scan_sys_files.cmd"), Program.AppPath, true, false);
         }
 
 
         // ------------------------------ Config files ------------------------------
-        private async void ReShadeConfig_Click(object sender, EventArgs e)
+        private async void ReShadeConfig_Click(object sender, LinkLabelLinkClickedEventArgs e)
         {
             string gamePath = await Utils.GetGame("giGameDir");
             string reShadeIni = Path.Combine(gamePath, "ReShade.ini");
@@ -203,14 +203,14 @@ namespace StellaLauncher.Forms
                 await Cmd.CliWrap("notepad.exe", reShadeIni, null, true, false);
         }
 
-        private async void UnlockerConfig_Click(object sender, EventArgs e)
+        private async void UnlockerConfig_Click(object sender, LinkLabelLinkClickedEventArgs e)
         {
             await Cmd.CliWrap("notepad.exe", Path.Combine(Program.AppPath, "data", "unlocker", "unlocker.config.json"), null, true, false);
         }
 
 
         // --------------------------------- Cache ---------------------------------
-        private async void DeleteCache_Button(object sender, EventArgs e)
+        private async void DeleteCache_Button(object sender, LinkLabelLinkClickedEventArgs e)
         {
             string resources = File.ReadAllText(Path.Combine(Program.AppData, "resources-path.sfn"));
             string cache = Path.Combine(resources, "Cache");
@@ -225,19 +225,19 @@ namespace StellaLauncher.Forms
                 Program.AppPath, true, false);
         }
 
-        private async void DeleteWebViewCache_Click(object sender, EventArgs e)
+        private async void DeleteWebViewCache_Click(object sender, LinkLabelLinkClickedEventArgs e)
         {
             await Cmd.CliWrap("wt.exe", Path.Combine(Program.AppPath, "data", "cmd", "delete_webview_cache.cmd"), Program.AppPath, true, false);
         }
 
 
         // ---------------------------------- Logs ---------------------------------
-        private async void LauncherLogs_Click(object sender, EventArgs e)
+        private async void LauncherLogs_Click(object sender, LinkLabelLinkClickedEventArgs e)
         {
             await Cmd.CliWrap("notepad.exe", Path.Combine(Log.Folder, "launcher.output.log"), null, true, false);
         }
 
-        private async void ReShadeLogs_Button(object sender, EventArgs e)
+        private async void ReShadeLogs_Button(object sender, LinkLabelLinkClickedEventArgs e)
         {
             string gameDir = await Utils.GetGame("giGameDir");
             string logFile = Path.Combine(gameDir, "ReShade.log");
@@ -254,7 +254,7 @@ namespace StellaLauncher.Forms
         }
 
 
-        private async void InnoSetup_Button(object sender, EventArgs e)
+        private async void InnoSetup_Button(object sender, LinkLabelLinkClickedEventArgs e)
         {
             await Cmd.CliWrap("notepad.exe", Path.Combine(Log.Folder, "innosetup-logs.install.log"), null, true, false);
         }
@@ -265,7 +265,7 @@ namespace StellaLauncher.Forms
             string path = Path.Combine(Program.AppPath, "data", "videos", "poland-strong.mp4");
             if (!Utils.CheckFileExists(path)) return;
 
-            WebViewWindow viewer = new WebViewWindow { Location = Location, Icon = Resources.icon_52x52 };
+            WebViewWindow viewer = new WebViewWindow { DesktopLocation = DesktopLocation, Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) };
             viewer.Navigate(path);
             viewer.Show();
         }

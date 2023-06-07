@@ -60,28 +60,26 @@ namespace StellaLauncher.Forms
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.panel1.ForeColor = System.Drawing.Color.Transparent;
             this.panel1.Name = "panel1";
-            this.toolTip1.SetToolTip(this.panel1, resources.GetString("panel1.ToolTip"));
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDown_Event);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MouseMove_Event);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MouseUp_Event);
             // 
             // linkLabel1
             // 
-            resources.ApplyResources(this.linkLabel1, "linkLabel1");
             this.linkLabel1.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.linkLabel1, "linkLabel1");
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel1.LinkColor = System.Drawing.Color.White;
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel1, resources.GetString("linkLabel1.ToolTip"));
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OpenInBrowser_LinkClicked);
             // 
             // label1
@@ -90,12 +88,11 @@ namespace StellaLauncher.Forms
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Name = "label1";
-            this.toolTip1.SetToolTip(this.label1, resources.GetString("label1.ToolTip"));
             // 
             // linkLabel2
             // 
-            resources.ApplyResources(this.linkLabel2, "linkLabel2");
             this.linkLabel2.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.linkLabel2, "linkLabel2");
             this.linkLabel2.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
@@ -103,12 +100,12 @@ namespace StellaLauncher.Forms
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.TabStop = true;
             this.toolTip1.SetToolTip(this.linkLabel2, resources.GetString("linkLabel2.ToolTip"));
-            this.linkLabel2.Click += new System.EventHandler(this.Discord_Button);
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Discord_Button);
             // 
             // linkLabel3
             // 
-            resources.ApplyResources(this.linkLabel3, "linkLabel3");
             this.linkLabel3.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.linkLabel3, "linkLabel3");
             this.linkLabel3.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
@@ -116,12 +113,12 @@ namespace StellaLauncher.Forms
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.TabStop = true;
             this.toolTip1.SetToolTip(this.linkLabel3, resources.GetString("linkLabel3.ToolTip"));
-            this.linkLabel3.Click += new System.EventHandler(this.Website_Button);
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Website_Button);
             // 
             // linkLabel4
             // 
-            resources.ApplyResources(this.linkLabel4, "linkLabel4");
             this.linkLabel4.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.linkLabel4, "linkLabel4");
             this.linkLabel4.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel4.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
@@ -129,7 +126,7 @@ namespace StellaLauncher.Forms
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.TabStop = true;
             this.toolTip1.SetToolTip(this.linkLabel4, resources.GetString("linkLabel4.ToolTip"));
-            this.linkLabel4.Click += new System.EventHandler(this.Gallery_Button);
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Gallery_Button);
             // 
             // label2
             // 
@@ -162,14 +159,13 @@ namespace StellaLauncher.Forms
             // 
             // webView21
             // 
-            resources.ApplyResources(this.webView21, "webView21");
             this.webView21.AllowExternalDrop = true;
+            resources.ApplyResources(this.webView21, "webView21");
             this.webView21.BackColor = System.Drawing.Color.Black;
             this.webView21.CreationProperties = null;
             this.webView21.DefaultBackgroundColor = System.Drawing.Color.Transparent;
             this.webView21.ForeColor = System.Drawing.Color.Transparent;
             this.webView21.Name = "webView21";
-            this.toolTip1.SetToolTip(this.webView21, resources.GetString("webView21.ToolTip"));
             this.webView21.ZoomFactor = 1D;
             // 
             // Gameplay
@@ -189,7 +185,6 @@ namespace StellaLauncher.Forms
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Gameplay";
-            this.toolTip1.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.Shown += new System.EventHandler(this.Tutorial_Shown);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

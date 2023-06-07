@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Reflection;
@@ -73,7 +74,7 @@ namespace StellaLauncher
 
             //if (!Debugger.IsAttached && Environment.CurrentDirectory != Folder)
             //{
-            //    new WrongDirectory { Icon = Resources.icon_52x52 }.ShowDialog();
+            //    new WrongDirectory { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.ShowDialog();
             //    Environment.Exit(994327186);
             //}
 
@@ -105,7 +106,7 @@ namespace StellaLauncher
 
             if (RegionInfo.CurrentRegion.Name == "RU")
             {
-                new WrongCountry { Icon = Resources.icon_52x52 }.ShowDialog();
+                new WrongCountry { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.ShowDialog();
                 Environment.Exit(999222999);
             }
 
@@ -132,7 +133,7 @@ namespace StellaLauncher
                     case 20:
                     case 42:
                     case 63:
-                        if (!File.Exists(TierActivated)) Application.Run(new SupportMe { Icon = Resources.icon_52x52 });
+                        if (!File.Exists(TierActivated)) Application.Run(new SupportMe { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) });
                         return;
 
                     case 26:
@@ -159,7 +160,7 @@ namespace StellaLauncher
                 }
 
 
-                Application.Run(new Default { Icon = Resources.icon_52x52 });
+                Application.Run(new Default { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) });
             }
             catch (Exception e)
             {
