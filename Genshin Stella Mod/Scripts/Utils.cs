@@ -189,7 +189,6 @@ namespace StellaLauncher.Scripts
                 WshShell shell = new WshShell();
                 IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(shortcutPath);
                 shortcut.Description = Resources.Utils_RunOfficialLauncherForStellaModMadeBySefinek;
-                shortcut.IconLocation = Path.Combine(Program.AppPath, "icons", "52x52.ico");
                 shortcut.WorkingDirectory = Program.AppPath;
                 shortcut.TargetPath = Path.Combine(Program.AppPath, $"{Program.AppName}.exe");
                 shortcut.Save();
