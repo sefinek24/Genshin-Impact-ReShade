@@ -269,7 +269,7 @@ namespace StellaLauncher.Forms
             if (!File.Exists(Program.ReShadePath) && !Debugger.IsAttached)
                 status_Label.Text += $"[x]: {string.Format(Resources.Default_File_WasNotFound, Program.ReShadePath)}\n";
 
-            if (!File.Exists(Program.FpsUnlockerCfgPath) /*&& !Debugger.IsAttached*/) FpsUnlockerCfg.Run(status_Label);
+            if (!File.Exists(Program.FpsUnlockerCfgPath) && !Debugger.IsAttached) FpsUnlockerCfg.Run(status_Label);
 
             if (status_Label.Text.Length > 0) Log.SaveErrorLog(new Exception(status_Label.Text));
 

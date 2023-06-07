@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -598,7 +598,7 @@ Zamknij proces o nazwie {0} i spróbuj ponownie.</value>
     <value>Nieprawidłowa wartość EnableMusic w pliku ini.</value>
   </data>
   <data name="Tools_YoureConnectedAs_.HiAndNiceToMeetYou.CheckYourDiscordActivity" xml:space="preserve">
-    <value>Jesteś połączony jako {0}. Cześć i miło mi ciebie poznać! Sprawdź swoją aktywność na Discordzie.</value>
+    <value>Jesteś połączony jako {0}. Cześć, miło mi ciebie poznać! Sprawdź swoją aktywność na Discordzie.</value>
   </data>
   <data name="Utils_AnErrorOccurredWhileCreatingTheShortcut" xml:space="preserve">
     <value>Wystąpił błąd podczas tworzenia skrótu.

@@ -105,8 +105,6 @@ namespace StellaLauncher.Forms
 
         private void MuteMusic_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MusicLabel_Set();
-
             int data = Program.Settings.ReadInt("Launcher", "EnableMusic", 1);
             switch (data)
             {
@@ -117,6 +115,8 @@ namespace StellaLauncher.Forms
                     Program.Settings.WriteInt("Launcher", "EnableMusic", 0);
                     break;
             }
+
+            MusicLabel_Set();
         }
 
         private void MusicLabel_Set()
@@ -140,22 +140,24 @@ namespace StellaLauncher.Forms
 
         private void DisableRPC_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            RPCLabel_Set();
-
             int iniData = Program.Settings.ReadInt("Launcher", "DiscordRPC", 1);
             switch (iniData)
             {
                 case 0:
                     Program.Settings.WriteInt("Launcher", "DiscordRPC", 1);
                     Discord.InitRpc();
-                    if (Discord.Username.Length > 0) // Fix
-                        MessageBox.Show(string.Format(Resources.Tools_YoureConnectedAs__HiAndNiceToMeetYou_CheckYourDiscordActivity, Discord.Username), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    break;
+                    RPCLabel_Set();
+
+                    if (Discord.Username.Length <= 0) return;
+                    MessageBox.Show(string.Format(Resources.Tools_YoureConnectedAs__HiAndNiceToMeetYou_CheckYourDiscordActivity, Discord.Username), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
                 case 1:
                     Program.Settings.WriteInt("Launcher", "DiscordRPC", 0);
                     Discord.Client.Dispose();
                     break;
             }
+
+            RPCLabel_Set();
         }
 
         private void RPCLabel_Set()
