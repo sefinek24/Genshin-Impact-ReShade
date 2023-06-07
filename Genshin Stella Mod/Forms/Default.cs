@@ -199,12 +199,8 @@ namespace StellaLauncher.Forms
                 {
                     UpdateIsAvailable = true;
 
-                    NormalRelease.Run(
-                        remoteVersion, remoteVerDate, version_LinkLabel, status_Label, updates_LinkLabel, updateIco_PictureBox, progressBar1, PreparingPleaseWait, toolsIco_PictureBox, tools_LinkLabel, padIco_PictureBox, gameplay_LinkLabel,
-                        shortcutIco_PictureBox,
-                        links_LinkLabel, websiteIco_PictureBox,
-                        website_LinkLabel, pictureBox8, pictureBox9, pictureBox10, discordServer_LinkLabel, youTube_LinkLabel, supportMe_LinkLabel
-                    );
+                    NormalRelease.Run(remoteVersion, remoteVerDate, version_LinkLabel, status_Label, updates_LinkLabel, updateIco_PictureBox, progressBar1, PreparingPleaseWait, toolsIco_PictureBox, tools_LinkLabel, padIco_PictureBox,
+                        gameplay_LinkLabel, shortcutIco_PictureBox, links_LinkLabel, websiteIco_PictureBox, website_LinkLabel, pictureBox8, pictureBox9, pictureBox10, discordServer_LinkLabel, youTube_LinkLabel, supportMe_LinkLabel);
 
                     return 1;
                 }
