@@ -5,7 +5,7 @@ using Microsoft.WindowsAPICodePack.Taskbar;
 using StellaLauncher.Forms.Errors;
 using StellaLauncher.Properties;
 
-namespace StellaLauncher.Scripts.Updates
+namespace StellaLauncher.Scripts.Download
 {
     internal class MajorRelease
     {

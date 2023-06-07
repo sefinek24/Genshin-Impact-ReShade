@@ -382,6 +382,9 @@ Czy chciałbyś teraz pobrać ten plik, aby zapobiec przyszłym błędom i ręcz
     <value>Załadowano formularz {0}.</value>
     <comment>Używane do Log.Output</comment>
   </data>
+  <data name="Main_PleaseWait" xml:space="preserve">
+    <value>Proszę czekać...</value>
+  </data>
   <data name="MajorRelease_MajorVersionIsAvailable" xml:space="preserve">
     <value>Dostępna jest główna aktualizacja</value>
   </data>
@@ -664,7 +667,7 @@ Czy chcesz zresetować wszystkie ustawienia Stella Mod?</value>
     <value>Zły parametr.</value>
   </data>
   <data name="WebView2Handler_ChooseEvergreenStandaloneInstaller" xml:space="preserve">
-    <value>Choose Evergreen Standalone Installer.</value>
+    <value>Wybierz Evergreen Standalone Installer.</value>
   </data>
   <data name="WebView2Handler_DoYouWantToDownloadThisDependencyFromMStore" xml:space="preserve">
     <value>{0}
@@ -672,6 +675,6 @@ Czy chcesz zresetować wszystkie ustawienia Stella Mod?</value>
 Czy chcesz pobrać tę zależność z witryny firmy Microsoft?</value>
   </data>
   <data name="WebView2Handler_OhhSorrySomethingWentWrongWithWV2" xml:space="preserve">
-    <value>Ohh, sorry. Something went wrong with WebView2.</value>
+    <value>Przepraszamy. Coś poszło nie tak z WebView2.</value>
   </data>
 </root>

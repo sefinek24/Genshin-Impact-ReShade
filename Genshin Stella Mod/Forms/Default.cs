@@ -15,7 +15,7 @@ using StellaLauncher.Forms.Other;
 using StellaLauncher.Models;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
-using StellaLauncher.Scripts.Updates;
+using StellaLauncher.Scripts.Download;
 
 namespace StellaLauncher.Forms
 {
@@ -272,38 +272,23 @@ namespace StellaLauncher.Forms
             if (!File.Exists(Program.ReShadePath) && !Debugger.IsAttached)
                 status_Label.Text += $"[x]: {string.Format(Resources.Default_File_WasNotFound, Program.ReShadePath)}\n";
 
-            if (!File.Exists(Program.FpsUnlockerCfgPath) && !Debugger.IsAttached)
-            {
-                status_Label.Text += $"[i] {Resources.Default_DownloadingConfigFileForFPSUnlocker}\n";
-                Log.Output(Resources.Default_DownloadingConfigFileForFPSUnlocker);
-
-                try
-                {
-                    WebClient client = new WebClient();
-                    client.Headers.Add("user-agent", Program.UserAgent);
-                    await client.DownloadFileTaskAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/unlocker.config.json", Program.FpsUnlockerCfgPath);
-
-                    string fpsUnlockerCfg = File.ReadAllText(Program.FpsUnlockerCfgPath);
-                    File.WriteAllText(Program.FpsUnlockerCfgPath, fpsUnlockerCfg.Replace("{GamePath}", @"C:\\Program Files\\Genshin Impact\\Genshin Impact game\\GenshinImpact.exe"));
-
-                    status_Label.Text += $"[✓] {Resources.Default_Success}\n";
-                    Log.Output(Resources.Default_Done);
-                }
-                catch (Exception ex)
-                {
-                    status_Label.Text += $"[✖] {ex.Message}\n";
-                    Log.SaveErrorLog(new Exception($"{Resources.Default_FailedToDownloadUnlockerConfigJson}\n{ex}"));
-                }
-            }
+            if (!File.Exists(Program.FpsUnlockerCfgPath) /*&& !Debugger.IsAttached*/) FpsUnlockerCfg.Run(status_Label);
 
             if (status_Label.Text.Length > 0) Log.SaveErrorLog(new Exception(status_Label.Text));
 
             if (File.Exists(NormalRelease.SetupPathExe))
-            {
-                File.Delete(NormalRelease.SetupPathExe);
-                status_Label.Text += $"[i] {Resources.Default_DeletedOldSetupFromTempDirectory}\n";
-                Log.Output(string.Format(Resources.Default_DeletedOldSetupFromTempFolder, NormalRelease.SetupPathExe));
-            }
+                try
+                {
+                    File.Delete(NormalRelease.SetupPathExe);
+                    status_Label.Text += $"[i] {Resources.Default_DeletedOldSetupFromTempDirectory}\n";
+                    Log.Output(string.Format(Resources.Default_DeletedOldSetupFromTempFolder, NormalRelease.SetupPathExe));
+                }
+                catch (Exception ex)
+                {
+                    status_Label.Text += $"[x] {ex.Message}\n";
+                    Log.SaveErrorLog(ex);
+                }
+
 
             await CheckUpdates();
 

@@ -1096,6 +1096,15 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please wait....
+        /// </summary>
+        internal static string Main_PleaseWait {
+            get {
+                return ResourceManager.GetString("Main_PleaseWait", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Major version is available.
         /// </summary>
         internal static string MajorRelease_MajorVersionIsAvailable {

@@ -10,7 +10,7 @@ using Microsoft.Toolkit.Uwp.Notifications;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using StellaLauncher.Properties;
 
-namespace StellaLauncher.Scripts.Updates
+namespace StellaLauncher.Scripts.Download
 {
     internal class NormalRelease
     {

@@ -10,7 +10,7 @@ using Microsoft.WindowsAPICodePack.Taskbar;
 using StellaLauncher.Forms;
 using StellaLauncher.Properties;
 
-namespace StellaLauncher.Scripts.Updates
+namespace StellaLauncher.Scripts.Download
 {
     internal class ReShadeIniUpdate
     {

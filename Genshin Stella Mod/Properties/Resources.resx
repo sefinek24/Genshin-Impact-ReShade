@@ -792,4 +792,7 @@ The requested operation is successful. Changes will not be effective until the s
   <data name="Telemetry_ThisFeatureDoesntDoAnything" xml:space="preserve">
     <value>This feature doesn't do anything in this release because it hasn't been created yet!</value>
   </data>
+  <data name="Main_PleaseWait" xml:space="preserve">
+    <value>Please wait...</value>
+  </data>
 </root>
