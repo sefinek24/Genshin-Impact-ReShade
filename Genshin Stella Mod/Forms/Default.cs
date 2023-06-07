@@ -23,6 +23,7 @@ namespace StellaLauncher.Forms
     {
         // Files
         private static readonly string CmdOutputLogs = Path.Combine(Program.AppData, "logs", "cmd.output.log");
+        private static readonly string RunCmd = Path.Combine(Program.AppPath, "data", "cmd", "run.cmd");
         public static IniFile ReShadeIni;
 
         // New update?
@@ -343,7 +344,7 @@ namespace StellaLauncher.Forms
         private async void StartGame_Click(object sender, EventArgs e)
         {
             // Run cmd file
-            bool res = await Cmd.CliWrap("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 1 {await Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
+            bool res = await Cmd.CliWrap("wt.exe", $"{RunCmd} 1 {await Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
 
             // Exit Stella with status code 0
             if (res) Environment.Exit(0);
@@ -352,7 +353,7 @@ namespace StellaLauncher.Forms
         private async void OnlyReShade_Click(object sender, EventArgs e)
         {
             // Run cmd file
-            bool res = await Cmd.CliWrap("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 2 {await Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
+            bool res = await Cmd.CliWrap("wt.exe", $"{RunCmd} 2 {await Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
             if (!res) return;
 
             // Find game path
@@ -369,7 +370,7 @@ namespace StellaLauncher.Forms
         private async void OnlyUnlocker_Click(object sender, EventArgs e)
         {
             // Run cmd file
-            bool res = await Cmd.CliWrap("wt.exe", $"{Path.Combine(Program.AppPath, "data", "cmd", "run.cmd")} 3 {await Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
+            bool res = await Cmd.CliWrap("wt.exe", $"{RunCmd} 3 {await Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
 
             // Exit Stella with status code 0
             if (res) Environment.Exit(0);
