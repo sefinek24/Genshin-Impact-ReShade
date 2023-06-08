@@ -72,7 +72,6 @@ namespace StellaLauncher
             ));
 
 
-
             if (Process.GetProcessesByName(AppName).Length > 1)
             {
                 MessageBox.Show(string.Format(Resources.Program_SorryOneInstanceIsCurrentlyOpen_, Path.GetFileNameWithoutExtension(Assembly.GetEntryAssembly()?.Location)),
