@@ -72,11 +72,6 @@ namespace StellaLauncher
             ));
 
 
-            //if (!Debugger.IsAttached && Environment.CurrentDirectory != Folder)
-            //{
-            //    new WrongDirectory { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.ShowDialog();
-            //    Environment.Exit(994327186);
-            //}
 
             if (Process.GetProcessesByName(AppName).Length > 1)
             {
