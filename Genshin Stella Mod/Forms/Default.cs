@@ -199,8 +199,38 @@ namespace StellaLauncher.Forms
                 {
                     UpdateIsAvailable = true;
 
-                    NormalRelease.Run(remoteVersion, remoteVerDate, version_LinkLabel, status_Label, updates_LinkLabel, updateIco_PictureBox, progressBar1, PreparingPleaseWait, toolsIco_PictureBox, tools_LinkLabel, padIco_PictureBox,
-                        gameplay_LinkLabel, shortcutIco_PictureBox, links_LinkLabel, websiteIco_PictureBox, website_LinkLabel, pictureBox8, pictureBox9, pictureBox10, discordServer_LinkLabel, youTube_LinkLabel, supportMe_LinkLabel);
+                    NormalRelease.Run(
+                        // Custom
+                        remoteVersion,
+                        remoteVerDate,
+
+                        // Main
+                        status_Label,
+                        PreparingPleaseWait,
+                        progressBar1,
+
+                        // Left
+                        discordServerIco_Picturebox,
+                        discordServer_LinkLabel,
+                        supportMeIco_PictureBox,
+                        supportMe_LinkLabel,
+                        youtubeIco_Picturebox,
+                        youTube_LinkLabel,
+
+                        // Bottom
+                        toolsIco_PictureBox,
+                        tools_LinkLabel,
+                        shortcutIco_PictureBox,
+                        links_LinkLabel,
+                        padIco_PictureBox,
+                        gameplay_LinkLabel,
+                        websiteIco_PictureBox,
+                        website_LinkLabel,
+
+                        // Right
+                        version_LinkLabel,
+                        updates_LinkLabel,
+                        updateIco_PictureBox);
 
                     return 1;
                 }
@@ -229,6 +259,87 @@ namespace StellaLauncher.Forms
 
                         return 1;
                     }
+                }
+
+
+                // Check new updates of resources
+
+                string resSfn = Path.Combine(Program.AppData, "resources-path.sfn");
+                if (File.Exists(resSfn))
+                {
+                    string resourcesPath = File.ReadAllText(resSfn);
+                    if (Directory.Exists(resourcesPath))
+                    {
+                        string jsonFile = Path.Combine(resourcesPath, "data.json");
+                        if (File.Exists(jsonFile))
+                        {
+                            string jsonContent = File.ReadAllText(jsonFile);
+                            LocalResources data = JsonConvert.DeserializeObject<LocalResources>(jsonContent);
+
+                            WebClient resClient = new WebClient();
+                            resClient.Headers.Add("user-agent", Program.UserAgent);
+                            string resJson = await resClient.DownloadStringTaskAsync("https://api.sefinek.net/api/v4/genshin-stella-mod/version/app/launcher/resources");
+                            StellaResources resourcesRes = JsonConvert.DeserializeObject<StellaResources>(resJson);
+
+                            if (data.Version != resourcesRes.Message)
+                            {
+                                UpdateIsAvailable = true;
+
+                                DownloadResources.Run(
+                                    // Custom
+                                    resourcesPath,
+                                    data.Version,
+                                    resourcesRes.Message,
+                                    resourcesRes.Date,
+
+                                    // Main
+                                    status_Label,
+                                    PreparingPleaseWait,
+                                    progressBar1,
+
+                                    // Left
+                                    discordServerIco_Picturebox,
+                                    discordServer_LinkLabel,
+                                    supportMeIco_PictureBox,
+                                    supportMe_LinkLabel,
+                                    youtubeIco_Picturebox,
+                                    youTube_LinkLabel,
+
+                                    // Bottom
+                                    toolsIco_PictureBox,
+                                    tools_LinkLabel,
+                                    shortcutIco_PictureBox,
+                                    links_LinkLabel,
+                                    padIco_PictureBox,
+                                    gameplay_LinkLabel,
+                                    websiteIco_PictureBox,
+                                    website_LinkLabel,
+
+                                    // Right
+                                    version_LinkLabel,
+                                    updates_LinkLabel,
+                                    updateIco_PictureBox);
+
+
+                                return 1;
+                            }
+                        }
+                        else
+                        {
+                            status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, jsonFile)}\n";
+                            Log.SaveErrorLog(new Exception(string.Format(Resources.Default_File_WasNotFound, jsonFile)));
+                        }
+                    }
+                    else
+                    {
+                        status_Label.Text += $"{string.Format(Resources.Default_Directory_WasNotFound, resourcesPath)}\n";
+                        Log.SaveErrorLog(new Exception(string.Format(Resources.Default_Directory_WasNotFound, resourcesPath)));
+                    }
+                }
+                else
+                {
+                    status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, resSfn)}\n";
+                    Log.SaveErrorLog(new Exception(string.Format(Resources.Default_File_WasNotFound, resSfn)));
                 }
 
 

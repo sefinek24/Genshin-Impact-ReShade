@@ -1,7 +1,10 @@
 using System;
 using System.ComponentModel;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
+using System.IO.Compression;
+using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,14 +15,16 @@ using StellaLauncher.Properties;
 
 namespace StellaLauncher.Scripts.Download
 {
-    internal class NormalRelease
+    internal class DownloadResources
     {
         // Files
-        public static readonly string SetupPathExe = Path.Combine(Path.GetTempPath(), "Stella_Mod_Update.exe");
+        public static string StellaResZip;
 
         // Custom
-        private static string _remoteVersion;
-        private static DateTime _remoteVerDate;
+        private static string _resourcesPath;
+        private static string _localResVersion;
+        private static string _remoteResVersion;
+        private static string _remoteResDate;
 
         // Main
         private static Label _status_Label;
@@ -54,10 +59,13 @@ namespace StellaLauncher.Scripts.Download
         private static long _lastBytesReceived;
         private static DateTime _lastUpdateTime = DateTime.Now;
 
+
         public static async void Run(
             // Custom
-            string remoteVersion,
-            DateTime remoteVerDate,
+            string resourcesPath,
+            string localResVersion,
+            string remoteResVersion,
+            string remoteResDate,
 
             // Main
             Label status_Label,
@@ -88,8 +96,10 @@ namespace StellaLauncher.Scripts.Download
             PictureBox updateIco_PictureBox
         )
         {
-            _remoteVersion = remoteVersion;
-            _remoteVerDate = remoteVerDate;
+            _resourcesPath = resourcesPath;
+            _localResVersion = localResVersion;
+            _remoteResVersion = remoteResVersion;
+            _remoteResDate = remoteResDate;
 
             _status_Label = status_Label;
             _preparingPleaseWait = PreparingPleaseWait;
@@ -115,8 +125,9 @@ namespace StellaLauncher.Scripts.Download
             _updates_LinkLabel = updates_LinkLabel;
             _updateIco_PictureBox = updateIco_PictureBox;
 
+
             // 1
-            version_LinkLabel.Text = $@"v{Program.AppVersion} → v{remoteVersion}";
+            version_LinkLabel.Text = $@"v{localResVersion} → v{remoteResVersion}";
 
             // 2
             updates_LinkLabel.LinkColor = Color.Cyan;
@@ -166,38 +177,41 @@ namespace StellaLauncher.Scripts.Download
                 Log.SaveErrorLog(e);
             }
 
-            // Log
-            status_Label.Text += $"[i] {string.Format(Resources.NormalRelease_NewVersionFrom_IsAvailable, remoteVerDate)}\n";
-            Log.Output(string.Format(Resources.NormalRelease_NewReleaseFrom_IsAvailable_v_, remoteVerDate, Program.AppVersion, remoteVersion));
+            // Date
+            DateTime date = DateTime.Parse(remoteResDate, null, DateTimeStyles.RoundtripKind).ToUniversalTime().ToLocalTime();
 
-            // Taskbar
-            TaskbarManager.Instance.SetProgressValue(100, 100);
+            // Log
+            Log.Output($"{string.Format(Resources.StellaResources_NewResourcesUpdateIsAvailable, date)} {remoteResDate}.");
+
+            status_Label.Text += $"[i] {string.Format(Resources.StellaResources_NewResourcesUpdateIsAvailable, date)}\n";
+            StellaResZip = Path.Combine(resourcesPath, $"Stella resources - v{remoteResVersion}.zip");
+
 
             // Check update size
             using (WebClient wc = new WebClient())
             {
                 wc.Headers.Add("user-agent", Program.UserAgent);
-                await wc.OpenReadTaskAsync("https://github.com/sefinek24/Genshin-Impact-ReShade/releases/latest/download/Stella-Mod-Setup.exe");
+                await wc.OpenReadTaskAsync("https://github.com/sefinek24/Genshin-Stella-Resources/releases/latest/download/resources.zip");
                 string updateSize = ByteSize.FromBytes(Convert.ToInt64(wc.ResponseHeaders["Content-Length"])).MegaBytes.ToString("00.00");
                 status_Label.Text += $"[i] {string.Format(Resources.StellaResources_UpdateSize, $"{updateSize} MB")}\n";
 
                 // Final
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
-                Log.Output(string.Format(Resources.NormalRelease_UpdateSize, updateSize));
+                Log.Output(string.Format(Resources.StellaResources_UpdateSize, $"{updateSize} MB"));
             }
+
+            // Taskbar
+            TaskbarManager.Instance.SetProgressValue(100, 100);
         }
 
         private static async void Update_Event(object sender, EventArgs e)
         {
             Log.Output(Resources.NormalRelease_PreparingToDownloadNewUpdate);
-            TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
+            TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Normal);
 
             _updates_LinkLabel.LinkColor = Color.DodgerBlue;
             _updates_LinkLabel.Text = Resources.NormalRelease_UpdatingPleaseWait;
             Utils.RemoveClickEvent(_updates_LinkLabel);
-
-            _progressBar1.Show();
-            _preparingPleaseWait.Show();
 
             _progressBar1.Show();
             _preparingPleaseWait.Show();
@@ -229,17 +243,19 @@ namespace StellaLauncher.Scripts.Download
                 Log.ThrowError(ex);
             }
 
-            Log.Output(string.Format(Resources.NormalRelease_Output_, SetupPathExe));
+            Log.Output(string.Format(Resources.NormalRelease_Output_, StellaResZip));
         }
 
 
         private static async Task StartDownload()
         {
-            if (File.Exists(SetupPathExe))
+            Console.WriteLine(@"Checking Stella resources...");
+
+            if (File.Exists(_resourcesPath))
             {
-                File.Delete(SetupPathExe);
+                File.Delete(_resourcesPath);
                 _status_Label.Text += $"[✓] {Resources.NormalRelease_DeletedOldSetupFileFromTempDir}\n";
-                Log.Output(string.Format(Resources.NormalRelease_DeletedOldSetupFireFrom_, SetupPathExe));
+                Log.Output(string.Format(Resources.NormalRelease_DeletedOldSetupFireFrom_, _resourcesPath));
             }
 
             Log.Output(Resources.NormalRelease_DownloadingInProgress);
@@ -250,7 +266,7 @@ namespace StellaLauncher.Scripts.Download
                 client.Headers.Add("user-agent", Program.UserAgent);
                 client.DownloadProgressChanged += Client_DownloadProgressChanged;
                 client.DownloadFileCompleted += Client_DownloadFileCompleted;
-                await client.DownloadFileTaskAsync(new Uri("https://github.com/sefinek24/Genshin-Impact-ReShade/releases/latest/download/Stella-Mod-Setup.exe"), SetupPathExe);
+                await client.DownloadFileTaskAsync(new Uri("https://github.com/sefinek24/Genshin-Stella-Resources/releases/latest/download/resources.zip"), StellaResZip);
             }
         }
 
@@ -275,45 +291,86 @@ namespace StellaLauncher.Scripts.Download
             _downloadSpeed = bytesReceived / elapsedTime.TotalSeconds;
             double downloadSpeedInMb = _downloadSpeed / (1024 * 1024);
 
-            _preparingPleaseWait.Text = $"{string.Format(Resources.NormalRelease_DownloadingUpdate_, $"{bytesReceivedMb:00.00}", $"{bytesReceiveMb:000.00}")}  [{downloadSpeedInMb:00.00} MB/s]";
+            _preparingPleaseWait.Text = $"{string.Format(Resources.StellaResources_DownloadingResources, $"{bytesReceivedMb:00.00}", $"{bytesReceiveMb:00.00}")} [{downloadSpeedInMb:00.00} MB/s]";
 
             Log.Output(string.Format(Resources.NormalRelease_DownloadingNewUpdate_, $"{bytesReceivedMb:00.00}", $"{bytesReceiveMb:000.00}", $"{downloadSpeedInMb:00.00}"));
         }
 
         private static async void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
-            string logDir = Path.Combine(Log.Folder, "updates");
-            if (!Directory.Exists(logDir)) Directory.CreateDirectory(logDir);
+            _preparingPleaseWait.Text = Resources.StellaResources_UnpackingFiles;
 
-            Log.Output(string.Format(Resources.NormalRelease_Waiting_, 4));
+            await UnzipWithProgress(StellaResZip, _resourcesPath);
 
-            _preparingPleaseWait.Text = string.Format(Resources.NormalRelease_JustAMoment_PleaseWait, 4);
-            await Task.Delay(1000);
+            _progressBar1.Hide();
+            _preparingPleaseWait.Hide();
 
-            _preparingPleaseWait.Text = string.Format(Resources.NormalRelease_JustAMoment_PleaseWait, 3);
-            await Task.Delay(1000);
+            _discordServerIco_Picturebox.Show();
+            _discordServer_LinkLabel.Show();
+            _supportMeIco_PictureBox.Show();
+            _supportMe_LinkLabel.Show();
+            _youtubeIco_Picturebox.Show();
+            _youTube_LinkLabel.Show();
 
-            _preparingPleaseWait.Text = string.Format(Resources.NormalRelease_JustAMoment_PleaseWait, 2);
-            await Task.Delay(1000);
+            _toolsIco_PictureBox.Show();
+            _tools_LinkLabel.Show();
+            _shortcutIco_PictureBox.Show();
+            _links_LinkLabel.Show();
+            _padIco_PictureBox.Show();
+            _gameplay_LinkLabel.Show();
+            _websiteIco_PictureBox.Show();
+            _website_LinkLabel.Show();
 
-            _preparingPleaseWait.Text = string.Format(Resources.NormalRelease_JustAMoment_PleaseWait, 1);
-            await Task.Delay(1000);
+            _version_LinkLabel.Text = $@"v{Program.AppVersion}";
 
-            _preparingPleaseWait.Text = Resources.NormalRelease_EverythingIsOkay_StartingSetup;
-            TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
-            await Task.Delay(500);
+            _status_Label.Text += $"[i] {Resources.StellaResources_SuccessfullyUpdatedResources}\n";
+            Log.Output(string.Format(Resources.StellaResources_SuccessfullyUnpacked, StellaResZip));
+        }
 
-            _ = Cmd.CliWrap(SetupPathExe, $"/UPDATE /NORESTART /LOG=\"{logDir}\\{DateTime.Now:yyyy-dd-M...HH-mm-ss}.log\"", null, true, true);
-
-            for (int i = 15; i > 0; i--)
+        private static async Task UnzipWithProgress(string zipFilePath, string extractPath)
+        {
+            using (ZipArchive archive = ZipFile.OpenRead(zipFilePath))
             {
-                _preparingPleaseWait.Text = string.Format(Resources.NormalRelease_InstallANewVersionInTheWizard_ClosingLauncherIn_, i);
-                Log.Output(string.Format(Resources.NormalRelease_ClosingLauncherIn_, i));
-                await Task.Delay(1000);
-            }
+                int totalEntries = archive.Entries.Count;
+                int currentEntry = 0;
+                long totalBytes = 0;
+                long totalBytesToExtract = archive.Entries.Sum(entry => entry.Length);
 
-            Log.Output(Resources.NormalRelease_Closing);
-            Environment.Exit(0);
+                foreach (ZipArchiveEntry entry in archive.Entries)
+                {
+                    string entryPath = Path.Combine(extractPath, entry.FullName);
+
+                    if (entry.FullName.EndsWith("/"))
+                    {
+                        Directory.CreateDirectory(entryPath);
+                        continue;
+                    }
+
+                    Directory.CreateDirectory(Path.GetDirectoryName(entryPath));
+
+                    using (Stream source = entry.Open())
+                    using (Stream destination = File.Create(entryPath))
+                    {
+                        byte[] buffer = new byte[8192];
+                        int bytesRead;
+
+                        while ((bytesRead = await source.ReadAsync(buffer, 0, buffer.Length)) > 0)
+                        {
+                            await destination.WriteAsync(buffer, 0, bytesRead);
+                            totalBytes += bytesRead;
+
+                            int progressPercentage = (int)((double)totalBytes / totalBytesToExtract * 100);
+                            _progressBar1.Value = progressPercentage;
+                            TaskbarManager.Instance.SetProgressValue(progressPercentage, 100);
+                        }
+                    }
+
+                    currentEntry++;
+
+                    _preparingPleaseWait.Text = string.Format(Resources.StellaResources_UnpackingFiles_From_, currentEntry, totalEntries);
+                    Log.Output(string.Format(Resources.StellaResources_UnpackingFiles_Log, currentEntry, totalEntries, totalBytes, totalBytesToExtract));
+                }
+            }
         }
     }
 }

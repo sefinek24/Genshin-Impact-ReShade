@@ -713,9 +713,8 @@ The requested operation is successful. Changes will not be effective until the s
   <data name="NormalRelease_NewReleaseIsAvailableDownloadNow" xml:space="preserve">
     <value>New release is available. Download now!</value>
   </data>
-  <data name="NormalRelease_NewVersionFrom_IsAvailable_UpdateSize" xml:space="preserve">
-    <value>[i] New version from {0} is available.
-[i] Update size: {1} MB</value>
+  <data name="NormalRelease_NewVersionFrom_IsAvailable" xml:space="preserve">
+    <value>New version from {0} is available.</value>
   </data>
   <data name="NormalRelease_Output_" xml:space="preserve">
     <value>Output: {0}</value>
@@ -791,5 +790,32 @@ The requested operation is successful. Changes will not be effective until the s
   </data>
   <data name="Main_PleaseWait" xml:space="preserve">
     <value>Please wait...</value>
+  </data>
+  <data name="Default_Directory_WasNotFound" xml:space="preserve">
+    <value>[x] Directory {0} was not found.</value>
+  </data>
+  <data name="StellaResources_DownloadingResources" xml:space="preserve">
+    <value>Downloading resources... {0} MB / {1} MB</value>
+  </data>
+  <data name="StellaResources_NewResourcesUpdateIsAvailable" xml:space="preserve">
+    <value>New update of the resources is available from {0}.</value>
+  </data>
+  <data name="StellaResources_SuccessfullyUnpacked" xml:space="preserve">
+    <value>Succesfully unpacked: {0}</value>
+  </data>
+  <data name="StellaResources_SuccessfullyUpdatedResources" xml:space="preserve">
+    <value>Successfully updated resources.</value>
+  </data>
+  <data name="StellaResources_UnpackingFiles" xml:space="preserve">
+    <value>Unpacking files...</value>
+  </data>
+  <data name="StellaResources_UnpackingFiles_From_" xml:space="preserve">
+    <value>Unpacking files... {0} from {1}</value>
+  </data>
+  <data name="StellaResources_UnpackingFiles_Log" xml:space="preserve">
+    <value>Unpacking files... {0} from {1}; totalBytes: {2}; totalBytesToExtract: {3};</value>
+  </data>
+  <data name="StellaResources_UpdateSize" xml:space="preserve">
+    <value>Update size: {0}</value>
   </data>
 </root>

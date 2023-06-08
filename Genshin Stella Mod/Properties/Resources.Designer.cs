@@ -366,6 +366,15 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to [x] Directory {0} was not found..
+        /// </summary>
+        internal static string Default_Directory_WasNotFound {
+            get {
+                return ResourceManager.GetString("Default_Directory_WasNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Done..
         /// </summary>
         internal static string Default_Done {
@@ -1240,12 +1249,11 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [i] New version from {0} is available.
-        ///[i] Update size: {1} MB.
+        ///   Looks up a localized string similar to New version from {0} is available..
         /// </summary>
-        internal static string NormalRelease_NewVersionFrom_IsAvailable_UpdateSize {
+        internal static string NormalRelease_NewVersionFrom_IsAvailable {
             get {
-                return ResourceManager.GetString("NormalRelease_NewVersionFrom_IsAvailable_UpdateSize", resourceCulture);
+                return ResourceManager.GetString("NormalRelease_NewVersionFrom_IsAvailable", resourceCulture);
             }
         }
         
@@ -1613,6 +1621,78 @@ namespace StellaLauncher.Properties {
         internal static string ReShadeIniUpdate_UpdateSize_KB {
             get {
                 return ResourceManager.GetString("ReShadeIniUpdate_UpdateSize_KB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Downloading resources... {0} MB / {1} MB.
+        /// </summary>
+        internal static string StellaResources_DownloadingResources {
+            get {
+                return ResourceManager.GetString("StellaResources_DownloadingResources", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New update of the resources is available from {0}..
+        /// </summary>
+        internal static string StellaResources_NewResourcesUpdateIsAvailable {
+            get {
+                return ResourceManager.GetString("StellaResources_NewResourcesUpdateIsAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Succesfully unpacked: {0}.
+        /// </summary>
+        internal static string StellaResources_SuccessfullyUnpacked {
+            get {
+                return ResourceManager.GetString("StellaResources_SuccessfullyUnpacked", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successfully updated resources..
+        /// </summary>
+        internal static string StellaResources_SuccessfullyUpdatedResources {
+            get {
+                return ResourceManager.GetString("StellaResources_SuccessfullyUpdatedResources", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unpacking files....
+        /// </summary>
+        internal static string StellaResources_UnpackingFiles {
+            get {
+                return ResourceManager.GetString("StellaResources_UnpackingFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unpacking files... {0} from {1}.
+        /// </summary>
+        internal static string StellaResources_UnpackingFiles_From_ {
+            get {
+                return ResourceManager.GetString("StellaResources_UnpackingFiles_From_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unpacking files... {0} from {1}; totalBytes: {2}; totalBytesToExtract: {3};.
+        /// </summary>
+        internal static string StellaResources_UnpackingFiles_Log {
+            get {
+                return ResourceManager.GetString("StellaResources_UnpackingFiles_Log", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update size: {0}.
+        /// </summary>
+        internal static string StellaResources_UpdateSize {
+            get {
+                return ResourceManager.GetString("StellaResources_UpdateSize", resourceCulture);
             }
         }
         

@@ -104,6 +104,8 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -180,11 +182,13 @@
       <DependentUpon>Links.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\RandomThings.cs" />
+    <Compile Include="Models\Local.cs" />
     <Compile Include="Models\Remote.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scripts\Cmd.cs" />
     <Compile Include="Scripts\Discord.cs" />
+    <Compile Include="Scripts\Download\StellaResources.cs" />
     <Compile Include="Scripts\IniFile.cs" />
     <Compile Include="Scripts\Log.cs" />
     <Compile Include="Scripts\Os.cs" />

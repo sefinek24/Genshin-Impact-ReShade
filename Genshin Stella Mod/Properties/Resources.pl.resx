@@ -204,6 +204,9 @@ Ta czynność spowoduje utratę wszelkich niestandardowych konfiguracji, jakie d
   <data name="Default_DeletedOldSetupFromTempFolder" xml:space="preserve">
     <value>Usunięto stary plik instalacyjny z folderu tymczasowego: {0}</value>
   </data>
+  <data name="Default_Directory_WasNotFound" xml:space="preserve">
+    <value>[x] Katalog {0} nie został odnaleziony.</value>
+  </data>
   <data name="Default_Done" xml:space="preserve">
     <value>Zrobione.</value>
   </data>
@@ -430,9 +433,8 @@ Czy chciałbyś teraz pobrać ten plik, aby zapobiec przyszłym błędom i ręcz
   <data name="NormalRelease_NewReleaseIsAvailableDownloadNow" xml:space="preserve">
     <value>Dostępna jest nowa wersja. Pobierz teraz!</value>
   </data>
-  <data name="NormalRelease_NewVersionFrom_IsAvailable_UpdateSize" xml:space="preserve">
-    <value>[i] Dostępna jest nowa wersja z {0}.
-[i] Rozmiar aktualizacji: {1} MB.</value>
+  <data name="NormalRelease_NewVersionFrom_IsAvailable" xml:space="preserve">
+    <value>Dostępna jest nowa wersja z {0}.</value>
   </data>
   <data name="NormalRelease_Output_" xml:space="preserve">
     <value>Wyjście: {0}</value>
@@ -554,6 +556,30 @@ Zamknij proces o nazwie {0} i spróbuj ponownie.</value>
   </data>
   <data name="ReShadeIniUpdate_UpdateSize_KB" xml:space="preserve">
     <value>[i] Rozmiar aktualizacji: {0} KB</value>
+  </data>
+  <data name="StellaResources_DownloadingResources" xml:space="preserve">
+    <value>Pobieranie zasobów... {0} MB / {1} MB</value>
+  </data>
+  <data name="StellaResources_NewResourcesUpdateIsAvailable" xml:space="preserve">
+    <value>Nowa aktualizacja zasobów jest dostępna z {0}.</value>
+  </data>
+  <data name="StellaResources_SuccessfullyUnpacked" xml:space="preserve">
+    <value>Pomyslnie wypakowano: {0}</value>
+  </data>
+  <data name="StellaResources_SuccessfullyUpdatedResources" xml:space="preserve">
+    <value>Pomyślnie zaktualizowano zasoby.</value>
+  </data>
+  <data name="StellaResources_UnpackingFiles" xml:space="preserve">
+    <value>Rozpakowywanie plików...</value>
+  </data>
+  <data name="StellaResources_UnpackingFiles_From_" xml:space="preserve">
+    <value>Wypakowywanie plików... {0} z {1}</value>
+  </data>
+  <data name="StellaResources_UnpackingFiles_Log" xml:space="preserve">
+    <value>Rozpakowywanie plików... {0} z {1}; totalBytes: {2}; totalBytesToExtract: {3};</value>
+  </data>
+  <data name="StellaResources_UpdateSize" xml:space="preserve">
+    <value>Rozmiar aktualizacji: {0}</value>
   </data>
   <data name="SupportMe_Thanks" xml:space="preserve">
     <value>Dzięki :3</value>
