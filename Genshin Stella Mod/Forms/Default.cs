@@ -320,7 +320,6 @@ namespace StellaLauncher.Forms
                                     updates_LinkLabel,
                                     updateIco_PictureBox);
 
-
                                 return 1;
                             }
                         }
