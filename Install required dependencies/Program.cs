@@ -34,7 +34,7 @@ namespace PrepareStella
         public static readonly string GameYuanShen = Path.Combine(ProgramFiles, "Genshin Impact", "Genshin Impact game", "YuanShen.exe");
         public static readonly string WindowsApps = Path.Combine(ProgramFiles, "WindowsApps");
         public static readonly string Packages = Path.Combine(Environment.GetEnvironmentVariable("LocalAppData") ?? string.Empty, "Packages");
-        private static readonly string InstalledViaSetup = Path.Combine(AppData, "configured.sfn");
+        private static readonly string configuredSfn = Path.Combine(AppData, "configured.sfn");
 
         // Dependencies
         public static readonly string VcLibsAppx = Path.Combine("dependencies", "Microsoft.VCLibs.x64.14.00.Desktop.appx");
@@ -183,7 +183,7 @@ namespace PrepareStella
 
             // Create files
             if (!Directory.Exists(AppData)) Directory.CreateDirectory(AppData);
-            if (!File.Exists(InstalledViaSetup)) File.Create(InstalledViaSetup);
+            if (!File.Exists(configuredSfn)) File.Create(configuredSfn);
 
             TaskbarManager.Instance.SetProgressValue(100, 100);
 
