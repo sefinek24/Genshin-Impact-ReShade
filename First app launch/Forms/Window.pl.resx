@@ -118,14 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="linkLabel1.Text" xml:space="preserve">
-    <value>&gt;&gt; Jestem gotów kontynuować... &lt;&lt;</value>
+    <value>&gt;&gt; Gotów! Ukończmy to teraz &lt;&lt;</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="MadeBySefinek.Location" type="System.Drawing.Point, System.Drawing">
-    <value>837, 54</value>
+    <value>853, 73</value>
   </data>
   <data name="MadeBySefinek.Size" type="System.Drawing.Size, System.Drawing">
-    <value>296, 33</value>
+    <value>313, 36</value>
   </data>
   <data name="MadeBySefinek.Text" xml:space="preserve">
     <value>stworzone przez Sefinek</value>
@@ -149,49 +149,48 @@
     <value>Utwórz skróty internetowe w menu Start</value>
   </data>
   <data name="checkBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>319, 24</value>
+    <value>388, 24</value>
   </data>
   <data name="checkBox4.Text" xml:space="preserve">
-    <value>Zaktualizuj konfigurację ReShade *</value>
+    <value>Zaktualizuj config ReShade (ReShade.ini) *</value>
   </data>
   <data name="checkBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>367, 24</value>
+    <value>316, 24</value>
   </data>
   <data name="checkBox5.Text" xml:space="preserve">
-    <value>Zaktualizuj konfigurację FPS Unlockera *</value>
+    <value>Zaktualizuj config FPS Unlockera *</value>
   </data>
   <data name="checkBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>310, 24</value>
+    <value>379, 24</value>
   </data>
   <data name="checkBox6.Text" xml:space="preserve">
-    <value>Usuń pamięć podręczną ReShade *</value>
+    <value>Usuń pamięć podręczną (cache) ReShade *</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 108</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Witaj w oknie konfiguracji</value>
+    <value>Witaj w oknie konfiguracyjnym</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 194</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>Wygląda na to, że to Twoje pierwsze uruchomienie lub właśnie pomyślnie zaktualizowałeś program! Gratulacje!
-Teraz przejdźmy do zakończenia instalacji/aktualizacji. Proszę wybierz odpowiednie pola.</value>
-  </data>
-  <data name="checkBox7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>525, 24</value>
+    <value>Wygląda na to, że to Twoje pierwsze uruchomienie lub właśnie przed chwilą udało Ci się zaktualizować program!
+Gratulacje! Teraz przejdźmy do ukończenia ostatnich kroków. Proszę wybierz odpowiednie pola.</value>
   </data>
   <data name="checkBox7.Text" xml:space="preserve">
-    <value>Pobierz lub zaktualizuj shadery, domyślne presety, dodatki *</value>
+    <value>Pobierz lub zaktualizuj zasoby (shadery, presety, dodatki) *</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>Należy pamiętać, że poprzednie konfiguracje, w tym ReShade i FPS Unlocker, mogą zostać utracone.
-Jednak twoje ustawienia wstępne i inne niestandardowe shadery nie zostaną usunięte.</value>
+    <value>Należy pamiętać, że poprzednie pliki konfiguracyjne, w tym ReShade i FPS Unlockera, mogą zostać utracone.
+Jednakże Twoje ustawienia wstępne i inne niestandardowe shadery nie zostaną usunięte.</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>854, 23</value>
+    <value>838, 23</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
-    <value>Zaleca się wypełnienie pól oznaczonych gwiazdką (*). Jeśli nie jesteś pewien, co robisz, nie odznaczaj żadnego pola.</value>
+    <value>Zaleca się wybranie pól oznaczonych gwiazdką (*). Jeśli nie jesteś pewien, co robisz, nie odznaczaj żadnego pola.</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Przygotuj Stella Mod Launcher</value>

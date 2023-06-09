@@ -61,14 +61,14 @@ namespace ConfWindow.Forms
             // 
             resources.ApplyResources(this.MadeBySefinek, "MadeBySefinek");
             this.MadeBySefinek.BackColor = System.Drawing.Color.Transparent;
-            this.MadeBySefinek.ForeColor = System.Drawing.Color.MediumBlue;
+            this.MadeBySefinek.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(83)))), ((int)(((byte)(167)))));
             this.MadeBySefinek.Name = "MadeBySefinek";
             // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(83)))), ((int)(((byte)(167)))));
             this.label1.Name = "label1";
             // 
             // checkBox1
@@ -189,6 +189,7 @@ namespace ConfWindow.Forms
             this.Controls.Add(this.label1);
             this.Controls.Add(this.linkLabel1);
             this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.Color.DodgerBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Window";
