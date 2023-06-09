@@ -64,48 +64,44 @@ namespace PrepareStella
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            string gamePathSfn = Path.Combine(AppData, "game-path.sfn");
+            GamePathSfn = gamePathSfn;
 
-            if (!Directory.Exists(AppData)) Directory.CreateDirectory(AppData);
-            GamePathSfn = Path.Combine(AppData, "game-path.sfn");
-
-
-            if (File.Exists(GamePathSfn))
+            if (File.Exists(gamePathSfn))
             {
-                string fileWithGamePath = File.ReadAllText(GamePathSfn).Trim();
-                if (Directory.Exists(fileWithGamePath)) GameDirGlobal = fileWithGamePath;
-            }
-            else
-            {
-                if (File.Exists(GameGenshinImpact))
-                    GameDirGlobal = Path.GetDirectoryName(Path.GetDirectoryName(GameGenshinImpact));
+                string gamePathContent = File.ReadAllText(gamePathSfn);
 
-                if (File.Exists(GameYuanShen))
-                    GameDirGlobal = Path.GetDirectoryName(Path.GetDirectoryName(GameYuanShen));
+                if (File.Exists(gamePathContent))
+                {
+                    GameExeGlobal = gamePathContent;
+                    Console.WriteLine(gamePathContent);
+                }
+                else
+                {
+                    if (File.Exists(GameGenshinImpact))
+                    {
+                        GameExeGlobal = GameGenshinImpact;
+                        File.WriteAllText(GamePathSfn, GameGenshinImpact);
+                        Console.WriteLine(GameGenshinImpact);
+                    }
+                    else if (File.Exists(GameYuanShen))
+                    {
+                        GameExeGlobal = GameYuanShen;
+                        File.WriteAllText(GamePathSfn, GameYuanShen);
+                        Console.WriteLine(GameYuanShen);
+                    }
+                    else
+                    {
+                        Application.Run(new SelectGamePath { Icon = Resources.icon });
+                    }
+                }
             }
 
-            if (Directory.Exists(GameDirGlobal))
-            {
-                File.WriteAllText(GamePathSfn, GameDirGlobal);
-                Console.WriteLine(GameDirGlobal);
-            }
-            else
-            {
-                Application.Run(new SelectGamePath { Icon = Resources.icon });
-            }
+            if (GameExeGlobal == null || !File.Exists(GameExeGlobal))
+                Log.ErrorAndExit(new Exception(
+                        $"Unknown\n\n{(GameExeGlobal != null ? $"File was not found: {GameExeGlobal}" : "Sorry. Full game path was not found.")}\nPlease delete all Stella Mod files from AppData (%appdata%) folder."),
+                    false, false);
 
-
-            if (Directory.Exists(GameDirGlobal))
-            {
-                ReShadeConfig = Path.Combine(GameDirGlobal, "Genshin Impact game", "ReShade.ini");
-                ReShadeLogFile = Path.Combine(GameDirGlobal, "Genshin Impact game", "ReShade.log");
-
-                if (File.Exists(GameGenshinImpact)) GameExeGlobal = GameGenshinImpact;
-                if (File.Exists(GameYuanShen)) GameExeGlobal = GameYuanShen;
-            }
-            else
-            {
-                Console.WriteLine();
-            }
 
             TaskbarManager.Instance.SetProgressValue(26, 100);
 

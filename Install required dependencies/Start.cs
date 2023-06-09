@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.WindowsAPICodePack.Taskbar;
@@ -30,6 +31,8 @@ namespace PrepareStella
                 Log.ErrorAndExit(new Exception("» This application requires administrator privileges to run."), false, false);
                 return;
             }
+
+            if (!Directory.Exists(Program.AppData)) Directory.CreateDirectory(Program.AppData);
 
             try
             {
