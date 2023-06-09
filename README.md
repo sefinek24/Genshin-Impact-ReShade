@@ -1,8 +1,8 @@
 <div align="center" id="header">
     <h1>🌟 Genshin Impact Stella Mod Pack - 2023 🌟</h1>
     <p>
-        <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/assets/images/banner/rounded-corners/compressed.png" title="See preview [data/images/banner/border/1.png]">
-            <img src="assets/images/banner/rounded-corners/compressed.png" alt="Header image">
+        <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Assets/images/banner/rounded-corners/compressed.png" title="See preview [data/images/banner/border/1.png]">
+            <img src="Assets/images/banner/rounded-corners/compressed.png" alt="Header image">
         </a>
     </p>
     <a href="https://sefinek.net" title="sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=Website&up_message=Online&url=https%3A%2F%2Fsefinek.net" alt="Status page"></a>
@@ -36,10 +36,10 @@
 - [🧶 Sources](#sources)
 
 <div align="center">
-    <a href="https://sefinek.net/genshin-impact-reshade/download" title="Download stable release"><img src="assets/images/readme/labels/download.png" alt="Download" height="148px"></a>
+    <a href="https://sefinek.net/genshin-impact-reshade/download" title="Download stable release"><img src="Assets/images/readme/labels/download.png" alt="Download" height="148px"></a>
     <br>
-    <a href="https://genshin.sefinek.net" title="Official website"><img src="assets/images/readme/labels/website.png" alt="Website" height="148px"></a>
-    <a href="https://discord.com/invite/SVcbaRc7gH" title="Our Discord server"><img src="assets/images/readme/labels/discord.png" alt="Discord" height="148px"></a>
+    <a href="https://genshin.sefinek.net" title="Official website"><img src="Assets/images/readme/labels/website.png" alt="Website" height="148px"></a>
+    <a href="https://discord.com/invite/SVcbaRc7gH" title="Our Discord server"><img src="Assets/images/readme/labels/discord.png" alt="Discord" height="148px"></a>
 </div>
 
 
