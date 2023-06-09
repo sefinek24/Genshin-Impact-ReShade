@@ -67,9 +67,7 @@ namespace PrepareStella.Scripts
                         Console.WriteLine(
                             $"     » We cannot install this package because some process is currently in use.\n       Reboot your PC or close all opened apps from Microsoft Store.\n\n{stderr}");
 
-                        Log.SaveErrorLog(new Exception($"We cannot install this package because some process is currently in use.\n\n» Attempt: {VcLibsAttemptNumber}\n» Exit code: 80073D02\n\n{stderr}"),
-                            true);
-                        Log.Output($"I can't install VCLibs because some process is currently in use. Attempt: {VcLibsAttemptNumber}");
+                        Log.SaveErrorLog(new Exception($"I cannot install this package because some process is currently open.\n\n» Attempt: {VcLibsAttemptNumber}\n» Exit code: 80073D02\n\n{stderr}"), true);
 
                         TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
 
@@ -87,7 +85,6 @@ namespace PrepareStella.Scripts
                     {
                         VcLibsAttemptNumber++;
 
-                        Log.Output($"Found missing dependency VCLibs. Attempt {VcLibsAttemptNumber}.");
                         Log.SaveErrorLog(new Exception($"Found missing dependency Microsoft.VCLibs.\n\nAttempt {VcLibsAttemptNumber}\nExit code: 80073CF3\n\n{stderr}"), true);
 
                         try
@@ -120,7 +117,7 @@ namespace PrepareStella.Scripts
                         if (wtProcess2.Length != 0) await CliWrap("taskkill", "/F /IM WindowsTerminal.exe", null);
 
                         // Installing...
-                        Console.WriteLine("Installing Microsoft Visual C++ 2015 UWP Desktop Package...");
+                        Console.WriteLine(@"Installing Microsoft Visual C++ 2015 UWP Desktop Package...");
 
                         if (!File.Exists(Program.VcLibsAppx))
                             Log.ErrorAndExit(new Exception($"I can't find a required file. Please unpack downloaded zip archive.\nNot found: {Program.VcLibsAppx}"), false, false);
@@ -147,7 +144,7 @@ namespace PrepareStella.Scripts
 
                         // Reboot PC
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.Write("» Restart your computer now? This is required. [Yes/no]: ");
+                        Console.Write(@"» Restart your computer now? This is required. [Yes/no]: ");
                         Console.ResetColor();
 
                         string rebootPc = Console.ReadLine();
