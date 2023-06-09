@@ -185,29 +185,32 @@ namespace PrepareStella
             if (!Directory.Exists(AppData)) Directory.CreateDirectory(AppData);
             if (!File.Exists(InstalledViaSetup)) File.Create(InstalledViaSetup);
 
+            TaskbarManager.Instance.SetProgressValue(100, 100);
+
             // Reboot is required?
             if (Cmd.RebootNeeded)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.Write(@"» Restart your computer now? This is required! [Yes/no]: ");
+                Console.Write(@"» Restart your computer now? This is required. [Yes/no]: ");
                 Console.ResetColor();
 
                 string rebootPc = Console.ReadLine();
                 if (Regex.Match(rebootPc ?? string.Empty, "(?:y)", RegexOptions.IgnoreCase | RegexOptions.Singleline).Success)
                 {
                     await Cmd.CliWrap("shutdown",
-                        $"/r /t 30 /c \"{AppName} - scheduled reboot, version {AppVersion}.\n\nThank you for installing. If you need help, add me on Discord Sefinek#2714.\n\nGood luck and have fun!\"", null);
+                        $"/r /t 30 /c \"{AppName} - scheduled reboot.\n\nThank you for installing. If you need help, add me on Discord Sefinek#2714.\n\nGood luck and have fun!\"", null);
 
                     Console.WriteLine(@"Your computer will restart in 30 seconds. Save your work!");
                     Log.Output("PC reboot was scheduled.");
                 }
             }
+            else
+            {
+                // Run Genshin Stella Mod
+                Console.WriteLine(@"Launching Genshin Stella Mod...");
+                Process.Start(Path.Combine(AppPath, "Genshin Stella Mod.exe"));
+            }
 
-            TaskbarManager.Instance.SetProgressValue(100, 100);
-
-            // Run Genshin Stella Mod
-            Console.WriteLine(@"Launching Genshin Stella Mod...");
-            Process.Start(Path.Combine(AppPath, "Genshin Stella Mod.exe"));
 
             // Close app
             Console.WriteLine($"\n{Line}\n");
