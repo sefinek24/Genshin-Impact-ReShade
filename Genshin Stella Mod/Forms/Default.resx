@@ -140,15 +140,18 @@
   <data name="&gt;&gt;startGame_LinkLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="&gt;&gt;githubIco_Picturebox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="&gt;&gt;youTube_LinkLabel.Name" xml:space="preserve">
     <value>youTube_LinkLabel</value>
+  </data>
+  <data name="injectReShade_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 23</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="supportMeIco_PictureBox.TabIndex" type="System.Int32, mscorlib">
     <value>99</value>
-  </data>
-  <data name="discordServerIco_Picturebox.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="injectReShade_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>83, 302</value>
@@ -168,9 +171,6 @@
   <data name="updates_LinkLabel.Text" xml:space="preserve">
     <value>Waiting for data...</value>
   </data>
-  <data name="youtubeIco_Picturebox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 536</value>
-  </data>
   <data name="&gt;&gt;toolsIco_PictureBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -186,9 +186,6 @@
   <data name="padIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>209, 565</value>
   </data>
-  <data name="version_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 23</value>
-  </data>
   <data name="&gt;&gt;runGiLauncher_LinkLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -198,8 +195,8 @@
   <data name="&gt;&gt;gameplay_LinkLabel.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
-  <data name="supportMeIco_PictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
+  <data name="updates_LinkLabel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
   </data>
   <data name="&gt;&gt;clickMe_LinkLabel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -246,12 +243,6 @@
   <data name="&gt;&gt;runFpsUnlocker_LinkLabel.Name" xml:space="preserve">
     <value>runFpsUnlocker_LinkLabel</value>
   </data>
-  <data name="&gt;&gt;PreparingPleaseWait.Name" xml:space="preserve">
-    <value>PreparingPleaseWait</value>
-  </data>
-  <data name="&gt;&gt;websiteIco_PictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="updateIco_PictureBox.TabIndex" type="System.Int32, mscorlib">
     <value>82</value>
   </data>
@@ -285,8 +276,8 @@
   <data name="&gt;&gt;gameplay_LinkLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="madeBySefinek_Label.ToolTip" xml:space="preserve">
-    <value>&gt;~~&lt;</value>
+  <data name="&gt;&gt;clickMe_LinkLabel.Name" xml:space="preserve">
+    <value>clickMe_LinkLabel</value>
   </data>
   <data name="progressBar1.TabIndex" type="System.Int32, mscorlib">
     <value>114</value>
@@ -302,6 +293,9 @@
   </data>
   <data name="githubUrl_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Comic Sans MS, 12pt</value>
+  </data>
+  <data name="runFpsUnlocker_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;githubUrl_LinkLabel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -321,11 +315,11 @@
   <data name="runFpsUnlocker_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>93</value>
   </data>
-  <data name="discordServerIco_Picturebox.TabIndex" type="System.Int32, mscorlib">
-    <value>88</value>
-  </data>
   <data name="madeBySefinek_Label.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="websiteIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 565</value>
   </data>
   <data name="website_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Comic Sans MS, 12pt</value>
@@ -347,9 +341,6 @@
   </data>
   <data name="youTube_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 23</value>
-  </data>
-  <data name="githubUrl_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
   </data>
   <data name="&gt;&gt;youtubeIco_Picturebox.ZOrder" xml:space="preserve">
     <value>19</value>
@@ -381,9 +372,6 @@
   <data name="&gt;&gt;toolsIco_PictureBox.Name" xml:space="preserve">
     <value>toolsIco_PictureBox</value>
   </data>
-  <data name="&gt;&gt;progressBar1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1045, 600</value>
   </data>
@@ -395,6 +383,9 @@
   </data>
   <data name="&gt;&gt;version_LinkLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="discordServer_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Join to our Discord server if you need help.</value>
   </data>
   <data name="&gt;&gt;websiteIco_PictureBox.ZOrder" xml:space="preserve">
     <value>24</value>
@@ -420,14 +411,14 @@
   <data name="links_LinkLabel.Text" xml:space="preserve">
     <value>Links</value>
   </data>
+  <data name="githubIco_Picturebox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>566, 48</value>
   </data>
   <data name="tools_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
-  </data>
-  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
   </data>
   <data name="startGame_LinkLabel.Text" xml:space="preserve">
     <value>Start game</value>
@@ -444,9 +435,6 @@
   <data name="githubUrl_LinkLabel.ToolTip" xml:space="preserve">
     <value>Main GitHub repository. Star the repo if you like my work.</value>
   </data>
-  <data name="gameplay_LinkLabel.Text" xml:space="preserve">
-    <value>Gameplay</value>
-  </data>
   <data name="&gt;&gt;version_LinkLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -459,17 +447,20 @@
   <data name="versionIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 23</value>
   </data>
+  <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
   <data name="status_Label.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 50</value>
-  </data>
-  <data name="discordServer_LinkLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>89</value>
   </data>
   <data name="&gt;&gt;becomeMyPatron_LinkLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;githubIco_Picturebox.Name" xml:space="preserve">
     <value>githubIco_Picturebox</value>
+  </data>
+  <data name="&gt;&gt;website_LinkLabel.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;updates_LinkLabel.Name" xml:space="preserve">
     <value>updates_LinkLabel</value>
@@ -495,14 +486,17 @@
   <data name="madeBySefinek_Label.Text" xml:space="preserve">
     <value>made by Sefinek</value>
   </data>
+  <data name="madeBySefinek_Label.ToolTip" xml:space="preserve">
+    <value>&gt;~~&lt;</value>
+  </data>
   <data name="&gt;&gt;injectReShade_LinkLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;status_Label.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="websiteIco_PictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>80</value>
+  <data name="gameplay_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12pt</value>
   </data>
   <data name="&gt;&gt;madeBySefinek_Label.Parent" xml:space="preserve">
     <value>$this</value>
@@ -567,9 +561,6 @@
   <data name="&gt;&gt;youtubeIco_Picturebox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;updateIco_PictureBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="&gt;&gt;close_Panel.Name" xml:space="preserve">
     <value>close_Panel</value>
   </data>
@@ -606,17 +597,8 @@
   <data name="&gt;&gt;changeBg_LinkLabel.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="runGiLauncher_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt</value>
-  </data>
-  <data name="youTube_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt, style=Bold</value>
-  </data>
   <data name="clickMe_LinkLabel.Text" xml:space="preserve">
     <value>Click me ;w;</value>
-  </data>
-  <data name="updates_LinkLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>85</value>
   </data>
   <data name="paimon_PictureBox.TabIndex" type="System.Int32, mscorlib">
     <value>107</value>
@@ -669,6 +651,9 @@
   <data name="&gt;&gt;PreparingPleaseWait.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="version_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="padIco_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -680,6 +665,9 @@
   </data>
   <data name="toolsIco_PictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
+  </data>
+  <data name="tools_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>41, 565</value>
   </data>
   <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -704,9 +692,6 @@
   </data>
   <data name="&gt;&gt;discordServer_LinkLabel.Name" xml:space="preserve">
     <value>discordServer_LinkLabel</value>
-  </data>
-  <data name="paimon_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
   </data>
   <data name="website_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>98</value>
@@ -807,6 +792,9 @@
   <data name="becomeMyPatron_LinkLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
+  <data name="youtubeIco_Picturebox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 23</value>
+  </data>
   <data name="websiteIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 23</value>
   </data>
@@ -825,9 +813,6 @@ RTX cards are not required.</value>
   </data>
   <data name="clickMe_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
-  </data>
-  <data name="changeBg_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 13</value>
   </data>
   <data name="&gt;&gt;discordServer_LinkLabel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -853,9 +838,6 @@ RTX cards are not required.</value>
   <data name="&gt;&gt;youTube_LinkLabel.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
-  <data name="&gt;&gt;progressBar1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;runGiLauncher_LinkLabel.Name" xml:space="preserve">
     <value>runGiLauncher_LinkLabel</value>
   </data>
@@ -871,8 +853,8 @@ RTX cards are not required.</value>
   <data name="madeBySefinek_Label.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopRight</value>
   </data>
-  <data name="&gt;&gt;supportMeIco_PictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="updates_LinkLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>85</value>
   </data>
   <data name="githubUrl_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -897,6 +879,9 @@ RTX cards are not required.</value>
   </data>
   <data name="&gt;&gt;discordServer_LinkLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;startGame_LinkLabel.Name" xml:space="preserve">
+    <value>startGame_LinkLabel</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Default</value>
@@ -931,8 +916,8 @@ RTX cards are not required.</value>
   <data name="website_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>369, 565</value>
   </data>
-  <data name="PreparingPleaseWait.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Liberation Sans, 12pt</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="status_Label.Font" type="System.Drawing.Font, System.Drawing">
     <value>Consolas, 9.75pt</value>
@@ -952,17 +937,20 @@ RTX cards are not required.</value>
   <data name="&gt;&gt;links_LinkLabel.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="PreparingPleaseWait.Size" type="System.Drawing.Size, System.Drawing">
+    <value>529, 20</value>
+  </data>
   <data name="becomeMyPatron_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>510, 60</value>
   </data>
   <data name="toolsIco_PictureBox.TabIndex" type="System.Int32, mscorlib">
     <value>79</value>
   </data>
+  <data name="&gt;&gt;startGame_LinkLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;padIco_PictureBox.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="PreparingPleaseWait.Text" xml:space="preserve">
-    <value>Please wait...</value>
   </data>
   <data name="runGiLauncher_LinkLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -975,6 +963,9 @@ RTX cards are not required.</value>
   </data>
   <data name="&gt;&gt;discordServerIco_Picturebox.ZOrder" xml:space="preserve">
     <value>18</value>
+  </data>
+  <data name="&gt;&gt;supportMeIco_PictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="updates_LinkLabel.ToolTip" xml:space="preserve">
     <value />
@@ -993,9 +984,6 @@ RTX cards are not required.</value>
   </data>
   <data name="startGame_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>94</value>
-  </data>
-  <data name="&gt;&gt;clickMe_LinkLabel.Name" xml:space="preserve">
-    <value>clickMe_LinkLabel</value>
   </data>
   <data name="toolsIco_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1042,17 +1030,23 @@ RTX cards are not required.</value>
   <data name="&gt;&gt;gameplay_LinkLabel.Name" xml:space="preserve">
     <value>gameplay_LinkLabel</value>
   </data>
+  <data name="tools_LinkLabel.Text" xml:space="preserve">
+    <value>Tools</value>
+  </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 11</value>
   </data>
   <data name="becomeMyPatron_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
+  <data name="&gt;&gt;tools_LinkLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="discordServer_LinkLabel.Text" xml:space="preserve">
     <value>Discord server</value>
   </data>
-  <data name="youtubeIco_Picturebox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 23</value>
+  <data name="changeBg_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 13</value>
   </data>
   <data name="runGiLauncher_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>166, 339</value>
@@ -1108,8 +1102,8 @@ RTX cards are not required.</value>
   <data name="gameplay_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>238, 564</value>
   </data>
-  <data name="tools_LinkLabel.Text" xml:space="preserve">
-    <value>Tools</value>
+  <data name="&gt;&gt;websiteIco_PictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="changeBg_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Liberation Sans, 11.25pt, style=Bold</value>
@@ -1132,6 +1126,9 @@ RTX cards are not required.</value>
   <data name="githubIco_Picturebox.Location" type="System.Drawing.Point, System.Drawing">
     <value>635, 118</value>
   </data>
+  <data name="&gt;&gt;injectReShade_LinkLabel.Name" xml:space="preserve">
+    <value>injectReShade_LinkLabel</value>
+  </data>
   <data name="PreparingPleaseWait.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
@@ -1144,17 +1141,20 @@ RTX cards are not required.</value>
   <data name="youTube_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>90</value>
   </data>
-  <data name="&gt;&gt;githubIco_Picturebox.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="version_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 23</value>
   </data>
   <data name="&gt;&gt;padIco_PictureBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="&gt;&gt;versionIco_PictureBox.ZOrder" xml:space="preserve">
     <value>22</value>
   </data>
-  <data name="tools_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 565</value>
+  <data name="PreparingPleaseWait.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Liberation Sans, 12pt</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -1183,9 +1183,6 @@ RTX cards are not required.</value>
   <data name="&gt;&gt;websiteIco_PictureBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="gameplay_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt</value>
-  </data>
   <data name="&gt;&gt;shortcutIco_PictureBox.Name" xml:space="preserve">
     <value>shortcutIco_PictureBox</value>
   </data>
@@ -1204,17 +1201,17 @@ RTX cards are not required.</value>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="runFpsUnlocker_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="discordServerIco_Picturebox.TabIndex" type="System.Int32, mscorlib">
+    <value>88</value>
   </data>
   <data name="discordServerIco_Picturebox.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 23</value>
   </data>
-  <data name="&gt;&gt;tools_LinkLabel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;PreparingPleaseWait.Name" xml:space="preserve">
+    <value>PreparingPleaseWait</value>
   </data>
-  <data name="discordServer_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Join to our Discord server if you need help.</value>
+  <data name="&gt;&gt;progressBar1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="version_LinkLabel.Text" xml:space="preserve">
     <value>Waiting for data...</value>
@@ -1225,8 +1222,8 @@ RTX cards are not required.</value>
   <data name="startGame_LinkLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="version_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+  <data name="&gt;&gt;updateIco_PictureBox.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="progressBar1.Size" type="System.Drawing.Size, System.Drawing">
     <value>779, 23</value>
@@ -1234,8 +1231,8 @@ RTX cards are not required.</value>
   <data name="PreparingPleaseWait.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+  <data name="websiteIco_PictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>80</value>
   </data>
   <data name="&gt;&gt;tools_LinkLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1252,11 +1249,11 @@ RTX cards are not required.</value>
   <data name="discordServerIco_Picturebox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="discordServerIco_Picturebox.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="&gt;&gt;website_LinkLabel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="PreparingPleaseWait.Text" xml:space="preserve">
+    <value>Please wait...</value>
   </data>
   <data name="&gt;&gt;toolsIco_PictureBox.ZOrder" xml:space="preserve">
     <value>25</value>
@@ -1267,8 +1264,8 @@ RTX cards are not required.</value>
   <data name="&gt;&gt;toolsIco_PictureBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
+  <data name="&gt;&gt;progressBar1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;updates_LinkLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1291,14 +1288,14 @@ RTX cards are not required.</value>
   <data name="version_LinkLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
-  <data name="injectReShade_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 23</value>
+  <data name="discordServer_LinkLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>89</value>
   </data>
   <data name="shortcutIco_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="updates_LinkLabel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
+  <data name="runGiLauncher_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12pt</value>
   </data>
   <data name="website_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 23</value>
@@ -1318,20 +1315,23 @@ RTX cards are not required.</value>
   <data name="discordServer_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="updates_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12pt</value>
+  </data>
   <data name="padIco_PictureBox.TabIndex" type="System.Int32, mscorlib">
     <value>97</value>
   </data>
-  <data name="&gt;&gt;injectReShade_LinkLabel.Name" xml:space="preserve">
-    <value>injectReShade_LinkLabel</value>
+  <data name="youTube_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12pt, style=Bold</value>
   </data>
   <data name="supportMe_LinkLabel.ToolTip" xml:space="preserve">
     <value>Support my work.</value>
   </data>
-  <data name="websiteIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 565</value>
+  <data name="youtubeIco_Picturebox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 536</value>
   </data>
-  <data name="&gt;&gt;startGame_LinkLabel.Name" xml:space="preserve">
-    <value>startGame_LinkLabel</value>
+  <data name="supportMeIco_PictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
   </data>
   <data name="youTube_LinkLabel.ToolTip" xml:space="preserve">
     <value>My YouTube channel. Subscribe me if you like this project.</value>
@@ -1339,8 +1339,8 @@ RTX cards are not required.</value>
   <data name="close_Panel.ToolTip" xml:space="preserve">
     <value>Exit the launcher</value>
   </data>
-  <data name="githubIco_Picturebox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
+  <data name="gameplay_LinkLabel.Text" xml:space="preserve">
+    <value>Gameplay</value>
   </data>
   <data name="&gt;&gt;PreparingPleaseWait.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1351,14 +1351,14 @@ RTX cards are not required.</value>
   <data name="runGiLauncher_LinkLabel.ToolTip" xml:space="preserve">
     <value>Open the main game launcher.</value>
   </data>
-  <data name="&gt;&gt;startGame_LinkLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="paimon_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="githubIco_Picturebox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="updates_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt</value>
+  <data name="githubUrl_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="&gt;&gt;label1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1369,8 +1369,8 @@ RTX cards are not required.</value>
   <data name="links_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 22</value>
   </data>
-  <data name="PreparingPleaseWait.Size" type="System.Drawing.Size, System.Drawing">
-    <value>529, 20</value>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
   </data>
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
