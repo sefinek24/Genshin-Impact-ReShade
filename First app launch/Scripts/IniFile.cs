@@ -40,10 +40,5 @@ namespace ConfWindow.Scripts
             GetPrivateProfileString(section, key, defaultValue, sb, 255, _path);
             return sb.ToString();
         }
-
-        public void Save()
-        {
-            WritePrivateProfileString(null, null, null, _path);
-        }
     }
 }
