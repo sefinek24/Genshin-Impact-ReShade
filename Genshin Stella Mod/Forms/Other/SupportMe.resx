@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="panel1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="panel2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="panel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -126,10 +132,10 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>987, 16</value>
+    <value>991, 16</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 24</value>
+    <value>25, 25</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
@@ -160,7 +166,7 @@
     <value>0, 0</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1040, 40</value>
+    <value>1045, 41</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -187,7 +193,7 @@
     <value>Ink Free, 21.7499962pt, style=Bold</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 407</value>
+    <value>20, 412</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>668, 72</value>
@@ -224,7 +230,7 @@ Thanks and have a nice day ^-^</value>
     <value>Consolas, 21.75pt</value>
   </data>
   <data name="linkLabel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 547</value>
+    <value>14, 552</value>
   </data>
   <data name="linkLabel6.Size" type="System.Drawing.Size, System.Drawing">
     <value>240, 34</value>
@@ -257,7 +263,7 @@ Thanks and have a nice day ^-^</value>
     <value>Consolas, 21.75pt</value>
   </data>
   <data name="linkLabel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>804, 547</value>
+    <value>806, 552</value>
   </data>
   <data name="linkLabel5.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 34</value>
@@ -290,7 +296,7 @@ Thanks and have a nice day ^-^</value>
     <value>Ink Free, 29.2499962pt, style=Bold</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 89</value>
+    <value>18, 94</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>613, 48</value>
@@ -326,7 +332,7 @@ Thanks and have a nice day ^-^</value>
     <value>Comic Sans MS, 15pt</value>
   </data>
   <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 152</value>
+    <value>21, 157</value>
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>341, 28</value>
@@ -362,7 +368,7 @@ Thanks and have a nice day ^-^</value>
     <value>Comic Sans MS, 15pt</value>
   </data>
   <data name="linkLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 208</value>
+    <value>21, 213</value>
   </data>
   <data name="linkLabel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>317, 28</value>
@@ -398,7 +404,7 @@ Thanks and have a nice day ^-^</value>
     <value>Comic Sans MS, 15pt</value>
   </data>
   <data name="linkLabel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 236</value>
+    <value>21, 241</value>
   </data>
   <data name="linkLabel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>311, 28</value>
@@ -434,7 +440,7 @@ Thanks and have a nice day ^-^</value>
     <value>Comic Sans MS, 15pt</value>
   </data>
   <data name="linkLabel7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 292</value>
+    <value>21, 297</value>
   </data>
   <data name="linkLabel7.Size" type="System.Drawing.Size, System.Drawing">
     <value>217, 28</value>
@@ -470,7 +476,7 @@ Thanks and have a nice day ^-^</value>
     <value>Comic Sans MS, 15pt</value>
   </data>
   <data name="linkLabel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 320</value>
+    <value>21, 325</value>
   </data>
   <data name="linkLabel8.Size" type="System.Drawing.Size, System.Drawing">
     <value>282, 28</value>
@@ -509,7 +515,7 @@ Thanks and have a nice day ^-^</value>
     <value>NoControl</value>
   </data>
   <data name="linkLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 180</value>
+    <value>21, 185</value>
   </data>
   <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>461, 28</value>
@@ -548,7 +554,7 @@ Thanks and have a nice day ^-^</value>
     <value>NoControl</value>
   </data>
   <data name="linkLabel9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 264</value>
+    <value>21, 269</value>
   </data>
   <data name="linkLabel9.Size" type="System.Drawing.Size, System.Drawing">
     <value>362, 28</value>
@@ -587,7 +593,7 @@ Thanks and have a nice day ^-^</value>
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 508</value>
+    <value>329, 513</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>400, 39</value>
@@ -626,7 +632,7 @@ Thanks and have a nice day ^-^</value>
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1040, 590</value>
+    <value>1045, 600</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

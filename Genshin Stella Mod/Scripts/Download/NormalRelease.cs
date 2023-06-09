@@ -17,10 +17,6 @@ namespace StellaLauncher.Scripts.Download
         // Files
         public static readonly string SetupPathExe = Path.Combine(Path.GetTempPath(), "Stella_Mod_Update.exe");
 
-        // Custom
-        private static string _remoteVersion;
-        private static DateTime _remoteVerDate;
-
         // Main
         private static Label _status_Label;
         private static Label _preparingPleaseWait;
@@ -45,9 +41,7 @@ namespace StellaLauncher.Scripts.Download
         private static LinkLabel _website_LinkLabel;
 
         // Right
-        private static LinkLabel _version_LinkLabel;
         private static LinkLabel _updates_LinkLabel;
-        private static PictureBox _updateIco_PictureBox;
 
         // Download
         private static double _downloadSpeed;
@@ -88,9 +82,6 @@ namespace StellaLauncher.Scripts.Download
             PictureBox updateIco_PictureBox
         )
         {
-            _remoteVersion = remoteVersion;
-            _remoteVerDate = remoteVerDate;
-
             _status_Label = status_Label;
             _preparingPleaseWait = PreparingPleaseWait;
             _progressBar1 = progressBar1;
@@ -111,9 +102,7 @@ namespace StellaLauncher.Scripts.Download
             _websiteIco_PictureBox = websiteIco_PictureBox;
             _website_LinkLabel = website_LinkLabel;
 
-            _version_LinkLabel = version_LinkLabel;
             _updates_LinkLabel = updates_LinkLabel;
-            _updateIco_PictureBox = updateIco_PictureBox;
 
             // 1
             version_LinkLabel.Text = $@"v{Program.AppVersion} → v{remoteVersion}";
@@ -275,7 +264,7 @@ namespace StellaLauncher.Scripts.Download
             _downloadSpeed = bytesReceived / elapsedTime.TotalSeconds;
             double downloadSpeedInMb = _downloadSpeed / (1024 * 1024);
 
-            _preparingPleaseWait.Text = $"{string.Format(Resources.NormalRelease_DownloadingUpdate_, $"{bytesReceivedMb:00.00}", $"{bytesReceiveMb:000.00}")}  [{downloadSpeedInMb:00.00} MB/s]";
+            _preparingPleaseWait.Text = $@"{string.Format(Resources.NormalRelease_DownloadingUpdate_, $"{bytesReceivedMb:00.00}", $"{bytesReceiveMb:000.00}")} [{downloadSpeedInMb:00.00} MB/s]";
 
             Log.Output(string.Format(Resources.NormalRelease_DownloadingNewUpdate_, $"{bytesReceivedMb:00.00}", $"{bytesReceiveMb:000.00}", $"{downloadSpeedInMb:00.00}"));
         }

@@ -47,7 +47,7 @@ namespace PrepareStella.Forms
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(776, 65);
             this.label4.TabIndex = 14;
-            this.label4.Text = ">> in path <<\r\n";
+            this.label4.Text = ">> in the localizations <<\r\n";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button3
@@ -77,16 +77,16 @@ namespace PrepareStella.Forms
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(53, 195);
+            this.label2.Location = new System.Drawing.Point(53, 216);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(271, 21);
+            this.label2.Size = new System.Drawing.Size(339, 21);
             this.label2.TabIndex = 11;
-            this.label2.Text = "> Please select GenshinImpact.exe file";
+            this.label2.Text = "> Please select the correct executable (.exe) file:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(57, 219);
+            this.button1.Location = new System.Drawing.Point(57, 240);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 21);
             this.button1.TabIndex = 10;
@@ -99,7 +99,7 @@ namespace PrepareStella.Forms
             this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(152, 219);
+            this.comboBox1.Location = new System.Drawing.Point(152, 240);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(579, 21);
             this.comboBox1.TabIndex = 9;

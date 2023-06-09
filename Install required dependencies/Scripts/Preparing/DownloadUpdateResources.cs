@@ -3,11 +3,8 @@ using System.IO;
 using System.IO.Compression;
 using System.Net;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using Newtonsoft.Json;
-using PrepareStella.Forms;
 using PrepareStella.Models;
-using PrepareStella.Properties;
 
 namespace PrepareStella.Scripts.Preparing
 {
@@ -18,26 +15,7 @@ namespace PrepareStella.Scripts.Preparing
     {
         public static async Task Run()
         {
-            string resourcesPath = Path.Combine(Program.AppData, "resources-path.sfn");
-            if (File.Exists(resourcesPath))
-            {
-                string fileWithGamePath = File.ReadAllText(resourcesPath).Trim();
-                if (Directory.Exists(fileWithGamePath))
-                {
-                    Program.ResourcesGlobal = fileWithGamePath;
-                }
-                else
-                {
-                    Console.WriteLine($@"Not found in: {fileWithGamePath}");
-                    Application.Run(new SelectShadersPath { Icon = Resources.icon });
-                }
-            }
-            else
-            {
-                Application.Run(new SelectShadersPath { Icon = Resources.icon });
-            }
-
-            if (!Directory.Exists(Program.ResourcesGlobal) && Program.ResourcesGlobal != null)
+            if (!Directory.Exists(Program.ResourcesGlobal))
             {
                 Directory.CreateDirectory(Program.ResourcesGlobal);
                 Console.WriteLine($@"Created folder: {Program.ResourcesGlobal}");
@@ -96,8 +74,10 @@ namespace PrepareStella.Scripts.Preparing
 
         private static void ConfigureReShade(string resourcesGlobal)
         {
-            string reShadeIniFile = File.ReadAllText(Program.ReShadeConfig);
-            string reShadeData = reShadeIniFile?
+            string reshadeIniPath = Path.Combine(Program.GameDirGlobal, "ReShade.ini");
+
+            string reShadeIniContent = File.ReadAllText(reshadeIniPath);
+            string newData = reShadeIniContent?
                 .Replace("{addon.path}", Path.Combine(resourcesGlobal, "Addons"))
                 .Replace("{general.effects}", Path.Combine(resourcesGlobal, "Shaders", "Effects"))
                 .Replace("{general.cache}", Path.Combine(resourcesGlobal, "Cache"))
@@ -106,7 +86,7 @@ namespace PrepareStella.Scripts.Preparing
                 .Replace("{screenshot.path}", Path.Combine(resourcesGlobal, "Screenshots"))
                 .Replace("{screenshot.sound}", Path.Combine(Program.AppPath, "data", "sounds", "screenshot.wav"));
 
-            File.WriteAllText(Program.ReShadeConfig, reShadeData);
+            File.WriteAllText(reshadeIniPath, newData);
         }
     }
 }

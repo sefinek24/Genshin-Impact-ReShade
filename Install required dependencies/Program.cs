@@ -48,8 +48,6 @@ namespace PrepareStella
         public static string GameExeGlobal;
         public static string GameDirGlobal;
         public static string ResourcesGlobal;
-        public static string ReShadeConfig;
-        public static string ReShadeLogFile;
 
 
         [STAThread]
@@ -57,7 +55,11 @@ namespace PrepareStella
         {
             TaskbarManager.Instance.SetProgressValue(12, 100);
 
-            // Game path
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine("\n-- Select the correct paths --");
+
+
+            // Check game path
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write(@"» Game path: ");
             Console.ResetColor();
@@ -74,39 +76,82 @@ namespace PrepareStella
                 if (File.Exists(gamePathContent))
                 {
                     GameExeGlobal = gamePathContent;
+                    GameDirGlobal = Path.GetDirectoryName(gamePathContent);
                     Console.WriteLine(gamePathContent);
+                }
+            }
+
+            if (GameExeGlobal == null)
+            {
+                string selectedGameExe = null;
+
+                if (File.Exists(GameGenshinImpact))
+                {
+                    selectedGameExe = GameGenshinImpact;
+                }
+                else if (File.Exists(GameYuanShen))
+                {
+                    selectedGameExe = GameYuanShen;
                 }
                 else
                 {
-                    if (File.Exists(GameGenshinImpact))
-                    {
-                        GameExeGlobal = GameGenshinImpact;
-                        File.WriteAllText(GamePathSfn, GameGenshinImpact);
-                        Console.WriteLine(GameGenshinImpact);
-                    }
-                    else if (File.Exists(GameYuanShen))
-                    {
-                        GameExeGlobal = GameYuanShen;
-                        File.WriteAllText(GamePathSfn, GameYuanShen);
-                        Console.WriteLine(GameYuanShen);
-                    }
-                    else
-                    {
-                        Application.Run(new SelectGamePath { Icon = Resources.icon });
-                    }
+                    SelectGamePath form = new SelectGamePath(GameExeGlobal ?? $"{GameGenshinImpact}\n{GameYuanShen}") { Icon = Resources.icon };
+                    Application.Run(form);
+                }
+
+                if (selectedGameExe != null)
+                {
+                    GameExeGlobal = selectedGameExe;
+                    GameDirGlobal = Path.GetDirectoryName(selectedGameExe);
+                    File.WriteAllText(GamePathSfn, selectedGameExe);
+                    Console.WriteLine(selectedGameExe);
                 }
             }
 
             if (GameExeGlobal == null || !File.Exists(GameExeGlobal))
-                Log.ErrorAndExit(new Exception(
-                        $"Unknown\n\n{(GameExeGlobal != null ? $"File was not found: {GameExeGlobal}" : "Sorry. Full game path was not found.")}\nPlease delete all Stella Mod files from AppData (%appdata%) folder."),
-                    false, false);
+            {
+                string errorMessage = GameExeGlobal != null
+                    ? $"File was not found: {GameExeGlobal}"
+                    : "Sorry. Full game path was not found.";
+
+                Log.ErrorAndExit(new Exception($"Unknown\n\n{errorMessage}\nPlease delete all Stella Mod files from AppData (%appdata%) folder."), false, false);
+            }
+
+
+            // Check resources
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write(@"» Resources: ");
+            Console.ResetColor();
+
+            string resourcesPath = Path.Combine(AppData, "resources-path.sfn");
+            if (File.Exists(resourcesPath))
+            {
+                string sfnFileContent = File.ReadAllText(resourcesPath).Trim();
+                if (Directory.Exists(sfnFileContent))
+                    ResourcesGlobal = sfnFileContent;
+                else
+                    Application.Run(new SelectShadersPath { Icon = Resources.icon });
+            }
+            else
+            {
+                Application.Run(new SelectShadersPath { Icon = Resources.icon });
+            }
+
+            if (ResourcesGlobal != null)
+                Console.WriteLine(ResourcesGlobal);
+            else
+                Log.ErrorAndExit(new Exception("Unknown\n\nSorry. Directory with the resources was not found.\nPlease delete all Stella Mod files from AppData (%appdata%) folder."), false, false);
 
 
             TaskbarManager.Instance.SetProgressValue(26, 100);
 
+
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine("\n-- Run the final configuration --");
+            Console.ResetColor();
+
             // Read ini file
-            Console.WriteLine("\nStarting...");
+            Console.WriteLine(@"Starting...");
 
             // Save AppData path
             File.WriteAllText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "stella-appdata.sfn"), AppData);

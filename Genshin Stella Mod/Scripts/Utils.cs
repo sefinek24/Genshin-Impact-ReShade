@@ -2,7 +2,6 @@ using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -31,68 +30,48 @@ namespace StellaLauncher.Scripts
                 return string.Empty;
             }
 
-            string gameFilePath = File.ReadAllLines(FileWithGamePath).First();
-            string gamePath = Path.Combine(gameFilePath);
-            if (!Directory.Exists(gamePath))
+            string gameFilePath = File.ReadAllText(FileWithGamePath);
+            if (!File.Exists(gameFilePath))
             {
-                DialogResult result = MessageBox.Show(string.Format(Resources.Utils_FolderWithGamePathDoesNotExists_DoYouWantToResetAllSMSettings, gamePath), Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show(string.Format(Resources.Utils_FolderWithGamePathDoesNotExists_DoYouWantToResetAllSMSettings, gameFilePath), Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (result != DialogResult.Yes) return string.Empty;
                 Directory.Delete(Program.AppData, true);
                 await Cmd.CliWrap(FirstAppLaunch, null, null, true, false);
+
                 return string.Empty;
             }
-
 
             switch (type)
             {
                 case "giDir":
                 {
-                    Log.Output(string.Format(Resources.Utils_FoundMainGIDir, gamePath, "giDir"));
-                    return gamePath;
+                    string path = Path.GetDirectoryName(Path.GetDirectoryName(gameFilePath));
+                    Log.Output(string.Format(Resources.Utils_FoundMainGIDir, path, "giDir"));
+
+                    return path;
                 }
 
                 case "giGameDir":
                 {
-                    string genshinImpactGame = Path.Combine(gamePath, "Genshin Impact game");
-                    if (!Directory.Exists(genshinImpactGame))
-                    {
-                        Log.Output(string.Format(Resources.Utils_FoundGIgameDir__, genshinImpactGame, "giGameDir"));
-                        return string.Empty;
-                    }
+                    string path = Path.GetDirectoryName(gameFilePath);
+                    string giGameDir = Path.Combine(path);
+                    if (Directory.Exists(giGameDir)) return giGameDir;
 
-                    Log.Output(string.Format(Resources.Utils_FoundGIgameDir__, genshinImpactGame, "giGameDir"));
-                    return genshinImpactGame;
+                    Log.Output(string.Format(Resources.Utils_FoundGIgameDir__, giGameDir, "giGameDir"));
+                    return string.Empty;
                 }
 
                 case "giExe":
                 {
-                    string genshinImpactExeMain = Path.Combine(gamePath, "Genshin Impact game", "GenshinImpact.exe");
-                    if (File.Exists(genshinImpactExeMain))
-                    {
-                        Log.Output(string.Format(Resources.Utils_FoundGiExe, genshinImpactExeMain, "giExe1"));
-                        return genshinImpactExeMain;
-                    }
-
-                    MessageBox.Show(string.Format(Resources.Utils_FileDoesntNotExists_, genshinImpactExeMain), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Log.Output(string.Format(Resources.Utils_FileDoesNotExistsIn, genshinImpactExeMain, "giExe"));
-
-                    string genshinImpactExeYuanShen = Path.Combine(gamePath, "Genshin Impact game", "YuanShen.exe");
-                    if (File.Exists(genshinImpactExeYuanShen))
-                    {
-                        Log.Output(string.Format(Resources.Utils_FoundGiExe, genshinImpactExeMain, "giExe2"));
-                        return genshinImpactExeYuanShen;
-                    }
-
-                    MessageBox.Show(string.Format(Resources.Utils_File_DoesntNotExists, genshinImpactExeYuanShen), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Log.Output(string.Format(Resources.Utils_FileDoesNotExistsIn, genshinImpactExeYuanShen, "giExe"));
-
-                    return string.Empty;
+                    return gameFilePath;
                 }
 
                 case "giLauncher":
                 {
-                    string genshinImpactExe = Path.Combine(gamePath, "launcher.exe");
+                    string giDir = await GetGame("giDir");
+
+                    string genshinImpactExe = Path.Combine(giDir, "launcher.exe");
                     if (!File.Exists(genshinImpactExe))
                     {
                         MessageBox.Show(string.Format(Resources.Utils_LauncherFileDoesNotExists, genshinImpactExe), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);

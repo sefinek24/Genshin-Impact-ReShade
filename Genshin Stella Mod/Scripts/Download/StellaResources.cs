@@ -22,9 +22,6 @@ namespace StellaLauncher.Scripts.Download
 
         // Custom
         private static string _resourcesPath;
-        private static string _localResVersion;
-        private static string _remoteResVersion;
-        private static string _remoteResDate;
 
         // Main
         private static Label _status_Label;
@@ -52,7 +49,6 @@ namespace StellaLauncher.Scripts.Download
         // Right
         private static LinkLabel _version_LinkLabel;
         private static LinkLabel _updates_LinkLabel;
-        private static PictureBox _updateIco_PictureBox;
 
         // Download
         private static double _downloadSpeed;
@@ -97,9 +93,6 @@ namespace StellaLauncher.Scripts.Download
         )
         {
             _resourcesPath = resourcesPath;
-            _localResVersion = localResVersion;
-            _remoteResVersion = remoteResVersion;
-            _remoteResDate = remoteResDate;
 
             _status_Label = status_Label;
             _preparingPleaseWait = PreparingPleaseWait;
@@ -123,7 +116,6 @@ namespace StellaLauncher.Scripts.Download
 
             _version_LinkLabel = version_LinkLabel;
             _updates_LinkLabel = updates_LinkLabel;
-            _updateIco_PictureBox = updateIco_PictureBox;
 
 
             // 1
@@ -291,7 +283,7 @@ namespace StellaLauncher.Scripts.Download
             _downloadSpeed = bytesReceived / elapsedTime.TotalSeconds;
             double downloadSpeedInMb = _downloadSpeed / (1024 * 1024);
 
-            _preparingPleaseWait.Text = $"{string.Format(Resources.StellaResources_DownloadingResources, $"{bytesReceivedMb:00.00}", $"{bytesReceiveMb:00.00}")} [{downloadSpeedInMb:00.00} MB/s]";
+            _preparingPleaseWait.Text = $@"{string.Format(Resources.StellaResources_DownloadingResources, $"{bytesReceivedMb:00.00}", $"{bytesReceiveMb:00.00}")} [{downloadSpeedInMb:00.00} MB/s]";
 
             Log.Output(string.Format(Resources.NormalRelease_DownloadingNewUpdate_, $"{bytesReceivedMb:00.00}", $"{bytesReceiveMb:000.00}", $"{downloadSpeedInMb:00.00}"));
         }
@@ -323,7 +315,7 @@ namespace StellaLauncher.Scripts.Download
 
             _version_LinkLabel.Text = $@"v{Program.AppVersion}";
 
-            _status_Label.Text += $"[i] {Resources.StellaResources_SuccessfullyUpdatedResources}\n";
+            _status_Label.Text += $"[✓] {Resources.StellaResources_SuccessfullyUpdatedResources}\n";
             Log.Output(string.Format(Resources.StellaResources_SuccessfullyUnpacked, StellaResZip));
         }
 

@@ -656,7 +656,7 @@ Czy chcesz zresetować wszystkie ustawienia Stella Mod?</value>
   </data>
   <data name="Utils_FolderWithGamePathDoesNotExists_DoYouWantToResetAllSMSettings" xml:space="preserve">
     <value>Folder ze ścieżką gry nie istnieje:
-{ścieżka gry}
+{0}
 
 Czy chcesz zresetować wszystkie ustawienia Stella Mod?</value>
   </data>

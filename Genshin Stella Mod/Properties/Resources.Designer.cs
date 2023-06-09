@@ -1935,7 +1935,7 @@ namespace StellaLauncher.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to Folder with game path does not exists:
-        ///{gamePath}
+        ///{0}
         ///
         ///Do you want to reset all Stella Mod settings?.
         /// </summary>

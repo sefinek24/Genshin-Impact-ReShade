@@ -12,6 +12,12 @@ namespace PrepareStella.Forms
             InitializeComponent();
         }
 
+        private void SelectShadersPath_Load(object sender, EventArgs e)
+        {
+            comboBox1.Items.Add(Path.Combine(@"C:\", "Stella-Mod-Resources"));
+            comboBox1.SelectedIndex = 0;
+        }
+
         private void Browse_Click(object sender, EventArgs e)
         {
             string folderPath = string.Empty;
@@ -21,12 +27,12 @@ namespace PrepareStella.Forms
                 using (FolderBrowserDialog dialog = new FolderBrowserDialog())
                 {
                     dialog.SelectedPath = Program.ProgramFiles;
-                    dialog.Description = @"Select the game folder";
+                    dialog.Description = @"Select a custom folder for your mod resources.";
 
                     if (dialog.ShowDialog() != DialogResult.OK) return;
                     string selectedFolder = dialog.SelectedPath;
 
-                    if (File.Exists(Path.Combine(selectedFolder, "UnityPlayer.dll")))
+                    if (File.Exists(Path.Combine(selectedFolder, "UnityPlayer.dll")) || File.Exists(Path.Combine(selectedFolder, "launcher.exe")))
                     {
                         MessageBox.Show(@"That's not the right place.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
@@ -41,8 +47,10 @@ namespace PrepareStella.Forms
             t.Join();
 
             if (string.IsNullOrEmpty(folderPath)) return;
-            comboBox1.Items.Clear();
             comboBox1.Items.Add(Path.Combine(folderPath, "Stella-Mod-Resources"));
+            string bottomItem = comboBox1.Items[comboBox1.Items.Count - 1].ToString();
+            comboBox1.Items.Insert(0, bottomItem);
+            comboBox1.Items.RemoveAt(comboBox1.Items.Count - 1);
             comboBox1.SelectedIndex = 0;
         }
 
