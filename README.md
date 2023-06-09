@@ -82,6 +82,9 @@ that [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel) connects to
 | Community presets         | Presets created by our community.                                                                                            | [View folder](https://github.com/sefinek24/Genshin-Stella-Resources/tree/main/static/reshade/zip/Presets/1.%20Made%20by%20community) | [CC BY-SA 4.0](https://github.com/sefinek24/Genshin-Stella-Resources/blob/main/static/reshade/zip/Presets/LICENSE) |
 | Presets with Ray Tracing  | Only available for [Patrons](https://www.patreon.com/sefinek).                                                               | [Patreon](https://www.patreon.com/sefinek)                                                                                           |                                                                                                                    |
 
+> **Note**:
+> The repository with the resources is available here: [sefinek24/Genshin-Stella-Resources](https://github.com/sefinek24/Genshin-Stella-Resources)
+
 
 ## <div id="pc-requirements">✨ 〢 Requirements</div>
 
