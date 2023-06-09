@@ -149,7 +149,7 @@ Then, adjust the settings according to the recommended values based on your syst
 | **Brightness**              | Default                           | Default                              |
 | **FPS**                     | 60                                | 60                                   |
 | **Render Resolution**       | 1.0                               | 1.1 or higher                        |
-| **Shadow Quality**          | Medium                            | Medium                               |
+| **Shadow Quality**          | Medium                            | High                                 |
 | **Visual Effects**          | Medium                            | High                                 |
 | **SFX Quality**             | Medium                            | High                                 |
 | **Environment Detail**      | Medium                            | High                                 |
