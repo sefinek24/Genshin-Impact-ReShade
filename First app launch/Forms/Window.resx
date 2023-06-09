@@ -283,13 +283,13 @@
     <value>26, 266</value>
   </data>
   <data name="checkBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 24</value>
+    <value>351, 24</value>
   </data>
   <data name="checkBox2.TabIndex" type="System.Int32, mscorlib">
     <value>82</value>
   </data>
   <data name="checkBox2.Text" xml:space="preserve">
-    <value>Create new shortcuts on Desktop *</value>
+    <value>Create a new shortcut on the desktop *</value>
   </data>
   <data name="&gt;&gt;checkBox2.Name" xml:space="preserve">
     <value>checkBox2</value>
@@ -316,13 +316,13 @@
     <value>26, 290</value>
   </data>
   <data name="checkBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>352, 24</value>
+    <value>433, 24</value>
   </data>
   <data name="checkBox3.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
   </data>
   <data name="checkBox3.Text" xml:space="preserve">
-    <value>Create internet shortcuts in start menu</value>
+    <value>Create shortcuts to websites on the Start menu *</value>
   </data>
   <data name="&gt;&gt;checkBox3.Name" xml:space="preserve">
     <value>checkBox3</value>
@@ -349,13 +349,13 @@
     <value>26, 338</value>
   </data>
   <data name="checkBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>236, 24</value>
+    <value>461, 24</value>
   </data>
   <data name="checkBox4.TabIndex" type="System.Int32, mscorlib">
     <value>84</value>
   </data>
   <data name="checkBox4.Text" xml:space="preserve">
-    <value>Update ReShade config *</value>
+    <value>Download or update ReShade config [ReShade.ini] *</value>
   </data>
   <data name="&gt;&gt;checkBox4.Name" xml:space="preserve">
     <value>checkBox4</value>
@@ -382,13 +382,13 @@
     <value>26, 362</value>
   </data>
   <data name="checkBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 24</value>
+    <value>379, 24</value>
   </data>
   <data name="checkBox5.TabIndex" type="System.Int32, mscorlib">
     <value>85</value>
   </data>
   <data name="checkBox5.Text" xml:space="preserve">
-    <value>Update FPS Unlocker config *</value>
+    <value>Download or update FPS Unlocker config *</value>
   </data>
   <data name="&gt;&gt;checkBox5.Name" xml:space="preserve">
     <value>checkBox5</value>
@@ -515,13 +515,13 @@ Now let's proceed with completing the installation/update. Please select the app
     <value>26, 314</value>
   </data>
   <data name="checkBox7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>483, 24</value>
+    <value>521, 24</value>
   </data>
   <data name="checkBox7.TabIndex" type="System.Int32, mscorlib">
     <value>89</value>
   </data>
   <data name="checkBox7.Text" xml:space="preserve">
-    <value>Download or update shaders, default presets, addons *</value>
+    <value>Download or update resources (shaders, presets, addons) *</value>
   </data>
   <data name="&gt;&gt;checkBox7.Name" xml:space="preserve">
     <value>checkBox7</value>
