@@ -13,8 +13,6 @@ namespace PrepareStella.Scripts.Preparing
     {
         public static async Task Run()
         {
-            Console.WriteLine(@"Creating Desktop shortcut...");
-
             try
             {
                 string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.CommonDesktopDirectory);

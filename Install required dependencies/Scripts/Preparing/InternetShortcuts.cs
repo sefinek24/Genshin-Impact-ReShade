@@ -13,9 +13,7 @@ namespace PrepareStella.Scripts.Preparing
     {
         public static async Task Run()
         {
-            Console.WriteLine(@"Creating new Internet shortcut...");
-
-            string appStartMenuPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonStartMenu), "Programs", "Genshin Stella Mod");
+            string appStartMenuPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonStartMenu), "Programs", "Stella Mod Launcher");
             Directory.CreateDirectory(appStartMenuPath);
 
             try
@@ -24,10 +22,9 @@ namespace PrepareStella.Scripts.Preparing
                 await Task.Run(() =>
                 {
                     WshShell shell = new WshShell();
-                    string shortcutLocation = Path.Combine(appStartMenuPath, "Genshin Stella Mod.lnk");
+                    string shortcutLocation = Path.Combine(appStartMenuPath, "Genshin Impact Stella Mod.lnk");
                     IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(shortcutLocation);
-                    shortcut.Description = "Run the official Genshin Stella Mod Launcher made by Sefinek.";
-                    shortcut.IconLocation = Path.Combine(Program.AppPath, "icons", "52x52.ico");
+                    shortcut.Description = "Run the official launcher for Genshin Impact Stella Mod made by Sefinek.";
                     shortcut.WorkingDirectory = Program.AppPath;
                     shortcut.TargetPath = Path.Combine(Program.AppPath, "Genshin Stella Mod.exe");
                     shortcut.Save();
@@ -45,7 +42,7 @@ namespace PrepareStella.Scripts.Preparing
 
                 foreach (KeyValuePair<string, string> kvp in urls)
                 {
-                    string url = Path.Combine(appStartMenuPath, $"{kvp.Key} - GenshinStellaMod.url");
+                    string url = Path.Combine(appStartMenuPath, $"{kvp.Key} - Genshin Stella Mod.url");
                     using (StreamWriter writer = new StreamWriter(url))
                     {
                         await writer.WriteLineAsync($"[InternetShortcut]\nURL={kvp.Value}");

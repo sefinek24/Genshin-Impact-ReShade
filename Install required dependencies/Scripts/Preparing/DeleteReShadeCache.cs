@@ -14,8 +14,6 @@ namespace PrepareStella.Scripts.Preparing
 
         public static async Task Run()
         {
-            Console.WriteLine(@"Deleting ReShade cache...");
-
             int deletedFilesCount = 0;
             long savedSpace = 0;
             string cacheDirectoryPath = Path.Combine(Program.ResourcesGlobal, "Cache");

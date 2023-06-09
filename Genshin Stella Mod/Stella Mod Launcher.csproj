@@ -344,10 +344,7 @@
     <None Include="dependencies\Microsoft.VCLibs.x64.14.00.Desktop.appx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="dependencies\WindowsTerminal_Win10.msixbundle">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="dependencies\WindowsTerminal_Win11.msixbundle">
+    <None Include="dependencies\Microsoft.WindowsTerminal_1.17.11461.0_8wekyb3d8bbwe.msixbundle">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="dev\build.cmd">

@@ -4,7 +4,9 @@ using System.IO.Compression;
 using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 using PrepareStella.Forms;
+using PrepareStella.Models;
 using PrepareStella.Properties;
 
 namespace PrepareStella.Scripts.Preparing
@@ -16,8 +18,6 @@ namespace PrepareStella.Scripts.Preparing
     {
         public static async Task Run()
         {
-            Console.WriteLine(@"Checking Stella resources...");
-
             string resourcesPath = Path.Combine(Program.AppData, "resources-path.sfn");
             if (File.Exists(resourcesPath))
             {
@@ -49,7 +49,12 @@ namespace PrepareStella.Scripts.Preparing
 
             Console.WriteLine(@"Downloading presets and shaders...");
 
-            string zipPath = Path.Combine(Program.ResourcesGlobal, "Resources - Backup.zip");
+            WebClient wb = new WebClient();
+            wb.Headers.Add("user-agent", Program.UserAgent);
+            string res = await wb.DownloadStringTaskAsync("https://api.sefinek.net/api/v4/genshin-stella-mod/version/app/launcher/resources");
+            StellaResources json = JsonConvert.DeserializeObject<StellaResources>(res);
+
+            string zipPath = Path.Combine(Program.ResourcesGlobal, $"Stella resources - v{json.Message}.zip");
             using (WebClient webClient = new WebClient())
             {
                 webClient.Headers.Add("user-agent", Program.UserAgent);

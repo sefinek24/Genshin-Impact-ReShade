@@ -12,8 +12,6 @@ namespace PrepareStella.Scripts.Preparing
     {
         public static async Task Run()
         {
-            Console.WriteLine(@"Downloading ReShade files...");
-
             if (Directory.Exists(Program.GameDirGlobal))
             {
                 // ReShade.ini

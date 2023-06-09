@@ -14,9 +14,6 @@ namespace PrepareStella.Scripts.Preparing
     {
         public static async Task Run()
         {
-            // Make backup
-            Console.Write(@"Backing up the Windows Terminal configuration file in app data... ");
-
             string wtAppDataLocal = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Microsoft", "Windows Terminal");
             if (!Directory.Exists(wtAppDataLocal))
             {
@@ -67,8 +64,8 @@ namespace PrepareStella.Scripts.Preparing
             // Installing
             Console.WriteLine(@"Installing latest Windows Terminal...");
 
-            if (!File.Exists(Program.WtWin10Setup) || !File.Exists(Program.WtWin11Setup))
-                Log.ErrorAndExit(new Exception($"I can't find a required file.\n\n{Program.WtWin10Setup} or {Program.WtWin11Setup}\n\nPlease unpack all files from zip archive and try again."), false, false);
+            if (!File.Exists(Program.WtMsixBundle))
+                Log.ErrorAndExit(new Exception($"I can't find a required file: {Program.WtMsixBundle}"), false, false);
 
             Process[] dllHostName = Process.GetProcessesByName("dllhost");
             if (dllHostName.Length != 0) await Cmd.CliWrap("taskkill", "/F /IM dllhost.exe", null);
@@ -77,16 +74,7 @@ namespace PrepareStella.Scripts.Preparing
 
             try
             {
-                if (Environment.OSVersion.Version.Build >= 22000)
-                {
-                    await Cmd.CliWrap("powershell", $"Add-AppxPackage -Path \"{Program.WtWin11Setup}\"", Program.AppPath);
-                    Log.Output($"Installed WT for Win 11: {Program.WtWin11Setup}");
-                }
-                else
-                {
-                    await Cmd.CliWrap("powershell", $"Add-AppxPackage -Path \"{Program.WtWin10Setup}\"", Program.AppPath);
-                    Log.Output($"Installed WT for Win 10: {Program.WtWin10Setup}");
-                }
+                await Cmd.CliWrap("powershell", $"Add-AppxPackage -Path \"{Program.WtMsixBundle}\"", Program.AppPath);
             }
             catch (Exception ex)
             {

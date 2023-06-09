@@ -37,8 +37,8 @@ namespace PrepareStella
         private static readonly string InstalledViaSetup = Path.Combine(AppData, "configured.sfn");
 
         // Dependencies
-        public static readonly string WtWin10Setup = Path.Combine("dependencies", "WindowsTerminal_Win10.msixbundle");
-        public static readonly string WtWin11Setup = Path.Combine("dependencies", "WindowsTerminal_Win11.msixbundle");
+        public static readonly string VcLibsAppx = Path.Combine("dependencies", "Microsoft.VCLibs.x64.14.00.Desktop.appx");
+        public static readonly string WtMsixBundle = Path.Combine("dependencies", "Microsoft.WindowsTerminal_1.17.11461.0_8wekyb3d8bbwe.msixbundle");
 
         // Other
         public static readonly string UserAgent = $"Mozilla/5.0 (compatible; PrepareStella/{AppVersion}; +{AppWebsite})";
@@ -124,32 +124,61 @@ namespace PrepareStella
             int newIntShortcuts = PrepareIni.ReadInt("PrepareStella", "InternetShortcutsInStartMenu", 1);
 
             // Download and prepare ReShade config
-            if (updateReShadeCfg == 1) await UpdateReShadeCfg.Run();
-            TaskbarManager.Instance.SetProgressValue(51, 100);
+            if (updateReShadeCfg == 1)
+            {
+                Console.WriteLine(@"Downloading ReShade files...");
+                await UpdateReShadeCfg.Run();
+                TaskbarManager.Instance.SetProgressValue(51, 100);
+            }
 
             // Download shaders, presets and addons (Stella resources)
-            if (downloadOrUpdateShaders == 1) await DownloadUpdateResources.Run();
-            TaskbarManager.Instance.SetProgressValue(68, 100);
+            if (downloadOrUpdateShaders == 1)
+            {
+                Console.WriteLine(@"Checking Stella resources...");
+                await DownloadUpdateResources.Run();
+                TaskbarManager.Instance.SetProgressValue(68, 100);
+            }
 
             // Download FPS Unlocker config
-            if (updateFpsUnlockerCfg == 1) await DownloadFpsUnlockerCfg.Run();
-            TaskbarManager.Instance.SetProgressValue(76, 100);
+            if (updateFpsUnlockerCfg == 1)
+            {
+                Console.WriteLine(@"Downloading FPS Unlocker configuration...");
+                await DownloadFpsUnlockerCfg.Run();
+                TaskbarManager.Instance.SetProgressValue(76, 100);
+            }
 
             // Delete ReShade cache
-            if (delReShadeCache == 1) await DeleteReShadeCache.Run();
-            TaskbarManager.Instance.SetProgressValue(82, 100);
+            if (delReShadeCache == 1)
+            {
+                Console.WriteLine(@"Deleting ReShade cache...");
+                await DeleteReShadeCache.Run();
+                TaskbarManager.Instance.SetProgressValue(82, 100);
+            }
+
 
             // Windows Terminal installation
-            if (installWtUpdate == 1) await TerminalInstallation.Run();
-            TaskbarManager.Instance.SetProgressValue(87, 100);
+            if (installWtUpdate == 1)
+            {
+                Console.Write(@"Backing up the Windows Terminal configuration file in app data... ");
+                await TerminalInstallation.Run();
+                TaskbarManager.Instance.SetProgressValue(87, 100);
+            }
 
             // Create or update Desktop icon
-            if (newShortcuts == 1) await DesktopIcon.Run();
-            TaskbarManager.Instance.SetProgressValue(39, 100);
+            if (newShortcuts == 1)
+            {
+                Console.WriteLine(@"Creating Desktop shortcut...");
+                await DesktopIcon.Run();
+                TaskbarManager.Instance.SetProgressValue(39, 100);
+            }
 
             // Create new Internet shortcuts in menu start
-            if (newIntShortcuts == 1) await InternetShortcuts.Run();
-            TaskbarManager.Instance.SetProgressValue(45, 100);
+            if (newIntShortcuts == 1)
+            {
+                Console.WriteLine(@"Creating new Internet shortcut...");
+                await InternetShortcuts.Run();
+                TaskbarManager.Instance.SetProgressValue(45, 100);
+            }
 
 
             // Create files

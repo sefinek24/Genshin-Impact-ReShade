@@ -12,8 +12,6 @@ namespace PrepareStella.Scripts.Preparing
     {
         public static async Task Run()
         {
-            Console.WriteLine(@"Downloading FPS Unlocker configuration...");
-
             try
             {
                 string unlockerFolderPath = Path.Combine(Program.AppPath, "data", "unlocker");
