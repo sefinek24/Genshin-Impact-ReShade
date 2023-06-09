@@ -295,10 +295,10 @@ Karty RTX nie są wymagane.</value>
     <value>354, 565</value>
   </data>
   <data name="updates_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>805, 565</value>
+    <value>796, 565</value>
   </data>
   <data name="updates_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 23</value>
+    <value>208, 23</value>
   </data>
   <data name="updates_LinkLabel.Text" xml:space="preserve">
     <value>Oczekiwanie...</value>
@@ -310,7 +310,10 @@ Karty RTX nie są wymagane.</value>
     <value>141, 565</value>
   </data>
   <data name="progressBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>787, 23</value>
+    <value>778, 23</value>
+  </data>
+  <data name="PreparingPleaseWait.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 541</value>
   </data>
   <data name="PreparingPleaseWait.Text" xml:space="preserve">
     <value>Proszę czekać...</value>
