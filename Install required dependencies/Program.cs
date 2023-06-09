@@ -123,6 +123,7 @@ namespace PrepareStella
             int newShortcuts = PrepareIni.ReadInt("PrepareStella", "NewShortcutsOnDesktop", 1);
             int newIntShortcuts = PrepareIni.ReadInt("PrepareStella", "InternetShortcutsInStartMenu", 1);
 
+
             // Download and prepare ReShade config
             if (updateReShadeCfg == 1)
             {
@@ -155,7 +156,6 @@ namespace PrepareStella
                 TaskbarManager.Instance.SetProgressValue(82, 100);
             }
 
-
             // Windows Terminal installation
             if (installWtUpdate == 1)
             {
@@ -186,6 +186,7 @@ namespace PrepareStella
             if (!File.Exists(configuredSfn)) File.Create(configuredSfn);
 
             TaskbarManager.Instance.SetProgressValue(100, 100);
+
 
             // Reboot is required?
             if (Cmd.RebootNeeded)
