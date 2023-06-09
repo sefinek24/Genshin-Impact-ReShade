@@ -116,28 +116,37 @@ namespace StellaLauncher
 
                 switch (launchCount)
                 {
-                    case 3:
-                    case 10:
-                    case 18:
+                    case 5:
+                    case 20:
+                    case 30:
                         DialogResult discordResult = MessageBox.Show(Resources.Program_DoYouWantToJoinOurDiscord, AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         Log.Output(string.Format(Resources.Program_QuestionMessageBox_DoYouWantToJoinOurDiscord_, discordResult));
                         if (discordResult == DialogResult.Yes) Utils.OpenUrl(Discord.Invitation);
                         break;
 
-                    case 6:
-                    case 20:
-                    case 42:
-                    case 63:
+                    case 2:
+                    case 12:
+                    case 40:
+                        DialogResult feedbackResult = MessageBox.Show(Resources.Program_WouldYouShareOpinionAboutStellaMod, AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        Log.Output(string.Format(Resources.Program_QuestionMessageBox_WouldYouShareOpinionAboutStellaMod, feedbackResult));
+                        if (feedbackResult == DialogResult.Yes) Utils.OpenUrl("https://www.trustpilot.com/review/genshin.sefinek.net");
+                        break;
+
+                    case 3:
+                    case 10:
+                    case 25:
+                    case 35:
+                    case 45:
                         if (!File.Exists(TierActivated)) Application.Run(new SupportMe { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) });
                         return;
 
-                    case 26:
-                    case 38:
-                    case 60:
+                    case 28:
+                    case 70:
                     case 100:
                     case 200:
+                    case 300:
                         DialogResult logFilesResult = MessageBox.Show(Resources.Program_DoYouWantToSendUsanonymousLogFiles, AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        Log.Output(string.Format(Resources.Program_QuestionDoYouWantToSendUsanonymousLogFiles_, logFilesResult));
+                        Log.Output(string.Format(Resources.Program_QuestionMessageBox_DoYouWantToSendUsanonymousLogFiles_, logFilesResult));
                         if (logFilesResult == DialogResult.Yes)
                         {
                             Telemetry.SendLogFiles();

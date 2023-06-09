@@ -490,11 +490,14 @@ Chcesz zobaczyć te pliki?</value>
   <data name="Program_OneInstanceIsCurrentlyOpen" xml:space="preserve">
     <value>Obecnie jest uruchomiona jedna instancja.</value>
   </data>
-  <data name="Program_QuestionDoYouWantToSendUsanonymousLogFiles_" xml:space="preserve">
+  <data name="Program_QuestionMessageBox_DoYouWantToSendUsanonymousLogFiles_" xml:space="preserve">
     <value>Pytanie (Okno MessageBox): Czy chcesz przesłać pliki dziennika (logi)? Wybrano: {0}</value>
   </data>
   <data name="Program_QuestionMessageBox_DoYouWantToJoinOurDiscord_" xml:space="preserve">
     <value>Pytanie (Okno MessageBox): Czy chcesz dołączyć do naszego serwera Discord? Wybrano: {0}</value>
+  </data>
+  <data name="Program_QuestionMessageBox_WouldYouShareOpinionAboutStellaMod" xml:space="preserve">
+    <value>Pytanie (MessageBox): Czy podzielisz się swoją opinią na temat Stella Mod na trustpilot.com? Będziemy bardzo wdzięczni! Wybrano: {0}</value>
   </data>
   <data name="Program_RequiredFileFisrtAppLaunchExeWasNotFound_" xml:space="preserve">
     <value>Nie znaleziono wymaganego pliku "First app launch.exe". Proszę ponownie zainstalować tę aplikację lub dołączyć do naszego serwera Discord, aby uzyskać pomoc.</value>
@@ -503,6 +506,9 @@ Chcesz zobaczyć te pliki?</value>
     <value>Przepraszam, obecnie jest uruchomiona jedna instancja.
 
 Zamknij proces o nazwie {0} i spróbuj ponownie.</value>
+  </data>
+  <data name="Program_WouldYouShareOpinionAboutStellaMod" xml:space="preserve">
+    <value>Czy podzielisz się swoją opinią na temat Stella Mod na trustpilot.com? Będziemy bardzo wdzięczni!</value>
   </data>
   <data name="RandomImages_AnimeName" xml:space="preserve">
     <value>Nazwa anime</value>
@@ -639,6 +645,14 @@ Zamknij proces o nazwie {0} i spróbuj ponownie.</value>
 
 {1}</value>
   </data>
+  <data name="Utils_FileDoesNotExistsIn" xml:space="preserve">
+    <value>Plik nie istnieje w: {0} [{1}]</value>
+  </data>
+  <data name="Utils_FileDoesntNotExists_" xml:space="preserve">
+    <value>Plik nie istnieje.
+
+{0}</value>
+  </data>
   <data name="Utils_FileWithGamePathWasNotFoundIn" xml:space="preserve">
     <value>Nie znaleziono pliku ze ścieżką gry w: {0}</value>
   </data>
@@ -647,6 +661,9 @@ Zamknij proces o nazwie {0} i spróbuj ponownie.</value>
 {0}
 
 Czy chcesz zresetować wszystkie ustawienia Stella Mod?</value>
+  </data>
+  <data name="Utils_File_DoesntNotExists" xml:space="preserve">
+    <value>Plik {0} nie został odnaleziony.</value>
   </data>
   <data name="Utils_File_WasFoundAt_" xml:space="preserve">
     <value>Plik '{0}' został znaleziony w '{1}'.</value>
@@ -702,5 +719,8 @@ Czy chcesz pobrać tę zależność z witryny firmy Microsoft?</value>
   </data>
   <data name="WebView2Handler_OhhSorrySomethingWentWrongWithWV2" xml:space="preserve">
     <value>Przepraszamy. Coś poszło nie tak z WebView2.</value>
+  </data>
+  <data name="Cmd_SuccessfullyExecutedCommand" xml:space="preserve">
+    <value>CliWrap: Pomyślnie wykonano {0}; Kod wyjścia: {1}; Czas rozpoczęcia: {2}; Czas zakończenia: {3}{4}{5};</value>
   </data>
 </root>

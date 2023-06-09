@@ -430,7 +430,7 @@ Would you like to download this file now to prevent future errors and manual con
 
 Do you want to see these files?</value>
   </data>
-  <data name="Program_QuestionDoYouWantToSendUsanonymousLogFiles_" xml:space="preserve">
+  <data name="Program_QuestionMessageBox_DoYouWantToSendUsanonymousLogFiles_" xml:space="preserve">
     <value>Question (MessageBox): Do you want to send log files? Selected: {0}</value>
   </data>
   <data name="Program_QuestionMessageBox_DoYouWantToJoinOurDiscord_" xml:space="preserve">
@@ -801,7 +801,7 @@ The requested operation is successful. Changes will not be effective until the s
     <value>New update of the resources is available from {0}.</value>
   </data>
   <data name="StellaResources_SuccessfullyUnpacked" xml:space="preserve">
-    <value>Succesfully unpacked: {0}</value>
+    <value>Successfully unpacked: {0}</value>
   </data>
   <data name="StellaResources_SuccessfullyUpdatedResources" xml:space="preserve">
     <value>Successfully updated resources.</value>
@@ -817,5 +817,11 @@ The requested operation is successful. Changes will not be effective until the s
   </data>
   <data name="StellaResources_UpdateSize" xml:space="preserve">
     <value>Update size: {0}</value>
+  </data>
+  <data name="Program_WouldYouShareOpinionAboutStellaMod" xml:space="preserve">
+    <value>Would you share your opinion about Stella Mod on trustpilot.com? I would be very grateful.</value>
+  </data>
+  <data name="Program_QuestionMessageBox_WouldYouShareOpinionAboutStellaMod" xml:space="preserve">
+    <value>Question (MessageBox): Would you share your opinion about Stella Mod on trustpilot.com? I would be very grateful. Selected: {0}</value>
   </data>
 </root>

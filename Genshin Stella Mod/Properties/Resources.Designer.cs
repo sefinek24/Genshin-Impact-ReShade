@@ -1432,20 +1432,29 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Question (MessageBox): Do you want to send log files? Selected: {0}.
-        /// </summary>
-        internal static string Program_QuestionDoYouWantToSendUsanonymousLogFiles_ {
-            get {
-                return ResourceManager.GetString("Program_QuestionDoYouWantToSendUsanonymousLogFiles_", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Question (MessageBox): Do you want to join our Discord server? Selected: {0}.
         /// </summary>
         internal static string Program_QuestionMessageBox_DoYouWantToJoinOurDiscord_ {
             get {
                 return ResourceManager.GetString("Program_QuestionMessageBox_DoYouWantToJoinOurDiscord_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Question (MessageBox): Do you want to send log files? Selected: {0}.
+        /// </summary>
+        internal static string Program_QuestionMessageBox_DoYouWantToSendUsanonymousLogFiles_ {
+            get {
+                return ResourceManager.GetString("Program_QuestionMessageBox_DoYouWantToSendUsanonymousLogFiles_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Question (MessageBox): Would you share your opinion about Stella Mod on trustpilot.com? I would be very grateful. Selected: {0}.
+        /// </summary>
+        internal static string Program_QuestionMessageBox_WouldYouShareOpinionAboutStellaMod {
+            get {
+                return ResourceManager.GetString("Program_QuestionMessageBox_WouldYouShareOpinionAboutStellaMod", resourceCulture);
             }
         }
         
@@ -1466,6 +1475,15 @@ namespace StellaLauncher.Properties {
         internal static string Program_SorryOneInstanceIsCurrentlyOpen_ {
             get {
                 return ResourceManager.GetString("Program_SorryOneInstanceIsCurrentlyOpen_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Would you share your opinion about Stella Mod on trustpilot.com? I would be very grateful..
+        /// </summary>
+        internal static string Program_WouldYouShareOpinionAboutStellaMod {
+            get {
+                return ResourceManager.GetString("Program_WouldYouShareOpinionAboutStellaMod", resourceCulture);
             }
         }
         
@@ -1643,7 +1661,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Succesfully unpacked: {0}.
+        ///   Looks up a localized string similar to Successfully unpacked: {0}.
         /// </summary>
         internal static string StellaResources_SuccessfullyUnpacked {
             get {

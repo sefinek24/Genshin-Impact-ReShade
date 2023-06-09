@@ -126,7 +126,7 @@ namespace StellaLauncher.Scripts
             try
             {
                 Process.Start(url);
-                Log.Output(Resources.Utils_Opened_InDefaultBrowser);
+                Log.Output(string.Format(Resources.Utils_Opened_InDefaultBrowser, url));
             }
             catch (Exception ex)
             {
