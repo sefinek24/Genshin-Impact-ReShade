@@ -2,7 +2,7 @@
     <h1>🌟 Genshin Impact Stella Mod Pack 🌟</h1>
     <p>
         <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Assets/Images/banner/rounded-corners/compressed.png" title="See preview [data/images/banner/border/1.png]">
-            <img src="Assets/Images/Banner/rounded-corners/compressed.png" alt="Header image">
+            <img src="Assets/Images/Banners/rounded-corners/compressed.png" alt="Header image">
         </a>
     </p>
     <a href="https://sefinek.net" title="sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=Website&up_message=Online&url=https%3A%2F%2Fsefinek.net" alt="Status page"></a>
