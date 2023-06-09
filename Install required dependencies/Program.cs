@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Win32;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using PrepareStella.Forms;
 using PrepareStella.Properties;
@@ -48,6 +49,8 @@ namespace PrepareStella
         public static string GameDirGlobal;
         public static string ResourcesGlobal;
 
+        // Registry
+        public static string RegistryPath = @"SOFTWARE\Stella Mod Launcher";
 
         [STAThread]
         public static async Task Start()
@@ -225,6 +228,16 @@ namespace PrepareStella
             if (!Directory.Exists(AppData)) Directory.CreateDirectory(AppData);
             if (!File.Exists(ConfiguredSfn)) File.Create(ConfiguredSfn);
 
+
+            // Registry
+            using (RegistryKey newKey = Registry.CurrentUser.CreateSubKey(RegistryPath))
+            {
+                newKey?.SetValue("AppIsConfigured", 1);
+                newKey?.SetValue("ConfiguredDate", DateTime.Now);
+            }
+
+
+            // Final
             TaskbarManager.Instance.SetProgressValue(100, 100);
 
 

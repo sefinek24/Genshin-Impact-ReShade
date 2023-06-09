@@ -9,6 +9,7 @@ using System.Net;
 using System.Runtime.Caching;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Win32;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using Newtonsoft.Json;
 using StellaLauncher.Forms.Other;
@@ -56,6 +57,12 @@ namespace StellaLauncher.Forms
             string mainGameDir = await Utils.GetGame("giGameDir");
             string reShadePath = Path.Combine(mainGameDir, "ReShade.ini");
             if (File.Exists(reShadePath)) ReShadeIni = new IniFile(reShadePath);
+
+            // Registry
+            using (RegistryKey key2 = Registry.CurrentUser.CreateSubKey(Program.RegistryPath))
+            {
+                key2?.SetValue("LastRunTime", DateTime.Now);
+            }
 
             // Background
             int bgInt = Program.Settings.ReadInt("Launcher", "Background", 0);

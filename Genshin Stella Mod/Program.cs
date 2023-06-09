@@ -6,6 +6,7 @@ using System.IO;
 using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
+using Microsoft.Win32;
 using StellaLauncher.Forms;
 using StellaLauncher.Forms.Errors;
 using StellaLauncher.Forms.Other;
@@ -39,6 +40,9 @@ namespace StellaLauncher
 
         // Config
         public static IniFile Settings;
+
+        // Registry
+        public static string RegistryPath = @"SOFTWARE\Stella Mod Launcher";
 
         [STAThread]
         private static void Main()
@@ -80,16 +84,14 @@ namespace StellaLauncher
                 Environment.Exit(998765341);
             }
 
-            if (!File.Exists(_appIsConfigured))
+            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(RegistryPath))
             {
-                if (!File.Exists(PrepareLauncher))
+                int value = (int)(key?.GetValue("AppIsConfigured") ?? 0);
+                if (value == 0)
                 {
-                    MessageBox.Show(Resources.Program_RequiredFileFisrtAppLaunchExeWasNotFound_, AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    _ = Cmd.CliWrap(PrepareLauncher, null, AppPath, true, false);
                     Environment.Exit(997890421);
                 }
-
-                _ = Cmd.CliWrap(PrepareLauncher, null, AppPath, true, false);
-                Environment.Exit(997890421);
             }
 
 
@@ -107,10 +109,10 @@ namespace StellaLauncher
             {
                 if (!File.Exists(TierActivated) && Directory.Exists(PatronsDir)) Directory.Delete(PatronsDir, true);
 
-                int launchCount = Settings.ReadInt("Launcher", "LaunchCount", 0);
+                RegistryKey key = Registry.CurrentUser.CreateSubKey(RegistryPath);
+                int launchCount = (int)key?.GetValue("LaunchCount", 0);
                 launchCount++;
-                Settings.WriteInt("Launcher", "LaunchCount", launchCount);
-                Settings.Save();
+                key.SetValue("LaunchCount", launchCount);
 
                 switch (launchCount)
                 {
