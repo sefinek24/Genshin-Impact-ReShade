@@ -170,16 +170,16 @@ namespace ConfWindow.Forms
         {
             SaveIniData();
 
-            string exeFile = Path.Combine(AppPath, "Prepare Stella Mod.exe");
-            if (!File.Exists(exeFile))
+            string prepareStellaExe = Path.Combine(AppPath, "Prepare Stella Mod.exe");
+            if (!File.Exists(prepareStellaExe))
             {
-                MessageBox.Show(string.Format(Resources.RequiredFile_WasNotFound, exeFile), AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format(Resources.RequiredFile_WasNotFound, prepareStellaExe), AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             Process.Start(new ProcessStartInfo
             {
-                FileName = exeFile,
+                FileName = prepareStellaExe,
                 WorkingDirectory = AppPath,
                 Verb = "runas",
                 UseShellExecute = true
