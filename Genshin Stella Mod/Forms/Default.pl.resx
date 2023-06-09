@@ -137,7 +137,7 @@
     <value>Wyjdź z programu uruchamiającego</value>
   </data>
   <data name="githubUrl_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>633, 113</value>
+    <value>666, 113</value>
   </data>
   <data name="githubUrl_LinkLabel.ToolTip" xml:space="preserve">
     <value>Główne repozytorium GitHub. Oznacz repozytorium gwiazdką, jeśli podoba Ci się moja praca.</value>
@@ -155,7 +155,7 @@
     <value>564, 43</value>
   </data>
   <data name="githubIco_Picturebox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>602, 113</value>
+    <value>634, 113</value>
   </data>
   <data name="tools_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 23</value>
