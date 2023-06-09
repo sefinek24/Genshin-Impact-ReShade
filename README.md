@@ -118,11 +118,11 @@ that [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel) connects to
 2. Run the setup file `Stella-Mod-Setup.exe` and follow the on-screen instructions to install the mod.
 3. After installing the mod, launch the Stella Launcher and click the `Start game` button.
 4. Select the appropriate number of [frames per second](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/04.-What-is...#-considerations).
-> After a moment, the game should launch with [ReShade](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/04.-What-is...#-reshade) injected and [FPS Unlocker](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/04.-What-is...#-fps-unlocker).
+> After a moment, the game should launch with [ReShade](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/07.-Installation#%EF%B8%8F-installation-via-innosetup) injected and [FPS Unlocker](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/04.-What-is...#-fps-unlocker).
 
 ### 📘 » Extended tutorial (GitHub Wiki)
 1. [Main page](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/07.-Installation)
-2. [Automatic installation](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/07.-Installation#-automatic-installation)
+2. [Automatic installation](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/07.-Installation#%EF%B8%8F-automatic-installation)
 
 ### 📝 » Note
 After the installation is complete, you should open the Stella Launcher and start the game by clicking on the **Start game** button.
