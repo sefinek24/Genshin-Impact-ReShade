@@ -1,6 +1,7 @@
 using System;
 using System.Windows.Forms;
 using ConfWindow.Forms;
+using ConfWindow.Properties;
 
 namespace ConfWindow
 {
@@ -17,7 +18,7 @@ namespace ConfWindow
 
             try
             {
-                Application.Run(new Window());
+                Application.Run(new Window { Icon = Resources.icon });
             }
             catch (Exception ex)
             {

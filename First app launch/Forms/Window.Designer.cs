@@ -47,8 +47,8 @@ namespace ConfWindow.Forms
             // 
             // linkLabel1
             // 
-            resources.ApplyResources(this.linkLabel1, "linkLabel1");
             this.linkLabel1.ActiveLinkColor = System.Drawing.Color.CornflowerBlue;
+            resources.ApplyResources(this.linkLabel1, "linkLabel1");
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
@@ -192,7 +192,6 @@ namespace ConfWindow.Forms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Window";
-            this.ShowIcon = false;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
