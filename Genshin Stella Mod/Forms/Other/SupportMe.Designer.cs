@@ -50,11 +50,12 @@ namespace StellaLauncher.Forms.Other
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
+            this.toolTip1.SetToolTip(this.panel1, resources.GetString("panel1.ToolTip"));
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDown_Event);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MouseMove_Event);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MouseUp_Event);
@@ -75,27 +76,30 @@ namespace StellaLauncher.Forms.Other
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label2.Name = "label2";
+            this.toolTip1.SetToolTip(this.label2, resources.GetString("label2.ToolTip"));
             // 
             // linkLabel6
             // 
-            this.linkLabel6.ActiveLinkColor = System.Drawing.Color.Orange;
             resources.ApplyResources(this.linkLabel6, "linkLabel6");
+            this.linkLabel6.ActiveLinkColor = System.Drawing.Color.Orange;
             this.linkLabel6.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel6.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel6.LinkColor = System.Drawing.Color.DarkOrange;
             this.linkLabel6.Name = "linkLabel6";
             this.linkLabel6.TabStop = true;
+            this.toolTip1.SetToolTip(this.linkLabel6, resources.GetString("linkLabel6.ToolTip"));
             this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.MaybeLater_LinkClicked);
             // 
             // linkLabel5
             // 
-            this.linkLabel5.ActiveLinkColor = System.Drawing.Color.Lime;
             resources.ApplyResources(this.linkLabel5, "linkLabel5");
+            this.linkLabel5.ActiveLinkColor = System.Drawing.Color.Lime;
             this.linkLabel5.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel5.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel5.LinkColor = System.Drawing.Color.SpringGreen;
             this.linkLabel5.Name = "linkLabel5";
             this.linkLabel5.TabStop = true;
+            this.toolTip1.SetToolTip(this.linkLabel5, resources.GetString("linkLabel5.ToolTip"));
             this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OkayDone_LinkClicked);
             // 
             // label1
@@ -104,11 +108,12 @@ namespace StellaLauncher.Forms.Other
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.LightGreen;
             this.label1.Name = "label1";
+            this.toolTip1.SetToolTip(this.label1, resources.GetString("label1.ToolTip"));
             // 
             // linkLabel1
             // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             resources.ApplyResources(this.linkLabel1, "linkLabel1");
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.ForeColor = System.Drawing.Color.Transparent;
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
@@ -120,8 +125,8 @@ namespace StellaLauncher.Forms.Other
             // 
             // linkLabel3
             // 
-            this.linkLabel3.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             resources.ApplyResources(this.linkLabel3, "linkLabel3");
+            this.linkLabel3.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel3.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel3.ForeColor = System.Drawing.Color.Transparent;
             this.linkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
@@ -133,8 +138,8 @@ namespace StellaLauncher.Forms.Other
             // 
             // linkLabel4
             // 
-            this.linkLabel4.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             resources.ApplyResources(this.linkLabel4, "linkLabel4");
+            this.linkLabel4.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel4.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel4.ForeColor = System.Drawing.Color.Transparent;
             this.linkLabel4.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
@@ -146,8 +151,8 @@ namespace StellaLauncher.Forms.Other
             // 
             // linkLabel7
             // 
-            this.linkLabel7.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             resources.ApplyResources(this.linkLabel7, "linkLabel7");
+            this.linkLabel7.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel7.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel7.ForeColor = System.Drawing.Color.Transparent;
             this.linkLabel7.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
@@ -159,8 +164,8 @@ namespace StellaLauncher.Forms.Other
             // 
             // linkLabel8
             // 
-            this.linkLabel8.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             resources.ApplyResources(this.linkLabel8, "linkLabel8");
+            this.linkLabel8.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel8.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel8.ForeColor = System.Drawing.Color.Transparent;
             this.linkLabel8.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
@@ -172,8 +177,8 @@ namespace StellaLauncher.Forms.Other
             // 
             // linkLabel2
             // 
-            this.linkLabel2.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             resources.ApplyResources(this.linkLabel2, "linkLabel2");
+            this.linkLabel2.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel2.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel2.ForeColor = System.Drawing.Color.Transparent;
             this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
@@ -185,8 +190,8 @@ namespace StellaLauncher.Forms.Other
             // 
             // linkLabel9
             // 
-            this.linkLabel9.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             resources.ApplyResources(this.linkLabel9, "linkLabel9");
+            this.linkLabel9.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel9.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel9.ForeColor = System.Drawing.Color.Transparent;
             this.linkLabel9.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
@@ -202,6 +207,7 @@ namespace StellaLauncher.Forms.Other
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.Color.LightGreen;
             this.label3.Name = "label3";
+            this.toolTip1.SetToolTip(this.label3, resources.GetString("label3.ToolTip"));
             // 
             // SupportMe
             // 
@@ -225,6 +231,7 @@ namespace StellaLauncher.Forms.Other
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SupportMe";
+            this.toolTip1.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.Shown += new System.EventHandler(this.SupportMe_Shown);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

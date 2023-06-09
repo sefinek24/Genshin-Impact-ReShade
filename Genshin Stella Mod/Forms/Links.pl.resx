@@ -172,6 +172,12 @@
   <data name="linkLabel6.Text" xml:space="preserve">
     <value>Status usługi - Uptimerobot</value>
   </data>
+  <data name="linkLabel7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 24</value>
+  </data>
+  <data name="linkLabel7.Text" xml:space="preserve">
+    <value>Serwer Sefina - Datadog</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Linki</value>
   </data>
