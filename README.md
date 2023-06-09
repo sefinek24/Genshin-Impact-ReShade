@@ -102,14 +102,14 @@ that [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel) connects to
 
 
 ## <div id="supported-systems">🔧 〢 Supported operating systems</div>
-| 🌌 System       | 🔖 Version | 📝 OS Build   | 🙀 Status      | 🤔 Recommended? |
-|-----------------|:-----------|---------------|:---------------|:----------------|
-| Windows 11      | 22H2       | 22621.900     | [✔️](#legend)  | [❌](#legend)    |
-| Windows 10      | 21H2       | 19044.2788    | [✔️](#legend)  | [️✔️](#legend)  | 
-| Windows 8 / 8.1 |            | [❓](#legend)  | [🎯️](#legend) | [❌](#legend)    | 
-| Windows 7       |            | [❓](#legend)  | [🎯️](#legend) | [❌](#legend)    | 
-| Android / Linux |            | [❓](#legend)  | [❌](#legend)   | [❌](#legend)    | 
-| iOS / macOS     |            | [❓](#legend)️ | [❌](#legend)   | [❌](#legend)    |
+| 🌌 System       | 🔖 Version | 🙀 Status      | 🤔 Recommended? |
+|-----------------|:-----------|:---------------|:----------------|
+| Windows 11      | 22H2       | [✔️](#legend)  | [❌](#legend)    |
+| Windows 10      | 21H2       | [✔️](#legend)  | [️✔️](#legend)  | 
+| Windows 8 / 8.1 |            | [🎯️](#legend) | [❌](#legend)    | 
+| Windows 7       |            | [🎯️](#legend) | [❌](#legend)    | 
+| Android / Linux |            | [❌](#legend)   | [❌](#legend)    | 
+| iOS / macOS     |            | [❌](#legend)   | [❌](#legend)    |
 
 
 ## <div id="installation">📥 〢 How to install?</div>
@@ -131,15 +131,15 @@ Then, adjust the settings according to the recommended values based on your syst
 
 
 ## <div id="tested-game-versions">🛠️ 〢 Tested game versions</div>
-| 🎮 Game version | 😅 Works with mod? | 📆 Date tested   |
-|-----------------|--------------------|------------------|
-| v3.7            | [✔️](#legend)      | May 24, 2023     |
-| v3.6            | [❌](#legend)       | April 12, 2023   |
-| v3.5            | [❌](#legend)       | March 01, 2023   |
-| v3.4            | [❌️](#legend)      | January 18, 2023 |
-| v3.3            | [❌](#legend)       | November 9, 2022 |
-| v3.2            | [❌](#legend)       | November 2, 2022 |
-| v3.1            | [❌](#legend)       | November 1, 2022 |
+| 🎮 Game version | 📝 Operating System    | 😅 Works with mod? | 📆 Date tested   |
+|-----------------|:-----------------------|--------------------|------------------|
+| v3.7.0          | Win 10 2H22 19045.3031 | [✔️](#legend)      | May 24, 2023     |
+| v3.6.0          |                        | [❌](#legend)       | April 12, 2023   |
+| v3.5.0          |                        | [❌](#legend)       | March 01, 2023   |
+| v3.4.0          |                        | [❌️](#legend)      | January 18, 2023 |
+| v3.3.0          |                        | [❌](#legend)       | November 9, 2022 |
+| v3.2.0          |                        | [❌](#legend)       | November 2, 2022 |
+| v3.1.0          |                        | [❌](#legend)       | November 1, 2022 |
 
 
 ## <div id="settings-for-game">⚙️ 〢 Recommended settings for game</div>
