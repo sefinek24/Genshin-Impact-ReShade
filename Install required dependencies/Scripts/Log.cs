@@ -130,21 +130,21 @@ namespace PrepareStella.Scripts
                             Utils.OpenUrl(Program.DiscordUrl);
 
                             Console.ForegroundColor = ConsoleColor.Green;
-                            Console.WriteLine("An invitation to the server has been opened in your default web browser.\n");
-
+                            Console.WriteLine(@"An invitation to the server has been opened in your default web browser.");
+                            Console.WriteLine();
                             Console.ForegroundColor = ConsoleColor.Magenta;
-                            Console.WriteLine("You can close the setup window.");
+                            Console.WriteLine(@"You can close the setup window.");
                             break;
 
                         case "n":
                         case "no":
                             Console.ForegroundColor = ConsoleColor.Magenta;
-                            Console.WriteLine("Okay... You can close this window.");
+                            Console.WriteLine(@"Okay... You can close this window.");
                             break;
 
                         default:
                             Console.ForegroundColor = ConsoleColor.Magenta;
-                            Console.WriteLine("Wrong answer. Close this window.");
+                            Console.WriteLine(@"Wrong answer. Close this window.");
                             break;
                     }
 

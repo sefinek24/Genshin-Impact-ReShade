@@ -46,22 +46,6 @@ namespace PrepareStella.Scripts
             }
         }
 
-        public static string GetWtAppData()
-        {
-            if (!Directory.Exists(Program.Packages))
-            {
-                Log.Output($"{Program.Packages} was not found.");
-                return null;
-            }
-
-            string[] dirs = Directory.GetDirectories(Program.Packages, "Microsoft.WindowsTerminal_*", SearchOption.AllDirectories);
-
-            string path = "";
-            foreach (string dir in dirs) path = dir;
-
-            return path;
-        }
-
         public static string GetWtProgramFiles()
         {
             if (!Directory.Exists(Program.WindowsApps))

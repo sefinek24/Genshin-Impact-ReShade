@@ -46,7 +46,7 @@ namespace PrepareStella.Forms
                     string directory = Path.GetDirectoryName(selectedFile);
                     if (!File.Exists(Path.Combine(directory, "UnityPlayer.dll")))
                     {
-                        MessageBox.Show("That's not the right place.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show($"That's not the right place.\n\nSelected path:\n{directory}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
 
@@ -69,7 +69,7 @@ namespace PrepareStella.Forms
             string selectedFile = comboBox1.GetItemText(comboBox1.SelectedItem);
             if (!selectedFile.Contains("GenshinImpact.exe") && !selectedFile.Contains("YuanShen.exe"))
             {
-                MessageBox.Show("We can't save your settings. Please select the game exe.\n\nGenshinImpact.exe for OS version.\nYuanShen.exe for CN version.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("We can't save your settings. Please select the game exe.\n\nGenshinImpact.exe for OS version (main).\nYuanShen.exe for CN version.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 

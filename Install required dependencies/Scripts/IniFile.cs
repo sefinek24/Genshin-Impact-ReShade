@@ -13,25 +13,12 @@ namespace PrepareStella.Scripts
         }
 
         [DllImport("kernel32.dll")]
-        private static extern long WritePrivateProfileString(string section, string key, string val, string filePath);
-
-        [DllImport("kernel32.dll")]
         private static extern int GetPrivateProfileString(string section, string key, string def, StringBuilder retVal, int size, string filePath);
-
-        public void WriteInt(string section, string key, int value)
-        {
-            WriteString(section, key, value.ToString());
-        }
 
         public int ReadInt(string section, string key, int defaultValue)
         {
             int.TryParse(ReadString(section, key, defaultValue.ToString()), out int value);
             return value;
-        }
-
-        private void WriteString(string section, string key, string value)
-        {
-            WritePrivateProfileString(section, key, value, _path);
         }
 
         private string ReadString(string section, string key, string defaultValue)

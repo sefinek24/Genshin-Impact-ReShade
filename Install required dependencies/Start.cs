@@ -14,7 +14,7 @@ namespace PrepareStella
             Console.OutputEncoding = Encoding.UTF8;
 
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine(@"                             Genshin Impact Stella Mod - Beta release");
+            Console.WriteLine(@"                               Genshin Impact Stella Mod - Prepare");
             Console.WriteLine($"                                        Version: v{Program.AppVersion}\n");
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine(@"» Author  : Sefinek [Country: Poland]");

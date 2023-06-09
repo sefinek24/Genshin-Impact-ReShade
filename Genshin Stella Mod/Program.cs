@@ -74,8 +74,7 @@ namespace StellaLauncher
 
             if (Process.GetProcessesByName(AppName).Length > 1)
             {
-                MessageBox.Show(string.Format(Resources.Program_SorryOneInstanceIsCurrentlyOpen_, Path.GetFileNameWithoutExtension(Assembly.GetEntryAssembly()?.Location)),
-                    AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(string.Format(Resources.Program_SorryOneInstanceIsCurrentlyOpen_, Path.GetFileNameWithoutExtension(Assembly.GetEntryAssembly()?.Location)), AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 Log.Output(Resources.Program_OneInstanceIsCurrentlyOpen);
                 Environment.Exit(998765341);
@@ -141,8 +140,7 @@ namespace StellaLauncher
                         {
                             Telemetry.SendLogFiles();
 
-                            DialogResult showFilesResult = MessageBox.Show(Resources.Program_IfYouWishToSendLogsToTheDeveloperPleaseSendThemToMeOnDiscord,
-                                AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                            DialogResult showFilesResult = MessageBox.Show(Resources.Program_IfYouWishToSendLogsToTheDeveloperPleaseSendThemToMeOnDiscord, AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                             if (showFilesResult == DialogResult.Yes)
                             {
                                 Process.Start(Log.Folder);
