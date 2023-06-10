@@ -14,8 +14,7 @@ AppVersion={#AppVersion}
 AppVerName={#AppName} {#AppVersion}
 AppPublisher={#AppPublisher}
 AppPublisherURL={#AppURL}
-AppSupportURL=https://sefinek.net/genshin-impact-reshade/support
-AppUpdatesURL=https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/14.-Changelog-for-v7.x.x
+
 ArchitecturesInstallIn64BitMode=x64
 ArchitecturesAllowed=x64
 MinVersion=6.1sp1
@@ -34,6 +33,8 @@ DirExistsWarning=yes
 DisableProgramGroupPage=yes
 UninstallDisplayIcon="{app}\Genshin Stella Mod.exe"
 
+AppSupportURL=https://sefinek.net/genshin-impact-reshade/support
+AppUpdatesURL=https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/14.-Changelog-for-v7.x.x
 VersionInfoCompany={#AppPublisher}
 VersionInfoTextVersion={#AppVersion}
 VersionInfoProductName={#AppName}
