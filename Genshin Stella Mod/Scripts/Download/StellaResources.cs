@@ -58,8 +58,6 @@ namespace StellaLauncher.Scripts.Download
             Default._tools_LinkLabel.Show();
 
             Default._shortcutIco_PictureBox.Show();
-            Default._shortcutIco_PictureBox.Show();
-
             Default._links_LinkLabel.Show();
 
             Default._padIco_PictureBox.Show();
