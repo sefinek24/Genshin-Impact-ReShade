@@ -44,7 +44,7 @@ VersionInfoCopyright={#GetFileCopyright(AppExeName)}
 
 WizardImageFile="..\Assets\Images\InnoSetup\WizardImageFile.bmp"
 WizardSmallImageFile="..\Assets\Images\InnoSetup\WizardSmallImageFile.bmp"
-SetupIconFile="..\Install required dependencies\Resources\52x52.ico"
+SetupIconFile="..\Assets\Images\Icons\setup\52x52.ico"
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
