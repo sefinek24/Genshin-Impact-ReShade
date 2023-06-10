@@ -30,6 +30,34 @@ namespace StellaLauncher.Forms
         // New update?
         public static bool UpdateIsAvailable;
 
+        // Main
+        public static Label _status_Label;
+        public static Label _preparingPleaseWait;
+        public static ProgressBar _progressBar1;
+
+        // Left
+        public static PictureBox _discordServerIco_Picturebox;
+        public static LinkLabel _discordServer_LinkLabel;
+        public static PictureBox _supportMeIco_PictureBox;
+        public static LinkLabel _supportMe_LinkLabel;
+        public static PictureBox _youtubeIco_Picturebox;
+        public static LinkLabel _youTube_LinkLabel;
+
+        // Bottom
+        public static PictureBox _toolsIco_PictureBox;
+        public static LinkLabel _tools_LinkLabel;
+        public static PictureBox _shortcutIco_PictureBox;
+        public static LinkLabel _links_LinkLabel;
+        public static PictureBox _padIco_PictureBox;
+        public static LinkLabel _gameplay_LinkLabel;
+        public static PictureBox _websiteIco_PictureBox;
+        public static LinkLabel _website_LinkLabel;
+
+        // Right
+        public static LinkLabel _version_LinkLabel;
+        public static LinkLabel _updates_LinkLabel;
+        public static PictureBox _updateIco_PictureBox;
+
         // Background
         private readonly string[] _backgroundFiles =
         {
@@ -53,6 +81,31 @@ namespace StellaLauncher.Forms
 
         private async void Default_Load(object sender, EventArgs e)
         {
+            // First
+            _status_Label = status_Label;
+            _preparingPleaseWait = PreparingPleaseWait;
+            _progressBar1 = progressBar1;
+
+            _discordServerIco_Picturebox = discordServerIco_Picturebox;
+            _discordServer_LinkLabel = discordServer_LinkLabel;
+            _supportMeIco_PictureBox = supportMeIco_PictureBox;
+            _supportMe_LinkLabel = supportMe_LinkLabel;
+            _youtubeIco_Picturebox = youtubeIco_Picturebox;
+            _youTube_LinkLabel = youTube_LinkLabel;
+
+            _toolsIco_PictureBox = toolsIco_PictureBox;
+            _tools_LinkLabel = tools_LinkLabel;
+            _shortcutIco_PictureBox = shortcutIco_PictureBox;
+            _links_LinkLabel = links_LinkLabel;
+            _padIco_PictureBox = padIco_PictureBox;
+            _gameplay_LinkLabel = gameplay_LinkLabel;
+            _websiteIco_PictureBox = websiteIco_PictureBox;
+            _website_LinkLabel = website_LinkLabel;
+
+            _version_LinkLabel = version_LinkLabel;
+            _updates_LinkLabel = updates_LinkLabel;
+            _updateIco_PictureBox = updateIco_PictureBox;
+
             // Path
             string mainGameDir = await Utils.GetGame("giGameDir");
             string reShadePath = Path.Combine(mainGameDir, "ReShade.ini");
@@ -174,10 +227,10 @@ namespace StellaLauncher.Forms
             Log.Output(string.Format(Resources.Default_ChangedTheLauncherBackground_ID, bgInt));
         }
 
-        public async Task<int> CheckUpdates()
+        public static async Task<int> CheckUpdates()
         {
-            updates_LinkLabel.LinkColor = Color.White;
-            updates_LinkLabel.Text = Resources.Default_CheckingForUpdates;
+            _updates_LinkLabel.LinkColor = Color.White;
+            _updates_LinkLabel.Text = Resources.Default_CheckingForUpdates;
 
             TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
             Log.Output(Resources.Default_CheckingForUpdates);
@@ -197,7 +250,7 @@ namespace StellaLauncher.Forms
                 {
                     UpdateIsAvailable = true;
 
-                    MajorRelease.Run(remoteVersion, remoteVerDate, version_LinkLabel, updates_LinkLabel, updateIco_PictureBox);
+                    MajorRelease.Run(remoteVersion, remoteVerDate, _version_LinkLabel, _updates_LinkLabel, _updateIco_PictureBox);
                     return 1;
                 }
 
@@ -206,44 +259,13 @@ namespace StellaLauncher.Forms
                 {
                     UpdateIsAvailable = true;
 
-                    NormalRelease.Run(
-                        // Custom
-                        remoteVersion,
-                        remoteVerDate,
-
-                        // Main
-                        status_Label,
-                        PreparingPleaseWait,
-                        progressBar1,
-
-                        // Left
-                        discordServerIco_Picturebox,
-                        discordServer_LinkLabel,
-                        supportMeIco_PictureBox,
-                        supportMe_LinkLabel,
-                        youtubeIco_Picturebox,
-                        youTube_LinkLabel,
-
-                        // Bottom
-                        toolsIco_PictureBox,
-                        tools_LinkLabel,
-                        shortcutIco_PictureBox,
-                        links_LinkLabel,
-                        padIco_PictureBox,
-                        gameplay_LinkLabel,
-                        websiteIco_PictureBox,
-                        website_LinkLabel,
-
-                        // Right
-                        version_LinkLabel,
-                        updates_LinkLabel,
-                        updateIco_PictureBox);
+                    NormalRelease.Run(remoteVersion, remoteVerDate);
 
                     return 1;
                 }
 
                 // Check new updates for ReShade.ini file
-                int resultInt = await ReShadeIniUpdate.Run(updates_LinkLabel, status_Label, updateIco_PictureBox, version_LinkLabel);
+                int resultInt = await ReShadeIniUpdate.Run(_updates_LinkLabel, _status_Label, _updateIco_PictureBox, _version_LinkLabel);
                 switch (resultInt)
                 {
                     case -2:
@@ -292,66 +314,35 @@ namespace StellaLauncher.Forms
                             {
                                 UpdateIsAvailable = true;
 
-                                DownloadResources.Run(
-                                    // Custom
-                                    resourcesPath,
-                                    data.Version,
-                                    resourcesRes.Message,
-                                    resourcesRes.Date,
-
-                                    // Main
-                                    status_Label,
-                                    PreparingPleaseWait,
-                                    progressBar1,
-
-                                    // Left
-                                    discordServerIco_Picturebox,
-                                    discordServer_LinkLabel,
-                                    supportMeIco_PictureBox,
-                                    supportMe_LinkLabel,
-                                    youtubeIco_Picturebox,
-                                    youTube_LinkLabel,
-
-                                    // Bottom
-                                    toolsIco_PictureBox,
-                                    tools_LinkLabel,
-                                    shortcutIco_PictureBox,
-                                    links_LinkLabel,
-                                    padIco_PictureBox,
-                                    gameplay_LinkLabel,
-                                    websiteIco_PictureBox,
-                                    website_LinkLabel,
-
-                                    // Right
-                                    version_LinkLabel,
-                                    updates_LinkLabel,
-                                    updateIco_PictureBox);
-
+                                DownloadResources.Run(resourcesPath, data.Version, resourcesRes.Message, resourcesRes.Date);
                                 return 1;
                             }
                         }
                         else
                         {
-                            status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, jsonFile)}\n";
+                            _status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, jsonFile)}\n";
                             Log.SaveErrorLog(new Exception(string.Format(Resources.Default_File_WasNotFound, jsonFile)));
                         }
                     }
                     else
                     {
-                        status_Label.Text += $"{string.Format(Resources.Default_Directory_WasNotFound, resourcesPath)}\n";
+                        _status_Label.Text += $"{string.Format(Resources.Default_Directory_WasNotFound, resourcesPath)}\n";
                         Log.SaveErrorLog(new Exception(string.Format(Resources.Default_Directory_WasNotFound, resourcesPath)));
                     }
                 }
                 else
                 {
-                    status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, resSfn)}\n";
+                    _status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, resSfn)}\n";
                     Log.SaveErrorLog(new Exception(string.Format(Resources.Default_File_WasNotFound, resSfn)));
                 }
 
 
                 // Not found any new updates
-                updates_LinkLabel.Text = Resources.Default_CheckForUpdates;
-                updateIco_PictureBox.Image = Resources.icons8_available_updates;
+                _updates_LinkLabel.Text = Resources.Default_CheckForUpdates;
+                _updateIco_PictureBox.Image = Resources.icons8_available_updates;
+
+                Utils.RemoveClickEvent(_updates_LinkLabel);
+                _updates_LinkLabel.Click += RunCheckForUpdates;
 
                 Log.Output(string.Format(Resources.Default_NotFoundAnyNewUpdates_YourInstalledVersion_, Program.AppVersion));
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress);
@@ -361,15 +352,20 @@ namespace StellaLauncher.Forms
             {
                 UpdateIsAvailable = false;
 
-                updates_LinkLabel.LinkColor = Color.Red;
-                updates_LinkLabel.Text = Resources.Default_OhhSomethingWentWrong;
-                status_Label.Text += $"[x] {e.Message}\n";
+                _updates_LinkLabel.LinkColor = Color.Red;
+                _updates_LinkLabel.Text = Resources.Default_OhhSomethingWentWrong;
+                _status_Label.Text += $"[x] {e.Message}\n";
 
                 Log.SaveErrorLog(new Exception(string.Format(Resources.Default_SomethingWentWrongWhileCheckingForNewUpdates, e)));
                 TaskbarManager.Instance.SetProgressValue(100, 100);
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
                 return -1;
             }
+        }
+
+        private static async void RunCheckForUpdates(object sender, EventArgs e)
+        {
+            await CheckUpdates();
         }
 
         private async void Main_Shown(object sender, EventArgs e)
