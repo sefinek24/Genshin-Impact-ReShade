@@ -1,39 +1,50 @@
-#define MyAppName "Genshin Stella Mod"
-#define MyAppVersion "7.4.0.0"
-#define MyAppPublisher "Sefinek Inc."
-#define MyAppURL "https://genshin.sefinek.net"
-#define MyAppExeName "Genshin Stella Mod.exe"
-#define MyAppId "5D6E44F3-2141-4EA4-89E3-6C3018583FF7"
+#define AppName "Genshin Stella Mod"
+#define AppVersion "7.5.0.0"
+#define AppPublisher "Sefinek Inc."
+#define AppURL "https://genshin.sefinek.net"
+#define AppExeName "Genshin Stella Mod.exe"
+#define AppId "5D6E44F3-2141-4EA4-89E3-6C3018583FF7"
 
 [Setup]
 AppCopyright=Copyright 2023 © by Sefinek. All Rights Reserved.
-AppId={#MyAppId}
-AppMutex={#MyAppId}
-AppName={#MyAppName}
-AppVersion={#MyAppVersion}
-AppVerName={#MyAppName} {#MyAppVersion}
-AppPublisher={#MyAppPublisher}
-AppPublisherURL={#MyAppURL}
+AppId={#AppId}
+AppMutex={#AppId}
+AppName={#AppName}
+AppVersion={#AppVersion}
+AppVerName={#AppName} {#AppVersion}
+AppPublisher={#AppPublisher}
+AppPublisherURL={#AppURL}
 AppSupportURL=https://sefinek.net/genshin-impact-reshade/support
 AppUpdatesURL=https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/14.-Changelog-for-v7.x.x
 ArchitecturesInstallIn64BitMode=x64
 ArchitecturesAllowed=x64
 MinVersion=6.1sp1
-// DefaultDirName=C:\Genshin-Stella-Mod
 DefaultDirName={autopf}\Sefinek\Genshin-Stella-Mod
 DisableDirPage=no
+DisableWelcomePage=no
 ChangesAssociations=no
-DisableProgramGroupPage=no
 InfoBeforeFile=..\Build\Release\data\README.txt
 LicenseFile=..\Build\Release\LICENSE
 PrivilegesRequired=none
 OutputBaseFilename=Stella-Mod-Setup
-Compression=lzma
 SolidCompression=yes
 WizardStyle=classic
-VersionInfoCompany={#MyAppPublisher}
-VersionInfoTextVersion={#MyAppVersion}
-VersionInfoVersion={#MyAppVersion}
+
+DirExistsWarning=yes
+DisableProgramGroupPage=yes
+UninstallDisplayIcon="{app}\Genshin Stella Mod.exe"
+
+VersionInfoCompany={#AppPublisher}
+VersionInfoTextVersion={#AppVersion}
+VersionInfoProductName={#AppName}
+VersionInfoProductTextVersion={#GetFileProductVersion(AppExeName)}
+VersionInfoDescription={#AppName + " " + AppVersion + " Setup"}
+VersionInfoVersion={#GetFileVersion(AppExeName)}
+VersionInfoCopyright={#GetFileCopyright(AppExeName)}
+
+WizardImageFile="..\Assets\Images\InnoSetup\WizardImageFile.bmp"
+WizardSmallImageFile="..\Assets\Images\InnoSetup\WizardSmallImageFile.bmp"
+SetupIconFile="..\Install required dependencies\Resources\52x52.ico"
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
@@ -63,24 +74,24 @@ Name: "turkish"; MessagesFile: "compiler:Languages\Turkish.isl"
 Name: "ukrainian"; MessagesFile: "compiler:Languages\Ukrainian.isl"
 
 [Tasks]
-Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Check: not InstViaSetup and not InstViaLauncher 
+Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Check: not InstViaSetup and not InstViaLauncher
 
 [Files]
-Source: "..\Build\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\Build\Release\{#AppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\Build\Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
-Name: "{autodesktop}\Stella Mod Launcher"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
-Name: "{autoprograms}\Genshin Stella Mod\Uninstall {#MyAppName}"; Filename: "{uninstallexe}"
+Name: "{autodesktop}\Stella Mod Launcher"; Filename: "{app}\{#AppExeName}"; Tasks: desktopicon
+Name: "{autoprograms}\Genshin Stella Mod\Uninstall {#AppName}"; Filename: "{uninstallexe}"
 
 [Run]
-Filename: "{app}\{#MyAppExeName}"; WorkingDir: "{app}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}} Launcher"; Flags: nowait postinstall skipifsilent runascurrentuser
+Filename: "{app}\{#AppExeName}"; WorkingDir: "{app}"; Description: "{cm:LaunchProgram,{#StringChange(AppName, '&', '&&')}} Launcher"; Flags: nowait postinstall skipifsilent runascurrentuser
 
 #define public Dependency_NoExampleSetup
 #include "CodeDependencies.iss"
 
 [Code]
-// ------------------------------------------- INSTALL REQUIRED DEPS -------------------------------------------
+{ ///////////////////////////////////////////////////////////////////// }
 function InitializeSetup: Boolean;
 begin
   Dependency_AddDotNet48;
@@ -95,7 +106,7 @@ begin
 end;
 
 
-// ------------------------------------------- PARAMS -------------------------------------------
+{ ///////////////////////////////////////////////////////////////////// }
 function CmdLineParamExists(const value: string): Boolean;
 var
   i: Integer;
@@ -117,4 +128,64 @@ end;
 function InstViaLauncher(): Boolean;
 begin
   Result := CmdLineParamExists('/UPDATE');
+end;
+
+
+{ ///////////////////////////////////////////////////////////////////// }
+function GetUninstallString(): String;
+var
+  sUnInstPath: String;
+  sUnInstallString: String;
+begin
+  sUnInstPath := ExpandConstant('Software\Microsoft\Windows\CurrentVersion\Uninstall\{#emit SetupSetting("AppId")}_is1');
+  sUnInstallString := '';
+  if not RegQueryStringValue(HKLM, sUnInstPath, 'UninstallString', sUnInstallString) then
+    RegQueryStringValue(HKCU, sUnInstPath, 'UninstallString', sUnInstallString);
+  Result := sUnInstallString;
+end;
+
+
+{ ///////////////////////////////////////////////////////////////////// }
+function IsUpgrade(): Boolean;
+begin
+  Result := (GetUninstallString() <> '');
+end;
+
+
+{ ///////////////////////////////////////////////////////////////////// }
+function UnInstallOldVersion(): Integer;
+var
+  sUnInstallString: String;
+  iResultCode: Integer;
+begin
+{ Return Values: }
+{ 1 - uninstall string is empty }
+{ 2 - error executing the UnInstallString }
+{ 3 - successfully executed the UnInstallString }
+
+  { default return value }
+  Result := 0;
+
+  { get the uninstall string of the old app }
+  sUnInstallString := GetUninstallString();
+  if sUnInstallString <> '' then begin
+    sUnInstallString := RemoveQuotes(sUnInstallString);
+    if Exec(sUnInstallString, '/SILENT /NORESTART /SUPPRESSMSGBOXES','', SW_HIDE, ewWaitUntilTerminated, iResultCode) then
+      Result := 3
+    else
+      Result := 2;
+  end else
+    Result := 1;
+end;
+
+{ ///////////////////////////////////////////////////////////////////// }
+procedure CurStepChanged(CurStep: TSetupStep);
+begin
+  if (CurStep=ssInstall) then
+  begin
+    if (IsUpgrade()) then
+    begin
+      UnInstallOldVersion();
+    end;
+  end;
 end;

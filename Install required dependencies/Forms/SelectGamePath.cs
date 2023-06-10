@@ -1,8 +1,8 @@
 using System;
+using System.Drawing;
 using System.IO;
 using System.Threading;
 using System.Windows.Forms;
-using PrepareStella.Properties;
 
 namespace PrepareStella.Forms
 {
@@ -93,7 +93,7 @@ namespace PrepareStella.Forms
 
         private void Help_Click(object sender, EventArgs e)
         {
-            new Help { Icon = Resources.icon }.Show();
+            new Help { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.Show();
         }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Text.RegularExpressions;
@@ -9,7 +10,6 @@ using System.Windows.Forms;
 using Microsoft.Win32;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using PrepareStella.Forms;
-using PrepareStella.Properties;
 using PrepareStella.Scripts;
 using PrepareStella.Scripts.Preparing;
 
@@ -97,7 +97,7 @@ namespace PrepareStella
                 }
                 else
                 {
-                    SelectGamePath form = new SelectGamePath(GameExeGlobal ?? $"{GameGenshinImpact}\n{GameYuanShen}") { Icon = Resources.icon };
+                    SelectGamePath form = new SelectGamePath(GameExeGlobal ?? $"{GameGenshinImpact}\n{GameYuanShen}") { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) };
                     Application.Run(form);
                 }
 
@@ -132,11 +132,11 @@ namespace PrepareStella
                 if (Directory.Exists(sfnFileContent))
                     ResourcesGlobal = sfnFileContent;
                 else
-                    Application.Run(new SelectShadersPath { Icon = Resources.icon });
+                    Application.Run(new SelectShadersPath { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) });
             }
             else
             {
-                Application.Run(new SelectShadersPath { Icon = Resources.icon });
+                Application.Run(new SelectShadersPath { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) });
             }
 
             if (ResourcesGlobal != null)

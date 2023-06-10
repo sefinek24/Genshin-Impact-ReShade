@@ -45,7 +45,7 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\52x52.ico</ApplicationIcon>
+    <ApplicationIcon>..\Assets\Images\Icons\setup\52x52.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -116,9 +116,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\jhg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\52x52.ico" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bg2.jpg" />
