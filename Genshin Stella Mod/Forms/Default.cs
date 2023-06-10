@@ -227,7 +227,7 @@ namespace StellaLauncher.Forms
             Log.Output(string.Format(Resources.Default_ChangedTheLauncherBackground_ID, bgInt));
         }
 
-        public static async Task<int> CheckUpdates()
+        public static async Task<int> CheckForUpdates()
         {
             _updates_LinkLabel.LinkColor = Color.White;
             _updates_LinkLabel.Text = Resources.Default_CheckingForUpdates;
@@ -292,7 +292,6 @@ namespace StellaLauncher.Forms
 
 
                 // Check new updates of resources
-
                 string resSfn = Path.Combine(Program.AppData, "resources-path.sfn");
                 if (File.Exists(resSfn))
                 {
@@ -365,8 +364,9 @@ namespace StellaLauncher.Forms
 
         private static async void RunCheckForUpdates(object sender, EventArgs e)
         {
-            await CheckUpdates();
+            await CheckForUpdates();
         }
+
 
         private async void Main_Shown(object sender, EventArgs e)
         {
@@ -400,7 +400,7 @@ namespace StellaLauncher.Forms
                 }
 
 
-            await CheckUpdates();
+            await CheckForUpdates();
 
             int data = Program.Settings.ReadInt("Launcher", "DiscordRPC", 1);
             if (data == 1) Discord.InitRpc();
@@ -555,7 +555,7 @@ namespace StellaLauncher.Forms
 
         public async void CheckUpdates_Click(object sender, EventArgs e)
         {
-            int update = await CheckUpdates();
+            int update = await CheckForUpdates();
             if (update == -2 || update == -3)
             {
                 DialogResult msgBoxResult = MessageBox.Show(Resources.Default_TheReShadeIniFileCouldNotBeLocatedInYourGameFiles, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -581,7 +581,7 @@ namespace StellaLauncher.Forms
                                 status_Label.Text += $"[✓] {Resources.Default_SuccessfullyDownloadedReShadeIni}\n";
                                 Log.Output(string.Format(Resources.Default_SuccessfullyDownloadedReShadeIniAndSavedIn, reShadePath));
 
-                                await CheckUpdates();
+                                await CheckForUpdates();
                             }
                             else
                             {

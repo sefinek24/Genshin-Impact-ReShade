@@ -1943,7 +1943,7 @@ namespace StellaLauncher.Properties {
         ///   Looks up a localized string similar to File with game path was not found in:
         ///{0}
         ///
-        ///Do you want to reset all Stella Mod settings?.
+        ///Do you want to reconfigure Stella Mod in the configuration window?.
         /// </summary>
         internal static string Utils_FileWithGamePathWasNotFoundIn_DoYouWantToResetAllSMSettings {
             get {
@@ -1955,7 +1955,7 @@ namespace StellaLauncher.Properties {
         ///   Looks up a localized string similar to Folder with game path does not exists:
         ///{0}
         ///
-        ///Do you want to reset all Stella Mod settings?.
+        ///Do you want to reconfigure Stella Mod in the configuration window?.
         /// </summary>
         internal static string Utils_FolderWithGamePathDoesNotExists_DoYouWantToResetAllSMSettings {
             get {

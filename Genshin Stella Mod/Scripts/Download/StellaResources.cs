@@ -231,7 +231,7 @@ namespace StellaLauncher.Scripts.Download
             Default._status_Label.Text += $"[✓] {Resources.StellaResources_SuccessfullyUpdatedResources}\n";
             Log.Output(string.Format(Resources.StellaResources_SuccessfullyUnpacked, StellaResZip));
 
-            await Default.CheckUpdates();
+            await Default.CheckForUpdates();
         }
 
         private static async Task UnzipWithProgress(string zipFilePath, string extractPath)

@@ -660,7 +660,7 @@ Zamknij proces o nazwie {0} i spróbuj ponownie.</value>
     <value>Plik ze ścieżką gry nie został znaleziony w:
 {0}
 
-Czy chcesz zresetować wszystkie ustawienia Stella Mod?</value>
+Czy chcesz ponownie skonfigurować Stella Mod w oknie konfiguracji?</value>
   </data>
   <data name="Utils_File_DoesntNotExists" xml:space="preserve">
     <value>Plik {0} nie został odnaleziony.</value>
@@ -675,7 +675,7 @@ Czy chcesz zresetować wszystkie ustawienia Stella Mod?</value>
     <value>Folder ze ścieżką gry nie istnieje:
 {0}
 
-Czy chcesz zresetować wszystkie ustawienia Stella Mod?</value>
+Czy chcesz ponownie skonfigurować Stella Mod w oknie konfiguracji?</value>
   </data>
   <data name="Utils_FoundGiExe" xml:space="preserve">
     <value>Znaleziono exe Genshin Impact w: {0} [{1}]</value>

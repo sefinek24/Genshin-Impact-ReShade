@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Windows.Storage;
 using IWshRuntimeLibrary;
+using Microsoft.Win32;
 using StellaLauncher.Properties;
 using File = System.IO.File;
 
@@ -25,8 +26,13 @@ namespace StellaLauncher.Scripts
                 Log.Output(string.Format(Resources.Utils_FileWithGamePathWasNotFoundIn, FileWithGamePath));
 
                 if (result != DialogResult.Yes) return string.Empty;
-                Directory.Delete(Program.AppData, true);
-                await Cmd.CliWrap(FirstAppLaunch, null, null, true, false);
+                using (RegistryKey newKey = Registry.CurrentUser.CreateSubKey(Program.RegistryPath))
+                {
+                    newKey?.SetValue("AppIsConfigured", 0);
+                }
+
+                _ = Cmd.CliWrap(FirstAppLaunch, null, null, true, false);
+                Environment.Exit(99587986);
                 return string.Empty;
             }
 
@@ -36,9 +42,13 @@ namespace StellaLauncher.Scripts
                 DialogResult result = MessageBox.Show(string.Format(Resources.Utils_FolderWithGamePathDoesNotExists_DoYouWantToResetAllSMSettings, gameFilePath), Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (result != DialogResult.Yes) return string.Empty;
-                Directory.Delete(Program.AppData, true);
-                await Cmd.CliWrap(FirstAppLaunch, null, null, true, false);
+                using (RegistryKey newKey = Registry.CurrentUser.CreateSubKey(Program.RegistryPath))
+                {
+                    newKey?.SetValue("AppIsConfigured", 0);
+                }
 
+                _ = Cmd.CliWrap(FirstAppLaunch, null, null, true, false);
+                Environment.Exit(99587987);
                 return string.Empty;
             }
 

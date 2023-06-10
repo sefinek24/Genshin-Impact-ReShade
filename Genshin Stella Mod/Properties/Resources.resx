@@ -510,7 +510,7 @@ Quit the process with name {0} and try again.</value>
     <value>File with game path was not found in:
 {0}
 
-Do you want to reset all Stella Mod settings?</value>
+Do you want to reconfigure Stella Mod in the configuration window?</value>
   </data>
   <data name="Utils_File_DoesntNotExists" xml:space="preserve">
     <value>File {0} does not exists.</value>
@@ -525,7 +525,7 @@ Do you want to reset all Stella Mod settings?</value>
     <value>Folder with game path does not exists:
 {0}
 
-Do you want to reset all Stella Mod settings?</value>
+Do you want to reconfigure Stella Mod in the configuration window?</value>
   </data>
   <data name="Utils_FoundGiExe" xml:space="preserve">
     <value>Found Genshin Impact Exe in: {0} [{1}]</value>
