@@ -343,6 +343,8 @@ namespace StellaLauncher.Forms
                 Utils.RemoveClickEvent(_updates_LinkLabel);
                 _updates_LinkLabel.Click += RunCheckForUpdates;
 
+                UpdateIsAvailable = false;
+
                 Log.Output(string.Format(Resources.Default_NotFoundAnyNewUpdates_YourInstalledVersion_, Program.AppVersion));
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress);
                 return 0;
