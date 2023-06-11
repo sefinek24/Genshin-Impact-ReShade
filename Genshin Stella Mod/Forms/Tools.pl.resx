@@ -134,10 +134,10 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="DeleteAllCacheAndLogFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 24</value>
+    <value>188, 24</value>
   </data>
   <data name="DeleteAllCacheAndLogFiles.Text" xml:space="preserve">
-    <value>Usuń cache i wszystkie logi</value>
+    <value>Cache + wszystkie logi</value>
   </data>
   <data name="DeleteAllCacheAndLogFiles.ToolTip" xml:space="preserve">
     <value />
@@ -178,25 +178,7 @@
   <data name="ConfigFiles.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="SeeReShadeConfig.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 24</value>
-  </data>
-  <data name="SeeReShadeConfig.Text" xml:space="preserve">
-    <value>Wyświetl konfiguracje ReShade</value>
-  </data>
-  <data name="SeeReShadeConfig.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="pictureBox4.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="SeeFPSUnlockerConfig.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 24</value>
-  </data>
-  <data name="SeeFPSUnlockerConfig.Text" xml:space="preserve">
-    <value>Wyświetl konfiguracje FPS Unlockera</value>
-  </data>
-  <data name="SeeFPSUnlockerConfig.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="pictureBox5.ToolTip" xml:space="preserve">
@@ -207,9 +189,6 @@
   </data>
   <data name="ScanAndRepairSysFiles.Text" xml:space="preserve">
     <value>Skanuj i napraw pliki systemowe</value>
-  </data>
-  <data name="ScanAndRepairSysFiles.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="pictureBox6.ToolTip" xml:space="preserve">
     <value />
@@ -224,13 +203,13 @@
     <value>Utwórz skrót na pulpicie</value>
   </data>
   <data name="CreateShortcut.ToolTip" xml:space="preserve">
-    <value />
+    <value>Utwórz skrót do Stella Mod Launcher na pulpicie. Jest to przydatne, jeśli przypadkowo usunąłeś ikonę moda.</value>
   </data>
   <data name="Launcher.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="CacheAndLogs.Text" xml:space="preserve">
-    <value>Pam. pod. i logi</value>
+    <value>Usuń</value>
   </data>
   <data name="CacheAndLogs.ToolTip" xml:space="preserve">
     <value />
@@ -239,13 +218,55 @@
     <value />
   </data>
   <data name="DeleteOnlyWebView2Cache.Size" type="System.Drawing.Size, System.Drawing">
-    <value>264, 24</value>
+    <value>202, 24</value>
   </data>
   <data name="DeleteOnlyWebView2Cache.Text" xml:space="preserve">
-    <value>Usuń pam. pod. tylko WebView2</value>
+    <value>Tylko pamięć podręczną</value>
   </data>
   <data name="DeleteOnlyWebView2Cache.ToolTip" xml:space="preserve">
     <value />
+  </data>
+  <data name="MuteMusicOnStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 24</value>
+  </data>
+  <data name="MuteMusicOnStart.Text" xml:space="preserve">
+    <value>Wycisz muzyke na start</value>
+  </data>
+  <data name="MuteMusicOnStart.ToolTip" xml:space="preserve">
+    <value>Włącz lub wycisz muzykę odtwarzaną podczas uruchamiania Stella Mod.</value>
+  </data>
+  <data name="DisableDiscordRPC.Text" xml:space="preserve">
+    <value>Wyłącz Discord RPC</value>
+  </data>
+  <data name="DisableDiscordRPC.ToolTip" xml:space="preserve">
+    <value>Włącz lub wyłącz status "W grze Genshin Stella Mod" na Discordzie.</value>
+  </data>
+  <data name="ChangeLanguage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 24</value>
+  </data>
+  <data name="ChangeLanguage.Text" xml:space="preserve">
+    <value>Zmień język</value>
+  </data>
+  <data name="ChangeLanguage.ToolTip" xml:space="preserve">
+    <value>Zmień język aplikacji Stella Mod Launcher.</value>
+  </data>
+  <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 24</value>
+  </data>
+  <data name="linkLabel1.Text" xml:space="preserve">
+    <value>Otwórz okno konfiguracyjne</value>
+  </data>
+  <data name="linkLabel1.ToolTip" xml:space="preserve">
+    <value>Ponownie skonfiguruj Genshin Stella Mod.</value>
+  </data>
+  <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 24</value>
+  </data>
+  <data name="linkLabel2.Text" xml:space="preserve">
+    <value>Usuń powiadomienia Stelli</value>
+  </data>
+  <data name="linkLabel2.ToolTip" xml:space="preserve">
+    <value>Po kliknięciu tego przycisku wszystkie powiadomienia z aplikacji Stella Mod Launcher zostaną usunięte.</value>
   </data>
   <data name="panel3.ToolTip" xml:space="preserve">
     <value />
@@ -271,18 +292,6 @@
   <data name="InnoSetupLogs.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="DoNotEdit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 23</value>
-  </data>
-  <data name="DoNotEdit.Text" xml:space="preserve">
-    <value>Nie edytuj ich</value>
-  </data>
-  <data name="DoNotEdit.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="madeWith_Label.Location" type="System.Drawing.Point, System.Drawing">
-    <value>423, 563</value>
-  </data>
   <data name="madeWith_Label.Size" type="System.Drawing.Size, System.Drawing">
     <value>217, 23</value>
   </data>
@@ -301,49 +310,16 @@
   <data name="pictureBox11.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="MuteMusicOnStart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 24</value>
-  </data>
-  <data name="MuteMusicOnStart.Text" xml:space="preserve">
-    <value>Wycisz muzyke na start</value>
-  </data>
-  <data name="MuteMusicOnStart.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="pictureBox12.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="DisableDiscordRPC.Text" xml:space="preserve">
-    <value>Wyłącz Discord RPC</value>
-  </data>
-  <data name="DisableDiscordRPC.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pictureBox13.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="pictureBox14.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="ChangeLanguage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 24</value>
-  </data>
-  <data name="ChangeLanguage.Text" xml:space="preserve">
-    <value>Zmień język</value>
-  </data>
-  <data name="ChangeLanguage.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="pictureBox15.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 24</value>
-  </data>
-  <data name="linkLabel1.Text" xml:space="preserve">
-    <value>Otwórz okno konfiguracyjne</value>
-  </data>
-  <data name="linkLabel1.ToolTip" xml:space="preserve">
+  <data name="pictureBox16.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="$this.Text" xml:space="preserve">

@@ -127,9 +127,6 @@
   <metadata name="panel2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="panel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -147,6 +144,9 @@
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>76</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="panel2.ToolTip" xml:space="preserve">
     <value>Close</value>
   </data>
@@ -265,16 +265,16 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="DeleteAllCacheAndLogFiles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>380, 193</value>
+    <value>400, 469</value>
   </data>
   <data name="DeleteAllCacheAndLogFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 24</value>
+    <value>140, 24</value>
   </data>
   <data name="DeleteAllCacheAndLogFiles.TabIndex" type="System.Int32, mscorlib">
     <value>80</value>
   </data>
   <data name="DeleteAllCacheAndLogFiles.Text" xml:space="preserve">
-    <value>Delete all cache and log files</value>
+    <value>Cache + log files</value>
   </data>
   <data name="&gt;&gt;DeleteAllCacheAndLogFiles.Name" xml:space="preserve">
     <value>DeleteAllCacheAndLogFiles</value>
@@ -292,7 +292,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>349, 193</value>
+    <value>369, 469</value>
   </data>
   <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -325,7 +325,7 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="ReShadeLogs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>379, 339</value>
+    <value>399, 329</value>
   </data>
   <data name="ReShadeLogs.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 24</value>
@@ -352,7 +352,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>349, 339</value>
+    <value>369, 329</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -385,7 +385,7 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="LauncherLogs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>379, 308</value>
+    <value>399, 298</value>
   </data>
   <data name="LauncherLogs.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 24</value>
@@ -412,7 +412,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>349, 308</value>
+    <value>369, 298</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -442,7 +442,7 @@
     <value>Comic Sans MS, 15pt</value>
   </data>
   <data name="LogFiles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>382, 272</value>
+    <value>402, 262</value>
   </data>
   <data name="LogFiles.Size" type="System.Drawing.Size, System.Drawing">
     <value>241, 35</value>
@@ -475,7 +475,7 @@
     <value>Comic Sans MS, 15pt</value>
   </data>
   <data name="ConfigFiles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 436</value>
+    <value>403, 158</value>
   </data>
   <data name="ConfigFiles.Size" type="System.Drawing.Size, System.Drawing">
     <value>233, 35</value>
@@ -511,16 +511,19 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="SeeReShadeConfig.Location" type="System.Drawing.Point, System.Drawing">
-    <value>66, 472</value>
+    <value>399, 194</value>
   </data>
   <data name="SeeReShadeConfig.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 24</value>
+    <value>81, 24</value>
   </data>
   <data name="SeeReShadeConfig.TabIndex" type="System.Int32, mscorlib">
     <value>90</value>
   </data>
   <data name="SeeReShadeConfig.Text" xml:space="preserve">
-    <value>See ReShade config</value>
+    <value>ReShade</value>
+  </data>
+  <data name="SeeReShadeConfig.ToolTip" xml:space="preserve">
+    <value>ReShade.ini</value>
   </data>
   <data name="&gt;&gt;SeeReShadeConfig.Name" xml:space="preserve">
     <value>SeeReShadeConfig</value>
@@ -538,7 +541,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>36, 472</value>
+    <value>369, 194</value>
   </data>
   <data name="pictureBox4.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -571,16 +574,19 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="SeeFPSUnlockerConfig.Location" type="System.Drawing.Point, System.Drawing">
-    <value>66, 503</value>
+    <value>399, 225</value>
   </data>
   <data name="SeeFPSUnlockerConfig.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 24</value>
+    <value>120, 24</value>
   </data>
   <data name="SeeFPSUnlockerConfig.TabIndex" type="System.Int32, mscorlib">
     <value>92</value>
   </data>
   <data name="SeeFPSUnlockerConfig.Text" xml:space="preserve">
-    <value>See FPS Unlocker config</value>
+    <value>FPS Unlocker</value>
+  </data>
+  <data name="SeeFPSUnlockerConfig.ToolTip" xml:space="preserve">
+    <value>unlocker.config.json</value>
   </data>
   <data name="&gt;&gt;SeeFPSUnlockerConfig.Name" xml:space="preserve">
     <value>SeeFPSUnlockerConfig</value>
@@ -598,7 +604,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>36, 503</value>
+    <value>369, 225</value>
   </data>
   <data name="pictureBox5.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -641,6 +647,9 @@
   </data>
   <data name="ScanAndRepairSysFiles.Text" xml:space="preserve">
     <value>Scan and repair system files</value>
+  </data>
+  <data name="ScanAndRepairSysFiles.ToolTip" xml:space="preserve">
+    <value>Clicking this button will initiate the scanning and repair of system files. This option is safe and recommended in most cases.</value>
   </data>
   <data name="&gt;&gt;ScanAndRepairSysFiles.Name" xml:space="preserve">
     <value>ScanAndRepairSysFiles</value>
@@ -729,6 +738,9 @@
   <data name="CreateShortcut.Text" xml:space="preserve">
     <value>Create shortcut on desktop</value>
   </data>
+  <data name="CreateShortcut.ToolTip" xml:space="preserve">
+    <value>Create a shortcut for Stella Mod Launcher on your desktop. This is useful if you accidentally deleted the mod icon.</value>
+  </data>
   <data name="&gt;&gt;CreateShortcut.Name" xml:space="preserve">
     <value>CreateShortcut</value>
   </data>
@@ -781,7 +793,7 @@
     <value>Comic Sans MS, 17.25pt</value>
   </data>
   <data name="CacheAndLogs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>382, 157</value>
+    <value>402, 433</value>
   </data>
   <data name="CacheAndLogs.Size" type="System.Drawing.Size, System.Drawing">
     <value>241, 35</value>
@@ -790,7 +802,7 @@
     <value>101</value>
   </data>
   <data name="CacheAndLogs.Text" xml:space="preserve">
-    <value>Cache and logs</value>
+    <value>Delete</value>
   </data>
   <data name="CacheAndLogs.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -811,7 +823,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>349, 223</value>
+    <value>369, 499</value>
   </data>
   <data name="pictureBox8.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -844,16 +856,16 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="DeleteOnlyWebView2Cache.Location" type="System.Drawing.Point, System.Drawing">
-    <value>379, 223</value>
+    <value>399, 499</value>
   </data>
   <data name="DeleteOnlyWebView2Cache.Size" type="System.Drawing.Size, System.Drawing">
-    <value>244, 24</value>
+    <value>98, 24</value>
   </data>
   <data name="DeleteOnlyWebView2Cache.TabIndex" type="System.Int32, mscorlib">
     <value>102</value>
   </data>
   <data name="DeleteOnlyWebView2Cache.Text" xml:space="preserve">
-    <value>Delete only WebView2 cache</value>
+    <value>Only cache</value>
   </data>
   <data name="&gt;&gt;DeleteOnlyWebView2Cache.Name" xml:space="preserve">
     <value>DeleteOnlyWebView2Cache</value>
@@ -867,9 +879,192 @@
   <data name="&gt;&gt;DeleteOnlyWebView2Cache.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="MuteMusicOnStart.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="MuteMusicOnStart.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MuteMusicOnStart.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12.75pt</value>
+  </data>
+  <data name="MuteMusicOnStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>66, 254</value>
+  </data>
+  <data name="MuteMusicOnStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 24</value>
+  </data>
+  <data name="MuteMusicOnStart.TabIndex" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
+  <data name="MuteMusicOnStart.Text" xml:space="preserve">
+    <value>Mute music on start</value>
+  </data>
+  <data name="MuteMusicOnStart.ToolTip" xml:space="preserve">
+    <value>Enable or mute the music played during the startup of this launcher program.</value>
+  </data>
+  <data name="&gt;&gt;MuteMusicOnStart.Name" xml:space="preserve">
+    <value>MuteMusicOnStart</value>
+  </data>
+  <data name="&gt;&gt;MuteMusicOnStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MuteMusicOnStart.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MuteMusicOnStart.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="DisableDiscordRPC.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="DisableDiscordRPC.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DisableDiscordRPC.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12.75pt</value>
+  </data>
+  <data name="DisableDiscordRPC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>66, 284</value>
+  </data>
+  <data name="DisableDiscordRPC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 24</value>
+  </data>
+  <data name="DisableDiscordRPC.TabIndex" type="System.Int32, mscorlib">
+    <value>114</value>
+  </data>
+  <data name="DisableDiscordRPC.Text" xml:space="preserve">
+    <value>Disable Discord RPC</value>
+  </data>
+  <data name="DisableDiscordRPC.ToolTip" xml:space="preserve">
+    <value>Enable or disable the "Playing Genshin Stella Mod" status on Discord.</value>
+  </data>
+  <data name="&gt;&gt;DisableDiscordRPC.Name" xml:space="preserve">
+    <value>DisableDiscordRPC</value>
+  </data>
+  <data name="&gt;&gt;DisableDiscordRPC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DisableDiscordRPC.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DisableDiscordRPC.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="ChangeLanguage.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="ChangeLanguage.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ChangeLanguage.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12.75pt</value>
+  </data>
+  <data name="ChangeLanguage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>66, 314</value>
+  </data>
+  <data name="ChangeLanguage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 24</value>
+  </data>
+  <data name="ChangeLanguage.TabIndex" type="System.Int32, mscorlib">
+    <value>117</value>
+  </data>
+  <data name="ChangeLanguage.Text" xml:space="preserve">
+    <value>Change langauge</value>
+  </data>
+  <data name="ChangeLanguage.ToolTip" xml:space="preserve">
+    <value>Change the language of the Stella Mod Launcher application.</value>
+  </data>
+  <data name="&gt;&gt;ChangeLanguage.Name" xml:space="preserve">
+    <value>ChangeLanguage</value>
+  </data>
+  <data name="&gt;&gt;ChangeLanguage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ChangeLanguage.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ChangeLanguage.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="linkLabel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="linkLabel1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="linkLabel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12.75pt</value>
+  </data>
+  <data name="linkLabel1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>66, 194</value>
+  </data>
+  <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 24</value>
+  </data>
+  <data name="linkLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>119</value>
+  </data>
+  <data name="linkLabel1.Text" xml:space="preserve">
+    <value>Open configuration window</value>
+  </data>
+  <data name="linkLabel1.ToolTip" xml:space="preserve">
+    <value>Reconfigure Stella Mod again.</value>
+  </data>
+  <data name="&gt;&gt;linkLabel1.Name" xml:space="preserve">
+    <value>linkLabel1</value>
+  </data>
+  <data name="&gt;&gt;linkLabel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;linkLabel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;linkLabel1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="linkLabel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="linkLabel2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="linkLabel2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12.75pt</value>
+  </data>
+  <data name="linkLabel2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="linkLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>66, 422</value>
+  </data>
+  <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 24</value>
+  </data>
+  <data name="linkLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>121</value>
+  </data>
+  <data name="linkLabel2.Text" xml:space="preserve">
+    <value>Remove all Stella notifications</value>
+  </data>
+  <data name="linkLabel2.ToolTip" xml:space="preserve">
+    <value>After clicking this button, all notifications from the Stella Mod Launcher application will be deleted.</value>
+  </data>
+  <data name="&gt;&gt;linkLabel2.Name" xml:space="preserve">
+    <value>linkLabel2</value>
+  </data>
+  <data name="&gt;&gt;linkLabel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;linkLabel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;linkLabel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="panel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -898,7 +1093,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>348, 369</value>
+    <value>368, 359</value>
   </data>
   <data name="pictureBox9.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -931,7 +1126,7 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="InstallationLogs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>378, 369</value>
+    <value>398, 359</value>
   </data>
   <data name="InstallationLogs.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 24</value>
@@ -958,7 +1153,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>348, 399</value>
+    <value>368, 389</value>
   </data>
   <data name="pictureBox10.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -991,7 +1186,7 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="InnoSetupLogs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>378, 399</value>
+    <value>398, 389</value>
   </data>
   <data name="InnoSetupLogs.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 24</value>
@@ -1013,39 +1208,6 @@
   </data>
   <data name="&gt;&gt;InnoSetupLogs.ZOrder" xml:space="preserve">
     <value>13</value>
-  </data>
-  <data name="DoNotEdit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="DoNotEdit.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DoNotEdit.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt</value>
-  </data>
-  <data name="DoNotEdit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>148, 537</value>
-  </data>
-  <data name="DoNotEdit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 23</value>
-  </data>
-  <data name="DoNotEdit.TabIndex" type="System.Int32, mscorlib">
-    <value>109</value>
-  </data>
-  <data name="DoNotEdit.Text" xml:space="preserve">
-    <value>Do not edit</value>
-  </data>
-  <data name="&gt;&gt;DoNotEdit.Name" xml:space="preserve">
-    <value>DoNotEdit</value>
-  </data>
-  <data name="&gt;&gt;DoNotEdit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DoNotEdit.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;DoNotEdit.ZOrder" xml:space="preserve">
-    <value>11</value>
   </data>
   <data name="madeWith_Label.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1081,7 +1243,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;madeWith_Label.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="Misc.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1114,7 +1276,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Misc.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="pictureBox11.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1141,39 +1303,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox11.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="MuteMusicOnStart.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="MuteMusicOnStart.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="MuteMusicOnStart.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12.75pt</value>
-  </data>
-  <data name="MuteMusicOnStart.Location" type="System.Drawing.Point, System.Drawing">
-    <value>66, 254</value>
-  </data>
-  <data name="MuteMusicOnStart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 24</value>
-  </data>
-  <data name="MuteMusicOnStart.TabIndex" type="System.Int32, mscorlib">
-    <value>112</value>
-  </data>
-  <data name="MuteMusicOnStart.Text" xml:space="preserve">
-    <value>Mute music on start</value>
-  </data>
-  <data name="&gt;&gt;MuteMusicOnStart.Name" xml:space="preserve">
-    <value>MuteMusicOnStart</value>
-  </data>
-  <data name="&gt;&gt;MuteMusicOnStart.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MuteMusicOnStart.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;MuteMusicOnStart.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
   <data name="pictureBox12.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -1201,67 +1330,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox12.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="DisableDiscordRPC.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="DisableDiscordRPC.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DisableDiscordRPC.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12.75pt</value>
-  </data>
-  <data name="DisableDiscordRPC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>66, 284</value>
-  </data>
-  <data name="DisableDiscordRPC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 24</value>
-  </data>
-  <data name="DisableDiscordRPC.TabIndex" type="System.Int32, mscorlib">
-    <value>114</value>
-  </data>
-  <data name="DisableDiscordRPC.Text" xml:space="preserve">
-    <value>Disable Discord RPC</value>
-  </data>
-  <data name="&gt;&gt;DisableDiscordRPC.Name" xml:space="preserve">
-    <value>DisableDiscordRPC</value>
-  </data>
-  <data name="&gt;&gt;DisableDiscordRPC.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DisableDiscordRPC.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;DisableDiscordRPC.ZOrder" xml:space="preserve">
     <value>7</value>
-  </data>
-  <data name="pictureBox13.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="pictureBox13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>121, 537</value>
-  </data>
-  <data name="pictureBox13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
-  </data>
-  <data name="pictureBox13.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pictureBox13.TabIndex" type="System.Int32, mscorlib">
-    <value>116</value>
-  </data>
-  <data name="&gt;&gt;pictureBox13.Name" xml:space="preserve">
-    <value>pictureBox13</value>
-  </data>
-  <data name="&gt;&gt;pictureBox13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox13.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox13.ZOrder" xml:space="preserve">
-    <value>5</value>
   </data>
   <data name="pictureBox14.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1288,40 +1357,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox14.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="ChangeLanguage.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="ChangeLanguage.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ChangeLanguage.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12.75pt</value>
-  </data>
-  <data name="ChangeLanguage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>66, 314</value>
-  </data>
-  <data name="ChangeLanguage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 24</value>
-  </data>
-  <data name="ChangeLanguage.TabIndex" type="System.Int32, mscorlib">
-    <value>117</value>
-  </data>
-  <data name="ChangeLanguage.Text" xml:space="preserve">
-    <value>Change langauge</value>
-  </data>
-  <data name="&gt;&gt;ChangeLanguage.Name" xml:space="preserve">
-    <value>ChangeLanguage</value>
-  </data>
-  <data name="&gt;&gt;ChangeLanguage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ChangeLanguage.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ChangeLanguage.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="pictureBox15.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1351,43 +1387,37 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox15.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
-  <data name="linkLabel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="pictureBox16.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="linkLabel1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="linkLabel1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12.75pt</value>
-  </data>
-  <data name="linkLabel1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="pictureBox16.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>66, 194</value>
+  <data name="pictureBox16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>36, 422</value>
   </data>
-  <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 24</value>
+  <data name="pictureBox16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
   </data>
-  <data name="linkLabel1.TabIndex" type="System.Int32, mscorlib">
-    <value>119</value>
+  <data name="pictureBox16.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
   </data>
-  <data name="linkLabel1.Text" xml:space="preserve">
-    <value>Open configuration window</value>
+  <data name="pictureBox16.TabIndex" type="System.Int32, mscorlib">
+    <value>123</value>
   </data>
-  <data name="&gt;&gt;linkLabel1.Name" xml:space="preserve">
-    <value>linkLabel1</value>
+  <data name="&gt;&gt;pictureBox16.Name" xml:space="preserve">
+    <value>pictureBox16</value>
   </data>
-  <data name="&gt;&gt;linkLabel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;pictureBox16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;linkLabel1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pictureBox16.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;linkLabel1.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;pictureBox16.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

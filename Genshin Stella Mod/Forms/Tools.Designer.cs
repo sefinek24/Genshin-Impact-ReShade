@@ -55,23 +55,23 @@ namespace StellaLauncher.Forms
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.DeleteOnlyWebView2Cache = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.MuteMusicOnStart = new System.Windows.Forms.LinkLabel();
+            this.DisableDiscordRPC = new System.Windows.Forms.LinkLabel();
+            this.ChangeLanguage = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.InstallationLogs = new System.Windows.Forms.LinkLabel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.InnoSetupLogs = new System.Windows.Forms.LinkLabel();
-            this.DoNotEdit = new System.Windows.Forms.Label();
             this.madeWith_Label = new System.Windows.Forms.Label();
             this.Misc = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.MuteMusicOnStart = new System.Windows.Forms.LinkLabel();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.DisableDiscordRPC = new System.Windows.Forms.LinkLabel();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.ChangeLanguage = new System.Windows.Forms.LinkLabel();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -85,9 +85,9 @@ namespace StellaLauncher.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -208,6 +208,7 @@ namespace StellaLauncher.Forms
             this.SeeReShadeConfig.LinkColor = System.Drawing.Color.White;
             this.SeeReShadeConfig.Name = "SeeReShadeConfig";
             this.SeeReShadeConfig.TabStop = true;
+            this.toolTip1.SetToolTip(this.SeeReShadeConfig, resources.GetString("SeeReShadeConfig.ToolTip"));
             this.SeeReShadeConfig.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ReShadeConfig_Click);
             // 
             // pictureBox4
@@ -228,6 +229,7 @@ namespace StellaLauncher.Forms
             this.SeeFPSUnlockerConfig.LinkColor = System.Drawing.Color.White;
             this.SeeFPSUnlockerConfig.Name = "SeeFPSUnlockerConfig";
             this.SeeFPSUnlockerConfig.TabStop = true;
+            this.toolTip1.SetToolTip(this.SeeFPSUnlockerConfig, resources.GetString("SeeFPSUnlockerConfig.ToolTip"));
             this.SeeFPSUnlockerConfig.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.UnlockerConfig_Click);
             // 
             // pictureBox5
@@ -248,6 +250,7 @@ namespace StellaLauncher.Forms
             this.ScanAndRepairSysFiles.LinkColor = System.Drawing.Color.White;
             this.ScanAndRepairSysFiles.Name = "ScanAndRepairSysFiles";
             this.ScanAndRepairSysFiles.TabStop = true;
+            this.toolTip1.SetToolTip(this.ScanAndRepairSysFiles, resources.GetString("ScanAndRepairSysFiles.ToolTip"));
             this.ScanAndRepairSysFiles.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ScanSysFiles_Click);
             // 
             // pictureBox6
@@ -277,6 +280,7 @@ namespace StellaLauncher.Forms
             this.CreateShortcut.LinkColor = System.Drawing.Color.White;
             this.CreateShortcut.Name = "CreateShortcut";
             this.CreateShortcut.TabStop = true;
+            this.toolTip1.SetToolTip(this.CreateShortcut, resources.GetString("CreateShortcut.ToolTip"));
             this.CreateShortcut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CreateShortcut_Button);
             // 
             // Launcher
@@ -312,6 +316,66 @@ namespace StellaLauncher.Forms
             this.DeleteOnlyWebView2Cache.Name = "DeleteOnlyWebView2Cache";
             this.DeleteOnlyWebView2Cache.TabStop = true;
             this.DeleteOnlyWebView2Cache.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.DeleteWebViewCache_Click);
+            // 
+            // MuteMusicOnStart
+            // 
+            this.MuteMusicOnStart.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.MuteMusicOnStart, "MuteMusicOnStart");
+            this.MuteMusicOnStart.BackColor = System.Drawing.Color.Transparent;
+            this.MuteMusicOnStart.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.MuteMusicOnStart.LinkColor = System.Drawing.Color.White;
+            this.MuteMusicOnStart.Name = "MuteMusicOnStart";
+            this.MuteMusicOnStart.TabStop = true;
+            this.toolTip1.SetToolTip(this.MuteMusicOnStart, resources.GetString("MuteMusicOnStart.ToolTip"));
+            this.MuteMusicOnStart.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.MuteMusic_LinkClicked);
+            // 
+            // DisableDiscordRPC
+            // 
+            this.DisableDiscordRPC.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.DisableDiscordRPC, "DisableDiscordRPC");
+            this.DisableDiscordRPC.BackColor = System.Drawing.Color.Transparent;
+            this.DisableDiscordRPC.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.DisableDiscordRPC.LinkColor = System.Drawing.Color.White;
+            this.DisableDiscordRPC.Name = "DisableDiscordRPC";
+            this.DisableDiscordRPC.TabStop = true;
+            this.toolTip1.SetToolTip(this.DisableDiscordRPC, resources.GetString("DisableDiscordRPC.ToolTip"));
+            this.DisableDiscordRPC.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.DisableRPC_LinkClicked);
+            // 
+            // ChangeLanguage
+            // 
+            this.ChangeLanguage.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.ChangeLanguage, "ChangeLanguage");
+            this.ChangeLanguage.BackColor = System.Drawing.Color.Transparent;
+            this.ChangeLanguage.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.ChangeLanguage.LinkColor = System.Drawing.Color.White;
+            this.ChangeLanguage.Name = "ChangeLanguage";
+            this.ChangeLanguage.TabStop = true;
+            this.toolTip1.SetToolTip(this.ChangeLanguage, resources.GetString("ChangeLanguage.ToolTip"));
+            this.ChangeLanguage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ChangeLang_LinkClicked);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.linkLabel1, "linkLabel1");
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.linkLabel1.LinkColor = System.Drawing.Color.White;
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.TabStop = true;
+            this.toolTip1.SetToolTip(this.linkLabel1, resources.GetString("linkLabel1.ToolTip"));
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OpenConfWindow_LinkClicked);
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.linkLabel2, "linkLabel2");
+            this.linkLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.linkLabel2.LinkColor = System.Drawing.Color.White;
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.TabStop = true;
+            this.toolTip1.SetToolTip(this.linkLabel2, resources.GetString("linkLabel2.ToolTip"));
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.RemoveStellaNotifications_LinkClicked);
             // 
             // panel3
             // 
@@ -360,13 +424,6 @@ namespace StellaLauncher.Forms
             this.InnoSetupLogs.TabStop = true;
             this.InnoSetupLogs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.InnoSetup_Button);
             // 
-            // DoNotEdit
-            // 
-            resources.ApplyResources(this.DoNotEdit, "DoNotEdit");
-            this.DoNotEdit.BackColor = System.Drawing.Color.Transparent;
-            this.DoNotEdit.ForeColor = System.Drawing.Color.White;
-            this.DoNotEdit.Name = "DoNotEdit";
-            // 
             // madeWith_Label
             // 
             resources.ApplyResources(this.madeWith_Label, "madeWith_Label");
@@ -390,17 +447,6 @@ namespace StellaLauncher.Forms
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.TabStop = false;
             // 
-            // MuteMusicOnStart
-            // 
-            this.MuteMusicOnStart.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.MuteMusicOnStart, "MuteMusicOnStart");
-            this.MuteMusicOnStart.BackColor = System.Drawing.Color.Transparent;
-            this.MuteMusicOnStart.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.MuteMusicOnStart.LinkColor = System.Drawing.Color.White;
-            this.MuteMusicOnStart.Name = "MuteMusicOnStart";
-            this.MuteMusicOnStart.TabStop = true;
-            this.MuteMusicOnStart.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.MuteMusic_LinkClicked);
-            // 
             // pictureBox12
             // 
             resources.ApplyResources(this.pictureBox12, "pictureBox12");
@@ -409,26 +455,6 @@ namespace StellaLauncher.Forms
             this.pictureBox12.Image = global::StellaLauncher.Properties.Resources.icons8_gear;
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.TabStop = false;
-            // 
-            // DisableDiscordRPC
-            // 
-            this.DisableDiscordRPC.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.DisableDiscordRPC, "DisableDiscordRPC");
-            this.DisableDiscordRPC.BackColor = System.Drawing.Color.Transparent;
-            this.DisableDiscordRPC.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.DisableDiscordRPC.LinkColor = System.Drawing.Color.White;
-            this.DisableDiscordRPC.Name = "DisableDiscordRPC";
-            this.DisableDiscordRPC.TabStop = true;
-            this.DisableDiscordRPC.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.DisableRPC_LinkClicked);
-            // 
-            // pictureBox13
-            // 
-            resources.ApplyResources(this.pictureBox13, "pictureBox13");
-            this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox13.Image = global::StellaLauncher.Properties.Resources.icons8_info_squared;
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.TabStop = false;
             // 
             // pictureBox14
             // 
@@ -439,17 +465,6 @@ namespace StellaLauncher.Forms
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.TabStop = false;
             // 
-            // ChangeLanguage
-            // 
-            this.ChangeLanguage.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.ChangeLanguage, "ChangeLanguage");
-            this.ChangeLanguage.BackColor = System.Drawing.Color.Transparent;
-            this.ChangeLanguage.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.ChangeLanguage.LinkColor = System.Drawing.Color.White;
-            this.ChangeLanguage.Name = "ChangeLanguage";
-            this.ChangeLanguage.TabStop = true;
-            this.ChangeLanguage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ChangeLang_LinkClicked);
-            // 
             // pictureBox15
             // 
             resources.ApplyResources(this.pictureBox15, "pictureBox15");
@@ -459,16 +474,14 @@ namespace StellaLauncher.Forms
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.TabStop = false;
             // 
-            // linkLabel1
+            // pictureBox16
             // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.linkLabel1, "linkLabel1");
-            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OpenConfWindow_LinkClicked);
+            resources.ApplyResources(this.pictureBox16, "pictureBox16");
+            this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox16.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox16.Image = global::StellaLauncher.Properties.Resources.icons8_recycle_bin;
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.TabStop = false;
             // 
             // Tools
             // 
@@ -476,18 +489,18 @@ namespace StellaLauncher.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::StellaLauncher.Properties.Resources.bg_tools;
+            this.Controls.Add(this.pictureBox16);
+            this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.pictureBox15);
             this.Controls.Add(this.madeWith_Label);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pictureBox14);
             this.Controls.Add(this.ChangeLanguage);
-            this.Controls.Add(this.pictureBox13);
             this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.DisableDiscordRPC);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.MuteMusicOnStart);
             this.Controls.Add(this.Misc);
-            this.Controls.Add(this.DoNotEdit);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.InnoSetupLogs);
             this.Controls.Add(this.pictureBox9);
@@ -534,9 +547,9 @@ namespace StellaLauncher.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -574,17 +587,17 @@ namespace StellaLauncher.Forms
         private System.Windows.Forms.LinkLabel InstallationLogs;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.LinkLabel InnoSetupLogs;
-        private System.Windows.Forms.Label DoNotEdit;
         private System.Windows.Forms.Label madeWith_Label;
         private System.Windows.Forms.Label Misc;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.LinkLabel MuteMusicOnStart;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.LinkLabel DisableDiscordRPC;
-        private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.LinkLabel ChangeLanguage;
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.PictureBox pictureBox16;
     }
 }

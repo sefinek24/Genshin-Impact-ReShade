@@ -2,6 +2,7 @@ using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using Microsoft.Toolkit.Uwp.Notifications;
 using Microsoft.Win32;
 using StellaLauncher.Forms.Other;
 using StellaLauncher.Properties;
@@ -191,6 +192,11 @@ namespace StellaLauncher.Forms
         private async void ScanSysFiles_Click(object sender, LinkLabelLinkClickedEventArgs e)
         {
             await Cmd.CliWrap("wt.exe", Path.Combine(Program.AppPath, "data", "cmd", "scan_sys_files.cmd"), Program.AppPath, true, false);
+        }
+
+        private void RemoveStellaNotifications_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ToastNotificationManagerCompat.History.Clear();
         }
 
 
