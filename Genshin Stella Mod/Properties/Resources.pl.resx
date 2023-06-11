@@ -723,4 +723,10 @@ Czy chcesz pobrać tę zależność z witryny firmy Microsoft?</value>
   <data name="Cmd_SuccessfullyExecutedCommand" xml:space="preserve">
     <value>CliWrap: Pomyślnie wykonano {0}; Kod wyjścia: {1}; Czas rozpoczęcia: {2}; Czas zakończenia: {3}{4}{5};</value>
   </data>
+  <data name="Tools_AreYouSureToRunStellaConfigurationWindowAgain" xml:space="preserve">
+    <value>Czy na pewno chcesz ponownie uruchomić Okno Konfiguracji Stella?</value>
+  </data>
+  <data name="Tools_TheShortcutHasBeenSuccessfullyCreated" xml:space="preserve">
+    <value>Skrót został pomyślnie utworzony.</value>
+  </data>
 </root>

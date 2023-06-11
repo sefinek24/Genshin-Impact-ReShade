@@ -1,5 +1,4 @@
 using System;
-using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Reflection;
@@ -230,10 +229,10 @@ namespace PrepareStella
 
 
             // Registry
-            using (RegistryKey newKey = Registry.CurrentUser.CreateSubKey(RegistryPath))
+            using (RegistryKey key = Registry.CurrentUser.CreateSubKey(RegistryPath))
             {
-                newKey?.SetValue("AppIsConfigured", 1);
-                newKey?.SetValue("ConfiguredDate", DateTime.Now);
+                key?.SetValue("AppIsConfigured", 1);
+                key?.SetValue("ConfiguredDate", DateTime.Now);
             }
 
 
@@ -262,7 +261,7 @@ namespace PrepareStella
             {
                 // Run Genshin Stella Mod
                 Console.WriteLine(@"Launching Genshin Stella Mod...");
-                Process.Start(Path.Combine(AppPath, "Genshin Stella Mod.exe"));
+                _ = Cmd.CliWrap("Genshin Stella Mod.exe", null, AppPath);
             }
 
 

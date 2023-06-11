@@ -824,4 +824,10 @@ The requested operation is successful. Changes will not be effective until the s
   <data name="Program_QuestionMessageBox_WouldYouShareOpinionAboutStellaMod" xml:space="preserve">
     <value>Question (MessageBox): Would you share your opinion about Stella Mod on trustpilot.com? I would be very grateful. Selected: {0}</value>
   </data>
+  <data name="Tools_AreYouSureToRunStellaConfigurationWindowAgain" xml:space="preserve">
+    <value>Are you sure to run Stella Configuration Window again?</value>
+  </data>
+  <data name="Tools_TheShortcutHasBeenSuccessfullyCreated" xml:space="preserve">
+    <value>The shortcut has been successfully created.</value>
+  </data>
 </root>

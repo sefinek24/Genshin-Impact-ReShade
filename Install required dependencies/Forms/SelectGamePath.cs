@@ -83,10 +83,12 @@ namespace PrepareStella.Forms
 
             File.WriteAllText(Path.Combine(Program.AppData, "game-version.sfn"), Path.GetFileName(selectedFile) == "GenshinImpact.exe" ? "1" : "2");
 
+            string giGame = Path.GetDirectoryName(selectedFile);
+            Program.GameDirGlobal = giGame;
             Program.GameExeGlobal = selectedFile;
             File.WriteAllText(Program.GamePathSfn, selectedFile);
 
-            Console.WriteLine(Path.GetDirectoryName(Path.GetDirectoryName(selectedFile)));
+            Console.WriteLine(Path.GetDirectoryName(giGame));
 
             Close();
         }

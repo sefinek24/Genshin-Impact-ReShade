@@ -2,6 +2,7 @@ using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using Microsoft.Win32;
 using StellaLauncher.Forms.Other;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
@@ -78,20 +79,22 @@ namespace StellaLauncher.Forms
         // -------------------------------- Launcher --------------------------------
         private void OpenConfWindow_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            DialogResult res = MessageBox.Show(@"Are you sure to run Stella Configuration Window again?", Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult res = MessageBox.Show(Resources.Tools_AreYouSureToRunStellaConfigurationWindowAgain, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (res == DialogResult.No) return;
 
             string path = Path.Combine(Program.AppPath, "First app launch.exe");
             if (!File.Exists(path))
             {
                 string fileName = Path.GetFileName(path);
-                MessageBox.Show($@"Required file '{fileName}' was not found in the main mod directory.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Log.SaveErrorLog(new Exception($"File {fileName} was not found in {path}."));
+                MessageBox.Show(Resources.Program_RequiredFileFisrtAppLaunchExeWasNotFound_, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Log.SaveErrorLog(new Exception(string.Format(Resources.Default_File_WasNotFound, fileName)));
                 return;
             }
 
-            string confSfn = Path.Combine(Program.AppData, "configured.sfn");
-            if (File.Exists(confSfn)) File.Delete(confSfn);
+            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(Program.RegistryPath))
+            {
+                key?.SetValue("AppIsConfigured", 0);
+            }
 
             _ = Cmd.CliWrap(path, null, null, true, false);
             Environment.Exit(0);
@@ -100,7 +103,7 @@ namespace StellaLauncher.Forms
         private void CreateShortcut_Button(object sender, LinkLabelLinkClickedEventArgs e)
         {
             bool success = Utils.CreateShortcut();
-            if (success) MessageBox.Show(@"The shortcut has been successfully created.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (success) MessageBox.Show(Resources.Tools_TheShortcutHasBeenSuccessfullyCreated, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void MuteMusic_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

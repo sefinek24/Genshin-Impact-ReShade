@@ -1751,6 +1751,15 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure to run Stella Configuration Window again?.
+        /// </summary>
+        internal static string Tools_AreYouSureToRunStellaConfigurationWindowAgain {
+            get {
+                return ResourceManager.GetString("Tools_AreYouSureToRunStellaConfigurationWindowAgain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Browsing utils 🔧.
         /// </summary>
         internal static string Tools_BrowsingUtils {
@@ -1812,6 +1821,15 @@ namespace StellaLauncher.Properties {
         internal static string Tools_SpecialBackgroundWasNotFoundIn_ForToolsWindow {
             get {
                 return ResourceManager.GetString("Tools_SpecialBackgroundWasNotFoundIn_ForToolsWindow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The shortcut has been successfully created..
+        /// </summary>
+        internal static string Tools_TheShortcutHasBeenSuccessfullyCreated {
+            get {
+                return ResourceManager.GetString("Tools_TheShortcutHasBeenSuccessfullyCreated", resourceCulture);
             }
         }
         
