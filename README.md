@@ -20,7 +20,10 @@
     </h3>
     <a href="https://patreon.com/sefinek" title="Patreon"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dsefinek%26type%3Dpledges&style=for-the-badge" height="32" alt="Support me on Patreon"></a>
     <a href="https://ko-fi.com/sefinek" title="Ko-fi"><img src="https://storage.ko-fi.com/cdn/brandasset/kofi_button_blue.png" height="32" alt="Support me on Ko-fi"></a>
+    <br><br>
+    <img src="https://moe-counter.glitch.me/get/@genshin-stella-mod-readme?theme=rule34" alt="README.md views">
 </div>
+
 
 ## <div id="list">📋 〢 List</div>
 - [⚠️ Important](#important)
