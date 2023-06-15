@@ -47,7 +47,7 @@ namespace StellaLauncher.Scripts
                 string showWorkingDir = !string.IsNullOrEmpty(workingDir)
                     ? $"\n\n» {Resources.Cmd_WorkingDirectory}: {workingDir}"
                     : "";
-                string showExitCode = !double.IsNaN(result.ExitCode) ? $"\n\n» ${Resources.Cmd_ExitCode}: {result.ExitCode}" : "";
+                string showExitCode = !double.IsNaN(result.ExitCode) ? $"\n\n» {Resources.Cmd_ExitCode}: {result.ExitCode}" : "";
                 string showError = !string.IsNullOrEmpty(stderr) ? $"\n\n» {Resources.Cmd_Error}:\n{stderr}" : "";
                 string info = $"{showCommand}{showWorkingDir}{showExitCode}{showError}";
 
