@@ -24,7 +24,7 @@
 </div>
 
 
-## <div id="list">📋 〢 List</div>
+## <div id="list">📋 〢 Table of contents</div>
 - [⚠️ Important](#important)
 - [📂 Includes](#includes)
 - [📃 Changelog](CHANGELOG.md)
