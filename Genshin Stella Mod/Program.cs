@@ -84,7 +84,7 @@ namespace StellaLauncher
                 Environment.Exit(998765341);
             }
 
-            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(RegistryPath))
+            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(RegistryPath, true))
             {
                 int value = (int)(key?.GetValue("AppIsConfigured") ?? 0);
                 if (value == 0)
@@ -110,9 +110,9 @@ namespace StellaLauncher
                 if (!File.Exists(TierActivated) && Directory.Exists(PatronsDir)) Directory.Delete(PatronsDir, true);
 
                 RegistryKey key = Registry.CurrentUser.CreateSubKey(RegistryPath);
-                int launchCount = (int)key?.GetValue("LaunchCount", 0);
+                int launchCount = (int)(key?.GetValue("LaunchCount") ?? 0);
                 launchCount++;
-                key.SetValue("LaunchCount", launchCount);
+                key?.SetValue("LaunchCount", launchCount);
 
                 switch (launchCount)
                 {

@@ -92,7 +92,7 @@ namespace StellaLauncher.Forms
                 return;
             }
 
-            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(Program.RegistryPath))
+            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(Program.RegistryPath, true))
             {
                 key?.SetValue("AppIsConfigured", 0);
             }
