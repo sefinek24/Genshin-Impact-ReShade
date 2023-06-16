@@ -43,8 +43,6 @@ namespace StellaLauncher.Forms
             this.discordServer_LinkLabel = new System.Windows.Forms.LinkLabel();
             this.youTube_LinkLabel = new System.Windows.Forms.LinkLabel();
             this.startGame_LinkLabel = new System.Windows.Forms.LinkLabel();
-            this.runFpsUnlocker_LinkLabel = new System.Windows.Forms.LinkLabel();
-            this.injectReShade_LinkLabel = new System.Windows.Forms.LinkLabel();
             this.website_LinkLabel = new System.Windows.Forms.LinkLabel();
             this.gameplay_LinkLabel = new System.Windows.Forms.LinkLabel();
             this.supportMe_LinkLabel = new System.Windows.Forms.LinkLabel();
@@ -67,6 +65,9 @@ namespace StellaLauncher.Forms
             this.paimon_PictureBox = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.PreparingPleaseWait = new System.Windows.Forms.Label();
+            this.injectReShade_LinkLabel = new System.Windows.Forms.LinkLabel();
+            this.runFpsUnlocker_LinkLabel = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.githubIco_Picturebox)).BeginInit();
@@ -212,32 +213,6 @@ namespace StellaLauncher.Forms
             this.startGame_LinkLabel.TabStop = true;
             this.toolTip1.SetToolTip(this.startGame_LinkLabel, resources.GetString("startGame_LinkLabel.ToolTip"));
             this.startGame_LinkLabel.Click += new System.EventHandler(this.StartGame_Click);
-            // 
-            // runFpsUnlocker_LinkLabel
-            // 
-            this.runFpsUnlocker_LinkLabel.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
-            resources.ApplyResources(this.runFpsUnlocker_LinkLabel, "runFpsUnlocker_LinkLabel");
-            this.runFpsUnlocker_LinkLabel.BackColor = System.Drawing.Color.Transparent;
-            this.runFpsUnlocker_LinkLabel.DisabledLinkColor = System.Drawing.Color.Black;
-            this.runFpsUnlocker_LinkLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.runFpsUnlocker_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.runFpsUnlocker_LinkLabel.LinkColor = System.Drawing.Color.White;
-            this.runFpsUnlocker_LinkLabel.Name = "runFpsUnlocker_LinkLabel";
-            this.runFpsUnlocker_LinkLabel.TabStop = true;
-            this.toolTip1.SetToolTip(this.runFpsUnlocker_LinkLabel, resources.GetString("runFpsUnlocker_LinkLabel.ToolTip"));
-            this.runFpsUnlocker_LinkLabel.Click += new System.EventHandler(this.OnlyUnlocker_Click);
-            // 
-            // injectReShade_LinkLabel
-            // 
-            this.injectReShade_LinkLabel.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
-            resources.ApplyResources(this.injectReShade_LinkLabel, "injectReShade_LinkLabel");
-            this.injectReShade_LinkLabel.BackColor = System.Drawing.Color.Transparent;
-            this.injectReShade_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.injectReShade_LinkLabel.LinkColor = System.Drawing.Color.White;
-            this.injectReShade_LinkLabel.Name = "injectReShade_LinkLabel";
-            this.injectReShade_LinkLabel.TabStop = true;
-            this.toolTip1.SetToolTip(this.injectReShade_LinkLabel, resources.GetString("injectReShade_LinkLabel.ToolTip"));
-            this.injectReShade_LinkLabel.Click += new System.EventHandler(this.OnlyReShade_Click);
             // 
             // website_LinkLabel
             // 
@@ -458,12 +433,50 @@ namespace StellaLauncher.Forms
             this.PreparingPleaseWait.ForeColor = System.Drawing.Color.White;
             this.PreparingPleaseWait.Name = "PreparingPleaseWait";
             // 
+            // injectReShade_LinkLabel
+            // 
+            this.injectReShade_LinkLabel.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.injectReShade_LinkLabel, "injectReShade_LinkLabel");
+            this.injectReShade_LinkLabel.BackColor = System.Drawing.Color.Transparent;
+            this.injectReShade_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.injectReShade_LinkLabel.LinkColor = System.Drawing.Color.White;
+            this.injectReShade_LinkLabel.Name = "injectReShade_LinkLabel";
+            this.injectReShade_LinkLabel.TabStop = true;
+            this.toolTip1.SetToolTip(this.injectReShade_LinkLabel, resources.GetString("injectReShade_LinkLabel.ToolTip"));
+            this.injectReShade_LinkLabel.Click += new System.EventHandler(this.OnlyReShade_Click);
+            // 
+            // runFpsUnlocker_LinkLabel
+            // 
+            this.runFpsUnlocker_LinkLabel.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.runFpsUnlocker_LinkLabel, "runFpsUnlocker_LinkLabel");
+            this.runFpsUnlocker_LinkLabel.BackColor = System.Drawing.Color.Transparent;
+            this.runFpsUnlocker_LinkLabel.DisabledLinkColor = System.Drawing.Color.Black;
+            this.runFpsUnlocker_LinkLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.runFpsUnlocker_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.runFpsUnlocker_LinkLabel.LinkColor = System.Drawing.Color.White;
+            this.runFpsUnlocker_LinkLabel.Name = "runFpsUnlocker_LinkLabel";
+            this.runFpsUnlocker_LinkLabel.TabStop = true;
+            this.toolTip1.SetToolTip(this.runFpsUnlocker_LinkLabel, resources.GetString("runFpsUnlocker_LinkLabel.ToolTip"));
+            this.runFpsUnlocker_LinkLabel.Click += new System.EventHandler(this.OnlyUnlocker_Click);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel1, "linkLabel1");
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.linkLabel1.LinkColor = System.Drawing.Color.White;
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.TabStop = true;
+            this.toolTip1.SetToolTip(this.linkLabel1, resources.GetString("linkLabel1.ToolTip"));
+            // 
             // Default
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::StellaLauncher.Properties.Resources.bg_main;
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.clickMe_LinkLabel);
             this.Controls.Add(this.PreparingPleaseWait);
             this.Controls.Add(this.progressBar1);
@@ -544,8 +557,6 @@ namespace StellaLauncher.Forms
         private System.Windows.Forms.LinkLabel discordServer_LinkLabel;
         private System.Windows.Forms.LinkLabel youTube_LinkLabel;
         private System.Windows.Forms.LinkLabel startGame_LinkLabel;
-        private System.Windows.Forms.LinkLabel runFpsUnlocker_LinkLabel;
-        private System.Windows.Forms.LinkLabel injectReShade_LinkLabel;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.LinkLabel website_LinkLabel;
         private System.Windows.Forms.LinkLabel gameplay_LinkLabel;
@@ -561,6 +572,9 @@ namespace StellaLauncher.Forms
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label PreparingPleaseWait;
         private System.Windows.Forms.LinkLabel clickMe_LinkLabel;
+        private System.Windows.Forms.LinkLabel injectReShade_LinkLabel;
+        private System.Windows.Forms.LinkLabel runFpsUnlocker_LinkLabel;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 

@@ -12,7 +12,7 @@ using StellaLauncher.Properties;
 
 namespace StellaLauncher.Scripts.Download
 {
-    internal class ReShadeIniUpdate
+    internal class ReShadeIni
     {
         // LinkLabel, Label, ProgressBar etc.
         private static LinkLabel _updatesLabel;
@@ -48,9 +48,6 @@ namespace StellaLauncher.Scripts.Download
                 _updatesLabel.Text = Resources.ReShadeIniUpdate_DownloadTheRequiredFile;
                 _statusLabel.Text += $"[x] {Resources.ReShadeIniUpdate_FileReShadeIniWasNotFoundInYourGameDir}\n";
                 _updateIcon.Image = Resources.icons8_download_from_the_cloud;
-
-                // Utils.RemoveClickEvent(_updatesLabel);
-                // _updatesLabel.Click += Default.RunCheckUpdates_Click;
 
                 Log.Output(string.Format(Resources.ReShadeIniUpdate_ReShadeIniWasNotFoundIn_, reShadePath));
                 return -2;

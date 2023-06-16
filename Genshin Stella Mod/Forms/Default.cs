@@ -58,6 +58,9 @@ namespace StellaLauncher.Forms
         public static LinkLabel _updates_LinkLabel;
         public static PictureBox _updateIco_PictureBox;
 
+        // Path
+        private static string _resPath;
+
         // Background
         private readonly string[] _backgroundFiles =
         {
@@ -260,7 +263,6 @@ namespace StellaLauncher.Forms
                     UpdateIsAvailable = true;
 
                     NormalRelease.Run(remoteVersion, remoteVerDate);
-
                     return 1;
                 }
 
@@ -269,7 +271,70 @@ namespace StellaLauncher.Forms
                 switch (resultInt)
                 {
                     case -2:
+                    {
+                        DialogResult msgBoxResult = MessageBox.Show(Resources.Default_TheReShadeIniFileCouldNotBeLocatedInYourGameFiles, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        string gameDir = await Utils.GetGame("giGameDir");
+                        string reShadePath = Path.Combine(gameDir, "ReShade.ini");
+
+                        switch (msgBoxResult)
+                        {
+                            case DialogResult.Yes:
+                                try
+                                {
+                                    _updates_LinkLabel.LinkColor = Color.DodgerBlue;
+                                    _updates_LinkLabel.Text = Resources.Default_Downloading;
+                                    TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
+
+                                    WebClient client2 = new WebClient();
+                                    client2.Headers.Add("user-agent", Program.UserAgent);
+                                    await client2.DownloadFileTaskAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini", reShadePath);
+
+                                    if (File.Exists(reShadePath))
+                                    {
+                                        _status_Label.Text += $"[✓] {Resources.Default_SuccessfullyDownloadedReShadeIni}\n";
+                                        Log.Output(string.Format(Resources.Default_SuccessfullyDownloadedReShadeIniAndSavedIn, reShadePath));
+
+                                        await CheckForUpdates();
+                                        return 0;
+                                    }
+
+                                    _status_Label.Text += $"[x] {Resources.Default_FileWasNotFound}\n";
+                                    Log.SaveErrorLog(new Exception(string.Format(Resources.Default_DownloadedReShadeIniWasNotFoundIn_, reShadePath)));
+
+                                    TaskbarManager.Instance.SetProgressValue(100, 100);
+                                    TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
+                                }
+                                catch (Exception ex)
+                                {
+                                    _status_Label.Text += $"[x] {Resources.Default_Meeow_FailedToDownloadReShadeIni_TryAgain}\n";
+                                    _updates_LinkLabel.LinkColor = Color.Red;
+                                    _updates_LinkLabel.Text = Resources.Default_FailedToDownload;
+
+                                    Log.SaveErrorLog(ex);
+                                    if (!File.Exists(reShadePath)) Log.Output(Resources.Default_TheReShadeIniFileStillDoesNotExist);
+
+                                    TaskbarManager.Instance.SetProgressValue(100, 100);
+                                    TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
+                                }
+
+                                break;
+                            case DialogResult.No:
+                            {
+                                _status_Label.Text += $"[i] {Resources.Default_CanceledByTheUser_AreYouSureOfWhatYoureDoing}\n";
+                                Log.Output(Resources.Default_FileDownloadHasBeenCanceledByTheUser);
+
+                                if (!File.Exists(reShadePath)) Log.Output(Resources.Default_TheReShadeIniFileStillDoesNotExist);
+
+                                TaskbarManager.Instance.SetProgressValue(100, 100);
+                                TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
+                                break;
+                            }
+                        }
+
                         return resultInt;
+                    }
+
 
                     case 1:
                     {
@@ -298,6 +363,8 @@ namespace StellaLauncher.Forms
                     string resourcesPath = File.ReadAllText(resSfn);
                     if (Directory.Exists(resourcesPath))
                     {
+                        _resPath = resourcesPath;
+
                         string jsonFile = Path.Combine(resourcesPath, "data.json");
                         if (File.Exists(jsonFile))
                         {
@@ -364,7 +431,7 @@ namespace StellaLauncher.Forms
             }
         }
 
-        private static async void RunCheckForUpdates(object sender, EventArgs e)
+        public static async void RunCheckForUpdates(object sender, EventArgs e)
         {
             await CheckForUpdates();
         }
@@ -449,13 +516,13 @@ namespace StellaLauncher.Forms
         }
 
         // ------- Start the game -------
-        // 1 = ReShade + FPS Unlocker
+        // 1 = ReShade + 3DMigoto + FPS Unlocker
         // 2 = Only ReShade
         // 3 = Only FPS Unlocker
         private async void StartGame_Click(object sender, EventArgs e)
         {
             // Run cmd file
-            bool res = await Cmd.CliWrap("wt.exe", $"{RunCmd} 1 {await Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
+            bool res = await Cmd.CliWrap("wt.exe", $"{RunCmd} 1 {await Utils.GetGameVersion()} \"{CmdOutputLogs}\" \"{_resPath}\\3DMigoto\" \"{Program.AppPath}\"", Program.AppPath, false, false);
 
             // Exit Stella with status code 0
             if (res) Environment.Exit(0);
@@ -558,75 +625,16 @@ namespace StellaLauncher.Forms
         public async void CheckUpdates_Click(object sender, EventArgs e)
         {
             int update = await CheckForUpdates();
-            if (update == -2 || update == -3)
-            {
-                DialogResult msgBoxResult = MessageBox.Show(Resources.Default_TheReShadeIniFileCouldNotBeLocatedInYourGameFiles, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                string gameDir = await Utils.GetGame("giGameDir");
-                string reShadePath = Path.Combine(gameDir, "ReShade.ini");
-
-                switch (msgBoxResult)
-                {
-                    case DialogResult.Yes:
-                        try
-                        {
-                            updates_LinkLabel.LinkColor = Color.DodgerBlue;
-                            updates_LinkLabel.Text = Resources.Default_Downloading;
-                            TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
-
-                            WebClient client = new WebClient();
-                            client.Headers.Add("user-agent", Program.UserAgent);
-                            await client.DownloadFileTaskAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini", reShadePath);
-
-                            if (File.Exists(reShadePath))
-                            {
-                                status_Label.Text += $"[✓] {Resources.Default_SuccessfullyDownloadedReShadeIni}\n";
-                                Log.Output(string.Format(Resources.Default_SuccessfullyDownloadedReShadeIniAndSavedIn, reShadePath));
-
-                                await CheckForUpdates();
-                            }
-                            else
-                            {
-                                status_Label.Text += $"[x] {Resources.Default_FileWasNotFound}\n";
-                                Log.SaveErrorLog(new Exception(string.Format(Resources.Default_DownloadedReShadeIniWasNotFoundIn_, reShadePath)));
-
-                                TaskbarManager.Instance.SetProgressValue(100, 100);
-                                TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            status_Label.Text += $"[x] {Resources.Default_Meeow_FailedToDownloadReShadeIni_TryAgain}\n";
-                            updates_LinkLabel.LinkColor = Color.Red;
-                            updates_LinkLabel.Text = Resources.Default_FailedToDownload;
-
-                            Log.SaveErrorLog(ex);
-                            if (!File.Exists(reShadePath)) Log.Output(Resources.Default_TheReShadeIniFileStillDoesNotExist);
-
-                            TaskbarManager.Instance.SetProgressValue(100, 100);
-                            TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
-                        }
-
-                        break;
-                    case DialogResult.No:
-                        status_Label.Text += $"[i] {Resources.Default_CanceledByTheUser_AreYouSureOfWhatYoureDoing}\n";
-                        Log.Output(Resources.Default_FileDownloadHasBeenCanceledByTheUser);
-
-                        if (!File.Exists(reShadePath)) Log.Output(Resources.Default_TheReShadeIniFileStillDoesNotExist);
-
-                        TaskbarManager.Instance.SetProgressValue(100, 100);
-                        TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
-                        break;
-                }
-
-                return;
-            }
-
             if (update != 0) return;
 
             updates_LinkLabel.LinkColor = Color.LawnGreen;
             updates_LinkLabel.Text = Resources.Default_YouHaveTheLatestVersion;
             updateIco_PictureBox.Image = Resources.icons8_available_updates;
+        }
+
+        public static async void RunCheckUpdates_Click(object sender, EventArgs e)
+        {
+            await CheckForUpdates();
         }
 
         private void W_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

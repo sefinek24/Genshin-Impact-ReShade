@@ -41,16 +41,6 @@ namespace PrepareStella.Scripts.Preparing
 
             Console.WriteLine(@"Unpacking resources...");
             await ExtractZipFile(zipPath, Program.ResourcesGlobal);
-
-            Console.WriteLine(@"Configuring ReShade...");
-            ConfigureReShade(Program.ResourcesGlobal);
-
-            string cache = Path.Combine(Program.ResourcesGlobal, "Cache");
-            if (!Directory.Exists(cache))
-            {
-                Console.WriteLine(@"Creating cache folder...");
-                Directory.CreateDirectory(cache);
-            }
         }
 
         private static async Task ExtractZipFile(string zipPath, string destinationPath)
@@ -70,23 +60,6 @@ namespace PrepareStella.Scripts.Preparing
                     await Task.Run(() => entry.ExtractToFile(fullPath, true));
                 }
             }
-        }
-
-        private static void ConfigureReShade(string resourcesGlobal)
-        {
-            string reshadeIniPath = Path.Combine(Program.GameDirGlobal, "ReShade.ini");
-
-            string reShadeIniContent = File.ReadAllText(reshadeIniPath);
-            string newData = reShadeIniContent?
-                .Replace("{addon.path}", Path.Combine(resourcesGlobal, "Addons"))
-                .Replace("{general.effects}", Path.Combine(resourcesGlobal, "Shaders", "Effects"))
-                .Replace("{general.cache}", Path.Combine(resourcesGlobal, "Cache"))
-                .Replace("{general.preset}", Path.Combine(resourcesGlobal, "Presets", "3. Preset by Sefinek - Medium settings [Default].ini"))
-                .Replace("{general.textures}", Path.Combine(resourcesGlobal, "Shaders", "Textures"))
-                .Replace("{screenshot.path}", Path.Combine(resourcesGlobal, "Screenshots"))
-                .Replace("{screenshot.sound}", Path.Combine(Program.AppPath, "data", "sounds", "screenshot.wav"));
-
-            File.WriteAllText(reshadeIniPath, newData);
         }
     }
 }

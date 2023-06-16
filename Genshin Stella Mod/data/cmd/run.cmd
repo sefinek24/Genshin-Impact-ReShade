@@ -134,10 +134,14 @@ if "%1" equ "1" (
     pushd "..\reshade"
     call "..\cmd\start\run-reshade.cmd"
 
+    REM Inject 3DMigoto
+    pushd "%4"
+    call "3DMigoto Loader.exe"
+
     REM Wait for the unlocker to finish
-    echo.
-    pushd "..\cmd\start"
-    call wait_for_unlockfps.cmd
+    pushd "%5"
+    pushd "data\cmd\start"
+    call "wait_for_unlockfps.cmd"
 ) else if "%1" equ "2" (
     echo [✓] Everything is ready! Thank you for using Stella Mod. Have fun. ᕱ⑅︎ᕱ & echo.
     REM Ask the user to start the game
