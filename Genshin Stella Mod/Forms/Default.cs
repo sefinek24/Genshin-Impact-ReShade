@@ -24,8 +24,8 @@ namespace StellaLauncher.Forms
     {
         // Files
         private static readonly string CmdOutputLogs = Path.Combine(Program.AppData, "logs", "cmd.output.log");
+
         private static readonly string RunCmd = Path.Combine(Program.AppPath, "data", "cmd", "run.cmd");
-        public static IniFile ReShadeIni;
 
         // New update?
         public static bool UpdateIsAvailable;
@@ -82,7 +82,7 @@ namespace StellaLauncher.Forms
             InitializeComponent();
         }
 
-        private async void Default_Load(object sender, EventArgs e)
+        private void Default_Load(object sender, EventArgs e)
         {
             // First
             _status_Label = status_Label;
@@ -109,10 +109,6 @@ namespace StellaLauncher.Forms
             _updates_LinkLabel = updates_LinkLabel;
             _updateIco_PictureBox = updateIco_PictureBox;
 
-            // Path
-            string mainGameDir = await Utils.GetGame("giGameDir");
-            string reShadePath = Path.Combine(mainGameDir, "ReShade.ini");
-            if (File.Exists(reShadePath)) ReShadeIni = new IniFile(reShadePath);
 
             // Registry
             using (RegistryKey key2 = Registry.CurrentUser.CreateSubKey(Program.RegistryPath, true))
@@ -268,73 +264,64 @@ namespace StellaLauncher.Forms
                 }
 
 
+                // Check new updates of resources
+                string resSfn = Path.Combine(Program.AppData, "resources-path.sfn");
+                string resourcesPath;
+                if (File.Exists(resSfn))
+                {
+                    resourcesPath = File.ReadAllText(resSfn);
+                    if (!Directory.Exists(resourcesPath))
+                    {
+                        _status_Label.Text += $"{string.Format(Resources.Default_Directory_WasNotFound, resourcesPath)}\n";
+                        Log.SaveErrorLog(new Exception(string.Format(Resources.Default_Directory_WasNotFound, resourcesPath)));
+
+                        return -1;
+                    }
+
+                    _resPath = resourcesPath;
+
+                    string jsonFile = Path.Combine(resourcesPath, "data.json");
+                    if (!File.Exists(jsonFile))
+                    {
+                        _status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, jsonFile)}\n";
+                        Log.SaveErrorLog(new Exception(string.Format(Resources.Default_File_WasNotFound, jsonFile)));
+
+                        return -1;
+                    }
+
+                    string jsonContent = File.ReadAllText(jsonFile);
+                    LocalResources data = JsonConvert.DeserializeObject<LocalResources>(jsonContent);
+
+                    WebClient resClient = new WebClient();
+                    resClient.Headers.Add("user-agent", Program.UserAgent);
+                    string resJson = await resClient.DownloadStringTaskAsync("https://api.sefinek.net/api/v4/genshin-stella-mod/version/app/launcher/resources");
+                    StellaResources resourcesRes = JsonConvert.DeserializeObject<StellaResources>(resJson);
+
+                    if (data.Version != resourcesRes.Message)
+                    {
+                        UpdateIsAvailable = true;
+
+                        DownloadResources.Run(resourcesPath, data.Version, resourcesRes.Message, resourcesRes.Date);
+                        return 1;
+                    }
+                }
+                else
+                {
+                    _status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, resSfn)}\n";
+                    Log.SaveErrorLog(new Exception(string.Format(Resources.Default_File_WasNotFound, resSfn)));
+
+                    return -1;
+                }
+
+
                 // Check new updates for ReShade.ini file
                 int resultInt = await ReShadeIniUpdate.Run(_updates_LinkLabel, _status_Label, _updateIco_PictureBox, _version_LinkLabel);
                 switch (resultInt)
                 {
                     case -2:
                     {
-                        DialogResult msgBoxResult = MessageBox.Show(Resources.Default_TheReShadeIniFileCouldNotBeLocatedInYourGameFiles, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                        string gameDir = await Utils.GetGame("giGameDir");
-                        string reShadePath = Path.Combine(gameDir, "ReShade.ini");
-
-                        switch (msgBoxResult)
-                        {
-                            case DialogResult.Yes:
-                                try
-                                {
-                                    _updates_LinkLabel.LinkColor = Color.DodgerBlue;
-                                    _updates_LinkLabel.Text = Resources.Default_Downloading;
-                                    TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
-
-                                    WebClient client2 = new WebClient();
-                                    client2.Headers.Add("user-agent", Program.UserAgent);
-                                    await client2.DownloadFileTaskAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini", reShadePath);
-
-                                    if (File.Exists(reShadePath))
-                                    {
-                                        _status_Label.Text += $"[✓] {Resources.Default_SuccessfullyDownloadedReShadeIni}\n";
-                                        Log.Output(string.Format(Resources.Default_SuccessfullyDownloadedReShadeIniAndSavedIn, reShadePath));
-
-                                        await CheckForUpdates();
-                                        return 0;
-                                    }
-
-                                    _status_Label.Text += $"[x] {Resources.Default_FileWasNotFound}\n";
-                                    Log.SaveErrorLog(new Exception(string.Format(Resources.Default_DownloadedReShadeIniWasNotFoundIn_, reShadePath)));
-
-                                    TaskbarManager.Instance.SetProgressValue(100, 100);
-                                    TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
-                                }
-                                catch (Exception ex)
-                                {
-                                    _status_Label.Text += $"[x] {Resources.Default_Meeow_FailedToDownloadReShadeIni_TryAgain}\n";
-                                    _updates_LinkLabel.LinkColor = Color.Red;
-                                    _updates_LinkLabel.Text = Resources.Default_FailedToDownload;
-
-                                    Log.SaveErrorLog(ex);
-                                    if (!File.Exists(reShadePath)) Log.Output(Resources.Default_TheReShadeIniFileStillDoesNotExist);
-
-                                    TaskbarManager.Instance.SetProgressValue(100, 100);
-                                    TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
-                                }
-
-                                break;
-                            case DialogResult.No:
-                            {
-                                _status_Label.Text += $"[i] {Resources.Default_CanceledByTheUser_AreYouSureOfWhatYoureDoing}\n";
-                                Log.Output(Resources.Default_FileDownloadHasBeenCanceledByTheUser);
-
-                                if (!File.Exists(reShadePath)) Log.Output(Resources.Default_TheReShadeIniFileStillDoesNotExist);
-
-                                TaskbarManager.Instance.SetProgressValue(100, 100);
-                                TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
-                                break;
-                            }
-                        }
-
-                        return resultInt;
+                        int number = await ReShadeCfg.Download(resultInt, resourcesPath);
+                        return number;
                     }
 
                     case 1:
@@ -355,54 +342,6 @@ namespace StellaLauncher.Forms
                         return 1;
                     }
                 }
-
-
-                // Check new updates of resources
-                string resSfn = Path.Combine(Program.AppData, "resources-path.sfn");
-                if (File.Exists(resSfn))
-                {
-                    string resourcesPath = File.ReadAllText(resSfn);
-                    if (Directory.Exists(resourcesPath))
-                    {
-                        _resPath = resourcesPath;
-
-                        string jsonFile = Path.Combine(resourcesPath, "data.json");
-                        if (File.Exists(jsonFile))
-                        {
-                            string jsonContent = File.ReadAllText(jsonFile);
-                            LocalResources data = JsonConvert.DeserializeObject<LocalResources>(jsonContent);
-
-                            WebClient resClient = new WebClient();
-                            resClient.Headers.Add("user-agent", Program.UserAgent);
-                            string resJson = await resClient.DownloadStringTaskAsync("https://api.sefinek.net/api/v4/genshin-stella-mod/version/app/launcher/resources");
-                            StellaResources resourcesRes = JsonConvert.DeserializeObject<StellaResources>(resJson);
-
-                            if (data.Version != resourcesRes.Message)
-                            {
-                                UpdateIsAvailable = true;
-
-                                DownloadResources.Run(resourcesPath, data.Version, resourcesRes.Message, resourcesRes.Date);
-                                return 1;
-                            }
-                        }
-                        else
-                        {
-                            _status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, jsonFile)}\n";
-                            Log.SaveErrorLog(new Exception(string.Format(Resources.Default_File_WasNotFound, jsonFile)));
-                        }
-                    }
-                    else
-                    {
-                        _status_Label.Text += $"{string.Format(Resources.Default_Directory_WasNotFound, resourcesPath)}\n";
-                        Log.SaveErrorLog(new Exception(string.Format(Resources.Default_Directory_WasNotFound, resourcesPath)));
-                    }
-                }
-                else
-                {
-                    _status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, resSfn)}\n";
-                    Log.SaveErrorLog(new Exception(string.Format(Resources.Default_File_WasNotFound, resSfn)));
-                }
-
 
                 // Not found any new updates
                 _updates_LinkLabel.Text = Resources.Default_CheckForUpdates;
@@ -631,11 +570,6 @@ namespace StellaLauncher.Forms
             updates_LinkLabel.LinkColor = Color.LawnGreen;
             updates_LinkLabel.Text = Resources.Default_YouHaveTheLatestVersion;
             updateIco_PictureBox.Image = Resources.icons8_available_updates;
-        }
-
-        public static async void RunCheckUpdates_Click(object sender, EventArgs e)
-        {
-            await CheckForUpdates();
         }
 
         private void W_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

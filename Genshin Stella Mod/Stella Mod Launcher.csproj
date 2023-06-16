@@ -186,7 +186,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scripts\Cmd.cs" />
     <Compile Include="Scripts\Discord.cs" />
-    <Compile Include="Scripts\Download\ReShadeIni.cs" />
+    <Compile Include="Scripts\Download\ReShadeCfg.cs" />
     <Compile Include="Scripts\Download\StellaResources.cs" />
     <Compile Include="Scripts\IniFile.cs" />
     <Compile Include="Scripts\Log.cs" />

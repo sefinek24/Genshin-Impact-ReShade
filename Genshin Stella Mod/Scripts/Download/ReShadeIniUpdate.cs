@@ -49,9 +49,6 @@ namespace StellaLauncher.Scripts.Download
                 _statusLabel.Text += $"[x] {Resources.ReShadeIniUpdate_FileReShadeIniWasNotFoundInYourGameDir}\n";
                 _updateIcon.Image = Resources.icons8_download_from_the_cloud;
 
-                // Utils.RemoveClickEvent(_updatesLabel);
-                // _updatesLabel.Click += Default.RunCheckUpdates_Click;
-
                 Log.Output(string.Format(Resources.ReShadeIniUpdate_ReShadeIniWasNotFoundIn_, reShadePath));
                 return -2;
             }
@@ -73,7 +70,8 @@ namespace StellaLauncher.Scripts.Download
                     }
             }
 
-            string localIniVersion = Default.ReShadeIni.ReadString("STELLA", "ConfigVersion", null);
+            IniFile reShadeIni = new IniFile(reShadePath);
+            string localIniVersion = reShadeIni.ReadString("STELLA", "ConfigVersion", null);
             if (string.IsNullOrEmpty(localIniVersion))
             {
                 Default.UpdateIsAvailable = false;

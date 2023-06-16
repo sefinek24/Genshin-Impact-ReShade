@@ -166,28 +166,20 @@ namespace PrepareStella
             int newIntShortcuts = PrepareIni.ReadInt("PrepareStella", "InternetShortcutsInStartMenu", 1);
 
 
-            // Download and prepare ReShade config
-            if (updateReShadeCfg == 1)
-            {
-                Console.WriteLine(@"Downloading ReShade files...");
-                await UpdateReShadeCfg.Run();
-                TaskbarManager.Instance.SetProgressValue(51, 100);
-            }
-
             // Download shaders, presets and addons (Stella resources)
             if (downloadOrUpdateShaders == 1)
             {
                 Console.WriteLine(@"Checking Stella resources...");
                 await DownloadUpdateResources.Run();
-                TaskbarManager.Instance.SetProgressValue(68, 100);
+                TaskbarManager.Instance.SetProgressValue(39, 100);
             }
 
-            // Download FPS Unlocker config
-            if (updateFpsUnlockerCfg == 1)
+            // Download and prepare ReShade config
+            if (updateReShadeCfg == 1)
             {
-                Console.WriteLine(@"Downloading FPS Unlocker configuration...");
-                await DownloadFpsUnlockerCfg.Run();
-                TaskbarManager.Instance.SetProgressValue(76, 100);
+                Console.WriteLine(@"Downloading ReShade files...");
+                await UpdateReShadeCfg.Run();
+                TaskbarManager.Instance.SetProgressValue(46, 100);
             }
 
             // Delete ReShade cache
@@ -195,7 +187,15 @@ namespace PrepareStella
             {
                 Console.WriteLine(@"Deleting ReShade cache...");
                 await DeleteReShadeCache.Run();
-                TaskbarManager.Instance.SetProgressValue(82, 100);
+                TaskbarManager.Instance.SetProgressValue(57, 100);
+            }
+
+            // Download FPS Unlocker config
+            if (updateFpsUnlockerCfg == 1)
+            {
+                Console.WriteLine(@"Downloading FPS Unlocker configuration...");
+                await DownloadFpsUnlockerCfg.Run();
+                TaskbarManager.Instance.SetProgressValue(68, 100);
             }
 
             // Windows Terminal installation
@@ -203,7 +203,7 @@ namespace PrepareStella
             {
                 Console.Write(@"Backing up the Windows Terminal configuration file in app data... ");
                 await TerminalInstallation.Run();
-                TaskbarManager.Instance.SetProgressValue(87, 100);
+                TaskbarManager.Instance.SetProgressValue(77, 100);
             }
 
             // Create or update Desktop icon
@@ -211,7 +211,7 @@ namespace PrepareStella
             {
                 Console.WriteLine(@"Creating Desktop shortcut...");
                 await DesktopIcon.Run();
-                TaskbarManager.Instance.SetProgressValue(39, 100);
+                TaskbarManager.Instance.SetProgressValue(89, 100);
             }
 
             // Create new Internet shortcuts in menu start
@@ -219,7 +219,7 @@ namespace PrepareStella
             {
                 Console.WriteLine(@"Creating new Internet shortcut...");
                 await InternetShortcuts.Run();
-                TaskbarManager.Instance.SetProgressValue(45, 100);
+                TaskbarManager.Instance.SetProgressValue(96, 100);
             }
 
 
