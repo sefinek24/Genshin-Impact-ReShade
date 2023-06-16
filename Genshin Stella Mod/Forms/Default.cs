@@ -112,7 +112,7 @@ namespace StellaLauncher.Forms
             if (File.Exists(reShadePath)) ReShadeIni = new IniFile(reShadePath);
 
             // Registry
-            using (RegistryKey key2 = Registry.CurrentUser.CreateSubKey(Program.RegistryPath))
+            using (RegistryKey key2 = Registry.CurrentUser.CreateSubKey(Program.RegistryPath, true))
             {
                 key2?.SetValue("LastRunTime", DateTime.Now);
             }

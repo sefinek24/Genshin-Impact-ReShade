@@ -109,14 +109,14 @@ namespace PrepareStella.Scripts
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine(
-                        $"Oh nooo!! I'm sorry, but something went wrong. If you need help, please do one of the following:\n• Join my Discord server: {Program.DiscordUrl} [My username: Sefinek#2714]\n• Send an email: contact@sefinek.net\n• Use the chat available on my website.");
+                        $"Oh nooo!! I'm sorry, but something went wrong. If you need help, please do one of the following:\n• Join my Discord server: {Program.DiscordUrl} [My username: sefinek]\n• Send an email: contact@sefinek.net\n• Use the chat available on my website.");
                     Console.ResetColor();
                 }
                 else
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine(
-                        $"Visit our Discord server for help or try again. Good luck!\n• Discord: {Program.DiscordUrl} [My username: Sefinek#2714]\n• E-mail: contact@sefinek.net\n• Use the chat available on my website.");
+                        $"Visit our Discord server for help or try again. Good luck!\n• Discord: {Program.DiscordUrl} [My username: sefinek]\n• E-mail: contact@sefinek.net\n• Use the chat available on my website.");
 
                     Console.ForegroundColor = ConsoleColor.Blue;
                     Console.Write("\n» Would you like to join our Discord server? [Yes/no]: ");
