@@ -41,7 +41,7 @@ namespace StellaLauncher.Scripts.Download
                                 .Replace("{general.cache}", Path.Combine(resourcesPath, "ReShade", "Cache"))
                                 .Replace("{general.preset}", Path.Combine(resourcesPath, "ReShade", "Presets", "3. Preset by Sefinek - Medium settings [Default].ini"))
                                 .Replace("{general.textures}", Path.Combine(resourcesPath, "ReShade", "Shaders", "Textures"))
-                                .Replace("{screenshot.path}", Path.Combine(resourcesPath, "ReShade", "Screenshots"))
+                                .Replace("{screenshot.path}", Path.Combine(resourcesPath, "Screenshots"))
                                 .Replace("{screenshot.sound}", Path.Combine(Program.AppPath, "data", "sounds", "screenshot.wav"));
 
                             File.WriteAllText(reShadePath, newData);

@@ -63,7 +63,7 @@ namespace PrepareStella.Scripts.Preparing
                 .Replace("{general.cache}", Path.Combine(resourcesGlobal, "ReShade", "Cache"))
                 .Replace("{general.preset}", Path.Combine(resourcesGlobal, "ReShade", "Presets", "3. Preset by Sefinek - Medium settings [Default].ini"))
                 .Replace("{general.textures}", Path.Combine(resourcesGlobal, "ReShade", "Shaders", "Textures"))
-                .Replace("{screenshot.path}", Path.Combine(resourcesGlobal, "ReShade", "Screenshots"))
+                .Replace("{screenshot.path}", Path.Combine(resourcesGlobal, "Screenshots"))
                 .Replace("{screenshot.sound}", Path.Combine(Program.AppPath, "data", "sounds", "screenshot.wav"));
 
             File.WriteAllText(reshadeIniPath, newData);
