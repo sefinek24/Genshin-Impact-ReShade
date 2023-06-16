@@ -257,6 +257,7 @@ namespace StellaLauncher.Forms
                     return 1;
                 }
 
+
                 // Normal release
                 if (Program.AppVersion != remoteVersion)
                 {
@@ -265,6 +266,7 @@ namespace StellaLauncher.Forms
                     NormalRelease.Run(remoteVersion, remoteVerDate);
                     return 1;
                 }
+
 
                 // Check new updates for ReShade.ini file
                 int resultInt = await ReShadeIniUpdate.Run(_updates_LinkLabel, _status_Label, _updateIco_PictureBox, _version_LinkLabel);
@@ -334,7 +336,6 @@ namespace StellaLauncher.Forms
 
                         return resultInt;
                     }
-
 
                     case 1:
                     {
