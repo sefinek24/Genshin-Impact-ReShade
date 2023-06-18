@@ -459,7 +459,10 @@ namespace StellaLauncher.Forms
         // 1 = ReShade + 3DMigoto + FPS Unlocker
         // 2 = Only ReShade
         // 3 = Only FPS Unlocker
-        private async void StartGame_Click(object sender, EventArgs e)
+        // 4 = Only 3DMigoto
+
+        /* 1 */
+        private async void StartGame_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Run cmd file
             bool res = await Cmd.CliWrap("wt.exe", $"{RunCmd} 1 {await Utils.GetGameVersion()} \"{CmdOutputLogs}\" \"{_resPath}\\3DMigoto\" \"{Program.AppPath}\"", Program.AppPath, false, false);
@@ -468,7 +471,8 @@ namespace StellaLauncher.Forms
             if (res) Environment.Exit(0);
         }
 
-        private async void OnlyReShade_Click(object sender, EventArgs e)
+        /* 2 */
+        private async void OnlyReShade_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Run cmd file
             bool res = await Cmd.CliWrap("wt.exe", $"{RunCmd} 2 {await Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
@@ -480,12 +484,10 @@ namespace StellaLauncher.Forms
 
             // Open Genshin Launcher
             _ = Cmd.CliWrap(path, null, null, true, false);
-
-            // Exit Stella with status code 0
-            Environment.Exit(0);
         }
 
-        private async void OnlyUnlocker_Click(object sender, EventArgs e)
+        /* 3 */
+        private async void OnlyUnlocker_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Run cmd file
             bool res = await Cmd.CliWrap("wt.exe", $"{RunCmd} 3 {await Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
@@ -494,7 +496,17 @@ namespace StellaLauncher.Forms
             if (res) Environment.Exit(0);
         }
 
-        private async void OpenGILauncher_Click(object sender, EventArgs e)
+        /* 4 */
+        private async void Only3DMigoto_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // Run cmd file
+            bool res = await Cmd.CliWrap("wt.exe", $"{RunCmd} 4 {await Utils.GetGameVersion()} \"{CmdOutputLogs}\" \"{_resPath}\\3DMigoto\" \"{Program.AppPath}\"", Program.AppPath, false, false);
+
+            // Exit Stella with status code 0
+            if (res) Environment.Exit(0);
+        }
+
+        private async void OpenGILauncher_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             string path = await Utils.GetGame("giLauncher");
             if (path == string.Empty)

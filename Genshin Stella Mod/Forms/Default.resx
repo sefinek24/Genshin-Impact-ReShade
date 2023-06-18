@@ -832,6 +832,123 @@ RTX cards are not required.</value>
   <data name="&gt;&gt;clickMe_LinkLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="injectReShade_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="injectReShade_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="injectReShade_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12pt</value>
+  </data>
+  <data name="injectReShade_LinkLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="injectReShade_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 302</value>
+  </data>
+  <data name="injectReShade_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 23</value>
+  </data>
+  <data name="injectReShade_LinkLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>92</value>
+  </data>
+  <data name="injectReShade_LinkLabel.Text" xml:space="preserve">
+    <value>Only ReShade</value>
+  </data>
+  <data name="injectReShade_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Run Genshin Impact with only ReShade.</value>
+  </data>
+  <data name="&gt;&gt;injectReShade_LinkLabel.Name" xml:space="preserve">
+    <value>injectReShade_LinkLabel</value>
+  </data>
+  <data name="&gt;&gt;injectReShade_LinkLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;injectReShade_LinkLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;injectReShade_LinkLabel.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="runFpsUnlocker_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="runFpsUnlocker_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="runFpsUnlocker_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12pt</value>
+  </data>
+  <data name="runFpsUnlocker_LinkLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="runFpsUnlocker_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>204, 302</value>
+  </data>
+  <data name="runFpsUnlocker_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 23</value>
+  </data>
+  <data name="runFpsUnlocker_LinkLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>93</value>
+  </data>
+  <data name="runFpsUnlocker_LinkLabel.Text" xml:space="preserve">
+    <value>Only FPS Unlocker</value>
+  </data>
+  <data name="runFpsUnlocker_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Run game with only FPS Unlocker.</value>
+  </data>
+  <data name="&gt;&gt;runFpsUnlocker_LinkLabel.Name" xml:space="preserve">
+    <value>runFpsUnlocker_LinkLabel</value>
+  </data>
+  <data name="&gt;&gt;runFpsUnlocker_LinkLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;runFpsUnlocker_LinkLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;runFpsUnlocker_LinkLabel.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="linkLabel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="linkLabel1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="linkLabel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12pt</value>
+  </data>
+  <data name="linkLabel1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 302</value>
+  </data>
+  <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 23</value>
+  </data>
+  <data name="linkLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>117</value>
+  </data>
+  <data name="linkLabel1.Text" xml:space="preserve">
+    <value>Only 3DMigoto</value>
+  </data>
+  <data name="linkLabel1.ToolTip" xml:space="preserve">
+    <value>Run Genshin Impact with only ReShade.</value>
+  </data>
+  <data name="&gt;&gt;linkLabel1.Name" xml:space="preserve">
+    <value>linkLabel1</value>
+  </data>
+  <data name="&gt;&gt;linkLabel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;linkLabel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;linkLabel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="toolsIco_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1227,123 +1344,6 @@ RTX cards are not required.</value>
   </data>
   <data name="&gt;&gt;PreparingPleaseWait.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="injectReShade_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="injectReShade_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="injectReShade_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt</value>
-  </data>
-  <data name="injectReShade_LinkLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="injectReShade_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 302</value>
-  </data>
-  <data name="injectReShade_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 23</value>
-  </data>
-  <data name="injectReShade_LinkLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>92</value>
-  </data>
-  <data name="injectReShade_LinkLabel.Text" xml:space="preserve">
-    <value>Only ReShade</value>
-  </data>
-  <data name="injectReShade_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Run Genshin Impact with only ReShade.</value>
-  </data>
-  <data name="&gt;&gt;injectReShade_LinkLabel.Name" xml:space="preserve">
-    <value>injectReShade_LinkLabel</value>
-  </data>
-  <data name="&gt;&gt;injectReShade_LinkLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;injectReShade_LinkLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;injectReShade_LinkLabel.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="runFpsUnlocker_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="runFpsUnlocker_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="runFpsUnlocker_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt</value>
-  </data>
-  <data name="runFpsUnlocker_LinkLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="runFpsUnlocker_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>359, 302</value>
-  </data>
-  <data name="runFpsUnlocker_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 23</value>
-  </data>
-  <data name="runFpsUnlocker_LinkLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>93</value>
-  </data>
-  <data name="runFpsUnlocker_LinkLabel.Text" xml:space="preserve">
-    <value>Only FPS Unlocker</value>
-  </data>
-  <data name="runFpsUnlocker_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Run game with only FPS Unlocker.</value>
-  </data>
-  <data name="&gt;&gt;runFpsUnlocker_LinkLabel.Name" xml:space="preserve">
-    <value>runFpsUnlocker_LinkLabel</value>
-  </data>
-  <data name="&gt;&gt;runFpsUnlocker_LinkLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;runFpsUnlocker_LinkLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;runFpsUnlocker_LinkLabel.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="linkLabel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="linkLabel1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="linkLabel1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt</value>
-  </data>
-  <data name="linkLabel1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>217, 302</value>
-  </data>
-  <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 23</value>
-  </data>
-  <data name="linkLabel1.TabIndex" type="System.Int32, mscorlib">
-    <value>117</value>
-  </data>
-  <data name="linkLabel1.Text" xml:space="preserve">
-    <value>Only 3DMigoto</value>
-  </data>
-  <data name="linkLabel1.ToolTip" xml:space="preserve">
-    <value>Run Genshin Impact with only ReShade.</value>
-  </data>
-  <data name="&gt;&gt;linkLabel1.Name" xml:space="preserve">
-    <value>linkLabel1</value>
-  </data>
-  <data name="&gt;&gt;linkLabel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;linkLabel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;linkLabel1.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
