@@ -20,6 +20,10 @@ echo ===========================================================================
 
 echo 1/4 - Preparing...
 
+REM Variables
+set "GameVersion=%2"
+
+
 REM Check if the script is running with administrative permissions
 net session >nul 2>&1
 if not "%ERRORLEVEL%"=="0" (
@@ -49,7 +53,7 @@ if not "%1" equ "1"   if not "%1" equ "2"   if not "%1" equ "3" (
 )
 
 REM Get the game version from a file
-if not "%2" equ "1" if not "%2" equ "2" (
+if not "%GameVersion%" equ "1" if not "%GameVersion%" equ "2" (
     echo [x] Failed to start. Invalid game version: %2
     goto pause
 )
@@ -71,7 +75,7 @@ tasklist /fi "ImageName eq Genshin Stella Mod.exe" /fo csv | find /I "Genshin St
 ) || (
     echo [✓] Genshin Stella Mod.exe - OK
 )
-if "%2" equ "1" (
+if "%GameVersion%" equ "1" (
     tasklist /fi "ImageName eq GenshinImpact.exe" /fo csv | find /I "GenshinImpact.exe" >NUL && (
         echo [%DATE% %TIME%]: Killing "GenshinImpact.exe" process... >> %3
         taskkill /F /IM "GenshinImpact.exe" >> %3
@@ -80,7 +84,7 @@ if "%2" equ "1" (
     ) || (
         echo [✓] GenshinImpact.exe      - OK
     )
-) else if "%2" equ "2" (
+) else if "%GameVersion%" equ "2" (
     tasklist /fi "ImageName eq YuanShen.exe" /fo csv | find /I "YuanShen.exe" >NUL && (
         echo [%DATE% %TIME%]: Killing "YuanShen.exe" process... >> %3
         taskkill /F /IM "YuanShen.exe" >> %3
@@ -117,12 +121,10 @@ echo.
 
 REM Start the game
 echo 4/4 - Starting...
-
-set "GameVersion=%2"
 echo [%DATE% %TIME%]: Launch mode %1. Starting... >> %3
 
 
-REM Choose the correct mode based on the LaunchModeContent variable
+REM Choose the correct mode
 if "%1" equ "1" (
     REM Unlock FPS
     pushd "data\unlocker"
@@ -136,7 +138,7 @@ if "%1" equ "1" (
 
     REM Inject 3DMigoto
     pushd "%4"
-    call "3DMigoto Loader.exe"
+    call "loader.exe"
 
     REM Wait for the unlocker to finish
     pushd "%5"
