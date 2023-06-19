@@ -13,7 +13,15 @@ namespace PrepareStella.Scripts
         }
 
         [DllImport("kernel32.dll")]
+        private static extern long WritePrivateProfileString(string section, string key, string val, string filePath);
+
+        [DllImport("kernel32.dll")]
         private static extern int GetPrivateProfileString(string section, string key, string def, StringBuilder retVal, int size, string filePath);
+
+        public void WriteInt(string section, string key, int value)
+        {
+            WriteString(section, key, value.ToString());
+        }
 
         public int ReadInt(string section, string key, int defaultValue)
         {
@@ -21,11 +29,21 @@ namespace PrepareStella.Scripts
             return value;
         }
 
-        private string ReadString(string section, string key, string defaultValue)
+        public void WriteString(string section, string key, string value)
+        {
+            WritePrivateProfileString(section, key, value, _path);
+        }
+
+        public string ReadString(string section, string key, string defaultValue)
         {
             StringBuilder sb = new StringBuilder(255);
             GetPrivateProfileString(section, key, defaultValue, sb, 255, _path);
             return sb.ToString();
+        }
+
+        public void Save()
+        {
+            WritePrivateProfileString(null, null, null, _path);
         }
     }
 }

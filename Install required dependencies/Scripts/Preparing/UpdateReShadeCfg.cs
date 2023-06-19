@@ -54,19 +54,15 @@ namespace PrepareStella.Scripts.Preparing
 
         private static void ConfigureReShade(string resourcesGlobal)
         {
-            string reshadeIniPath = Path.Combine(Program.GameDirGlobal, "ReShade.ini");
-
-            string reShadeIniContent = File.ReadAllText(reshadeIniPath);
-            string newData = reShadeIniContent?
-                .Replace("{addon.path}", Path.Combine(resourcesGlobal, "ReShade", "Addons"))
-                .Replace("{general.effects}", Path.Combine(resourcesGlobal, "ReShade", "Shaders", "Effects"))
-                .Replace("{general.cache}", Path.Combine(resourcesGlobal, "ReShade", "Cache"))
-                .Replace("{general.preset}", Path.Combine(resourcesGlobal, "ReShade", "Presets", "3. Preset by Sefinek - Medium settings [Default].ini"))
-                .Replace("{general.textures}", Path.Combine(resourcesGlobal, "ReShade", "Shaders", "Textures"))
-                .Replace("{screenshot.path}", Path.Combine(resourcesGlobal, "Screenshots"))
-                .Replace("{screenshot.sound}", Path.Combine(Program.AppPath, "data", "sounds", "screenshot.wav"));
-
-            File.WriteAllText(reshadeIniPath, newData);
+            IniFile ini = new IniFile(Path.Combine(Program.GameDirGlobal, "ReShade.ini"));
+            ini.WriteString("ADDON", "AddonPath", $"{Path.Combine(resourcesGlobal, "ReShade", "Addons")}");
+            ini.WriteString("GENERAL", "EffectSearchPaths", Path.Combine(resourcesGlobal, "ReShade", "Shaders", "Effects"));
+            ini.WriteString("GENERAL", "IntermediateCachePath", Path.Combine(resourcesGlobal, "ReShade", "Cache"));
+            ini.WriteString("GENERAL", "PresetPath", Path.Combine(resourcesGlobal, "ReShade", "Presets", "3. Preset by Sefinek - Medium settings [Default].ini"));
+            ini.WriteString("GENERAL", "TextureSearchPaths", $"{Path.Combine(resourcesGlobal, "ReShade", "Shaders", "Textures")}");
+            ini.WriteString("SCREENSHOT", "SavePath", Path.Combine(resourcesGlobal, "Screenshots"));
+            ini.WriteString("SCREENSHOT", "SoundPath", Path.Combine(Program.AppPath, "data", "sounds", "screenshot.wav"));
+            ini.Save();
         }
     }
 }

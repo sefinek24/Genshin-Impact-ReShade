@@ -251,7 +251,7 @@ namespace PrepareStella
                 if (Regex.Match(rebootPc ?? string.Empty, "(?:y)", RegexOptions.IgnoreCase | RegexOptions.Singleline).Success)
                 {
                     await Cmd.CliWrap("shutdown",
-                        $"/r /t 30 /c \"{AppName} - scheduled reboot.\n\nThank you for installing. If you need help, add me on Discord Sefinek#2714.\n\nGood luck and have fun!\"", null);
+                        $"/r /t 30 /c \"{AppName} - scheduled reboot.\n\nThank you for installing. If you need help, add me on Discord: sefinek\n\nGood luck and have fun!\"", null);
 
                     Console.WriteLine(@"Your computer will restart in 30 seconds. Save your work!");
                     Log.Output("PC reboot was scheduled.");
