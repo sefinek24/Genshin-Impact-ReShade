@@ -14,7 +14,7 @@
     <a href="https://github.com/sefinek24/Genshin-Impact-ReShade/commits/main" title="Commit activity"><img src="https://img.shields.io/github/commit-activity/w/sefinek24/Genshin-Impact-ReShade?label=Commit%20activity" alt="Commit activity"></a>
     <a href="https://discord.com/invite/SVcbaRc7gH" title="Official Discord server"><img src="https://img.shields.io/discord/1044713077125435492?label=Discord%20server" alt="Our Discord server"></a>
     <br><br>
-    <img src="https://moe-counter.glitch.me/get/@genshin-stella-mod-readme?theme=rule34" alt="README.md views">
+    <img src="https://moe-counter.glitch.me/get/@genshin-stella-mod-readme?theme=rule34" alt="Views" title="README.md views - starts from Jun 15, 2023, 12:26 PM GMT+2">
     <h3>
         🌠 » If you want Ray Tracing in game or private DNS server, become <a href="https://www.patreon.com/sefinek" title="www.patreon.com/sefinek">my Patron</a> « 🌠<br>
         ⭐ » Star the repo if you liked it! « ⭐
