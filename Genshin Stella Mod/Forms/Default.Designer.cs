@@ -68,6 +68,7 @@ namespace StellaLauncher.Forms
             this.paimon_PictureBox = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.PreparingPleaseWait = new System.Windows.Forms.Label();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.githubIco_Picturebox)).BeginInit();
@@ -471,12 +472,24 @@ namespace StellaLauncher.Forms
             this.PreparingPleaseWait.ForeColor = System.Drawing.Color.White;
             this.PreparingPleaseWait.Name = "PreparingPleaseWait";
             // 
+            // linkLabel2
+            // 
+            this.linkLabel2.ActiveLinkColor = System.Drawing.Color.DeepSkyBlue;
+            resources.ApplyResources(this.linkLabel2, "linkLabel2");
+            this.linkLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.linkLabel2.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.TabStop = true;
+            this.toolTip1.SetToolTip(this.linkLabel2, resources.GetString("linkLabel2.ToolTip"));
+            // 
             // Default
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::StellaLauncher.Properties.Resources.bg_main;
+            this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.clickMe_LinkLabel);
             this.Controls.Add(this.PreparingPleaseWait);
@@ -576,6 +589,7 @@ namespace StellaLauncher.Forms
         private System.Windows.Forms.LinkLabel injectReShade_LinkLabel;
         private System.Windows.Forms.LinkLabel runFpsUnlocker_LinkLabel;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }
 
