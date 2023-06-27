@@ -16,7 +16,7 @@
     <br><br>
     <img src="https://moe-counter.glitch.me/get/@genshin-stella-mod-readme?theme=rule34" alt="Views" title="README.md views - starts from Jun 15, 2023, 12:26 PM GMT+2">
     <h3>
-        🌠 » If you want Ray Tracing in game or private DNS server, become <a href="https://www.patreon.com/sefinek" title="www.patreon.com/sefinek">my Patron</a> « 🌠<br>
+        🌠 » If you want to get Ray Tracing in game or other benefits, become <a href="https://www.patreon.com/sefinek" title="www.patreon.com/sefinek">my Patron</a> « 🌠<br>
         ⭐ » Star the repo if you liked it! « ⭐
     </h3>
     <a href="https://patreon.com/sefinek" title="Patreon"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dsefinek%26type%3Dpledges&style=for-the-badge" height="32" alt="Support me on Patreon"></a>
