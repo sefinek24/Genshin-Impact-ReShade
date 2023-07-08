@@ -47,9 +47,9 @@ if not exist "data\reshade\inject64.exe" (
 )
 
 REM Get the launch mode from a file
-if not "%1" equ "1"   if not "%1" equ "2"   if not "%1" equ "3" (
+if not "%1" equ "1" if not "%1" equ "2" if not "%1" equ "3" if not "%1" equ "4" if not "%1" equ "5" (
     echo [x] Failed to start. Unknown launch mode: %1
-    goto pause
+    goto :pause
 )
 
 REM Get the game version from a file
@@ -144,7 +144,7 @@ if "%1" equ "1" (
     pushd "%5"
     pushd "data\cmd\start"
     call "wait_for_unlockfps.cmd"
-) else if "%1" equ "2" (
+) else if "%1" equ "3" (
     echo [✓] Everything is ready! Thank you for using Stella Mod. Have fun. ᕱ⑅︎ᕱ & echo.
     REM Ask the user to start the game
     echo [i] ~~ Please start the game now. ~~
@@ -158,7 +158,7 @@ if "%1" equ "1" (
     pushd "..\cmd\start"
 
     call done.cmd
-) else if "%1" equ "3" (
+)  else if "%1" equ "4" (
     REM Unlock FPS
     pushd "data\unlocker"
     start "" "unlockfps_clr.exe"
@@ -168,6 +168,10 @@ if "%1" equ "1" (
     REM Wait for the unlocker to finish
     pushd "..\cmd\start"
     call wait_for_unlockfps.cmd
+) else if "%1" equ "5" (
+    REM Inject 3DMigoto
+    pushd "%4"
+    call "loader.exe"
 ) else (
     REM Wrong launch mode
     echo [x] Failed to start. Invalid launch mode: %1

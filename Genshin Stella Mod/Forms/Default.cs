@@ -455,11 +455,13 @@ namespace StellaLauncher.Forms
             Utils.OpenUrl("https://github.com/sefinek24/Genshin-Impact-ReShade");
         }
 
+
         // ------- Start the game -------
         // 1 = ReShade + 3DMigoto + FPS Unlocker
-        // 2 = Only ReShade
-        // 3 = Only FPS Unlocker
-        // 4 = Only 3DMigoto
+        // 2 = ReShade + 3DMigoto
+        // 3 = Only ReShade
+        // 4 = Only FPS Unlocker
+        // 5 = Only 3DMigoto
 
         /* 1 */
         private async void StartGame_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -471,11 +473,11 @@ namespace StellaLauncher.Forms
             if (res) Environment.Exit(0);
         }
 
-        /* 2 */
+        /* 3 */
         private async void OnlyReShade_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Run cmd file
-            bool res = await Cmd.CliWrap("wt.exe", $"{RunCmd} 2 {await Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
+            bool res = await Cmd.CliWrap("wt.exe", $"{RunCmd} 3 {await Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
             if (!res) return;
 
             // Find game path
@@ -486,24 +488,28 @@ namespace StellaLauncher.Forms
             _ = Cmd.CliWrap(path, null, null, true, false);
         }
 
-        /* 3 */
+        /* 4 */
         private async void OnlyUnlocker_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Run cmd file
-            bool res = await Cmd.CliWrap("wt.exe", $"{RunCmd} 3 {await Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
+            bool res = await Cmd.CliWrap("wt.exe", $"{RunCmd} 4 {await Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
 
             // Exit Stella with status code 0
             if (res) Environment.Exit(0);
         }
 
-        /* 4 */
+        /* 5 */
         private async void Only3DMigoto_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Run cmd file
-            bool res = await Cmd.CliWrap("wt.exe", $"{RunCmd} 4 {await Utils.GetGameVersion()} \"{CmdOutputLogs}\" \"{_resPath}\\3DMigoto\" \"{Program.AppPath}\"", Program.AppPath, false, false);
+            await Cmd.CliWrap("wt.exe", $"{RunCmd} 5 {await Utils.GetGameVersion()} \"{CmdOutputLogs}\" \"{_resPath}\\3DMigoto\" \"{Program.AppPath}\"", Program.AppPath, false, false);
 
-            // Exit Stella with status code 0
-            if (res) Environment.Exit(0);
+            // Find game path
+            string path = await Utils.GetGame("giLauncher");
+            if (path == null) return;
+
+            // Open Genshin Launcher
+            _ = Cmd.CliWrap(path, null, null, true, false);
         }
 
         private async void OpenGILauncher_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -518,6 +524,7 @@ namespace StellaLauncher.Forms
 
             await Cmd.CliWrap(path, null, null, true, false);
         }
+
 
         // ------- Footer -------
         private void Patreon_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
