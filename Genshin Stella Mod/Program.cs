@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
@@ -24,9 +25,9 @@ namespace StellaLauncher
         public static readonly string AppWebsiteFull = "https://sefinek.net/genshin-impact-reshade";
 
         // Files and folders
+        public static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
         public static string AppData = Utils.GetAppData();
         private static string _appIsConfigured;
-        public static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
         private static readonly string PrepareLauncher = Path.Combine(AppPath, "First app launch.exe");
         public static readonly string ReShadePath = Path.Combine(AppPath, "data", "reshade", "ReShade64.dll");
         public static readonly string InjectorPath = Path.Combine(AppPath, "data", "reshade", "inject64.exe");
@@ -41,8 +42,12 @@ namespace StellaLauncher
         // Config
         public static IniFile Settings;
 
+        // Lang
+        public static string[] SupportedLangs = { "en", "pl" };
+
         // Registry
         public static string RegistryPath = @"SOFTWARE\Stella Mod Launcher";
+
 
         [STAThread]
         private static void Main()
@@ -50,30 +55,35 @@ namespace StellaLauncher
             _appIsConfigured = Path.Combine(AppData, "configured.sfn");
             Settings = new IniFile(Path.Combine(AppData, "settings.ini"));
 
-            int selected = Settings.ReadInt("Launcher", "LanguageID", 0);
-            switch (selected)
+
+            /* Language */
+            string currentLang = Settings.ReadString("Language", "UI", null);
+            bool isSupportedLanguage = SupportedLangs.Contains(currentLang);
+            if (string.IsNullOrEmpty(currentLang) || !isSupportedLanguage)
             {
-                case 0:
-                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
-                    break;
-                case 1:
-                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("pl");
-                    break;
-                default:
-                    Thread.CurrentThread.CurrentUICulture = CultureInfo.InvariantCulture;
-                    break;
+                string sysLang = CultureInfo.InstalledUICulture.Name.Substring(0, 2);
+                currentLang = SupportedLangs.Contains(sysLang) ? sysLang : "en";
+
+                Settings.WriteString("Language", "UI", currentLang);
             }
 
-            Log.Output(string.Format(
-                Resources.Program_ARequestToStartTheProgramHasBeenReceived,
-                Debugger.IsAttached,
-                Os.CpuId,
-                AppPath,
-                AppData,
-                _appIsConfigured,
-                FpsUnlockerCfgPath,
-                PatronsDir
-            ));
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(currentLang);
+
+
+            /* Run */
+            Log.Output(
+                "==============================================================================================================\n" +
+                string.Format(
+                    Resources.Program_ARequestToStartTheProgramHasBeenReceived,
+                    Debugger.IsAttached,
+                    Os.CpuId,
+                    AppPath,
+                    AppData,
+                    _appIsConfigured,
+                    FpsUnlockerCfgPath,
+                    PatronsDir
+                ) + "\n"
+            );
 
 
             if (Process.GetProcessesByName(AppName).Length > 1)

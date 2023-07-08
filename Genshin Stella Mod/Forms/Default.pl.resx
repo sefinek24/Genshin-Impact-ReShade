@@ -121,9 +121,6 @@
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
   </data>
-  <data name="pictureBox2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="changeBg_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>37, 14</value>
   </data>
@@ -138,9 +135,6 @@
   </data>
   <data name="close_Panel.ToolTip" xml:space="preserve">
     <value>Wyjdź z programu uruchamiającego</value>
-  </data>
-  <data name="panel1.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="githubUrl_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>666, 113</value>
@@ -159,9 +153,6 @@
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>564, 43</value>
-  </data>
-  <data name="label1.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="githubIco_Picturebox.Location" type="System.Drawing.Point, System.Drawing">
     <value>634, 113</value>
@@ -197,7 +188,7 @@
     <value>Uruchom grę</value>
   </data>
   <data name="startGame_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Uruchom Genshin Impact ze wstrzykniętym ReShade i użytym FPS Unlockerem (odblokowywaniem FPS'ów). Zalecane.</value>
+    <value>Uruchom Genshin Impact z ReShade, 3DMigoto i FPS Unlocker. Zalecane.</value>
   </data>
   <data name="website_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>380, 565</value>
@@ -246,7 +237,7 @@ Karty RTX nie są wymagane.</value>
     <value>Przejdź do https://patreon.com/sefinek</value>
   </data>
   <data name="runGiLauncher_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>175, 334</value>
+    <value>162, 334</value>
   </data>
   <data name="runGiLauncher_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>249, 23</value>
@@ -276,47 +267,44 @@ Karty RTX nie są wymagane.</value>
     <value>Kliknij mnie ;w;</value>
   </data>
   <data name="injectReShade_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 296</value>
+    <value>70, 297</value>
   </data>
   <data name="injectReShade_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 23</value>
+    <value>120, 23</value>
   </data>
   <data name="injectReShade_LinkLabel.Text" xml:space="preserve">
-    <value>Użyj tylko ReShade</value>
+    <value>Tylko ReShade</value>
   </data>
   <data name="injectReShade_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Uruchom Genshin Impact tylko ze wstrzykniętym ReShade.</value>
+    <value>Uruchom Genshin Impact tylko z wstrzykniętym ReShade.</value>
   </data>
   <data name="runFpsUnlocker_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>320, 297</value>
+    <value>216, 297</value>
   </data>
   <data name="runFpsUnlocker_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 23</value>
+    <value>165, 23</value>
   </data>
   <data name="runFpsUnlocker_LinkLabel.Text" xml:space="preserve">
-    <value>Użyj tylko FPS Unlockera</value>
+    <value>Tylko FPS Unlockera</value>
   </data>
   <data name="runFpsUnlocker_LinkLabel.ToolTip" xml:space="preserve">
     <value>Uruchom grę tylko z użytym FPS Unlockerem (odblokowywaniem limitu 60 klatek na sekundę).
 Nie ma sensu używać tego, jeśli Twój monitor nie ma więcej niż 60 Hz.</value>
   </data>
-  <data name="linkLabel2.ToolTip" xml:space="preserve">
-    <value>Dziękuję Ci za wsparcie mnie :3</value>
+  <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>416, 297</value>
   </data>
-  <data name="toolsIco_PictureBox.ToolTip" xml:space="preserve">
-    <value />
+  <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 23</value>
+  </data>
+  <data name="linkLabel1.Text" xml:space="preserve">
+    <value>Tylko 3DMigoto</value>
+  </data>
+  <data name="linkLabel1.ToolTip" xml:space="preserve">
+    <value>Uruchom grę z wstrzykniętym tylko 3DMigoto.</value>
   </data>
   <data name="websiteIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>354, 565</value>
-  </data>
-  <data name="websiteIco_PictureBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="updateIco_PictureBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="versionIco_PictureBox.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="updates_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>796, 565</value>
@@ -327,52 +315,19 @@ Nie ma sensu używać tego, jeśli Twój monitor nie ma więcej niż 60 Hz.</val
   <data name="updates_LinkLabel.Text" xml:space="preserve">
     <value>Oczekiwanie...</value>
   </data>
-  <data name="updates_LinkLabel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="youtubeIco_Picturebox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="discordServerIco_Picturebox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="status_Label.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="padIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>227, 565</value>
-  </data>
-  <data name="padIco_PictureBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="supportMeIco_PictureBox.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="shortcutIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>141, 565</value>
   </data>
-  <data name="shortcutIco_PictureBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="paimon_PictureBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="progressBar1.Size" type="System.Drawing.Size, System.Drawing">
     <value>778, 23</value>
-  </data>
-  <data name="progressBar1.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="PreparingPleaseWait.Location" type="System.Drawing.Point, System.Drawing">
     <value>132, 541</value>
   </data>
   <data name="PreparingPleaseWait.Text" xml:space="preserve">
     <value>Proszę czekać...</value>
-  </data>
-  <data name="PreparingPleaseWait.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value />
   </data>
 </root>

@@ -16,6 +16,7 @@ namespace StellaLauncher.Forms.Other
 {
     public partial class RandomImages : Form
     {
+        private static Label _poweredBy;
         private string _sourceUrl;
 
         public RandomImages()
@@ -25,6 +26,12 @@ namespace StellaLauncher.Forms.Other
             webView21.DefaultBackgroundColor = Color.Transparent;
 
             if (RegionInfo.CurrentRegion.Name == "PL") linkLabel46.Visible = true;
+        }
+
+        private void RandomThings_Load(object sender, EventArgs e)
+        {
+            _poweredBy = poweredBy_Label;
+            WindowState = FormWindowState.Maximized;
         }
 
         private async void RandomImg_Shown(object sender, EventArgs e)
@@ -53,6 +60,25 @@ namespace StellaLauncher.Forms.Other
 
         private static async Task<string> GetData(string url)
         {
+            if (Uri.TryCreate(url, UriKind.Absolute, out Uri uri))
+            {
+                string host = uri.Host;
+
+                int colonIndex = _poweredBy.Text.IndexOf(':');
+                if (colonIndex >= 0)
+                {
+                    string prefix = _poweredBy.Text.Substring(0, colonIndex + 1);
+                    _poweredBy.Text = $@"{prefix} {host}";
+                }
+                else
+                {
+                    _poweredBy.Text = host;
+                }
+
+                _poweredBy.Visible = true;
+            }
+
+
             try
             {
                 WebClient client = new WebClient();
@@ -81,7 +107,7 @@ namespace StellaLauncher.Forms.Other
             webView21.CoreWebView2.Navigate(res.Message);
             text_Label.Visible = false;
 
-            Log.Output($"{string.Format(Resources.RandomImages_ReceivedDataFrom, "api.sefinek.net")}: {res.Success} {res.Status} {res.Category} {res.Endpoint} {res.Message}");
+            Log.Output($"{string.Format(Resources.RandomImages_ReceivedDataFrom, new Uri(url).Host)}: {res.Success} {res.Status} {res.Category} {res.Endpoint} {res.Message}");
         }
 
         private async void NekosBest(string url, bool gif) // The best api uwu
@@ -109,7 +135,7 @@ namespace StellaLauncher.Forms.Other
             text_Label.Visible = true;
             _sourceUrl = res.Results[0].Source_url;
 
-            Log.Output($"{string.Format(Resources.RandomImages_ReceivedDataFrom, "nekos.best")}: {res.Results[0].Anime_name} {res.Results[0].Source_url} {res.Results[0].Url}");
+            Log.Output($"{string.Format(Resources.RandomImages_ReceivedDataFrom, new Uri(url).Host)}: {res.Results[0].Anime_name} {res.Results[0].Source_url} {res.Results[0].Url}");
         }
 
         private async void PurrBot(string url)
@@ -123,7 +149,7 @@ namespace StellaLauncher.Forms.Other
             _sourceUrl = res.Link;
             text_Label.Visible = false;
 
-            Log.Output($"{string.Format(Resources.RandomImages_ReceivedDataFrom, "purrbot.site")}: {res.Link}");
+            Log.Output($"{string.Format(Resources.RandomImages_ReceivedDataFrom, new Uri(url).Host)}: {res.Link}");
         }
 
         private async void NekoBot(string url)
@@ -137,13 +163,14 @@ namespace StellaLauncher.Forms.Other
             Color rgbColor = Color.FromArgb(Convert.ToInt16(color.R), Convert.ToInt16(color.G), Convert.ToInt16(color.B));
 
             text_Label.LinkColor = rgbColor;
+            poweredBy_Label.ForeColor = rgbColor;
             text_Label.Text = $@">> {Resources.RandomImages_OpenImageInDefaultBrowser} <<";
             text_Label.LinkBehavior = LinkBehavior.HoverUnderline;
 
             text_Label.Visible = true;
             _sourceUrl = res.Message;
 
-            Log.Output($"{string.Format(Resources.RandomImages_ReceivedDataFrom, "nekobot.xyz")}: {res.Color} {rgbColor} {res.Message}");
+            Log.Output($"{string.Format(Resources.RandomImages_ReceivedDataFrom, new Uri(url).Host)}: {res.Color} {rgbColor} {res.Message}");
         }
 
         /* Random animals */
@@ -385,11 +412,6 @@ namespace StellaLauncher.Forms.Other
         private void RandomHentai_Click(object sender, EventArgs e)
         {
             webView21.CoreWebView2.Navigate(Path.Combine(Program.AppPath, "data", "videos", "gengbeng.mp4"));
-        }
-
-        private void RandomThings_Load(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Maximized;
         }
     }
 }

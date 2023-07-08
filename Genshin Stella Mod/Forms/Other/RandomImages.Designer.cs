@@ -84,20 +84,20 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel46 = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.linkLabel47 = new System.Windows.Forms.LinkLabel();
+            this.poweredBy_Label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
             this.SuspendLayout();
             // 
             // linkLabel1
             // 
-            resources.ApplyResources(this.linkLabel1, "linkLabel1");
             this.linkLabel1.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel1, "linkLabel1");
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel1.LinkColor = System.Drawing.Color.White;
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel1, resources.GetString("linkLabel1.ToolTip"));
             this.linkLabel1.Click += new System.EventHandler(this.RandomCat_Click);
             // 
             // label1
@@ -106,32 +106,29 @@ namespace StellaLauncher.Forms.Other
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(149)))), ((int)(((byte)(254)))));
             this.label1.Name = "label1";
-            this.toolTip1.SetToolTip(this.label1, resources.GetString("label1.ToolTip"));
             // 
             // linkLabel2
             // 
-            resources.ApplyResources(this.linkLabel2, "linkLabel2");
             this.linkLabel2.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel2, "linkLabel2");
             this.linkLabel2.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel2.LinkColor = System.Drawing.Color.White;
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel2, resources.GetString("linkLabel2.ToolTip"));
             this.linkLabel2.Click += new System.EventHandler(this.RandomDog_Click);
             // 
             // linkLabel3
             // 
-            resources.ApplyResources(this.linkLabel3, "linkLabel3");
             this.linkLabel3.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel3, "linkLabel3");
             this.linkLabel3.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel3.LinkColor = System.Drawing.Color.White;
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel3, resources.GetString("linkLabel3.ToolTip"));
             this.linkLabel3.Click += new System.EventHandler(this.RandomFox_Click);
             // 
             // label2
@@ -140,25 +137,23 @@ namespace StellaLauncher.Forms.Other
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(149)))), ((int)(((byte)(254)))));
             this.label2.Name = "label2";
-            this.toolTip1.SetToolTip(this.label2, resources.GetString("label2.ToolTip"));
             // 
             // linkLabel4
             // 
-            resources.ApplyResources(this.linkLabel4, "linkLabel4");
             this.linkLabel4.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel4, "linkLabel4");
             this.linkLabel4.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel4.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel4.LinkColor = System.Drawing.Color.White;
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel4, resources.GetString("linkLabel4.ToolTip"));
             this.linkLabel4.Click += new System.EventHandler(this.Senko_Click);
             // 
             // linkLabel5
             // 
-            resources.ApplyResources(this.linkLabel5, "linkLabel5");
             this.linkLabel5.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel5, "linkLabel5");
             this.linkLabel5.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel5.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
@@ -170,8 +165,8 @@ namespace StellaLauncher.Forms.Other
             // 
             // linkLabel6
             // 
-            resources.ApplyResources(this.linkLabel6, "linkLabel6");
             this.linkLabel6.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel6, "linkLabel6");
             this.linkLabel6.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel6.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
@@ -183,26 +178,24 @@ namespace StellaLauncher.Forms.Other
             // 
             // linkLabel7
             // 
-            resources.ApplyResources(this.linkLabel7, "linkLabel7");
             this.linkLabel7.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel7, "linkLabel7");
             this.linkLabel7.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel7.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel7.LinkColor = System.Drawing.Color.White;
             this.linkLabel7.Name = "linkLabel7";
             this.linkLabel7.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel7, resources.GetString("linkLabel7.ToolTip"));
             this.linkLabel7.Click += new System.EventHandler(this.Coffee_Click);
             // 
             // text_Label
             // 
-            resources.ApplyResources(this.text_Label, "text_Label");
             this.text_Label.ActiveLinkColor = System.Drawing.Color.MediumBlue;
+            resources.ApplyResources(this.text_Label, "text_Label");
             this.text_Label.BackColor = System.Drawing.Color.Transparent;
             this.text_Label.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.text_Label.LinkColor = System.Drawing.Color.White;
             this.text_Label.Name = "text_Label";
-            this.toolTip1.SetToolTip(this.text_Label, resources.GetString("text_Label.ToolTip"));
             this.text_Label.Click += new System.EventHandler(this.Source_Click);
             // 
             // label3
@@ -211,498 +204,459 @@ namespace StellaLauncher.Forms.Other
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(149)))), ((int)(((byte)(254)))));
             this.label3.Name = "label3";
-            this.toolTip1.SetToolTip(this.label3, resources.GetString("label3.ToolTip"));
             // 
             // linkLabel8
             // 
-            resources.ApplyResources(this.linkLabel8, "linkLabel8");
             this.linkLabel8.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel8, "linkLabel8");
             this.linkLabel8.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel8.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel8.LinkColor = System.Drawing.Color.White;
             this.linkLabel8.Name = "linkLabel8";
             this.linkLabel8.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel8, resources.GetString("linkLabel8.ToolTip"));
             this.linkLabel8.Click += new System.EventHandler(this.Hug_Click);
             // 
             // linkLabel9
             // 
-            resources.ApplyResources(this.linkLabel9, "linkLabel9");
             this.linkLabel9.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel9, "linkLabel9");
             this.linkLabel9.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel9.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel9.LinkColor = System.Drawing.Color.White;
             this.linkLabel9.Name = "linkLabel9";
             this.linkLabel9.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel9, resources.GetString("linkLabel9.ToolTip"));
             this.linkLabel9.Click += new System.EventHandler(this.Happy_Click);
             // 
             // linkLabel10
             // 
-            resources.ApplyResources(this.linkLabel10, "linkLabel10");
             this.linkLabel10.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel10, "linkLabel10");
             this.linkLabel10.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel10.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel10.LinkColor = System.Drawing.Color.White;
             this.linkLabel10.Name = "linkLabel10";
             this.linkLabel10.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel10, resources.GetString("linkLabel10.ToolTip"));
             this.linkLabel10.Click += new System.EventHandler(this.Pat_Click);
             // 
             // linkLabel11
             // 
-            resources.ApplyResources(this.linkLabel11, "linkLabel11");
             this.linkLabel11.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel11, "linkLabel11");
             this.linkLabel11.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel11.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel11.LinkColor = System.Drawing.Color.White;
             this.linkLabel11.Name = "linkLabel11";
             this.linkLabel11.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel11, resources.GetString("linkLabel11.ToolTip"));
             this.linkLabel11.Click += new System.EventHandler(this.Wink_Click);
             // 
             // linkLabel12
             // 
-            resources.ApplyResources(this.linkLabel12, "linkLabel12");
             this.linkLabel12.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel12, "linkLabel12");
             this.linkLabel12.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel12.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel12.LinkColor = System.Drawing.Color.White;
             this.linkLabel12.Name = "linkLabel12";
             this.linkLabel12.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel12, resources.GetString("linkLabel12.ToolTip"));
             this.linkLabel12.Click += new System.EventHandler(this.Cry_Click);
             // 
             // linkLabel13
             // 
-            resources.ApplyResources(this.linkLabel13, "linkLabel13");
             this.linkLabel13.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel13, "linkLabel13");
             this.linkLabel13.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel13.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel13.LinkColor = System.Drawing.Color.White;
             this.linkLabel13.Name = "linkLabel13";
             this.linkLabel13.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel13, resources.GetString("linkLabel13.ToolTip"));
             this.linkLabel13.Click += new System.EventHandler(this.Wave_Click);
             // 
             // linkLabel14
             // 
-            resources.ApplyResources(this.linkLabel14, "linkLabel14");
             this.linkLabel14.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel14, "linkLabel14");
             this.linkLabel14.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel14.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel14.LinkColor = System.Drawing.Color.White;
             this.linkLabel14.Name = "linkLabel14";
             this.linkLabel14.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel14, resources.GetString("linkLabel14.ToolTip"));
             this.linkLabel14.Click += new System.EventHandler(this.Thumbsup_Click);
             // 
             // linkLabel15
             // 
-            resources.ApplyResources(this.linkLabel15, "linkLabel15");
             this.linkLabel15.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel15, "linkLabel15");
             this.linkLabel15.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel15.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel15.LinkColor = System.Drawing.Color.White;
             this.linkLabel15.Name = "linkLabel15";
             this.linkLabel15.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel15, resources.GetString("linkLabel15.ToolTip"));
             this.linkLabel15.Click += new System.EventHandler(this.Kiss_Click);
             // 
             // linkLabel16
             // 
-            resources.ApplyResources(this.linkLabel16, "linkLabel16");
             this.linkLabel16.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel16, "linkLabel16");
             this.linkLabel16.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel16.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel16.LinkColor = System.Drawing.Color.White;
             this.linkLabel16.Name = "linkLabel16";
             this.linkLabel16.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel16, resources.GetString("linkLabel16.ToolTip"));
             this.linkLabel16.Click += new System.EventHandler(this.Cuddle_Click);
             // 
             // linkLabel17
             // 
-            resources.ApplyResources(this.linkLabel17, "linkLabel17");
             this.linkLabel17.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel17, "linkLabel17");
             this.linkLabel17.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel17.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel17.LinkColor = System.Drawing.Color.White;
             this.linkLabel17.Name = "linkLabel17";
             this.linkLabel17.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel17, resources.GetString("linkLabel17.ToolTip"));
             // 
             // linkLabel18
             // 
-            resources.ApplyResources(this.linkLabel18, "linkLabel18");
             this.linkLabel18.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel18, "linkLabel18");
             this.linkLabel18.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel18.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel18.LinkColor = System.Drawing.Color.White;
             this.linkLabel18.Name = "linkLabel18";
             this.linkLabel18.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel18, resources.GetString("linkLabel18.ToolTip"));
             this.linkLabel18.Click += new System.EventHandler(this.Sleep_Click);
             // 
             // linkLabel20
             // 
-            resources.ApplyResources(this.linkLabel20, "linkLabel20");
             this.linkLabel20.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel20, "linkLabel20");
             this.linkLabel20.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel20.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel20.LinkColor = System.Drawing.Color.White;
             this.linkLabel20.Name = "linkLabel20";
             this.linkLabel20.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel20, resources.GetString("linkLabel20.ToolTip"));
             this.linkLabel20.Click += new System.EventHandler(this.Blush_Click);
             // 
             // linkLabel19
             // 
-            resources.ApplyResources(this.linkLabel19, "linkLabel19");
             this.linkLabel19.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel19, "linkLabel19");
             this.linkLabel19.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel19.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel19.LinkColor = System.Drawing.Color.White;
             this.linkLabel19.Name = "linkLabel19";
             this.linkLabel19.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel19, resources.GetString("linkLabel19.ToolTip"));
             this.linkLabel19.Click += new System.EventHandler(this.Laugh_Click);
             // 
             // linkLabel21
             // 
-            resources.ApplyResources(this.linkLabel21, "linkLabel21");
             this.linkLabel21.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel21, "linkLabel21");
             this.linkLabel21.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel21.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel21.LinkColor = System.Drawing.Color.White;
             this.linkLabel21.Name = "linkLabel21";
             this.linkLabel21.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel21, resources.GetString("linkLabel21.ToolTip"));
             this.linkLabel21.Click += new System.EventHandler(this.Shoot_Click);
             // 
             // linkLabel22
             // 
-            resources.ApplyResources(this.linkLabel22, "linkLabel22");
             this.linkLabel22.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel22, "linkLabel22");
             this.linkLabel22.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel22.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel22.LinkColor = System.Drawing.Color.White;
             this.linkLabel22.Name = "linkLabel22";
             this.linkLabel22.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel22, resources.GetString("linkLabel22.ToolTip"));
             this.linkLabel22.Click += new System.EventHandler(this.Waifu_Click);
             // 
             // linkLabel23
             // 
-            resources.ApplyResources(this.linkLabel23, "linkLabel23");
             this.linkLabel23.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel23, "linkLabel23");
             this.linkLabel23.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel23.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel23.LinkColor = System.Drawing.Color.White;
             this.linkLabel23.Name = "linkLabel23";
             this.linkLabel23.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel23, resources.GetString("linkLabel23.ToolTip"));
             this.linkLabel23.Click += new System.EventHandler(this.Baka_Click);
             // 
             // linkLabel24
             // 
-            resources.ApplyResources(this.linkLabel24, "linkLabel24");
             this.linkLabel24.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel24, "linkLabel24");
             this.linkLabel24.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel24.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel24.LinkColor = System.Drawing.Color.White;
             this.linkLabel24.Name = "linkLabel24";
             this.linkLabel24.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel24, resources.GetString("linkLabel24.ToolTip"));
             this.linkLabel24.Click += new System.EventHandler(this.Bite_Click);
             // 
             // linkLabel25
             // 
-            resources.ApplyResources(this.linkLabel25, "linkLabel25");
             this.linkLabel25.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel25, "linkLabel25");
             this.linkLabel25.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel25.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel25.LinkColor = System.Drawing.Color.White;
             this.linkLabel25.Name = "linkLabel25";
             this.linkLabel25.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel25, resources.GetString("linkLabel25.ToolTip"));
             this.linkLabel25.Click += new System.EventHandler(this.Bored_Click);
             // 
             // linkLabel26
             // 
-            resources.ApplyResources(this.linkLabel26, "linkLabel26");
             this.linkLabel26.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel26, "linkLabel26");
             this.linkLabel26.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel26.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel26.LinkColor = System.Drawing.Color.White;
             this.linkLabel26.Name = "linkLabel26";
             this.linkLabel26.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel26, resources.GetString("linkLabel26.ToolTip"));
             this.linkLabel26.Click += new System.EventHandler(this.Dance_Click);
             // 
             // linkLabel27
             // 
-            resources.ApplyResources(this.linkLabel27, "linkLabel27");
             this.linkLabel27.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel27, "linkLabel27");
             this.linkLabel27.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel27.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel27.LinkColor = System.Drawing.Color.White;
             this.linkLabel27.Name = "linkLabel27";
             this.linkLabel27.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel27, resources.GetString("linkLabel27.ToolTip"));
             this.linkLabel27.Click += new System.EventHandler(this.FacePalm_Click);
             // 
             // linkLabel28
             // 
-            resources.ApplyResources(this.linkLabel28, "linkLabel28");
             this.linkLabel28.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel28, "linkLabel28");
             this.linkLabel28.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel28.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel28.LinkColor = System.Drawing.Color.White;
             this.linkLabel28.Name = "linkLabel28";
             this.linkLabel28.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel28, resources.GetString("linkLabel28.ToolTip"));
             this.linkLabel28.Click += new System.EventHandler(this.Feed_Click);
             // 
             // linkLabel29
             // 
-            resources.ApplyResources(this.linkLabel29, "linkLabel29");
             this.linkLabel29.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel29, "linkLabel29");
             this.linkLabel29.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel29.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel29.LinkColor = System.Drawing.Color.White;
             this.linkLabel29.Name = "linkLabel29";
             this.linkLabel29.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel29, resources.GetString("linkLabel29.ToolTip"));
             this.linkLabel29.Click += new System.EventHandler(this.Handhold_Click);
             // 
             // linkLabel30
             // 
-            resources.ApplyResources(this.linkLabel30, "linkLabel30");
             this.linkLabel30.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel30, "linkLabel30");
             this.linkLabel30.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel30.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel30.LinkColor = System.Drawing.Color.White;
             this.linkLabel30.Name = "linkLabel30";
             this.linkLabel30.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel30, resources.GetString("linkLabel30.ToolTip"));
             this.linkLabel30.Click += new System.EventHandler(this.Highfive_Click);
             // 
             // linkLabel31
             // 
-            resources.ApplyResources(this.linkLabel31, "linkLabel31");
             this.linkLabel31.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel31, "linkLabel31");
             this.linkLabel31.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel31.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel31.LinkColor = System.Drawing.Color.White;
             this.linkLabel31.Name = "linkLabel31";
             this.linkLabel31.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel31, resources.GetString("linkLabel31.ToolTip"));
             this.linkLabel31.Click += new System.EventHandler(this.Kick_Click);
             // 
             // linkLabel32
             // 
-            resources.ApplyResources(this.linkLabel32, "linkLabel32");
             this.linkLabel32.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel32, "linkLabel32");
             this.linkLabel32.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel32.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel32.LinkColor = System.Drawing.Color.White;
             this.linkLabel32.Name = "linkLabel32";
             this.linkLabel32.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel32, resources.GetString("linkLabel32.ToolTip"));
             this.linkLabel32.Click += new System.EventHandler(this.Poke_Click);
             // 
             // linkLabel33
             // 
-            resources.ApplyResources(this.linkLabel33, "linkLabel33");
             this.linkLabel33.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel33, "linkLabel33");
             this.linkLabel33.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel33.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel33.LinkColor = System.Drawing.Color.White;
             this.linkLabel33.Name = "linkLabel33";
             this.linkLabel33.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel33, resources.GetString("linkLabel33.ToolTip"));
             this.linkLabel33.Click += new System.EventHandler(this.Pout_Click);
             // 
             // linkLabel34
             // 
-            resources.ApplyResources(this.linkLabel34, "linkLabel34");
             this.linkLabel34.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel34, "linkLabel34");
             this.linkLabel34.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel34.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel34.LinkColor = System.Drawing.Color.White;
             this.linkLabel34.Name = "linkLabel34";
             this.linkLabel34.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel34, resources.GetString("linkLabel34.ToolTip"));
             this.linkLabel34.Click += new System.EventHandler(this.Punch_Click);
             // 
             // linkLabel35
             // 
-            resources.ApplyResources(this.linkLabel35, "linkLabel35");
             this.linkLabel35.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel35, "linkLabel35");
             this.linkLabel35.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel35.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel35.LinkColor = System.Drawing.Color.White;
             this.linkLabel35.Name = "linkLabel35";
             this.linkLabel35.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel35, resources.GetString("linkLabel35.ToolTip"));
             this.linkLabel35.Click += new System.EventHandler(this.Shrug_Click);
             // 
             // linkLabel36
             // 
-            resources.ApplyResources(this.linkLabel36, "linkLabel36");
             this.linkLabel36.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel36, "linkLabel36");
             this.linkLabel36.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel36.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel36.LinkColor = System.Drawing.Color.White;
             this.linkLabel36.Name = "linkLabel36";
             this.linkLabel36.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel36, resources.GetString("linkLabel36.ToolTip"));
             this.linkLabel36.Click += new System.EventHandler(this.Slap_Click);
             // 
             // linkLabel37
             // 
-            resources.ApplyResources(this.linkLabel37, "linkLabel37");
             this.linkLabel37.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel37, "linkLabel37");
             this.linkLabel37.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel37.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel37.LinkColor = System.Drawing.Color.White;
             this.linkLabel37.Name = "linkLabel37";
             this.linkLabel37.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel37, resources.GetString("linkLabel37.ToolTip"));
             this.linkLabel37.Click += new System.EventHandler(this.Smug_Click);
             // 
             // linkLabel38
             // 
-            resources.ApplyResources(this.linkLabel38, "linkLabel38");
             this.linkLabel38.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel38, "linkLabel38");
             this.linkLabel38.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel38.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel38.LinkColor = System.Drawing.Color.White;
             this.linkLabel38.Name = "linkLabel38";
             this.linkLabel38.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel38, resources.GetString("linkLabel38.ToolTip"));
             this.linkLabel38.Click += new System.EventHandler(this.Stare_Click);
             // 
             // linkLabel39
             // 
-            resources.ApplyResources(this.linkLabel39, "linkLabel39");
             this.linkLabel39.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel39, "linkLabel39");
             this.linkLabel39.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel39.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel39.LinkColor = System.Drawing.Color.White;
             this.linkLabel39.Name = "linkLabel39";
             this.linkLabel39.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel39, resources.GetString("linkLabel39.ToolTip"));
             this.linkLabel39.Click += new System.EventHandler(this.Think_Click);
             // 
             // linkLabel40
             // 
-            resources.ApplyResources(this.linkLabel40, "linkLabel40");
             this.linkLabel40.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel40, "linkLabel40");
             this.linkLabel40.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel40.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel40.LinkColor = System.Drawing.Color.White;
             this.linkLabel40.Name = "linkLabel40";
             this.linkLabel40.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel40, resources.GetString("linkLabel40.ToolTip"));
             this.linkLabel40.Click += new System.EventHandler(this.Tickle_Click);
             // 
             // linkLabel41
             // 
-            resources.ApplyResources(this.linkLabel41, "linkLabel41");
             this.linkLabel41.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel41, "linkLabel41");
             this.linkLabel41.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel41.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel41.LinkColor = System.Drawing.Color.White;
             this.linkLabel41.Name = "linkLabel41";
             this.linkLabel41.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel41, resources.GetString("linkLabel41.ToolTip"));
             this.linkLabel41.Click += new System.EventHandler(this.Yeet_Click);
             // 
             // linkLabel42
             // 
-            resources.ApplyResources(this.linkLabel42, "linkLabel42");
             this.linkLabel42.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel42, "linkLabel42");
             this.linkLabel42.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel42.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel42.LinkColor = System.Drawing.Color.White;
             this.linkLabel42.Name = "linkLabel42";
             this.linkLabel42.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel42, resources.GetString("linkLabel42.ToolTip"));
             this.linkLabel42.Click += new System.EventHandler(this.Holo_Click);
             // 
             // linkLabel43
             // 
-            resources.ApplyResources(this.linkLabel43, "linkLabel43");
             this.linkLabel43.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel43, "linkLabel43");
             this.linkLabel43.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel43.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel43.LinkColor = System.Drawing.Color.White;
             this.linkLabel43.Name = "linkLabel43";
             this.linkLabel43.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel43, resources.GetString("linkLabel43.ToolTip"));
             this.linkLabel43.Click += new System.EventHandler(this.Tail_Click);
             // 
             // linkLabel44
             // 
-            resources.ApplyResources(this.linkLabel44, "linkLabel44");
             this.linkLabel44.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel44, "linkLabel44");
             this.linkLabel44.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel44.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel44.LinkColor = System.Drawing.Color.White;
             this.linkLabel44.Name = "linkLabel44";
             this.linkLabel44.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel44, resources.GetString("linkLabel44.ToolTip"));
             this.linkLabel44.Click += new System.EventHandler(this.Shiro_Click);
             // 
             // webView21
             // 
-            resources.ApplyResources(this.webView21, "webView21");
             this.webView21.AllowExternalDrop = true;
+            resources.ApplyResources(this.webView21, "webView21");
             this.webView21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(31)))));
             this.webView21.CreationProperties = null;
             this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
             this.webView21.ForeColor = System.Drawing.Color.White;
             this.webView21.Name = "webView21";
-            this.toolTip1.SetToolTip(this.webView21, resources.GetString("webView21.ToolTip"));
             this.webView21.ZoomFactor = 1D;
             // 
             // label4
@@ -711,52 +665,56 @@ namespace StellaLauncher.Forms.Other
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(149)))), ((int)(((byte)(254)))));
             this.label4.Name = "label4";
-            this.toolTip1.SetToolTip(this.label4, resources.GetString("label4.ToolTip"));
             // 
             // linkLabel45
             // 
-            resources.ApplyResources(this.linkLabel45, "linkLabel45");
             this.linkLabel45.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel45, "linkLabel45");
             this.linkLabel45.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel45.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel45.LinkColor = System.Drawing.Color.White;
             this.linkLabel45.Name = "linkLabel45";
             this.linkLabel45.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel45, resources.GetString("linkLabel45.ToolTip"));
             this.linkLabel45.Click += new System.EventHandler(this.HlCat_Click);
             // 
             // linkLabel46
             // 
-            resources.ApplyResources(this.linkLabel46, "linkLabel46");
             this.linkLabel46.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel46, "linkLabel46");
             this.linkLabel46.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel46.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel46.LinkColor = System.Drawing.Color.White;
             this.linkLabel46.Name = "linkLabel46";
             this.linkLabel46.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel46, resources.GetString("linkLabel46.ToolTip"));
             this.linkLabel46.Click += new System.EventHandler(this.RandomHentai_Click);
             // 
             // linkLabel47
             // 
-            resources.ApplyResources(this.linkLabel47, "linkLabel47");
             this.linkLabel47.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel47, "linkLabel47");
             this.linkLabel47.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.linkLabel47.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel47.LinkColor = System.Drawing.Color.White;
             this.linkLabel47.Name = "linkLabel47";
             this.linkLabel47.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel47, resources.GetString("linkLabel47.ToolTip"));
             this.linkLabel47.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Smile_Click);
+            // 
+            // poweredBy_Label
+            // 
+            resources.ApplyResources(this.poweredBy_Label, "poweredBy_Label");
+            this.poweredBy_Label.BackColor = System.Drawing.Color.Transparent;
+            this.poweredBy_Label.ForeColor = System.Drawing.Color.White;
+            this.poweredBy_Label.Name = "poweredBy_Label";
             // 
             // RandomImages
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
+            this.Controls.Add(this.poweredBy_Label);
             this.Controls.Add(this.linkLabel47);
             this.Controls.Add(this.linkLabel46);
             this.Controls.Add(this.linkLabel45);
@@ -813,7 +771,6 @@ namespace StellaLauncher.Forms.Other
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "RandomImages";
-            this.toolTip1.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RandomImg_FormClosed);
             this.Load += new System.EventHandler(this.RandomThings_Load);
             this.Shown += new System.EventHandler(this.RandomImg_Shown);
@@ -880,5 +837,6 @@ namespace StellaLauncher.Forms.Other
         private System.Windows.Forms.LinkLabel linkLabel46;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.LinkLabel linkLabel47;
+        private System.Windows.Forms.Label poweredBy_Label;
     }
 }

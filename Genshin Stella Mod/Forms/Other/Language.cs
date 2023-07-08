@@ -15,7 +15,7 @@ namespace StellaLauncher.Forms.Other
             InitializeComponent();
 
             _isInitializing = true;
-            int selected = Program.Settings.ReadInt("Launcher", "LanguageID", 0);
+            int selected = Program.Settings.ReadInt("Language", "ID", 0);
             comboBox1.SelectedIndex = selected;
             _isInitializing = false;
         }
@@ -24,22 +24,28 @@ namespace StellaLauncher.Forms.Other
         {
             if (_isInitializing) return;
 
+            string selectedLang;
             switch (comboBox1.SelectedIndex)
             {
                 case 0:
-                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+                    selectedLang = "en";
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo(selectedLang);
                     break;
                 case 1:
-                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("pl");
+                    selectedLang = "pl";
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo(selectedLang);
                     break;
                 default:
-                    Thread.CurrentThread.CurrentUICulture = CultureInfo.InvariantCulture;
+                    selectedLang = CultureInfo.InstalledUICulture.Name.Substring(0, 2);
+                    Thread.CurrentThread.CurrentUICulture = CultureInfo.InstalledUICulture;
                     break;
             }
 
             ReloadOpenForms();
-            Program.Settings.WriteInt("Launcher", "LanguageID", comboBox1.SelectedIndex);
+            Program.Settings.WriteString("Language", "UI", selectedLang);
+            Program.Settings.WriteString("Language", "ID", comboBox1.SelectedIndex.ToString());
         }
+
 
         private void ReloadOpenForms()
         {
