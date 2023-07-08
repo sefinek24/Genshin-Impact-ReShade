@@ -125,7 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="CliWrap">
-      <Version>3.6.3</Version>
+      <Version>3.6.4</Version>
     </PackageReference>
     <PackageReference Include="DotNetZip">
       <Version>1.16.0</Version>
