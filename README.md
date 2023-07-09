@@ -135,6 +135,7 @@ Then, adjust the settings according to the recommended values based on your syst
 ## <div id="tested-game-versions">🛠️ 〢 Tested game versions</div>
 | 🎮 Version | 📝 OS build | 😅 Status     | 📆 Date tested   |
 |------------|:------------|---------------|------------------|
+| v3.8.0     | 19045.3155  | [✔️](#legend) | July 09, 2023    |
 | v3.7.0     | 19045.3031  | [✔️](#legend) | May 24, 2023     |
 | v3.6.0     |             | [❌](#legend)  | April 12, 2023   |
 | v3.5.0     |             | [❌](#legend)  | March 01, 2023   |
