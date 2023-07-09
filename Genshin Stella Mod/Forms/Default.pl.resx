@@ -237,7 +237,7 @@ Karty RTX nie są wymagane.</value>
     <value>Przejdź do https://patreon.com/sefinek</value>
   </data>
   <data name="runGiLauncher_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>162, 334</value>
+    <value>165, 334</value>
   </data>
   <data name="runGiLauncher_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>249, 23</value>
@@ -246,7 +246,7 @@ Karty RTX nie są wymagane.</value>
     <value>Otwórz launcher Genshin Impact</value>
   </data>
   <data name="version_LinkLabel.Text" xml:space="preserve">
-    <value>Oczekiwanie...</value>
+    <value>Uruchom ponownie apke</value>
   </data>
   <data name="version_LinkLabel.ToolTip" xml:space="preserve">
     <value>Zobacz dziennik zmian (changelog) na GitHubie.</value>
@@ -267,7 +267,7 @@ Karty RTX nie są wymagane.</value>
     <value>Kliknij mnie ;w;</value>
   </data>
   <data name="injectReShade_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 297</value>
+    <value>71, 297</value>
   </data>
   <data name="injectReShade_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 23</value>
@@ -279,29 +279,26 @@ Karty RTX nie są wymagane.</value>
     <value>Uruchom Genshin Impact tylko z wstrzykniętym ReShade.</value>
   </data>
   <data name="runFpsUnlocker_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 297</value>
+    <value>217, 297</value>
   </data>
   <data name="runFpsUnlocker_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 23</value>
+    <value>157, 23</value>
   </data>
   <data name="runFpsUnlocker_LinkLabel.Text" xml:space="preserve">
-    <value>Tylko FPS Unlockera</value>
+    <value>Tylko FPS Unlocker</value>
   </data>
   <data name="runFpsUnlocker_LinkLabel.ToolTip" xml:space="preserve">
     <value>Uruchom grę tylko z użytym FPS Unlockerem (odblokowywaniem limitu 60 klatek na sekundę).
 Nie ma sensu używać tego, jeśli Twój monitor nie ma więcej niż 60 Hz.</value>
   </data>
-  <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>416, 297</value>
+  <data name="only3DMigoto_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>397, 297</value>
   </data>
-  <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="only3DMigoto_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 23</value>
   </data>
-  <data name="linkLabel1.Text" xml:space="preserve">
+  <data name="only3DMigoto_LinkLabel.Text" xml:space="preserve">
     <value>Tylko 3DMigoto</value>
-  </data>
-  <data name="linkLabel1.ToolTip" xml:space="preserve">
-    <value>Uruchom grę z wstrzykniętym tylko 3DMigoto.</value>
   </data>
   <data name="websiteIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>354, 565</value>
@@ -313,7 +310,7 @@ Nie ma sensu używać tego, jeśli Twój monitor nie ma więcej niż 60 Hz.</val
     <value>208, 23</value>
   </data>
   <data name="updates_LinkLabel.Text" xml:space="preserve">
-    <value>Oczekiwanie...</value>
+    <value>&gt;&gt; Kliknij, by odświeżyć &lt;&lt;</value>
   </data>
   <data name="padIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>227, 565</value>

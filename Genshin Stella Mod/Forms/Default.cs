@@ -43,6 +43,14 @@ namespace StellaLauncher.Forms
         public static PictureBox _youtubeIco_Picturebox;
         public static LinkLabel _youTube_LinkLabel;
 
+        // Start the game
+        public static LinkLabel _startGame_LinkLabel;
+        public static LinkLabel _injectReShade_LinkLabel;
+        public static LinkLabel _runFpsUnlocker_LinkLabel;
+        public static LinkLabel _only3DMigoto_LinkLabel;
+        public static LinkLabel _runGiLauncher_LinkLabel;
+        public static LinkLabel _becomeMyPatron_LinkLabel;
+
         // Bottom
         public static PictureBox _toolsIco_PictureBox;
         public static LinkLabel _tools_LinkLabel;
@@ -95,6 +103,13 @@ namespace StellaLauncher.Forms
             _supportMe_LinkLabel = supportMe_LinkLabel;
             _youtubeIco_Picturebox = youtubeIco_Picturebox;
             _youTube_LinkLabel = youTube_LinkLabel;
+
+            _startGame_LinkLabel = startGame_LinkLabel;
+            _injectReShade_LinkLabel = injectReShade_LinkLabel;
+            _runFpsUnlocker_LinkLabel = runFpsUnlocker_LinkLabel;
+            _only3DMigoto_LinkLabel = only3DMigoto_LinkLabel;
+            _runGiLauncher_LinkLabel = runGiLauncher_LinkLabel;
+            _becomeMyPatron_LinkLabel = becomeMyPatron_LinkLabel;
 
             _toolsIco_PictureBox = toolsIco_PictureBox;
             _tools_LinkLabel = tools_LinkLabel;
@@ -348,12 +363,21 @@ namespace StellaLauncher.Forms
                 _updateIco_PictureBox.Image = Resources.icons8_available_updates;
 
                 Utils.RemoveClickEvent(_updates_LinkLabel);
-                _updates_LinkLabel.Click += RunCheckForUpdates;
+                _updates_LinkLabel.Click += CheckUpdates_Click;
 
                 UpdateIsAvailable = false;
 
                 Log.Output(string.Format(Resources.Default_NotFoundAnyNewUpdates_YourInstalledVersion_, Program.AppVersion));
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress);
+
+
+                _startGame_LinkLabel.Visible = true;
+                _injectReShade_LinkLabel.Visible = true;
+                _runFpsUnlocker_LinkLabel.Visible = true;
+                _only3DMigoto_LinkLabel.Visible = true;
+                _runGiLauncher_LinkLabel.Visible = true;
+                _becomeMyPatron_LinkLabel.Visible = true;
+
                 return 0;
             }
             catch (Exception e)
@@ -369,11 +393,6 @@ namespace StellaLauncher.Forms
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
                 return -1;
             }
-        }
-
-        public static async void RunCheckForUpdates(object sender, EventArgs e)
-        {
-            await CheckForUpdates();
         }
 
 
@@ -581,20 +600,19 @@ namespace StellaLauncher.Forms
             Utils.OpenUrl("https://www.youtube.com/watch?v=RpDf3XFHVNI");
         }
 
-        public async void CheckUpdates_Click(object sender, EventArgs e)
+        private void CheckUpdates_Worker(object sender, EventArgs e)
+        {
+            CheckUpdates_Click(sender, e);
+        }
+
+        public static async void CheckUpdates_Click(object sender, EventArgs e)
         {
             int update = await CheckForUpdates();
             if (update != 0) return;
 
-            updates_LinkLabel.LinkColor = Color.LawnGreen;
-            updates_LinkLabel.Text = Resources.Default_YouHaveTheLatestVersion;
-            updateIco_PictureBox.Image = Resources.icons8_available_updates;
-
-            startGame_LinkLabel.Visible = true;
-            injectReShade_LinkLabel.Visible = true;
-            runFpsUnlocker_LinkLabel.Visible = true;
-            only3DMigoto_LinkLabel.Visible = true;
-            runGiLauncher_LinkLabel.Visible = true;
+            _updates_LinkLabel.LinkColor = Color.LawnGreen;
+            _updates_LinkLabel.Text = Resources.Default_YouHaveTheLatestVersion;
+            _updateIco_PictureBox.Image = Resources.icons8_available_updates;
         }
 
         private void W_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
