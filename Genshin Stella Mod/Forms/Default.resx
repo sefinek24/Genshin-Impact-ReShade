@@ -528,6 +528,9 @@
   <data name="startGame_LinkLabel.ToolTip" xml:space="preserve">
     <value>Launch Genshin Impact with ReShade, 3DMigoto and FPS Unlocker. Recommended.</value>
   </data>
+  <data name="startGame_LinkLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;startGame_LinkLabel.Name" xml:space="preserve">
     <value>startGame_LinkLabel</value>
   </data>
@@ -712,6 +715,9 @@ RTX cards are not required.</value>
   <data name="runGiLauncher_LinkLabel.ToolTip" xml:space="preserve">
     <value>Open the main game launcher.</value>
   </data>
+  <data name="runGiLauncher_LinkLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;runGiLauncher_LinkLabel.Name" xml:space="preserve">
     <value>runGiLauncher_LinkLabel</value>
   </data>
@@ -859,6 +865,9 @@ RTX cards are not required.</value>
   <data name="injectReShade_LinkLabel.ToolTip" xml:space="preserve">
     <value>Run Genshin Impact with only ReShade.</value>
   </data>
+  <data name="injectReShade_LinkLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;injectReShade_LinkLabel.Name" xml:space="preserve">
     <value>injectReShade_LinkLabel</value>
   </data>
@@ -898,6 +907,9 @@ RTX cards are not required.</value>
   <data name="runFpsUnlocker_LinkLabel.ToolTip" xml:space="preserve">
     <value>Run game with only FPS Unlocker.</value>
   </data>
+  <data name="runFpsUnlocker_LinkLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;runFpsUnlocker_LinkLabel.Name" xml:space="preserve">
     <value>runFpsUnlocker_LinkLabel</value>
   </data>
@@ -910,43 +922,46 @@ RTX cards are not required.</value>
   <data name="&gt;&gt;runFpsUnlocker_LinkLabel.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="linkLabel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="only3DMigoto_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="linkLabel1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="only3DMigoto_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="linkLabel1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="only3DMigoto_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Comic Sans MS, 12pt</value>
   </data>
-  <data name="linkLabel1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="only3DMigoto_LinkLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="only3DMigoto_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>375, 302</value>
   </data>
-  <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="only3DMigoto_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 23</value>
   </data>
-  <data name="linkLabel1.TabIndex" type="System.Int32, mscorlib">
+  <data name="only3DMigoto_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>117</value>
   </data>
-  <data name="linkLabel1.Text" xml:space="preserve">
+  <data name="only3DMigoto_LinkLabel.Text" xml:space="preserve">
     <value>Only 3DMigoto</value>
   </data>
-  <data name="linkLabel1.ToolTip" xml:space="preserve">
+  <data name="only3DMigoto_LinkLabel.ToolTip" xml:space="preserve">
     <value>Run Genshin Impact with only 3DMigoto.</value>
   </data>
-  <data name="&gt;&gt;linkLabel1.Name" xml:space="preserve">
-    <value>linkLabel1</value>
+  <data name="only3DMigoto_LinkLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="&gt;&gt;linkLabel1.Type" xml:space="preserve">
+  <data name="&gt;&gt;only3DMigoto_LinkLabel.Name" xml:space="preserve">
+    <value>only3DMigoto_LinkLabel</value>
+  </data>
+  <data name="&gt;&gt;only3DMigoto_LinkLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;linkLabel1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;only3DMigoto_LinkLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;linkLabel1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;only3DMigoto_LinkLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="toolsIco_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">

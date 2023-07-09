@@ -589,6 +589,12 @@ namespace StellaLauncher.Forms
             updates_LinkLabel.LinkColor = Color.LawnGreen;
             updates_LinkLabel.Text = Resources.Default_YouHaveTheLatestVersion;
             updateIco_PictureBox.Image = Resources.icons8_available_updates;
+
+            startGame_LinkLabel.Visible = true;
+            injectReShade_LinkLabel.Visible = true;
+            runFpsUnlocker_LinkLabel.Visible = true;
+            only3DMigoto_LinkLabel.Visible = true;
+            runGiLauncher_LinkLabel.Visible = true;
         }
 
         private void W_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

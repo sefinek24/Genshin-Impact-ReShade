@@ -53,7 +53,7 @@ namespace StellaLauncher.Forms
             this.clickMe_LinkLabel = new System.Windows.Forms.LinkLabel();
             this.injectReShade_LinkLabel = new System.Windows.Forms.LinkLabel();
             this.runFpsUnlocker_LinkLabel = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.only3DMigoto_LinkLabel = new System.Windows.Forms.LinkLabel();
             this.toolsIco_PictureBox = new System.Windows.Forms.PictureBox();
             this.websiteIco_PictureBox = new System.Windows.Forms.PictureBox();
             this.updateIco_PictureBox = new System.Windows.Forms.PictureBox();
@@ -337,17 +337,17 @@ namespace StellaLauncher.Forms
             this.toolTip1.SetToolTip(this.runFpsUnlocker_LinkLabel, resources.GetString("runFpsUnlocker_LinkLabel.ToolTip"));
             this.runFpsUnlocker_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OnlyUnlocker_LinkClicked);
             // 
-            // linkLabel1
+            // only3DMigoto_LinkLabel
             // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
-            resources.ApplyResources(this.linkLabel1, "linkLabel1");
-            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel1, resources.GetString("linkLabel1.ToolTip"));
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Only3DMigoto_LinkClicked);
+            this.only3DMigoto_LinkLabel.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.only3DMigoto_LinkLabel, "only3DMigoto_LinkLabel");
+            this.only3DMigoto_LinkLabel.BackColor = System.Drawing.Color.Transparent;
+            this.only3DMigoto_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.only3DMigoto_LinkLabel.LinkColor = System.Drawing.Color.White;
+            this.only3DMigoto_LinkLabel.Name = "only3DMigoto_LinkLabel";
+            this.only3DMigoto_LinkLabel.TabStop = true;
+            this.toolTip1.SetToolTip(this.only3DMigoto_LinkLabel, resources.GetString("only3DMigoto_LinkLabel.ToolTip"));
+            this.only3DMigoto_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Only3DMigoto_LinkClicked);
             // 
             // toolsIco_PictureBox
             // 
@@ -477,7 +477,7 @@ namespace StellaLauncher.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::StellaLauncher.Properties.Resources.bg_main;
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.only3DMigoto_LinkLabel);
             this.Controls.Add(this.clickMe_LinkLabel);
             this.Controls.Add(this.PreparingPleaseWait);
             this.Controls.Add(this.progressBar1);
@@ -575,7 +575,7 @@ namespace StellaLauncher.Forms
         private System.Windows.Forms.LinkLabel clickMe_LinkLabel;
         private System.Windows.Forms.LinkLabel injectReShade_LinkLabel;
         private System.Windows.Forms.LinkLabel runFpsUnlocker_LinkLabel;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel only3DMigoto_LinkLabel;
     }
 }
 
