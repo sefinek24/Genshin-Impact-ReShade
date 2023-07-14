@@ -508,7 +508,7 @@ namespace StellaLauncher.Forms
             int launchCount = (int)(key?.GetValue("LaunchCount") ?? 0);
             launchCount++;
             key?.SetValue("LaunchCount", launchCount);
-            MessageBox.Show(Secret.IsMyPatron.ToString());
+
             switch (launchCount)
             {
                 case 5:
