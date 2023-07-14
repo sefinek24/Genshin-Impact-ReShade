@@ -4,7 +4,7 @@
          xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
          xmlns:uap10="http://schemas.microsoft.com/appx/manifest/uap/windows10/10"
          xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities">
-  <Identity Name="21936Sefinek.110730C5FA09B" Version="7.6.0.0" Publisher="CN=24508F31-E67A-4211-BCA6-40B385B08A8A"
+  <Identity Name="21936Sefinek.110730C5FA09B" Version="7.6.0.2" Publisher="CN=24508F31-E67A-4211-BCA6-40B385B08A8A"
             ProcessorArchitecture="x64" />
   <Properties>
     <DisplayName>Stella Mod Launcher</DisplayName>
