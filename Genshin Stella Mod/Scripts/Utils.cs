@@ -193,22 +193,10 @@ namespace StellaLauncher.Scripts
             }
         }
 
-        public static async void HideProgressBar()
+        public static void HideProgressBar()
         {
-            await Task.Delay(800);
-
             Default._progressBar1.Hide();
             Default._preparingPleaseWait.Hide();
-
-            Default._progressBar1.Value = 0;
-        }
-
-        public static async void ShowProgressBar()
-        {
-            await Task.Delay(800);
-
-            Default._progressBar1.Show();
-            Default._preparingPleaseWait.Show();
 
             Default._progressBar1.Value = 0;
         }
