@@ -289,9 +289,6 @@
     <None Include="data\cmd\delete_webview_cache.cmd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="data\cmd\run_patrons.cmd">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="data\cmd\run.cmd">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
