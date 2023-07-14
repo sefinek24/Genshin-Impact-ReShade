@@ -830,4 +830,12 @@ The requested operation is successful. Changes will not be effective until the s
   <data name="Tools_TheShortcutHasBeenSuccessfullyCreated" xml:space="preserve">
     <value>The shortcut has been successfully created.</value>
   </data>
+  <data name="Default_GenshinStellaModForPatrons" xml:space="preserve">
+    <value>Genshin Stella Mod for Patrons</value>
+  </data>
+  <data name="Default_ThisFeatureIsAvailableOnlyForMyPatrons" xml:space="preserve">
+    <value>This feature is available only for my patrons.
+
+Would you like to visit Patreon.com and make subscribe? You will gain access to numerous benefits! You will also be able to enjoy ReShade, 3DMigoto, and FPS Unlocker simultaneously.</value>
+  </data>
 </root>

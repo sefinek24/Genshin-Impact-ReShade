@@ -148,9 +148,15 @@ namespace StellaLauncher.Forms
 
                 GetToken remote = JsonConvert.DeserializeObject<GetToken>(data);
                 if (remote.Status == 200)
+                {
                     Secret.IsMyPatron = true;
+                    label1.Text = Resources.Default_GenshinStellaModForPatrons;
+                    label1.TextAlign = ContentAlignment.MiddleRight;
+                }
                 else if (Directory.Exists(Program.PatronsDir))
+                {
                     Directory.Delete(Program.PatronsDir, true);
+                }
             }
 
             progressBar1.Value = 25;
@@ -617,7 +623,8 @@ namespace StellaLauncher.Forms
         {
             if (!Secret.IsMyPatron)
             {
-                MessageBox.Show("You are not my patron!");
+                DialogResult result = MessageBox.Show(Resources.Default_ThisFeatureIsAvailableOnlyForMyPatrons, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes) Utils.OpenUrl("https://www.patreon.com/sefinek");
                 return;
             }
 

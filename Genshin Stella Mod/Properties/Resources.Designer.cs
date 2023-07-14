@@ -483,6 +483,15 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Genshin Stella Mod for Patrons.
+        /// </summary>
+        internal static string Default_GenshinStellaModForPatrons {
+            get {
+                return ResourceManager.GetString("Default_GenshinStellaModForPatrons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to It appears that you are launching the launcher for the first time! Take a moment to review the terms of use on the GitHub Wiki and other guidelines for this modification to avoid any unexpected issues.
         ///
         ///REMEMBER NOT TO SHARE YOUR UID WITH VISIBLE GAME SHADERS WITH ANYONE!.
@@ -647,6 +656,17 @@ namespace StellaLauncher.Properties {
         internal static string Default_TheUpdateOfReShadIniHasBeenCanceledByTheUser {
             get {
                 return ResourceManager.GetString("Default_TheUpdateOfReShadIniHasBeenCanceledByTheUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This feature is available only for my patrons.
+        ///
+        ///Would you like to visit Patreon.com and make subscribe? You will gain access to numerous benefits! You will also be able to enjoy ReShade, 3DMigoto, and FPS Unlocker simultaneously..
+        /// </summary>
+        internal static string Default_ThisFeatureIsAvailableOnlyForMyPatrons {
+            get {
+                return ResourceManager.GetString("Default_ThisFeatureIsAvailableOnlyForMyPatrons", resourceCulture);
             }
         }
         
