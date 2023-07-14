@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using Windows.Storage;
 using IWshRuntimeLibrary;
 using Microsoft.Win32;
+using StellaLauncher.Forms;
 using StellaLauncher.Properties;
 using File = System.IO.File;
 
@@ -190,6 +191,26 @@ namespace StellaLauncher.Scripts
                 Log.ThrowError(new Exception(string.Format(Resources.Utils_AnErrorOccurredWhileCreatingTheShortcut, ex)));
                 return false;
             }
+        }
+
+        public static async void HideProgressBar()
+        {
+            await Task.Delay(800);
+
+            Default._progressBar1.Hide();
+            Default._preparingPleaseWait.Hide();
+
+            Default._progressBar1.Value = 0;
+        }
+
+        public static async void ShowProgressBar()
+        {
+            await Task.Delay(800);
+
+            Default._progressBar1.Show();
+            Default._preparingPleaseWait.Show();
+
+            Default._progressBar1.Value = 0;
         }
     }
 }

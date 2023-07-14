@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using Microsoft.Win32;
 using StellaLauncher.Forms;
 using StellaLauncher.Forms.Errors;
-using StellaLauncher.Forms.Other;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
 
@@ -21,32 +20,35 @@ namespace StellaLauncher
         // App
         public static readonly string AppName = Assembly.GetExecutingAssembly().GetName().Name;
         public static readonly string AppVersion = Application.ProductVersion;
-        public static readonly string AppWebsiteSub = "https://genshin.sefinek.net";
+        private static readonly string AppWebsiteSub = "https://genshin.sefinek.net";
         public static readonly string AppWebsiteFull = "https://sefinek.net/genshin-impact-reshade";
 
         // Files and folders
         public static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
-        public static string AppData = Utils.GetAppData();
+        public static readonly string AppData = Utils.GetAppData();
         private static string _appIsConfigured;
         private static readonly string PrepareLauncher = Path.Combine(AppPath, "First app launch.exe");
         public static readonly string ReShadePath = Path.Combine(AppPath, "data", "reshade", "ReShade64.dll");
         public static readonly string InjectorPath = Path.Combine(AppPath, "data", "reshade", "inject64.exe");
         public static readonly string FpsUnlockerExePath = Path.Combine(AppPath, "data", "unlocker", "unlockfps_clr.exe");
         public static readonly string FpsUnlockerCfgPath = Path.Combine(AppPath, "data", "unlocker", "unlocker.config.json");
-        private static readonly string PatronsDir = Path.Combine(AppPath, "data", "presets", "3. Only for patrons");
+        public static readonly string PatronsDir = Path.Combine(AppPath, "data", "presets", "3. Only for patrons");
         private static readonly string TierActivated = Path.Combine(AppPath, "tier-activated.sfn");
 
         // Web
         public static readonly string UserAgent = $"Mozilla/5.0 (compatible; StellaLauncher/{AppVersion}; +{AppWebsiteSub})";
 
+        // public static readonly string WebApi = "http://127.0.0.1:4010/api/v4";
+        public static readonly string WebApi = "https://api.sefinek.net/api/v4";
+
         // Config
         public static IniFile Settings;
 
         // Lang
-        public static string[] SupportedLangs = { "en", "pl" };
+        private static readonly string[] SupportedLangs = { "en", "pl" };
 
         // Registry
-        public static string RegistryPath = @"SOFTWARE\Stella Mod Launcher";
+        public static readonly string RegistryPath = @"SOFTWARE\Stella Mod Launcher";
 
 
         [STAThread]
@@ -76,7 +78,7 @@ namespace StellaLauncher
                 string.Format(
                     Resources.Program_ARequestToStartTheProgramHasBeenReceived,
                     Debugger.IsAttached,
-                    Os.CpuId,
+                    ComputerInfo.GetCpuSerialNumber(),
                     AppPath,
                     AppData,
                     _appIsConfigured,
@@ -117,62 +119,6 @@ namespace StellaLauncher
 
             try
             {
-                if (!File.Exists(TierActivated) && Directory.Exists(PatronsDir)) Directory.Delete(PatronsDir, true);
-
-                RegistryKey key = Registry.CurrentUser.CreateSubKey(RegistryPath);
-                int launchCount = (int)(key?.GetValue("LaunchCount") ?? 0);
-                launchCount++;
-                key?.SetValue("LaunchCount", launchCount);
-
-                switch (launchCount)
-                {
-                    case 5:
-                    case 20:
-                    case 30:
-                        DialogResult discordResult = MessageBox.Show(Resources.Program_DoYouWantToJoinOurDiscord, AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        Log.Output(string.Format(Resources.Program_QuestionMessageBox_DoYouWantToJoinOurDiscord_, discordResult));
-                        if (discordResult == DialogResult.Yes) Utils.OpenUrl(Discord.Invitation);
-                        break;
-
-                    case 2:
-                    case 12:
-                    case 40:
-                        DialogResult feedbackResult = MessageBox.Show(Resources.Program_WouldYouShareOpinionAboutStellaMod, AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        Log.Output(string.Format(Resources.Program_QuestionMessageBox_WouldYouShareOpinionAboutStellaMod, feedbackResult));
-                        if (feedbackResult == DialogResult.Yes) Utils.OpenUrl("https://www.trustpilot.com/review/genshin.sefinek.net");
-                        break;
-
-                    case 3:
-                    case 10:
-                    case 25:
-                    case 35:
-                    case 45:
-                        if (!File.Exists(TierActivated)) Application.Run(new SupportMe { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) });
-                        return;
-
-                    case 28:
-                    case 70:
-                    case 100:
-                    case 200:
-                    case 300:
-                        DialogResult logFilesResult = MessageBox.Show(Resources.Program_DoYouWantToSendUsanonymousLogFiles, AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        Log.Output(string.Format(Resources.Program_QuestionMessageBox_DoYouWantToSendUsanonymousLogFiles_, logFilesResult));
-                        if (logFilesResult == DialogResult.Yes)
-                        {
-                            Telemetry.SendLogFiles();
-
-                            DialogResult showFilesResult = MessageBox.Show(Resources.Program_IfYouWishToSendLogsToTheDeveloperPleaseSendThemToMeOnDiscord, AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                            if (showFilesResult == DialogResult.Yes)
-                            {
-                                Process.Start(Log.Folder);
-                                Log.Output($"Opened: {Log.Folder}");
-                            }
-                        }
-
-                        break;
-                }
-
-
                 Application.Run(new Default { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) });
             }
             catch (Exception e)

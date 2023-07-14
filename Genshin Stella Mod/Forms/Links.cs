@@ -100,7 +100,7 @@ namespace StellaLauncher.Forms
         // --------------------------- Nothing special ((: ----------------------------
         private void Flower_MouseClick(object sender, MouseEventArgs e)
         {
-            if (Os.RegionCode != "PL") return;
+            if (ComputerInfo.GetSystemRegion() != "PL") return;
 
             Utils.OpenUrl("https://www.youtube.com/watch?v=zSeosXivzG4");
             MessageBox.Show(

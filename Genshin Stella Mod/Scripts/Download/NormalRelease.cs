@@ -12,7 +12,7 @@ using StellaLauncher.Properties;
 
 namespace StellaLauncher.Scripts.Download
 {
-    internal class NormalRelease
+    internal static class NormalRelease
     {
         // Files
         public static readonly string SetupPathExe = Path.Combine(Path.GetTempPath(), "Stella_Mod_Update.exe");
@@ -45,19 +45,6 @@ namespace StellaLauncher.Scripts.Download
             Default._supportMe_LinkLabel.Show();
             Default._youtubeIco_Picturebox.Show();
 
-            Default._toolsIco_PictureBox.Show();
-            Default._tools_LinkLabel.Show();
-
-            Default._shortcutIco_PictureBox.Show();
-            Default._links_LinkLabel.Show();
-
-            Default._padIco_PictureBox.Show();
-            Default._gameplay_LinkLabel.Show();
-            Default._websiteIco_PictureBox.Show();
-            Default._website_LinkLabel.Show();
-            Default._version_LinkLabel.Show();
-            Default._updates_LinkLabel.Show();
-            Default._updateIco_PictureBox.Show();
             Default._progressBar1.Value = 0;
 
             // ToastContentBuilder
@@ -115,15 +102,6 @@ namespace StellaLauncher.Scripts.Download
             Default._supportMe_LinkLabel.Hide();
             Default._youtubeIco_Picturebox.Hide();
             Default._youTube_LinkLabel.Hide();
-
-            Default._toolsIco_PictureBox.Hide();
-            Default._tools_LinkLabel.Hide();
-            Default._shortcutIco_PictureBox.Hide();
-            Default._links_LinkLabel.Hide();
-            Default._padIco_PictureBox.Hide();
-            Default._gameplay_LinkLabel.Hide();
-            Default._websiteIco_PictureBox.Hide();
-            Default._website_LinkLabel.Hide();
 
             try
             {

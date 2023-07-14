@@ -11,6 +11,9 @@ Genshin Stella Mod/obj
 Install required dependencies/bin
 Install required dependencies/obj
 
+# Solution
+Genshin Stella Mod/data/cmd/run_patrons.cmd
+
 # Files etc.
 packages
 InnoSetup/Output/Genshin Stella Mod Setup.exe

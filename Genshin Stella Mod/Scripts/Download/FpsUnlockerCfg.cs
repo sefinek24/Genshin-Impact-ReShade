@@ -8,7 +8,7 @@ using StellaLauncher.Properties;
 
 namespace StellaLauncher.Scripts.Download
 {
-    internal class FpsUnlockerCfg
+    internal static class FpsUnlockerCfg
     {
         private static Label _statusLabel;
 

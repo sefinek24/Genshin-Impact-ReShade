@@ -190,7 +190,8 @@
     <Compile Include="Scripts\Download\StellaResources.cs" />
     <Compile Include="Scripts\IniFile.cs" />
     <Compile Include="Scripts\Log.cs" />
-    <Compile Include="Scripts\Os.cs" />
+    <Compile Include="Scripts\ComputerInfo.cs" />
+    <Compile Include="Scripts\Secret.cs" />
     <Compile Include="Scripts\Telemetry.cs" />
     <Compile Include="Scripts\Download\MajorRelease.cs" />
     <Compile Include="Scripts\Download\FpsUnlockerCfg.cs" />
@@ -287,6 +288,9 @@
     </None>
     <None Include="data\cmd\delete_webview_cache.cmd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="data\cmd\run_patrons.cmd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="data\cmd\run.cmd">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -10,7 +10,7 @@ using StellaLauncher.Properties;
 
 namespace StellaLauncher.Scripts.Download
 {
-    internal class ReShadeCfg
+    internal static class ReShadeCfg
     {
         public static async Task<int> Download(int resultInt, string resourcesPath)
         {

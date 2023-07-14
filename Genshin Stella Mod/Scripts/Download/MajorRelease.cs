@@ -7,7 +7,7 @@ using StellaLauncher.Properties;
 
 namespace StellaLauncher.Scripts.Download
 {
-    internal class MajorRelease
+    internal static class MajorRelease
     {
         public static void Run(string remoteVersion, DateTime remoteVerDate, LinkLabel versionLabel, LinkLabel updatesLabel, PictureBox updateIcon)
         {

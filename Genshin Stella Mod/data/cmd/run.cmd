@@ -47,7 +47,7 @@ if not exist "data\reshade\inject64.exe" (
 )
 
 REM Get the launch mode from a file
-if not "%1" equ "1" if not "%1" equ "2" if not "%1" equ "3" if not "%1" equ "4" if not "%1" equ "5" (
+if not "%1" equ "6" if not "%1" equ "2" if not "%1" equ "3" if not "%1" equ "4" if not "%1" equ "5" (
     echo [x] Failed to start. Unknown launch mode: %1
     goto :pause
 )
@@ -125,7 +125,7 @@ echo [%DATE% %TIME%]: Launch mode %1. Starting... >> %3
 
 
 REM Choose the correct mode
-if "%1" equ "1" (
+if "%1" equ "6" (
     REM Unlock FPS
     pushd "data\unlocker"
     start "" "unlockfps_clr.exe"
@@ -135,10 +135,6 @@ if "%1" equ "1" (
     REM Inject ReShade
     pushd "..\reshade"
     call "..\cmd\start\run-reshade.cmd"
-
-    REM Inject 3DMigoto
-    pushd "%4"
-    call "loader.exe"
 
     REM Wait for the unlocker to finish
     pushd "%5"
@@ -168,10 +164,6 @@ if "%1" equ "1" (
     REM Wait for the unlocker to finish
     pushd "..\cmd\start"
     call wait_for_unlockfps.cmd
-) else if "%1" equ "5" (
-    REM Inject 3DMigoto
-    pushd "%4"
-    call "loader.exe"
 ) else (
     REM Wrong launch mode
     echo [x] Failed to start. Invalid launch mode: %1

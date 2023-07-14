@@ -12,7 +12,7 @@ using StellaLauncher.Properties;
 
 namespace StellaLauncher.Scripts.Download
 {
-    internal class ReShadeIniUpdate
+    internal static class ReShadeIniUpdate
     {
         // LinkLabel, Label, ProgressBar etc.
         private static LinkLabel _updatesLabel;

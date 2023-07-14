@@ -15,10 +15,10 @@ using StellaLauncher.Properties;
 
 namespace StellaLauncher.Scripts.Download
 {
-    internal class DownloadResources
+    internal static class DownloadResources
     {
         // Files
-        public static string StellaResZip;
+        private static string _stellaResZip;
 
         // Custom
         private static string _resourcesPath;
@@ -48,25 +48,6 @@ namespace StellaLauncher.Scripts.Download
             Default._preparingPleaseWait.Hide();
             Default._preparingPleaseWait.Text = Resources.NormalRelease_Preparing_IfProcessIsStuckReopenLauncher;
 
-            Default._discordServerIco_Picturebox.Show();
-            Default._discordServer_LinkLabel.Show();
-            Default._supportMeIco_PictureBox.Show();
-            Default._supportMe_LinkLabel.Show();
-            Default._youtubeIco_Picturebox.Show();
-
-            Default._toolsIco_PictureBox.Show();
-            Default._tools_LinkLabel.Show();
-
-            Default._shortcutIco_PictureBox.Show();
-            Default._links_LinkLabel.Show();
-
-            Default._padIco_PictureBox.Show();
-            Default._gameplay_LinkLabel.Show();
-            Default._websiteIco_PictureBox.Show();
-            Default._website_LinkLabel.Show();
-            Default._version_LinkLabel.Show();
-            Default._updates_LinkLabel.Show();
-            Default._updateIco_PictureBox.Show();
             Default._progressBar1.Value = 0;
 
             // ToastContentBuilder
@@ -89,7 +70,7 @@ namespace StellaLauncher.Scripts.Download
             Log.Output($"{string.Format(Resources.StellaResources_NewResourcesUpdateIsAvailable, date)} {remoteResDate}.");
 
             Default._status_Label.Text += $"[i] {string.Format(Resources.StellaResources_NewResourcesUpdateIsAvailable, date)}\n";
-            StellaResZip = Path.Combine(resourcesPath, $"Stella resources - v{remoteResVersion}.zip");
+            _stellaResZip = Path.Combine(resourcesPath, $"Stella resources - v{remoteResVersion}.zip");
 
 
             // Check update size
@@ -128,15 +109,6 @@ namespace StellaLauncher.Scripts.Download
             Default._youtubeIco_Picturebox.Hide();
             Default._youTube_LinkLabel.Hide();
 
-            Default._toolsIco_PictureBox.Hide();
-            Default._tools_LinkLabel.Hide();
-            Default._shortcutIco_PictureBox.Hide();
-            Default._links_LinkLabel.Hide();
-            Default._padIco_PictureBox.Hide();
-            Default._gameplay_LinkLabel.Hide();
-            Default._websiteIco_PictureBox.Hide();
-            Default._website_LinkLabel.Hide();
-
             try
             {
                 Log.Output(Resources.NormalRelease_Starting);
@@ -148,14 +120,12 @@ namespace StellaLauncher.Scripts.Download
                 Log.ThrowError(ex);
             }
 
-            Log.Output(string.Format(Resources.NormalRelease_Output_, StellaResZip));
+            Log.Output(string.Format(Resources.NormalRelease_Output_, _stellaResZip));
         }
 
 
         private static async Task StartDownload()
         {
-            Console.WriteLine(@"Checking Stella resources...");
-
             if (File.Exists(_resourcesPath))
             {
                 File.Delete(_resourcesPath);
@@ -171,7 +141,7 @@ namespace StellaLauncher.Scripts.Download
                 client.Headers.Add("user-agent", Program.UserAgent);
                 client.DownloadProgressChanged += Client_DownloadProgressChanged;
                 client.DownloadFileCompleted += Client_DownloadFileCompleted;
-                await client.DownloadFileTaskAsync(new Uri("https://github.com/sefinek24/Genshin-Stella-Resources/releases/latest/download/resources.zip"), StellaResZip);
+                await client.DownloadFileTaskAsync(new Uri("https://github.com/sefinek24/Genshin-Stella-Resources/releases/latest/download/resources.zip"), _stellaResZip);
             }
         }
 
@@ -205,7 +175,7 @@ namespace StellaLauncher.Scripts.Download
         {
             Default._preparingPleaseWait.Text = Resources.StellaResources_UnpackingFiles;
 
-            await UnzipWithProgress(StellaResZip, _resourcesPath);
+            await UnzipWithProgress(_stellaResZip, _resourcesPath);
 
             Default._progressBar1.Hide();
             Default._preparingPleaseWait.Hide();
@@ -217,19 +187,10 @@ namespace StellaLauncher.Scripts.Download
             Default._youtubeIco_Picturebox.Show();
             Default._youTube_LinkLabel.Show();
 
-            Default._toolsIco_PictureBox.Show();
-            Default._tools_LinkLabel.Show();
-            Default._shortcutIco_PictureBox.Show();
-            Default._links_LinkLabel.Show();
-            Default._padIco_PictureBox.Show();
-            Default._gameplay_LinkLabel.Show();
-            Default._websiteIco_PictureBox.Show();
-            Default._website_LinkLabel.Show();
-
             Default._version_LinkLabel.Text = $@"v{Program.AppVersion}";
 
             Default._status_Label.Text += $"[✓] {Resources.StellaResources_SuccessfullyUpdatedResources}\n";
-            Log.Output(string.Format(Resources.StellaResources_SuccessfullyUnpacked, StellaResZip));
+            Log.Output(string.Format(Resources.StellaResources_SuccessfullyUnpacked, _stellaResZip));
 
             await Default.CheckForUpdates();
         }
