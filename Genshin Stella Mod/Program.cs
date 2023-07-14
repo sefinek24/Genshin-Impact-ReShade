@@ -33,7 +33,6 @@ namespace StellaLauncher
         public static readonly string FpsUnlockerExePath = Path.Combine(AppPath, "data", "unlocker", "unlockfps_clr.exe");
         public static readonly string FpsUnlockerCfgPath = Path.Combine(AppPath, "data", "unlocker", "unlocker.config.json");
         public static readonly string PatronsDir = Path.Combine(AppPath, "data", "presets", "3. Only for patrons");
-        private static readonly string TierActivated = Path.Combine(AppPath, "tier-activated.sfn");
 
         // Web
         public static readonly string UserAgent = $"Mozilla/5.0 (compatible; StellaLauncher/{AppVersion}; +{AppWebsiteSub})";
