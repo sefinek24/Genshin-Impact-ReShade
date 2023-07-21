@@ -9,10 +9,10 @@ namespace StellaLauncher.Scripts
         public const string Invitation = "https://discord.com/invite/SVcbaRc7gH";
         public const string FeedbackChannel = "https://discord.gg/X8bt6mkbu7";
         public static string Username = "";
-        public static bool IsReady;
+        private static bool _isReady;
         public static DiscordRpcClient Client;
 
-        public static readonly RichPresence Presence = new RichPresence
+        private static readonly RichPresence Presence = new RichPresence
         {
             Details = $"{Resources.Discord_InTheMainWindow} 🏠",
             State = string.Format(Resources.Discord_Version_, Program.AppVersion),
@@ -38,7 +38,7 @@ namespace StellaLauncher.Scripts
                 Username = msg.User.Username;
                 Log.Output(string.Format(Resources.Discord_OnReady, Username));
 
-                IsReady = true;
+                _isReady = true;
             };
             Client.OnPresenceUpdate += (sender, msg) => Log.Output(Resources.Discord_OnPresenceUpdate);
             Client.OnClose += (sender, msg) => Log.Output(Resources.Discord_OnClose);
@@ -61,14 +61,14 @@ namespace StellaLauncher.Scripts
         public static void SetStatus(string status)
         {
             int data = Program.Settings.ReadInt("Launcher", "DiscordRPC", 1);
-            if (data == 1 && IsReady)
+            if (data == 1 && _isReady)
             {
                 Presence.Details = status;
                 Client.SetPresence(Presence);
             }
             else
             {
-                Log.Output(string.Format(Resources.Discord_RPCWasNotUpdated, data, IsReady));
+                Log.Output(string.Format(Resources.Discord_RPCWasNotUpdated, data, _isReady));
             }
         }
     }

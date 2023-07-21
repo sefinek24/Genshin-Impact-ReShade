@@ -2058,6 +2058,15 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Oops, an error occurred.
+        /// </summary>
+        internal static string Utils_OopsAnErrorOccurred {
+            get {
+                return ResourceManager.GetString("Utils_OopsAnErrorOccurred", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Opened &apos;{0}&apos; in default browser..
         /// </summary>
         internal static string Utils_Opened_InDefaultBrowser {

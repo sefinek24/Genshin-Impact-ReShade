@@ -5,6 +5,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
 using Microsoft.Win32;
@@ -49,6 +50,8 @@ namespace StellaLauncher
         // Registry
         public static readonly string RegistryPath = @"SOFTWARE\Stella Mod Launcher";
 
+        [DllImport("user32.dll")]
+        private static extern bool SetProcessDpiAwarenessContext(IntPtr dpiContext);
 
         [STAThread]
         private static void Main()
@@ -108,6 +111,7 @@ namespace StellaLauncher
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            SetProcessDpiAwarenessContext(new IntPtr(-4));
 
 
             if (RegionInfo.CurrentRegion.Name == "RU")

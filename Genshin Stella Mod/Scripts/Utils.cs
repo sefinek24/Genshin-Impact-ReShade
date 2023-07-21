@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ using System.Windows.Forms;
 using Windows.Storage;
 using IWshRuntimeLibrary;
 using Microsoft.Win32;
+using Microsoft.WindowsAPICodePack.Taskbar;
 using StellaLauncher.Forms;
 using StellaLauncher.Properties;
 using File = System.IO.File;
@@ -193,8 +195,19 @@ namespace StellaLauncher.Scripts
             }
         }
 
-        public static void HideProgressBar()
+        public static void HideProgressBar(bool error)
         {
+            if (error)
+            {
+                Default.UpdateIsAvailable = false;
+
+                Default._updates_LinkLabel.LinkColor = Color.Red;
+                Default._updates_LinkLabel.Text = Resources.Utils_OopsAnErrorOccurred;
+
+                TaskbarManager.Instance.SetProgressValue(100, 100);
+                TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
+            }
+
             Default._progressBar1.Hide();
             Default._preparingPleaseWait.Hide();
 

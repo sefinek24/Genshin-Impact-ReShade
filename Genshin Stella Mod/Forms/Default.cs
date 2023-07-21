@@ -323,6 +323,7 @@ namespace StellaLauncher.Forms
                         _status_Label.Text += $"{string.Format(Resources.Default_Directory_WasNotFound, resourcesPath)}\n";
                         Log.SaveErrorLog(new Exception(string.Format(Resources.Default_Directory_WasNotFound, resourcesPath)));
 
+                        Utils.HideProgressBar(true);
                         return -1;
                     }
 
@@ -334,6 +335,7 @@ namespace StellaLauncher.Forms
                         _status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, jsonFile)}\n";
                         Log.SaveErrorLog(new Exception(string.Format(Resources.Default_File_WasNotFound, jsonFile)));
 
+                        Utils.HideProgressBar(true);
                         return -1;
                     }
 
@@ -360,18 +362,21 @@ namespace StellaLauncher.Forms
                     _status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, resSfn)}\n";
                     Log.SaveErrorLog(new Exception(string.Format(Resources.Default_File_WasNotFound, resSfn)));
 
+                    Utils.HideProgressBar(true);
                     return -1;
                 }
 
                 _progressBar1.Value = 90;
 
                 // Check new updates for ReShade.ini file
-                int resultInt = await ReShadeIniUpdate.Run(_updates_LinkLabel, _status_Label, _updateIco_PictureBox, _version_LinkLabel);
+                int resultInt = await ReShadeIni.CheckForUpdates();
                 switch (resultInt)
                 {
                     case -2:
                     {
-                        int number = await ReShadeCfg.Download(resultInt, resourcesPath);
+                        DialogResult msgBoxResult = MessageBox.Show(Resources.Default_TheReShadeIniFileCouldNotBeLocatedInYourGameFiles, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        int number = await ReShadeIni.Download(resultInt, resourcesPath, msgBoxResult);
                         return number;
                     }
 
@@ -384,15 +389,15 @@ namespace StellaLauncher.Forms
                             Log.Output(Resources.Default_TheUpdateOfReShadIniHasBeenCanceledByTheUser);
                             MessageBox.Show(Resources.Default_ForSomeReasonYouDidNotGiveConsentForTheAutomaticUpdateOfTheReShadeFile, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
+                            Utils.HideProgressBar(true);
                             return 1;
                         }
 
-                        _ = Cmd.CliWrap(Utils.FirstAppLaunch, null, null, true, false);
-                        Environment.Exit(0);
-
-                        return 1;
+                        int number = await ReShadeIni.Download(resultInt, resourcesPath, DialogResult.Yes);
+                        return number;
                     }
                 }
+
 
                 // Not found any new updates
                 _updates_LinkLabel.Text = Resources.Default_CheckForUpdates;
@@ -402,10 +407,7 @@ namespace StellaLauncher.Forms
                 _updates_LinkLabel.Click += CheckUpdates_Click;
 
                 UpdateIsAvailable = false;
-
                 Log.Output(string.Format(Resources.Default_NotFoundAnyNewUpdates_YourInstalledVersion_, Program.AppVersion));
-                TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress);
-
 
                 _startGame_LinkLabel.Visible = true;
                 _injectReShade_LinkLabel.Visible = true;
@@ -414,9 +416,8 @@ namespace StellaLauncher.Forms
                 _runGiLauncher_LinkLabel.Visible = true;
                 if (!Secret.IsMyPatron) _becomeMyPatron_LinkLabel.Visible = true;
 
-
                 _progressBar1.Value = 100;
-                Utils.HideProgressBar();
+                Utils.HideProgressBar(false);
                 return 0;
             }
             catch (Exception e)
@@ -428,10 +429,7 @@ namespace StellaLauncher.Forms
                 _status_Label.Text += $"[x] {e.Message}\n";
 
                 Log.SaveErrorLog(new Exception(string.Format(Resources.Default_SomethingWentWrongWhileCheckingForNewUpdates, e)));
-                TaskbarManager.Instance.SetProgressValue(100, 100);
-                TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
-
-                Utils.HideProgressBar();
+                Utils.HideProgressBar(true);
                 return -1;
             }
         }

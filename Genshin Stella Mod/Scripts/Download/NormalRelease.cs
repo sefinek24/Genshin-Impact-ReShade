@@ -16,6 +16,7 @@ namespace StellaLauncher.Scripts.Download
     {
         // Files
         public static readonly string SetupPathExe = Path.Combine(Path.GetTempPath(), "Stella_Mod_Update.exe");
+        private static readonly string DownloadUrl = "https://github.com/sefinek24/Genshin-Impact-ReShade/releases/latest/download/Stella-Mod-Setup.exe";
 
         // Download
         private static double _downloadSpeed;
@@ -71,7 +72,7 @@ namespace StellaLauncher.Scripts.Download
             using (WebClient wc = new WebClient())
             {
                 wc.Headers.Add("user-agent", Program.UserAgent);
-                await wc.OpenReadTaskAsync("https://github.com/sefinek24/Genshin-Impact-ReShade/releases/latest/download/Stella-Mod-Setup.exe");
+                await wc.OpenReadTaskAsync(DownloadUrl);
                 string updateSize = ByteSize.FromBytes(Convert.ToInt64(wc.ResponseHeaders["Content-Length"])).MegaBytes.ToString("00.00");
                 Default._status_Label.Text += $"[i] {string.Format(Resources.StellaResources_UpdateSize, $"{updateSize} MB")}\n";
 
@@ -135,7 +136,7 @@ namespace StellaLauncher.Scripts.Download
                 client.Headers.Add("user-agent", Program.UserAgent);
                 client.DownloadProgressChanged += Client_DownloadProgressChanged;
                 client.DownloadFileCompleted += Client_DownloadFileCompleted;
-                await client.DownloadFileTaskAsync(new Uri("https://github.com/sefinek24/Genshin-Impact-ReShade/releases/latest/download/Stella-Mod-Setup.exe"), SetupPathExe);
+                await client.DownloadFileTaskAsync(new Uri(DownloadUrl), SetupPathExe);
             }
         }
 

@@ -737,4 +737,7 @@ Czy chcesz pobrać tę zależność z witryny firmy Microsoft?</value>
 
 Czy chcesz odwiedzić Patreon.com i dokonać subskrypcji? Zyskasz dostęp do wielu korzyści! Będziesz także mógł jednocześnie korzystać z ReShade, 3DMigoto i FPS Unlockera.</value>
   </data>
+  <data name="Utils_OopsAnErrorOccurred" xml:space="preserve">
+    <value>Aw, wystąpił jakiś błąd</value>
+  </data>
 </root>
