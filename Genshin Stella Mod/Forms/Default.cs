@@ -117,7 +117,7 @@ namespace StellaLauncher.Forms
             progressBar1.Value = 15;
 
             Image newBackground = Background.OnStart(toolTip1, changeBg_LinkLabel);
-            BackgroundImage = newBackground;
+            if (newBackground != null) BackgroundImage = newBackground;
 
             progressBar1.Value = 20;
 
@@ -186,7 +186,7 @@ namespace StellaLauncher.Forms
         private void ChangeBg_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Image newBackground = Background.Change(BackgroundImage, toolTip1, changeBg_LinkLabel);
-            BackgroundImage = newBackground;
+            if (newBackground != null) BackgroundImage = newBackground;
         }
 
         private async void Main_Shown(object sender, EventArgs e)
