@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Source>C:\Users\Sefinek\Desktop\main.jpg</Source>
+    <SmallTileSource>C:\Users\Sefinek\Desktop\main.jpg</SmallTileSource>
+    <MediumTileSource>C:\Users\Sefinek\Desktop\main.jpg</MediumTileSource>
+    <WideTileSource>C:\Users\Sefinek\Desktop\main.jpg</WideTileSource>
+    <LargeTileSource>C:\Users\Sefinek\Desktop\main.jpg</LargeTileSource>
+    <AppIconSource>C:\Users\Sefinek\Desktop\main.jpg</AppIconSource>
+    <SplashScreenSource>C:\Users\Sefinek\Desktop\main.jpg</SplashScreenSource>
+    <PackageLogoSource>C:\Users\Sefinek\Desktop\main.jpg</PackageLogoSource>
+    <UapAppxPackageBuildMode>StoreAndSideload</UapAppxPackageBuildMode>
+    <AppxShowAllApps>False</AppxShowAllApps>
+    <AppxBuildConfigurationSelection>x64</AppxBuildConfigurationSelection>
+    <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
+  </PropertyGroup>
+</Project>

@@ -39,7 +39,7 @@ namespace StellaLauncher.Scripts
             {
                 using (StreamWriter sw = File.AppendText(OutputFile))
                 {
-                    await sw.WriteLineAsync($"[{DateTime.Now}]: Output() • {Program.AppName} • v{Program.AppVersion}\n{log}");
+                    await sw.WriteLineAsync($"[{DateTime.Now}]: Output() • {Program.AppName}\n{log}");
                 }
             }
             catch
@@ -60,7 +60,7 @@ namespace StellaLauncher.Scripts
             {
                 using (StreamWriter sw = File.AppendText(OutputFile))
                 {
-                    await sw.WriteLineAsync($"[{DateTime.Now}]: SaveError() • {Program.AppName} • v{Program.AppVersion}\n{log}\n");
+                    await sw.WriteLineAsync($"[{DateTime.Now}]: SaveError() • {Program.AppName}\n{log}\n");
                 }
             }
             catch

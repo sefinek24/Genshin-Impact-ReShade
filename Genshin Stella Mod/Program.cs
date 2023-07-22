@@ -19,8 +19,8 @@ namespace StellaLauncher
     internal static class Program
     {
         // App
-        public static readonly string AppName = Application.ProductName;
-        public static readonly string AppVersion = Application.ProductVersion;
+        public static readonly string AppVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+        public static readonly string AppName = $"{Assembly.GetExecutingAssembly().GetName().Name} • v{AppVersion}";
         private static readonly string AppWebsiteSub = "https://genshin.sefinek.net";
         public static readonly string AppWebsiteFull = "https://sefinek.net/genshin-impact-reshade";
 

@@ -26,6 +26,16 @@ Screenshots/*.jpg
 Screenshots/*.jpeg
 Screenshots/*.bmp
 
+# Win App Packaging Project
+Win App Packaging Project/AppPackages
+Win App Packaging Project/bin
+Win App Packaging Project/BundleArtifacts
+Win App Packaging Project/obj/Debug
+Win App Packaging Project/obj/Release
+Win App Packaging Project/obj/x64
+Win App Packaging Project/obj/x86
+Win App Packaging Project/obj/Win App Packaging Project.assets.cache
+
 # For patrons
 data/Patrons
 data/presets/New

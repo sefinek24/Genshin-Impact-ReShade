@@ -35,7 +35,7 @@ namespace StellaLauncher.Scripts
             if (data == 0) return;
 
             Client = new DiscordRpcClient("1057407191704940575") { Logger = new ConsoleLogger { Level = LogLevel.Warning } };
-            Client.OnError += (sender, msg) => Log.Output(Resources.Discord_OnError);
+
             Client.OnReady += (sender, msg) =>
             {
                 Username = msg.User.Username;
@@ -44,9 +44,22 @@ namespace StellaLauncher.Scripts
                 _isReady = true;
             };
             Client.OnPresenceUpdate += (sender, msg) => Log.Output(Resources.Discord_OnPresenceUpdate);
-            Client.OnClose += (sender, msg) => Log.Output(Resources.Discord_OnClose);
-            Client.OnUnsubscribe += (sender, msg) => Log.Output(Resources.Discord_OnUnsubscribe);
+            Client.OnClose += (sender, msg) =>
+            {
+                Log.Output(Resources.Discord_OnClose);
+                _isReady = false;
+            };
+            Client.OnUnsubscribe += (sender, msg) =>
+            {
+                Log.Output(Resources.Discord_OnUnsubscribe);
+                _isReady = false;
+            };
             Client.OnConnectionEstablished += (sender, msg) => Log.Output(Resources.Discord_OnConnectionEstablished);
+            Client.OnError += (sender, msg) =>
+            {
+                Log.SaveError(Resources.Discord_OnError);
+                _isReady = false;
+            };
 
             Client.Initialize();
             Client.SetPresence(Presence);

@@ -163,7 +163,7 @@ namespace StellaLauncher.Forms
 
                 case 1:
                     Program.Settings.WriteInt("Launcher", "DiscordRPC", 0);
-                    if (!Discord.Client.IsDisposed)
+                    if (!Discord._isReady)
                     {
                         Discord.Client.Dispose();
                         Discord.Username = null;
@@ -231,7 +231,7 @@ namespace StellaLauncher.Forms
         private async void DeleteCache_Button(object sender, LinkLabelLinkClickedEventArgs e)
         {
             string resources = File.ReadAllText(Path.Combine(Program.AppData, "resources-path.sfn"));
-            string cache = Path.Combine(resources, "Cache");
+            string cache = Path.Combine(resources, "ReShade", "Cache");
             string webViewCache = Path.Combine(Program.AppData, "EBWebView");
             string gameDir = await Utils.GetGame("giGameDir");
             string reShadeLog = Path.Combine(gameDir, "ReShade.log");
