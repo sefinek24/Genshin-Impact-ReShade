@@ -19,13 +19,13 @@ namespace StellaLauncher
     internal static class Program
     {
         // App
-        public static readonly string AppName = Assembly.GetExecutingAssembly().GetName().Name;
+        public static readonly string AppName = Application.ProductName;
         public static readonly string AppVersion = Application.ProductVersion;
         private static readonly string AppWebsiteSub = "https://genshin.sefinek.net";
         public static readonly string AppWebsiteFull = "https://sefinek.net/genshin-impact-reshade";
 
         // Files and folders
-        public static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
+        public static readonly string AppPath = AppContext.BaseDirectory;
         public static readonly string AppData = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
         private static string _appIsConfigured;
         private static readonly string PrepareLauncher = Path.Combine(AppPath, "First app launch.exe");
