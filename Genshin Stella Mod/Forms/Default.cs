@@ -271,12 +271,13 @@ namespace StellaLauncher.Forms
                 WorkingDir = Program.AppPath,
                 Arguments = new ArgumentsBuilder()
                     .Add(Secret.IsMyPatron ? RunCmdPatrons : RunCmd)
-                    .Add(Program.AppVersion)
-                    .Add(Data.ReShadeVer)
-                    .Add(Data.UnlockerVer)
-                    .Add(3)
-                    .Add(await Utils.GetGameVersion())
-                    .Add(Log.CmdLogs)
+                    .Add(Program.AppVersion) // 1
+                    .Add(Data.ReShadeVer) // 2
+                    .Add(Data.UnlockerVer) // 3
+                    .Add(3) // 4
+                    .Add(0) // 5 
+                    .Add(await Utils.GetGameVersion()) // 6
+                    .Add(Log.CmdLogs) // 7
             };
             bool res = await Cmd.Execute(command);
             if (!res) return;
@@ -299,12 +300,13 @@ namespace StellaLauncher.Forms
                 WorkingDir = Program.AppPath,
                 Arguments = new ArgumentsBuilder()
                     .Add(Secret.IsMyPatron ? RunCmdPatrons : RunCmd)
-                    .Add(Program.AppVersion)
-                    .Add(Data.ReShadeVer)
-                    .Add(Data.UnlockerVer)
-                    .Add(4)
-                    .Add(await Utils.GetGameVersion())
-                    .Add(Log.CmdLogs)
+                    .Add(Program.AppVersion) // 1
+                    .Add(Data.ReShadeVer) // 2
+                    .Add(Data.UnlockerVer) // 3
+                    .Add(4) // 4
+                    .Add(0) // 5 
+                    .Add(await Utils.GetGameVersion()) // 6
+                    .Add(Log.CmdLogs) // 7
             };
             bool res = await Cmd.Execute(command);
 
