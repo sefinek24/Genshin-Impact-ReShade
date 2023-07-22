@@ -31,6 +31,9 @@ namespace StellaLauncher.Scripts
 
         public static void InitRpc()
         {
+            int data = Program.Settings.ReadInt("Launcher", "DiscordRPC", 1);
+            if (data == 1) return;
+
             Client = new DiscordRpcClient("1057407191704940575") { Logger = new ConsoleLogger { Level = LogLevel.Warning } };
             Client.OnError += (sender, msg) => Log.Output(Resources.Discord_OnError);
             Client.OnReady += (sender, msg) =>

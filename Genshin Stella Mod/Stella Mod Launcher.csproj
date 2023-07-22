@@ -184,9 +184,14 @@
     <Compile Include="Models\Remote.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripts\Forms\MainForm\Background.cs" />
+    <Compile Include="Scripts\Forms\MainForm\CheckForUpdates.cs" />
     <Compile Include="Scripts\Cmd.cs" />
     <Compile Include="Scripts\Discord.cs" />
     <Compile Include="Scripts\Download\StellaResources.cs" />
+    <Compile Include="Scripts\Forms\MainForm\LaunchCount.cs" />
+    <Compile Include="Scripts\Forms\MainForm\Music.cs" />
+    <Compile Include="Scripts\Forms\MainForm\Files.cs" />
     <Compile Include="Scripts\IniFile.cs" />
     <Compile Include="Scripts\Log.cs" />
     <Compile Include="Scripts\ComputerInfo.cs" />
@@ -197,7 +202,7 @@
     <Compile Include="Scripts\Download\NormalRelease.cs" />
     <Compile Include="Scripts\Download\ReShadeIni.cs" />
     <Compile Include="Scripts\Utils.cs" />
-    <Compile Include="Scripts\WebView2Handler.cs" />
+    <Compile Include="Scripts\Forms\WebView2Handler.cs" />
     <EmbeddedResource Include="Forms\Default.pl.resx">
       <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>

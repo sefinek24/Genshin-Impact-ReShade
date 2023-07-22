@@ -34,7 +34,7 @@ namespace StellaLauncher.Forms.Other
             }
             catch (Exception ex)
             {
-                Scripts.WebView2.HandleError(ex);
+                Scripts.Forms.WebView2.HandleError(ex);
             }
         }
 

@@ -11,6 +11,7 @@ using Newtonsoft.Json;
 using StellaLauncher.Models;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
+using StellaLauncher.Scripts.Forms;
 
 namespace StellaLauncher.Forms.Other
 {

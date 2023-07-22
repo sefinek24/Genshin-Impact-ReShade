@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using StellaLauncher.Properties;
 
-namespace StellaLauncher.Scripts
+namespace StellaLauncher.Scripts.Forms
 {
     internal static class WebView2
     {

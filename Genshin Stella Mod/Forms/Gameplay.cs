@@ -6,6 +6,7 @@ using Microsoft.Web.WebView2.Core;
 using StellaLauncher.Forms.Other;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
+using StellaLauncher.Scripts.Forms;
 
 namespace StellaLauncher.Forms
 {

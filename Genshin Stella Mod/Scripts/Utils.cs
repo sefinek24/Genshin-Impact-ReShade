@@ -19,7 +19,7 @@ namespace StellaLauncher.Scripts
     internal static class Utils
     {
         private static readonly string FileWithGamePath = Path.Combine(Program.AppData, "game-path.sfn");
-        public static readonly string FirstAppLaunch = Path.Combine(Program.AppPath, "First app launch.exe");
+        private static readonly string FirstAppLaunch = Path.Combine(Program.AppPath, "First app launch.exe");
 
         public static async Task<string> GetGame(string type)
         {

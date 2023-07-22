@@ -2,6 +2,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using Microsoft.WindowsAPICodePack.Taskbar;
+using StellaLauncher.Forms;
 using StellaLauncher.Forms.Errors;
 using StellaLauncher.Properties;
 
@@ -9,12 +10,12 @@ namespace StellaLauncher.Scripts.Download
 {
     internal static class MajorRelease
     {
-        public static void Run(string remoteVersion, DateTime remoteVerDate, LinkLabel versionLabel, LinkLabel updatesLabel, PictureBox updateIcon)
+        public static void Run(string remoteVersion, DateTime remoteVerDate)
         {
-            versionLabel.Text = $@"v{Program.AppVersion} → v{remoteVersion}";
-            updatesLabel.LinkColor = Color.Cyan;
-            updatesLabel.Text = Resources.MajorRelease_MajorVersionIsAvailable;
-            updateIcon.Image = Resources.icons8_download_from_the_cloud;
+            Default._version_LinkLabel.Text = $@"v{Program.AppVersion} → v{remoteVersion}";
+            Default._updates_LinkLabel.LinkColor = Color.Cyan;
+            Default._updates_LinkLabel.Text = Resources.MajorRelease_MajorVersionIsAvailable;
+            Default._updateIco_PictureBox.Image = Resources.icons8_download_from_the_cloud;
             Log.Output(string.Format(Resources.MajorRelease_NewMajorVersionFrom_IsAvailable_v_, remoteVerDate, Program.AppVersion, remoteVersion));
 
             TaskbarManager.Instance.SetProgressValue(100, 100);

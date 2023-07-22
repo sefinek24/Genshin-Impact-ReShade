@@ -1,22 +1,16 @@
 using System;
 using System.Diagnostics;
 using System.Drawing;
-using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Media;
-using System.Net;
-using System.Runtime.Caching;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Win32;
-using Microsoft.WindowsAPICodePack.Taskbar;
 using Newtonsoft.Json;
 using StellaLauncher.Forms.Other;
 using StellaLauncher.Models;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
-using StellaLauncher.Scripts.Download;
+using StellaLauncher.Scripts.Forms.MainForm;
 
 namespace StellaLauncher.Forms
 {
@@ -45,12 +39,12 @@ namespace StellaLauncher.Forms
         public static LinkLabel _youTube_LinkLabel;
 
         // Start the game
-        private static LinkLabel _startGame_LinkLabel;
-        private static LinkLabel _injectReShade_LinkLabel;
-        private static LinkLabel _runFpsUnlocker_LinkLabel;
-        private static LinkLabel _only3DMigoto_LinkLabel;
-        private static LinkLabel _runGiLauncher_LinkLabel;
-        private static LinkLabel _becomeMyPatron_LinkLabel;
+        public static LinkLabel _startGame_LinkLabel;
+        public static LinkLabel _injectReShade_LinkLabel;
+        public static LinkLabel _runFpsUnlocker_LinkLabel;
+        public static LinkLabel _only3DMigoto_LinkLabel;
+        public static LinkLabel _runGiLauncher_LinkLabel;
+        public static LinkLabel _becomeMyPatron_LinkLabel;
 
         // Bottom
         // public static PictureBox _toolsIco_PictureBox;
@@ -68,19 +62,7 @@ namespace StellaLauncher.Forms
         public static PictureBox _updateIco_PictureBox;
 
         // Path
-        private static string _resPath;
-
-        // Background
-        private readonly string[] _backgroundFiles =
-        {
-            @"nahida\1",
-            @"yaoyao\1", @"yaoyao\2",
-            @"ayaka\1", @"ayaka\2", @"ayaka\3", @"ayaka\4",
-            @"hutao\1", @"hutao\2", @"hutao\3", @"hutao\4"
-        };
-
-        // Cache
-        private readonly ObjectCache _cache = MemoryCache.Default;
+        public static string _resourcesPath;
 
         // Window
         private bool _mouseDown;
@@ -134,6 +116,11 @@ namespace StellaLauncher.Forms
 
             progressBar1.Value = 15;
 
+            Image newBackground = Background.OnStart(BackgroundImage, toolTip1, changeBg_LinkLabel);
+            BackgroundImage = newBackground;
+
+            progressBar1.Value = 20;
+
 
             // User is my patron?
             string mainPcKey = Secret.GetTokenFromRegistry();
@@ -160,28 +147,6 @@ namespace StellaLauncher.Forms
             }
 
             progressBar1.Value = 25;
-
-            // Background
-            int bgInt = Program.Settings.ReadInt("Launcher", "Background", 0);
-            if (bgInt == 0) return;
-
-            bgInt--;
-
-            string cacheKey = $"background_{bgInt}";
-            string localization = Path.Combine(Program.AppPath, "data", "images", "launcher", "backgrounds", $"{_backgroundFiles[bgInt]}.png");
-            if (!Utils.CheckFileExists(localization))
-            {
-                MessageBox.Show(string.Format(Resources.Default_Sorry_Background_WasNotFound, _backgroundFiles[bgInt]), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Log.SaveErrorLog(new Exception(string.Format(Resources.Default_Sorry_Background_WasNotFound, localization, bgInt)));
-                return;
-            }
-
-            Bitmap backgroundImage = new Bitmap(localization);
-            _cache.Add(cacheKey, backgroundImage, new CacheItemPolicy { AbsoluteExpiration = DateTimeOffset.Now.AddMinutes(20) });
-            Log.Output(string.Format(Resources.Default_CachedAppBackground_ID, localization, bgInt + 1));
-
-            BackgroundImage = backgroundImage;
-            toolTip1.SetToolTip(changeBg_LinkLabel, string.Format(Resources.Default_CurrentBackground, _backgroundFiles[bgInt]));
         }
 
         private void Exit_Click(object sender, EventArgs e)
@@ -218,350 +183,34 @@ namespace StellaLauncher.Forms
             _mouseDown = false;
         }
 
-
         private void ChangeBg_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            int bgInt = Program.Settings.ReadInt("Launcher", "Background", 0);
-
-            if (bgInt >= _backgroundFiles.Length)
-            {
-                bgInt = 0;
-                BackgroundImage = Resources.bg_main;
-
-                Program.Settings.WriteInt("Launcher", "Background", 0);
-                Program.Settings.Save();
-
-                toolTip1.SetToolTip(changeBg_LinkLabel, Resources.Default_CurrentBackground_Default);
-
-                Log.Output(string.Format(Resources.Default_TheApplicationBackgroundHasBeenChangedToDefault_ID, bgInt.ToString()));
-                return;
-            }
-
-
-            Bitmap backgroundImage;
-            string cacheKey = $"background_{bgInt}";
-            if (_cache.Contains(cacheKey))
-            {
-                backgroundImage = (Bitmap)_cache.Get(cacheKey);
-                Log.Output(string.Format(Resources.Default_SuccessfullyRetrievedAndUpdatedTheCachedAppBackgroundWithID_, bgInt + 1));
-            }
-            else
-            {
-                string localization = Path.Combine(Program.AppPath, "data", "images", "launcher", "backgrounds", $"{_backgroundFiles[bgInt]}.png");
-                if (!Utils.CheckFileExists(localization))
-                {
-                    MessageBox.Show(string.Format(Resources.Default_Sorry_Background_WasNotFound, _backgroundFiles[bgInt]), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Log.SaveErrorLog(new Exception(string.Format(Resources.Default_Sorry_Background_WasNotFound, localization, bgInt)));
-                    return;
-                }
-
-                backgroundImage = new Bitmap(localization);
-                _cache.Add(cacheKey, backgroundImage, new CacheItemPolicy { AbsoluteExpiration = DateTimeOffset.Now.AddMinutes(20) });
-
-                Log.Output(string.Format(Resources.Default_CachedAppBackground_ID, localization, bgInt + 1));
-            }
-
-            toolTip1.SetToolTip(changeBg_LinkLabel, string.Format(Resources.Default_CurrentBackground, _backgroundFiles[bgInt]));
-
-            BackgroundImage = backgroundImage;
-            bgInt++;
-            Program.Settings.WriteInt("Launcher", "Background", bgInt);
-            Program.Settings.Save();
-
-            Log.Output(string.Format(Resources.Default_ChangedTheLauncherBackground_ID, bgInt));
+            Image newBackground = Background.Change(BackgroundImage, toolTip1, changeBg_LinkLabel);
+            BackgroundImage = newBackground;
         }
-
-        public static async Task<int> CheckForUpdates()
-        {
-            _updates_LinkLabel.LinkColor = Color.White;
-            _updates_LinkLabel.Text = Resources.Default_CheckingForUpdates;
-
-            TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
-            Log.Output(Resources.Default_CheckingForUpdates);
-
-            try
-            {
-                WebClient client = new WebClient();
-                client.Headers.Add("user-agent", Program.UserAgent);
-                string json = await client.DownloadStringTaskAsync("https://api.sefinek.net/api/v4/genshin-stella-mod/version/app/launcher");
-                StellaApiVersion res = JsonConvert.DeserializeObject<StellaApiVersion>(json);
-
-                string remoteVersion = res.Launcher.Version;
-                DateTime remoteVerDate = DateTime.Parse(res.Launcher.ReleaseDate, null, DateTimeStyles.RoundtripKind).ToUniversalTime().ToLocalTime();
-                _progressBar1.Value = 40;
-
-                // Major release
-                if (Program.AppVersion[0] != remoteVersion[0])
-                {
-                    UpdateIsAvailable = true;
-
-                    MajorRelease.Run(remoteVersion, remoteVerDate, _version_LinkLabel, _updates_LinkLabel, _updateIco_PictureBox);
-                    return 1;
-                }
-
-                _progressBar1.Value = 60;
-
-                // Normal release
-                if (Program.AppVersion != remoteVersion)
-                {
-                    UpdateIsAvailable = true;
-
-                    NormalRelease.Run(remoteVersion, remoteVerDate);
-                    return 1;
-                }
-
-                _progressBar1.Value = 80;
-
-                // Check new updates of resources
-                string resSfn = Path.Combine(Program.AppData, "resources-path.sfn");
-                string resourcesPath;
-                if (File.Exists(resSfn))
-                {
-                    resourcesPath = File.ReadAllText(resSfn);
-                    if (!Directory.Exists(resourcesPath))
-                    {
-                        _status_Label.Text += $"{string.Format(Resources.Default_Directory_WasNotFound, resourcesPath)}\n";
-                        Log.SaveErrorLog(new Exception(string.Format(Resources.Default_Directory_WasNotFound, resourcesPath)));
-
-                        Utils.HideProgressBar(true);
-                        return -1;
-                    }
-
-                    _resPath = resourcesPath;
-
-                    string jsonFile = Path.Combine(resourcesPath, "data.json");
-                    if (!File.Exists(jsonFile))
-                    {
-                        _status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, jsonFile)}\n";
-                        Log.SaveErrorLog(new Exception(string.Format(Resources.Default_File_WasNotFound, jsonFile)));
-
-                        Utils.HideProgressBar(true);
-                        return -1;
-                    }
-
-                    _progressBar1.Value = 80;
-
-                    string jsonContent = File.ReadAllText(jsonFile);
-                    LocalResources data = JsonConvert.DeserializeObject<LocalResources>(jsonContent);
-
-                    WebClient resClient = new WebClient();
-                    resClient.Headers.Add("user-agent", Program.UserAgent);
-                    string resJson = await resClient.DownloadStringTaskAsync("https://api.sefinek.net/api/v4/genshin-stella-mod/version/app/launcher/resources");
-                    StellaResources resourcesRes = JsonConvert.DeserializeObject<StellaResources>(resJson);
-
-                    if (data.Version != resourcesRes.Message)
-                    {
-                        UpdateIsAvailable = true;
-
-                        DownloadResources.Run(resourcesPath, data.Version, resourcesRes.Message, resourcesRes.Date);
-                        return 1;
-                    }
-                }
-                else
-                {
-                    _status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, resSfn)}\n";
-                    Log.SaveErrorLog(new Exception(string.Format(Resources.Default_File_WasNotFound, resSfn)));
-
-                    Utils.HideProgressBar(true);
-                    return -1;
-                }
-
-                _progressBar1.Value = 90;
-
-                // Check new updates for ReShade.ini file
-                int resultInt = await ReShadeIni.CheckForUpdates();
-                switch (resultInt)
-                {
-                    case -2:
-                    {
-                        DialogResult msgBoxResult = MessageBox.Show(Resources.Default_TheReShadeIniFileCouldNotBeLocatedInYourGameFiles, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                        int number = await ReShadeIni.Download(resultInt, resourcesPath, msgBoxResult);
-                        return number;
-                    }
-
-                    case 1:
-                    {
-                        DialogResult msgReply = MessageBox.Show(Resources.Default_AreYouSureWantToUpdateReShadeConfiguration, Program.AppName, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-
-                        if (msgReply == DialogResult.No || msgReply == DialogResult.Cancel)
-                        {
-                            Log.Output(Resources.Default_TheUpdateOfReShadIniHasBeenCanceledByTheUser);
-                            MessageBox.Show(Resources.Default_ForSomeReasonYouDidNotGiveConsentForTheAutomaticUpdateOfTheReShadeFile, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Stop);
-
-                            Utils.HideProgressBar(true);
-                            return 1;
-                        }
-
-                        int number = await ReShadeIni.Download(resultInt, resourcesPath, DialogResult.Yes);
-                        return number;
-                    }
-                }
-
-
-                // Not found any new updates
-                _updates_LinkLabel.Text = Resources.Default_CheckForUpdates;
-                _updateIco_PictureBox.Image = Resources.icons8_available_updates;
-
-                Utils.RemoveClickEvent(_updates_LinkLabel);
-                _updates_LinkLabel.Click += CheckUpdates_Click;
-
-                UpdateIsAvailable = false;
-                Log.Output(string.Format(Resources.Default_NotFoundAnyNewUpdates_YourInstalledVersion_, Program.AppVersion));
-
-                _startGame_LinkLabel.Visible = true;
-                _injectReShade_LinkLabel.Visible = true;
-                _runFpsUnlocker_LinkLabel.Visible = true;
-                _only3DMigoto_LinkLabel.Visible = true;
-                _runGiLauncher_LinkLabel.Visible = true;
-                if (!Secret.IsMyPatron) _becomeMyPatron_LinkLabel.Visible = true;
-
-                _progressBar1.Value = 100;
-                Utils.HideProgressBar(false);
-                return 0;
-            }
-            catch (Exception e)
-            {
-                UpdateIsAvailable = false;
-
-                _updates_LinkLabel.LinkColor = Color.Red;
-                _updates_LinkLabel.Text = Resources.Default_OhhSomethingWentWrong;
-                _status_Label.Text += $"[x] {e.Message}\n";
-
-                Log.SaveErrorLog(new Exception(string.Format(Resources.Default_SomethingWentWrongWhileCheckingForNewUpdates, e)));
-                Utils.HideProgressBar(true);
-                return -1;
-            }
-        }
-
 
         private async void Main_Shown(object sender, EventArgs e)
         {
-            version_LinkLabel.Text = $@"v{Program.AppVersion}";
-            Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
+            // Check if all required files exists
+            Files.Scan(Text);
 
-            if (!File.Exists(Program.FpsUnlockerExePath) && !Debugger.IsAttached)
-                status_Label.Text += $"[x]: {string.Format(Resources.Default_File_WasNotFound, Program.FpsUnlockerExePath)}\n";
+            // Delete setup file from Temp directory
+            Files.DeleteSetup();
 
-            if (!File.Exists(Program.InjectorPath) && !Debugger.IsAttached)
-                status_Label.Text += $"[x]: {string.Format(Resources.Default_File_WasNotFound, Program.InjectorPath)}\n";
+            // Check for updates
+            await CheckForUpdatesMain.Analyze();
 
-            if (!File.Exists(Program.ReShadePath) && !Debugger.IsAttached)
-                status_Label.Text += $"[x]: {string.Format(Resources.Default_File_WasNotFound, Program.ReShadePath)}\n";
-
-            if (!File.Exists(Program.FpsUnlockerCfgPath) && !Debugger.IsAttached) FpsUnlockerCfg.Run(status_Label);
-
-            if (status_Label.Text.Length > 0) Log.SaveErrorLog(new Exception(status_Label.Text));
-
-            if (File.Exists(NormalRelease.SetupPathExe))
-                try
-                {
-                    File.Delete(NormalRelease.SetupPathExe);
-                    status_Label.Text += $"[i] {Resources.Default_DeletedOldSetupFromTempDirectory}\n";
-                    Log.Output(string.Format(Resources.Default_DeletedOldSetupFromTempFolder, NormalRelease.SetupPathExe));
-                }
-                catch (Exception ex)
-                {
-                    status_Label.Text += $"[x] {ex.Message}\n";
-                    Log.SaveErrorLog(ex);
-                }
-
-
-            await CheckForUpdates();
-
-            int data = Program.Settings.ReadInt("Launcher", "DiscordRPC", 1);
-            if (data == 1) Discord.InitRpc();
+            // Discord RPC
+            Discord.InitRpc();
 
             if (Debugger.IsAttached) return;
-            Telemetry.Opened();
+            // Telemetry.Opened();
 
             // Music
-            int muteBgMusic = Program.Settings.ReadInt("Launcher", "EnableMusic", 1);
-            if (muteBgMusic == 1)
-            {
-                Random random = new Random();
-                string wavPath = Path.Combine(Program.AppPath, "data", "sounds", "bg", $"{random.Next(1, 6 + 1)}.wav");
-                if (!File.Exists(wavPath))
-                {
-                    status_Label.Text += $"[x]: {Resources.Default_TheSoundFileWithMusicWasNotFound}\n";
-                    Log.SaveErrorLog(new Exception(string.Format(Resources.Default_TheSoundFileWithMusicWasNotFoundInTheLocalization_, wavPath)));
-                    return;
-                }
-
-                try
-                {
-                    new SoundPlayer { SoundLocation = wavPath }.Play();
-                    Log.Output(string.Format(Resources.Default_PlayingSoundFile_, wavPath));
-                }
-                catch (Exception ex)
-                {
-                    status_Label.Text += $"[x]: {ex.Message}\n";
-                    Log.SaveErrorLog(ex);
-                }
-            }
-
+            Music.Play();
 
             // Launch count
-            RegistryKey key = Registry.CurrentUser.CreateSubKey(Program.RegistryPath);
-            int launchCount = (int)(key?.GetValue("LaunchCount") ?? 0);
-            launchCount++;
-            key?.SetValue("LaunchCount", launchCount);
-
-            switch (launchCount)
-            {
-                case 5:
-                case 20:
-                case 30:
-                    DialogResult discordResult = MessageBox.Show(Resources.Program_DoYouWantToJoinOurDiscord, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    Log.Output(string.Format(Resources.Program_QuestionMessageBox_DoYouWantToJoinOurDiscord_, discordResult));
-                    if (discordResult == DialogResult.Yes) Utils.OpenUrl(Discord.Invitation);
-                    break;
-
-                case 2:
-                case 12:
-                case 40:
-                    DialogResult feedbackResult = MessageBox.Show(Resources.Program_WouldYouShareOpinionAboutStellaMod, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    Log.Output(string.Format(Resources.Program_QuestionMessageBox_WouldYouShareOpinionAboutStellaMod, feedbackResult));
-                    if (feedbackResult == DialogResult.Yes) Utils.OpenUrl("https://www.trustpilot.com/review/genshin.sefinek.net");
-                    break;
-
-                case 3:
-                case 10:
-                case 25:
-                case 35:
-                case 45:
-                    if (!Secret.IsMyPatron) Application.Run(new SupportMe { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) });
-                    return;
-
-                case 28:
-                case 70:
-                case 100:
-                case 200:
-                case 300:
-                    DialogResult logFilesResult = MessageBox.Show(Resources.Program_DoYouWantToSendUsanonymousLogFiles, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    Log.Output(string.Format(Resources.Program_QuestionMessageBox_DoYouWantToSendUsanonymousLogFiles_, logFilesResult));
-                    if (logFilesResult == DialogResult.Yes)
-                    {
-                        Telemetry.SendLogFiles();
-
-                        DialogResult showFilesResult = MessageBox.Show(Resources.Program_IfYouWishToSendLogsToTheDeveloperPleaseSendThemToMeOnDiscord, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (showFilesResult == DialogResult.Yes)
-                        {
-                            Process.Start(Log.Folder);
-                            Log.Output($"Opened: {Log.Folder}");
-                        }
-                    }
-
-                    break;
-            }
-
-
-            int firstMsgBox = Program.Settings.ReadInt("Launcher", "FirstMsgBox", 1);
-            if (firstMsgBox != 1) return;
-
-            MessageBox.Show(Resources.Default_ItAppersThatIsYourFirstTimeLaunchingTheLauncher, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Program.Settings.WriteInt("Launcher", "FirstMsgBox", 0);
-            status_Label.Text += $"[i] {Resources.Default_ClickStartGameButtonToInjectReShadeAndUseFPSUnlock}\n";
+            LaunchCountHelper.CheckLaunchCountAndShowMessages();
         }
 
         // ------- Body -------
@@ -584,7 +233,7 @@ namespace StellaLauncher.Forms
         {
             // Run cmd file
             bool res = await Cmd.CliWrap("wt.exe",
-                $"{(Secret.IsMyPatron ? RunCmdPatrons : RunCmd)} {(Secret.IsMyPatron ? 1 : 6)} {await Utils.GetGameVersion()} \"{CmdOutputLogs}\" {(Secret.IsMyPatron ? $"\"{_resPath}\\3DMigoto\"" : "0")} \"{Program.AppPath}\"", Program.AppPath,
+                $"{(Secret.IsMyPatron ? RunCmdPatrons : RunCmd)} {(Secret.IsMyPatron ? 1 : 6)} {await Utils.GetGameVersion()} \"{CmdOutputLogs}\" {(Secret.IsMyPatron ? $"\"{_resourcesPath}\\3DMigoto\"" : "0")} \"{Program.AppPath}\"", Program.AppPath,
                 false, false);
 
             // Exit Stella with status code 0
@@ -627,7 +276,7 @@ namespace StellaLauncher.Forms
             }
 
             // Run cmd file
-            await Cmd.CliWrap("wt.exe", $"{(Secret.IsMyPatron ? RunCmdPatrons : RunCmd)} 5 {await Utils.GetGameVersion()} \"{CmdOutputLogs}\" \"{_resPath}\\3DMigoto\" \"{Program.AppPath}\"", Program.AppPath, false, false);
+            await Cmd.CliWrap("wt.exe", $"{(Secret.IsMyPatron ? RunCmdPatrons : RunCmd)} 5 {await Utils.GetGameVersion()} \"{CmdOutputLogs}\" \"{_resourcesPath}\\3DMigoto\" \"{Program.AppPath}\"", Program.AppPath, false, false);
 
             // Find game path
             string path = await Utils.GetGame("giLauncher");
@@ -708,17 +357,7 @@ namespace StellaLauncher.Forms
 
         private void CheckUpdates_Worker(object sender, EventArgs e)
         {
-            CheckUpdates_Click(sender, e);
-        }
-
-        private static async void CheckUpdates_Click(object sender, EventArgs e)
-        {
-            int update = await CheckForUpdates();
-            if (update != 0) return;
-
-            _updates_LinkLabel.LinkColor = Color.LawnGreen;
-            _updates_LinkLabel.Text = Resources.Default_YouHaveTheLatestVersion;
-            _updateIco_PictureBox.Image = Resources.icons8_available_updates;
+            CheckForUpdatesMain.CheckUpdates_Click(sender, e);
         }
 
         private void W_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
