@@ -33,7 +33,8 @@ namespace StellaLauncher.Scripts
                     newKey?.SetValue("AppIsConfigured", 0);
                 }
 
-                _ = Cmd.CliWrap(FirstAppLaunch, null, null, true, false);
+                _ = Cmd.Execute(new Cmd.CliWrap { App = FirstAppLaunch });
+
                 Environment.Exit(99587986);
                 return string.Empty;
             }
@@ -49,7 +50,7 @@ namespace StellaLauncher.Scripts
                     newKey?.SetValue("AppIsConfigured", 0);
                 }
 
-                _ = Cmd.CliWrap(FirstAppLaunch, null, null, true, false);
+                _ = Cmd.Execute(new Cmd.CliWrap { App = FirstAppLaunch });
                 Environment.Exit(99587987);
                 return string.Empty;
             }

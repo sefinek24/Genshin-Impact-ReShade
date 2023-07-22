@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Media;
 using System.Windows.Forms;
+using CliWrap.Builders;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
 
@@ -43,7 +44,17 @@ namespace StellaLauncher.Forms.Errors
 
         private async void SfcScan_Click(object sender, EventArgs e)
         {
-            await Cmd.CliWrap("wt", Path.Combine(Program.AppPath, "data", "cmd", "scan_sys_files.cmd"), null, true, false);
+            Cmd.CliWrap command = new Cmd.CliWrap
+            {
+                App = "wt.exe",
+                WorkingDir = Program.AppPath,
+                Arguments = new ArgumentsBuilder()
+                    .Add(Path.Combine(Program.AppPath, "data", "cmd", "scan_sys_files.cmd"))
+                    .Add(Program.AppVersion)
+                    .Add("5.8.0")
+                    .Add("2.0.11")
+            };
+            await Cmd.Execute(command);
         }
     }
 }

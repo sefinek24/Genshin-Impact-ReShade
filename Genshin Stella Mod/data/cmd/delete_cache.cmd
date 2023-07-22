@@ -11,9 +11,9 @@ echo.⠀   ⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿
 echo.    ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟
 echo. ⠀   ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀
 echo. ⠀   ⠀⠀⡟⢦⡀⠇⠀⠀⣀⠞⠀⠀⠘⡀⢀⡠⠚⣉⠤⠂⠀⠀⠀⠈⠙⢦⡀
-echo.  ⠀ ⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆      » Mod version          : v7.6.0
-echo.    ⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆    » ReShade version      : v5.8.0
-echo.   ⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇     » FPS Unlocker version : v2.0.11
+echo.  ⠀ ⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆      » Mod version          : v%1
+echo.    ⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆    » ReShade version      : v%2
+echo.   ⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇     » FPS Unlocker version : v%3
 echo.  ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉⠀⠀⠀⠀⣠⠟
 echo.   ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟                                          ~ Made by Sefinek
 echo ========================================================================================= & echo.
@@ -24,34 +24,35 @@ if "%ERRORLEVEL%"=="0" (
     echo [✓] No problems found. & echo.
 ) else (
     echo [x] This file needs to be executed with administrative privileges.
-    goto pause
+    goto done
 )
 
 
 echo 2/6 - Checking required files and folders...
 
-if exist %1 (
-    echo [✓] %1
+if exist %4 (
+    echo [✓] %4
 ) else (
     echo [x] Not found game-path.sfn.
-    goto pause
+    echo [x] %4
+    goto done
 )
 
-set /p GamePath=<%1
+set /p GamePath=<%4
 if exist "%GamePath%" (
     echo [✓] "%GamePath%"
 ) else (
     echo [x] Not found main game folder.
-    goto pause
+    goto done
 )
 echo.
 
 
 
 echo 3/6 - Deleting temp files...
-echo [i] Path: %2
-if exist %2 (
-    pushd %2
+echo [i] Path: %5
+if exist %5 (
+    pushd %5
     for %%I in (*) do (
       if not "%%~nxI"=="null" (
         del /f /q "%%I"
@@ -67,9 +68,9 @@ echo.
 
 
 echo 4/6 - Deleting WebView2 cache...
-echo [i] Path: %3
+echo [i] Path: %6
 if exist %3 (
-    rd /s /q %3
+    rd /s /q %6
     echo [✓] Success.
 ) else (
     echo [x] Not found.
@@ -78,9 +79,9 @@ echo.
 
 
 echo 5/6 - Deleting ReShade log file...
-echo [i] Path: %4
-if exist %4 (
-    del %4
+echo [i] Path: %7
+if exist %7 (
+    del %7
     echo [✓] Success.
 ) else (
     echo [x] Not found.
@@ -89,9 +90,9 @@ echo.
 
 
 echo 6/6 - Deleting Stella Mod logs...
-echo [i] Path: %5
-if exist %5 (
-    rd /s /q %5
+echo [i] Path: %8
+if exist %8 (
+    rd /s /q %8
     echo [✓] Success.
 ) else (
     echo [x] Not found.
@@ -99,9 +100,10 @@ if exist %5 (
 echo. && echo.
 
 
-echo [i] Done! You can close this window.
-goto pause
+echo [i] Done! Operation has been completed.
+goto done
 
-:pause
-    set /p 0=
-    goto pause
+:done
+    echo.
+    pause
+    exit

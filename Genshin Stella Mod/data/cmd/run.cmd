@@ -11,9 +11,9 @@ echo.⠀   ⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿
 echo.    ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟
 echo. ⠀   ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀
 echo. ⠀   ⠀⠀⡟⢦⡀⠇⠀⠀⣀⠞⠀⠀⠘⡀⢀⡠⠚⣉⠤⠂⠀⠀⠀⠈⠙⢦⡀
-echo.  ⠀ ⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆      » Mod version          : v7.6.0
-echo.    ⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆    » ReShade version      : v5.8.0
-echo.   ⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇     » FPS Unlocker version : v2.0.11
+echo.  ⠀ ⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆      » Mod version          : v%1
+echo.    ⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆    » ReShade version      : v%2
+echo.   ⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇     » FPS Unlocker version : v%3
 echo.  ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉⠀⠀⠀⠀⣠⠟
 echo.   ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟                                          ~ Made by Sefinek
 echo ========================================================================================= & echo.
@@ -21,14 +21,14 @@ echo ===========================================================================
 echo 1/4 - Preparing...
 
 REM Variables
-set "GameVersion=%2"
+set "GameVersion=%6"
 
 
 REM Check if the script is running with administrative permissions
 net session >nul 2>&1
 if not "%ERRORLEVEL%"=="0" (
     echo [x] This file needs to be executed with administrative privileges.
-    echo [%DATE% %TIME%]: The file must be run as administrator. >> %3
+    echo [%DATE% %TIME%]: The file must be run as administrator. >> %7
     goto pause
 )
 
@@ -47,14 +47,14 @@ if not exist "data\reshade\inject64.exe" (
 )
 
 REM Get the launch mode from a file
-if not "%1" equ "6" if not "%1" equ "2" if not "%1" equ "3" if not "%1" equ "4" if not "%1" equ "5" (
+if not "%4" equ "6" if not "%4" equ "2" if not "%4" equ "3" if not "%4" equ "4" if not "%4" equ "5" (
     echo [x] Failed to start. Unknown launch mode: %1
     goto :pause
 )
 
 REM Get the game version from a file
 if not "%GameVersion%" equ "1" if not "%GameVersion%" equ "2" (
-    echo [x] Failed to start. Invalid game version: %2
+    echo [x] Failed to start. Invalid game version: %GameVersion%
     goto pause
 )
 
@@ -68,8 +68,8 @@ REM Check for required processes
 echo 3/4 - Checking required processes...
 
 tasklist /fi "ImageName eq Genshin Stella Mod.exe" /fo csv | find /I "Genshin Stella Mod.exe" >NUL && (
-    echo [%DATE% %TIME%]: Killing "Genshin Stella Mod.exe" process... >> %3
-    taskkill /F /IM "Genshin Stella Mod.exe" >> %3
+    echo [%DATE% %TIME%]: Killing "Genshin Stella Mod.exe" process... >> %7
+    taskkill /F /IM "Genshin Stella Mod.exe" >> %7
 
     echo [i] Genshin Stella Mod.exe - Closed
 ) || (
@@ -77,8 +77,8 @@ tasklist /fi "ImageName eq Genshin Stella Mod.exe" /fo csv | find /I "Genshin St
 )
 if "%GameVersion%" equ "1" (
     tasklist /fi "ImageName eq GenshinImpact.exe" /fo csv | find /I "GenshinImpact.exe" >NUL && (
-        echo [%DATE% %TIME%]: Killing "GenshinImpact.exe" process... >> %3
-        taskkill /F /IM "GenshinImpact.exe" >> %3
+        echo [%DATE% %TIME%]: Killing "GenshinImpact.exe" process... >> %7
+        taskkill /F /IM "GenshinImpact.exe" >> %7
 
         echo [i] GenshinImpact.exe      - Closed
     ) || (
@@ -86,8 +86,8 @@ if "%GameVersion%" equ "1" (
     )
 ) else if "%GameVersion%" equ "2" (
     tasklist /fi "ImageName eq YuanShen.exe" /fo csv | find /I "YuanShen.exe" >NUL && (
-        echo [%DATE% %TIME%]: Killing "YuanShen.exe" process... >> %3
-        taskkill /F /IM "YuanShen.exe" >> %3
+        echo [%DATE% %TIME%]: Killing "YuanShen.exe" process... >> %7
+        taskkill /F /IM "YuanShen.exe" >> %7
 
         echo [i] YuanShen.exe           - Closed
     ) || (
@@ -98,16 +98,16 @@ if "%GameVersion%" equ "1" (
     goto pause
 )
 tasklist /fi "ImageName eq unlockfps_clr.exe" /fo csv | find /I "unlockfps_clr.exe" >NUL && (
-    echo [%DATE% %TIME%]: Killing "unlockfps_clr.exe" process... >> %3
-    taskkill /F /IM "unlockfps_clr.exe" >> %3
+    echo [%DATE% %TIME%]: Killing "unlockfps_clr.exe" process... >> %7
+    taskkill /F /IM "unlockfps_clr.exe" >> %7
 
     echo [i] unlockfps_clr.exe      - Closed
 ) || (
     echo [✓] unlockfps_clr.exe      - OK
 )
 tasklist /fi "ImageName eq inject64.exe" /fo csv | find /I "inject64.exe" >NUL && (
-    echo [%DATE% %TIME%]: Killing "inject64.exe" process... >> %3
-    taskkill /F /IM "inject64.exe" >> %3
+    echo [%DATE% %TIME%]: Killing "inject64.exe" process... >> %7
+    taskkill /F /IM "inject64.exe" >> %7
 
     echo [i] inject64.exe           - Closed
 ) || (
@@ -121,11 +121,11 @@ echo.
 
 REM Start the game
 echo 4/4 - Starting...
-echo [%DATE% %TIME%]: Launch mode %1. Starting... >> %3
+echo [%DATE% %TIME%]: Launch mode %1. Starting... >> %7
 
 
 REM Choose the correct mode
-if "%1" equ "6" (
+if "%4" equ "6" (
     REM Unlock FPS
     pushd "data\unlocker"
     start "" "unlockfps_clr.exe"
@@ -137,10 +137,9 @@ if "%1" equ "6" (
     call "..\cmd\start\run-reshade.cmd"
 
     REM Wait for the unlocker to finish
-    pushd "%5"
-    pushd "data\cmd\start"
-    call "wait_for_unlockfps.cmd"
-) else if "%1" equ "3" (
+    pushd "..\cmd\start"
+    call "start.cmd"
+) else if "%4" equ "3" (
     echo [✓] Everything is ready! Thank you for using Stella Mod. Have fun. ᕱ⑅︎ᕱ & echo.
     REM Ask the user to start the game
     echo [i] ~~ Please start the game now. ~~
@@ -154,7 +153,7 @@ if "%1" equ "6" (
     pushd "..\cmd\start"
 
     call done.cmd
-)  else if "%1" equ "4" (
+)  else if "%4" equ "4" (
     REM Unlock FPS
     pushd "data\unlocker"
     start "" "unlockfps_clr.exe"
@@ -167,7 +166,7 @@ if "%1" equ "6" (
 ) else (
     REM Wrong launch mode
     echo [x] Failed to start. Invalid launch mode: %1
-    echo [%DATE% %TIME%]: Failed to start. Launch mode is invalid. >> %3
+    echo [%DATE% %TIME%]: Failed to start. Launch mode is invalid. >> %7
     goto pause
 )
 

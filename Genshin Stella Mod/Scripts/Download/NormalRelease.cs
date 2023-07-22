@@ -5,6 +5,7 @@ using System.IO;
 using System.Net;
 using System.Threading.Tasks;
 using ByteSizeLib;
+using CliWrap.Builders;
 using Microsoft.Toolkit.Uwp.Notifications;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using StellaLauncher.Forms;
@@ -189,7 +190,16 @@ namespace StellaLauncher.Scripts.Download
             TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
             await Task.Delay(500);
 
-            _ = Cmd.CliWrap(SetupPathExe, $"/UPDATE /NORESTART /LOG=\"{logDir}\\{DateTime.Now:yyyy-dd-M...HH-mm-ss}.log\"", null, true, true);
+            Cmd.CliWrap command = new Cmd.CliWrap
+            {
+                App = SetupPathExe,
+                Arguments = new ArgumentsBuilder()
+                    .Add("/UPDATE")
+                    .Add($"/LOG=\"{logDir}\\{DateTime.Now:yyyy-dd-M...HH-mm-ss}.log")
+                    .Add("/NORESTART"),
+                DownloadingSetup = true
+            };
+            _ = Cmd.Execute(command);
 
             for (int i = 15; i > 0; i--)
             {

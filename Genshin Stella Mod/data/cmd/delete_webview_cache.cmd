@@ -11,9 +11,9 @@ echo.⠀   ⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿
 echo.    ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟
 echo. ⠀   ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀
 echo. ⠀   ⠀⠀⡟⢦⡀⠇⠀⠀⣀⠞⠀⠀⠘⡀⢀⡠⠚⣉⠤⠂⠀⠀⠀⠈⠙⢦⡀
-echo.  ⠀ ⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆      » Mod version          : v7.6.0
-echo.    ⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆    » ReShade version      : v5.8.0
-echo.   ⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇     » FPS Unlocker version : v2.0.11
+echo.  ⠀ ⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆      » Mod version          : v%1
+echo.    ⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆    » ReShade version      : v%2
+echo.   ⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇     » FPS Unlocker version : v%3
 echo.  ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉⠀⠀⠀⠀⣠⠟
 echo.   ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟                                          ~ Made by Sefinek
 echo ========================================================================================= & echo.
@@ -24,14 +24,12 @@ if "%ERRORLEVEL%"=="0" (
     echo [✓] No problems found. & echo.
 ) else (
     echo [x] This file needs to be executed with administrative privileges.
-    goto pause
+    goto done
 )
 
-echo 2/2 - Deleting %AppData%\Genshin Stella Mod\EBWebView...
-if exist "%AppData%\Genshin Stella Mod\EBWebView" (
-    rd /s /q "%AppData%\Genshin Stella Mod\EBWebView"
-    echo.
-
+echo 2/2 - Deleting %4...
+if exist %4 (
+    rd /s /q %4
     echo [i] Success.
 ) else (
     echo [x] Folder was not found.
@@ -39,16 +37,16 @@ if exist "%AppData%\Genshin Stella Mod\EBWebView" (
 
 echo. && echo.
 
-echo [i] Done! You can close this window.
-goto pause
+echo [i] Operation has been completed.
+goto done
 
-:pause
+
+:done
     echo.
-    set /p 0=
-    goto pause
+    pause
+    exit
 
 :missing_perms
     echo.
     echo [x] Error: The script must be run as an administrator.
-    pause
-    exit
+    goto done

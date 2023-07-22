@@ -2,6 +2,7 @@ using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using CliWrap.Builders;
 using Microsoft.Toolkit.Uwp.Notifications;
 using Microsoft.Win32;
 using StellaLauncher.Forms.Other;
@@ -78,7 +79,7 @@ namespace StellaLauncher.Forms
 
 
         // -------------------------------- Launcher --------------------------------
-        private void OpenConfWindow_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private async void OpenConfWindow_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             DialogResult res = MessageBox.Show(Resources.Tools_AreYouSureToRunStellaConfigurationWindowAgain, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (res == DialogResult.No) return;
@@ -97,7 +98,14 @@ namespace StellaLauncher.Forms
                 key?.SetValue("AppIsConfigured", 0);
             }
 
-            _ = Cmd.CliWrap(path, null, null, true, false);
+            Cmd.CliWrap cliWrapCommand2 = new Cmd.CliWrap
+            {
+                App = path,
+                WorkingDir = Program.AppPath,
+                BypassUpdates = true
+            };
+            await Cmd.Execute(cliWrapCommand2);
+
             Environment.Exit(0);
         }
 
@@ -200,7 +208,14 @@ namespace StellaLauncher.Forms
         // ---------------------------------- Misc ----------------------------------
         private async void ScanSysFiles_Click(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            await Cmd.CliWrap("wt.exe", Path.Combine(Program.AppPath, "data", "cmd", "scan_sys_files.cmd"), Program.AppPath, true, false);
+            Cmd.CliWrap command = new Cmd.CliWrap
+            {
+                App = "wt.exe",
+                WorkingDir = Program.AppPath,
+                Arguments = new ArgumentsBuilder()
+                    .Add(Path.Combine(Program.AppPath, "data", "cmd", "scan_sys_files.cmd"))
+            };
+            await Cmd.Execute(command);
         }
 
         private void RemoveStellaNotifications_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -216,14 +231,32 @@ namespace StellaLauncher.Forms
             string reShadeIni = Path.Combine(gamePath, "ReShade.ini");
 
             if (!File.Exists(reShadeIni))
+            {
                 MessageBox.Show(string.Format(Resources.Tools_ReShadeConfigFileWasNotFoundIn_, reShadeIni), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             else
-                await Cmd.CliWrap("notepad.exe", reShadeIni, null, true, false);
+            {
+                Cmd.CliWrap command = new Cmd.CliWrap
+                {
+                    App = "notepad.exe",
+                    WorkingDir = Program.AppPath,
+                    Arguments = new ArgumentsBuilder()
+                        .Add(reShadeIni)
+                };
+                await Cmd.Execute(command);
+            }
         }
 
         private async void UnlockerConfig_Click(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            await Cmd.CliWrap("notepad.exe", Path.Combine(Program.AppPath, "data", "unlocker", "unlocker.config.json"), null, true, false);
+            Cmd.CliWrap command = new Cmd.CliWrap
+            {
+                App = "notepad.exe",
+                WorkingDir = Program.AppPath,
+                Arguments = new ArgumentsBuilder()
+                    .Add(Path.Combine(Program.AppPath, "data", "unlocker", "unlocker.config.json"))
+            };
+            await Cmd.Execute(command);
         }
 
 
@@ -231,28 +264,56 @@ namespace StellaLauncher.Forms
         private async void DeleteCache_Button(object sender, LinkLabelLinkClickedEventArgs e)
         {
             string resources = File.ReadAllText(Path.Combine(Program.AppData, "resources-path.sfn"));
-            string cache = Path.Combine(resources, "ReShade", "Cache");
-            string webViewCache = Path.Combine(Program.AppData, "EBWebView");
             string gameDir = await Utils.GetGame("giGameDir");
-            string reShadeLog = Path.Combine(gameDir, "ReShade.log");
-            string logs = Path.Combine(Log.Folder);
 
-            await Cmd.CliWrap(
-                "wt.exe",
-                $"{Path.Combine(Program.AppPath, "data", "cmd", "delete_cache.cmd")} \"{Path.Combine(Program.AppData, "game-path.sfn")}\" \"{cache}\" \"{webViewCache}\" \"{reShadeLog}\" \"{logs}\"",
-                Program.AppPath, true, false);
+            Cmd.CliWrap command = new Cmd.CliWrap
+            {
+                App = "wt.exe",
+                WorkingDir = Program.AppPath,
+                Arguments = new ArgumentsBuilder()
+                    .Add(Path.Combine(Program.AppPath, "data", "cmd", "delete_cache.cmd"))
+                    .Add(Program.AppVersion)
+                    .Add(Data.ReShadeVer)
+                    .Add(Data.UnlockerVer)
+                    .Add(Path.Combine(Program.AppData, "game-path.sfn"))
+                    .Add(Path.Combine(resources, "ReShade", "Cache"))
+                    .Add(Path.Combine(Program.AppData, "EBWebView"))
+                    .Add(Path.Combine(gameDir, "ReShade.log"))
+                    .Add(Log.Folder)
+            };
+            await Cmd.Execute(command);
         }
 
         private async void DeleteWebViewCache_Click(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            await Cmd.CliWrap("wt.exe", Path.Combine(Program.AppPath, "data", "cmd", "delete_webview_cache.cmd"), Program.AppPath, true, false);
+            string webViewDir = Path.Combine(Program.AppData, "EBWebView");
+
+            Cmd.CliWrap command = new Cmd.CliWrap
+            {
+                App = "wt.exe",
+                WorkingDir = Program.AppPath,
+                Arguments = new ArgumentsBuilder()
+                    .Add(Path.Combine(Program.AppPath, "data", "cmd", "delete_webview_cache.cmd"))
+                    .Add(Program.AppVersion)
+                    .Add(Data.ReShadeVer)
+                    .Add(Data.UnlockerVer)
+                    .Add(webViewDir)
+            };
+            await Cmd.Execute(command);
         }
 
 
         // ---------------------------------- Logs ---------------------------------
         private async void LauncherLogs_Click(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            await Cmd.CliWrap("notepad.exe", Path.Combine(Log.Folder, "launcher.output.log"), null, true, false);
+            Cmd.CliWrap command = new Cmd.CliWrap
+            {
+                App = "notepad.exe",
+                WorkingDir = Program.AppPath,
+                Arguments = new ArgumentsBuilder()
+                    .Add(Path.Combine(Log.Folder, "launcher.output.log"))
+            };
+            await Cmd.Execute(command);
         }
 
         private async void ReShadeLogs_Button(object sender, LinkLabelLinkClickedEventArgs e)
@@ -261,20 +322,45 @@ namespace StellaLauncher.Forms
             string logFile = Path.Combine(gameDir, "ReShade.log");
 
             if (!Directory.Exists(gameDir) || !File.Exists(logFile))
+            {
                 MessageBox.Show(string.Format(Resources.Tools_ReShadeLogFileWasNotFoundIn_, logFile), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             else
-                await Cmd.CliWrap("notepad.exe", logFile, null, true, false);
+            {
+                Cmd.CliWrap command = new Cmd.CliWrap
+                {
+                    App = "notepad.exe",
+                    WorkingDir = Program.AppPath,
+                    Arguments = new ArgumentsBuilder()
+                        .Add(logFile)
+                };
+                await Cmd.Execute(command);
+            }
         }
 
         private async void PreparationLogs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            await Cmd.CliWrap("notepad.exe", Path.Combine(Log.Folder, "prepare.output.log"), null, true, false);
+            Cmd.CliWrap command = new Cmd.CliWrap
+            {
+                App = "notepad.exe",
+                WorkingDir = Program.AppPath,
+                Arguments = new ArgumentsBuilder()
+                    .Add(Path.Combine(Log.Folder, "prepare.output.log"))
+            };
+            await Cmd.Execute(command);
         }
 
 
         private async void InnoSetup_Button(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            await Cmd.CliWrap("notepad.exe", Path.Combine(Log.Folder, "innosetup-logs.install.log"), null, true, false);
+            Cmd.CliWrap command = new Cmd.CliWrap
+            {
+                App = "notepad.exe",
+                WorkingDir = Program.AppPath,
+                Arguments = new ArgumentsBuilder()
+                    .Add(Path.Combine(Log.Folder, "innosetup-logs.install.log"))
+            };
+            await Cmd.Execute(command);
         }
 
         // -------------------------- Nothing special ((: ---------------------------

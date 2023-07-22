@@ -107,6 +107,7 @@
     <Reference Include="System.IO.Compression.FileSystem" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data.cs" />
     <Compile Include="Forms\Errors\ErrorOccurred.cs">
       <SubType>Form</SubType>
     </Compile>

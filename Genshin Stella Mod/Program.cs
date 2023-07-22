@@ -113,7 +113,7 @@ namespace StellaLauncher
                 int value = (int)(key?.GetValue("AppIsConfigured") ?? 0);
                 if (value == 0)
                 {
-                    _ = Cmd.CliWrap(PrepareLauncher, null, AppPath, true, false);
+                    _ = Cmd.Execute(new Cmd.CliWrap { App = PrepareLauncher });
                     Environment.Exit(997890421);
                 }
             }
