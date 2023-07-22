@@ -355,6 +355,9 @@ REMEMBER NOT TO SHARE YOUR UID WITH VISIBLE GAME SHADERS WITH ANYONE!</value>
   <data name="Default_ClickStartGameButtonToInjectReShadeAndUseFPSUnlock" xml:space="preserve">
     <value>Click „Start game” button to inject ReShade and use FPS Unlock.</value>
   </data>
+  <data name="Default_ClickStartGameButtonToInjectReShadeFPSUnlockAnd3DMigoto" xml:space="preserve">
+    <value>Click „Start game” button to inject ReShade, FPS Unlock and 3DMigoto.</value>
+  </data>
   <data name="Default_YouHaveTheLatestVersion" xml:space="preserve">
     <value>You have the latest version</value>
   </data>

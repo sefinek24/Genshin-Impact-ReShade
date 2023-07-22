@@ -153,7 +153,7 @@ namespace StellaLauncher.Forms
         {
             // Check if all required files exists
             progressBar1.Value = 45;
-            await Files.ScanAsync(Text);
+            await Files.ScanAsync();
 
             // Delete setup file from Temp directory
             progressBar1.Value = 50;
@@ -163,17 +163,21 @@ namespace StellaLauncher.Forms
             progressBar1.Value = 55;
             await CheckForUpdatesMain.Analyze();
 
-            // Discord RPC
-            Discord.InitRpc();
+            // Loaded form
+            _version_LinkLabel.Text = $@"v{Program.AppVersion}";
+            Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
+
+            // Launch count
+            LaunchCountHelper.CheckLaunchCountAndShowMessages();
 
             if (Debugger.IsAttached) return;
             // Telemetry.Opened();
 
+            // Discord RPC
+            Discord.InitRpc();
+
             // Music
             Music.Play();
-
-            // Launch count
-            LaunchCountHelper.CheckLaunchCountAndShowMessages();
         }
 
         private void Exit_Click(object sender, EventArgs e)

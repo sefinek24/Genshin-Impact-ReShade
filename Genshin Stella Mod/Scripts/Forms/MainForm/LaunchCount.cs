@@ -1,3 +1,4 @@
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
@@ -66,12 +67,38 @@ namespace StellaLauncher.Scripts.Forms.MainForm
             }
 
 
-            int firstMsgBox = Program.Settings.ReadInt("Launcher", "FirstMsgBox", 1);
-            if (firstMsgBox != 1) return;
+            switch (launchCount)
+            {
+                case 1:
+                    ShowMessage(MessageType.MessageBox);
+                    ShowMessage(MessageType.StatusLabel);
+                    break;
+                case 2:
+                case 3:
+                    ShowMessage(MessageType.StatusLabel);
+                    break;
+            }
+        }
 
-            MessageBox.Show(Resources.Default_ItAppersThatIsYourFirstTimeLaunchingTheLauncher, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Program.Settings.WriteInt("Launcher", "FirstMsgBox", 0);
-            Default._status_Label.Text += $"[i] {Resources.Default_ClickStartGameButtonToInjectReShadeAndUseFPSUnlock}\n";
+        private static void ShowMessage(MessageType type)
+        {
+            switch (type)
+            {
+                case MessageType.MessageBox:
+                    MessageBox.Show(Resources.Default_ItAppersThatIsYourFirstTimeLaunchingTheLauncher, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+                case MessageType.StatusLabel:
+                    Default._status_Label.Text += $"[i] {(Secret.IsMyPatron ? Resources.Default_ClickStartGameButtonToInjectReShadeFPSUnlockAnd3DMigoto : Resources.Default_ClickStartGameButtonToInjectReShadeAndUseFPSUnlock)}\n";
+                    break;
+                default:
+                    throw new ArgumentException("Invalid message type. Supported types are 'MessageBox' and 'StatusLabel'.");
+            }
+        }
+
+        private enum MessageType
+        {
+            MessageBox,
+            StatusLabel
         }
     }
 }

@@ -330,6 +330,15 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Click „Start game” button to inject ReShade, FPS Unlock and 3DMigoto..
+        /// </summary>
+        internal static string Default_ClickStartGameButtonToInjectReShadeFPSUnlockAnd3DMigoto {
+            get {
+                return ResourceManager.GetString("Default_ClickStartGameButtonToInjectReShadeFPSUnlockAnd3DMigoto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Current background: {0}.
         /// </summary>
         internal static string Default_CurrentBackground {

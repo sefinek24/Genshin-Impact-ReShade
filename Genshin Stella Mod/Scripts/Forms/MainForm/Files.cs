@@ -10,11 +10,8 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 {
     internal static class Files
     {
-        public static async Task ScanAsync(string formName)
+        public static async Task ScanAsync()
         {
-            Default._version_LinkLabel.Text = $@"v{Program.AppVersion}";
-            Log.Output(string.Format(Resources.Main_LoadedForm_, formName));
-
             await CheckFileAsync(Program.FpsUnlockerExePath);
             await CheckFileAsync(Program.InjectorPath);
             await CheckFileAsync(Program.ReShadePath);

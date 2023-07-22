@@ -191,6 +191,9 @@ Ta czynność spowoduje utratę wszelkich niestandardowych konfiguracji, jakie d
   <data name="Default_ClickStartGameButtonToInjectReShadeAndUseFPSUnlock" xml:space="preserve">
     <value>Kliknij przycisk "Uruchom grę", aby wstrzyknąć ReShade i użyć odblokowania FPS.</value>
   </data>
+  <data name="Default_ClickStartGameButtonToInjectReShadeFPSUnlockAnd3DMigoto" xml:space="preserve">
+    <value>Kliknij przycisk "Uruchom grę", aby wstrzyknąć ReShade i 3DMigoto oraz użyć odblokowania FPS.</value>
+  </data>
   <data name="Default_CurrentBackground" xml:space="preserve">
     <value>Bieżące tło: {0}</value>
     <comment>Dla toolTip1.SetToolTip</comment>
