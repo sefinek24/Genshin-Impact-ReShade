@@ -118,6 +118,10 @@ namespace StellaLauncher.Forms
                 case 1:
                     Program.Settings.WriteInt("Launcher", "EnableMusic", 0);
                     break;
+                default:
+                    Log.SaveError(Resources.Tools_WrongEnableMusicValueInTheIniFile);
+                    MessageBox.Show(Resources.Tools_WrongEnableMusicValueInTheIniFile, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    break;
             }
 
             MusicLabel_Set();
@@ -151,12 +155,11 @@ namespace StellaLauncher.Forms
                 case 0:
                     Program.Settings.WriteInt("Launcher", "DiscordRPC", 1);
                     Discord.InitRpc();
-                    RPCLabel_Set();
 
                     if (!string.IsNullOrEmpty(Discord.Username))
                         MessageBox.Show(string.Format(Resources.Tools_YoureConnectedAs__HiAndNiceToMeetYou_CheckYourDiscordActivity, Discord.Username), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    return;
+                    break;
 
                 case 1:
                     Program.Settings.WriteInt("Launcher", "DiscordRPC", 0);
