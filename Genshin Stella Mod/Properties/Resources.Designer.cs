@@ -420,7 +420,9 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to download unlocker.config.json..
+        ///   Looks up a localized string similar to Failed to download unlocker.config.json.
+        ///
+        ///{0}.
         /// </summary>
         internal static string Default_FailedToDownloadUnlockerConfigJson {
             get {
