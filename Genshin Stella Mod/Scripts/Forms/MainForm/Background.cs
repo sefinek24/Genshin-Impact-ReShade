@@ -68,12 +68,11 @@ namespace StellaLauncher.Scripts.Forms.MainForm
         private static Image GetCachedOrLoadImage(int bgInt)
         {
             string cacheKey = $"background_{bgInt}";
-            if (Cache.Contains(cacheKey))
-                if (Cache.Get(cacheKey) is Bitmap cachedImage)
-                {
-                    Log.Output(string.Format(Resources.Default_SuccessfullyRetrievedAndUpdatedTheCachedAppBackgroundWithID_, bgInt + 1));
-                    return cachedImage;
-                }
+            if (Cache.Contains(cacheKey) && Cache.Get(cacheKey) is Bitmap cachedImage)
+            {
+                Log.Output(string.Format(Resources.Default_SuccessfullyRetrievedAndUpdatedTheCachedAppBackgroundWithID_, bgInt + 1));
+                return cachedImage;
+            }
 
             string localization = Path.Combine(Program.AppPath, "data", "images", "launcher", "backgrounds", $"{BackgroundFiles[bgInt]}.png");
             if (!Utils.CheckFileExists(localization))
