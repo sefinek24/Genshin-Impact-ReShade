@@ -33,9 +33,8 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 
                 string remoteVersion = res.Launcher.Version;
                 DateTime remoteVerDate = DateTime.Parse(res.Launcher.ReleaseDate, null, DateTimeStyles.RoundtripKind).ToUniversalTime().ToLocalTime();
-                Default._progressBar1.Value = 40;
 
-
+                Default._progressBar1.Value = 60;
                 // == Major release ==
                 if (Program.AppVersion[0] != remoteVersion[0])
                 {
@@ -45,9 +44,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                     return 1;
                 }
 
-                Default._progressBar1.Value = 60;
-
-
+                Default._progressBar1.Value = 70;
                 // == Normal release ==
                 if (Program.AppVersion != remoteVersion)
                 {
@@ -58,8 +55,6 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 }
 
                 Default._progressBar1.Value = 80;
-
-
                 // == Check new updates of resources ==
                 string resSfn = Path.Combine(Program.AppData, "resources-path.sfn");
                 string resourcesPath;
@@ -87,7 +82,6 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                         return -1;
                     }
 
-                    Default._progressBar1.Value = 80;
 
                     string jsonContent = File.ReadAllText(jsonFile);
                     LocalResources data = JsonConvert.DeserializeObject<LocalResources>(jsonContent);
@@ -114,9 +108,8 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                     return -1;
                 }
 
+
                 Default._progressBar1.Value = 90;
-
-
                 // == Check new updates for ReShade.ini file ==
                 int resultInt = await ReShadeIni.CheckForUpdates();
                 switch (resultInt)
@@ -148,6 +141,8 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 }
 
 
+                Default._progressBar1.Value = 100;
+
                 // == Not found any new updates ==
                 Default._updates_LinkLabel.Text = Resources.Default_CheckForUpdates;
                 Default._updateIco_PictureBox.Image = Resources.icons8_available_updates;
@@ -165,7 +160,6 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 Default._runGiLauncher_LinkLabel.Visible = true;
                 if (!Secret.IsMyPatron) Default._becomeMyPatron_LinkLabel.Visible = true;
 
-                Default._progressBar1.Value = 100;
                 Utils.HideProgressBar(false);
                 return 0;
             }

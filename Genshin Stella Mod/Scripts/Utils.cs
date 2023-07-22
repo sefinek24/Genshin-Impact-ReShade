@@ -6,7 +6,6 @@ using System.IO;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Windows.Storage;
 using IWshRuntimeLibrary;
 using Microsoft.Win32;
 using Microsoft.WindowsAPICodePack.Taskbar;
@@ -18,6 +17,7 @@ namespace StellaLauncher.Scripts
 {
     internal static class Utils
     {
+        // .. . 
         private static readonly string FileWithGamePath = Path.Combine(Program.AppData, "game-path.sfn");
         private static readonly string FirstAppLaunch = Path.Combine(Program.AppPath, "First app launch.exe");
 
@@ -101,18 +101,6 @@ namespace StellaLauncher.Scripts
                     Log.ThrowError(new Exception(Resources.Utils_WrongParameter));
                     return string.Empty;
                 }
-            }
-        }
-
-        public static string GetAppData()
-        {
-            try
-            {
-                return Path.Combine(ApplicationData.Current?.LocalFolder?.Path);
-            }
-            catch (InvalidOperationException)
-            {
-                return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
             }
         }
 

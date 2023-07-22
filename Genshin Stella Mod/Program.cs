@@ -26,7 +26,7 @@ namespace StellaLauncher
 
         // Files and folders
         public static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
-        public static readonly string AppData = Utils.GetAppData();
+        public static readonly string AppData = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
         private static string _appIsConfigured;
         private static readonly string PrepareLauncher = Path.Combine(AppPath, "First app launch.exe");
         public static readonly string ReShadePath = Path.Combine(AppPath, "data", "reshade", "ReShade64.dll");

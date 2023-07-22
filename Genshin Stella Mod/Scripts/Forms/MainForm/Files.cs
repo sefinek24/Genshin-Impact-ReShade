@@ -1,6 +1,7 @@
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Threading.Tasks;
 using StellaLauncher.Forms;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts.Download;
@@ -9,32 +10,35 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 {
     internal static class Files
     {
-        public static void Scan(string formName)
+        public static async Task ScanAsync(string formName)
         {
             Default._version_LinkLabel.Text = $@"v{Program.AppVersion}";
             Log.Output(string.Format(Resources.Main_LoadedForm_, formName));
 
-            if (!File.Exists(Program.FpsUnlockerExePath) && !Debugger.IsAttached)
-                Default._status_Label.Text += $"[x]: {string.Format(Resources.Default_File_WasNotFound, Program.FpsUnlockerExePath)}\n";
+            await CheckFileAsync(Program.FpsUnlockerExePath);
+            await CheckFileAsync(Program.InjectorPath);
+            await CheckFileAsync(Program.ReShadePath);
 
-            if (!File.Exists(Program.InjectorPath) && !Debugger.IsAttached)
-                Default._status_Label.Text += $"[x]: {string.Format(Resources.Default_File_WasNotFound, Program.InjectorPath)}\n";
+            if (!File.Exists(Program.FpsUnlockerCfgPath) && !Debugger.IsAttached)
+                await FpsUnlockerCfg.RunAsync(Default._status_Label);
 
-            if (!File.Exists(Program.ReShadePath) && !Debugger.IsAttached)
-                Default._status_Label.Text += $"[x]: {string.Format(Resources.Default_File_WasNotFound, Program.ReShadePath)}\n";
-
-            if (!File.Exists(Program.FpsUnlockerCfgPath) && !Debugger.IsAttached) FpsUnlockerCfg.Run(Default._status_Label);
-
-            if (Default._status_Label.Text.Length > 0) Log.SaveError(Default._status_Label.Text);
+            if (Default._status_Label.Text.Length > 0)
+                Log.SaveError(Default._status_Label.Text);
         }
 
-        public static void DeleteSetup()
+        private static async Task CheckFileAsync(string filePath)
+        {
+            if (!File.Exists(filePath) && !Debugger.IsAttached)
+                await Task.Run(() => { Default._status_Label.Text += $"[x]: {string.Format(Resources.Default_File_WasNotFound, filePath)}\n"; });
+        }
+
+        public static async Task DeleteSetupAsync()
         {
             if (!File.Exists(NormalRelease.SetupPathExe)) return;
 
             try
             {
-                File.Delete(NormalRelease.SetupPathExe);
+                await Task.Run(() => File.Delete(NormalRelease.SetupPathExe));
                 Default._status_Label.Text += $"[i] {Resources.Default_DeletedOldSetupFromTempDirectory}\n";
                 Log.Output(string.Format(Resources.Default_DeletedOldSetupFromTempFolder, NormalRelease.SetupPathExe));
             }

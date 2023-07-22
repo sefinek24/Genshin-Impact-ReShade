@@ -71,11 +71,12 @@ namespace StellaLauncher.Forms
         public Default()
         {
             InitializeComponent();
-            progressBar1.Value = 10;
         }
 
         private async void Default_Load(object sender, EventArgs e)
         {
+            progressBar1.Value = 5;
+
             // First
             _status_Label = status_Label;
             _preparingPleaseWait = PreparingPleaseWait;
@@ -108,47 +109,73 @@ namespace StellaLauncher.Forms
             _updates_LinkLabel = updates_LinkLabel;
             _updateIco_PictureBox = updateIco_PictureBox;
 
+
+            // Set background
+            Image newBackground = Background.OnStart(toolTip1, changeBg_LinkLabel);
+            if (newBackground != null) BackgroundImage = newBackground;
+
             // Registry
+            progressBar1.Value = 15;
             using (RegistryKey key2 = Registry.CurrentUser.CreateSubKey(Program.RegistryPath, true))
             {
                 key2?.SetValue("LastRunTime", DateTime.Now);
             }
 
-            progressBar1.Value = 15;
 
-            Image newBackground = Background.OnStart(toolTip1, changeBg_LinkLabel);
-            if (newBackground != null) BackgroundImage = newBackground;
-
-            progressBar1.Value = 20;
-
-
-            // User is my patron?
+            // Is user my Patron?
+            progressBar1.Value = 35;
             string mainPcKey = Secret.GetTokenFromRegistry();
-            if (mainPcKey != null)
+            if (mainPcKey == null) return;
+
+            label1.Text = @"/ᐠ. ｡.ᐟ\ᵐᵉᵒʷˎˊ˗";
+
+            string data = await Secret.VerifyToken(mainPcKey);
+            if (data == null)
             {
-                label1.Text = @"/ᐠ. ｡.ᐟ\ᵐᵉᵒʷˎˊ˗";
-
-                string data = await Secret.VerifyToken(mainPcKey);
-                if (data == null)
-                {
-                    if (Directory.Exists(Program.PatronsDir)) Directory.Delete(Program.PatronsDir, true);
-                    return;
-                }
-
-                GetToken remote = JsonConvert.DeserializeObject<GetToken>(data);
-                if (remote.Status == 200)
-                {
-                    Secret.IsMyPatron = true;
-                    label1.Text = Resources.Default_GenshinStellaModForPatrons;
-                    label1.TextAlign = ContentAlignment.MiddleRight;
-                }
-                else if (Directory.Exists(Program.PatronsDir))
-                {
-                    Directory.Delete(Program.PatronsDir, true);
-                }
+                if (Directory.Exists(Program.PatronsDir)) Directory.Delete(Program.PatronsDir, true);
+                return;
             }
 
-            progressBar1.Value = 25;
+            GetToken remote = JsonConvert.DeserializeObject<GetToken>(data);
+            Log.Output(remote.Status.ToString());
+            if (remote.Status == 200)
+            {
+                Secret.IsMyPatron = true;
+                label1.Text = Resources.Default_GenshinStellaModForPatrons;
+                label1.TextAlign = ContentAlignment.MiddleRight;
+            }
+            else
+            {
+                if (Directory.Exists(Program.PatronsDir)) Directory.Delete(Program.PatronsDir, true);
+                label1.Text = @"Oh nooo... Sad cat... ( ̿–ᆺ ̿–)";
+            }
+        }
+
+        private async void Main_Shown(object sender, EventArgs e)
+        {
+            // Check if all required files exists
+            progressBar1.Value = 45;
+            await Files.ScanAsync(Text);
+
+            // Delete setup file from Temp directory
+            progressBar1.Value = 50;
+            await Files.DeleteSetupAsync();
+
+            // Check for updates
+            progressBar1.Value = 55;
+            await CheckForUpdatesMain.Analyze();
+
+            // Discord RPC
+            Discord.InitRpc();
+
+            if (Debugger.IsAttached) return;
+            // Telemetry.Opened();
+
+            // Music
+            Music.Play();
+
+            // Launch count
+            LaunchCountHelper.CheckLaunchCountAndShowMessages();
         }
 
         private void Exit_Click(object sender, EventArgs e)
@@ -191,29 +218,6 @@ namespace StellaLauncher.Forms
             if (newBackground != null) BackgroundImage = newBackground;
         }
 
-        private async void Main_Shown(object sender, EventArgs e)
-        {
-            // Check if all required files exists
-            Files.Scan(Text);
-
-            // Delete setup file from Temp directory
-            Files.DeleteSetup();
-
-            // Check for updates
-            await CheckForUpdatesMain.Analyze();
-
-            // Discord RPC
-            Discord.InitRpc();
-
-            if (Debugger.IsAttached) return;
-            // Telemetry.Opened();
-
-            // Music
-            Music.Play();
-
-            // Launch count
-            LaunchCountHelper.CheckLaunchCountAndShowMessages();
-        }
 
         // ------- Body -------
         private void GitHub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

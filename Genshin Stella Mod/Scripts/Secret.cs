@@ -39,10 +39,11 @@ namespace StellaLauncher.Scripts
                     };
 
                     FormUrlEncodedContent content = new FormUrlEncodedContent(postData);
-
                     HttpResponseMessage response = await httpClient.PostAsync($"{Program.WebApi}/genshin-stella-mod/access/launcher/verify", content).ConfigureAwait(false);
 
-                    return await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                    string json = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                    Log.Output(json);
+                    return json;
                 }
             }
             catch (Exception ex)

@@ -19,7 +19,7 @@ namespace StellaLauncher.Scripts.Download
         ///     Starts the process of downloading and updating the FPS unlocker config file.
         /// </summary>
         /// <param name="statusLabel">Label control to display the download status.</param>
-        public static async void Run(Label statusLabel)
+        public static async Task RunAsync(Label statusLabel)
         {
             Log.Output(Resources.Default_DownloadingConfigFileForFPSUnlocker);
 
