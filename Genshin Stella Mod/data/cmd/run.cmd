@@ -138,7 +138,7 @@ if "%4" equ "6" (
 
     REM Wait for the unlocker to finish
     pushd "..\cmd\start"
-    call "start.cmd"
+    call wait_for_unlockfps.cmd
 ) else if "%4" equ "3" (
     echo [✓] Everything is ready! Thank you for using Stella Mod. Have fun. ᕱ⑅︎ᕱ & echo.
     REM Ask the user to start the game
