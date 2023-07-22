@@ -17,8 +17,6 @@ namespace StellaLauncher.Forms
     public partial class Default : Form
     {
         // Files
-        private static readonly string CmdOutputLogs = Path.Combine(Program.AppData, "logs", "cmd.output.log");
-
         private static readonly string RunCmd = Path.Combine(Program.AppPath, "data", "cmd", "run.cmd");
         private static readonly string RunCmdPatrons = Path.Combine(Program.AppPath, "data", "cmd", "run_patrons.cmd");
 
@@ -239,7 +237,7 @@ namespace StellaLauncher.Forms
         {
             // Run cmd file
             bool res = await Cmd.CliWrap("wt.exe",
-                $"{(Secret.IsMyPatron ? RunCmdPatrons : RunCmd)} {(Secret.IsMyPatron ? 1 : 6)} {await Utils.GetGameVersion()} \"{CmdOutputLogs}\" {(Secret.IsMyPatron ? $"\"{_resourcesPath}\\3DMigoto\"" : "0")} \"{Program.AppPath}\"", Program.AppPath,
+                $"{(Secret.IsMyPatron ? RunCmdPatrons : RunCmd)} {(Secret.IsMyPatron ? 1 : 6)} {await Utils.GetGameVersion()} \"{Log.CmdLogs}\" {(Secret.IsMyPatron ? $"\"{_resourcesPath}\\3DMigoto\"" : "0")} \"{Program.AppPath}\"", Program.AppPath,
                 false, false);
 
             // Exit Stella with status code 0
@@ -250,7 +248,7 @@ namespace StellaLauncher.Forms
         private async void OnlyReShade_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Run cmd file
-            bool res = await Cmd.CliWrap("wt.exe", $"{(Secret.IsMyPatron ? RunCmdPatrons : RunCmd)} 3 {await Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
+            bool res = await Cmd.CliWrap("wt.exe", $"{(Secret.IsMyPatron ? RunCmdPatrons : RunCmd)} 3 {await Utils.GetGameVersion()} \"{Log.CmdLogs}\"", Program.AppPath, false, false);
             if (!res) return;
 
             // Find game path
@@ -265,7 +263,7 @@ namespace StellaLauncher.Forms
         private async void OnlyUnlocker_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Run cmd file
-            bool res = await Cmd.CliWrap("wt.exe", $"{(Secret.IsMyPatron ? RunCmdPatrons : RunCmd)} 4 {await Utils.GetGameVersion()} \"{CmdOutputLogs}\"", Program.AppPath, false, false);
+            bool res = await Cmd.CliWrap("wt.exe", $"{(Secret.IsMyPatron ? RunCmdPatrons : RunCmd)} 4 {await Utils.GetGameVersion()} \"{Log.CmdLogs}\"", Program.AppPath, false, false);
 
             // Exit Stella with status code 0
             if (res) Environment.Exit(0);
@@ -282,7 +280,7 @@ namespace StellaLauncher.Forms
             }
 
             // Run cmd file
-            await Cmd.CliWrap("wt.exe", $"{(Secret.IsMyPatron ? RunCmdPatrons : RunCmd)} 5 {await Utils.GetGameVersion()} \"{CmdOutputLogs}\" \"{_resourcesPath}\\3DMigoto\" \"{Program.AppPath}\"", Program.AppPath, false, false);
+            await Cmd.CliWrap("wt.exe", $"{(Secret.IsMyPatron ? RunCmdPatrons : RunCmd)} 5 {await Utils.GetGameVersion()} \"{Log.CmdLogs}\" \"{_resourcesPath}\\3DMigoto\" \"{Program.AppPath}\"", Program.AppPath, false, false);
 
             // Find game path
             string path = await Utils.GetGame("giLauncher");
@@ -330,19 +328,19 @@ namespace StellaLauncher.Forms
         private void Tools_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (Application.OpenForms.OfType<Tools>().Any()) return;
-            new Tools { DesktopLocation = DesktopLocation, Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.Show();
+            new Tools { DesktopLocation = DesktopLocation, Icon = Program.Ico }.Show();
         }
 
         private void Gameplay_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (Application.OpenForms.OfType<Gameplay>().Any()) return;
-            new Gameplay { DesktopLocation = DesktopLocation, Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.Show();
+            new Gameplay { DesktopLocation = DesktopLocation, Icon = Program.Ico }.Show();
         }
 
         private void Links_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (Application.OpenForms.OfType<Links>().Any()) return;
-            new Links { DesktopLocation = DesktopLocation, Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.Show();
+            new Links { DesktopLocation = DesktopLocation, Icon = Program.Ico }.Show();
         }
 
         private void Website_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -370,7 +368,7 @@ namespace StellaLauncher.Forms
         {
             if (ComputerInfo.GetSystemRegion() == "PL")
             {
-                WebViewWindow viewer = new WebViewWindow { DesktopLocation = DesktopLocation, Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) };
+                WebViewWindow viewer = new WebViewWindow { DesktopLocation = DesktopLocation, Icon = Program.Ico };
                 viewer.Navigate("https://www.youtube.com/embed/2F2DdXUNyaQ?autoplay=1");
                 viewer.Show();
 
@@ -378,7 +376,7 @@ namespace StellaLauncher.Forms
             }
             else
             {
-                WebViewWindow viewer = new WebViewWindow { DesktopLocation = DesktopLocation, Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) };
+                WebViewWindow viewer = new WebViewWindow { DesktopLocation = DesktopLocation, Icon = Program.Ico };
                 viewer.Navigate("https://www.youtube.com/embed/L3ky4gZU5gY?autoplay=1");
                 viewer.Show();
             }
@@ -388,7 +386,7 @@ namespace StellaLauncher.Forms
         {
             if (Application.OpenForms.OfType<RandomImages>().Any()) return;
 
-            RandomImages randomImagesForm = new RandomImages { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) };
+            RandomImages randomImagesForm = new RandomImages { Icon = Program.Ico };
             randomImagesForm.Show();
         }
 

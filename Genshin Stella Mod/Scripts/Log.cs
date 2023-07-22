@@ -15,6 +15,8 @@ namespace StellaLauncher.Scripts
     {
         public static readonly string Folder = Path.Combine(Program.AppData, "logs");
         private static readonly string OutputFile = Path.Combine(Folder, "launcher.output.log");
+        public static readonly string CmdLogs = Path.Combine(Program.AppData, "logs", "cmd.output.log");
+
 
         /// <summary>
         ///     Initializes the necessary directories for logging.

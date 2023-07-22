@@ -27,13 +27,14 @@ namespace StellaLauncher
         // Files and folders
         public static readonly string AppPath = AppContext.BaseDirectory;
         public static readonly string AppData = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
-        private static string _appIsConfigured;
+        private static readonly string AppIsConfigured = Path.Combine(AppData, "configured.sfn");
         private static readonly string PrepareLauncher = Path.Combine(AppPath, "First app launch.exe");
         public static readonly string ReShadePath = Path.Combine(AppPath, "data", "reshade", "ReShade64.dll");
         public static readonly string InjectorPath = Path.Combine(AppPath, "data", "reshade", "inject64.exe");
         public static readonly string FpsUnlockerExePath = Path.Combine(AppPath, "data", "unlocker", "unlockfps_clr.exe");
         public static readonly string FpsUnlockerCfgPath = Path.Combine(AppPath, "data", "unlocker", "unlocker.config.json");
         public static readonly string PatronsDir = Path.Combine(AppPath, "data", "presets", "3. Only for patrons");
+        public static readonly Icon Ico = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
 
         // Web
         public static readonly string UserAgent = $"Mozilla/5.0 (compatible; StellaLauncher/{AppVersion}; +{AppWebsiteSub})";
@@ -42,7 +43,7 @@ namespace StellaLauncher
         public static readonly string WebApi = "https://api.sefinek.net/api/v4";
 
         // Config
-        public static IniFile Settings;
+        public static readonly IniFile Settings = new IniFile(Path.Combine(AppData, "settings.ini"));
 
         // Lang
         private static readonly string[] SupportedLangs = { "en", "pl" };
@@ -56,11 +57,7 @@ namespace StellaLauncher
         [STAThread]
         private static void Main()
         {
-            _appIsConfigured = Path.Combine(AppData, "configured.sfn");
-            Settings = new IniFile(Path.Combine(AppData, "settings.ini"));
-
-
-            /* Language */
+            // Set language
             string currentLang = Settings.ReadString("Language", "UI", null);
             bool isSupportedLanguage = SupportedLangs.Contains(currentLang);
             if (string.IsNullOrEmpty(currentLang) || !isSupportedLanguage)
@@ -74,7 +71,7 @@ namespace StellaLauncher
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(currentLang);
 
 
-            /* Run */
+            // First log
             Log.Output(
                 "==============================================================================================================\n" +
                 string.Format(
@@ -83,7 +80,7 @@ namespace StellaLauncher
                     ComputerInfo.GetCpuSerialNumber(),
                     AppPath,
                     AppData,
-                    _appIsConfigured,
+                    AppIsConfigured,
                     FpsUnlockerCfgPath,
                     PatronsDir
                 ) + "\n"
@@ -98,6 +95,19 @@ namespace StellaLauncher
                 Environment.Exit(998765341);
             }
 
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            SetProcessDpiAwarenessContext(new IntPtr(-4));
+
+
+            // Found russian pig?
+            if (RegionInfo.CurrentRegion.Name == "RU")
+            {
+                new WrongCountry { Icon = Ico }.ShowDialog();
+                Environment.Exit(999222999);
+            }
+
+            // Is launcher configured?
             using (RegistryKey key = Registry.CurrentUser.OpenSubKey(RegistryPath, true))
             {
                 int value = (int)(key?.GetValue("AppIsConfigured") ?? 0);
@@ -109,20 +119,9 @@ namespace StellaLauncher
             }
 
 
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            SetProcessDpiAwarenessContext(new IntPtr(-4));
-
-
-            if (RegionInfo.CurrentRegion.Name == "RU")
-            {
-                new WrongCountry { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.ShowDialog();
-                Environment.Exit(999222999);
-            }
-
             try
             {
-                Application.Run(new Default { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) });
+                Application.Run(new Default { Icon = Ico });
             }
             catch (Exception e)
             {

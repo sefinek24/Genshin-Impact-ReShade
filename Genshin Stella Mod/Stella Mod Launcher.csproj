@@ -602,7 +602,6 @@
     <None Include="Resources\main.png" />
     <None Include="Resources\donation.png" />
     <None Include="Resources\IMG_20220810_133130-1-1.png" />
-    <None Include="Resources\random_images.jpg" />
     <None Include="Resources\775295135108825088.gif" />
     <None Include="Resources\party-popper_1f389.png" />
     <None Include="Resources\asdfasfa.png" />
@@ -616,8 +615,6 @@
     <None Include="Resources\icons8-info-squared-96.png" />
     <None Include="Resources\icons8-gear-94.png" />
     <None Include="Resources\icons8-web-48.png" />
-    <None Include="Resources\9a922c14615f616b3be16ae06aa0fdac.jpg" />
-    <None Include="Resources\29b20e63b8d94849ed201c4fac3f2312357d088dr1-1024-1015v2_00.jpg" />
     <None Include="Resources\exchange.png" />
     <None Include="Resources\refresh.png" />
     <None Include="Resources\icons8-update-48.png" />
