@@ -17,7 +17,6 @@ namespace StellaLauncher.Scripts
 {
     internal static class Utils
     {
-        // .. . 
         private static readonly string FileWithGamePath = Path.Combine(Program.AppData, "game-path.sfn");
         private static readonly string FirstAppLaunch = Path.Combine(Program.AppPath, "First app launch.exe");
 
