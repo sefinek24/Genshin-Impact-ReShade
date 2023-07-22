@@ -45,8 +45,3 @@ goto done
     echo.
     pause
     exit
-
-:missing_perms
-    echo.
-    echo [x] Error: The script must be run as an administrator.
-    goto done
