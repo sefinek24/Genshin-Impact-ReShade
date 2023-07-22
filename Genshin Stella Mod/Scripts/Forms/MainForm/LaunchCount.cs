@@ -1,6 +1,5 @@
 using System;
 using System.Diagnostics;
-using System.Drawing;
 using System.Windows.Forms;
 using Microsoft.Win32;
 using StellaLauncher.Forms;
@@ -41,7 +40,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 case 25:
                 case 35:
                 case 45:
-                    if (!Secret.IsMyPatron) Application.Run(new SupportMe { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) });
+                    if (!Secret.IsMyPatron) new SupportMe { Icon = Program.Ico }.ShowDialog();
                     return;
 
                 case 28:
