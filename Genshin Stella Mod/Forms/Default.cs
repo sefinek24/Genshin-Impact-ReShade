@@ -126,6 +126,8 @@ namespace StellaLauncher.Forms
             string mainPcKey = Secret.GetTokenFromRegistry();
             if (mainPcKey != null)
             {
+                label1.Text = @"/ᐠ. ｡.ᐟ\ᵐᵉᵒʷˎˊ˗";
+
                 string data = await Secret.VerifyToken(mainPcKey);
                 if (data == null)
                 {
@@ -384,6 +386,11 @@ namespace StellaLauncher.Forms
 
             RandomImages randomImagesForm = new RandomImages { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) };
             randomImagesForm.Show();
+        }
+
+        private void StatusLabel_TextChanged(object sender, EventArgs e)
+        {
+            status_Label.Visible = !string.IsNullOrEmpty(status_Label.Text);
         }
     }
 }

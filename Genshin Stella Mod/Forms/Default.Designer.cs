@@ -421,6 +421,7 @@ namespace StellaLauncher.Forms
             this.status_Label.Cursor = System.Windows.Forms.Cursors.Default;
             this.status_Label.ForeColor = System.Drawing.Color.Snow;
             this.status_Label.Name = "status_Label";
+            this.status_Label.TextChanged += new System.EventHandler(this.StatusLabel_TextChanged);
             // 
             // padIco_PictureBox
             // 
