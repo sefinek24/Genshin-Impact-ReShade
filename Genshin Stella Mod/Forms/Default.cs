@@ -292,7 +292,7 @@ namespace StellaLauncher.Forms
             if (path == string.Empty)
             {
                 MessageBox.Show(Resources.Default_GameLauncherWasNotFound, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Log.SaveErrorLog(new Exception(string.Format(Resources.Default_GameLauncherWasNotFoundIn, path)));
+                Log.SaveError(string.Format(Resources.Default_GameLauncherWasNotFoundIn, path));
                 return;
             }
 

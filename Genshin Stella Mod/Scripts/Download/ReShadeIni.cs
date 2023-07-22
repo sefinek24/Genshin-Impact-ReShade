@@ -24,7 +24,7 @@ namespace StellaLauncher.Scripts.Download
 
                 Default._status_Label.Text += $"[x] {Resources.ReShadeIniUpdate_GamePathWasNotFoundOnYourPC}\n";
 
-                Log.SaveErrorLog(new Exception(Resources.ReShadeIniUpdate_GamePathWasNotFoundOnYourPC));
+                Log.SaveError(Resources.ReShadeIniUpdate_GamePathWasNotFoundOnYourPC);
                 return -1;
             }
 
@@ -142,7 +142,7 @@ namespace StellaLauncher.Scripts.Download
                         }
 
                         Default._status_Label.Text += $"[x] {Resources.Default_FileWasNotFound}\n";
-                        Log.SaveErrorLog(new Exception(string.Format(Resources.Default_DownloadedReShadeIniWasNotFoundIn_, reShadePath)));
+                        Log.SaveError(string.Format(Resources.Default_DownloadedReShadeIniWasNotFoundIn_, reShadePath));
 
                         Utils.HideProgressBar(true);
                     }
@@ -152,7 +152,7 @@ namespace StellaLauncher.Scripts.Download
                         Default._updates_LinkLabel.LinkColor = Color.Red;
                         Default._updates_LinkLabel.Text = Resources.Default_FailedToDownload;
 
-                        Log.SaveErrorLog(ex);
+                        Log.SaveError(ex.ToString());
                         if (!File.Exists(reShadePath)) Log.Output(Resources.Default_TheReShadeIniFileStillDoesNotExist);
 
                         Utils.HideProgressBar(true);

@@ -45,7 +45,7 @@ namespace StellaLauncher.Scripts.Download
             catch (Exception ex)
             {
                 _statusLabel.Text += $"[x] {ex.Message}\n";
-                Log.SaveErrorLog(new Exception($"{Resources.Default_FailedToDownloadUnlockerConfigJson}\n{ex}"));
+                Log.SaveError(Path.Combine(Resources.Default_FailedToDownloadUnlockerConfigJson, ex.ToString()));
             }
         }
 

@@ -47,7 +47,7 @@ namespace StellaLauncher.Scripts
             }
             catch (Exception ex)
             {
-                Log.SaveErrorLog(ex);
+                Log.SaveError(ex.ToString());
 
                 return null;
             }

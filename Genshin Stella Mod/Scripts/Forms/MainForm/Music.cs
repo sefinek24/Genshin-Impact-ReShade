@@ -18,7 +18,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
             if (!File.Exists(wavPath))
             {
                 Default._status_Label.Text += $"[x]: {Resources.Default_TheSoundFileWithMusicWasNotFound}\n";
-                Log.SaveErrorLog(new Exception(string.Format(Resources.Default_TheSoundFileWithMusicWasNotFoundInTheLocalization_, wavPath)));
+                Log.SaveError(string.Format(Resources.Default_TheSoundFileWithMusicWasNotFoundInTheLocalization_, wavPath));
                 return;
             }
 
@@ -30,7 +30,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
             catch (Exception ex)
             {
                 Default._status_Label.Text += $"[x]: {ex.Message}\n";
-                Log.SaveErrorLog(ex);
+                Log.SaveError(ex.ToString());
             }
         }
     }

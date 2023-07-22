@@ -64,7 +64,7 @@ namespace StellaLauncher.Scripts
                         }
                         catch (Exception ex)
                         {
-                            Log.SaveErrorLog(ex);
+                            Log.SaveError(ex.ToString());
                         }
 
                         MessageBox.Show(Resources.Cmd_TheRequestOperationWasSuccessfulButYourPCNeedsToBeRebooted, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -76,7 +76,7 @@ namespace StellaLauncher.Scripts
                         string mainInfo = Resources.Cmd_FailedToUpdate;
                         MessageBox.Show(mainInfo, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                        Log.SaveErrorLog(new Exception($"{mainInfo}\n{Resources.Cmd_RestartYourComputerOrSuspendAntivirusProgramAndTryAgain}{info}"));
+                        Log.SaveError($"{mainInfo}\n{Resources.Cmd_RestartYourComputerOrSuspendAntivirusProgramAndTryAgain}{info}");
                         return false;
 
                     default:
@@ -84,7 +84,7 @@ namespace StellaLauncher.Scripts
                         if (!downloadSetup)
                             Log.ErrorAndExit(new Exception(string.Format(Resources.Cmd_CommandExecutionFailedBeacuseTheUnderlyingProcessReturnedANonZeroExitCode, app, result.ExitCode, info)));
                         else
-                            Log.SaveErrorLog(new Exception(info));
+                            Log.SaveError(info);
                         return false;
                     }
                 }

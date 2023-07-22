@@ -69,7 +69,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                     if (!Directory.Exists(resourcesPath))
                     {
                         Default._status_Label.Text += $"{string.Format(Resources.Default_Directory_WasNotFound, resourcesPath)}\n";
-                        Log.SaveErrorLog(new Exception(string.Format(Resources.Default_Directory_WasNotFound, resourcesPath)));
+                        Log.SaveError(string.Format(Resources.Default_Directory_WasNotFound, resourcesPath));
 
                         Utils.HideProgressBar(true);
                         return -1;
@@ -81,7 +81,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                     if (!File.Exists(jsonFile))
                     {
                         Default._status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, jsonFile)}\n";
-                        Log.SaveErrorLog(new Exception(string.Format(Resources.Default_File_WasNotFound, jsonFile)));
+                        Log.SaveError(string.Format(Resources.Default_File_WasNotFound, jsonFile));
 
                         Utils.HideProgressBar(true);
                         return -1;
@@ -108,7 +108,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 else
                 {
                     Default._status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, resSfn)}\n";
-                    Log.SaveErrorLog(new Exception(string.Format(Resources.Default_File_WasNotFound, resSfn)));
+                    Log.SaveError(string.Format(Resources.Default_File_WasNotFound, resSfn));
 
                     Utils.HideProgressBar(true);
                     return -1;
@@ -177,7 +177,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 Default._updates_LinkLabel.Text = Resources.Default_OhhSomethingWentWrong;
                 Default._status_Label.Text += $"[x] {e.Message}\n";
 
-                Log.SaveErrorLog(new Exception(string.Format(Resources.Default_SomethingWentWrongWhileCheckingForNewUpdates, e)));
+                Log.SaveError(string.Format(Resources.Default_SomethingWentWrongWhileCheckingForNewUpdates, e));
                 Utils.HideProgressBar(true);
                 return -1;
             }

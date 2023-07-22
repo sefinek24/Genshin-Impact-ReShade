@@ -29,7 +29,7 @@ namespace StellaLauncher.Forms
                 string pathStr = Path.Combine(Program.AppPath, "data", "images", "launcher", "backgrounds", "forms", "tools", "2.png");
                 if (!Utils.CheckFileExists(pathStr))
                 {
-                    Log.SaveErrorLog(new Exception(Resources.Tools_SpecialBackgroundWasNotFoundIn_ForToolsWindow));
+                    Log.SaveError(Resources.Tools_SpecialBackgroundWasNotFoundIn_ForToolsWindow);
                     return;
                 }
 
@@ -88,7 +88,7 @@ namespace StellaLauncher.Forms
             {
                 string fileName = Path.GetFileName(path);
                 MessageBox.Show(Resources.Program_RequiredFileFisrtAppLaunchExeWasNotFound_, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Log.SaveErrorLog(new Exception(string.Format(Resources.Default_File_WasNotFound, fileName)));
+                Log.SaveError(string.Format(Resources.Default_File_WasNotFound, fileName));
                 return;
             }
 
@@ -136,7 +136,7 @@ namespace StellaLauncher.Forms
                     MuteMusicOnStart.Text = Resources.Tools_MuteMusicOnStart;
                     break;
                 default:
-                    Log.SaveErrorLog(new Exception(Resources.Tools_WrongEnableMusicValueInTheIniFile));
+                    Log.SaveError(Resources.Tools_WrongEnableMusicValueInTheIniFile);
                     MessageBox.Show(Resources.Tools_WrongEnableMusicValueInTheIniFile, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
             }
@@ -145,6 +145,7 @@ namespace StellaLauncher.Forms
         private void DisableRPC_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             int iniData = Program.Settings.ReadInt("Launcher", "DiscordRPC", 1);
+
             switch (iniData)
             {
                 case 0:
@@ -152,12 +153,19 @@ namespace StellaLauncher.Forms
                     Discord.InitRpc();
                     RPCLabel_Set();
 
-                    if (Discord.Username.Length <= 0) return;
-                    MessageBox.Show(string.Format(Resources.Tools_YoureConnectedAs__HiAndNiceToMeetYou_CheckYourDiscordActivity, Discord.Username), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (!string.IsNullOrEmpty(Discord.Username))
+                        MessageBox.Show(string.Format(Resources.Tools_YoureConnectedAs__HiAndNiceToMeetYou_CheckYourDiscordActivity, Discord.Username), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     return;
+
                 case 1:
                     Program.Settings.WriteInt("Launcher", "DiscordRPC", 0);
-                    Discord.Client.Dispose();
+                    if (!Discord.Client.IsDisposed)
+                    {
+                        Discord.Client.Dispose();
+                        Discord.Username = null;
+                    }
+
                     break;
             }
 
@@ -172,15 +180,13 @@ namespace StellaLauncher.Forms
                 case 0:
                     DisableDiscordRPC.Text = Resources.Tools_EnableDiscordRPC;
                     break;
+
                 case 1:
                     DisableDiscordRPC.Text = Resources.Tools_DisableDiscordRPC;
                     break;
-                default:
-                    Log.SaveErrorLog(new Exception(Resources.Tools_WrongEnableMusicValueInTheIniFile));
-                    MessageBox.Show(Resources.Tools_WrongEnableMusicValueInTheIniFile, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    break;
             }
         }
+
 
         private void ChangeLang_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

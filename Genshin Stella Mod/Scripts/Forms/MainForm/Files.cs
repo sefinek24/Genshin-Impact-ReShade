@@ -25,7 +25,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 
             if (!File.Exists(Program.FpsUnlockerCfgPath) && !Debugger.IsAttached) FpsUnlockerCfg.Run(Default._status_Label);
 
-            if (Default._status_Label.Text.Length > 0) Log.SaveErrorLog(new Exception(Default._status_Label.Text));
+            if (Default._status_Label.Text.Length > 0) Log.SaveError(Default._status_Label.Text);
         }
 
         public static void DeleteSetup()
@@ -41,7 +41,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
             catch (Exception ex)
             {
                 Default._status_Label.Text += $"[x] {ex.Message}\n";
-                Log.SaveErrorLog(ex);
+                Log.SaveError(ex.ToString());
             }
         }
     }

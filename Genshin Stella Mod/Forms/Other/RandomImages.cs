@@ -93,7 +93,7 @@ namespace StellaLauncher.Forms.Other
                 else
                     MessageBox.Show(e.Message, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                Log.SaveErrorLog(new Exception(string.Format(Resources.RandomImages_ErrorWithTheAPI, url, e)));
+                Log.SaveError(string.Format(Resources.RandomImages_ErrorWithTheAPI, url, e));
                 return null;
             }
         }

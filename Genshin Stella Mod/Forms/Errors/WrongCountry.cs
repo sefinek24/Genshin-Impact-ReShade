@@ -26,7 +26,7 @@ namespace StellaLauncher.Forms.Errors
             }
             catch (Exception ex)
             {
-                Log.SaveErrorLog(ex);
+                Log.SaveError(ex.ToString());
             }
 
             Timer randomSizeTimer = new Timer { Interval = 500 };
@@ -74,7 +74,7 @@ namespace StellaLauncher.Forms.Errors
             }
             catch (Exception ex)
             {
-                Log.SaveErrorLog(ex);
+                Log.SaveError(ex.ToString());
             }
 
             Log.Output(string.Format(Resources.Main_LoadedForm_, Text));

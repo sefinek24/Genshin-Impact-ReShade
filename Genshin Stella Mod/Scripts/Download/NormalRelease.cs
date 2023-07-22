@@ -56,9 +56,9 @@ namespace StellaLauncher.Scripts.Download
                     .AddText(Resources.NormalRelease_NewReleaseIsAvailableDownloadNow)
                     .Show();
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Log.SaveErrorLog(e);
+                Log.SaveError(ex.ToString());
             }
 
             // Log

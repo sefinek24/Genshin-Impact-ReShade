@@ -9,7 +9,7 @@ namespace StellaLauncher.Scripts
         public const string Invitation = "https://discord.com/invite/SVcbaRc7gH";
         public const string FeedbackChannel = "https://discord.gg/X8bt6mkbu7";
         public static string Username = "";
-        private static bool _isReady;
+        public static bool _isReady;
         public static DiscordRpcClient Client;
 
         private static readonly RichPresence Presence = new RichPresence
@@ -32,7 +32,7 @@ namespace StellaLauncher.Scripts
         public static void InitRpc()
         {
             int data = Program.Settings.ReadInt("Launcher", "DiscordRPC", 1);
-            if (data == 1) return;
+            if (data == 0) return;
 
             Client = new DiscordRpcClient("1057407191704940575") { Logger = new ConsoleLogger { Level = LogLevel.Warning } };
             Client.OnError += (sender, msg) => Log.Output(Resources.Discord_OnError);

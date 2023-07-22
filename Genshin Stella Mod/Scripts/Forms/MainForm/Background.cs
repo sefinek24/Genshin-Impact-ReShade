@@ -49,7 +49,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
             if (!Utils.CheckFileExists(localization))
             {
                 MessageBox.Show(string.Format(Resources.Default_Sorry_Background_WasNotFound, BackgroundFiles[bgInt]), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Log.SaveErrorLog(new Exception(string.Format(Resources.Default_Sorry_Background_WasNotFound, localization, bgInt)));
+                Log.SaveError(string.Format(Resources.Default_Sorry_Background_WasNotFound, localization, bgInt));
                 return null;
             }
 
@@ -108,7 +108,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
             {
                 // If the file does not exist, show an error message and log the exception
                 MessageBox.Show(string.Format(Resources.Default_Sorry_Background_WasNotFound, BackgroundFiles[bgInt]), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Log.SaveErrorLog(new Exception(string.Format(Resources.Default_Sorry_Background_WasNotFound, localization, bgInt)));
+                Log.SaveError(string.Format(Resources.Default_Sorry_Background_WasNotFound, localization, bgInt));
                 return null;
             }
 

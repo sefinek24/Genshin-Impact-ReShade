@@ -61,7 +61,7 @@ namespace StellaLauncher.Scripts.Download
             }
             catch (Exception e)
             {
-                Log.SaveErrorLog(e);
+                Log.SaveError(e.ToString());
             }
 
             // Date

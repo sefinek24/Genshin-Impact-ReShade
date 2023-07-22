@@ -331,7 +331,9 @@ This action will result in the loss of any custom configurations you have made. 
     <value>Deleted old setup file from temp folder: {0}</value>
   </data>
   <data name="Default_FailedToDownloadUnlockerConfigJson" xml:space="preserve">
-    <value>Failed to download unlocker.config.json.</value>
+    <value>Failed to download unlocker.config.json.
+
+{0}</value>
   </data>
   <data name="Default_ItAppersThatIsYourFirstTimeLaunchingTheLauncher" xml:space="preserve">
     <value>It appears that you are launching the launcher for the first time! Take a moment to review the terms of use on the GitHub Wiki and other guidelines for this modification to avoid any unexpected issues.
