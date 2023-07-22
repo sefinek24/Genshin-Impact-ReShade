@@ -19,7 +19,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
             @"hutao\1", @"hutao\2", @"hutao\3", @"hutao\4"
         };
 
-        public static Image OnStart(Image bgFormImage, ToolTip toolTip, LinkLabel changeBg)
+        public static Image OnStart(ToolTip toolTip, LinkLabel changeBg)
         {
             // Background
             int bgInt = Program.Settings.ReadInt("Launcher", "Background", 0);

@@ -116,7 +116,7 @@ namespace StellaLauncher.Forms
 
             progressBar1.Value = 15;
 
-            Image newBackground = Background.OnStart(BackgroundImage, toolTip1, changeBg_LinkLabel);
+            Image newBackground = Background.OnStart(toolTip1, changeBg_LinkLabel);
             BackgroundImage = newBackground;
 
             progressBar1.Value = 20;
