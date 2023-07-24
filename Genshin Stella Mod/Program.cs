@@ -13,6 +13,7 @@ using StellaLauncher.Forms;
 using StellaLauncher.Forms.Errors;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
+using StellaLauncher.Scripts.Forms.MainForm;
 
 namespace StellaLauncher
 {
@@ -70,7 +71,6 @@ namespace StellaLauncher
 
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(currentLang);
 
-
             // First log
             Log.Output(
                 "==============================================================================================================\n" +
@@ -99,10 +99,10 @@ namespace StellaLauncher
             Application.SetCompatibleTextRenderingDefault(false);
             SetProcessDpiAwarenessContext(new IntPtr(-4));
 
-
             // Found russian pig?
             if (RegionInfo.CurrentRegion.Name == "RU")
             {
+                Music.PlaySound("winxp", "battery-critical");
                 new WrongCountry { Icon = Ico }.ShowDialog();
                 Environment.Exit(999222999);
             }

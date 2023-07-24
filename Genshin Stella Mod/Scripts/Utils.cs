@@ -11,6 +11,7 @@ using Microsoft.Win32;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using StellaLauncher.Forms;
 using StellaLauncher.Properties;
+using StellaLauncher.Scripts.Forms.MainForm;
 using File = System.IO.File;
 
 namespace StellaLauncher.Scripts
@@ -123,6 +124,8 @@ namespace StellaLauncher.Scripts
                 Log.ThrowError(new Exception(Resources.Utils_URLIsNullOrEmpty));
                 return;
             }
+
+            Music.PlaySound("winxp", "pop-up_blocked");
 
             try
             {

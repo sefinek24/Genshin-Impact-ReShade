@@ -1,6 +1,7 @@
 using System;
 using System.Drawing;
 using System.IO;
+using System.Reflection;
 using System.Windows.Forms;
 using Microsoft.Toolkit.Uwp.Notifications;
 using StellaLauncher.Forms.Errors;
@@ -39,7 +40,7 @@ namespace StellaLauncher.Scripts
             {
                 using (StreamWriter sw = File.AppendText(OutputFile))
                 {
-                    await sw.WriteLineAsync($"[{DateTime.Now}]: Output() • {Program.AppName}\n{log}");
+                    await sw.WriteLineAsync($"[{Program.AppVersion}: {DateTime.Now}]: {log}");
                 }
             }
             catch
@@ -60,7 +61,7 @@ namespace StellaLauncher.Scripts
             {
                 using (StreamWriter sw = File.AppendText(OutputFile))
                 {
-                    await sw.WriteLineAsync($"[{DateTime.Now}]: SaveError() • {Program.AppName}\n{log}\n");
+                    await sw.WriteLineAsync($"[{Program.AppVersion}: {DateTime.Now}]: SaveError() • {Assembly.GetExecutingAssembly().GetName().Name}\n{log}\n");
                 }
             }
             catch

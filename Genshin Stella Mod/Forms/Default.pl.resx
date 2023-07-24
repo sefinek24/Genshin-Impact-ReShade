@@ -166,12 +166,6 @@
   <data name="tools_LinkLabel.ToolTip" xml:space="preserve">
     <value>Opcje i inne narzędzia dla tego moda</value>
   </data>
-  <data name="discordServer_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 23</value>
-  </data>
-  <data name="discordServer_LinkLabel.Text" xml:space="preserve">
-    <value>Serwer Discord</value>
-  </data>
   <data name="discordServer_LinkLabel.ToolTip" xml:space="preserve">
     <value>Dołącz do naszego serwera Discord, jeśli potrzebujesz pomocy.</value>
   </data>
@@ -191,7 +185,7 @@
     <value>Uruchom Genshin Impact z ReShade, 3DMigoto i FPS Unlocker. Zalecane.</value>
   </data>
   <data name="website_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>380, 565</value>
+    <value>497, 565</value>
   </data>
   <data name="website_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 23</value>
@@ -203,7 +197,7 @@
     <value>Zobacz oficjalną stronę internetową</value>
   </data>
   <data name="gameplay_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>253, 564</value>
+    <value>366, 563</value>
   </data>
   <data name="gameplay_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 23</value>
@@ -252,7 +246,7 @@ Karty RTX nie są wymagane.</value>
     <value>Zobacz dziennik zmian (changelog) na GitHubie.</value>
   </data>
   <data name="links_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>167, 565</value>
+    <value>279, 565</value>
   </data>
   <data name="links_LinkLabel.Text" xml:space="preserve">
     <value>Linki</value>
@@ -300,8 +294,20 @@ Nie ma sensu używać tego, jeśli Twój monitor nie ma więcej niż 60 Hz.</val
   <data name="only3DMigoto_LinkLabel.Text" xml:space="preserve">
     <value>Tylko 3DMigoto</value>
   </data>
+  <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>176, 565</value>
+  </data>
+  <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 22</value>
+  </data>
+  <data name="linkLabel1.Text" xml:space="preserve">
+    <value>Zasoby</value>
+  </data>
+  <data name="linkLabel1.ToolTip" xml:space="preserve">
+    <value>Przejdź do Zasobów Stelli</value>
+  </data>
   <data name="websiteIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>354, 565</value>
+    <value>471, 565</value>
   </data>
   <data name="updates_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>796, 565</value>
@@ -313,10 +319,10 @@ Nie ma sensu używać tego, jeśli Twój monitor nie ma więcej niż 60 Hz.</val
     <value>&gt;&gt; Kliknij, by odświeżyć &lt;&lt;</value>
   </data>
   <data name="padIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>227, 565</value>
+    <value>340, 564</value>
   </data>
   <data name="shortcutIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>141, 565</value>
+    <value>253, 565</value>
   </data>
   <data name="progressBar1.Size" type="System.Drawing.Size, System.Drawing">
     <value>778, 23</value>
@@ -326,5 +332,8 @@ Nie ma sensu używać tego, jeśli Twój monitor nie ma więcej niż 60 Hz.</val
   </data>
   <data name="PreparingPleaseWait.Text" xml:space="preserve">
     <value>Proszę czekać...</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>147, 565</value>
   </data>
 </root>

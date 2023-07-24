@@ -178,7 +178,7 @@ namespace StellaLauncher.Forms
             Discord.InitRpc();
 
             // Music
-            Music.Play();
+            Music.PlayBg();
         }
 
         private void Exit_Click(object sender, EventArgs e)
@@ -219,6 +219,8 @@ namespace StellaLauncher.Forms
         {
             Image newBackground = Background.Change(BackgroundImage, toolTip1, changeBg_LinkLabel);
             if (newBackground != null) BackgroundImage = newBackground;
+
+            Music.PlaySound("winxp", "menu_command");
         }
 
 
@@ -388,18 +390,26 @@ namespace StellaLauncher.Forms
         {
             if (Application.OpenForms.OfType<Tools>().Any()) return;
             new Tools { DesktopLocation = DesktopLocation, Icon = Program.Ico }.Show();
+            Music.PlaySound("winxp", "navigation_start");
+        }
+
+        private void ViewResources_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Cmd.Start(_resourcesPath);
         }
 
         private void Gameplay_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (Application.OpenForms.OfType<Gameplay>().Any()) return;
             new Gameplay { DesktopLocation = DesktopLocation, Icon = Program.Ico }.Show();
+            Music.PlaySound("winxp", "navigation_start");
         }
 
         private void Links_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (Application.OpenForms.OfType<Links>().Any()) return;
             new Links { DesktopLocation = DesktopLocation, Icon = Program.Ico }.Show();
+            Music.PlaySound("winxp", "navigation_start");
         }
 
         private void Website_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -425,6 +435,8 @@ namespace StellaLauncher.Forms
 
         private void W_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            Music.PlaySound("winxp", "pop-up_blocked");
+
             if (ComputerInfo.GetSystemRegion() == "PL")
             {
                 WebViewWindow viewer = new WebViewWindow { DesktopLocation = DesktopLocation, Icon = Program.Ico };
@@ -444,14 +456,14 @@ namespace StellaLauncher.Forms
         private void Paimon_Click(object sender, EventArgs e)
         {
             if (Application.OpenForms.OfType<RandomImages>().Any()) return;
-
-            RandomImages randomImagesForm = new RandomImages { Icon = Program.Ico };
-            randomImagesForm.Show();
+            new RandomImages { Icon = Program.Ico }.Show();
+            Music.PlaySound("winxp", "navigation_start");
         }
 
         private void StatusLabel_TextChanged(object sender, EventArgs e)
         {
             status_Label.Visible = !string.IsNullOrEmpty(status_Label.Text);
+            Music.PlaySound("winxp", "balloon");
         }
     }
 }

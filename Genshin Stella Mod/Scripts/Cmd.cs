@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CliWrap;
@@ -7,6 +8,7 @@ using CliWrap.Builders;
 using Microsoft.Toolkit.Uwp.Notifications;
 using StellaLauncher.Forms;
 using StellaLauncher.Properties;
+using StellaLauncher.Scripts.Forms.MainForm;
 
 namespace StellaLauncher.Scripts
 {
@@ -14,6 +16,8 @@ namespace StellaLauncher.Scripts
     {
         public static async Task<bool> Execute(CliWrap cliWrapCommand)
         {
+            Music.PlaySound("winxp", "information_bar");
+
             string commandArguments = string.Empty;
             if (!string.IsNullOrEmpty(cliWrapCommand.Arguments?.ToString())) commandArguments = cliWrapCommand.Arguments.Build();
 
@@ -99,6 +103,13 @@ namespace StellaLauncher.Scripts
                 Log.ThrowError(ex);
                 return false;
             }
+        }
+
+        public static void Start(string process)
+        {
+            Process.Start(process);
+            Log.Output($"Process.Start = {process}");
+            Music.PlaySound("winxp", "restore");
         }
 
         public class CliWrap

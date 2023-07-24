@@ -117,296 +117,436 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RandomImages_AnimeName" xml:space="preserve">
+    <value>Anime name</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="icons8_tools" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-tools-65.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flaticon_controller" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\controller.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flaticon_redo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\redo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_notepad" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-notepad-96 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icons8_available-updates" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-available-updates-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bg_gameplay" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tutorial3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IMG_20220810_133130-1-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_github" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-github-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="web" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\web.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_animated" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-animated-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_web" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-web-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="poland_flag" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\poland (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_info-squared" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-info-squared-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="error" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\asdfasfa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Default_CheckingForUpdates" xml:space="preserve">
+    <value>Checking for updates...</value>
   </data>
-  <data name="icons8_download-from-the-cloud" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-download-from-the-cloud-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Default_Success" xml:space="preserve">
+    <value>Success!</value>
   </data>
-  <data name="party-popper" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\party-popper_1f389.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Main_ClickedYesInForm_" xml:space="preserve">
+    <value>Clicked Yes in form '{0}'.</value>
   </data>
-  <data name="bg_tools" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tools.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_shortcut" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-shortcut-58.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_edit-property" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-edit-property-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="uk_flag" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\united-kingdom (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_support" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-support-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bg_links" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\links.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="paimon-gif" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\775295135108825088.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flaticon_settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_recycle-bin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-recycle-bin-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_gear" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-gear-94.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bg_main" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\main.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="exchange" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\exchange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flaticon_donation" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\donation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="new-release" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\352967288013211.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_youtube" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-youtube-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_discord" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-discord-481.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="web" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\web.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bg_support-me" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\support-me.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Tools_DisableDiscordRPC" xml:space="preserve">
-    <value>Disable Discord RPC</value>
+  <data name="Cmd_CommandExecutionFailedBeacuseTheUnderlyingProcessReturnedANonZeroExitCode" xml:space="preserve">
+    <value>Command execution failed because the underlying process ({0}) returned a non-zero exit code - {1}.
+
+{2}</value>
   </data>
-  <data name="Tools_EnableDiscordRPC" xml:space="preserve">
-    <value>Enable Discord RPC</value>
+  <data name="Discord_InTheMainWindow" xml:space="preserve">
+    <value>In the main window</value>
   </data>
-  <data name="Tools_MuteMusicOnStart" xml:space="preserve">
-    <value>Mute music on start</value>
+  <data name="SupportMe_Thanks" xml:space="preserve">
+    <value>Thanks :3</value>
   </data>
-  <data name="Tools_ReShadeConfigFileWasNotFoundIn_" xml:space="preserve">
-    <value>ReShade config file was not found in:
-{0}</value>
+  <data name="Default_SuccessfullyRetrievedAndUpdatedTheCachedAppBackgroundWithID_" xml:space="preserve">
+    <value>Successfully retrieved and updated the cached app background with ID {0}.</value>
   </data>
-  <data name="Tools_ReShadeLogFileWasNotFoundIn_" xml:space="preserve">
-    <value>ReShade log file was not found in:
-{0}</value>
+  <data name="Cmd_WorkingDirectory" xml:space="preserve">
+    <value>Working directory</value>
   </data>
-  <data name="Tools_UnmuteMusicOnStart" xml:space="preserve">
-    <value>Unmute music on start</value>
+  <data name="Utils_LauncherFileDoesNotExistsIn_" xml:space="preserve">
+    <value>Launcher file does not exists in: {0} [{1}]</value>
   </data>
-  <data name="Tools_WrongEnableMusicValueInTheIniFile" xml:space="preserve">
-    <value>Wrong EnableMusic value in the ini file.</value>
+  <data name="icons8_animated" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-animated-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Tools_YoureConnectedAs_.HiAndNiceToMeetYou.CheckYourDiscordActivity" xml:space="preserve">
-    <value>You are connected as {0}. Hi and nice to meet you! Check your activity on Discord.</value>
+  <data name="Utils_WrongParameter" xml:space="preserve">
+    <value>Wrong parameter.</value>
   </data>
-  <data name="Links_DRPC_OnTheWindowWithLinks" xml:space="preserve">
-    <value>On the window with links 🌍</value>
-  </data>
-  <data name="Main_ClosedForm_" xml:space="preserve">
-    <value>Closed form {0}.</value>
-    <comment>Used for Log.Output</comment>
-  </data>
-  <data name="Main_LoadedForm_" xml:space="preserve">
-    <value>Loaded form {0}.</value>
-    <comment>Used for Log.Output</comment>
-  </data>
-  <data name="Tools_BrowsingUtils" xml:space="preserve">
-    <value>Browsing utils 🔧</value>
-  </data>
-  <data name="Tools_SpecialBackgroundWasNotFoundIn_ForToolsWindow" xml:space="preserve">
-    <value>Special background file was not found in '{0}' for Tools window.</value>
+  <data name="Cmd_CommandExecutionFailed" xml:space="preserve">
+    <value>CliWrap: Command execution failed. An update is required.</value>
   </data>
   <data name="Gameplay_WatchingGameplay" xml:space="preserve">
     <value>Watching gameplay 🎮</value>
   </data>
-  <data name="Default_BackgroundFileWasNotFoundIn_.ID" xml:space="preserve">
-    <value>Background file was not found in '{0}'; ID: {1};</value>
+  <data name="NormalRelease_DeletedOldSetupFileFromTempDir" xml:space="preserve">
+    <value>Deleted old setup file from temp directory.</value>
   </data>
-  <data name="Default_CachedAppBackground_ID" xml:space="preserve">
-    <value>Cached app background in RAM memory '{0}'; ID: {1};</value>
-    <comment>Used for Log.Output</comment>
+  <data name="icons8_discord" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-discord-481.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Default_ChangedTheLauncherBackground_ID" xml:space="preserve">
-    <value>Changed the launcher background. ID: {0}</value>
-    <comment>Used for Log.Output</comment>
+  <data name="exchange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exchange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Default_CurrentBackground" xml:space="preserve">
-    <value>Current background: {0}</value>
-    <comment>For toolTip1.SetToolTip</comment>
+  <data name="Discord_Desc" xml:space="preserve">
+    <value>The best mod for Genshin Impact with ReShade, custom graphics presets, FPS unlock, custom launcher, and more!</value>
   </data>
-  <data name="Default_Sorry.Background_WasNotFound" xml:space="preserve">
-    <value>Sorry. Background {0} was not found.</value>
+  <data name="Utils_DesktopShortcutHasBeenCreated" xml:space="preserve">
+    <value>Desktop shortcut has been created.</value>
   </data>
-  <data name="Default_TheApplicationBackgroundHasBeenChangedToDefault_ID" xml:space="preserve">
-    <value>The application background has been changed to default. ID: {0}</value>
+  <data name="Cmd_SuccessfullyExecutedCommand" xml:space="preserve">
+    <value>CliWrap: Successfully executed {0}; Exit code: {1}; Start time: {2}; Exit time: {3}{4}{5};</value>
   </data>
-  <data name="Default_CurrentBackground_Default" xml:space="preserve">
-    <value>Current background: Default</value>
-  </data>
-  <data name="Default_CheckingForUpdates" xml:space="preserve">
-    <value>Checking for updates...</value>
-  </data>
-  <data name="Default_SuccessfullyRetrievedAndUpdatedTheCachedAppBackgroundWithID_" xml:space="preserve">
-    <value>Successfully retrieved and updated the cached app background with ID {0}.</value>
+  <data name="ReShadeIniUpdate_StellaConfigVersionIsNullInReShadeIni" xml:space="preserve">
+    <value>STELLA.ConfigVersion is null in ReShade.ini.</value>
   </data>
   <data name="Default_AreYouSureWantToUpdateReShadeConfiguration" xml:space="preserve">
     <value>Are you sure you want to update ReShade configuration?
 
 This action will result in the loss of any custom configurations you have made. If you do not have any custom configurations, you may proceed by clicking Yes. However, if you have made changes, please ensure that you have backed up the previous ReShade file in your game files.</value>
   </data>
-  <data name="Default_CheckForUpdates" xml:space="preserve">
-    <value>Check for updates</value>
+  <data name="Discord_OnUnsubscribe" xml:space="preserve">
+    <value>Discord RPC: Unsubscribed.</value>
   </data>
-  <data name="Default_ForSomeReasonYouDidNotGiveConsentForTheAutomaticUpdateOfTheReShadeFile" xml:space="preserve">
-    <value>For some reason, you did not give consent for the automatic update of the ReShade file. Please note that older versions of this file may not be compatible with newer versions of Stella Mod. I hope you know what you're doing.</value>
-  </data>
-  <data name="Default_TheUpdateOfReShadIniHasBeenCanceledByTheUser" xml:space="preserve">
-    <value>The update of ReShade.ini has been cancelled by the user.</value>
-  </data>
-  <data name="Default_DownloadingConfigFileForFPSUnlocker" xml:space="preserve">
-    <value>Downloading config file for FPS Unlocker...</value>
-  </data>
-  <data name="Default_File_WasNotFound" xml:space="preserve">
-    <value>File {0} was not found.</value>
-  </data>
-  <data name="Default_NotFoundAnyNewUpdates_YourInstalledVersion_" xml:space="preserve">
-    <value>Not found any new updates. Your installed version: v{0}</value>
-  </data>
-  <data name="Default_OhhSomethingWentWrong" xml:space="preserve">
-    <value>Ohh, something went wrong</value>
-  </data>
-  <data name="Default_SomethingWentWrongWhileCheckingForNewUpdates" xml:space="preserve">
-    <value>Something went wrong while checking for new updates.
-
-{0}</value>
-  </data>
-  <data name="Default_DeletedOldSetupFromTempDirectory" xml:space="preserve">
-    <value>Deleted old setup file from temp directory.</value>
-  </data>
-  <data name="Default_DeletedOldSetupFromTempFolder" xml:space="preserve">
-    <value>Deleted old setup file from temp folder: {0}</value>
+  <data name="flaticon_controller" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\controller.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Default_FailedToDownloadUnlockerConfigJson" xml:space="preserve">
     <value>Failed to download unlocker.config.json.
 
 {0}</value>
   </data>
-  <data name="Default_ItAppersThatIsYourFirstTimeLaunchingTheLauncher" xml:space="preserve">
-    <value>It appears that you are launching the launcher for the first time! Take a moment to review the terms of use on the GitHub Wiki and other guidelines for this modification to avoid any unexpected issues.
-
-REMEMBER NOT TO SHARE YOUR UID WITH VISIBLE GAME SHADERS WITH ANYONE!</value>
+  <data name="Default_CheckForUpdates" xml:space="preserve">
+    <value>Check for updates</value>
   </data>
-  <data name="Default_PlayingSoundFile_" xml:space="preserve">
-    <value>Playing sound file: {0}</value>
+  <data name="Default_CurrentBackground_Default" xml:space="preserve">
+    <value>Current background: Default</value>
   </data>
-  <data name="Default_Success" xml:space="preserve">
-    <value>Success!</value>
+  <data name="NormalRelease_JustAMoment_PleaseWait" xml:space="preserve">
+    <value>Just a moment. Please wait {0}s...</value>
   </data>
-  <data name="Default_TheSoundFileWithMusicWasNotFound" xml:space="preserve">
-    <value>The sound file with music was not found.</value>
-  </data>
-  <data name="Default_TheSoundFileWithMusicWasNotFoundInTheLocalization_" xml:space="preserve">
-    <value>The sound file with music was not found in the location: '{0}'</value>
-  </data>
-  <data name="Default_ClickStartGameButtonToInjectReShadeAndUseFPSUnlock" xml:space="preserve">
-    <value>Click „Start game” button to inject ReShade and use FPS Unlock.</value>
-  </data>
-  <data name="Default_ClickStartGameButtonToInjectReShadeFPSUnlockAnd3DMigoto" xml:space="preserve">
-    <value>Click „Start game” button to inject ReShade, FPS Unlock and 3DMigoto.</value>
-  </data>
-  <data name="Default_YouHaveTheLatestVersion" xml:space="preserve">
-    <value>You have the latest version</value>
-  </data>
-  <data name="Default_GameLauncherWasNotFound" xml:space="preserve">
-    <value>Game launcher was not found.</value>
-  </data>
-  <data name="Default_GameLauncherWasNotFoundIn" xml:space="preserve">
-    <value>Game launcher was not found in: {0}</value>
-  </data>
-  <data name="Default_ItsJustText_WhatMoreDoYouWant" xml:space="preserve">
-    <value>It's just text. What more do you want?</value>
-  </data>
-  <data name="Default_DownloadedReShadeIniWasNotFoundIn_" xml:space="preserve">
-    <value>Downloaded ReShade.ini was not found in: {0}</value>
-  </data>
-  <data name="Default_Downloading" xml:space="preserve">
-    <value>Downloading...</value>
-  </data>
-  <data name="Default_FailedToDownload" xml:space="preserve">
-    <value>Failed to download...</value>
-  </data>
-  <data name="Default_FileWasNotFound" xml:space="preserve">
-    <value>File was not found.</value>
-  </data>
-  <data name="Default_Meeow_FailedToDownloadReShadeIni_TryAgain" xml:space="preserve">
-    <value>Meeow! Failed to download ReShade.ini. Try again.</value>
-  </data>
-  <data name="Default_SuccessfullyDownloadedReShadeIni" xml:space="preserve">
-    <value>Successfully downloaded ReShade.ini!</value>
-  </data>
-  <data name="Default_SuccessfullyDownloadedReShadeIniAndSavedIn" xml:space="preserve">
-    <value>Successfully downloaded ReShade.ini and saved in: {0}</value>
-    <comment>Used for Log.Output</comment>
-  </data>
-  <data name="Default_TheReShadeIniFileCouldNotBeLocatedInYourGameFiles" xml:space="preserve">
-    <value>The ReShade.ini file could not be located in your game files, or it may not be compatible with the current version.
-
-Would you like to download this file now to prevent future errors and manual configuration? Recommended.</value>
+  <data name="Program_QuestionMessageBox_WouldYouShareOpinionAboutStellaMod" xml:space="preserve">
+    <value>Question (MessageBox): Would you share your opinion about Stella Mod on trustpilot.com? I would be very grateful. Selected: {0}</value>
   </data>
   <data name="Default_TheReShadeIniFileStillDoesNotExist" xml:space="preserve">
     <value>The ReShade.ini file still does not exist!</value>
     <comment>Used for Log.Output</comment>
   </data>
-  <data name="Default_CanceledByTheUser_AreYouSureOfWhatYoureDoing" xml:space="preserve">
-    <value>Canceled by the user. Are you sure of what you're doing?</value>
+  <data name="ReShadeIniUpdate_UpdateReShadeCfg" xml:space="preserve">
+    <value>Update ReShade config</value>
   </data>
-  <data name="Default_FileDownloadHasBeenCanceledByTheUser" xml:space="preserve">
-    <value>File download has been canceled by the user.</value>
+  <data name="Default_FailedToDownload" xml:space="preserve">
+    <value>Failed to download...</value>
+  </data>
+  <data name="NormalRelease_Closing" xml:space="preserve">
+    <value>Closing...</value>
+  </data>
+  <data name="Log_SomethingWentWrong" xml:space="preserve">
+    <value>Something went wrong</value>
+  </data>
+  <data name="ReShadeIniUpdate_TheVersionOfReShadeCfgWasNotFound" xml:space="preserve">
+    <value>The version of ReShade config was not found.</value>
+  </data>
+  <data name="Default_Sorry.Background_WasNotFound" xml:space="preserve">
+    <value>Sorry. Background {0} was not found.</value>
+  </data>
+  <data name="Program_IfYouWishToSendLogsToTheDeveloperPleaseSendThemToMeOnDiscord" xml:space="preserve">
+    <value>If you wish to send logs to the developer, please send them to me on Discord: Sefinek#2714. API communication is not yet available for the Stella Launcher.
+
+Do you want to see these files?</value>
+  </data>
+  <data name="Default_TheApplicationBackgroundHasBeenChangedToDefault_ID" xml:space="preserve">
+    <value>The application background has been changed to default. ID: {0}</value>
+  </data>
+  <data name="Default_Meeow_FailedToDownloadReShadeIni_TryAgain" xml:space="preserve">
+    <value>Meeow! Failed to download ReShade.ini. Try again.</value>
+  </data>
+  <data name="Tools_TheShortcutHasBeenSuccessfullyCreated" xml:space="preserve">
+    <value>The shortcut has been successfully created.</value>
+  </data>
+  <data name="Default_File_WasNotFound" xml:space="preserve">
+    <value>File {0} was not found.</value>
+  </data>
+  <data name="Main_ClosingForm_" xml:space="preserve">
+    <value>Closing form {0}...</value>
+  </data>
+  <data name="flaticon_settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Default_ThisFeatureIsAvailableOnlyForMyPatrons" xml:space="preserve">
+    <value>This feature is available only for my patrons.
+
+Would you like to visit Patreon.com and make subscribe? You will gain access to numerous benefits! You will also be able to enjoy ReShade, 3DMigoto, and FPS Unlocker simultaneously.</value>
+  </data>
+  <data name="Telemetry_DeliveredTelemetryData" xml:space="preserve">
+    <value>Delivered telemetry data '{0}' [{1}].</value>
+  </data>
+  <data name="Program_OneInstanceIsCurrentlyOpen" xml:space="preserve">
+    <value>One instance is currently open.</value>
+  </data>
+  <data name="icons8_github" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-github-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Default_ItsJustText_WhatMoreDoYouWant" xml:space="preserve">
+    <value>It's just text. What more do you want?</value>
+  </data>
+  <data name="Utils_AnErrorOccurredWhileCreatingTheShortcut" xml:space="preserve">
+    <value>An error occurred while creating the shortcut.
+
+{0}</value>
+  </data>
+  <data name="icons8_web" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-web-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Utils_FoundGiExe" xml:space="preserve">
+    <value>Found Genshin Impact Exe in: {0} [{1}]</value>
+  </data>
+  <data name="Discord_OnClose" xml:space="preserve">
+    <value>Discord RPC: Closed.</value>
+  </data>
+  <data name="Default_NotFoundAnyNewUpdates_YourInstalledVersion_" xml:space="preserve">
+    <value>Not found any new updates. Your installed version: v{0}</value>
+  </data>
+  <data name="Default_CachedAppBackground_ID" xml:space="preserve">
+    <value>Cached app background in RAM memory '{0}'; ID: {1};</value>
     <comment>Used for Log.Output</comment>
+  </data>
+  <data name="Program_DoYouWantToJoinOurDiscord" xml:space="preserve">
+    <value>Do you want to join our Discord server?</value>
+  </data>
+  <data name="ReShadeIniUpdate_DownloadTheRequiredFile" xml:space="preserve">
+    <value>Download the required file</value>
+  </data>
+  <data name="icons8_notepad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-notepad-96 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NormalRelease_DownloadingUpdate_" xml:space="preserve">
+    <value>Downloading update... {0} MB / {1} MB</value>
+  </data>
+  <data name="Utils_FoundGIgameDir__" xml:space="preserve">
+    <value>Found Genshin Impact game dir: {0} [{1}]</value>
+  </data>
+  <data name="Default_SomethingWentWrongWhileCheckingForNewUpdates" xml:space="preserve">
+    <value>Something went wrong while checking for new updates.
+
+{0}</value>
+  </data>
+  <data name="StellaResources_UpdateSize" xml:space="preserve">
+    <value>Update size: {0}</value>
+  </data>
+  <data name="bg_tools" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tools.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg_gameplay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tutorial3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NormalRelease_DeletedOldSetupFireFrom_" xml:space="preserve">
+    <value>Deleted od setup file from: {0}</value>
+  </data>
+  <data name="StellaResources_SuccessfullyUpdatedResources" xml:space="preserve">
+    <value>Successfully updated resources.</value>
+  </data>
+  <data name="NormalRelease_Waiting_" xml:space="preserve">
+    <value>Waiting {0}s...</value>
+  </data>
+  <data name="Program_SorryOneInstanceIsCurrentlyOpen_" xml:space="preserve">
+    <value>Sorry, one instance is currently open.
+
+Quit the process with name {0} and try again.</value>
+  </data>
+  <data name="cat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_20220810_133130-1-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Utils_RunOfficialLauncherForStellaModMadeBySefinek" xml:space="preserve">
+    <value>Run the official launcher for Genshin Impact Stella Mod made by Sefinek.</value>
+  </data>
+  <data name="WebView2Handler_OhhSorrySomethingWentWrongWithWV2" xml:space="preserve">
+    <value>Sorry. Something went wrong with WebView2.</value>
+  </data>
+  <data name="Default_ForSomeReasonYouDidNotGiveConsentForTheAutomaticUpdateOfTheReShadeFile" xml:space="preserve">
+    <value>For some reason, you did not give consent for the automatic update of the ReShade file. Please note that older versions of this file may not be compatible with newer versions of Stella Mod. I hope you know what you're doing.</value>
+  </data>
+  <data name="Default_TheSoundFileWithMusicWasNotFoundInTheLocalization_" xml:space="preserve">
+    <value>The sound file with music was not found in the location: '{0}'</value>
+  </data>
+  <data name="StellaResources_UnpackingFiles" xml:space="preserve">
+    <value>Unpacking files...</value>
+  </data>
+  <data name="Default_CurrentBackground" xml:space="preserve">
+    <value>Current background: {0}</value>
+    <comment>For toolTip1.SetToolTip</comment>
+  </data>
+  <data name="Default_PlayingSoundFile_" xml:space="preserve">
+    <value>Playing sound file: {0}</value>
+  </data>
+  <data name="RandomImages_GeneratingBeautifulPictures" xml:space="preserve">
+    <value>Generating beautiful pictures 😻</value>
+  </data>
+  <data name="Default_GameLauncherWasNotFoundIn" xml:space="preserve">
+    <value>Game launcher was not found in: {0}</value>
+  </data>
+  <data name="Tools_SpecialBackgroundWasNotFoundIn_ForToolsWindow" xml:space="preserve">
+    <value>Special background file was not found in '{0}' for Tools window.</value>
+  </data>
+  <data name="Main_Closed" xml:space="preserve">
+    <value>Closed.</value>
+  </data>
+  <data name="Default_GameLauncherWasNotFound" xml:space="preserve">
+    <value>Game launcher was not found.</value>
+  </data>
+  <data name="icons8_download-from-the-cloud" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-download-from-the-cloud-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tools_ReShadeLogFileWasNotFoundIn_" xml:space="preserve">
+    <value>ReShade log file was not found in:
+{0}</value>
+  </data>
+  <data name="NormalRelease_DownloadingNewUpdate_" xml:space="preserve">
+    <value>Downloading new update... {0} MB of {1} MB / {2} MB/s</value>
+  </data>
+  <data name="bg_links" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\links.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ReShadeIniUpdate_NewReShadeCfgIsAvailable_v_" xml:space="preserve">
+    <value>New ReShade config version is available: v{0} → v{1}</value>
+  </data>
+  <data name="icons8_tools" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-tools-65.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="party-popper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\party-popper_1f389.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NormalRelease_InstallANewVersionInTheWizard_ClosingLauncherIn_" xml:space="preserve">
+    <value>Install a new version in the wizard. Closing launcher in {0}s...</value>
+  </data>
+  <data name="Utils_FolderWithGamePathDoesNotExists_DoYouWantToResetAllSMSettings" xml:space="preserve">
+    <value>Folder with game path does not exists:
+{0}
+
+Do you want to reconfigure Stella Mod in the configuration window?</value>
+  </data>
+  <data name="Discord_OfficialWebsite" xml:space="preserve">
+    <value>Official website</value>
+  </data>
+  <data name="uk_flag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\united-kingdom (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Program_DoYouWantToSendUsanonymousLogFiles" xml:space="preserve">
+    <value>Do you want to send us anonymous log files?</value>
+  </data>
+  <data name="Tools_YoureConnectedAs_.HiAndNiceToMeetYou.CheckYourDiscordActivity" xml:space="preserve">
+    <value>You are connected as {0}. Hi and nice to meet you! Check your activity on Discord.</value>
+  </data>
+  <data name="Default_TheUpdateOfReShadIniHasBeenCanceledByTheUser" xml:space="preserve">
+    <value>The update of ReShade.ini has been cancelled by the user.</value>
+  </data>
+  <data name="NormalRelease_UpdatingPleaseWait" xml:space="preserve">
+    <value>Updating. Please wait...</value>
+  </data>
+  <data name="Main_PleaseWait" xml:space="preserve">
+    <value>Please wait...</value>
+  </data>
+  <data name="Utils_OopsAnErrorOccurred" xml:space="preserve">
+    <value>Oops, an error occurred</value>
+  </data>
+  <data name="Utils_FoundMainGIDir" xml:space="preserve">
+    <value>Found main Genshin Impact dir: {0} [{1}]</value>
+  </data>
+  <data name="NormalRelease_NewReleaseIsAvailableDownloadNow" xml:space="preserve">
+    <value>New release is available. Download now!</value>
+  </data>
+  <data name="ReShadeIniUpdate_FileSize_KB" xml:space="preserve">
+    <value>File size: {0} KB</value>
+  </data>
+  <data name="Log_ForSomeReasonICannotSaveTheActionInfoInTheLogFile" xml:space="preserve">
+    <value>For some reason, I cannot save the action information in the log file.</value>
+  </data>
+  <data name="Gallery_BrowsingTheGallery" xml:space="preserve">
+    <value>Browsing the gallery 📷</value>
+  </data>
+  <data name="icons8_shortcut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-shortcut-58.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Default_ChangedTheLauncherBackground_ID" xml:space="preserve">
+    <value>Changed the launcher background. ID: {0}</value>
+    <comment>Used for Log.Output</comment>
+  </data>
+  <data name="Tools_WrongEnableMusicValueInTheIniFile" xml:space="preserve">
+    <value>Wrong EnableMusic value in the ini file.</value>
+  </data>
+  <data name="Default_ClickStartGameButtonToInjectReShadeFPSUnlockAnd3DMigoto" xml:space="preserve">
+    <value>Click „Start game” button to inject ReShade, FPS Unlock and 3DMigoto.</value>
+  </data>
+  <data name="Discord_OnError" xml:space="preserve">
+    <value>Discord RPC: An error occurred during the transmission of a message.</value>
+  </data>
+  <data name="Default_DownloadedReShadeIniWasNotFoundIn_" xml:space="preserve">
+    <value>Downloaded ReShade.ini was not found in: {0}</value>
+  </data>
+  <data name="Main_LoadedForm_" xml:space="preserve">
+    <value>Loaded form {0}.</value>
+    <comment>Used for Log.Output</comment>
+  </data>
+  <data name="StellaResources_SuccessfullyUnpacked" xml:space="preserve">
+    <value>Successfully unpacked: {0}</value>
+  </data>
+  <data name="Default_BackgroundFileWasNotFoundIn_.ID" xml:space="preserve">
+    <value>Background file was not found in '{0}'; ID: {1};</value>
+  </data>
+  <data name="NormalRelease_Starting" xml:space="preserve">
+    <value>Starting...</value>
+  </data>
+  <data name="NormalRelease_NewVersionFrom_IsAvailable" xml:space="preserve">
+    <value>New version from {0} is available.</value>
+  </data>
+  <data name="Program_RequiredFileFisrtAppLaunchExeWasNotFound_" xml:space="preserve">
+    <value>Required file 'First app launch.exe' was not found. Please reinstall this app or join our Discord server for help.</value>
+  </data>
+  <data name="Program_QuestionMessageBox_DoYouWantToJoinOurDiscord_" xml:space="preserve">
+    <value>Question (MessageBox): Do you want to join our Discord server? Selected: {0}</value>
+  </data>
+  <data name="Tools_ReShadeConfigFileWasNotFoundIn_" xml:space="preserve">
+    <value>ReShade config file was not found in:
+{0}</value>
+  </data>
+  <data name="Utils_FoundGILauncherIn_" xml:space="preserve">
+    <value>Found Genshin Impact Launcher in: {0}</value>
+  </data>
+  <data name="RandomImages_Source" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="Cmd_FailedToUpdate" xml:space="preserve">
+    <value>Failed to update. The software was denied access to a location, preventing it from saving, copying, opening or loading files.</value>
+  </data>
+  <data name="Telemetry_ThisFeatureDoesntDoAnything" xml:space="preserve">
+    <value>This feature doesn't do anything in this release because it hasn't been created yet!</value>
+  </data>
+  <data name="Discord_OnPresenceUpdate" xml:space="preserve">
+    <value>Discord RPC: Presence has been updated.</value>
+  </data>
+  <data name="RandomImages_ErrorWithTheAPI" xml:space="preserve">
+    <value>Error with the API: {0}
+
+{1}</value>
+  </data>
+  <data name="Default_FileWasNotFound" xml:space="preserve">
+    <value>File was not found.</value>
+  </data>
+  <data name="NormalRelease_ClosingLauncherIn_" xml:space="preserve">
+    <value>Closing launcher in {0}s...</value>
+  </data>
+  <data name="Discord_OnReady" xml:space="preserve">
+    <value>Discord RPC: Connected to Discord with user {0}.</value>
+  </data>
+  <data name="Telemetry_LogFilesWasSentToDeveloper" xml:space="preserve">
+    <value>Log files was sent to developer.</value>
+  </data>
+  <data name="Tools_DisableDiscordRPC" xml:space="preserve">
+    <value>Disable Discord RPC</value>
+  </data>
+  <data name="Default_DownloadingConfigFileForFPSUnlocker" xml:space="preserve">
+    <value>Downloading config file for FPS Unlocker...</value>
+  </data>
+  <data name="Program_WouldYouShareOpinionAboutStellaMod" xml:space="preserve">
+    <value>Would you share your opinion about Stella Mod on trustpilot.com? I would be very grateful.</value>
+  </data>
+  <data name="Tools_EnableDiscordRPC" xml:space="preserve">
+    <value>Enable Discord RPC</value>
   </data>
   <data name="Program_ARequestToStartTheProgramHasBeenReceived" xml:space="preserve">
     <value>A request to start the program has been received.
@@ -418,197 +558,103 @@ Would you like to download this file now to prevent future errors and manual con
 * FPS Unlocker config path: {5}
 * Directory for patrons: {6}</value>
   </data>
-  <data name="Main_Closed" xml:space="preserve">
-    <value>Closed.</value>
+  <data name="flaticon_donation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\donation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Main_ClosingForm_" xml:space="preserve">
-    <value>Closing form {0}...</value>
+  <data name="NormalRelease_PreparingToDownloadNewUpdate" xml:space="preserve">
+    <value>Preparing to download new update...</value>
   </data>
-  <data name="Program_DoYouWantToJoinOurDiscord" xml:space="preserve">
-    <value>Do you want to join our Discord server?</value>
+  <data name="new-release" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\352967288013211.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Program_DoYouWantToSendUsanonymousLogFiles" xml:space="preserve">
-    <value>Do you want to send us anonymous log files?</value>
+  <data name="Default_DeletedOldSetupFromTempDirectory" xml:space="preserve">
+    <value>Deleted old setup file from temp directory.</value>
   </data>
-  <data name="Program_IfYouWishToSendLogsToTheDeveloperPleaseSendThemToMeOnDiscord" xml:space="preserve">
-    <value>If you wish to send logs to the developer, please send them to me on Discord: Sefinek#2714. API communication is not yet available for the Stella Launcher.
-
-Do you want to see these files?</value>
+  <data name="NormalRelease_Preparing_IfProcessIsStuckReopenLauncher" xml:space="preserve">
+    <value>Preparing... If process is stuck, reopen launcher.</value>
   </data>
-  <data name="Program_QuestionMessageBox_DoYouWantToSendUsanonymousLogFiles_" xml:space="preserve">
-    <value>Question (MessageBox): Do you want to send log files? Selected: {0}</value>
+  <data name="MajorRelease_NewMajorVersionFrom_IsAvailable_v_" xml:space="preserve">
+    <value>New major version from {0} is available: v{1} → v{2}</value>
   </data>
-  <data name="Program_QuestionMessageBox_DoYouWantToJoinOurDiscord_" xml:space="preserve">
-    <value>Question (MessageBox): Do you want to join our Discord server? Selected: {0}</value>
+  <data name="Links_DRPC_OnTheWindowWithLinks" xml:space="preserve">
+    <value>On the window with links 🌍</value>
   </data>
-  <data name="Program_RequiredFileFisrtAppLaunchExeWasNotFound_" xml:space="preserve">
-    <value>Required file 'First app launch.exe' was not found. Please reinstall this app or join our Discord server for help.</value>
+  <data name="Log_ForSomeReasonICantSaveTheErrorInfoInTheLogFile" xml:space="preserve">
+    <value>For some reason, I can't save the error information in the log file.</value>
   </data>
-  <data name="Program_SorryOneInstanceIsCurrentlyOpen_" xml:space="preserve">
-    <value>Sorry, one instance is currently open.
-
-Quit the process with name {0} and try again.</value>
+  <data name="StellaResources_UnpackingFiles_Log" xml:space="preserve">
+    <value>Unpacking files... {0} from {1}; totalBytes: {2}; totalBytesToExtract: {3};</value>
   </data>
-  <data name="Program_OneInstanceIsCurrentlyOpen" xml:space="preserve">
-    <value>One instance is currently open.</value>
+  <data name="icons8_gear" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-gear-94.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RandomImages_AnimeName" xml:space="preserve">
-    <value>Anime name</value>
+  <data name="Default_SuccessfullyDownloadedReShadeIniAndSavedIn" xml:space="preserve">
+    <value>Successfully downloaded ReShade.ini and saved in: {0}</value>
+    <comment>Used for Log.Output</comment>
   </data>
-  <data name="RandomImages_ErrorWithTheAPI" xml:space="preserve">
-    <value>Error with the API: {0}
-
-{1}</value>
+  <data name="NormalRelease_EverythingIsOkay_StartingSetup" xml:space="preserve">
+    <value>Everything is okay! Starting setup...</value>
   </data>
-  <data name="RandomImages_GeneratingBeautifulPictures" xml:space="preserve">
-    <value>Generating beautiful pictures 😻</value>
+  <data name="ReShadeIniUpdate_ReShadeIniWasNotFoundIn_" xml:space="preserve">
+    <value>ReShade.ini was not found in: {0}</value>
   </data>
-  <data name="RandomImages_OpenImageInDefaultBrowser" xml:space="preserve">
-    <value>Open image in default browser</value>
-  </data>
-  <data name="RandomImages_ReceivedDataFrom" xml:space="preserve">
-    <value>Received data from {0}</value>
-  </data>
-  <data name="RandomImages_Source" xml:space="preserve">
-    <value>Source</value>
-  </data>
-  <data name="Gallery_BrowsingTheGallery" xml:space="preserve">
-    <value>Browsing the gallery 📷</value>
-  </data>
-  <data name="Gallery_ExitedTheGallery" xml:space="preserve">
-    <value>Exited the gallery 🦊</value>
-  </data>
-  <data name="Main_ClickedNoInForm_" xml:space="preserve">
-    <value>Clicked No in form '{0}'.</value>
-  </data>
-  <data name="Main_ClickedYesInForm_" xml:space="preserve">
-    <value>Clicked Yes in form '{0}'.</value>
-  </data>
-  <data name="SupportMe_Thanks" xml:space="preserve">
-    <value>Thanks :3</value>
-  </data>
-  <data name="Utils_AnErrorOccurredWhileCreatingTheShortcut" xml:space="preserve">
-    <value>An error occurred while creating the shortcut.
-
-{0}</value>
-  </data>
-  <data name="Utils_DesktopShortcutHasBeenCreated" xml:space="preserve">
-    <value>Desktop shortcut has been created.</value>
-  </data>
-  <data name="Utils_FailedToOpen_InDefaultBrowser" xml:space="preserve">
-    <value>Failed to open '{0}' in default browser.
-
-{1}</value>
-  </data>
-  <data name="Utils_FileDoesNotExistsIn" xml:space="preserve">
-    <value>File does not exists in: {0} [{1}]</value>
-  </data>
-  <data name="Utils_FileDoesntNotExists_" xml:space="preserve">
-    <value>File does not exists.
-
-{0}</value>
-  </data>
-  <data name="Utils_FileWithGamePathWasNotFoundIn" xml:space="preserve">
-    <value>File with game path was not found in: {0}</value>
-  </data>
-  <data name="Utils_FileWithGamePathWasNotFoundIn_DoYouWantToResetAllSMSettings" xml:space="preserve">
-    <value>File with game path was not found in:
-{0}
-
-Do you want to reconfigure Stella Mod in the configuration window?</value>
-  </data>
-  <data name="Utils_File_DoesntNotExists" xml:space="preserve">
-    <value>File {0} does not exists.</value>
-  </data>
-  <data name="Utils_File_WasFoundAt_" xml:space="preserve">
-    <value>File '{0}' was found at '{1}'.</value>
-  </data>
-  <data name="Utils_File_WasNotFoundAt_" xml:space="preserve">
-    <value>File '{0}' was not found at '{1}'.</value>
-  </data>
-  <data name="Utils_FolderWithGamePathDoesNotExists_DoYouWantToResetAllSMSettings" xml:space="preserve">
-    <value>Folder with game path does not exists:
-{0}
-
-Do you want to reconfigure Stella Mod in the configuration window?</value>
-  </data>
-  <data name="Utils_FoundGiExe" xml:space="preserve">
-    <value>Found Genshin Impact Exe in: {0} [{1}]</value>
-  </data>
-  <data name="Utils_FoundGIgameDir__" xml:space="preserve">
-    <value>Found Genshin Impact game dir: {0} [{1}]</value>
-  </data>
-  <data name="Utils_FoundGILauncherIn_" xml:space="preserve">
-    <value>Found Genshin Impact Launcher in: {0}</value>
-  </data>
-  <data name="Utils_FoundMainGIDir" xml:space="preserve">
-    <value>Found main Genshin Impact dir: {0} [{1}]</value>
+  <data name="Tools_BrowsingUtils" xml:space="preserve">
+    <value>Browsing utils 🔧</value>
   </data>
   <data name="Utils_LauncherFileDoesNotExists" xml:space="preserve">
     <value>Launcher file does not exists.
 
 {0}</value>
   </data>
-  <data name="Utils_LauncherFileDoesNotExistsIn_" xml:space="preserve">
-    <value>Launcher file does not exists in: {0} [{1}]</value>
+  <data name="NormalRelease_SomethingWentWrong" xml:space="preserve">
+    <value>Something went wrong???</value>
+  </data>
+  <data name="Utils_File_WasNotFoundAt_" xml:space="preserve">
+    <value>File '{0}' was not found at '{1}'.</value>
   </data>
   <data name="Utils_Opened_InDefaultBrowser" xml:space="preserve">
     <value>Opened '{0}' in default browser.</value>
-  </data>
-  <data name="Utils_RunOfficialLauncherForStellaModMadeBySefinek" xml:space="preserve">
-    <value>Run the official launcher for Genshin Impact Stella Mod made by Sefinek.</value>
-  </data>
-  <data name="Utils_URLIsNullOrEmpty" xml:space="preserve">
-    <value>URL is null or empty.</value>
-  </data>
-  <data name="Utils_WrongParameter" xml:space="preserve">
-    <value>Wrong parameter.</value>
-  </data>
-  <data name="WebView2Handler_ChooseEvergreenStandaloneInstaller" xml:space="preserve">
-    <value>Select Evergreen Standalone Installer.</value>
-  </data>
-  <data name="WebView2Handler_DoYouWantToDownloadThisDependencyFromMStore" xml:space="preserve">
-    <value>{0}
-
-Do you want to download this dependency from Microsoft website?</value>
-  </data>
-  <data name="WebView2Handler_OhhSorrySomethingWentWrongWithWV2" xml:space="preserve">
-    <value>Sorry. Something went wrong with WebView2.</value>
-  </data>
-  <data name="Cmd_CommandExecutionFailed" xml:space="preserve">
-    <value>CliWrap: Command execution failed. An update is required.</value>
-  </data>
-  <data name="Cmd_CommandExecutionFailedBeacuseTheUnderlyingProcessReturnedANonZeroExitCode" xml:space="preserve">
-    <value>Command execution failed because the underlying process ({0}) returned a non-zero exit code - {1}.
-
-{2}</value>
-  </data>
-  <data name="Cmd_Error" xml:space="preserve">
-    <value>Error</value>
-  </data>
-  <data name="Cmd_ExecutedCommand" xml:space="preserve">
-    <value>Executed command</value>
-  </data>
-  <data name="Cmd_ExitCode" xml:space="preserve">
-    <value>Exit code</value>
-  </data>
-  <data name="Cmd_FailedToUpdate" xml:space="preserve">
-    <value>Failed to update. The software was denied access to a location, preventing it from saving, copying, opening or loading files.</value>
-  </data>
-  <data name="Cmd_RebootIsRequired" xml:space="preserve">
-    <value>Reboot is required</value>
-  </data>
-  <data name="Cmd_RestartYourComputerOrSuspendAntivirusProgramAndTryAgain" xml:space="preserve">
-    <value>Restart your computer or suspend antivirus program and try again.</value>
-  </data>
-  <data name="Cmd_SuccessfullyExecutedCommand" xml:space="preserve">
-    <value>CliWrap: Successfully executed {0}; Exit code: {1}; Start time: {2}; Exit time: {3}{4}{5};</value>
   </data>
   <data name="Cmd_TheRequestOperationWasSuccessfulButYourPCNeedsToBeRebooted" xml:space="preserve">
     <value>The requested operation was successful, but your computer needs to be restarted.</value>
   </data>
   <data name="Cmd_TheRequiredDependencyHasBeenSuccessfullyInstalledButyourComputerNeedsToBeRestart" xml:space="preserve">
     <value>The required dependency has been successfully installed, but your computer needs to be restarted.</value>
+  </data>
+  <data name="Utils_File_WasFoundAt_" xml:space="preserve">
+    <value>File '{0}' was found at '{1}'.</value>
+  </data>
+  <data name="StellaResources_NewResourcesUpdateIsAvailable" xml:space="preserve">
+    <value>New update of the resources is available from {0}.</value>
+  </data>
+  <data name="Utils_FailedToOpen_InDefaultBrowser" xml:space="preserve">
+    <value>Failed to open '{0}' in default browser.
+
+{1}</value>
+  </data>
+  <data name="NormalRelease_NewReleaseFrom_IsAvailable_v_" xml:space="preserve">
+    <value>New release from {0} is available: v{1} → v{2}</value>
+  </data>
+  <data name="NormalRelease_ClickHereToUpdate" xml:space="preserve">
+    <value>Click here to update</value>
+  </data>
+  <data name="Default_Directory_WasNotFound" xml:space="preserve">
+    <value>[x] Directory {0} was not found.</value>
+  </data>
+  <data name="Default_TheSoundFileWithMusicWasNotFound" xml:space="preserve">
+    <value>The sound file with music was not found.</value>
+  </data>
+  <data name="StellaResources_DownloadingResources" xml:space="preserve">
+    <value>Downloading resources... {0} MB / {1} MB</value>
+  </data>
+  <data name="Utils_File_DoesntNotExists" xml:space="preserve">
+    <value>File {0} does not exists.</value>
+  </data>
+  <data name="Default_ClickStartGameButtonToInjectReShadeAndUseFPSUnlock" xml:space="preserve">
+    <value>Click „Start game” button to inject ReShade and use FPS Unlock.</value>
+  </data>
+  <data name="ReShadeIniUpdate_UpdateSize_KB" xml:space="preserve">
+    <value>[i] Update size: {0} KB</value>
   </data>
   <data name="Cmd_UpdateIsRequired" xml:space="preserve">
     <value>An update is required.
@@ -617,233 +663,190 @@ We apologize for any inconvenience caused, but it is necessary to install every 
 
 If, for any reason, you are unable to update Stella Mod through the Launcher, please uninstall the current version and install the new one from the official website source.</value>
   </data>
-  <data name="Cmd_WorkingDirectory" xml:space="preserve">
-    <value>Working directory</value>
+  <data name="Main_ClosedForm_" xml:space="preserve">
+    <value>Closed form {0}.</value>
+    <comment>Used for Log.Output</comment>
+  </data>
+  <data name="StellaResources_UnpackingFiles_From_" xml:space="preserve">
+    <value>Unpacking files... {0} from {1}</value>
+  </data>
+  <data name="poland_flag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\poland (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flaticon_redo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\redo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Default_CanceledByTheUser_AreYouSureOfWhatYoureDoing" xml:space="preserve">
+    <value>Canceled by the user. Are you sure of what you're doing?</value>
+  </data>
+  <data name="ReShadeIniUpdate_FileReShadeIniWasNotFoundInYourGameDir" xml:space="preserve">
+    <value>File ReShade.ini was not found in your game directory.</value>
+  </data>
+  <data name="NormalRelease_Output_" xml:space="preserve">
+    <value>Output: {0}</value>
+  </data>
+  <data name="Default_GenshinStellaModForPatrons" xml:space="preserve">
+    <value>Genshin Stella Mod for Patrons</value>
+  </data>
+  <data name="Tools_MuteMusicOnStart" xml:space="preserve">
+    <value>Mute music on start</value>
+  </data>
+  <data name="ReShadeIniUpdate_NewReShadeConfigVersionIsAvailable" xml:space="preserve">
+    <value>New ReShade config version is available. Update is required.</value>
+  </data>
+  <data name="Discord_OnConnectionEstablished" xml:space="preserve">
+    <value>Discord RPC: Connection successfully.</value>
+  </data>
+  <data name="MajorRelease_MajorVersionIsAvailable" xml:space="preserve">
+    <value>Major version is available</value>
+  </data>
+  <data name="NormalRelease_WeFoundNewUpdates" xml:space="preserve">
+    <value>We found new updates</value>
+  </data>
+  <data name="Program_QuestionMessageBox_DoYouWantToSendUsanonymousLogFiles_" xml:space="preserve">
+    <value>Question (MessageBox): Do you want to send log files? Selected: {0}</value>
+  </data>
+  <data name="NormalRelease_DownloadingInProgress" xml:space="preserve">
+    <value>Downloading in progress...</value>
+  </data>
+  <data name="icons8_recycle-bin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-recycle-bin-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RandomImages_ReceivedDataFrom" xml:space="preserve">
+    <value>Received data from {0}</value>
+  </data>
+  <data name="Utils_FileWithGamePathWasNotFoundIn_DoYouWantToResetAllSMSettings" xml:space="preserve">
+    <value>File with game path was not found in:
+{0}
+
+Do you want to reconfigure Stella Mod in the configuration window?</value>
+  </data>
+  <data name="Cmd_ExecutedCommand" xml:space="preserve">
+    <value>Executed command</value>
+  </data>
+  <data name="Default_TheReShadeIniFileCouldNotBeLocatedInYourGameFiles" xml:space="preserve">
+    <value>The ReShade.ini file could not be located in your game files, or it may not be compatible with the current version.
+
+Would you like to download this file now to prevent future errors and manual configuration? Recommended.</value>
+  </data>
+  <data name="Cmd_Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Discord_RPCWasNotUpdated" xml:space="preserve">
+    <value>Discord Rich Presence was not updated. Data: {0}; IsReady: {1}</value>
+  </data>
+  <data name="icons8_support" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-support-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Default_Done" xml:space="preserve">
+    <value>Done.</value>
+  </data>
+  <data name="Tools_AreYouSureToRunStellaConfigurationWindowAgain" xml:space="preserve">
+    <value>Are you sure to run Stella Configuration Window again?</value>
+  </data>
+  <data name="WebView2Handler_DoYouWantToDownloadThisDependencyFromMStore" xml:space="preserve">
+    <value>{0}
+
+Do you want to download this dependency from Microsoft website?</value>
+  </data>
+  <data name="Utils_FileDoesNotExistsIn" xml:space="preserve">
+    <value>File does not exists in: {0} [{1}]</value>
   </data>
   <data name="Cmd__AppInstalled" xml:space="preserve">
     <value>CliWrap: {0} installed. Exit code: {1}
 
 The requested operation is successful. Changes will not be effective until the system is rebooted.</value>
   </data>
-  <data name="Default_Done" xml:space="preserve">
-    <value>Done.</value>
+  <data name="Default_Downloading" xml:space="preserve">
+    <value>Downloading...</value>
   </data>
-  <data name="Discord_Desc" xml:space="preserve">
-    <value>The best mod for Genshin Impact with ReShade, custom graphics presets, FPS unlock, custom launcher, and more!</value>
+  <data name="RandomImages_OpenImageInDefaultBrowser" xml:space="preserve">
+    <value>Open image in default browser</value>
+  </data>
+  <data name="bg_main" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\main.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Default_SuccessfullyDownloadedReShadeIni" xml:space="preserve">
+    <value>Successfully downloaded ReShade.ini!</value>
+  </data>
+  <data name="icons8_edit-property" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-edit-property-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Default_OhhSomethingWentWrong" xml:space="preserve">
+    <value>Ohh, something went wrong</value>
   </data>
   <data name="Discord_DiscordServer" xml:space="preserve">
     <value>Discord server</value>
   </data>
-  <data name="Discord_InTheMainWindow" xml:space="preserve">
-    <value>In the main window</value>
+  <data name="ReShadeIniUpdate_GamePathWasNotFoundOnYourPC" xml:space="preserve">
+    <value>Game path was not found on your PC.</value>
   </data>
-  <data name="Discord_OfficialWebsite" xml:space="preserve">
-    <value>Official website</value>
+  <data name="Utils_URLIsNullOrEmpty" xml:space="preserve">
+    <value>URL is null or empty.</value>
   </data>
-  <data name="Discord_OnClose" xml:space="preserve">
-    <value>Discord RPC: Closed.</value>
+  <data name="paimon-gif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\775295135108825088.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Discord_OnConnectionEstablished" xml:space="preserve">
-    <value>Discord RPC: Connection successfully.</value>
+  <data name="Default_FileDownloadHasBeenCanceledByTheUser" xml:space="preserve">
+    <value>File download has been canceled by the user.</value>
+    <comment>Used for Log.Output</comment>
   </data>
-  <data name="Discord_OnError" xml:space="preserve">
-    <value>Discord RPC: An error occurred during the transmission of a message.</value>
+  <data name="Default_DeletedOldSetupFromTempFolder" xml:space="preserve">
+    <value>Deleted old setup file from temp folder: {0}</value>
   </data>
-  <data name="Discord_OnPresenceUpdate" xml:space="preserve">
-    <value>Discord RPC: Presence has been updated.</value>
+  <data name="Default_ItAppersThatIsYourFirstTimeLaunchingTheLauncher" xml:space="preserve">
+    <value>It appears that you are launching the launcher for the first time! Take a moment to review the terms of use on the GitHub Wiki and other guidelines for this modification to avoid any unexpected issues.
+
+REMEMBER NOT TO SHARE YOUR UID WITH VISIBLE GAME SHADERS WITH ANYONE!</value>
   </data>
-  <data name="Discord_OnReady" xml:space="preserve">
-    <value>Discord RPC: Connected to Discord with user {0}.</value>
+  <data name="Tools_UnmuteMusicOnStart" xml:space="preserve">
+    <value>Unmute music on start</value>
   </data>
-  <data name="Discord_OnUnsubscribe" xml:space="preserve">
-    <value>Discord RPC: Unsubscribed.</value>
+  <data name="Utils_FileWithGamePathWasNotFoundIn" xml:space="preserve">
+    <value>File with game path was not found in: {0}</value>
   </data>
-  <data name="Discord_RPCWasNotUpdated" xml:space="preserve">
-    <value>Discord Rich Presence was not updated. Data: {0}; IsReady: {1}</value>
+  <data name="icons8_youtube" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-youtube-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Discord_Version_" xml:space="preserve">
-    <value>Version: {0}</value>
+  <data name="Cmd_ExitCode" xml:space="preserve">
+    <value>Exit code</value>
   </data>
-  <data name="Log_ForSomeReasonICannotSaveTheActionInfoInTheLogFile" xml:space="preserve">
-    <value>For some reason, I cannot save the action information in the log file.</value>
+  <data name="Default_YouHaveTheLatestVersion" xml:space="preserve">
+    <value>You have the latest version</value>
   </data>
-  <data name="Log_ForSomeReasonICantSaveTheErrorInfoInTheLogFile" xml:space="preserve">
-    <value>For some reason, I can't save the error information in the log file.</value>
-  </data>
-  <data name="Log_SomethingWentWrong" xml:space="preserve">
-    <value>Something went wrong</value>
-  </data>
-  <data name="MajorRelease_MajorVersionIsAvailable" xml:space="preserve">
-    <value>Major version is available</value>
-  </data>
-  <data name="MajorRelease_NewMajorVersionFrom_IsAvailable_v_" xml:space="preserve">
-    <value>New major version from {0} is available: v{1} → v{2}</value>
-  </data>
-  <data name="NormalRelease_ClickHereToUpdate" xml:space="preserve">
-    <value>Click here to update</value>
-  </data>
-  <data name="NormalRelease_Closing" xml:space="preserve">
-    <value>Closing...</value>
-  </data>
-  <data name="NormalRelease_ClosingLauncherIn_" xml:space="preserve">
-    <value>Closing launcher in {0}s...</value>
-  </data>
-  <data name="NormalRelease_DeletedOldSetupFileFromTempDir" xml:space="preserve">
-    <value>Deleted old setup file from temp directory.</value>
-  </data>
-  <data name="NormalRelease_DeletedOldSetupFireFrom_" xml:space="preserve">
-    <value>Deleted od setup file from: {0}</value>
-  </data>
-  <data name="NormalRelease_DownloadingInProgress" xml:space="preserve">
-    <value>Downloading in progress...</value>
-  </data>
-  <data name="NormalRelease_DownloadingNewUpdate_" xml:space="preserve">
-    <value>Downloading new update... {0} MB of {1} MB / {2} MB/s</value>
-  </data>
-  <data name="NormalRelease_DownloadingUpdate_" xml:space="preserve">
-    <value>Downloading update... {0} MB / {1} MB</value>
-  </data>
-  <data name="NormalRelease_EverythingIsOkay_StartingSetup" xml:space="preserve">
-    <value>Everything is okay! Starting setup...</value>
-  </data>
-  <data name="NormalRelease_InstallANewVersionInTheWizard_ClosingLauncherIn_" xml:space="preserve">
-    <value>Install a new version in the wizard. Closing launcher in {0}s...</value>
-  </data>
-  <data name="NormalRelease_JustAMoment_PleaseWait" xml:space="preserve">
-    <value>Just a moment. Please wait {0}s...</value>
-  </data>
-  <data name="NormalRelease_NewReleaseFrom_IsAvailable_v_" xml:space="preserve">
-    <value>New release from {0} is available: v{1} → v{2}</value>
-  </data>
-  <data name="NormalRelease_NewReleaseIsAvailableDownloadNow" xml:space="preserve">
-    <value>New release is available. Download now!</value>
-  </data>
-  <data name="NormalRelease_NewVersionFrom_IsAvailable" xml:space="preserve">
-    <value>New version from {0} is available.</value>
-  </data>
-  <data name="NormalRelease_Output_" xml:space="preserve">
-    <value>Output: {0}</value>
-  </data>
-  <data name="NormalRelease_PreparingToDownloadNewUpdate" xml:space="preserve">
-    <value>Preparing to download new update...</value>
-  </data>
-  <data name="NormalRelease_Preparing_IfProcessIsStuckReopenLauncher" xml:space="preserve">
-    <value>Preparing... If process is stuck, reopen launcher.</value>
-  </data>
-  <data name="NormalRelease_SomethingWentWrong" xml:space="preserve">
-    <value>Something went wrong???</value>
-  </data>
-  <data name="NormalRelease_Starting" xml:space="preserve">
-    <value>Starting...</value>
-  </data>
-  <data name="NormalRelease_UpdateSize" xml:space="preserve">
-    <value>Update size: {0} MB</value>
-  </data>
-  <data name="NormalRelease_UpdatingPleaseWait" xml:space="preserve">
-    <value>Updating. Please wait...</value>
-  </data>
-  <data name="NormalRelease_Waiting_" xml:space="preserve">
-    <value>Waiting {0}s...</value>
-  </data>
-  <data name="NormalRelease_WeFoundNewUpdates" xml:space="preserve">
-    <value>We found new updates</value>
+  <data name="Utils_FileDoesntNotExists_" xml:space="preserve">
+    <value>File does not exists.
+
+{0}</value>
   </data>
   <data name="Os_FailedToRetrieveDeviceIdentifier" xml:space="preserve">
     <value>Failed to retrieve device identifier.</value>
   </data>
-  <data name="ReShadeIniUpdate_DownloadTheRequiredFile" xml:space="preserve">
-    <value>Download the required file</value>
+  <data name="WebView2Handler_ChooseEvergreenStandaloneInstaller" xml:space="preserve">
+    <value>Select Evergreen Standalone Installer.</value>
   </data>
-  <data name="ReShadeIniUpdate_FileReShadeIniWasNotFoundInYourGameDir" xml:space="preserve">
-    <value>File ReShade.ini was not found in your game directory.</value>
+  <data name="Main_ClickedNoInForm_" xml:space="preserve">
+    <value>Clicked No in form '{0}'.</value>
   </data>
-  <data name="ReShadeIniUpdate_FileSize_KB" xml:space="preserve">
-    <value>File size: {0} KB</value>
+  <data name="NormalRelease_UpdateSize" xml:space="preserve">
+    <value>Update size: {0} MB</value>
   </data>
-  <data name="ReShadeIniUpdate_GamePathWasNotFoundOnYourPC" xml:space="preserve">
-    <value>Game path was not found on your PC.</value>
+  <data name="Cmd_RestartYourComputerOrSuspendAntivirusProgramAndTryAgain" xml:space="preserve">
+    <value>Restart your computer or suspend antivirus program and try again.</value>
   </data>
-  <data name="ReShadeIniUpdate_NewReShadeCfgIsAvailable_v_" xml:space="preserve">
-    <value>New ReShade config version is available: v{0} → v{1}</value>
+  <data name="error" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\asdfasfa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ReShadeIniUpdate_NewReShadeConfigVersionIsAvailable" xml:space="preserve">
-    <value>New ReShade config version is available. Update is required.</value>
+  <data name="Discord_Version_" xml:space="preserve">
+    <value>Version: {0}</value>
   </data>
-  <data name="ReShadeIniUpdate_ReShadeIniWasNotFoundIn_" xml:space="preserve">
-    <value>ReShade.ini was not found in: {0}</value>
+  <data name="Cmd_RebootIsRequired" xml:space="preserve">
+    <value>Reboot is required</value>
   </data>
-  <data name="ReShadeIniUpdate_StellaConfigVersionIsNullInReShadeIni" xml:space="preserve">
-    <value>STELLA.ConfigVersion is null in ReShade.ini.</value>
+  <data name="Gallery_ExitedTheGallery" xml:space="preserve">
+    <value>Exited the gallery 🦊</value>
   </data>
-  <data name="ReShadeIniUpdate_TheVersionOfReShadeCfgWasNotFound" xml:space="preserve">
-    <value>The version of ReShade config was not found.</value>
-  </data>
-  <data name="ReShadeIniUpdate_UpdateReShadeCfg" xml:space="preserve">
-    <value>Update ReShade config</value>
-  </data>
-  <data name="ReShadeIniUpdate_UpdateSize_KB" xml:space="preserve">
-    <value>[i] Update size: {0} KB</value>
-  </data>
-  <data name="Telemetry_DeliveredTelemetryData" xml:space="preserve">
-    <value>Delivered telemetry data '{0}' [{1}].</value>
-  </data>
-  <data name="Telemetry_LogFilesWasSentToDeveloper" xml:space="preserve">
-    <value>Log files was sent to developer.</value>
-  </data>
-  <data name="Telemetry_ThisFeatureDoesntDoAnything" xml:space="preserve">
-    <value>This feature doesn't do anything in this release because it hasn't been created yet!</value>
-  </data>
-  <data name="Main_PleaseWait" xml:space="preserve">
-    <value>Please wait...</value>
-  </data>
-  <data name="Default_Directory_WasNotFound" xml:space="preserve">
-    <value>[x] Directory {0} was not found.</value>
-  </data>
-  <data name="StellaResources_DownloadingResources" xml:space="preserve">
-    <value>Downloading resources... {0} MB / {1} MB</value>
-  </data>
-  <data name="StellaResources_NewResourcesUpdateIsAvailable" xml:space="preserve">
-    <value>New update of the resources is available from {0}.</value>
-  </data>
-  <data name="StellaResources_SuccessfullyUnpacked" xml:space="preserve">
-    <value>Successfully unpacked: {0}</value>
-  </data>
-  <data name="StellaResources_SuccessfullyUpdatedResources" xml:space="preserve">
-    <value>Successfully updated resources.</value>
-  </data>
-  <data name="StellaResources_UnpackingFiles" xml:space="preserve">
-    <value>Unpacking files...</value>
-  </data>
-  <data name="StellaResources_UnpackingFiles_From_" xml:space="preserve">
-    <value>Unpacking files... {0} from {1}</value>
-  </data>
-  <data name="StellaResources_UnpackingFiles_Log" xml:space="preserve">
-    <value>Unpacking files... {0} from {1}; totalBytes: {2}; totalBytesToExtract: {3};</value>
-  </data>
-  <data name="StellaResources_UpdateSize" xml:space="preserve">
-    <value>Update size: {0}</value>
-  </data>
-  <data name="Program_WouldYouShareOpinionAboutStellaMod" xml:space="preserve">
-    <value>Would you share your opinion about Stella Mod on trustpilot.com? I would be very grateful.</value>
-  </data>
-  <data name="Program_QuestionMessageBox_WouldYouShareOpinionAboutStellaMod" xml:space="preserve">
-    <value>Question (MessageBox): Would you share your opinion about Stella Mod on trustpilot.com? I would be very grateful. Selected: {0}</value>
-  </data>
-  <data name="Tools_AreYouSureToRunStellaConfigurationWindowAgain" xml:space="preserve">
-    <value>Are you sure to run Stella Configuration Window again?</value>
-  </data>
-  <data name="Tools_TheShortcutHasBeenSuccessfullyCreated" xml:space="preserve">
-    <value>The shortcut has been successfully created.</value>
-  </data>
-  <data name="Default_GenshinStellaModForPatrons" xml:space="preserve">
-    <value>Genshin Stella Mod for Patrons</value>
-  </data>
-  <data name="Default_ThisFeatureIsAvailableOnlyForMyPatrons" xml:space="preserve">
-    <value>This feature is available only for my patrons.
-
-Would you like to visit Patreon.com and make subscribe? You will gain access to numerous benefits! You will also be able to enjoy ReShade, 3DMigoto, and FPS Unlocker simultaneously.</value>
-  </data>
-  <data name="Utils_OopsAnErrorOccurred" xml:space="preserve">
-    <value>Oops, an error occurred</value>
+  <data name="flaticon-open-folder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flaticon-open-folder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

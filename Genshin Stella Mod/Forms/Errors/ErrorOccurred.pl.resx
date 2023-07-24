@@ -135,7 +135,7 @@
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Proszę zgłaszać wszelkie błędy na moim serwerze Discord lub przez e-mail.
-Discord: Sefinek#2714 ┃ E-mail: contact@sefinek.net</value>
+Discord: {0} ┃ E-mail: {1}</value>
   </data>
   <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
     <value>339, 139</value>

@@ -1,10 +1,10 @@
 using System;
 using System.IO;
-using System.Media;
 using System.Windows.Forms;
 using CliWrap.Builders;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
+using StellaLauncher.Scripts.Forms.MainForm;
 
 namespace StellaLauncher.Forms.Errors
 {
@@ -15,10 +15,15 @@ namespace StellaLauncher.Forms.Errors
             InitializeComponent();
         }
 
+        private void ErrorOccurred_Load(object sender, EventArgs e)
+        {
+            label1.Text = string.Format(label1.Text, Data.Discord, Data.Email);
+
+            Music.PlaySound("winxp", "error");
+        }
+
         private void ErrorOccurred_Shown(object sender, EventArgs e)
         {
-            SystemSounds.Hand.Play();
-
             Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
         }
 
@@ -34,7 +39,7 @@ namespace StellaLauncher.Forms.Errors
 
         private void Reinstall_Button(object sender, EventArgs e)
         {
-            Utils.OpenUrl($"{Program.AppWebsiteFull}/download");
+            Utils.OpenUrl($"{Program.AppWebsiteFull}/download?referrer=error_occurred&hash=null");
         }
 
         private void Discord_Button(object sender, EventArgs e)
@@ -51,8 +56,8 @@ namespace StellaLauncher.Forms.Errors
                 Arguments = new ArgumentsBuilder()
                     .Add(Path.Combine(Program.AppPath, "data", "cmd", "scan_sys_files.cmd"))
                     .Add(Program.AppVersion)
-                    .Add("5.8.0")
-                    .Add("2.0.11")
+                    .Add(Data.ReShadeVer)
+                    .Add(Data.UnlockerVer)
             };
             await Cmd.Execute(command);
         }

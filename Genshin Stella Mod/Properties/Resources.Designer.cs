@@ -841,6 +841,16 @@ namespace StellaLauncher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap flaticon_open_folder {
+            get {
+                object obj = ResourceManager.GetObject("flaticon-open-folder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap flaticon_redo {
             get {
                 object obj = ResourceManager.GetObject("flaticon_redo", resourceCulture);

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
@@ -179,8 +179,18 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 
         public static async void CheckUpdates_Click(object sender, EventArgs e)
         {
+            Music.PlaySound("winxp", "hardware_insert");
             int update = await Analyze();
+
+            if (update == -1)
+            {
+                Music.PlaySound("winxp", "hardware_fail");
+                return;
+            }
+
             if (update != 0) return;
+
+            Music.PlaySound("winxp", "hardware_remove");
 
             Default._updates_LinkLabel.LinkColor = Color.LawnGreen;
             Default._updates_LinkLabel.Text = Resources.Default_YouHaveTheLatestVersion;

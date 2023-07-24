@@ -107,6 +107,7 @@ namespace StellaLauncher.Forms.Errors
             this.MaximizeBox = false;
             this.Name = "ErrorOccurred";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ErrorOccurred_FormClosed);
+            this.Load += new System.EventHandler(this.ErrorOccurred_Load);
             this.Shown += new System.EventHandler(this.ErrorOccurred_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
