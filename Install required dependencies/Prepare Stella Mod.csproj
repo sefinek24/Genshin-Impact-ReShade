@@ -60,17 +60,17 @@
     <Compile Include="Forms\Help.Designer.cs">
       <DependentUpon>Help.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SelectShadersPath.cs">
+    <Compile Include="Forms\Resources.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\SelectShadersPath.Designer.cs">
-      <DependentUpon>SelectShadersPath.cs</DependentUpon>
+    <Compile Include="Forms\Resources.Designer.cs">
+      <DependentUpon>Resources.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SelectGamePath.cs">
+    <Compile Include="Forms\GamePath.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\SelectGamePath.Designer.cs">
-      <DependentUpon>SelectGamePath.cs</DependentUpon>
+    <Compile Include="Forms\GamePath.Designer.cs">
+      <DependentUpon>GamePath.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Remote.cs" />
     <Compile Include="Program.cs" />
@@ -102,11 +102,11 @@
     <EmbeddedResource Include="Forms\Help.resx">
       <DependentUpon>Help.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SelectShadersPath.resx">
-      <DependentUpon>SelectShadersPath.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Resources.resx">
+      <DependentUpon>Resources.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SelectGamePath.resx">
-      <DependentUpon>SelectGamePath.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\GamePath.resx">
+      <DependentUpon>GamePath.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

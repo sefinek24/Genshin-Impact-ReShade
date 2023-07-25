@@ -96,8 +96,7 @@ namespace PrepareStella
                 }
                 else
                 {
-                    SelectGamePath form = new SelectGamePath(GameExeGlobal ?? $"{GameGenshinImpact}\n{GameYuanShen}") { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) };
-                    Application.Run(form);
+                   new GamePath(GameExeGlobal ?? $"{GameGenshinImpact}\n{GameYuanShen}") { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.ShowDialog();
                 }
 
                 if (selectedGameExe != null)
@@ -113,9 +112,9 @@ namespace PrepareStella
             {
                 string errorMessage = GameExeGlobal != null
                     ? $"File was not found: {GameExeGlobal}"
-                    : "Sorry. Full game path was not found.";
+                    : "Full game path was not found";
 
-                Log.ErrorAndExit(new Exception($"Unknown\n\n{errorMessage}\nPlease delete all Stella Mod files from AppData (%appdata%) folder."), false, false);
+                Log.ErrorAndExit(new Exception($"{errorMessage}\n\nYou must provide a specific location of the game in which it is installed.\nThis program will not modify ANY game files."), false, false);
             }
 
 
@@ -125,23 +124,24 @@ namespace PrepareStella
             Console.ResetColor();
 
             string resourcesPath = Path.Combine(AppData, "resources-path.sfn");
+            Resources selectResPath = new Resources { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) };
             if (File.Exists(resourcesPath))
             {
                 string sfnFileContent = File.ReadAllText(resourcesPath).Trim();
                 if (Directory.Exists(sfnFileContent))
                     ResourcesGlobal = sfnFileContent;
                 else
-                    Application.Run(new SelectShadersPath { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) });
+                    selectResPath.ShowDialog();
             }
             else
             {
-                Application.Run(new SelectShadersPath { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) });
+                selectResPath.ShowDialog();
             }
 
             if (ResourcesGlobal != null)
                 Console.WriteLine(ResourcesGlobal);
             else
-                Log.ErrorAndExit(new Exception("Unknown\n\nSorry. Directory with the resources was not found.\nPlease delete all Stella Mod files from AppData (%appdata%) folder."), false, false);
+                Log.ErrorAndExit(new Exception("Unknown\n\nSorry. Directory with the resources was not found.\nIn the resources directory, files such as your shaders, presets, screenshots, and custom mods are stored."), false, false);
 
 
             TaskbarManager.Instance.SetProgressValue(26, 100);

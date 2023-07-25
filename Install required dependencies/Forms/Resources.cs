@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace PrepareStella.Forms
 {
-    public partial class SelectShadersPath : Form
+    public partial class Resources : Form
     {
-        public SelectShadersPath()
+        public Resources()
         {
             InitializeComponent();
         }

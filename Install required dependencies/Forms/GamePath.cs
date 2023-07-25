@@ -6,11 +6,11 @@ using System.Windows.Forms;
 
 namespace PrepareStella.Forms
 {
-    public partial class SelectGamePath : Form
+    public partial class GamePath : Form
     {
         private readonly string _inputString;
 
-        public SelectGamePath(string inputString)
+        public GamePath(string inputString)
         {
             InitializeComponent();
             _inputString += inputString;
