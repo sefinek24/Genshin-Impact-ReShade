@@ -7,12 +7,12 @@
   IgnorableNamespaces="uap rescap">
 
   <Identity
-    Name="21936Sefinek.5891882F2AB07"
+    Name="21936Sefinek.110730C5FA09B"
     Publisher="CN=24508F31-E67A-4211-BCA6-40B385B08A8A"
-    Version="1.0.0.0" />
+    Version="7.6.1.0" />
 
   <Properties>
-    <DisplayName>Stella Mod Alpha</DisplayName>
+    <DisplayName>Stella Mod Launcher</DisplayName>
     <PublisherDisplayName>Sefinek</PublisherDisplayName>
     <Logo>Images\StoreLogo.png</Logo>
   </Properties>
@@ -31,8 +31,8 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="$targetentrypoint$">
       <uap:VisualElements
-        DisplayName="Stella Mod Launcher"
-        Description="Stella Mod Launcher"
+        DisplayName="Stella Mod Packaging Project"
+        Description="Stella Mod Launcher Packaging Project"
         BackgroundColor="transparent"
         Square150x150Logo="Images\Square150x150Logo.png"
         Square44x44Logo="Images\Square44x44Logo.png">

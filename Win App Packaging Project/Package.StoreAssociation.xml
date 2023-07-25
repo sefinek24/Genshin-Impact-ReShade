@@ -361,15 +361,16 @@
     <Language Code="zu-za" InMinimumRequirementSet="true" />
   </SupportedLocales>
   <ProductReservedInfo>
-    <MainPackageIdentityName>21936Sefinek.5891882F2AB07</MainPackageIdentityName>
+    <MainPackageIdentityName>21936Sefinek.110730C5FA09B</MainPackageIdentityName>
     <ReservedNames>
-      <ReservedName>Stella Mod Alpha</ReservedName>
+      <ReservedName>Stella Mod Launcher</ReservedName>
+      <ReservedName>Stella Mod Launcher Beta</ReservedName>
     </ReservedNames>
   </ProductReservedInfo>
   <AccountPackageIdentityNames>
     <MainPackageIdentityName>21936Sefinek.GuciowyTest</MainPackageIdentityName>
     <MainPackageIdentityName>21936Sefinek.RandomKittens</MainPackageIdentityName>
-    <MainPackageIdentityName>21936Sefinek.110730C5FA09B</MainPackageIdentityName>
+    <MainPackageIdentityName>21936Sefinek.5891882F2AB07</MainPackageIdentityName>
   </AccountPackageIdentityNames>
-  <PackageInfoList LandingUrl="https://developer.microsoft.com/dashboard/Application?appId=9P7TCRQW0RFS" />
+  <PackageInfoList LandingUrl="https://developer.microsoft.com/dashboard/Application?appId=9P370LM8SPDH" />
 </StoreAssociation>

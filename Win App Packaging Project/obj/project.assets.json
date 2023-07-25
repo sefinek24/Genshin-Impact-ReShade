@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "UAP,Version=v10.0.19041": {
+    "UAP,Version=v10.0.18362": {
       "ByteSize/2.1.1": {
         "type": "package",
         "compile": {
@@ -1386,7 +1386,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.19041/win10-arm": {
+    "UAP,Version=v10.0.18362/win10-arm": {
       "ByteSize/2.1.1": {
         "type": "package",
         "compile": {
@@ -2894,7 +2894,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.19041/win10-arm-aot": {
+    "UAP,Version=v10.0.18362/win10-arm-aot": {
       "ByteSize/2.1.1": {
         "type": "package",
         "compile": {
@@ -4506,7 +4506,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.19041/win10-arm64-aot": {
+    "UAP,Version=v10.0.18362/win10-arm64-aot": {
       "ByteSize/2.1.1": {
         "type": "package",
         "compile": {
@@ -6121,7 +6121,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.19041/win10-x64": {
+    "UAP,Version=v10.0.18362/win10-x64": {
       "ByteSize/2.1.1": {
         "type": "package",
         "compile": {
@@ -7632,7 +7632,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.19041/win10-x64-aot": {
+    "UAP,Version=v10.0.18362/win10-x64-aot": {
       "ByteSize/2.1.1": {
         "type": "package",
         "compile": {
@@ -9247,7 +9247,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.19041/win10-x86": {
+    "UAP,Version=v10.0.18362/win10-x86": {
       "ByteSize/2.1.1": {
         "type": "package",
         "compile": {
@@ -10758,7 +10758,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.19041/win10-x86-aot": {
+    "UAP,Version=v10.0.18362/win10-x86-aot": {
       "ByteSize/2.1.1": {
         "type": "package",
         "compile": {
@@ -16842,7 +16842,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "UAP,Version=v10.0.19041": [
+    "UAP,Version=v10.0.18362": [
       "Configuration window >= 1.0.0",
       "Genshin Stella Mod >= 1.0.0",
       "Microsoft.Windows.SDK.BuildTools >= 10.0.22621.756",
@@ -16878,7 +16878,7 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "uap10.0.19041": {
+        "uap10.0.18362": {
           "targetAlias": "net451",
           "projectReferences": {
             "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\First app launch\\Configuration window.csproj": {
@@ -16900,7 +16900,7 @@
       }
     },
     "frameworks": {
-      "uap10.0.19041": {
+      "uap10.0.18362": {
         "targetAlias": "net451",
         "dependencies": {
           "Microsoft.Windows.SDK.BuildTools": {
@@ -16955,30 +16955,30 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'NAudio 2.1.0' was restored using '.NETCoreApp,Version=v3.1, .NETCoreApp,Version=v3.0, .NETCoreApp,Version=v2.0, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, net7.0-windows10.0.22621, .NETFramework,Version=v4.6.1' instead of the project target framework 'UAP,Version=v10.0.19041'. This package may not be fully compatible with your project.",
+      "message": "Package 'NAudio 2.1.0' was restored using '.NETCoreApp,Version=v3.1, .NETCoreApp,Version=v3.0, .NETCoreApp,Version=v2.0, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, net7.0-windows10.0.22621, .NETFramework,Version=v4.6.1' instead of the project target framework 'UAP,Version=v10.0.18362'. This package may not be fully compatible with your project.",
       "libraryId": "NAudio",
       "targetGraphs": [
-        "UAP,Version=v10.0.19041"
+        "UAP,Version=v10.0.18362"
       ]
     },
     {
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'NAudio.WinForms 2.1.0' was restored using '.NETCoreApp,Version=v3.1, .NETCoreApp,Version=v3.0, .NETCoreApp,Version=v2.0, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, net7.0-windows10.0.22621, .NETFramework,Version=v4.6.1' instead of the project target framework 'UAP,Version=v10.0.19041'. This package may not be fully compatible with your project.",
+      "message": "Package 'NAudio.WinForms 2.1.0' was restored using '.NETCoreApp,Version=v3.1, .NETCoreApp,Version=v3.0, .NETCoreApp,Version=v2.0, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, net7.0-windows10.0.22621, .NETFramework,Version=v4.6.1' instead of the project target framework 'UAP,Version=v10.0.18362'. This package may not be fully compatible with your project.",
       "libraryId": "NAudio.WinForms",
       "targetGraphs": [
-        "UAP,Version=v10.0.19041"
+        "UAP,Version=v10.0.18362"
       ]
     },
     {
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'WindowsAPICodePack 7.0.4' was restored using '.NETCoreApp,Version=v3.1, .NETCoreApp,Version=v3.0, .NETCoreApp,Version=v2.0, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, net7.0-windows10.0.22621, .NETFramework,Version=v4.6.1' instead of the project target framework 'UAP,Version=v10.0.19041'. This package may not be fully compatible with your project.",
+      "message": "Package 'WindowsAPICodePack 7.0.4' was restored using '.NETCoreApp,Version=v3.1, .NETCoreApp,Version=v3.0, .NETCoreApp,Version=v2.0, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, net7.0-windows10.0.22621, .NETFramework,Version=v4.6.1' instead of the project target framework 'UAP,Version=v10.0.18362'. This package may not be fully compatible with your project.",
       "libraryId": "WindowsAPICodePack",
       "targetGraphs": [
-        "UAP,Version=v10.0.19041"
+        "UAP,Version=v10.0.18362"
       ]
     }
   ]

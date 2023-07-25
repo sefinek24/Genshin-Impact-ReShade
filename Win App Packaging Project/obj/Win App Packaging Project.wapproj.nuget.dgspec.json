@@ -218,7 +218,7 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "uap10.0.19041": {
+          "uap10.0.18362": {
             "targetAlias": "net451",
             "projectReferences": {
               "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\First app launch\\Configuration window.csproj": {
@@ -240,7 +240,7 @@
         }
       },
       "frameworks": {
-        "uap10.0.19041": {
+        "uap10.0.18362": {
           "targetAlias": "net451",
           "dependencies": {
             "Microsoft.Windows.SDK.BuildTools": {
