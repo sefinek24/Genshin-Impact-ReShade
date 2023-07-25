@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/genshin-mod-launcher.iml" filepath="$PROJECT_DIR$/.idea/genshin-mod-launcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Genshin-Impact-ReShade.iml" filepath="$PROJECT_DIR$/.idea/Genshin-Impact-ReShade.iml" />
     </modules>
   </component>
 </project>
