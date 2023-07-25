@@ -1,4 +1,6 @@
-## 🔐 Security Policy
+🔐 Security Policy
+---------------------
+
 ### Reporting a Vulnerability
 If you believe you have discovered a security vulnerability in my mod, please do not disclose it publicly. Instead, please contact me privately at contact@sefinek.net with details of the vulnerability and steps to reproduce it. I take all reports of vulnerabilities seriously and will make every effort to quickly investigate and address the issue.
 

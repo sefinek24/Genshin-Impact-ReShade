@@ -2,6 +2,13 @@
 .vs
 data/reshade/cache
 
+# Default ignored files
+.idea/shelf/
+.idea/workspace.xml
+
+# Editor-based HTTP Client requests
+.idea/httpRequests/
+
 # Build
 Build
 First app launch/bin
@@ -34,7 +41,8 @@ Win App Packaging Project/obj/Debug
 Win App Packaging Project/obj/Release
 Win App Packaging Project/obj/x64
 Win App Packaging Project/obj/x86
-Win App Packaging Project/obj/Win App Packaging Project.assets.cache
+Win App Packaging Project/obj/project.nuget.cache
+Win App Packaging Project/Win App Packaging Project.assets.cache
 
 # For patrons
 data/Patrons

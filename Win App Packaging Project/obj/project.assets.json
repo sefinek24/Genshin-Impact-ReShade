@@ -16856,11 +16856,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GitHub\\Stella\\Genshin-Stella-Mod\\Win App Packaging Project\\Win App Packaging Project.wapproj",
+      "projectUniqueName": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Win App Packaging Project\\Win App Packaging Project.wapproj",
       "projectName": "Win App Packaging Project",
-      "projectPath": "C:\\GitHub\\Stella\\Genshin-Stella-Mod\\Win App Packaging Project\\Win App Packaging Project.wapproj",
+      "projectPath": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Win App Packaging Project\\Win App Packaging Project.wapproj",
       "packagesPath": "C:\\Users\\Sefinek\\.nuget\\packages\\",
-      "outputPath": "C:\\GitHub\\Stella\\Genshin-Stella-Mod\\Win App Packaging Project\\obj\\",
+      "outputPath": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Win App Packaging Project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -16881,14 +16881,14 @@
         "uap10.0.19041": {
           "targetAlias": "net451",
           "projectReferences": {
-            "C:\\GitHub\\Stella\\Genshin-Stella-Mod\\First app launch\\Configuration window.csproj": {
-              "projectPath": "C:\\GitHub\\Stella\\Genshin-Stella-Mod\\First app launch\\Configuration window.csproj"
+            "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\First app launch\\Configuration window.csproj": {
+              "projectPath": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\First app launch\\Configuration window.csproj"
             },
-            "C:\\GitHub\\Stella\\Genshin-Stella-Mod\\Genshin Stella Mod\\Stella Mod Launcher.csproj": {
-              "projectPath": "C:\\GitHub\\Stella\\Genshin-Stella-Mod\\Genshin Stella Mod\\Stella Mod Launcher.csproj"
+            "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Genshin Stella Mod\\Stella Mod Launcher.csproj": {
+              "projectPath": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Genshin Stella Mod\\Stella Mod Launcher.csproj"
             },
-            "C:\\GitHub\\Stella\\Genshin-Stella-Mod\\Install required dependencies\\Prepare Stella Mod.csproj": {
-              "projectPath": "C:\\GitHub\\Stella\\Genshin-Stella-Mod\\Install required dependencies\\Prepare Stella Mod.csproj"
+            "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Install required dependencies\\Prepare Stella Mod.csproj": {
+              "projectPath": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Install required dependencies\\Prepare Stella Mod.csproj"
             }
           }
         }
