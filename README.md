@@ -47,6 +47,7 @@
 
 <div id="important">⚠️ 〢 Important</div>
 ----------------------------------------------------------
+
 Please note that sharing game screenshots displaying your UID, visible shaders, or ReShade overlay may result in a game ban.
 If you plan to record a video of the game for platforms like YouTube, remember to hide or censor your UID and username to avoid being banned.
 
@@ -94,9 +95,10 @@ that [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel) connects to
 
 <div id="pc-requirements">✨ 〢 Requirements</div>
 ----------------------------------------------------------
+
 > **Note**:
 > Make sure your PC meets the following requirements before installing the mod.
-
+> 
 | 🗝️ Your PC & Network                      | 📂 Dependencies                                                                                                                                                                                                       |
 |:-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **OS:** Windows 10.0 x64 (build > 19041)   | [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)                                                                                                                                |
@@ -219,6 +221,7 @@ and refined by the developers to ensure optimal user experience and address any 
 
 <div id="sources">🧶 〢 Sources</div>
 ----------------------------------------------------------
+
 Please note that the icons and stickers used in this project were obtained from different sources.
 
 - The icons were sourced from <a href="https://icons8.com" target="_blank">Icons8</a> and <a href="https://www.flaticon.com" target="_blank">FlatIcon</a>, which offer a variety of high-quality icons in formats including PNG, SVG, and EPS.
