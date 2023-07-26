@@ -74,6 +74,7 @@ that [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel) connects to
 
 <div id="includes">📂 〢 Includes</div>
 ----------------------------------------------------------
+
 | 🔍 Name                   | 📃 More information                                                                                                          | 🌍 URL address                                                                                                                       | 📑 License                                                                                                         |
 |:--------------------------|:-----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------|
 | Own launcher              | Always the latest releases.                                                                                                  | [View folder](https://github.com/sefinek24/Genshin-Impact-ReShade/tree/main/Genshin%20Stella%20Mod)                                  | [CC BY-NC-SA 4.0](LICENSE)                                                                                         |
