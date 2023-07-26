@@ -45,9 +45,7 @@
 </div>
 
 
-<div id="important">⚠️ 〢 Important</div>
-----------------------------------------------------------
-
+## <div id="important">⚠️ 〢 Important</div>
 Please note that sharing game screenshots displaying your UID, visible shaders, or ReShade overlay may result in a game ban.
 If you plan to record a video of the game for platforms like YouTube, remember to hide or censor your UID and username to avoid being banned.
 
@@ -73,9 +71,7 @@ that [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel) connects to
 > In addition, we are not responsible for any potential bans in the game, although the chances of this happening **are negligible**.
 
 
-<div id="includes">📂 〢 Includes</div>
-----------------------------------------------------------
-
+## <div id="includes">📂 〢 Includes</div>
 | 🔍 Name                   | 📃 More information                                                                                                          | 🌍 URL address                                                                                                                       | 📑 License                                                                                                         |
 |:--------------------------|:-----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------|
 | Own launcher              | Always the latest releases.                                                                                                  | [View folder](https://github.com/sefinek24/Genshin-Impact-ReShade/tree/main/Genshin%20Stella%20Mod)                                  | [CC BY-NC-SA 4.0](LICENSE)                                                                                         |
@@ -93,9 +89,7 @@ that [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel) connects to
 > The repository with the resources is available here: [sefinek24/Genshin-Stella-Resources](https://github.com/sefinek24/Genshin-Stella-Resources)
 
 
-<div id="pc-requirements">✨ 〢 Requirements</div>
-----------------------------------------------------------
-
+## <div id="pc-requirements">✨ 〢 Requirements</div>
 > **Note**:
 > Make sure your PC meets the following requirements before installing the mod.
 > 
@@ -109,9 +103,7 @@ that [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel) connects to
 | **BIOS:** UEFI mode enabled                | [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional)                                                                                                           |
 
 
-<div id="supported-systems">🔧 〢 Supported operating systems</div>
-----------------------------------------------------------
-
+## <div id="supported-systems">🔧 〢 Supported operating systems</div>
 | 🌌 System       | 🔖 Version | 🙀 Status      | 🤔 Recommended? |
 |-----------------|:-----------|:---------------|:----------------|
 | Windows 11      | 22H2       | [✔️](#legend)  | [❌](#legend)    |
@@ -122,9 +114,7 @@ that [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel) connects to
 | iOS / macOS     |            | [❌](#legend)   | [❌](#legend)    |
 
 
-<div id="installation">📥 〢 How to install?</div>
-----------------------------------------------------------
-
+##<div id="installation">📥 〢 How to install?</div>
 ### 📦 » Short tutorial (installation via setup)
 1. Download the latest setup from [my official website](https://genshin.sefinek.net).
 2. Run the setup file `Stella-Mod-Setup.exe` and follow the on-screen instructions to install the mod.
@@ -142,9 +132,7 @@ Once the game has launched, it is crucial to verify that [the recommended graphi
 Then, adjust the settings according to the recommended values based on your system's capabilities. This will help to ensure that the game runs smoothly and looks its best.
 
 
-<div id="tested-game-versions">🛠️ 〢 Tested game versions</div>
-
-----------------------------------------------------------
+## <div id="tested-game-versions">🛠️ 〢 Tested game versions</div>
 | 🎮 Version | 📝 OS build | 😅 Status     | 📆 Date tested   |
 |------------|:------------|---------------|------------------|
 | v3.8.0     | 19045.3155  | [✔️](#legend) | July 09, 2023    |
@@ -157,9 +145,7 @@ Then, adjust the settings according to the recommended values based on your syst
 | v3.1.0     |             | [❌](#legend)  | November 1, 2022 |
 
 
-<div id="settings-for-game">⚙️ 〢 Recommended settings for game</div>
-
-----------------------------------------------------------
+## <div id="settings-for-game">⚙️ 〢 Recommended settings for game</div>
 | 🔧 Settings                 | 💻 Intel Core i3-10100 + GTX 1650 | 💻 AMD Ryzen 5 3600 + RTX 2060       |
 |-----------------------------|-----------------------------------|:-------------------------------------|
 | **Display Mode**            | 1920x1080 (or higher) Fullscreen  | 1920x1080 (or higher) Fullscreen     |
@@ -192,8 +178,7 @@ You can adjust the presets from very low to very high, which will significantly 
 Do not change FPS settings in the game if you are using FPS unlock.
 
 
-<div id="other-screenshots">📷 〢 Other screenshots (without Ray Tracing)</div>
-----------------------------------------------------------
+## <div id="other-screenshots">📷 〢 Other screenshots (without Ray Tracing)</div>
 <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Genshin%20Stella%20Mod/data/images/launcher/backgrounds/nahida/1.png" title="See preview [1.png]">
     <img src="Genshin Stella Mod/data/images/launcher/backgrounds/nahida/1.png" alt="Screenshot number 1">
 </a>
@@ -210,18 +195,14 @@ This is because the presets or default settings are constantly being reviewed
 and refined by the developers to ensure optimal user experience and address any issues or bugs that may arise.
 
 
-<div id="legend">🧀 〢 Legend</div>
-
-----------------------------------------------------------
+## <div id="legend"></div> 🧀 〢 Legend
 | 🐈 Emoji       | 🤔 Meaning            | 🐈 Emoji      | 🤔 Meaning         | 🐈 Emoji     | 🤔 Meaning   |
 |----------------|-----------------------|:--------------|:-------------------|:-------------|:-------------|
 | [✔️](#legend)  | Yes / Supported       | [❌](#legend)  | No / Not supported | [❓](#legend) | I don't know |
 | [🎯️](#legend) | Default not supported | [🤔](#legend) | Not tested         |              |              |
 
 
-<div id="sources">🧶 〢 Sources</div>
-----------------------------------------------------------
-
+## <div id="sources"></div> 🧶 〢 Sources
 Please note that the icons and stickers used in this project were obtained from different sources.
 
 - The icons were sourced from <a href="https://icons8.com" target="_blank">Icons8</a> and <a href="https://www.flaticon.com" target="_blank">FlatIcon</a>, which offer a variety of high-quality icons in formats including PNG, SVG, and EPS.
