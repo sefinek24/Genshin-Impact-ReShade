@@ -40,8 +40,8 @@
 <div align="center">
     <a href="https://sefinek.net/genshin-impact-reshade/download?referrer=github&hash=null" title="Download stable release"><img src="Assets/Images/Readme/labels/download.png" alt="Download" height="148px"></a>
     <br>
-    <a href="https://genshin.sefinek.net" title="Official website"><img src="Assets/Images/Readme/labels/website.png" alt="Website" height="148px"></a>
-    <a href="https://discord.com/invite/SVcbaRc7gH" title="Our Discord server"><img src="Assets/Images/Readme/labels/discord.png" alt="Discord" height="148px"></a>
+    <a href="https://genshin.sefinek.net" title="Official website"><img src="Assets/Images/Readme/labels/website.png" alt="Website" height="140px"></a>
+    <a href="https://discord.com/invite/SVcbaRc7gH" title="Our Discord server"><img src="Assets/Images/Readme/labels/discord.png" alt="Discord" height="140px"></a>
 </div>
 
 
