@@ -109,6 +109,7 @@ that [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel) connects to
 
 <div id="supported-systems">🔧 〢 Supported operating systems</div>
 ----------------------------------------------------------
+
 | 🌌 System       | 🔖 Version | 🙀 Status      | 🤔 Recommended? |
 |-----------------|:-----------|:---------------|:----------------|
 | Windows 11      | 22H2       | [✔️](#legend)  | [❌](#legend)    |
@@ -121,6 +122,7 @@ that [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel) connects to
 
 <div id="installation">📥 〢 How to install?</div>
 ----------------------------------------------------------
+
 ### 📦 » Short tutorial (installation via setup)
 1. Download the latest setup from [my official website](https://genshin.sefinek.net).
 2. Run the setup file `Stella-Mod-Setup.exe` and follow the on-screen instructions to install the mod.
@@ -139,6 +141,7 @@ Then, adjust the settings according to the recommended values based on your syst
 
 
 <div id="tested-game-versions">🛠️ 〢 Tested game versions</div>
+
 ----------------------------------------------------------
 | 🎮 Version | 📝 OS build | 😅 Status     | 📆 Date tested   |
 |------------|:------------|---------------|------------------|
@@ -153,6 +156,7 @@ Then, adjust the settings according to the recommended values based on your syst
 
 
 <div id="settings-for-game">⚙️ 〢 Recommended settings for game</div>
+
 ----------------------------------------------------------
 | 🔧 Settings                 | 💻 Intel Core i3-10100 + GTX 1650 | 💻 AMD Ryzen 5 3600 + RTX 2060       |
 |-----------------------------|-----------------------------------|:-------------------------------------|
@@ -205,6 +209,7 @@ and refined by the developers to ensure optimal user experience and address any 
 
 
 <div id="legend">🧀 〢 Legend</div>
+
 ----------------------------------------------------------
 | 🐈 Emoji       | 🤔 Meaning            | 🐈 Emoji      | 🤔 Meaning         | 🐈 Emoji     | 🤔 Meaning   |
 |----------------|-----------------------|:--------------|:-------------------|:-------------|:-------------|
