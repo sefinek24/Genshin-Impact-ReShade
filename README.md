@@ -27,7 +27,7 @@
 ## <div id="list"></div> 📋 〢 Table of contents
 - [⚠️ Important](#important)
 - [📂 Includes](#includes)
-- [📃 Changelog](CHANGELOG.md)
+- [📃 Changelog](https://sefinek.net/genshin-impact-reshade/docs?page=changelog_v7)
 - [✨ Requirements](#pc-requirements)
 - [🔧 Supported systems](#supported-systems)
 - [📥 How to install](#installation)
