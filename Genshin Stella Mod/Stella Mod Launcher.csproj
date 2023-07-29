@@ -182,6 +182,7 @@
     </Compile>
     <Compile Include="Models\RandomThings.cs" />
     <Compile Include="Models\Local.cs" />
+    <Compile Include="Models\ForPatrons.cs" />
     <Compile Include="Models\Remote.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -201,6 +202,7 @@
     <Compile Include="Scripts\IniFile.cs" />
     <Compile Include="Scripts\Log.cs" />
     <Compile Include="Scripts\ComputerInfo.cs" />
+    <Compile Include="Scripts\Patrons\DownloadCmd.cs" />
     <Compile Include="Scripts\Secret.cs" />
     <Compile Include="Scripts\Telemetry.cs" />
     <Compile Include="Scripts\Download\MajorRelease.cs" />

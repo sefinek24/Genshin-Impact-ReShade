@@ -12,6 +12,7 @@ using StellaLauncher.Models;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
 using StellaLauncher.Scripts.Forms.MainForm;
+using StellaLauncher.Scripts.Patrons;
 
 namespace StellaLauncher.Forms
 {
@@ -19,7 +20,6 @@ namespace StellaLauncher.Forms
     {
         // Files
         private static readonly string RunCmd = Path.Combine(Program.AppPath, "data", "cmd", "run.cmd");
-        private static readonly string RunCmdPatrons = Path.Combine(Program.AppPath, "data", "cmd", "run_patrons.cmd");
 
         // New update?
         public static bool UpdateIsAvailable;
@@ -173,6 +173,9 @@ namespace StellaLauncher.Forms
             // Launch count
             LaunchCountHelper.CheckLaunchCountAndShowMessages();
 
+            // Download cmd file for patrons
+            if (Secret.IsMyPatron && !string.IsNullOrEmpty(Secret.JwtToken)) await DownloadCmd.Run();
+
             if (Debugger.IsAttached) return;
             // Telemetry.Opened();
 
@@ -250,7 +253,7 @@ namespace StellaLauncher.Forms
                 App = "wt.exe",
                 WorkingDir = Program.AppPath,
                 Arguments = new ArgumentsBuilder()
-                    .Add(Secret.IsMyPatron ? RunCmdPatrons : RunCmd)
+                    .Add(Secret.IsMyPatron ? DownloadCmd.RunCmdPatrons : RunCmd)
                     .Add(Program.AppVersion) // 1
                     .Add(Data.ReShadeVer) // 2
                     .Add(Data.UnlockerVer) // 3
@@ -274,7 +277,7 @@ namespace StellaLauncher.Forms
                 App = "wt.exe",
                 WorkingDir = Program.AppPath,
                 Arguments = new ArgumentsBuilder()
-                    .Add(Secret.IsMyPatron ? RunCmdPatrons : RunCmd)
+                    .Add(Secret.IsMyPatron ? DownloadCmd.RunCmdPatrons : RunCmd)
                     .Add(Program.AppVersion) // 1
                     .Add(Data.ReShadeVer) // 2
                     .Add(Data.UnlockerVer) // 3
@@ -303,7 +306,7 @@ namespace StellaLauncher.Forms
                 App = "wt.exe",
                 WorkingDir = Program.AppPath,
                 Arguments = new ArgumentsBuilder()
-                    .Add(Secret.IsMyPatron ? RunCmdPatrons : RunCmd)
+                    .Add(Secret.IsMyPatron ? DownloadCmd.RunCmdPatrons : RunCmd)
                     .Add(Program.AppVersion) // 1
                     .Add(Data.ReShadeVer) // 2
                     .Add(Data.UnlockerVer) // 3
@@ -334,7 +337,7 @@ namespace StellaLauncher.Forms
                 App = "wt.exe",
                 WorkingDir = Program.AppPath,
                 Arguments = new ArgumentsBuilder()
-                    .Add(Secret.IsMyPatron ? RunCmdPatrons : RunCmd)
+                    .Add(Secret.IsMyPatron ? DownloadCmd.RunCmdPatrons : RunCmd)
                     .Add(Program.AppVersion)
                     .Add(Data.ReShadeVer)
                     .Add(Data.UnlockerVer)
