@@ -20,7 +20,7 @@
         ⭐ » Star the repo if you liked it. Have a nice day or night! « ⭐
     </h3>
     <a href="https://patreon.com/sefinek" title="Patreon"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dsefinek%26type%3Dpledges&style=for-the-badge" height="32" alt="Support me on Patreon"></a>
-    <a href="https://ko-fi.com/sefinek" title="Ko-fi"><img src="https://storage.ko-fi.com/cdn/brandasset/kofi_button_blue.png" height="32" alt="Support me on Ko-fi"></a>
+    <a href="https://ko-fi.com/sefinek" title="Ko-fi"><img src="https://storage.ko-fi.com/cdn/brandasset/kofi_button_blue.png" id="kofi" height="32" alt="Support me on Ko-fi"></a>
 </div>
 
 
@@ -37,7 +37,7 @@
 - [🧀 Legend](#legend)
 - [🧶 Sources](#sources)
 
-<div align="center">
+<div align="center" id="labels">
     <a href="https://sefinek.net/genshin-impact-reshade/download?referrer=github&hash=null" title="Download stable release"><img src="Assets/Images/Readme/labels/download.png" alt="Download" height="148px"></a>
     <br>
     <a href="https://genshin.sefinek.net" title="Official website"><img src="Assets/Images/Readme/labels/website.png" alt="Website" height="140px"></a>
@@ -57,17 +57,12 @@ The wiki provides a comprehensive installation and usage guide for ReShade, alon
 
 If you need further assistance, feel free to join our [Discord server](https://discord.gg/SVcbaRc7gH).
 Additionally, if you wish to contribute to the project, please create a new [Pull request](https://github.com/sefinek24/Genshin-Impact-ReShade/pulls).
-You can also check out the latest [screenshots](https://sefinek.net/genshin-impact-reshade/gallery?page=1) on our
-website and watch [YouTube videos](https://sefinek.net/genshin-impact-reshade/videos) for more.
+You can also check out the latest [screenshots](https://sefinek.net/genshin-impact-reshade/gallery?page=1) on our website and watch [YouTube videos](https://sefinek.net/genshin-impact-reshade/videos) for more.
 
-The main server of [sefinek.net](https://sefinek.net) is located in Poland, while
-the [Cloudflare](https://www.cloudflare.com) servers
-that [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel) connects to are in Warsaw and Frankfurt.
+The main server of [sefinek.net](https://sefinek.net) is located in Poland, while the [Cloudflare](https://www.cloudflare.com) servers that [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel) connects to are in Warsaw and Frankfurt.
 
 > **Note**:  
-> By using this software, you agree to the terms of the [License agreement](LICENSE),
-> [Terms of use](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-ToS#-1-terms-of-use) and
-> [Rules](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-ToS#-2-rules-etc).
+> By using this software, you agree to the terms of the [License agreement](LICENSE), [Terms of use](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-ToS#-1-terms-of-use) and [Rules](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-ToS#-2-rules-etc).
 > In addition, we are not responsible for any potential bans in the game, although the chances of this happening **are negligible**.
 
 
@@ -92,7 +87,7 @@ that [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel) connects to
 ## <div id="pc-requirements"></div> ✨ 〢 Requirements
 > **Note**:
 > Make sure your PC meets the following requirements before installing the mod.
-> 
+
 | 🗝️ Your PC & Network                      | 📂 Dependencies                                                                                                                                                                                                       |
 |:-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **OS:** Windows 10.0 x64 (build > 19041)   | [Visual C++ 2015-2022 Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)                                                                                                                                |
@@ -179,15 +174,17 @@ Do not change FPS settings in the game if you are using FPS unlock.
 
 
 ## <div id="other-screenshots"></div> 📷 〢 Other screenshots (without Ray Tracing)
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Genshin%20Stella%20Mod/data/images/launcher/backgrounds/nahida/1.png" title="See preview [1.png]">
-    <img src="Genshin Stella Mod/data/images/launcher/backgrounds/nahida/1.png" alt="Screenshot number 1">
-</a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Genshin%20Stella%20Mod/data/images/launcher/backgrounds/hutao/4.png" title="See preview [4.png]">
-    <img src="Genshin Stella Mod/data/images/launcher/backgrounds/hutao/4.png" alt="Screenshot number 2">
-</a>
-<a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Genshin%20Stella%20Mod/data/images/launcher/backgrounds/yaoyao/2.png" title="See preview [2.png]">
-    <img src="Genshin Stella Mod/data/images/launcher/backgrounds/yaoyao/2.png" alt="Screenshot number 3">
-</a>
+<div id="images">
+    <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Genshin%20Stella%20Mod/data/images/launcher/backgrounds/nahida/1.png" title="See preview [1.png]">
+        <img src="Genshin Stella Mod/data/images/launcher/backgrounds/nahida/1.png" alt="Screenshot number 1">
+    </a>
+    <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Genshin%20Stella%20Mod/data/images/launcher/backgrounds/hutao/4.png" title="See preview [4.png]">
+        <img src="Genshin Stella Mod/data/images/launcher/backgrounds/hutao/4.png" alt="Screenshot number 2">
+    </a>
+    <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Genshin%20Stella%20Mod/data/images/launcher/backgrounds/yaoyao/2.png" title="See preview [2.png]">
+        <img src="Genshin Stella Mod/data/images/launcher/backgrounds/yaoyao/2.png" alt="Screenshot number 3">
+    </a>
+</div>
 
 ### ⚠️ Warning
 It is worth noting that relying solely on the screenshots or videos provided may not necessarily provide the most accurate or up-to-date representation of the software or application.

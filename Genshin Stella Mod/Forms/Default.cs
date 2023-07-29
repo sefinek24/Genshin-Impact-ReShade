@@ -135,13 +135,16 @@ namespace StellaLauncher.Forms
                 return;
             }
 
-            GetToken remote = JsonConvert.DeserializeObject<GetToken>(data);
+            VerifyToken remote = JsonConvert.DeserializeObject<VerifyToken>(data);
             Log.Output(remote.Status.ToString());
             if (remote.Status == 200)
             {
                 Secret.IsMyPatron = true;
                 label1.Text = Resources.Default_GenshinStellaModForPatrons;
                 label1.TextAlign = ContentAlignment.MiddleRight;
+
+                Secret.JwtToken = remote.Token;
+                MessageBox.Show(Secret.JwtToken);
             }
             else
             {
