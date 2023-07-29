@@ -24,18 +24,18 @@
 </div>
 
 
-## <div id="list"></div> 📋 〢 Table of contents
-- [⚠️ Important](#important)
-- [📂 Includes](#includes)
+## 📋 〢 Table of contents
+- [⚠️ Important](https://sefinek.net/genshin-impact-reshade/docs?page=readme#%E2%9A%A0%EF%B8%8F-%E3%80%A2-important)
+- [📂 Includes](https://sefinek.net/genshin-impact-reshade/docs?page=readme#%F0%9F%93%82-%E3%80%A2-includes)
 - [📃 Changelog](https://sefinek.net/genshin-impact-reshade/docs?page=changelog_v7)
-- [✨ Requirements](#pc-requirements)
-- [🔧 Supported systems](#supported-systems)
-- [📥 How to install](#installation)
-- [🛠️ Tested game versions](#tested-game-versions)
-- [⚙️ Recommended settings for game](#settings-for-game)
-- [📷 Other screenshots](#other-screenshots)
-- [🧀 Legend](#legend)
-- [🧶 Sources](#sources)
+- [✨ Requirements](https://sefinek.net/genshin-impact-reshade/docs?page=readme#%E2%9C%A8-%E3%80%A2-requirements)
+- [🔧 Supported systems](https://sefinek.net/genshin-impact-reshade/docs?page=readme#%F0%9F%94%A7-%E3%80%A2-supported-operating-systems)
+- [📥 How to install](https://sefinek.net/genshin-impact-reshade/docs?page=readme#%F0%9F%93%A5-%E3%80%A2-how-to-install)
+- [🛠️ Tested game versions](https://sefinek.net/genshin-impact-reshade/docs?page=readme#div-idtested-game-versionsdiv-%F0%9F%9B%A0%EF%B8%8F-%E3%80%A2-tested-game-versions)
+- [⚙️ Recommended settings for game](https://sefinek.net/genshin-impact-reshade/docs?page=readme#%F0%9F%9B%A0%EF%B8%8F-%E3%80%A2-tested-game-versions)
+- [📷 Other screenshots](https://sefinek.net/genshin-impact-reshade/docs?page=readme#%E2%9A%99%EF%B8%8F-%E3%80%A2-recommended-settings-for-game)
+- [🧀 Legend](https://sefinek.net/genshin-impact-reshade/docs?page=readme#%F0%9F%A7%80-%E3%80%A2-legend)
+- [🧶 Sources](https://sefinek.net/genshin-impact-reshade/docs?page=readme#%F0%9F%A7%B6-%E3%80%A2-sources)
 
 <div align="center" id="labels">
     <a href="https://sefinek.net/genshin-impact-reshade/download?referrer=github&hash=null" title="Download stable release"><img src="Assets/Images/Readme/labels/download.png" alt="Download" height="148px"></a>
@@ -45,7 +45,7 @@
 </div>
 
 
-## <div id="important"></div> ⚠️ 〢 Important
+## ⚠️ 〢 Important
 Please note that sharing game screenshots displaying your UID, visible shaders, or ReShade overlay may result in a game ban.
 If you plan to record a video of the game for platforms like YouTube, remember to hide or censor your UID and username to avoid being banned.
 
@@ -66,7 +66,7 @@ The main server of [sefinek.net](https://sefinek.net) is located in Poland, whil
 > In addition, we are not responsible for any potential bans in the game, although the chances of this happening **are negligible**.
 
 
-## <div id="includes"></div> 📂 〢 Includes
+## 📂 〢 Includes
 | 🔍 Name                   | 📃 More information                                                                                                          | 🌍 URL address                                                                                                                       | 📑 License                                                                                                         |
 |:--------------------------|:-----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------|
 | Own launcher              | Always the latest releases.                                                                                                  | [View folder](https://github.com/sefinek24/Genshin-Impact-ReShade/tree/main/Genshin%20Stella%20Mod)                                  | [CC BY-NC-SA 4.0](LICENSE)                                                                                         |
@@ -84,7 +84,7 @@ The main server of [sefinek.net](https://sefinek.net) is located in Poland, whil
 > The repository with the resources is available here: [sefinek24/Genshin-Stella-Resources](https://github.com/sefinek24/Genshin-Stella-Resources)
 
 
-## <div id="pc-requirements"></div> ✨ 〢 Requirements
+## ✨ 〢 Requirements
 > **Note**:
 > Make sure your PC meets the following requirements before installing the mod.
 
@@ -98,7 +98,7 @@ The main server of [sefinek.net](https://sefinek.net) is located in Poland, whil
 | **BIOS:** UEFI mode enabled                | [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2) (Optional)                                                                                                           |
 
 
-## <div id="supported-systems"></div> 🔧 〢 Supported operating systems
+## 🔧 〢 Supported operating systems
 | 🌌 System       | 🔖 Version | 🙀 Status      | 🤔 Recommended? |
 |-----------------|:-----------|:---------------|:----------------|
 | Windows 11      | 22H2       | [✔️](#legend)  | [❌](#legend)    |
@@ -109,7 +109,7 @@ The main server of [sefinek.net](https://sefinek.net) is located in Poland, whil
 | iOS / macOS     |            | [❌](#legend)   | [❌](#legend)    |
 
 
-## <div id="installation"></div> 📥 〢 How to install?
+## 📥 〢 How to install?
 ### 📦 » Short tutorial (installation via setup)
 1. Download the latest setup from [my official website](https://genshin.sefinek.net).
 2. Run the setup file `Stella-Mod-Setup.exe` and follow the on-screen instructions to install the mod.
@@ -127,7 +127,7 @@ Once the game has launched, it is crucial to verify that [the recommended graphi
 Then, adjust the settings according to the recommended values based on your system's capabilities. This will help to ensure that the game runs smoothly and looks its best.
 
 
-## <div id="tested-game-versions"></div> 🛠️ 〢 Tested game versions
+## 🛠️ 〢 Tested game versions
 | 🎮 Version | 📝 OS build | 😅 Status     | 📆 Date tested   |
 |------------|:------------|---------------|------------------|
 | v3.8.0     | 19045.3155  | [✔️](#legend) | July 09, 2023    |
@@ -140,7 +140,7 @@ Then, adjust the settings according to the recommended values based on your syst
 | v3.1.0     |             | [❌](#legend)  | November 1, 2022 |
 
 
-## <div id="settings-for-game"></div> ⚙️ 〢 Recommended settings for game
+## ⚙️ 〢 Recommended settings for game
 | 🔧 Settings                 | 💻 Intel Core i3-10100 + GTX 1650 | 💻 AMD Ryzen 5 3600 + RTX 2060       |
 |-----------------------------|-----------------------------------|:-------------------------------------|
 | **Display Mode**            | 1920x1080 (or higher) Fullscreen  | 1920x1080 (or higher) Fullscreen     |
@@ -173,7 +173,7 @@ You can adjust the presets from very low to very high, which will significantly 
 Do not change FPS settings in the game if you are using FPS unlock.
 
 
-## <div id="other-screenshots"></div> 📷 〢 Other screenshots (without Ray Tracing)
+## 📷 〢 Other screenshots (without Ray Tracing)
 <div id="images">
     <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Genshin%20Stella%20Mod/data/images/launcher/backgrounds/nahida/1.png" title="See preview [1.png]">
         <img src="Genshin Stella Mod/data/images/launcher/backgrounds/nahida/1.png" alt="Screenshot number 1">
@@ -192,14 +192,14 @@ This is because the presets or default settings are constantly being reviewed
 and refined by the developers to ensure optimal user experience and address any issues or bugs that may arise.
 
 
-## <div id="legend"></div> 🧀 〢 Legend
+##  🧀 〢 Legend
 | 🐈 Emoji       | 🤔 Meaning            | 🐈 Emoji      | 🤔 Meaning         | 🐈 Emoji     | 🤔 Meaning   |
 |----------------|-----------------------|:--------------|:-------------------|:-------------|:-------------|
 | [✔️](#legend)  | Yes / Supported       | [❌](#legend)  | No / Not supported | [❓](#legend) | I don't know |
 | [🎯️](#legend) | Default not supported | [🤔](#legend) | Not tested         |              |              |
 
 
-## <div id="sources"></div> 🧶 〢 Sources
+## 🧶 〢 Sources
 Please note that the icons and stickers used in this project were obtained from different sources.
 
 - The icons were sourced from <a href="https://icons8.com" target="_blank">Icons8</a> and <a href="https://www.flaticon.com" target="_blank">FlatIcon</a>, which offer a variety of high-quality icons in formats including PNG, SVG, and EPS.
