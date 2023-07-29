@@ -1,7 +1,7 @@
 <div align="center" id="header">
     <h1>🌟 Genshin Impact Stella Mod Pack 🌟</h1>
     <p>
-        <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Assets/Images/banner/rounded-corners/compressed.png" title="See preview [data/images/banner/border/1.png]">
+        <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Assets/Images/Banners/rounded-corners/compressed.png" title="See preview">
             <img src="Assets/Images/Banners/rounded-corners/compressed.png" alt="Header image">
         </a>
     </p>
