@@ -144,7 +144,6 @@ namespace StellaLauncher.Forms
                 label1.TextAlign = ContentAlignment.MiddleRight;
 
                 Secret.JwtToken = remote.Token;
-                MessageBox.Show(Secret.JwtToken);
             }
             else
             {

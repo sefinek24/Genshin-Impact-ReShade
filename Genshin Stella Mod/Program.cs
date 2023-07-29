@@ -39,9 +39,7 @@ namespace StellaLauncher
 
         // Web
         public static readonly string UserAgent = $"Mozilla/5.0 (compatible; StellaLauncher/{AppVersion}; +{AppWebsiteSub})";
-
-        public static readonly string WebApi = "http://127.0.0.1:4010/api/v4";
-        // public static readonly string WebApi = "https://api.sefinek.net/api/v4";
+        public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v4" : "https://api.sefinek.net/api/v4";
 
         // Config
         public static readonly IniFile Settings = new IniFile(Path.Combine(AppData, "settings.ini"));

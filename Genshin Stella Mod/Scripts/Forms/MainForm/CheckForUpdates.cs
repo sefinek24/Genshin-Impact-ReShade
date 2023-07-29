@@ -141,8 +141,6 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 }
 
 
-                Default._progressBar1.Value = 100;
-
                 // == Not found any new updates ==
                 Default._updates_LinkLabel.Text = Resources.Default_CheckForUpdates;
                 Default._updateIco_PictureBox.Image = Resources.icons8_available_updates;
@@ -160,7 +158,9 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 Default._runGiLauncher_LinkLabel.Visible = true;
                 if (!Secret.IsMyPatron) Default._becomeMyPatron_LinkLabel.Visible = true;
 
+                Default._progressBar1.Value = 100;
                 Utils.HideProgressBar(false);
+                TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress);
                 return 0;
             }
             catch (Exception e)
