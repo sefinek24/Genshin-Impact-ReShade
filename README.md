@@ -99,14 +99,14 @@ The main server of [sefinek.net](https://sefinek.net) is located in Poland, whil
 
 
 ## 🔧 〢 Supported operating systems
-| 🌌 System       | 🔖 Version | 🙀 Status      | 🤔 Recommended? |
-|-----------------|:-----------|:---------------|:----------------|
-| Windows 11      | 22H2       | [✔️](#legend)  | [❌](#legend)    |
-| Windows 10      | 21H2       | [✔️](#legend)  | [️✔️](#legend)  | 
-| Windows 8 / 8.1 |            | [🎯️](#legend) | [❌](#legend)    | 
-| Windows 7       |            | [🎯️](#legend) | [❌](#legend)    | 
-| Android / Linux |            | [❌](#legend)   | [❌](#legend)    | 
-| iOS / macOS     |            | [❌](#legend)   | [❌](#legend)    |
+| 🌌 System       | 🔖 Version | 🙀 Status                                                                                                                                    | 🤔 Recommended?                                                                                                                              |
+|-----------------|:-----------|:---------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------|
+| Windows 11      | 22H2       | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)  | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)   |
+| Windows 10      | 21H2       | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)  | [️✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki) | 
+| Windows 8 / 8.1 |            | [🎯️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki) | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)   | 
+| Windows 7       |            | [🎯️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki) | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)   | 
+| Android / Linux |            | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)   | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)   | 
+| iOS / macOS     |            | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)   | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)   |
 
 
 ## 📥 〢 How to install?
@@ -128,16 +128,17 @@ Then, adjust the settings according to the recommended values based on your syst
 
 
 ## 🛠️ 〢 Tested game versions
-| 🎮 Version | 📝 OS build | 😅 Status     | 📆 Date tested   |
-|------------|:------------|---------------|------------------|
-| v3.8.0     | 19045.3155  | [✔️](#legend) | July 09, 2023    |
-| v3.7.0     | 19045.3031  | [✔️](#legend) | May 24, 2023     |
-| v3.6.0     |             | [❌](#legend)  | April 12, 2023   |
-| v3.5.0     |             | [❌](#legend)  | March 01, 2023   |
-| v3.4.0     |             | [❌️](#legend) | January 18, 2023 |
-| v3.3.0     |             | [❌](#legend)  | November 9, 2022 |
-| v3.2.0     |             | [❌](#legend)  | November 2, 2022 |
-| v3.1.0     |             | [❌](#legend)  | November 1, 2022 |
+| 😻 Stella version | 🎮 Game version | 💻 System                      | 📝 OS build | 😅 Status                                                                                                                                           | 📆 Date tested   |
+|:------------------|-----------------|:-------------------------------|:------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|------------------|
+| v7.6.1.0          | v3.8.0.0        | Microsoft Windows 11 Home 22H2 | 22621.1992  | [✔️ Success](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki) | July 31, 2023    |
+| Unknown           | v3.8.0.0        | Microsoft Windows 10 Home 22H2 | 19045.3155  | [✔️ Success](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki) | July 09, 2023    |
+| Unknown           | v3.7.0.0        | Microsoft Windows 10 Home 22H2 | 19045.3031  | [✔️ Success](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki) | May 24, 2023     |
+| Unknown           | v3.6.0.0        |                                |             | [❌ Fail](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)     | April 12, 2023   |
+| Unknown           | v3.5.0.0        |                                |             | [❌ Fail](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)     | March 01, 2023   |
+| Unknown           | v3.4.0.0        |                                |             | [❌️ Fail](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)    | January 18, 2023 |
+| Unknown           | v3.3.0.0        |                                |             | [❌ Fail](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)     | November 9, 2022 |
+| Unknown           | v3.2.0.0        |                                |             | [❌ Fail](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)     | November 2, 2022 |
+| Unknown           | v3.1.0.0        |                                |             | [❌ Fail](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)     | November 1, 2022 |
 
 
 ## ⚙️ 〢 Recommended settings for game
@@ -193,10 +194,10 @@ and refined by the developers to ensure optimal user experience and address any 
 
 
 ##  🧀 〢 Legend
-| 🐈 Emoji       | 🤔 Meaning            | 🐈 Emoji      | 🤔 Meaning         | 🐈 Emoji     | 🤔 Meaning   |
-|----------------|-----------------------|:--------------|:-------------------|:-------------|:-------------|
-| [✔️](#legend)  | Yes / Supported       | [❌](#legend)  | No / Not supported | [❓](#legend) | I don't know |
-| [🎯️](#legend) | Default not supported | [🤔](#legend) | Not tested         |              |              |
+| 🐈 Emoji                                                                                                                                     | 🤔 Meaning            | 🐈 Emoji                                                                                                                                    | 🤔 Meaning         | 🐈 Emoji                                                                                                                                   | 🤔 Meaning   |
+|----------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|:--------------------------------------------------------------------------------------------------------------------------------------------|:-------------------|:-------------------------------------------------------------------------------------------------------------------------------------------|:-------------|
+| [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)  | Yes / Supported       | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)  | No / Not supported | [❓](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki) | I don't know |
+| [🎯️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki) | Default not supported | [🤔](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki) | Not tested         |                                                                                                                                            |              |
 
 
 ## 🧶 〢 Sources
