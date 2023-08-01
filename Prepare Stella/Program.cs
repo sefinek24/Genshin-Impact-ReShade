@@ -30,8 +30,8 @@ namespace PrepareStella
         // Files and folders
         private static readonly IniFile PrepareIni = new IniFile(Path.Combine(AppData, "prepare-stella.ini"));
         public static readonly string ProgramFiles = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
-        public static readonly string GameGenshinImpact = Path.Combine(ProgramFiles, "Genshin Impact", "Genshin Impact game", "GenshinImpact.exe");
-        public static readonly string GameYuanShen = Path.Combine(ProgramFiles, "Genshin Impact", "Genshin Impact game", "YuanShen.exe");
+        private static readonly string GameGenshinImpact = Path.Combine(ProgramFiles, "Genshin Impact", "Genshin Impact game", "GenshinImpact.exe");
+        private static readonly string GameYuanShen = Path.Combine(ProgramFiles, "Genshin Impact", "Genshin Impact game", "YuanShen.exe");
         public static readonly string WindowsApps = Path.Combine(ProgramFiles, "WindowsApps");
         private static readonly string ConfiguredSfn = Path.Combine(AppData, "configured.sfn");
 
@@ -49,7 +49,7 @@ namespace PrepareStella
         public static string ResourcesGlobal;
 
         // Registry
-        public static string RegistryPath = @"SOFTWARE\Stella Mod Launcher";
+        private static readonly string RegistryPath = @"SOFTWARE\Stella Mod Launcher";
 
         [STAThread]
         public static async Task Start()
