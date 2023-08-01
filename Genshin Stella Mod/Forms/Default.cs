@@ -253,16 +253,13 @@ namespace StellaLauncher.Forms
                 App = "wt.exe",
                 WorkingDir = Program.AppPath,
                 Arguments = new ArgumentsBuilder()
-                    .Add(Secret.IsMyPatron ? DownloadCmd.RunCmdPatrons : RunCmd)
-                    .Add(Program.AppVersion) // 1
-                    .Add(Data.ReShadeVer) // 2
-                    .Add(Data.UnlockerVer) // 3
-                    .Add(Secret.IsMyPatron ? 1 : 6) // 4
-                    .Add(Secret.IsMyPatron ? $"\"{_resourcesPath}\\3DMigoto\"" : "0") // 5 
-                    .Add(await Utils.GetGameVersion()) // 6
-                    .Add(Log.CmdLogs) // 7
-                    .Add(Program.AppPath) // 8
-                    .Add(Path.GetDirectoryName(Program.FpsUnlockerExePath) ?? string.Empty) // 9
+                    .Add(Secret.IsMyPatron ? "Inject Mods.exe" : RunCmd)
+                    .Add(Program.AppVersion) // 0
+                    .Add(Data.ReShadeVer) // 1
+                    .Add(Data.UnlockerVer) // 2
+                    .Add(Secret.IsMyPatron ? 1 : 6) // 3
+                    .Add(Secret.IsMyPatron ? 1 : 0) // 4
+                    .Add(_resourcesPath) // 5
             };
             bool res = await Cmd.Execute(command);
 

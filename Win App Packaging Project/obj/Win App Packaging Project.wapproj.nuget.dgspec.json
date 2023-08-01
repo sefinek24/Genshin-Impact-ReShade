@@ -66,7 +66,7 @@
             },
             "DiscordRichPresence": {
               "target": "Package",
-              "version": "[1.1.4.20, )"
+              "version": "[1.2.1.24, )"
             },
             "Microsoft.Toolkit.Uwp.Notifications": {
               "target": "Package",
@@ -74,7 +74,7 @@
             },
             "Microsoft.Web.WebView2": {
               "target": "Package",
-              "version": "[1.0.1823.32, )"
+              "version": "[1.0.1901.177, )"
             },
             "NAudio": {
               "target": "Package",

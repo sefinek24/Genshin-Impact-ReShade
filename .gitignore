@@ -33,6 +33,12 @@ Screenshots/*.jpg
 Screenshots/*.jpeg
 Screenshots/*.bmp
 
+# Zjebany Injector
+Inject Mods/Action.cs
+Inject Mods/Scripts/Logic.cs
+Inject Mods/bin
+Inject Mods/obj
+
 # Win App Packaging Project
 Win App Packaging Project/AppPackages
 Win App Packaging Project/bin

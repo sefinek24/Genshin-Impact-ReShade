@@ -49,7 +49,7 @@ if not exist "data\reshade\inject64.exe" (
 REM Get the launch mode from a file
 if not "%4" equ "3" if not "%4" equ "4" if not "%4" equ "5" if not "%4" equ "6" (
     echo [x] Failed to start. Unknown launch mode: %4
-    goto :pause
+    goto pause
 )
 
 REM Get the game version from a file
