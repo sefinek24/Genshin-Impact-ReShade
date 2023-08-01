@@ -1,7 +1,7 @@
 using System;
 using System.Security.Principal;
 
-namespace Inject_Mods.Scripts
+namespace GenshinStellaMod.Scripts
 {
     internal static class Utils
     {

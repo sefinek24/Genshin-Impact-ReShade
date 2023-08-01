@@ -1,4 +1,4 @@
-namespace ConfWindow.Forms
+namespace Configuration.Forms
 {
     partial class Window
     {
@@ -173,7 +173,7 @@ namespace ConfWindow.Forms
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ConfWindow.Properties.Resources.bg;
+            this.BackgroundImage = global::Configuration.Properties.Resources.bg;
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.checkBox7);

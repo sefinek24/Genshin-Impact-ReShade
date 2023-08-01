@@ -3,9 +3,9 @@ using System.IO;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using Inject_Mods.Scripts;
+using GenshinStellaMod.Scripts;
 
-namespace Inject_Mods
+namespace GenshinStellaMod
 {
     internal static class Program
     {

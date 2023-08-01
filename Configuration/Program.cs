@@ -1,9 +1,9 @@
 using System;
 using System.Windows.Forms;
-using ConfWindow.Forms;
-using ConfWindow.Properties;
+using Configuration.Forms;
+using Configuration.Properties;
 
-namespace ConfWindow
+namespace Configuration
 {
     internal static class Program
     {

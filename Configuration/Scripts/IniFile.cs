@@ -1,7 +1,7 @@
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace ConfWindow.Scripts
+namespace Configuration.Scripts
 {
     public class IniFile
     {

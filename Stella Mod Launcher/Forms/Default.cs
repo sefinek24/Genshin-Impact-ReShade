@@ -247,45 +247,93 @@ namespace StellaLauncher.Forms
         /* 1 */
         private async void StartGame_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            // Run cmd file
-            Cmd.CliWrap command = new Cmd.CliWrap
-            {
-                App = "wt.exe",
-                WorkingDir = Program.AppPath,
-                Arguments = new ArgumentsBuilder()
-                    .Add(Secret.IsMyPatron ? "Inject Mods.exe" : RunCmd)
-                    .Add(Program.AppVersion) // 0
-                    .Add(Data.ReShadeVer) // 1
-                    .Add(Data.UnlockerVer) // 2
-                    .Add(Secret.IsMyPatron ? 1 : 6) // 3
-                    .Add(Secret.IsMyPatron ? 1 : 0) // 4
-                    .Add(_resourcesPath) // 5
-            };
-            bool res = await Cmd.Execute(command);
+            string injectType = Program.Settings.ReadString("Launcher", "InjectType", "exe");
 
-            // Exit Stella with status code 0
+            Cmd.CliWrap command = null;
+            switch (injectType)
+            {
+                case "exe":
+                    command = new Cmd.CliWrap
+                    {
+                        App = "wt.exe",
+                        WorkingDir = Program.AppPath,
+                        Arguments = new ArgumentsBuilder()
+                            .Add(Secret.IsMyPatron ? "Genshin Stella Mod.exe" : RunCmd)
+                            .Add(Program.AppVersion) // 0
+                            .Add(Data.ReShadeVer) // 1
+                            .Add(Data.UnlockerVer) // 2
+                            .Add(Secret.IsMyPatron ? 1 : 6) // 3
+                            .Add(Secret.IsMyPatron ? 1 : 0) // 4
+                            .Add(_resourcesPath) // 5
+                    };
+                    break;
+                case "cmd":
+                    command = new Cmd.CliWrap
+                    {
+                        App = "wt.exe",
+                        WorkingDir = Program.AppPath,
+                        Arguments = new ArgumentsBuilder()
+                            .Add(Secret.IsMyPatron ? DownloadCmd.RunCmdPatrons : RunCmd)
+                            .Add(Program.AppVersion) // 1
+                            .Add(Data.ReShadeVer) // 2
+                            .Add(Data.UnlockerVer) // 3
+                            .Add(Secret.IsMyPatron ? 1 : 6) // 4
+                            .Add(Secret.IsMyPatron ? $"\"{_resourcesPath}\\3DMigoto\"" : "0") // 5 
+                            .Add(await Utils.GetGameVersion()) // 6
+                            .Add(Log.CmdLogs) // 7
+                            .Add(Program.AppPath) // 8
+                            .Add(Path.GetDirectoryName(Program.FpsUnlockerExePath) ?? string.Empty) // 9
+                    };
+                    break;
+            }
+
+            bool res = await Cmd.Execute(command);
             if (res) Environment.Exit(0);
         }
 
         /* 3 */
         private async void OnlyReShade_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            // Run cmd file
-            Cmd.CliWrap command = new Cmd.CliWrap
+            string injectType = Program.Settings.ReadString("Launcher", "InjectType", "exe");
+
+            Cmd.CliWrap command = null;
+            switch (injectType)
             {
-                App = "wt.exe",
-                WorkingDir = Program.AppPath,
-                Arguments = new ArgumentsBuilder()
-                    .Add(Secret.IsMyPatron ? DownloadCmd.RunCmdPatrons : RunCmd)
-                    .Add(Program.AppVersion) // 1
-                    .Add(Data.ReShadeVer) // 2
-                    .Add(Data.UnlockerVer) // 3
-                    .Add(3) // 4
-                    .Add(0) // 5 
-                    .Add(await Utils.GetGameVersion()) // 6
-                    .Add(Log.CmdLogs) // 7
-                    .Add(Program.AppPath) // 8
-            };
+                case "exe":
+                    command = new Cmd.CliWrap
+                    {
+                        App = "wt.exe",
+                        WorkingDir = Program.AppPath,
+                        Arguments = new ArgumentsBuilder()
+                            .Add(Secret.IsMyPatron ? "Genshin Stella Mod.exe" : RunCmd)
+                            .Add(Program.AppVersion) // 0
+                            .Add(Data.ReShadeVer) // 1
+                            .Add(Data.UnlockerVer) // 2
+                            .Add(3) // 3
+                            .Add(Secret.IsMyPatron ? 1 : 0) // 4
+                            .Add(_resourcesPath) // 5
+                    };
+                    break;
+                case "cmd":
+                    command = new Cmd.CliWrap
+                    {
+                        App = "wt.exe",
+                        WorkingDir = Program.AppPath,
+                        Arguments = new ArgumentsBuilder()
+                            .Add(Secret.IsMyPatron ? DownloadCmd.RunCmdPatrons : RunCmd)
+                            .Add(Program.AppVersion) // 1
+                            .Add(Data.ReShadeVer) // 2
+                            .Add(Data.UnlockerVer) // 3
+                            .Add(3) // 4
+                            .Add(0) // 5 
+                            .Add(await Utils.GetGameVersion()) // 6
+                            .Add(Log.CmdLogs) // 7
+                            .Add(Program.AppPath) // 8
+                    };
+                    break;
+            }
+
+
             bool res = await Cmd.Execute(command);
             if (!res) return;
 
@@ -300,26 +348,48 @@ namespace StellaLauncher.Forms
         /* 4 */
         private async void OnlyUnlocker_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            // Run cmd file
-            Cmd.CliWrap command = new Cmd.CliWrap
-            {
-                App = "wt.exe",
-                WorkingDir = Program.AppPath,
-                Arguments = new ArgumentsBuilder()
-                    .Add(Secret.IsMyPatron ? DownloadCmd.RunCmdPatrons : RunCmd)
-                    .Add(Program.AppVersion) // 1
-                    .Add(Data.ReShadeVer) // 2
-                    .Add(Data.UnlockerVer) // 3
-                    .Add(4) // 4
-                    .Add(0) // 5 
-                    .Add(await Utils.GetGameVersion()) // 6
-                    .Add(Log.CmdLogs) // 7
-                    .Add(Program.AppPath) // 8
-                    .Add(Path.GetDirectoryName(Program.FpsUnlockerExePath) ?? string.Empty) // 9
-            };
-            bool res = await Cmd.Execute(command);
+            string injectType = Program.Settings.ReadString("Launcher", "InjectType", "exe");
 
-            // Exit Stella with status code 0
+            Cmd.CliWrap command = null;
+            switch (injectType)
+            {
+                case "exe":
+                    command = new Cmd.CliWrap
+                    {
+                        App = "wt.exe",
+                        WorkingDir = Program.AppPath,
+                        Arguments = new ArgumentsBuilder()
+                            .Add(Secret.IsMyPatron ? "Genshin Stella Mod.exe" : RunCmd)
+                            .Add(Program.AppVersion) // 0
+                            .Add(Data.ReShadeVer) // 1
+                            .Add(Data.UnlockerVer) // 2
+                            .Add(4) // 3
+                            .Add(Secret.IsMyPatron ? 1 : 0) // 4
+                            .Add(_resourcesPath) // 5
+                    };
+                    break;
+                case "cmd":
+                    command = new Cmd.CliWrap
+                    {
+                        App = "wt.exe",
+                        WorkingDir = Program.AppPath,
+                        Arguments = new ArgumentsBuilder()
+                            .Add(Secret.IsMyPatron ? DownloadCmd.RunCmdPatrons : RunCmd)
+                            .Add(Program.AppVersion) // 1
+                            .Add(Data.ReShadeVer) // 2
+                            .Add(Data.UnlockerVer) // 3
+                            .Add(4) // 4
+                            .Add(0) // 5 
+                            .Add(await Utils.GetGameVersion()) // 6
+                            .Add(Log.CmdLogs) // 7
+                            .Add(Program.AppPath) // 8
+                            .Add(Path.GetDirectoryName(Program.FpsUnlockerExePath) ?? string.Empty) // 9
+                    };
+                    break;
+            }
+
+
+            bool res = await Cmd.Execute(command);
             if (res) Environment.Exit(0);
         }
 
@@ -333,22 +403,46 @@ namespace StellaLauncher.Forms
                 return;
             }
 
-            // Run cmd file
-            Cmd.CliWrap command = new Cmd.CliWrap
+            string injectType = Program.Settings.ReadString("Launcher", "InjectType", "exe");
+
+            Cmd.CliWrap command = null;
+            switch (injectType)
             {
-                App = "wt.exe",
-                WorkingDir = Program.AppPath,
-                Arguments = new ArgumentsBuilder()
-                    .Add(Secret.IsMyPatron ? DownloadCmd.RunCmdPatrons : RunCmd)
-                    .Add(Program.AppVersion) // 1
-                    .Add(Data.ReShadeVer) // 2
-                    .Add(Data.UnlockerVer) // 3
-                    .Add(Secret.IsMyPatron ? 1 : 6) // 4
-                    .Add(Secret.IsMyPatron ? $"\"{_resourcesPath}\\3DMigoto\"" : "0") // 5 
-                    .Add(await Utils.GetGameVersion()) // 6
-                    .Add(Log.CmdLogs) // 7
-                    .Add(Program.AppPath) // 8
-            };
+                case "exe":
+                    command = new Cmd.CliWrap
+                    {
+                        App = "wt.exe",
+                        WorkingDir = Program.AppPath,
+                        Arguments = new ArgumentsBuilder()
+                            .Add(Secret.IsMyPatron ? "Genshin Stella Mod.exe" : RunCmd)
+                            .Add(Program.AppVersion) // 0
+                            .Add(Data.ReShadeVer) // 1
+                            .Add(Data.UnlockerVer) // 2
+                            .Add(6) // 3
+                            .Add(Secret.IsMyPatron ? 1 : 0) // 4
+                            .Add(_resourcesPath) // 5
+                    };
+                    break;
+                case "cmd":
+                    command = new Cmd.CliWrap
+                    {
+                        App = "wt.exe",
+                        WorkingDir = Program.AppPath,
+                        Arguments = new ArgumentsBuilder()
+                            .Add(Secret.IsMyPatron ? DownloadCmd.RunCmdPatrons : RunCmd)
+                            .Add(Program.AppVersion) // 1
+                            .Add(Data.ReShadeVer) // 2
+                            .Add(Data.UnlockerVer) // 3
+                            .Add(6) // 4
+                            .Add(Secret.IsMyPatron ? $"\"{_resourcesPath}\\3DMigoto\"" : "0") // 5 
+                            .Add(await Utils.GetGameVersion()) // 6
+                            .Add(Log.CmdLogs) // 7
+                            .Add(Program.AppPath) // 8
+                    };
+                    break;
+            }
+
+            // Run file
             await Cmd.Execute(command);
 
             // Find game path

@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{8C3922C1-DE28-4285-A1A7-9EFB1203BC97}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Inject_Mods</RootNamespace>
-    <AssemblyName>Inject Mods</AssemblyName>
+    <RootNamespace>GenshinStellaMod</RootNamespace>
+    <AssemblyName>Genshin Stella Mod</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

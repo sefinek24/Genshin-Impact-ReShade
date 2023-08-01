@@ -7,7 +7,7 @@
     <ProjectGuid>{A9DDC941-CB15-4B3C-8BA1-8F559F70480D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>StellaLauncher</RootNamespace>
-    <AssemblyName>Genshin Stella Mod</AssemblyName>
+    <AssemblyName>Stella Mod Launcher</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

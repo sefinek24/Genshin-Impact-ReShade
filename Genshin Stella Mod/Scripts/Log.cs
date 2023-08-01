@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Reflection;
 
-namespace Inject_Mods.Scripts
+namespace GenshinStellaMod.Scripts
 {
     /// <summary>
     ///     Provides logging functionality for the launcher.

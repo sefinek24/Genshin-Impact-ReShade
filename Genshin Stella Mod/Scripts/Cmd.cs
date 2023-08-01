@@ -4,7 +4,7 @@ using CliWrap;
 using CliWrap.Buffered;
 using CliWrap.Builders;
 
-namespace Inject_Mods.Scripts
+namespace GenshinStellaMod.Scripts
 {
     internal static class Cmd
     {

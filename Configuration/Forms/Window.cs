@@ -4,15 +4,15 @@ using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 using Windows.Storage;
-using ConfWindow.Properties;
-using ConfWindow.Scripts;
+using Configuration.Properties;
+using Configuration.Scripts;
 
-namespace ConfWindow.Forms
+namespace Configuration.Forms
 {
     public partial class Window : Form
     {
         private static readonly string AppData = GetAppData();
-        public static bool MsStore;
+        private static bool MsStore;
         public static readonly string AppName = Assembly.GetExecutingAssembly().GetName().Name;
         private static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
 

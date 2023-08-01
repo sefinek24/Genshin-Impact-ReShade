@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{91FBB412-D343-4E78-95B5-F18E6EB6001C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ConfWindow</RootNamespace>
-    <AssemblyName>First app launch</AssemblyName>
+    <RootNamespace>Configuration</RootNamespace>
+    <AssemblyName>Configuration</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -36,7 +36,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ConfWindow.Program</StartupObject>
+    <StartupObject>Configuration.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
