@@ -87,17 +87,11 @@ namespace PrepareStella
                 string selectedGameExe = null;
 
                 if (File.Exists(GameGenshinImpact))
-                {
                     selectedGameExe = GameGenshinImpact;
-                }
                 else if (File.Exists(GameYuanShen))
-                {
                     selectedGameExe = GameYuanShen;
-                }
                 else
-                {
-                   new GamePath(GameExeGlobal ?? $"{GameGenshinImpact}\n{GameYuanShen}") { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.ShowDialog();
-                }
+                    new GamePath(GameExeGlobal ?? $"{GameGenshinImpact}\n{GameYuanShen}") { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.ShowDialog();
 
                 if (selectedGameExe != null)
                 {
