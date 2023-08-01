@@ -1,3 +1,9 @@
+<!-- [[> SEO
+###### Title: Genshin Impact ReShade README.md
+###### Description: .
+###### Tags: .
+]]> -->
+
 <div align="center" id="header">
     <h1>🌟 Genshin Impact Stella Mod Pack 🌟</h1>
     <p>
@@ -205,10 +211,3 @@ Please note that the icons and stickers used in this project were obtained from 
 
 - The icons were sourced from <a href="https://icons8.com" target="_blank">Icons8</a> and <a href="https://www.flaticon.com" target="_blank">FlatIcon</a>, which offer a variety of high-quality icons in formats including PNG, SVG, and EPS.
 - The stickers used in the project were obtained from <a href="https://stickers.wiki" target="_blank">stickers.wiki</a>, a website that provides a large collection of digital stickers.
-
-
-<!-- [[> SEO
-###### Title: Genshin Impact ReShade README.md
-###### Description: .
-###### Tags: .
-]]> -->
