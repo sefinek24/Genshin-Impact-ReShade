@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configuration window", "Fir
 EndProject
 Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "Win App Packaging Project", "Win App Packaging Project\Win App Packaging Project.wapproj", "{1D6AC525-A490-4EEE-A83C-C614A9D97C0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inject Mods", "Inject Mods\Inject Mods.csproj", "{8C3922C1-DE28-4285-A1A7-9EFB1203BC97}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genshin Stella Mod", "Inject Mods\Genshin Stella Mod.csproj", "{8C3922C1-DE28-4285-A1A7-9EFB1203BC97}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -142,9 +142,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {DDABFAAF-62E1-4807-820C-8A87AAE3C15D}
-		RESX_PrefixTranslations = False
-		RESX_SaveFilesImmediatelyUponChange = True
 		RESX_NeutralResourcesLanguage = en-US
+		RESX_SaveFilesImmediatelyUponChange = True
+		RESX_PrefixTranslations = False
+		SolutionGuid = {DDABFAAF-62E1-4807-820C-8A87AAE3C15D}
 	EndGlobalSection
 EndGlobal
