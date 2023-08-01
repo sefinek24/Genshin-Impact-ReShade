@@ -15,8 +15,8 @@ Configuration/bin
 Configuration/obj
 Stella Mod Launcher/bin
 Stella Mod Launcher/obj
-Setup/bin
-Setup/obj
+Prepare Stella/bin
+Prepare Stella/obj
 
 # Solution
 Stella Mod Launcher/data/cmd/run_patrons.cmd

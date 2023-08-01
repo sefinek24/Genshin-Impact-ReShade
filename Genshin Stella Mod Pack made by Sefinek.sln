@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. Stella Mod Launcher", "Stella Mod Launcher\1. Stella Mod Launcher.csproj", "{A9DDC941-CB15-4B3C-8BA1-8F559F70480D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. Prepare Stella", "Setup\4. Prepare Stella.csproj", "{377E01DA-E164-4E79-A540-23F68FB2CD8B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. Prepare Stella", "Prepare Stella\4. Prepare Stella.csproj", "{377E01DA-E164-4E79-A540-23F68FB2CD8B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. Configuration", "Configuration\3. Configuration.csproj", "{91FBB412-D343-4E78-95B5-F18E6EB6001C}"
 EndProject
