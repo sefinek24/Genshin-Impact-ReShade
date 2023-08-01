@@ -1,5 +1,5 @@
 <!-- [[> SEO
-###### Number: 0
+###### Number: 2
 
 ###### Title: Genshin Impact Stella Mod Pack: Installation, Requirements, and Screenshots
 ###### Description: Learn how to install the Genshin Impact Stella Mod Pack, check the system requirements, and view in-game screenshots. Enhance your gaming experience now!
