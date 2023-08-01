@@ -799,7 +799,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} Succesfully downloaded or updated file: {1}.
+        ///   Looks up a localized string similar to {0} Successfully downloaded or updated file: {1}.
         /// </summary>
         internal static string DownloadCmd_SuccesfullyDownloadedOrUpdatedFile_ {
             get {
