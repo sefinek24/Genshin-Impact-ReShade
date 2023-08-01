@@ -33,17 +33,17 @@
 
 
 ## 📋 〢 Table of contents
-- [⚠️ Important](https://sefinek.net/genshin-impact-reshade/docs?page=readme#%E2%9A%A0%EF%B8%8F-%E3%80%A2-important)
-- [📂 Includes](https://sefinek.net/genshin-impact-reshade/docs?page=readme#%F0%9F%93%82-%E3%80%A2-includes)
-- [📃 Changelog](https://sefinek.net/genshin-impact-reshade/docs?page=changelog_v7)
-- [✨ Requirements](https://sefinek.net/genshin-impact-reshade/docs?page=readme#%E2%9C%A8-%E3%80%A2-requirements)
-- [🔧 Supported systems](https://sefinek.net/genshin-impact-reshade/docs?page=readme#%F0%9F%94%A7-%E3%80%A2-supported-operating-systems)
-- [📥 How to install](https://sefinek.net/genshin-impact-reshade/docs?page=readme#%F0%9F%93%A5-%E3%80%A2-how-to-install)
-- [🛠️ Tested game versions](https://sefinek.net/genshin-impact-reshade/docs?page=readme#div-idtested-game-versionsdiv-%F0%9F%9B%A0%EF%B8%8F-%E3%80%A2-tested-game-versions)
-- [⚙️ Recommended settings for game](https://sefinek.net/genshin-impact-reshade/docs?page=readme#%F0%9F%9B%A0%EF%B8%8F-%E3%80%A2-tested-game-versions)
-- [📷 Other screenshots](https://sefinek.net/genshin-impact-reshade/docs?page=readme#%E2%9A%99%EF%B8%8F-%E3%80%A2-recommended-settings-for-game)
-- [🧀 Legend](https://sefinek.net/genshin-impact-reshade/docs?page=readme#%F0%9F%A7%80-%E3%80%A2-legend)
-- [🧶 Sources](https://sefinek.net/genshin-impact-reshade/docs?page=readme#%F0%9F%A7%B6-%E3%80%A2-sources)
+- [⚠️ Important](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%E2%9A%A0%EF%B8%8F-%E3%80%A2-important)
+- [📂 Includes](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%F0%9F%93%82-%E3%80%A2-includes)
+- [📃 Changelog](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%E2%9C%A8-%E3%80%A2-requirements)
+- [✨ Requirements](https://sefinek.net/genshin-impact-reshade/docs?page=changelog_v7)
+- [🔧 Supported systems](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%F0%9F%94%A7-%E3%80%A2-supported-operating-systems)
+- [📥 How to install](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%F0%9F%93%A5-%E3%80%A2-how-to-install)
+- [🛠️ Tested game versions](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%F0%9F%9B%A0%EF%B8%8F-%E3%80%A2-tested-game-versions)
+- [⚙️ Recommended settings for game](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%E2%9A%99%EF%B8%8F-%E3%80%A2-recommended-settings-for-game)
+- [📷 Other screenshots](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%F0%9F%93%B7-%E3%80%A2-other-screenshots-without-ray-tracing)
+- [🧀 Legend](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)
+- [🧶 Sources](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%F0%9F%A7%B6-%E3%80%A2-sources)
 
 <div align="center" id="labels">
     <a href="https://sefinek.net/genshin-impact-reshade/download?referrer=readme&hash=null" title="Download stable release"><img src="Assets/Images/Readme/labels/download.png" alt="Download" height="148px"></a>
