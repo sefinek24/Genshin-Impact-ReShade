@@ -61,6 +61,7 @@ namespace GenshinStellaMod
             catch (Exception ex)
             {
                 Log.ThrowError(ex);
+
                 Console.WriteLine("=========================================================================================");
                 Console.WriteLine("[x] Oops, we're sorry. The application failed to start for some reason.");
                 Console.WriteLine("[i] If you need help, please visit: https://sefinek.net/genshin-impact-reshade/support");
