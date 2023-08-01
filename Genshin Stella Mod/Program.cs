@@ -21,10 +21,10 @@ namespace GenshinStellaMod
         {
             Console.OutputEncoding = Encoding.UTF8;
 
-            string isMyPatron = args[4];
             string launchMode = args[3];
-
             Console.Title = $"Genshin Stella Mod - {launchMode}";
+
+            string isMyPatron = args[4];
 
             Console.WriteLine("⠀   ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⢶⣦⡀");
             Console.WriteLine("⠀  ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿");
