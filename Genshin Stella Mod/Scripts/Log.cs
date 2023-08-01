@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Reflection;
@@ -47,6 +48,8 @@ namespace StellaLauncher.Scripts
             {
                 ShowToastNotification(Resources.Log_SomethingWentWrong, Resources.Log_ForSomeReasonICannotSaveTheActionInfoInTheLogFile);
             }
+
+            if (Debugger.IsAttached) Console.WriteLine($"Log.Output(): {log}");
         }
 
         /// <summary>
@@ -68,6 +71,8 @@ namespace StellaLauncher.Scripts
             {
                 ShowToastNotification(Resources.Log_SomethingWentWrong, Resources.Log_ForSomeReasonICantSaveTheErrorInfoInTheLogFile);
             }
+
+            if (Debugger.IsAttached) Console.WriteLine($"Log.SaveError(): {log}");
         }
 
         /// <summary>

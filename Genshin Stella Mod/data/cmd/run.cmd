@@ -47,8 +47,8 @@ if not exist "data\reshade\inject64.exe" (
 )
 
 REM Get the launch mode from a file
-if not "%4" equ "6" if not "%4" equ "2" if not "%4" equ "3" if not "%4" equ "4" if not "%4" equ "5" (
-    echo [x] Failed to start. Unknown launch mode: %1
+if not "%4" equ "3" if not "%4" equ "4" if not "%4" equ "5" if not "%4" equ "6" (
+    echo [x] Failed to start. Unknown launch mode: %4
     goto :pause
 )
 
@@ -127,7 +127,7 @@ echo [%DATE% %TIME%]: Launch mode %1. Starting... >> %7
 REM Choose the correct mode
 if "%4" equ "6" (
     REM Unlock FPS
-    pushd "data\unlocker"
+    pushd "%9"
     start "" "unlockfps_clr.exe"
 
     echo [✓] Everything is ready! Now run the game using an FPS unlocking program ᕱ⑅︎ᕱ & echo.
@@ -137,8 +137,9 @@ if "%4" equ "6" (
     call "..\cmd\start\run-reshade.cmd"
 
     REM Wait for the unlocker to finish
-    pushd "..\cmd\start"
-    call wait_for_unlockfps.cmd
+    pushd "%8"
+    pushd "data\cmd\start"
+    call "wait_for_unlockfps.cmd"
 ) else if "%4" equ "3" (
     echo [✓] Everything is ready! Thank you for using Stella Mod. Have fun. ᕱ⑅︎ᕱ & echo.
     REM Ask the user to start the game
@@ -155,7 +156,7 @@ if "%4" equ "6" (
     call done.cmd
 )  else if "%4" equ "4" (
     REM Unlock FPS
-    pushd "data\unlocker"
+    pushd "%9"
     start "" "unlockfps_clr.exe"
 
     echo [✓] Good job! Now run the game using an FPS unlocking program ᕱ⑅︎ᕱ & echo.
@@ -165,8 +166,8 @@ if "%4" equ "6" (
     call wait_for_unlockfps.cmd
 ) else (
     REM Wrong launch mode
-    echo [x] Failed to start. Invalid launch mode: %1
-    echo [%DATE% %TIME%]: Failed to start. Launch mode is invalid. >> %7
+    echo [x] Failed to start. Invalid launch mode: %4
+    echo [%DATE% %TIME%]: Failed to start. Launch mode %4 is invalid. >> %7
     goto pause
 )
 

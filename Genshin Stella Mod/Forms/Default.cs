@@ -261,6 +261,8 @@ namespace StellaLauncher.Forms
                     .Add(Secret.IsMyPatron ? $"\"{_resourcesPath}\\3DMigoto\"" : "0") // 5 
                     .Add(await Utils.GetGameVersion()) // 6
                     .Add(Log.CmdLogs) // 7
+                    .Add(Program.AppPath) // 8
+                    .Add(Path.GetDirectoryName(Program.FpsUnlockerExePath) ?? string.Empty) // 9
             };
             bool res = await Cmd.Execute(command);
 
@@ -285,6 +287,7 @@ namespace StellaLauncher.Forms
                     .Add(0) // 5 
                     .Add(await Utils.GetGameVersion()) // 6
                     .Add(Log.CmdLogs) // 7
+                    .Add(Program.AppPath) // 8
             };
             bool res = await Cmd.Execute(command);
             if (!res) return;
@@ -314,6 +317,8 @@ namespace StellaLauncher.Forms
                     .Add(0) // 5 
                     .Add(await Utils.GetGameVersion()) // 6
                     .Add(Log.CmdLogs) // 7
+                    .Add(Program.AppPath) // 8
+                    .Add(Path.GetDirectoryName(Program.FpsUnlockerExePath) ?? string.Empty) // 9
             };
             bool res = await Cmd.Execute(command);
 
@@ -338,13 +343,14 @@ namespace StellaLauncher.Forms
                 WorkingDir = Program.AppPath,
                 Arguments = new ArgumentsBuilder()
                     .Add(Secret.IsMyPatron ? DownloadCmd.RunCmdPatrons : RunCmd)
-                    .Add(Program.AppVersion)
-                    .Add(Data.ReShadeVer)
-                    .Add(Data.UnlockerVer)
-                    .Add(5)
-                    .Add(await Utils.GetGameVersion())
-                    .Add($@"{_resourcesPath}\3DMigoto")
-                    .Add(Program.AppPath)
+                    .Add(Program.AppVersion) // 1
+                    .Add(Data.ReShadeVer) // 2
+                    .Add(Data.UnlockerVer) // 3
+                    .Add(Secret.IsMyPatron ? 1 : 6) // 4
+                    .Add(Secret.IsMyPatron ? $"\"{_resourcesPath}\\3DMigoto\"" : "0") // 5 
+                    .Add(await Utils.GetGameVersion()) // 6
+                    .Add(Log.CmdLogs) // 7
+                    .Add(Program.AppPath) // 8
             };
             await Cmd.Execute(command);
 

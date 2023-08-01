@@ -745,4 +745,7 @@ Czy chcesz odwiedzić Patreon.com i dokonać subskrypcji? Zyskasz dostęp do wie
   <data name="Utils_OopsAnErrorOccurred" xml:space="preserve">
     <value>Aw, wystąpił jakiś błąd</value>
   </data>
+  <data name="DownloadCmd_SuccesfullyDownloadedOrUpdatedFile_" xml:space="preserve">
+    <value>{0}: Pomyślnie pobrano lub zaktualizowano plik: {1}</value>
+  </data>
 </root>

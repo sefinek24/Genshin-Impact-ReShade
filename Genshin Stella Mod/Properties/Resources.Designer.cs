@@ -799,6 +799,15 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} Succesfully downloaded or updated file: {1}.
+        /// </summary>
+        internal static string DownloadCmd_SuccesfullyDownloadedOrUpdatedFile_ {
+            get {
+                return ResourceManager.GetString("DownloadCmd_SuccesfullyDownloadedOrUpdatedFile_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap error {

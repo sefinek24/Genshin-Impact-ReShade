@@ -5,7 +5,9 @@ using System.Net.Http.Headers;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using StellaLauncher.Forms;
 using StellaLauncher.Models;
+using StellaLauncher.Properties;
 
 namespace StellaLauncher.Scripts.Patrons
 {
@@ -14,42 +16,42 @@ namespace StellaLauncher.Scripts.Patrons
         private static readonly HttpClient HttpClient = new HttpClient();
 
         public static readonly string RunCmdPatrons = Path.Combine(Program.AppPath, "data", "cmd", "run_patrons.cmd");
+        private static readonly string ApiCheckUrl = $"{Program.WebApi}/genshin-stella-mod/patrons/sha256/static?file=run_patrons.cmd";
+        private static readonly string ApiDownloadUrl = $"{Program.WebApi}/genshin-stella-mod/patrons/static/run_patrons.cmd";
 
         public static async Task Run()
         {
-            string apiCheckUrl = $"{Program.WebApi}/genshin-stella-mod/patrons/sha256/static?file=run_patrons.cmd";
-            string apiDownloadUrl = $"{Program.WebApi}/genshin-stella-mod/patrons/static/run_patrons.cmd";
+            Log.Output($"{ApiCheckUrl}\n{ApiDownloadUrl}");
 
             try
             {
                 if (File.Exists(RunCmdPatrons))
                 {
-                    Console.WriteLine("Plik istnieje lokalnie. Wysyłanie żądania do sprawdzenia hashu na serwer...");
+                    Log.Output($"DownloadCmd.Run(): File exists locally in {RunCmdPatrons}. Sending a request to check the hash on the server...");
 
-                    FileHash remoteFileHash = await GetRemoteFileHash(apiCheckUrl);
-
+                    FileHash remoteFileHash = await GetRemoteFileHash(ApiCheckUrl);
                     if (!string.IsNullOrEmpty(remoteFileHash?.Hash))
                     {
                         string localFileHash = CalculateFileHash(RunCmdPatrons);
 
                         if (remoteFileHash.Hash == localFileHash)
-                            Console.WriteLine("Hash pliku się zgadza. Nie ma potrzeby pobierania pliku.");
+                            Log.Output($"DownloadCmd.Run(): The file hash matches. There's no need to download the file.\nLocal: {localFileHash}\nRemote: {remoteFileHash.Hash}");
                         else
-                            await DownloadFile(apiDownloadUrl);
+                            await DownloadFile(ApiDownloadUrl);
                     }
                     else
                     {
-                        Console.WriteLine("Nie można pobrać hasha pliku z serwera.");
+                        Log.Output("DownloadCmd.Run(): Unable to download the file hash from the server.");
                     }
                 }
                 else
                 {
-                    await DownloadFile(apiDownloadUrl);
+                    await DownloadFile(ApiDownloadUrl);
                 }
             }
             catch (HttpRequestException ex)
             {
-                Console.WriteLine($"Wystąpił błąd podczas komunikacji z serwerem: {ex}");
+                Log.SaveError($"DownloadCmd.Run(): HttpRequestException: An error occurred while communicating with the server: {ex}");
             }
         }
 
@@ -76,7 +78,8 @@ namespace StellaLauncher.Scripts.Patrons
                 byte[] fileBytes = await downloadResponse.Content.ReadAsByteArrayAsync();
                 File.WriteAllBytes(RunCmdPatrons, fileBytes);
 
-                Console.WriteLine("Plik został pomyślnie pobrany i zapisany na dysku.");
+                Log.Output("DownloadCmd.DownloadFile(): The file has been successfully downloaded and saved to the disk.");
+                Default._status_Label.Text = string.Format(Resources.DownloadCmd_SuccesfullyDownloadedOrUpdatedFile_, "[i]", Path.GetFileName(RunCmdPatrons));
             }
         }
 
