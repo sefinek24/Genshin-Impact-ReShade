@@ -199,13 +199,6 @@ This is because the presets or default settings are constantly being reviewed
 and refined by the developers to ensure optimal user experience and address any issues or bugs that may arise.
 
 
-##  🧀 〢 Legend
-| 🐈 Emoji                                                                                                                                     | 🤔 Meaning            | 🐈 Emoji                                                                                                                                    | 🤔 Meaning         | 🐈 Emoji                                                                                                                                   | 🤔 Meaning   |
-|----------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|:--------------------------------------------------------------------------------------------------------------------------------------------|:-------------------|:-------------------------------------------------------------------------------------------------------------------------------------------|:-------------|
-| [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)  | Yes / Supported       | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)  | No / Not supported | [❓](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki) | I don't know |
-| [🎯️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki) | Default not supported | [🤔](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki) | Not tested         |                                                                                                                                            |              |
-
-
 ## 🧶 〢 Sources
 Please note that the icons and stickers used in this project were obtained from different sources.
 
