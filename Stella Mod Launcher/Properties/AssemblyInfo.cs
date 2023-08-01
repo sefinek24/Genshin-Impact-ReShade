@@ -1,17 +1,17 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
+using System.Resources;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Inject Mods")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Genshin Impact Stella Mod Launcher")]
+[assembly: AssemblyDescription("Official launcher for Genshin Impact Stella Mod 2023 made by Sefinek.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Inject Mods")]
-[assembly: AssemblyCopyright("Copyright ©  2023")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("Sefinek Inc.")]
+[assembly: AssemblyProduct("The best Genshin Impact mod pack with custom presets for ReShade and FPS Unlocker.")]
+[assembly: AssemblyCopyright("Copyright 2023 © by Sefinek. All Rights Reserved.")]
+[assembly: AssemblyTrademark("© Sefinek Inc.")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("8c3922c1-de28-4285-a1a7-9efb1203bc97")]
+[assembly: Guid("a9ddc941-cb15-4b3c-8ba1-8f559f70480d")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -32,5 +32,6 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("7.6.1.0")]
+[assembly: AssemblyFileVersion("7.6.1.0")]
+[assembly: NeutralResourcesLanguage("en")]

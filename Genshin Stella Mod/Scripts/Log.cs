@@ -1,23 +1,16 @@
 using System;
-using System.Diagnostics;
-using System.Drawing;
 using System.IO;
 using System.Reflection;
-using System.Windows.Forms;
-using Microsoft.Toolkit.Uwp.Notifications;
-using StellaLauncher.Forms.Errors;
-using StellaLauncher.Properties;
 
-namespace StellaLauncher.Scripts
+namespace Inject_Mods.Scripts
 {
     /// <summary>
     ///     Provides logging functionality for the launcher.
     /// </summary>
     internal static class Log
     {
-        public static readonly string Folder = Path.Combine(Program.AppData, "logs");
-        private static readonly string OutputFile = Path.Combine(Folder, "launcher.output.log");
-        public static readonly string CmdLogs = Path.Combine(Program.AppData, "logs", "cmd.output.log");
+        private static readonly string Folder = Path.Combine(Program.AppData, "logs");
+        private static readonly string OutputFile = Path.Combine(Folder, "inject.output.log");
 
 
         /// <summary>
@@ -46,10 +39,8 @@ namespace StellaLauncher.Scripts
             }
             catch
             {
-                ShowToastNotification(Resources.Log_SomethingWentWrong, Resources.Log_ForSomeReasonICannotSaveTheActionInfoInTheLogFile);
+                // ...
             }
-
-            if (Debugger.IsAttached) Console.WriteLine($"Log.Output(): {log}");
         }
 
         /// <summary>
@@ -69,10 +60,8 @@ namespace StellaLauncher.Scripts
             }
             catch
             {
-                ShowToastNotification(Resources.Log_SomethingWentWrong, Resources.Log_ForSomeReasonICantSaveTheErrorInfoInTheLogFile);
+                // ...
             }
-
-            if (Debugger.IsAttached) Console.WriteLine($"Log.SaveError(): {log}");
         }
 
         /// <summary>
@@ -81,10 +70,9 @@ namespace StellaLauncher.Scripts
         /// <param name="ex">The exception to be logged.</param>
         public static void ThrowError(Exception ex)
         {
-            SaveError(ex.ToString());
+            Console.WriteLine($"{ex.Message}\n");
 
-            // Show an error dialog with associated icon
-            new ErrorOccurred { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.ShowDialog();
+            SaveError(ex.ToString());
         }
 
         /// <summary>
@@ -93,8 +81,6 @@ namespace StellaLauncher.Scripts
         /// <param name="ex">The exception to be logged and reported.</param>
         public static void ErrorAndExit(Exception ex)
         {
-            Telemetry.Error(ex);
-
             // Log the exception and show the error dialog
             ThrowError(ex);
 
@@ -111,10 +97,10 @@ namespace StellaLauncher.Scripts
         {
             try
             {
-                new ToastContentBuilder()
-                    .AddText(title)
-                    .AddText(message)
-                    .Show();
+                // new ToastContentBuilder()
+                //    .AddText(title)
+                //    .AddText(message)
+                //    .Show();
             }
             catch (Exception ex)
             {

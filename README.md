@@ -185,13 +185,13 @@ Do not change FPS settings in the game if you are using FPS unlock.
 ## 📷 〢 Other screenshots (without Ray Tracing)
 <div id="images">
     <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Genshin%20Stella%20Mod/data/images/launcher/backgrounds/nahida/1.png" title="See preview [1.png]">
-        <img src="Genshin Stella Mod/data/images/launcher/backgrounds/nahida/1.png" alt="Screenshot number 1">
+        <img src="Stella Mod Launcher/data/images/launcher/backgrounds/nahida/1.png" alt="Screenshot number 1">
     </a>
     <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Genshin%20Stella%20Mod/data/images/launcher/backgrounds/hutao/4.png" title="See preview [4.png]">
-        <img src="Genshin Stella Mod/data/images/launcher/backgrounds/hutao/4.png" alt="Screenshot number 2">
+        <img src="Stella Mod Launcher/data/images/launcher/backgrounds/hutao/4.png" alt="Screenshot number 2">
     </a>
     <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Genshin%20Stella%20Mod/data/images/launcher/backgrounds/yaoyao/2.png" title="See preview [2.png]">
-        <img src="Genshin Stella Mod/data/images/launcher/backgrounds/yaoyao/2.png" alt="Screenshot number 3">
+        <img src="Stella Mod Launcher/data/images/launcher/backgrounds/yaoyao/2.png" alt="Screenshot number 3">
     </a>
 </div>
 

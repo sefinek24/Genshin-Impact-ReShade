@@ -11,15 +11,15 @@ data/reshade/cache
 
 # Build
 Build
-First app launch/bin
-First app launch/obj
-Genshin Stella Mod/bin
-Genshin Stella Mod/obj
-Install required dependencies/bin
-Install required dependencies/obj
+Configuration/bin
+Configuration/obj
+Stella Mod Launcher/bin
+Stella Mod Launcher/obj
+Setup/bin
+Setup/obj
 
 # Solution
-Genshin Stella Mod/data/cmd/run_patrons.cmd
+Stella Mod Launcher/data/cmd/run_patrons.cmd
 
 # Files etc.
 packages
@@ -34,10 +34,10 @@ Screenshots/*.jpeg
 Screenshots/*.bmp
 
 # Zjebany Injector
-Inject Mods/Action.cs
-Inject Mods/Scripts/Logic.cs
-Inject Mods/bin
-Inject Mods/obj
+Genshin Stella Mod/Action.cs
+Genshin Stella Mod/Scripts/Logic.cs
+Genshin Stella Mod/bin
+Genshin Stella Mod/obj
 
 # Win App Packaging Project
 Win App Packaging Project/AppPackages
