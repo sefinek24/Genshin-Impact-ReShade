@@ -88,12 +88,12 @@ The main server of [sefinek.net](https://sefinek.net) is located in Poland, whil
 | Community presets         | Presets created by our community.                                                                                            | [View folder](https://github.com/sefinek24/Stella-Mod-Resources/tree/main/static/reshade/zip/Presets/1.%20Made%20by%20community) | [CC BY-SA 4.0](https://github.com/sefinek24/Stella-Mod-Resources/blob/main/static/reshade/zip/Presets/LICENSE) |
 | Presets with Ray Tracing  | Only available for [Patrons](https://www.patreon.com/sefinek).                                                               | [Patreon](https://www.patreon.com/sefinek)                                                                                       |                                                                                                                |
 
-> [!NOTE]:
+> [!NOTE]
 > The repository with the resources is available here: [sefinek24/Stella-Mod-Resources](https://github.com/sefinek24/Stella-Mod-Resources)
 
 
 ## ✨ 〢 Requirements
-> [!NOTE]:
+> [!NOTE]
 > Make sure your PC meets the following requirements before installing the mod.
 
 | 🗝️ Your PC & Network                      | 📂 Dependencies                                                                                                                                                                                                       |
