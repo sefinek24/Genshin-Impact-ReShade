@@ -43,11 +43,9 @@ namespace SefinAntiCheat.Forms
 
         private void OnTrayIconClick(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
-            {
-                Show();
-                WindowState = FormWindowState.Normal;
-            }
+            if (e.Button != MouseButtons.Left) return;
+            Show();
+            WindowState = FormWindowState.Normal;
         }
 
         private void OnQuitClick(object sender, EventArgs e)
@@ -61,11 +59,9 @@ namespace SefinAntiCheat.Forms
         {
             base.OnResize(e);
 
-            if (WindowState == FormWindowState.Minimized)
-            {
-                Hide();
-                _trayIcon.ShowBalloonTip(2000, "Information", "The application has been minimized to the tray.", ToolTipIcon.Info);
-            }
+            if (WindowState != FormWindowState.Minimized) return;
+            Hide();
+            _trayIcon.ShowBalloonTip(2000, "Information", "The application has been minimized to the tray.", ToolTipIcon.Info);
         }
     }
 }
