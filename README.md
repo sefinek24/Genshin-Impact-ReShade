@@ -33,7 +33,7 @@
 
 
 ## 📋 〢 Table of contents
-- [⚠️ Information](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%E2%9A%A0%EF%B8%8F-%E3%80%A2-important)
+- [⚠️ Information](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%F0%9F%93%84-%E3%80%A2-information)
 - [📂 Includes](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%F0%9F%93%82-%E3%80%A2-includes)
 - [📃 Changelog](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%E2%9C%A8-%E3%80%A2-requirements)
 - [✨ Requirements](https://sefinek.net/genshin-impact-reshade/docs?page=changelog_v7)
@@ -58,7 +58,7 @@ Please note that sharing game screenshots displaying your UID, visible shaders, 
 If you plan to record a video of the game for platforms like YouTube, remember to hide or censor your UID and username to avoid being banned.
 
 Also, it is highly recommended to update your graphics card and chipset drivers to ensure smooth gameplay, minimize graphics-related issues, and prevent crashes.
-Please familiarize yourself with the [system requirements](#pc-requirements) as well.
+Please familiarize yourself with the [system requirements](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%E2%9C%A8-%E3%80%A2-requirements) as well.
 
 For more information and details about the Genshin Stella Mod project, visit our [Documentation](https://sefinek.net/genshin-impact-reshade/docs?page=introduction).
 The wiki provides a comprehensive installation and usage guide for ReShade, along with frequently asked questions and troubleshooting tips.
@@ -118,16 +118,8 @@ The main server of [sefinek.net](https://sefinek.net) is located in Poland, whil
 
 
 ## 📥 〢 How to install?
-### 📦 » Short tutorial (installation via setup)
-1. Download the latest setup from [my official website](https://genshin.sefinek.net).
-2. Run the setup file `Stella-Mod-Setup.exe` and follow the on-screen instructions to install the mod.
-3. After installing the mod, launch the Stella Launcher and click the `Start game` button.
-4. Select the appropriate number of [frames per second](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/04.-What-is...#-considerations).
-> After a moment, the game should launch with [ReShade](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/07.-Installation#%EF%B8%8F-installation-via-innosetup) injected and [FPS Unlocker](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/04.-What-is...#-fps-unlocker).
-
-### 📘 » Extended tutorial (GitHub Wiki)
-1. [Main page](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/07.-Installation)
-2. [Automatic installation](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/07.-Installation#%EF%B8%8F-automatic-installation)
+1. [Default installation via InnoSetup](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/07.-Installation)
+2. [Manual installation](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/07.-Installation#%EF%B8%8F-automatic-installation)
 
 ### 📝 » Note
 After the installation is complete, you should open the Stella Launcher and start the game by clicking on the **Start game** button.
