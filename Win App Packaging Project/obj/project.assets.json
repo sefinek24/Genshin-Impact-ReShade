@@ -284,9 +284,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Win App Packaging Project\\5. Win App Packaging Project.wapproj",
-      "projectName": "5. Win App Packaging Project",
-      "projectPath": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Win App Packaging Project\\5. Win App Packaging Project.wapproj",
+      "projectUniqueName": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Win App Packaging Project\\6. Win App Packaging Project.wapproj",
+      "projectName": "6. Win App Packaging Project",
+      "projectPath": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Win App Packaging Project\\6. Win App Packaging Project.wapproj",
       "packagesPath": "C:\\Users\\Sefinek\\.nuget\\packages\\",
       "outputPath": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Win App Packaging Project\\obj\\",
       "projectStyle": "PackageReference",

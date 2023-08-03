@@ -2,9 +2,12 @@
 .vs
 data/reshade/cache
 
-# Default ignored files
+# Default
 .idea/shelf/
 .idea/workspace.xml
+*.wapproj.user
+*.assets.cache
+*.cache
 
 # Editor-based HTTP Client requests
 .idea/httpRequests/
@@ -47,9 +50,11 @@ Win App Packaging Project/obj/Debug
 Win App Packaging Project/obj/Release
 Win App Packaging Project/obj/x64
 Win App Packaging Project/obj/x86
-Win App Packaging Project/obj/project.nuget.cache
-Win App Packaging Project/Win App Packaging Project.assets.cache
-Win App Packaging Project/Win App Packaging Project.wapproj.user
+Win App Packaging Project/obj/project.nuget
+
+# SefinEAC
+Sefin Anti Cheat/bin
+Sefin Anti Cheat/obj
 
 # For patrons
 data/Patrons

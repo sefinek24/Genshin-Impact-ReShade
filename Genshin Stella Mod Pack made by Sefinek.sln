@@ -5,13 +5,15 @@ VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. Stella Mod Launcher", "Stella Mod Launcher\1. Stella Mod Launcher.csproj", "{A9DDC941-CB15-4B3C-8BA1-8F559F70480D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. Prepare Stella", "Prepare Stella\4. Prepare Stella.csproj", "{377E01DA-E164-4E79-A540-23F68FB2CD8B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. Genshin Stella Mod", "Genshin Stella Mod\2. Genshin Stella Mod.csproj", "{8C3922C1-DE28-4285-A1A7-9EFB1203BC97}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. Configuration", "Configuration\3. Configuration.csproj", "{91FBB412-D343-4E78-95B5-F18E6EB6001C}"
 EndProject
-Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "5. Win App Packaging Project", "Win App Packaging Project\5. Win App Packaging Project.wapproj", "{1D6AC525-A490-4EEE-A83C-C614A9D97C0A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. Prepare Stella", "Prepare Stella\4. Prepare Stella.csproj", "{377E01DA-E164-4E79-A540-23F68FB2CD8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. Genshin Stella Mod", "Genshin Stella Mod\2. Genshin Stella Mod.csproj", "{8C3922C1-DE28-4285-A1A7-9EFB1203BC97}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. Sefin Anti Cheat", "Sefin Anti Cheat\5. Sefin Anti Cheat.csproj", "{F53B112D-AC37-4FFE-854E-82DEA97FBFB9}"
+EndProject
+Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "6. Win App Packaging Project", "Win App Packaging Project\6. Win App Packaging Project.wapproj", "{1D6AC525-A490-4EEE-A83C-C614A9D97C0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -137,6 +139,26 @@ Global
 		{8C3922C1-DE28-4285-A1A7-9EFB1203BC97}.Release|x64.Build.0 = Release|Any CPU
 		{8C3922C1-DE28-4285-A1A7-9EFB1203BC97}.Release|x86.ActiveCfg = Release|Any CPU
 		{8C3922C1-DE28-4285-A1A7-9EFB1203BC97}.Release|x86.Build.0 = Release|Any CPU
+		{F53B112D-AC37-4FFE-854E-82DEA97FBFB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F53B112D-AC37-4FFE-854E-82DEA97FBFB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F53B112D-AC37-4FFE-854E-82DEA97FBFB9}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{F53B112D-AC37-4FFE-854E-82DEA97FBFB9}.Debug|ARM.Build.0 = Debug|Any CPU
+		{F53B112D-AC37-4FFE-854E-82DEA97FBFB9}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{F53B112D-AC37-4FFE-854E-82DEA97FBFB9}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{F53B112D-AC37-4FFE-854E-82DEA97FBFB9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F53B112D-AC37-4FFE-854E-82DEA97FBFB9}.Debug|x64.Build.0 = Debug|Any CPU
+		{F53B112D-AC37-4FFE-854E-82DEA97FBFB9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F53B112D-AC37-4FFE-854E-82DEA97FBFB9}.Debug|x86.Build.0 = Debug|Any CPU
+		{F53B112D-AC37-4FFE-854E-82DEA97FBFB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F53B112D-AC37-4FFE-854E-82DEA97FBFB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F53B112D-AC37-4FFE-854E-82DEA97FBFB9}.Release|ARM.ActiveCfg = Release|Any CPU
+		{F53B112D-AC37-4FFE-854E-82DEA97FBFB9}.Release|ARM.Build.0 = Release|Any CPU
+		{F53B112D-AC37-4FFE-854E-82DEA97FBFB9}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{F53B112D-AC37-4FFE-854E-82DEA97FBFB9}.Release|ARM64.Build.0 = Release|Any CPU
+		{F53B112D-AC37-4FFE-854E-82DEA97FBFB9}.Release|x64.ActiveCfg = Release|Any CPU
+		{F53B112D-AC37-4FFE-854E-82DEA97FBFB9}.Release|x64.Build.0 = Release|Any CPU
+		{F53B112D-AC37-4FFE-854E-82DEA97FBFB9}.Release|x86.ActiveCfg = Release|Any CPU
+		{F53B112D-AC37-4FFE-854E-82DEA97FBFB9}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
