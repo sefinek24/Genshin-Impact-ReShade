@@ -33,7 +33,7 @@
 
 
 ## 📋 〢 Table of contents
-- [⚠️ Important](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%E2%9A%A0%EF%B8%8F-%E3%80%A2-important)
+- [⚠️ Information](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%E2%9A%A0%EF%B8%8F-%E3%80%A2-important)
 - [📂 Includes](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%F0%9F%93%82-%E3%80%A2-includes)
 - [📃 Changelog](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%E2%9C%A8-%E3%80%A2-requirements)
 - [✨ Requirements](https://sefinek.net/genshin-impact-reshade/docs?page=changelog_v7)
@@ -53,14 +53,14 @@
 </div>
 
 
-## ⚠️ 〢 Important
+## 📄 〢 Information
 Please note that sharing game screenshots displaying your UID, visible shaders, or ReShade overlay may result in a game ban.
 If you plan to record a video of the game for platforms like YouTube, remember to hide or censor your UID and username to avoid being banned.
 
 Also, it is highly recommended to update your graphics card and chipset drivers to ensure smooth gameplay, minimize graphics-related issues, and prevent crashes.
 Please familiarize yourself with the [system requirements](#pc-requirements) as well.
 
-For more information and details about the Genshin Stella Mod project, visit our [GitHub Wiki](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki).
+For more information and details about the Genshin Stella Mod project, visit our [Documentation](https://sefinek.net/genshin-impact-reshade/docs?page=introduction).
 The wiki provides a comprehensive installation and usage guide for ReShade, along with frequently asked questions and troubleshooting tips.
 
 If you need further assistance, feel free to join our [Discord server](https://discord.gg/SVcbaRc7gH).
