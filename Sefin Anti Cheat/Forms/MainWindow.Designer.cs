@@ -104,7 +104,7 @@ namespace SefinAntiCheat.Forms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "MainWindow";
-            this.Opacity = 0.98D;
+            this.Opacity = 0.99D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Sefin EAC";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
