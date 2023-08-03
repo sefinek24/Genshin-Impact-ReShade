@@ -8,6 +8,7 @@ namespace SefinAntiCheat.Forms
     public partial class MainWindow : Form
     {
         private const int MinimizeMargin = 9;
+        private bool _balloonTipShown;
         private NotifyIcon _trayIcon;
         private ContextMenu _trayMenu;
 
@@ -28,6 +29,8 @@ namespace SefinAntiCheat.Forms
         private void InitializeTray()
         {
             _trayMenu = new ContextMenu();
+            _trayMenu.MenuItems.Add("Open", OnOpenClick);
+            _trayMenu.MenuItems.Add("Open minimized", OnOpenMinimizedClick);
             _trayMenu.MenuItems.Add("Quit", OnQuitClick);
 
             _trayIcon = new NotifyIcon
@@ -48,6 +51,17 @@ namespace SefinAntiCheat.Forms
             WindowState = FormWindowState.Normal;
         }
 
+        private void OnOpenClick(object sender, EventArgs e)
+        {
+            Show();
+            WindowState = FormWindowState.Normal;
+        }
+
+        private void OnOpenMinimizedClick(object sender, EventArgs e)
+        {
+            Show();
+        }
+
         private void OnQuitClick(object sender, EventArgs e)
         {
             _trayIcon.Visible = false;
@@ -61,7 +75,12 @@ namespace SefinAntiCheat.Forms
 
             if (WindowState != FormWindowState.Minimized) return;
             Hide();
+
+            // Show the balloon tip only once
+            if (_balloonTipShown) return;
+
             _trayIcon.ShowBalloonTip(2000, "Information", "The application has been minimized to the tray.", ToolTipIcon.Info);
+            _balloonTipShown = true;
         }
     }
 }
