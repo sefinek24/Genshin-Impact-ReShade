@@ -15,6 +15,7 @@ namespace SefinAntiCheat.Forms
         public MainWindow()
         {
             InitializeComponent();
+
             InitializeWindow();
             InitializeTray();
         }
