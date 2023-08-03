@@ -24,6 +24,7 @@ namespace SefinAntiCheat.Forms
         {
             Rectangle workingArea = Screen.GetWorkingArea(this);
             Location = new Point(workingArea.Right - Width - MinimizeMargin, workingArea.Bottom - Height - MinimizeMargin);
+
             label2.Text = $@"v{Program.AppVersion}";
         }
 
