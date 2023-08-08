@@ -18,15 +18,20 @@ namespace StellaLauncher.Scripts
 {
     internal static class Utils
     {
-        private static readonly string FileWithGamePath = Path.Combine(Program.AppData, "game-path.sfn");
         private static readonly string FirstAppLaunch = Path.Combine(Program.AppPath, "First app launch.exe");
 
         public static async Task<string> GetGame(string type)
         {
-            if (!File.Exists(FileWithGamePath))
+            string fullGamePath = null;
+            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(Program.RegistryPath))
             {
-                DialogResult result = MessageBox.Show(string.Format(Resources.Utils_FileWithGamePathWasNotFoundIn_DoYouWantToResetAllSMSettings, FileWithGamePath), Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                Log.Output(string.Format(Resources.Utils_FileWithGamePathWasNotFoundIn, FileWithGamePath));
+                if (key != null) fullGamePath = (string)key.GetValue("GamePath");
+            }
+
+            if (!File.Exists(fullGamePath))
+            {
+                DialogResult result = MessageBox.Show(string.Format(Resources.Utils_FileWithGamePathWasNotFoundIn_DoYouWantToResetAllSMSettings, fullGamePath), Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                Log.Output(string.Format(Resources.Utils_FileWithGamePathWasNotFoundIn, fullGamePath));
 
                 if (result != DialogResult.Yes) return string.Empty;
                 using (RegistryKey newKey = Registry.CurrentUser.CreateSubKey(Program.RegistryPath))
@@ -40,27 +45,12 @@ namespace StellaLauncher.Scripts
                 return string.Empty;
             }
 
-            string gameFilePath = File.ReadAllText(FileWithGamePath);
-            if (!File.Exists(gameFilePath))
-            {
-                DialogResult result = MessageBox.Show(string.Format(Resources.Utils_FolderWithGamePathDoesNotExists_DoYouWantToResetAllSMSettings, gameFilePath), Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (result != DialogResult.Yes) return string.Empty;
-                using (RegistryKey newKey = Registry.CurrentUser.CreateSubKey(Program.RegistryPath))
-                {
-                    newKey?.SetValue("AppIsConfigured", 0);
-                }
-
-                _ = Cmd.Execute(new Cmd.CliWrap { App = FirstAppLaunch });
-                Environment.Exit(99587987);
-                return string.Empty;
-            }
 
             switch (type)
             {
                 case "giDir":
                 {
-                    string path = Path.GetDirectoryName(Path.GetDirectoryName(gameFilePath));
+                    string path = Path.GetDirectoryName(Path.GetDirectoryName(fullGamePath));
                     Log.Output(string.Format(Resources.Utils_FoundMainGIDir, path, "giDir"));
 
                     return path;
@@ -68,7 +58,7 @@ namespace StellaLauncher.Scripts
 
                 case "giGameDir":
                 {
-                    string path = Path.GetDirectoryName(gameFilePath);
+                    string path = Path.GetDirectoryName(fullGamePath);
                     string giGameDir = Path.Combine(path);
                     if (Directory.Exists(giGameDir)) return giGameDir;
 
@@ -78,7 +68,7 @@ namespace StellaLauncher.Scripts
 
                 case "giExe":
                 {
-                    return gameFilePath;
+                    return fullGamePath;
                 }
 
                 case "giLauncher":

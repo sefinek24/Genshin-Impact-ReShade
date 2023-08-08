@@ -5,6 +5,7 @@ using System.IO;
 using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Win32;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using Newtonsoft.Json;
 using StellaLauncher.Forms;
@@ -56,56 +57,48 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 
                 Default._progressBar1.Value = 80;
                 // == Check new updates of resources ==
-                string resSfn = Path.Combine(Program.AppData, "resources-path.sfn");
-                string resourcesPath;
-                if (File.Exists(resSfn))
+                string resourcesPath = null;
+                using (RegistryKey key = Registry.CurrentUser.OpenSubKey(Program.RegistryPath))
                 {
-                    resourcesPath = File.ReadAllText(resSfn);
-                    if (!Directory.Exists(resourcesPath))
-                    {
-                        Default._status_Label.Text += $"{string.Format(Resources.Default_Directory_WasNotFound, resourcesPath)}\n";
-                        Log.SaveError(string.Format(Resources.Default_Directory_WasNotFound, resourcesPath));
-
-                        Utils.HideProgressBar(true);
-                        return -1;
-                    }
-
-                    Default._resourcesPath = resourcesPath;
-
-                    string jsonFile = Path.Combine(resourcesPath, "data.json");
-                    if (!File.Exists(jsonFile))
-                    {
-                        Default._status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, jsonFile)}\n";
-                        Log.SaveError(string.Format(Resources.Default_File_WasNotFound, jsonFile));
-
-                        Utils.HideProgressBar(true);
-                        return -1;
-                    }
-
-
-                    string jsonContent = File.ReadAllText(jsonFile);
-                    LocalResources data = JsonConvert.DeserializeObject<LocalResources>(jsonContent);
-
-                    WebClient resClient = new WebClient();
-                    resClient.Headers.Add("user-agent", Program.UserAgent);
-                    string resJson = await resClient.DownloadStringTaskAsync("https://api.sefinek.net/api/v4/genshin-stella-mod/version/app/launcher/resources");
-                    StellaResources resourcesRes = JsonConvert.DeserializeObject<StellaResources>(resJson);
-
-                    if (data.Version != resourcesRes.Message)
-                    {
-                        Default.UpdateIsAvailable = true;
-
-                        DownloadResources.Run(resourcesPath, data.Version, resourcesRes.Message, resourcesRes.Date);
-                        return 1;
-                    }
+                    if (key != null) resourcesPath = (string)key.GetValue("ResourcesPath");
                 }
-                else
+
+                if (string.IsNullOrEmpty(resourcesPath) || !Directory.Exists(resourcesPath))
                 {
-                    Default._status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, resSfn)}\n";
-                    Log.SaveError(string.Format(Resources.Default_File_WasNotFound, resSfn));
+                    Default._status_Label.Text += $"{string.Format(Resources.Default_Directory_WasNotFound, resourcesPath)}\n";
+                    Log.SaveError(string.Format(Resources.Default_Directory_WasNotFound, resourcesPath));
 
                     Utils.HideProgressBar(true);
                     return -1;
+                }
+
+                Default._resourcesPath = resourcesPath;
+
+                string jsonFile = Path.Combine(resourcesPath, "data.json");
+                if (!File.Exists(jsonFile))
+                {
+                    Default._status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, jsonFile)}\n";
+                    Log.SaveError(string.Format(Resources.Default_File_WasNotFound, jsonFile));
+
+                    Utils.HideProgressBar(true);
+                    return -1;
+                }
+
+
+                string jsonContent = File.ReadAllText(jsonFile);
+                LocalResources data = JsonConvert.DeserializeObject<LocalResources>(jsonContent);
+
+                WebClient resClient = new WebClient();
+                resClient.Headers.Add("user-agent", Program.UserAgent);
+                string resJson = await resClient.DownloadStringTaskAsync("https://api.sefinek.net/api/v4/genshin-stella-mod/version/app/launcher/resources");
+                StellaResources resourcesRes = JsonConvert.DeserializeObject<StellaResources>(resJson);
+
+                if (data.Version != resourcesRes.Message)
+                {
+                    Default.UpdateIsAvailable = true;
+
+                    DownloadResources.Run(resourcesPath, data.Version, resourcesRes.Message, resourcesRes.Date);
+                    return 1;
                 }
 
 
