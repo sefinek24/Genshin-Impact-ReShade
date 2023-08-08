@@ -56,13 +56,13 @@
     <DefaultLanguage>en-US</DefaultLanguage>
     <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
     <NoWarn>$(NoWarn);NU1702</NoWarn>
-    <EntryPointProjectUniqueName>..\Genshin Stella Mod\Stella Mod Launcher.csproj</EntryPointProjectUniqueName>
     <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
     <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
     <GenerateTestArtifacts>True</GenerateTestArtifacts>
     <AppxBundlePlatforms>x64</AppxBundlePlatforms>
     <GenerateTemporaryStoreCertificate>True</GenerateTemporaryStoreCertificate>
     <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
+    <EntryPointProjectUniqueName>..\Stella Mod Launcher\1. Stella Mod Launcher.csproj</EntryPointProjectUniqueName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <AppxBundle>Always</AppxBundle>
@@ -107,9 +107,10 @@
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.756" PrivateAssets="all" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\First app launch\Configuration window.csproj" />
-    <ProjectReference Include="..\Genshin Stella Mod\Stella Mod Launcher.csproj" />
-    <ProjectReference Include="..\Install required dependencies\Prepare Stella Mod.csproj" />
+    <ProjectReference Include="..\Configuration\3. Configuration.csproj" />
+    <ProjectReference Include="..\Genshin Stella Mod\2. Genshin Stella Mod.csproj" />
+    <ProjectReference Include="..\Prepare Stella\4. Prepare Stella.csproj" />
+    <ProjectReference Include="..\Stella Mod Launcher\1. Stella Mod Launcher.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\LargeTile.scale-100.png" />
