@@ -1,55 +1,71 @@
 using System;
 using System.IO;
 using System.IO.Compression;
-using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using PrepareStella.Models;
 
 namespace PrepareStella.Scripts.Preparing
 {
-    /// <summary>
-    ///     Runs the resource download and preparation process.
-    /// </summary>
     internal static class DownloadUpdateResources
     {
         public static async Task Run()
         {
-            if (!Directory.Exists(Program.ResourcesGlobal))
+            string resourcesGlobalPath = Program.ResourcesGlobal;
+
+            if (!Directory.Exists(resourcesGlobalPath))
             {
-                Directory.CreateDirectory(Program.ResourcesGlobal);
-                Console.WriteLine($@"Created folder: {Program.ResourcesGlobal}");
+                Directory.CreateDirectory(resourcesGlobalPath);
+                Console.WriteLine($@"Created folder: {resourcesGlobalPath}");
             }
             else
             {
-                Console.WriteLine($@"Found: {Program.ResourcesGlobal}");
+                Console.WriteLine($@"Found: {resourcesGlobalPath}");
             }
 
-            Console.WriteLine(@"Downloading presets and shaders...");
-
-            WebClient wb = new WebClient();
-            wb.Headers.Add("user-agent", Program.UserAgent);
-            string res = await wb.DownloadStringTaskAsync("https://api.sefinek.net/api/v4/genshin-stella-mod/version/app/launcher/resources");
-            StellaResources json = JsonConvert.DeserializeObject<StellaResources>(res);
-
-            string zipPath = Path.Combine(Program.ResourcesGlobal, $"Stella resources - v{json.Message}.zip");
-            using (WebClient webClient = new WebClient())
+            // Checking current version of resources
+            Console.WriteLine(@"Checking current version of resources...");
+            StellaResources json;
+            using (HttpClient httpClient = new HttpClient())
             {
-                webClient.Headers.Add("user-agent", Program.UserAgent);
-                await webClient.DownloadFileTaskAsync("https://github.com/sefinek24/Genshin-Stella-Resources/releases/latest/download/resources.zip", zipPath);
+                httpClient.DefaultRequestHeaders.Add("User-Agent", Program.UserAgent);
+                HttpResponseMessage response = await httpClient.GetAsync("https://api.sefinek.net/api/v4/genshin-stella-mod/version/app/launcher/resources");
+                string responseContent = await response.Content.ReadAsStringAsync();
+                json = JsonConvert.DeserializeObject<StellaResources>(responseContent);
             }
 
-            Console.WriteLine(@"Unpacking resources...");
-            await ExtractZipFile(zipPath, Program.ResourcesGlobal);
-        }
+            // Deleting existing resources zip file
+            string zipPath = Path.Combine(resourcesGlobalPath, $"Stella resources - v{json.Message}.zip");
 
-        private static async Task ExtractZipFile(string zipPath, string destinationPath)
-        {
+            if (File.Exists(zipPath))
+            {
+                Console.WriteLine($@"Deleting {zipPath}...");
+                File.Delete(zipPath);
+            }
+
+            // Downloading resources zip file
+            Console.WriteLine(@"Downloading resources...");
+
+            using (HttpClient httpClient = new HttpClient())
+            {
+                httpClient.DefaultRequestHeaders.Add("user-agent", Program.UserAgent);
+
+                using (Stream stream = await httpClient.GetStreamAsync("https://github.com/sefinek24/Genshin-Stella-Resources/releases/latest/download/resources.zip"))
+                using (FileStream fs = File.Create(zipPath))
+                {
+                    await stream.CopyToAsync(fs);
+                }
+            }
+
+            // Unpacking resources
+            Console.WriteLine(@"Unpacking resources...");
+
             using (ZipArchive archive = ZipFile.OpenRead(zipPath))
             {
                 foreach (ZipArchiveEntry entry in archive.Entries)
                 {
-                    string fullPath = Path.Combine(destinationPath, entry.FullName);
+                    string fullPath = Path.Combine(resourcesGlobalPath, entry.FullName);
 
                     if (entry.Name == "")
                     {
