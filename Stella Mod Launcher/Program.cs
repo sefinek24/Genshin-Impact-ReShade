@@ -28,7 +28,6 @@ namespace StellaLauncher
         // Files and folders
         public static readonly string AppPath = AppContext.BaseDirectory;
         public static readonly string AppData = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
-        private static readonly string AppIsConfigured = Path.Combine(AppData, "configured.sfn");
         private static readonly string PrepareLauncher = Path.Combine(AppPath, "First app launch.exe");
         public static readonly string ReShadePath = Path.Combine(AppPath, "data", "reshade", "ReShade64.dll");
         public static readonly string InjectorPath = Path.Combine(AppPath, "data", "reshade", "inject64.exe");
@@ -72,24 +71,20 @@ namespace StellaLauncher
             // First log
             Log.Output(
                 "==============================================================================================================\n" +
-                string.Format(
-                    Resources.Program_ARequestToStartTheProgramHasBeenReceived,
-                    Debugger.IsAttached,
-                    ComputerInfo.GetCpuSerialNumber(),
-                    AppPath,
-                    AppData,
-                    AppIsConfigured,
-                    FpsUnlockerCfgPath,
-                    PatronsDir
-                ) + "\n"
-            );
+                "A request to start the program has been received." +
+                $"* Debugger.IsAttached: {Debugger.IsAttached}" +
+                $"* ComputerInfo.GetCpuSerialNumber: {ComputerInfo.GetCpuSerialNumber()}" +
+                $"* AppPath: {AppPath}" +
+                $"* AppData: {AppData}" +
+                $"* FpsUnlockerCfgPath: {FpsUnlockerCfgPath}" +
+                $"* PatronsDir: {PatronsDir}");
 
 
             if (Process.GetProcessesByName(AppName).Length > 1)
             {
                 MessageBox.Show(string.Format(Resources.Program_SorryOneInstanceIsCurrentlyOpen_, Path.GetFileNameWithoutExtension(Assembly.GetEntryAssembly()?.Location)), AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                Log.Output(Resources.Program_OneInstanceIsCurrentlyOpen);
+                Log.Output("One instance is currently open.");
                 Environment.Exit(998765341);
             }
 

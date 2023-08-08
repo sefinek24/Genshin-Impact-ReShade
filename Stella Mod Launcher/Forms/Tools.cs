@@ -171,7 +171,7 @@ namespace StellaLauncher.Forms
 
                 case 1:
                     Program.Settings.WriteInt("Launcher", "DiscordRPC", 0);
-                    if (!Discord._isReady)
+                    if (!Discord.IsReady)
                     {
                         Discord.Client.Dispose();
                         Discord.Username = null;

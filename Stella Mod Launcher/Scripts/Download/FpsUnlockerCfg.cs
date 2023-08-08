@@ -21,10 +21,10 @@ namespace StellaLauncher.Scripts.Download
         /// <param name="statusLabel">Label control to display the download status.</param>
         public static async Task RunAsync(Label statusLabel)
         {
-            Log.Output(Resources.Default_DownloadingConfigFileForFPSUnlocker);
-
             statusLabel.Text += $"[i] {Resources.Default_DownloadingConfigFileForFPSUnlocker}\n";
             _statusLabel = statusLabel;
+
+            Log.Output("Downloading config file for FPS Unlocker...");
 
             await StartDownload();
         }
@@ -45,7 +45,7 @@ namespace StellaLauncher.Scripts.Download
             catch (Exception ex)
             {
                 _statusLabel.Text += $"[x] {ex.Message}\n";
-                Log.SaveError(Path.Combine(Resources.Default_FailedToDownloadUnlockerConfigJson, ex.ToString()));
+                Log.SaveError($"Failed to download {Path.GetFileName(Program.FpsUnlockerCfgPath)} in {Path.GetDirectoryName(Program.FpsUnlockerCfgPath)}.\n\n{ex}");
             }
         }
 
@@ -68,7 +68,7 @@ namespace StellaLauncher.Scripts.Download
             // Update the status label to indicate successful completion
             _statusLabel.Text += $"[✓] {Resources.Default_Success}\n";
 
-            Log.Output(Resources.Default_Done);
+            Log.Output("Done.");
         }
     }
 }

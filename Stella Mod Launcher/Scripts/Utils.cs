@@ -31,7 +31,7 @@ namespace StellaLauncher.Scripts
             if (!File.Exists(fullGamePath))
             {
                 DialogResult result = MessageBox.Show(string.Format(Resources.Utils_FileWithGamePathWasNotFoundIn_DoYouWantToResetAllSMSettings, fullGamePath), Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                Log.Output(string.Format(Resources.Utils_FileWithGamePathWasNotFoundIn, fullGamePath));
+                Log.Output($"File with game path was not found in: {fullGamePath}");
 
                 if (result != DialogResult.Yes) return string.Empty;
                 using (RegistryKey newKey = Registry.CurrentUser.CreateSubKey(Program.RegistryPath))
@@ -51,7 +51,7 @@ namespace StellaLauncher.Scripts
                 case "giDir":
                 {
                     string path = Path.GetDirectoryName(Path.GetDirectoryName(fullGamePath));
-                    Log.Output(string.Format(Resources.Utils_FoundMainGIDir, path, "giDir"));
+                    Log.Output($"giDir: {path}");
 
                     return path;
                 }
@@ -62,7 +62,7 @@ namespace StellaLauncher.Scripts
                     string giGameDir = Path.Combine(path);
                     if (Directory.Exists(giGameDir)) return giGameDir;
 
-                    Log.Output(string.Format(Resources.Utils_FoundGIgameDir__, giGameDir, "giGameDir"));
+                    Log.Output($"giGameDir: {giGameDir}");
                     return string.Empty;
                 }
 
@@ -79,11 +79,11 @@ namespace StellaLauncher.Scripts
                     if (!File.Exists(genshinImpactExe))
                     {
                         MessageBox.Show(string.Format(Resources.Utils_LauncherFileDoesNotExists, genshinImpactExe), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        Log.Output(string.Format(Resources.Utils_LauncherFileDoesNotExistsIn_, genshinImpactExe, "giLauncher"));
+                        Log.Output($"Launcher file does not exists in: {genshinImpactExe} [giLauncher]");
                         return string.Empty;
                     }
 
-                    Log.Output(string.Format(Resources.Utils_FoundGILauncherIn_, genshinImpactExe, "giLauncher"));
+                    Log.Output($"giLauncher: {genshinImpactExe}");
                     return genshinImpactExe;
                 }
 
@@ -120,11 +120,11 @@ namespace StellaLauncher.Scripts
             try
             {
                 Process.Start(url);
-                Log.Output(string.Format(Resources.Utils_Opened_InDefaultBrowser, url));
+                Log.Output($"Opened '{url}' in default browser.");
             }
             catch (Exception ex)
             {
-                Log.ThrowError(new Exception(string.Format(Resources.Utils_FailedToOpen_InDefaultBrowser, url, ex)));
+                Log.ThrowError(new Exception($"Failed to open '{url}' in default browser.\n\n{ex}"));
             }
         }
 
@@ -145,9 +145,7 @@ namespace StellaLauncher.Scripts
             string filePath = Path.Combine(fileName);
             bool fileExists = File.Exists(filePath);
 
-            Log.Output(fileExists
-                ? string.Format(Resources.Utils_File_WasFoundAt_, fileName, filePath)
-                : string.Format(Resources.Utils_File_WasNotFoundAt_, fileName, filePath));
+            Log.Output(fileExists ? $"File '{fileName}' was found at '{filePath}'." : $"File '{fileName}' was not found at '{filePath}'.");
 
             return fileExists;
         }
@@ -166,12 +164,12 @@ namespace StellaLauncher.Scripts
                 shortcut.TargetPath = Path.Combine(Program.AppPath, $"{Program.AppName}.exe");
                 shortcut.Save();
 
-                Log.Output(Resources.Utils_DesktopShortcutHasBeenCreated);
+                Log.Output($"Desktop shortcut has been created in: {shortcutPath}");
                 return true;
             }
             catch (Exception ex)
             {
-                Log.ThrowError(new Exception(string.Format(Resources.Utils_AnErrorOccurredWhileCreatingTheShortcut, ex)));
+                Log.ThrowError(new Exception($"An error occurred while creating the shortcut.\n\n{ex}"));
                 return false;
             }
         }

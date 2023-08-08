@@ -23,7 +23,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 case 20:
                 case 30:
                     DialogResult discordResult = MessageBox.Show(Resources.Program_DoYouWantToJoinOurDiscord, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    Log.Output(string.Format(Resources.Program_QuestionMessageBox_DoYouWantToJoinOurDiscord_, discordResult));
+                    Log.Output($"Question (MessageBox): Do you want to join our Discord server? Selected: {discordResult}");
                     if (discordResult == DialogResult.Yes) Utils.OpenUrl(Discord.Invitation);
                     break;
 
@@ -31,7 +31,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 case 12:
                 case 40:
                     DialogResult feedbackResult = MessageBox.Show(Resources.Program_WouldYouShareOpinionAboutStellaMod, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    Log.Output(string.Format(Resources.Program_QuestionMessageBox_WouldYouShareOpinionAboutStellaMod, feedbackResult));
+                    Log.Output($"Question (MessageBox): Would you share your opinion about Stella Mod on trustpilot.com? I would be very grateful. Selected: {feedbackResult}");
                     if (feedbackResult == DialogResult.Yes) Utils.OpenUrl("https://www.trustpilot.com/review/genshin.sefinek.net");
                     break;
 
@@ -49,7 +49,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 case 200:
                 case 300:
                     DialogResult logFilesResult = MessageBox.Show(Resources.Program_DoYouWantToSendUsanonymousLogFiles, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    Log.Output(string.Format(Resources.Program_QuestionMessageBox_DoYouWantToSendUsanonymousLogFiles_, logFilesResult));
+                    Log.Output($"Question (MessageBox): Do you want to send log files? Selected: {logFilesResult}");
                     if (logFilesResult == DialogResult.Yes)
                     {
                         Telemetry.SendLogFiles();

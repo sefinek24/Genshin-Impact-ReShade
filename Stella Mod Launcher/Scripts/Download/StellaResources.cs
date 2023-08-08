@@ -68,7 +68,7 @@ namespace StellaLauncher.Scripts.Download
             DateTime date = DateTime.Parse(remoteResDate, null, DateTimeStyles.RoundtripKind).ToUniversalTime().ToLocalTime();
 
             // Log
-            Log.Output($"{string.Format(Resources.StellaResources_NewResourcesUpdateIsAvailable, date)} {remoteResDate}.");
+            Log.Output($"Found the new update of resources from {date} - {remoteResDate}.");
 
             Default._status_Label.Text += $"[i] {string.Format(Resources.StellaResources_NewResourcesUpdateIsAvailable, date)}\n";
             _stellaResZip = Path.Combine(resourcesPath, $"Stella resources - v{remoteResVersion}.zip");
@@ -112,7 +112,7 @@ namespace StellaLauncher.Scripts.Download
 
             try
             {
-                Log.Output(Resources.NormalRelease_Starting);
+                Log.Output("Starting...");
                 await StartDownload();
             }
             catch (Exception ex)
@@ -121,7 +121,7 @@ namespace StellaLauncher.Scripts.Download
                 Log.ThrowError(ex);
             }
 
-            Log.Output(string.Format(Resources.NormalRelease_Output_, _stellaResZip));
+            Log.Output($"Output: {_stellaResZip}");
         }
 
 
@@ -134,7 +134,7 @@ namespace StellaLauncher.Scripts.Download
                 Log.Output(string.Format(Resources.NormalRelease_DeletedOldSetupFireFrom_, _resourcesPath));
             }
 
-            Log.Output(Resources.NormalRelease_DownloadingInProgress);
+            Log.Output("Downloading in progress...");
             TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Normal);
 
             using (WebClient client = new WebClient())
@@ -169,7 +169,7 @@ namespace StellaLauncher.Scripts.Download
 
             Default._preparingPleaseWait.Text = $@"{string.Format(Resources.StellaResources_DownloadingResources, $"{bytesReceivedMb:00.00}", $"{bytesReceiveMb:00.00}")} [{downloadSpeedInMb:00.00} MB/s]";
 
-            Log.Output(string.Format(Resources.NormalRelease_DownloadingNewUpdate_, $"{bytesReceivedMb:00.00}", $"{bytesReceiveMb:000.00}", $"{downloadSpeedInMb:00.00}"));
+            Log.Output($"Downloading new update... {bytesReceivedMb:00.00} MB of {bytesReceiveMb:000.00} MB / {downloadSpeedInMb:00.00} MB/s");
         }
 
         private static async void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
@@ -191,7 +191,7 @@ namespace StellaLauncher.Scripts.Download
             Default._version_LinkLabel.Text = $@"v{Program.AppVersion}";
 
             Default._status_Label.Text += $"[✓] {Resources.StellaResources_SuccessfullyUpdatedResources}\n";
-            Log.Output(string.Format(Resources.StellaResources_SuccessfullyUnpacked, _stellaResZip));
+            Log.Output($"Successfully unpacked: {_stellaResZip}");
 
             await CheckForUpdatesMain.Analyze();
         }
@@ -237,7 +237,7 @@ namespace StellaLauncher.Scripts.Download
                     currentEntry++;
 
                     Default._preparingPleaseWait.Text = string.Format(Resources.StellaResources_UnpackingFiles_From_, currentEntry, totalEntries);
-                    Log.Output(string.Format(Resources.StellaResources_UnpackingFiles_Log, currentEntry, totalEntries, totalBytes, totalBytesToExtract));
+                    Log.Output($"Unpacking files... {currentEntry} from {totalEntries}; totalBytes: {totalBytes}; totalBytesToExtract: {totalBytesToExtract};");
                 }
             }
         }

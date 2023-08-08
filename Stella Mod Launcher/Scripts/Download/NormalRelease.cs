@@ -64,7 +64,7 @@ namespace StellaLauncher.Scripts.Download
 
             // Log
             Default._status_Label.Text += $"[i] {string.Format(Resources.NormalRelease_NewVersionFrom_IsAvailable, remoteVerDate)}\n";
-            Log.Output(string.Format(Resources.NormalRelease_NewReleaseFrom_IsAvailable_v_, remoteVerDate, Program.AppVersion, remoteVersion));
+            Log.Output($"New release from {remoteVerDate} is available: v{Program.AppVersion} → v{remoteVersion}");
 
             // Taskbar
             TaskbarManager.Instance.SetProgressValue(100, 100);
@@ -79,7 +79,7 @@ namespace StellaLauncher.Scripts.Download
 
                 // Final
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
-                Log.Output(string.Format(Resources.NormalRelease_UpdateSize, updateSize));
+                Log.Output($"Update size: {updateSize} MB");
             }
         }
 
@@ -107,7 +107,7 @@ namespace StellaLauncher.Scripts.Download
 
             try
             {
-                Log.Output(Resources.NormalRelease_Starting);
+                Log.Output("Starting...");
                 await StartDownload();
             }
             catch (Exception ex)
@@ -116,7 +116,7 @@ namespace StellaLauncher.Scripts.Download
                 Log.ThrowError(ex);
             }
 
-            Log.Output(string.Format(Resources.NormalRelease_Output_, SetupPathExe));
+            Log.Output($"Output: {SetupPathExe}");
         }
 
 
@@ -126,7 +126,7 @@ namespace StellaLauncher.Scripts.Download
             {
                 File.Delete(SetupPathExe);
                 Default._status_Label.Text += $"[✓] {Resources.NormalRelease_DeletedOldSetupFileFromTempDir}\n";
-                Log.Output(string.Format(Resources.NormalRelease_DeletedOldSetupFireFrom_, SetupPathExe));
+                Log.Output($"Deleted old setup file: {SetupPathExe}");
             }
 
             Log.Output(Resources.NormalRelease_DownloadingInProgress);
@@ -164,7 +164,7 @@ namespace StellaLauncher.Scripts.Download
 
             Default._preparingPleaseWait.Text = $@"{string.Format(Resources.NormalRelease_DownloadingUpdate_, $"{bytesReceivedMb:00.00}", $"{bytesReceiveMb:000.00}")} [{downloadSpeedInMb:00.00} MB/s]";
 
-            Log.Output(string.Format(Resources.NormalRelease_DownloadingNewUpdate_, $"{bytesReceivedMb:00.00}", $"{bytesReceiveMb:000.00}", $"{downloadSpeedInMb:00.00}"));
+            Log.Output($"Downloading new update... {bytesReceivedMb:00.00} MB of {bytesReceiveMb:000.00} MB / {downloadSpeedInMb:00.00} MB/s");
         }
 
         private static async void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
@@ -172,7 +172,7 @@ namespace StellaLauncher.Scripts.Download
             string logDir = Path.Combine(Log.Folder, "updates");
             if (!Directory.Exists(logDir)) Directory.CreateDirectory(logDir);
 
-            Log.Output(string.Format(Resources.NormalRelease_Waiting_, 4));
+            Log.Output("Waiting 4s...");
 
             Default._preparingPleaseWait.Text = string.Format(Resources.NormalRelease_JustAMoment_PleaseWait, 4);
             await Task.Delay(1000);
@@ -190,12 +190,14 @@ namespace StellaLauncher.Scripts.Download
             TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
             await Task.Delay(500);
 
+
+            string logFile = Path.Combine(logDir, $"{DateTime.Now:yyyy-dd-M...HH-mm-ss}.log");
             Cmd.CliWrap command = new Cmd.CliWrap
             {
                 App = SetupPathExe,
                 Arguments = new ArgumentsBuilder()
                     .Add("/UPDATE")
-                    .Add($"/LOG=\"{logDir}\\{DateTime.Now:yyyy-dd-M...HH-mm-ss}.log")
+                    .Add($"/LOG=\"{logFile}\"")
                     .Add("/NORESTART"),
                 DownloadingSetup = true
             };
@@ -204,11 +206,11 @@ namespace StellaLauncher.Scripts.Download
             for (int i = 15; i > 0; i--)
             {
                 Default._preparingPleaseWait.Text = string.Format(Resources.NormalRelease_InstallANewVersionInTheWizard_ClosingLauncherIn_, i);
-                Log.Output(string.Format(Resources.NormalRelease_ClosingLauncherIn_, i));
+                Log.Output($"Closing launcher in {i}s...");
                 await Task.Delay(1000);
             }
 
-            Log.Output(Resources.NormalRelease_Closing);
+            Log.Output("Closing...");
             Environment.Exit(0);
         }
     }

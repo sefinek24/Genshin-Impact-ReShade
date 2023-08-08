@@ -16,7 +16,7 @@ namespace StellaLauncher.Scripts.Download
             Default._updates_LinkLabel.LinkColor = Color.Cyan;
             Default._updates_LinkLabel.Text = Resources.MajorRelease_MajorVersionIsAvailable;
             Default._updateIco_PictureBox.Image = Resources.icons8_download_from_the_cloud;
-            Log.Output(string.Format(Resources.MajorRelease_NewMajorVersionFrom_IsAvailable_v_, remoteVerDate, Program.AppVersion, remoteVersion));
+            Log.Output($"New major version from {remoteVerDate} is available: v{Program.AppVersion} → v{remoteVersion}");
 
             TaskbarManager.Instance.SetProgressValue(100, 100);
             TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);

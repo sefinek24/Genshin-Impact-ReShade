@@ -121,37 +121,6 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to CliWrap: {0} installed. Exit code: {1}
-        ///
-        ///The requested operation is successful. Changes will not be effective until the system is rebooted..
-        /// </summary>
-        internal static string Cmd__AppInstalled {
-            get {
-                return ResourceManager.GetString("Cmd__AppInstalled", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to CliWrap: Command execution failed. An update is required..
-        /// </summary>
-        internal static string Cmd_CommandExecutionFailed {
-            get {
-                return ResourceManager.GetString("Cmd_CommandExecutionFailed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Command execution failed because the underlying process ({0}) returned a non-zero exit code - {1}.
-        ///
-        ///{2}.
-        /// </summary>
-        internal static string Cmd_CommandExecutionFailedBeacuseTheUnderlyingProcessReturnedANonZeroExitCode {
-            get {
-                return ResourceManager.GetString("Cmd_CommandExecutionFailedBeacuseTheUnderlyingProcessReturnedANonZeroExitCode", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
         internal static string Cmd_Error {
@@ -197,16 +166,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Restart your computer or suspend antivirus program and try again..
-        /// </summary>
-        internal static string Cmd_RestartYourComputerOrSuspendAntivirusProgramAndTryAgain {
-            get {
-                return ResourceManager.GetString("Cmd_RestartYourComputerOrSuspendAntivirusProgramAndTryAgain", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to CliWrap: Successfully executed {0}; Exit code: {1}; Start time: {2}; Exit time: {3}{4}{5};.
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string Cmd_SuccessfullyExecutedCommand {
             get {
@@ -357,7 +317,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Deleted old setup file from temp directory..
+        ///   Looks up a localized string similar to [i] Deleted old setup file from temp directory..
         /// </summary>
         internal static string Default_DeletedOldSetupFromTempDirectory {
             get {
@@ -366,7 +326,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Deleted old setup file from temp folder: {0}.
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string Default_DeletedOldSetupFromTempFolder {
             get {
@@ -380,15 +340,6 @@ namespace StellaLauncher.Properties {
         internal static string Default_Directory_WasNotFound {
             get {
                 return ResourceManager.GetString("Default_Directory_WasNotFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Done..
-        /// </summary>
-        internal static string Default_Done {
-            get {
-                return ResourceManager.GetString("Default_Done", resourceCulture);
             }
         }
         
@@ -411,7 +362,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Downloading config file for FPS Unlocker....
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string Default_DownloadingConfigFileForFPSUnlocker {
             get {
@@ -429,9 +380,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to download unlocker.config.json.
-        ///
-        ///{0}.
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string Default_FailedToDownloadUnlockerConfigJson {
             get {
@@ -532,7 +481,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Not found any new updates. Your installed version: v{0}.
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string Default_NotFoundAnyNewUpdates_YourInstalledVersion_ {
             get {
@@ -546,15 +495,6 @@ namespace StellaLauncher.Properties {
         internal static string Default_OhhSomethingWentWrong {
             get {
                 return ResourceManager.GetString("Default_OhhSomethingWentWrong", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Playing sound file: {0}.
-        /// </summary>
-        internal static string Default_PlayingSoundFile_ {
-            get {
-                return ResourceManager.GetString("Default_PlayingSoundFile_", resourceCulture);
             }
         }
         
@@ -662,7 +602,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The update of ReShade.ini has been cancelled by the user..
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string Default_TheUpdateOfReShadIniHasBeenCanceledByTheUser {
             get {
@@ -727,16 +667,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Discord RPC: Closed..
-        /// </summary>
-        internal static string Discord_OnClose {
-            get {
-                return ResourceManager.GetString("Discord_OnClose", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Discord RPC: Connection successfully..
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string Discord_OnConnectionEstablished {
             get {
@@ -745,7 +676,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Discord RPC: An error occurred during the transmission of a message..
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string Discord_OnError {
             get {
@@ -754,7 +685,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Discord RPC: Presence has been updated..
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string Discord_OnPresenceUpdate {
             get {
@@ -763,7 +694,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Discord RPC: Connected to Discord with user {0}..
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string Discord_OnReady {
             get {
@@ -772,7 +703,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Discord RPC: Unsubscribed..
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string Discord_OnUnsubscribe {
             get {
@@ -781,7 +712,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Discord Rich Presence was not updated. Data: {0}; IsReady: {1}.
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string Discord_RPCWasNotUpdated {
             get {
@@ -1163,7 +1094,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New major version from {0} is available: v{1} → v{2}.
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string MajorRelease_NewMajorVersionFrom_IsAvailable_v_ {
             get {
@@ -1191,7 +1122,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Closing....
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string NormalRelease_Closing {
             get {
@@ -1200,7 +1131,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Closing launcher in {0}s....
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string NormalRelease_ClosingLauncherIn_ {
             get {
@@ -1218,7 +1149,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Deleted od setup file from: {0}.
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string NormalRelease_DeletedOldSetupFireFrom_ {
             get {
@@ -1344,15 +1275,6 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Starting....
-        /// </summary>
-        internal static string NormalRelease_Starting {
-            get {
-                return ResourceManager.GetString("NormalRelease_Starting", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Update size: {0} MB.
         /// </summary>
         internal static string NormalRelease_UpdateSize {
@@ -1473,16 +1395,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to One instance is currently open..
-        /// </summary>
-        internal static string Program_OneInstanceIsCurrentlyOpen {
-            get {
-                return ResourceManager.GetString("Program_OneInstanceIsCurrentlyOpen", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Question (MessageBox): Do you want to join our Discord server? Selected: {0}.
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string Program_QuestionMessageBox_DoYouWantToJoinOurDiscord_ {
             get {
@@ -1491,7 +1404,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Question (MessageBox): Do you want to send log files? Selected: {0}.
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string Program_QuestionMessageBox_DoYouWantToSendUsanonymousLogFiles_ {
             get {
@@ -1500,7 +1413,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Question (MessageBox): Would you share your opinion about Stella Mod on trustpilot.com? I would be very grateful. Selected: {0}.
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string Program_QuestionMessageBox_WouldYouShareOpinionAboutStellaMod {
             get {
@@ -1774,7 +1687,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Delivered telemetry data &apos;{0}&apos; [{1}]..
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string Telemetry_DeliveredTelemetryData {
             get {
@@ -1792,7 +1705,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This feature doesn&apos;t do anything in this release because it hasn&apos;t been created yet!.
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string Telemetry_ThisFeatureDoesntDoAnything {
             get {
@@ -1932,7 +1845,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Desktop shortcut has been created..
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string Utils_DesktopShortcutHasBeenCreated {
             get {
@@ -1941,9 +1854,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to open &apos;{0}&apos; in default browser.
-        ///
-        ///{1}.
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string Utils_FailedToOpen_InDefaultBrowser {
             get {
@@ -1999,7 +1910,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to File with game path was not found in: {0}.
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string Utils_FileWithGamePathWasNotFoundIn {
             get {
@@ -2041,7 +1952,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Found Genshin Impact game dir: {0} [{1}].
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string Utils_FoundGIgameDir__ {
             get {
@@ -2050,7 +1961,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Found Genshin Impact Launcher in: {0}.
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string Utils_FoundGILauncherIn_ {
             get {
@@ -2059,7 +1970,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Found main Genshin Impact dir: {0} [{1}].
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string Utils_FoundMainGIDir {
             get {
@@ -2079,7 +1990,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Launcher file does not exists in: {0} [{1}].
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string Utils_LauncherFileDoesNotExistsIn_ {
             get {
@@ -2097,7 +2008,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Opened &apos;{0}&apos; in default browser..
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string Utils_Opened_InDefaultBrowser {
             get {

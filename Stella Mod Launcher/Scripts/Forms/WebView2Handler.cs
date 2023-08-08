@@ -11,7 +11,11 @@ namespace StellaLauncher.Scripts.Forms
         {
             if (ex.HResult == -2146233088)
             {
-                DialogResult res = MessageBox.Show(string.Format(Resources.WebView2Handler_DoYouWantToDownloadThisDependencyFromMStore, ex.Message), Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult res = MessageBox.Show(
+                    string.Format(Resources.WebView2Handler_DoYouWantToDownloadThisDependencyFromMStore, ex.Message),
+                    Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question
+                );
+
                 if (res == DialogResult.Yes)
                 {
                     Process.Start("https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section");

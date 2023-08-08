@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.IO;
 using System.Runtime.Caching;
@@ -49,14 +49,13 @@ namespace StellaLauncher.Scripts.Forms.MainForm
             if (!Utils.CheckFileExists(localization))
             {
                 MessageBox.Show(string.Format(Resources.Default_Sorry_Background_WasNotFound, BackgroundFiles[bgInt]), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Log.SaveError(string.Format(Resources.Default_Sorry_Background_WasNotFound, localization, bgInt));
+                Log.SaveError($"Sorry. Background {Path.GetFileName(localization)} was not found in: {Path.GetDirectoryName(localization)}");
                 return null;
             }
 
             Bitmap backgroundImage = new Bitmap(localization);
-
             Cache.Add(cacheKey, backgroundImage, new CacheItemPolicy { AbsoluteExpiration = DateTimeOffset.Now.AddMinutes(20) });
-            Log.Output(string.Format(Resources.Default_CachedAppBackground_ID, localization, bgInt + 1));
+            Log.Output($"Cached app background in RAM memory '{localization}'; ID: {bgInt + 1};");
 
             toolTip.SetToolTip(changeBg, string.Format(Resources.Default_CurrentBackground, BackgroundFiles[bgInt]));
             return backgroundImage;

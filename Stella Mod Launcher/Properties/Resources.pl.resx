@@ -237,7 +237,7 @@ Ta czynność spowoduje utratę wszelkich niestandardowych konfiguracji, jakie d
     <value>Plik nie został znaleziony.</value>
   </data>
   <data name="Default_File_WasNotFound" xml:space="preserve">
-    <value>[x]: Nie znaleziono pliku {0}.</value>
+    <value>[x] Nie znaleziono pliku {0}.</value>
   </data>
   <data name="Default_ForSomeReasonYouDidNotGiveConsentForTheAutomaticUpdateOfTheReShadeFile" xml:space="preserve">
     <value>Z jakiegoś powodu nie wyraziłeś zgody na automatyczną aktualizację pliku ReShade. Należy pamiętać, że starsze wersje tego pliku mogą nie być kompatybilne z nowszymi wersjami modyfikacji Stella Mod. Mam nadzieję, że wiesz, co robisz.</value>

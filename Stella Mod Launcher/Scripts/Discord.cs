@@ -9,7 +9,7 @@ namespace StellaLauncher.Scripts
         public const string Invitation = "https://discord.com/invite/SVcbaRc7gH";
         public const string FeedbackChannel = "https://discord.gg/X8bt6mkbu7";
         public static string Username = "";
-        public static bool _isReady;
+        public static bool IsReady;
         public static DiscordRpcClient Client;
 
         private static readonly RichPresence Presence = new RichPresence
@@ -39,26 +39,26 @@ namespace StellaLauncher.Scripts
             Client.OnReady += (sender, msg) =>
             {
                 Username = msg.User.Username;
-                Log.Output(string.Format(Resources.Discord_OnReady, Username));
+                Log.Output($"Discord RPC: Connected to Discord with user {Username}.");
 
-                _isReady = true;
+                IsReady = true;
             };
-            Client.OnPresenceUpdate += (sender, msg) => Log.Output(Resources.Discord_OnPresenceUpdate);
+            Client.OnPresenceUpdate += (sender, msg) => Log.Output("Discord RPC: Presence has been updated.");
             Client.OnClose += (sender, msg) =>
             {
-                Log.Output(Resources.Discord_OnClose);
-                _isReady = false;
+                Log.Output("Discord RPC: Closed.");
+                IsReady = false;
             };
             Client.OnUnsubscribe += (sender, msg) =>
             {
-                Log.Output(Resources.Discord_OnUnsubscribe);
-                _isReady = false;
+                Log.Output("Discord RPC: Unsubscribed.");
+                IsReady = false;
             };
-            Client.OnConnectionEstablished += (sender, msg) => Log.Output(Resources.Discord_OnConnectionEstablished);
+            Client.OnConnectionEstablished += (sender, msg) => Log.Output("Discord RPC: Connection successfully.");
             Client.OnError += (sender, msg) =>
             {
-                Log.SaveError(Resources.Discord_OnError);
-                _isReady = false;
+                Log.SaveError("Discord RPC: An error occurred during the transmission of a message.");
+                IsReady = false;
             };
 
             Client.Initialize();
@@ -77,14 +77,14 @@ namespace StellaLauncher.Scripts
         public static void SetStatus(string status)
         {
             int data = Program.Settings.ReadInt("Launcher", "DiscordRPC", 1);
-            if (data == 1 && _isReady)
+            if (data == 1 && IsReady)
             {
                 Presence.Details = status;
                 Client.SetPresence(Presence);
             }
             else
             {
-                Log.Output(string.Format(Resources.Discord_RPCWasNotUpdated, data, _isReady));
+                Log.Output($"Discord Rich Presence was not updated. Data: {data}; IsReady: {IsReady}");
             }
         }
     }

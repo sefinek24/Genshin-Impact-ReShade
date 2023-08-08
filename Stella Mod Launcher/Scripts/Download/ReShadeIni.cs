@@ -24,7 +24,7 @@ namespace StellaLauncher.Scripts.Download
 
                 Default._status_Label.Text += $"[x] {Resources.ReShadeIniUpdate_GamePathWasNotFoundOnYourPC}\n";
 
-                Log.SaveError(Resources.ReShadeIniUpdate_GamePathWasNotFoundOnYourPC);
+                Log.SaveError("Game path was not found on your PC.");
                 return -1;
             }
 
@@ -38,7 +38,7 @@ namespace StellaLauncher.Scripts.Download
                 Default._status_Label.Text += $"[x] {Resources.ReShadeIniUpdate_FileReShadeIniWasNotFoundInYourGameDir}\n";
                 Default._updateIco_PictureBox.Image = Resources.icons8_download_from_the_cloud;
 
-                Log.Output(string.Format(Resources.ReShadeIniUpdate_ReShadeIniWasNotFoundIn_, reShadePath));
+                Log.Output($"ReShade.ini was not found in: {reShadePath}");
                 return -2;
             }
 
@@ -70,7 +70,7 @@ namespace StellaLauncher.Scripts.Download
                 Default._status_Label.Text += $"[x] {Resources.ReShadeIniUpdate_TheVersionOfReShadeCfgWasNotFound}\n";
                 Default._updateIco_PictureBox.Image = Resources.icons8_download_from_the_cloud;
 
-                Log.Output(string.Format(Resources.ReShadeIniUpdate_StellaConfigVersionIsNullInReShadeIni));
+                Log.Output("STELLA.ConfigVersion is null in ReShade.ini.");
                 TaskbarManager.Instance.SetProgressValue(100, 100);
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
                 return -2;
@@ -86,7 +86,7 @@ namespace StellaLauncher.Scripts.Download
             Default._updateIco_PictureBox.Image = Resources.icons8_download_from_the_cloud;
             Default._version_LinkLabel.Text = $@"v{localIniVersion} → v{remoteIniVersion}";
             Default._status_Label.Text += $"[i] {Resources.ReShadeIniUpdate_NewReShadeConfigVersionIsAvailable}\n";
-            Log.Output(string.Format(Resources.ReShadeIniUpdate_NewReShadeCfgIsAvailable_v_, localIniVersion, remoteIniVersion));
+            Log.Output($"New ReShade config version is available: v{localIniVersion} → v{remoteIniVersion}");
 
             using (WebClient wc = new WebClient())
             {
@@ -95,7 +95,7 @@ namespace StellaLauncher.Scripts.Download
                 string updateSize = ByteSize.FromBytes(Convert.ToInt64(wc.ResponseHeaders["Content-Length"])).KiloBytes.ToString("0.00");
                 Default._status_Label.Text += $"{string.Format(Resources.ReShadeIniUpdate_UpdateSize_KB, updateSize)}\n";
 
-                Log.Output(string.Format(Resources.ReShadeIniUpdate_FileSize_KB, updateSize));
+                Log.Output($"File size: {updateSize} KB");
                 TaskbarManager.Instance.SetProgressValue(100, 100);
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
                 return 1;
@@ -122,6 +122,7 @@ namespace StellaLauncher.Scripts.Download
 
                         if (File.Exists(reShadePath))
                         {
+                            // TODO
                             string reShadeIniContent = File.ReadAllText(reShadePath);
                             string newData = reShadeIniContent?
                                 .Replace("{addon.path}", Path.Combine(resourcesPath, "ReShade", "Addons"))
@@ -135,14 +136,14 @@ namespace StellaLauncher.Scripts.Download
                             File.WriteAllText(reShadePath, newData);
 
                             Default._status_Label.Text += $"[✓] {Resources.Default_SuccessfullyDownloadedReShadeIni}\n";
-                            Log.Output(string.Format(Resources.Default_SuccessfullyDownloadedReShadeIniAndSavedIn, reShadePath));
+                            Log.Output($"Successfully downloaded ReShade.ini and saved in: {reShadePath}");
 
                             await CheckForUpdatesMain.Analyze();
                             return 0;
                         }
 
                         Default._status_Label.Text += $"[x] {Resources.Default_FileWasNotFound}\n";
-                        Log.SaveError(string.Format(Resources.Default_DownloadedReShadeIniWasNotFoundIn_, reShadePath));
+                        Log.SaveError($"Downloaded ReShade.ini was not found in: {reShadePath}");
 
                         Utils.HideProgressBar(true);
                     }
@@ -162,7 +163,7 @@ namespace StellaLauncher.Scripts.Download
                 case DialogResult.No:
                 {
                     Default._status_Label.Text += $"[i] {Resources.Default_CanceledByTheUser_AreYouSureOfWhatYoureDoing}\n";
-                    Log.Output(Resources.Default_FileDownloadHasBeenCanceledByTheUser);
+                    Log.Output("File download has been canceled by the user.");
 
                     if (!File.Exists(reShadePath)) Log.Output(Resources.Default_TheReShadeIniFileStillDoesNotExist);
 

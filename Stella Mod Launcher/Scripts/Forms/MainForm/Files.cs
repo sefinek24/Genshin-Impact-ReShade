@@ -26,7 +26,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
         private static async Task CheckFileAsync(string filePath)
         {
             if (!File.Exists(filePath) && !Debugger.IsAttached)
-                await Task.Run(() => { Default._status_Label.Text += $"[x]: {string.Format(Resources.Default_File_WasNotFound, filePath)}\n"; });
+                await Task.Run(() => { Default._status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, filePath)}\n"; });
         }
 
         public static async Task DeleteSetupAsync()
@@ -36,8 +36,8 @@ namespace StellaLauncher.Scripts.Forms.MainForm
             try
             {
                 await Task.Run(() => File.Delete(NormalRelease.SetupPathExe));
-                Default._status_Label.Text += $"[i] {Resources.Default_DeletedOldSetupFromTempDirectory}\n";
-                Log.Output(string.Format(Resources.Default_DeletedOldSetupFromTempFolder, NormalRelease.SetupPathExe));
+                Default._status_Label.Text += $"{Resources.Default_DeletedOldSetupFromTempDirectory}\n";
+                Log.Output($"Deleted old setup file from temp folder: {NormalRelease.SetupPathExe}");
             }
             catch (Exception ex)
             {

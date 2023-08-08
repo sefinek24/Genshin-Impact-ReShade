@@ -21,21 +21,6 @@ namespace StellaLauncher.Scripts.Forms.MainForm
             Task.Run(() => PlaySoundAsync(wavPath, 0.6f));
         }
 
-        public static void PlaySound(string dir, string fileName)
-        {
-            if (Program.Settings.ReadInt("Launcher", "EnableBgSounds", 1) == 0) return;
-
-            string wavPath = Path.Combine(Program.AppPath, "data", "sounds", dir, $"{fileName}.wav");
-            if (!File.Exists(wavPath))
-            {
-                Default._status_Label.Text += $"[x]: {Resources.Default_TheSoundFileWithMusicWasNotFound}\n";
-                Log.SaveError(string.Format(Resources.Default_TheSoundFileWithMusicWasNotFoundInTheLocalization_, wavPath));
-                return;
-            }
-
-            Task.Run(() => PlaySoundAsync(wavPath, fileName == "information_bar" ? 0.45f : 1.6f));
-        }
-
         private static string GetRandomBgWavPath()
         {
             int randomBgNumber = Random.Next(1, 6 + 1);
@@ -43,25 +28,43 @@ namespace StellaLauncher.Scripts.Forms.MainForm
             return File.Exists(wavPath) ? wavPath : null;
         }
 
+        public static void PlaySound(string dir, string fileName)
+        {
+            if (Program.Settings.ReadInt("Launcher", "EnableBgSounds", 1) == 0) return;
+
+            string wavPath = Path.Combine(Program.AppPath, "data", "sounds", dir, $"{fileName}.wav");
+            if (!File.Exists(wavPath))
+            {
+                Default._status_Label.Text += $"[x] {Resources.Default_TheSoundFileWithMusicWasNotFound}\n";
+                Log.SaveError($"The sound file with music was not found in the location: {wavPath}");
+                return;
+            }
+
+            Task.Run(() => PlaySoundAsync(wavPath, fileName == "information_bar" ? 0.45f : 1.6f));
+        }
+
         private static async Task PlaySoundAsync(string wavPath, float volume)
         {
             try
             {
                 using (AudioFileReader audioFile = new AudioFileReader(wavPath))
-                using (WaveChannel32 volumeStream = new WaveChannel32(audioFile) { Volume = volume })
-                using (WaveOutEvent outputDevice = new WaveOutEvent())
+                using (WaveChannel32 volumeStream = new WaveChannel32(audioFile))
                 {
-                    outputDevice.Init(volumeStream);
-                    outputDevice.Play();
+                    volumeStream.Volume = volume;
+                    using (WaveOutEvent outputDevice = new WaveOutEvent())
+                    {
+                        outputDevice.Init(volumeStream);
+                        outputDevice.Play();
 
-                    await Task.Delay(TimeSpan.FromSeconds(audioFile.TotalTime.TotalSeconds));
+                        await Task.Delay(TimeSpan.FromSeconds(audioFile.TotalTime.TotalSeconds));
+                    }
                 }
 
-                Log.Output(string.Format(Resources.Default_PlayingSoundFile_, wavPath));
+                Log.Output($"Playing sound file: {wavPath}");
             }
             catch (Exception ex)
             {
-                Default._status_Label.Text += $"[x]: {ex.Message}\n";
+                Default._status_Label.Text += $"[x] {ex.Message}\n";
                 Log.SaveError(ex.ToString());
             }
         }

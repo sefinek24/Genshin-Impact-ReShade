@@ -28,7 +28,7 @@ namespace StellaLauncher.Scripts
                 if (Default.UpdateIsAvailable && !cliWrapCommand.BypassUpdates)
                 {
                     MessageBox.Show(Resources.Cmd_UpdateIsRequired, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Log.Output(Resources.Cmd_CommandExecutionFailed);
+                    Log.Output("CliWrap: Command execution failed. An update is required.");
                     return false;
                 }
 
@@ -47,7 +47,7 @@ namespace StellaLauncher.Scripts
                 // StandardOutput
                 string stdoutLine = !string.IsNullOrEmpty(stdout) ? $"\n✅ STDOUT: {stdout}" : "";
                 string stderrLine = !string.IsNullOrEmpty(stderr) ? $"\n❌ STDERR: {stderr}" : "";
-                Log.Output(string.Format(Resources.Cmd_SuccessfullyExecutedCommand, cliWrapCommand.App, result.ExitCode, result.StartTime, result.ExitTime, stdoutLine, stderrLine));
+                Log.Output($"CliWrap: Successfully executed {cliWrapCommand.App}; Exit code: {result.ExitCode}; Start time: {result.StartTime}; Exit time: {result.ExitTime}{stdoutLine}{stderrLine};");
 
                 // StandardError
                 if (result.ExitCode == 0) return true;
@@ -77,7 +77,7 @@ namespace StellaLauncher.Scripts
                         }
 
                         MessageBox.Show(Resources.Cmd_TheRequestOperationWasSuccessfulButYourPCNeedsToBeRebooted, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Log.Output(string.Format(Resources.Cmd__AppInstalled, cliWrapCommand.App, result.ExitCode));
+                        Log.Output("CliWrap: {cliWrapCommand.App} installed. Exit code: {result.ExitCode}\nThe requested operation is successful. Changes will not be effective until the system is rebooted");
                         return false;
                     }
 
@@ -85,13 +85,13 @@ namespace StellaLauncher.Scripts
                         string mainInfo = Resources.Cmd_FailedToUpdate;
                         MessageBox.Show(mainInfo, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                        Log.SaveError($"{mainInfo}\n{Resources.Cmd_RestartYourComputerOrSuspendAntivirusProgramAndTryAgain}{info}");
+                        Log.SaveError($"{mainInfo}\nRestart your computer or suspend antivirus program and try again.{info}");
                         return false;
 
                     default:
                     {
                         if (!cliWrapCommand.DownloadingSetup)
-                            Log.ErrorAndExit(new Exception(string.Format(Resources.Cmd_CommandExecutionFailedBeacuseTheUnderlyingProcessReturnedANonZeroExitCode, cliWrapCommand.App, result.ExitCode, info)));
+                            Log.ErrorAndExit(new Exception($"Command execution failed because the underlying process ({cliWrapCommand.App}) returned a non-zero exit code - {result.ExitCode}.\n\n{info}"));
                         else
                             Log.SaveError(info);
                         return false;
