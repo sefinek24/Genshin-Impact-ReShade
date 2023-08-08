@@ -168,7 +168,7 @@ namespace PrepareStella
             if (downloadOrUpdateShaders == 1)
             {
                 Console.WriteLine(@"Checking Stella resources...");
-                await DownloadUpdateResources.Run();
+                await Task.Run(async () => await DownloadUpdateResources.Run());
                 TaskbarManager.Instance.SetProgressValue(39, 100);
             }
 
@@ -176,7 +176,7 @@ namespace PrepareStella
             if (updateReShadeCfg == 1)
             {
                 Console.WriteLine(@"Downloading ReShade files...");
-                await UpdateReShadeCfg.Run();
+                await Task.Run(async () => await UpdateReShadeCfg.Run());
                 TaskbarManager.Instance.SetProgressValue(46, 100);
             }
 
@@ -184,7 +184,7 @@ namespace PrepareStella
             if (delReShadeCache == 1)
             {
                 Console.WriteLine(@"Deleting ReShade cache...");
-                await DeleteReShadeCache.Run();
+                await Task.Run(async () => await DeleteReShadeCache.Run());
                 TaskbarManager.Instance.SetProgressValue(57, 100);
             }
 
@@ -192,7 +192,7 @@ namespace PrepareStella
             if (updateFpsUnlockerCfg == 1)
             {
                 Console.WriteLine(@"Downloading FPS Unlocker configuration...");
-                await DownloadFpsUnlockerCfg.Run();
+                await Task.Run(async () => await DownloadFpsUnlockerCfg.Run());
                 TaskbarManager.Instance.SetProgressValue(68, 100);
             }
 
@@ -200,7 +200,7 @@ namespace PrepareStella
             if (installWtUpdate == 1)
             {
                 Console.Write(@"Backing up the Windows Terminal configuration file in app data... ");
-                await TerminalInstallation.Run();
+                await Task.Run(async () => await TerminalInstallation.Run());
                 TaskbarManager.Instance.SetProgressValue(77, 100);
             }
 
@@ -208,7 +208,7 @@ namespace PrepareStella
             if (newShortcuts == 1)
             {
                 Console.WriteLine(@"Creating Desktop shortcut...");
-                await DesktopIcon.Run();
+                await Task.Run(async () => await DesktopIcon.Run());
                 TaskbarManager.Instance.SetProgressValue(89, 100);
             }
 
@@ -216,7 +216,7 @@ namespace PrepareStella
             if (newIntShortcuts == 1)
             {
                 Console.WriteLine(@"Creating new Internet shortcut...");
-                await InternetShortcuts.Run();
+                await Task.Run(async () => await InternetShortcuts.Run());
                 TaskbarManager.Instance.SetProgressValue(96, 100);
             }
 
