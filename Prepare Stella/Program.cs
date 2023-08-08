@@ -71,8 +71,7 @@ namespace PrepareStella
             // Load the game path from the registry
             using (RegistryKey key = Registry.CurrentUser.OpenSubKey(RegistryPath))
             {
-                if (key != null)
-                    SavedGamePath = (string)key.GetValue("GamePath");
+                if (key != null) SavedGamePath = (string)key.GetValue("GamePath");
             }
 
             // Try to find the game in the default localizations
@@ -87,8 +86,7 @@ namespace PrepareStella
             }
 
             // Check if the path is valid
-            if (!File.Exists(SavedGamePath))
-                new GamePath(SavedGamePath) { Icon = Icon }.ShowDialog();
+            if (!File.Exists(SavedGamePath)) new GamePath(SavedGamePath) { Icon = Icon }.ShowDialog();
 
             // Check if the variable is empty or if the path is still not valid
             if (string.IsNullOrEmpty(SavedGamePath) || !File.Exists(SavedGamePath))
