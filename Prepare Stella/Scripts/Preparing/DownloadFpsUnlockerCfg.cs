@@ -27,7 +27,7 @@ namespace PrepareStella.Scripts.Preparing
 
                 string fpsUnlockerConfigPath = Path.Combine(unlockerFolderPath, "unlocker.config.json");
 
-                string gameExePath = Program.GameExeGlobal?.Replace("\\", "\\\\");
+                string gameExePath = UpdateReShadeCfg.GiGame?.Replace("\\", "\\\\");
                 string fpsUnlockerConfigContent = fpsUnlockerConfig.Replace("{GamePath}", gameExePath ?? string.Empty);
 
                 File.WriteAllText(fpsUnlockerConfigPath, fpsUnlockerConfigContent);

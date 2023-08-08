@@ -3,6 +3,7 @@ using System.Drawing;
 using System.IO;
 using System.Threading;
 using System.Windows.Forms;
+using Microsoft.Win32;
 
 namespace PrepareStella.Forms
 {
@@ -39,7 +40,7 @@ namespace PrepareStella.Forms
 
                     if (!selectedFile.Contains("GenshinImpact.exe") && !selectedFile.Contains("YuanShen.exe"))
                     {
-                        MessageBox.Show("Please select the game exe.\n\nGenshinImpact.exe for OS version.\nYuanShen.exe for CN version.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Please select the game exe.\n\n* GenshinImpact.exe for OS version\n* YuanShen.exe for CN version", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
 
@@ -69,7 +70,7 @@ namespace PrepareStella.Forms
             string selectedFile = comboBox1.GetItemText(comboBox1.SelectedItem);
             if (!selectedFile.Contains("GenshinImpact.exe") && !selectedFile.Contains("YuanShen.exe"))
             {
-                MessageBox.Show("We can't save your settings. Please select the game exe.\n\nGenshinImpact.exe for OS version (main).\nYuanShen.exe for CN version.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("We can't save your settings. Please select the game exe.\n\n* GenshinImpact.exe for OS version (main)\n* YuanShen.exe for CN (Chinese) version", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -80,16 +81,12 @@ namespace PrepareStella.Forms
                 return;
             }
 
+            using (RegistryKey key = Registry.CurrentUser.CreateSubKey(Program.RegistryPath))
+            {
+                key?.SetValue("GameVersion", Path.GetFileName(selectedFile) == "GenshinImpact.exe" ? "1" : "2");
+            }
 
-            File.WriteAllText(Path.Combine(Program.AppData, "game-version.sfn"), Path.GetFileName(selectedFile) == "GenshinImpact.exe" ? "1" : "2");
-
-            string giGame = Path.GetDirectoryName(selectedFile);
-            Program.GameDirGlobal = giGame;
-            Program.GameExeGlobal = selectedFile;
-            File.WriteAllText(Program.GamePathSfn, selectedFile);
-
-            Console.WriteLine(Path.GetDirectoryName(giGame));
-
+            Program.SavedGamePath = selectedFile;
             Close();
         }
 

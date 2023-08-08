@@ -10,12 +10,14 @@ namespace PrepareStella.Scripts.Preparing
     /// </summary>
     internal static class UpdateReShadeCfg
     {
+        public static readonly string GiGame = Path.GetDirectoryName(Program.SavedGamePath);
+
         public static async Task Run()
         {
-            string reshadeIniPath = Path.Combine(Program.GameDirGlobal, "ReShade.ini");
-            string reshadeLogPath = Path.Combine(Program.GameDirGlobal, "ReShade.log");
+            string reshadeIniPath = Path.Combine(GiGame, "ReShade.ini");
+            string reshadeLogPath = Path.Combine(GiGame, "ReShade.log");
 
-            if (!Directory.Exists(Program.GameDirGlobal))
+            if (!Directory.Exists(GiGame))
             {
                 Console.WriteLine(@"You must configure some settings manually.");
                 return;
@@ -37,7 +39,7 @@ namespace PrepareStella.Scripts.Preparing
 
             // Final
             if (!File.Exists(reshadeIniPath) || !File.Exists(reshadeLogPath))
-                Log.ErrorAndExit(new Exception($"Something went wrong. Config or log file for ReShade was not found in: {Program.GameDirGlobal}"), false, false);
+                Log.ErrorAndExit(new Exception($"Something went wrong. Config or log file for ReShade was not found in: {GiGame}"), false, false);
 
             Log.Output($"{Path.GetFileName(reshadeIniPath)} and {Path.GetFileName(reshadeLogPath)} was successfully downloaded.");
 
@@ -54,7 +56,7 @@ namespace PrepareStella.Scripts.Preparing
 
         private static void ConfigureReShade(string resourcesGlobal)
         {
-            IniFile ini = new IniFile(Path.Combine(Program.GameDirGlobal, "ReShade.ini"));
+            IniFile ini = new IniFile(Path.Combine(GiGame, "ReShade.ini"));
             ini.WriteString("ADDON", "AddonPath", $"{Path.Combine(resourcesGlobal, "ReShade", "Addons")}");
             ini.WriteString("GENERAL", "EffectSearchPaths", Path.Combine(resourcesGlobal, "ReShade", "Shaders", "Effects"));
             ini.WriteString("GENERAL", "IntermediateCachePath", Path.Combine(resourcesGlobal, "ReShade", "Cache"));

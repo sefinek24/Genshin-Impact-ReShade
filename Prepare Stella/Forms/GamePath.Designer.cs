@@ -47,7 +47,7 @@ namespace PrepareStella.Forms
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(776, 65);
             this.label4.TabIndex = 14;
-            this.label4.Text = ">> in the localizations <<\r\n";
+            this.label4.Text = ">> in the localization: <<\r\n";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button3

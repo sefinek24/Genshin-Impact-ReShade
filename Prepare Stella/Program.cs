@@ -21,7 +21,6 @@ namespace PrepareStella
         public static readonly string AppVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
         public static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
         public static readonly string AppData = Utils.GetAppData();
-        public static string GamePathSfn;
 
         // Links
         public static readonly string AppWebsite = "https://genshin.sefinek.net";
@@ -42,14 +41,14 @@ namespace PrepareStella
         // Other
         public static readonly string UserAgent = $"Mozilla/5.0 (compatible; PrepareStella/{AppVersion}; +{AppWebsite})";
         public static readonly string Line = "===============================================================================================";
+        private static readonly Icon Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
 
         // Global variables
-        public static string GameExeGlobal;
-        public static string GameDirGlobal;
+        public static string SavedGamePath;
         public static string ResourcesGlobal;
 
         // Registry
-        private static readonly string RegistryPath = @"SOFTWARE\Stella Mod Launcher";
+        public static readonly string RegistryPath = @"SOFTWARE\Stella Mod Launcher";
 
         [STAThread]
         public static async Task Start()
@@ -57,7 +56,7 @@ namespace PrepareStella
             TaskbarManager.Instance.SetProgressValue(12, 100);
 
             Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("\n-- Select the correct paths --");
+            Console.WriteLine("\n-- Select the correct localizations --");
 
 
             // Check game path
@@ -67,48 +66,46 @@ namespace PrepareStella
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            string gamePathSfn = Path.Combine(AppData, "game-path.sfn");
-            GamePathSfn = gamePathSfn;
 
-            if (File.Exists(gamePathSfn))
+
+            // Load the game path from the registry
+            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(RegistryPath))
             {
-                string gamePathContent = File.ReadAllText(gamePathSfn);
-
-                if (File.Exists(gamePathContent))
-                {
-                    GameExeGlobal = gamePathContent;
-                    GameDirGlobal = Path.GetDirectoryName(gamePathContent);
-                    Console.WriteLine(gamePathContent);
-                }
+                if (key != null)
+                    SavedGamePath = (string)key.GetValue("GamePath");
             }
 
-            if (GameExeGlobal == null)
+            // Try to find the game in the default localizations
+            if (string.IsNullOrEmpty(SavedGamePath))
             {
-                string selectedGameExe = null;
-
                 if (File.Exists(GameGenshinImpact))
-                    selectedGameExe = GameGenshinImpact;
+                    SavedGamePath = GameGenshinImpact;
                 else if (File.Exists(GameYuanShen))
-                    selectedGameExe = GameYuanShen;
+                    SavedGamePath = GameYuanShen;
                 else
-                    new GamePath(GameExeGlobal ?? $"{GameGenshinImpact}\n{GameYuanShen}") { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.ShowDialog();
-
-                if (selectedGameExe != null)
-                {
-                    GameExeGlobal = selectedGameExe;
-                    GameDirGlobal = Path.GetDirectoryName(selectedGameExe);
-                    File.WriteAllText(GamePathSfn, selectedGameExe);
-                    Console.WriteLine(selectedGameExe);
-                }
+                    new GamePath($"{GameGenshinImpact}\n{GameYuanShen}") { Icon = Icon }.ShowDialog();
             }
 
-            if (GameExeGlobal == null || !File.Exists(GameExeGlobal))
-            {
-                string errorMessage = GameExeGlobal != null
-                    ? $"File was not found: {GameExeGlobal}"
-                    : "Full game path was not found";
+            // Check if the path is valid
+            if (!File.Exists(SavedGamePath))
+                new GamePath(SavedGamePath) { Icon = Icon }.ShowDialog();
 
-                Log.ErrorAndExit(new Exception($"{errorMessage}\n\nYou must provide a specific location of the game in which it is installed.\nThis program will not modify ANY game files."), false, false);
+            // Check if the variable is empty or if the path is still not valid
+            if (string.IsNullOrEmpty(SavedGamePath) || !File.Exists(SavedGamePath))
+            {
+                string errorMessage = SavedGamePath != null ? $"File was not found: {SavedGamePath}" : "Full game path was not found";
+                Log.ErrorAndExit(new Exception($"{errorMessage}\n\nYou must provide the specific location where the game is installed.\nThis program will not modify ANY game files."), false, false);
+            }
+
+            // If the variable is not empty, save the data
+            if (!string.IsNullOrEmpty(SavedGamePath))
+            {
+                using (RegistryKey key = Registry.CurrentUser.CreateSubKey(RegistryPath))
+                {
+                    key?.SetValue("GamePath", SavedGamePath);
+                }
+
+                Console.WriteLine(SavedGamePath);
             }
 
 
@@ -117,26 +114,33 @@ namespace PrepareStella
             Console.Write(@"» Resources: ");
             Console.ResetColor();
 
-            string resourcesPath = Path.Combine(AppData, "resources-path.sfn");
-            Resources selectResPath = new Resources { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) };
-            if (File.Exists(resourcesPath))
+            // Prepare WinForm
+            Resources selectResPath = new Resources { Icon = Icon };
+
+
+            // Get ResourcesPath from the registry
+            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(RegistryPath))
             {
-                string sfnFileContent = File.ReadAllText(resourcesPath).Trim();
-                if (Directory.Exists(sfnFileContent))
-                    ResourcesGlobal = sfnFileContent;
-                else
-                    selectResPath.ShowDialog();
-            }
-            else
-            {
-                selectResPath.ShowDialog();
+                if (key != null) ResourcesGlobal = (string)key.GetValue("ResourcesPath");
             }
 
-            if (ResourcesGlobal != null)
+            // Path is not valid?
+            if (string.IsNullOrEmpty(SavedGamePath) || !Directory.Exists(ResourcesGlobal)) selectResPath.ShowDialog();
+
+            // Path is now valid?
+            if (!string.IsNullOrEmpty(SavedGamePath) || Directory.Exists(ResourcesGlobal))
+            {
+                using (RegistryKey key = Registry.CurrentUser.CreateSubKey(RegistryPath))
+                {
+                    key?.SetValue("ResourcesPath", ResourcesGlobal);
+                }
+
                 Console.WriteLine(ResourcesGlobal);
+            }
             else
+            {
                 Log.ErrorAndExit(new Exception("Unknown\n\nSorry. Directory with the resources was not found.\nIn the resources directory, files such as your shaders, presets, screenshots, and custom mods are stored."), false, false);
-
+            }
 
             TaskbarManager.Instance.SetProgressValue(26, 100);
 
@@ -254,8 +258,10 @@ namespace PrepareStella
             else
             {
                 // Run Genshin Stella Mod
-                Console.WriteLine(@"Launching Genshin Stella Mod...");
-                _ = Cmd.CliWrap("Genshin Stella Mod.exe", null, AppPath);
+                string stellaLauncher = Path.Combine(AppPath, "Stella Mod Launcher.exe");
+
+                Console.WriteLine($@"Launching {Path.GetFileName(stellaLauncher)}...");
+                _ = Cmd.CliWrap(stellaLauncher, null, null);
             }
 
 
