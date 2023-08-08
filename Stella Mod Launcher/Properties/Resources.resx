@@ -154,9 +154,6 @@
   <data name="Cmd_WorkingDirectory" xml:space="preserve">
     <value>Working directory</value>
   </data>
-  <data name="Utils_LauncherFileDoesNotExistsIn_" xml:space="preserve">
-    <value></value>
-  </data>
   <data name="icons8_animated" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-animated-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,12 +175,6 @@
   <data name="Discord_Desc" xml:space="preserve">
     <value>The best mod for Genshin Impact with ReShade, custom graphics presets, FPS unlock, custom launcher, and more!</value>
   </data>
-  <data name="Utils_DesktopShortcutHasBeenCreated" xml:space="preserve">
-    <value></value>
-  </data>
-  <data name="Cmd_SuccessfullyExecutedCommand" xml:space="preserve">
-    <value></value>
-  </data>
   <data name="ReShadeIniUpdate_StellaConfigVersionIsNullInReShadeIni" xml:space="preserve">
     <value>STELLA.ConfigVersion is null in ReShade.ini.</value>
   </data>
@@ -192,14 +183,8 @@
 
 This action will result in the loss of any custom configurations you have made. If you do not have any custom configurations, you may proceed by clicking Yes. However, if you have made changes, please ensure that you have backed up the previous ReShade file in your game files.</value>
   </data>
-  <data name="Discord_OnUnsubscribe" xml:space="preserve">
-    <value></value>
-  </data>
   <data name="flaticon_controller" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\controller.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Default_FailedToDownloadUnlockerConfigJson" xml:space="preserve">
-    <value></value>
   </data>
   <data name="Default_CheckForUpdates" xml:space="preserve">
     <value>Check for updates</value>
@@ -210,9 +195,6 @@ This action will result in the loss of any custom configurations you have made. 
   <data name="NormalRelease_JustAMoment_PleaseWait" xml:space="preserve">
     <value>Just a moment. Please wait {0}s...</value>
   </data>
-  <data name="Program_QuestionMessageBox_WouldYouShareOpinionAboutStellaMod" xml:space="preserve">
-    <value></value>
-  </data>
   <data name="Default_TheReShadeIniFileStillDoesNotExist" xml:space="preserve">
     <value>The ReShade.ini file still does not exist!</value>
     <comment>Used for Log.Output</comment>
@@ -222,9 +204,6 @@ This action will result in the loss of any custom configurations you have made. 
   </data>
   <data name="Default_FailedToDownload" xml:space="preserve">
     <value>Failed to download...</value>
-  </data>
-  <data name="NormalRelease_Closing" xml:space="preserve">
-    <value></value>
   </data>
   <data name="Log_SomethingWentWrong" xml:space="preserve">
     <value>Something went wrong</value>
@@ -266,9 +245,6 @@ Do you want to see these files?</value>
 
 Would you like to visit Patreon.com and make subscribe? You will gain access to numerous benefits! You will also be able to enjoy ReShade, 3DMigoto, and FPS Unlocker simultaneously.</value>
   </data>
-  <data name="Telemetry_DeliveredTelemetryData" xml:space="preserve">
-    <value></value>
-  </data>
   <data name="icons8_github" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-github-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -286,9 +262,6 @@ Would you like to visit Patreon.com and make subscribe? You will gain access to 
   <data name="Utils_FoundGiExe" xml:space="preserve">
     <value>Found Genshin Impact Exe in: {0} [{1}]</value>
   </data>
-  <data name="Default_NotFoundAnyNewUpdates_YourInstalledVersion_" xml:space="preserve">
-    <value></value>
-  </data>
   <data name="Default_CachedAppBackground_ID" xml:space="preserve">
     <value>Cached app background in RAM memory '{0}'; ID: {1};</value>
     <comment>Used for Log.Output</comment>
@@ -305,9 +278,6 @@ Would you like to visit Patreon.com and make subscribe? You will gain access to 
   <data name="NormalRelease_DownloadingUpdate_" xml:space="preserve">
     <value>Downloading update... {0} MB / {1} MB</value>
   </data>
-  <data name="Utils_FoundGIgameDir__" xml:space="preserve">
-    <value></value>
-  </data>
   <data name="Default_SomethingWentWrongWhileCheckingForNewUpdates" xml:space="preserve">
     <value>Something went wrong while checking for new updates.
 
@@ -322,14 +292,8 @@ Would you like to visit Patreon.com and make subscribe? You will gain access to 
   <data name="bg_gameplay" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tutorial3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="NormalRelease_DeletedOldSetupFireFrom_" xml:space="preserve">
-    <value></value>
-  </data>
   <data name="StellaResources_SuccessfullyUpdatedResources" xml:space="preserve">
     <value>Successfully updated resources.</value>
-  </data>
-  <data name="NormalRelease_Waiting_" xml:space="preserve">
-    <value>Waiting {0}s...</value>
   </data>
   <data name="Program_SorryOneInstanceIsCurrentlyOpen_" xml:space="preserve">
     <value>Sorry, one instance is currently open.
@@ -416,9 +380,6 @@ Do you want to reconfigure Stella Mod in the configuration window?</value>
   <data name="Tools_YoureConnectedAs_.HiAndNiceToMeetYou.CheckYourDiscordActivity" xml:space="preserve">
     <value>You are connected as {0}. Hi and nice to meet you! Check your activity on Discord.</value>
   </data>
-  <data name="Default_TheUpdateOfReShadIniHasBeenCanceledByTheUser" xml:space="preserve">
-    <value></value>
-  </data>
   <data name="NormalRelease_UpdatingPleaseWait" xml:space="preserve">
     <value>Updating. Please wait...</value>
   </data>
@@ -427,9 +388,6 @@ Do you want to reconfigure Stella Mod in the configuration window?</value>
   </data>
   <data name="Utils_OopsAnErrorOccurred" xml:space="preserve">
     <value>Oops, an error occurred</value>
-  </data>
-  <data name="Utils_FoundMainGIDir" xml:space="preserve">
-    <value></value>
   </data>
   <data name="NormalRelease_NewReleaseIsAvailableDownloadNow" xml:space="preserve">
     <value>New release is available. Download now!</value>
@@ -456,9 +414,6 @@ Do you want to reconfigure Stella Mod in the configuration window?</value>
   <data name="Default_ClickStartGameButtonToInjectReShadeFPSUnlockAnd3DMigoto" xml:space="preserve">
     <value>Click „Start game” button to inject ReShade, FPS Unlock and 3DMigoto.</value>
   </data>
-  <data name="Discord_OnError" xml:space="preserve">
-    <value></value>
-  </data>
   <data name="Default_DownloadedReShadeIniWasNotFoundIn_" xml:space="preserve">
     <value>Downloaded ReShade.ini was not found in: {0}</value>
   </data>
@@ -478,27 +433,15 @@ Do you want to reconfigure Stella Mod in the configuration window?</value>
   <data name="Program_RequiredFileFisrtAppLaunchExeWasNotFound_" xml:space="preserve">
     <value>Required file 'First app launch.exe' was not found. Please reinstall this app or join our Discord server for help.</value>
   </data>
-  <data name="Program_QuestionMessageBox_DoYouWantToJoinOurDiscord_" xml:space="preserve">
-    <value></value>
-  </data>
   <data name="Tools_ReShadeConfigFileWasNotFoundIn_" xml:space="preserve">
     <value>ReShade config file was not found in:
 {0}</value>
-  </data>
-  <data name="Utils_FoundGILauncherIn_" xml:space="preserve">
-    <value></value>
   </data>
   <data name="RandomImages_Source" xml:space="preserve">
     <value>Source</value>
   </data>
   <data name="Cmd_FailedToUpdate" xml:space="preserve">
     <value>Failed to update. The software was denied access to a location, preventing it from saving, copying, opening or loading files.</value>
-  </data>
-  <data name="Telemetry_ThisFeatureDoesntDoAnything" xml:space="preserve">
-    <value></value>
-  </data>
-  <data name="Discord_OnPresenceUpdate" xml:space="preserve">
-    <value></value>
   </data>
   <data name="RandomImages_ErrorWithTheAPI" xml:space="preserve">
     <value>Error with the API: {0}
@@ -508,20 +451,11 @@ Do you want to reconfigure Stella Mod in the configuration window?</value>
   <data name="Default_FileWasNotFound" xml:space="preserve">
     <value>File was not found.</value>
   </data>
-  <data name="NormalRelease_ClosingLauncherIn_" xml:space="preserve">
-    <value></value>
-  </data>
-  <data name="Discord_OnReady" xml:space="preserve">
-    <value></value>
-  </data>
   <data name="Telemetry_LogFilesWasSentToDeveloper" xml:space="preserve">
     <value>Log files was sent to developer.</value>
   </data>
   <data name="Tools_DisableDiscordRPC" xml:space="preserve">
     <value>Disable Discord RPC</value>
-  </data>
-  <data name="Default_DownloadingConfigFileForFPSUnlocker" xml:space="preserve">
-    <value></value>
   </data>
   <data name="Program_WouldYouShareOpinionAboutStellaMod" xml:space="preserve">
     <value>Would you share your opinion about Stella Mod on trustpilot.com? I would be very grateful.</value>
@@ -553,9 +487,6 @@ Do you want to reconfigure Stella Mod in the configuration window?</value>
   </data>
   <data name="NormalRelease_Preparing_IfProcessIsStuckReopenLauncher" xml:space="preserve">
     <value>Preparing... If process is stuck, reopen launcher.</value>
-  </data>
-  <data name="MajorRelease_NewMajorVersionFrom_IsAvailable_v_" xml:space="preserve">
-    <value></value>
   </data>
   <data name="Links_DRPC_OnTheWindowWithLinks" xml:space="preserve">
     <value>On the window with links 🌍</value>
@@ -593,9 +524,6 @@ Do you want to reconfigure Stella Mod in the configuration window?</value>
   <data name="Utils_File_WasNotFoundAt_" xml:space="preserve">
     <value>File '{0}' was not found at '{1}'.</value>
   </data>
-  <data name="Utils_Opened_InDefaultBrowser" xml:space="preserve">
-    <value></value>
-  </data>
   <data name="Cmd_TheRequestOperationWasSuccessfulButYourPCNeedsToBeRebooted" xml:space="preserve">
     <value>The requested operation was successful, but your computer needs to be restarted.</value>
   </data>
@@ -607,9 +535,6 @@ Do you want to reconfigure Stella Mod in the configuration window?</value>
   </data>
   <data name="StellaResources_NewResourcesUpdateIsAvailable" xml:space="preserve">
     <value>New update of the resources is available from {0}.</value>
-  </data>
-  <data name="Utils_FailedToOpen_InDefaultBrowser" xml:space="preserve">
-    <value></value>
   </data>
   <data name="NormalRelease_NewReleaseFrom_IsAvailable_v_" xml:space="preserve">
     <value>New release from {0} is available: v{1} → v{2}</value>
@@ -673,17 +598,11 @@ If, for any reason, you are unable to update Stella Mod through the Launcher, pl
   <data name="ReShadeIniUpdate_NewReShadeConfigVersionIsAvailable" xml:space="preserve">
     <value>New ReShade config version is available. Update is required.</value>
   </data>
-  <data name="Discord_OnConnectionEstablished" xml:space="preserve">
-    <value></value>
-  </data>
   <data name="MajorRelease_MajorVersionIsAvailable" xml:space="preserve">
     <value>Major version is available</value>
   </data>
   <data name="NormalRelease_WeFoundNewUpdates" xml:space="preserve">
     <value>We found new updates</value>
-  </data>
-  <data name="Program_QuestionMessageBox_DoYouWantToSendUsanonymousLogFiles_" xml:space="preserve">
-    <value></value>
   </data>
   <data name="NormalRelease_DownloadingInProgress" xml:space="preserve">
     <value>Downloading in progress...</value>
@@ -710,9 +629,6 @@ Would you like to download this file now to prevent future errors and manual con
   </data>
   <data name="Cmd_Error" xml:space="preserve">
     <value>Error</value>
-  </data>
-  <data name="Discord_RPCWasNotUpdated" xml:space="preserve">
-    <value></value>
   </data>
   <data name="icons8_support" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-support-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -762,9 +678,6 @@ Do you want to download this dependency from Microsoft website?</value>
     <value>File download has been canceled by the user.</value>
     <comment>Used for Log.Output</comment>
   </data>
-  <data name="Default_DeletedOldSetupFromTempFolder" xml:space="preserve">
-    <value></value>
-  </data>
   <data name="Default_ItAppersThatIsYourFirstTimeLaunchingTheLauncher" xml:space="preserve">
     <value>It appears that you are launching the launcher for the first time! Take a moment to review the terms of use on the GitHub Wiki and other guidelines for this modification to avoid any unexpected issues.
 
@@ -772,9 +685,6 @@ REMEMBER NOT TO SHARE YOUR UID WITH VISIBLE GAME SHADERS WITH ANYONE!</value>
   </data>
   <data name="Tools_UnmuteMusicOnStart" xml:space="preserve">
     <value>Unmute music on start</value>
-  </data>
-  <data name="Utils_FileWithGamePathWasNotFoundIn" xml:space="preserve">
-    <value></value>
   </data>
   <data name="icons8_youtube" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-youtube-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -819,5 +729,8 @@ REMEMBER NOT TO SHARE YOUR UID WITH VISIBLE GAME SHADERS WITH ANYONE!</value>
   </data>
   <data name="DownloadCmd_SuccesfullyDownloadedOrUpdatedFile_" xml:space="preserve">
     <value>{0} Successfully downloaded or updated file: {1}</value>
+  </data>
+  <data name="Default_DownloadingConfigFileForFPSUnlocker" xml:space="preserve">
+    <value>Downloading the configuration file for FPS Unlocker....</value>
   </data>
 </root>

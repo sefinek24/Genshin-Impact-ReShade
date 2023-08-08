@@ -127,12 +127,7 @@ namespace StellaLauncher.Scripts.Download
 
         private static async Task StartDownload()
         {
-            if (File.Exists(_resourcesPath))
-            {
-                File.Delete(_resourcesPath);
-                Default._status_Label.Text += $"[✓] {Resources.NormalRelease_DeletedOldSetupFileFromTempDir}\n";
-                Log.Output(string.Format(Resources.NormalRelease_DeletedOldSetupFireFrom_, _resourcesPath));
-            }
+            if (File.Exists(_resourcesPath)) File.Delete(_resourcesPath);
 
             Log.Output("Downloading in progress...");
             TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Normal);
