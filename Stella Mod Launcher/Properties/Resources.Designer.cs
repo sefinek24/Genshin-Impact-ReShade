@@ -440,7 +440,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to File {0} was not found..
+        ///   Looks up a localized string similar to [i] File {0} was not found..
         /// </summary>
         internal static string Default_File_WasNotFound {
             get {
