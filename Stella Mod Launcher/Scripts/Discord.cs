@@ -1,3 +1,4 @@
+using System;
 using DiscordRPC;
 using DiscordRPC.Logging;
 using StellaLauncher.Properties;
@@ -71,7 +72,15 @@ namespace StellaLauncher.Scripts
             if (data == 0) return;
 
             Presence.Details = $"{Resources.Discord_InTheMainWindow} 🐈";
-            Client.SetPresence(Presence);
+
+            try
+            {
+                Client.SetPresence(Presence);
+            }
+            catch (Exception ex)
+            {
+                Log.ThrowError(ex);
+            }
         }
 
         public static void SetStatus(string status)
@@ -80,7 +89,14 @@ namespace StellaLauncher.Scripts
             if (data == 1 && IsReady)
             {
                 Presence.Details = status;
-                Client.SetPresence(Presence);
+                try
+                {
+                    Client.SetPresence(Presence);
+                }
+                catch (Exception ex)
+                {
+                    Log.ThrowError(ex);
+                }
             }
             else
             {

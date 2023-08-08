@@ -12,6 +12,7 @@ using StellaLauncher.Models;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
 using StellaLauncher.Scripts.Forms;
+using StellaLauncher.Scripts.Forms.MainForm;
 
 namespace StellaLauncher.Forms.Other
 {
@@ -79,6 +80,7 @@ namespace StellaLauncher.Forms.Other
                 _poweredBy.Visible = true;
             }
 
+            Music.PlaySound("winxp", "pop-up_blocked");
 
             try
             {
@@ -175,242 +177,242 @@ namespace StellaLauncher.Forms.Other
         }
 
         /* Random animals */
-        private void RandomCat_Click(object sender, EventArgs e)
+        private void RandomCat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             SkiffyApi("https://api.sefinek.net/api/v2/random/animal/cat");
         }
 
-        private void RandomDog_Click(object sender, EventArgs e)
+        private void RandomDog_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             SkiffyApi("https://api.sefinek.net/api/v2/random/animal/dog");
         }
 
-        private void RandomFox_Click(object sender, EventArgs e)
+        private void RandomFox_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             SkiffyApi("https://api.sefinek.net/api/v2/random/animal/fox");
         }
 
         /* Random anime bitches */
-        private void CatGirl_Click(object sender, EventArgs e)
+        private void CatGirl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/neko", false);
         }
 
-        private void FoxGirl_Click(object sender, EventArgs e)
+        private void FoxGirl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/kitsune", false);
         }
 
-        private void Waifu_Click(object sender, EventArgs e)
+        private void Waifu_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/waifu", false);
         }
 
-        private void Coffee_Click(object sender, EventArgs e)
+        private void Coffee_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekoBot("https://nekobot.xyz/api/image?type=coffee");
         }
 
-        private void Shiro_Click(object sender, EventArgs e)
+        private void Shiro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             PurrBot("https://purrbot.site/api/img/sfw/shiro/img");
         }
 
-        private void Holo_Click(object sender, EventArgs e)
+        private void Holo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             PurrBot("https://purrbot.site/api/img/sfw/holo/img");
         }
 
-        private void Senko_Click(object sender, EventArgs e)
+        private void Senko_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             PurrBot("https://purrbot.site/api/img/sfw/senko/img");
         }
 
         /* Random anime gifs */
-        private void Hug_Click(object sender, EventArgs e)
+        private void Hug_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/hug", true);
         }
 
-        private void Cuddle_Click(object sender, EventArgs e)
+        private void Cuddle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/cuddle", true);
         }
 
-        private void Kiss_Click(object sender, EventArgs e)
+        private void Kiss_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/kiss", true);
         }
 
-        private void Happy_Click(object sender, EventArgs e)
+        private void Happy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/happy", true);
         }
 
-        private void Cry_Click(object sender, EventArgs e)
+        private void Cry_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/cry", true);
         }
 
-        private void Pat_Click(object sender, EventArgs e)
+        private void Pat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/pat", true);
         }
 
-        private void Wink_Click(object sender, EventArgs e)
+        private void Wink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/wink", true);
         }
 
-        private void Wave_Click(object sender, EventArgs e)
+        private void Wave_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/wave", true);
         }
 
-        private void Thumbsup_Click(object sender, EventArgs e)
+        private void Thumbsup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/thumbsup", true);
         }
 
-        private void Blush_Click(object sender, EventArgs e)
+        private void Blush_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/blush", true);
         }
 
-        private void Smile_Click(object sender, EventArgs e)
+        private void Smile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/smile", true);
         }
 
-        private void Laugh_Click(object sender, EventArgs e)
+        private void Laugh_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/laugh", true);
         }
 
-        private void Shoot_Click(object sender, EventArgs e)
+        private void Shoot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/shoot", true);
         }
 
-        private void Sleep_Click(object sender, EventArgs e)
+        private void Sleep_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/sleep", true);
         }
 
         /* Random anime gifs */
-        private void Baka_Click(object sender, EventArgs e)
+        private void Baka_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/baka", true);
         }
 
-        private void Bite_Click(object sender, EventArgs e)
+        private void Bite_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/bite", true);
         }
 
-        private void Bored_Click(object sender, EventArgs e)
+        private void Bored_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/bored", true);
         }
 
-        private void Dance_Click(object sender, EventArgs e)
+        private void Dance_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/dance", true);
         }
 
-        private void FacePalm_Click(object sender, EventArgs e)
+        private void FacePalm_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/facepalm", true);
         }
 
-        private void Feed_Click(object sender, EventArgs e)
+        private void Feed_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/feed", true);
         }
 
-        private void Handhold_Click(object sender, EventArgs e)
+        private void Handhold_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/handhold", true);
         }
 
-        private void Highfive_Click(object sender, EventArgs e)
+        private void Highfive_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/highfive", true);
         }
 
-        private void Kick_Click(object sender, EventArgs e)
+        private void Kick_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/kick", true);
         }
 
-        private void Poke_Click(object sender, EventArgs e)
+        private void Poke_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/poke", true);
         }
 
-        private void Pout_Click(object sender, EventArgs e)
+        private void Pout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/pout", true);
         }
 
-        private void Punch_Click(object sender, EventArgs e)
+        private void Punch_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/punch", true);
         }
 
-        private void Shrug_Click(object sender, EventArgs e)
+        private void Shrug_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/shrug", true);
         }
 
-        private void Slap_Click(object sender, EventArgs e)
+        private void Slap_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/slap", true);
         }
 
-        private void Smug_Click(object sender, EventArgs e)
+        private void Smug_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/smug", true);
         }
 
-        private void Stare_Click(object sender, EventArgs e)
+        private void Stare_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/stare", true);
         }
 
-        private void Think_Click(object sender, EventArgs e)
+        private void Think_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/think", true);
         }
 
-        private void Tickle_Click(object sender, EventArgs e)
+        private void Tickle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/tickle", true);
         }
 
-        private void Yeet_Click(object sender, EventArgs e)
+        private void Yeet_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NekosBest("https://nekos.best/api/v2/yeet", true);
         }
 
-        private void Tail_Click(object sender, EventArgs e)
+        private void Tail_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             PurrBot("https://purrbot.site/api/img/sfw/tail/gif");
         }
 
         /* Random YouTube videos */
-        private void HlCat_Click(object sender, EventArgs e)
+        private void HlCat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             SkiffyApi("https://api.sefinek.net/api/v2/random/yt-video/hl-cats");
         }
 
         /* Footer */
-        private void Source_Click(object sender, EventArgs e)
+        private void Source_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (!string.IsNullOrEmpty(_sourceUrl)) Utils.OpenUrl(_sourceUrl);
         }
 
-        private void RandomHentai_Click(object sender, EventArgs e)
+        private void RandomHentai_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             webView21.CoreWebView2.Navigate(Path.Combine(Program.AppPath, "data", "videos", "gengbeng.mp4"));
         }

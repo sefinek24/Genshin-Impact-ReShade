@@ -32,7 +32,6 @@ namespace PrepareStella
         private static readonly string GameGenshinImpact = Path.Combine(ProgramFiles, "Genshin Impact", "Genshin Impact game", "GenshinImpact.exe");
         private static readonly string GameYuanShen = Path.Combine(ProgramFiles, "Genshin Impact", "Genshin Impact game", "YuanShen.exe");
         public static readonly string WindowsApps = Path.Combine(ProgramFiles, "WindowsApps");
-        private static readonly string ConfiguredSfn = Path.Combine(AppData, "configured.sfn");
 
         // Dependencies
         public static readonly string VcLibsAppx = Path.Combine("dependencies", "Microsoft.VCLibs.x64.14.00.Desktop.appx");
@@ -68,7 +67,7 @@ namespace PrepareStella
             Application.SetCompatibleTextRenderingDefault(false);
 
 
-            // Load the game path from the registry
+            // Get the game path from the registry
             using (RegistryKey key = Registry.CurrentUser.OpenSubKey(RegistryPath))
             {
                 if (key != null) SavedGamePath = (string)key.GetValue("GamePath");
@@ -221,7 +220,6 @@ namespace PrepareStella
 
             // Create files
             if (!Directory.Exists(AppData)) Directory.CreateDirectory(AppData);
-            if (!File.Exists(ConfiguredSfn)) File.Create(ConfiguredSfn);
 
 
             // Registry

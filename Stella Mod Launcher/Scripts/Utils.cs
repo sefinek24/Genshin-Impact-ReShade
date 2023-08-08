@@ -115,7 +115,7 @@ namespace StellaLauncher.Scripts
                 return;
             }
 
-            Music.PlaySound("winxp", "pop-up_blocked");
+            Music.PlaySound("winxp", "minimize");
 
             try
             {

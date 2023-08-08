@@ -98,7 +98,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel1.LinkColor = System.Drawing.Color.White;
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Click += new System.EventHandler(this.RandomCat_Click);
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.RandomCat_LinkClicked);
             // 
             // label1
             // 
@@ -117,7 +117,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel2.LinkColor = System.Drawing.Color.White;
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.TabStop = true;
-            this.linkLabel2.Click += new System.EventHandler(this.RandomDog_Click);
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.RandomDog_LinkClicked);
             // 
             // linkLabel3
             // 
@@ -129,7 +129,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel3.LinkColor = System.Drawing.Color.White;
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.TabStop = true;
-            this.linkLabel3.Click += new System.EventHandler(this.RandomFox_Click);
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.RandomFox_LinkClicked);
             // 
             // label2
             // 
@@ -148,7 +148,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel4.LinkColor = System.Drawing.Color.White;
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.TabStop = true;
-            this.linkLabel4.Click += new System.EventHandler(this.Senko_Click);
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Senko_LinkClicked);
             // 
             // linkLabel5
             // 
@@ -161,7 +161,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel5.Name = "linkLabel5";
             this.linkLabel5.TabStop = true;
             this.toolTip1.SetToolTip(this.linkLabel5, resources.GetString("linkLabel5.ToolTip"));
-            this.linkLabel5.Click += new System.EventHandler(this.FoxGirl_Click);
+            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.FoxGirl_LinkClicked);
             // 
             // linkLabel6
             // 
@@ -174,7 +174,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel6.Name = "linkLabel6";
             this.linkLabel6.TabStop = true;
             this.toolTip1.SetToolTip(this.linkLabel6, resources.GetString("linkLabel6.ToolTip"));
-            this.linkLabel6.Click += new System.EventHandler(this.CatGirl_Click);
+            this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CatGirl_LinkClicked);
             // 
             // linkLabel7
             // 
@@ -186,7 +186,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel7.LinkColor = System.Drawing.Color.White;
             this.linkLabel7.Name = "linkLabel7";
             this.linkLabel7.TabStop = true;
-            this.linkLabel7.Click += new System.EventHandler(this.Coffee_Click);
+            this.linkLabel7.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Coffee_LinkClicked);
             // 
             // text_Label
             // 
@@ -196,7 +196,7 @@ namespace StellaLauncher.Forms.Other
             this.text_Label.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.text_Label.LinkColor = System.Drawing.Color.White;
             this.text_Label.Name = "text_Label";
-            this.text_Label.Click += new System.EventHandler(this.Source_Click);
+            this.text_Label.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Source_LinkClicked);
             // 
             // label3
             // 
@@ -215,7 +215,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel8.LinkColor = System.Drawing.Color.White;
             this.linkLabel8.Name = "linkLabel8";
             this.linkLabel8.TabStop = true;
-            this.linkLabel8.Click += new System.EventHandler(this.Hug_Click);
+            this.linkLabel8.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Hug_LinkClicked);
             // 
             // linkLabel9
             // 
@@ -227,7 +227,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel9.LinkColor = System.Drawing.Color.White;
             this.linkLabel9.Name = "linkLabel9";
             this.linkLabel9.TabStop = true;
-            this.linkLabel9.Click += new System.EventHandler(this.Happy_Click);
+            this.linkLabel9.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Happy_LinkClicked);
             // 
             // linkLabel10
             // 
@@ -239,7 +239,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel10.LinkColor = System.Drawing.Color.White;
             this.linkLabel10.Name = "linkLabel10";
             this.linkLabel10.TabStop = true;
-            this.linkLabel10.Click += new System.EventHandler(this.Pat_Click);
+            this.linkLabel10.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Pat_LinkClicked);
             // 
             // linkLabel11
             // 
@@ -251,7 +251,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel11.LinkColor = System.Drawing.Color.White;
             this.linkLabel11.Name = "linkLabel11";
             this.linkLabel11.TabStop = true;
-            this.linkLabel11.Click += new System.EventHandler(this.Wink_Click);
+            this.linkLabel11.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Wink_LinkClicked);
             // 
             // linkLabel12
             // 
@@ -263,7 +263,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel12.LinkColor = System.Drawing.Color.White;
             this.linkLabel12.Name = "linkLabel12";
             this.linkLabel12.TabStop = true;
-            this.linkLabel12.Click += new System.EventHandler(this.Cry_Click);
+            this.linkLabel12.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Cry_LinkClicked);
             // 
             // linkLabel13
             // 
@@ -275,7 +275,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel13.LinkColor = System.Drawing.Color.White;
             this.linkLabel13.Name = "linkLabel13";
             this.linkLabel13.TabStop = true;
-            this.linkLabel13.Click += new System.EventHandler(this.Wave_Click);
+            this.linkLabel13.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Wave_LinkClicked);
             // 
             // linkLabel14
             // 
@@ -287,7 +287,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel14.LinkColor = System.Drawing.Color.White;
             this.linkLabel14.Name = "linkLabel14";
             this.linkLabel14.TabStop = true;
-            this.linkLabel14.Click += new System.EventHandler(this.Thumbsup_Click);
+            this.linkLabel14.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Thumbsup_LinkClicked);
             // 
             // linkLabel15
             // 
@@ -299,7 +299,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel15.LinkColor = System.Drawing.Color.White;
             this.linkLabel15.Name = "linkLabel15";
             this.linkLabel15.TabStop = true;
-            this.linkLabel15.Click += new System.EventHandler(this.Kiss_Click);
+            this.linkLabel15.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Kiss_LinkClicked);
             // 
             // linkLabel16
             // 
@@ -311,7 +311,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel16.LinkColor = System.Drawing.Color.White;
             this.linkLabel16.Name = "linkLabel16";
             this.linkLabel16.TabStop = true;
-            this.linkLabel16.Click += new System.EventHandler(this.Cuddle_Click);
+            this.linkLabel16.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Cuddle_LinkClicked);
             // 
             // linkLabel17
             // 
@@ -334,7 +334,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel18.LinkColor = System.Drawing.Color.White;
             this.linkLabel18.Name = "linkLabel18";
             this.linkLabel18.TabStop = true;
-            this.linkLabel18.Click += new System.EventHandler(this.Sleep_Click);
+            this.linkLabel18.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Sleep_LinkClicked);
             // 
             // linkLabel20
             // 
@@ -346,7 +346,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel20.LinkColor = System.Drawing.Color.White;
             this.linkLabel20.Name = "linkLabel20";
             this.linkLabel20.TabStop = true;
-            this.linkLabel20.Click += new System.EventHandler(this.Blush_Click);
+            this.linkLabel20.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Blush_LinkClicked);
             // 
             // linkLabel19
             // 
@@ -358,7 +358,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel19.LinkColor = System.Drawing.Color.White;
             this.linkLabel19.Name = "linkLabel19";
             this.linkLabel19.TabStop = true;
-            this.linkLabel19.Click += new System.EventHandler(this.Laugh_Click);
+            this.linkLabel19.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Laugh_LinkClicked);
             // 
             // linkLabel21
             // 
@@ -370,7 +370,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel21.LinkColor = System.Drawing.Color.White;
             this.linkLabel21.Name = "linkLabel21";
             this.linkLabel21.TabStop = true;
-            this.linkLabel21.Click += new System.EventHandler(this.Shoot_Click);
+            this.linkLabel21.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Shoot_LinkClicked);
             // 
             // linkLabel22
             // 
@@ -382,7 +382,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel22.LinkColor = System.Drawing.Color.White;
             this.linkLabel22.Name = "linkLabel22";
             this.linkLabel22.TabStop = true;
-            this.linkLabel22.Click += new System.EventHandler(this.Waifu_Click);
+            this.linkLabel22.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Waifu_LinkClicked);
             // 
             // linkLabel23
             // 
@@ -394,7 +394,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel23.LinkColor = System.Drawing.Color.White;
             this.linkLabel23.Name = "linkLabel23";
             this.linkLabel23.TabStop = true;
-            this.linkLabel23.Click += new System.EventHandler(this.Baka_Click);
+            this.linkLabel23.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Baka_LinkClicked);
             // 
             // linkLabel24
             // 
@@ -406,7 +406,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel24.LinkColor = System.Drawing.Color.White;
             this.linkLabel24.Name = "linkLabel24";
             this.linkLabel24.TabStop = true;
-            this.linkLabel24.Click += new System.EventHandler(this.Bite_Click);
+            this.linkLabel24.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Bite_LinkClicked);
             // 
             // linkLabel25
             // 
@@ -418,7 +418,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel25.LinkColor = System.Drawing.Color.White;
             this.linkLabel25.Name = "linkLabel25";
             this.linkLabel25.TabStop = true;
-            this.linkLabel25.Click += new System.EventHandler(this.Bored_Click);
+            this.linkLabel25.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Bored_LinkClicked);
             // 
             // linkLabel26
             // 
@@ -430,7 +430,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel26.LinkColor = System.Drawing.Color.White;
             this.linkLabel26.Name = "linkLabel26";
             this.linkLabel26.TabStop = true;
-            this.linkLabel26.Click += new System.EventHandler(this.Dance_Click);
+            this.linkLabel26.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Dance_LinkClicked);
             // 
             // linkLabel27
             // 
@@ -442,7 +442,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel27.LinkColor = System.Drawing.Color.White;
             this.linkLabel27.Name = "linkLabel27";
             this.linkLabel27.TabStop = true;
-            this.linkLabel27.Click += new System.EventHandler(this.FacePalm_Click);
+            this.linkLabel27.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.FacePalm_LinkClicked);
             // 
             // linkLabel28
             // 
@@ -454,7 +454,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel28.LinkColor = System.Drawing.Color.White;
             this.linkLabel28.Name = "linkLabel28";
             this.linkLabel28.TabStop = true;
-            this.linkLabel28.Click += new System.EventHandler(this.Feed_Click);
+            this.linkLabel28.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Feed_LinkClicked);
             // 
             // linkLabel29
             // 
@@ -466,7 +466,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel29.LinkColor = System.Drawing.Color.White;
             this.linkLabel29.Name = "linkLabel29";
             this.linkLabel29.TabStop = true;
-            this.linkLabel29.Click += new System.EventHandler(this.Handhold_Click);
+            this.linkLabel29.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Handhold_LinkClicked);
             // 
             // linkLabel30
             // 
@@ -478,7 +478,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel30.LinkColor = System.Drawing.Color.White;
             this.linkLabel30.Name = "linkLabel30";
             this.linkLabel30.TabStop = true;
-            this.linkLabel30.Click += new System.EventHandler(this.Highfive_Click);
+            this.linkLabel30.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Highfive_LinkClicked);
             // 
             // linkLabel31
             // 
@@ -490,7 +490,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel31.LinkColor = System.Drawing.Color.White;
             this.linkLabel31.Name = "linkLabel31";
             this.linkLabel31.TabStop = true;
-            this.linkLabel31.Click += new System.EventHandler(this.Kick_Click);
+            this.linkLabel31.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Kick_LinkClicked);
             // 
             // linkLabel32
             // 
@@ -502,7 +502,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel32.LinkColor = System.Drawing.Color.White;
             this.linkLabel32.Name = "linkLabel32";
             this.linkLabel32.TabStop = true;
-            this.linkLabel32.Click += new System.EventHandler(this.Poke_Click);
+            this.linkLabel32.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Poke_LinkClicked);
             // 
             // linkLabel33
             // 
@@ -514,7 +514,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel33.LinkColor = System.Drawing.Color.White;
             this.linkLabel33.Name = "linkLabel33";
             this.linkLabel33.TabStop = true;
-            this.linkLabel33.Click += new System.EventHandler(this.Pout_Click);
+            this.linkLabel33.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Pout_LinkClicked);
             // 
             // linkLabel34
             // 
@@ -526,7 +526,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel34.LinkColor = System.Drawing.Color.White;
             this.linkLabel34.Name = "linkLabel34";
             this.linkLabel34.TabStop = true;
-            this.linkLabel34.Click += new System.EventHandler(this.Punch_Click);
+            this.linkLabel34.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Punch_LinkClicked);
             // 
             // linkLabel35
             // 
@@ -538,7 +538,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel35.LinkColor = System.Drawing.Color.White;
             this.linkLabel35.Name = "linkLabel35";
             this.linkLabel35.TabStop = true;
-            this.linkLabel35.Click += new System.EventHandler(this.Shrug_Click);
+            this.linkLabel35.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Shrug_LinkClicked);
             // 
             // linkLabel36
             // 
@@ -550,7 +550,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel36.LinkColor = System.Drawing.Color.White;
             this.linkLabel36.Name = "linkLabel36";
             this.linkLabel36.TabStop = true;
-            this.linkLabel36.Click += new System.EventHandler(this.Slap_Click);
+            this.linkLabel36.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Slap_LinkClicked);
             // 
             // linkLabel37
             // 
@@ -562,7 +562,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel37.LinkColor = System.Drawing.Color.White;
             this.linkLabel37.Name = "linkLabel37";
             this.linkLabel37.TabStop = true;
-            this.linkLabel37.Click += new System.EventHandler(this.Smug_Click);
+            this.linkLabel37.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Smug_LinkClicked);
             // 
             // linkLabel38
             // 
@@ -574,7 +574,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel38.LinkColor = System.Drawing.Color.White;
             this.linkLabel38.Name = "linkLabel38";
             this.linkLabel38.TabStop = true;
-            this.linkLabel38.Click += new System.EventHandler(this.Stare_Click);
+            this.linkLabel38.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Stare_LinkClicked);
             // 
             // linkLabel39
             // 
@@ -586,7 +586,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel39.LinkColor = System.Drawing.Color.White;
             this.linkLabel39.Name = "linkLabel39";
             this.linkLabel39.TabStop = true;
-            this.linkLabel39.Click += new System.EventHandler(this.Think_Click);
+            this.linkLabel39.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Think_LinkClicked);
             // 
             // linkLabel40
             // 
@@ -598,7 +598,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel40.LinkColor = System.Drawing.Color.White;
             this.linkLabel40.Name = "linkLabel40";
             this.linkLabel40.TabStop = true;
-            this.linkLabel40.Click += new System.EventHandler(this.Tickle_Click);
+            this.linkLabel40.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Tickle_LinkClicked);
             // 
             // linkLabel41
             // 
@@ -610,7 +610,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel41.LinkColor = System.Drawing.Color.White;
             this.linkLabel41.Name = "linkLabel41";
             this.linkLabel41.TabStop = true;
-            this.linkLabel41.Click += new System.EventHandler(this.Yeet_Click);
+            this.linkLabel41.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Yeet_LinkClicked);
             // 
             // linkLabel42
             // 
@@ -622,7 +622,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel42.LinkColor = System.Drawing.Color.White;
             this.linkLabel42.Name = "linkLabel42";
             this.linkLabel42.TabStop = true;
-            this.linkLabel42.Click += new System.EventHandler(this.Holo_Click);
+            this.linkLabel42.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Holo_LinkClicked);
             // 
             // linkLabel43
             // 
@@ -634,7 +634,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel43.LinkColor = System.Drawing.Color.White;
             this.linkLabel43.Name = "linkLabel43";
             this.linkLabel43.TabStop = true;
-            this.linkLabel43.Click += new System.EventHandler(this.Tail_Click);
+            this.linkLabel43.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Tail_LinkClicked);
             // 
             // linkLabel44
             // 
@@ -646,7 +646,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel44.LinkColor = System.Drawing.Color.White;
             this.linkLabel44.Name = "linkLabel44";
             this.linkLabel44.TabStop = true;
-            this.linkLabel44.Click += new System.EventHandler(this.Shiro_Click);
+            this.linkLabel44.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Shiro_LinkClicked);
             // 
             // webView21
             // 
@@ -676,7 +676,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel45.LinkColor = System.Drawing.Color.White;
             this.linkLabel45.Name = "linkLabel45";
             this.linkLabel45.TabStop = true;
-            this.linkLabel45.Click += new System.EventHandler(this.HlCat_Click);
+            this.linkLabel45.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.HlCat_LinkClicked);
             // 
             // linkLabel46
             // 
@@ -688,7 +688,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel46.LinkColor = System.Drawing.Color.White;
             this.linkLabel46.Name = "linkLabel46";
             this.linkLabel46.TabStop = true;
-            this.linkLabel46.Click += new System.EventHandler(this.RandomHentai_Click);
+            this.linkLabel46.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.RandomHentai_LinkClicked);
             // 
             // linkLabel47
             // 
@@ -700,7 +700,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel47.LinkColor = System.Drawing.Color.White;
             this.linkLabel47.Name = "linkLabel47";
             this.linkLabel47.TabStop = true;
-            this.linkLabel47.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Smile_Click);
+            this.linkLabel47.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Smile_LinkClicked);
             // 
             // poweredBy_Label
             // 
