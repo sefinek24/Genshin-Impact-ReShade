@@ -6,7 +6,7 @@
 ###### Tags: genshin impact, stella mod, reshade, installation, system requirements, screenshots, gaming, mods
 ]]> -->
 
-<div align="center" id="header">
+<div align="center" class="header">
     <h1>🌟 Genshin Impact Stella Mod Pack 🌟</h1>
     <p>
         <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Assets/Images/Banners/rounded-corners/compressed.png" title="See preview">
@@ -70,14 +70,14 @@ You can also check out the latest [screenshots](https://sefinek.net/genshin-impa
 The main server of [sefinek.net](https://sefinek.net) is located in Poland, while the [Cloudflare](https://www.cloudflare.com) servers that [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel) connects to are in Warsaw and Frankfurt.
 
 > [!IMPORTANT]
-> By using this software, you agree to the terms of the [License agreement](LICENSE), [Terms of use](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-ToS#-1-terms-of-use) and [Rules](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-ToS#-2-rules-etc).
+> By using this software, you agree to the terms of the [License agreement][https://sefinek.net/genshin-impact-reshade/docs?page=license_stella], [Terms of use](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-ToS#-1-terms-of-use) and [Rules](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-ToS#-2-rules-etc).
 > In addition, we are not responsible for any potential bans in the game, although the chances of this happening **are negligible**.
 
 
 ## 📂 〢 Includes
 | 🔍 Name                   | 📃 More information                                                                                                          | 🌍 URL address                                                                                                                   | 📑 License                                                                                                     |
 |:--------------------------|:-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------|
-| Own launcher              | Always the latest releases.                                                                                                  | [View folder](https://github.com/sefinek24/Genshin-Impact-ReShade/tree/main/Genshin%20Stella%20Mod)                              | [CC BY-NC-SA 4.0](LICENSE)                                                                                     |
+| Own launcher              | Always the latest releases.                                                                                                  | [View folder](https://github.com/sefinek24/Genshin-Impact-ReShade/tree/main/Genshin%20Stella%20Mod)                              | [CC BY-NC-SA 4.0][https://sefinek.net/genshin-impact-reshade/docs?page=license_stella]                         |
 | Easy installation wizard  | Safe and automatic installation.                                                                                             | [~~Repo~~](https://github.com/sefinek24/Stella-Mod-Setup) - deprecated                                                           | [CC BY-NC-SA 4.0](https://github.com/sefinek24/Stella-Mod-Setup)                                               |
 | Unlocked ReShade          | No depth buffer detection.                                                                                                   | [~~Repo~~](https://github.com/sefinek24/unlocked-reshade) - deprecated                                                           | [BSD 3-Clause License](https://github.com/sefinek24/unlocked-reshade/blob/main/LICENSE.md)                     |
 | Crosire's DLL injector    | Just an injector.                                                                                                            | [View file](https://github.com/sefinek24/Genshin-Impact-ReShade/blob/main/Genshin%20Stella%20Mod/data/reshade/inject64.exe)      |                                                                                                                |
