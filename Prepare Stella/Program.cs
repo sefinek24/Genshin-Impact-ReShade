@@ -227,6 +227,7 @@ namespace PrepareStella
             {
                 key?.SetValue("AppIsConfigured", 1);
                 key?.SetValue("ConfiguredDate", DateTime.Now);
+                key?.SetValue("StellaPath", AppPath);
             }
 
 

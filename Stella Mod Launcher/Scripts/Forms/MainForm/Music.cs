@@ -12,14 +12,14 @@ namespace StellaLauncher.Scripts.Forms.MainForm
     {
         private static readonly Random Random = new Random();
 
-        public static void PlayBg()
+        public static async Task PlayBg()
         {
             if (Program.Settings.ReadInt("Launcher", "EnableMusic", 1) == 0 || Debugger.IsAttached) return;
 
             string wavPath = GetRandomBgWavPath();
             if (string.IsNullOrEmpty(wavPath)) return;
 
-            Task.Run(() => PlaySoundAsync(wavPath, 0.6f));
+            await Task.Run(() => PlaySoundAsync(wavPath, 0.6f));
         }
 
         private static string GetRandomBgWavPath()

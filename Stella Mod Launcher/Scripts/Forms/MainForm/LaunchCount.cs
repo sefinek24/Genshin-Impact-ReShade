@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Win32;
 using StellaLauncher.Forms;
@@ -10,7 +11,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 {
     internal static class LaunchCountHelper
     {
-        public static void CheckLaunchCountAndShowMessages()
+        public static async Task CheckLaunchCountAndShowMessages()
         {
             RegistryKey key = Registry.CurrentUser.CreateSubKey(Program.RegistryPath);
             int launchCount = (int)(key?.GetValue("LaunchCount") ?? 0);
@@ -65,21 +66,20 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                     break;
             }
 
-
             switch (launchCount)
             {
                 case 1:
-                    ShowMessage(MessageType.MessageBox);
-                    ShowMessage(MessageType.StatusLabel);
+                    await ShowMessage(MessageType.MessageBox);
+                    await ShowMessage(MessageType.StatusLabel);
                     break;
                 case 2:
                 case 3:
-                    ShowMessage(MessageType.StatusLabel);
+                    await ShowMessage(MessageType.StatusLabel);
                     break;
             }
         }
 
-        private static void ShowMessage(MessageType type)
+        private static Task ShowMessage(MessageType type)
         {
             switch (type)
             {
@@ -92,6 +92,8 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 default:
                     throw new ArgumentException("Invalid message type. Supported types are 'MessageBox' and 'StatusLabel'.");
             }
+
+            return Task.CompletedTask;
         }
 
         private enum MessageType

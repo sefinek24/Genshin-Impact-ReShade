@@ -133,28 +133,33 @@ namespace StellaLauncher.Forms
             if (data == null)
             {
                 if (Directory.Exists(Program.PatronsDir)) Directory.Delete(Program.PatronsDir, true);
-                return;
-            }
-
-            VerifyToken remote = JsonConvert.DeserializeObject<VerifyToken>(data);
-            Log.Output(remote.Status.ToString());
-            if (remote.Status == 200)
-            {
-                Secret.IsMyPatron = true;
-                label1.Text = Resources.Default_GenshinStellaModForPatrons;
-                label1.TextAlign = ContentAlignment.MiddleRight;
-
-                Secret.JwtToken = remote.Token;
-            }
-            else if (remote.Status >= 500)
-            {
-                label1.Text = $@"zjebało się xd {remote.Status} ( ̿–ᆺ ̿–)";
-                MessageBox.Show(remote.Message, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                label1.Text = @"Oh nooo... Sad cat... ( ̿–ᆺ ̿–)";
-                MessageBox.Show(remote.Message, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                VerifyToken remote = JsonConvert.DeserializeObject<VerifyToken>(data);
+                Log.Output(remote.Status.ToString());
+                if (remote.Status == 200)
+                {
+                    Secret.IsMyPatron = true;
+                    label1.Text = Resources.Default_GenshinStellaModForPatrons;
+                    label1.TextAlign = ContentAlignment.MiddleRight;
+
+                    Secret.JwtToken = remote.Token;
+                }
+                else if (remote.Status >= 500)
+                {
+                    label1.Text = $@"zjebało się xd {remote.Status} ( ̿–ᆺ ̿–)";
+                    MessageBox.Show(
+                        $"Unfortunately, there was a server-side error during the verification of your benefits. Please report this error on the Discord server or via email. Remember to provide your `backup code` as well.\nIf you launch the game after closing this message, you will be playing the free version.\n\n{remote.Message}",
+                        Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    label1.Text = @"Oh nooo... Sad cat... ( ̿–ᆺ ̿–)";
+                    MessageBox.Show(
+                        $"An error occurred while verifying the benefits of your subscription. The server informed the client that it sent an invalid request. If you launch the game after closing this message, you will be playing the free version. Please contact Sefinek for more information. Error details can be found below.\n\n{remote.Message}",
+                        Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
 
 
@@ -170,26 +175,26 @@ namespace StellaLauncher.Forms
             progressBar1.Value = 58;
             await CheckForUpdatesMain.Analyze();
 
+            // Launch count
+            await LaunchCountHelper.CheckLaunchCountAndShowMessages();
+            progressBar1.Value = 88;
+
             // Loaded form
             version_LinkLabel.Text = $@"v{Program.AppVersion}";
             Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
-            progressBar1.Value = 87;
-
-            // Launch count
-            LaunchCountHelper.CheckLaunchCountAndShowMessages();
-            progressBar1.Value = 89;
 
             // Download cmd file for patrons
             if (Secret.IsMyPatron && !string.IsNullOrEmpty(Secret.JwtToken)) await DownloadCmd.Run();
             progressBar1.Value = 95;
 
-            // Telemetry.Opened();
+            // Telemetry
+            Telemetry.Opened();
 
             // Discord RPC
             Discord.InitRpc();
 
             // Music
-            Music.PlayBg();
+            await Music.PlayBg();
 
             // Done (:
             progressBar1.Value = 100;
