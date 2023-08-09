@@ -461,6 +461,9 @@
     <Content Include="data\README.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="data\reshade\ReShade64.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="data\reshade\fpng.pdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -475,9 +478,6 @@
     </Content>
     <Content Include="data\reshade\MinHook.pdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\reshade\ReShade64.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="data\reshade\ReShadeFX64.pdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
