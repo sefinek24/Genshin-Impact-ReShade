@@ -1,5 +1,4 @@
 using System;
-using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -38,12 +37,12 @@ namespace StellaLauncher.Forms
         public static LinkLabel _youTube_LinkLabel;
 
         // Start the game
-        public static LinkLabel _startGame_LinkLabel;
-        public static LinkLabel _injectReShade_LinkLabel;
-        public static LinkLabel _runFpsUnlocker_LinkLabel;
-        public static LinkLabel _only3DMigoto_LinkLabel;
-        public static LinkLabel _runGiLauncher_LinkLabel;
-        public static LinkLabel _becomeMyPatron_LinkLabel;
+        // public static LinkLabel _startGame_LinkLabel;
+        // public static LinkLabel _injectReShade_LinkLabel;
+        // public static LinkLabel _runFpsUnlocker_LinkLabel;
+        // public static LinkLabel _only3DMigoto_LinkLabel;
+        // public static LinkLabel _runGiLauncher_LinkLabel;
+        private static LinkLabel _becomeMyPatron_LinkLabel;
 
         // Bottom
         // public static PictureBox _toolsIco_PictureBox;
@@ -72,9 +71,22 @@ namespace StellaLauncher.Forms
             InitializeComponent();
         }
 
-        private async void Default_Load(object sender, EventArgs e)
+        private void Default_Load(object sender, EventArgs e)
         {
-            progressBar1.Value = 5;
+            // Set background
+            Image newBackground = Background.OnStart(toolTip1, changeBg_LinkLabel);
+            if (newBackground != null) BackgroundImage = newBackground;
+        }
+
+        private async void Main_Shown(object sender, EventArgs e)
+        {
+            // Registry
+            using (RegistryKey key2 = Registry.CurrentUser.CreateSubKey(Program.RegistryPath, true))
+            {
+                key2?.SetValue("LastRunTime", DateTime.Now);
+            }
+
+            progressBar1.Value = 6;
 
             // First
             _status_Label = status_Label;
@@ -88,11 +100,11 @@ namespace StellaLauncher.Forms
             _youtubeIco_Picturebox = youtubeIco_Picturebox;
             _youTube_LinkLabel = youTube_LinkLabel;
 
-            _startGame_LinkLabel = startGame_LinkLabel;
-            _injectReShade_LinkLabel = injectReShade_LinkLabel;
-            _runFpsUnlocker_LinkLabel = runFpsUnlocker_LinkLabel;
-            _only3DMigoto_LinkLabel = only3DMigoto_LinkLabel;
-            _runGiLauncher_LinkLabel = runGiLauncher_LinkLabel;
+            // _startGame_LinkLabel = startGame_LinkLabel;
+            // _injectReShade_LinkLabel = injectReShade_LinkLabel;
+            // _runFpsUnlocker_LinkLabel = runFpsUnlocker_LinkLabel;
+            // _only3DMigoto_LinkLabel = only3DMigoto_LinkLabel;
+            // _runGiLauncher_LinkLabel = runGiLauncher_LinkLabel;
             _becomeMyPatron_LinkLabel = becomeMyPatron_LinkLabel;
 
             // _toolsIco_PictureBox = toolsIco_PictureBox;
@@ -109,21 +121,10 @@ namespace StellaLauncher.Forms
             _updateIco_PictureBox = updateIco_PictureBox;
 
 
-            // Set background
-            Image newBackground = Background.OnStart(toolTip1, changeBg_LinkLabel);
-            if (newBackground != null) BackgroundImage = newBackground;
-
-            // Registry
-            progressBar1.Value = 15;
-            using (RegistryKey key2 = Registry.CurrentUser.CreateSubKey(Program.RegistryPath, true))
-            {
-                key2?.SetValue("LastRunTime", DateTime.Now);
-            }
-
-
             // Is user my Patron?
-            progressBar1.Value = 35;
+            progressBar1.Value = 18;
             string mainPcKey = Secret.GetTokenFromRegistry();
+            progressBar1.Value = 37;
             if (mainPcKey == null) return;
 
             label1.Text = @"/ᐠ. ｡.ᐟ\ᵐᵉᵒʷˎˊ˗";
@@ -155,12 +156,10 @@ namespace StellaLauncher.Forms
                 label1.Text = @"Oh nooo... Sad cat... ( ̿–ᆺ ̿–)";
                 MessageBox.Show(remote.Message, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        }
 
-        private async void Main_Shown(object sender, EventArgs e)
-        {
+
             // Check if all required files exists
-            progressBar1.Value = 45;
+            progressBar1.Value = 44;
             await Files.ScanAsync();
 
             // Delete setup file from Temp directory
@@ -168,20 +167,22 @@ namespace StellaLauncher.Forms
             await Files.DeleteSetupAsync();
 
             // Check for updates
-            progressBar1.Value = 55;
+            progressBar1.Value = 58;
             await CheckForUpdatesMain.Analyze();
 
             // Loaded form
-            _version_LinkLabel.Text = $@"v{Program.AppVersion}";
+            version_LinkLabel.Text = $@"v{Program.AppVersion}";
             Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
+            progressBar1.Value = 87;
 
             // Launch count
             LaunchCountHelper.CheckLaunchCountAndShowMessages();
+            progressBar1.Value = 89;
 
             // Download cmd file for patrons
             if (Secret.IsMyPatron && !string.IsNullOrEmpty(Secret.JwtToken)) await DownloadCmd.Run();
+            progressBar1.Value = 95;
 
-            if (Debugger.IsAttached) return;
             // Telemetry.Opened();
 
             // Discord RPC
@@ -189,6 +190,17 @@ namespace StellaLauncher.Forms
 
             // Music
             Music.PlayBg();
+
+            // Done (:
+            progressBar1.Value = 100;
+            startGame_LinkLabel.Visible = true;
+            injectReShade_LinkLabel.Visible = true;
+            runFpsUnlocker_LinkLabel.Visible = true;
+            only3DMigoto_LinkLabel.Visible = true;
+            runGiLauncher_LinkLabel.Visible = true;
+            if (!Secret.IsMyPatron) _becomeMyPatron_LinkLabel.Visible = true;
+
+            Utils.HideProgressBar(false);
         }
 
         private void Exit_Click(object sender, EventArgs e)

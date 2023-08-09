@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 using NAudio.Wave;
@@ -13,7 +14,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 
         public static void PlayBg()
         {
-            if (Program.Settings.ReadInt("Launcher", "EnableMusic", 1) == 0) return;
+            if (Program.Settings.ReadInt("Launcher", "EnableMusic", 1) == 0 || Debugger.IsAttached) return;
 
             string wavPath = GetRandomBgWavPath();
             if (string.IsNullOrEmpty(wavPath)) return;

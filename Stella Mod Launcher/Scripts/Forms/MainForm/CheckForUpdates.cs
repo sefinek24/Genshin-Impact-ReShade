@@ -35,7 +35,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 string remoteVersion = res.Launcher.Version;
                 DateTime remoteVerDate = DateTime.Parse(res.Launcher.ReleaseDate, null, DateTimeStyles.RoundtripKind).ToUniversalTime().ToLocalTime();
 
-                Default._progressBar1.Value = 60;
+                Default._progressBar1.Value = 62;
                 // == Major release ==
                 if (Program.AppVersion[0] != remoteVersion[0])
                 {
@@ -45,7 +45,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                     return 1;
                 }
 
-                Default._progressBar1.Value = 70;
+                Default._progressBar1.Value = 68;
                 // == Normal release ==
                 if (Program.AppVersion != remoteVersion)
                 {
@@ -55,7 +55,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                     return 1;
                 }
 
-                Default._progressBar1.Value = 80;
+                Default._progressBar1.Value = 74;
                 // == Check new updates of resources ==
                 string resourcesPath = null;
                 using (RegistryKey key = Registry.CurrentUser.OpenSubKey(Program.RegistryPath))
@@ -102,7 +102,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 }
 
 
-                Default._progressBar1.Value = 90;
+                Default._progressBar1.Value = 79;
                 // == Check new updates for ReShade.ini file ==
                 int resultInt = await ReShadeIni.CheckForUpdates();
                 switch (resultInt)
@@ -144,15 +144,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 Default.UpdateIsAvailable = false;
                 Log.Output($"Not found any new updates. Your installed version: v{Program.AppVersion}");
 
-                Default._startGame_LinkLabel.Visible = true;
-                Default._injectReShade_LinkLabel.Visible = true;
-                Default._runFpsUnlocker_LinkLabel.Visible = true;
-                Default._only3DMigoto_LinkLabel.Visible = true;
-                Default._runGiLauncher_LinkLabel.Visible = true;
-                if (!Secret.IsMyPatron) Default._becomeMyPatron_LinkLabel.Visible = true;
-
-                Default._progressBar1.Value = 100;
-                Utils.HideProgressBar(false);
+                Default._progressBar1.Value = 84;
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress);
                 return 0;
             }

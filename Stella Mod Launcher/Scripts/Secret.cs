@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Microsoft.Win32;
 
 namespace StellaLauncher.Scripts
@@ -49,8 +50,11 @@ namespace StellaLauncher.Scripts
             }
             catch (Exception ex)
             {
-                Log.SaveError(ex.ToString());
+                MessageBox.Show(
+                    $"An unrecoverable error occurred while communicating with the API interface in Warsaw, Poland. The application must be closed immediately.\n\n{(ex.InnerException != null ? ex.InnerException : ex)}",
+                    Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+                Log.ErrorAndExit(ex);
                 return null;
             }
         }
