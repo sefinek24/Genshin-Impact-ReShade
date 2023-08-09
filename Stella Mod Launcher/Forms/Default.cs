@@ -145,6 +145,11 @@ namespace StellaLauncher.Forms
 
                 Secret.JwtToken = remote.Token;
             }
+            else if (remote.Status >= 500)
+            {
+                label1.Text = $@"zjebało się xd {remote.Status} ( ̿–ᆺ ̿–)";
+                MessageBox.Show(remote.Message, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
             {
                 if (Directory.Exists(Program.PatronsDir)) Directory.Delete(Program.PatronsDir, true);
