@@ -152,7 +152,6 @@ namespace StellaLauncher.Forms
             }
             else
             {
-                if (Directory.Exists(Program.PatronsDir)) Directory.Delete(Program.PatronsDir, true);
                 label1.Text = @"Oh nooo... Sad cat... ( ̿–ᆺ ̿–)";
                 MessageBox.Show(remote.Message, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
