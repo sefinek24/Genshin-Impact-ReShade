@@ -6,8 +6,8 @@
 ###### Tags: genshin impact, stella mod, reshade, installation, system requirements, screenshots, gaming, mods
 ]]> -->
 
-<div align="center" class="header">
-    <h1>🌟 Genshin Impact Stella Mod Pack 🌟</h1>
+<div align="center">
+    <h1 class="header">🌟 Genshin Impact Stella Mod Pack 🌟</h1>
     <p>
         <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Assets/Images/Banners/rounded-corners/compressed.png" title="See preview">
             <img src="Assets/Images/Banners/rounded-corners/compressed.png" alt="Header image">
