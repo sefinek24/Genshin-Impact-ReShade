@@ -10,7 +10,7 @@
     <h1 class="header">🌟 Genshin Impact Stella Mod Pack 🌟</h1>
     <p>
         <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Assets/Images/Banners/rounded-corners/compressed.png" title="See preview">
-            <img src="Assets/Images/Banners/rounded-corners/compressed.png" alt="Header image">
+            <img src="Assets/Images/Banners/rounded-corners/compressed.png" id="header-pic" alt="Header image">
         </a>
     </p>
     <a href="https://sefinek.net" title="sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=Website&up_message=Online&url=https%3A%2F%2Fsefinek.net" alt="Status page"></a>
@@ -27,7 +27,7 @@
         🌠 » If you want to get Ray Tracing in game or other benefits, become <a href="https://www.patreon.com/sefinek" title="www.patreon.com/sefinek">my Patron</a> « 🌠<br>
         ⭐ » Star the repo if you liked it. Have a nice day or night! « ⭐
     </h3>
-    <a href="https://patreon.com/sefinek" title="Patreon"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dsefinek%26type%3Dpledges&style=for-the-badge" height="32" alt="Support me on Patreon"></a>
+    <a href="https://patreon.com/sefinek" title="Patreon"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dsefinek%26type%3Dpledges&style=for-the-badge" id="patreon" height="32" alt="Support me on Patreon"></a>
     <a href="https://ko-fi.com/sefinek" title="Ko-fi"><img src="https://storage.ko-fi.com/cdn/brandasset/kofi_button_blue.png" id="kofi" height="32" alt="Support me on Ko-fi"></a>
 </div>
 
