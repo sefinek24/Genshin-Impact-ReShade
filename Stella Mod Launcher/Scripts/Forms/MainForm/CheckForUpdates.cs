@@ -118,8 +118,11 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 
 
                 // == For patrons ==
-                int found = await CheckForUpdatesOfBenefits.Analyze();
-                if (found == 1) return 1;
+                if (Secret.IsMyPatron)
+                {
+                    int found = await CheckForUpdatesOfBenefits.Analyze();
+                    if (found == 1) return 1;
+                }
 
 
                 // == Not found any new updates ==
