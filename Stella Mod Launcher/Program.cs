@@ -71,12 +71,12 @@ namespace StellaLauncher
             // First log
             Log.Output(
                 "==============================================================================================================\n" +
-                "A request to start the program has been received." +
-                $"* Debugger.IsAttached: {Debugger.IsAttached}" +
-                $"* ComputerInfo.GetCpuSerialNumber: {ComputerInfo.GetCpuSerialNumber()}" +
-                $"* AppPath: {AppPath}" +
-                $"* AppData: {AppData}" +
-                $"* FpsUnlockerCfgPath: {FpsUnlockerCfgPath}" +
+                "A request to start the program has been received.\n" +
+                $"* Debugger.IsAttached: {Debugger.IsAttached}\n" +
+                $"* ComputerInfo.GetCpuSerialNumber: {ComputerInfo.GetCpuSerialNumber()}\n" +
+                $"* AppPath: {AppPath}\n" +
+                $"* AppData: {AppData}\n" +
+                $"* FpsUnlockerCfgPath: {FpsUnlockerCfgPath}\n" +
                 $"* PatronsDir: {PatronsDir}");
 
 
