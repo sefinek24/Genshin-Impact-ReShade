@@ -733,4 +733,7 @@ REMEMBER NOT TO SHARE YOUR UID WITH VISIBLE GAME SHADERS WITH ANYONE!</value>
   <data name="Default_DownloadingConfigFileForFPSUnlocker" xml:space="preserve">
     <value>Downloading the configuration file for FPS Unlocker....</value>
   </data>
+  <data name="Default_UpdatingBenefits" xml:space="preserve">
+    <value>Updating benefits...</value>
+  </data>
 </root>

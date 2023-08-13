@@ -30,5 +30,36 @@ namespace StellaLauncher.Models
         public int Status { get; set; }
         public string Message { get; set; }
         public string Token { get; set; }
+        public int TierId { get; set; }
+    }
+
+    // Benefits
+    public class PatronResources
+    {
+        public string Mods { get; set; }
+        public string Addons { get; set; }
+        public string Presets { get; set; }
+        public string Shaders { get; set; }
+    }
+
+    public class ResourcesData
+    {
+        public PatronResources Resources { get; set; }
+    }
+
+    public class BenefitVersions
+    {
+        public bool Success { get; set; }
+        public int Status { get; set; }
+        public ResourcesData Message { get; set; }
+        public int Tier { get; set; }
+    }
+
+    // Version of benefits
+    public class BenefitsJsonVersion
+    {
+        public string Version { get; set; }
+        public string Date { get; set; }
+        public int Tier { get; set; }
     }
 }

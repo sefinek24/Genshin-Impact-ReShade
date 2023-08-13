@@ -9,7 +9,6 @@ using ByteSizeLib;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using StellaLauncher.Forms;
 using StellaLauncher.Properties;
-using StellaLauncher.Scripts.Forms.MainForm;
 
 namespace StellaLauncher.Scripts.Download
 {
@@ -138,7 +137,7 @@ namespace StellaLauncher.Scripts.Download
                             Default._status_Label.Text += $"[✓] {Resources.Default_SuccessfullyDownloadedReShadeIni}\n";
                             Log.Output($"Successfully downloaded ReShade.ini and saved in: {reShadePath}");
 
-                            await CheckForUpdatesMain.Analyze();
+                            await Forms.MainForm.CheckForUpdates.Analyze();
                             return 0;
                         }
 

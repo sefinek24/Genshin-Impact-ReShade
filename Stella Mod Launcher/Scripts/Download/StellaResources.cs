@@ -21,19 +21,14 @@ namespace StellaLauncher.Scripts.Download
         // Files
         private static string _stellaResZip;
 
-        // Custom
-        private static string _resourcesPath;
-
         // Download
         private static double _downloadSpeed;
         private static long _lastBytesReceived;
         private static DateTime _lastUpdateTime = DateTime.Now;
 
 
-        public static async void Run(string resourcesPath, string localResVersion, string remoteResVersion, string remoteResDate)
+        public static async void Run(string localResVersion, string remoteResVersion, string remoteResDate)
         {
-            _resourcesPath = resourcesPath;
-
             // 1
             Default._version_LinkLabel.Text = $@"v{localResVersion} → v{remoteResVersion}";
 
@@ -71,7 +66,7 @@ namespace StellaLauncher.Scripts.Download
             Log.Output($"Found the new update of resources from {date} - {remoteResDate}.");
 
             Default._status_Label.Text += $"[i] {string.Format(Resources.StellaResources_NewResourcesUpdateIsAvailable, date)}\n";
-            _stellaResZip = Path.Combine(resourcesPath, $"Stella resources - v{remoteResVersion}.zip");
+            _stellaResZip = Path.Combine(Default.ResourcesPath, $"Stella resources - v{remoteResVersion}.zip");
 
 
             // Check update size
@@ -127,7 +122,7 @@ namespace StellaLauncher.Scripts.Download
 
         private static async Task StartDownload()
         {
-            if (File.Exists(_resourcesPath)) File.Delete(_resourcesPath);
+            if (File.Exists(Default.ResourcesPath)) File.Delete(Default.ResourcesPath);
 
             Log.Output("Downloading in progress...");
             TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Normal);
@@ -171,7 +166,7 @@ namespace StellaLauncher.Scripts.Download
         {
             Default._preparingPleaseWait.Text = Resources.StellaResources_UnpackingFiles;
 
-            await UnzipWithProgress(_stellaResZip, _resourcesPath);
+            await UnzipWithProgress(_stellaResZip, Default.ResourcesPath);
 
             Default._progressBar1.Hide();
             Default._preparingPleaseWait.Hide();
@@ -183,15 +178,13 @@ namespace StellaLauncher.Scripts.Download
             Default._youtubeIco_Picturebox.Show();
             Default._youTube_LinkLabel.Show();
 
-            Default._version_LinkLabel.Text = $@"v{Program.AppVersion}";
-
             Default._status_Label.Text += $"[✓] {Resources.StellaResources_SuccessfullyUpdatedResources}\n";
             Log.Output($"Successfully unpacked: {_stellaResZip}");
 
-            await CheckForUpdatesMain.Analyze();
+            await CheckForUpdates.Analyze();
         }
 
-        private static async Task UnzipWithProgress(string zipFilePath, string extractPath)
+        public static async Task UnzipWithProgress(string zipFilePath, string extractPath)
         {
             using (ZipArchive archive = ZipFile.OpenRead(zipFilePath))
             {

@@ -577,6 +577,15 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Updating benefits....
+        /// </summary>
+        internal static string Default_UpdatingBenefits {
+            get {
+                return ResourceManager.GetString("Default_UpdatingBenefits", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You have the latest version.
         /// </summary>
         internal static string Default_YouHaveTheLatestVersion {

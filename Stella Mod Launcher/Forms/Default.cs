@@ -60,7 +60,7 @@ namespace StellaLauncher.Forms
         public static PictureBox _updateIco_PictureBox;
 
         // Path
-        public static string _resourcesPath;
+        public static string ResourcesPath;
 
         // Window
         private bool _mouseDown;
@@ -121,44 +121,68 @@ namespace StellaLauncher.Forms
             _updateIco_PictureBox = updateIco_PictureBox;
 
 
+            // Get resources path
+            string resourcesPath = null;
+            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(Program.RegistryPath))
+            {
+                if (key != null) resourcesPath = (string)key.GetValue("ResourcesPath");
+            }
+
+            if (string.IsNullOrEmpty(resourcesPath) || !Directory.Exists(resourcesPath))
+            {
+                _status_Label.Text += $"{string.Format(Resources.Default_Directory_WasNotFound, resourcesPath)}\n";
+                Log.SaveError($"Directory {resourcesPath} was not found.");
+            }
+
+            ResourcesPath = resourcesPath;
+
+
+            // App version
+            version_LinkLabel.Text = $@"v{Program.AppVersion}";
+
+
             // Is user my Patron?
             progressBar1.Value = 18;
             string mainPcKey = Secret.GetTokenFromRegistry();
             progressBar1.Value = 37;
-            if (mainPcKey == null) return;
-
-            label1.Text = @"/ᐠ. ｡.ᐟ\ᵐᵉᵒʷˎˊ˗";
-
-            string data = await Secret.VerifyToken(mainPcKey);
-            if (data == null)
+            if (mainPcKey != null)
             {
-                if (Directory.Exists(Program.PatronsDir)) Directory.Delete(Program.PatronsDir, true);
-            }
-            else
-            {
-                VerifyToken remote = JsonConvert.DeserializeObject<VerifyToken>(data);
-                Log.Output(remote.Status.ToString());
-                if (remote.Status == 200)
-                {
-                    Secret.IsMyPatron = true;
-                    label1.Text = Resources.Default_GenshinStellaModForPatrons;
-                    label1.TextAlign = ContentAlignment.MiddleRight;
+                Secret.LocalToken = mainPcKey;
 
-                    Secret.JwtToken = remote.Token;
-                }
-                else if (remote.Status >= 500)
+                label1.Text = @"/ᐠ. ｡.ᐟ\ᵐᵉᵒʷˎˊ˗";
+
+                string data = await Secret.VerifyToken(mainPcKey);
+                if (data == null)
                 {
-                    label1.Text = $@"zjebało się xd {remote.Status} ( ̿–ᆺ ̿–)";
-                    MessageBox.Show(
-                        $"Unfortunately, there was a server-side error during the verification of your benefits. Please report this error on the Discord server or via email. Remember to provide your `backup code` as well.\nIf you launch the game after closing this message, you will be playing the free version.\n\n{remote.Message}",
-                        Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (Directory.Exists(Program.PatronsDir)) Directory.Delete(Program.PatronsDir, true);
                 }
                 else
                 {
-                    label1.Text = @"Oh nooo... Sad cat... ( ̿–ᆺ ̿–)";
-                    MessageBox.Show(
-                        $"An error occurred while verifying the benefits of your subscription. The server informed the client that it sent an invalid request. If you launch the game after closing this message, you will be playing the free version. Please contact Sefinek for more information. Error details can be found below.\n\n{remote.Message}",
-                        Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    VerifyToken remote = JsonConvert.DeserializeObject<VerifyToken>(data);
+                    Log.Output(remote.Status.ToString());
+                    if (remote.Status == 200)
+                    {
+                        Secret.IsMyPatron = true;
+                        label1.Text = Resources.Default_GenshinStellaModForPatrons;
+                        label1.TextAlign = ContentAlignment.MiddleRight;
+
+                        Secret.JwtToken = remote.Token;
+                        Secret.TierId = remote.TierId;
+                    }
+                    else if (remote.Status >= 500)
+                    {
+                        label1.Text = $@"zjebało się xd {remote.Status} ( ̿–ᆺ ̿–)";
+                        MessageBox.Show(
+                            $"Unfortunately, there was a server-side error during the verification of your benefits. Please report this error on the Discord server or via email. Remember to provide your `backup code` as well.\nIf you launch the game after closing this message, you will be playing the free version.\n\n{remote.Message}",
+                            Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        label1.Text = @"Oh nooo... Sad cat... ( ̿–ᆺ ̿–)";
+                        MessageBox.Show(
+                            $"An error occurred while verifying the benefits of your subscription. The server informed the client that it sent an invalid request. If you launch the game after closing this message, you will be playing the free version. Please contact Sefinek for more information. Error details can be found below.\n\n{remote.Message}",
+                            Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
             }
 
@@ -173,14 +197,21 @@ namespace StellaLauncher.Forms
 
             // Check for updates
             progressBar1.Value = 58;
-            await CheckForUpdatesMain.Analyze();
+            int found = await CheckForUpdates.Analyze();
+            if (found == 1)
+            {
+                _updates_LinkLabel.LinkColor = Color.Cyan;
+                _updates_LinkLabel.Text = Resources.Default_UpdatingBenefits;
+                _updateIco_PictureBox.Image = Resources.icons8_download_from_the_cloud;
+                Utils.RemoveClickEvent(_updates_LinkLabel);
+                return;
+            }
 
             // Launch count
             await LaunchCountHelper.CheckLaunchCountAndShowMessages();
             progressBar1.Value = 88;
 
             // Loaded form
-            version_LinkLabel.Text = $@"v{Program.AppVersion}";
             Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
 
             // Download cmd file for patrons
@@ -286,7 +317,7 @@ namespace StellaLauncher.Forms
                             .Add(Data.UnlockerVer) // 2
                             .Add(Secret.IsMyPatron ? 1 : 6) // 3
                             .Add(Secret.IsMyPatron ? 1 : 0) // 4
-                            .Add(_resourcesPath) // 5
+                            .Add(ResourcesPath) // 5
                     };
                     break;
                 case "cmd":
@@ -300,7 +331,7 @@ namespace StellaLauncher.Forms
                             .Add(Data.ReShadeVer) // 2
                             .Add(Data.UnlockerVer) // 3
                             .Add(Secret.IsMyPatron ? 1 : 6) // 4
-                            .Add(Secret.IsMyPatron ? $"\"{_resourcesPath}\\3DMigoto\"" : "0") // 5 
+                            .Add(Secret.IsMyPatron ? $"\"{ResourcesPath}\\3DMigoto\"" : "0") // 5 
                             .Add(await Utils.GetGameVersion()) // 6
                             .Add(Log.CmdLogs) // 7
                             .Add(Program.AppPath) // 8
@@ -333,7 +364,7 @@ namespace StellaLauncher.Forms
                             .Add(Data.UnlockerVer) // 2
                             .Add(3) // 3
                             .Add(Secret.IsMyPatron ? 1 : 0) // 4
-                            .Add(_resourcesPath) // 5
+                            .Add(ResourcesPath) // 5
                     };
                     break;
                 case "cmd":
@@ -387,7 +418,7 @@ namespace StellaLauncher.Forms
                             .Add(Data.UnlockerVer) // 2
                             .Add(4) // 3
                             .Add(Secret.IsMyPatron ? 1 : 0) // 4
-                            .Add(_resourcesPath) // 5
+                            .Add(ResourcesPath) // 5
                     };
                     break;
                 case "cmd":
@@ -442,7 +473,7 @@ namespace StellaLauncher.Forms
                             .Add(Data.UnlockerVer) // 2
                             .Add(6) // 3
                             .Add(Secret.IsMyPatron ? 1 : 0) // 4
-                            .Add(_resourcesPath) // 5
+                            .Add(ResourcesPath) // 5
                     };
                     break;
                 case "cmd":
@@ -456,7 +487,7 @@ namespace StellaLauncher.Forms
                             .Add(Data.ReShadeVer) // 2
                             .Add(Data.UnlockerVer) // 3
                             .Add(6) // 4
-                            .Add(Secret.IsMyPatron ? $"\"{_resourcesPath}\\3DMigoto\"" : "0") // 5 
+                            .Add(Secret.IsMyPatron ? $"\"{ResourcesPath}\\3DMigoto\"" : "0") // 5 
                             .Add(await Utils.GetGameVersion()) // 6
                             .Add(Log.CmdLogs) // 7
                             .Add(Program.AppPath) // 8
@@ -519,7 +550,7 @@ namespace StellaLauncher.Forms
 
         private void ViewResources_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Cmd.Start(_resourcesPath);
+            Cmd.Start(ResourcesPath);
         }
 
         private void Gameplay_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -554,7 +585,7 @@ namespace StellaLauncher.Forms
 
         private void CheckUpdates_Worker(object sender, EventArgs e)
         {
-            CheckForUpdatesMain.CheckUpdates_Click(sender, e);
+            CheckForUpdates.CheckUpdates_Click(sender, e);
         }
 
         private void W_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

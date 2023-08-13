@@ -202,7 +202,9 @@
     <Compile Include="Scripts\IniFile.cs" />
     <Compile Include="Scripts\Log.cs" />
     <Compile Include="Scripts\ComputerInfo.cs" />
+    <Compile Include="Scripts\Patrons\CheckForUpdatesOfBenefits.cs" />
     <Compile Include="Scripts\Patrons\DownloadCmd.cs" />
+    <Compile Include="Scripts\Patrons\UpdateBenefits.cs" />
     <Compile Include="Scripts\Secret.cs" />
     <Compile Include="Scripts\Telemetry.cs" />
     <Compile Include="Scripts\Download\MajorRelease.cs" />

@@ -5,17 +5,17 @@ using System.IO;
 using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.Win32;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using Newtonsoft.Json;
 using StellaLauncher.Forms;
 using StellaLauncher.Models;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts.Download;
+using StellaLauncher.Scripts.Patrons;
 
 namespace StellaLauncher.Scripts.Forms.MainForm
 {
-    internal static class CheckForUpdatesMain
+    internal static class CheckForUpdates
     {
         public static async Task<int> Analyze()
         {
@@ -57,24 +57,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 
                 Default._progressBar1.Value = 74;
                 // == Check new updates of resources ==
-                string resourcesPath = null;
-                using (RegistryKey key = Registry.CurrentUser.OpenSubKey(Program.RegistryPath))
-                {
-                    if (key != null) resourcesPath = (string)key.GetValue("ResourcesPath");
-                }
-
-                if (string.IsNullOrEmpty(resourcesPath) || !Directory.Exists(resourcesPath))
-                {
-                    Default._status_Label.Text += $"{string.Format(Resources.Default_Directory_WasNotFound, resourcesPath)}\n";
-                    Log.SaveError($"Directory {resourcesPath} was not found.");
-
-                    Utils.HideProgressBar(true);
-                    return -1;
-                }
-
-                Default._resourcesPath = resourcesPath;
-
-                string jsonFile = Path.Combine(resourcesPath, "data.json");
+                string jsonFile = Path.Combine(Default.ResourcesPath, "data.json");
                 if (!File.Exists(jsonFile))
                 {
                     Default._status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, jsonFile)}\n";
@@ -97,7 +80,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 {
                     Default.UpdateIsAvailable = true;
 
-                    DownloadResources.Run(resourcesPath, data.Version, resourcesRes.Message, resourcesRes.Date);
+                    DownloadResources.Run(data.Version, resourcesRes.Message, resourcesRes.Date);
                     return 1;
                 }
 
@@ -111,7 +94,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                     {
                         DialogResult msgBoxResult = MessageBox.Show(Resources.Default_TheReShadeIniFileCouldNotBeLocatedInYourGameFiles, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                        int number = await ReShadeIni.Download(resultInt, resourcesPath, msgBoxResult);
+                        int number = await ReShadeIni.Download(resultInt, Default.ResourcesPath, msgBoxResult);
                         return number;
                     }
 
@@ -128,15 +111,22 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                             return 1;
                         }
 
-                        int number = await ReShadeIni.Download(resultInt, resourcesPath, DialogResult.Yes);
+                        int number = await ReShadeIni.Download(resultInt, Default.ResourcesPath, DialogResult.Yes);
                         return number;
                     }
                 }
 
 
+                // == For patrons ==
+                int found = await CheckForUpdatesOfBenefits.Analyze();
+                if (found == 1) return 1;
+
+
                 // == Not found any new updates ==
                 Default._updates_LinkLabel.Text = Resources.Default_CheckForUpdates;
                 Default._updateIco_PictureBox.Image = Resources.icons8_available_updates;
+
+                Default._version_LinkLabel.Text = $@"v{Program.AppVersion}";
 
                 Utils.RemoveClickEvent(Default._updates_LinkLabel);
                 Default._updates_LinkLabel.Click += CheckUpdates_Click;
