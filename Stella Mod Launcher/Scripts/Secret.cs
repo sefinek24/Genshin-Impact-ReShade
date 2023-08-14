@@ -12,8 +12,7 @@ namespace StellaLauncher.Scripts
         public const string RegistryKeyPath = @"SOFTWARE\Stella Mod Launcher";
         public static bool IsMyPatron = false;
         public static string InjectType;
-        public static string JwtToken;
-        public static string LocalToken;
+        public static string BearerToken;
 
         public static string GetTokenFromRegistry()
         {
@@ -46,7 +45,6 @@ namespace StellaLauncher.Scripts
                     HttpResponseMessage response = await httpClient.PostAsync($"{Program.WebApi}/genshin-stella-mod/access/launcher/verify", content).ConfigureAwait(false);
 
                     string json = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    Log.Output(json);
                     return json;
                 }
             }

@@ -1663,6 +1663,51 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Successfully updated 3DMigoto mods for patrons..
+        /// </summary>
+        internal static string UpdateBenefits_SuccessfullyUpdated3DMigotoMods {
+            get {
+                return ResourceManager.GetString("UpdateBenefits_SuccessfullyUpdated3DMigotoMods", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successfully updated ReShade Addons for patrons..
+        /// </summary>
+        internal static string UpdateBenefits_SuccessfullyUpdatedAddons {
+            get {
+                return ResourceManager.GetString("UpdateBenefits_SuccessfullyUpdatedAddons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successfully updated cmd files (batch) to the latest version..
+        /// </summary>
+        internal static string UpdateBenefits_SuccessfullyUpdatedCmdFiles {
+            get {
+                return ResourceManager.GetString("UpdateBenefits_SuccessfullyUpdatedCmdFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successfully updated presets (with or without RT) for patrons..
+        /// </summary>
+        internal static string UpdateBenefits_SuccessfullyUpdatedPresets {
+            get {
+                return ResourceManager.GetString("UpdateBenefits_SuccessfullyUpdatedPresets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successfully updated shaders to the latest version for patrons..
+        /// </summary>
+        internal static string UpdateBenefits_SuccessfullyUpdatedShaders {
+            get {
+                return ResourceManager.GetString("UpdateBenefits_SuccessfullyUpdatedShaders", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An error occurred while creating the shortcut.
         ///
         ///{0}.

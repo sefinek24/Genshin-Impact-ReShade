@@ -40,6 +40,7 @@ namespace StellaLauncher.Models
         public string Addons { get; set; }
         public string Presets { get; set; }
         public string Shaders { get; set; }
+        public string Cmd { get; set; }
     }
 
     public class ResourcesData
@@ -59,7 +60,8 @@ namespace StellaLauncher.Models
     public class BenefitsJsonVersion
     {
         public string Version { get; set; }
+
         public string Date { get; set; }
-        public int Tier { get; set; }
+        // public int Tier { get; set; }
     }
 }

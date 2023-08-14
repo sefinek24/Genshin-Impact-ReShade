@@ -19,13 +19,12 @@ namespace StellaLauncher.Scripts
             Music.PlaySound("winxp", "information_bar");
 
             string commandArguments = string.Empty;
-            if (!string.IsNullOrEmpty(cliWrapCommand.Arguments?.ToString())) commandArguments = cliWrapCommand.Arguments.Build();
+            if (!string.IsNullOrEmpty($"{cliWrapCommand.Arguments}")) commandArguments = cliWrapCommand.Arguments.Build();
 
             try
             {
                 Log.Output($"CliWrap: {cliWrapCommand.App} {commandArguments} {cliWrapCommand.WorkingDir}");
-
-                if (Default.UpdateIsAvailable && !cliWrapCommand.BypassUpdates)
+                if (Default.UpdateIsAvailable && !cliWrapCommand.DownloadingSetup)
                 {
                     MessageBox.Show(Resources.Cmd_UpdateIsRequired, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Log.Output("CliWrap: Command execution failed. An update is required.");
@@ -52,7 +51,7 @@ namespace StellaLauncher.Scripts
                 // StandardError
                 if (result.ExitCode == 0) return true;
 
-                string showCommand = !string.IsNullOrEmpty(cliWrapCommand.App) ? $"\n\n» {Resources.Cmd_ExecutedCommand}:\n{cliWrapCommand.App} {cliWrapCommand.Arguments}" : "";
+                string showCommand = !string.IsNullOrEmpty(cliWrapCommand.App) ? $"\n\n» {Resources.Cmd_ExecutedCommand}:\n{cliWrapCommand.App} {cliWrapCommand.Arguments?.Build()}" : "";
                 string showWorkingDir = !string.IsNullOrEmpty(cliWrapCommand.WorkingDir)
                     ? $"\n\n» {Resources.Cmd_WorkingDirectory}: {cliWrapCommand.WorkingDir}"
                     : "";
@@ -77,7 +76,7 @@ namespace StellaLauncher.Scripts
                         }
 
                         MessageBox.Show(Resources.Cmd_TheRequestOperationWasSuccessfulButYourPCNeedsToBeRebooted, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Log.Output("CliWrap: {cliWrapCommand.App} installed. Exit code: {result.ExitCode}\nThe requested operation is successful. Changes will not be effective until the system is rebooted");
+                        Log.Output($"CliWrap: {cliWrapCommand.App} installed. Exit code: {result.ExitCode}\nThe requested operation is successful. Changes will not be effective until the system is rebooted");
                         return false;
                     }
 

@@ -37,11 +37,11 @@ namespace StellaLauncher.Forms
         public static LinkLabel _youTube_LinkLabel;
 
         // Start the game
-        // public static LinkLabel _startGame_LinkLabel;
-        // public static LinkLabel _injectReShade_LinkLabel;
-        // public static LinkLabel _runFpsUnlocker_LinkLabel;
-        // public static LinkLabel _only3DMigoto_LinkLabel;
-        // public static LinkLabel _runGiLauncher_LinkLabel;
+        public static LinkLabel _startGame_LinkLabel;
+        public static LinkLabel _injectReShade_LinkLabel;
+        public static LinkLabel _runFpsUnlocker_LinkLabel;
+        public static LinkLabel _only3DMigoto_LinkLabel;
+        public static LinkLabel _runGiLauncher_LinkLabel;
         private static LinkLabel _becomeMyPatron_LinkLabel;
 
         // Bottom
@@ -100,11 +100,11 @@ namespace StellaLauncher.Forms
             _youtubeIco_Picturebox = youtubeIco_Picturebox;
             _youTube_LinkLabel = youTube_LinkLabel;
 
-            // _startGame_LinkLabel = startGame_LinkLabel;
-            // _injectReShade_LinkLabel = injectReShade_LinkLabel;
-            // _runFpsUnlocker_LinkLabel = runFpsUnlocker_LinkLabel;
-            // _only3DMigoto_LinkLabel = only3DMigoto_LinkLabel;
-            // _runGiLauncher_LinkLabel = runGiLauncher_LinkLabel;
+            _startGame_LinkLabel = startGame_LinkLabel;
+            _injectReShade_LinkLabel = injectReShade_LinkLabel;
+            _runFpsUnlocker_LinkLabel = runFpsUnlocker_LinkLabel;
+            _only3DMigoto_LinkLabel = only3DMigoto_LinkLabel;
+            _runGiLauncher_LinkLabel = runGiLauncher_LinkLabel;
             _becomeMyPatron_LinkLabel = becomeMyPatron_LinkLabel;
 
             // _toolsIco_PictureBox = toolsIco_PictureBox;
@@ -139,16 +139,14 @@ namespace StellaLauncher.Forms
 
             // App version
             version_LinkLabel.Text = $@"v{Program.AppVersion}";
+            progressBar1.Value = 18;
 
 
             // Is user my Patron?
-            progressBar1.Value = 18;
             string mainPcKey = Secret.GetTokenFromRegistry();
             progressBar1.Value = 37;
             if (mainPcKey != null)
             {
-                Secret.LocalToken = mainPcKey;
-
                 label1.Text = @"/ᐠ. ｡.ᐟ\ᵐᵉᵒʷˎˊ˗";
 
                 string data = await Secret.VerifyToken(mainPcKey);
@@ -166,7 +164,7 @@ namespace StellaLauncher.Forms
                         label1.Text = Resources.Default_GenshinStellaModForPatrons;
                         label1.TextAlign = ContentAlignment.MiddleRight;
 
-                        Secret.JwtToken = remote.Token;
+                        Secret.BearerToken = remote.Token;
                     }
                     else if (remote.Status >= 500)
                     {
@@ -214,18 +212,8 @@ namespace StellaLauncher.Forms
             // Check for updates
             progressBar1.Value = 68;
             int found = await CheckForUpdates.Analyze();
-            if (found == 1)
-            {
-                _updates_LinkLabel.LinkColor = Color.Cyan;
-                _updates_LinkLabel.Text = Resources.Default_UpdatingBenefits;
-                _updateIco_PictureBox.Image = Resources.icons8_download_from_the_cloud;
-                Utils.RemoveClickEvent(_updates_LinkLabel);
-                return;
-            }
+            if (found == 1) return;
 
-            // Download cmd file for patrons
-            if (Secret.IsMyPatron && !string.IsNullOrEmpty(Secret.JwtToken)) await DownloadCmd.Run();
-            progressBar1.Value = 95;
 
             // Check InjectType
             string injectMode = Program.Settings.ReadString("Launcher", "InjectType", "exe");
@@ -235,7 +223,7 @@ namespace StellaLauncher.Forms
             progressBar1.Value = 88;
 
             // Music
-            await Music.PlayBg();
+            _ = Music.PlayBg();
 
 
             // Done (:
@@ -379,7 +367,7 @@ namespace StellaLauncher.Forms
                         App = "wt.exe",
                         WorkingDir = Program.AppPath,
                         Arguments = new ArgumentsBuilder()
-                            .Add(DownloadCmd.RunCmdPatrons) // 0
+                            .Add(RunCmd) // 0
                             .Add(Program.AppVersion) // 1
                             .Add(Data.ReShadeVer) // 2
                             .Add(Data.UnlockerVer) // 3

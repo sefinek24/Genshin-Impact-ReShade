@@ -21,11 +21,12 @@ namespace StellaLauncher.Scripts.Patrons
         private static readonly string DownloadUrl = $"{Program.WebApi}/genshin-stella-mod/patrons/benefits/download";
         private static string _zipFile;
         private static string _outputDir;
+        private static string successfullyUpdated;
 
         // Paths
         public static async void Download(string benefitName, string zipFilename, string dirPathToUnpack)
         {
-            string tempPath = Path.Combine(Default.ResourcesPath, "temp");
+            string tempPath = Path.Combine(Default.ResourcesPath, "Temp files");
             if (!Directory.Exists(tempPath))
             {
                 Directory.CreateDirectory(tempPath);
@@ -41,13 +42,34 @@ namespace StellaLauncher.Scripts.Patrons
 
             _outputDir = dirPathToUnpack;
 
+            switch (benefitName)
+            {
+                case "3dmigoto":
+                    successfullyUpdated = Resources.UpdateBenefits_SuccessfullyUpdated3DMigotoMods;
+                    break;
+                case "addons":
+                    successfullyUpdated = Resources.UpdateBenefits_SuccessfullyUpdatedAddons;
+                    break;
+                case "presets":
+                    successfullyUpdated = Resources.UpdateBenefits_SuccessfullyUpdatedPresets;
+                    break;
+                case "shaders":
+                    successfullyUpdated = Resources.UpdateBenefits_SuccessfullyUpdatedShaders;
+                    break;
+                case "cmd":
+                    successfullyUpdated = Resources.UpdateBenefits_SuccessfullyUpdatedCmdFiles;
+                    break;
+                default:
+                    throw new InvalidEnumArgumentException();
+            }
+
             Default._progressBar1.Show();
             Default._preparingPleaseWait.Show();
 
             using (WebClient client = new WebClient())
             {
                 client.Headers.Add("user-agent", Program.UserAgent);
-                client.Headers.Add("Authorization", $"Bearer {Secret.JwtToken}");
+                client.Headers.Add("Authorization", $"Bearer {Secret.BearerToken}");
 
                 client.DownloadProgressChanged += Client_DownloadProgressChanged;
                 client.DownloadFileCompleted += Client_DownloadFileCompleted;
@@ -84,18 +106,23 @@ namespace StellaLauncher.Scripts.Patrons
 
         private static async void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
+            // Unpack files
             Log.Output($"Unpacking {_zipFile} to {_outputDir}");
-
             Default._preparingPleaseWait.Text = Resources.StellaResources_UnpackingFiles;
-
             await DownloadResources.UnzipWithProgress(_zipFile, _outputDir);
+            Log.Output($"Unpacked: {_zipFile}");
 
+            // Success
             Default._progressBar1.Hide();
             Default._preparingPleaseWait.Hide();
-            Default._status_Label.Text += "[\u2713] Successfully!\n";
-            Log.Output($"Successfully unpacked: {_zipFile}");
+            Default._status_Label.Text += $"[\u2713] {successfullyUpdated}\n";
+            Log.Output(successfullyUpdated);
 
-            await CheckForUpdates.Analyze();
+
+            // Check for updates again
+            int foundUpdated = await CheckForUpdates.Analyze();
+            if (foundUpdated == 0) Labels.ShowStartGameBtns();
+            else Labels.HideStartGameBtns();
         }
     }
 }

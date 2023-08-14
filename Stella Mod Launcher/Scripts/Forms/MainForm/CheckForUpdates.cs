@@ -126,7 +126,16 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 if (Secret.IsMyPatron)
                 {
                     int found = await CheckForUpdatesOfBenefits.Analyze();
-                    if (found == 1) return 1;
+                    if (found == 1)
+                    {
+                        Labels.HideStartGameBtns();
+
+                        Default._updates_LinkLabel.LinkColor = Color.Cyan;
+                        Default._updates_LinkLabel.Text = Resources.Default_UpdatingBenefits;
+                        Default._updateIco_PictureBox.Image = Resources.icons8_download_from_the_cloud;
+                        Utils.RemoveClickEvent(Default._updates_LinkLabel);
+                        return found;
+                    }
                 }
 
 

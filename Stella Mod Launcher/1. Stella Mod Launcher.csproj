@@ -196,6 +196,7 @@
     <Compile Include="Scripts\Cmd.cs" />
     <Compile Include="Scripts\Discord.cs" />
     <Compile Include="Scripts\Download\StellaResources.cs" />
+    <Compile Include="Scripts\Forms\MainForm\Labels.cs" />
     <Compile Include="Scripts\Forms\MainForm\LaunchCount.cs" />
     <Compile Include="Scripts\Forms\MainForm\Music.cs" />
     <Compile Include="Scripts\Forms\MainForm\Files.cs" />
@@ -204,7 +205,6 @@
     <Compile Include="Scripts\ComputerInfo.cs" />
     <Compile Include="Scripts\Patrons\CheckForUpdatesOfBenefits.cs" />
     <Compile Include="Scripts\Patrons\DeleteBenefits.cs" />
-    <Compile Include="Scripts\Patrons\DownloadCmd.cs" />
     <Compile Include="Scripts\Patrons\UpdateBenefits.cs" />
     <Compile Include="Scripts\Secret.cs" />
     <Compile Include="Scripts\Telemetry.cs" />

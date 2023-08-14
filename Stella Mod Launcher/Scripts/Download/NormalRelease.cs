@@ -4,6 +4,7 @@ using System.Drawing;
 using System.IO;
 using System.Net;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using ByteSizeLib;
 using CliWrap.Builders;
 using Microsoft.Toolkit.Uwp.Notifications;
@@ -169,6 +170,8 @@ namespace StellaLauncher.Scripts.Download
 
         private static async void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
+            Default._progressBar1.Style = ProgressBarStyle.Marquee;
+
             string logDir = Path.Combine(Log.Folder, "updates");
             if (!Directory.Exists(logDir)) Directory.CreateDirectory(logDir);
 
@@ -197,16 +200,22 @@ namespace StellaLauncher.Scripts.Download
                 App = SetupPathExe,
                 Arguments = new ArgumentsBuilder()
                     .Add("/UPDATE")
-                    .Add($"/LOG=\"{logFile}\"")
+                    .Add($"/LOG={logFile}")
                     .Add("/NORESTART"),
                 DownloadingSetup = true
             };
             _ = Cmd.Execute(command);
 
-            for (int i = 15; i > 0; i--)
+
+            Default._progressBar1.Style = ProgressBarStyle.Continuous;
+            for (int i = 15; i >= 0; i--)
             {
                 Default._preparingPleaseWait.Text = string.Format(Resources.NormalRelease_InstallANewVersionInTheWizard_ClosingLauncherIn_, i);
                 Log.Output($"Closing launcher in {i}s...");
+
+                double progressPercentage = (15 - i) / 15.0 * 100;
+                Default._progressBar1.Value = (int)progressPercentage;
+
                 await Task.Delay(1000);
             }
 
