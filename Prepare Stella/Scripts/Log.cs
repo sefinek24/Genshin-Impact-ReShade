@@ -2,7 +2,6 @@ using System;
 using System.IO;
 using System.Threading;
 using Microsoft.Toolkit.Uwp.Notifications;
-using Microsoft.WindowsAPICodePack.Taskbar;
 
 namespace PrepareStella.Scripts
 {
@@ -22,7 +21,7 @@ namespace PrepareStella.Scripts
             Thread.Sleep(5000);
 
             Console.ResetColor();
-            TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Normal);
+            // TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Normal);
         }
 
 
@@ -69,7 +68,7 @@ namespace PrepareStella.Scripts
                     .AddText("Go back to the configuration window.")
                     .Show();
 
-                TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
+                // TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
             }
             catch (Exception e)
             {
@@ -95,7 +94,7 @@ namespace PrepareStella.Scripts
                         .AddText("🎶 Sad song... Could you please try again?")
                         .Show();
 
-                    TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
+                    // TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
                 }
                 catch (Exception e)
                 {

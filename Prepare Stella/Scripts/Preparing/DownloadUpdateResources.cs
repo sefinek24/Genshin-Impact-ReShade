@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.IO.Compression;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -26,14 +27,11 @@ namespace PrepareStella.Scripts.Preparing
 
             // Checking current version of resources
             Console.WriteLine(@"Checking current version of resources...");
-            StellaResources json;
-            using (HttpClient httpClient = new HttpClient())
-            {
-                httpClient.DefaultRequestHeaders.Add("User-Agent", Program.UserAgent);
-                HttpResponseMessage response = await httpClient.GetAsync("https://api.sefinek.net/api/v4/genshin-stella-mod/version/app/launcher/resources");
-                string responseContent = await response.Content.ReadAsStringAsync();
-                json = JsonConvert.DeserializeObject<StellaResources>(responseContent);
-            }
+            WebClient webClient = new WebClient();
+            webClient.Headers.Add("User-Agent", Program.UserAgent);
+            string responseContent = await webClient.DownloadStringTaskAsync("https://api.sefinek.net/api/v4/genshin-stella-mod/version/app/launcher/resources");
+            StellaResources json = JsonConvert.DeserializeObject<StellaResources>(responseContent);
+
 
             // Deleting existing resources zip file
             string zipPath = Path.Combine(resourcesGlobalPath, $"Stella resources - v{json.Message}.zip");

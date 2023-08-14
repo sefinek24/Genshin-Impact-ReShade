@@ -94,10 +94,6 @@
             "System.IO.Compression.ZipFile": {
               "target": "Package",
               "version": "[4.3.0, )"
-            },
-            "WindowsAPICodePack": {
-              "target": "Package",
-              "version": "[7.0.4, )"
             }
           }
         }
