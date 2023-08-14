@@ -121,18 +121,15 @@ namespace StellaLauncher.Scripts.Download
 
                         if (File.Exists(reShadePath))
                         {
-                            // TODO
-                            string reShadeIniContent = File.ReadAllText(reShadePath);
-                            string newData = reShadeIniContent?
-                                .Replace("{addon.path}", Path.Combine(resourcesPath, "ReShade", "Addons"))
-                                .Replace("{general.effects}", Path.Combine(resourcesPath, "ReShade", "Shaders", "Effects"))
-                                .Replace("{general.cache}", Path.Combine(resourcesPath, "ReShade", "Cache"))
-                                .Replace("{general.preset}", Path.Combine(resourcesPath, "ReShade", "Presets", "3. Preset by Sefinek - Medium settings [Default].ini"))
-                                .Replace("{general.textures}", Path.Combine(resourcesPath, "ReShade", "Shaders", "Textures"))
-                                .Replace("{screenshot.path}", Path.Combine(resourcesPath, "Screenshots"))
-                                .Replace("{screenshot.sound}", Path.Combine(Program.AppPath, "data", "sounds", "screenshot.wav"));
-
-                            File.WriteAllText(reShadePath, newData);
+                            IniFile ini = new IniFile(reShadePath);
+                            ini.WriteString("ADDON", "AddonPath", $"{Path.Combine(resourcesPath, "ReShade", "Addons")}");
+                            ini.WriteString("GENERAL", "EffectSearchPaths", Path.Combine(resourcesPath, "ReShade", "Shaders", "Effects"));
+                            ini.WriteString("GENERAL", "IntermediateCachePath", Path.Combine(resourcesPath, "ReShade", "Cache"));
+                            if (!Secret.IsMyPatron) ini.WriteString("GENERAL", "PresetPath", Path.Combine(resourcesPath, "ReShade", "Presets", "3. Preset by Sefinek - Medium settings [Default].ini"));
+                            ini.WriteString("GENERAL", "TextureSearchPaths", $"{Path.Combine(resourcesPath, "ReShade", "Shaders", "Textures")}");
+                            ini.WriteString("SCREENSHOT", "SavePath", Path.Combine(resourcesPath, "Screenshots"));
+                            ini.WriteString("SCREENSHOT", "SoundPath", Path.Combine(Program.AppPath, "data", "sounds", "screenshot.wav"));
+                            ini.Save();
 
                             Default._status_Label.Text += $"[✓] {Resources.Default_SuccessfullyDownloadedReShadeIni}\n";
                             Log.Output($"Successfully downloaded ReShade.ini and saved in: {reShadePath}");

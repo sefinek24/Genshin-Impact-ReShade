@@ -154,17 +154,14 @@ namespace StellaLauncher.Scripts
         {
             try
             {
-                string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.CommonDesktopDirectory);
-                string shortcutPath = Path.Combine(desktopPath, "Stella Mod Launcher.lnk");
-
                 WshShell shell = new WshShell();
-                IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(shortcutPath);
+                IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(Shortcut.ScPath);
                 shortcut.Description = Resources.Utils_RunOfficialLauncherForStellaModMadeBySefinek;
                 shortcut.WorkingDirectory = Program.AppPath;
-                shortcut.TargetPath = Path.Combine(Program.AppPath, $"{Program.AppName}.exe");
+                shortcut.TargetPath = Shortcut.ProgramExe;
                 shortcut.Save();
 
-                Log.Output($"Desktop shortcut has been created in: {shortcutPath}");
+                Log.Output($"Desktop shortcut has been created in: {Shortcut.ScPath}");
                 return true;
             }
             catch (Exception ex)

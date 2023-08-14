@@ -1,7 +1,6 @@
 using System;
 using System.IO;
 using System.Net;
-using System.Threading.Tasks;
 
 namespace PrepareStella.Scripts.Preparing
 {
@@ -10,7 +9,7 @@ namespace PrepareStella.Scripts.Preparing
     /// </summary>
     internal static class DownloadFpsUnlockerCfg
     {
-        public static async Task Run()
+        public static async void Run()
         {
             try
             {

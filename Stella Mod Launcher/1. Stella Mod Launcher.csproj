@@ -191,6 +191,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Scripts\Shortcut.cs" />
     <Compile Include="Scripts\Forms\MainForm\Background.cs" />
     <Compile Include="Scripts\Forms\MainForm\CheckForUpdates.cs" />
     <Compile Include="Scripts\Cmd.cs" />

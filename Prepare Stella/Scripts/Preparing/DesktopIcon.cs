@@ -1,6 +1,5 @@
 using System;
 using System.IO;
-using System.Threading.Tasks;
 using IWshRuntimeLibrary;
 using PrepareStella.Properties;
 
@@ -11,7 +10,7 @@ namespace PrepareStella.Scripts.Preparing
     /// </summary>
     internal static class DesktopIcon
     {
-        public static async Task Run()
+        public static void Run()
         {
             try
             {
@@ -22,9 +21,9 @@ namespace PrepareStella.Scripts.Preparing
                 IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(shortcutPath);
                 shortcut.Description = Resources.Utils_RunOfficialLauncherForStellaModMadeBySefinek;
                 shortcut.WorkingDirectory = Program.AppPath;
-                shortcut.TargetPath = Path.Combine(Program.AppPath, "Genshin Stella Mod.exe");
+                shortcut.TargetPath = Path.Combine(Program.AppPath, "Stella Mod Launcher.exe");
 
-                await Task.Run(() => shortcut.Save());
+                shortcut.Save();
             }
             catch (Exception e)
             {

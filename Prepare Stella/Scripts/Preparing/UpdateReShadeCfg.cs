@@ -1,7 +1,6 @@
 using System;
 using System.IO;
 using System.Net;
-using System.Threading.Tasks;
 
 namespace PrepareStella.Scripts.Preparing
 {
@@ -12,7 +11,7 @@ namespace PrepareStella.Scripts.Preparing
     {
         public static readonly string GiGame = Path.GetDirectoryName(Program.SavedGamePath);
 
-        public static async Task Run()
+        public static async void Run()
         {
             string reshadeIniPath = Path.Combine(GiGame, "ReShade.ini");
             string reshadeLogPath = Path.Combine(GiGame, "ReShade.log");
@@ -56,11 +55,13 @@ namespace PrepareStella.Scripts.Preparing
 
         private static void ConfigureReShade(string resourcesGlobal)
         {
+            bool isMyPatron = CheckData.IsUserMyPatron();
+
             IniFile ini = new IniFile(Path.Combine(GiGame, "ReShade.ini"));
             ini.WriteString("ADDON", "AddonPath", $"{Path.Combine(resourcesGlobal, "ReShade", "Addons")}");
             ini.WriteString("GENERAL", "EffectSearchPaths", Path.Combine(resourcesGlobal, "ReShade", "Shaders", "Effects"));
             ini.WriteString("GENERAL", "IntermediateCachePath", Path.Combine(resourcesGlobal, "ReShade", "Cache"));
-            ini.WriteString("GENERAL", "PresetPath", Path.Combine(resourcesGlobal, "ReShade", "Presets", "3. Preset by Sefinek - Medium settings [Default].ini"));
+            if (!isMyPatron) ini.WriteString("GENERAL", "PresetPath", Path.Combine(resourcesGlobal, "ReShade", "Presets", "3. Preset by Sefinek - Medium settings [Default].ini"));
             ini.WriteString("GENERAL", "TextureSearchPaths", $"{Path.Combine(resourcesGlobal, "ReShade", "Shaders", "Textures")}");
             ini.WriteString("SCREENSHOT", "SavePath", Path.Combine(resourcesGlobal, "Screenshots"));
             ini.WriteString("SCREENSHOT", "SoundPath", Path.Combine(Program.AppPath, "data", "sounds", "screenshot.wav"));
