@@ -14,7 +14,7 @@ namespace PrepareStella.Scripts
     internal abstract class Cmd
     {
         public static bool RebootNeeded;
-        public static int VcLibsAttemptNumber;
+        private static int _vcLibsAttemptNumber;
 
         public static async Task CliWrap(string app, string args, string workingDir)
         {
@@ -50,7 +50,7 @@ namespace PrepareStella.Scripts
 
 
                     // VcLibs
-                    if (VcLibsAttemptNumber >= 3)
+                    if (_vcLibsAttemptNumber >= 3)
                     {
                         Log.ErrorAndExit(
                             new Exception(
@@ -68,7 +68,7 @@ namespace PrepareStella.Scripts
                         Console.WriteLine(
                             $"     » We cannot install this package because some process is currently in use.\n       Reboot your PC or close all opened apps from Microsoft Store.\n\n{stderr}");
 
-                        Log.SaveErrorLog(new Exception($"I cannot install this package because some process is currently open.\n\n» Attempt: {VcLibsAttemptNumber}\n» Exit code: 80073D02\n\n{stderr}"), true);
+                        Log.SaveErrorLog(new Exception($"I cannot install this package because some process is currently open.\n\n» Attempt: {_vcLibsAttemptNumber}\n» Exit code: 80073D02\n\n{stderr}"), true);
 
                         // TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
 
@@ -84,9 +84,9 @@ namespace PrepareStella.Scripts
 
                     if (Regex.Match(stderr, "(?:80073CF3|Microsoft.VCLibs.)", RegexOptions.IgnoreCase | RegexOptions.Multiline).Success)
                     {
-                        VcLibsAttemptNumber++;
+                        _vcLibsAttemptNumber++;
 
-                        Log.SaveErrorLog(new Exception($"Found missing dependency Microsoft.VCLibs.\n\nAttempt {VcLibsAttemptNumber}\nExit code: 80073CF3\n\n{stderr}"), true);
+                        Log.SaveErrorLog(new Exception($"Found missing dependency Microsoft.VCLibs.\n\nAttempt {_vcLibsAttemptNumber}\nExit code: 80073CF3\n\n{stderr}"), true);
 
                         try
                         {
@@ -102,7 +102,7 @@ namespace PrepareStella.Scripts
                         }
 
                         // Preparing...
-                        Console.WriteLine($@"Preparing to install Microsoft Visual C++ 2015 UWP Desktop Package (attempt {VcLibsAttemptNumber}/3)...");
+                        Console.WriteLine($@"Preparing to install Microsoft Visual C++ 2015 UWP Desktop Package (attempt {_vcLibsAttemptNumber}/3)...");
 
                         // TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
                         Console.ForegroundColor = ConsoleColor.Yellow;
