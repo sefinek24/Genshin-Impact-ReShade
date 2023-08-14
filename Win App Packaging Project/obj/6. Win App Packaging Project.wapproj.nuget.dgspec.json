@@ -86,14 +86,6 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
-            },
-            "System.IO.Compression": {
-              "target": "Package",
-              "version": "[4.3.0, )"
-            },
-            "System.IO.Compression.ZipFile": {
-              "target": "Package",
-              "version": "[4.3.0, )"
             }
           }
         }

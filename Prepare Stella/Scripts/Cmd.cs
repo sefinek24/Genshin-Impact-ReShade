@@ -3,7 +3,10 @@ using System.Diagnostics;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using CliWrap;
+using CliWrap.Buffered;
 using Microsoft.Toolkit.Uwp.Notifications;
+
 // using Microsoft.WindowsAPICodePack.Taskbar;
 
 namespace PrepareStella.Scripts
