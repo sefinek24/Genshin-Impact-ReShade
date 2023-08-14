@@ -1,8 +1,7 @@
 using System;
 using System.IO;
+using System.Net;
 using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
@@ -91,21 +90,14 @@ namespace StellaLauncher.Scripts.Patrons
         {
             try
             {
-                HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Secret.JwtToken);
-
-                var requestData = new
+                using (WebClient webClient = new WebClient())
                 {
-                    token = Secret.LocalToken
-                };
+                    webClient.Headers.Add("Authorization", $"Bearer {Secret.JwtToken}");
+                    webClient.Headers.Add("User-Agent", Program.UserAgent);
 
-                string jsonRequest = JsonConvert.SerializeObject(requestData);
-                StringContent content = new StringContent(jsonRequest, Encoding.UTF8, "application/json");
+                    string jsonResponse = await webClient.DownloadStringTaskAsync($"{Program.WebApi}/genshin-stella-mod/patrons/benefits/version");
 
-                using (HttpResponseMessage response = await HttpClient.PostAsync($"{Program.WebApi}/genshin-stella-mod/patrons/benefits/version", content))
-                {
-                    response.EnsureSuccessStatusCode();
-                    string json = await response.Content.ReadAsStringAsync();
-                    return JsonConvert.DeserializeObject<BenefitVersions>(json);
+                    return JsonConvert.DeserializeObject<BenefitVersions>(jsonResponse);
                 }
             }
             catch (Exception ex)

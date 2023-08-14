@@ -9,10 +9,10 @@ namespace StellaLauncher.Scripts
 {
     internal static class Secret
     {
-        private const string RegistryKeyPath = @"SOFTWARE\Stella Mod Launcher";
+        public const string RegistryKeyPath = @"SOFTWARE\Stella Mod Launcher";
         public static bool IsMyPatron = false;
+        public static string InjectType;
         public static string JwtToken;
-        public static int TierId;
         public static string LocalToken;
 
         public static string GetTokenFromRegistry()
@@ -20,12 +20,12 @@ namespace StellaLauncher.Scripts
             using (RegistryKey registryKey = Registry.CurrentUser.OpenSubKey(RegistryKeyPath))
             {
                 object value = registryKey?.GetValue("Secret");
-                if (value is string token) return token;
+                if (!(value is string token)) return null;
+
+                Log.Output("Found token in the registry.");
+                return token;
             }
-
-            return null;
         }
-
 
         public static async Task<string> VerifyToken(string mainPcKey)
         {

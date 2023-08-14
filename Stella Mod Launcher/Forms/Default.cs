@@ -154,7 +154,7 @@ namespace StellaLauncher.Forms
                 string data = await Secret.VerifyToken(mainPcKey);
                 if (data == null)
                 {
-                    if (Directory.Exists(Program.PatronsDir)) Directory.Delete(Program.PatronsDir, true);
+                    await DeleteBenefits.RunAsync();
                 }
                 else
                 {
@@ -167,11 +167,12 @@ namespace StellaLauncher.Forms
                         label1.TextAlign = ContentAlignment.MiddleRight;
 
                         Secret.JwtToken = remote.Token;
-                        Secret.TierId = remote.TierId;
                     }
                     else if (remote.Status >= 500)
                     {
                         label1.Text = $@"zjebało się xd {remote.Status} ( ̿–ᆺ ̿–)";
+
+                        await DeleteBenefits.RunAsync();
                         MessageBox.Show(
                             $"Unfortunately, there was a server-side error during the verification of your benefits. Please report this error on the Discord server or via email. Remember to provide your `backup code` as well.\nIf you launch the game after closing this message, you will be playing the free version.\n\n{remote.Message}",
                             Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -179,6 +180,8 @@ namespace StellaLauncher.Forms
                     else
                     {
                         label1.Text = @"Oh nooo... Sad cat... ( ̿–ᆺ ̿–)";
+
+                        await DeleteBenefits.RunAsync();
                         MessageBox.Show(
                             $"An error occurred while verifying the benefits of your subscription. The server informed the client that it sent an invalid request. If you launch the game after closing this message, you will be playing the free version. Please contact Sefinek for more information. Error details can be found below.\n\n{remote.Message}",
                             Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -195,8 +198,21 @@ namespace StellaLauncher.Forms
             progressBar1.Value = 50;
             await Files.DeleteSetupAsync();
 
+            // Loaded form
+            Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
+
+            // Launch count
+            await LaunchCountHelper.CheckLaunchCountAndShowMessages();
+            progressBar1.Value = 57;
+
+            // Telemetry
+            Telemetry.Opened();
+
+            // Discord RPC
+            Discord.InitRpc();
+
             // Check for updates
-            progressBar1.Value = 58;
+            progressBar1.Value = 68;
             int found = await CheckForUpdates.Analyze();
             if (found == 1)
             {
@@ -207,22 +223,16 @@ namespace StellaLauncher.Forms
                 return;
             }
 
-            // Launch count
-            await LaunchCountHelper.CheckLaunchCountAndShowMessages();
-            progressBar1.Value = 88;
-
-            // Loaded form
-            Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
-
             // Download cmd file for patrons
             if (Secret.IsMyPatron && !string.IsNullOrEmpty(Secret.JwtToken)) await DownloadCmd.Run();
             progressBar1.Value = 95;
 
-            // Telemetry
-            Telemetry.Opened();
+            // Check InjectType
+            string injectMode = Program.Settings.ReadString("Launcher", "InjectType", "exe");
+            if (!Secret.IsMyPatron && injectMode == "exe") Secret.InjectType = "cmd";
+            else Secret.InjectType = injectMode;
 
-            // Discord RPC
-            Discord.InitRpc();
+            progressBar1.Value = 88;
 
             // Music
             await Music.PlayBg();
@@ -300,10 +310,8 @@ namespace StellaLauncher.Forms
         /* 1 */
         private async void StartGame_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            string injectType = Program.Settings.ReadString("Launcher", "InjectType", "exe");
-
             Cmd.CliWrap command = null;
-            switch (injectType)
+            switch (Secret.InjectType)
             {
                 case "exe":
                     command = new Cmd.CliWrap
@@ -311,13 +319,13 @@ namespace StellaLauncher.Forms
                         App = "wt.exe",
                         WorkingDir = Program.AppPath,
                         Arguments = new ArgumentsBuilder()
-                            .Add(Secret.IsMyPatron ? "Genshin Stella Mod.exe" : RunCmd)
-                            .Add(Program.AppVersion) // 0
-                            .Add(Data.ReShadeVer) // 1
-                            .Add(Data.UnlockerVer) // 2
-                            .Add(Secret.IsMyPatron ? 1 : 6) // 3
-                            .Add(Secret.IsMyPatron ? 1 : 0) // 4
-                            .Add(ResourcesPath) // 5
+                            .Add("Genshin Stella Mod.exe") // 0
+                            .Add(Program.AppVersion) // 1
+                            .Add(Data.ReShadeVer) // 2
+                            .Add(Data.UnlockerVer) // 3
+                            .Add(Secret.IsMyPatron ? 1 : 6) // 4
+                            .Add(Secret.IsMyPatron ? 1 : 0) // 5
+                            .Add(ResourcesPath) // 6
                     };
                     break;
                 case "cmd":
@@ -326,7 +334,7 @@ namespace StellaLauncher.Forms
                         App = "wt.exe",
                         WorkingDir = Program.AppPath,
                         Arguments = new ArgumentsBuilder()
-                            .Add(Secret.IsMyPatron ? DownloadCmd.RunCmdPatrons : RunCmd)
+                            .Add(RunCmd) // 0
                             .Add(Program.AppVersion) // 1
                             .Add(Data.ReShadeVer) // 2
                             .Add(Data.UnlockerVer) // 3
@@ -347,10 +355,8 @@ namespace StellaLauncher.Forms
         /* 3 */
         private async void OnlyReShade_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            string injectType = Program.Settings.ReadString("Launcher", "InjectType", "exe");
-
             Cmd.CliWrap command = null;
-            switch (injectType)
+            switch (Secret.InjectType)
             {
                 case "exe":
                     command = new Cmd.CliWrap
@@ -358,13 +364,13 @@ namespace StellaLauncher.Forms
                         App = "wt.exe",
                         WorkingDir = Program.AppPath,
                         Arguments = new ArgumentsBuilder()
-                            .Add(Secret.IsMyPatron ? "Genshin Stella Mod.exe" : RunCmd)
-                            .Add(Program.AppVersion) // 0
-                            .Add(Data.ReShadeVer) // 1
-                            .Add(Data.UnlockerVer) // 2
-                            .Add(3) // 3
-                            .Add(Secret.IsMyPatron ? 1 : 0) // 4
-                            .Add(ResourcesPath) // 5
+                            .Add("Genshin Stella Mod.exe") // 0
+                            .Add(Program.AppVersion) // 1
+                            .Add(Data.ReShadeVer) // 2
+                            .Add(Data.UnlockerVer) // 3
+                            .Add(3) // 4
+                            .Add(Secret.IsMyPatron ? 1 : 0) // 5
+                            .Add(ResourcesPath) // 6
                     };
                     break;
                 case "cmd":
@@ -373,7 +379,7 @@ namespace StellaLauncher.Forms
                         App = "wt.exe",
                         WorkingDir = Program.AppPath,
                         Arguments = new ArgumentsBuilder()
-                            .Add(Secret.IsMyPatron ? DownloadCmd.RunCmdPatrons : RunCmd)
+                            .Add(DownloadCmd.RunCmdPatrons) // 0
                             .Add(Program.AppVersion) // 1
                             .Add(Data.ReShadeVer) // 2
                             .Add(Data.UnlockerVer) // 3
@@ -401,10 +407,8 @@ namespace StellaLauncher.Forms
         /* 4 */
         private async void OnlyUnlocker_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            string injectType = Program.Settings.ReadString("Launcher", "InjectType", "exe");
-
             Cmd.CliWrap command = null;
-            switch (injectType)
+            switch (Secret.InjectType)
             {
                 case "exe":
                     command = new Cmd.CliWrap
@@ -412,13 +416,13 @@ namespace StellaLauncher.Forms
                         App = "wt.exe",
                         WorkingDir = Program.AppPath,
                         Arguments = new ArgumentsBuilder()
-                            .Add(Secret.IsMyPatron ? "Genshin Stella Mod.exe" : RunCmd)
-                            .Add(Program.AppVersion) // 0
-                            .Add(Data.ReShadeVer) // 1
-                            .Add(Data.UnlockerVer) // 2
-                            .Add(4) // 3
-                            .Add(Secret.IsMyPatron ? 1 : 0) // 4
-                            .Add(ResourcesPath) // 5
+                            .Add("Genshin Stella Mod.exe") // 0
+                            .Add(Program.AppVersion) // 1
+                            .Add(Data.ReShadeVer) // 2
+                            .Add(Data.UnlockerVer) // 3
+                            .Add(4) // 4
+                            .Add(Secret.IsMyPatron ? 1 : 0) // 5
+                            .Add(ResourcesPath) // 6
                     };
                     break;
                 case "cmd":
@@ -427,7 +431,7 @@ namespace StellaLauncher.Forms
                         App = "wt.exe",
                         WorkingDir = Program.AppPath,
                         Arguments = new ArgumentsBuilder()
-                            .Add(Secret.IsMyPatron ? DownloadCmd.RunCmdPatrons : RunCmd)
+                            .Add(RunCmd) // 0
                             .Add(Program.AppVersion) // 1
                             .Add(Data.ReShadeVer) // 2
                             .Add(Data.UnlockerVer) // 3
