@@ -300,12 +300,12 @@ namespace StellaLauncher.Forms
 
 
         // ------- Start the game -------
-        // 6 = ReShade + FPS Unlocker
-        // 1 = ReShade + 3DMigoto + FPS Unlocker
-        // 2 = ReShade + 3DMigoto
-        // 3 = Only ReShade
-        // 4 = Only FPS Unlocker
-        // 5 = Only 3DMigoto
+        // 1 = ReShade       + 3DMigoto      + FPS Unlocker  = 1 (for patrons)
+        // 2 = ReShade       + 3DMigoto                      = 2
+        // 6 = ReShade       + FPS Unlocker                  = 6 (default)
+        // 4 = FPS Unlocker                                  = 4
+        // 5 = 3DMigoto                                      = 5
+        // 3 = ReShade                                       = 3
 
         /* 1 */
         private async void StartGame_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
