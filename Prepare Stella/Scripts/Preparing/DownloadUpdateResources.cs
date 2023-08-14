@@ -35,7 +35,6 @@ namespace PrepareStella.Scripts.Preparing
 
             // Deleting existing resources zip file
             string zipPath = Path.Combine(resourcesGlobalPath, $"Stella resources - v{json.Message}.zip");
-
             if (File.Exists(zipPath))
             {
                 Console.WriteLine($@"Deleting {zipPath}...");
