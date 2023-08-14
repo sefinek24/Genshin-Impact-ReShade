@@ -386,7 +386,7 @@ namespace StellaLauncher.Forms
 
             // Find game path
             string path = await Utils.GetGame("giLauncher");
-            if (path == null) return;
+            if (string.IsNullOrEmpty(path)) return;
 
             // Open Genshin Launcher
             await Cmd.Execute(new Cmd.CliWrap { App = path });
@@ -501,7 +501,7 @@ namespace StellaLauncher.Forms
         private async void OpenGILauncher_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             string path = await Utils.GetGame("giLauncher");
-            if (path == string.Empty)
+            if (string.IsNullOrEmpty(path))
             {
                 MessageBox.Show(Resources.Default_GameLauncherWasNotFound, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Log.SaveError(string.Format(Resources.Default_GameLauncherWasNotFoundIn, path));
@@ -590,7 +590,7 @@ namespace StellaLauncher.Forms
                 viewer.Navigate("https://www.youtube.com/embed/2F2DdXUNyaQ?autoplay=1");
                 viewer.Show();
 
-                MessageBox.Show(@"Pamiętaj by nie grać w lola, gdyż to grzech ciężki.");
+                MessageBox.Show(@"Pamiętaj by nie grać w lola, gdyż to grzech ciężki.", "kurwa");
             }
             else
             {
