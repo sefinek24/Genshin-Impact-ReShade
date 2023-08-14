@@ -145,6 +145,9 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.3</Version>
     </PackageReference>
+    <PackageReference Include="WindowsAPICodePack">
+      <Version>7.0.4</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="IWshRuntimeLibrary">

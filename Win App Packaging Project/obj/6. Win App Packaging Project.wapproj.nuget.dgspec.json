@@ -63,6 +63,9 @@
           "net48": {
             "projectReferences": {}
           }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true
         }
       },
       "frameworks": {
@@ -83,6 +86,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "WindowsAPICodePack": {
+              "target": "Package",
+              "version": "[7.0.4, )"
             }
           }
         }
@@ -131,6 +138,9 @@
           "net48": {
             "projectReferences": {}
           }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true
         }
       },
       "frameworks": {

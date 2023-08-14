@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.WindowsAPICodePack.Taskbar;
 using PrepareStella.Scripts;
 
 namespace PrepareStella
@@ -26,7 +27,7 @@ namespace PrepareStella
 
             if (!Utils.IsRunAsAdmin())
             {
-                // TaskbarManager.Instance.SetProgressValue(100, 100);
+                TaskbarManager.Instance.SetProgressValue(100, 100);
                 Log.ErrorAndExit(new Exception("» This application requires administrator privileges to run."), false, false);
                 return;
             }
