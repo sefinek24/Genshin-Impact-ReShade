@@ -6,10 +6,10 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Configuration window")]
-[assembly: AssemblyDescription("Prepare Stella Mod Launcher for the first run.")]
+[assembly: AssemblyDescription("Configuration window of Stella Mod Launcher.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Sefinek Inc.")]
-[assembly: AssemblyProduct("Prepare Genshin Stella Mod Launcher for the first run.")]
+[assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("Copyright 2023 © by Sefinek. All Rights Reserved.")]
 [assembly: AssemblyTrademark("© Sefinek Inc.")]
 [assembly: AssemblyCulture("")]

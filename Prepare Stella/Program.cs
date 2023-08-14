@@ -161,7 +161,7 @@ namespace PrepareStella
             if (downloadOrUpdateShaders == 1)
             {
                 Console.WriteLine(@"Checking Stella resources...");
-                await DownloadUpdateResources.Run();
+                await DownloadUpdateResources.RunAsync();
                 TaskbarManager.Instance.SetProgressValue(39, 100);
             }
 
@@ -169,7 +169,7 @@ namespace PrepareStella
             if (updateReShadeCfg == 1)
             {
                 Console.WriteLine(@"Downloading ReShade files...");
-                await UpdateReShadeCfg.Run();
+                await UpdateReShadeCfg.RunAsync();
                 TaskbarManager.Instance.SetProgressValue(46, 100);
             }
 
@@ -177,7 +177,7 @@ namespace PrepareStella
             if (delReShadeCache == 1)
             {
                 Console.WriteLine(@"Deleting ReShade cache...");
-                await DeleteReShadeCache.Run();
+                await DeleteReShadeCache.RunAsync();
                 TaskbarManager.Instance.SetProgressValue(57, 100);
             }
 

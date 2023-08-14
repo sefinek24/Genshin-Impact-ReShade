@@ -1,13 +1,10 @@
 using System;
 using System.IO;
-using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace PrepareStella.Scripts.Preparing
 {
-    /// <summary>
-    ///     Downloads and updates the FPS Unlocker configuration file.
-    /// </summary>
     internal static class DownloadFpsUnlockerCfg
     {
         public static async Task Run()
@@ -15,22 +12,19 @@ namespace PrepareStella.Scripts.Preparing
             try
             {
                 string unlockerFolderPath = Path.Combine(Program.AppPath, "data", "unlocker");
-                if (!Directory.Exists(unlockerFolderPath))
-                    Directory.CreateDirectory(unlockerFolderPath);
+                Directory.CreateDirectory(unlockerFolderPath);
 
-                string fpsUnlockerConfig;
-                using (WebClient client = new WebClient())
+                using (HttpClient httpClient = new HttpClient())
                 {
-                    client.Headers.Add("user-agent", Program.UserAgent);
-                    fpsUnlockerConfig = await client.DownloadStringTaskAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/unlocker.config.json");
+                    httpClient.DefaultRequestHeaders.Add("user-agent", Program.UserAgent);
+                    string fpsUnlockerConfig = await httpClient.GetStringAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/unlocker.config.json");
+
+                    string fpsUnlockerConfigPath = Path.Combine(unlockerFolderPath, "unlocker.config.json");
+                    string gameExePath = Program.SavedGamePath?.Replace("\\", "\\\\");
+                    string fpsUnlockerConfigContent = fpsUnlockerConfig.Replace("{GamePath}", gameExePath ?? string.Empty);
+
+                    File.WriteAllText(fpsUnlockerConfigPath, fpsUnlockerConfigContent);
                 }
-
-                string fpsUnlockerConfigPath = Path.Combine(unlockerFolderPath, "unlocker.config.json");
-
-                string gameExePath = UpdateReShadeCfg.GiGame?.Replace("\\", "\\\\");
-                string fpsUnlockerConfigContent = fpsUnlockerConfig.Replace("{GamePath}", gameExePath ?? string.Empty);
-
-                File.WriteAllText(fpsUnlockerConfigPath, fpsUnlockerConfigContent);
             }
             catch (Exception e)
             {
