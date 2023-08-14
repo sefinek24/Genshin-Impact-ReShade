@@ -21,19 +21,19 @@ namespace StellaLauncher.Scripts.Patrons
         private static readonly string DownloadUrl = $"{Program.WebApi}/genshin-stella-mod/patrons/benefits/download";
         private static string _zipFile;
         private static string _outputDir;
-        private static string successfullyUpdated;
+        private static string _successfullyUpdated;
+        private static readonly string BenefitsTempFile = Path.Combine(Default.ResourcesPath, "Temp files");
 
         // Paths
         public static async void Download(string benefitName, string zipFilename, string dirPathToUnpack)
         {
-            string tempPath = Path.Combine(Default.ResourcesPath, "Temp files");
-            if (!Directory.Exists(tempPath))
+            if (!Directory.Exists(BenefitsTempFile))
             {
-                Directory.CreateDirectory(tempPath);
-                Log.Output($"Created dir: {tempPath}");
+                Directory.CreateDirectory(BenefitsTempFile);
+                Log.Output($"Created dir: {BenefitsTempFile}");
             }
 
-            _zipFile = Path.Combine(tempPath, zipFilename);
+            _zipFile = Path.Combine(BenefitsTempFile, zipFilename);
             if (File.Exists(_zipFile))
             {
                 File.Delete(_zipFile);
@@ -45,19 +45,19 @@ namespace StellaLauncher.Scripts.Patrons
             switch (benefitName)
             {
                 case "3dmigoto":
-                    successfullyUpdated = Resources.UpdateBenefits_SuccessfullyUpdated3DMigotoMods;
+                    _successfullyUpdated = Resources.UpdateBenefits_SuccessfullyUpdated3DMigotoMods;
                     break;
                 case "addons":
-                    successfullyUpdated = Resources.UpdateBenefits_SuccessfullyUpdatedAddons;
+                    _successfullyUpdated = Resources.UpdateBenefits_SuccessfullyUpdatedAddons;
                     break;
                 case "presets":
-                    successfullyUpdated = Resources.UpdateBenefits_SuccessfullyUpdatedPresets;
+                    _successfullyUpdated = Resources.UpdateBenefits_SuccessfullyUpdatedPresets;
                     break;
                 case "shaders":
-                    successfullyUpdated = Resources.UpdateBenefits_SuccessfullyUpdatedShaders;
+                    _successfullyUpdated = Resources.UpdateBenefits_SuccessfullyUpdatedShaders;
                     break;
                 case "cmd":
-                    successfullyUpdated = Resources.UpdateBenefits_SuccessfullyUpdatedCmdFiles;
+                    _successfullyUpdated = Resources.UpdateBenefits_SuccessfullyUpdatedCmdFiles;
                     break;
                 default:
                     throw new InvalidEnumArgumentException();
@@ -112,17 +112,21 @@ namespace StellaLauncher.Scripts.Patrons
             await DownloadResources.UnzipWithProgress(_zipFile, _outputDir);
             Log.Output($"Unpacked: {_zipFile}");
 
+            // Delete file
+            File.Delete(_zipFile);
+
             // Success
             Default._progressBar1.Hide();
             Default._preparingPleaseWait.Hide();
-            Default._status_Label.Text += $"[\u2713] {successfullyUpdated}\n";
-            Log.Output(successfullyUpdated);
-
+            Default._status_Label.Text += $"[\u2713] {_successfullyUpdated}\n";
+            Log.Output(_successfullyUpdated);
 
             // Check for updates again
             int foundUpdated = await CheckForUpdates.Analyze();
-            if (foundUpdated == 0) Labels.ShowStartGameBtns();
-            else Labels.HideStartGameBtns();
+            if (foundUpdated == 0)
+                Labels.ShowStartGameBtns();
+            else
+                Labels.HideStartGameBtns();
         }
     }
 }
