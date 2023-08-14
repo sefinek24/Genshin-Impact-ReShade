@@ -27,16 +27,16 @@ namespace StellaLauncher.Scripts.Patrons
                     Default._version_LinkLabel.Text = $@"v{modsJsonConverted.Version} → v{versions.Message.Resources.Mods}";
 
                     MessageBox.Show(
-                        $"New 3DMigoto mod updates for patrons detected! Your current mods will NOT be removed.\n\nClick OK to proceed with the update.\n\nNew version: v{versions.Message.Resources.Mods}\nYour version: v{modsJsonConverted.Version} from {modsJsonConverted.Date}\n",
+                        $"New 3DMigoto mod updates for patrons detected! Your current mods will NOT be removed.\n\nClick OK to proceed with the update.\n\nYour version: v{modsJsonConverted.Version} from {modsJsonConverted.Date}\nNew version: v{versions.Message.Resources.Mods}",
                         Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    UpdateBenefits.Download("3dmigoto", "3DMigoto mods.zip", Path.GetDirectoryName(modsVersionPath));
+                    UpdateBenefits.Download("3dmigoto", $"3DMigoto mods update - v{versions.Message.Resources.Mods}.zip", Path.GetDirectoryName(modsVersionPath));
                     return 1;
                 }
             }
             else
             {
-                UpdateBenefits.Download("3dmigoto", "3DMigoto mods.zip", Path.GetDirectoryName(modsVersionPath));
+                UpdateBenefits.Download("3dmigoto", $"3DMigoto mods - v{versions.Message.Resources.Mods}.zip", Path.GetDirectoryName(modsVersionPath));
                 return 1;
             }
 
@@ -52,16 +52,16 @@ namespace StellaLauncher.Scripts.Patrons
                     Default._version_LinkLabel.Text = $@"v{addonsJsonConverted.Version} → v{versions.Message.Resources.Addons}";
 
                     MessageBox.Show(
-                        $"A new version of the Addons is available.\n\nCurrent version: {addonsJsonConverted.Version}\nNew version: {versions.Message.Resources.Addons}",
+                        $"The new update for ReShade addons is available! Click the OK button to proceed with the update.\n\nCurrent version: v{addonsJsonConverted.Version} from {addonsJsonConverted.Date}\nNew version: v{versions.Message.Resources.Addons}",
                         Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    UpdateBenefits.Download("addons", "Addons.zip", Path.GetDirectoryName(addonsVersionPath));
+                    UpdateBenefits.Download("addons", $"Addons update - v{versions.Message.Resources.Addons}.zip", Path.GetDirectoryName(addonsVersionPath));
                     return 1;
                 }
             }
             else
             {
-                UpdateBenefits.Download("addons", "Addons.zip", Path.GetDirectoryName(addonsVersionPath));
+                UpdateBenefits.Download("addons", $"Addons - v{versions.Message.Resources.Addons}.zip", Path.GetDirectoryName(addonsVersionPath));
                 return 1;
             }
 
@@ -77,16 +77,16 @@ namespace StellaLauncher.Scripts.Patrons
                     Default._version_LinkLabel.Text = $@"v{presetsJsonConverted.Version} → v{versions.Message.Resources.Presets}";
 
                     MessageBox.Show(
-                        $"A new version of the Presets is available.\n\nCurrent version: {presetsJsonConverted.Version}\nNew version: {versions.Message.Resources.Presets}",
+                        $"A new version of the Presets is available.\n\nCurrent version: v{presetsJsonConverted.Version} from {presetsJsonConverted.Date}\nNew version: v{versions.Message.Resources.Presets}",
                         Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    UpdateBenefits.Download("presets", "Presets.zip", Path.GetDirectoryName(presetsVersionPath));
+                    UpdateBenefits.Download("presets", $"Presets update - v{versions.Message.Resources.Presets}.zip", Path.GetDirectoryName(presetsVersionPath));
                     return 1;
                 }
             }
             else
             {
-                UpdateBenefits.Download("presets", "Presets.zip", Path.GetDirectoryName(presetsVersionPath));
+                UpdateBenefits.Download("presets", $"Presets - v{versions.Message.Resources.Presets}.zip", Path.GetDirectoryName(presetsVersionPath));
                 return 1;
             }
 
@@ -102,16 +102,16 @@ namespace StellaLauncher.Scripts.Patrons
                     Default._version_LinkLabel.Text = $@"v{shadersJsonConverted.Version} → v{versions.Message.Resources.Shaders}";
 
                     MessageBox.Show(
-                        $"A new version of the Shaders is available.\n\nCurrent version: {shadersJsonConverted.Version}\nNew version: {versions.Message.Resources.Shaders}",
+                        $"A new version of the Shaders is available.\n\nCurrent version: v{shadersJsonConverted.Version} from {shadersJsonConverted.Date}\nNew version: v{versions.Message.Resources.Shaders}",
                         Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    UpdateBenefits.Download("shaders", "Shaders.zip", Path.GetDirectoryName(shadersVersionPath));
+                    UpdateBenefits.Download("shaders", $"Shaders update - v{versions.Message.Resources.Shaders}.zip", Path.GetDirectoryName(shadersVersionPath));
                     return 1;
                 }
             }
             else
             {
-                UpdateBenefits.Download("shaders", "Shaders.zip", Path.GetDirectoryName(shadersVersionPath));
+                UpdateBenefits.Download("shaders", $"Shaders - v{versions.Message.Resources.Shaders}.zip", Path.GetDirectoryName(shadersVersionPath));
                 return 1;
             }
 
@@ -127,16 +127,16 @@ namespace StellaLauncher.Scripts.Patrons
                     Default._version_LinkLabel.Text = $@"v{cmdJsonConverted.Version} → v{versions.Message.Resources.Cmd}";
 
                     MessageBox.Show(
-                        $"A new version of the CMD files is available.\n\nCurrent version: {cmdJsonConverted.Version}\nNew version: {versions.Message.Resources.Cmd}",
+                        $"A new version of the CMD files is available.\n\nCurrent version: v{cmdJsonConverted.Version} from {cmdJsonConverted.Date}\nNew version: v{versions.Message.Resources.Cmd}",
                         Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    UpdateBenefits.Download("cmd", "Batch files.zip", Path.GetDirectoryName(cmdVersionPath));
+                    UpdateBenefits.Download("cmd", $"Batch files update - {versions.Message.Resources.Cmd}.zip", Path.GetDirectoryName(cmdVersionPath));
                     return 1;
                 }
             }
             else
             {
-                UpdateBenefits.Download("cmd", "Batch files.zip", Path.GetDirectoryName(cmdVersionPath));
+                UpdateBenefits.Download("cmd", $"Batch files - {versions.Message.Resources.Cmd}.zip", Path.GetDirectoryName(cmdVersionPath));
                 return 1;
             }
 
