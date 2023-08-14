@@ -10,7 +10,7 @@ namespace PrepareStella.Scripts.Preparing
 {
     internal static class DownloadUpdateResources
     {
-        public static async void Run()
+        public static async Task Run()
         {
             string resourcesGlobalPath = Program.ResourcesGlobal;
 

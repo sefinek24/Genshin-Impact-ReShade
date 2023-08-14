@@ -165,7 +165,7 @@ namespace PrepareStella
             if (downloadOrUpdateShaders == 1)
             {
                 Console.WriteLine(@"Checking Stella resources...");
-                DownloadUpdateResources.Run();
+                await DownloadUpdateResources.Run();
                 TaskbarManager.Instance.SetProgressValue(39, 100);
             }
 
@@ -173,7 +173,7 @@ namespace PrepareStella
             if (updateReShadeCfg == 1)
             {
                 Console.WriteLine(@"Downloading ReShade files...");
-                UpdateReShadeCfg.Run();
+                await UpdateReShadeCfg.Run();
                 TaskbarManager.Instance.SetProgressValue(46, 100);
             }
 
@@ -189,7 +189,7 @@ namespace PrepareStella
             if (updateFpsUnlockerCfg == 1)
             {
                 Console.WriteLine(@"Downloading FPS Unlocker configuration...");
-                DownloadFpsUnlockerCfg.Run();
+                await DownloadFpsUnlockerCfg.Run();
                 TaskbarManager.Instance.SetProgressValue(68, 100);
             }
 
