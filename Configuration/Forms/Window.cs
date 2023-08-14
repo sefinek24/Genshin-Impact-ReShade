@@ -12,7 +12,7 @@ namespace Configuration.Forms
     public partial class Window : Form
     {
         private static readonly string AppData = GetAppData();
-        private static bool MsStore;
+        private static bool _msStore;
         public static readonly string AppName = Assembly.GetExecutingAssembly().GetName().Name;
         private static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
 
@@ -39,19 +39,19 @@ namespace Configuration.Forms
         {
             try
             {
-                MsStore = true;
+                _msStore = true;
                 return Path.Combine(ApplicationData.Current?.LocalFolder?.Path);
             }
             catch (InvalidOperationException)
             {
-                MsStore = false;
+                _msStore = false;
                 return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
             }
         }
 
         private void Main_Load(object sender, EventArgs e)
         {
-            if (MsStore)
+            if (_msStore)
             {
                 checkBox2.Checked = false;
                 checkBox3.Checked = false;
@@ -71,8 +71,17 @@ namespace Configuration.Forms
             }
             else
             {
-                int data3 = _prepareIni.ReadInt("PrepareStella", "DownloadOrUpdateShaders", 1);
-                checkBox7.Checked = data3 != 0;
+                bool isMyPatron = CheckData.IsUserMyPatron();
+                if (isMyPatron)
+                {
+                    checkBox7.Checked = false;
+                    checkBox7.Enabled = false;
+                }
+                else
+                {
+                    int data3 = _prepareIni.ReadInt("PrepareStella", "DownloadOrUpdateShaders", 1);
+                    checkBox7.Checked = data3 != 0;
+                }
             }
 
             int data4 = _prepareIni.ReadInt("PrepareStella", "UpdateReShadeConfig", 1);
@@ -98,7 +107,7 @@ namespace Configuration.Forms
         // Checkboxes
         private void NewShortcutsOnDesktop_CheckedChanged(object sender, EventArgs e)
         {
-            if (MsStore && checkBox2.Checked)
+            if (_msStore && checkBox2.Checked)
             {
                 checkBox2.Checked = false;
                 MessageBox.Show(Resources.YouCannotCreateANewIconOnYourDesktopWhenAnAppIsInstalledFromTheMStore, AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -110,7 +119,7 @@ namespace Configuration.Forms
 
         private void InternetShortcutsInStartMenu_CheckedChanged(object sender, EventArgs e)
         {
-            if (MsStore && checkBox3.Checked)
+            if (_msStore && checkBox3.Checked)
             {
                 checkBox3.Checked = false;
                 MessageBox.Show(Resources.YouCannotCreateANewIconsInTheSMWhenAnAppIsInstalledFromTheMStore, AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);

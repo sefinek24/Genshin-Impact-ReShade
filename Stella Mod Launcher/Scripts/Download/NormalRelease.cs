@@ -207,6 +207,11 @@ namespace StellaLauncher.Scripts.Download
             _ = Cmd.Execute(command);
 
 
+            // IniFile prepareIni = new IniFile(Path.Combine(Program.AppData, "prepare-stella.ini"));
+            // prepareIni.WriteInt("Launcher", "UserIsMyPatron", Secret.IsMyPatron ? 1 : 0);
+            // prepareIni.WriteInt("PrepareStella", "DownloadOrUpdateShaders", 0);
+            // prepareIni.Save();
+
             Default._progressBar1.Style = ProgressBarStyle.Continuous;
             for (int i = 15; i >= 0; i--)
             {

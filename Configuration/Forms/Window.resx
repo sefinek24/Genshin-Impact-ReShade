@@ -244,13 +244,13 @@
     <value>True</value>
   </data>
   <data name="checkBox1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>UD Digi Kyokasho NK-R, 12.75pt</value>
+    <value>Microsoft Sans Serif, 12.75pt</value>
   </data>
   <data name="checkBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 424</value>
   </data>
   <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>334, 24</value>
+    <value>301, 24</value>
   </data>
   <data name="checkBox1.TabIndex" type="System.Int32, mscorlib">
     <value>81</value>
@@ -277,13 +277,13 @@
     <value>True</value>
   </data>
   <data name="checkBox2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>UD Digi Kyokasho NK-R, 12.75pt</value>
+    <value>Microsoft Sans Serif, 12.75pt</value>
   </data>
   <data name="checkBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 280</value>
   </data>
   <data name="checkBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>351, 24</value>
+    <value>318, 24</value>
   </data>
   <data name="checkBox2.TabIndex" type="System.Int32, mscorlib">
     <value>82</value>
@@ -310,13 +310,13 @@
     <value>True</value>
   </data>
   <data name="checkBox3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>UD Digi Kyokasho NK-R, 12.75pt</value>
+    <value>Microsoft Sans Serif, 12.75pt</value>
   </data>
   <data name="checkBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 304</value>
   </data>
   <data name="checkBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>433, 24</value>
+    <value>392, 24</value>
   </data>
   <data name="checkBox3.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
@@ -343,13 +343,13 @@
     <value>True</value>
   </data>
   <data name="checkBox4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>UD Digi Kyokasho NK-R, 12.75pt</value>
+    <value>Microsoft Sans Serif, 12.75pt</value>
   </data>
   <data name="checkBox4.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 352</value>
   </data>
   <data name="checkBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>461, 24</value>
+    <value>415, 24</value>
   </data>
   <data name="checkBox4.TabIndex" type="System.Int32, mscorlib">
     <value>84</value>
@@ -376,13 +376,13 @@
     <value>True</value>
   </data>
   <data name="checkBox5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>UD Digi Kyokasho NK-R, 12.75pt</value>
+    <value>Microsoft Sans Serif, 12.75pt</value>
   </data>
   <data name="checkBox5.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 376</value>
   </data>
   <data name="checkBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>379, 24</value>
+    <value>346, 24</value>
   </data>
   <data name="checkBox5.TabIndex" type="System.Int32, mscorlib">
     <value>85</value>
@@ -409,13 +409,13 @@
     <value>True</value>
   </data>
   <data name="checkBox6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>UD Digi Kyokasho NK-R, 12.75pt</value>
+    <value>Microsoft Sans Serif, 12.75pt</value>
   </data>
   <data name="checkBox6.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 400</value>
   </data>
   <data name="checkBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 24</value>
+    <value>211, 24</value>
   </data>
   <data name="checkBox6.TabIndex" type="System.Int32, mscorlib">
     <value>86</value>
@@ -509,13 +509,13 @@ Congratulations! Now let's proceed to complete the final steps. Please select th
     <value>True</value>
   </data>
   <data name="checkBox7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>UD Digi Kyokasho NK-R, 12.75pt</value>
+    <value>Microsoft Sans Serif, 12.75pt</value>
   </data>
   <data name="checkBox7.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 328</value>
   </data>
   <data name="checkBox7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>521, 24</value>
+    <value>473, 24</value>
   </data>
   <data name="checkBox7.TabIndex" type="System.Int32, mscorlib">
     <value>89</value>

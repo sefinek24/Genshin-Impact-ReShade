@@ -111,7 +111,17 @@ namespace StellaLauncher
                 }
             }
 
+            // Is launcher updated?
+            // IniFile prepareIni = new IniFile(Path.Combine(AppData, "prepare-stella.ini"));
+            // int newUpdate = prepareIni.ReadInt("Launcher", "UserIsMyPatron", 0);
+            // if (newUpdate == 1)
+            // {
+            //     _ = Cmd.Execute(new Cmd.CliWrap { App = PrepareLauncher });
+            //     Environment.Exit(997890421);
+            // }
 
+
+            // Run
             try
             {
                 Application.Run(new Default { Icon = Ico });
