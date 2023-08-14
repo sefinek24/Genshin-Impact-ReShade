@@ -19,25 +19,30 @@ namespace PrepareStella.Scripts.Preparing
             string cacheDirectoryPath = Path.Combine(Program.ResourcesGlobal, "ReShade", "Cache");
 
             if (Directory.Exists(cacheDirectoryPath))
-                foreach (string filePath in Directory.EnumerateFiles(cacheDirectoryPath))
+            {
+                string[] files = Directory.GetFiles(cacheDirectoryPath);
+                foreach (string filePath in files)
                 {
                     FileInfo file = new FileInfo(filePath);
                     savedSpace += file.Length;
                     await DeleteFileAsync(filePath);
                     deletedFilesCount++;
                 }
+            }
             else
+            {
                 Directory.CreateDirectory(cacheDirectoryPath);
+            }
 
             if (deletedFilesCount > 0)
             {
                 string spaceUnit = savedSpace > MegabyteInBytes ? "MB" : "KB";
                 double spaceSaved = savedSpace / (double)(savedSpace > MegabyteInBytes ? MegabyteInBytes : KilobyteInBytes);
-                Console.WriteLine($"Deleted {deletedFilesCount} cache files and saved {spaceSaved:F2} {spaceUnit}.");
+                Log.Output($"Deleted {deletedFilesCount} cache files and saved {spaceSaved:F2} {spaceUnit}.");
             }
             else
             {
-                Console.WriteLine("No cache files found to delete.");
+                Log.Output("No cache files found to delete.");
             }
         }
 
@@ -46,10 +51,11 @@ namespace PrepareStella.Scripts.Preparing
             try
             {
                 await Task.Run(() => File.Delete(filePath));
+                Log.Output($"Deleted cache file: {filePath}");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error deleting file {filePath}: {ex.Message}");
+                Log.Output($"Error deleting file {filePath}: {ex.Message}");
             }
         }
     }
