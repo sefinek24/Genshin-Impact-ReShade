@@ -30,7 +30,7 @@ namespace StellaLauncher.Scripts.Patrons
                     $"New 3DMigoto mod updates for patrons detected! Your current mods will NOT be removed.\n\nClick OK to proceed with the update.\n\nNew version: v{versions.Message.Resources.Mods}\nYour version: v{modsJsonConverted.Version} from {modsJsonConverted.Date}\n",
                     Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                UpdateBenefits.Download("3DMigoto mods.zip", "3dmigoto");
+                UpdateBenefits.Download("3dmigoto", "3DMigoto mods.zip", Path.GetDirectoryName(modsVersionPath));
                 return 1;
             }
 
@@ -46,7 +46,7 @@ namespace StellaLauncher.Scripts.Patrons
                     $"A new version of the Addons is available.\n\nCurrent version: {addonsJsonConverted.Version}\nNew version: {versions.Message.Resources.Addons}",
                     Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                UpdateBenefits.Download("Addons.zip", "addons");
+                UpdateBenefits.Download("addons", "Addons.zip", Path.GetDirectoryName(addonsVersionPath));
                 return 1;
             }
 
@@ -62,7 +62,7 @@ namespace StellaLauncher.Scripts.Patrons
                     $"A new version of the Presets is available.\n\nCurrent version: {presetsJsonConverted.Version}\nNew version: {versions.Message.Resources.Presets}",
                     Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                UpdateBenefits.Download("Presets.zip", "presets");
+                UpdateBenefits.Download("presets", "Presets.zip", Path.GetDirectoryName(presetsVersionPath));
                 return 1;
             }
 
@@ -79,7 +79,7 @@ namespace StellaLauncher.Scripts.Patrons
                     $"A new version of the Shaders is available.\n\nCurrent version: {shadersJsonConverted.Version}\nNew version: {versions.Message.Resources.Shaders}",
                     Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                UpdateBenefits.Download("Shaders.zip", "shaders");
+                UpdateBenefits.Download("shaders", "Shaders.zip", Path.GetDirectoryName(shadersVersionPath));
                 return 1;
             }
 
@@ -96,9 +96,27 @@ namespace StellaLauncher.Scripts.Patrons
                     webClient.Headers.Add("User-Agent", Program.UserAgent);
 
                     string jsonResponse = await webClient.DownloadStringTaskAsync($"{Program.WebApi}/genshin-stella-mod/patrons/benefits/version");
-
                     return JsonConvert.DeserializeObject<BenefitVersions>(jsonResponse);
                 }
+            }
+            catch (WebException webEx)
+            {
+                if (webEx.Response is HttpWebResponse response)
+                {
+                    using (StreamReader reader = new StreamReader(response.GetResponseStream()))
+                    {
+                        string errorResponse = await reader.ReadToEndAsync();
+                        MessageBox.Show($@"An error occurred: {errorResponse}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Log.ErrorAndExit(new Exception(errorResponse));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show($@"An unrecoverable error occurred: {webEx.Message}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Log.ErrorAndExit(webEx);
+                }
+
+                return null;
             }
             catch (Exception ex)
             {

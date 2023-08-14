@@ -237,6 +237,7 @@ namespace StellaLauncher.Forms
             // Music
             await Music.PlayBg();
 
+
             // Done (:
             progressBar1.Value = 100;
             startGame_LinkLabel.Visible = true;
@@ -245,7 +246,6 @@ namespace StellaLauncher.Forms
             only3DMigoto_LinkLabel.Visible = true;
             runGiLauncher_LinkLabel.Visible = true;
             if (!Secret.IsMyPatron) _becomeMyPatron_LinkLabel.Visible = true;
-
             Utils.HideProgressBar(false);
         }
 
@@ -471,13 +471,13 @@ namespace StellaLauncher.Forms
                         App = "wt.exe",
                         WorkingDir = Program.AppPath,
                         Arguments = new ArgumentsBuilder()
-                            .Add(Secret.IsMyPatron ? "Genshin Stella Mod.exe" : RunCmd)
-                            .Add(Program.AppVersion) // 0
-                            .Add(Data.ReShadeVer) // 1
-                            .Add(Data.UnlockerVer) // 2
-                            .Add(6) // 3
-                            .Add(Secret.IsMyPatron ? 1 : 0) // 4
-                            .Add(ResourcesPath) // 5
+                            .Add("Genshin Stella Mod.exe") // 0
+                            .Add(Program.AppVersion) // 1
+                            .Add(Data.ReShadeVer) // 2
+                            .Add(Data.UnlockerVer) // 3
+                            .Add(5) // 4
+                            .Add(Secret.IsMyPatron ? 1 : 0) // 5
+                            .Add(ResourcesPath) // 6
                     };
                     break;
                 case "cmd":
@@ -486,11 +486,11 @@ namespace StellaLauncher.Forms
                         App = "wt.exe",
                         WorkingDir = Program.AppPath,
                         Arguments = new ArgumentsBuilder()
-                            .Add(Secret.IsMyPatron ? DownloadCmd.RunCmdPatrons : RunCmd)
+                            .Add(RunCmd) // 0
                             .Add(Program.AppVersion) // 1
                             .Add(Data.ReShadeVer) // 2
                             .Add(Data.UnlockerVer) // 3
-                            .Add(6) // 4
+                            .Add(5) // 4
                             .Add(Secret.IsMyPatron ? $"\"{ResourcesPath}\\3DMigoto\"" : "0") // 5 
                             .Add(await Utils.GetGameVersion()) // 6
                             .Add(Log.CmdLogs) // 7

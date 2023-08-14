@@ -20,11 +20,10 @@ namespace StellaLauncher.Scripts.Patrons
 
         private static readonly string DownloadUrl = $"{Program.WebApi}/genshin-stella-mod/patrons/benefits/download";
         private static string _zipFile;
+        private static string _outputDir;
 
         // Paths
-        private static readonly string MigotoPath = Path.Combine(Default.ResourcesPath, "3DMigoto");
-
-        public static async void Download(string zipFilename, string benefitName)
+        public static async void Download(string benefitName, string zipFilename, string dirPathToUnpack)
         {
             string tempPath = Path.Combine(Default.ResourcesPath, "temp");
             if (!Directory.Exists(tempPath))
@@ -39,6 +38,8 @@ namespace StellaLauncher.Scripts.Patrons
                 File.Delete(_zipFile);
                 Log.Output($"Deleted file: {_zipFile}");
             }
+
+            _outputDir = dirPathToUnpack;
 
             Default._progressBar1.Show();
             Default._preparingPleaseWait.Show();
@@ -83,11 +84,11 @@ namespace StellaLauncher.Scripts.Patrons
 
         private static async void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
-            Log.Output($"Unpacking {_zipFile} to {MigotoPath}");
+            Log.Output($"Unpacking {_zipFile} to {_outputDir}");
 
             Default._preparingPleaseWait.Text = Resources.StellaResources_UnpackingFiles;
 
-            await DownloadResources.UnzipWithProgress(_zipFile, MigotoPath);
+            await DownloadResources.UnzipWithProgress(_zipFile, _outputDir);
 
             Default._progressBar1.Hide();
             Default._preparingPleaseWait.Hide();
