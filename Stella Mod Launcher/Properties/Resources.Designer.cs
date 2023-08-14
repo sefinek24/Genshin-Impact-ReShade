@@ -1699,7 +1699,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Successfully updated shaders to the latest version for patrons..
+        ///   Looks up a localized string similar to Successfully updated shaders for patrons to the latest version..
         /// </summary>
         internal static string UpdateBenefits_SuccessfullyUpdatedShaders {
             get {

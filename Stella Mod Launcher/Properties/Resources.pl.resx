@@ -748,4 +748,19 @@ Czy chcesz odwiedzić Patreon.com i dokonać subskrypcji? Zyskasz dostęp do wie
   <data name="DownloadCmd_SuccesfullyDownloadedOrUpdatedFile_" xml:space="preserve">
     <value>{0}: Pomyślnie pobrano lub zaktualizowano plik: {1}</value>
   </data>
+  <data name="UpdateBenefits_SuccessfullyUpdated3DMigotoMods" xml:space="preserve">
+    <value>Pomyślnie zaktualizowano mody 3DMigoto dla patronów.</value>
+  </data>
+  <data name="UpdateBenefits_SuccessfullyUpdatedAddons" xml:space="preserve">
+    <value>Pomyślnie zaktualizowano dodatki ReShade dla patronów.</value>
+  </data>
+  <data name="UpdateBenefits_SuccessfullyUpdatedCmdFiles" xml:space="preserve">
+    <value>Pomyślnie zaktualizowano pliki cmd (wsadowe) do najnowszej wersji.</value>
+  </data>
+  <data name="UpdateBenefits_SuccessfullyUpdatedPresets" xml:space="preserve">
+    <value>Pomyślnie zaktualizowano ustawienia wstępne (z lub bez RT) dla patronów.</value>
+  </data>
+  <data name="UpdateBenefits_SuccessfullyUpdatedShaders" xml:space="preserve">
+    <value>Pomyślnie zaktualizowano shadery dla patronów do najnowszej wersji.</value>
+  </data>
 </root>

@@ -749,6 +749,6 @@ REMEMBER NOT TO SHARE YOUR UID WITH VISIBLE GAME SHADERS WITH ANYONE!</value>
     <value>Successfully updated presets (with or without RT) for patrons.</value>
   </data>
   <data name="UpdateBenefits_SuccessfullyUpdatedShaders" xml:space="preserve">
-    <value>Successfully updated shaders to the latest version for patrons.</value>
+    <value>Successfully updated shaders for patrons to the latest version.</value>
   </data>
 </root>
