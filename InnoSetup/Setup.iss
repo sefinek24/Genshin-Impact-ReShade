@@ -2,7 +2,7 @@
 #define AppVersion "7.7.0.0"
 #define AppPublisher "Sefinek Inc."
 #define AppURL "https://genshin.sefinek.net"
-#define AppExeName "Genshin Stella Mod.exe"
+#define AppExeName "Stella Mod Launcher.exe"
 #define AppId "5D6E44F3-2141-4EA4-89E3-6C3018583FF7"
 
 [Setup]
