@@ -11,23 +11,27 @@ namespace StellaLauncher.Scripts.Patrons
     {
         public static async Task RunAsync()
         {
-            string presets = Path.Combine(Default.ResourcesPath, "ReShade", "Presets", "3. Only for patrons");
-            string addons = Path.Combine(Default.ResourcesPath, "ReShade", "Addons");
-            string migotoDir = Path.Combine(Default.ResourcesPath, "3DMigoto");
-
             // Delete files for patrons
+            string presets = Path.Combine(Default.ResourcesPath, "ReShade", "Presets", "3. Only for patrons");
             if (Directory.Exists(presets)) await DeleteDirectoryAsync(presets);
+            string addons = Path.Combine(Default.ResourcesPath, "ReShade", "Addons");
             if (Directory.Exists(addons)) await DeleteDirectoryAsync(addons);
 
             // Delete 3DMigoto files
+            string migotoDir = Path.Combine(Default.ResourcesPath, "3DMigoto");
             string[] filesToDelete = { "d3d11.dll", "d3dcompiler_46.dll", "loader.exe", "nvapi64.dll" };
             DeleteFiles(migotoDir, filesToDelete);
+
+            // Delete cmd files
+            string cmdPath = Path.Combine(Program.AppPath, "data", "cmd");
+            string[] cmdFilesToDelete = { "run.cmd", "run-patrons.cmd" };
+            DeleteFiles(cmdPath, cmdFilesToDelete);
 
             // Delete key
             DeleteRegistryKey();
         }
 
-        private static void DeleteFiles(string folderPath, string[] filesToDelete)
+        private static void DeleteFiles(string folderPath, IEnumerable<string> filesToDelete)
         {
             Log.Output($"Deleting files in folder: {folderPath}");
 
