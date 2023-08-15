@@ -42,7 +42,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 case 55:
                 case 60:
                     if (!Secret.IsMyPatron) new SupportMe { Icon = Program.Ico }.ShowDialog();
-                    return;
+                    break;
 
                 // case 15:
                 // case 29:
