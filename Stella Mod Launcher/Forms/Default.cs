@@ -231,10 +231,23 @@ namespace StellaLauncher.Forms
 
             // Check InjectType
             string injectMode = Program.Settings.ReadString("Launcher", "InjectType", "exe");
-            if (!Secret.IsMyPatron && injectMode == "exe")
-                Secret.InjectType = "cmd";
-            else
-                Secret.InjectType = injectMode;
+            switch (injectMode)
+            {
+                case "exe":
+                    Secret.InjectType = "exe";
+                    break;
+                case "cmd":
+                    Secret.InjectType = Secret.IsMyPatron ? "cmd" : "exe";
+                    break;
+                default:
+                {
+                    Secret.InjectType = "exe";
+                    Program.Settings.ReadString("Launcher", "InjectType", "exe");
+                    Program.Settings.Save();
+                    break;
+                }
+            }
+
 
             progressBar1.Value = 88;
 

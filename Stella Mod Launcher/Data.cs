@@ -8,7 +8,7 @@ namespace StellaLauncher
         public static readonly string Email = "contact@sefinek.net";
 
         /* Versions */
-        public static readonly string ReShadeVer = "5.8.0";
+        public static readonly string ReShadeVer = "5.9.1";
         public static readonly string UnlockerVer = "2.0.11";
     }
 }
