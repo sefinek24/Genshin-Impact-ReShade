@@ -764,4 +764,10 @@ REMEMBER NOT TO SHARE YOUR UID WITH VISIBLE GAME SHADERS WITH ANYONE!</value>
 
 In newer versions of Stella Mod, saving paths has been moved to the registry. If you have just updated the software, click OK. The configuration window will be launched.</value>
   </data>
+  <data name="LaunchCount_ABigThankYouTouYouForYourWillingnessToSupport" xml:space="preserve">
+    <value>A big thank you to you for your willingness to support! ~ Sefinek</value>
+  </data>
+  <data name="LaunchCount_TheSimultaneousOfUseRSFU3DM" xml:space="preserve">
+    <value>The simultaneous use of ReShade, FPS Unlock, and 3DMigoto is only possible for patrons.</value>
+  </data>
 </root>

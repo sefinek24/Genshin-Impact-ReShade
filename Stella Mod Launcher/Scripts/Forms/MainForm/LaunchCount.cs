@@ -1,5 +1,4 @@
 using System;
-using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Win32;
@@ -20,7 +19,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 
             switch (launchCount)
             {
-                case 5:
+                case 3:
                 case 20:
                 case 30:
                     DialogResult discordResult = MessageBox.Show(Resources.Program_DoYouWantToJoinOurDiscord, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -28,42 +27,43 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                     if (discordResult == DialogResult.Yes) Utils.OpenUrl(Discord.Invitation);
                     break;
 
-                case 2:
-                case 12:
-                case 40:
+                case 4:
+                case 17:
                     DialogResult feedbackResult = MessageBox.Show(Resources.Program_WouldYouShareOpinionAboutStellaMod, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     Log.Output($"Question (MessageBox): Would you share your opinion about Stella Mod on trustpilot.com? I would be very grateful. Selected: {feedbackResult}");
                     if (feedbackResult == DialogResult.Yes) Utils.OpenUrl("https://www.trustpilot.com/review/genshin.sefinek.net");
                     break;
 
-                case 3:
+                case 2:
                 case 10:
                 case 25:
                 case 35:
                 case 45:
+                case 55:
+                case 60:
                     if (!Secret.IsMyPatron) new SupportMe { Icon = Program.Ico }.ShowDialog();
                     return;
 
-                case 28:
-                case 70:
-                case 100:
-                case 200:
-                case 300:
-                    DialogResult logFilesResult = MessageBox.Show(Resources.Program_DoYouWantToSendUsanonymousLogFiles, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    Log.Output($"Question (MessageBox): Do you want to send log files? Selected: {logFilesResult}");
-                    if (logFilesResult == DialogResult.Yes)
-                    {
-                        Telemetry.SendLogFiles();
+                // case 15:
+                // case 29:
+                // case 40:
+                // case 80:
+                // case 110:
+                //     DialogResult logFilesResult = MessageBox.Show(Resources.Program_DoYouWantToSendUsanonymousLogFiles, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                //     Log.Output($"Question (MessageBox): Do you want to send log files? Selected: {logFilesResult}");
+                //     if (logFilesResult == DialogResult.Yes)
+                //     {
+                //         Telemetry.SendLogFiles();
+                // 
+                //       DialogResult showFilesResult = MessageBox.Show(Resources.Program_IfYouWishToSendLogsToTheDeveloperPleaseSendThemToMeOnDiscord, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                //       if (showFilesResult == DialogResult.Yes)
+                //       {
+                //           Process.Start(Log.Folder);
+                //           Log.Output($"Opened: {Log.Folder}");
+                //       }
+                //    }
 
-                        DialogResult showFilesResult = MessageBox.Show(Resources.Program_IfYouWishToSendLogsToTheDeveloperPleaseSendThemToMeOnDiscord, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (showFilesResult == DialogResult.Yes)
-                        {
-                            Process.Start(Log.Folder);
-                            Log.Output($"Opened: {Log.Folder}");
-                        }
-                    }
-
-                    break;
+                //    break;
             }
 
             switch (launchCount)
@@ -87,7 +87,10 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                     MessageBox.Show(Resources.Default_ItAppersThatIsYourFirstTimeLaunchingTheLauncher, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
                 case MessageType.StatusLabel:
-                    Default._status_Label.Text += $"[i] {(Secret.IsMyPatron ? Resources.Default_ClickStartGameButtonToInjectReShadeFPSUnlockAnd3DMigoto : Resources.Default_ClickStartGameButtonToInjectReShadeAndUseFPSUnlock)}\n";
+                    if (Secret.IsMyPatron)
+                        Default._status_Label.Text += $"[i] {Resources.Default_ClickStartGameButtonToInjectReShadeFPSUnlockAnd3DMigoto}\n[i] {Resources.LaunchCount_ABigThankYouTouYouForYourWillingnessToSupport}\n";
+                    else
+                        Default._status_Label.Text += $"[i] {Resources.Default_ClickStartGameButtonToInjectReShadeAndUseFPSUnlock}\n[i] {Resources.LaunchCount_TheSimultaneousOfUseRSFU3DM}\n";
                     break;
                 default:
                     throw new ArgumentException("Invalid message type. Supported types are 'MessageBox' and 'StatusLabel'.");
