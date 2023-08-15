@@ -170,28 +170,24 @@ namespace StellaLauncher.Scripts.Download
 
         private static async void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
-            Default._progressBar1.Style = ProgressBarStyle.Marquee;
-
             string logDir = Path.Combine(Log.Folder, "updates");
             if (!Directory.Exists(logDir)) Directory.CreateDirectory(logDir);
 
-            Log.Output("Waiting 4s...");
+            // Wait 7 seconds
+            Default._progressBar1.Style = ProgressBarStyle.Continuous;
+            for (int i = 7; i >= 0; i--)
+            {
+                Default._preparingPleaseWait.Text = string.Format(Resources.NormalRelease_JustAMoment_PleaseWait, i);
+                Log.Output($"Waiting {i}s...");
 
-            Default._preparingPleaseWait.Text = string.Format(Resources.NormalRelease_JustAMoment_PleaseWait, 4);
-            await Task.Delay(1000);
+                double progressPercentage = (7 - i) / 7.0 * 100;
+                Default._progressBar1.Value = (int)progressPercentage;
 
-            Default._preparingPleaseWait.Text = string.Format(Resources.NormalRelease_JustAMoment_PleaseWait, 3);
-            await Task.Delay(1000);
-
-            Default._preparingPleaseWait.Text = string.Format(Resources.NormalRelease_JustAMoment_PleaseWait, 2);
-            await Task.Delay(1000);
-
-            Default._preparingPleaseWait.Text = string.Format(Resources.NormalRelease_JustAMoment_PleaseWait, 1);
-            await Task.Delay(1000);
+                await Task.Delay(1000);
+            }
 
             Default._preparingPleaseWait.Text = Resources.NormalRelease_EverythingIsOkay_StartingSetup;
             TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
-            await Task.Delay(500);
 
 
             // Run setup
@@ -208,22 +204,18 @@ namespace StellaLauncher.Scripts.Download
             _ = Cmd.Execute(command);
 
 
-            // Ini
+            // Save settings
             Program.Settings.WriteInt("Updates", "UpdateAvailable", 1);
             Program.Settings.WriteString("Updates", "OldVersion", Program.AppVersion);
             Program.Settings.Save();
 
 
-            // Close launcher
-            Default._progressBar1.Style = ProgressBarStyle.Continuous;
-            for (int i = 15; i >= 0; i--)
+            // Wait 16 seconds and close launcher
+            Default._progressBar1.Style = ProgressBarStyle.Marquee;
+            for (int i = 16; i >= 0; i--)
             {
                 Default._preparingPleaseWait.Text = string.Format(Resources.NormalRelease_InstallANewVersionInTheWizard_ClosingLauncherIn_, i);
                 Log.Output($"Closing launcher in {i}s...");
-
-                double progressPercentage = (15 - i) / 15.0 * 100;
-                Default._progressBar1.Value = (int)progressPercentage;
-
                 await Task.Delay(1000);
             }
 
