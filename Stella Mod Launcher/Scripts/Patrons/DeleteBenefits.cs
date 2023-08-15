@@ -26,6 +26,7 @@ namespace StellaLauncher.Scripts.Patrons
             string cmdPath = Path.Combine(Program.AppPath, "data", "cmd");
             string[] cmdFilesToDelete = { "run.cmd", "run-patrons.cmd" };
             DeleteFiles(cmdPath, cmdFilesToDelete);
+            await DeleteDirectoryAsync(Path.Combine(presets, "start"));
 
             // Delete key
             DeleteRegistryKey();
