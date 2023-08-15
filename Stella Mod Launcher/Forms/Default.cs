@@ -128,11 +128,20 @@ namespace StellaLauncher.Forms
                 if (key != null) resourcesPath = (string)key.GetValue("ResourcesPath");
             }
 
-            if (string.IsNullOrEmpty(resourcesPath) || !Directory.Exists(resourcesPath))
+            if (string.IsNullOrEmpty(resourcesPath))
             {
-                Log.SaveError($"Directory {resourcesPath} was not found.");
-                MessageBox.Show(string.Format(Resources.Default_Directory_WasNotFound, resourcesPath), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Log.SaveError("Directory with the resources was not found.");
+                MessageBox.Show(Resources.Default_ResourceDirNotFound, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
+            if (!Directory.Exists(resourcesPath))
+            {
+                Log.SaveError($"Directory with the resources '{resourcesPath}' was not found.");
+                MessageBox.Show(string.Format(Resources.Default_Directory_WasNotFound, resourcesPath), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            if (string.IsNullOrEmpty(resourcesPath))
+            {
                 _ = Cmd.Execute(new Cmd.CliWrap { App = Program.PrepareLauncher });
                 Environment.Exit(997890421);
             }

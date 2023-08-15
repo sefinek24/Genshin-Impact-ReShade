@@ -757,4 +757,11 @@ REMEMBER NOT TO SHARE YOUR UID WITH VISIBLE GAME SHADERS WITH ANYONE!</value>
   <data name="Default_SMLSuccessfullyUpdatedToVersion_" xml:space="preserve">
     <value>Stella Mod Launcher has been successfully updated to version: v{0}</value>
   </data>
+  <data name="Default_ResourceDirNotFound" xml:space="preserve">
+    <value>Resource directory not found.
+
+
+
+In newer versions of Stella Mod, saving paths has been moved to the registry. If you have just updated the software, click OK. The configuration window will be launched.</value>
+  </data>
 </root>

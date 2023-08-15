@@ -472,6 +472,19 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Resource directory not found.
+        ///
+        ///
+        ///
+        ///In newer versions of Stella Mod, saving paths has been moved to the registry. If you have just updated the software, click OK. The configuration window will be launched..
+        /// </summary>
+        internal static string Default_ResourceDirNotFound {
+            get {
+                return ResourceManager.GetString("Default_ResourceDirNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Stella Mod Launcher has been successfully updated to version: v{0}.
         /// </summary>
         internal static string Default_SMLSuccessfullyUpdatedToVersion_ {

@@ -763,4 +763,11 @@ Czy chcesz odwiedzić Patreon.com i dokonać subskrypcji? Zyskasz dostęp do wie
   <data name="UpdateBenefits_SuccessfullyUpdatedShaders" xml:space="preserve">
     <value>Pomyślnie zaktualizowano shadery dla patronów do najnowszej wersji.</value>
   </data>
+  <data name="Default_ResourceDirNotFound" xml:space="preserve">
+    <value>Nie znaleziono katalogu zasobów.
+
+
+
+W nowszych wersjach Stella Mod zapisywanie ścieżek zostało przeniesione do rejestru. Jeśli właśnie zaktualizowałeś oprogramowanie, kliknij OK. Zostanie uruchomione okno konfiguracji.</value>
+  </data>
 </root>
