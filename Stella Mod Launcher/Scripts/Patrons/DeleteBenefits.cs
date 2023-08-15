@@ -1,7 +1,5 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Threading.Tasks;
 using Microsoft.Win32;
 using StellaLauncher.Forms;
 
@@ -11,12 +9,12 @@ namespace StellaLauncher.Scripts.Patrons
     {
         private static readonly string MigotoDir = Path.Combine(Default.ResourcesPath, "3DMigoto", "");
 
-        public static async Task RunAsync()
+        public static void RunAsync()
         {
             DeleteRegistryKey();
 
             // Delete presets for patrons
-            if (Directory.Exists(Program.PresetsPatronsPath)) await DeleteDirectoryAsync(Program.PresetsPatronsPath);
+            if (Directory.Exists(Program.PresetsPatronsPath)) Directory.Delete(Program.PresetsPatronsPath, true);
 
             // Delete 3DMigoto files
             string[] filesToDelete = { "d3d11.dll", "d3dcompiler_46.dll", "loader.exe", "nvapi64.dll" };
@@ -49,22 +47,6 @@ namespace StellaLauncher.Scripts.Patrons
                 Log.Output($"An error occurred while deleting files in folder: {folderPath}");
                 Log.SaveError(ex.ToString());
             }
-        }
-
-        private static async Task DeleteDirectoryAsync(string directoryPath)
-        {
-            string[] files = Directory.GetFiles(directoryPath);
-            string[] subDirectories = Directory.GetDirectories(directoryPath);
-
-            List<Task> deleteTasks = new List<Task>();
-
-            foreach (string file in files) deleteTasks.Add(Task.Run(() => File.Delete(file)));
-            foreach (string subDirectory in subDirectories) deleteTasks.Add(DeleteDirectoryAsync(subDirectory));
-
-            await Task.WhenAll(deleteTasks);
-
-            Directory.Delete(directoryPath);
-            Log.Output($"Deleted folder: {directoryPath}");
         }
 
         private static void DeleteRegistryKey()
