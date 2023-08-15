@@ -72,6 +72,9 @@ namespace StellaLauncher.Forms
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -88,6 +91,7 @@ namespace StellaLauncher.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -483,12 +487,43 @@ namespace StellaLauncher.Forms
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.TabStop = false;
             // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Name = "label2";
+            // 
+            // pictureBox13
+            // 
+            resources.ApplyResources(this.pictureBox13, "pictureBox13");
+            this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox13.Image = global::StellaLauncher.Properties.Resources.icons8_support;
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.TabStop = false;
+            // 
+            // linkLabel3
+            // 
+            this.linkLabel3.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.linkLabel3, "linkLabel3");
+            this.linkLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.linkLabel3.LinkColor = System.Drawing.Color.White;
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.TabStop = true;
+            this.toolTip1.SetToolTip(this.linkLabel3, resources.GetString("linkLabel3.ToolTip"));
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ConfReShade_LinkClicked);
+            // 
             // Tools
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::StellaLauncher.Properties.Resources.bg_tools;
+            this.Controls.Add(this.pictureBox13);
+            this.Controls.Add(this.linkLabel3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox16);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.pictureBox15);
@@ -550,6 +585,7 @@ namespace StellaLauncher.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -599,5 +635,8 @@ namespace StellaLauncher.Forms
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.LinkLabel linkLabel3;
     }
 }
