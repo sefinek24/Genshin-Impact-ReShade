@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.IO;
 using System.Net;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using StellaLauncher.Forms;
 using StellaLauncher.Properties;
 
 namespace StellaLauncher.Scripts.Download
@@ -13,16 +13,13 @@ namespace StellaLauncher.Scripts.Download
     /// </summary>
     internal static class FpsUnlockerCfg
     {
-        private static Label _statusLabel;
-
         /// <summary>
         ///     Starts the process of downloading and updating the FPS unlocker config file.
         /// </summary>
         /// <param name="statusLabel">Label control to display the download status.</param>
-        public static async Task RunAsync(Label statusLabel)
+        public static async Task RunAsync()
         {
-            statusLabel.Text += $"[i] {Resources.Default_DownloadingConfigFileForFPSUnlocker}\n";
-            _statusLabel = statusLabel;
+            Default._status_Label.Text += $"[i] {Resources.Default_DownloadingConfigFileForFPSUnlocker}\n";
 
             Log.Output("Downloading config file for FPS Unlocker...");
 
@@ -44,14 +41,14 @@ namespace StellaLauncher.Scripts.Download
             }
             catch (Exception ex)
             {
-                _statusLabel.Text += $"[x] {ex.Message}\n";
+                Default._status_Label.Text += $"[x] {ex.Message}\n";
                 Log.SaveError($"Failed to download {Path.GetFileName(Program.FpsUnlockerCfgPath)} in {Path.GetDirectoryName(Program.FpsUnlockerCfgPath)}.\n\n{ex}");
             }
         }
 
         private static void Client_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
-            // _statusLabel.Text += $"[i] {Resources.Main_PleaseWait}\n";
+            // Default._status_Label.Text += $"[i] {Resources.Main_PleaseWait}\n";
         }
 
         private static void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
@@ -66,7 +63,7 @@ namespace StellaLauncher.Scripts.Download
             File.WriteAllText(Program.FpsUnlockerCfgPath, fpsUnlockerCfg);
 
             // Update the status label to indicate successful completion
-            _statusLabel.Text += $"[✓] {Resources.Default_Success}\n";
+            Default._status_Label.Text += $"[✓] {Resources.Default_Success}\n";
 
             Log.Output("Done.");
         }

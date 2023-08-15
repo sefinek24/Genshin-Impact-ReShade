@@ -17,7 +17,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
             await CheckFileAsync(Program.ReShadePath);
 
             if (!File.Exists(Program.FpsUnlockerCfgPath) && !Debugger.IsAttached)
-                await FpsUnlockerCfg.RunAsync(Default._status_Label);
+                await FpsUnlockerCfg.RunAsync();
 
             if (Default._status_Label.Text.Length > 0)
                 Log.SaveError(Default._status_Label.Text);
