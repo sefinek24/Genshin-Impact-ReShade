@@ -9,7 +9,7 @@ namespace StellaLauncher.Scripts
 {
     internal static class Secret
     {
-        public const string RegistryKeyPath = @"SOFTWARE\Stella Mod Launcher";
+        public const string RegistryKeyPath = @"Software\Stella Mod Launcher";
         public static bool IsMyPatron = false;
         public static string InjectType;
         public static string BearerToken;

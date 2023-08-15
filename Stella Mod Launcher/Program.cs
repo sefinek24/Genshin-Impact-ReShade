@@ -34,7 +34,6 @@ namespace StellaLauncher
         public static readonly string InjectorPath = Path.Combine(AppPath, "data", "reshade", "inject64.exe");
         public static readonly string FpsUnlockerExePath = Path.Combine(AppPath, "data", "unlocker", "unlockfps_clr.exe");
         public static readonly string FpsUnlockerCfgPath = Path.Combine(AppPath, "data", "unlocker", "unlocker.config.json");
-        public static readonly string PresetsPatronsPath = Path.Combine(AppPath, "data", "presets", "3. Only for patrons");
         public static readonly Icon Ico = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
 
         // Web
@@ -79,8 +78,7 @@ namespace StellaLauncher
                 $"* ComputerInfo.GetCpuSerialNumber: {ComputerInfo.GetCpuSerialNumber()}\n" +
                 $"* AppPath: {AppPath}\n" +
                 $"* AppData: {AppData}\n" +
-                $"* FpsUnlockerCfgPath: {FpsUnlockerCfgPath}\n" +
-                $"* PresetsPatronsPath: {PresetsPatronsPath}");
+                $"* FpsUnlockerCfgPath: {FpsUnlockerCfgPath}");
 
 
             if (Process.GetProcessesByName(AppName).Length > 1)

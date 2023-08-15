@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Threading.Tasks;
 using Microsoft.Win32;
 using StellaLauncher.Forms;
 
@@ -7,21 +9,25 @@ namespace StellaLauncher.Scripts.Patrons
 {
     internal static class DeleteBenefits
     {
-        private static readonly string MigotoDir = Path.Combine(Default.ResourcesPath, "3DMigoto", "");
-
-        public static void RunAsync()
+        public static async Task RunAsync()
         {
-            DeleteRegistryKey();
+            string presets = Path.Combine(Default.ResourcesPath, "ReShade", "Presets", "3. Only for patrons");
+            string addons = Path.Combine(Default.ResourcesPath, "ReShade", "Addons");
+            string migotoDir = Path.Combine(Default.ResourcesPath, "3DMigoto");
 
-            // Delete presets for patrons
-            if (Directory.Exists(Program.PresetsPatronsPath)) Directory.Delete(Program.PresetsPatronsPath, true);
+            // Delete files for patrons
+            if (Directory.Exists(presets)) await DeleteDirectoryAsync(presets);
+            if (Directory.Exists(addons)) await DeleteDirectoryAsync(addons);
 
             // Delete 3DMigoto files
             string[] filesToDelete = { "d3d11.dll", "d3dcompiler_46.dll", "loader.exe", "nvapi64.dll" };
-            DeleteFilesInFolder(MigotoDir, filesToDelete);
+            DeleteFiles(migotoDir, filesToDelete);
+
+            // Delete key
+            DeleteRegistryKey();
         }
 
-        private static void DeleteFilesInFolder(string folderPath, string[] filesToDelete)
+        private static void DeleteFiles(string folderPath, string[] filesToDelete)
         {
             Log.Output($"Deleting files in folder: {folderPath}");
 
@@ -49,25 +55,45 @@ namespace StellaLauncher.Scripts.Patrons
             }
         }
 
+        private static async Task DeleteDirectoryAsync(string directoryPath)
+        {
+            string[] files = Directory.GetFiles(directoryPath);
+            string[] subDirectories = Directory.GetDirectories(directoryPath);
+
+            List<Task> deleteTasks = new List<Task>();
+
+            foreach (string file in files) deleteTasks.Add(Task.Run(() => File.Delete(file)));
+            foreach (string subDirectory in subDirectories) deleteTasks.Add(DeleteDirectoryAsync(subDirectory));
+
+            await Task.WhenAll(deleteTasks);
+
+            Log.Output($"Deleting folder: {directoryPath}");
+            Directory.Delete(directoryPath, true);
+        }
+
         private static void DeleteRegistryKey()
         {
-            string keyPath = $"{Secret.RegistryKeyPath}/Secret";
+            const string secret = "Secret";
 
             try
             {
-                using (RegistryKey key = Registry.LocalMachine.OpenSubKey(keyPath, true))
+                using (RegistryKey key = Registry.CurrentUser.OpenSubKey(Secret.RegistryKeyPath, true))
                 {
-                    if (key == null) return;
-
-                    foreach (string subKeyName in key.GetSubKeyNames()) key.DeleteSubKeyTree(subKeyName);
-
-                    Registry.LocalMachine.DeleteSubKeyTree(keyPath);
-                    Log.Output($"Deleted key: {keyPath}");
+                    if (key != null)
+                    {
+                        key.DeleteValue(secret);
+                        Log.Output($"Deleted key `{secret}` from the registry.");
+                    }
+                    else
+                    {
+                        Log.Output($"Registry key `{secret}` not found.");
+                    }
                 }
             }
             catch (Exception ex)
             {
-                Log.ThrowError(ex);
+                Log.Output($"An error occurred while deleting registry key `{secret}`.");
+                Log.SaveError(ex.ToString());
             }
         }
     }
