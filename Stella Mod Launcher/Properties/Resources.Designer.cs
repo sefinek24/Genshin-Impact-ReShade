@@ -326,7 +326,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [x] Directory {0} was not found..
+        ///   Looks up a localized string similar to Directory {0} was not found..
         /// </summary>
         internal static string Default_Directory_WasNotFound {
             get {

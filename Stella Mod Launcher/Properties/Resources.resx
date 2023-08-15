@@ -543,7 +543,7 @@ Do you want to reconfigure Stella Mod in the configuration window?</value>
     <value>Click here to update</value>
   </data>
   <data name="Default_Directory_WasNotFound" xml:space="preserve">
-    <value>[x] Directory {0} was not found.</value>
+    <value>Directory {0} was not found.</value>
   </data>
   <data name="Default_TheSoundFileWithMusicWasNotFound" xml:space="preserve">
     <value>The sound file with music was not found.</value>

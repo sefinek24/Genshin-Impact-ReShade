@@ -208,7 +208,7 @@ Ta czynność spowoduje utratę wszelkich niestandardowych konfiguracji, jakie d
     <value>Usunięto stary plik instalacyjny z folderu tymczasowego: {0}</value>
   </data>
   <data name="Default_Directory_WasNotFound" xml:space="preserve">
-    <value>[x] Katalog {0} nie został odnaleziony.</value>
+    <value>Katalog {0} nie został odnaleziony.</value>
   </data>
   <data name="Default_Done" xml:space="preserve">
     <value>Zrobione.</value>
