@@ -209,6 +209,17 @@ namespace StellaLauncher.Forms
             // Discord RPC
             Discord.InitRpc();
 
+
+            // Updated was updated?
+            int updatedLauncher = Program.Settings.ReadInt("Updates", "UpdateAvailable", 0);
+            string oldVersion = Program.Settings.ReadString("Updates", "OldVersion", null);
+            if (updatedLauncher == 1 && oldVersion != Program.AppVersion)
+            {
+                Program.Settings.WriteInt("Updates", "UpdateAvailable", 0);
+                Program.Settings.Save();
+                status_Label.Text += $"[✓] {Resources.Default_Congratulations}\n[i] {string.Format(Resources.Default_SMLSuccessfullyUpdatedToVersion_, Program.AppVersion)}";
+            }
+
             // Check for updates
             progressBar1.Value = 68;
             int found = await CheckForUpdates.Analyze();
@@ -217,8 +228,10 @@ namespace StellaLauncher.Forms
 
             // Check InjectType
             string injectMode = Program.Settings.ReadString("Launcher", "InjectType", "exe");
-            if (!Secret.IsMyPatron && injectMode == "exe") Secret.InjectType = "cmd";
-            else Secret.InjectType = injectMode;
+            if (!Secret.IsMyPatron && injectMode == "exe")
+                Secret.InjectType = "cmd";
+            else
+                Secret.InjectType = injectMode;
 
             progressBar1.Value = 88;
 

@@ -7,12 +7,9 @@ using File = System.IO.File;
 
 namespace PrepareStella.Scripts.Preparing
 {
-    /// <summary>
-    ///     Runs the Terminal installation process.
-    /// </summary>
     internal static class TerminalInstallation
     {
-        public static async Task Run()
+        public static async Task RunAsync()
         {
             string wtAppDataLocal = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Microsoft", "Windows Terminal");
             if (!Directory.Exists(wtAppDataLocal))
@@ -40,9 +37,9 @@ namespace PrepareStella.Scripts.Preparing
 
                     string zipFile = Path.Combine(Program.AppData, "Windows Terminal", $"wt-config.backup-{DateTime.Now:HHmm_dd.MM.yyyy}.zip");
                     if (!Directory.Exists(stellaWtBkp)) Directory.CreateDirectory(stellaWtBkp);
-                    Zip.Create(wtAppDataLocal, zipFile);
+                    await Zip.CreateAsync(wtAppDataLocal, zipFile);
 
-                    Log.Output($"The Windows Terminal application configuration files has been backed up.\n» Source: {wtAppDataLocal}\n» Backup: {zipFile}");
+                    Log.Output($"The Windows Terminal application configuration files have been backed up.\n» Source: {wtAppDataLocal}\n» Backup: {zipFile}");
                 }
                 catch (Exception e)
                 {
@@ -62,7 +59,7 @@ namespace PrepareStella.Scripts.Preparing
             }
 
             // Installing
-            Console.WriteLine(@"Installing latest Windows Terminal...");
+            Console.WriteLine(@"Installing the latest Windows Terminal...");
 
             if (!File.Exists(Program.WtMsixBundle))
                 Log.ErrorAndExit(new Exception($"I can't find a required file: {Program.WtMsixBundle}"), false, false);

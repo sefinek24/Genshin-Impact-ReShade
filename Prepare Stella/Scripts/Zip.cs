@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using Ionic.Zip;
 using Ionic.Zlib;
 
@@ -19,7 +20,7 @@ namespace PrepareStella.Scripts
             return result;
         }
 
-        public static void Create(string source, string destination)
+        public static async Task CreateAsync(string source, string destination)
         {
             using (ZipFile zip = new ZipFile { CompressionLevel = CompressionLevel.BestCompression })
             {
@@ -34,7 +35,7 @@ namespace PrepareStella.Scripts
                 if (Directory.Exists(destination) && !destination.EndsWith(".zip"))
                     destinationFilename += $"\\{new DirectoryInfo(source).Name}-{DateTime.Now:yyyy-MM-dd-HH-mm-ss-ffffff}.zip";
 
-                zip.Save(destinationFilename);
+                await Task.Run(() => zip.Save(destinationFilename));
             }
         }
     }

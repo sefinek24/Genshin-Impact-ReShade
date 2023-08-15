@@ -31,6 +31,7 @@ namespace PrepareStella.Scripts.Preparing
             }
             else
             {
+                Console.WriteLine(@"Creating cache folder...");
                 Directory.CreateDirectory(cacheDirectoryPath);
             }
 
@@ -38,11 +39,11 @@ namespace PrepareStella.Scripts.Preparing
             {
                 string spaceUnit = savedSpace > MegabyteInBytes ? "MB" : "KB";
                 double spaceSaved = savedSpace / (double)(savedSpace > MegabyteInBytes ? MegabyteInBytes : KilobyteInBytes);
-                Log.Output($"Deleted {deletedFilesCount} cache files and saved {spaceSaved:F2} {spaceUnit}.");
+                Console.WriteLine($@"Deleted {deletedFilesCount} cache files and saved {spaceSaved:F2} {spaceUnit}.");
             }
             else
             {
-                Log.Output("No cache files found to delete.");
+                Console.WriteLine(@"No cache files found to delete.");
             }
         }
 

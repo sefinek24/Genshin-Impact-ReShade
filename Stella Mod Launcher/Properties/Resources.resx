@@ -751,4 +751,10 @@ REMEMBER NOT TO SHARE YOUR UID WITH VISIBLE GAME SHADERS WITH ANYONE!</value>
   <data name="UpdateBenefits_SuccessfullyUpdatedShaders" xml:space="preserve">
     <value>Successfully updated shaders for patrons to the latest version.</value>
   </data>
+  <data name="Default_Congratulations" xml:space="preserve">
+    <value>Congratulations!</value>
+  </data>
+  <data name="Default_SMLSuccessfullyUpdatedToVersion_" xml:space="preserve">
+    <value>Stella Mod Launcher has been successfully updated to version: v{0}</value>
+  </data>
 </root>

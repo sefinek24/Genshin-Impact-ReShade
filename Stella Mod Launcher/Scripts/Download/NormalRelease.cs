@@ -194,6 +194,7 @@ namespace StellaLauncher.Scripts.Download
             await Task.Delay(500);
 
 
+            // Run setup
             string logFile = Path.Combine(logDir, $"{DateTime.Now:yyyy-dd-M...HH-mm-ss}.log");
             Cmd.CliWrap command = new Cmd.CliWrap
             {
@@ -207,11 +208,13 @@ namespace StellaLauncher.Scripts.Download
             _ = Cmd.Execute(command);
 
 
-            // IniFile prepareIni = new IniFile(Path.Combine(Program.AppData, "prepare-stella.ini"));
-            // prepareIni.WriteInt("Launcher", "UserIsMyPatron", Secret.IsMyPatron ? 1 : 0);
-            // prepareIni.WriteInt("PrepareStella", "DownloadOrUpdateShaders", 0);
-            // prepareIni.Save();
+            // Ini
+            Program.Settings.WriteInt("Updates", "UpdateAvailable", 1);
+            Program.Settings.WriteString("Updates", "OldVersion", Program.AppVersion);
+            Program.Settings.Save();
 
+
+            // Close launcher
             Default._progressBar1.Style = ProgressBarStyle.Continuous;
             for (int i = 15; i >= 0; i--)
             {

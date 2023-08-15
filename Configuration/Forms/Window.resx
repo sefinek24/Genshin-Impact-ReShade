@@ -283,13 +283,13 @@
     <value>16, 280</value>
   </data>
   <data name="checkBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>318, 24</value>
+    <value>434, 24</value>
   </data>
   <data name="checkBox2.TabIndex" type="System.Int32, mscorlib">
     <value>82</value>
   </data>
   <data name="checkBox2.Text" xml:space="preserve">
-    <value>Create a new shortcut on the desktop *</value>
+    <value>Create shortcut on the desktop and in the Start Menu *</value>
   </data>
   <data name="&gt;&gt;checkBox2.Name" xml:space="preserve">
     <value>checkBox2</value>
@@ -316,13 +316,13 @@
     <value>16, 304</value>
   </data>
   <data name="checkBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>392, 24</value>
+    <value>430, 24</value>
   </data>
   <data name="checkBox3.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
   </data>
   <data name="checkBox3.Text" xml:space="preserve">
-    <value>Create shortcuts to websites on the Start menu *</value>
+    <value>Create shortcuts to official websites in the Start Menu</value>
   </data>
   <data name="&gt;&gt;checkBox3.Name" xml:space="preserve">
     <value>checkBox3</value>
@@ -415,13 +415,13 @@
     <value>16, 400</value>
   </data>
   <data name="checkBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 24</value>
+    <value>200, 24</value>
   </data>
   <data name="checkBox6.TabIndex" type="System.Int32, mscorlib">
     <value>86</value>
   </data>
   <data name="checkBox6.Text" xml:space="preserve">
-    <value>Delete ReShade cache *</value>
+    <value>Delete ReShade cache</value>
   </data>
   <data name="&gt;&gt;checkBox6.Name" xml:space="preserve">
     <value>checkBox6</value>

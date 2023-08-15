@@ -15,7 +15,7 @@ namespace PrepareStella.Scripts.Preparing
 
             if (!Directory.Exists(giGame))
             {
-                Console.WriteLine("@You must configure some settings manually.");
+                Console.WriteLine(@"You must configure some settings manually.");
                 return;
             }
 
@@ -26,7 +26,7 @@ namespace PrepareStella.Scripts.Preparing
 
             Log.Output($"{Path.GetFileName(reshadeIniPath)} and {Path.GetFileName(reshadeLogPath)} were successfully downloaded.");
 
-            string cache = Path.Combine(Program.ResourcesGlobal, "Cache");
+            string cache = Path.Combine(Program.ResourcesGlobal, "ReShade", "Cache");
             if (!Directory.Exists(cache))
             {
                 Console.WriteLine(@"Creating cache folder...");

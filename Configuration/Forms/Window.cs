@@ -65,9 +65,11 @@ namespace Configuration.Forms
                 checkBox3.Checked = data2 != 0;
             }
 
-            if (!File.Exists(Path.Combine(AppData, "resources-path.sfn")) && !checkBox7.Checked)
+            bool foundResources = CheckData.ResourcesPath();
+            if (!foundResources)
             {
                 checkBox7.Checked = true;
+                checkBox7.Enabled = false;
             }
             else
             {
@@ -104,6 +106,7 @@ namespace Configuration.Forms
             SaveIniData();
         }
 
+
         // Checkboxes
         private void NewShortcutsOnDesktop_CheckedChanged(object sender, EventArgs e)
         {
@@ -131,7 +134,8 @@ namespace Configuration.Forms
 
         private void DownloadOrUpdateShaders(object sender, EventArgs e)
         {
-            if (!File.Exists(Path.Combine(AppData, "resources-path.sfn")) && !checkBox7.Checked)
+            bool foundResources = CheckData.ResourcesPath();
+            if (!foundResources && !checkBox7.Checked)
             {
                 checkBox7.Checked = true;
                 MessageBox.Show(Resources.TheStellaResourcesDirWasNotFoundOnYourPC, AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -140,7 +144,6 @@ namespace Configuration.Forms
 
             _downloadOrUpdateShaders = checkBox7.Checked ? 1 : 0;
         }
-
 
         private void UpdateReShadeConfig_CheckedChanged(object sender, EventArgs e)
         {

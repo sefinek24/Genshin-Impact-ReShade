@@ -290,6 +290,15 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Congratulations!.
+        /// </summary>
+        internal static string Default_Congratulations {
+            get {
+                return ResourceManager.GetString("Default_Congratulations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Current background: {0}.
         /// </summary>
         internal static string Default_CurrentBackground {
@@ -459,6 +468,15 @@ namespace StellaLauncher.Properties {
         internal static string Default_OhhSomethingWentWrong {
             get {
                 return ResourceManager.GetString("Default_OhhSomethingWentWrong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stella Mod Launcher has been successfully updated to version: v{0}.
+        /// </summary>
+        internal static string Default_SMLSuccessfullyUpdatedToVersion_ {
+            get {
+                return ResourceManager.GetString("Default_SMLSuccessfullyUpdatedToVersion_", resourceCulture);
             }
         }
         

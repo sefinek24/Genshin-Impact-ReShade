@@ -7,7 +7,7 @@ namespace PrepareStella.Scripts.Preparing
 {
     internal static class DownloadFpsUnlockerCfg
     {
-        public static async Task Run()
+        public static async Task RunAsync()
         {
             try
             {
@@ -23,12 +23,20 @@ namespace PrepareStella.Scripts.Preparing
                     string gameExePath = Program.SavedGamePath?.Replace("\\", "\\\\");
                     string fpsUnlockerConfigContent = fpsUnlockerConfig.Replace("{GamePath}", gameExePath ?? string.Empty);
 
-                    File.WriteAllText(fpsUnlockerConfigPath, fpsUnlockerConfigContent);
+                    await WriteToFileAsync(fpsUnlockerConfigPath, fpsUnlockerConfigContent);
                 }
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+            }
+        }
+
+        private static async Task WriteToFileAsync(string filePath, string content)
+        {
+            using (StreamWriter writer = new StreamWriter(filePath))
+            {
+                await writer.WriteAsync(content);
             }
         }
     }

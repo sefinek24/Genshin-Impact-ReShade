@@ -1,3 +1,4 @@
+using System.IO;
 using Microsoft.Win32;
 
 namespace Configuration.Scripts
@@ -14,6 +15,17 @@ namespace Configuration.Scripts
 
                 string data = (string)key.GetValue("Secret");
                 return !string.IsNullOrEmpty(data);
+            }
+        }
+
+        public static bool ResourcesPath()
+        {
+            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(RegistryPath))
+            {
+                if (key == null) return false;
+
+                string data = (string)key.GetValue("ResourcesPath");
+                return Directory.Exists(data);
             }
         }
     }
