@@ -33,8 +33,8 @@ DirExistsWarning=yes
 DisableProgramGroupPage=yes
 UninstallDisplayIcon="{app}\Genshin Stella Mod.exe"
 
-AppSupportURL=https://sefinek.net/genshin-impact-reshade/support
-AppUpdatesURL=https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/14.-Changelog-for-v7.x.x
+AppSupportURL=https://genshin.sefinek.net/support
+AppUpdatesURL=https://genshin.sefinek.net/docs?page=changelog_v7
 VersionInfoCompany={#AppPublisher}
 VersionInfoTextVersion={#AppVersion}
 VersionInfoProductName={#AppName}
