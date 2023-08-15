@@ -130,7 +130,7 @@ namespace StellaLauncher.Forms
 
             if (string.IsNullOrEmpty(resourcesPath))
             {
-                Log.SaveError("Directory with the resources was not found.");
+                Log.SaveError("Path of the resources was not found. Is null or empty.");
                 MessageBox.Show(Resources.Default_ResourceDirNotFound, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
