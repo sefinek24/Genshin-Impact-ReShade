@@ -600,7 +600,7 @@ namespace StellaLauncher.Forms
 
         private void Version_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Utils.OpenUrl("https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/14.-Changelog-for-v7.x.x");
+            Utils.OpenUrl("https://sefinek.net/genshin-impact-reshade/docs?page=changelog_v7");
         }
 
         private void MadeBySefinek_Click(object sender, EventArgs e)
