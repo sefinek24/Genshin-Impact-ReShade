@@ -140,7 +140,7 @@ namespace StellaLauncher.Forms
                 MessageBox.Show(string.Format(Resources.Default_Directory_WasNotFound, resourcesPath), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            if (string.IsNullOrEmpty(resourcesPath))
+            if (string.IsNullOrEmpty(resourcesPath) || !Directory.Exists(resourcesPath))
             {
                 _ = Cmd.Execute(new Cmd.CliWrap { App = Program.PrepareLauncher });
                 Environment.Exit(997890421);
