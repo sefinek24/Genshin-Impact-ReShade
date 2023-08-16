@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Genshin Stella Mod")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("This application enables injecting ReShade, 3DMigoto, and unlocking FPS with a single click.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Sefinek Inc.")]
 [assembly: AssemblyProduct("Genshin Stella Mod made by Sefinek")]
