@@ -16,7 +16,6 @@ namespace StellaLauncher.Scripts.Download
         /// <summary>
         ///     Starts the process of downloading and updating the FPS unlocker config file.
         /// </summary>
-        /// <param name="statusLabel">Label control to display the download status.</param>
         public static async Task RunAsync()
         {
             Default._status_Label.Text += $"[i] {Resources.Default_DownloadingConfigFileForFPSUnlocker}\n";
@@ -33,7 +32,6 @@ namespace StellaLauncher.Scripts.Download
                 using (WebClient client = new WebClient())
                 {
                     client.Headers.Add("user-agent", Program.UserAgent);
-                    client.DownloadProgressChanged += Client_DownloadProgressChanged;
                     client.DownloadFileCompleted += Client_DownloadFileCompleted;
 
                     await client.DownloadFileTaskAsync(new Uri("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/unlocker.config.json"), Program.FpsUnlockerCfgPath);
@@ -46,25 +44,20 @@ namespace StellaLauncher.Scripts.Download
             }
         }
 
-        private static void Client_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
-        {
-            // Default._status_Label.Text += $"[i] {Resources.Main_PleaseWait}\n";
-        }
-
-        private static void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
+        private static async void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
             // Read the downloaded FPS unlocker config file
             string fpsUnlockerCfg = File.ReadAllText(Program.FpsUnlockerCfgPath);
 
             // Replace the placeholder "{GamePath}" with the actual game path
-            fpsUnlockerCfg = fpsUnlockerCfg.Replace("{GamePath}", @"C:\\Program Files\\Genshin Impact\\Genshin Impact game\\GenshinImpact.exe");
+            string gamePath = await Utils.GetGame("giExe");
+            fpsUnlockerCfg = fpsUnlockerCfg.Replace("{GamePath}", gamePath.Replace(@"\", @"\\"));
 
             // Write the updated FPS unlocker config file back to disk
             File.WriteAllText(Program.FpsUnlockerCfgPath, fpsUnlockerCfg);
 
             // Update the status label to indicate successful completion
             Default._status_Label.Text += $"[✓] {Resources.Default_Success}\n";
-
             Log.Output("Done.");
         }
     }
