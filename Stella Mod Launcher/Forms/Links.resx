@@ -784,13 +784,13 @@
     <value>61, 473</value>
   </data>
   <data name="linkLabel7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 24</value>
+    <value>327, 24</value>
   </data>
   <data name="linkLabel7.TabIndex" type="System.Int32, mscorlib">
     <value>118</value>
   </data>
   <data name="linkLabel7.Text" xml:space="preserve">
-    <value>Sefinek's server - Datadog</value>
+    <value>Datadog - See server metrics and more</value>
   </data>
   <data name="&gt;&gt;linkLabel7.Name" xml:space="preserve">
     <value>linkLabel7</value>
