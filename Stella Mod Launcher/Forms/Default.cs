@@ -164,7 +164,7 @@ namespace StellaLauncher.Forms
                 string data = await Secret.VerifyToken(mainPcKey);
                 if (data == null)
                 {
-                    await DeleteBenefits.RunAsync();
+                    DeleteBenefits.RunAsync();
                 }
                 else
                 {
@@ -182,7 +182,7 @@ namespace StellaLauncher.Forms
                     {
                         label1.Text = $@"zjebało się xd {remote.Status} ( ̿–ᆺ ̿–)";
 
-                        await DeleteBenefits.RunAsync();
+                        DeleteBenefits.RunAsync();
                         MessageBox.Show(
                             $"Unfortunately, there was a server-side error during the verification of your benefits. Please report this error on the Discord server or via email. Remember to provide your `backup code` as well.\nIf you launch the game after closing this message, you will be playing the free version.\n\n{remote.Message}",
                             Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -191,12 +191,16 @@ namespace StellaLauncher.Forms
                     {
                         label1.Text = @"Oh nooo... Sad cat... ( ̿–ᆺ ̿–)";
 
-                        await DeleteBenefits.RunAsync();
+                        DeleteBenefits.RunAsync();
                         MessageBox.Show(
                             $"An error occurred while verifying the benefits of your subscription. The server informed the client that it sent an invalid request. If you launch the game after closing this message, you will be playing the free version. Please contact Sefinek for more information. Error details can be found below.\n\n{remote.Message}",
                             Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
+            }
+            else
+            {
+                DeleteBenefits.RunAsync();
             }
 
 

@@ -8,7 +8,7 @@ namespace StellaLauncher.Scripts.Patrons
 {
     internal static class DeleteBenefits
     {
-        public static void RunAsync()
+        public static void Run()
         {
             // Delete presets for patrons
             string presets = Path.Combine(Default.ResourcesPath, "ReShade", "Presets", "3. Only for patrons");
