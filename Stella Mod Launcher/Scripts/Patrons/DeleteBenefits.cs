@@ -11,9 +11,11 @@ namespace StellaLauncher.Scripts.Patrons
     {
         public static async Task RunAsync()
         {
-            // Delete files for patrons
+            // Delete presets for patrons
             string presets = Path.Combine(Default.ResourcesPath, "ReShade", "Presets", "3. Only for patrons");
             if (Directory.Exists(presets)) await DeleteDirectoryAsync(presets);
+
+            // Delete addons for patrons
             string addons = Path.Combine(Default.ResourcesPath, "ReShade", "Addons");
             if (Directory.Exists(addons)) await DeleteDirectoryAsync(addons);
 
@@ -22,16 +24,24 @@ namespace StellaLauncher.Scripts.Patrons
             string[] filesToDelete = { "d3d11.dll", "d3dcompiler_46.dll", "loader.exe", "nvapi64.dll" };
             DeleteFiles(migotoDir, filesToDelete);
 
-            // Delete cmd files
+            // Delete cmd files: data/cmd
             string cmdPath = Path.Combine(Program.AppPath, "data", "cmd");
-            string[] cmdFilesToDelete = { "run.cmd", "run-patrons.cmd" };
-            DeleteFiles(cmdPath, cmdFilesToDelete);
-            await DeleteDirectoryAsync(Path.Combine(presets, "start"));
+            if (Directory.Exists(cmdPath))
+            {
+                string[] cmdFilesToDelete = { "run.cmd", "run-patrons.cmd" };
+                DeleteFiles(cmdPath, cmdFilesToDelete);
+
+                // Delete: data/cmd/start
+                string cmdDir = Path.Combine(cmdPath, "start");
+                if (Directory.Exists(cmdDir)) await DeleteDirectoryAsync(cmdDir);
+            }
 
             // Delete key
             DeleteRegistryKey();
         }
 
+
+        // Delete specific files in a folder
         private static void DeleteFiles(string folderPath, IEnumerable<string> filesToDelete)
         {
             Log.Output($"Deleting files in folder: {folderPath}");
@@ -55,27 +65,39 @@ namespace StellaLauncher.Scripts.Patrons
             }
             catch (Exception ex)
             {
-                Log.Output($"An error occurred while deleting files in folder: {folderPath}");
+                Log.Output($"An error occurred while deleting files in folder: {Path.GetDirectoryName(folderPath)}");
                 Log.SaveError(ex.ToString());
             }
         }
 
+        // Delete a directory and its contents
         private static async Task DeleteDirectoryAsync(string directoryPath)
         {
-            string[] files = Directory.GetFiles(directoryPath);
-            string[] subDirectories = Directory.GetDirectories(directoryPath);
+            Log.Output($"Deleting files in folder: {directoryPath}");
 
-            List<Task> deleteTasks = new List<Task>();
+            try
+            {
+                string[] files = Directory.GetFiles(directoryPath);
+                string[] subDirectories = Directory.GetDirectories(directoryPath);
 
-            foreach (string file in files) deleteTasks.Add(Task.Run(() => File.Delete(file)));
-            foreach (string subDirectory in subDirectories) deleteTasks.Add(DeleteDirectoryAsync(subDirectory));
+                List<Task> deleteTasks = new List<Task>();
 
-            await Task.WhenAll(deleteTasks);
+                foreach (string file in files) deleteTasks.Add(Task.Run(() => File.Delete(file)));
+                foreach (string subDirectory in subDirectories) deleteTasks.Add(DeleteDirectoryAsync(subDirectory));
 
-            Log.Output($"Deleting folder: {directoryPath}");
-            Directory.Delete(directoryPath, true);
+                await Task.WhenAll(deleteTasks);
+
+                Log.Output($"Deleting folder: {directoryPath}");
+                Directory.Delete(directoryPath, true);
+            }
+            catch (Exception ex)
+            {
+                Log.Output($"An error occurred while deleting folder: {Path.GetDirectoryName(directoryPath)}");
+                Log.SaveError(ex.ToString());
+            }
         }
 
+        // Delete registry key for patrons
         private static void DeleteRegistryKey()
         {
             const string secret = "Secret";
