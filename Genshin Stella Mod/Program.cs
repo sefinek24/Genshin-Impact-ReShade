@@ -85,7 +85,7 @@ namespace GenshinStellaMod
                 int value = (int)(key?.GetValue("AppIsConfigured") ?? 0);
                 if (value == 0)
                 {
-                    Log.ThrowErrorString("[X] The program is not configured yet. Please run the launcher first");
+                    Log.ThrowErrorString("[X] The software is not configured yet. Please run the launcher first");
 
                     Utils.Pause();
                 }
