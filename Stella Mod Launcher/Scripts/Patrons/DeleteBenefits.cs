@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.Win32;
 using StellaLauncher.Forms;
 
@@ -10,15 +8,15 @@ namespace StellaLauncher.Scripts.Patrons
 {
     internal static class DeleteBenefits
     {
-        public static async Task RunAsync()
+        public static void RunAsync()
         {
             // Delete presets for patrons
             string presets = Path.Combine(Default.ResourcesPath, "ReShade", "Presets", "3. Only for patrons");
-            if (Directory.Exists(presets)) await DeleteDirectoryAsync(presets);
+            if (Directory.Exists(presets)) DeleteDirectory(presets);
 
             // Delete addons for patrons
             string addons = Path.Combine(Default.ResourcesPath, "ReShade", "Addons");
-            if (Directory.Exists(addons)) await DeleteDirectoryAsync(addons);
+            if (Directory.Exists(addons)) DeleteDirectory(addons);
 
             // Delete 3DMigoto files
             string migotoDir = Path.Combine(Default.ResourcesPath, "3DMigoto");
@@ -34,7 +32,7 @@ namespace StellaLauncher.Scripts.Patrons
 
                 // Delete: data/cmd/start
                 string cmdDir = Path.Combine(cmdPath, "start");
-                if (Directory.Exists(cmdDir)) await DeleteDirectoryAsync(cmdDir);
+                if (Directory.Exists(cmdDir)) DeleteDirectory(cmdDir);
             }
 
             // Delete key
@@ -72,21 +70,12 @@ namespace StellaLauncher.Scripts.Patrons
         }
 
         // Delete a directory and its contents
-        private static async Task DeleteDirectoryAsync(string directoryPath)
+        private static void DeleteDirectory(string directoryPath)
         {
             Log.Output($"Deleting files in folder: {directoryPath}");
 
             try
             {
-                string[] files = Directory.GetFiles(directoryPath);
-                string[] subDirectories = Directory.GetDirectories(directoryPath);
-
-                List<Task> deleteTasks = files.Select(file => Task.Run(() => File.Delete(file))).ToList();
-                deleteTasks.AddRange(subDirectories.Select(DeleteDirectoryAsync));
-
-                await Task.WhenAll(deleteTasks);
-
-                Log.Output($"Deleting folder: {directoryPath}");
                 Directory.Delete(directoryPath, true);
             }
             catch (Exception ex)
