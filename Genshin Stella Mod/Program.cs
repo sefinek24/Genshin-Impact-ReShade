@@ -10,12 +10,16 @@ namespace GenshinStellaMod
     internal static class Program
     {
         // App
+        public static readonly string AppName = Assembly.GetExecutingAssembly().GetName().Name;
         public static readonly string AppVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
         // Files and folders
         public static readonly string AppPath = AppContext.BaseDirectory;
         public static readonly string AppData = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
         public static readonly string ReShadeDllPath = Path.Combine(AppPath, "data", "reshade", "ReShade64.dll");
+
+        // Registry
+        public static readonly string RegistryPath = @"SOFTWARE\Stella Mod Launcher";
 
         private static async Task Main(string[] args)
         {

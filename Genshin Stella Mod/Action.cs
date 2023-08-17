@@ -2,15 +2,18 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 using GenshinStellaMod.Scripts;
+using Microsoft.Win32;
 
 namespace GenshinStellaMod
 {
     internal static class Action
     {
+        private static string FullGamePath;
+        public static string GameExeFile;
+
         public static async Task Run(string launchMode, string resources)
         {
-            Console.WriteLine("1/4 - Preparing...");
-
+            Console.WriteLine("1/4 - Checking required files...");
 
             // Check if the required files exist
             if (!File.Exists(Logic.FpsUnlockerPath))
@@ -34,7 +37,34 @@ namespace GenshinStellaMod
                 return;
             }
 
+            Console.WriteLine("[✓] Status: OK\n");
 
+
+            // Find game path
+            Console.WriteLine("2/4 - Finding game path...");
+            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(Program.RegistryPath))
+            {
+                if (key != null) FullGamePath = (string)key.GetValue("GamePath");
+            }
+
+            if (!File.Exists(FullGamePath))
+            {
+                Console.WriteLine($"[X] Game instance was not found . I cannot inject ReShade.\n[i] File: {FullGamePath ?? "Unknown"}");
+                Utils.Pause();
+            }
+
+            GameExeFile = Path.GetFileName(FullGamePath);
+            if (GameExeFile == null)
+            {
+                Console.WriteLine("[X] Fatal error. Game exe file is null. But why?");
+                Utils.Pause();
+            }
+
+            Console.WriteLine($"[✓] {FullGamePath}\n");
+
+
+            // Start
+            Console.WriteLine($"3/4 - Starting (launch mode {launchMode})...");
             switch (launchMode)
             {
                 case "1":

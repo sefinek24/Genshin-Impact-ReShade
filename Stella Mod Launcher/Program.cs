@@ -49,7 +49,7 @@ namespace StellaLauncher
         private static readonly string[] SupportedLangs = { "en", "pl" };
 
         // Registry
-        public static readonly string RegistryPath = @"SOFTWARE\Stella Mod Launcher";
+        public static readonly string RegistryPath = @"Software\Stella Mod Launcher";
 
         [DllImport("user32.dll")]
         private static extern bool SetProcessDpiAwarenessContext(IntPtr dpiContext);

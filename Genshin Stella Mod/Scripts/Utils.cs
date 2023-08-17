@@ -16,9 +16,14 @@ namespace GenshinStellaMod.Scripts
 
         public static void Pause()
         {
-            Console.WriteLine();
-            Console.Write("Press any key to close this application...");
+            const string text = "Press any key to close this application...";
+            Console.Write($"\n{text}");
+            Log.Output(text);
+
             Console.ReadKey();
+
+            Log.Output("Exiting...");
+            Environment.Exit(0);
         }
     }
 }
