@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Win32;
 using StellaLauncher.Forms;
@@ -80,10 +81,8 @@ namespace StellaLauncher.Scripts.Patrons
                 string[] files = Directory.GetFiles(directoryPath);
                 string[] subDirectories = Directory.GetDirectories(directoryPath);
 
-                List<Task> deleteTasks = new List<Task>();
-
-                foreach (string file in files) deleteTasks.Add(Task.Run(() => File.Delete(file)));
-                foreach (string subDirectory in subDirectories) deleteTasks.Add(DeleteDirectoryAsync(subDirectory));
+                List<Task> deleteTasks = files.Select(file => Task.Run(() => File.Delete(file))).ToList();
+                deleteTasks.AddRange(subDirectories.Select(DeleteDirectoryAsync));
 
                 await Task.WhenAll(deleteTasks);
 
@@ -97,6 +96,7 @@ namespace StellaLauncher.Scripts.Patrons
             }
         }
 
+        // Delete registry key for patrons
         // Delete registry key for patrons
         private static void DeleteRegistryKey()
         {
