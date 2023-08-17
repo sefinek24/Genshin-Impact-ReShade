@@ -68,11 +68,11 @@ namespace GenshinStellaMod.Scripts
         ///     Logs the provided exception and shows an error dialog.
         /// </summary>
         /// <param name="ex">The exception to be logged.</param>
-        public static void ThrowError(Exception ex)
+        public static void ThrowError(string log)
         {
-            Console.WriteLine($"{ex.Message}\n");
+            Console.WriteLine($"{log}\n");
 
-            SaveError(ex.ToString());
+            SaveError(log);
         }
 
         /// <summary>
