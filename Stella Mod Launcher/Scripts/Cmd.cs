@@ -19,24 +19,24 @@ namespace StellaLauncher.Scripts
             Music.PlaySound("winxp", "information_bar");
 
             string commandArguments = string.Empty;
-            if (!string.IsNullOrEmpty($"{cliWrapCommand.Arguments}")) commandArguments = cliWrapCommand.Arguments.Build();
+            if (cliWrapCommand.Arguments != null) commandArguments = cliWrapCommand.Arguments.Build();
+
+            Log.Output($"CliWrap: {cliWrapCommand.App} {commandArguments} {cliWrapCommand.WorkingDir}");
+
+            if (Default.UpdateIsAvailable && !cliWrapCommand.DownloadingSetup)
+            {
+                MessageBox.Show(Resources.Cmd_UpdateIsRequired, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Log.Output("CliWrap: Command execution failed. An update is required.");
+                return false;
+            }
 
             try
             {
-                Log.Output($"CliWrap: {cliWrapCommand.App} {commandArguments} {cliWrapCommand.WorkingDir}");
-                if (Default.UpdateIsAvailable && !cliWrapCommand.DownloadingSetup)
-                {
-                    MessageBox.Show(Resources.Cmd_UpdateIsRequired, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Log.Output("CliWrap: Command execution failed. An update is required.");
-                    return false;
-                }
-
                 // CliWrap
                 Command action = Cli.Wrap(cliWrapCommand.App)
                     .WithWorkingDirectory(cliWrapCommand.WorkingDir)
                     .WithArguments(commandArguments)
                     .WithValidation(cliWrapCommand.Validation);
-
                 BufferedCommandResult result = await action.ExecuteBufferedAsync();
 
                 // Variables

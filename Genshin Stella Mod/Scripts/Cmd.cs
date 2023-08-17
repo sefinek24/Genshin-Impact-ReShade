@@ -13,25 +13,21 @@ namespace GenshinStellaMod.Scripts
             string commandArguments = string.Empty;
             if (cliWrapCommand.Arguments != null) commandArguments = cliWrapCommand.Arguments.Build();
 
+            Log.Output($"CliWrap: Run app: {cliWrapCommand.App}; Arguments {commandArguments}; WorkingDir {cliWrapCommand.WorkingDir};");
+
+
             try
             {
-                Log.Output($"CliWrap: Run app: {cliWrapCommand.App}; Arguments {commandArguments}; WorkingDir {cliWrapCommand.WorkingDir};");
-
                 // CliWrap
                 Command action = Cli.Wrap(cliWrapCommand.App)
                     .WithWorkingDirectory(cliWrapCommand.WorkingDir)
                     .WithArguments(commandArguments)
                     .WithValidation(cliWrapCommand.Validation);
-
                 BufferedCommandResult result = await action.ExecuteBufferedAsync();
 
                 // Variables
                 string stdout = result.StandardOutput;
-                Console.WriteLine(stdout);
-
                 string stderr = result.StandardError;
-                Console.WriteLine(stderr);
-
 
                 // StandardOutput
                 string stdoutLine = !string.IsNullOrEmpty(stdout) ? $"\n✅ STDOUT: {stdout}" : "";
