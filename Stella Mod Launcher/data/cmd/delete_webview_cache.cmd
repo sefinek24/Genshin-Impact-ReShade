@@ -27,21 +27,36 @@ if "%ERRORLEVEL%"=="0" (
     goto done
 )
 
-echo 2/2 - Deleting %4...
-if exist %4 (
-    rd /s /q %4
-    echo [i] Success.
+set /p "response=» Are you sure? [Yes/no]: "
+if /i "%response%"=="yes" (
+    echo You chose "Yes". Deleting WebView2 cache in progress...
 ) else (
-    echo [x] Folder was not found.
+    echo You chose "No" or provided an invalid response. Paused.
+    goto done
 )
+echo.
 
-echo. && echo.
 
-echo [i] Operation has been completed.
+
+
+echo 2/2 - Deleting WebView2 cache...
+set "WebViewCache=%~4\EBWebView"
+echo [i] Path: %WebViewCache%
+if exist "%WebViewCache%" (
+    rd /s /q "%WebViewCache%"
+    echo [✓] Success.
+) else (
+    echo [x] Not found.
+)
+echo.
+
+
+
+
+echo [i] Done! Operation has been completed.
 goto done
-
 
 :done
     echo.
-    pause
+    set /p null=
     exit

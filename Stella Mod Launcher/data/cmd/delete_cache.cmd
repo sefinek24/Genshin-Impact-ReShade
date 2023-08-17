@@ -27,22 +27,23 @@ if "%ERRORLEVEL%"=="0" (
     goto done
 )
 
-
-echo 2/6 - Checking required files and folders...
-
-if exist %4 (
-    echo [✓] %4
+set /p "response=» Are you sure? [Yes/no]: "
+if /i "%response%"=="yes" (
+    echo You chose "Yes". Deleting log files and caches in progress...
 ) else (
-    echo [x] Not found game-path.sfn.
-    echo [x] %4
+    echo You chose "No" or provided an invalid response. Paused.
     goto done
 )
+echo.
 
-set /p GamePath=<%4
+
+
+echo 2/6 - Checking required paths...
+set "GamePath=%~6"
 if exist "%GamePath%" (
-    echo [✓] "%GamePath%"
+    echo [✓] %GamePath%
 ) else (
-    echo [x] Not found main game folder.
+    echo [x] Not found main game folder: %GamePath%
     goto done
 )
 echo.
@@ -50,13 +51,14 @@ echo.
 
 
 echo 3/6 - Deleting temp files...
-echo [i] Path: %5
-if exist %5 (
-    pushd %5
+set "ReShadeCache=%~5\ReShade\Cache"
+echo [i] Path: %ReShadeCache%
+if exist "%ReShadeCache%" (
+    pushd "%ReShadeCache%"
     for %%I in (*) do (
-      if not "%%~nxI"=="null" (
-        del /f /q "%%I"
-      )
+        if not "%%~nxI"=="null" (
+            del /f /q "%%I"
+        )
     )
     popd
 
@@ -67,21 +69,24 @@ if exist %5 (
 echo.
 
 
+
 echo 4/6 - Deleting WebView2 cache...
-echo [i] Path: %6
-if exist %3 (
-    rd /s /q %6
+set "WebViewCache=%~7\EBWebView"
+echo [i] Path: %WebViewCache%
+if exist "%WebViewCache%" (
+    rd /s /q "%WebViewCache%"
     echo [✓] Success.
 ) else (
     echo [x] Not found.
 )
 echo.
+
 
 
 echo 5/6 - Deleting ReShade log file...
-echo [i] Path: %7
-if exist %7 (
-    del %7
+set "ReShadeLog=%~6\ReShade.log"
+if exist "%ReShadeLog%" (
+    del "%ReShadeLog%"
     echo [✓] Success.
 ) else (
     echo [x] Not found.
@@ -89,15 +94,20 @@ if exist %7 (
 echo.
 
 
+
 echo 6/6 - Deleting Stella Mod logs...
-echo [i] Path: %8
-if exist %8 (
-    rd /s /q %8
+set "StellaModLogs=%~7\logs"
+echo [i] Path: %StellaModLogs%
+if exist "%StellaModLogs%" (
+    rd /s /q "%StellaModLogs%"
     echo [✓] Success.
 ) else (
     echo [x] Not found.
 )
-echo. && echo.
+
+echo.
+echo.
+
 
 
 echo [i] Done! Operation has been completed.
@@ -105,5 +115,5 @@ goto done
 
 :done
     echo.
-    pause
+    set /p null=
     exit

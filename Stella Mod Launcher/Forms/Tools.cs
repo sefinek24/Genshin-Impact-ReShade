@@ -278,7 +278,6 @@ namespace StellaLauncher.Forms
         // --------------------------------- Cache ---------------------------------
         private async void DeleteCache_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            string resources = File.ReadAllText(Path.Combine(Program.AppData, "resources-path.sfn"));
             string gameDir = await Utils.GetGame("giGameDir");
 
             Cmd.CliWrap command = new Cmd.CliWrap
@@ -286,33 +285,30 @@ namespace StellaLauncher.Forms
                 App = "wt.exe",
                 WorkingDir = Program.AppPath,
                 Arguments = new ArgumentsBuilder()
-                    .Add(Path.Combine(Program.AppPath, "data", "cmd", "delete_cache.cmd"))
-                    .Add(Program.AppVersion)
-                    .Add(Data.ReShadeVer)
-                    .Add(Data.UnlockerVer)
-                    .Add(Path.Combine(Program.AppData, "game-path.sfn"))
-                    .Add(Path.Combine(resources, "ReShade", "Cache"))
-                    .Add(Path.Combine(Program.AppData, "EBWebView"))
-                    .Add(Path.Combine(gameDir, "ReShade.log"))
-                    .Add(Log.Folder)
+                    .Add(Path.Combine(Program.AppPath, "data", "cmd", "delete_cache.cmd")) // 0
+                    .Add(Program.AppVersion) // 1
+                    .Add(Data.ReShadeVer) // 2
+                    .Add(Data.UnlockerVer) // 3
+                    .Add(Program.AppData) // 4
+                    .Add(Default.ResourcesPath) // 5
+                    .Add(gameDir) // 6
+                    .Add(Program.AppData) // 7
             };
             await Cmd.Execute(command);
         }
 
         private async void DeleteWebViewCache_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            string webViewDir = Path.Combine(Program.AppData, "EBWebView");
-
             Cmd.CliWrap command = new Cmd.CliWrap
             {
                 App = "wt.exe",
                 WorkingDir = Program.AppPath,
                 Arguments = new ArgumentsBuilder()
-                    .Add(Path.Combine(Program.AppPath, "data", "cmd", "delete_webview_cache.cmd"))
-                    .Add(Program.AppVersion)
-                    .Add(Data.ReShadeVer)
-                    .Add(Data.UnlockerVer)
-                    .Add(webViewDir)
+                    .Add(Path.Combine(Program.AppPath, "data", "cmd", "delete_webview_cache.cmd")) // 0
+                    .Add(Program.AppVersion) // 1
+                    .Add(Data.ReShadeVer) // 2
+                    .Add(Data.UnlockerVer) // 3
+                    .Add(Program.AppData) // 4
             };
             await Cmd.Execute(command);
         }
@@ -330,6 +326,13 @@ namespace StellaLauncher.Forms
 
         private void LogDir_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            if (!Directory.Exists(Log.Folder))
+            {
+                MessageBox.Show($"Directory with the Stella Logs was not found in:\n\n{Log.Folder}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Log.Output($"Directory with the Stella Logs was not found in: {Log.Folder}");
+                return;
+            }
+
             Cmd.Start(Log.Folder);
             LogSharingAlert();
         }
