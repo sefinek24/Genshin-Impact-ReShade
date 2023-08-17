@@ -11,7 +11,7 @@ namespace GenshinStellaMod.Scripts
         public static async Task<bool> Execute(CliWrap cliWrapCommand)
         {
             string commandArguments = string.Empty;
-            if (!string.IsNullOrEmpty($"{cliWrapCommand.Arguments}")) commandArguments = cliWrapCommand.Arguments.Build();
+            if (cliWrapCommand.Arguments != null) commandArguments = cliWrapCommand.Arguments.Build();
 
             try
             {
