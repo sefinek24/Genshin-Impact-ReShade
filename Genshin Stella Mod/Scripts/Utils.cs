@@ -15,7 +15,7 @@ namespace GenshinStellaMod.Scripts
             }
         }
 
-        public static bool ObjIsEmpty(object obj)
+        public static bool ValueIsEmpty(object obj)
         {
             return obj == null || (obj is string str && string.IsNullOrWhiteSpace(str));
         }

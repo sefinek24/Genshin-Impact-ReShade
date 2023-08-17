@@ -27,13 +27,13 @@ namespace GenshinStellaMod
         public static readonly string AppData = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
 
         // Registry
-        public static readonly string RegistryPath = @"SOFTWARE\Stella Mod Launcher";
+        public static readonly string RegistryPath = @"Software\Stella Mod Launcher";
 
         private static async Task Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
 
-            if (!Utils.ObjIsEmpty(args))
+            if (!Utils.ValueIsEmpty(args))
             {
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.BackgroundColor = ConsoleColor.Red;
@@ -74,7 +74,6 @@ namespace GenshinStellaMod
             {
                 Log.ThrowErrorString("[X] This file needs to be executed with administrative privileges.");
                 Utils.Pause();
-                return;
             }
 
             Console.WriteLine("[✓] Administrative permissions");
@@ -114,8 +113,8 @@ namespace GenshinStellaMod
                 Log.ThrowError(ex);
 
                 Console.WriteLine("=========================================================================================");
-                Console.WriteLine("[x] Oops, we're sorry. The application failed to start for some reason.");
-                Console.WriteLine("[i] If you need help, please visit: https://sefinek.net/genshin-impact-reshade/support");
+                Console.WriteLine("[x] We apologize, but unfortunately something didn't go according to our plan.");
+                Console.WriteLine("[i] If you believe this error is not your fault, please report it: https://genshin.sefinek.net/support");
             }
         }
     }
