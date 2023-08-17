@@ -7,7 +7,7 @@
 
 2. CAN I ADD MY PRESET?
 Absolutely yes! We welcome community contributions and invite you to create a new Pull Request on our GitHub repository at:
-* https://github.com/sefinek24/Genshin-Impact-ReShade/pulls
+* https://github.com/sefinek24/Stella-Mod-Resources/pulls
 
 3. WANT TO BECOME A CONTRIBUTOR?
 We are always looking for new contributors to help improve the project.
