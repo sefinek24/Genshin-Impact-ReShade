@@ -5,6 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using GenshinStellaMod.Scripts;
 
+/*
+ *
+ * IMPORTANT!
+ * Some files of this project are not publicly accessible!
+ *
+ */
+
 namespace GenshinStellaMod
 {
     internal static class Program
