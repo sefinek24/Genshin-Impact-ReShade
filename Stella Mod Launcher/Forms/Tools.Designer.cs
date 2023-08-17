@@ -418,7 +418,7 @@ namespace StellaLauncher.Forms
             this.InstallationLogs.LinkColor = System.Drawing.Color.White;
             this.InstallationLogs.Name = "InstallationLogs";
             this.InstallationLogs.TabStop = true;
-            this.InstallationLogs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.PreparationLogs_LinkClicked);
+            this.InstallationLogs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.GSModLogs_LinkClicked);
             // 
             // pictureBox10
             // 

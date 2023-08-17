@@ -7,6 +7,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using IWshRuntimeLibrary;
+using Microsoft.Toolkit.Uwp.Notifications;
 using Microsoft.Win32;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using StellaLauncher.Forms;
@@ -188,6 +189,23 @@ namespace StellaLauncher.Scripts
             Default._preparingPleaseWait.Hide();
 
             Default._progressBar1.Value = 0;
+        }
+
+        public static void ShowToast(string title, string desc)
+        {
+            Log.Output($"ShowToast: {title}");
+
+            try
+            {
+                new ToastContentBuilder()
+                    .AddText(title)
+                    .AddText(desc)
+                    .Show();
+            }
+            catch (Exception ex)
+            {
+                Log.SaveError(ex.ToString());
+            }
         }
     }
 }

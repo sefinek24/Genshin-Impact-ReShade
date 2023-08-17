@@ -319,9 +319,19 @@ namespace StellaLauncher.Forms
 
 
         // ---------------------------------- Logs ---------------------------------
+        private static void LogSharingAlert()
+        {
+            int logSharingAlert = Program.Settings.ReadInt("Launcher", "LogSharingAlert", 0);
+            if (logSharingAlert >= 2) return;
+
+            Utils.ShowToast("Important", "Remember not to share log files with unfamiliar individuals, as they might contain sensitive data. Share them only with the Stella Mod developer.");
+            Program.Settings.WriteInt("Launcher", "LogSharingAlert", logSharingAlert + 1);
+        }
+
         private void LogDir_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Cmd.Start(Log.Folder);
+            LogSharingAlert();
         }
 
         private async void LauncherLogs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -334,6 +344,21 @@ namespace StellaLauncher.Forms
                     .Add(Path.Combine(Log.Folder, "launcher.output.log"))
             };
             await Cmd.Execute(command);
+
+            LogSharingAlert();
+        }
+
+        private async void GSModLogs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            await Cmd.Execute(new Cmd.CliWrap
+            {
+                App = "notepad.exe",
+                WorkingDir = Program.AppPath,
+                Arguments = new ArgumentsBuilder()
+                    .Add(Path.Combine(Log.Folder, "gsmod.output.log"))
+            });
+
+            LogSharingAlert();
         }
 
         private async void ReShadeLogs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -351,17 +376,8 @@ namespace StellaLauncher.Forms
                     Arguments = new ArgumentsBuilder()
                         .Add(logFile)
                 });
-        }
 
-        private async void PreparationLogs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            await Cmd.Execute(new Cmd.CliWrap
-            {
-                App = "notepad.exe",
-                WorkingDir = Program.AppPath,
-                Arguments = new ArgumentsBuilder()
-                    .Add(Path.Combine(Log.Folder, "prepare.output.log"))
-            });
+            LogSharingAlert();
         }
 
 

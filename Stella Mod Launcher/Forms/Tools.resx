@@ -325,16 +325,16 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="ReShadeLogs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>399, 358</value>
+    <value>399, 387</value>
   </data>
   <data name="ReShadeLogs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 24</value>
+    <value>109, 24</value>
   </data>
   <data name="ReShadeLogs.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
   </data>
   <data name="ReShadeLogs.Text" xml:space="preserve">
-    <value>ReShade logs</value>
+    <value>ReShade.log</value>
   </data>
   <data name="&gt;&gt;ReShadeLogs.Name" xml:space="preserve">
     <value>ReShadeLogs</value>
@@ -352,7 +352,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 358</value>
+    <value>369, 387</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -388,13 +388,13 @@
     <value>399, 327</value>
   </data>
   <data name="LauncherLogs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 24</value>
+    <value>82, 24</value>
   </data>
   <data name="LauncherLogs.TabIndex" type="System.Int32, mscorlib">
     <value>85</value>
   </data>
   <data name="LauncherLogs.Text" xml:space="preserve">
-    <value>Launcher logs</value>
+    <value>Launcher</value>
   </data>
   <data name="&gt;&gt;LauncherLogs.Name" xml:space="preserve">
     <value>LauncherLogs</value>
@@ -1132,7 +1132,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>368, 388</value>
+    <value>369, 357</value>
   </data>
   <data name="pictureBox9.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -1165,16 +1165,16 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="InstallationLogs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>398, 388</value>
+    <value>399, 357</value>
   </data>
   <data name="InstallationLogs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 24</value>
+    <value>165, 24</value>
   </data>
   <data name="InstallationLogs.TabIndex" type="System.Int32, mscorlib">
     <value>105</value>
   </data>
   <data name="InstallationLogs.Text" xml:space="preserve">
-    <value>Preparation logs</value>
+    <value>Genshin Stella Mod</value>
   </data>
   <data name="&gt;&gt;InstallationLogs.Name" xml:space="preserve">
     <value>InstallationLogs</value>
