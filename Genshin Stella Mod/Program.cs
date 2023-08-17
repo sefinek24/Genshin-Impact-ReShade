@@ -3,6 +3,7 @@ using System.IO;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using GenshinStellaMod.Scripts;
 using Microsoft.Win32;
 
@@ -31,6 +32,21 @@ namespace GenshinStellaMod
         private static async Task Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
+
+            if (!Utils.ObjIsEmpty(args))
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.BackgroundColor = ConsoleColor.Red;
+
+                const int violationCode = 54632789;
+                Log.ThrowError(new Exception($"):\n\nA potential violation has occurred. Code: {violationCode}"));
+                MessageBox.Show(
+                    "The object is empty. Don't tinker with anything in this file!\n\nThere might have been a certain violation. Please remember to respect the authors of this software as well as the game Genshin Impact.", AppName,
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                Environment.Exit(violationCode);
+            }
+
             string isMyPatron = args[4];
             Console.WriteLine("⠀   ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⢶⣦⡀");
             Console.WriteLine("⠀  ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿");
@@ -51,7 +67,7 @@ namespace GenshinStellaMod
             Console.WriteLine("1/3 - Starting program...");
 
             string launchMode = args[3];
-            Console.Title = $"Genshin Stella Mod - {AppVersion}";
+            Console.Title = $"Genshin Stella Mod v{AppVersion}";
 
             // Check if the application is running with administrative permissions
             if (!Utils.IsRunningWithAdminPrivileges())

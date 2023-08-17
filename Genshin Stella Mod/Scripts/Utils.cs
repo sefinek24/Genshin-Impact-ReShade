@@ -15,6 +15,11 @@ namespace GenshinStellaMod.Scripts
             }
         }
 
+        public static bool ObjIsEmpty(object obj)
+        {
+            return obj == null || (obj is string str && string.IsNullOrWhiteSpace(str));
+        }
+
         public static void Pause()
         {
             const string text = "Press any key to close this application...";
