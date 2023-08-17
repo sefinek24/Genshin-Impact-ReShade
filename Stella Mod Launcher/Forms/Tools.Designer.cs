@@ -425,7 +425,7 @@ namespace StellaLauncher.Forms
             resources.ApplyResources(this.pictureBox10, "pictureBox10");
             this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox10.Image = global::StellaLauncher.Properties.Resources.icons8_notepad;
+            this.pictureBox10.Image = global::StellaLauncher.Properties.Resources.flaticon_open_folder;
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.TabStop = false;
             // 
@@ -438,7 +438,7 @@ namespace StellaLauncher.Forms
             this.InnoSetupLogs.LinkColor = System.Drawing.Color.White;
             this.InnoSetupLogs.Name = "InnoSetupLogs";
             this.InnoSetupLogs.TabStop = true;
-            this.InnoSetupLogs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.InnoSetup_Button);
+            this.InnoSetupLogs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LogDir_LinkLabel);
             // 
             // madeWith_Label
             // 

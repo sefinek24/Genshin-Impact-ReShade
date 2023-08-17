@@ -81,25 +81,14 @@ namespace StellaLauncher.Scripts.Patrons
             // Prepare presets
             if (benefitName == "presets")
             {
-                string gameDir = await Utils.GetGame("giGameDir");
-                string reShadePath = Path.Combine(gameDir, "ReShade.ini");
-                string presetPath = Path.Combine(Default.ResourcesPath, "ReShade", "Presets", "3. Only for patrons", "Ray Tracing", "3. RT by Sefinek - Medium settings #1 [Default]                 .ini");
-
-                IniFile ini = new IniFile(reShadePath);
-                ini.WriteString("ADDON", "AddonPath", $"{Path.Combine(Default.ResourcesPath, "ReShade", "Addons")}");
-                ini.WriteString("GENERAL", "EffectSearchPaths", Path.Combine(Default.ResourcesPath, "ReShade", "Shaders", "Effects"));
-                ini.WriteString("GENERAL", "IntermediateCachePath", Path.Combine(Default.ResourcesPath, "ReShade", "Cache"));
-                ini.WriteString("GENERAL", "PresetPath", presetPath);
-                ini.WriteString("GENERAL", "TextureSearchPaths", $"{Path.Combine(Default.ResourcesPath, "ReShade", "Shaders", "Textures")}");
-                ini.WriteString("SCREENSHOT", "SavePath", Path.Combine(Default.ResourcesPath, "Screenshots"));
-                ini.WriteString("SCREENSHOT", "SoundPath", Path.Combine(Program.AppPath, "data", "sounds", "screenshot.wav"));
-                ini.Save();
+                string currentPreset = await RsConfig.Prepare();
+                if (currentPreset == null) return;
 
                 try
                 {
                     new ToastContentBuilder()
                         .AddText("ReShade configuration")
-                        .AddText($"The ReShade configuration file has also been updated, including setting the default preset to {Path.GetFileName(presetPath)}.")
+                        .AddText($"The ReShade configuration file has also been updated, including setting the default preset to {Path.GetFileNameWithoutExtension(currentPreset)}.")
                         .Show();
                 }
                 catch (Exception ex)

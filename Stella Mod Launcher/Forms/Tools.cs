@@ -207,43 +207,13 @@ namespace StellaLauncher.Forms
         // ---------------------------------- ReShade ----------------------------------
         private async void ConfReShade_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            string gameDir = await Utils.GetGame("giGameDir");
-            string reShadePath = Path.Combine(gameDir, "ReShade.ini");
-            string cachePath = Path.Combine(Default.ResourcesPath, "ReShade", "Cache");
+            string currentPreset = await RsConfig.Prepare();
+            if (currentPreset == null) return;
 
-            string defaultPreset = Path.Combine(Default.ResourcesPath, "ReShade", "Presets", "3. Preset by Sefinek - Medium settings [Default].ini");
-            string presetForPatrons = Path.Combine(Default.ResourcesPath, "ReShade", "Presets", "3. Only for patrons", "Ray Tracing", "3. RT by Sefinek - Medium settings #1 [Default]                 .ini");
-            string presetPath = Secret.IsMyPatron ? presetForPatrons : defaultPreset;
-            if (!File.Exists(presetPath)) MessageBox.Show($"Preset was not found on your computer.\n\nLocalization:\n{presetPath}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            string cleanedFileName = Path.GetFileNameWithoutExtension(presetPath).Replace("  ", " ");
+            MessageBox.Show($"Successfully updated the ReShade.ini file. Paths to resource locations have been changed to current, and similar changes have been made.\n\nCurrent preset:\n{Path.GetFileNameWithoutExtension(currentPreset).Trim()}",
+                Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            string screenshotsPath = Path.Combine(Default.ResourcesPath, "Screenshots");
-
-            IniFile ini = new IniFile(reShadePath);
-            ini.WriteString("ADDON", "AddonPath", $"{Path.Combine(Default.ResourcesPath, "ReShade", "Addons")}");
-            ini.WriteString("GENERAL", "EffectSearchPaths", Path.Combine(Default.ResourcesPath, "ReShade", "Shaders", "Effects"));
-            ini.WriteString("GENERAL", "IntermediateCachePath", cachePath);
-            ini.WriteString("GENERAL", "PresetPath", presetPath);
-            ini.WriteString("GENERAL", "TextureSearchPaths", $"{Path.Combine(Default.ResourcesPath, "ReShade", "Shaders", "Textures")}");
-            ini.WriteString("SCREENSHOT", "SavePath", screenshotsPath);
-            ini.WriteString("SCREENSHOT", "SoundPath", Path.Combine(Program.AppPath, "data", "sounds", "screenshot.wav"));
-            ini.Save();
-
-            if (!Directory.Exists(cachePath))
-            {
-                Directory.CreateDirectory(cachePath);
-                Log.Output("Created missing dir " + cachePath);
-            }
-
-            if (!Directory.Exists(screenshotsPath))
-            {
-                Directory.CreateDirectory(screenshotsPath);
-                Log.Output("Created missing dir " + screenshotsPath);
-            }
-
-            MessageBox.Show($"Succesfully updated the ReShade.ini file. Paths to resource locations have been changed to current, and similar changes have been made.\n\nCurrent preset:\n{Path.GetFileName(cleanedFileName)}", Program.AppName,
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Log.Output($"Updated ReShade config.\nCurrent preset: {presetPath}");
+            Log.Output($"Updated ReShade config.\nCurrent preset: {currentPreset}");
         }
 
 
@@ -367,45 +337,32 @@ namespace StellaLauncher.Forms
             string logFile = Path.Combine(gameDir, "ReShade.log");
 
             if (!Directory.Exists(gameDir) || !File.Exists(logFile))
-            {
                 MessageBox.Show(string.Format(Resources.Tools_ReShadeLogFileWasNotFoundIn_, logFile), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
             else
-            {
-                Cmd.CliWrap command = new Cmd.CliWrap
+                await Cmd.Execute(new Cmd.CliWrap
                 {
                     App = "notepad.exe",
                     WorkingDir = Program.AppPath,
                     Arguments = new ArgumentsBuilder()
                         .Add(logFile)
-                };
-                await Cmd.Execute(command);
-            }
+                });
         }
 
         private async void PreparationLogs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Cmd.CliWrap command = new Cmd.CliWrap
+            await Cmd.Execute(new Cmd.CliWrap
             {
                 App = "notepad.exe",
                 WorkingDir = Program.AppPath,
                 Arguments = new ArgumentsBuilder()
                     .Add(Path.Combine(Log.Folder, "prepare.output.log"))
-            };
-            await Cmd.Execute(command);
+            });
         }
 
 
-        private async void InnoSetup_Button(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LogDir_LinkLabel(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Cmd.CliWrap command = new Cmd.CliWrap
-            {
-                App = "notepad.exe",
-                WorkingDir = Program.AppPath,
-                Arguments = new ArgumentsBuilder()
-                    .Add(Path.Combine(Log.Folder, "innosetup-logs.install.log"))
-            };
-            await Cmd.Execute(command);
+            Cmd.Start(Log.Folder);
         }
 
         // -------------------------- Nothing special ((: ---------------------------

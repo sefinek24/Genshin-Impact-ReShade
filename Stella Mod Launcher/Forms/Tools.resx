@@ -325,7 +325,7 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="ReShadeLogs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>399, 329</value>
+    <value>399, 358</value>
   </data>
   <data name="ReShadeLogs.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 24</value>
@@ -352,7 +352,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 329</value>
+    <value>369, 358</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -385,7 +385,7 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="LauncherLogs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>399, 298</value>
+    <value>399, 327</value>
   </data>
   <data name="LauncherLogs.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 24</value>
@@ -412,7 +412,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 298</value>
+    <value>369, 327</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -1078,7 +1078,7 @@
     <value>NoControl</value>
   </data>
   <data name="linkLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>66, 393</value>
+    <value>66, 389</value>
   </data>
   <data name="linkLabel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>164, 24</value>
@@ -1132,7 +1132,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>368, 359</value>
+    <value>368, 388</value>
   </data>
   <data name="pictureBox9.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -1165,7 +1165,7 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="InstallationLogs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>398, 359</value>
+    <value>398, 388</value>
   </data>
   <data name="InstallationLogs.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 24</value>
@@ -1192,7 +1192,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>368, 389</value>
+    <value>369, 297</value>
   </data>
   <data name="pictureBox10.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -1225,16 +1225,16 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="InnoSetupLogs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>398, 389</value>
+    <value>399, 297</value>
   </data>
   <data name="InnoSetupLogs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 24</value>
+    <value>129, 24</value>
   </data>
   <data name="InnoSetupLogs.TabIndex" type="System.Int32, mscorlib">
     <value>107</value>
   </data>
   <data name="InnoSetupLogs.Text" xml:space="preserve">
-    <value>InnoSetup logs</value>
+    <value>View directory</value>
   </data>
   <data name="&gt;&gt;InnoSetupLogs.Name" xml:space="preserve">
     <value>InnoSetupLogs</value>
