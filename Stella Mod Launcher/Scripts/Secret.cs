@@ -21,7 +21,7 @@ namespace StellaLauncher.Scripts
                 object value = registryKey?.GetValue("Secret");
                 if (!(value is string token)) return null;
 
-                Log.Output("Found token in the registry.");
+                Log.Output("Found token for patrons in the registry.");
                 return token;
             }
         }
