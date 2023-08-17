@@ -10,8 +10,7 @@ namespace GenshinStellaMod.Scripts
     internal static class Log
     {
         private static readonly string Folder = Path.Combine(Program.AppData, "logs");
-        private static readonly string OutputFile = Path.Combine(Folder, "inject.output.log");
-
+        private static readonly string OutputFile = Path.Combine(Folder, "gsmod.output.log");
 
         /// <summary>
         ///     Initializes the necessary directories for logging.
@@ -82,30 +81,10 @@ namespace GenshinStellaMod.Scripts
         public static void ErrorAndExit(Exception ex)
         {
             // Log the exception and show the error dialog
-            ThrowError(ex);
+            ThrowError(ex.ToString());
 
             // Exit the application with a specific exit code
             Environment.Exit(999991000);
-        }
-
-        /// <summary>
-        ///     Helper method to display a toast notification.
-        /// </summary>
-        /// <param name="title">The title of the toast notification.</param>
-        /// <param name="message">The message of the toast notification.</param>
-        private static void ShowToastNotification(string title, string message)
-        {
-            try
-            {
-                // new ToastContentBuilder()
-                //    .AddText(title)
-                //    .AddText(message)
-                //    .Show();
-            }
-            catch (Exception ex)
-            {
-                ErrorAndExit(ex);
-            }
         }
     }
 }
