@@ -138,7 +138,7 @@ namespace StellaLauncher.Forms
             this.DeleteAllCacheAndLogFiles.LinkColor = System.Drawing.Color.White;
             this.DeleteAllCacheAndLogFiles.Name = "DeleteAllCacheAndLogFiles";
             this.DeleteAllCacheAndLogFiles.TabStop = true;
-            this.DeleteAllCacheAndLogFiles.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.DeleteCache_Button);
+            this.DeleteAllCacheAndLogFiles.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.DeleteCache_LinkClicked);
             // 
             // pictureBox3
             // 
@@ -158,7 +158,7 @@ namespace StellaLauncher.Forms
             this.ReShadeLogs.LinkColor = System.Drawing.Color.White;
             this.ReShadeLogs.Name = "ReShadeLogs";
             this.ReShadeLogs.TabStop = true;
-            this.ReShadeLogs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ReShadeLogs_Button);
+            this.ReShadeLogs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ReShadeLogs_LinkClicked);
             // 
             // pictureBox1
             // 
@@ -178,7 +178,7 @@ namespace StellaLauncher.Forms
             this.LauncherLogs.LinkColor = System.Drawing.Color.White;
             this.LauncherLogs.Name = "LauncherLogs";
             this.LauncherLogs.TabStop = true;
-            this.LauncherLogs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LauncherLogs_Click);
+            this.LauncherLogs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LauncherLogs_LinkClicked);
             // 
             // pictureBox2
             // 
@@ -213,7 +213,7 @@ namespace StellaLauncher.Forms
             this.SeeReShadeConfig.Name = "SeeReShadeConfig";
             this.SeeReShadeConfig.TabStop = true;
             this.toolTip1.SetToolTip(this.SeeReShadeConfig, resources.GetString("SeeReShadeConfig.ToolTip"));
-            this.SeeReShadeConfig.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ReShadeConfig_Click);
+            this.SeeReShadeConfig.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ReShadeConfig_LinkClicked);
             // 
             // pictureBox4
             // 
@@ -234,7 +234,7 @@ namespace StellaLauncher.Forms
             this.SeeFPSUnlockerConfig.Name = "SeeFPSUnlockerConfig";
             this.SeeFPSUnlockerConfig.TabStop = true;
             this.toolTip1.SetToolTip(this.SeeFPSUnlockerConfig, resources.GetString("SeeFPSUnlockerConfig.ToolTip"));
-            this.SeeFPSUnlockerConfig.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.UnlockerConfig_Click);
+            this.SeeFPSUnlockerConfig.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.UnlockerConfig_LinkClicked);
             // 
             // pictureBox5
             // 
@@ -255,7 +255,7 @@ namespace StellaLauncher.Forms
             this.ScanAndRepairSysFiles.Name = "ScanAndRepairSysFiles";
             this.ScanAndRepairSysFiles.TabStop = true;
             this.toolTip1.SetToolTip(this.ScanAndRepairSysFiles, resources.GetString("ScanAndRepairSysFiles.ToolTip"));
-            this.ScanAndRepairSysFiles.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ScanSysFiles_Click);
+            this.ScanAndRepairSysFiles.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ScanSysFiles_LinkClicked);
             // 
             // pictureBox6
             // 
@@ -285,7 +285,7 @@ namespace StellaLauncher.Forms
             this.CreateShortcut.Name = "CreateShortcut";
             this.CreateShortcut.TabStop = true;
             this.toolTip1.SetToolTip(this.CreateShortcut, resources.GetString("CreateShortcut.ToolTip"));
-            this.CreateShortcut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CreateShortcut_Button);
+            this.CreateShortcut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CreateShortcut_LinkClicked);
             // 
             // Launcher
             // 
@@ -319,7 +319,7 @@ namespace StellaLauncher.Forms
             this.DeleteOnlyWebView2Cache.LinkColor = System.Drawing.Color.White;
             this.DeleteOnlyWebView2Cache.Name = "DeleteOnlyWebView2Cache";
             this.DeleteOnlyWebView2Cache.TabStop = true;
-            this.DeleteOnlyWebView2Cache.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.DeleteWebViewCache_Click);
+            this.DeleteOnlyWebView2Cache.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.DeleteWebViewCache_LinkClicked);
             // 
             // MuteMusicOnStart
             // 
@@ -438,7 +438,7 @@ namespace StellaLauncher.Forms
             this.InnoSetupLogs.LinkColor = System.Drawing.Color.White;
             this.InnoSetupLogs.Name = "InnoSetupLogs";
             this.InnoSetupLogs.TabStop = true;
-            this.InnoSetupLogs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LogDir_LinkLabel);
+            this.InnoSetupLogs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LogDir_LinkClicked);
             // 
             // madeWith_Label
             // 

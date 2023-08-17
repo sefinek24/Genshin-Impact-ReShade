@@ -108,7 +108,7 @@ namespace StellaLauncher.Forms
             Environment.Exit(0);
         }
 
-        private void CreateShortcut_Button(object sender, LinkLabelLinkClickedEventArgs e)
+        private void CreateShortcut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             bool success = Utils.CreateShortcut();
             if (success) MessageBox.Show(Resources.Tools_TheShortcutHasBeenSuccessfullyCreated, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -218,7 +218,7 @@ namespace StellaLauncher.Forms
 
 
         // ---------------------------------- Misc ----------------------------------
-        private async void ScanSysFiles_Click(object sender, LinkLabelLinkClickedEventArgs e)
+        private async void ScanSysFiles_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Cmd.CliWrap command = new Cmd.CliWrap
             {
@@ -240,7 +240,7 @@ namespace StellaLauncher.Forms
 
 
         // ------------------------------ Config files ------------------------------
-        private async void ReShadeConfig_Click(object sender, LinkLabelLinkClickedEventArgs e)
+        private async void ReShadeConfig_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             string gamePath = await Utils.GetGame("giGameDir");
             string reShadeIni = Path.Combine(gamePath, "ReShade.ini");
@@ -262,7 +262,7 @@ namespace StellaLauncher.Forms
             }
         }
 
-        private async void UnlockerConfig_Click(object sender, LinkLabelLinkClickedEventArgs e)
+        private async void UnlockerConfig_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Cmd.CliWrap command = new Cmd.CliWrap
             {
@@ -276,7 +276,7 @@ namespace StellaLauncher.Forms
 
 
         // --------------------------------- Cache ---------------------------------
-        private async void DeleteCache_Button(object sender, LinkLabelLinkClickedEventArgs e)
+        private async void DeleteCache_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             string resources = File.ReadAllText(Path.Combine(Program.AppData, "resources-path.sfn"));
             string gameDir = await Utils.GetGame("giGameDir");
@@ -299,7 +299,7 @@ namespace StellaLauncher.Forms
             await Cmd.Execute(command);
         }
 
-        private async void DeleteWebViewCache_Click(object sender, LinkLabelLinkClickedEventArgs e)
+        private async void DeleteWebViewCache_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             string webViewDir = Path.Combine(Program.AppData, "EBWebView");
 
@@ -319,7 +319,12 @@ namespace StellaLauncher.Forms
 
 
         // ---------------------------------- Logs ---------------------------------
-        private async void LauncherLogs_Click(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LogDir_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Cmd.Start(Log.Folder);
+        }
+
+        private async void LauncherLogs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Cmd.CliWrap command = new Cmd.CliWrap
             {
@@ -331,7 +336,7 @@ namespace StellaLauncher.Forms
             await Cmd.Execute(command);
         }
 
-        private async void ReShadeLogs_Button(object sender, LinkLabelLinkClickedEventArgs e)
+        private async void ReShadeLogs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             string gameDir = await Utils.GetGame("giGameDir");
             string logFile = Path.Combine(gameDir, "ReShade.log");
@@ -359,11 +364,6 @@ namespace StellaLauncher.Forms
             });
         }
 
-
-        private void LogDir_LinkLabel(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Cmd.Start(Log.Folder);
-        }
 
         // -------------------------- Nothing special ((: ---------------------------
         private void Notepad_MouseClick(object sender, MouseEventArgs e)
