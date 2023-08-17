@@ -70,7 +70,7 @@ namespace GenshinStellaMod
             Console.Title = $"Genshin Stella Mod v{AppVersion}";
 
             // Check if the application is running with administrative permissions
-            if (!Utils.IsRunningWithAdminPrivileges())
+            if (Utils.IsRunningWithAdminPrivileges())
             {
                 Log.ThrowErrorString("[X] This file needs to be executed with administrative privileges.");
                 Utils.Pause();
