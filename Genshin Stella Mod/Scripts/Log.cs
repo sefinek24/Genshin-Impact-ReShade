@@ -45,7 +45,7 @@ namespace GenshinStellaMod.Scripts
             }
         }
 
-        public static async void SaveError(string log)
+        private static async void SaveError(string log)
         {
             try
             {

@@ -40,8 +40,8 @@ namespace StellaLauncher.Scripts
                 BufferedCommandResult result = await action.ExecuteBufferedAsync();
 
                 // Variables
-                string stdout = result.StandardOutput;
-                string stderr = result.StandardError;
+                string stdout = result.StandardOutput.Trim();
+                string stderr = result.StandardError.Trim();
 
                 // StandardOutput
                 string stdoutLine = !string.IsNullOrEmpty(stdout) ? $"\n✅ STDOUT: {stdout}" : "";

@@ -4,6 +4,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using GenshinStellaMod.Scripts;
+using Microsoft.Win32;
 
 /*
  *
@@ -50,7 +51,7 @@ namespace GenshinStellaMod
             Console.WriteLine("1/3 - Starting program...");
 
             string launchMode = args[3];
-            Console.Title = $"Genshin Stella Mod - {launchMode}";
+            Console.Title = $"Genshin Stella Mod - {AppVersion}";
 
             // Check if the application is running with administrative permissions
             if (!Utils.IsRunningWithAdminPrivileges())
@@ -60,7 +61,25 @@ namespace GenshinStellaMod
                 return;
             }
 
-            Console.WriteLine("[✓] Permissions");
+            Console.WriteLine("[✓] Administrative permissions");
+
+
+            // Is launcher configured?
+            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(RegistryPath, true))
+            {
+                int value = (int)(key?.GetValue("AppIsConfigured") ?? 0);
+                if (value == 0)
+                {
+                    Log.ThrowErrorString("[X] The program is not configured yet. Please run the launcher first");
+
+                    Utils.Pause();
+                }
+                else
+                {
+                    Console.WriteLine("[✓] The launcher is configured");
+                }
+            }
+
 
             // Init dirs
             Log.InitDirs();
