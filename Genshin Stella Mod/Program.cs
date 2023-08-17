@@ -16,7 +16,6 @@ namespace GenshinStellaMod
         // Files and folders
         public static readonly string AppPath = AppContext.BaseDirectory;
         public static readonly string AppData = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
-        public static readonly string ReShadeDllPath = Path.Combine(AppPath, "data", "reshade", "ReShade64.dll");
 
         // Registry
         public static readonly string RegistryPath = @"SOFTWARE\Stella Mod Launcher";
@@ -24,12 +23,7 @@ namespace GenshinStellaMod
         private static async Task Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
-
-            string launchMode = args[3];
-            Console.Title = $"Genshin Stella Mod - {launchMode}";
-
             string isMyPatron = args[4];
-
             Console.WriteLine("⠀   ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⢶⣦⡀");
             Console.WriteLine("⠀  ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿");
             Console.WriteLine("⠀   ⠀⣿⡄⠀⠀⠀⠈⠀⠀⠀⠀⣾⡿                              Genshin Impact Stella Mod 2023");
@@ -45,21 +39,32 @@ namespace GenshinStellaMod
             Console.WriteLine("⠀   ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟                                          ~ Made by Sefinek");
             Console.WriteLine(" =========================================================================================\n");
 
+            /***** 1 *****/
+            Console.WriteLine("1/3 - Starting program...");
+
+            string launchMode = args[3];
+            Console.Title = $"Genshin Stella Mod - {launchMode}";
 
             // Check if the application is running with administrative permissions
             if (!Utils.IsRunningWithAdminPrivileges())
             {
-                Console.WriteLine("[x] This file needs to be executed with administrative privileges.");
-                Log.Output("The file must be run as administrator.");
+                Log.ThrowErrorString("[X] This file needs to be executed with administrative privileges.");
                 Utils.Pause();
                 return;
             }
 
+            Console.WriteLine("[✓] Permissions");
 
-            string resources = args[5];
+            // Init dirs
+            Log.InitDirs();
 
+
+            // Start the application
             try
             {
+                string resources = args[5];
+
+                Log.Output("Starting...");
                 await Action.Run(launchMode, resources);
             }
             catch (Exception ex)

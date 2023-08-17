@@ -8,63 +8,47 @@ namespace GenshinStellaMod
 {
     internal static class Action
     {
-        private static string FullGamePath;
+        private static string _fullGamePath;
         public static string GameExeFile;
 
         public static async Task Run(string launchMode, string resources)
         {
-            Console.WriteLine("1/4 - Checking required files...");
-
-            // Check if the required files exist
-            if (!File.Exists(Logic.FpsUnlockerPath))
-            {
-                Console.WriteLine($"[x] Failed to start. File {Path.GetFileName(Logic.FpsUnlockerPath)} was not found.");
-                Utils.Pause();
-                return;
-            }
-
-            if (!File.Exists(Program.ReShadeDllPath))
-            {
-                Console.WriteLine($"[x] Failed to start. File {Path.GetFileName(Program.ReShadeDllPath)} was not found.");
-                Utils.Pause();
-                return;
-            }
-
-            if (!File.Exists(Logic.InjectorPath))
-            {
-                Console.WriteLine($"[x] Failed to start. File {Path.GetFileName(Logic.InjectorPath)} was not found.");
-                Utils.Pause();
-                return;
-            }
-
-            Console.WriteLine("[✓] Status: OK\n");
-
-
             // Find game path
-            Console.WriteLine("2/4 - Finding game path...");
             using (RegistryKey key = Registry.CurrentUser.OpenSubKey(Program.RegistryPath))
             {
-                if (key != null) FullGamePath = (string)key.GetValue("GamePath");
+                if (key != null) _fullGamePath = (string)key.GetValue("GamePath");
             }
 
-            if (!File.Exists(FullGamePath))
-            {
-                Console.WriteLine($"[X] Game instance was not found . I cannot inject ReShade.\n[i] File: {FullGamePath ?? "Unknown"}");
-                Utils.Pause();
-            }
+            if (!File.Exists(_fullGamePath)) Log.ThrowErrorString($"[X] Game instance was not found . I cannot inject ReShade.\n[i] File: {_fullGamePath ?? "Unknown"}");
 
-            GameExeFile = Path.GetFileName(FullGamePath);
-            if (GameExeFile == null)
-            {
-                Console.WriteLine("[X] Fatal error. Game exe file is null. But why?");
-                Utils.Pause();
-            }
+            GameExeFile = Path.GetFileName(_fullGamePath);
+            if (GameExeFile == null) Log.ThrowErrorString("[X] Fatal error. Game exe file is null. But why?");
 
-            Console.WriteLine($"[✓] {FullGamePath}\n");
+            Console.WriteLine($"[✓] Found game path: {_fullGamePath}");
 
 
+            // Check if the required files exist
+            if (!File.Exists(Logic.FpsUnlockerPath)) Log.ThrowErrorString($"[x] Failed to start. File {Path.GetFileName(Logic.FpsUnlockerPath)} was not found.");
+            if (!File.Exists(Logic.ReShadeDllPath)) Log.ThrowErrorString($"[x] Failed to start. File {Path.GetFileName(Logic.ReShadeDllPath)} was not found.");
+            if (!File.Exists(Logic.InjectorPath)) Log.ThrowErrorString($"[x] Failed to start. File {Path.GetFileName(Logic.InjectorPath)} was not found.");
+
+            Console.WriteLine("[✓] Found required files\n");
+
+
+            /***** 3 *****/
+            Console.WriteLine("2/3 - Checking processes...");
+            Utils.CheckProcess(GameExeFile);
+            Utils.CheckProcess("");
+            Utils.CheckProcess(Path.GetFileName(Logic.FpsUnlockerPath));
+            Utils.CheckProcess(Path.GetFileName(Logic.InjectorPath));
+
+
+            Console.WriteLine("[✓] Completed\n");
+
+
+            /***** 4 *****/
             // Start
-            Console.WriteLine($"3/4 - Starting (launch mode {launchMode})...");
+            Console.WriteLine($"3/3 - Starting (launch mode {launchMode})...");
             switch (launchMode)
             {
                 case "1":

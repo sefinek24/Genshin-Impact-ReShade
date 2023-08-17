@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.Security.Principal;
 
 namespace GenshinStellaMod.Scripts
@@ -24,6 +25,28 @@ namespace GenshinStellaMod.Scripts
 
             Log.Output("Exiting...");
             Environment.Exit(0);
+        }
+
+        public static void CheckProcess(string processName)
+        {
+            if (string.IsNullOrEmpty(processName))
+            {
+                Log.ThrowErrorString("[X] Process name cannot be null or empty.");
+                return;
+            }
+
+            if (processName.EndsWith(".exe", StringComparison.OrdinalIgnoreCase)) processName = processName.Substring(0, processName.Length - 4);
+
+            Process[] processes = Process.GetProcessesByName(processName);
+
+            foreach (Process process in processes)
+            {
+                Console.WriteLine($"[i] Process {process.ProcessName} is running. Killing...");
+                Log.Output($"Killing process {process.ProcessName}...");
+
+                process.Kill();
+                process.WaitForExit();
+            }
         }
     }
 }
