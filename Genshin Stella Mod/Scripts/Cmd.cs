@@ -43,7 +43,7 @@ namespace GenshinStellaMod.Scripts
 
                 // StandardError
                 string showCommand = !string.IsNullOrEmpty(cliWrapCommand.App)
-                    ? $"» Executed command:\n{cliWrapCommand.App} {cliWrapCommand.Arguments?.Build()}"
+                    ? $"» Executed command:\n{cliWrapCommand.App} {commandArguments}"
                     : "";
                 string showWorkingDir = !string.IsNullOrEmpty(cliWrapCommand.WorkingDir)
                     ? $"\n\n» Working directory: {cliWrapCommand.WorkingDir}"

@@ -51,12 +51,18 @@ namespace StellaLauncher.Scripts
                 // StandardError
                 if (result.ExitCode == 0) return true;
 
-                string showCommand = !string.IsNullOrEmpty(cliWrapCommand.App) ? $"\n\n» {Resources.Cmd_ExecutedCommand}:\n{cliWrapCommand.App} {cliWrapCommand.Arguments?.Build()}" : "";
-                string showWorkingDir = !string.IsNullOrEmpty(cliWrapCommand.WorkingDir)
-                    ? $"\n\n» {Resources.Cmd_WorkingDirectory}: {cliWrapCommand.WorkingDir}"
+                string showCommand = !string.IsNullOrEmpty(cliWrapCommand.App)
+                    ? $"» Executed command:\n{cliWrapCommand.App} {commandArguments}"
                     : "";
-                string showExitCode = !double.IsNaN(result.ExitCode) ? $"\n\n» {Resources.Cmd_ExitCode}: {result.ExitCode}" : "";
-                string showError = !string.IsNullOrEmpty(stderr) ? $"\n\n» {Resources.Cmd_Error}:\n{stderr}" : "";
+                string showWorkingDir = !string.IsNullOrEmpty(cliWrapCommand.WorkingDir)
+                    ? $"\n\n» Working directory: {cliWrapCommand.WorkingDir}"
+                    : "";
+                string showExitCode = !double.IsNaN(result.ExitCode)
+                    ? $"\n\n» Exit code: {result.ExitCode}"
+                    : "";
+                string showError = !string.IsNullOrEmpty(stderr)
+                    ? $"\n\n» Error:\n{stderr}"
+                    : "";
                 string info = $"{showCommand}{showWorkingDir}{showExitCode}{showError}";
 
                 switch (result.ExitCode)
