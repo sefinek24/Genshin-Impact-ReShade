@@ -35,10 +35,10 @@ namespace GenshinStellaMod
             Console.WriteLine("[✓] Found required files\n");
 
 
-            /***** 3 *****/
+            /***** 2 *****/
             Console.WriteLine("2/3 - Checking processes...");
             Utils.CheckProcess(GameExeFile);
-            Utils.CheckProcess("");
+            Utils.CheckProcess("launcher.exe");
             Utils.CheckProcess(Path.GetFileName(Logic.FpsUnlockerPath));
             Utils.CheckProcess(Path.GetFileName(Logic.InjectorPath));
 
@@ -46,9 +46,8 @@ namespace GenshinStellaMod
             Console.WriteLine("[✓] Completed\n");
 
 
-            /***** 4 *****/
-            // Start
-            Console.WriteLine($"3/3 - Starting (launch mode {launchMode})...");
+            /***** 3 *****/
+            Console.WriteLine($"3/3 - Preparing the game (launch mode {launchMode})...");
             switch (launchMode)
             {
                 case "1":
@@ -84,13 +83,11 @@ namespace GenshinStellaMod
                     break;
                 }
                 default:
-                    Console.WriteLine("[x] Failed to start. Invalid launch mode.");
+                    Log.ThrowErrorString("[x] Failed to start. Invalid launch mode.");
                     return;
             }
 
             Logic.Completed();
-
-            Utils.Pause();
         }
     }
 }
