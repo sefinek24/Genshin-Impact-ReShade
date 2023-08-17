@@ -164,15 +164,19 @@ namespace StellaLauncher.Forms
                 string data = await Secret.VerifyToken(mainPcKey);
                 if (data == null)
                 {
+                    Log.Output("Received null from the server. Deleting benefits in progress...");
                     DeleteBenefits.Run();
                 }
                 else
                 {
                     VerifyToken remote = JsonConvert.DeserializeObject<VerifyToken>(data);
-                    Log.Output(remote.Status.ToString());
+                    Log.Output($"Status: {remote.Status}; Tier {remote.TierId}; Message: {remote.Message ?? "Unknown"};");
+
                     if (remote.Status == 200)
                     {
                         Secret.IsMyPatron = true;
+                        Log.Output($"User is my Patron ({Secret.IsMyPatron}). Benefits are enabled.");
+
                         label1.Text = Resources.Default_GenshinStellaModForPatrons;
                         label1.TextAlign = ContentAlignment.MiddleRight;
 
@@ -180,7 +184,8 @@ namespace StellaLauncher.Forms
                     }
                     else if (remote.Status >= 500)
                     {
-                        label1.Text = $@"zjebało się xd {remote.Status} ( ̿–ᆺ ̿–)";
+                        Secret.IsMyPatron = false;
+                        label1.Text = @"Something went wrong ( ̿–ᆺ ̿–)";
 
                         DeleteBenefits.Run();
                         MessageBox.Show(
@@ -189,6 +194,7 @@ namespace StellaLauncher.Forms
                     }
                     else
                     {
+                        Secret.IsMyPatron = false;
                         label1.Text = @"Oh nooo... Sad cat... ( ̿–ᆺ ̿–)";
 
                         DeleteBenefits.Run();
@@ -200,6 +206,7 @@ namespace StellaLauncher.Forms
             }
             else
             {
+                Secret.IsMyPatron = false;
                 DeleteBenefits.Run();
             }
 

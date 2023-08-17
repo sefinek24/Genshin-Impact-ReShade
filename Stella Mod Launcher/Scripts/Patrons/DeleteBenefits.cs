@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Security;
 using Microsoft.Win32;
 using StellaLauncher.Forms;
 
@@ -35,8 +36,8 @@ namespace StellaLauncher.Scripts.Patrons
                 if (Directory.Exists(cmdDir)) DeleteDirectory(cmdDir);
             }
 
-            // Delete key
-            DeleteRegistryKey();
+            // Delete registry value for patrons
+            DeleteRegistryValue();
         }
 
 
@@ -86,28 +87,47 @@ namespace StellaLauncher.Scripts.Patrons
         }
 
         // Delete registry key for patrons
-        private static void DeleteRegistryKey()
+        private static void DeleteRegistryValue()
         {
             const string secret = "Secret";
 
             try
             {
-                using (RegistryKey key = Registry.CurrentUser.OpenSubKey(Secret.RegistryKeyPath, true))
+                string registryKeyPath = Secret.RegistryKeyPath; // Upewnij się, że Secret.RegistryKeyPath nie jest null
+                using (RegistryKey key = Registry.CurrentUser.OpenSubKey(registryKeyPath, true))
                 {
                     if (key != null)
                     {
-                        key.DeleteValue(secret);
-                        Log.Output($"Deleted key `{secret}` from the registry.");
+                        object value = key.GetValue(secret);
+                        if (value != null)
+                        {
+                            key.DeleteValue(secret); // Usuń wartość REG_SZ o nazwie "Secret" z klucza rejestru
+                            Log.Output($"Deleted REG_SZ value '{secret}' from the registry.");
+                        }
+                        else
+                        {
+                            Log.Output($"REG_SZ value '{secret}' not found in the registry.");
+                        }
                     }
                     else
                     {
-                        Log.Output($"Registry key `{secret}` not found.");
+                        Log.Output($"Registry key '{secret}' not found.");
                     }
                 }
             }
+            catch (SecurityException securityEx)
+            {
+                Log.Output($"Permission error while deleting registry value '{secret}': {securityEx.Message}");
+                Log.SaveError(securityEx.ToString());
+            }
+            catch (IOException ioEx)
+            {
+                Log.Output($"I/O error while deleting registry value '{secret}': {ioEx.Message}");
+                Log.SaveError(ioEx.ToString());
+            }
             catch (Exception ex)
             {
-                Log.Output($"An error occurred while deleting registry key `{secret}`.");
+                Log.Output($"An error occurred while deleting registry value '{secret}': {ex.Message}");
                 Log.SaveError(ex.ToString());
             }
         }
