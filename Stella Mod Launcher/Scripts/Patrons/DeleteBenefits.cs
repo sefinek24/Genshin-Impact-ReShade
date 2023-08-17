@@ -97,7 +97,6 @@ namespace StellaLauncher.Scripts.Patrons
         }
 
         // Delete registry key for patrons
-        // Delete registry key for patrons
         private static void DeleteRegistryKey()
         {
             const string secret = "Secret";
