@@ -15,7 +15,7 @@ namespace GenshinStellaMod.Scripts
 
             try
             {
-                Log.Output($"CliWrap: Run app: {cliWrapCommand.App}; Arguments; {commandArguments} WorkingDir; {cliWrapCommand.WorkingDir}");
+                Log.Output($"CliWrap: Run app: {cliWrapCommand.App}; Arguments {commandArguments}; WorkingDir {cliWrapCommand.WorkingDir};");
 
                 // CliWrap
                 Command action = Cli.Wrap(cliWrapCommand.App)
