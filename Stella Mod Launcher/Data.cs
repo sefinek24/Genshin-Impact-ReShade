@@ -9,6 +9,6 @@ namespace StellaLauncher
 
         /* Versions */
         public static readonly string ReShadeVer = "5.9.1";
-        public static readonly string UnlockerVer = "2.0.11";
+        public static readonly string UnlockerVer = "2.0.12";
     }
 }
