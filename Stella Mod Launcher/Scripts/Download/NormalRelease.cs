@@ -173,14 +173,14 @@ namespace StellaLauncher.Scripts.Download
             string logDir = Path.Combine(Log.Folder, "updates");
             if (!Directory.Exists(logDir)) Directory.CreateDirectory(logDir);
 
-            // Wait 7 seconds
+            // Wait 5 seconds
             Default._progressBar1.Style = ProgressBarStyle.Continuous;
-            for (int i = 7; i >= 0; i--)
+            for (int i = 5; i >= 0; i--)
             {
                 Default._preparingPleaseWait.Text = string.Format(Resources.NormalRelease_JustAMoment_PleaseWait, i);
                 Log.Output($"Waiting {i}s...");
 
-                double progressPercentage = (7 - i) / 7.0 * 100;
+                double progressPercentage = (5 - i) / 5.0 * 100;
                 Default._progressBar1.Value = (int)progressPercentage;
 
                 await Task.Delay(1000);
@@ -188,6 +188,8 @@ namespace StellaLauncher.Scripts.Download
 
             Default._preparingPleaseWait.Text = Resources.NormalRelease_EverythingIsOkay_StartingSetup;
             TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
+
+            await Task.Delay(500);
 
 
             // Run setup
