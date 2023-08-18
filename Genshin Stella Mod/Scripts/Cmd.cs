@@ -27,10 +27,10 @@ namespace GenshinStellaMod.Scripts
 
                 // Variables
                 string stdout = result.StandardOutput.Trim();
-                if (!cliWrapCommand.ReloadExplorer && !string.IsNullOrEmpty(stdout)) Console.WriteLine(stdout);
+                if (!cliWrapCommand.ReloadExplorer) Console.WriteLine(stdout);
 
                 string stderr = result.StandardError.Trim();
-                if (!cliWrapCommand.ReloadExplorer && !string.IsNullOrEmpty(stderr)) Console.WriteLine(stderr);
+                if (!cliWrapCommand.ReloadExplorer) Console.WriteLine(stderr);
 
                 // StandardOutput
                 string stdoutLine = !string.IsNullOrEmpty(stdout) ? $"\nSTDOUT: {stdout}" : "";
