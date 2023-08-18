@@ -45,7 +45,7 @@ namespace GenshinStellaMod.Scripts
             }
         }
 
-        public static async void SaveError(string log)
+        private static async void SaveError(string log)
         {
             try
             {
@@ -74,8 +74,6 @@ namespace GenshinStellaMod.Scripts
             Console.WriteLine("\n=========================================================================================");
             Console.WriteLine("[x] Meeow (=〃ﻌ〃=)! We're sorry. It seems like we've encountered an issue.");
             Console.WriteLine("[i] If you require assistance, kindly visit: https://genshin.sefinek.net/support");
-
-            Music.PlaySound("winxp", "exclamation");
 
             SaveError(log);
             Utils.Pause();
