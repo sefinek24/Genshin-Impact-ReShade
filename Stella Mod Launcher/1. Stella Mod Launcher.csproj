@@ -518,7 +518,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="data\sounds\winxp\Windows XP Battery Low.wav" />
-    <Content Include="data\sounds\winxp\Windows XP Critical Stop.wav" />
+    <Content Include="data\sounds\winxp\critical_stop.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="data\sounds\winxp\default.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -526,7 +528,9 @@
     <Content Include="data\sounds\winxp\error.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\sounds\winxp\Windows XP Exclamation.wav" />
+    <Content Include="data\sounds\winxp\exclamation.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="data\sounds\winxp\hardware_fail.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -546,7 +550,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="data\sounds\winxp\Windows XP Notify.wav" />
-    <Content Include="data\sounds\winxp\Windows XP Print complete.wav" />
+    <Content Include="data\sounds\winxp\print_complete.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="data\sounds\winxp\Windows XP Recycle.wav" />
     <Content Include="data\sounds\winxp\restore.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
