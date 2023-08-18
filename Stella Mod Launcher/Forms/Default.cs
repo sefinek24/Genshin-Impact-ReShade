@@ -10,6 +10,7 @@ using StellaLauncher.Forms.Other;
 using StellaLauncher.Models;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
+using StellaLauncher.Scripts.Forms;
 using StellaLauncher.Scripts.Forms.MainForm;
 using StellaLauncher.Scripts.Patrons;
 
@@ -152,6 +153,29 @@ namespace StellaLauncher.Forms
             // App version
             version_LinkLabel.Text = $@"v{Program.AppVersion}";
             progressBar1.Value = 18;
+
+
+            // Tray
+            NotifyIcon trayIcon = new NotifyIcon
+            {
+                Icon = Program.Ico,
+                Text = Program.AppName,
+                Visible = true,
+                ContextMenuStrip = new ContextMenuStrip()
+            };
+
+            Tray trayHandler = new Tray(trayIcon, this);
+            trayIcon.ContextMenuStrip.Items.AddRange(new ToolStripItem[]
+            {
+                new ToolStripMenuItem("Toggle Minimize/Restore", null, trayHandler.ToggleMinimizeRestore),
+                new ToolStripMenuItem("Reload window", null, trayHandler.ReloadForm),
+                new ToolStripMenuItem("Official website", null, Tray.OfficialWebsite),
+                new ToolStripMenuItem("Discord server", null, Tray.DiscordServer),
+                new ToolStripMenuItem("Support", null, Tray.Support),
+                new ToolStripMenuItem("Donations", null, Tray.Donations),
+                new ToolStripMenuItem("Leave your feedback", null, Tray.Feedback),
+                new ToolStripMenuItem("Quit", null, Tray.OnQuitClick)
+            });
 
 
             // Is user my Patron?

@@ -67,6 +67,7 @@ namespace GenshinStellaMod
             Console.WriteLine("1/3 - Starting program...");
 
             string launchMode = args[3];
+            Log.Output($"Launch mode: {launchMode}");
             Console.Title = $"Genshin Stella Mod v{AppVersion}";
 
             // Check if the application is running with administrative permissions
@@ -104,8 +105,8 @@ namespace GenshinStellaMod
             try
             {
                 string resources = args[5];
+                Log.Output($"Resources: {resources}");
 
-                Log.Output("Starting...");
                 await Action.Run(launchMode, resources);
             }
             catch (Exception ex)
@@ -115,6 +116,8 @@ namespace GenshinStellaMod
                 Console.WriteLine("=========================================================================================");
                 Console.WriteLine("[x] We apologize, but unfortunately something didn't go according to our plan.");
                 Console.WriteLine("[i] If you believe this error is not your fault, please report it: https://genshin.sefinek.net/support");
+
+                Music.PlaySound("winxp", "critical_stop");
             }
         }
     }
