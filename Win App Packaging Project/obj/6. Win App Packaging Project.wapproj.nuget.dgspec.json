@@ -63,6 +63,9 @@
           "net48": {
             "projectReferences": {}
           }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true
         }
       },
       "frameworks": {
@@ -135,6 +138,9 @@
           "net48": {
             "projectReferences": {}
           }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true
         }
       },
       "frameworks": {
