@@ -62,6 +62,7 @@ namespace StellaLauncher.Forms
         // Path
         public static string ResourcesPath;
 
+
         // Window
         private bool _mouseDown;
         private Point _offset;
@@ -70,6 +71,7 @@ namespace StellaLauncher.Forms
         {
             InitializeComponent();
         }
+
 
         private void Default_Load(object sender, EventArgs e)
         {
@@ -119,6 +121,29 @@ namespace StellaLauncher.Forms
             _version_LinkLabel = version_LinkLabel;
             _updates_LinkLabel = updates_LinkLabel;
             _updateIco_PictureBox = updateIco_PictureBox;
+
+
+            // Tray
+            NotifyIcon trayIcon = new NotifyIcon
+            {
+                Icon = Program.Ico,
+                Text = Program.AppName,
+                Visible = true,
+                ContextMenuStrip = new ContextMenuStrip()
+            };
+
+            Tray trayHandler = new Tray(trayIcon, this);
+            trayIcon.ContextMenuStrip.Items.AddRange(new ToolStripItem[]
+            {
+                new ToolStripMenuItem("Toggle Minimize/Restore", null, trayHandler.ToggleMinimizeRestore),
+                new ToolStripMenuItem("Reload window", null, trayHandler.ReloadForm),
+                new ToolStripMenuItem("Official website", null, Tray.OfficialWebsite),
+                new ToolStripMenuItem("Discord server", null, Tray.DiscordServer),
+                new ToolStripMenuItem("Support", null, Tray.Support),
+                new ToolStripMenuItem("Donations", null, Tray.Donations),
+                new ToolStripMenuItem("Leave your feedback", null, Tray.Feedback),
+                new ToolStripMenuItem("Quit", null, Tray.OnQuitClick)
+            });
 
 
             // Get resources path
