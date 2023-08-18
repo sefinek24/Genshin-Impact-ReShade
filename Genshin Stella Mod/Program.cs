@@ -67,6 +67,7 @@ namespace GenshinStellaMod
             Console.WriteLine("1/3 - Starting program...");
 
             string launchMode = args[3];
+            Log.Output($"Launch mode: {launchMode}");
             Console.Title = $"Genshin Stella Mod v{AppVersion}";
 
             // Check if the application is running with administrative permissions
@@ -104,8 +105,8 @@ namespace GenshinStellaMod
             try
             {
                 string resources = args[5];
+                Log.Output($"Resources: {resources}");
 
-                Log.Output("Starting...");
                 await Action.Run(launchMode, resources);
             }
             catch (Exception ex)
