@@ -10,6 +10,7 @@ using StellaLauncher.Forms.Other;
 using StellaLauncher.Models;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
+using StellaLauncher.Scripts.Forms;
 using StellaLauncher.Scripts.Forms.MainForm;
 using StellaLauncher.Scripts.Patrons;
 

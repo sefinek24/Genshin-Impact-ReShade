@@ -192,6 +192,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Scripts\Forms\Music.cs" />
     <Compile Include="Scripts\RSConfig.cs" />
     <Compile Include="Scripts\Shortcut.cs" />
     <Compile Include="Scripts\Forms\MainForm\Background.cs" />
@@ -201,7 +202,6 @@
     <Compile Include="Scripts\Download\StellaResources.cs" />
     <Compile Include="Scripts\Forms\MainForm\Labels.cs" />
     <Compile Include="Scripts\Forms\MainForm\LaunchCount.cs" />
-    <Compile Include="Scripts\Forms\MainForm\Music.cs" />
     <Compile Include="Scripts\Forms\MainForm\Files.cs" />
     <Compile Include="Scripts\IniFile.cs" />
     <Compile Include="Scripts\Log.cs" />

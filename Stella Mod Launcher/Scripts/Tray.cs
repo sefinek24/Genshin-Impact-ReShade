@@ -1,6 +1,6 @@
 using System;
 using System.Windows.Forms;
-using StellaLauncher.Scripts.Forms.MainForm;
+using StellaLauncher.Scripts.Forms;
 
 namespace StellaLauncher.Scripts
 {
