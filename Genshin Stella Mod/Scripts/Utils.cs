@@ -15,9 +15,9 @@ namespace GenshinStellaMod.Scripts
             }
         }
 
-        public static bool ValueIsEmpty(object obj)
+        public static bool IsArrayEmpty(string[] obj)
         {
-            return obj == null || (obj is string str && string.IsNullOrWhiteSpace(str));
+            return obj.Length == 0;
         }
 
         public static void Pause()
