@@ -192,7 +192,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Scripts\Forms\Music.cs" />
     <Compile Include="Scripts\RSConfig.cs" />
     <Compile Include="Scripts\Shortcut.cs" />
     <Compile Include="Scripts\Forms\MainForm\Background.cs" />
@@ -202,6 +201,7 @@
     <Compile Include="Scripts\Download\StellaResources.cs" />
     <Compile Include="Scripts\Forms\MainForm\Labels.cs" />
     <Compile Include="Scripts\Forms\MainForm\LaunchCount.cs" />
+    <Compile Include="Scripts\Forms\MainForm\Music.cs" />
     <Compile Include="Scripts\Forms\MainForm\Files.cs" />
     <Compile Include="Scripts\IniFile.cs" />
     <Compile Include="Scripts\Log.cs" />
@@ -215,7 +215,6 @@
     <Compile Include="Scripts\Download\FpsUnlockerCfg.cs" />
     <Compile Include="Scripts\Download\NormalRelease.cs" />
     <Compile Include="Scripts\Download\ReShadeIni.cs" />
-    <Compile Include="Scripts\Tray.cs" />
     <Compile Include="Scripts\Utils.cs" />
     <Compile Include="Scripts\Forms\WebView2Handler.cs" />
     <EmbeddedResource Include="Forms\Default.pl.resx">
@@ -499,9 +498,7 @@
     <Content Include="data\sounds\screenshot.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\sounds\winxp\deed_discovered.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="data\sounds\winxp\Windows Feed Discovered.wav" />
     <Content Include="data\sounds\winxp\information_bar.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -518,9 +515,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="data\sounds\winxp\Windows XP Battery Low.wav" />
-    <Content Include="data\sounds\winxp\critical_stop.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="data\sounds\winxp\Windows XP Critical Stop.wav" />
     <Content Include="data\sounds\winxp\default.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -528,9 +523,7 @@
     <Content Include="data\sounds\winxp\error.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\sounds\winxp\exclamation.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="data\sounds\winxp\Windows XP Exclamation.wav" />
     <Content Include="data\sounds\winxp\hardware_fail.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -550,9 +543,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="data\sounds\winxp\Windows XP Notify.wav" />
-    <Content Include="data\sounds\winxp\print_complete.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="data\sounds\winxp\Windows XP Pop-up Blocked.wav" />
+    <Content Include="data\sounds\winxp\Windows XP Print complete.wav" />
     <Content Include="data\sounds\winxp\Windows XP Recycle.wav" />
     <Content Include="data\sounds\winxp\restore.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
