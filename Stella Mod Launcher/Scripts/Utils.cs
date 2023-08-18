@@ -12,7 +12,7 @@ using Microsoft.Win32;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using StellaLauncher.Forms;
 using StellaLauncher.Properties;
-using StellaLauncher.Scripts.Forms;
+using StellaLauncher.Scripts.Forms.MainForm;
 using File = System.IO.File;
 
 namespace StellaLauncher.Scripts

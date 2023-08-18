@@ -6,7 +6,7 @@ using NAudio.Wave;
 using StellaLauncher.Forms;
 using StellaLauncher.Properties;
 
-namespace StellaLauncher.Scripts.Forms
+namespace StellaLauncher.Scripts.Forms.MainForm
 {
     internal static class Music
     {

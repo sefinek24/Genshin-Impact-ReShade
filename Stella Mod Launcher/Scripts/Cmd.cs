@@ -8,7 +8,7 @@ using CliWrap.Builders;
 using Microsoft.Toolkit.Uwp.Notifications;
 using StellaLauncher.Forms;
 using StellaLauncher.Properties;
-using StellaLauncher.Scripts.Forms;
+using StellaLauncher.Scripts.Forms.MainForm;
 
 namespace StellaLauncher.Scripts
 {

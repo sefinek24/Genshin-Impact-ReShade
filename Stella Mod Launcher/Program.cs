@@ -13,7 +13,7 @@ using StellaLauncher.Forms;
 using StellaLauncher.Forms.Errors;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
-using StellaLauncher.Scripts.Forms;
+using StellaLauncher.Scripts.Forms.MainForm;
 using Shortcut = StellaLauncher.Scripts.Shortcut;
 
 namespace StellaLauncher

@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using CliWrap.Builders;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
-using StellaLauncher.Scripts.Forms;
+using StellaLauncher.Scripts.Forms.MainForm;
 
 namespace StellaLauncher.Forms.Errors
 {
