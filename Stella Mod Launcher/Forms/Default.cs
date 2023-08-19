@@ -264,7 +264,7 @@ namespace StellaLauncher.Forms
             {
                 Program.Settings.WriteInt("Updates", "UpdateAvailable", 0);
                 Program.Settings.Save();
-                status_Label.Text += $"[✓] {Resources.Default_Congratulations}\n[i] {string.Format(Resources.Default_SMLSuccessfullyUpdatedToVersion_, Program.AppVersion)}";
+                status_Label.Text += $"[✓] {Resources.Default_Congratulations}\n[i] {string.Format(Resources.Default_SMLSuccessfullyUpdatedToVersion_, Program.AppVersion)}\n";
             }
 
             // Check for updates
