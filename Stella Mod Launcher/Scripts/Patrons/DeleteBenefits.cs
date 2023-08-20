@@ -89,14 +89,14 @@ namespace StellaLauncher.Scripts.Patrons
             }
         }
 
-        // Delete registry key for patrons
+        // Delete registry key for patrons. Written by ChatGPT.
         private static void DeleteRegistryValue()
         {
             const string secret = "Secret";
 
             try
             {
-                string registryKeyPath = Secret.RegistryKeyPath; // Upewnij się, że Secret.RegistryKeyPath nie jest null
+                string registryKeyPath = Secret.RegistryKeyPath;
                 using (RegistryKey key = Registry.CurrentUser.OpenSubKey(registryKeyPath, true))
                 {
                     if (key != null)
@@ -104,7 +104,7 @@ namespace StellaLauncher.Scripts.Patrons
                         object value = key.GetValue(secret);
                         if (value != null)
                         {
-                            key.DeleteValue(secret); // Usuń wartość REG_SZ o nazwie "Secret" z klucza rejestru
+                            key.DeleteValue(secret);
                             Log.Output($"Deleted REG_SZ value '{secret}' from the registry.");
                         }
                         else
