@@ -29,7 +29,7 @@ namespace StellaLauncher
         // Files and folders
         public static readonly string AppPath = AppContext.BaseDirectory;
         public static readonly string AppData = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
-        public static readonly string PrepareLauncher = Path.Combine(AppPath, "Configuration.exe");
+        public static readonly string PrepareLauncher = Path.Combine(AppPath, "Prepare Stella Mod.exe");
         public static readonly string ReShadePath = Path.Combine(AppPath, "data", "reshade", "ReShade64.dll");
         public static readonly string InjectorPath = Path.Combine(AppPath, "data", "reshade", "inject64.exe");
         public static readonly string FpsUnlockerExePath = Path.Combine(AppPath, "data", "unlocker", "unlockfps_clr.exe");
