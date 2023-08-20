@@ -43,7 +43,7 @@ namespace PrepareStella.Scripts.Preparing
                 }
 
                 // Downloading resources zip file
-                Console.WriteLine(@"Downloading resources...");
+                Console.WriteLine(@"Downloading resources from GitHub...");
                 using (HttpClient httpClient = new HttpClient())
                 {
                     httpClient.DefaultRequestHeaders.Add("user-agent", Program.UserAgent);
