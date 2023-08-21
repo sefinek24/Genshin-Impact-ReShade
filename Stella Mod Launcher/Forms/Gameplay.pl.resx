@@ -122,7 +122,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>379, 43</value>
+    <value>381, 68</value>
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>259, 23</value>
@@ -135,25 +135,25 @@
 Dzięki za korzystanie z tego oprogramowania. Miłej gry (:</value>
   </data>
   <data name="linkLabel2.Text" xml:space="preserve">
-    <value>Serwer Discord</value>
+    <value>Dokumentacja</value>
   </data>
   <data name="linkLabel2.ToolTip" xml:space="preserve">
-    <value>Dołącz do mojego serwera Discord.</value>
+    <value>Zapoznaj się z dokumentacją</value>
   </data>
   <data name="linkLabel3.Text" xml:space="preserve">
-    <value>Strona www</value>
-  </data>
-  <data name="linkLabel3.ToolTip" xml:space="preserve">
-    <value>Sprawdź oficjalną stronę internetową.</value>
-  </data>
-  <data name="linkLabel4.Text" xml:space="preserve">
     <value>Galeria</value>
   </data>
+  <data name="linkLabel3.ToolTip" xml:space="preserve">
+    <value>Przeglądaj zrzuty ekranu z gry</value>
+  </data>
+  <data name="linkLabel4.Text" xml:space="preserve">
+    <value>Widea</value>
+  </data>
   <data name="linkLabel4.ToolTip" xml:space="preserve">
-    <value>Sprawdź zrzuty ekranu.</value>
+    <value>Obejrzyj widea na YouTube</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Stworzone przez: Sefinek</value>
+    <value>Autor: Sefinek, i chuj lol</value>
   </data>
   <data name="pictureBox3.ToolTip" xml:space="preserve">
     <value>Angielski</value>

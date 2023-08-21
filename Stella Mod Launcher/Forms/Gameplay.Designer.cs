@@ -100,7 +100,7 @@ namespace StellaLauncher.Forms
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.TabStop = true;
             this.toolTip1.SetToolTip(this.linkLabel2, resources.GetString("linkLabel2.ToolTip"));
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Discord_Button);
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Documentation_LinkLabel);
             // 
             // linkLabel3
             // 
@@ -113,7 +113,7 @@ namespace StellaLauncher.Forms
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.TabStop = true;
             this.toolTip1.SetToolTip(this.linkLabel3, resources.GetString("linkLabel3.ToolTip"));
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Website_Button);
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Gallery_LinkLabel);
             // 
             // linkLabel4
             // 
@@ -126,7 +126,7 @@ namespace StellaLauncher.Forms
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.TabStop = true;
             this.toolTip1.SetToolTip(this.linkLabel4, resources.GetString("linkLabel4.ToolTip"));
-            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Gallery_Button);
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Videos_LinkLabel);
             // 
             // label2
             // 

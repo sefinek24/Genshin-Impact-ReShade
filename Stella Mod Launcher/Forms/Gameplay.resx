@@ -196,7 +196,7 @@
     <value>Comic Sans MS, 12pt</value>
   </data>
   <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>447, 43</value>
+    <value>451, 71</value>
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>189, 23</value>
@@ -226,10 +226,10 @@
     <value>Comic Sans MS, 12pt</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 423</value>
+    <value>25, 464</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 46</value>
+    <value>615, 46</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>93</value>
@@ -260,7 +260,7 @@ Thank you for using. Please support me if you find it helpful. Enjoy!</value>
     <value>Comic Sans MS, 14.25pt</value>
   </data>
   <data name="linkLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>214, 483</value>
+    <value>213, 533</value>
   </data>
   <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>232, 26</value>
@@ -269,13 +269,13 @@ Thank you for using. Please support me if you find it helpful. Enjoy!</value>
     <value>95</value>
   </data>
   <data name="linkLabel2.Text" xml:space="preserve">
-    <value>Discord server</value>
+    <value>Documentation</value>
   </data>
   <data name="linkLabel2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
   <data name="linkLabel2.ToolTip" xml:space="preserve">
-    <value>Join to my Discord server.</value>
+    <value>Read documentation</value>
   </data>
   <data name="&gt;&gt;linkLabel2.Name" xml:space="preserve">
     <value>linkLabel2</value>
@@ -296,7 +296,7 @@ Thank you for using. Please support me if you find it helpful. Enjoy!</value>
     <value>Comic Sans MS, 14.25pt</value>
   </data>
   <data name="linkLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>452, 482</value>
+    <value>462, 532</value>
   </data>
   <data name="linkLabel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>178, 29</value>
@@ -305,13 +305,13 @@ Thank you for using. Please support me if you find it helpful. Enjoy!</value>
     <value>96</value>
   </data>
   <data name="linkLabel3.Text" xml:space="preserve">
-    <value>Website</value>
+    <value>Gallery</value>
   </data>
   <data name="linkLabel3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
   <data name="linkLabel3.ToolTip" xml:space="preserve">
-    <value>Check official website.</value>
+    <value>Check the gallery</value>
   </data>
   <data name="&gt;&gt;linkLabel3.Name" xml:space="preserve">
     <value>linkLabel3</value>
@@ -332,22 +332,22 @@ Thank you for using. Please support me if you find it helpful. Enjoy!</value>
     <value>Comic Sans MS, 14.25pt</value>
   </data>
   <data name="linkLabel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 482</value>
+    <value>25, 532</value>
   </data>
   <data name="linkLabel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 29</value>
+    <value>173, 29</value>
   </data>
   <data name="linkLabel4.TabIndex" type="System.Int32, mscorlib">
     <value>97</value>
   </data>
   <data name="linkLabel4.Text" xml:space="preserve">
-    <value>Gallery</value>
+    <value>Videos</value>
   </data>
   <data name="linkLabel4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
   <data name="linkLabel4.ToolTip" xml:space="preserve">
-    <value>Check screenshots.</value>
+    <value>Other videos</value>
   </data>
   <data name="&gt;&gt;linkLabel4.Name" xml:space="preserve">
     <value>linkLabel4</value>
@@ -368,10 +368,10 @@ Thank you for using. Please support me if you find it helpful. Enjoy!</value>
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 522</value>
+    <value>577, 527</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 24</value>
+    <value>432, 24</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>98</value>
@@ -398,7 +398,7 @@ Thank you for using. Please support me if you find it helpful. Enjoy!</value>
     <value>None</value>
   </data>
   <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>338, 551</value>
+    <value>801, 558</value>
   </data>
   <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 32</value>
@@ -428,7 +428,7 @@ Thank you for using. Please support me if you find it helpful. Enjoy!</value>
     <value>None</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>286, 551</value>
+    <value>749, 558</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 32</value>
@@ -458,10 +458,10 @@ Thank you for using. Please support me if you find it helpful. Enjoy!</value>
     <value>None</value>
   </data>
   <data name="webView21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 69</value>
+    <value>25, 97</value>
   </data>
   <data name="webView21.Size" type="System.Drawing.Size, System.Drawing">
-    <value>604, 340</value>
+    <value>615, 350</value>
   </data>
   <data name="webView21.TabIndex" type="System.Int32, mscorlib">
     <value>101</value>
@@ -494,7 +494,7 @@ Thank you for using. Please support me if you find it helpful. Enjoy!</value>
     <value>Manual</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Gameplay</value>
+    <value>Mini video gameplay</value>
   </data>
   <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
     <value>toolTip1</value>

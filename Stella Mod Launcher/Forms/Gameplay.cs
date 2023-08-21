@@ -75,20 +75,20 @@ namespace StellaLauncher.Forms
 
 
         // Bottom
-        private void Gallery_Button(object sender, LinkLabelLinkClickedEventArgs e)
+        private void Videos_LinkLabel(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Utils.OpenUrl($"{Program.AppWebsiteFull}/videos");
+        }
+
+        private void Documentation_LinkLabel(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Utils.OpenUrl($"{Program.AppWebsiteFull}/docs?page=introduction");
+        }
+
+        private void Gallery_LinkLabel(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (Application.OpenForms.OfType<Gallery>().Any()) return;
             new Gallery { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.Show();
-        }
-
-        private void Discord_Button(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Utils.OpenUrl(Discord.Invitation);
-        }
-
-        private void Website_Button(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Utils.OpenUrl(Program.AppWebsiteFull);
         }
     }
 }
