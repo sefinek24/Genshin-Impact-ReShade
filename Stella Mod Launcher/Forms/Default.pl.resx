@@ -218,13 +218,13 @@
     <value>Wesprzyj moją pracę.</value>
   </data>
   <data name="becomeMyPatron_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 390</value>
+    <value>34, 390</value>
   </data>
   <data name="becomeMyPatron_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>598, 60</value>
+    <value>540, 60</value>
   </data>
   <data name="becomeMyPatron_LinkLabel.Text" xml:space="preserve">
-    <value>Aby uzyskać Ray Tracing w grze, zostań moim patronem.
+    <value>Aby uzyskać Ray Tracing w grze, zostań patronem.
 Karty RTX nie są wymagane.</value>
   </data>
   <data name="becomeMyPatron_LinkLabel.ToolTip" xml:space="preserve">
@@ -252,13 +252,13 @@ Karty RTX nie są wymagane.</value>
     <value>Linki</value>
   </data>
   <data name="clickMe_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>912, 449</value>
+    <value>913, 450</value>
   </data>
   <data name="clickMe_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 21</value>
+    <value>124, 21</value>
   </data>
   <data name="clickMe_LinkLabel.Text" xml:space="preserve">
-    <value>Kliknij mnie ;w;</value>
+    <value>Kliknij mnie &gt;.&lt;</value>
   </data>
   <data name="injectReShade_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>71, 297</value>
@@ -316,7 +316,7 @@ Nie ma sensu używać tego, jeśli Twój monitor nie ma więcej niż 60 Hz.</val
     <value>208, 23</value>
   </data>
   <data name="updates_LinkLabel.Text" xml:space="preserve">
-    <value>&gt;&gt; Kliknij, by odświeżyć &lt;&lt;</value>
+    <value>Oczekiwanie...</value>
   </data>
   <data name="padIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>340, 564</value>
