@@ -339,9 +339,6 @@
   <data name="linkLabel2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="linkLabel2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="linkLabel2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Comic Sans MS, 12.75pt</value>
   </data>
@@ -402,9 +399,6 @@
   <data name="linkLabel3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="linkLabel3.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="linkLabel3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Comic Sans MS, 12.75pt</value>
   </data>
@@ -412,13 +406,13 @@
     <value>61, 322</value>
   </data>
   <data name="linkLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>436, 24</value>
+    <value>458, 24</value>
   </data>
   <data name="linkLabel3.TabIndex" type="System.Int32, mscorlib">
     <value>106</value>
   </data>
   <data name="linkLabel3.Text" xml:space="preserve">
-    <value>4.0 Tier List and the Best Characters as of May 2023</value>
+    <value>4.0 Tier List and the Best Characters as of August 2023</value>
   </data>
   <data name="&gt;&gt;linkLabel3.Name" xml:space="preserve">
     <value>linkLabel3</value>
