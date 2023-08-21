@@ -18,8 +18,7 @@ namespace StellaLauncher.Scripts
         {
             Music.PlaySound("winxp", "information_bar");
 
-            string commandArguments = string.Empty;
-            if (cliWrapCommand.Arguments != null) commandArguments = cliWrapCommand.Arguments.Build();
+            string commandArguments = cliWrapCommand.Arguments != null ? cliWrapCommand.Arguments.Build() : string.Empty;
 
             Log.Output($"CliWrap: {cliWrapCommand.App} {commandArguments} {cliWrapCommand.WorkingDir}");
 

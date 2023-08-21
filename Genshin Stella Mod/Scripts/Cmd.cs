@@ -12,8 +12,7 @@ namespace GenshinStellaMod.Scripts
         {
             try
             {
-                string commandArguments = string.Empty;
-                if (cliWrapCommand.Arguments != null) commandArguments = cliWrapCommand.Arguments.Build();
+                string commandArguments = cliWrapCommand.Arguments != null ? cliWrapCommand.Arguments.Build() : string.Empty;
 
                 Log.Output($"CliWrap: Run app: {cliWrapCommand.App}; Arguments {commandArguments}; WorkingDir {cliWrapCommand.WorkingDir};");
 
