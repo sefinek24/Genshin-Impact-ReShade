@@ -252,13 +252,17 @@ Karty RTX nie są wymagane.</value>
     <value>Linki</value>
   </data>
   <data name="clickMe_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>913, 450</value>
+    <value>939, 432</value>
   </data>
   <data name="clickMe_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 21</value>
+    <value>92, 42</value>
   </data>
   <data name="clickMe_LinkLabel.Text" xml:space="preserve">
-    <value>Kliknij mnie &gt;.&lt;</value>
+    <value>Kliknij mnie
+&gt;.&lt;</value>
+  </data>
+  <data name="clickMe_LinkLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="injectReShade_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>71, 297</value>
