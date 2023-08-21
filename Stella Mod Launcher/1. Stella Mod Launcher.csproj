@@ -550,7 +550,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="data\sounds\winxp\Windows XP Notify.wav" />
-    <Content Include="data\sounds\winxp\Windows XP Print complete.wav" />
+    <Content Include="data\sounds\winxp\print_complete.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="data\sounds\winxp\Windows XP Recycle.wav" />
     <Content Include="data\sounds\winxp\restore.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

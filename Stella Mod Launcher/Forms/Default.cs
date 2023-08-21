@@ -451,16 +451,8 @@ namespace StellaLauncher.Forms
                     break;
             }
 
-
             bool res = await Cmd.Execute(command);
-            if (!res) return;
-
-            // Find game path
-            string path = await Utils.GetGame("giLauncher");
-            if (string.IsNullOrEmpty(path)) return;
-
-            // Open Genshin Launcher
-            await Cmd.Execute(new Cmd.CliWrap { App = path });
+            if (res) Environment.Exit(0);
         }
 
         /* 4 */
@@ -557,27 +549,21 @@ namespace StellaLauncher.Forms
             }
 
             // Run file
-            await Cmd.Execute(command);
-
-            // Find game path
-            string path = await Utils.GetGame("giLauncher");
-            if (path == null) return;
-
-            // Open Genshin Launcher
-            await Cmd.Execute(new Cmd.CliWrap { App = path });
+            bool res = await Cmd.Execute(command);
+            if (res) Environment.Exit(0);
         }
 
         private async void OpenGILauncher_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            string path = await Utils.GetGame("giLauncher");
-            if (string.IsNullOrEmpty(path))
+            string giLauncher = await Utils.GetGame("giLauncher");
+            if (string.IsNullOrEmpty(giLauncher))
             {
                 MessageBox.Show(Resources.Default_GameLauncherWasNotFound, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Log.SaveError(string.Format(Resources.Default_GameLauncherWasNotFoundIn, path));
+                Log.SaveError(string.Format(Resources.Default_GameLauncherWasNotFoundIn, giLauncher));
                 return;
             }
 
-            await Cmd.Execute(new Cmd.CliWrap { App = path });
+            await Cmd.Execute(new Cmd.CliWrap { App = giLauncher });
         }
 
 
