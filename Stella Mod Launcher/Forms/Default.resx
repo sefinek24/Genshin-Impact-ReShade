@@ -755,7 +755,7 @@ RTX cards are not required.</value>
     <value>85</value>
   </data>
   <data name="version_LinkLabel.Text" xml:space="preserve">
-    <value>Loading...</value>
+    <value>Restart is optional</value>
   </data>
   <data name="version_LinkLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
