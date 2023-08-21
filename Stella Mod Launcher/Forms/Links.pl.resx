@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="panel3.ToolTip" xml:space="preserve">
-    <value>Zamknij</value>
+    <value>kurwa</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="createShortcut_Label.Size" type="System.Drawing.Size, System.Drawing">
@@ -140,10 +140,10 @@
     <value>Tier lista najlepszych postaci Genshin Impact</value>
   </data>
   <data name="linkLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>440, 24</value>
+    <value>456, 24</value>
   </data>
   <data name="linkLabel3.Text" xml:space="preserve">
-    <value>3.7 Lista poziomów i najlepsze postacie na Maj 2023r.</value>
+    <value>Tier lista dla 4.0 i najlepsze postacie na sierpień 2023 r.</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Mapa gry</value>
