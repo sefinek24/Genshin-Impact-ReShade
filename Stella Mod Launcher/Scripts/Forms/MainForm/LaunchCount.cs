@@ -37,11 +37,11 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                     break;
 
                 case 2:
+                case 8:
                 case 10:
                 case 25:
                 case 35:
                 case 45:
-                case 55:
                 case 60:
                     if (!Secret.IsMyPatron) new SupportMe { Icon = Program.Ico }.ShowDialog();
                     break;
@@ -74,9 +74,25 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                     await ShowMessage(MessageType.MessageBox);
                     await ShowMessage(MessageType.StatusLabel);
                     break;
+
                 case 2:
                 case 3:
+                case 4:
+                case 5:
+                case 6:
                     await ShowMessage(MessageType.StatusLabel);
+                    break;
+
+                case 10:
+                case 15:
+                    await ShowMessage(MessageType.TheSimultaneousOfUse);
+                    break;
+
+                case 20:
+                case 30:
+                case 40:
+                case 50:
+                    await ShowMessage(MessageType.ThankYouForYourSupport);
                     break;
             }
         }
@@ -86,9 +102,11 @@ namespace StellaLauncher.Scripts.Forms.MainForm
             switch (type)
             {
                 case MessageType.MessageBox:
+                {
                     MessageBox.Show(Resources.Default_ItAppersThatIsYourFirstTimeLaunchingTheLauncher, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Log.Output(Resources.Default_ItAppersThatIsYourFirstTimeLaunchingTheLauncher);
                     break;
+                }
                 case MessageType.StatusLabel:
                 {
                     if (Secret.IsMyPatron)
@@ -99,8 +117,24 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                     Log.Output(Default._status_Label.Text);
                     break;
                 }
+                case MessageType.TheSimultaneousOfUse:
+                {
+                    if (!Secret.IsMyPatron)
+                        Default._status_Label.Text += $"[i] {Resources.LaunchCount_TheSimultaneousOfUseRSFU3DM}\n";
+
+                    Log.Output(Default._status_Label.Text);
+                    break;
+                }
+                case MessageType.ThankYouForYourSupport:
+                {
+                    if (Secret.IsMyPatron)
+                        Default._status_Label.Text += $"[i] {Resources.LaunchCount_ThankYouForYourSupport}\n";
+
+                    Log.Output(Default._status_Label.Text);
+                    break;
+                }
                 default:
-                    throw new ArgumentException("Invalid message type. Supported types are 'MessageBox' and 'StatusLabel'.");
+                    throw new ArgumentException("Invalid message type.");
             }
 
             return Task.CompletedTask;
@@ -109,7 +143,9 @@ namespace StellaLauncher.Scripts.Forms.MainForm
         private enum MessageType
         {
             MessageBox,
-            StatusLabel
+            StatusLabel,
+            TheSimultaneousOfUse,
+            ThankYouForYourSupport
         }
     }
 }

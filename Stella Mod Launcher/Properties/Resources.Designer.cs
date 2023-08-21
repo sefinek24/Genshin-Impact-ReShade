@@ -936,6 +936,15 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hello! Thank you for your support! Have a nice day!.
+        /// </summary>
+        internal static string LaunchCount_ThankYouForYourSupport {
+            get {
+                return ResourceManager.GetString("LaunchCount_ThankYouForYourSupport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The simultaneous use of ReShade, FPS Unlock, and 3DMigoto is only possible for patrons..
         /// </summary>
         internal static string LaunchCount_TheSimultaneousOfUseRSFU3DM {

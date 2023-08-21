@@ -1,5 +1,5 @@
 #define AppName "Genshin Stella Mod"
-#define AppVersion "7.7.4.0"
+#define AppVersion "7.7.4.1"
 #define AppPublisher "Sefinek Inc."
 #define AppURL "https://genshin.sefinek.net"
 #define AppExeName "Stella Mod Launcher.exe"

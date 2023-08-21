@@ -770,4 +770,7 @@ In newer versions of Stella Mod, saving paths has been moved to the registry. If
   <data name="LaunchCount_TheSimultaneousOfUseRSFU3DM" xml:space="preserve">
     <value>The simultaneous use of ReShade, FPS Unlock, and 3DMigoto is only possible for patrons.</value>
   </data>
+  <data name="LaunchCount_ThankYouForYourSupport" xml:space="preserve">
+    <value>Hello! Thank you for your support! Have a nice day!</value>
+  </data>
 </root>
