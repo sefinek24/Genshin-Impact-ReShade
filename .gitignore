@@ -70,3 +70,9 @@ data/reshade/addons/ReshadeEffectShaderToggler.ini
 
 # Configs
 .eslintrc.js
+
+# Honkai Star Rail
+Star Rail Stella Mod/bin
+Star Rail Stella Mod/obj
+Star Rail Stella Mod/Action.cs
+Star Rail Stella Mod/Scripts/Logic.cs
