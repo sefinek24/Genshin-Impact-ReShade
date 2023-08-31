@@ -225,7 +225,7 @@ namespace StellaLauncher.Forms
                 App = "wt.exe",
                 WorkingDir = Program.AppPath,
                 Arguments = new ArgumentsBuilder()
-                    .Add(Path.Combine(Program.AppPath, "data", "cmd", "scan_sys_files.cmd"))
+                    .Add(Path.Combine(Default.NewCmdDir, "scan_sys_files.cmd"))
                     .Add(Program.AppVersion)
                     .Add(Data.ReShadeVer)
                     .Add(Data.UnlockerVer)
@@ -285,7 +285,7 @@ namespace StellaLauncher.Forms
                 App = "wt.exe",
                 WorkingDir = Program.AppPath,
                 Arguments = new ArgumentsBuilder()
-                    .Add(Path.Combine(Program.AppPath, "data", "cmd", "delete_cache.cmd")) // 0
+                    .Add(Path.Combine(Default.NewCmdDir, "delete_cache.cmd")) // 0
                     .Add(Program.AppVersion) // 1
                     .Add(Data.ReShadeVer) // 2
                     .Add(Data.UnlockerVer) // 3
@@ -304,7 +304,7 @@ namespace StellaLauncher.Forms
                 App = "wt.exe",
                 WorkingDir = Program.AppPath,
                 Arguments = new ArgumentsBuilder()
-                    .Add(Path.Combine(Program.AppPath, "data", "cmd", "delete_webview_cache.cmd")) // 0
+                    .Add(Path.Combine(Default.NewCmdDir, "delete_webview_cache.cmd")) // 0
                     .Add(Program.AppVersion) // 1
                     .Add(Data.ReShadeVer) // 2
                     .Add(Data.UnlockerVer) // 3

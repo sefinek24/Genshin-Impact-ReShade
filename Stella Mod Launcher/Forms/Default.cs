@@ -18,8 +18,11 @@ namespace StellaLauncher.Forms
 {
     public partial class Default : Form
     {
-        // Files
-        private static readonly string RunCmd = Path.Combine(Program.AppPath, "data", "cmd", "patrons", "run.cmd");
+        // Batch files
+        private static readonly string BatchDir = Path.Combine(Program.AppPath, "data", "cmd");
+        private static readonly string BatchDirPatrons = Path.Combine(BatchDir, "patrons");
+        private static readonly string BatchRunPatrons = Path.Combine(BatchDirPatrons, "run.cmd");
+        public static string NewCmdDir;
 
         // New update?
         public static bool UpdateIsAvailable;
@@ -205,10 +208,13 @@ namespace StellaLauncher.Forms
                         label1.TextAlign = ContentAlignment.MiddleRight;
 
                         Secret.BearerToken = remote.Token;
+
+                        NewCmdDir = BatchDirPatrons;
                     }
                     else if (remote.Status >= 500)
                     {
                         Secret.IsMyPatron = false;
+                        NewCmdDir = BatchDir;
                         label1.Text = @"Something went wrong ( ̿–ᆺ ̿–)";
 
                         DeleteBenefits.Run();
@@ -219,6 +225,7 @@ namespace StellaLauncher.Forms
                     else
                     {
                         Secret.IsMyPatron = false;
+                        NewCmdDir = BatchDir;
                         label1.Text = @"Oh nooo... Sad cat... ( ̿–ᆺ ̿–)";
 
                         DeleteBenefits.Run();
@@ -231,6 +238,7 @@ namespace StellaLauncher.Forms
             else
             {
                 Secret.IsMyPatron = false;
+                NewCmdDir = BatchDir;
                 DeleteBenefits.Run();
             }
 
@@ -394,7 +402,7 @@ namespace StellaLauncher.Forms
                         App = "wt.exe",
                         WorkingDir = Program.AppPath,
                         Arguments = new ArgumentsBuilder()
-                            .Add(RunCmd) // 0
+                            .Add(BatchRunPatrons) // 0
                             .Add(Program.AppVersion) // 1
                             .Add(Data.ReShadeVer) // 2
                             .Add(Data.UnlockerVer) // 3
@@ -438,7 +446,7 @@ namespace StellaLauncher.Forms
                         App = "wt.exe",
                         WorkingDir = Program.AppPath,
                         Arguments = new ArgumentsBuilder()
-                            .Add(RunCmd) // 0
+                            .Add(BatchRunPatrons) // 0
                             .Add(Program.AppVersion) // 1
                             .Add(Data.ReShadeVer) // 2
                             .Add(Data.UnlockerVer) // 3
@@ -481,7 +489,7 @@ namespace StellaLauncher.Forms
                         App = "wt.exe",
                         WorkingDir = Program.AppPath,
                         Arguments = new ArgumentsBuilder()
-                            .Add(RunCmd) // 0
+                            .Add(BatchRunPatrons) // 0
                             .Add(Program.AppVersion) // 1
                             .Add(Data.ReShadeVer) // 2
                             .Add(Data.UnlockerVer) // 3
@@ -535,7 +543,7 @@ namespace StellaLauncher.Forms
                         App = "wt.exe",
                         WorkingDir = Program.AppPath,
                         Arguments = new ArgumentsBuilder()
-                            .Add(RunCmd) // 0
+                            .Add(BatchRunPatrons) // 0
                             .Add(Program.AppVersion) // 1
                             .Add(Data.ReShadeVer) // 2
                             .Add(Data.UnlockerVer) // 3
