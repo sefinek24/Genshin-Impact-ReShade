@@ -19,7 +19,7 @@ namespace StellaLauncher.Forms
     public partial class Default : Form
     {
         // Files
-        private static readonly string RunCmd = Path.Combine(Program.AppPath, "data", "cmd", "run.cmd");
+        private static readonly string RunCmd = Path.Combine(Program.AppPath, "data", "cmd", "patrons", "run.cmd");
 
         // New update?
         public static bool UpdateIsAvailable;

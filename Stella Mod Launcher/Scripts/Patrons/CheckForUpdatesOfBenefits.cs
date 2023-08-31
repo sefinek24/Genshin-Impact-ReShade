@@ -117,7 +117,7 @@ namespace StellaLauncher.Scripts.Patrons
 
 
             // Cmd files
-            string cmdVersionPath = Path.Combine(Program.AppPath, "data", "cmd", "version.json");
+            string cmdVersionPath = Path.Combine(Program.AppPath, "data", "cmd", "patrons", "version.json");
             if (File.Exists(cmdVersionPath))
             {
                 string cmdJson = File.ReadAllText(cmdVersionPath);
