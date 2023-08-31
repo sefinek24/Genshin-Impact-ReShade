@@ -202,7 +202,7 @@ namespace StellaLauncher.Forms
                     if (remote.Status == 200)
                     {
                         Secret.IsMyPatron = true;
-                        Log.Output($"User is my Patron ({Secret.IsMyPatron}). Benefits are enabled.");
+                        Log.Output($"User is my Patron; {Secret.IsMyPatron}; Benefits are enabled;");
 
                         label1.Text = Resources.Default_GenshinStellaModForPatrons;
                         label1.TextAlign = ContentAlignment.MiddleRight;
