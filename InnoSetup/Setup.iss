@@ -1,5 +1,5 @@
 #define AppName "Genshin Stella Mod"
-#define AppVersion "7.7.4.1"
+#define AppVersion "7.7.5.0"
 #define AppPublisher "Sefinek Inc."
 #define AppURL "https://genshin.sefinek.net"
 #define AppExeName "Stella Mod Launcher.exe"
@@ -29,7 +29,7 @@ OutputBaseFilename=Stella-Mod-Setup
 SolidCompression=yes
 WizardStyle=classic
 
-DirExistsWarning=yes
+DirExistsWarning=no
 DisableProgramGroupPage=yes
 UninstallDisplayIcon="{app}\Genshin Stella Mod.exe"
 
@@ -96,7 +96,7 @@ Filename: "{app}\{#AppExeName}"; WorkingDir: "{app}"; Description: "{cm:LaunchPr
 function InitializeSetup: Boolean;
 begin
   Dependency_AddDotNet48;
-  // Dependency_AddDotNet70;
+  Dependency_AddDotNet70;
   Dependency_AddWebView2;
 
   Dependency_ForceX86 := True;
