@@ -19,7 +19,7 @@ namespace StellaLauncher.Scripts.Forms
             string wavPath = GetRandomBgWavPath();
             if (string.IsNullOrEmpty(wavPath)) return;
 
-            await Task.Run(() => PlaySoundAsync(wavPath, 0.6f));
+            await Task.Run(() => PlaySoundAsync(wavPath, 0.76f));
         }
 
         private static string GetRandomBgWavPath()
@@ -41,7 +41,7 @@ namespace StellaLauncher.Scripts.Forms
                 return;
             }
 
-            Task.Run(() => PlaySoundAsync(wavPath, fileName == "information_bar" ? 0.45f : 1.6f));
+            Task.Run(() => PlaySoundAsync(wavPath, fileName == "information_bar" ? 0.44f : 1.54f));
         }
 
         private static async Task PlaySoundAsync(string wavPath, float volume)

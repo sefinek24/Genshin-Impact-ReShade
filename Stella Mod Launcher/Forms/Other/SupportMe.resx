@@ -193,16 +193,17 @@
     <value>Ink Free, 21.7499962pt, style=Bold</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 407</value>
+    <value>23, 407</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>668, 36</value>
+    <value>648, 72</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>By becoming my patron, you can gain new benefits.</value>
+    <value>By becoming a patron, you can gain new benefits.
+Beautiful mods, Ray Tracing and much more!</value>
   </data>
   <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -442,13 +443,13 @@
     <value>21, 272</value>
   </data>
   <data name="linkLabel7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 28</value>
+    <value>254, 28</value>
   </data>
   <data name="linkLabel7.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
   <data name="linkLabel7.Text" xml:space="preserve">
-    <value>» Join Discord server</value>
+    <value>» Join the Discord server</value>
   </data>
   <data name="linkLabel7.ToolTip" xml:space="preserve">
     <value>Discord server</value>
@@ -637,7 +638,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Support me</value>
+    <value>Support the creator</value>
   </data>
   <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
     <value>toolTip1</value>
