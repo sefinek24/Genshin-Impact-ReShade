@@ -10,13 +10,13 @@
         "projectName": "3. Configuration",
         "projectPath": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Configuration\\3. Configuration.csproj",
         "frameworks": {
-          "net48": {
+          "net481": {
             "projectReferences": {}
           }
         }
       },
       "frameworks": {
-        "net48": {}
+        "net481": {}
       }
     },
     "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Genshin Stella Mod\\2. Genshin Stella Mod.csproj": {
@@ -25,13 +25,13 @@
         "projectName": "2. Genshin Stella Mod",
         "projectPath": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Genshin Stella Mod\\2. Genshin Stella Mod.csproj",
         "frameworks": {
-          "net48": {
+          "net481": {
             "projectReferences": {}
           }
         }
       },
       "frameworks": {
-        "net48": {}
+        "net481": {}
       }
     },
     "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Prepare Stella\\4. Prepare Stella.csproj": {
@@ -53,20 +53,23 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net48"
+          "net481"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net48": {
+          "net481": {
             "projectReferences": {}
           }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true
         }
       },
       "frameworks": {
-        "net48": {
+        "net481": {
           "dependencies": {
             "CliWrap": {
               "target": "Package",
@@ -125,20 +128,23 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net48"
+          "net481"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net48": {
+          "net481": {
             "projectReferences": {}
           }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true
         }
       },
       "frameworks": {
-        "net48": {
+        "net481": {
           "dependencies": {
             "ByteSize": {
               "target": "Package",
