@@ -63,6 +63,9 @@
           "net48": {
             "projectReferences": {}
           }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true
         }
       },
       "frameworks": {
@@ -135,6 +138,9 @@
           "net48": {
             "projectReferences": {}
           }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true
         }
       },
       "frameworks": {
@@ -158,11 +164,11 @@
             },
             "Microsoft.Web.WebView2": {
               "target": "Package",
-              "version": "[1.0.1901.177, )"
+              "version": "[1.0.1938.49, )"
             },
             "NAudio": {
               "target": "Package",
-              "version": "[2.1.0, )"
+              "version": "[2.2.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

@@ -118,7 +118,7 @@
           }
         }
       },
-      "Microsoft.Web.WebView2/1.0.1901.177": {
+      "Microsoft.Web.WebView2/1.0.1938.49": {
         "type": "package",
         "build": {
           "build/_._": {}
@@ -171,15 +171,15 @@
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.targets": {}
         }
       },
-      "NAudio/2.1.0": {
+      "NAudio/2.2.0": {
         "type": "package",
         "dependencies": {
-          "NAudio.Asio": "2.1.0",
-          "NAudio.Core": "2.1.0",
-          "NAudio.Midi": "2.1.0",
-          "NAudio.Wasapi": "2.1.0",
-          "NAudio.WinForms": "2.1.0",
-          "NAudio.WinMM": "2.1.0"
+          "NAudio.Asio": "2.2.0",
+          "NAudio.Core": "2.2.0",
+          "NAudio.Midi": "2.2.0",
+          "NAudio.Wasapi": "22.0.0",
+          "NAudio.WinForms": "2.2.0",
+          "NAudio.WinMM": "2.2.0"
         },
         "compile": {
           "lib/netcoreapp3.1/NAudio.dll": {
@@ -192,79 +192,99 @@
           }
         }
       },
-      "NAudio.Asio/2.1.0": {
+      "NAudio.Asio/2.2.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry": "4.7.0",
-          "NAudio.Core": "2.1.0"
+          "NAudio.Core": "2.2.0"
         },
         "compile": {
-          "lib/netstandard2.0/NAudio.Asio.dll": {}
+          "lib/netstandard2.0/NAudio.Asio.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NAudio.Asio.dll": {}
+          "lib/netstandard2.0/NAudio.Asio.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NAudio.Core/2.1.0": {
+      "NAudio.Core/2.2.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/NAudio.Core.dll": {}
+          "lib/netstandard2.0/NAudio.Core.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NAudio.Core.dll": {}
+          "lib/netstandard2.0/NAudio.Core.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NAudio.Midi/2.1.0": {
-        "type": "package",
-        "dependencies": {
-          "NAudio.Core": "2.1.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/NAudio.Midi.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/NAudio.Midi.dll": {}
-        }
-      },
-      "NAudio.Wasapi/2.1.0": {
+      "NAudio.Midi/2.2.0": {
         "type": "package",
         "dependencies": {
-          "NAudio.Core": "2.1.0"
+          "NAudio.Core": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/NAudio.Midi.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NAudio.Midi.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NAudio.Wasapi/22.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NAudio.Core": "2.2.0"
         },
         "compile": {
           "lib/uap10.0.18362/NAudio.Wasapi.dll": {
-            "related": ".pri"
+            "related": ".pri;.xml"
           }
         },
         "runtime": {
           "lib/uap10.0.18362/NAudio.Wasapi.dll": {
-            "related": ".pri"
+            "related": ".pri;.xml"
           }
         }
       },
-      "NAudio.WinForms/2.1.0": {
+      "NAudio.WinForms/2.2.0": {
         "type": "package",
         "dependencies": {
-          "NAudio.WinMM": "2.1.0"
+          "NAudio.WinMM": "2.2.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/NAudio.WinForms.dll": {}
+          "lib/netcoreapp3.1/NAudio.WinForms.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netcoreapp3.1/NAudio.WinForms.dll": {}
+          "lib/netcoreapp3.1/NAudio.WinForms.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NAudio.WinMM/2.1.0": {
+      "NAudio.WinMM/2.2.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry": "4.7.0",
-          "NAudio.Core": "2.1.0"
+          "NAudio.Core": "2.2.0"
         },
         "compile": {
-          "lib/netstandard2.0/NAudio.WinMM.dll": {}
+          "lib/netstandard2.0/NAudio.WinMM.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NAudio.WinMM.dll": {}
+          "lib/netstandard2.0/NAudio.WinMM.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.3": {
@@ -1299,8 +1319,8 @@
           "CliWrap": "3.6.4",
           "DiscordRichPresence": "1.2.1.24",
           "Microsoft.Toolkit.Uwp.Notifications": "7.1.3",
-          "Microsoft.Web.WebView2": "1.0.1901.177",
-          "NAudio": "2.1.0",
+          "Microsoft.Web.WebView2": "1.0.1938.49",
+          "NAudio": "2.2.0",
           "Newtonsoft.Json": "13.0.3",
           "System.Runtime.Caching": "7.0.0",
           "WindowsAPICodePack": "7.0.4"
@@ -1430,7 +1450,7 @@
           }
         }
       },
-      "Microsoft.Web.WebView2/1.0.1901.177": {
+      "Microsoft.Web.WebView2/1.0.1938.49": {
         "type": "package",
         "build": {
           "build/_._": {}
@@ -1473,15 +1493,15 @@
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.targets": {}
         }
       },
-      "NAudio/2.1.0": {
+      "NAudio/2.2.0": {
         "type": "package",
         "dependencies": {
-          "NAudio.Asio": "2.1.0",
-          "NAudio.Core": "2.1.0",
-          "NAudio.Midi": "2.1.0",
-          "NAudio.Wasapi": "2.1.0",
-          "NAudio.WinForms": "2.1.0",
-          "NAudio.WinMM": "2.1.0"
+          "NAudio.Asio": "2.2.0",
+          "NAudio.Core": "2.2.0",
+          "NAudio.Midi": "2.2.0",
+          "NAudio.Wasapi": "22.0.0",
+          "NAudio.WinForms": "2.2.0",
+          "NAudio.WinMM": "2.2.0"
         },
         "compile": {
           "lib/netcoreapp3.1/NAudio.dll": {
@@ -1494,79 +1514,99 @@
           }
         }
       },
-      "NAudio.Asio/2.1.0": {
+      "NAudio.Asio/2.2.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry": "4.7.0",
-          "NAudio.Core": "2.1.0"
+          "NAudio.Core": "2.2.0"
         },
         "compile": {
-          "lib/netstandard2.0/NAudio.Asio.dll": {}
+          "lib/netstandard2.0/NAudio.Asio.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NAudio.Asio.dll": {}
+          "lib/netstandard2.0/NAudio.Asio.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NAudio.Core/2.1.0": {
+      "NAudio.Core/2.2.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/NAudio.Core.dll": {}
+          "lib/netstandard2.0/NAudio.Core.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NAudio.Core.dll": {}
+          "lib/netstandard2.0/NAudio.Core.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NAudio.Midi/2.1.0": {
-        "type": "package",
-        "dependencies": {
-          "NAudio.Core": "2.1.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/NAudio.Midi.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/NAudio.Midi.dll": {}
-        }
-      },
-      "NAudio.Wasapi/2.1.0": {
+      "NAudio.Midi/2.2.0": {
         "type": "package",
         "dependencies": {
-          "NAudio.Core": "2.1.0"
+          "NAudio.Core": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/NAudio.Midi.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NAudio.Midi.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NAudio.Wasapi/22.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NAudio.Core": "2.2.0"
         },
         "compile": {
           "lib/uap10.0.18362/NAudio.Wasapi.dll": {
-            "related": ".pri"
+            "related": ".pri;.xml"
           }
         },
         "runtime": {
           "lib/uap10.0.18362/NAudio.Wasapi.dll": {
-            "related": ".pri"
+            "related": ".pri;.xml"
           }
         }
       },
-      "NAudio.WinForms/2.1.0": {
+      "NAudio.WinForms/2.2.0": {
         "type": "package",
         "dependencies": {
-          "NAudio.WinMM": "2.1.0"
+          "NAudio.WinMM": "2.2.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/NAudio.WinForms.dll": {}
+          "lib/netcoreapp3.1/NAudio.WinForms.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netcoreapp3.1/NAudio.WinForms.dll": {}
+          "lib/netcoreapp3.1/NAudio.WinForms.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NAudio.WinMM/2.1.0": {
+      "NAudio.WinMM/2.2.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry": "4.7.0",
-          "NAudio.Core": "2.1.0"
+          "NAudio.Core": "2.2.0"
         },
         "compile": {
-          "lib/netstandard2.0/NAudio.WinMM.dll": {}
+          "lib/netstandard2.0/NAudio.WinMM.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NAudio.WinMM.dll": {}
+          "lib/netstandard2.0/NAudio.WinMM.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.3": {
@@ -2746,8 +2786,8 @@
           "CliWrap": "3.6.4",
           "DiscordRichPresence": "1.2.1.24",
           "Microsoft.Toolkit.Uwp.Notifications": "7.1.3",
-          "Microsoft.Web.WebView2": "1.0.1901.177",
-          "NAudio": "2.1.0",
+          "Microsoft.Web.WebView2": "1.0.1938.49",
+          "NAudio": "2.2.0",
           "Newtonsoft.Json": "13.0.3",
           "System.Runtime.Caching": "7.0.0",
           "WindowsAPICodePack": "7.0.4"
@@ -2877,7 +2917,7 @@
           }
         }
       },
-      "Microsoft.Web.WebView2/1.0.1901.177": {
+      "Microsoft.Web.WebView2/1.0.1938.49": {
         "type": "package",
         "build": {
           "build/_._": {}
@@ -2920,15 +2960,15 @@
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.targets": {}
         }
       },
-      "NAudio/2.1.0": {
+      "NAudio/2.2.0": {
         "type": "package",
         "dependencies": {
-          "NAudio.Asio": "2.1.0",
-          "NAudio.Core": "2.1.0",
-          "NAudio.Midi": "2.1.0",
-          "NAudio.Wasapi": "2.1.0",
-          "NAudio.WinForms": "2.1.0",
-          "NAudio.WinMM": "2.1.0"
+          "NAudio.Asio": "2.2.0",
+          "NAudio.Core": "2.2.0",
+          "NAudio.Midi": "2.2.0",
+          "NAudio.Wasapi": "22.0.0",
+          "NAudio.WinForms": "2.2.0",
+          "NAudio.WinMM": "2.2.0"
         },
         "compile": {
           "lib/netcoreapp3.1/NAudio.dll": {
@@ -2941,79 +2981,99 @@
           }
         }
       },
-      "NAudio.Asio/2.1.0": {
+      "NAudio.Asio/2.2.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry": "4.7.0",
-          "NAudio.Core": "2.1.0"
+          "NAudio.Core": "2.2.0"
         },
         "compile": {
-          "lib/netstandard2.0/NAudio.Asio.dll": {}
+          "lib/netstandard2.0/NAudio.Asio.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NAudio.Asio.dll": {}
+          "lib/netstandard2.0/NAudio.Asio.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NAudio.Core/2.1.0": {
+      "NAudio.Core/2.2.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/NAudio.Core.dll": {}
+          "lib/netstandard2.0/NAudio.Core.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NAudio.Core.dll": {}
+          "lib/netstandard2.0/NAudio.Core.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NAudio.Midi/2.1.0": {
-        "type": "package",
-        "dependencies": {
-          "NAudio.Core": "2.1.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/NAudio.Midi.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/NAudio.Midi.dll": {}
-        }
-      },
-      "NAudio.Wasapi/2.1.0": {
+      "NAudio.Midi/2.2.0": {
         "type": "package",
         "dependencies": {
-          "NAudio.Core": "2.1.0"
+          "NAudio.Core": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/NAudio.Midi.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NAudio.Midi.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NAudio.Wasapi/22.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NAudio.Core": "2.2.0"
         },
         "compile": {
           "lib/uap10.0.18362/NAudio.Wasapi.dll": {
-            "related": ".pri"
+            "related": ".pri;.xml"
           }
         },
         "runtime": {
           "lib/uap10.0.18362/NAudio.Wasapi.dll": {
-            "related": ".pri"
+            "related": ".pri;.xml"
           }
         }
       },
-      "NAudio.WinForms/2.1.0": {
+      "NAudio.WinForms/2.2.0": {
         "type": "package",
         "dependencies": {
-          "NAudio.WinMM": "2.1.0"
+          "NAudio.WinMM": "2.2.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/NAudio.WinForms.dll": {}
+          "lib/netcoreapp3.1/NAudio.WinForms.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netcoreapp3.1/NAudio.WinForms.dll": {}
+          "lib/netcoreapp3.1/NAudio.WinForms.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NAudio.WinMM/2.1.0": {
+      "NAudio.WinMM/2.2.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry": "4.7.0",
-          "NAudio.Core": "2.1.0"
+          "NAudio.Core": "2.2.0"
         },
         "compile": {
-          "lib/netstandard2.0/NAudio.WinMM.dll": {}
+          "lib/netstandard2.0/NAudio.WinMM.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NAudio.WinMM.dll": {}
+          "lib/netstandard2.0/NAudio.WinMM.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.3": {
@@ -4297,8 +4357,8 @@
           "CliWrap": "3.6.4",
           "DiscordRichPresence": "1.2.1.24",
           "Microsoft.Toolkit.Uwp.Notifications": "7.1.3",
-          "Microsoft.Web.WebView2": "1.0.1901.177",
-          "NAudio": "2.1.0",
+          "Microsoft.Web.WebView2": "1.0.1938.49",
+          "NAudio": "2.2.0",
           "Newtonsoft.Json": "13.0.3",
           "System.Runtime.Caching": "7.0.0",
           "WindowsAPICodePack": "7.0.4"
@@ -4428,7 +4488,7 @@
           }
         }
       },
-      "Microsoft.Web.WebView2/1.0.1901.177": {
+      "Microsoft.Web.WebView2/1.0.1938.49": {
         "type": "package",
         "native": {
           "runtimes/win-arm64/native/WebView2Loader.dll": {}
@@ -4474,15 +4534,15 @@
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.targets": {}
         }
       },
-      "NAudio/2.1.0": {
+      "NAudio/2.2.0": {
         "type": "package",
         "dependencies": {
-          "NAudio.Asio": "2.1.0",
-          "NAudio.Core": "2.1.0",
-          "NAudio.Midi": "2.1.0",
-          "NAudio.Wasapi": "2.1.0",
-          "NAudio.WinForms": "2.1.0",
-          "NAudio.WinMM": "2.1.0"
+          "NAudio.Asio": "2.2.0",
+          "NAudio.Core": "2.2.0",
+          "NAudio.Midi": "2.2.0",
+          "NAudio.Wasapi": "22.0.0",
+          "NAudio.WinForms": "2.2.0",
+          "NAudio.WinMM": "2.2.0"
         },
         "compile": {
           "lib/netcoreapp3.1/NAudio.dll": {
@@ -4495,79 +4555,99 @@
           }
         }
       },
-      "NAudio.Asio/2.1.0": {
+      "NAudio.Asio/2.2.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry": "4.7.0",
-          "NAudio.Core": "2.1.0"
+          "NAudio.Core": "2.2.0"
         },
         "compile": {
-          "lib/netstandard2.0/NAudio.Asio.dll": {}
+          "lib/netstandard2.0/NAudio.Asio.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NAudio.Asio.dll": {}
+          "lib/netstandard2.0/NAudio.Asio.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NAudio.Core/2.1.0": {
+      "NAudio.Core/2.2.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/NAudio.Core.dll": {}
+          "lib/netstandard2.0/NAudio.Core.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NAudio.Core.dll": {}
+          "lib/netstandard2.0/NAudio.Core.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NAudio.Midi/2.1.0": {
-        "type": "package",
-        "dependencies": {
-          "NAudio.Core": "2.1.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/NAudio.Midi.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/NAudio.Midi.dll": {}
-        }
-      },
-      "NAudio.Wasapi/2.1.0": {
+      "NAudio.Midi/2.2.0": {
         "type": "package",
         "dependencies": {
-          "NAudio.Core": "2.1.0"
+          "NAudio.Core": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/NAudio.Midi.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NAudio.Midi.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NAudio.Wasapi/22.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NAudio.Core": "2.2.0"
         },
         "compile": {
           "lib/uap10.0.18362/NAudio.Wasapi.dll": {
-            "related": ".pri"
+            "related": ".pri;.xml"
           }
         },
         "runtime": {
           "lib/uap10.0.18362/NAudio.Wasapi.dll": {
-            "related": ".pri"
+            "related": ".pri;.xml"
           }
         }
       },
-      "NAudio.WinForms/2.1.0": {
+      "NAudio.WinForms/2.2.0": {
         "type": "package",
         "dependencies": {
-          "NAudio.WinMM": "2.1.0"
+          "NAudio.WinMM": "2.2.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/NAudio.WinForms.dll": {}
+          "lib/netcoreapp3.1/NAudio.WinForms.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netcoreapp3.1/NAudio.WinForms.dll": {}
+          "lib/netcoreapp3.1/NAudio.WinForms.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NAudio.WinMM/2.1.0": {
+      "NAudio.WinMM/2.2.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry": "4.7.0",
-          "NAudio.Core": "2.1.0"
+          "NAudio.Core": "2.2.0"
         },
         "compile": {
-          "lib/netstandard2.0/NAudio.WinMM.dll": {}
+          "lib/netstandard2.0/NAudio.WinMM.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NAudio.WinMM.dll": {}
+          "lib/netstandard2.0/NAudio.WinMM.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.3": {
@@ -5851,8 +5931,8 @@
           "CliWrap": "3.6.4",
           "DiscordRichPresence": "1.2.1.24",
           "Microsoft.Toolkit.Uwp.Notifications": "7.1.3",
-          "Microsoft.Web.WebView2": "1.0.1901.177",
-          "NAudio": "2.1.0",
+          "Microsoft.Web.WebView2": "1.0.1938.49",
+          "NAudio": "2.2.0",
           "Newtonsoft.Json": "13.0.3",
           "System.Runtime.Caching": "7.0.0",
           "WindowsAPICodePack": "7.0.4"
@@ -5982,7 +6062,7 @@
           }
         }
       },
-      "Microsoft.Web.WebView2/1.0.1901.177": {
+      "Microsoft.Web.WebView2/1.0.1938.49": {
         "type": "package",
         "native": {
           "runtimes/win-x64/native/WebView2Loader.dll": {}
@@ -6028,15 +6108,15 @@
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.targets": {}
         }
       },
-      "NAudio/2.1.0": {
+      "NAudio/2.2.0": {
         "type": "package",
         "dependencies": {
-          "NAudio.Asio": "2.1.0",
-          "NAudio.Core": "2.1.0",
-          "NAudio.Midi": "2.1.0",
-          "NAudio.Wasapi": "2.1.0",
-          "NAudio.WinForms": "2.1.0",
-          "NAudio.WinMM": "2.1.0"
+          "NAudio.Asio": "2.2.0",
+          "NAudio.Core": "2.2.0",
+          "NAudio.Midi": "2.2.0",
+          "NAudio.Wasapi": "22.0.0",
+          "NAudio.WinForms": "2.2.0",
+          "NAudio.WinMM": "2.2.0"
         },
         "compile": {
           "lib/netcoreapp3.1/NAudio.dll": {
@@ -6049,79 +6129,99 @@
           }
         }
       },
-      "NAudio.Asio/2.1.0": {
+      "NAudio.Asio/2.2.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry": "4.7.0",
-          "NAudio.Core": "2.1.0"
+          "NAudio.Core": "2.2.0"
         },
         "compile": {
-          "lib/netstandard2.0/NAudio.Asio.dll": {}
+          "lib/netstandard2.0/NAudio.Asio.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NAudio.Asio.dll": {}
+          "lib/netstandard2.0/NAudio.Asio.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NAudio.Core/2.1.0": {
+      "NAudio.Core/2.2.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/NAudio.Core.dll": {}
+          "lib/netstandard2.0/NAudio.Core.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NAudio.Core.dll": {}
+          "lib/netstandard2.0/NAudio.Core.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NAudio.Midi/2.1.0": {
-        "type": "package",
-        "dependencies": {
-          "NAudio.Core": "2.1.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/NAudio.Midi.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/NAudio.Midi.dll": {}
-        }
-      },
-      "NAudio.Wasapi/2.1.0": {
+      "NAudio.Midi/2.2.0": {
         "type": "package",
         "dependencies": {
-          "NAudio.Core": "2.1.0"
+          "NAudio.Core": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/NAudio.Midi.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NAudio.Midi.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NAudio.Wasapi/22.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NAudio.Core": "2.2.0"
         },
         "compile": {
           "lib/uap10.0.18362/NAudio.Wasapi.dll": {
-            "related": ".pri"
+            "related": ".pri;.xml"
           }
         },
         "runtime": {
           "lib/uap10.0.18362/NAudio.Wasapi.dll": {
-            "related": ".pri"
+            "related": ".pri;.xml"
           }
         }
       },
-      "NAudio.WinForms/2.1.0": {
+      "NAudio.WinForms/2.2.0": {
         "type": "package",
         "dependencies": {
-          "NAudio.WinMM": "2.1.0"
+          "NAudio.WinMM": "2.2.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/NAudio.WinForms.dll": {}
+          "lib/netcoreapp3.1/NAudio.WinForms.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netcoreapp3.1/NAudio.WinForms.dll": {}
+          "lib/netcoreapp3.1/NAudio.WinForms.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NAudio.WinMM/2.1.0": {
+      "NAudio.WinMM/2.2.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry": "4.7.0",
-          "NAudio.Core": "2.1.0"
+          "NAudio.Core": "2.2.0"
         },
         "compile": {
-          "lib/netstandard2.0/NAudio.WinMM.dll": {}
+          "lib/netstandard2.0/NAudio.WinMM.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NAudio.WinMM.dll": {}
+          "lib/netstandard2.0/NAudio.WinMM.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.3": {
@@ -7301,8 +7401,8 @@
           "CliWrap": "3.6.4",
           "DiscordRichPresence": "1.2.1.24",
           "Microsoft.Toolkit.Uwp.Notifications": "7.1.3",
-          "Microsoft.Web.WebView2": "1.0.1901.177",
-          "NAudio": "2.1.0",
+          "Microsoft.Web.WebView2": "1.0.1938.49",
+          "NAudio": "2.2.0",
           "Newtonsoft.Json": "13.0.3",
           "System.Runtime.Caching": "7.0.0",
           "WindowsAPICodePack": "7.0.4"
@@ -7432,7 +7532,7 @@
           }
         }
       },
-      "Microsoft.Web.WebView2/1.0.1901.177": {
+      "Microsoft.Web.WebView2/1.0.1938.49": {
         "type": "package",
         "native": {
           "runtimes/win-x64/native/WebView2Loader.dll": {}
@@ -7478,15 +7578,15 @@
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.targets": {}
         }
       },
-      "NAudio/2.1.0": {
+      "NAudio/2.2.0": {
         "type": "package",
         "dependencies": {
-          "NAudio.Asio": "2.1.0",
-          "NAudio.Core": "2.1.0",
-          "NAudio.Midi": "2.1.0",
-          "NAudio.Wasapi": "2.1.0",
-          "NAudio.WinForms": "2.1.0",
-          "NAudio.WinMM": "2.1.0"
+          "NAudio.Asio": "2.2.0",
+          "NAudio.Core": "2.2.0",
+          "NAudio.Midi": "2.2.0",
+          "NAudio.Wasapi": "22.0.0",
+          "NAudio.WinForms": "2.2.0",
+          "NAudio.WinMM": "2.2.0"
         },
         "compile": {
           "lib/netcoreapp3.1/NAudio.dll": {
@@ -7499,79 +7599,99 @@
           }
         }
       },
-      "NAudio.Asio/2.1.0": {
+      "NAudio.Asio/2.2.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry": "4.7.0",
-          "NAudio.Core": "2.1.0"
+          "NAudio.Core": "2.2.0"
         },
         "compile": {
-          "lib/netstandard2.0/NAudio.Asio.dll": {}
+          "lib/netstandard2.0/NAudio.Asio.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NAudio.Asio.dll": {}
+          "lib/netstandard2.0/NAudio.Asio.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NAudio.Core/2.1.0": {
+      "NAudio.Core/2.2.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/NAudio.Core.dll": {}
+          "lib/netstandard2.0/NAudio.Core.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NAudio.Core.dll": {}
+          "lib/netstandard2.0/NAudio.Core.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NAudio.Midi/2.1.0": {
-        "type": "package",
-        "dependencies": {
-          "NAudio.Core": "2.1.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/NAudio.Midi.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/NAudio.Midi.dll": {}
-        }
-      },
-      "NAudio.Wasapi/2.1.0": {
+      "NAudio.Midi/2.2.0": {
         "type": "package",
         "dependencies": {
-          "NAudio.Core": "2.1.0"
+          "NAudio.Core": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/NAudio.Midi.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NAudio.Midi.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NAudio.Wasapi/22.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NAudio.Core": "2.2.0"
         },
         "compile": {
           "lib/uap10.0.18362/NAudio.Wasapi.dll": {
-            "related": ".pri"
+            "related": ".pri;.xml"
           }
         },
         "runtime": {
           "lib/uap10.0.18362/NAudio.Wasapi.dll": {
-            "related": ".pri"
+            "related": ".pri;.xml"
           }
         }
       },
-      "NAudio.WinForms/2.1.0": {
+      "NAudio.WinForms/2.2.0": {
         "type": "package",
         "dependencies": {
-          "NAudio.WinMM": "2.1.0"
+          "NAudio.WinMM": "2.2.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/NAudio.WinForms.dll": {}
+          "lib/netcoreapp3.1/NAudio.WinForms.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netcoreapp3.1/NAudio.WinForms.dll": {}
+          "lib/netcoreapp3.1/NAudio.WinForms.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NAudio.WinMM/2.1.0": {
+      "NAudio.WinMM/2.2.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry": "4.7.0",
-          "NAudio.Core": "2.1.0"
+          "NAudio.Core": "2.2.0"
         },
         "compile": {
-          "lib/netstandard2.0/NAudio.WinMM.dll": {}
+          "lib/netstandard2.0/NAudio.WinMM.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NAudio.WinMM.dll": {}
+          "lib/netstandard2.0/NAudio.WinMM.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.3": {
@@ -8855,8 +8975,8 @@
           "CliWrap": "3.6.4",
           "DiscordRichPresence": "1.2.1.24",
           "Microsoft.Toolkit.Uwp.Notifications": "7.1.3",
-          "Microsoft.Web.WebView2": "1.0.1901.177",
-          "NAudio": "2.1.0",
+          "Microsoft.Web.WebView2": "1.0.1938.49",
+          "NAudio": "2.2.0",
           "Newtonsoft.Json": "13.0.3",
           "System.Runtime.Caching": "7.0.0",
           "WindowsAPICodePack": "7.0.4"
@@ -8986,7 +9106,7 @@
           }
         }
       },
-      "Microsoft.Web.WebView2/1.0.1901.177": {
+      "Microsoft.Web.WebView2/1.0.1938.49": {
         "type": "package",
         "native": {
           "runtimes/win-x86/native/WebView2Loader.dll": {}
@@ -9032,15 +9152,15 @@
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.targets": {}
         }
       },
-      "NAudio/2.1.0": {
+      "NAudio/2.2.0": {
         "type": "package",
         "dependencies": {
-          "NAudio.Asio": "2.1.0",
-          "NAudio.Core": "2.1.0",
-          "NAudio.Midi": "2.1.0",
-          "NAudio.Wasapi": "2.1.0",
-          "NAudio.WinForms": "2.1.0",
-          "NAudio.WinMM": "2.1.0"
+          "NAudio.Asio": "2.2.0",
+          "NAudio.Core": "2.2.0",
+          "NAudio.Midi": "2.2.0",
+          "NAudio.Wasapi": "22.0.0",
+          "NAudio.WinForms": "2.2.0",
+          "NAudio.WinMM": "2.2.0"
         },
         "compile": {
           "lib/netcoreapp3.1/NAudio.dll": {
@@ -9053,79 +9173,99 @@
           }
         }
       },
-      "NAudio.Asio/2.1.0": {
+      "NAudio.Asio/2.2.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry": "4.7.0",
-          "NAudio.Core": "2.1.0"
+          "NAudio.Core": "2.2.0"
         },
         "compile": {
-          "lib/netstandard2.0/NAudio.Asio.dll": {}
+          "lib/netstandard2.0/NAudio.Asio.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NAudio.Asio.dll": {}
+          "lib/netstandard2.0/NAudio.Asio.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NAudio.Core/2.1.0": {
+      "NAudio.Core/2.2.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/NAudio.Core.dll": {}
+          "lib/netstandard2.0/NAudio.Core.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NAudio.Core.dll": {}
+          "lib/netstandard2.0/NAudio.Core.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NAudio.Midi/2.1.0": {
-        "type": "package",
-        "dependencies": {
-          "NAudio.Core": "2.1.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/NAudio.Midi.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/NAudio.Midi.dll": {}
-        }
-      },
-      "NAudio.Wasapi/2.1.0": {
+      "NAudio.Midi/2.2.0": {
         "type": "package",
         "dependencies": {
-          "NAudio.Core": "2.1.0"
+          "NAudio.Core": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/NAudio.Midi.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NAudio.Midi.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NAudio.Wasapi/22.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NAudio.Core": "2.2.0"
         },
         "compile": {
           "lib/uap10.0.18362/NAudio.Wasapi.dll": {
-            "related": ".pri"
+            "related": ".pri;.xml"
           }
         },
         "runtime": {
           "lib/uap10.0.18362/NAudio.Wasapi.dll": {
-            "related": ".pri"
+            "related": ".pri;.xml"
           }
         }
       },
-      "NAudio.WinForms/2.1.0": {
+      "NAudio.WinForms/2.2.0": {
         "type": "package",
         "dependencies": {
-          "NAudio.WinMM": "2.1.0"
+          "NAudio.WinMM": "2.2.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/NAudio.WinForms.dll": {}
+          "lib/netcoreapp3.1/NAudio.WinForms.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netcoreapp3.1/NAudio.WinForms.dll": {}
+          "lib/netcoreapp3.1/NAudio.WinForms.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NAudio.WinMM/2.1.0": {
+      "NAudio.WinMM/2.2.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry": "4.7.0",
-          "NAudio.Core": "2.1.0"
+          "NAudio.Core": "2.2.0"
         },
         "compile": {
-          "lib/netstandard2.0/NAudio.WinMM.dll": {}
+          "lib/netstandard2.0/NAudio.WinMM.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NAudio.WinMM.dll": {}
+          "lib/netstandard2.0/NAudio.WinMM.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.3": {
@@ -10305,8 +10445,8 @@
           "CliWrap": "3.6.4",
           "DiscordRichPresence": "1.2.1.24",
           "Microsoft.Toolkit.Uwp.Notifications": "7.1.3",
-          "Microsoft.Web.WebView2": "1.0.1901.177",
-          "NAudio": "2.1.0",
+          "Microsoft.Web.WebView2": "1.0.1938.49",
+          "NAudio": "2.2.0",
           "Newtonsoft.Json": "13.0.3",
           "System.Runtime.Caching": "7.0.0",
           "WindowsAPICodePack": "7.0.4"
@@ -10436,7 +10576,7 @@
           }
         }
       },
-      "Microsoft.Web.WebView2/1.0.1901.177": {
+      "Microsoft.Web.WebView2/1.0.1938.49": {
         "type": "package",
         "native": {
           "runtimes/win-x86/native/WebView2Loader.dll": {}
@@ -10482,15 +10622,15 @@
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.targets": {}
         }
       },
-      "NAudio/2.1.0": {
+      "NAudio/2.2.0": {
         "type": "package",
         "dependencies": {
-          "NAudio.Asio": "2.1.0",
-          "NAudio.Core": "2.1.0",
-          "NAudio.Midi": "2.1.0",
-          "NAudio.Wasapi": "2.1.0",
-          "NAudio.WinForms": "2.1.0",
-          "NAudio.WinMM": "2.1.0"
+          "NAudio.Asio": "2.2.0",
+          "NAudio.Core": "2.2.0",
+          "NAudio.Midi": "2.2.0",
+          "NAudio.Wasapi": "22.0.0",
+          "NAudio.WinForms": "2.2.0",
+          "NAudio.WinMM": "2.2.0"
         },
         "compile": {
           "lib/netcoreapp3.1/NAudio.dll": {
@@ -10503,79 +10643,99 @@
           }
         }
       },
-      "NAudio.Asio/2.1.0": {
+      "NAudio.Asio/2.2.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry": "4.7.0",
-          "NAudio.Core": "2.1.0"
+          "NAudio.Core": "2.2.0"
         },
         "compile": {
-          "lib/netstandard2.0/NAudio.Asio.dll": {}
+          "lib/netstandard2.0/NAudio.Asio.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NAudio.Asio.dll": {}
+          "lib/netstandard2.0/NAudio.Asio.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NAudio.Core/2.1.0": {
+      "NAudio.Core/2.2.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/NAudio.Core.dll": {}
+          "lib/netstandard2.0/NAudio.Core.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NAudio.Core.dll": {}
+          "lib/netstandard2.0/NAudio.Core.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NAudio.Midi/2.1.0": {
-        "type": "package",
-        "dependencies": {
-          "NAudio.Core": "2.1.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/NAudio.Midi.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/NAudio.Midi.dll": {}
-        }
-      },
-      "NAudio.Wasapi/2.1.0": {
+      "NAudio.Midi/2.2.0": {
         "type": "package",
         "dependencies": {
-          "NAudio.Core": "2.1.0"
+          "NAudio.Core": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/NAudio.Midi.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NAudio.Midi.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NAudio.Wasapi/22.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NAudio.Core": "2.2.0"
         },
         "compile": {
           "lib/uap10.0.18362/NAudio.Wasapi.dll": {
-            "related": ".pri"
+            "related": ".pri;.xml"
           }
         },
         "runtime": {
           "lib/uap10.0.18362/NAudio.Wasapi.dll": {
-            "related": ".pri"
+            "related": ".pri;.xml"
           }
         }
       },
-      "NAudio.WinForms/2.1.0": {
+      "NAudio.WinForms/2.2.0": {
         "type": "package",
         "dependencies": {
-          "NAudio.WinMM": "2.1.0"
+          "NAudio.WinMM": "2.2.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/NAudio.WinForms.dll": {}
+          "lib/netcoreapp3.1/NAudio.WinForms.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netcoreapp3.1/NAudio.WinForms.dll": {}
+          "lib/netcoreapp3.1/NAudio.WinForms.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NAudio.WinMM/2.1.0": {
+      "NAudio.WinMM/2.2.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry": "4.7.0",
-          "NAudio.Core": "2.1.0"
+          "NAudio.Core": "2.2.0"
         },
         "compile": {
-          "lib/netstandard2.0/NAudio.WinMM.dll": {}
+          "lib/netstandard2.0/NAudio.WinMM.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NAudio.WinMM.dll": {}
+          "lib/netstandard2.0/NAudio.WinMM.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.3": {
@@ -11859,8 +12019,8 @@
           "CliWrap": "3.6.4",
           "DiscordRichPresence": "1.2.1.24",
           "Microsoft.Toolkit.Uwp.Notifications": "7.1.3",
-          "Microsoft.Web.WebView2": "1.0.1901.177",
-          "NAudio": "2.1.0",
+          "Microsoft.Web.WebView2": "1.0.1938.49",
+          "NAudio": "2.2.0",
           "Newtonsoft.Json": "13.0.3",
           "System.Runtime.Caching": "7.0.0",
           "WindowsAPICodePack": "7.0.4"
@@ -12046,10 +12206,10 @@
         "microsoft.toolkit.uwp.notifications.nuspec"
       ]
     },
-    "Microsoft.Web.WebView2/1.0.1901.177": {
-      "sha512": "uvVpS0zoIBlmGzNBqtDNhJLvc4z5raFLFmXsLaAVKkxpRMiehOxUtjwvsZX/1Pv6M/N6xkIt/PnM0NdTHlOQoQ==",
+    "Microsoft.Web.WebView2/1.0.1938.49": {
+      "sha512": "z8KnFnaTYzhA/ZnyRX0qGfS1NU5ZBJeClAH64F0fVDvdDJTvME7xl6zTJ0Jlfe1BtL3C0NH9xTy64shg2baKdw==",
       "type": "package",
-      "path": "microsoft.web.webview2/1.0.1901.177",
+      "path": "microsoft.web.webview2/1.0.1938.49",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -12090,7 +12250,7 @@
         "lib/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.xml",
         "lib/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll",
         "lib/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.xml",
-        "microsoft.web.webview2.1.0.1901.177.nupkg.sha512",
+        "microsoft.web.webview2.1.0.1938.49.nupkg.sha512",
         "microsoft.web.webview2.nuspec",
         "runtimes/win-arm64/native/WebView2Loader.dll",
         "runtimes/win-arm64/native_uap/Microsoft.Web.WebView2.Core.dll",
@@ -12414,10 +12574,10 @@
         "schemas/10.0.22621.0/winrt/UapManifestSchema_v8.xsd"
       ]
     },
-    "NAudio/2.1.0": {
-      "sha512": "iamDtIq4Tcq6BDEMatX7Wj6KI7rscECS72ZejjnL9RK8BgfrVRH2RlhlQVNxXNp9Up1eFESEiCILNBo7//Rr0g==",
+    "NAudio/2.2.0": {
+      "sha512": "1ZImYczIftCJFV9dLfB5seeo0lSem3wBkbx134XicCRNwPf3JFGNshszCZyN7AW+Q90lzQA0SRAlSepaFNgC4A==",
       "type": "package",
-      "path": "naudio/2.1.0",
+      "path": "naudio/2.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -12431,88 +12591,96 @@
         "lib/netcoreapp3.1/NAudio.xml",
         "license.txt",
         "naudio-icon.png",
-        "naudio.2.1.0.nupkg.sha512",
+        "naudio.2.2.0.nupkg.sha512",
         "naudio.nuspec"
       ]
     },
-    "NAudio.Asio/2.1.0": {
-      "sha512": "YMXffgqPTsQIjmXYyzLrXSpQZzC7ZH49mmdXaPW3o/5S+AhFKZeOrwUA2fkvphQdGhryObbZnPAq+u8uABkH5A==",
+    "NAudio.Asio/2.2.0": {
+      "sha512": "mv2Nv5NAORFpGg8Aehu5biAiT4izj+RvctoTEKWqPgt0FQJXx7kd03vyQHIOHYmvSp5q26lAkBCzSQuRG/8ldw==",
       "type": "package",
-      "path": "naudio.asio/2.1.0",
+      "path": "naudio.asio/2.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/NAudio.Asio.dll",
+        "lib/netstandard2.0/NAudio.Asio.xml",
         "naudio-icon.png",
-        "naudio.asio.2.1.0.nupkg.sha512",
+        "naudio.asio.2.2.0.nupkg.sha512",
         "naudio.asio.nuspec"
       ]
     },
-    "NAudio.Core/2.1.0": {
-      "sha512": "0iowfmolibU4KxjaC/s7lox/BeDg76UVvXtCuCzRiNpylVndqsxXxp+bVWFrpv0KzQDIKLxZrnDmYENlAI0u9g==",
+    "NAudio.Core/2.2.0": {
+      "sha512": "6jOWa+ZB04ByuWSSQ1cQnKv6zujX0ZCsSpd/UrCqHyHbUGuVP64X76QTwphudGUJRUBAIsZ9HVMqPaXP6qlpPw==",
       "type": "package",
-      "path": "naudio.core/2.1.0",
+      "path": "naudio.core/2.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/NAudio.Core.dll",
+        "lib/netstandard2.0/NAudio.Core.xml",
         "naudio-icon.png",
-        "naudio.core.2.1.0.nupkg.sha512",
+        "naudio.core.2.2.0.nupkg.sha512",
         "naudio.core.nuspec"
       ]
     },
-    "NAudio.Midi/2.1.0": {
-      "sha512": "m2ZunnyZ1p7OoAMh1scHRVle+GiFuIRrzkcxZJREUFHje8O2hcMGya3ZAjD+dV2FTcrbqNQUc4kJy9LOTuydUw==",
+    "NAudio.Midi/2.2.0": {
+      "sha512": "+SO7cw3mrH2k5TQxZdt6FvmW7OnwvzFwPbjXGpD2lqnuTfN3Xr13nwqfX9DDcmT7/P+qJy+mqrAZwaN0EuDbrA==",
       "type": "package",
-      "path": "naudio.midi/2.1.0",
+      "path": "naudio.midi/2.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/NAudio.Midi.dll",
+        "lib/netstandard2.0/NAudio.Midi.xml",
         "naudio-icon.png",
-        "naudio.midi.2.1.0.nupkg.sha512",
+        "naudio.midi.2.2.0.nupkg.sha512",
         "naudio.midi.nuspec"
       ]
     },
-    "NAudio.Wasapi/2.1.0": {
-      "sha512": "Zp/8l79aYQEu7/HfzXWVpqyIwRUPgsvCj/Qx+pR6ykJxvwjqOoUfMiEG9US1wW4d7PEzT5ZBIL+cp90t6HNNiw==",
+    "NAudio.Wasapi/22.0.0": {
+      "sha512": "wDPj5OVl54TGnRbdPJQa6VuAShe3rYDgCLFn4jrqHzpGEQ54FCzmjDsS/KLbb0M6mln83K+kQ1vQzY7SQGDEEg==",
       "type": "package",
-      "path": "naudio.wasapi/2.1.0",
+      "path": "naudio.wasapi/22.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/NAudio.Wasapi.dll",
+        "lib/netstandard2.0/NAudio.Wasapi.xml",
         "lib/uap10.0.18362/NAudio.Wasapi.dll",
         "lib/uap10.0.18362/NAudio.Wasapi.pri",
+        "lib/uap10.0.18362/NAudio.Wasapi.xml",
         "naudio-icon.png",
-        "naudio.wasapi.2.1.0.nupkg.sha512",
+        "naudio.wasapi.22.0.0.nupkg.sha512",
         "naudio.wasapi.nuspec"
       ]
     },
-    "NAudio.WinForms/2.1.0": {
-      "sha512": "yoGCLidMVQmg66dNuEYusY1bttZJ5gxvufxRYFgxIw444dw4C70YsDgLeDugPd0rdwkSCQq5CtrVw6DSmxTxPA==",
+    "NAudio.WinForms/2.2.0": {
+      "sha512": "vWJ6NQY5p9BvJSvI3VydFXjwFl91iOj9AOI24Pa4G/9fNp8CunHgxVuOcJfjZ7ZEEVWK+g4NslS+tDlNze7LeQ==",
       "type": "package",
-      "path": "naudio.winforms/2.1.0",
+      "path": "naudio.winforms/2.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net472/NAudio.WinForms.dll",
+        "lib/net472/NAudio.WinForms.xml",
         "lib/netcoreapp3.1/NAudio.WinForms.dll",
+        "lib/netcoreapp3.1/NAudio.WinForms.xml",
         "naudio-icon.png",
-        "naudio.winforms.2.1.0.nupkg.sha512",
+        "naudio.winforms.2.2.0.nupkg.sha512",
         "naudio.winforms.nuspec"
       ]
     },
-    "NAudio.WinMM/2.1.0": {
-      "sha512": "lUU5C+XNzKhFUIEafA/nJpbtjksFtbUd033fs27KeHlOM0r6rQFF3l75dqxg+rWkGu81MfkBbYrNpH9p8qmtBA==",
+    "NAudio.WinMM/2.2.0": {
+      "sha512": "MnszU7s34+OVParz72w4dNhYFjjk3Cu/nI9mqHOuS2nvxDT9XvqmY64mSwDrxY3CQReUWKHj3sBkY//VCMgfGg==",
       "type": "package",
-      "path": "naudio.winmm/2.1.0",
+      "path": "naudio.winmm/2.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/NAudio.WinMM.dll",
+        "lib/netstandard2.0/NAudio.WinMM.xml",
         "naudio-icon.png",
-        "naudio.winmm.2.1.0.nupkg.sha512",
+        "naudio.winmm.2.2.0.nupkg.sha512",
         "naudio.winmm.nuspec"
       ]
     },
@@ -16242,7 +16410,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'NAudio 2.1.0' was restored using '.NETCoreApp,Version=v3.1, .NETCoreApp,Version=v3.0, .NETCoreApp,Version=v2.0, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, net7.0-windows10.0.22621, .NETFramework,Version=v4.6.1' instead of the project target framework 'UAP,Version=v10.0.18362'. This package may not be fully compatible with your project.",
+      "message": "Package 'NAudio 2.2.0' was restored using '.NETCoreApp,Version=v3.1, .NETCoreApp,Version=v3.0, .NETCoreApp,Version=v2.0, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, net7.0-windows10.0.22621, .NETFramework,Version=v4.6.1' instead of the project target framework 'UAP,Version=v10.0.18362'. This package may not be fully compatible with your project.",
       "libraryId": "NAudio",
       "targetGraphs": [
         "UAP,Version=v10.0.18362"
@@ -16252,7 +16420,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'NAudio.WinForms 2.1.0' was restored using '.NETCoreApp,Version=v3.1, .NETCoreApp,Version=v3.0, .NETCoreApp,Version=v2.0, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, net7.0-windows10.0.22621, .NETFramework,Version=v4.6.1' instead of the project target framework 'UAP,Version=v10.0.18362'. This package may not be fully compatible with your project.",
+      "message": "Package 'NAudio.WinForms 2.2.0' was restored using '.NETCoreApp,Version=v3.1, .NETCoreApp,Version=v3.0, .NETCoreApp,Version=v2.0, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, net7.0-windows10.0.22621, .NETFramework,Version=v4.6.1' instead of the project target framework 'UAP,Version=v10.0.18362'. This package may not be fully compatible with your project.",
       "libraryId": "NAudio.WinForms",
       "targetGraphs": [
         "UAP,Version=v10.0.18362"
