@@ -16,7 +16,7 @@ namespace GenshinStellaMod.Scripts
                 return;
             }
 
-            Task.Run(() => PlaySoundAsync(wavPath, fileName == "information_bar" ? 0.45f : 1.6f));
+            Task.Run(() => PlaySoundAsync(wavPath, fileName == "information_bar" ? 0.59f : 1.61f));
         }
 
         private static async Task PlaySoundAsync(string wavPath, float volume)
