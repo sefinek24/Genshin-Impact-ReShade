@@ -19,7 +19,6 @@ namespace StellaLauncher.Scripts
         private static readonly string OutputFile = Path.Combine(Folder, "launcher.output.log");
         public static readonly string CmdLogs = Path.Combine(Program.AppData, "logs", "cmd.output.log");
 
-
         /// <summary>
         ///     Initializes the necessary directories for logging.
         /// </summary>
@@ -44,12 +43,15 @@ namespace StellaLauncher.Scripts
                     await sw.WriteLineAsync($"[{Program.AppVersion}: {DateTime.Now}]: {log}");
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                ShowToastNotification(Resources.Log_SomethingWentWrong, Resources.Log_ForSomeReasonICannotSaveTheActionInfoInTheLogFile);
+                using (StreamWriter sw = File.AppendText(Path.Combine(Folder, "launcher2.output.log")))
+                {
+                    await sw.WriteLineAsync($"[{DateTime.Now}]: {log}\n\nException: {ex}");
+                }
             }
 
-            if (Debugger.IsAttached) Console.WriteLine($"Log.Output(): {log}");
+            if (Debugger.IsAttached) Console.WriteLine($@"Log.Output(): {log}");
         }
 
         /// <summary>
@@ -72,7 +74,7 @@ namespace StellaLauncher.Scripts
                 ShowToastNotification(Resources.Log_SomethingWentWrong, Resources.Log_ForSomeReasonICantSaveTheErrorInfoInTheLogFile);
             }
 
-            if (Debugger.IsAttached) Console.WriteLine($"Log.SaveError(): {log}");
+            if (Debugger.IsAttached) Console.WriteLine($@"Log.SaveError(): {log}");
         }
 
         /// <summary>

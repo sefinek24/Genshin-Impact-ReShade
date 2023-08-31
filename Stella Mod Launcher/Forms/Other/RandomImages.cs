@@ -12,7 +12,6 @@ using StellaLauncher.Models;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
 using StellaLauncher.Scripts.Forms;
-using StellaLauncher.Scripts.Forms.MainForm;
 
 namespace StellaLauncher.Forms.Other
 {
