@@ -38,7 +38,9 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 
                 case 2:
                 case 8:
+                case 6:
                 case 10:
+                case 15:
                 case 25:
                 case 35:
                 case 45:
