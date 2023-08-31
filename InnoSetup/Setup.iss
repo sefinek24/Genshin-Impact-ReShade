@@ -4,6 +4,8 @@
 #define AppURL "https://genshin.sefinek.net"
 #define AppExeName "Stella Mod Launcher.exe"
 #define AppId "5D6E44F3-2141-4EA4-89E3-6C3018583FF7"
+#define public Dependency_Path_NetCoreCheck "dependencies\"
+#include "CodeDependencies.iss"
 
 [Setup]
 AppCopyright=Copyright 2023 © by Sefinek. All Rights Reserved.
@@ -17,7 +19,6 @@ AppPublisherURL={#AppURL}
 
 ArchitecturesInstallIn64BitMode=x64
 ArchitecturesAllowed=x64
-MinVersion=6.1sp1
 DefaultDirName={autopf}\Sefinek\Genshin-Stella-Mod
 DisableDirPage=no
 DisableWelcomePage=no
@@ -39,7 +40,7 @@ VersionInfoCompany={#AppPublisher}
 VersionInfoTextVersion={#AppVersion}
 VersionInfoProductName={#AppName}
 VersionInfoProductTextVersion={#GetFileProductVersion(AppExeName)}
-VersionInfoDescription={#AppName + " " + AppVersion + " Setup"}
+VersionInfoDescription={#AppName + " v" + AppVersion + " Setup"}
 VersionInfoVersion={#GetFileVersion(AppExeName)}
 VersionInfoCopyright={#GetFileCopyright(AppExeName)}
 
@@ -87,9 +88,6 @@ Name: "{autoprograms}\Genshin Stella Mod\Uninstall {#AppName}"; Filename: "{unin
 
 [Run]
 Filename: "{app}\{#AppExeName}"; WorkingDir: "{app}"; Description: "{cm:LaunchProgram,{#StringChange(AppName, '&', '&&')}} Launcher"; Flags: nowait postinstall skipifsilent runascurrentuser
-
-#define public Dependency_NoExampleSetup
-#include "CodeDependencies.iss"
 
 [Code]
 { ///////////////////////////////////////////////////////////////////// }

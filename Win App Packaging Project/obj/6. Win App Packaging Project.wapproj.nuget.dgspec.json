@@ -63,9 +63,6 @@
           "net481": {
             "projectReferences": {}
           }
-        },
-        "warningProperties": {
-          "allWarningsAsErrors": true
         }
       },
       "frameworks": {
@@ -138,9 +135,6 @@
           "net481": {
             "projectReferences": {}
           }
-        },
-        "warningProperties": {
-          "allWarningsAsErrors": true
         }
       },
       "frameworks": {
