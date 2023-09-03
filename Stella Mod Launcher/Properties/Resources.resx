@@ -736,8 +736,11 @@ REMEMBER NOT TO SHARE YOUR UID WITH VISIBLE GAME SHADERS WITH ANYONE!</value>
   <data name="Default_UpdatingBenefits" xml:space="preserve">
     <value>Updating benefits...</value>
   </data>
+  <data name="UpdateBenefits_SuccessfullyUpdated3DMigoto" xml:space="preserve">
+    <value>Successfully updated 3DMigoto software for patrons.</value>
+  </data>
   <data name="UpdateBenefits_SuccessfullyUpdated3DMigotoMods" xml:space="preserve">
-    <value>Successfully updated 3DMigoto mods for patrons.</value>
+    <value>Successfully updated 3DMigoto Mods for patrons.</value>
   </data>
   <data name="UpdateBenefits_SuccessfullyUpdatedAddons" xml:space="preserve">
     <value>Successfully updated ReShade Addons for patrons.</value>

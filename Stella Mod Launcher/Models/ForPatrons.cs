@@ -36,6 +36,7 @@ namespace StellaLauncher.Models
     // Benefits
     public class PatronResources
     {
+        public string Migoto { get; set; }
         public string Mods { get; set; }
         public string Addons { get; set; }
         public string Presets { get; set; }

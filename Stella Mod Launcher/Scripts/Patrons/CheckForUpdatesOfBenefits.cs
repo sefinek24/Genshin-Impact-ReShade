@@ -16,28 +16,48 @@ namespace StellaLauncher.Scripts.Patrons
             BenefitVersions versions = await GetVersions();
 
 
-            // Mods
-            string modsVersionPath = Path.Combine(Default.ResourcesPath, "3DMigoto", "version.json");
-            if (File.Exists(modsVersionPath))
+            // 3DMigoto
+            string migotoVerPath = Path.Combine(Default.ResourcesPath, "3DMigoto", "3dmigoto-version.json");
+            if (File.Exists(migotoVerPath))
             {
-                string modsJson = File.ReadAllText(modsVersionPath);
+                string migotoJson = File.ReadAllText(migotoVerPath);
+                BenefitsJsonVersion migotoJsonConverted = JsonConvert.DeserializeObject<BenefitsJsonVersion>(migotoJson);
+                if (versions.Message.Resources.Migoto != migotoJsonConverted.Version)
+                {
+                    Default._version_LinkLabel.Text = $@"v{migotoJsonConverted.Version} → v{versions.Message.Resources.Migoto}";
+
+                    MessageBox.Show(
+                        $"The new update for 3DMigoto has been detected. This update will not affect any downloaded mods.\n\nClick OK to proceed with the update.\n\nYour version: v{migotoJsonConverted.Version} from {migotoJsonConverted.Date}\nNew version: v{versions.Message.Resources.Migoto}",
+                        Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    UpdateBenefits.Download("3dmigoto", $"3DMigoto Update - v{versions.Message.Resources.Migoto}.zip", Path.GetDirectoryName(migotoVerPath));
+                    return 1;
+                }
+            }
+            else
+            {
+                UpdateBenefits.Download("3dmigoto", $"3DMigoto - v{versions.Message.Resources.Migoto}.zip", Path.GetDirectoryName(migotoVerPath));
+                return 1;
+            }
+
+
+            // Mods for 3DMigoto
+            string modsVerPath = Path.Combine(Default.ResourcesPath, "3DMigoto", "mods-version.json");
+            if (File.Exists(modsVerPath))
+            {
+                string modsJson = File.ReadAllText(modsVerPath);
                 BenefitsJsonVersion modsJsonConverted = JsonConvert.DeserializeObject<BenefitsJsonVersion>(modsJson);
                 if (versions.Message.Resources.Mods != modsJsonConverted.Version)
                 {
                     Default._version_LinkLabel.Text = $@"v{modsJsonConverted.Version} → v{versions.Message.Resources.Mods}";
 
                     MessageBox.Show(
-                        $"New 3DMigoto mod updates for patrons detected! Your current mods will NOT be removed.\n\nClick OK to proceed with the update.\n\nYour version: v{modsJsonConverted.Version} from {modsJsonConverted.Date}\nNew version: v{versions.Message.Resources.Mods}",
+                        $"A new update for the mod pack has been detected. Your custom mods will not be removed.\n\nClick OK to proceed with the update.\n\nYour version: v{modsJsonConverted.Version} from {modsJsonConverted.Date}\nNew version: v{versions.Message.Resources.Mods}",
                         Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    UpdateBenefits.Download("3dmigoto", $"3DMigoto mods update - v{versions.Message.Resources.Mods}.zip", Path.GetDirectoryName(modsVersionPath));
+                    UpdateBenefits.Download("3dmigoto-mods", $"3DMigoto Mods Update - v{versions.Message.Resources.Mods}.zip", Path.GetDirectoryName(modsVerPath));
                     return 1;
                 }
-            }
-            else
-            {
-                UpdateBenefits.Download("3dmigoto", $"3DMigoto mods - v{versions.Message.Resources.Mods}.zip", Path.GetDirectoryName(modsVersionPath));
-                return 1;
             }
 
 

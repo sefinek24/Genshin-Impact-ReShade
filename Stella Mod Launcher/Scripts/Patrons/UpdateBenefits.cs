@@ -46,6 +46,9 @@ namespace StellaLauncher.Scripts.Patrons
             switch (benefitName)
             {
                 case "3dmigoto":
+                    _successfullyUpdated = Resources.UpdateBenefits_SuccessfullyUpdated3DMigoto;
+                    break;
+                case "3dmigoto-mods":
                     _successfullyUpdated = Resources.UpdateBenefits_SuccessfullyUpdated3DMigotoMods;
                     break;
                 case "addons":

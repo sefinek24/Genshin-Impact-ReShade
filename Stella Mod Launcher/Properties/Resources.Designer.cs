@@ -1721,7 +1721,16 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Successfully updated 3DMigoto mods for patrons..
+        ///   Looks up a localized string similar to Successfully updated 3DMigoto software for patrons..
+        /// </summary>
+        internal static string UpdateBenefits_SuccessfullyUpdated3DMigoto {
+            get {
+                return ResourceManager.GetString("UpdateBenefits_SuccessfullyUpdated3DMigoto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successfully updated 3DMigoto Mods for patrons..
         /// </summary>
         internal static string UpdateBenefits_SuccessfullyUpdated3DMigotoMods {
             get {
