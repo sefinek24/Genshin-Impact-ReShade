@@ -194,6 +194,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Scripts\Forms\MainForm\Tray.cs" />
+    <Compile Include="Scripts\Forms\MainForm\Run.cs" />
     <Compile Include="Scripts\RSConfig.cs" />
     <Compile Include="Scripts\Shortcut.cs" />
     <Compile Include="Scripts\Forms\MainForm\Background.cs" />
@@ -707,9 +708,6 @@
       <Version>7.1.3</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.1938.49" />
-    <PackageReference Include="NAudio">
-      <Version>2.2.1</Version>
-    </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.3</Version>
     </PackageReference>

@@ -55,11 +55,11 @@ namespace GenshinStellaMod
                 Environment.Exit(violationCode);
             }
 
-            string isMyPatron = args[4];
+            bool isSubscriber = Data.IsUserMyPatron();
             Console.WriteLine("⠀   ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⢶⣦⡀");
             Console.WriteLine("⠀  ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿");
-            Console.WriteLine("⠀   ⠀⣿⡄⠀⠀⠀⠈⠀⠀⠀⠀⣾⡿                              Genshin Impact Stella Mod 2023");
-            Console.WriteLine($"⠀   ⠀⠀⠹⣿⣦⡀⠀⠀⠀⠀⢀⣾⣿                                {(isMyPatron == "0" ? "     Start the game" : "~~ Release for Patrons ~~")}");
+            Console.WriteLine($"⠀   ⠀⣿⡄⠀⠀⠀⠈⠀⠀⠀⠀⣾⡿                            {(!isSubscriber ? "Genshin Impact Stella Mod 2023" : "Genshin Impact Stella Mod Plus+ 2023")}");
+            Console.WriteLine($"⠀   ⠀⠀⠹⣿⣦⡀⠀⠀⠀⠀⢀⣾⣿                                {(!isSubscriber ? "     Start the game" : "~ Release for Subscribers ~")}");
             Console.WriteLine("⠀   ⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿");
             Console.WriteLine("⠀    ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟");
             Console.WriteLine("⠀   ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀");
@@ -107,14 +107,14 @@ namespace GenshinStellaMod
 
             // Init dirs
             Log.InitDirs();
-
+           
 
             // Start the application
             try
             {
-                string resources = args[5];
+                string resources = args[4];
                 Log.Output($"Resources: {resources}");
-
+                
                 await Action.Run(launchMode, resources);
             }
             catch (Exception ex)
