@@ -27,7 +27,7 @@ namespace GenshinStellaMod
         public static readonly string AppData = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
 
         // Registry
-        public static readonly string RegistryPath = @"Software\Stella Mod Launcher";
+        public static readonly string RegistryPath = @"SOFTWARE\Stella Mod Launcher";
 
         private static async Task Main(string[] args)
         {
@@ -107,14 +107,14 @@ namespace GenshinStellaMod
 
             // Init dirs
             Log.InitDirs();
-           
+
 
             // Start the application
             try
             {
                 string resources = args[4];
                 Log.Output($"Resources: {resources}");
-                
+
                 await Action.Run(launchMode, resources);
             }
             catch (Exception ex)
