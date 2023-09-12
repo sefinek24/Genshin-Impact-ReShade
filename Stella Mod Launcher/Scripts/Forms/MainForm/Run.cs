@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CliWrap.Builders;
 using StellaLauncher.Forms;
-using StellaLauncher.Models;
 using StellaLauncher.Properties;
 
 namespace StellaLauncher.Scripts.Forms.MainForm

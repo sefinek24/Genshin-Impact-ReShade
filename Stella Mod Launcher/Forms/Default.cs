@@ -3,7 +3,6 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using CliWrap.Builders;
 using Microsoft.Win32;
 using Newtonsoft.Json;
 using StellaLauncher.Forms.Other;
