@@ -8,44 +8,6 @@
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.props": {},
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.targets": {}
         }
-      },
-      "2. Genshin Stella Mod/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/2. Genshin Stella Mod.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/2. Genshin Stella Mod.dll": {}
-        }
-      },
-      "3. Configuration/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/3. Configuration.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/3. Configuration.dll": {}
-        }
-      },
-      "Prepare Stella Mod/1.0.0": {
-        "type": "project",
-        "framework": "Unsupported,Version=v0.0",
-        "compile": {
-          "bin/placeholder/Prepare Stella Mod.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Prepare Stella Mod.dll": {}
-        }
-      },
-      "Stella Mod Launcher/1.0.0": {
-        "type": "project",
-        "framework": "Unsupported,Version=v0.0",
-        "compile": {
-          "bin/placeholder/Stella Mod Launcher.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Stella Mod Launcher.dll": {}
-        }
       }
     },
     "UAP,Version=v10.0.18362/win10-arm": {
@@ -54,44 +16,6 @@
         "build": {
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.props": {},
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.targets": {}
-        }
-      },
-      "2. Genshin Stella Mod/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/2. Genshin Stella Mod.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/2. Genshin Stella Mod.dll": {}
-        }
-      },
-      "3. Configuration/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/3. Configuration.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/3. Configuration.dll": {}
-        }
-      },
-      "Prepare Stella Mod/1.0.0": {
-        "type": "project",
-        "framework": "Unsupported,Version=v0.0",
-        "compile": {
-          "bin/placeholder/Prepare Stella Mod.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Prepare Stella Mod.dll": {}
-        }
-      },
-      "Stella Mod Launcher/1.0.0": {
-        "type": "project",
-        "framework": "Unsupported,Version=v0.0",
-        "compile": {
-          "bin/placeholder/Stella Mod Launcher.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Stella Mod Launcher.dll": {}
         }
       }
     },
@@ -102,44 +26,6 @@
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.props": {},
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.targets": {}
         }
-      },
-      "2. Genshin Stella Mod/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/2. Genshin Stella Mod.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/2. Genshin Stella Mod.dll": {}
-        }
-      },
-      "3. Configuration/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/3. Configuration.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/3. Configuration.dll": {}
-        }
-      },
-      "Prepare Stella Mod/1.0.0": {
-        "type": "project",
-        "framework": "Unsupported,Version=v0.0",
-        "compile": {
-          "bin/placeholder/Prepare Stella Mod.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Prepare Stella Mod.dll": {}
-        }
-      },
-      "Stella Mod Launcher/1.0.0": {
-        "type": "project",
-        "framework": "Unsupported,Version=v0.0",
-        "compile": {
-          "bin/placeholder/Stella Mod Launcher.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Stella Mod Launcher.dll": {}
-        }
       }
     },
     "UAP,Version=v10.0.18362/win10-arm64-aot": {
@@ -148,44 +34,6 @@
         "build": {
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.props": {},
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.targets": {}
-        }
-      },
-      "2. Genshin Stella Mod/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/2. Genshin Stella Mod.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/2. Genshin Stella Mod.dll": {}
-        }
-      },
-      "3. Configuration/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/3. Configuration.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/3. Configuration.dll": {}
-        }
-      },
-      "Prepare Stella Mod/1.0.0": {
-        "type": "project",
-        "framework": "Unsupported,Version=v0.0",
-        "compile": {
-          "bin/placeholder/Prepare Stella Mod.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Prepare Stella Mod.dll": {}
-        }
-      },
-      "Stella Mod Launcher/1.0.0": {
-        "type": "project",
-        "framework": "Unsupported,Version=v0.0",
-        "compile": {
-          "bin/placeholder/Stella Mod Launcher.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Stella Mod Launcher.dll": {}
         }
       }
     },
@@ -196,44 +44,6 @@
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.props": {},
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.targets": {}
         }
-      },
-      "2. Genshin Stella Mod/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/2. Genshin Stella Mod.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/2. Genshin Stella Mod.dll": {}
-        }
-      },
-      "3. Configuration/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/3. Configuration.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/3. Configuration.dll": {}
-        }
-      },
-      "Prepare Stella Mod/1.0.0": {
-        "type": "project",
-        "framework": "Unsupported,Version=v0.0",
-        "compile": {
-          "bin/placeholder/Prepare Stella Mod.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Prepare Stella Mod.dll": {}
-        }
-      },
-      "Stella Mod Launcher/1.0.0": {
-        "type": "project",
-        "framework": "Unsupported,Version=v0.0",
-        "compile": {
-          "bin/placeholder/Stella Mod Launcher.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Stella Mod Launcher.dll": {}
-        }
       }
     },
     "UAP,Version=v10.0.18362/win10-x64-aot": {
@@ -242,44 +52,6 @@
         "build": {
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.props": {},
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.targets": {}
-        }
-      },
-      "2. Genshin Stella Mod/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/2. Genshin Stella Mod.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/2. Genshin Stella Mod.dll": {}
-        }
-      },
-      "3. Configuration/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/3. Configuration.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/3. Configuration.dll": {}
-        }
-      },
-      "Prepare Stella Mod/1.0.0": {
-        "type": "project",
-        "framework": "Unsupported,Version=v0.0",
-        "compile": {
-          "bin/placeholder/Prepare Stella Mod.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Prepare Stella Mod.dll": {}
-        }
-      },
-      "Stella Mod Launcher/1.0.0": {
-        "type": "project",
-        "framework": "Unsupported,Version=v0.0",
-        "compile": {
-          "bin/placeholder/Stella Mod Launcher.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Stella Mod Launcher.dll": {}
         }
       }
     },
@@ -290,44 +62,6 @@
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.props": {},
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.targets": {}
         }
-      },
-      "2. Genshin Stella Mod/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/2. Genshin Stella Mod.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/2. Genshin Stella Mod.dll": {}
-        }
-      },
-      "3. Configuration/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/3. Configuration.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/3. Configuration.dll": {}
-        }
-      },
-      "Prepare Stella Mod/1.0.0": {
-        "type": "project",
-        "framework": "Unsupported,Version=v0.0",
-        "compile": {
-          "bin/placeholder/Prepare Stella Mod.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Prepare Stella Mod.dll": {}
-        }
-      },
-      "Stella Mod Launcher/1.0.0": {
-        "type": "project",
-        "framework": "Unsupported,Version=v0.0",
-        "compile": {
-          "bin/placeholder/Stella Mod Launcher.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Stella Mod Launcher.dll": {}
-        }
       }
     },
     "UAP,Version=v10.0.18362/win10-x86-aot": {
@@ -336,44 +70,6 @@
         "build": {
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.props": {},
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.targets": {}
-        }
-      },
-      "2. Genshin Stella Mod/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/2. Genshin Stella Mod.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/2. Genshin Stella Mod.dll": {}
-        }
-      },
-      "3. Configuration/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/3. Configuration.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/3. Configuration.dll": {}
-        }
-      },
-      "Prepare Stella Mod/1.0.0": {
-        "type": "project",
-        "framework": "Unsupported,Version=v0.0",
-        "compile": {
-          "bin/placeholder/Prepare Stella Mod.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Prepare Stella Mod.dll": {}
-        }
-      },
-      "Stella Mod Launcher/1.0.0": {
-        "type": "project",
-        "framework": "Unsupported,Version=v0.0",
-        "compile": {
-          "bin/placeholder/Stella Mod Launcher.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Stella Mod Launcher.dll": {}
         }
       }
     }
@@ -571,35 +267,11 @@
         "schemas/10.0.22621.0/winrt/UapManifestSchema_v7.xsd",
         "schemas/10.0.22621.0/winrt/UapManifestSchema_v8.xsd"
       ]
-    },
-    "2. Genshin Stella Mod/1.0.0": {
-      "type": "project",
-      "path": "../Genshin Stella Mod/2. Genshin Stella Mod.csproj",
-      "msbuildProject": "../Genshin Stella Mod/2. Genshin Stella Mod.csproj"
-    },
-    "3. Configuration/1.0.0": {
-      "type": "project",
-      "path": "../Configuration/3. Configuration.csproj",
-      "msbuildProject": "../Configuration/3. Configuration.csproj"
-    },
-    "Prepare Stella Mod/1.0.0": {
-      "type": "project",
-      "path": "../Prepare Stella/4. Prepare Stella.csproj",
-      "msbuildProject": "../Prepare Stella/4. Prepare Stella.csproj"
-    },
-    "Stella Mod Launcher/1.0.0": {
-      "type": "project",
-      "path": "../Stella Mod Launcher/1. Stella Mod Launcher.csproj",
-      "msbuildProject": "../Stella Mod Launcher/1. Stella Mod Launcher.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.18362": [
-      "2. Genshin Stella Mod >= 1.0.0",
-      "3. Configuration >= 1.0.0",
-      "Microsoft.Windows.SDK.BuildTools >= 10.0.22621.756",
-      "Prepare Stella Mod >= 1.0.0",
-      "Stella Mod Launcher >= 1.0.0"
+      "Microsoft.Windows.SDK.BuildTools >= 10.0.22621.756"
     ]
   },
   "packageFolders": {
@@ -609,11 +281,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Win App Packaging Project\\6. Win App Packaging Project.wapproj",
+      "projectUniqueName": "C:\\GitHub\\VS\\Genshin-Impact-ReShade\\Win App Packaging Project\\6. Win App Packaging Project.wapproj",
       "projectName": "6. Win App Packaging Project",
-      "projectPath": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Win App Packaging Project\\6. Win App Packaging Project.wapproj",
+      "projectPath": "C:\\GitHub\\VS\\Genshin-Impact-ReShade\\Win App Packaging Project\\6. Win App Packaging Project.wapproj",
       "packagesPath": "C:\\Users\\Sefinek\\.nuget\\packages\\",
-      "outputPath": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Win App Packaging Project\\obj\\",
+      "outputPath": "C:\\GitHub\\VS\\Genshin-Impact-ReShade\\Win App Packaging Project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -633,20 +305,7 @@
       "frameworks": {
         "uap10.0.18362": {
           "targetAlias": "net451",
-          "projectReferences": {
-            "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Configuration\\3. Configuration.csproj": {
-              "projectPath": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Configuration\\3. Configuration.csproj"
-            },
-            "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Genshin Stella Mod\\2. Genshin Stella Mod.csproj": {
-              "projectPath": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Genshin Stella Mod\\2. Genshin Stella Mod.csproj"
-            },
-            "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Prepare Stella\\4. Prepare Stella.csproj": {
-              "projectPath": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Prepare Stella\\4. Prepare Stella.csproj"
-            },
-            "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Stella Mod Launcher\\1. Stella Mod Launcher.csproj": {
-              "projectPath": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Stella Mod Launcher\\1. Stella Mod Launcher.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -705,151 +364,5 @@
         "#import": []
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Project Stella Mod Launcher is not compatible with uap10.0.18362 (UAP,Version=v10.0.18362). Project Stella Mod Launcher supports: net481 (.NETFramework,Version=v4.8.1)",
-      "libraryId": "Stella Mod Launcher",
-      "targetGraphs": [
-        "UAP,Version=v10.0.18362"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Project Prepare Stella Mod is not compatible with uap10.0.18362 (UAP,Version=v10.0.18362). Project Prepare Stella Mod supports: net481 (.NETFramework,Version=v4.8.1)",
-      "libraryId": "Prepare Stella Mod",
-      "targetGraphs": [
-        "UAP,Version=v10.0.18362"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Project Stella Mod Launcher is not compatible with uap10.0.18362 (UAP,Version=v10.0.18362) / win10-arm. Project Stella Mod Launcher supports: net481 (.NETFramework,Version=v4.8.1)",
-      "libraryId": "Stella Mod Launcher",
-      "targetGraphs": [
-        "UAP,Version=v10.0.18362/win10-arm"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Project Prepare Stella Mod is not compatible with uap10.0.18362 (UAP,Version=v10.0.18362) / win10-arm. Project Prepare Stella Mod supports: net481 (.NETFramework,Version=v4.8.1)",
-      "libraryId": "Prepare Stella Mod",
-      "targetGraphs": [
-        "UAP,Version=v10.0.18362/win10-arm"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Project Stella Mod Launcher is not compatible with uap10.0.18362 (UAP,Version=v10.0.18362) / win10-arm-aot. Project Stella Mod Launcher supports: net481 (.NETFramework,Version=v4.8.1)",
-      "libraryId": "Stella Mod Launcher",
-      "targetGraphs": [
-        "UAP,Version=v10.0.18362/win10-arm-aot"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Project Prepare Stella Mod is not compatible with uap10.0.18362 (UAP,Version=v10.0.18362) / win10-arm-aot. Project Prepare Stella Mod supports: net481 (.NETFramework,Version=v4.8.1)",
-      "libraryId": "Prepare Stella Mod",
-      "targetGraphs": [
-        "UAP,Version=v10.0.18362/win10-arm-aot"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Project Stella Mod Launcher is not compatible with uap10.0.18362 (UAP,Version=v10.0.18362) / win10-arm64-aot. Project Stella Mod Launcher supports: net481 (.NETFramework,Version=v4.8.1)",
-      "libraryId": "Stella Mod Launcher",
-      "targetGraphs": [
-        "UAP,Version=v10.0.18362/win10-arm64-aot"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Project Prepare Stella Mod is not compatible with uap10.0.18362 (UAP,Version=v10.0.18362) / win10-arm64-aot. Project Prepare Stella Mod supports: net481 (.NETFramework,Version=v4.8.1)",
-      "libraryId": "Prepare Stella Mod",
-      "targetGraphs": [
-        "UAP,Version=v10.0.18362/win10-arm64-aot"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Project Stella Mod Launcher is not compatible with uap10.0.18362 (UAP,Version=v10.0.18362) / win10-x64. Project Stella Mod Launcher supports: net481 (.NETFramework,Version=v4.8.1)",
-      "libraryId": "Stella Mod Launcher",
-      "targetGraphs": [
-        "UAP,Version=v10.0.18362/win10-x64"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Project Prepare Stella Mod is not compatible with uap10.0.18362 (UAP,Version=v10.0.18362) / win10-x64. Project Prepare Stella Mod supports: net481 (.NETFramework,Version=v4.8.1)",
-      "libraryId": "Prepare Stella Mod",
-      "targetGraphs": [
-        "UAP,Version=v10.0.18362/win10-x64"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Project Stella Mod Launcher is not compatible with uap10.0.18362 (UAP,Version=v10.0.18362) / win10-x64-aot. Project Stella Mod Launcher supports: net481 (.NETFramework,Version=v4.8.1)",
-      "libraryId": "Stella Mod Launcher",
-      "targetGraphs": [
-        "UAP,Version=v10.0.18362/win10-x64-aot"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Project Prepare Stella Mod is not compatible with uap10.0.18362 (UAP,Version=v10.0.18362) / win10-x64-aot. Project Prepare Stella Mod supports: net481 (.NETFramework,Version=v4.8.1)",
-      "libraryId": "Prepare Stella Mod",
-      "targetGraphs": [
-        "UAP,Version=v10.0.18362/win10-x64-aot"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Project Stella Mod Launcher is not compatible with uap10.0.18362 (UAP,Version=v10.0.18362) / win10-x86. Project Stella Mod Launcher supports: net481 (.NETFramework,Version=v4.8.1)",
-      "libraryId": "Stella Mod Launcher",
-      "targetGraphs": [
-        "UAP,Version=v10.0.18362/win10-x86"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Project Prepare Stella Mod is not compatible with uap10.0.18362 (UAP,Version=v10.0.18362) / win10-x86. Project Prepare Stella Mod supports: net481 (.NETFramework,Version=v4.8.1)",
-      "libraryId": "Prepare Stella Mod",
-      "targetGraphs": [
-        "UAP,Version=v10.0.18362/win10-x86"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Project Stella Mod Launcher is not compatible with uap10.0.18362 (UAP,Version=v10.0.18362) / win10-x86-aot. Project Stella Mod Launcher supports: net481 (.NETFramework,Version=v4.8.1)",
-      "libraryId": "Stella Mod Launcher",
-      "targetGraphs": [
-        "UAP,Version=v10.0.18362/win10-x86-aot"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Project Prepare Stella Mod is not compatible with uap10.0.18362 (UAP,Version=v10.0.18362) / win10-x86-aot. Project Prepare Stella Mod supports: net481 (.NETFramework,Version=v4.8.1)",
-      "libraryId": "Prepare Stella Mod",
-      "targetGraphs": [
-        "UAP,Version=v10.0.18362/win10-x86-aot"
-      ]
-    }
-  ]
+  }
 }
