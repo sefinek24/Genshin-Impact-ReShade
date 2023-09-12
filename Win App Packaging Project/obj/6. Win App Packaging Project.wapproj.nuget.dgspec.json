@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GitHub\\VS\\Genshin-Impact-ReShade\\Win App Packaging Project\\6. Win App Packaging Project.wapproj": {}
+    "C:\\GitHub\\VS\\Stella\\Genshin-Impact-ReShade\\Win App Packaging Project\\6. Win App Packaging Project.wapproj": {}
   },
   "projects": {
-    "C:\\GitHub\\VS\\Genshin-Impact-ReShade\\Win App Packaging Project\\6. Win App Packaging Project.wapproj": {
+    "C:\\GitHub\\VS\\Stella\\Genshin-Impact-ReShade\\Win App Packaging Project\\6. Win App Packaging Project.wapproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GitHub\\VS\\Genshin-Impact-ReShade\\Win App Packaging Project\\6. Win App Packaging Project.wapproj",
+        "projectUniqueName": "C:\\GitHub\\VS\\Stella\\Genshin-Impact-ReShade\\Win App Packaging Project\\6. Win App Packaging Project.wapproj",
         "projectName": "6. Win App Packaging Project",
-        "projectPath": "C:\\GitHub\\VS\\Genshin-Impact-ReShade\\Win App Packaging Project\\6. Win App Packaging Project.wapproj",
+        "projectPath": "C:\\GitHub\\VS\\Stella\\Genshin-Impact-ReShade\\Win App Packaging Project\\6. Win App Packaging Project.wapproj",
         "packagesPath": "C:\\Users\\Sefinek\\.nuget\\packages\\",
-        "outputPath": "C:\\GitHub\\VS\\Genshin-Impact-ReShade\\Win App Packaging Project\\obj\\",
+        "outputPath": "C:\\GitHub\\VS\\Stella\\Genshin-Impact-ReShade\\Win App Packaging Project\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
