@@ -124,7 +124,8 @@ The main server of [sefinek.net](https://sefinek.net) is located in Poland, whil
 ### 📝 » Note
 After the installation is complete, you should open the Stella Launcher and start the game by clicking on the **Start game** button.
 Once the game has launched, it is crucial to verify that [the recommended graphics settings](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%E2%9A%99%EF%B8%8F-%E3%80%A2-recommended-settings-for-game) are configured correctly.
-Then, adjust the settings according to the recommended values based on your system's capabilities. This will help to ensure that the game runs smoothly and looks its best.
+Then, adjust the settings according to the recommended values based on your system's capabilities. This will help to ensure
+that the game runs smoothly and looks its best.
 
 
 ## 🛠️ 〢 Tested game versions
@@ -189,8 +190,8 @@ Do not change FPS settings in the game if you are using FPS unlock.
 </div>
 
 ### ⚠️ Warning
-It is worth noting that relying solely on the screenshots or videos provided may not necessarily provide the most accurate or up-to-date representation of the software or application.
-This is because the presets or default settings are constantly being reviewed
+It is worth noting that relying solely on the screenshots or videos provided may not necessarily provide the most accurate or up-to-date
+representation of the software or application. This is because the presets or default settings are constantly being reviewed
 and refined by the developers to ensure optimal user experience and address any issues or bugs that may arise.
 
 
