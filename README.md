@@ -1,9 +1,9 @@
 <!-- [[> SEO
 ###### Number: 2
 
-###### Title: Genshin Impact Stella Mod Pack: Installation, Requirements, and Screenshots
-###### Description: Learn how to install the Genshin Impact Stella Mod Pack, check the system requirements, and view in-game screenshots. Enhance your gaming experience now!
-###### Tags: genshin impact, stella mod, reshade, installation, system requirements, screenshots, gaming, mods
+###### Title: Genshin Stella Mod Pack: Installation, Requirements, and Screenshots
+###### Description: Learn how to install the Genshin Impact Stella Shader Pack. Check the system requirements, and view in-game screenshots. Enhance your gaming experience now!
+###### Tags: genshin impact, genshin shaders, genshin impact shaders, stella mod, reshade, installation, system requirements, screenshots, gaming, mods, stella mod readme, genshin impact stella mod readme, genshin stella mod readme
 ]]> -->
 
 <div align="center">
@@ -16,7 +16,6 @@
     <a href="https://sefinek.net" title="sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=Website&up_message=Online&url=https%3A%2F%2Fsefinek.net" alt="Status page"></a>
     <a href="https://api.sefinek.net" title="api.sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=API&up_message=Online&url=https%3A%2F%2Fapi.sefinek.net" alt="Status page"></a>
     <a href="https://cdn.sefinek.net" title="cdn.sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=CDN&up_message=Online&url=https%3A%2F%2Fcdn.sefinek.net" alt="Status page"></a>
-    <a href="https://stats.uptimerobot.com/kLXYEukEwW" title="sefinek.net uptime"><img src="https://img.shields.io/uptimerobot/ratio/7/m793533681-b79b8280de15efcd9bc83d7d?label=Uptime" alt="Website uptime"></a>
     <br>
     <a href="https://github.com/sefinek24/Genshin-Impact-ReShade" title="Repository size"><img src="https://img.shields.io/github/repo-size/sefinek24/Genshin-Impact-ReShade?label=Repo%20size" alt="Repo size"></a>
     <a href="https://github.com/sefinek24/Genshin-Impact-ReShade/commits/main" title="Commit activity"><img src="https://img.shields.io/github/commit-activity/w/sefinek24/Genshin-Impact-ReShade?label=Commit%20activity" alt="Commit activity"></a>
@@ -42,7 +41,7 @@
 - [🛠️ Tested game versions](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%F0%9F%9B%A0%EF%B8%8F-%E3%80%A2-tested-game-versions)
 - [⚙️ Recommended settings for game](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%E2%9A%99%EF%B8%8F-%E3%80%A2-recommended-settings-for-game)
 - [📷 Other screenshots](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%F0%9F%93%B7-%E3%80%A2-other-screenshots-without-ray-tracing)
-- [🧀 Legend](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)
+- [🧀 Legend](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme)
 - [🧶 Sources](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%F0%9F%A7%B6-%E3%80%A2-sources)
 
 <div align="center" id="labels">
@@ -58,19 +57,19 @@ Please note that sharing game screenshots displaying your UID, visible shaders, 
 If you plan to record a video of the game for platforms like YouTube, remember to hide or censor your UID and username to avoid being banned.
 
 Also, it is highly recommended to update your graphics card and chipset drivers to ensure smooth gameplay, minimize graphics-related issues, and prevent crashes.
-Please familiarize yourself with the [system requirements](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%E2%9C%A8-%E3%80%A2-requirements) as well.
+Please familiarize yourself with the [system requirements](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%E2%9C%A8-%E3%80%A2-requirements&referrer=readme) as well.
 
-For more information and details about the Genshin Stella Mod project, visit our [Documentation](https://sefinek.net/genshin-impact-reshade/docs?page=introduction).
+For more information and details about the Genshin Stella Mod project, visit our [Documentation](https://sefinek.net/genshin-impact-reshade/docs?page=introduction&referrer=readme).
 The wiki provides a comprehensive installation and usage guide for ReShade, along with frequently asked questions and troubleshooting tips.
 
 If you need further assistance, feel free to join our [Discord server](https://discord.gg/SVcbaRc7gH).
 Additionally, if you wish to contribute to the project, please create a new [Pull request](https://github.com/sefinek24/Genshin-Impact-ReShade/pulls).
-You can also check out the latest [screenshots](https://sefinek.net/genshin-impact-reshade/gallery?page=1) on our website and watch [YouTube videos](https://sefinek.net/genshin-impact-reshade/videos) for more.
+You can also check out the latest [screenshots](https://sefinek.net/genshin-impact-reshade/gallery?page=1&referrer=readme) on our website and watch [YouTube videos](https://sefinek.net/genshin-impact-reshade/videos?referrer=readme) for more.
 
-The main server of [sefinek.net](https://sefinek.net) is located in Poland, while the [Cloudflare](https://www.cloudflare.com) servers that [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel) connects to are in Warsaw and Frankfurt.
+The main server of [sefinek.net](https://sefinek.net/?referrer=readme) is located in Poland, while the [Cloudflare](https://www.cloudflare.com) servers that [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel) connects to are in Warsaw and Frankfurt.
 
 > [!IMPORTANT]
-> By using this software, you agree to the terms of the [License agreement](https://sefinek.net/genshin-impact-reshade/docs?page=license_stella), [Terms of use](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-ToS#-1-terms-of-use) and [Rules](https://github.com/sefinek24/Genshin-Impact-ReShade/wiki/05.-ToS#-2-rules-etc).
+> By using this software, you agree to the terms of the [License agreement](https://sefinek.net/genshin-impact-reshade/docs?page=license_stella&referrer=readme), [Terms of use](https://sefinek.net/genshin-impact-reshade/docs?page=tos#%F0%9F%93%8B-%C2%A71-terms-of-use&referrer=readme) and [Rules](https://sefinek.net/genshin-impact-reshade/docs?page=tos#%E2%9C%85-%C2%A72-rules-etc?referrer=readme).
 > In addition, we are not responsible for any potential bans in the game, although the chances of this happening **are negligible**.
 
 
@@ -107,14 +106,14 @@ The main server of [sefinek.net](https://sefinek.net) is located in Poland, whil
 
 
 ## 🔧 〢 Supported operating systems
-| 🌌 System       | 🔖 Version | 🙀 Status                                                                                                                                    | 🤔 Recommended?                                                                                                                              |
-|-----------------|:-----------|:---------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------|
-| Windows 11      | 22H2       | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)  | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)   |
-| Windows 10      | 21H2       | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)  | [️✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki) | 
-| Windows 8 / 8.1 |            | [🎯️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki) | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)   | 
-| Windows 7       |            | [🎯️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki) | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)   | 
-| Android / Linux |            | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)   | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)   | 
-| iOS / macOS     |            | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)   | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)   |
+| 🌌 System       | 🔖 Version | 🙀 Status                                                                                                                                                    | 🤔 Recommended?                                                                                                                                              |
+|-----------------|:-----------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Windows 11      | 22H2       | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme)  | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme)   |
+| Windows 10      | 21H2       | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme)  | [️✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme) | 
+| Windows 8 / 8.1 |            | [🎯️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme) | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme)   | 
+| Windows 7       |            | [🎯️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme) | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme)   | 
+| Android / Linux |            | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme)   | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme)   | 
+| iOS / macOS     |            | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme)   | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme)   |
 
 
 ## 📥 〢 How to install?
@@ -129,18 +128,18 @@ that the game runs smoothly and looks its best.
 
 
 ## 🛠️ 〢 Tested game versions
-| 😻 Stella | 🎮 Game  | 💻 System               | 📝 OS build | 😅 Status                                                                                                                                   | 📆 Date tested     |
-|:----------|----------|:------------------------|:------------|---------------------------------------------------------------------------------------------------------------------------------------------|--------------------|
-| v7.6.6.0  | v4.0.1.0 | MS Windows 10 Home 22H2 | 19045.3393  | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki) | September 12, 2023 |
-| v7.6.1.0  | v3.8.0.0 | MS Windows 11 Home 22H2 | 22621.1992  | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki) | July 31, 2023      |
-| Unknown   | v3.8.0.0 | MS Windows 10 Home 22H2 | 19045.3155  | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki) | July 09, 2023      |
-| Unknown   | v3.7.0.0 | MS Windows 10 Home 22H2 | 19045.3031  | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki) | May 24, 2023       |
-| Unknown   | v3.6.0.0 |                         |             | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)  | April 12, 2023     |
-| Unknown   | v3.5.0.0 |                         |             | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)  | March 01, 2023     |
-| Unknown   | v3.4.0.0 |                         |             | [❌️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki) | January 18, 2023   |
-| Unknown   | v3.3.0.0 |                         |             | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)  | November 9, 2022   |
-| Unknown   | v3.2.0.0 |                         |             | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)  | November 2, 2022   |
-| Unknown   | v3.1.0.0 |                         |             | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki)  | November 1, 2022   |
+| 😻 Stella | 🎮 Game  | 💻 System               | 📝 OS build | 😅 Status                                                                                                                                                   | 📆 Date tested     |
+|:----------|----------|:------------------------|:------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------|
+| v7.6.6.0  | v4.0.1.0 | MS Windows 10 Home 22H2 | 19045.3448  | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme) | September 12, 2023 |
+| v7.6.1.0  | v3.8.0.0 | MS Windows 11 Home 22H2 | 22621.1992  | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme) | July 31, 2023      |
+| Unknown   | v3.8.0.0 | MS Windows 10 Home 22H2 | 19045.3155  | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme) | July 09, 2023      |
+| Unknown   | v3.7.0.0 | MS Windows 10 Home 22H2 | 19045.3031  | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme) | May 24, 2023       |
+| Unknown   | v3.6.0.0 |                         |             | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme)  | April 12, 2023     |
+| Unknown   | v3.5.0.0 |                         |             | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme)  | March 01, 2023     |
+| Unknown   | v3.4.0.0 |                         |             | [❌️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme) | January 18, 2023   |
+| Unknown   | v3.3.0.0 |                         |             | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme)  | November 9, 2022   |
+| Unknown   | v3.2.0.0 |                         |             | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme)  | November 2, 2022   |
+| Unknown   | v3.1.0.0 |                         |             | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme)  | November 1, 2022   |
 
 
 ## ⚙️ 〢 Recommended settings for game
@@ -169,7 +168,7 @@ These recommended settings are provided as a general guideline and may vary base
 It is recommended that players adjust the settings accordingly to optimize their own experience.
 
 ### ✋ » Important
-Please note that there is an additional graphics settings option available in the reshade overlay by changing presets.
+Please note that there is an additional graphics settings option available in the ReShade overlay by changing presets.
 You can adjust the presets from very low to very high, which will significantly impact the shadows in the game.
 
 ### ⚠️ » Warning
