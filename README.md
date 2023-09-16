@@ -131,40 +131,40 @@ that the game runs smoothly and looks its best.
 
 
 ## 🛠️ 〢 Tested game versions
-| 😻 Stella | 🎮 Game  | 💻 System               | 📝 OS build | 😅 Status                                                                                                                                                   | 📆 Date tested     |
-|:----------|----------|:------------------------|:------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------|
-| v7.6.6.0  | v4.0.1.0 | MS Windows 10 Home 22H2 | 19045.3448  | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme) | September 12, 2023 |
-| v7.6.1.0  | v3.8.0.0 | MS Windows 11 Home 22H2 | 22621.1992  | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme) | July 31, 2023      |
-| Unknown   | v3.8.0.0 | MS Windows 10 Home 22H2 | 19045.3155  | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme) | July 09, 2023      |
-| Unknown   | v3.7.0.0 | MS Windows 10 Home 22H2 | 19045.3031  | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme) | May 24, 2023       |
-| Unknown   | v3.6.0.0 |                         |             | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme)  | April 12, 2023     |
-| Unknown   | v3.5.0.0 |                         |             | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme)  | March 01, 2023     |
-| Unknown   | v3.4.0.0 |                         |             | [❌️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme) | January 18, 2023   |
-| Unknown   | v3.3.0.0 |                         |             | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme)  | November 9, 2022   |
-| Unknown   | v3.2.0.0 |                         |             | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme)  | November 2, 2022   |
-| Unknown   | v3.1.0.0 |                         |             | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme)  | November 1, 2022   |
+| <div align="left">😻 Stella | <div align="left">🎮 Game</div> | <div align="left">💻 System</div> | <div align="left">📝 OS build | <div align="left">😅 Status</div>                                                                                                                           | 📆 <div align="left">Date tested</div> |
+|:----------------------------|---------------------------------|:----------------------------------|:------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|
+| v7.6.6.0                    | v4.0.1.0                        | MS Windows 10 Home 22H2           | 19045.3448                    | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme) | September 12, 2023                     |
+| v7.6.1.0                    | v3.8.0.0                        | MS Windows 11 Home 22H2           | 22621.1992                    | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme) | July 31, 2023                          |
+| Unknown                     | v3.8.0.0                        | MS Windows 10 Home 22H2           | 19045.3155                    | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme) | July 09, 2023                          |
+| Unknown                     | v3.7.0.0                        | MS Windows 10 Home 22H2           | 19045.3031                    | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme) | May 24, 2023                           |
+| Unknown                     | v3.6.0.0                        |                                   |                               | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme)  | April 12, 2023                         |
+| Unknown                     | v3.5.0.0                        |                                   |                               | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme)  | March 01, 2023                         |
+| Unknown                     | v3.4.0.0                        |                                   |                               | [❌️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme) | January 18, 2023                       |
+| Unknown                     | v3.3.0.0                        |                                   |                               | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme)  | November 9, 2022                       |
+| Unknown                     | v3.2.0.0                        |                                   |                               | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme)  | November 2, 2022                       |
+| Unknown                     | v3.1.0.0                        |                                   |                               | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#%F0%9F%98%89-explanation-of-the-meanings-of-emojis-used-in-the-wiki&referrer=readme)  | November 1, 2022                       |
 
 
 ## ⚙️ 〢 Recommended settings for game
-| 🔧 Settings                 | 💻 Intel Core i3-10100 + GTX 1650 | 💻 AMD Ryzen 5 3600 + RTX 2060       |
-|-----------------------------|-----------------------------------|:-------------------------------------|
-| **Display Mode**            | 1920x1080 (or higher) Fullscreen  | 1920x1080 (or higher) Fullscreen     |
-| **Brightness**              | Default                           | Default                              |
-| **FPS**                     | 60                                | 60                                   |
-| **Render Resolution**       | 1.0                               | 1.1 or higher                        |
-| **Shadow Quality**          | Medium                            | High                                 |
-| **Visual Effects**          | Medium                            | High                                 |
-| **SFX Quality**             | Medium                            | High                                 |
-| **Environment Detail**      | Medium                            | High                                 |
-| **Anti-Aliasing**           | FSR 2                             | SMAA (Use FSR 2 if you have low FPS) |
-| **Volumetric Fog**          | On                                | On                                   |
-| **Reflections**             | On                                | On                                   |
-| **Motion Blur**             | Low or Off                        | Low or Off                           |
-| **Bloom**                   | On                                | On                                   |
-| **Crowd Density**           | High                              | High                                 |
-| **Co-Op Teammates Effects** | On                                | On                                   |
-| **Subsurface Scattering**   | High                              | High                                 |
-| **Anisotropic Filtering**   | 4x                                | 16x                                  |
+| <div align="center">🔧 Settings</div> | <div align="center">💻 Intel Core i3-10100 + GTX 1650</div> | <div align="center">💻 AMD Ryzen 5 3600 + RTX 2060</div> |
+|---------------------------------------|-------------------------------------------------------------|:---------------------------------------------------------|
+| **Display Mode**                      | 1920x1080 (or higher) Fullscreen                            | 1920x1080 (or higher) Fullscreen                         |
+| **Brightness**                        | Default                                                     | Default                                                  |
+| **FPS**                               | 60                                                          | 60                                                       |
+| **Render Resolution**                 | 1.0                                                         | 1.1 or higher                                            |
+| **Shadow Quality**                    | Medium                                                      | High                                                     |
+| **Visual Effects**                    | Medium                                                      | High                                                     |
+| **SFX Quality**                       | Medium                                                      | High                                                     |
+| **Environment Detail**                | Medium                                                      | High                                                     |
+| **Anti-Aliasing**                     | FSR 2                                                       | SMAA (Use FSR 2 if you have low FPS)                     |
+| **Volumetric Fog**                    | On                                                          | On                                                       |
+| **Reflections**                       | On                                                          | On                                                       |
+| **Motion Blur**                       | Low or Off                                                  | Low or Off                                               |
+| **Bloom**                             | On                                                          | On                                                       |
+| **Crowd Density**                     | High                                                        | High                                                     |
+| **Co-Op Teammates Effects**           | On                                                          | On                                                       |
+| **Subsurface Scattering**             | High                                                        | High                                                     |
+| **Anisotropic Filtering**             | 4x                                                          | 16x                                                      |
 
 ### 📝 » Note
 These recommended settings are provided as a general guideline and may vary based on individual player preferences and system specifications.
