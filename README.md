@@ -74,6 +74,9 @@ The main server of [sefinek.net](https://sefinek.net/?referrer=readme) is locate
 
 
 ## 📂 〢 Includes
+> [!NOTE]
+> This is the free version. The subscriber's version provides additional benefits and features.
+
 | 🔍 Name                   | 📃 More information                                                                                                         | 🌍 URL address                                                                                                                         | 📑 License                                                                                                     |
 |:--------------------------|:----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------|
 | Own launcher              | Always the latest releases                                                                                                  | [View folder](https://github.com/sefinek24/Genshin-Impact-ReShade/tree/main/Stella%20Mod%20Launcher)                                   | [CC BY-NC-SA 4.0](https://sefinek.net/genshin-impact-reshade/docs?page=license_stella)                         |
@@ -85,7 +88,7 @@ The main server of [sefinek.net](https://sefinek.net/?referrer=readme) is locate
 | Latest shaders            | The best experience                                                                                                         | [View folder](https://github.com/sefinek24/Stella-Mod-Resources/tree/main/public/resources/ReShade/Shaders)                            |                                                                                                                |
 | Own presets for game      | Best graphics quality                                                                                                       | [View folder](https://github.com/sefinek24/Stella-Mod-Resources/tree/main/public/resources/ReShade/Presets)                            | [CC BY-SA 4.0](https://github.com/sefinek24/Stella-Mod-Resources/blob/main/static/reshade/zip/Presets/LICENSE) |
 | Community presets         | Presets created by our community                                                                                            | [View folder](https://github.com/sefinek24/Stella-Mod-Resources/tree/main/public/resources/ReShade/Presets/1.%20Made%20by%20community) | [CC BY-SA 4.0](https://github.com/sefinek24/Stella-Mod-Resources/blob/main/static/reshade/zip/Presets/LICENSE) |
-| Presets with Ray Tracing  | Only available for Patrons                                                                                                  | [Visit Patreon](https://www.patreon.com/sefinek)                                                                                       |                                                                                                                |
+| Presets with RT etc.      | Only available for Patrons                                                                                                  | [Visit Patreon](https://www.patreon.com/sefinek)                                                                                       |                                                                                                                |
 
 > [!NOTE]
 > The repository with the resources is available here: [sefinek24/Stella-Mod-Resources](https://github.com/sefinek24/Stella-Mod-Resources)
