@@ -83,7 +83,7 @@ The main server of [sefinek.net](https://sefinek.net/?referrer=stella_readme) is
 | Own launcher              | Always the latest releases                                                                                                  | [View folder](https://github.com/sefinek24/Genshin-Impact-ReShade/tree/main/Stella%20Mod%20Launcher)                                  | [CC BY-NC-SA 4.0](https://sefinek.net/genshin-impact-reshade/docs?page=license_stella)                         |
 | Easy configuration wizard | Safe and fast installation                                                                                                  | [View folder](https://github.com/sefinek24/Genshin-Impact-ReShade/tree/main/Prepare%20Stella)                                         | [CC BY-NC-SA 4.0](https://github.com/sefinek24/Stella-Mod-Setup)                                               |
 | Unlocked ReShade          | No depth buffer detection                                                                                                   | [~~Repo~~](https://github.com/sefinek24/unlocked-reshade)                                                                             | [BSD 3-Clause License](https://github.com/sefinek24/unlocked-reshade/blob/main/LICENSE.md)                     |
-| Crosire's DLL injector    | Just an injector                                                                                                            | [View file](https://github.com/sefinek24/Genshin-Impact-ReShade/blob/main/Genshin%20Stella%20Mod/data/reshade/inject64.exe)           |                                                                                                                |
+| Crosire's DLL injector    | Just an injector                                                                                                            | [View file](https://github.com/sefinek24/Genshin-Impact-ReShade/blob/main/Stella%20Mod%20Launcher/data/reshade/inject64.exe)           |                                                                                                                |
 | 3DMigoto                  | Custom mods in game                                                                                                         | [Repository](https://github.com/SilentNightSound/GI-Model-Importer)                                                                   | [GNU v3.0](https://github.com/SilentNightSound/GI-Model-Importer/blob/main/LICENSE)                            |
 | FPS Unlocker              | [Click here for more info](https://github.com/sefinek24/genshin-fps-unlock#genshin-impact-fps-unlocker-modified-by-sefinek) | [Repository](https://github.com/sefinek24/genshin-fps-unlock)                                                                         |                                                                                                                |
 | Latest shaders            | The best experience                                                                                                         | [Visit repo](https://github.com/sefinek24/Stella-Mod-Resources/tree/main/public/resources/ReShade/Shaders)                            |                                                                                                                |
@@ -182,13 +182,13 @@ Do not change FPS settings in the game if you are using FPS unlock.
 
 ## 📷 〢 Other screenshots (without Ray Tracing)
 <div id="images">
-    <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Genshin%20Stella%20Mod/data/images/launcher/backgrounds/nahida/1.png" title="See preview [1.png]">
+    <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Stella%20Mod%20Launcher/data/images/launcher/backgrounds/nahida/1.png?referrer=stella_readme" title="See preview [1.png]">
         <img src="Stella Mod Launcher/data/images/launcher/backgrounds/nahida/1.png" alt="Screenshot number 1">
     </a>
-    <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Genshin%20Stella%20Mod/data/images/launcher/backgrounds/hutao/4.png" title="See preview [4.png]">
+    <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Stella%20Mod%20Launcher/data/images/launcher/backgrounds/hutao/4.png?referrer=stella_readme" title="See preview [4.png]">
         <img src="Stella Mod Launcher/data/images/launcher/backgrounds/hutao/4.png" alt="Screenshot number 2">
     </a>
-    <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Genshin%20Stella%20Mod/data/images/launcher/backgrounds/yaoyao/2.png" title="See preview [2.png]">
+    <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Stella%20Mod%20Launcher/data/images/launcher/backgrounds/yaoyao/2.png?referrer=stella_readme" title="See preview [2.png]">
         <img src="Stella Mod Launcher/data/images/launcher/backgrounds/yaoyao/2.png" alt="Screenshot number 3">
     </a>
 </div>
