@@ -199,6 +199,18 @@ representation of the software or application. This is because the presets or de
 and refined by the developers to ensure optimal user experience and address any issues or bugs that may arise.
 
 
+## 👌 Contributors
+Thank you to all the collaborators for their dedication to the project!
+
+<div align="center">
+	<a href="https://github.com/Rodez97">
+		<img alt="sefinek24" width="70" style="border-radius: 50%" src="https://avatars.githubusercontent.com/u/35657153?v=4" />
+	</a>
+    <br>
+    For migrating the payment system from Patreon to Stripe and releasing the new API version 5.
+</div>
+
+
 ## 🧶 〢 Sources
 Please note that the icons and stickers used in this project were obtained from different sources.
 
