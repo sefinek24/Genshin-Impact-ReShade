@@ -208,7 +208,7 @@ Thank you to all the collaborators for their dedication to the project!
 		<img src="https://avatars.githubusercontent.com/u/35657153?v=4" width="70" style="border-radius: 50%" alt="Rodez97">
 	</a>
     <br>
-    For migrating the payment system from Patreon to Stripe and releasing the new API version 5.
+    For migrating the payment system from Patreon to Stripe and releasing the new API version v5.
 </div>
 
 
