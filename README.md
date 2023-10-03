@@ -203,6 +203,7 @@ and refined by the developers to ensure optimal user experience and address any 
 Thank you to all the collaborators for their dedication to the project!
 
 <div align="center">
+    <h3>Rodez97</h3>
 	<a href="https://github.com/Rodez97">
 		<img src="https://avatars.githubusercontent.com/u/35657153?v=4" width="70" style="border-radius: 50%" alt="Rodez97">
 	</a>
