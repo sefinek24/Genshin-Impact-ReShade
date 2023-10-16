@@ -96,12 +96,13 @@ namespace StellaLauncher.Forms
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.panel1.ForeColor = System.Drawing.Color.Transparent;
             this.panel1.Name = "panel1";
+            this.toolTip1.SetToolTip(this.panel1, resources.GetString("panel1.ToolTip"));
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDown_Event);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MouseMove_Event);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MouseUp_Event);
@@ -121,6 +122,7 @@ namespace StellaLauncher.Forms
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label1.Name = "label1";
+            this.toolTip1.SetToolTip(this.label1, resources.GetString("label1.ToolTip"));
             // 
             // SettingsAndUtils
             // 
@@ -128,16 +130,18 @@ namespace StellaLauncher.Forms
             this.SettingsAndUtils.BackColor = System.Drawing.Color.Transparent;
             this.SettingsAndUtils.ForeColor = System.Drawing.Color.White;
             this.SettingsAndUtils.Name = "SettingsAndUtils";
+            this.toolTip1.SetToolTip(this.SettingsAndUtils, resources.GetString("SettingsAndUtils.ToolTip"));
             // 
             // DeleteAllCacheAndLogFiles
             // 
-            this.DeleteAllCacheAndLogFiles.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             resources.ApplyResources(this.DeleteAllCacheAndLogFiles, "DeleteAllCacheAndLogFiles");
+            this.DeleteAllCacheAndLogFiles.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.DeleteAllCacheAndLogFiles.BackColor = System.Drawing.Color.Transparent;
             this.DeleteAllCacheAndLogFiles.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.DeleteAllCacheAndLogFiles.LinkColor = System.Drawing.Color.White;
             this.DeleteAllCacheAndLogFiles.Name = "DeleteAllCacheAndLogFiles";
             this.DeleteAllCacheAndLogFiles.TabStop = true;
+            this.toolTip1.SetToolTip(this.DeleteAllCacheAndLogFiles, resources.GetString("DeleteAllCacheAndLogFiles.ToolTip"));
             this.DeleteAllCacheAndLogFiles.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.DeleteCache_LinkClicked);
             // 
             // pictureBox3
@@ -148,16 +152,18 @@ namespace StellaLauncher.Forms
             this.pictureBox3.Image = global::StellaLauncher.Properties.Resources.icons8_recycle_bin;
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox3, resources.GetString("pictureBox3.ToolTip"));
             // 
             // ReShadeLogs
             // 
-            this.ReShadeLogs.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             resources.ApplyResources(this.ReShadeLogs, "ReShadeLogs");
+            this.ReShadeLogs.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.ReShadeLogs.BackColor = System.Drawing.Color.Transparent;
             this.ReShadeLogs.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.ReShadeLogs.LinkColor = System.Drawing.Color.White;
             this.ReShadeLogs.Name = "ReShadeLogs";
             this.ReShadeLogs.TabStop = true;
+            this.toolTip1.SetToolTip(this.ReShadeLogs, resources.GetString("ReShadeLogs.ToolTip"));
             this.ReShadeLogs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ReShadeLogs_LinkClicked);
             // 
             // pictureBox1
@@ -168,16 +174,18 @@ namespace StellaLauncher.Forms
             this.pictureBox1.Image = global::StellaLauncher.Properties.Resources.icons8_notepad;
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox1, resources.GetString("pictureBox1.ToolTip"));
             // 
             // LauncherLogs
             // 
-            this.LauncherLogs.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             resources.ApplyResources(this.LauncherLogs, "LauncherLogs");
+            this.LauncherLogs.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.LauncherLogs.BackColor = System.Drawing.Color.Transparent;
             this.LauncherLogs.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.LauncherLogs.LinkColor = System.Drawing.Color.White;
             this.LauncherLogs.Name = "LauncherLogs";
             this.LauncherLogs.TabStop = true;
+            this.toolTip1.SetToolTip(this.LauncherLogs, resources.GetString("LauncherLogs.ToolTip"));
             this.LauncherLogs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LauncherLogs_LinkClicked);
             // 
             // pictureBox2
@@ -188,6 +196,7 @@ namespace StellaLauncher.Forms
             this.pictureBox2.Image = global::StellaLauncher.Properties.Resources.icons8_notepad;
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox2, resources.GetString("pictureBox2.ToolTip"));
             // 
             // LogFiles
             // 
@@ -195,6 +204,7 @@ namespace StellaLauncher.Forms
             this.LogFiles.BackColor = System.Drawing.Color.Transparent;
             this.LogFiles.ForeColor = System.Drawing.Color.White;
             this.LogFiles.Name = "LogFiles";
+            this.toolTip1.SetToolTip(this.LogFiles, resources.GetString("LogFiles.ToolTip"));
             // 
             // ConfigFiles
             // 
@@ -202,11 +212,12 @@ namespace StellaLauncher.Forms
             this.ConfigFiles.BackColor = System.Drawing.Color.Transparent;
             this.ConfigFiles.ForeColor = System.Drawing.Color.White;
             this.ConfigFiles.Name = "ConfigFiles";
+            this.toolTip1.SetToolTip(this.ConfigFiles, resources.GetString("ConfigFiles.ToolTip"));
             // 
             // SeeReShadeConfig
             // 
-            this.SeeReShadeConfig.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             resources.ApplyResources(this.SeeReShadeConfig, "SeeReShadeConfig");
+            this.SeeReShadeConfig.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.SeeReShadeConfig.BackColor = System.Drawing.Color.Transparent;
             this.SeeReShadeConfig.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.SeeReShadeConfig.LinkColor = System.Drawing.Color.White;
@@ -223,11 +234,12 @@ namespace StellaLauncher.Forms
             this.pictureBox4.Image = global::StellaLauncher.Properties.Resources.icons8_edit_property;
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox4, resources.GetString("pictureBox4.ToolTip"));
             // 
             // SeeFPSUnlockerConfig
             // 
-            this.SeeFPSUnlockerConfig.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             resources.ApplyResources(this.SeeFPSUnlockerConfig, "SeeFPSUnlockerConfig");
+            this.SeeFPSUnlockerConfig.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.SeeFPSUnlockerConfig.BackColor = System.Drawing.Color.Transparent;
             this.SeeFPSUnlockerConfig.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.SeeFPSUnlockerConfig.LinkColor = System.Drawing.Color.White;
@@ -244,11 +256,12 @@ namespace StellaLauncher.Forms
             this.pictureBox5.Image = global::StellaLauncher.Properties.Resources.icons8_edit_property;
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox5, resources.GetString("pictureBox5.ToolTip"));
             // 
             // ScanAndRepairSysFiles
             // 
-            this.ScanAndRepairSysFiles.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             resources.ApplyResources(this.ScanAndRepairSysFiles, "ScanAndRepairSysFiles");
+            this.ScanAndRepairSysFiles.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.ScanAndRepairSysFiles.BackColor = System.Drawing.Color.Transparent;
             this.ScanAndRepairSysFiles.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.ScanAndRepairSysFiles.LinkColor = System.Drawing.Color.White;
@@ -265,6 +278,7 @@ namespace StellaLauncher.Forms
             this.pictureBox6.Image = global::StellaLauncher.Properties.Resources.icons8_tools;
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox6, resources.GetString("pictureBox6.ToolTip"));
             // 
             // pictureBox7
             // 
@@ -274,11 +288,12 @@ namespace StellaLauncher.Forms
             this.pictureBox7.Image = global::StellaLauncher.Properties.Resources.icons8_shortcut;
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox7, resources.GetString("pictureBox7.ToolTip"));
             // 
             // CreateShortcut
             // 
-            this.CreateShortcut.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             resources.ApplyResources(this.CreateShortcut, "CreateShortcut");
+            this.CreateShortcut.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.CreateShortcut.BackColor = System.Drawing.Color.Transparent;
             this.CreateShortcut.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.CreateShortcut.LinkColor = System.Drawing.Color.White;
@@ -293,6 +308,7 @@ namespace StellaLauncher.Forms
             this.Launcher.BackColor = System.Drawing.Color.Transparent;
             this.Launcher.ForeColor = System.Drawing.Color.White;
             this.Launcher.Name = "Launcher";
+            this.toolTip1.SetToolTip(this.Launcher, resources.GetString("Launcher.ToolTip"));
             // 
             // CacheAndLogs
             // 
@@ -300,6 +316,7 @@ namespace StellaLauncher.Forms
             this.CacheAndLogs.BackColor = System.Drawing.Color.Transparent;
             this.CacheAndLogs.ForeColor = System.Drawing.Color.White;
             this.CacheAndLogs.Name = "CacheAndLogs";
+            this.toolTip1.SetToolTip(this.CacheAndLogs, resources.GetString("CacheAndLogs.ToolTip"));
             // 
             // pictureBox8
             // 
@@ -309,22 +326,24 @@ namespace StellaLauncher.Forms
             this.pictureBox8.Image = global::StellaLauncher.Properties.Resources.icons8_recycle_bin;
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox8, resources.GetString("pictureBox8.ToolTip"));
             // 
             // DeleteOnlyWebView2Cache
             // 
-            this.DeleteOnlyWebView2Cache.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             resources.ApplyResources(this.DeleteOnlyWebView2Cache, "DeleteOnlyWebView2Cache");
+            this.DeleteOnlyWebView2Cache.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.DeleteOnlyWebView2Cache.BackColor = System.Drawing.Color.Transparent;
             this.DeleteOnlyWebView2Cache.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.DeleteOnlyWebView2Cache.LinkColor = System.Drawing.Color.White;
             this.DeleteOnlyWebView2Cache.Name = "DeleteOnlyWebView2Cache";
             this.DeleteOnlyWebView2Cache.TabStop = true;
+            this.toolTip1.SetToolTip(this.DeleteOnlyWebView2Cache, resources.GetString("DeleteOnlyWebView2Cache.ToolTip"));
             this.DeleteOnlyWebView2Cache.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.DeleteWebViewCache_LinkClicked);
             // 
             // MuteMusicOnStart
             // 
-            this.MuteMusicOnStart.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             resources.ApplyResources(this.MuteMusicOnStart, "MuteMusicOnStart");
+            this.MuteMusicOnStart.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.MuteMusicOnStart.BackColor = System.Drawing.Color.Transparent;
             this.MuteMusicOnStart.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.MuteMusicOnStart.LinkColor = System.Drawing.Color.White;
@@ -335,8 +354,8 @@ namespace StellaLauncher.Forms
             // 
             // DisableDiscordRPC
             // 
-            this.DisableDiscordRPC.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             resources.ApplyResources(this.DisableDiscordRPC, "DisableDiscordRPC");
+            this.DisableDiscordRPC.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.DisableDiscordRPC.BackColor = System.Drawing.Color.Transparent;
             this.DisableDiscordRPC.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.DisableDiscordRPC.LinkColor = System.Drawing.Color.White;
@@ -347,8 +366,8 @@ namespace StellaLauncher.Forms
             // 
             // ChangeLanguage
             // 
-            this.ChangeLanguage.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             resources.ApplyResources(this.ChangeLanguage, "ChangeLanguage");
+            this.ChangeLanguage.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.ChangeLanguage.BackColor = System.Drawing.Color.Transparent;
             this.ChangeLanguage.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.ChangeLanguage.LinkColor = System.Drawing.Color.White;
@@ -359,8 +378,8 @@ namespace StellaLauncher.Forms
             // 
             // linkLabel1
             // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             resources.ApplyResources(this.linkLabel1, "linkLabel1");
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel1.LinkColor = System.Drawing.Color.White;
@@ -371,8 +390,8 @@ namespace StellaLauncher.Forms
             // 
             // linkLabel2
             // 
-            this.linkLabel2.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             resources.ApplyResources(this.linkLabel2, "linkLabel2");
+            this.linkLabel2.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.linkLabel2.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel2.LinkColor = System.Drawing.Color.White;
@@ -383,8 +402,8 @@ namespace StellaLauncher.Forms
             // 
             // linkLabel3
             // 
-            this.linkLabel3.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             resources.ApplyResources(this.linkLabel3, "linkLabel3");
+            this.linkLabel3.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.linkLabel3.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel3.LinkColor = System.Drawing.Color.White;
@@ -398,6 +417,7 @@ namespace StellaLauncher.Forms
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Name = "panel3";
+            this.toolTip1.SetToolTip(this.panel3, resources.GetString("panel3.ToolTip"));
             this.panel3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Notepad_MouseClick);
             // 
             // pictureBox9
@@ -408,16 +428,18 @@ namespace StellaLauncher.Forms
             this.pictureBox9.Image = global::StellaLauncher.Properties.Resources.icons8_notepad;
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox9, resources.GetString("pictureBox9.ToolTip"));
             // 
             // InstallationLogs
             // 
-            this.InstallationLogs.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             resources.ApplyResources(this.InstallationLogs, "InstallationLogs");
+            this.InstallationLogs.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.InstallationLogs.BackColor = System.Drawing.Color.Transparent;
             this.InstallationLogs.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.InstallationLogs.LinkColor = System.Drawing.Color.White;
             this.InstallationLogs.Name = "InstallationLogs";
             this.InstallationLogs.TabStop = true;
+            this.toolTip1.SetToolTip(this.InstallationLogs, resources.GetString("InstallationLogs.ToolTip"));
             this.InstallationLogs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.GSModLogs_LinkClicked);
             // 
             // pictureBox10
@@ -428,16 +450,18 @@ namespace StellaLauncher.Forms
             this.pictureBox10.Image = global::StellaLauncher.Properties.Resources.flaticon_open_folder;
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox10, resources.GetString("pictureBox10.ToolTip"));
             // 
             // InnoSetupLogs
             // 
-            this.InnoSetupLogs.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             resources.ApplyResources(this.InnoSetupLogs, "InnoSetupLogs");
+            this.InnoSetupLogs.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.InnoSetupLogs.BackColor = System.Drawing.Color.Transparent;
             this.InnoSetupLogs.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.InnoSetupLogs.LinkColor = System.Drawing.Color.White;
             this.InnoSetupLogs.Name = "InnoSetupLogs";
             this.InnoSetupLogs.TabStop = true;
+            this.toolTip1.SetToolTip(this.InnoSetupLogs, resources.GetString("InnoSetupLogs.ToolTip"));
             this.InnoSetupLogs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LogDir_LinkClicked);
             // 
             // madeWith_Label
@@ -446,6 +470,7 @@ namespace StellaLauncher.Forms
             this.madeWith_Label.BackColor = System.Drawing.Color.Transparent;
             this.madeWith_Label.ForeColor = System.Drawing.Color.White;
             this.madeWith_Label.Name = "madeWith_Label";
+            this.toolTip1.SetToolTip(this.madeWith_Label, resources.GetString("madeWith_Label.ToolTip"));
             // 
             // Misc
             // 
@@ -453,6 +478,7 @@ namespace StellaLauncher.Forms
             this.Misc.BackColor = System.Drawing.Color.Transparent;
             this.Misc.ForeColor = System.Drawing.Color.White;
             this.Misc.Name = "Misc";
+            this.toolTip1.SetToolTip(this.Misc, resources.GetString("Misc.ToolTip"));
             // 
             // pictureBox11
             // 
@@ -462,6 +488,7 @@ namespace StellaLauncher.Forms
             this.pictureBox11.Image = global::StellaLauncher.Properties.Resources.icons8_gear;
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox11, resources.GetString("pictureBox11.ToolTip"));
             // 
             // pictureBox12
             // 
@@ -471,6 +498,7 @@ namespace StellaLauncher.Forms
             this.pictureBox12.Image = global::StellaLauncher.Properties.Resources.icons8_gear;
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox12, resources.GetString("pictureBox12.ToolTip"));
             // 
             // pictureBox14
             // 
@@ -480,6 +508,7 @@ namespace StellaLauncher.Forms
             this.pictureBox14.Image = global::StellaLauncher.Properties.Resources.icons8_gear;
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox14, resources.GetString("pictureBox14.ToolTip"));
             // 
             // pictureBox15
             // 
@@ -489,6 +518,7 @@ namespace StellaLauncher.Forms
             this.pictureBox15.Image = global::StellaLauncher.Properties.Resources.icons8_gear;
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox15, resources.GetString("pictureBox15.ToolTip"));
             // 
             // pictureBox16
             // 
@@ -498,6 +528,7 @@ namespace StellaLauncher.Forms
             this.pictureBox16.Image = global::StellaLauncher.Properties.Resources.icons8_recycle_bin;
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox16, resources.GetString("pictureBox16.ToolTip"));
             // 
             // label2
             // 
@@ -505,6 +536,7 @@ namespace StellaLauncher.Forms
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Name = "label2";
+            this.toolTip1.SetToolTip(this.label2, resources.GetString("label2.ToolTip"));
             // 
             // pictureBox13
             // 
@@ -514,6 +546,7 @@ namespace StellaLauncher.Forms
             this.pictureBox13.Image = global::StellaLauncher.Properties.Resources.icons8_support;
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox13, resources.GetString("pictureBox13.ToolTip"));
             // 
             // Tools
             // 
@@ -567,6 +600,7 @@ namespace StellaLauncher.Forms
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Tools";
+            this.toolTip1.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.Load += new System.EventHandler(this.Tools_Load);
             this.Shown += new System.EventHandler(this.Utils_Shown);
             this.panel1.ResumeLayout(false);
