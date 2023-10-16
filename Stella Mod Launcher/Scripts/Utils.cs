@@ -19,8 +19,6 @@ namespace StellaLauncher.Scripts
 {
     internal static class Utils
     {
-        private static readonly string FirstAppLaunch = Path.Combine(Program.AppPath, "First app launch.exe");
-
         public static async Task<string> GetGame(string type)
         {
             string fullGamePath = null;
@@ -40,7 +38,7 @@ namespace StellaLauncher.Scripts
                     newKey?.SetValue("AppIsConfigured", 0);
                 }
 
-                _ = Cmd.Execute(new Cmd.CliWrap { App = FirstAppLaunch });
+                _ = Cmd.Execute(new Cmd.CliWrap { App = Program.PrepareLauncher });
 
                 Environment.Exit(99587986);
                 return string.Empty;

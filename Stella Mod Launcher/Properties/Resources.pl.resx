@@ -505,7 +505,7 @@ Chcesz zobaczyć te pliki?</value>
     <value>Pytanie (MessageBox): Czy podzielisz się swoją opinią na temat Stella Mod na trustpilot.com? Będziemy bardzo wdzięczni! Wybrano: {0}</value>
   </data>
   <data name="Program_RequiredFileFisrtAppLaunchExeWasNotFound_" xml:space="preserve">
-    <value>Nie znaleziono wymaganego pliku "First app launch.exe". Proszę ponownie zainstalować tę aplikację lub dołączyć do naszego serwera Discord, aby uzyskać pomoc.</value>
+    <value>Nie znaleziono wymaganego pliku "Configuration.exe". Proszę ponownie zainstalować tę aplikację lub dołączyć do naszego serwera Discord, aby uzyskać pomoc.</value>
   </data>
   <data name="Program_SorryOneInstanceIsCurrentlyOpen_" xml:space="preserve">
     <value>Przepraszam, obecnie jest uruchomiona jedna instancja.
