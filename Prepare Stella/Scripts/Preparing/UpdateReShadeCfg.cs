@@ -56,14 +56,13 @@ namespace PrepareStella.Scripts.Preparing
 
         private static void ConfigureReShade(string resourcesGlobal)
         {
-            bool isMyPatron = CheckData.IsUserMyPatron();
             string reshadeIniFilePath = Path.Combine(Path.GetDirectoryName(Program.SavedGamePath), "ReShade.ini");
             IniFile ini = new IniFile(reshadeIniFilePath);
 
             string addonsPath = Path.Combine(resourcesGlobal, "ReShade", "Addons");
             string effectsPath = Path.Combine(resourcesGlobal, "ReShade", "Shaders", "Effects");
             string cachePath = Path.Combine(resourcesGlobal, "ReShade", "Cache");
-            string presetsPath = isMyPatron ? string.Empty : Path.Combine(resourcesGlobal, "ReShade", "Presets", "3. Preset by Sefinek - Medium settings [Default].ini");
+            string presetsPath = Path.Combine(resourcesGlobal, "ReShade", "Presets", "3. Preset by Sefinek - Medium settings [Default].ini");
             string texturesPath = Path.Combine(resourcesGlobal, "ReShade", "Shaders", "Textures");
             string screenshotsPath = Path.Combine(resourcesGlobal, "Screenshots");
             string soundPath = Path.Combine(Program.AppPath, "data", "sounds", "screenshot.wav");
