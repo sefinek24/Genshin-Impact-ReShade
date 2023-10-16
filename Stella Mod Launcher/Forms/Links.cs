@@ -78,7 +78,7 @@ namespace StellaLauncher.Forms
         // ------------------------------- Other links --------------------------------
         private void Uptimerobot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Utils.OpenUrl("https://stats.uptimerobot.com/kLXYEukEwW");
+            Utils.OpenUrl("https://sefinek.net");
         }
 
         private void DataDog_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
