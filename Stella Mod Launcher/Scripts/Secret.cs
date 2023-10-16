@@ -51,7 +51,7 @@ namespace StellaLauncher.Scripts
             catch (Exception ex)
             {
                 MessageBox.Show(
-                    $"An unrecoverable error occurred while communicating with the API interface in Warsaw, Poland. The application must be closed immediately.\n\n{(ex.InnerException ?? ex)}",
+                    $"An unrecoverable error occurred while communicating with the API interface in Warsaw, Poland. The application must be closed immediately.\n\n{ex.InnerException ?? ex}",
                     Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 Log.ErrorAndExit(ex);

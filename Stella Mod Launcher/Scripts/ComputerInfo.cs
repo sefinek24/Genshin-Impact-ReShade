@@ -4,7 +4,6 @@ using System.Globalization;
 using System.Linq;
 using System.Management;
 using System.Net.NetworkInformation;
-using Microsoft.Win32;
 
 namespace StellaLauncher.Scripts
 {
