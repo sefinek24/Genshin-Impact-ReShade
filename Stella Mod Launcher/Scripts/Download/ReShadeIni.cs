@@ -122,10 +122,12 @@ namespace StellaLauncher.Scripts.Download
                         if (File.Exists(reShadePath))
                         {
                             IniFile ini = new IniFile(reShadePath);
+                            string presetPath = ini.ReadString("GENERAL", "PresetPath", Path.Combine(resourcesPath, "ReShade", "Presets", "3. Preset by Sefinek - Medium settings [Default].ini"))
+
                             ini.WriteString("ADDON", "AddonPath", $"{Path.Combine(resourcesPath, "ReShade", "Addons")}");
                             ini.WriteString("GENERAL", "EffectSearchPaths", Path.Combine(resourcesPath, "ReShade", "Shaders", "Effects"));
                             ini.WriteString("GENERAL", "IntermediateCachePath", Path.Combine(resourcesPath, "ReShade", "Cache"));
-                            if (!Secret.IsMyPatron) ini.WriteString("GENERAL", "PresetPath", Path.Combine(resourcesPath, "ReShade", "Presets", "3. Preset by Sefinek - Medium settings [Default].ini"));
+                            ini.WriteString("GENERAL", "PresetPath", presetPath);
                             ini.WriteString("GENERAL", "TextureSearchPaths", $"{Path.Combine(resourcesPath, "ReShade", "Shaders", "Textures")}");
                             ini.WriteString("SCREENSHOT", "SavePath", Path.Combine(resourcesPath, "Screenshots"));
                             ini.WriteString("SCREENSHOT", "SoundPath", Path.Combine(Program.AppPath, "data", "sounds", "screenshot.wav"));
@@ -156,6 +158,7 @@ namespace StellaLauncher.Scripts.Download
                     }
 
                     break;
+
                 case DialogResult.No:
                 {
                     Default._status_Label.Text += $"[i] {Resources.Default_CanceledByTheUser_AreYouSureOfWhatYoureDoing}\n";
