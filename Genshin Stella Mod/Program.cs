@@ -116,7 +116,7 @@ namespace GenshinStellaMod
 
 
             // Is the user a patron?
-            if (launchMode == "1" || launchMode == "6")
+            if (launchMode == "1" || launchMode == "5")
             {
                 string mainPcKey = Secret.GetTokenFromRegistry();
                 if (mainPcKey != null)
@@ -168,7 +168,7 @@ namespace GenshinStellaMod
 
 
             // Good?
-            if (!Secret.IsMyPatron && (launchMode == "1" || launchMode == "6"))
+            if (!Secret.IsMyPatron && (launchMode == "1" || launchMode == "5"))
             {
                 Console.WriteLine("[X] Not this time bro");
                 Log.SaveError($"An attempt was made to use launchMode {launchMode} without being a patron; Secret.IsMyPatron: {Secret.IsMyPatron}; Secret.Attempt: {Secret.Attempt}");
