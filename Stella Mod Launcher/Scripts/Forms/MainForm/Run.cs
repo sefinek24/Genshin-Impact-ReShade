@@ -26,7 +26,6 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                             .Add(Data.ReShadeVer) // 2
                             .Add(Data.UnlockerVer) // 3
                             .Add(Secret.IsMyPatron ? 1 : 6) // 4
-                            .Add(Default.ResourcesPath) // 6
                     };
                     break;
                 case "cmd":
@@ -69,7 +68,6 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                             .Add(Data.ReShadeVer) // 2
                             .Add(Data.UnlockerVer) // 3
                             .Add(3) // 4
-                            .Add(Default.ResourcesPath) // 6
                     };
                     break;
                 case "cmd":
@@ -110,7 +108,6 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                             .Add(Data.ReShadeVer) // 2
                             .Add(Data.UnlockerVer) // 3
                             .Add(4) // 4
-                            .Add(Default.ResourcesPath) // 6
                     };
                     break;
                 case "cmd":
@@ -162,7 +159,6 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                             .Add(Data.ReShadeVer) // 2
                             .Add(Data.UnlockerVer) // 3
                             .Add(5) // 4
-                            .Add(Default.ResourcesPath) // 6
                     };
                     break;
                 case "cmd":
