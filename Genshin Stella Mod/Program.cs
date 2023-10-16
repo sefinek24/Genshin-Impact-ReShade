@@ -94,7 +94,7 @@ namespace GenshinStellaMod
             Console.Title = $"Genshin Stella Mod v{AppVersion}";
 
 
-            // Check if the application is running with administrative permissions
+            // Verify that the application is running with administrative privileges.
             if (!Utils.IsRunningWithAdminPrivileges())
             {
                 Log.ThrowErrorString("[X] This file needs to be executed with administrative privileges.");
@@ -121,7 +121,7 @@ namespace GenshinStellaMod
             }
 
 
-            // Is user patron?
+            // Is the user a patron?
             if (launchMode == "1" || launchMode == "6")
             {
                 string mainPcKey = Secret.GetTokenFromRegistry();
@@ -172,10 +172,11 @@ namespace GenshinStellaMod
             }
 
 
+            // Good?
             if (!Secret.IsMyPatron && (launchMode == "1" || launchMode == "6"))
             {
                 Console.WriteLine("[X] Not this time bro");
-                Log.SaveError($"An attempt was made to use launchMode {launchMode} without being the patron; Secret.IsMyPatron: {Secret.IsMyPatron}; Secret.Attempt: {Secret.Attempt}");
+                Log.SaveError($"An attempt was made to use launchMode {launchMode} without being a patron; Secret.IsMyPatron: {Secret.IsMyPatron}; Secret.Attempt: {Secret.Attempt}");
                 MessageBox.Show("The security system has detected a breach.\n\nScrew you ((:", AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 Environment.Exit(1432166809);
