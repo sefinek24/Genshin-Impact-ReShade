@@ -93,9 +93,10 @@ Filename: "{app}\{#AppExeName}"; WorkingDir: "{app}"; Description: "{cm:LaunchPr
 { ///////////////////////////////////////////////////////////////////// }
 function InitializeSetup: Boolean;
 begin
+  Dependency_AddWebView2;
+
   Dependency_AddDotNet48;
   Dependency_AddDotNet70;
-  Dependency_AddWebView2;
 
   Dependency_ForceX86 := True;
   Dependency_AddVC2015To2022;
