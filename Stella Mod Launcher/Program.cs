@@ -10,10 +10,8 @@ using System.Threading;
 using System.Windows.Forms;
 using Microsoft.Win32;
 using StellaLauncher.Forms;
-using StellaLauncher.Forms.Errors;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
-using StellaLauncher.Scripts.Forms;
 using Shortcut = StellaLauncher.Scripts.Shortcut;
 
 namespace StellaLauncher
