@@ -139,7 +139,7 @@
     <value>webView21</value>
   </data>
   <data name="&gt;&gt;webView21.Type" xml:space="preserve">
-    <value>Microsoft.Web.WebView2.WinForms.WebView2, Microsoft.Web.WebView2.WinForms, Version=1.0.1774.30, Culture=neutral, PublicKeyToken=2a8ab48044d2601e</value>
+    <value>Microsoft.Web.WebView2.WinForms.WebView2, Microsoft.Web.WebView2.WinForms, Version=1.0.2045.28, Culture=neutral, PublicKeyToken=2a8ab48044d2601e</value>
   </data>
   <data name="&gt;&gt;webView21.Parent" xml:space="preserve">
     <value>$this</value>
