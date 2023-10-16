@@ -125,7 +125,7 @@
     <value>37, 14</value>
   </data>
   <data name="changeBg_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 17</value>
+    <value>144, 18</value>
   </data>
   <data name="changeBg_LinkLabel.Text" xml:space="preserve">
     <value>Zmień tło aplikacji</value>
@@ -182,7 +182,7 @@
     <value>Uruchom grę</value>
   </data>
   <data name="startGame_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Uruchom Genshin Impact z ReShade, 3DMigoto i FPS Unlocker. Zalecane.</value>
+    <value>Uruchom Genshin Impact z ReShade, FPS Unlockerem oraz 3DMigoto (tylko dla patronów). Zalecane.</value>
   </data>
   <data name="website_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>497, 565</value>
