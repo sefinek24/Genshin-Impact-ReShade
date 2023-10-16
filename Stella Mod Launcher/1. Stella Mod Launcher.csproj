@@ -116,11 +116,11 @@
     <Compile Include="Forms\Errors\ErrorOccurred.Designer.cs">
       <DependentUpon>ErrorOccurred.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Errors\WrongCountry.cs">
+    <Compile Include="Forms\Errors\RussianCunt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Errors\WrongCountry.Designer.cs">
-      <DependentUpon>WrongCountry.cs</DependentUpon>
+    <Compile Include="Forms\Errors\RussianCunt.Designer.cs">
+      <DependentUpon>RussianCunt.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Other\Gallery.cs">
       <SubType>Form</SubType>
@@ -233,8 +233,8 @@
     <EmbeddedResource Include="Forms\Errors\NotCompatible.pl.resx">
       <DependentUpon>NotCompatible.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Errors\WrongCountry.resx">
-      <DependentUpon>WrongCountry.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Errors\RussianCunt.resx">
+      <DependentUpon>RussianCunt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Gameplay.pl.resx">
       <DependentUpon>Gameplay.cs</DependentUpon>

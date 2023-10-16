@@ -97,7 +97,7 @@ namespace StellaLauncher
             if (RegionInfo.CurrentRegion.Name == "RU")
             {
                 Music.PlaySound("winxp", "battery-critical");
-                new WrongCountry { Icon = Ico }.ShowDialog();
+                new RussianCunt { Icon = Ico }.ShowDialog();
                 Environment.Exit(999222999);
             }
 

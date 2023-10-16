@@ -9,11 +9,11 @@ using StellaLauncher.Scripts;
 
 namespace StellaLauncher.Forms.Errors
 {
-    public partial class WrongCountry : Form
+    public partial class RussianCunt : Form
     {
         private readonly Random _random = new Random();
 
-        public WrongCountry()
+        public RussianCunt()
         {
             InitializeComponent();
         }

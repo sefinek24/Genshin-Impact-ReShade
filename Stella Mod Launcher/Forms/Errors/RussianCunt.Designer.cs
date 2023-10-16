@@ -1,6 +1,6 @@
 namespace StellaLauncher.Forms.Errors
 {
-    sealed partial class WrongCountry
+    sealed partial class RussianCunt
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -60,7 +60,7 @@ namespace StellaLauncher.Forms.Errors
             this.label2.Text = "Russian ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // WrongCountry
+            // RussianCunt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -71,11 +71,11 @@ namespace StellaLauncher.Forms.Errors
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "WrongCountry";
+            this.Name = "RussianCunt";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Surprise for russians ХАХАХАХ";
+            this.Text = "Russian cunt >////<";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.WrongCountry_FormClosed);
             this.Shown += new System.EventHandler(this.WrongCountry_Shown);
             this.ResumeLayout(false);
