@@ -376,9 +376,7 @@
     <None Include="dependencies\Microsoft.VCLibs.x64.14.00.Desktop.appx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="data\build.cmd">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Include="data\build.cmd" />
     <None Include="dependencies\Microsoft.WindowsTerminal_1.18.2822.0_8wekyb3d8bbwe.msixbundle">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
