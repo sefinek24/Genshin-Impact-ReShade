@@ -10,6 +10,8 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 {
     internal static class Run
     {
+        public static readonly string GsmPath = Path.Combine(Program.AppPath, "Genshin Stella Mod.exe");
+
         public static async Task StartGame()
         {
             Cmd.CliWrap command = null;
@@ -21,7 +23,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                     {
                         App = "wt.exe",
                         Arguments = new ArgumentsBuilder()
-                            .Add(Path.Combine(Program.AppPath, "Genshin Stella Mod.exe")) // 0
+                            .Add(GsmPath) // 0
                             .Add(Program.AppVersion) // 1
                             .Add(Data.ReShadeVer) // 2
                             .Add(Data.UnlockerVer) // 3
@@ -63,7 +65,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                     {
                         App = "wt.exe",
                         Arguments = new ArgumentsBuilder()
-                            .Add(Path.Combine(Program.AppPath, "Genshin Stella Mod.exe")) // 0
+                            .Add(GsmPath) // 0
                             .Add(Program.AppVersion) // 1
                             .Add(Data.ReShadeVer) // 2
                             .Add(Data.UnlockerVer) // 3
@@ -103,7 +105,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                     {
                         App = "wt.exe",
                         Arguments = new ArgumentsBuilder()
-                            .Add(Path.Combine(Program.AppPath, "Genshin Stella Mod.exe")) // 0
+                            .Add(GsmPath) // 0
                             .Add(Program.AppVersion) // 1
                             .Add(Data.ReShadeVer) // 2
                             .Add(Data.UnlockerVer) // 3
@@ -154,7 +156,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                     {
                         App = "wt.exe",
                         Arguments = new ArgumentsBuilder()
-                            .Add(Path.Combine(Program.AppPath, "Genshin Stella Mod.exe")) // 0
+                            .Add(GsmPath) // 0
                             .Add(Program.AppVersion) // 1
                             .Add(Data.ReShadeVer) // 2
                             .Add(Data.UnlockerVer) // 3

@@ -21,9 +21,10 @@ namespace StellaLauncher.Scripts
                 // Checking if the shortcut exists or needs updating
                 bool createOrUpdateShortcut = false;
 
+                WshShell shell = new WshShell();
+
                 if (File.Exists(ScPath))
                 {
-                    WshShell shell = new WshShell();
                     IWshShortcut existingShortcut = (IWshShortcut)shell.CreateShortcut(ScPath);
 
                     if (existingShortcut.TargetPath == ProgramExe && existingShortcut.WorkingDirectory == Program.AppPath)
@@ -38,28 +39,25 @@ namespace StellaLauncher.Scripts
                 }
 
                 // Creating or updating the shortcut
-                if (createOrUpdateShortcut)
+                if (!createOrUpdateShortcut) return;
+                IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(ScPath);
+                shortcut.Description = Resources.Utils_RunOfficialLauncherForStellaModMadeBySefinek;
+                shortcut.WorkingDirectory = Program.AppPath;
+                shortcut.TargetPath = ProgramExe;
+                shortcut.Save();
+
+                Log.Output("Created or updated the desktop shortcut.");
+
+                try
                 {
-                    WshShell shell = new WshShell();
-                    IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(ScPath);
-                    shortcut.Description = Resources.Utils_RunOfficialLauncherForStellaModMadeBySefinek;
-                    shortcut.WorkingDirectory = Program.AppPath;
-                    shortcut.TargetPath = ProgramExe;
-                    shortcut.Save();
-
-                    Log.Output("Created or updated the desktop shortcut.");
-
-                    try
-                    {
-                        new ToastContentBuilder()
-                            .AddText("Desktop shortcut 🖥️")
-                            .AddText("The program icon on your desktop has been successfully updated. Other shortcuts may stop working.")
-                            .Show();
-                    }
-                    catch (Exception ex)
-                    {
-                        Log.SaveError(ex.ToString());
-                    }
+                    new ToastContentBuilder()
+                        .AddText("Desktop shortcut 🖥️")
+                        .AddText("The program icon on your desktop has been successfully updated. Other shortcuts may stop working.")
+                        .Show();
+                }
+                catch (Exception ex)
+                {
+                    Log.SaveError(ex.ToString());
                 }
             }
             catch (Exception ex)
