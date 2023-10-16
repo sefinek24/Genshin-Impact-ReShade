@@ -117,101 +117,1034 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="panel1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="DeleteOnlyWebView2Cache.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
+  <data name="pictureBox9.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="linkLabel2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12.75pt</value>
+  </data>
+  <data name="&gt;&gt;DeleteAllCacheAndLogFiles.Name" xml:space="preserve">
+    <value>DeleteAllCacheAndLogFiles</value>
+  </data>
+  <data name="linkLabel2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CacheAndLogs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>64, 424</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="SeeReShadeConfig.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;madeWith_Label.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox16.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;InnoSetupLogs.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="&gt;&gt;pictureBox5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pictureBox10.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="DeleteAllCacheAndLogFiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 24</value>
+  </data>
+  <data name="label1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;linkLabel2.Name" xml:space="preserve">
+    <value>linkLabel2</value>
+  </data>
+  <data name="madeWith_Label.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="LauncherLogs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 24</value>
+  </data>
   <data name="panel1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
-  <metadata name="panel2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="pictureBox16.TabIndex" type="System.Int32, mscorlib">
+    <value>123</value>
+  </data>
+  <data name="pictureBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 216</value>
+  </data>
+  <data name="madeWith_Label.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12pt</value>
+  </data>
+  <data name="&gt;&gt;pictureBox4.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;pictureBox6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="ConfigFiles.Text" xml:space="preserve">
+    <value>Config files</value>
+  </data>
+  <data name="ConfigFiles.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;Misc.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;SettingsAndUtils.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="LauncherLogs.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;SeeFPSUnlockerConfig.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="Misc.Text" xml:space="preserve">
+    <value>Misc</value>
+  </data>
+  <data name="&gt;&gt;pictureBox6.Name" xml:space="preserve">
+    <value>pictureBox6</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="pictureBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LogFiles.Text" xml:space="preserve">
+    <value>Log files</value>
+  </data>
+  <data name="pictureBox5.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="linkLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>342, 216</value>
+  </data>
+  <data name="&gt;&gt;LauncherLogs.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="SeeFPSUnlockerConfig.Text" xml:space="preserve">
+    <value>FPS Unlocker</value>
+  </data>
+  <data name="&gt;&gt;InstallationLogs.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="pictureBox16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="SeeReShadeConfig.Text" xml:space="preserve">
+    <value>ReShade</value>
+  </data>
+  <data name="pictureBox5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="LogFiles.TabIndex" type="System.Int32, mscorlib">
+    <value>88</value>
+  </data>
+  <data name="DeleteOnlyWebView2Cache.Text" xml:space="preserve">
+    <value>Only cache</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SettingsAndUtils.Size" type="System.Drawing.Size, System.Drawing">
+    <value>457, 29</value>
+  </data>
+  <data name="ScanAndRepairSysFiles.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="InnoSetupLogs.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12.75pt</value>
+  </data>
+  <data name="SeeReShadeConfig.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 24</value>
+  </data>
+  <data name="InstallationLogs.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12.75pt</value>
+  </data>
+  <data name="&gt;&gt;pictureBox10.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ScanAndRepairSysFiles.Name" xml:space="preserve">
+    <value>ScanAndRepairSysFiles</value>
+  </data>
+  <data name="ScanAndRepairSysFiles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>342, 185</value>
+  </data>
+  <data name="&gt;&gt;DeleteAllCacheAndLogFiles.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1045, 600</value>
+  </data>
+  <data name="ReShadeLogs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="SettingsAndUtils.Text" xml:space="preserve">
+    <value>&gt;&gt; Utils and logs &lt;&lt;</value>
+  </data>
+  <data name="&gt;&gt;CacheAndLogs.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureBox16.Name" xml:space="preserve">
+    <value>pictureBox16</value>
+  </data>
+  <data name="pictureBox6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;pictureBox6.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="pictureBox3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;pictureBox9.Name" xml:space="preserve">
+    <value>pictureBox9</value>
+  </data>
+  <data name="CacheAndLogs.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="linkLabel2.ToolTip" xml:space="preserve">
+    <value>After clicking this button, all notifications from the Stella Mod Launcher application will be deleted.</value>
+  </data>
+  <data name="madeWith_Label.Text" xml:space="preserve">
+    <value>Made with ♡ by Sefinek</value>
+  </data>
+  <data name="pictureBox5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;ConfigFiles.Name" xml:space="preserve">
+    <value>ConfigFiles</value>
+  </data>
+  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="InnoSetupLogs.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
-  <data name="panel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  </data>
+  <data name="&gt;&gt;pictureBox3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="linkLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>121</value>
+  </data>
+  <data name="panel2.ToolTip" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="SeeFPSUnlockerConfig.ToolTip" xml:space="preserve">
+    <value>unlocker.config.json</value>
+  </data>
+  <data name="SeeFPSUnlockerConfig.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12.75pt</value>
+  </data>
+  <data name="&gt;&gt;CacheAndLogs.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="Misc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 35</value>
+  </data>
+  <data name="pictureBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="pictureBox3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Genshin Stella Mod Launcher 2023</value>
+  </data>
+  <data name="LauncherLogs.Text" xml:space="preserve">
+    <value>Launcher</value>
+  </data>
+  <data name="SeeReShadeConfig.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;DeleteOnlyWebView2Cache.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Misc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>341, 149</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 55</value>
+  </data>
+  <data name="pictureBox9.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="CacheAndLogs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 35</value>
+  </data>
+  <data name="&gt;&gt;pictureBox4.Name" xml:space="preserve">
+    <value>pictureBox4</value>
+  </data>
+  <data name="SeeReShadeConfig.TabIndex" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="panel1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DeleteAllCacheAndLogFiles.TabIndex" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="linkLabel2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;SeeFPSUnlockerConfig.Name" xml:space="preserve">
+    <value>SeeFPSUnlockerConfig</value>
+  </data>
+  <data name="SeeReShadeConfig.ToolTip" xml:space="preserve">
+    <value>ReShade.ini</value>
+  </data>
+  <data name="Misc.TabIndex" type="System.Int32, mscorlib">
+    <value>111</value>
+  </data>
+  <data name="&gt;&gt;SeeFPSUnlockerConfig.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;SettingsAndUtils.Name" xml:space="preserve">
+    <value>SettingsAndUtils</value>
+  </data>
+  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SettingsAndUtils.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;linkLabel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 24</value>
+  </data>
+  <data name="pictureBox16.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="InstallationLogs.Text" xml:space="preserve">
+    <value>Genshin Stella Mod</value>
+  </data>
+  <data name="&gt;&gt;CacheAndLogs.Name" xml:space="preserve">
+    <value>CacheAndLogs</value>
+  </data>
+  <data name="SeeReShadeConfig.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 185</value>
+  </data>
+  <data name="SettingsAndUtils.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="ScanAndRepairSysFiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>237, 24</value>
+  </data>
+  <data name="LauncherLogs.TabIndex" type="System.Int32, mscorlib">
+    <value>85</value>
+  </data>
+  <data name="&gt;&gt;SeeFPSUnlockerConfig.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;madeWith_Label.Name" xml:space="preserve">
+    <value>madeWith_Label</value>
+  </data>
+  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
+    <value>104</value>
+  </data>
+  <data name="SeeFPSUnlockerConfig.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 216</value>
+  </data>
+  <data name="panel3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;ReShadeLogs.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;LogFiles.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="linkLabel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="pictureBox6.TabIndex" type="System.Int32, mscorlib">
+    <value>96</value>
+  </data>
+  <data name="Misc.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="pictureBox1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;SettingsAndUtils.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="pictureBox10.TabIndex" type="System.Int32, mscorlib">
+    <value>108</value>
+  </data>
+  <data name="SettingsAndUtils.Location" type="System.Drawing.Point, System.Drawing">
+    <value>291, 98</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="&gt;&gt;SeeReShadeConfig.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ScanAndRepairSysFiles.Text" xml:space="preserve">
+    <value>Scan and repair system files</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="LogFiles.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;SeeReShadeConfig.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;CacheAndLogs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1021, 38</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="pictureBox10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="InstallationLogs.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Misc.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ConfigFiles.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 15pt</value>
+  </data>
+  <data name="label1.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="pictureBox8.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="ReShadeLogs.TabIndex" type="System.Int32, mscorlib">
+    <value>83</value>
+  </data>
+  <data name="pictureBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="ScanAndRepairSysFiles.ToolTip" xml:space="preserve">
+    <value>Clicking this button will initiate the scanning and repair of system files. This option is safe and recommended in most cases.</value>
+  </data>
+  <data name="&gt;&gt;ConfigFiles.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="pictureBox16.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="&gt;&gt;pictureBox4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="InstallationLogs.TabIndex" type="System.Int32, mscorlib">
+    <value>105</value>
+  </data>
+  <data name="&gt;&gt;DeleteAllCacheAndLogFiles.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LogFiles.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 15pt</value>
+  </data>
+  <data name="InstallationLogs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 348</value>
+  </data>
+  <data name="madeWith_Label.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 23</value>
+  </data>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pictureBox10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 288</value>
+  </data>
+  <data name="ReShadeLogs.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12.75pt</value>
+  </data>
+  <data name="InstallationLogs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 24</value>
+  </data>
+  <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 460</value>
+  </data>
+  <data name="&gt;&gt;madeWith_Label.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="LogFiles.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="DeleteOnlyWebView2Cache.TabIndex" type="System.Int32, mscorlib">
+    <value>102</value>
+  </data>
+  <data name="SettingsAndUtils.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 15.75pt</value>
+  </data>
+  <data name="InnoSetupLogs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="SeeFPSUnlockerConfig.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="panel2.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>991, 16</value>
+  <data name="pictureBox8.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
   </data>
-  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 25</value>
+  <data name="ReShadeLogs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 24</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
-    <value>76</value>
+  <data name="LauncherLogs.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12.75pt</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="panel2.ToolTip" xml:space="preserve">
-    <value>Close</value>
+  <data name="&gt;&gt;SettingsAndUtils.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
-    <value>panel2</value>
+  <data name="pictureBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>312, 185</value>
   </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="CacheAndLogs.TabIndex" type="System.Int32, mscorlib">
+    <value>101</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1045, 41</value>
   </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="ReShadeLogs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 378</value>
   </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
+  <data name="&gt;&gt;LogFiles.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 25</value>
   </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="CacheAndLogs.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
   </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>28</value>
+  <data name="pictureBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
   </data>
-  <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+  <data name="ScanAndRepairSysFiles.TabIndex" type="System.Int32, mscorlib">
+    <value>95</value>
+  </data>
+  <data name="&gt;&gt;pictureBox10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox9.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Comic Sans MS, 20.25pt, style=Bold</value>
   </data>
-  <data name="label1.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopRight</value>
+  <data name="&gt;&gt;SeeReShadeConfig.ZOrder" xml:space="preserve">
+    <value>17</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 55</value>
+  <data name="&gt;&gt;Misc.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1021, 38</value>
+  <data name="linkLabel2.Text" xml:space="preserve">
+    <value>Remove all Stella notifications</value>
   </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>74</value>
+  <data name="InnoSetupLogs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 288</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Genshin Stella Mod Launcher 2023</value>
+  <data name="Misc.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;pictureBox6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="LogFiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 35</value>
+  </data>
+  <data name="CacheAndLogs.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;InstallationLogs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Misc.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 15.75pt</value>
+  </data>
+  <data name="pictureBox10.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;InnoSetupLogs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;ScanAndRepairSysFiles.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="InnoSetupLogs.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;pictureBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>86</value>
+  </data>
+  <data name="&gt;&gt;madeWith_Label.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox5.Name" xml:space="preserve">
+    <value>pictureBox5</value>
+  </data>
+  <data name="InstallationLogs.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SettingsAndUtils.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;Misc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>922, 179</value>
+  </data>
+  <data name="LauncherLogs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="&gt;&gt;ConfigFiles.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pictureBox10.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pictureBox3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Tools</value>
+  </data>
+  <data name="&gt;&gt;ScanAndRepairSysFiles.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 185</value>
+  </data>
+  <data name="pictureBox5.TabIndex" type="System.Int32, mscorlib">
+    <value>93</value>
+  </data>
+  <data name="DeleteOnlyWebView2Cache.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12.75pt</value>
+  </data>
+  <data name="ConfigFiles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 149</value>
+  </data>
+  <data name="SeeFPSUnlockerConfig.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 24</value>
+  </data>
+  <data name="DeleteAllCacheAndLogFiles.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;InnoSetupLogs.Name" xml:space="preserve">
+    <value>InnoSetupLogs</value>
+  </data>
+  <data name="pictureBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="SettingsAndUtils.TabIndex" type="System.Int32, mscorlib">
+    <value>82</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="DeleteAllCacheAndLogFiles.Text" xml:space="preserve">
+    <value>Cache + log files</value>
+  </data>
+  <data name="&gt;&gt;pictureBox8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ReShadeLogs.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;DeleteOnlyWebView2Cache.Name" xml:space="preserve">
+    <value>DeleteOnlyWebView2Cache</value>
+  </data>
+  <data name="&gt;&gt;ScanAndRepairSysFiles.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="pictureBox8.TabIndex" type="System.Int32, mscorlib">
+    <value>103</value>
+  </data>
+  <data name="&gt;&gt;InnoSetupLogs.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="DeleteAllCacheAndLogFiles.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;pictureBox16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pictureBox9.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox16.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pictureBox6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="panel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="panel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;linkLabel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ReShadeLogs.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureBox9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="madeWith_Label.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="SeeReShadeConfig.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12.75pt</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DeleteOnlyWebView2Cache.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 24</value>
+  </data>
+  <data name="DeleteAllCacheAndLogFiles.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;ConfigFiles.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ScanAndRepairSysFiles.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12.75pt</value>
+  </data>
+  <data name="&gt;&gt;ReShadeLogs.Name" xml:space="preserve">
+    <value>ReShadeLogs</value>
+  </data>
+  <data name="ScanAndRepairSysFiles.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LogFiles.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="madeWith_Label.Location" type="System.Drawing.Point, System.Drawing">
+    <value>431, 563</value>
+  </data>
+  <data name="pictureBox8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 318</value>
+  </data>
+  <data name="&gt;&gt;Misc.Name" xml:space="preserve">
+    <value>Misc</value>
+  </data>
+  <data name="madeWith_Label.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="InnoSetupLogs.Text" xml:space="preserve">
+    <value>View directory</value>
+  </data>
+  <data name="pictureBox9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 348</value>
+  </data>
+  <data name="LogFiles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>64, 253</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
+    <value>toolTip1</value>
+  </data>
+  <data name="pictureBox16.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;pictureBox8.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
+    <value>pictureBox2</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Utils</value>
+  </data>
+  <data name="DeleteAllCacheAndLogFiles.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12.75pt</value>
+  </data>
+  <data name="pictureBox8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 490</value>
+  </data>
+  <data name="InstallationLogs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="pictureBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>81</value>
+  </data>
+  <data name="pictureBox4.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="InnoSetupLogs.TabIndex" type="System.Int32, mscorlib">
+    <value>107</value>
+  </data>
+  <data name="InnoSetupLogs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 24</value>
+  </data>
+  <data name="pictureBox16.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;DeleteOnlyWebView2Cache.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pictureBox6.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="madeWith_Label.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;DeleteOnlyWebView2Cache.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="pictureBox9.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="CacheAndLogs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="ReShadeLogs.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;LogFiles.Name" xml:space="preserve">
+    <value>LogFiles</value>
+  </data>
+  <data name="pictureBox16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>312, 216</value>
+  </data>
+  <data name="pictureBox4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DeleteOnlyWebView2Cache.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;pictureBox5.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;SeeReShadeConfig.Name" xml:space="preserve">
+    <value>SeeReShadeConfig</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>Manual</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 378</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="ConfigFiles.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="madeWith_Label.TabIndex" type="System.Int32, mscorlib">
+    <value>110</value>
+  </data>
+  <data name="&gt;&gt;linkLabel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DeleteAllCacheAndLogFiles.ZOrder" xml:space="preserve">
+    <value>26</value>
   </data>
   <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
+  <data name="pictureBox2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="DeleteOnlyWebView2Cache.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>991, 16</value>
+  </data>
+  <data name="ConfigFiles.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>84</value>
+  </data>
+  <data name="pictureBox9.TabIndex" type="System.Int32, mscorlib">
+    <value>106</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="ConfigFiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 35</value>
+  </data>
+  <data name="&gt;&gt;pictureBox10.Name" xml:space="preserve">
+    <value>pictureBox10</value>
+  </data>
+  <data name="&gt;&gt;pictureBox8.Name" xml:space="preserve">
+    <value>pictureBox8</value>
+  </data>
+  <data name="&gt;&gt;ReShadeLogs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SeeFPSUnlockerConfig.TabIndex" type="System.Int32, mscorlib">
+    <value>92</value>
+  </data>
+  <data name="DeleteOnlyWebView2Cache.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 490</value>
+  </data>
+  <data name="DeleteAllCacheAndLogFiles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>62, 460</value>
+  </data>
+  <data name="&gt;&gt;pictureBox10.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pictureBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>91</value>
+  </data>
+  <data name="&gt;&gt;InstallationLogs.Name" xml:space="preserve">
+    <value>InstallationLogs</value>
+  </data>
+  <data name="&gt;&gt;LauncherLogs.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LauncherLogs.Name" xml:space="preserve">
+    <value>LauncherLogs</value>
+  </data>
+  <data name="SeeFPSUnlockerConfig.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LauncherLogs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 318</value>
+  </data>
+  <data name="ConfigFiles.TabIndex" type="System.Int32, mscorlib">
+    <value>89</value>
+  </data>
+  <data name="&gt;&gt;pictureBox8.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="LauncherLogs.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CacheAndLogs.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 17.25pt</value>
+  </data>
+  <data name="&gt;&gt;LauncherLogs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;InstallationLogs.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.Name" xml:space="preserve">
+    <value>pictureBox3</value>
   </data>
   <data name="&gt;&gt;label1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -219,883 +1152,28 @@
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>27</value>
-  </data>
-  <data name="SettingsAndUtils.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="SettingsAndUtils.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 15.75pt</value>
-  </data>
-  <data name="SettingsAndUtils.Location" type="System.Drawing.Point, System.Drawing">
-    <value>291, 98</value>
-  </data>
-  <data name="SettingsAndUtils.Size" type="System.Drawing.Size, System.Drawing">
-    <value>457, 29</value>
-  </data>
-  <data name="SettingsAndUtils.TabIndex" type="System.Int32, mscorlib">
-    <value>82</value>
-  </data>
-  <data name="SettingsAndUtils.Text" xml:space="preserve">
-    <value>&gt;&gt; Utils and logs &lt;&lt;</value>
-  </data>
-  <data name="SettingsAndUtils.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;SettingsAndUtils.Name" xml:space="preserve">
-    <value>SettingsAndUtils</value>
-  </data>
-  <data name="&gt;&gt;SettingsAndUtils.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SettingsAndUtils.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;SettingsAndUtils.ZOrder" xml:space="preserve">
-    <value>24</value>
-  </data>
-  <data name="DeleteAllCacheAndLogFiles.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="DeleteAllCacheAndLogFiles.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DeleteAllCacheAndLogFiles.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12.75pt</value>
-  </data>
-  <data name="DeleteAllCacheAndLogFiles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>62, 460</value>
-  </data>
-  <data name="DeleteAllCacheAndLogFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 24</value>
-  </data>
-  <data name="DeleteAllCacheAndLogFiles.TabIndex" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <data name="DeleteAllCacheAndLogFiles.Text" xml:space="preserve">
-    <value>Cache + log files</value>
-  </data>
-  <data name="&gt;&gt;DeleteAllCacheAndLogFiles.Name" xml:space="preserve">
-    <value>DeleteAllCacheAndLogFiles</value>
-  </data>
-  <data name="&gt;&gt;DeleteAllCacheAndLogFiles.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DeleteAllCacheAndLogFiles.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;DeleteAllCacheAndLogFiles.ZOrder" xml:space="preserve">
-    <value>26</value>
-  </data>
-  <data name="pictureBox3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 460</value>
-  </data>
-  <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
-  </data>
-  <data name="pictureBox3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pictureBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>81</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Name" xml:space="preserve">
-    <value>pictureBox3</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
-    <value>25</value>
-  </data>
-  <data name="ReShadeLogs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="ReShadeLogs.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ReShadeLogs.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12.75pt</value>
-  </data>
-  <data name="ReShadeLogs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 378</value>
-  </data>
-  <data name="ReShadeLogs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 24</value>
-  </data>
-  <data name="ReShadeLogs.TabIndex" type="System.Int32, mscorlib">
-    <value>83</value>
-  </data>
   <data name="ReShadeLogs.Text" xml:space="preserve">
     <value>ReShade.log</value>
-  </data>
-  <data name="&gt;&gt;ReShadeLogs.Name" xml:space="preserve">
-    <value>ReShadeLogs</value>
-  </data>
-  <data name="&gt;&gt;ReShadeLogs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ReShadeLogs.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ReShadeLogs.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="pictureBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 378</value>
-  </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
-  </data>
-  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>84</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="LauncherLogs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="LauncherLogs.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="LauncherLogs.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12.75pt</value>
-  </data>
-  <data name="LauncherLogs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 318</value>
-  </data>
-  <data name="LauncherLogs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 24</value>
-  </data>
-  <data name="LauncherLogs.TabIndex" type="System.Int32, mscorlib">
-    <value>85</value>
-  </data>
-  <data name="LauncherLogs.Text" xml:space="preserve">
-    <value>Launcher</value>
-  </data>
-  <data name="&gt;&gt;LauncherLogs.Name" xml:space="preserve">
-    <value>LauncherLogs</value>
-  </data>
-  <data name="&gt;&gt;LauncherLogs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LauncherLogs.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;LauncherLogs.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="pictureBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 318</value>
-  </data>
-  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
-  </data>
-  <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>86</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
-    <value>pictureBox2</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="LogFiles.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="LogFiles.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 15pt</value>
-  </data>
-  <data name="LogFiles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>64, 253</value>
-  </data>
-  <data name="LogFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>241, 35</value>
-  </data>
-  <data name="LogFiles.TabIndex" type="System.Int32, mscorlib">
-    <value>88</value>
-  </data>
-  <data name="LogFiles.Text" xml:space="preserve">
-    <value>Log files</value>
-  </data>
-  <data name="LogFiles.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;LogFiles.Name" xml:space="preserve">
-    <value>LogFiles</value>
-  </data>
-  <data name="&gt;&gt;LogFiles.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LogFiles.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="&gt;&gt;LogFiles.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
-  <data name="ConfigFiles.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
   </data>
-  <data name="ConfigFiles.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 15pt</value>
-  </data>
-  <data name="ConfigFiles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>65, 149</value>
-  </data>
-  <data name="ConfigFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 35</value>
-  </data>
-  <data name="ConfigFiles.TabIndex" type="System.Int32, mscorlib">
-    <value>89</value>
-  </data>
-  <data name="ConfigFiles.Text" xml:space="preserve">
-    <value>Config files</value>
-  </data>
-  <data name="ConfigFiles.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;ConfigFiles.Name" xml:space="preserve">
-    <value>ConfigFiles</value>
-  </data>
-  <data name="&gt;&gt;ConfigFiles.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ConfigFiles.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ConfigFiles.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="SeeReShadeConfig.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="SeeReShadeConfig.AutoSize" type="System.Boolean, mscorlib">
+  <metadata name="panel2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
-  <data name="SeeReShadeConfig.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12.75pt</value>
-  </data>
-  <data name="SeeReShadeConfig.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 185</value>
-  </data>
-  <data name="SeeReShadeConfig.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 24</value>
-  </data>
-  <data name="SeeReShadeConfig.TabIndex" type="System.Int32, mscorlib">
-    <value>90</value>
-  </data>
-  <data name="SeeReShadeConfig.Text" xml:space="preserve">
-    <value>ReShade</value>
-  </data>
-  <data name="SeeReShadeConfig.ToolTip" xml:space="preserve">
-    <value>ReShade.ini</value>
-  </data>
-  <data name="&gt;&gt;SeeReShadeConfig.Name" xml:space="preserve">
-    <value>SeeReShadeConfig</value>
-  </data>
-  <data name="&gt;&gt;SeeReShadeConfig.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SeeReShadeConfig.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;SeeReShadeConfig.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="pictureBox4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 185</value>
-  </data>
-  <data name="pictureBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
-  </data>
-  <data name="pictureBox4.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pictureBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>91</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Name" xml:space="preserve">
-    <value>pictureBox4</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="SeeFPSUnlockerConfig.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="SeeFPSUnlockerConfig.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="SeeFPSUnlockerConfig.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12.75pt</value>
-  </data>
-  <data name="SeeFPSUnlockerConfig.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 216</value>
-  </data>
-  <data name="SeeFPSUnlockerConfig.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 24</value>
-  </data>
-  <data name="SeeFPSUnlockerConfig.TabIndex" type="System.Int32, mscorlib">
-    <value>92</value>
-  </data>
-  <data name="SeeFPSUnlockerConfig.Text" xml:space="preserve">
-    <value>FPS Unlocker</value>
-  </data>
-  <data name="SeeFPSUnlockerConfig.ToolTip" xml:space="preserve">
-    <value>unlocker.config.json</value>
-  </data>
-  <data name="&gt;&gt;SeeFPSUnlockerConfig.Name" xml:space="preserve">
-    <value>SeeFPSUnlockerConfig</value>
-  </data>
-  <data name="&gt;&gt;SeeFPSUnlockerConfig.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SeeFPSUnlockerConfig.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;SeeFPSUnlockerConfig.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="pictureBox5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="pictureBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 216</value>
-  </data>
-  <data name="pictureBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
-  </data>
-  <data name="pictureBox5.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pictureBox5.TabIndex" type="System.Int32, mscorlib">
-    <value>93</value>
-  </data>
-  <data name="&gt;&gt;pictureBox5.Name" xml:space="preserve">
-    <value>pictureBox5</value>
-  </data>
-  <data name="&gt;&gt;pictureBox5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox5.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox5.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="ScanAndRepairSysFiles.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="ScanAndRepairSysFiles.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ScanAndRepairSysFiles.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12.75pt</value>
-  </data>
-  <data name="ScanAndRepairSysFiles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 185</value>
-  </data>
-  <data name="ScanAndRepairSysFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>237, 24</value>
-  </data>
-  <data name="ScanAndRepairSysFiles.TabIndex" type="System.Int32, mscorlib">
-    <value>95</value>
-  </data>
-  <data name="ScanAndRepairSysFiles.Text" xml:space="preserve">
-    <value>Scan and repair system files</value>
-  </data>
-  <data name="ScanAndRepairSysFiles.ToolTip" xml:space="preserve">
-    <value>Clicking this button will initiate the scanning and repair of system files. This option is safe and recommended in most cases.</value>
-  </data>
-  <data name="&gt;&gt;ScanAndRepairSysFiles.Name" xml:space="preserve">
-    <value>ScanAndRepairSysFiles</value>
-  </data>
-  <data name="&gt;&gt;ScanAndRepairSysFiles.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ScanAndRepairSysFiles.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ScanAndRepairSysFiles.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="pictureBox6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="pictureBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>312, 185</value>
-  </data>
-  <data name="pictureBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
-  </data>
-  <data name="pictureBox6.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pictureBox6.TabIndex" type="System.Int32, mscorlib">
-    <value>96</value>
-  </data>
-  <data name="&gt;&gt;pictureBox6.Name" xml:space="preserve">
-    <value>pictureBox6</value>
-  </data>
-  <data name="&gt;&gt;pictureBox6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox6.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox6.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="CacheAndLogs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="CacheAndLogs.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 17.25pt</value>
-  </data>
-  <data name="CacheAndLogs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>64, 424</value>
-  </data>
-  <data name="CacheAndLogs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>241, 35</value>
-  </data>
-  <data name="CacheAndLogs.TabIndex" type="System.Int32, mscorlib">
-    <value>101</value>
-  </data>
-  <data name="CacheAndLogs.Text" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="CacheAndLogs.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;CacheAndLogs.Name" xml:space="preserve">
-    <value>CacheAndLogs</value>
-  </data>
-  <data name="&gt;&gt;CacheAndLogs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CacheAndLogs.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;CacheAndLogs.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="pictureBox8.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="pictureBox8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 490</value>
-  </data>
-  <data name="pictureBox8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
-  </data>
-  <data name="pictureBox8.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pictureBox8.TabIndex" type="System.Int32, mscorlib">
-    <value>103</value>
-  </data>
-  <data name="&gt;&gt;pictureBox8.Name" xml:space="preserve">
-    <value>pictureBox8</value>
-  </data>
-  <data name="&gt;&gt;pictureBox8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox8.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox8.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="DeleteOnlyWebView2Cache.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="DeleteOnlyWebView2Cache.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DeleteOnlyWebView2Cache.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12.75pt</value>
-  </data>
-  <data name="DeleteOnlyWebView2Cache.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 490</value>
-  </data>
-  <data name="DeleteOnlyWebView2Cache.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 24</value>
-  </data>
-  <data name="DeleteOnlyWebView2Cache.TabIndex" type="System.Int32, mscorlib">
-    <value>102</value>
-  </data>
-  <data name="DeleteOnlyWebView2Cache.Text" xml:space="preserve">
-    <value>Only cache</value>
-  </data>
-  <data name="&gt;&gt;DeleteOnlyWebView2Cache.Name" xml:space="preserve">
-    <value>DeleteOnlyWebView2Cache</value>
-  </data>
-  <data name="&gt;&gt;DeleteOnlyWebView2Cache.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DeleteOnlyWebView2Cache.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;DeleteOnlyWebView2Cache.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="linkLabel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="linkLabel2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="linkLabel2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12.75pt</value>
-  </data>
-  <data name="linkLabel2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="linkLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 216</value>
-  </data>
-  <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>256, 24</value>
-  </data>
-  <data name="linkLabel2.TabIndex" type="System.Int32, mscorlib">
-    <value>121</value>
-  </data>
-  <data name="linkLabel2.Text" xml:space="preserve">
-    <value>Remove all Stella notifications</value>
-  </data>
-  <data name="linkLabel2.ToolTip" xml:space="preserve">
-    <value>After clicking this button, all notifications from the Stella Mod Launcher application will be deleted.</value>
-  </data>
-  <data name="&gt;&gt;linkLabel2.Name" xml:space="preserve">
-    <value>linkLabel2</value>
-  </data>
-  <data name="&gt;&gt;linkLabel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;linkLabel2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;linkLabel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="panel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>922, 179</value>
-  </data>
-  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 30</value>
-  </data>
-  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
-    <value>104</value>
-  </data>
-  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="pictureBox9.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="pictureBox9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 348</value>
-  </data>
-  <data name="pictureBox9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
-  </data>
-  <data name="pictureBox9.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pictureBox9.TabIndex" type="System.Int32, mscorlib">
-    <value>106</value>
-  </data>
-  <data name="&gt;&gt;pictureBox9.Name" xml:space="preserve">
-    <value>pictureBox9</value>
-  </data>
-  <data name="&gt;&gt;pictureBox9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox9.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox9.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="InstallationLogs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="InstallationLogs.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="InstallationLogs.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12.75pt</value>
-  </data>
-  <data name="InstallationLogs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 348</value>
-  </data>
-  <data name="InstallationLogs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 24</value>
-  </data>
-  <data name="InstallationLogs.TabIndex" type="System.Int32, mscorlib">
-    <value>105</value>
-  </data>
-  <data name="InstallationLogs.Text" xml:space="preserve">
-    <value>Genshin Stella Mod</value>
-  </data>
-  <data name="&gt;&gt;InstallationLogs.Name" xml:space="preserve">
-    <value>InstallationLogs</value>
-  </data>
-  <data name="&gt;&gt;InstallationLogs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;InstallationLogs.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;InstallationLogs.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="pictureBox10.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="pictureBox10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 288</value>
-  </data>
-  <data name="pictureBox10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
-  </data>
-  <data name="pictureBox10.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pictureBox10.TabIndex" type="System.Int32, mscorlib">
-    <value>108</value>
-  </data>
-  <data name="&gt;&gt;pictureBox10.Name" xml:space="preserve">
-    <value>pictureBox10</value>
-  </data>
-  <data name="&gt;&gt;pictureBox10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox10.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox10.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="InnoSetupLogs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="InnoSetupLogs.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="InnoSetupLogs.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12.75pt</value>
-  </data>
-  <data name="InnoSetupLogs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 288</value>
-  </data>
-  <data name="InnoSetupLogs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 24</value>
-  </data>
-  <data name="InnoSetupLogs.TabIndex" type="System.Int32, mscorlib">
-    <value>107</value>
-  </data>
-  <data name="InnoSetupLogs.Text" xml:space="preserve">
-    <value>View directory</value>
-  </data>
-  <data name="&gt;&gt;InnoSetupLogs.Name" xml:space="preserve">
-    <value>InnoSetupLogs</value>
-  </data>
-  <data name="&gt;&gt;InnoSetupLogs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;InnoSetupLogs.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;InnoSetupLogs.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="madeWith_Label.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="madeWith_Label.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="madeWith_Label.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt</value>
-  </data>
-  <data name="madeWith_Label.Location" type="System.Drawing.Point, System.Drawing">
-    <value>431, 563</value>
-  </data>
-  <data name="madeWith_Label.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 23</value>
-  </data>
-  <data name="madeWith_Label.TabIndex" type="System.Int32, mscorlib">
-    <value>110</value>
-  </data>
-  <data name="madeWith_Label.Text" xml:space="preserve">
-    <value>Made with ♡ by Sefinek</value>
-  </data>
-  <data name="madeWith_Label.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;madeWith_Label.Name" xml:space="preserve">
-    <value>madeWith_Label</value>
-  </data>
-  <data name="&gt;&gt;madeWith_Label.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;madeWith_Label.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;madeWith_Label.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="Misc.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="Misc.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 15.75pt</value>
-  </data>
-  <data name="Misc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>341, 149</value>
-  </data>
-  <data name="Misc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 35</value>
-  </data>
-  <data name="Misc.TabIndex" type="System.Int32, mscorlib">
-    <value>111</value>
-  </data>
-  <data name="Misc.Text" xml:space="preserve">
-    <value>Misc</value>
-  </data>
-  <data name="Misc.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;Misc.Name" xml:space="preserve">
-    <value>Misc</value>
-  </data>
-  <data name="&gt;&gt;Misc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Misc.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Misc.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="pictureBox16.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="pictureBox16.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pictureBox16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>312, 216</value>
-  </data>
-  <data name="pictureBox16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
-  </data>
-  <data name="pictureBox16.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pictureBox16.TabIndex" type="System.Int32, mscorlib">
-    <value>123</value>
-  </data>
-  <data name="&gt;&gt;pictureBox16.Name" xml:space="preserve">
-    <value>pictureBox16</value>
-  </data>
-  <data name="&gt;&gt;pictureBox16.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox16.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox16.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
+  </metadata>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1045, 600</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>Manual</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Settings</value>
-  </data>
-  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
-    <value>toolTip1</value>
-  </data>
-  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Tools</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
+  <metadata name="panel1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

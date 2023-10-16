@@ -120,8 +120,17 @@
   <data name="panel2.ToolTip" xml:space="preserve">
     <value>Zamknij</value>
   </data>
+  <data name="panel1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="SettingsAndUtils.Text" xml:space="preserve">
-    <value>&gt;&gt; Jakieś ustawienia i narzędzia &lt;&lt;</value>
+    <value>&gt;&gt; Narzędzia i przegląd logów &lt;&lt;</value>
+  </data>
+  <data name="SettingsAndUtils.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="DeleteAllCacheAndLogFiles.Size" type="System.Drawing.Size, System.Drawing">
@@ -130,23 +139,53 @@
   <data name="DeleteAllCacheAndLogFiles.Text" xml:space="preserve">
     <value>Cache + wszystkie logi</value>
   </data>
+  <data name="DeleteAllCacheAndLogFiles.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="ReShadeLogs.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 24</value>
   </data>
   <data name="ReShadeLogs.Text" xml:space="preserve">
     <value>Logi ReShade</value>
   </data>
+  <data name="ReShadeLogs.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="LauncherLogs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 24</value>
+    <value>124, 24</value>
   </data>
   <data name="LauncherLogs.Text" xml:space="preserve">
-    <value>Logi programu uruchamiającego</value>
+    <value>Logi launchera</value>
+  </data>
+  <data name="LauncherLogs.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox2.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="LogFiles.Text" xml:space="preserve">
     <value>Dzienniki zdarzeń</value>
   </data>
+  <data name="LogFiles.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="ConfigFiles.Text" xml:space="preserve">
     <value>Pliki konfiguracyjne</value>
+  </data>
+  <data name="ConfigFiles.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox5.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="ScanAndRepairSysFiles.Size" type="System.Drawing.Size, System.Drawing">
     <value>268, 24</value>
@@ -154,17 +193,17 @@
   <data name="ScanAndRepairSysFiles.Text" xml:space="preserve">
     <value>Skanuj i napraw pliki systemowe</value>
   </data>
-  <data name="CreateShortcut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 24</value>
-  </data>
-  <data name="CreateShortcut.Text" xml:space="preserve">
-    <value>Utwórz skrót na pulpicie</value>
-  </data>
-  <data name="CreateShortcut.ToolTip" xml:space="preserve">
-    <value>Utwórz skrót do Stella Mod Launcher na pulpicie. Jest to przydatne, jeśli przypadkowo usunąłeś ikonę moda.</value>
+  <data name="pictureBox6.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="CacheAndLogs.Text" xml:space="preserve">
     <value>Usuń</value>
+  </data>
+  <data name="CacheAndLogs.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox8.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="DeleteOnlyWebView2Cache.Size" type="System.Drawing.Size, System.Drawing">
     <value>202, 24</value>
@@ -172,38 +211,8 @@
   <data name="DeleteOnlyWebView2Cache.Text" xml:space="preserve">
     <value>Tylko pamięć podręczną</value>
   </data>
-  <data name="MuteMusicOnStart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 24</value>
-  </data>
-  <data name="MuteMusicOnStart.Text" xml:space="preserve">
-    <value>Wycisz muzyke na start</value>
-  </data>
-  <data name="MuteMusicOnStart.ToolTip" xml:space="preserve">
-    <value>Włącz lub wycisz muzykę odtwarzaną podczas uruchamiania Stella Mod.</value>
-  </data>
-  <data name="DisableDiscordRPC.Text" xml:space="preserve">
-    <value>Wyłącz Discord RPC</value>
-  </data>
-  <data name="DisableDiscordRPC.ToolTip" xml:space="preserve">
-    <value>Włącz lub wyłącz status "W grze Genshin Stella Mod" na Discordzie.</value>
-  </data>
-  <data name="ChangeLanguage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 24</value>
-  </data>
-  <data name="ChangeLanguage.Text" xml:space="preserve">
-    <value>Zmień język</value>
-  </data>
-  <data name="ChangeLanguage.ToolTip" xml:space="preserve">
-    <value>Zmień język aplikacji Stella Mod Launcher.</value>
-  </data>
-  <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 24</value>
-  </data>
-  <data name="linkLabel1.Text" xml:space="preserve">
-    <value>Otwórz okno konfiguracyjne</value>
-  </data>
-  <data name="linkLabel1.ToolTip" xml:space="preserve">
-    <value>Ponownie skonfiguruj Genshin Stella Mod.</value>
+  <data name="DeleteOnlyWebView2Cache.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>217, 24</value>
@@ -214,11 +223,23 @@
   <data name="linkLabel2.ToolTip" xml:space="preserve">
     <value>Po kliknięciu tego przycisku wszystkie powiadomienia z aplikacji Stella Mod Launcher zostaną usunięte.</value>
   </data>
+  <data name="panel3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox9.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="InstallationLogs.Size" type="System.Drawing.Size, System.Drawing">
     <value>143, 24</value>
   </data>
   <data name="InstallationLogs.Text" xml:space="preserve">
     <value>Logi instalacyjne</value>
+  </data>
+  <data name="InstallationLogs.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox10.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="InnoSetupLogs.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 24</value>
@@ -226,19 +247,31 @@
   <data name="InnoSetupLogs.Text" xml:space="preserve">
     <value>Logi InnoSetup</value>
   </data>
+  <data name="InnoSetupLogs.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="madeWith_Label.Size" type="System.Drawing.Size, System.Drawing">
     <value>217, 23</value>
   </data>
   <data name="madeWith_Label.Text" xml:space="preserve">
     <value>Zrobione z ♡ przez Sefinka</value>
   </data>
+  <data name="madeWith_Label.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="Misc.Text" xml:space="preserve">
     <value>Różne</value>
   </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>65, 353</value>
+  <data name="Misc.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox16.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Ustawienia i narzędzia</value>
+    <value>Narzędzia</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
   </data>
 </root>
