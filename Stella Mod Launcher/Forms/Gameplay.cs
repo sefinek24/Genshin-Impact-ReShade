@@ -12,6 +12,8 @@ namespace StellaLauncher.Forms
 {
     public partial class Gameplay : Form
     {
+        private const string VideoId = "0tPwI7uVRxo";
+
         private bool _mouseDown;
         private Point _offset;
 
@@ -27,7 +29,7 @@ namespace StellaLauncher.Forms
                 CoreWebView2Environment coreWebView2Env = await CoreWebView2Environment.CreateAsync(null, Program.AppData, new CoreWebView2EnvironmentOptions());
                 await webView21.EnsureCoreWebView2Async(coreWebView2Env);
 
-                webView21.CoreWebView2.Navigate("https://www.youtube.com/watch?v=0tPwI7uVRxo");
+                webView21.CoreWebView2.Navigate($"https://www.youtube.com/embed/{VideoId}");
             }
             catch (Exception ex)
             {
@@ -70,7 +72,7 @@ namespace StellaLauncher.Forms
         // Top
         private void OpenInBrowser_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Utils.OpenUrl("https://www.youtube.com/watch?v=CjfNy3aPMWs");
+            Utils.OpenUrl($"https://www.youtube.com/watch?v={VideoId}");
         }
 
 

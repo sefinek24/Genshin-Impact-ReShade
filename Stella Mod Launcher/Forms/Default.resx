@@ -782,7 +782,7 @@ RTX cards are not required.</value>
     <value>Comic Sans MS, 12pt</value>
   </data>
   <data name="links_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>243, 566</value>
+    <value>244, 566</value>
   </data>
   <data name="links_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 22</value>
@@ -1040,7 +1040,7 @@ RTX cards are not required.</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel2.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="toolsIco_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1328,7 +1328,7 @@ RTX cards are not required.</value>
     <value>None</value>
   </data>
   <data name="shortcutIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>214, 565</value>
+    <value>215, 565</value>
   </data>
   <data name="shortcutIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 23</value>
@@ -1382,7 +1382,7 @@ RTX cards are not required.</value>
     <value>None</value>
   </data>
   <data name="progressBar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 496</value>
+    <value>12, 566</value>
   </data>
   <data name="progressBar1.Size" type="System.Drawing.Size, System.Drawing">
     <value>779, 23</value>
@@ -1400,7 +1400,7 @@ RTX cards are not required.</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;progressBar1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="PreparingPleaseWait.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1493,7 +1493,7 @@ RTX cards are not required.</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

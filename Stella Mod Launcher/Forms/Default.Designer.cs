@@ -526,9 +526,9 @@ namespace StellaLauncher.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::StellaLauncher.Properties.Resources.bg_main;
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.only3DMigoto_LinkLabel);
             this.Controls.Add(this.clickMe_LinkLabel);
             this.Controls.Add(this.PreparingPleaseWait);
