@@ -84,7 +84,7 @@ Source: "..\Build\Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubd
 
 [Icons]
 Name: "{autodesktop}\Stella Mod Launcher"; Filename: "{app}\{#AppExeName}"; Tasks: desktopicon
-Name: "{autoprograms}\Genshin Stella Mod\Uninstall {#AppName}"; Filename: "{uninstallexe}"
+Name: "{autoprograms}\Stella Mod Launcher\Uninstall {#AppName}"; Filename: "{uninstallexe}"
 
 [Run]
 Filename: "{app}\{#AppExeName}"; WorkingDir: "{app}"; Description: "{cm:LaunchProgram,{#StringChange(AppName, '&', '&&')}} Launcher"; Flags: nowait postinstall skipifsilent runascurrentuser
