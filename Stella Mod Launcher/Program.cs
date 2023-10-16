@@ -94,12 +94,12 @@ namespace StellaLauncher
             SetProcessDpiAwarenessContext(new IntPtr(-4));
 
             // Found russian pig?
-            if (RegionInfo.CurrentRegion.Name == "RU")
-            {
-                Music.PlaySound("winxp", "battery-critical");
-                new RussianCunt { Icon = Ico }.ShowDialog();
-                Environment.Exit(999222999);
-            }
+            // if (RegionInfo.CurrentRegion.Name == "RU")
+            // {
+            //     Music.PlaySound("winxp", "battery-critical");
+            //     new RussianCunt { Icon = Ico }.ShowDialog();
+            //     Environment.Exit(999222999);
+            // }
 
             // Is launcher configured?
             using (RegistryKey key = Registry.CurrentUser.OpenSubKey(RegistryPath, true))
