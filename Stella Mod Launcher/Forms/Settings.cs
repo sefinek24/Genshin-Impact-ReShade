@@ -21,21 +21,6 @@ namespace StellaLauncher.Forms
 
         private void Tools_Load(object sender, EventArgs e)
         {
-            Random random = new Random();
-            int randomInt = random.Next(1, 50 + 1);
-            if (randomInt == 25)
-            {
-                string pathStr = Path.Combine(Program.AppPath, "data", "images", "launcher", "backgrounds", "forms", "tools", "2.png");
-                if (!Utils.CheckFileExists(pathStr))
-                {
-                    Log.SaveError(Resources.Tools_SpecialBackgroundWasNotFoundIn_ForToolsWindow);
-                    return;
-                }
-
-                string pathCombine = Path.Combine(pathStr);
-                BackgroundImage = new Bitmap(pathCombine);
-            }
-
             MusicLabel_Set();
             RPCLabel_Set();
         }

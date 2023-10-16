@@ -4,7 +4,6 @@ using System.IO;
 using System.Windows.Forms;
 using CliWrap.Builders;
 using Microsoft.Toolkit.Uwp.Notifications;
-using Microsoft.Win32;
 using StellaLauncher.Forms.Other;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
@@ -20,25 +19,6 @@ namespace StellaLauncher.Forms
         public Tools()
         {
             InitializeComponent();
-        }
-
-        private void Tools_Load(object sender, EventArgs e)
-        {
-            Random random = new Random();
-            int randomInt = random.Next(1, 50 + 1);
-            if (randomInt == 25)
-            {
-                string pathStr = Path.Combine(Program.AppPath, "data", "images", "launcher", "backgrounds", "forms", "tools", "2.png");
-                if (!Utils.CheckFileExists(pathStr))
-                {
-                    Log.SaveError(Resources.Tools_SpecialBackgroundWasNotFoundIn_ForToolsWindow);
-                    return;
-                }
-
-                string pathCombine = Path.Combine(pathStr);
-                BackgroundImage = new Bitmap(pathCombine);
-                panel3.Visible = false;
-            }
         }
 
         private void Utils_Shown(object sender, EventArgs e)

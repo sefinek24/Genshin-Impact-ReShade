@@ -238,7 +238,7 @@
     <value>82</value>
   </data>
   <data name="SettingsAndUtils.Text" xml:space="preserve">
-    <value>&gt;&gt; Settings &lt;&lt;</value>
+    <value>&gt;&gt; Utils and logs &lt;&lt;</value>
   </data>
   <data name="SettingsAndUtils.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1093,7 +1093,7 @@
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Settings</value>
+    <value>Tools</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

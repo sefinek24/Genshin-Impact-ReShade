@@ -355,7 +355,7 @@ namespace StellaLauncher.Forms
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.TabStop = false;
             // 
-            // Settings
+            // Tools
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -392,8 +392,7 @@ namespace StellaLauncher.Forms
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Settings";
-            this.Load += new System.EventHandler(this.Tools_Load);
+            this.Name = "Tools";
             this.Shown += new System.EventHandler(this.Utils_Shown);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

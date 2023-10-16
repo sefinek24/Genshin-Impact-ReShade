@@ -430,7 +430,7 @@
     <Content Include="data\images\launcher\backgrounds\forms\tools\1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\forms\tools\2.png">
+    <Content Include="data\images\launcher\backgrounds\forms\settings\1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="data\images\launcher\backgrounds\hutao\1.png">

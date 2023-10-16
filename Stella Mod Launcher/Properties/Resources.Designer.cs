@@ -93,6 +93,16 @@ namespace StellaLauncher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bg_settings {
+            get {
+                object obj = ResourceManager.GetObject("bg_settings", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bg_support_me {
             get {
                 object obj = ResourceManager.GetObject("bg_support-me", resourceCulture);
