@@ -17,12 +17,6 @@ namespace StellaLauncher.Forms
 {
     public partial class Default : Form
     {
-        // Batch files
-        private static readonly string BatchDir = Path.Combine(Program.AppPath, "data", "cmd");
-        private static readonly string BatchDirPatrons = Path.Combine(BatchDir, "patrons");
-        public static readonly string BatchRunPatrons = Path.Combine(BatchDirPatrons, "run.cmd");
-        public static string NewCmdDir;
-
         // New update?
         public static bool UpdateIsAvailable;
 
@@ -212,13 +206,10 @@ namespace StellaLauncher.Forms
                             label1.TextAlign = ContentAlignment.MiddleRight;
 
                             Secret.BearerToken = remote.Token;
-
-                            NewCmdDir = BatchDirPatrons;
                             break;
 
                         case 500:
                             Secret.IsMyPatron = false;
-                            NewCmdDir = BatchDir;
                             label1.Text = @"Something went wrong ( ̿–ᆺ ̿–)";
 
                             DeleteBenefits.Run();
@@ -229,7 +220,6 @@ namespace StellaLauncher.Forms
 
                         default:
                             Secret.IsMyPatron = false;
-                            NewCmdDir = BatchDir;
                             label1.Text = @"Oh nooo... Sad cat... ( ̿–ᆺ ̿–)";
 
                             DeleteBenefits.Run();
@@ -243,7 +233,6 @@ namespace StellaLauncher.Forms
             else
             {
                 Secret.IsMyPatron = false;
-                NewCmdDir = BatchDir;
                 DeleteBenefits.Run();
             }
 
@@ -286,15 +275,15 @@ namespace StellaLauncher.Forms
             switch (injectMode)
             {
                 case "exe":
-                    Secret.InjectType = "exe";
+                    Run.InjectType = "exe";
                     break;
                 case "cmd":
-                    Secret.InjectType = Secret.IsMyPatron ? "cmd" : "exe";
+                    Run.InjectType = Secret.IsMyPatron ? "cmd" : "exe";
                     break;
                 default:
                 {
-                    Secret.InjectType = "exe";
-                    Program.Settings.ReadString("Launcher", "InjectType", "exe");
+                    Run.InjectType = "exe";
+                    Program.Settings.WriteString("Launcher", "InjectType", "exe");
                     Program.Settings.Save();
                     break;
                 }
@@ -445,6 +434,13 @@ namespace StellaLauncher.Forms
         {
             if (Application.OpenForms.OfType<Tools>().Any()) return;
             new Tools { DesktopLocation = DesktopLocation, Icon = Program.Ico }.Show();
+            Music.PlaySound("winxp", "navigation_start");
+        }
+
+        private void Settings_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (Application.OpenForms.OfType<Settings>().Any()) return;
+            new Settings { DesktopLocation = DesktopLocation, Icon = Program.Ico }.Show();
             Music.PlaySound("winxp", "navigation_start");
         }
 

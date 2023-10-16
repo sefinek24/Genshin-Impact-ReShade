@@ -140,6 +140,12 @@
     <Compile Include="Forms\Errors\NotCompatible.Designer.cs">
       <DependentUpon>NotCompatible.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Other\InjectionMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Other\InjectionMethod.Designer.cs">
+      <DependentUpon>InjectionMethod.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Other\Language.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,12 @@
     </Compile>
     <Compile Include="Forms\Tools.Designer.cs">
       <DependentUpon>Tools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Gameplay.cs">
       <SubType>Form</SubType>
@@ -256,6 +268,12 @@
     <EmbeddedResource Include="Forms\Errors\NotCompatible.resx">
       <DependentUpon>NotCompatible.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Other\InjectionMethod.pl.resx">
+      <DependentUpon>InjectionMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Other\InjectionMethod.resx">
+      <DependentUpon>InjectionMethod.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Other\Language.pl.resx">
       <DependentUpon>Language.cs</DependentUpon>
     </EmbeddedResource>
@@ -286,6 +304,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tools.resx">
       <DependentUpon>Tools.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings.pl.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Gameplay.resx">

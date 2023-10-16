@@ -11,7 +11,6 @@ namespace StellaLauncher.Scripts
     {
         public const string RegistryKeyPath = @"Software\Stella Mod Launcher";
         public static bool IsMyPatron = false;
-        public static string InjectType;
         public static string BearerToken;
 
         public static string GetTokenFromRegistry()

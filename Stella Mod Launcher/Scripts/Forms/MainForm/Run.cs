@@ -10,13 +10,22 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 {
     internal static class Run
     {
-        public static readonly string GsmPath = Path.Combine(Program.AppPath, "Genshin Stella Mod.exe");
+        // Exe files
+        private static readonly string GsmPath = Path.Combine(Program.AppPath, "Genshin Stella Mod.exe");
+
+        // Batch files
+        public static readonly string BatchDir = Path.Combine(Program.AppPath, "data", "cmd");
+        private static readonly string BatchDirPatrons = Path.Combine(BatchDir, "patrons");
+        private static readonly string BatchRunPatrons = Path.Combine(BatchDirPatrons, "run.cmd");
+
+        // Variables
+        public static string InjectType;
 
         public static async Task StartGame()
         {
             Cmd.CliWrap command = null;
 
-            switch (Secret.InjectType)
+            switch (InjectType)
             {
                 case "exe":
                     command = new Cmd.CliWrap
@@ -36,7 +45,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                         App = "wt.exe",
                         WorkingDir = Program.AppPath,
                         Arguments = new ArgumentsBuilder()
-                            .Add(Default.BatchRunPatrons) // 0
+                            .Add(BatchRunPatrons) // 0
                             .Add(Program.AppVersion) // 1
                             .Add(Data.ReShadeVer) // 2
                             .Add(Data.UnlockerVer) // 3
@@ -58,7 +67,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
         {
             Cmd.CliWrap command = null;
 
-            switch (Secret.InjectType)
+            switch (InjectType)
             {
                 case "exe":
                     command = new Cmd.CliWrap
@@ -98,7 +107,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
         public static async Task FpsUnlocker()
         {
             Cmd.CliWrap command = null;
-            switch (Secret.InjectType)
+            switch (InjectType)
             {
                 case "exe":
                     command = new Cmd.CliWrap
@@ -118,7 +127,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                         App = "wt.exe",
                         WorkingDir = Program.AppPath,
                         Arguments = new ArgumentsBuilder()
-                            .Add(Default.BatchRunPatrons) // 0
+                            .Add(BatchRunPatrons) // 0
                             .Add(Program.AppVersion) // 1
                             .Add(Data.ReShadeVer) // 2
                             .Add(Data.UnlockerVer) // 3
@@ -146,10 +155,8 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 return;
             }
 
-            string injectType = Program.Settings.ReadString("Launcher", "InjectType", "exe");
-
             Cmd.CliWrap command = null;
-            switch (injectType)
+            switch (InjectType)
             {
                 case "exe":
                     command = new Cmd.CliWrap
@@ -169,7 +176,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                         App = "wt.exe",
                         WorkingDir = Program.AppPath,
                         Arguments = new ArgumentsBuilder()
-                            .Add(Default.BatchRunPatrons) // 0
+                            .Add(BatchRunPatrons) // 0
                             .Add(Program.AppVersion) // 1
                             .Add(Data.ReShadeVer) // 2
                             .Add(Data.UnlockerVer) // 3
