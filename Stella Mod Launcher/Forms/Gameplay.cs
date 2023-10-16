@@ -27,7 +27,7 @@ namespace StellaLauncher.Forms
                 CoreWebView2Environment coreWebView2Env = await CoreWebView2Environment.CreateAsync(null, Program.AppData, new CoreWebView2EnvironmentOptions());
                 await webView21.EnsureCoreWebView2Async(coreWebView2Env);
 
-                webView21.CoreWebView2.Navigate("https://www.youtube.com/embed/CjfNy3aPMWs");
+                webView21.CoreWebView2.Navigate("https://www.youtube.com/watch?v=0tPwI7uVRxo");
             }
             catch (Exception ex)
             {
