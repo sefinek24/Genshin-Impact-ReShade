@@ -283,7 +283,7 @@ namespace StellaLauncher.Forms
                 default:
                 {
                     Run.InjectType = "exe";
-                    Program.Settings.WriteString("Launcher", "InjectType", "exe");
+                    Program.Settings.WriteString("Injection", "Method", "exe");
                     Program.Settings.Save();
                     break;
                 }

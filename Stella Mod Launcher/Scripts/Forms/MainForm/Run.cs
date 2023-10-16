@@ -87,7 +87,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                         App = "wt.exe",
                         WorkingDir = Program.AppPath,
                         Arguments = new ArgumentsBuilder()
-                            .Add(Default.ResourcesPath) // 0
+                            .Add(BatchRunPatrons) // 0
                             .Add(Program.AppVersion) // 1
                             .Add(Data.ReShadeVer) // 2
                             .Add(Data.UnlockerVer) // 3
@@ -96,6 +96,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                             .Add(await Utils.GetGameVersion()) // 6
                             .Add(Log.CmdLogs) // 7
                             .Add(Program.AppPath) // 8
+                            .Add(Path.GetDirectoryName(Program.FpsUnlockerExePath) ?? string.Empty) // 9
                     };
                     break;
             }

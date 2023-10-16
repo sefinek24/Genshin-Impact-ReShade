@@ -30,7 +30,7 @@ namespace StellaLauncher.Forms.Other
             switch (comboBox1.SelectedIndex)
             {
                 case 0:
-                    Program.Settings.WriteString("Launcher", "InjectType", "exe");
+                    Program.Settings.WriteString("Injection", "Method", "exe");
                     Run.InjectType = "exe";
                     break;
 
@@ -38,22 +38,23 @@ namespace StellaLauncher.Forms.Other
                 case 1:
                     if (Secret.IsMyPatron)
                     {
-                        Program.Settings.WriteString("Launcher", "InjectType", "cmd");
+                        Program.Settings.WriteString("Injection", "Method", "cmd");
                         Program.Settings.Save();
-
                         Run.InjectType = "cmd";
+
+                        MessageBox.Show(@"WARNING! SETTING CHANGED TO ONE DIFFERENT FROM THE RECOMMENDED ONE! I HOPE YOU KNOW WHAT YOU'RE DOING! 
+
+This option is intended for users with any knowledge in the IT field and in the Batch scripting language. With this option, you can have full control over the injection process in the .cmd file.
+
+!!! THE CREATOR OF THIS SOFTWARE TAKES NO RESPONSIBILITY FOR ANY BANS IN THE GAME. BY USING THIS FUNCTION, YOU ACCEPT THIS RISK !!!", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
                     {
-                        MessageBox.Show("You're not my patron.");
+                        MessageBox.Show(@"Only patrons can use this option.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
                     break;
             }
-        }
-
-        private void SaveData_Click(object sender, EventArgs e)
-        {
         }
     }
 }
