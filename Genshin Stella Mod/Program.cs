@@ -143,6 +143,7 @@ namespace GenshinStellaMod
                         case 200:
                             Secret.IsMyPatron = true;
                             Log.Output($"User is my Patron; {Secret.IsMyPatron}; Allowed;");
+                            Console.WriteLine("[✓] You're verified Patron");
                             break;
 
                         case 500:
@@ -183,10 +184,7 @@ namespace GenshinStellaMod
             // Start
             try
             {
-                string resources = args[4];
-                Log.Output($"Resources: {resources}");
-
-                await Action.Run(launchMode, resources);
+                await Action.Run(launchMode);
             }
             catch (Exception ex)
             {
