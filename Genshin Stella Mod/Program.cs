@@ -1,11 +1,16 @@
 using System;
 using System.IO;
 using System.Reflection;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
+using GenshinStellaMod.Models;
 using GenshinStellaMod.Scripts;
 using Microsoft.Win32;
+using Newtonsoft.Json;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 /*
  *
@@ -28,6 +33,10 @@ namespace GenshinStellaMod
 
         // Registry
         public static readonly string RegistryPath = @"SOFTWARE\Stella Mod Launcher";
+
+        // API
+        // public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v5" : "https://api.sefinek.net/api/v5";
+        public static readonly string WebApi = "https://api.sefinek.net/api/v4";
 
         private static async Task Main(string[] args)
         {
@@ -74,9 +83,16 @@ namespace GenshinStellaMod
             /***** 1 *****/
             Console.WriteLine("1/3 - Starting program...");
 
+
+            // Init dirs
+            Log.InitDirs();
+
+
+            // Set app title etc.
             string launchMode = args[3];
             Log.Output($"Launch mode: {launchMode}");
             Console.Title = $"Genshin Stella Mod v{AppVersion}";
+
 
             // Check if the application is running with administrative permissions
             if (!Utils.IsRunningWithAdminPrivileges())
@@ -105,11 +121,68 @@ namespace GenshinStellaMod
             }
 
 
-            // Init dirs
-            Log.InitDirs();
+            // Is user patron?
+            if (launchMode == "1" || launchMode == "6")
+            {
+                string mainPcKey = Secret.GetTokenFromRegistry();
+                if (mainPcKey != null)
+                {
+                    Secret.Attempt = true;
+
+                    string data = await Secret.VerifyToken(mainPcKey);
+                    if (data == null)
+                    {
+                        Secret.IsMyPatron = false;
+                        Log.Output($"Received null from the server. Closing {AppName}...");
+
+                        Environment.Exit(6660666);
+                    }
+
+                    VerifyToken remote = JsonConvert.DeserializeObject<VerifyToken>(data);
+                    Log.Output($"Status: {remote.Status}; Tier {remote.TierId}; Message: {remote.Message ?? "Unknown"};");
+
+                    switch (remote.Status)
+                    {
+                        case 200:
+                            Secret.IsMyPatron = true;
+                            Log.Output($"User is my Patron; {Secret.IsMyPatron}; Allowed;");
+                            break;
+
+                        case 500:
+                            Secret.IsMyPatron = false;
+
+                            MessageBox.Show(
+                                $"Unfortunately, something went wrong, and 3DMigoto will not be injected into your game. There was a server-side error while verifying the registered license on your computer. Please try again in a few minutes. If the issue persists, please contact Sefinek.{remote.Message}",
+                                AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            break;
+
+                        default:
+                            Secret.IsMyPatron = false;
+
+                            MessageBox.Show(
+                                $"An error occurred while verifying the benefits of your subscription. The server informed the client that it sent an invalid request. If you launch the game after closing this message, you will be playing the free version. Please contact Sefinek for more information. Error details can be found below.\n\n{remote.Message}",
+                                AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            break;
+                    }
+                }
+                else
+                {
+                    Secret.IsMyPatron = false;
+                }
+            }
 
 
-            // Start the application
+            if (!Secret.IsMyPatron && (launchMode == "1" || launchMode == "6"))
+            {
+                Console.WriteLine("[X] Not this time bro");
+                Log.SaveError($"An attempt was made to use launchMode {launchMode} without being the patron; Secret.IsMyPatron: {Secret.IsMyPatron}; Secret.Attempt: {Secret.Attempt}");
+                MessageBox.Show("The security system has detected a breach.\n\nScrew you ((:", AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                Environment.Exit(1432166809);
+            }
+
+
+            // Start
             try
             {
                 string resources = args[4];
@@ -122,7 +195,7 @@ namespace GenshinStellaMod
                 Log.ThrowError(ex);
 
                 Console.WriteLine("=========================================================================================");
-                Console.WriteLine("[x] We apologize, but unfortunately something didn't go according to our plan.");
+                Console.WriteLine("[x] We apologize, but unfortunately something didn't go according to our plan ):");
                 Console.WriteLine("[i] If you believe this error is not your fault, please report it: https://genshin.sefinek.net/support");
 
                 Music.PlaySound("winxp", "critical_stop");

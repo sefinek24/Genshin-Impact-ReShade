@@ -1,18 +1,19 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Win32;
 
-namespace StellaLauncher.Scripts
+namespace GenshinStellaMod.Scripts
 {
     internal static class Secret
     {
-        public const string RegistryKeyPath = @"Software\Stella Mod Launcher";
+        private const string RegistryKeyPath = @"Software\Stella Mod Launcher";
         public static bool IsMyPatron = false;
-        public static string InjectType;
-        public static string BearerToken;
+        public static bool Attempt = false;
 
         public static string GetTokenFromRegistry()
         {
@@ -32,6 +33,8 @@ namespace StellaLauncher.Scripts
             {
                 using (HttpClient httpClient = new HttpClient())
                 {
+                    httpClient.DefaultRequestHeaders.Add("User-Agent", $"Mozilla/5.0 (compatible; {Program.AppName.Replace(" ", "")}/{Program.AppVersion} +https://genshin.sefinek.net)");
+
                     List<KeyValuePair<string, string>> postData = new List<KeyValuePair<string, string>>
                     {
                         new KeyValuePair<string, string>("token", mainPcKey),

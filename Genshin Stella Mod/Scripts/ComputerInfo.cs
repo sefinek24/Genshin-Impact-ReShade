@@ -4,27 +4,11 @@ using System.Globalization;
 using System.Linq;
 using System.Management;
 using System.Net.NetworkInformation;
-using Microsoft.Win32;
 
-namespace StellaLauncher.Scripts
+namespace GenshinStellaMod.Scripts
 {
     internal static class ComputerInfo
     {
-        // private static readonly RegistryKey LocalMachine = Environment.Is64BitProcess
-        //    ? RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64)
-        //    : Registry.LocalMachine;
-
-
-        public static string GetComputerName()
-        {
-            return Environment.MachineName;
-        }
-
-        public static string GetSystemRegion()
-        {
-            return RegionInfo.CurrentRegion.TwoLetterISORegionName;
-        }
-
         public static string GetMacAddress()
         {
             List<NetworkInterface> networkInterfaces = NetworkInterface.GetAllNetworkInterfaces()

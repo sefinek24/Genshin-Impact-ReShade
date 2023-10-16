@@ -190,47 +190,53 @@ namespace StellaLauncher.Forms
                 string data = await Secret.VerifyToken(mainPcKey);
                 if (data == null)
                 {
+                    Secret.IsMyPatron = false;
                     Log.Output("Received null from the server. Deleting benefits in progress...");
+
                     DeleteBenefits.Run();
+                    MessageBox.Show("Zero data received from the server. What happened? I don't know, but Sefinek probably will (:\nReport this error as soon as possible.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Environment.Exit(6660666);
                 }
                 else
                 {
                     VerifyToken remote = JsonConvert.DeserializeObject<VerifyToken>(data);
                     Log.Output($"Status: {remote.Status}; Tier {remote.TierId}; Message: {remote.Message ?? "Unknown"};");
 
-                    if (remote.Status == 200)
+                    switch (remote.Status)
                     {
-                        Secret.IsMyPatron = true;
-                        Log.Output($"User is my Patron; {Secret.IsMyPatron}; Benefits are enabled;");
+                        case 200:
+                            Secret.IsMyPatron = true;
+                            Log.Output($"User is my Patron; {Secret.IsMyPatron}; Benefits are enabled;");
 
-                        label1.Text = Resources.Default_GenshinStellaModForPatrons;
-                        label1.TextAlign = ContentAlignment.MiddleRight;
+                            label1.Text = Resources.Default_GenshinStellaModForPatrons;
+                            label1.TextAlign = ContentAlignment.MiddleRight;
 
-                        Secret.BearerToken = remote.Token;
+                            Secret.BearerToken = remote.Token;
 
-                        NewCmdDir = BatchDirPatrons;
-                    }
-                    else if (remote.Status >= 500)
-                    {
-                        Secret.IsMyPatron = false;
-                        NewCmdDir = BatchDir;
-                        label1.Text = @"Something went wrong ( ̿–ᆺ ̿–)";
+                            NewCmdDir = BatchDirPatrons;
+                            break;
 
-                        DeleteBenefits.Run();
-                        MessageBox.Show(
-                            $"Unfortunately, there was a server-side error during the verification of your benefits. Please report this error on the Discord server or via email. Remember to provide your `backup code` as well.\nIf you launch the game after closing this message, you will be playing the free version.\n\n{remote.Message}",
-                            Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
-                        Secret.IsMyPatron = false;
-                        NewCmdDir = BatchDir;
-                        label1.Text = @"Oh nooo... Sad cat... ( ̿–ᆺ ̿–)";
+                        case 500:
+                            Secret.IsMyPatron = false;
+                            NewCmdDir = BatchDir;
+                            label1.Text = @"Something went wrong ( ̿–ᆺ ̿–)";
 
-                        DeleteBenefits.Run();
-                        MessageBox.Show(
-                            $"An error occurred while verifying the benefits of your subscription. The server informed the client that it sent an invalid request. If you launch the game after closing this message, you will be playing the free version. Please contact Sefinek for more information. Error details can be found below.\n\n{remote.Message}",
-                            Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            DeleteBenefits.Run();
+                            MessageBox.Show(
+                                $"Unfortunately, there was a server-side error during the verification of your benefits. Please report this error on the Discord server or via email. Remember to provide your `backup code` as well.\nIf you launch the game after closing this message, you will be playing the free version.\n\n{remote.Message}",
+                                Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            break;
+
+                        default:
+                            Secret.IsMyPatron = false;
+                            NewCmdDir = BatchDir;
+                            label1.Text = @"Oh nooo... Sad cat... ( ̿–ᆺ ̿–)";
+
+                            DeleteBenefits.Run();
+                            MessageBox.Show(
+                                $"An error occurred while verifying the benefits of your subscription. The server informed the client that it sent an invalid request. If you launch the game after closing this message, you will be playing the free version. Please contact Sefinek for more information. Error details can be found below.\n\n{remote.Message}",
+                                Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            break;
                     }
                 }
             }
