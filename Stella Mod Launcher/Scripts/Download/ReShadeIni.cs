@@ -115,14 +115,15 @@ namespace StellaLauncher.Scripts.Download
                         Default._updates_LinkLabel.Text = Resources.Default_Downloading;
                         TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
 
-                        WebClient client2 = new WebClient();
-                        client2.Headers.Add("user-agent", Program.UserAgent);
-                        await client2.DownloadFileTaskAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini", reShadePath);
+                        WebClient wc = new WebClient();
+                        wc.Headers.Add("user-agent", Program.UserAgent);
+                        await wc.DownloadFileTaskAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini", reShadePath);
 
                         if (File.Exists(reShadePath))
                         {
                             IniFile ini = new IniFile(reShadePath);
-                            string presetPath = ini.ReadString("GENERAL", "PresetPath", Path.Combine(resourcesPath, "ReShade", "Presets", "3. Preset by Sefinek - Medium settings [Default].ini"))
+                            string presetPath = ini.ReadString("GENERAL", "PresetPath", Path.Combine(resourcesPath, "ReShade", "Presets", "3. Preset by Sefinek - Medium settings [Default].ini"));
+                            Log.Output($"Preset path: {presetPath}");
 
                             ini.WriteString("ADDON", "AddonPath", $"{Path.Combine(resourcesPath, "ReShade", "Addons")}");
                             ini.WriteString("GENERAL", "EffectSearchPaths", Path.Combine(resourcesPath, "ReShade", "Shaders", "Effects"));
