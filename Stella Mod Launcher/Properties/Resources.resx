@@ -136,6 +136,9 @@
   <data name="web" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\web.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Cmd_WorkingDirectory" xml:space="preserve">
+    <value>Working directory</value>
+  </data>
   <data name="bg_support-me" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\support-me.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -149,8 +152,8 @@ In newer versions of Stella Mod, saving paths has been moved to the registry. If
   <data name="Discord_InTheMainWindow" xml:space="preserve">
     <value>In the main window</value>
   </data>
-  <data name="Cmd_WorkingDirectory" xml:space="preserve">
-    <value>Working directory</value>
+  <data name="UpdateBenefits_SuccessfullyUpdated3DMigotoMods" xml:space="preserve">
+    <value>Successfully updated 3DMigoto Mods for patrons.</value>
   </data>
   <data name="SupportMe_Thanks" xml:space="preserve">
     <value>Thanks :3</value>
@@ -176,14 +179,17 @@ In newer versions of Stella Mod, saving paths has been moved to the registry. If
   <data name="NormalRelease_DeletedOldSetupFileFromTempDir" xml:space="preserve">
     <value>Deleted old setup file from temp directory.</value>
   </data>
-  <data name="icons8_discord" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-discord-481.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ReShadeIniUpdate_FileReShadeIniWasNotFoundInYourGameDir" xml:space="preserve">
+    <value>File ReShade.ini was not found in your game directory.</value>
   </data>
   <data name="exchange" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exchange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Discord_Desc" xml:space="preserve">
     <value>The best mod for Genshin Impact with ReShade, custom graphics presets, FPS unlock, custom launcher, and more!</value>
+  </data>
+  <data name="bg_tools" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tools.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ReShadeIniUpdate_StellaConfigVersionIsNullInReShadeIni" xml:space="preserve">
     <value>STELLA.ConfigVersion is null in ReShade.ini.</value>
@@ -243,6 +249,9 @@ This action will result in the loss of any custom configurations you have made. 
 
 Would you like to visit Patreon.com and make subscribe? You will gain access to numerous benefits! You will also be able to enjoy ReShade, 3DMigoto, and FPS Unlocker simultaneously.</value>
   </data>
+  <data name="Program_RequiredFileFisrtAppLaunchExeWasNotFound_" xml:space="preserve">
+    <value>Required file 'First app launch.exe' was not found. Please reinstall this app or join our Discord server for help.</value>
+  </data>
   <data name="icons8_github" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-github-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -287,20 +296,17 @@ Would you like to visit Patreon.com and make subscribe? You will gain access to 
   <data name="StellaResources_UpdateSize" xml:space="preserve">
     <value>Update size: {0}</value>
   </data>
-  <data name="bg_tools" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tools.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="UpdateBenefits_SuccessfullyUpdatedPresets" xml:space="preserve">
+    <value>Successfully updated presets (with or without RT) for patrons.</value>
   </data>
-  <data name="bg_gameplay" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tutorial3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="UpdateBenefits_SuccessfullyUpdatedCmdFiles" xml:space="preserve">
+    <value>Successfully updated cmd files (batch) to the latest version.</value>
   </data>
   <data name="StellaResources_SuccessfullyUpdatedResources" xml:space="preserve">
     <value>Successfully updated resources.</value>
   </data>
   <data name="NormalRelease_Waiting_" xml:space="preserve">
     <value>Waiting {0}s...</value>
-  </data>
-  <data name="UpdateBenefits_SuccessfullyUpdatedPresets" xml:space="preserve">
-    <value>Successfully updated presets (with or without RT) for patrons.</value>
   </data>
   <data name="Program_SorryOneInstanceIsCurrentlyOpen_" xml:space="preserve">
     <value>Sorry, one instance is currently open.
@@ -313,11 +319,9 @@ Quit the process with name {0} and try again.</value>
   <data name="Utils_RunOfficialLauncherForStellaModMadeBySefinek" xml:space="preserve">
     <value>Run the official launcher for Genshin Impact Stella Mod made by Sefinek.</value>
   </data>
-  <data name="bg_main" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\main.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="UpdateBenefits_SuccessfullyUpdatedShaders" xml:space="preserve">
-    <value>Successfully updated shaders for patrons to the latest version.</value>
+  <data name="Default_ChangedTheLauncherBackground_ID" xml:space="preserve">
+    <value>Changed the launcher background. ID: {0}</value>
+    <comment>Used for Log.Output</comment>
   </data>
   <data name="WebView2Handler_OhhSorrySomethingWentWrongWithWV2" xml:space="preserve">
     <value>Sorry. Something went wrong with WebView2.</value>
@@ -328,24 +332,27 @@ Quit the process with name {0} and try again.</value>
   <data name="Default_TheSoundFileWithMusicWasNotFoundInTheLocalization_" xml:space="preserve">
     <value>The sound file with music was not found in the location: '{0}'</value>
   </data>
+  <data name="Tools_BrowsingUtils" xml:space="preserve">
+    <value>Browsing utils 🔧</value>
+  </data>
   <data name="StellaResources_UnpackingFiles" xml:space="preserve">
     <value>Unpacking files...</value>
-  </data>
-  <data name="Discord_Version_" xml:space="preserve">
-    <value>Version: {0}</value>
   </data>
   <data name="Default_CurrentBackground" xml:space="preserve">
     <value>Current background: {0}</value>
     <comment>For toolTip1.SetToolTip</comment>
   </data>
+  <data name="flaticon_config" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flaticon_config.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="RandomImages_GeneratingBeautifulPictures" xml:space="preserve">
     <value>Generating beautiful pictures 😻</value>
   </data>
+  <data name="bg_gameplay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tutorial3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Tools_SpecialBackgroundWasNotFoundIn_ForToolsWindow" xml:space="preserve">
     <value>Special background file was not found in '{0}' for Tools window.</value>
-  </data>
-  <data name="Cmd_RebootIsRequired" xml:space="preserve">
-    <value>Reboot is required</value>
   </data>
   <data name="Default_GameLauncherWasNotFound" xml:space="preserve">
     <value>Game launcher was not found.</value>
@@ -366,23 +373,20 @@ Quit the process with name {0} and try again.</value>
   <data name="ReShadeIniUpdate_NewReShadeCfgIsAvailable_v_" xml:space="preserve">
     <value>New ReShade config version is available: v{0} → v{1}</value>
   </data>
-  <data name="Default_UpdatingBenefits" xml:space="preserve">
-    <value>Updating benefits...</value>
-  </data>
   <data name="Default_BackgroundFileWasNotFoundIn_.ID" xml:space="preserve">
     <value>Background file was not found in '{0}'; ID: {1};</value>
   </data>
   <data name="party-popper" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\party-popper_1f389.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Utils_FolderWithGamePathDoesNotExists_DoYouWantToResetAllSMSettings" xml:space="preserve">
-    <value>Folder with game path does not exists:
-{0}
-
-Do you want to reconfigure Stella Mod in the configuration window?</value>
+  <data name="Tools_UnmuteMusicOnStart" xml:space="preserve">
+    <value>Unmute music on start</value>
   </data>
   <data name="Discord_OfficialWebsite" xml:space="preserve">
     <value>Official website</value>
+  </data>
+  <data name="icons8_discord" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-discord-481.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="uk_flag" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\united-kingdom (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -399,8 +403,11 @@ Do you want to reconfigure Stella Mod in the configuration window?</value>
   <data name="NormalRelease_UpdatingPleaseWait" xml:space="preserve">
     <value>Updating. Please wait...</value>
   </data>
-  <data name="UpdateBenefits_SuccessfullyUpdatedCmdFiles" xml:space="preserve">
-    <value>Successfully updated cmd files (batch) to the latest version.</value>
+  <data name="flaticon_tools" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LaunchCount_ABigThankYouTouYouForYourWillingnessToSupport" xml:space="preserve">
+    <value>A big thank you to you for your willingness to support! ~ Sefinek</value>
   </data>
   <data name="Main_PleaseWait" xml:space="preserve">
     <value>Please wait...</value>
@@ -424,9 +431,6 @@ Do you want to reconfigure Stella Mod in the configuration window?</value>
   <data name="icons8_shortcut" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-shortcut-58.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Default_SuccessfullyDownloadedReShadeIni" xml:space="preserve">
-    <value>Successfully downloaded ReShade.ini!</value>
-  </data>
   <data name="NormalRelease_JustAMoment_PleaseWait" xml:space="preserve">
     <value>Just a moment. Please wait {0}s...</value>
   </data>
@@ -435,8 +439,8 @@ Do you want to reconfigure Stella Mod in the configuration window?</value>
 
 Do you want to see these files?</value>
   </data>
-  <data name="Default_Congratulations" xml:space="preserve">
-    <value>Congratulations!</value>
+  <data name="icons8_edit-property" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-edit-property-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Default_ClickStartGameButtonToInjectReShadeFPSUnlockAnd3DMigoto" xml:space="preserve">
     <value>Click „Start game” button to inject ReShade, FPS Unlock and 3DMigoto.</value>
@@ -454,14 +458,14 @@ Do you want to see these files?</value>
   <data name="Default_FailedToDownload" xml:space="preserve">
     <value>Failed to download...</value>
   </data>
-  <data name="paimon-gif" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\775295135108825088.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="NormalRelease_NewVersionFrom_IsAvailable" xml:space="preserve">
+    <value>New version from {0} is available.</value>
   </data>
-  <data name="Program_RequiredFileFisrtAppLaunchExeWasNotFound_" xml:space="preserve">
-    <value>Required file 'First app launch.exe' was not found. Please reinstall this app or join our Discord server for help.</value>
+  <data name="Default_UpdatingBenefits" xml:space="preserve">
+    <value>Updating benefits...</value>
   </data>
-  <data name="ReShadeIniUpdate_GamePathWasNotFoundOnYourPC" xml:space="preserve">
-    <value>Game path was not found on your PC.</value>
+  <data name="UpdateBenefits_SuccessfullyUpdated3DMigoto" xml:space="preserve">
+    <value>Successfully updated 3DMigoto software for patrons.</value>
   </data>
   <data name="NormalRelease_SomethingWentWrong" xml:space="preserve">
     <value>Something went wrong???</value>
@@ -511,9 +515,6 @@ Do you want to reconfigure Stella Mod in the configuration window?</value>
   <data name="NormalRelease_PreparingToDownloadNewUpdate" xml:space="preserve">
     <value>Preparing to download new update...</value>
   </data>
-  <data name="LaunchCount_TheSimultaneousOfUseRSFU3DM" xml:space="preserve">
-    <value>The simultaneous use of ReShade, FPS Unlock, and 3DMigoto is only possible for patrons.</value>
-  </data>
   <data name="Default_DeletedOldSetupFromTempDirectory" xml:space="preserve">
     <value>[i] Deleted old setup file from temp directory.</value>
   </data>
@@ -539,8 +540,8 @@ Do you want to reconfigure Stella Mod in the configuration window?</value>
   <data name="ReShadeIniUpdate_ReShadeIniWasNotFoundIn_" xml:space="preserve">
     <value>ReShade.ini was not found in: {0}</value>
   </data>
-  <data name="Tools_BrowsingUtils" xml:space="preserve">
-    <value>Browsing utils 🔧</value>
+  <data name="Default_SuccessfullyDownloadedReShadeIni" xml:space="preserve">
+    <value>Successfully downloaded ReShade.ini!</value>
   </data>
   <data name="Utils_LauncherFileDoesNotExists" xml:space="preserve">
     <value>Launcher file does not exists.
@@ -563,17 +564,14 @@ Do you want to reconfigure Stella Mod in the configuration window?</value>
   <data name="Cmd_TheRequiredDependencyHasBeenSuccessfullyInstalledButyourComputerNeedsToBeRestart" xml:space="preserve">
     <value>The required dependency has been successfully installed, but your computer needs to be restarted.</value>
   </data>
-  <data name="Utils_File_WasFoundAt_" xml:space="preserve">
-    <value>File '{0}' was found at '{1}'.</value>
+  <data name="LaunchCount_TheSimultaneousOfUseRSFU3DM" xml:space="preserve">
+    <value>The simultaneous use of ReShade, FPS Unlock, and 3DMigoto is only possible for patrons.</value>
   </data>
   <data name="StellaResources_NewResourcesUpdateIsAvailable" xml:space="preserve">
     <value>New update of the resources is available from {0}.</value>
   </data>
   <data name="DownloadCmd_SuccesfullyDownloadedOrUpdatedFile_" xml:space="preserve">
     <value>{0} Successfully downloaded or updated file: {1}</value>
-  </data>
-  <data name="UpdateBenefits_SuccessfullyUpdated3DMigoto" xml:space="preserve">
-    <value>Successfully updated 3DMigoto software for patrons.</value>
   </data>
   <data name="NormalRelease_NewReleaseFrom_IsAvailable_v_" xml:space="preserve">
     <value>New release from {0} is available: v{1} → v{2}</value>
@@ -621,14 +619,14 @@ If, for any reason, you are unable to update Stella Mod through the Launcher, pl
   <data name="poland_flag" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\poland (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="flaticon_redo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\redo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_web" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-web-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Default_CanceledByTheUser_AreYouSureOfWhatYoureDoing" xml:space="preserve">
     <value>Canceled by the user. Are you sure of what you're doing?</value>
   </data>
-  <data name="ReShadeIniUpdate_FileReShadeIniWasNotFoundInYourGameDir" xml:space="preserve">
-    <value>File ReShade.ini was not found in your game directory.</value>
+  <data name="Default_Congratulations" xml:space="preserve">
+    <value>Congratulations!</value>
   </data>
   <data name="NormalRelease_Output_" xml:space="preserve">
     <value>Output: {0}</value>
@@ -645,14 +643,14 @@ If, for any reason, you are unable to update Stella Mod through the Launcher, pl
   <data name="Default_GenshinStellaModForPatrons" xml:space="preserve">
     <value>Genshin Stella Mod for Patrons</value>
   </data>
-  <data name="icons8_tools" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-tools-65.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="flaticon_log" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flaticon_log1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UpdateBenefits_SuccessfullyUpdatedShaders" xml:space="preserve">
+    <value>Successfully updated shaders for patrons to the latest version.</value>
   </data>
   <data name="NormalRelease_DownloadingInProgress" xml:space="preserve">
     <value>Downloading in progress...</value>
-  </data>
-  <data name="UpdateBenefits_SuccessfullyUpdated3DMigotoMods" xml:space="preserve">
-    <value>Successfully updated 3DMigoto Mods for patrons.</value>
   </data>
   <data name="icons8_recycle-bin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-recycle-bin-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -665,6 +663,9 @@ If, for any reason, you are unable to update Stella Mod through the Launcher, pl
   </data>
   <data name="Cmd_ExecutedCommand" xml:space="preserve">
     <value>Executed command</value>
+  </data>
+  <data name="Utils_File_WasFoundAt_" xml:space="preserve">
+    <value>File '{0}' was found at '{1}'.</value>
   </data>
   <data name="Default_TheReShadeIniFileCouldNotBeLocatedInYourGameFiles" xml:space="preserve">
     <value>The ReShade.ini file could not be located in your game files, or it may not be compatible with the current version.
@@ -680,9 +681,6 @@ Would you like to download this file now to prevent future errors and manual con
   <data name="icons8_support" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-support-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LaunchCount_ABigThankYouTouYouForYourWillingnessToSupport" xml:space="preserve">
-    <value>A big thank you to you for your willingness to support! ~ Sefinek</value>
-  </data>
   <data name="Tools_AreYouSureToRunStellaConfigurationWindowAgain" xml:space="preserve">
     <value>Are you sure to run Stella Configuration Window again?</value>
   </data>
@@ -694,20 +692,29 @@ Do you want to download this dependency from Microsoft website?</value>
   <data name="Utils_FileDoesNotExistsIn" xml:space="preserve">
     <value>File does not exists in: {0} [{1}]</value>
   </data>
+  <data name="icons8_tools" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-tools-65.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Default_Downloading" xml:space="preserve">
     <value>Downloading...</value>
   </data>
   <data name="RandomImages_OpenImageInDefaultBrowser" xml:space="preserve">
     <value>Open image in default browser</value>
   </data>
-  <data name="flaticon_settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bg_main" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\main.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NormalRelease_InstallANewVersionInTheWizard_ClosingLauncherIn_" xml:space="preserve">
     <value>Install a new version in the wizard. Closing launcher in {0}s...</value>
   </data>
-  <data name="icons8_edit-property" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-edit-property-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Utils_FolderWithGamePathDoesNotExists_DoYouWantToResetAllSMSettings" xml:space="preserve">
+    <value>Folder with game path does not exists:
+{0}
+
+Do you want to reconfigure Stella Mod in the configuration window?</value>
+  </data>
+  <data name="icons8_youtube" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-youtube-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Default_OhhSomethingWentWrong" xml:space="preserve">
     <value>Ohh, something went wrong</value>
@@ -715,22 +722,21 @@ Do you want to download this dependency from Microsoft website?</value>
   <data name="RandomImages_AnimeName" xml:space="preserve">
     <value>Anime name</value>
   </data>
-  <data name="NormalRelease_NewVersionFrom_IsAvailable" xml:space="preserve">
-    <value>New version from {0} is available.</value>
+  <data name="ReShadeIniUpdate_GamePathWasNotFoundOnYourPC" xml:space="preserve">
+    <value>Game path was not found on your PC.</value>
   </data>
   <data name="Utils_URLIsNullOrEmpty" xml:space="preserve">
     <value>URL is null or empty.</value>
   </data>
-  <data name="Default_ChangedTheLauncherBackground_ID" xml:space="preserve">
-    <value>Changed the launcher background. ID: {0}</value>
-    <comment>Used for Log.Output</comment>
+  <data name="paimon-gif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\775295135108825088.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Default_FileDownloadHasBeenCanceledByTheUser" xml:space="preserve">
     <value>File download has been canceled by the user.</value>
     <comment>Used for Log.Output</comment>
   </data>
-  <data name="Tools_UnmuteMusicOnStart" xml:space="preserve">
-    <value>Unmute music on start</value>
+  <data name="flaticon_redo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\redo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Default_GameLauncherWasNotFoundIn" xml:space="preserve">
     <value>Game launcher was not found in: {0}</value>
@@ -740,6 +746,9 @@ Do you want to download this dependency from Microsoft website?</value>
   </data>
   <data name="Cmd_ExitCode" xml:space="preserve">
     <value>Exit code</value>
+  </data>
+  <data name="bg_settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\images\launcher\backgrounds\forms\settings\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="UpdateBenefits_SuccessfullyUpdatedAddons" xml:space="preserve">
     <value>Successfully updated ReShade Addons for patrons.</value>
@@ -767,16 +776,13 @@ Do you want to download this dependency from Microsoft website?</value>
   <data name="Utils_OopsAnErrorOccurred" xml:space="preserve">
     <value>Oops, an error occurred</value>
   </data>
-  <data name="icons8_youtube" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-youtube-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Discord_Version_" xml:space="preserve">
+    <value>Version: {0}</value>
   </data>
-  <data name="icons8_web" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-web-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Cmd_RebootIsRequired" xml:space="preserve">
+    <value>Reboot is required</value>
   </data>
   <data name="Gallery_ExitedTheGallery" xml:space="preserve">
     <value>Exited the gallery 🦊</value>
-  </data>
-  <data name="bg_settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\data\images\launcher\backgrounds\forms\settings\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

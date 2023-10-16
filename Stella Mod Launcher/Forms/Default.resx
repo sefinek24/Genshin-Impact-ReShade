@@ -153,9 +153,6 @@
   <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="changeBg_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -163,13 +160,13 @@
     <value>True</value>
   </data>
   <data name="changeBg_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
+    <value>Arial, 11.25pt</value>
   </data>
   <data name="changeBg_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>39, 13</value>
   </data>
   <data name="changeBg_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 18</value>
+    <value>139, 17</value>
   </data>
   <data name="changeBg_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>88</value>
@@ -177,6 +174,9 @@
   <data name="changeBg_LinkLabel.Text" xml:space="preserve">
     <value>Change background</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="changeBg_LinkLabel.ToolTip" xml:space="preserve">
     <value>Change the application background.</value>
   </data>
@@ -396,9 +396,6 @@
   <data name="&gt;&gt;githubIco_Picturebox.ZOrder" xml:space="preserve">
     <value>33</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="tools_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -418,7 +415,7 @@
     <value>Tools</value>
   </data>
   <data name="tools_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Options and other utils for this mod</value>
+    <value>Utils and logs</value>
   </data>
   <data name="&gt;&gt;tools_LinkLabel.Name" xml:space="preserve">
     <value>tools_LinkLabel</value>
@@ -1028,7 +1025,7 @@ RTX cards are not required.</value>
     <value>Settings</value>
   </data>
   <data name="linkLabel2.ToolTip" xml:space="preserve">
-    <value>Options and other utils for this mod</value>
+    <value>Open Settings</value>
   </data>
   <data name="&gt;&gt;linkLabel2.Name" xml:space="preserve">
     <value>linkLabel2</value>
@@ -1382,7 +1379,7 @@ RTX cards are not required.</value>
     <value>None</value>
   </data>
   <data name="progressBar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 566</value>
+    <value>12, 565</value>
   </data>
   <data name="progressBar1.Size" type="System.Drawing.Size, System.Drawing">
     <value>779, 23</value>

@@ -712,6 +712,16 @@ namespace StellaLauncher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap flaticon_config {
+            get {
+                object obj = ResourceManager.GetObject("flaticon_config", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap flaticon_controller {
             get {
                 object obj = ResourceManager.GetObject("flaticon_controller", resourceCulture);
@@ -725,6 +735,16 @@ namespace StellaLauncher.Properties {
         internal static System.Drawing.Bitmap flaticon_donation {
             get {
                 object obj = ResourceManager.GetObject("flaticon_donation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flaticon_log {
+            get {
+                object obj = ResourceManager.GetObject("flaticon_log", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -752,9 +772,9 @@ namespace StellaLauncher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap flaticon_settings {
+        internal static System.Drawing.Bitmap flaticon_tools {
             get {
-                object obj = ResourceManager.GetObject("flaticon_settings", resourceCulture);
+                object obj = ResourceManager.GetObject("flaticon_tools", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

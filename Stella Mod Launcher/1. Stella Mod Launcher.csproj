@@ -624,6 +624,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\flaticon-open-folder.png" />
+    <None Include="Resources\flaticon_settings.png" />
+    <None Include="Resources\flaticon_log1.png" />
+    <None Include="Resources\flaticon_config.png" />
     <Content Include="www\css\default.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

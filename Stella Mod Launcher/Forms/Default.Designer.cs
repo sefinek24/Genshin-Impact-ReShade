@@ -384,7 +384,7 @@ namespace StellaLauncher.Forms
             resources.ApplyResources(this.toolsIco_PictureBox, "toolsIco_PictureBox");
             this.toolsIco_PictureBox.BackColor = System.Drawing.Color.Transparent;
             this.toolsIco_PictureBox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.toolsIco_PictureBox.Image = global::StellaLauncher.Properties.Resources.flaticon_settings;
+            this.toolsIco_PictureBox.Image = global::StellaLauncher.Properties.Resources.flaticon_tools;
             this.toolsIco_PictureBox.Name = "toolsIco_PictureBox";
             this.toolsIco_PictureBox.TabStop = false;
             // 
@@ -516,7 +516,7 @@ namespace StellaLauncher.Forms
             resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox3.Image = global::StellaLauncher.Properties.Resources.flaticon_settings;
+            this.pictureBox3.Image = global::StellaLauncher.Properties.Resources.flaticon_config;
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
             // 
