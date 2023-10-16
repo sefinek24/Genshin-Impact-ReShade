@@ -11,13 +11,13 @@ namespace GenshinStellaMod.Scripts
 {
     internal static class Secret
     {
-        private const string RegistryKeyPath = @"Software\Stella Mod Launcher";
+        public const string RegistryPath = @"SOFTWARE\Stella Mod Launcher";
         public static bool IsMyPatron = false;
         public static bool Attempt = false;
 
         public static string GetTokenFromRegistry()
         {
-            using (RegistryKey registryKey = Registry.CurrentUser.OpenSubKey(RegistryKeyPath))
+            using (RegistryKey registryKey = Registry.CurrentUser.OpenSubKey(RegistryPath))
             {
                 object value = registryKey?.GetValue("Secret");
                 if (!(value is string token)) return null;

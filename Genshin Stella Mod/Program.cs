@@ -31,9 +31,6 @@ namespace GenshinStellaMod
         public static readonly string AppPath = AppContext.BaseDirectory;
         public static readonly string AppData = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
 
-        // Registry
-        public static readonly string RegistryPath = @"SOFTWARE\Stella Mod Launcher";
-
         // API
         // public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v5" : "https://api.sefinek.net/api/v5";
         public static readonly string WebApi = "https://api.sefinek.net/api/v4";
@@ -105,7 +102,7 @@ namespace GenshinStellaMod
 
 
             // Is launcher configured?
-            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(RegistryPath, true))
+            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(Secret.RegistryPath, true))
             {
                 int value = (int)(key?.GetValue("AppIsConfigured") ?? 0);
                 if (value == 0)

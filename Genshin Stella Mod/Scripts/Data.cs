@@ -43,7 +43,7 @@ namespace GenshinStellaMod.Scripts
 
         public static string GetGamePath()
         {
-            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(Program.RegistryPath, true))
+            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(Secret.RegistryPath, true))
             {
                 string gPath = (string)(key?.GetValue("GamePath") ?? "");
                 return !string.IsNullOrEmpty(gPath) ? Path.Combine(gPath) : "";
