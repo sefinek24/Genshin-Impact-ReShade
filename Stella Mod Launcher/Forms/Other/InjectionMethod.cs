@@ -7,6 +7,8 @@ namespace StellaLauncher.Forms.Other
 {
     public partial class InjectionMethod : Form
     {
+        private bool _isLoading;
+
         public InjectionMethod()
         {
             InitializeComponent();
@@ -14,6 +16,8 @@ namespace StellaLauncher.Forms.Other
 
         private void InjectionMethod_Load(object sender, EventArgs e)
         {
+            _isLoading = true;
+
             switch (Run.InjectType)
             {
                 case "exe":
@@ -23,10 +27,14 @@ namespace StellaLauncher.Forms.Other
                     comboBox1.SelectedIndex = 1;
                     break;
             }
+
+            _isLoading = false;
         }
 
         private void Method_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (_isLoading) return;
+
             switch (comboBox1.SelectedIndex)
             {
                 case 0:
