@@ -76,7 +76,8 @@ namespace StellaLauncher
                 $"* ComputerInfo.GetCpuSerialNumber: {ComputerInfo.GetCpuSerialNumber()}\n" +
                 $"* AppPath: {AppPath}\n" +
                 $"* AppData: {AppData}\n" +
-                $"* FpsUnlockerCfgPath: {FpsUnlockerCfgPath}");
+                $"* FpsUnlockerCfgPath: {FpsUnlockerCfgPath}\n" +
+                $"* Language: {currentLang}");
 
 
             if (Process.GetProcessesByName(AppName).Length > 1)
