@@ -271,20 +271,27 @@ namespace StellaLauncher.Forms
 
 
             // Check InjectType
-            string injectMode = Program.Settings.ReadString("Launcher", "InjectType", "exe");
+            string injectMode = Program.Settings.ReadString("Injection", "Method", "exe");
             switch (injectMode)
             {
                 case "exe":
                     Run.InjectType = "exe";
                     break;
-                case "cmd":
-                    Run.InjectType = Secret.IsMyPatron ? "cmd" : "exe";
+                case "cmd" when Secret.IsMyPatron:
+                    Run.InjectType = "cmd";
                     break;
                 default:
                 {
                     Run.InjectType = "exe";
                     Program.Settings.WriteString("Injection", "Method", "exe");
                     Program.Settings.Save();
+
+                    if (!Secret.IsMyPatron)
+                    {
+                        status_Label.Text += @"[X] You cannot use batch files in Genshin Stella Mod without being a patron.";
+                        Log.SaveError("You cannot use batch files without being a patron.");
+                    }
+
                     break;
                 }
             }
