@@ -27,4 +27,4 @@ jobs:
 
       - name: Build Solution
         run: |
-          msbuild.exe Genshin Stella Mod Pack made by Sefinek.sln" /p:platform="Any CPU" /p:configuration="Release"
+          msbuild.exe "Genshin Stella Mod Pack made by Sefinek.sln" /p:platform="Any CPU" /p:configuration="Release"
