@@ -63,7 +63,7 @@ namespace StellaLauncher.Scripts.Download
             DateTime date = DateTime.Parse(remoteResDate, null, DateTimeStyles.RoundtripKind).ToUniversalTime().ToLocalTime();
 
             // Log
-            Log.Output($"Found the new update of resources from {date} - {remoteResDate}.");
+            Log.Output($"Found the new update of resources from {date} - {remoteResDate}");
 
             Default._status_Label.Text += $"[i] {string.Format(Resources.StellaResources_NewResourcesUpdateIsAvailable, date)}\n";
             _stellaResZip = Path.Combine(Default.ResourcesPath, $"Stella resources - v{remoteResVersion}.zip");
@@ -179,8 +179,6 @@ namespace StellaLauncher.Scripts.Download
             Default._youTube_LinkLabel.Show();
 
             Default._status_Label.Text += $"[✓] {Resources.StellaResources_SuccessfullyUpdatedResources}\n";
-            Log.Output($"Successfully unpacked: {_stellaResZip}");
-
             await CheckForUpdates.Analyze();
         }
 
@@ -225,8 +223,9 @@ namespace StellaLauncher.Scripts.Download
                     currentEntry++;
 
                     Default._preparingPleaseWait.Text = string.Format(Resources.StellaResources_UnpackingFiles_From_, currentEntry, totalEntries);
-                    Log.Output($"Unpacking files... {currentEntry} from {totalEntries}; totalBytes: {totalBytes}; totalBytesToExtract: {totalBytesToExtract};");
                 }
+
+                Log.Output($"Successfully unpacked; totalEntries {totalEntries}; totalBytes: {totalBytes}; totalBytesToExtract: {totalBytesToExtract};");
             }
         }
     }

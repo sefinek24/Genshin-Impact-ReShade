@@ -34,7 +34,7 @@ namespace PrepareStella.Scripts.Preparing
                 StellaResources json = JsonConvert.DeserializeObject<StellaResources>(responseContent);
 
                 // Deleting existing resources zip file
-                string zipPath = Path.Combine(resourcesGlobalPath, "Temp files", $"Stella resources - v{json.Message}.zip");
+                string zipPath = Path.Combine(resourcesGlobalPath, "Temp files", $"Stella Mod Resources - v{json.Message}.zip");
                 if (!Directory.Exists(Path.GetDirectoryName(zipPath))) Directory.CreateDirectory(Path.GetDirectoryName(zipPath) ?? string.Empty);
                 if (File.Exists(zipPath))
                 {

@@ -36,7 +36,7 @@ namespace StellaLauncher.Scripts.Patrons
             }
             else
             {
-                UpdateBenefits.Download("3dmigoto", $"3DMigoto - v{versions.Message.Resources.Migoto}.zip", Path.GetDirectoryName(migotoVerPath));
+                UpdateBenefits.Download("3dmigoto", $"3DMigoto Software - v{versions.Message.Resources.Migoto}.zip", Path.GetDirectoryName(migotoVerPath));
                 return 1;
             }
 
@@ -52,8 +52,13 @@ namespace StellaLauncher.Scripts.Patrons
                     Default._version_LinkLabel.Text = $@"v{modsJsonConverted.Version} → v{versions.Message.Resources.Mods}";
 
                     MessageBox.Show(
-                        $"A new update for the mod pack has been detected. Your custom mods will not be removed.\n\nClick OK to proceed with the update.\n\nYour version: v{modsJsonConverted.Version} from {modsJsonConverted.Date}\nNew version: v{versions.Message.Resources.Mods}",
+                        $"A new version of the default mod pack for patrons has been detected. Your custom mods will not be removed as long as they are located in folder number 3. The software developer is not responsible for any accidental removal of any mods.\n\nIf character models appear strange after the update, remove the default mod from the pack. Each character can have only 1 mod. In any case, if you encounter any issues, please visit the Genshin Stella Mod Discord server and request assistance.\n\nClick the OK button to continue.\n\nYour version: v{modsJsonConverted.Version} from {modsJsonConverted.Date}\nNew version: v{versions.Message.Resources.Mods}",
                         Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    string migotoCharsMods = Path.Combine(Default.ResourcesPath, "3DMigoto", "Mods", "1. Characters");
+                    if (Directory.Exists(migotoCharsMods)) await DeleteBenefits.DeleteDirectory(migotoCharsMods);
+                    string migotoOtherMods = Path.Combine(Default.ResourcesPath, "3DMigoto", "Mods", "2. Other");
+                    if (Directory.Exists(migotoOtherMods)) await DeleteBenefits.DeleteDirectory(migotoOtherMods);
 
                     UpdateBenefits.Download("3dmigoto-mods", $"3DMigoto Mods Update - v{versions.Message.Resources.Mods}.zip", Path.GetDirectoryName(modsVerPath));
                     return 1;

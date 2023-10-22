@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Security;
+using System.Threading.Tasks;
 using Microsoft.Win32;
 using StellaLauncher.Forms;
 
@@ -13,16 +14,22 @@ namespace StellaLauncher.Scripts.Patrons
         {
             // Delete presets for patrons
             string presets = Path.Combine(Default.ResourcesPath, "ReShade", "Presets", "3. Only for patrons");
-            if (Directory.Exists(presets)) DeleteDirectory(presets);
+            if (Directory.Exists(presets)) await DeleteDirectory(presets);
 
             // Delete addons for patrons
             string addons = Path.Combine(Default.ResourcesPath, "ReShade", "Addons");
-            if (Directory.Exists(addons)) DeleteDirectory(addons);
+            if (Directory.Exists(addons)) await DeleteDirectory(addons);
 
             // Delete 3DMigoto files
             string migotoDir = Path.Combine(Default.ResourcesPath, "3DMigoto");
             string[] filesToDelete = { "d3d11.dll", "d3dcompiler_46.dll", "loader.exe", "nvapi64.dll" };
             DeleteFiles(migotoDir, filesToDelete);
+
+            // Delete 3DMigoto default mods
+            string migotoCharsMods = Path.Combine(Default.ResourcesPath, "3DMigoto", "Mods", "1. Characters");
+            if (Directory.Exists(migotoCharsMods)) await DeleteDirectory(migotoCharsMods);
+            string migotoOtherMods = Path.Combine(Default.ResourcesPath, "3DMigoto", "Mods", "2. Other");
+            if (Directory.Exists(migotoOtherMods)) await DeleteDirectory(migotoOtherMods);
 
             // Delete cmd files: data/cmd
             string cmdPath = Path.Combine(Program.AppPath, "data", "cmd");
@@ -33,7 +40,7 @@ namespace StellaLauncher.Scripts.Patrons
 
                 // Delete: data/cmd/start
                 string cmdDir = Path.Combine(cmdPath, "start");
-                if (Directory.Exists(cmdDir)) DeleteDirectory(cmdDir);
+                if (Directory.Exists(cmdDir)) await DeleteDirectory(cmdDir);
             }
 
             // Delete registry value for patrons
@@ -74,13 +81,13 @@ namespace StellaLauncher.Scripts.Patrons
         }
 
         // Delete a directory and its contents
-        private static void DeleteDirectory(string directoryPath)
+        public static async Task DeleteDirectory(string directoryPath)
         {
-            Log.Output($"Deleting files in folder: {directoryPath}");
-
             try
             {
-                Directory.Delete(directoryPath, true);
+                await Task.Run(() => { Directory.Delete(directoryPath, true); });
+
+                Log.Output($"Deleted directory: {directoryPath}");
             }
             catch (Exception ex)
             {
@@ -88,6 +95,7 @@ namespace StellaLauncher.Scripts.Patrons
                 Log.SaveError(ex.ToString());
             }
         }
+
 
         // Delete registry key for patrons. Written by ChatGPT.
         private static void DeleteRegistryValue()

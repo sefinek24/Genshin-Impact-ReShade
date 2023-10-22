@@ -43,6 +43,8 @@ namespace StellaLauncher.Scripts.Patrons
 
             _outputDir = dirPathToUnpack;
 
+            Log.Output($"Found the new version of: {benefitName}");
+
             switch (benefitName)
             {
                 case "3dmigoto":
@@ -123,7 +125,6 @@ namespace StellaLauncher.Scripts.Patrons
             double downloadSpeedInMb = _downloadSpeed / (1024 * 1024);
 
             Default._preparingPleaseWait.Text = $@"{string.Format(Resources.NormalRelease_DownloadingUpdate_, $"{bytesReceivedMb:00.00}", $"{bytesReceiveMb:000.00}")} [{downloadSpeedInMb:00.00} MB/s]";
-
             Log.Output($"Downloading new update... {bytesReceivedMb:00.00} MB of {bytesReceiveMb:000.00} MB / {downloadSpeedInMb:00.00} MB/s");
         }
 
@@ -141,7 +142,7 @@ namespace StellaLauncher.Scripts.Patrons
             // Success
             Default._progressBar1.Hide();
             Default._preparingPleaseWait.Hide();
-            Default._status_Label.Text += $"[\u2713] {_successfullyUpdated}\n";
+            Default._status_Label.Text += $"[✓] {_successfullyUpdated}\n";
             Log.Output(_successfullyUpdated);
 
             // Check for updates again
