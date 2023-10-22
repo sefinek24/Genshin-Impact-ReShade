@@ -96,7 +96,7 @@ namespace StellaLauncher.Scripts.Patrons
 
             try
             {
-                string registryKeyPath = Secret.RegistryKeyPath;
+                const string registryKeyPath = Secret.RegistryKeyPath;
                 using (RegistryKey key = Registry.CurrentUser.OpenSubKey(registryKeyPath, true))
                 {
                     if (key != null)
