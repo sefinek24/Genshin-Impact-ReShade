@@ -13,6 +13,7 @@ using Microsoft.WindowsAPICodePack.Taskbar;
 using StellaLauncher.Forms;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts.Forms.MainForm;
+using StellaLauncher.Scripts.Patrons;
 
 namespace StellaLauncher.Scripts.Download
 {
@@ -164,10 +165,11 @@ namespace StellaLauncher.Scripts.Download
 
         private static async void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
+            // Unpack new mods
             Default._preparingPleaseWait.Text = Resources.StellaResources_UnpackingFiles;
-
             await UnzipWithProgress(_stellaResZip, Default.ResourcesPath);
 
+            // Done!
             Default._progressBar1.Hide();
             Default._preparingPleaseWait.Hide();
 

@@ -1541,6 +1541,15 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Deleting the previous version of the mod pack....
+        /// </summary>
+        internal static string StellaResources_DeletingThePreviousVersionOfTheModPack {
+            get {
+                return ResourceManager.GetString("StellaResources_DeletingThePreviousVersionOfTheModPack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Downloading resources... {0} MB / {1} MB.
         /// </summary>
         internal static string StellaResources_DownloadingResources {

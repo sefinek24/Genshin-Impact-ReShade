@@ -770,4 +770,7 @@ Czy chcesz odwiedzić Patreon.com i dokonać subskrypcji? Zyskasz dostęp do wie
 
 W nowszych wersjach Stella Mod zapisywanie ścieżek zostało przeniesione do rejestru. Jeśli właśnie zaktualizowałeś oprogramowanie, kliknij OK. Zostanie uruchomione okno konfiguracji.</value>
   </data>
+  <data name="StellaResources_DeletingThePreviousVersionOfTheModPack" xml:space="preserve">
+    <value>Usuwanie poprzedniej wersji paczki modów...</value>
+  </data>
 </root>

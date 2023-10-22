@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using Newtonsoft.Json;
 using StellaLauncher.Forms;
 using StellaLauncher.Models;
+using StellaLauncher.Properties;
 
 namespace StellaLauncher.Scripts.Patrons
 {
@@ -55,11 +56,14 @@ namespace StellaLauncher.Scripts.Patrons
                         $"A new version of the default mod pack for patrons has been detected. Your custom mods will not be removed as long as they are located in folder number 3. The software developer is not responsible for any accidental removal of any mods.\n\nIf character models appear strange after the update, remove the default mod from the pack. Each character can have only 1 mod. In any case, if you encounter any issues, please visit the Genshin Stella Mod Discord server and request assistance.\n\nClick the OK button to continue.\n\nYour version: v{modsJsonConverted.Version} from {modsJsonConverted.Date}\nNew version: v{versions.Message.Resources.Mods}",
                         Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                    // Delete old mods
+                    Default._preparingPleaseWait.Text = Resources.StellaResources_DeletingThePreviousVersionOfTheModPack;
                     string migotoCharsMods = Path.Combine(Default.ResourcesPath, "3DMigoto", "Mods", "1. Characters");
                     if (Directory.Exists(migotoCharsMods)) await DeleteBenefits.DeleteDirectory(migotoCharsMods);
                     string migotoOtherMods = Path.Combine(Default.ResourcesPath, "3DMigoto", "Mods", "2. Other");
                     if (Directory.Exists(migotoOtherMods)) await DeleteBenefits.DeleteDirectory(migotoOtherMods);
 
+                    // Update
                     UpdateBenefits.Download("3dmigoto-mods", $"3DMigoto Mods Update - v{versions.Message.Resources.Mods}.zip", Path.GetDirectoryName(modsVerPath));
                     return 1;
                 }

@@ -785,4 +785,7 @@ Do you want to reconfigure Stella Mod in the configuration window?</value>
   <data name="Gallery_ExitedTheGallery" xml:space="preserve">
     <value>Exited the gallery 🦊</value>
   </data>
+  <data name="StellaResources_DeletingThePreviousVersionOfTheModPack" xml:space="preserve">
+    <value>Deleting the previous version of the mod pack...</value>
+  </data>
 </root>
