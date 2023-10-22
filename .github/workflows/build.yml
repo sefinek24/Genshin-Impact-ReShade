@@ -31,8 +31,4 @@ jobs:
 
       - name: Build Solution
         run: |
-          msbuild.exe "Genshin Stella Mod Pack made by Sefinek.sln" /p:platform="Any CPU" /p:configuration="Release"
-
-      - name: Exclude Win App Packaging Project
-        run: |
-          msbuild.exe "Genshin Stella Mod Pack made by Sefinek.sln" /p:platform="Any CPU" /p:configuration="Release" /p:BuildProjectReferences=false /p:SkipInvalidConfigurations=true /p:BuildInParallel=false /p:SkipNonDependentProjects=true /p:ExcludeProjects="6. Win App Packaging Project"
+          msbuild.exe "Genshin Stella Mod Pack made by Sefinek.sln" /p:platform="Any CPU" /p:configuration="Release" /p:ExcludeProjects="6. Win App Packaging Project"
