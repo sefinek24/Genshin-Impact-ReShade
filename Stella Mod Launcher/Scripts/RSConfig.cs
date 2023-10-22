@@ -9,7 +9,6 @@ namespace StellaLauncher.Scripts
     {
         public static async Task<string> Prepare()
         {
-            // TODO?
             if (!Directory.Exists(Default.ResourcesPath))
             {
                 MessageBox.Show(@"Stella Resources was not found.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
