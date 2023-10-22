@@ -59,10 +59,10 @@ namespace GenshinStellaMod
             }
 
             bool isSubscriber = Data.IsUserMyPatron();
-            Console.WriteLine("⠀  ⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⢶⣦⡀");
+            Console.WriteLine("⠀  ⠀⠀⠀⠀⠀⠀⠀ ⢀⣤⡶⢶⣦⡀");
             Console.WriteLine("⠀  ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿");
             Console.WriteLine($"⠀  ⠀⠀⣿⡄⠀⠀⠀⠈⠀⠀⠀⠀⣾⡿                            {(!isSubscriber ? "Genshin Impact Stella Mod 2023" : "Genshin Impact Stella Mod Plus+ 2023")}");
-            Console.WriteLine($"⠀  ⠀⠀⠹⣿⣦⡀⠀⠀⠀⠀⢀⣾⣿                                {(!isSubscriber ? "     Start the game" : "~ Release for Subscribers ~")}");
+            Console.WriteLine($"⠀  ⠀⠀⠹⣿⣦⡀⠀⠀⠀⠀⢀⣾⣿                                   {(!isSubscriber ? "    Start the game" : "~ Release for Patrons ~")}");
             Console.WriteLine("⠀  ⠀⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿");
             Console.WriteLine("⠀⠀  ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟");
             Console.WriteLine("⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀");
@@ -72,7 +72,7 @@ namespace GenshinStellaMod
             Console.WriteLine("  ⠀⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇     » FPS Unlocker version : v" + args[2]);
             Console.WriteLine("  ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉⠀⠀⠀⠀⣠⠟");
             Console.WriteLine("  ⠀⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⡴⠟⠁                                         ~ Made by Sefinek");
-            Console.WriteLine(" =========================================================================================\n");
+            Console.WriteLine("=========================================================================================\n");
 
             /***** 1 *****/
             Console.WriteLine("1/3 - Starting program...");
