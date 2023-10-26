@@ -60,10 +60,10 @@ namespace StellaLauncher
 
         public static HttpClient SefinWebClient => WbClient.Value;
 
-        public static void DisposeHttpClient()
-        {
-            if (WbClient.IsValueCreated) WbClient.Value.Dispose();
-        }
+        // public static void DisposeHttpClient()
+        // {
+        //     if (WbClient.IsValueCreated) WbClient.Value.Dispose();
+        // }
 
         [DllImport("user32.dll")]
         private static extern bool SetProcessDpiAwarenessContext(IntPtr dpiContext);
