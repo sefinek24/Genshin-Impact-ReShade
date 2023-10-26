@@ -27,9 +27,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 
             try
             {
-                WebClient client = new WebClient();
-                client.Headers.Add("user-agent", Program.UserAgent);
-                string json = await client.DownloadStringTaskAsync("https://api.sefinek.net/api/v4/genshin-stella-mod/version/app/launcher");
+                string json = await Program.SefinWebClient.GetStringAsync("https://api.sefinek.net/api/v4/genshin-stella-mod/version/app/launcher");
                 StellaApiVersion res = JsonConvert.DeserializeObject<StellaApiVersion>(json);
 
                 string remoteVersion = res.Launcher.Version;
@@ -75,9 +73,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                     string jsonContent = File.ReadAllText(jsonFile);
                     LocalResources data = JsonConvert.DeserializeObject<LocalResources>(jsonContent);
 
-                    WebClient resClient = new WebClient();
-                    resClient.Headers.Add("user-agent", Program.UserAgent);
-                    string resJson = await resClient.DownloadStringTaskAsync("https://api.sefinek.net/api/v4/genshin-stella-mod/version/app/launcher/resources");
+                    string resJson = await Program.SefinWebClient.GetStringAsync("https://api.sefinek.net/api/v4/genshin-stella-mod/version/app/launcher/resources");
                     StellaResources resourcesRes = JsonConvert.DeserializeObject<StellaResources>(resJson);
 
                     if (data.Version != resourcesRes.Message)

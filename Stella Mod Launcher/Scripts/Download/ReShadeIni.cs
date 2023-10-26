@@ -15,8 +15,6 @@ namespace StellaLauncher.Scripts.Download
 {
     internal static class ReShadeIni
     {
-        private static readonly HttpClient HttpClient = new HttpClient();
-
         public static async Task<int> CheckForUpdates()
         {
             string gamePath = await Utils.GetGame("giGameDir");
@@ -42,8 +40,7 @@ namespace StellaLauncher.Scripts.Download
                 return -2;
             }
 
-            HttpClient.DefaultRequestHeaders.UserAgent.ParseAdd(Program.UserAgent);
-            string content = await HttpClient.GetStringAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini");
+            string content = await Program.SefinWebClient.GetStringAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini");
             NameValueCollection iniData = new NameValueCollection();
 
             using (StringReader reader = new StringReader(content))
@@ -117,7 +114,7 @@ namespace StellaLauncher.Scripts.Download
                         Default._updates_LinkLabel.Text = Resources.Default_Downloading;
                         TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
 
-                        HttpResponseMessage response = await HttpClient.GetAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini");
+                        HttpResponseMessage response = await Program.SefinWebClient.GetAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini");
                         if (response.IsSuccessStatusCode)
                         {
                             using (Stream contentStream = await response.Content.ReadAsStreamAsync())
