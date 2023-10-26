@@ -2,7 +2,8 @@ using System;
 using System.Collections.Specialized;
 using System.Drawing;
 using System.IO;
-using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ByteSizeLib;
@@ -14,6 +15,8 @@ namespace StellaLauncher.Scripts.Download
 {
     internal static class ReShadeIni
     {
+        private static readonly HttpClient HttpClient = new HttpClient();
+
         public static async Task<int> CheckForUpdates()
         {
             string gamePath = await Utils.GetGame("giGameDir");
@@ -39,9 +42,8 @@ namespace StellaLauncher.Scripts.Download
                 return -2;
             }
 
-            WebClient wc = new WebClient();
-            wc.Headers.Add("user-agent", Program.UserAgent);
-            string content = await wc.DownloadStringTaskAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini");
+            HttpClient.DefaultRequestHeaders.UserAgent.ParseAdd(Program.UserAgent);
+            string content = await HttpClient.GetStringAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini");
             NameValueCollection iniData = new NameValueCollection();
 
             using (StringReader reader = new StringReader(content))
@@ -88,10 +90,11 @@ namespace StellaLauncher.Scripts.Download
             Default._status_Label.Text += $"[i] {Resources.ReShadeIniUpdate_NewReShadeConfigVersionIsAvailable}\n";
             Log.Output($"New ReShade config version is available: v{localIniVersion} → v{remoteIniVersion}");
 
-            using (WebClient wc2 = new WebClient())
+            using (HttpClient wc2 = new HttpClient())
             {
-                await wc2.OpenReadTaskAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini");
-                string updateSize = ByteSize.FromBytes(Convert.ToInt64(wc.ResponseHeaders["Content-Length"])).KiloBytes.ToString("0.00");
+                HttpResponseMessage response = await wc2.GetAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini");
+                long contentLength = response.Content.Headers.ContentLength ?? 0;
+                string updateSize = ByteSize.FromBytes(contentLength).KiloBytes.ToString("0.00");
                 Default._status_Label.Text += $"{string.Format(Resources.ReShadeIniUpdate_UpdateSize_KB, updateSize)}\n";
                 Log.Output($"File size: {updateSize} KB");
                 TaskbarManager.Instance.SetProgressValue(100, 100);
@@ -114,10 +117,14 @@ namespace StellaLauncher.Scripts.Download
                         Default._updates_LinkLabel.Text = Resources.Default_Downloading;
                         TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
 
-                        using (WebClient wc = new WebClient())
+                        HttpResponseMessage response = await HttpClient.GetAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini");
+                        if (response.IsSuccessStatusCode)
                         {
-                            wc.Headers.Add("user-agent", Program.UserAgent);
-                            await wc.DownloadFileTaskAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini", reShadePath);
+                            using (Stream contentStream = await response.Content.ReadAsStreamAsync())
+                            using (FileStream fileStream = new FileStream(reShadePath, FileMode.Create, FileAccess.Write))
+                            {
+                                await contentStream.CopyToAsync(fileStream);
+                            }
 
                             if (File.Exists(reShadePath))
                             {
