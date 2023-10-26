@@ -36,12 +36,12 @@ namespace StellaLauncher
         public static readonly Icon Ico = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
 
         // Web
-        public static readonly string UserAgent = $"Mozilla/5.0 (compatible; StellaLauncherTESTTTTTTTTT/{AppVersion}; +{AppWebsiteSub})";
+        public static readonly string UserAgent = $"Mozilla/5.0 (compatible; StellaLauncher/{AppVersion}; +{AppWebsiteSub}) WebClient/0.0";
 
         private static readonly Lazy<HttpClient> WbClient = new Lazy<HttpClient>(() =>
         {
             HttpClient httpClient = new HttpClient();
-            httpClient.DefaultRequestHeaders.UserAgent.ParseAdd(UserAgent);
+            httpClient.DefaultRequestHeaders.UserAgent.ParseAdd($"Mozilla/5.0 (compatible; StellaLauncher/{AppVersion}; +{AppWebsiteSub}) HttpClient/0.0");
 
             return httpClient;
         });

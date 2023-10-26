@@ -75,9 +75,7 @@ namespace StellaLauncher.Scripts.Download
             }
 
             string remoteIniVersion = iniData["ConfigVersion"];
-
-            if (localIniVersion == remoteIniVersion)
-                return 0;
+            if (localIniVersion == remoteIniVersion) return 0;
 
             Default.UpdateIsAvailable = true;
             Default._updates_LinkLabel.LinkColor = Color.DodgerBlue;
