@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Interop;
 using Microsoft.Win32;
 
 namespace StellaLauncher.Scripts

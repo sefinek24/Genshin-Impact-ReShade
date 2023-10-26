@@ -46,16 +46,6 @@ namespace StellaLauncher
             return httpClient;
         });
 
-        public static HttpClient SefinWebClient => WbClient.Value;
-
-        public static void DisposeHttpClient()
-        {
-            if (WbClient.IsValueCreated)
-            {
-                WbClient.Value.Dispose();
-            }
-        }
-
         // public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v5" : "https://api.sefinek.net/api/v5";
         public static readonly string WebApi = "https://api.sefinek.net/api/v4";
 
@@ -67,6 +57,13 @@ namespace StellaLauncher
 
         // Registry
         public static readonly string RegistryPath = @"Software\Stella Mod Launcher";
+
+        public static HttpClient SefinWebClient => WbClient.Value;
+
+        public static void DisposeHttpClient()
+        {
+            if (WbClient.IsValueCreated) WbClient.Value.Dispose();
+        }
 
         [DllImport("user32.dll")]
         private static extern bool SetProcessDpiAwarenessContext(IntPtr dpiContext);

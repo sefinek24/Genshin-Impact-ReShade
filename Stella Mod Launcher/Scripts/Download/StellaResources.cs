@@ -13,7 +13,6 @@ using Microsoft.WindowsAPICodePack.Taskbar;
 using StellaLauncher.Forms;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts.Forms.MainForm;
-using StellaLauncher.Scripts.Patrons;
 
 namespace StellaLauncher.Scripts.Download
 {
