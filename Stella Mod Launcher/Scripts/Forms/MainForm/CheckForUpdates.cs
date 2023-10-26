@@ -149,6 +149,8 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 
                 Default._progressBar1.Value = 84;
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress);
+
+                Utils.ShowStartGameBts();
                 return 0;
             }
             catch (Exception e)

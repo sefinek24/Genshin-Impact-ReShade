@@ -39,7 +39,7 @@ namespace StellaLauncher.Forms
         public static LinkLabel _runFpsUnlocker_LinkLabel;
         public static LinkLabel _only3DMigoto_LinkLabel;
         public static LinkLabel _runGiLauncher_LinkLabel;
-        private static LinkLabel _becomeMyPatron_LinkLabel;
+        public static LinkLabel _becomeMyPatron_LinkLabel;
 
         // Bottom
         // public static PictureBox _toolsIco_PictureBox;
@@ -310,13 +310,6 @@ namespace StellaLauncher.Forms
 
 
             // Done (:
-            progressBar1.Value = 100;
-            startGame_LinkLabel.Visible = true;
-            injectReShade_LinkLabel.Visible = true;
-            runFpsUnlocker_LinkLabel.Visible = true;
-            only3DMigoto_LinkLabel.Visible = true;
-            runGiLauncher_LinkLabel.Visible = true;
-            if (!Secret.IsMyPatron) _becomeMyPatron_LinkLabel.Visible = true;
             Utils.HideProgressBar(false);
         }
 

@@ -170,6 +170,16 @@ namespace StellaLauncher.Scripts
             }
         }
 
+        public static void ShowStartGameBts()
+        {
+            Default._startGame_LinkLabel.Visible = true;
+            Default._injectReShade_LinkLabel.Visible = true;
+            Default._runFpsUnlocker_LinkLabel.Visible = true;
+            Default._only3DMigoto_LinkLabel.Visible = true;
+            Default._runGiLauncher_LinkLabel.Visible = true;
+            if (!Secret.IsMyPatron) Default._becomeMyPatron_LinkLabel.Visible = true;
+        }
+
         public static void HideProgressBar(bool error)
         {
             if (error)
