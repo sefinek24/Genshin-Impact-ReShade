@@ -533,20 +533,11 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Successfully downloaded ReShade.ini!.
-        /// </summary>
-        internal static string Default_SuccessfullyDownloadedReShadeIni {
-            get {
-                return ResourceManager.GetString("Default_SuccessfullyDownloadedReShadeIni", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Successfully downloaded ReShade.ini and saved in: {0}.
         /// </summary>
-        internal static string Default_SuccessfullyDownloadedReShadeIniAndSavedIn {
+        internal static string Default_SuccessfullyUpdatedReShadeCfgAndSavedIn {
             get {
-                return ResourceManager.GetString("Default_SuccessfullyDownloadedReShadeIniAndSavedIn", resourceCulture);
+                return ResourceManager.GetString("Default_SuccessfullyUpdatedReShadeCfgAndSavedIn", resourceCulture);
             }
         }
         
@@ -556,6 +547,15 @@ namespace StellaLauncher.Properties {
         internal static string Default_SuccessfullyRetrievedAndUpdatedTheCachedAppBackgroundWithID_ {
             get {
                 return ResourceManager.GetString("Default_SuccessfullyRetrievedAndUpdatedTheCachedAppBackgroundWithID_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successfully updated the ReShade.ini file!.
+        /// </summary>
+        internal static string Default_SuccessfullyUpdatedReShadeCfg {
+            get {
+                return ResourceManager.GetString("Default_SuccessfullyUpdatedReShadeCfg", resourceCulture);
             }
         }
         

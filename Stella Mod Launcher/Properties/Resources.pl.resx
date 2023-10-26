@@ -279,10 +279,10 @@ PAMIĘTAJ, ABY NIE UDOSTĘPNIAĆ NIKOMU SWOJEGO UID Z WIDOCZNYMI SHADERAMI!</val
   <data name="Default_Success" xml:space="preserve">
     <value>Sukces!</value>
   </data>
-  <data name="Default_SuccessfullyDownloadedReShadeIni" xml:space="preserve">
-    <value>Pomyślnie pobrano plik ReShade.ini!</value>
+  <data name="Default_SuccessfullyUpdatedReShadeCfg" xml:space="preserve">
+    <value>Pomyślnie zaktualizowano plik ReShade.ini!</value>
   </data>
-  <data name="Default_SuccessfullyDownloadedReShadeIniAndSavedIn" xml:space="preserve">
+  <data name="Default_SuccessfullyUpdatedReShadeCfgAndSavedIn" xml:space="preserve">
     <value>Pomyślnie pobrano plik ReShade.ini i zapisano w: {0}</value>
     <comment>Używane do Log.Output</comment>
   </data>

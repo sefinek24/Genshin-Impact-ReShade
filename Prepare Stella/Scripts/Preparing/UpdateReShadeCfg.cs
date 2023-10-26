@@ -62,7 +62,7 @@ namespace PrepareStella.Scripts.Preparing
             string addonsPath = Path.Combine(resourcesGlobal, "ReShade", "Addons");
             string effectsPath = Path.Combine(resourcesGlobal, "ReShade", "Shaders", "Effects");
             string cachePath = Path.Combine(resourcesGlobal, "ReShade", "Cache");
-            string presetsPath = Path.Combine(resourcesGlobal, "ReShade", "Presets", "3. Preset by Sefinek - Medium settings [Default].ini");
+            string presetsPath = Path.Combine(resourcesGlobal, "ReShade", "Presets", "1. Default preset - Medium settings.ini");
             string texturesPath = Path.Combine(resourcesGlobal, "ReShade", "Shaders", "Textures");
             string screenshotsPath = Path.Combine(resourcesGlobal, "Screenshots");
             string soundPath = Path.Combine(Program.AppPath, "data", "sounds", "screenshot.wav");
