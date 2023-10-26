@@ -2,7 +2,9 @@ using System;
 using System.ComponentModel;
 using System.IO;
 using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using StellaLauncher.Forms;
 using StellaLauncher.Properties;
 
@@ -29,12 +31,35 @@ namespace StellaLauncher.Scripts.Download
         {
             try
             {
-                using (WebClient client = new WebClient())
+                HttpResponseMessage response = await Program.SefinWebClient.GetAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/unlocker.config.json");
+                if (response.IsSuccessStatusCode)
                 {
-                    client.Headers.Add("user-agent", Program.UserAgent);
-                    client.DownloadFileCompleted += Client_DownloadFileCompleted;
+                    Stream contentStream = await response.Content.ReadAsStreamAsync();
+                    StreamReader reader = new StreamReader(contentStream);
+                    string json = await reader.ReadToEndAsync();
+                    contentStream.Close();
 
-                    await client.DownloadFileTaskAsync(new Uri("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/unlocker.config.json"), Program.FpsUnlockerCfgPath);
+                    // Parse the JSON
+                    dynamic config = JsonConvert.DeserializeObject(json);
+
+                    // Replace the placeholder with the actual game path
+                    string gamePath = await Utils.GetGame("giExe");
+                    config.GamePath = gamePath;
+
+                    // Serialize the updated JSON back to a string
+                    string updatedJson = JsonConvert.SerializeObject(config, Formatting.Indented);
+
+                    // Write the updated JSON to the config file
+                    File.WriteAllText(Program.FpsUnlockerCfgPath, updatedJson);
+
+                    // Update the status label to indicate successful completion
+                    Default._status_Label.Text += $"[✓] {Resources.Default_Success}\n";
+                    Log.Output("Done.");
+                }
+                else
+                {
+                    Default._status_Label.Text += $"[x] Download failed: {response.ReasonPhrase}\n";
+                    Log.SaveError($"Failed to download {Path.GetFileName(Program.FpsUnlockerCfgPath)} in {Path.GetDirectoryName(Program.FpsUnlockerCfgPath)}.\n\n{response.ReasonPhrase}");
                 }
             }
             catch (Exception ex)
@@ -42,23 +67,6 @@ namespace StellaLauncher.Scripts.Download
                 Default._status_Label.Text += $"[x] {ex.Message}\n";
                 Log.SaveError($"Failed to download {Path.GetFileName(Program.FpsUnlockerCfgPath)} in {Path.GetDirectoryName(Program.FpsUnlockerCfgPath)}.\n\n{ex}");
             }
-        }
-
-        private static async void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
-        {
-            // Read the downloaded FPS unlocker config file
-            string fpsUnlockerCfg = File.ReadAllText(Program.FpsUnlockerCfgPath);
-
-            // Replace the placeholder "{GamePath}" with the actual game path
-            string gamePath = await Utils.GetGame("giExe");
-            fpsUnlockerCfg = fpsUnlockerCfg.Replace("{GamePath}", gamePath.Replace(@"\", @"\\"));
-
-            // Write the updated FPS unlocker config file back to disk
-            File.WriteAllText(Program.FpsUnlockerCfgPath, fpsUnlockerCfg);
-
-            // Update the status label to indicate successful completion
-            Default._status_Label.Text += $"[✓] {Resources.Default_Success}\n";
-            Log.Output("Done.");
         }
     }
 }

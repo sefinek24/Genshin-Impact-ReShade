@@ -288,7 +288,7 @@ namespace StellaLauncher.Forms
 
                     if (!Secret.IsMyPatron)
                     {
-                        status_Label.Text += @"[X] You cannot use batch files in Genshin Stella Mod without being a patron.";
+                        status_Label.Text += @"[x] You cannot use batch files in Genshin Stella Mod without being a patron.";
                         Log.SaveError("You cannot use batch files without being a patron.");
                     }
 
