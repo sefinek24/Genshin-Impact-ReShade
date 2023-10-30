@@ -15,7 +15,7 @@ namespace StellaLauncher.Scripts.Patrons
     {
         public static async Task<int> Analyze()
         {
-            BenefitVersions versions = await GetVersions();
+            BenefitVersions remoteVersions = await GetVersions();
 
 
             // 3DMigoto
@@ -24,21 +24,22 @@ namespace StellaLauncher.Scripts.Patrons
             {
                 string migotoJson = File.ReadAllText(migotoVerPath);
                 BenefitsJsonVersion migotoJsonConverted = JsonConvert.DeserializeObject<BenefitsJsonVersion>(migotoJson);
-                if (versions.Message.Resources.Migoto != migotoJsonConverted.Version)
+
+                if (remoteVersions.Message.Resources.Migoto != migotoJsonConverted.Version)
                 {
-                    Default._version_LinkLabel.Text = $@"v{migotoJsonConverted.Version} → v{versions.Message.Resources.Migoto}";
+                    Default._version_LinkLabel.Text = $@"v{migotoJsonConverted.Version} → v{remoteVersions.Message.Resources.Migoto}";
 
                     MessageBox.Show(
-                        $"The new update for 3DMigoto has been detected. This update will not affect any downloaded mods.\n\nClick OK to proceed with the update.\n\nYour version: v{migotoJsonConverted.Version} from {migotoJsonConverted.Date}\nNew version: v{versions.Message.Resources.Migoto}",
+                        $"The new update for 3DMigoto has been detected. This update will not affect any downloaded mods.\n\nClick OK to proceed with the update.\n\nYour version: v{migotoJsonConverted.Version} from {migotoJsonConverted.Date}\nNew version: v{remoteVersions.Message.Resources.Migoto}",
                         Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    UpdateBenefits.Download("3dmigoto", $"3DMigoto Update - v{versions.Message.Resources.Migoto}.zip", Path.GetDirectoryName(migotoVerPath));
+                    UpdateBenefits.Download("3dmigoto", $"3DMigoto Update - v{remoteVersions.Message.Resources.Migoto}.zip", Path.GetDirectoryName(migotoVerPath));
                     return 1;
                 }
             }
             else
             {
-                UpdateBenefits.Download("3dmigoto", $"3DMigoto Software - v{versions.Message.Resources.Migoto}.zip", Path.GetDirectoryName(migotoVerPath));
+                UpdateBenefits.Download("3dmigoto", $"3DMigoto Software - v{remoteVersions.Message.Resources.Migoto}.zip", Path.GetDirectoryName(migotoVerPath));
                 return 1;
             }
 
@@ -49,12 +50,12 @@ namespace StellaLauncher.Scripts.Patrons
             {
                 string modsJson = File.ReadAllText(modsVerPath);
                 BenefitsJsonVersion modsJsonConverted = JsonConvert.DeserializeObject<BenefitsJsonVersion>(modsJson);
-                if (versions.Message.Resources.Mods != modsJsonConverted.Version)
+                if (remoteVersions.Message.Resources.Mods != modsJsonConverted.Version)
                 {
-                    Default._version_LinkLabel.Text = $@"v{modsJsonConverted.Version} → v{versions.Message.Resources.Mods}";
+                    Default._version_LinkLabel.Text = $@"v{modsJsonConverted.Version} → v{remoteVersions.Message.Resources.Mods}";
 
                     MessageBox.Show(
-                        $"A new version of the default mod pack for patrons has been detected. Your custom mods will not be removed as long as they are located in folder number 3. The software developer is not responsible for any accidental removal of any mods.\n\nIf character models appear strange after the update, remove the default mod from the pack. Each character can have only 1 mod. In any case, if you encounter any issues, please visit the Genshin Stella Mod Discord server and request assistance.\n\nClick the OK button to continue.\n\nYour version: v{modsJsonConverted.Version} from {modsJsonConverted.Date}\nNew version: v{versions.Message.Resources.Mods}",
+                        $"A new version of the default mod pack for patrons has been detected. Your custom mods will not be removed as long as they are located in folder number 3. The software developer is not responsible for any accidental removal of any mods.\n\nIf character models appear strange after the update, remove the default mod from the pack. Each character can have only 1 mod. In any case, if you encounter any issues, please visit the Genshin Stella Mod Discord server and request assistance.\n\nClick the OK button to continue.\n\nYour version: v{modsJsonConverted.Version} from {modsJsonConverted.Date}\nNew version: v{remoteVersions.Message.Resources.Mods}",
                         Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Delete old mods
@@ -65,7 +66,7 @@ namespace StellaLauncher.Scripts.Patrons
                     if (Directory.Exists(migotoOtherMods)) await DeleteBenefits.DeleteDirectory(migotoOtherMods);
 
                     // Update
-                    UpdateBenefits.Download("3dmigoto-mods", $"3DMigoto Mods Update - v{versions.Message.Resources.Mods}.zip", Path.GetDirectoryName(modsVerPath));
+                    UpdateBenefits.Download("3dmigoto-mods", $"3DMigoto Mods Update - v{remoteVersions.Message.Resources.Mods}.zip", Path.GetDirectoryName(modsVerPath));
                     return 1;
                 }
             }
@@ -77,21 +78,21 @@ namespace StellaLauncher.Scripts.Patrons
             {
                 string addonsJson = File.ReadAllText(addonsVersionPath);
                 BenefitsJsonVersion addonsJsonConverted = JsonConvert.DeserializeObject<BenefitsJsonVersion>(addonsJson);
-                if (versions.Message.Resources.Addons != addonsJsonConverted.Version)
+                if (remoteVersions.Message.Resources.Addons != addonsJsonConverted.Version)
                 {
-                    Default._version_LinkLabel.Text = $@"v{addonsJsonConverted.Version} → v{versions.Message.Resources.Addons}";
+                    Default._version_LinkLabel.Text = $@"v{addonsJsonConverted.Version} → v{remoteVersions.Message.Resources.Addons}";
 
                     MessageBox.Show(
-                        $"The new update for ReShade addons is available! Click the OK button to proceed with the update.\n\nYour version: v{addonsJsonConverted.Version} from {addonsJsonConverted.Date}\nNew version: v{versions.Message.Resources.Addons}",
+                        $"The new update for ReShade addons is available! Click the OK button to proceed with the update.\n\nYour version: v{addonsJsonConverted.Version} from {addonsJsonConverted.Date}\nNew version: v{remoteVersions.Message.Resources.Addons}",
                         Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    UpdateBenefits.Download("addons", $"Addons update - v{versions.Message.Resources.Addons}.zip", Path.GetDirectoryName(addonsVersionPath));
+                    UpdateBenefits.Download("addons", $"Addons update - v{remoteVersions.Message.Resources.Addons}.zip", Path.GetDirectoryName(addonsVersionPath));
                     return 1;
                 }
             }
             else
             {
-                UpdateBenefits.Download("addons", $"Addons - v{versions.Message.Resources.Addons}.zip", Path.GetDirectoryName(addonsVersionPath));
+                UpdateBenefits.Download("addons", $"Addons - v{remoteVersions.Message.Resources.Addons}.zip", Path.GetDirectoryName(addonsVersionPath));
                 return 1;
             }
 
@@ -102,21 +103,21 @@ namespace StellaLauncher.Scripts.Patrons
             {
                 string presetsJson = File.ReadAllText(presetsVersionPath);
                 BenefitsJsonVersion presetsJsonConverted = JsonConvert.DeserializeObject<BenefitsJsonVersion>(presetsJson);
-                if (versions.Message.Resources.Presets != presetsJsonConverted.Version)
+                if (remoteVersions.Message.Resources.Presets != presetsJsonConverted.Version)
                 {
-                    Default._version_LinkLabel.Text = $@"v{presetsJsonConverted.Version} → v{versions.Message.Resources.Presets}";
+                    Default._version_LinkLabel.Text = $@"v{presetsJsonConverted.Version} → v{remoteVersions.Message.Resources.Presets}";
 
                     MessageBox.Show(
-                        $"A new version of the Presets is available.\n\nYour version: v{presetsJsonConverted.Version} from {presetsJsonConverted.Date}\nNew version: v{versions.Message.Resources.Presets}",
+                        $"A new version of the Presets is available.\n\nYour version: v{presetsJsonConverted.Version} from {presetsJsonConverted.Date}\nNew version: v{remoteVersions.Message.Resources.Presets}",
                         Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    UpdateBenefits.Download("presets", $"Presets update - v{versions.Message.Resources.Presets}.zip", Path.GetDirectoryName(presetsVersionPath));
+                    UpdateBenefits.Download("presets", $"Presets update - v{remoteVersions.Message.Resources.Presets}.zip", Path.GetDirectoryName(presetsVersionPath));
                     return 1;
                 }
             }
             else
             {
-                UpdateBenefits.Download("presets", $"Presets - v{versions.Message.Resources.Presets}.zip", Path.GetDirectoryName(presetsVersionPath));
+                UpdateBenefits.Download("presets", $"Presets - v{remoteVersions.Message.Resources.Presets}.zip", Path.GetDirectoryName(presetsVersionPath));
                 return 1;
             }
 
@@ -127,21 +128,21 @@ namespace StellaLauncher.Scripts.Patrons
             {
                 string shadersJson = File.ReadAllText(shadersVersionPath);
                 BenefitsJsonVersion shadersJsonConverted = JsonConvert.DeserializeObject<BenefitsJsonVersion>(shadersJson);
-                if (versions.Message.Resources.Shaders != shadersJsonConverted.Version)
+                if (remoteVersions.Message.Resources.Shaders != shadersJsonConverted.Version)
                 {
-                    Default._version_LinkLabel.Text = $@"v{shadersJsonConverted.Version} → v{versions.Message.Resources.Shaders}";
+                    Default._version_LinkLabel.Text = $@"v{shadersJsonConverted.Version} → v{remoteVersions.Message.Resources.Shaders}";
 
                     MessageBox.Show(
-                        $"A new version of the Shaders is available.\n\nYour version: v{shadersJsonConverted.Version} from {shadersJsonConverted.Date}\nNew version: v{versions.Message.Resources.Shaders}",
+                        $"A new version of the Shaders is available.\n\nYour version: v{shadersJsonConverted.Version} from {shadersJsonConverted.Date}\nNew version: v{remoteVersions.Message.Resources.Shaders}",
                         Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    UpdateBenefits.Download("shaders", $"Shaders update - v{versions.Message.Resources.Shaders}.zip", Path.GetDirectoryName(shadersVersionPath));
+                    UpdateBenefits.Download("shaders", $"Shaders update - v{remoteVersions.Message.Resources.Shaders}.zip", Path.GetDirectoryName(shadersVersionPath));
                     return 1;
                 }
             }
             else
             {
-                UpdateBenefits.Download("shaders", $"Shaders - v{versions.Message.Resources.Shaders}.zip", Path.GetDirectoryName(shadersVersionPath));
+                UpdateBenefits.Download("shaders", $"Shaders - v{remoteVersions.Message.Resources.Shaders}.zip", Path.GetDirectoryName(shadersVersionPath));
                 return 1;
             }
 
@@ -152,21 +153,21 @@ namespace StellaLauncher.Scripts.Patrons
             {
                 string cmdJson = File.ReadAllText(cmdVersionPath);
                 BenefitsJsonVersion cmdJsonConverted = JsonConvert.DeserializeObject<BenefitsJsonVersion>(cmdJson);
-                if (versions.Message.Resources.Cmd != cmdJsonConverted.Version)
+                if (remoteVersions.Message.Resources.Cmd != cmdJsonConverted.Version)
                 {
-                    Default._version_LinkLabel.Text = $@"v{cmdJsonConverted.Version} → v{versions.Message.Resources.Cmd}";
+                    Default._version_LinkLabel.Text = $@"v{cmdJsonConverted.Version} → v{remoteVersions.Message.Resources.Cmd}";
 
                     MessageBox.Show(
-                        $"A new version of the CMD files is available.\n\nYour version: v{cmdJsonConverted.Version} from {cmdJsonConverted.Date}\nNew version: v{versions.Message.Resources.Cmd}",
+                        $"A new version of the CMD files is available.\n\nYour version: v{cmdJsonConverted.Version} from {cmdJsonConverted.Date}\nNew version: v{remoteVersions.Message.Resources.Cmd}",
                         Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    UpdateBenefits.Download("cmd", $"Batch files update - {versions.Message.Resources.Cmd}.zip", Path.GetDirectoryName(cmdVersionPath));
+                    UpdateBenefits.Download("cmd", $"Batch files update - {remoteVersions.Message.Resources.Cmd}.zip", Path.GetDirectoryName(cmdVersionPath));
                     return 1;
                 }
             }
             else
             {
-                UpdateBenefits.Download("cmd", $"Batch files - {versions.Message.Resources.Cmd}.zip", Path.GetDirectoryName(cmdVersionPath));
+                UpdateBenefits.Download("cmd", $"Batch files - {remoteVersions.Message.Resources.Cmd}.zip", Path.GetDirectoryName(cmdVersionPath));
                 return 1;
             }
 
