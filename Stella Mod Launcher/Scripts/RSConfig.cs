@@ -20,7 +20,7 @@ namespace StellaLauncher.Scripts
 
             // Presets
             string defaultPreset = Path.Combine(Default.ResourcesPath, "ReShade", "Presets", "1. Default preset - Medium settings.ini");
-            string rtPreset = Path.Combine(Default.ResourcesPath, "ReShade", "Presets", "3. Only for patrons", "Ray Tracing", "3. RT by Sefinek - Medium settings #1 [Default]                 .ini");
+            string rtPreset = Path.Combine(Default.ResourcesPath, "ReShade", "Presets", "3. Only for patrons", "Ray Tracing", "1. RT by Sefinek - Medium settings #1 [Default]                     .ini");
             string currentPreset;
 
             // Dirs
