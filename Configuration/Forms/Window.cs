@@ -11,12 +11,10 @@ namespace Configuration.Forms
 {
     public partial class Window : Form
     {
-        private static readonly string AppData = GetAppData();
-        private static bool _msStore;
         public static readonly string AppName = Assembly.GetExecutingAssembly().GetName().Name;
         private static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
-
-        private static IniFile _prepareIni;
+        private static readonly string AppData = GetAppData();
+        private static bool _msStore;
 
         private static int _newShortcutsOnDesktop;
         private static int _newInternetShortcutsOnDesktop;
@@ -26,6 +24,7 @@ namespace Configuration.Forms
         private static int _deleteReShadeCache;
         private static int _instOrUpdWt;
 
+        private static IniFile _prepareIni;
 
         // Main
         public Window()
