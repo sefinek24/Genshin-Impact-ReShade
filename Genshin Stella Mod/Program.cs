@@ -10,6 +10,7 @@ using GenshinStellaMod.Scripts;
 using Microsoft.Win32;
 using Newtonsoft.Json;
 using NLog;
+using NLog.Config;
 
 /*
  *
@@ -42,7 +43,7 @@ namespace GenshinStellaMod
             Logger = Logger.WithProperty("AppName", "Genshin Stella Mod");
             Logger = Logger.WithProperty("AppVersion", AppVersion);
             string assemblyFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            LogManager.Configuration = new NLog.Config.XmlLoggingConfiguration(assemblyFolder + @"\NLog_GSM.config");
+            LogManager.Configuration = new XmlLoggingConfiguration(assemblyFolder + @"\NLog_GSM.config");
 
             Console.OutputEncoding = Encoding.UTF8;
 
@@ -94,7 +95,7 @@ namespace GenshinStellaMod
 
             // Set app title etc.
             string launchMode = args[3];
-            Program.Logger.Info($"Launch mode: {launchMode}");
+            Logger.Info($"Launch mode: {launchMode}");
             Console.Title = $"Genshin Stella Mod v{AppVersion}";
 
 
@@ -137,19 +138,19 @@ namespace GenshinStellaMod
                     if (data == null)
                     {
                         Secret.IsMyPatron = false;
-                        Program.Logger.Info($"Received null from the server. Closing {AppName}...");
+                        Logger.Info($"Received null from the server. Closing {AppName}...");
 
                         Environment.Exit(6660666);
                     }
 
                     VerifyToken remote = JsonConvert.DeserializeObject<VerifyToken>(data);
-                    Program.Logger.Info($"Status: {remote.Status}; Tier {remote.TierId}; Message: {remote.Message ?? "Unknown"};");
+                    Logger.Info($"Status: {remote.Status}; Tier {remote.TierId}; Message: {remote.Message ?? "Unknown"};");
 
                     switch (remote.Status)
                     {
                         case 200:
                             Secret.IsMyPatron = true;
-                            Program.Logger.Info($"User is my Patron; {Secret.IsMyPatron}; Allowed;");
+                            Logger.Info($"User is my Patron; {Secret.IsMyPatron}; Allowed;");
                             Console.WriteLine("[✓] You're verified Patron");
                             break;
 
@@ -181,7 +182,7 @@ namespace GenshinStellaMod
             if (!Secret.IsMyPatron && (launchMode == "1" || launchMode == "5"))
             {
                 Console.WriteLine("[X] Not this time bro");
-                Program.Logger.Error($"An attempt was made to use launchMode {launchMode} without being a patron; Secret.IsMyPatron: {Secret.IsMyPatron}; Secret.Attempt: {Secret.Attempt}");
+                Logger.Error($"An attempt was made to use launchMode {launchMode} without being a patron; Secret.IsMyPatron: {Secret.IsMyPatron}; Secret.Attempt: {Secret.Attempt}");
                 MessageBox.Show("The security system has detected a breach.\n\nScrew you ((:", AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 Environment.Exit(1432166809);
