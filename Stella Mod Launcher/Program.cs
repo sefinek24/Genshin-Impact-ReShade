@@ -28,7 +28,7 @@ namespace StellaLauncher
         public static readonly string AppWebsiteFull = "https://sefinek.net/genshin-impact-reshade";
 
         // Files and folders
-        public static readonly string AppPath = AppContext.BaseDirectory;
+        public static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
         public static readonly string AppData = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
         public static readonly string PrepareLauncher = Path.Combine(AppPath, "Configuration.exe");
         public static readonly string ReShadePath = Path.Combine(AppPath, "data", "reshade", "ReShade64.dll");

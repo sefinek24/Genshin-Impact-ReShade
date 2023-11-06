@@ -28,7 +28,7 @@ namespace GenshinStellaMod
         public static readonly string AppVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
         // Files and folders
-        public static readonly string AppPath = AppContext.BaseDirectory;
+        public static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
         public static readonly string AppData = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
 
         // API
@@ -42,8 +42,7 @@ namespace GenshinStellaMod
         {
             Logger = Logger.WithProperty("AppName", "Genshin Stella Mod");
             Logger = Logger.WithProperty("AppVersion", AppVersion);
-            string assemblyFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            LogManager.Configuration = new XmlLoggingConfiguration(assemblyFolder + @"\NLog_GSM.config");
+            LogManager.Configuration = new XmlLoggingConfiguration(Path.Combine(AppPath, "NLog_GSM.config"));
 
             Console.OutputEncoding = Encoding.UTF8;
 

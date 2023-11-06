@@ -26,7 +26,6 @@ namespace Configuration.Forms
 
         private static IniFile _prepareIni;
 
-        // Main
         public Window()
         {
             _prepareIni = new IniFile(Path.Combine(AppData, "prepare-stella.ini"));
@@ -57,11 +56,8 @@ namespace Configuration.Forms
             }
             else
             {
-                int data1 = _prepareIni.ReadInt("PrepareStella", "NewShortcutsOnDesktop", 1);
-                checkBox2.Checked = data1 != 0;
-
-                int data2 = _prepareIni.ReadInt("PrepareStella", "InternetShortcutsInStartMenu", 1);
-                checkBox3.Checked = data2 != 0;
+                checkBox2.Checked = _prepareIni.ReadInt("PrepareStella", "NewShortcutsOnDesktop", 1) != 0;
+                checkBox3.Checked = _prepareIni.ReadInt("PrepareStella", "InternetShortcutsInStartMenu", 1) != 0;
             }
 
             bool foundResources = CheckData.ResourcesPath();
@@ -80,22 +76,14 @@ namespace Configuration.Forms
                 }
                 else
                 {
-                    int data3 = _prepareIni.ReadInt("PrepareStella", "DownloadOrUpdateShaders", 1);
-                    checkBox7.Checked = data3 != 0;
+                    checkBox7.Checked = _prepareIni.ReadInt("PrepareStella", "DownloadOrUpdateShaders", 1) != 0;
                 }
             }
 
-            int data4 = _prepareIni.ReadInt("PrepareStella", "UpdateReShadeConfig", 1);
-            checkBox4.Checked = data4 != 0;
-
-            int data5 = _prepareIni.ReadInt("PrepareStella", "UpdateFpsUnlockerConfig", 1);
-            checkBox5.Checked = data5 != 0;
-
-            int data6 = _prepareIni.ReadInt("PrepareStella", "DeleteReShadeCache", 1);
-            checkBox6.Checked = data6 != 0;
-
-            int data7 = _prepareIni.ReadInt("PrepareStella", "InstOrUpdWT", 1);
-            checkBox1.Checked = data7 != 0;
+            checkBox4.Checked = _prepareIni.ReadInt("PrepareStella", "UpdateReShadeConfig", 1) != 0;
+            checkBox5.Checked = _prepareIni.ReadInt("PrepareStella", "UpdateFpsUnlockerConfig", 1) != 0;
+            checkBox6.Checked = _prepareIni.ReadInt("PrepareStella", "DeleteReShadeCache", 1) != 0;
+            checkBox1.Checked = _prepareIni.ReadInt("PrepareStella", "InstOrUpdWT", 1) != 0;
 
             SaveIniData();
         }
@@ -105,8 +93,6 @@ namespace Configuration.Forms
             SaveIniData();
         }
 
-
-        // Checkboxes
         private void NewShortcutsOnDesktop_CheckedChanged(object sender, EventArgs e)
         {
             if (_msStore && checkBox2.Checked)
@@ -116,7 +102,7 @@ namespace Configuration.Forms
                 return;
             }
 
-            _newShortcutsOnDesktop = sender is CheckBox checkbox && checkbox.Checked ? 1 : 0;
+            _newShortcutsOnDesktop = checkBox2.Checked ? 1 : 0;
         }
 
         private void InternetShortcutsInStartMenu_CheckedChanged(object sender, EventArgs e)
@@ -128,7 +114,7 @@ namespace Configuration.Forms
                 return;
             }
 
-            _newInternetShortcutsOnDesktop = sender is CheckBox checkbox && checkbox.Checked ? 1 : 0;
+            _newInternetShortcutsOnDesktop = checkBox3.Checked ? 1 : 0;
         }
 
         private void DownloadOrUpdateShaders(object sender, EventArgs e)
@@ -146,26 +132,24 @@ namespace Configuration.Forms
 
         private void UpdateReShadeConfig_CheckedChanged(object sender, EventArgs e)
         {
-            _updateReShadeConfig = sender is CheckBox checkbox && checkbox.Checked ? 1 : 0;
+            _updateReShadeConfig = checkBox4.Checked ? 1 : 0;
         }
 
         private void UpdateFpsUnlockerConfig_CheckedChanged(object sender, EventArgs e)
         {
-            _updateFpsUnlockerConfig = sender is CheckBox checkbox && checkbox.Checked ? 1 : 0;
+            _updateFpsUnlockerConfig = checkBox5.Checked ? 1 : 0;
         }
 
         private void DeleteReShadeCache_CheckedChanged(object sender, EventArgs e)
         {
-            _deleteReShadeCache = sender is CheckBox checkbox && checkbox.Checked ? 1 : 0;
+            _deleteReShadeCache = checkBox6.Checked ? 1 : 0;
         }
 
         private void InstOrUpdWT_CheckedChanged(object sender, EventArgs e)
         {
-            _instOrUpdWt = sender is CheckBox checkbox && checkbox.Checked ? 1 : 0;
+            _instOrUpdWt = checkBox1.Checked ? 1 : 0;
         }
 
-
-        // Done! Save data.
         private static void SaveIniData()
         {
             _prepareIni.WriteInt("PrepareStella", "NewShortcutsOnDesktop", _newShortcutsOnDesktop);

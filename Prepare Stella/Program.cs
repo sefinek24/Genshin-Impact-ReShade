@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using NLog;
+using NLog.Config;
 using PrepareStella.Scripts;
 
 namespace PrepareStella
@@ -45,6 +46,7 @@ namespace PrepareStella
         {
             Logger = Logger.WithProperty("AppName", "Prepare Stella");
             Logger = Logger.WithProperty("AppVersion", AppVersion);
+            LogManager.Configuration = new XmlLoggingConfiguration(Path.Combine(AppPath, "NLog_PS.config"));
 
             Console.OutputEncoding = Encoding.UTF8;
 
