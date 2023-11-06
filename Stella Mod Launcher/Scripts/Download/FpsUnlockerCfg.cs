@@ -20,7 +20,7 @@ namespace StellaLauncher.Scripts.Download
         {
             Default._status_Label.Text += $"[i] {Resources.Default_DownloadingConfigFileForFPSUnlocker}\n";
 
-            Log.Output("Downloading config file for FPS Unlocker...");
+            Program.Logger.Info("Downloading config file for FPS Unlocker...");
 
             await StartDownload();
         }
@@ -52,18 +52,18 @@ namespace StellaLauncher.Scripts.Download
 
                     // Update the status label to indicate successful completion
                     Default._status_Label.Text += $"[✓] {Resources.Default_Success}\n";
-                    Log.Output("Done.");
+                    Program.Logger.Info("Done.");
                 }
                 else
                 {
                     Default._status_Label.Text += $"[x] Download failed: {response.ReasonPhrase}\n";
-                    Log.SaveError($"Failed to download {Path.GetFileName(Program.FpsUnlockerCfgPath)} in {Path.GetDirectoryName(Program.FpsUnlockerCfgPath)}.\n\n{response.ReasonPhrase}");
+                    Program.Logger.Error($"Failed to download {Path.GetFileName(Program.FpsUnlockerCfgPath)} in {Path.GetDirectoryName(Program.FpsUnlockerCfgPath)}.\n\n{response.ReasonPhrase}");
                 }
             }
             catch (Exception ex)
             {
                 Default._status_Label.Text += $"[x] {ex.Message}\n";
-                Log.SaveError($"Failed to download {Path.GetFileName(Program.FpsUnlockerCfgPath)} in {Path.GetDirectoryName(Program.FpsUnlockerCfgPath)}.\n\n{ex}");
+                Program.Logger.Error($"Failed to download {Path.GetFileName(Program.FpsUnlockerCfgPath)} in {Path.GetDirectoryName(Program.FpsUnlockerCfgPath)}.\n\n{ex}");
             }
         }
     }

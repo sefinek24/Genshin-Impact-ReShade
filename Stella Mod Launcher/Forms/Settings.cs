@@ -29,7 +29,7 @@ namespace StellaLauncher.Forms
         {
             Discord.SetStatus(Resources.Tools_BrowsingUtils);
 
-            Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
+            Program.Logger.Info(string.Format(Resources.Main_LoadedForm_, Text));
         }
 
         private void MouseDown_Event(object sender, MouseEventArgs e)
@@ -53,7 +53,7 @@ namespace StellaLauncher.Forms
 
         private void Exit_Click(object sender, EventArgs e)
         {
-            Log.Output(string.Format(Resources.Main_ClosedForm_, Text));
+            Program.Logger.Info(string.Format(Resources.Main_ClosedForm_, Text));
             Close();
 
             Discord.Home();
@@ -70,7 +70,7 @@ namespace StellaLauncher.Forms
             {
                 string fileName = Path.GetFileName(Program.PrepareLauncher);
                 MessageBox.Show(Resources.Program_RequiredFileFisrtAppLaunchExeWasNotFound_, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Log.SaveError($"Required file was not found in: {fileName}");
+                Program.Logger.Error($"Required file was not found in: {fileName}");
                 return;
             }
 
@@ -108,7 +108,7 @@ namespace StellaLauncher.Forms
                     Program.Settings.WriteInt("Launcher", "EnableMusic", 0);
                     break;
                 default:
-                    Log.SaveError(Resources.Tools_WrongEnableMusicValueInTheIniFile);
+                    Program.Logger.Error(Resources.Tools_WrongEnableMusicValueInTheIniFile);
                     MessageBox.Show(Resources.Tools_WrongEnableMusicValueInTheIniFile, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
             }
@@ -129,7 +129,7 @@ namespace StellaLauncher.Forms
                     MuteMusicOnStart.Text = Resources.Tools_MuteMusicOnStart;
                     break;
                 default:
-                    Log.SaveError(Resources.Tools_WrongEnableMusicValueInTheIniFile);
+                    Program.Logger.Error(Resources.Tools_WrongEnableMusicValueInTheIniFile);
                     MessageBox.Show(Resources.Tools_WrongEnableMusicValueInTheIniFile, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
             }
@@ -195,7 +195,7 @@ namespace StellaLauncher.Forms
             MessageBox.Show($"Successfully updated the ReShade.ini file. Paths to resource locations have been changed to current, and similar changes have been made.\n\nCurrent preset:\n{Path.GetFileNameWithoutExtension(currentPreset).Trim()}",
                 Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            Log.Output($"Updated ReShade config.\nCurrent preset: {currentPreset}");
+            Program.Logger.Info($"Updated ReShade config.\nCurrent preset: {currentPreset}");
         }
 
 

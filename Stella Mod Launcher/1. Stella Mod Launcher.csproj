@@ -205,6 +205,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Scripts\Delete.cs" />
     <Compile Include="Scripts\Forms\MainForm\Tray.cs" />
     <Compile Include="Scripts\Forms\MainForm\Run.cs" />
     <Compile Include="Scripts\RSConfig.cs" />
@@ -382,6 +383,9 @@
     </None>
     <None Include="LICENSE">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Properties\app.manifest" />
     <None Include="www\LICENSE">
@@ -740,6 +744,9 @@
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="NLog">
+      <Version>5.2.5</Version>
     </PackageReference>
     <PackageReference Include="System.Runtime.Caching">
       <Version>7.0.0</Version>

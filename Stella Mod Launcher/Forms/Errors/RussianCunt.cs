@@ -5,7 +5,6 @@ using System.Media;
 using System.Windows.Forms;
 using Microsoft.Toolkit.Uwp.Notifications;
 using StellaLauncher.Properties;
-using StellaLauncher.Scripts;
 
 namespace StellaLauncher.Forms.Errors
 {
@@ -26,7 +25,7 @@ namespace StellaLauncher.Forms.Errors
             }
             catch (Exception ex)
             {
-                Log.SaveError(ex.ToString());
+                Program.Logger.Error(ex.ToString());
             }
 
             Timer randomSizeTimer = new Timer { Interval = 500 };
@@ -74,15 +73,15 @@ namespace StellaLauncher.Forms.Errors
             }
             catch (Exception ex)
             {
-                Log.SaveError(ex.ToString());
+                Program.Logger.Error(ex.ToString());
             }
 
-            Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
+            Program.Logger.Info(string.Format(Resources.Main_LoadedForm_, Text));
         }
 
         private void WrongCountry_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Log.Output(string.Format(Resources.Main_ClosedForm_, Text));
+            Program.Logger.Info(string.Format(Resources.Main_ClosedForm_, Text));
         }
 
         private void ChangeWindowSize(object sender, EventArgs e)

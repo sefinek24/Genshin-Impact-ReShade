@@ -34,7 +34,7 @@ namespace GenshinStellaMod.Scripts
             foreach (Process process in processes)
             {
                 Console.WriteLine($"[i] Process {process.ProcessName} is running. Killing...");
-                Log.Output($"Killing process {process.ProcessName}...");
+                Program.Logger.Info($"Killing process {process.ProcessName}...");
 
                 process.Kill();
                 process.WaitForExit();

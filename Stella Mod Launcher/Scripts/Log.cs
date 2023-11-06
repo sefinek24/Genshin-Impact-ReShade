@@ -1,12 +1,8 @@
 using System;
-using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Reflection;
 using System.Windows.Forms;
-using Microsoft.Toolkit.Uwp.Notifications;
 using StellaLauncher.Forms.Errors;
-using StellaLauncher.Properties;
 
 namespace StellaLauncher.Scripts
 {
@@ -16,66 +12,7 @@ namespace StellaLauncher.Scripts
     internal static class Log
     {
         public static readonly string Folder = Path.Combine(Program.AppData, "logs");
-        private static readonly string OutputFile = Path.Combine(Folder, "launcher.output.log");
         public static readonly string CmdLogs = Path.Combine(Program.AppData, "logs", "cmd.output.log");
-
-        /// <summary>
-        ///     Initializes the necessary directories for logging.
-        /// </summary>
-        private static void InitDirs()
-        {
-            if (!Directory.Exists(Program.AppData)) Directory.CreateDirectory(Program.AppData);
-            if (!Directory.Exists(Folder)) Directory.CreateDirectory(Folder);
-        }
-
-        /// <summary>
-        ///     Logs the provided information to the output log file asynchronously.
-        /// </summary>
-        /// <param name="log">The log message to be written to the log file.</param>
-        public static async void Output(string log)
-        {
-            InitDirs();
-
-            try
-            {
-                using (StreamWriter sw = File.AppendText(OutputFile))
-                {
-                    await sw.WriteLineAsync($"[{Program.AppVersion}: {DateTime.Now}]: {log}");
-                }
-            }
-            catch (Exception ex)
-            {
-                using (StreamWriter sw = File.AppendText(Path.Combine(Folder, "launcher2.output.log")))
-                {
-                    await sw.WriteLineAsync($"[{DateTime.Now}]: {log}\n\nException: {ex}");
-                }
-            }
-
-            if (Debugger.IsAttached) Console.WriteLine($@"Log.Output(): {log}");
-        }
-
-        /// <summary>
-        ///     Logs the provided error information to the output log file asynchronously.
-        /// </summary>
-        /// <param name="log">The error log message to be written to the log file.</param>
-        public static async void SaveError(string log)
-        {
-            InitDirs();
-
-            try
-            {
-                using (StreamWriter sw = File.AppendText(OutputFile))
-                {
-                    await sw.WriteLineAsync($"[{Program.AppVersion}: {DateTime.Now}]: SaveError() • {Assembly.GetExecutingAssembly().GetName().Name}\n{log}\n");
-                }
-            }
-            catch
-            {
-                ShowToastNotification(Resources.Log_SomethingWentWrong, Resources.Log_ForSomeReasonICantSaveTheErrorInfoInTheLogFile);
-            }
-
-            if (Debugger.IsAttached) Console.WriteLine($@"Log.SaveError(): {log}");
-        }
 
         /// <summary>
         ///     Logs the provided exception and shows an error dialog.
@@ -83,7 +20,7 @@ namespace StellaLauncher.Scripts
         /// <param name="ex">The exception to be logged.</param>
         public static void ThrowError(Exception ex)
         {
-            SaveError(ex.ToString());
+            Program.Logger.Error(ex);
 
             // Show an error dialog with associated icon
             new ErrorOccurred { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.ShowDialog();
@@ -102,26 +39,6 @@ namespace StellaLauncher.Scripts
 
             // Exit the application with a specific exit code
             Environment.Exit(999991000);
-        }
-
-        /// <summary>
-        ///     Helper method to display a toast notification.
-        /// </summary>
-        /// <param name="title">The title of the toast notification.</param>
-        /// <param name="message">The message of the toast notification.</param>
-        private static void ShowToastNotification(string title, string message)
-        {
-            try
-            {
-                new ToastContentBuilder()
-                    .AddText(title)
-                    .AddText(message)
-                    .Show();
-            }
-            catch (Exception ex)
-            {
-                ErrorAndExit(ex);
-            }
         }
     }
 }

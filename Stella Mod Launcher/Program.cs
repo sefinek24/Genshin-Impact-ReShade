@@ -10,6 +10,7 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
 using Microsoft.Win32;
+using NLog;
 using StellaLauncher.Forms;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
@@ -46,8 +47,8 @@ namespace StellaLauncher
             return httpClient;
         });
 
-        // public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v5" : "https://api.sefinek.net/api/v5";
-        public static readonly string WebApi = "https://api.sefinek.net/api/v5";
+        public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v5" : "https://api.sefinek.net/api/v5";
+        //  public static readonly string WebApi = "https://api.sefinek.net/api/v5";
 
         // Config
         public static readonly IniFile Settings = new IniFile(Path.Combine(AppData, "settings.ini"));
@@ -58,12 +59,14 @@ namespace StellaLauncher
         // Registry
         public static readonly string RegistryPath = @"Software\Stella Mod Launcher";
 
-        public static HttpClient SefinWebClient => WbClient.Value;
-
         // public static void DisposeHttpClient()
         // {
         //     if (WbClient.IsValueCreated) WbClient.Value.Dispose();
         // }
+
+        public static readonly Logger Logger = LogManager.GetCurrentClassLogger();
+
+        public static HttpClient SefinWebClient => WbClient.Value;
 
         [DllImport("user32.dll")]
         private static extern bool SetProcessDpiAwarenessContext(IntPtr dpiContext);
@@ -85,20 +88,21 @@ namespace StellaLauncher
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(currentLang);
 
             // First log
-            Log.Output(
+            Logger.Info(
                 "==============================================================================================================\n" +
                 "A request to start the program has been received.\n" +
                 $"* Debugger.IsAttached: {Debugger.IsAttached}\n" +
-                $"* ComputerInfo.GetCpuSerialNumber: {ComputerInfo.GetCpuSerialNumber()}\n" +
                 $"* AppPath: {AppPath}\n" +
                 $"* AppData: {AppData}\n" +
                 $"* FpsUnlockerCfgPath: {FpsUnlockerCfgPath}\n" +
                 $"* Language: {currentLang}");
 
+            if (Debugger.IsAttached) Logger.Debug($"CPU Serial Number {ComputerInfo.GetCpuSerialNumber()}");
+
 
             if (Process.GetProcessesByName(AppName).Length > 1)
             {
-                Log.Output("One instance is currently open.");
+                Logger.Info("One instance is currently open.");
                 MessageBox.Show(string.Format(Resources.Program_SorryOneInstanceIsCurrentlyOpen_, Path.GetFileNameWithoutExtension(Assembly.GetEntryAssembly()?.Location)), AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 Environment.Exit(998765341);

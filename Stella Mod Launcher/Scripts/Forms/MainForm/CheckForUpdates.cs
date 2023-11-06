@@ -22,7 +22,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
             Default._updates_LinkLabel.Text = Resources.Default_CheckingForUpdates;
 
             TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
-            Log.Output("Checking for new updates...");
+            Program.Logger.Info("Checking for new updates...");
 
             try
             {
@@ -63,7 +63,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                     if (!File.Exists(jsonFile))
                     {
                         Default._status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, jsonFile)}\n";
-                        Log.SaveError($"File {jsonFile} was not found.");
+                        Program.Logger.Error($"File {jsonFile} was not found.");
 
                         Utils.HideProgressBar(true);
                         return -1;
@@ -104,7 +104,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 
                         if (msgReply == DialogResult.No || msgReply == DialogResult.Cancel)
                         {
-                            Log.Output("The update of ReShade.ini has been cancelled by the user.");
+                            Program.Logger.Info("The update of ReShade.ini has been cancelled by the user.");
                             MessageBox.Show(Resources.Default_ForSomeReasonYouDidNotGiveConsentForTheAutomaticUpdateOfTheReShadeFile, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
                             Utils.HideProgressBar(true);
@@ -144,7 +144,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 Default._updates_LinkLabel.Click += CheckUpdates_Click;
 
                 Default.UpdateIsAvailable = false;
-                Log.Output($"Not found any new updates. Your installed version: v{Program.AppVersion}");
+                Program.Logger.Info($"Not found any new updates. Your installed version: v{Program.AppVersion}");
 
                 Default._progressBar1.Value = 84;
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress);
@@ -160,7 +160,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 Default._updates_LinkLabel.Text = Resources.Default_OhhSomethingWentWrong;
                 Default._status_Label.Text += $"[x] {e.Message}\n";
 
-                Log.SaveError(string.Format(Resources.Default_SomethingWentWrongWhileCheckingForNewUpdates, e));
+                Program.Logger.Error(string.Format(Resources.Default_SomethingWentWrongWhileCheckingForNewUpdates, e));
                 Utils.HideProgressBar(true);
                 return -1;
             }

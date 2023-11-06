@@ -20,46 +20,39 @@ namespace StellaLauncher.Scripts
                 object value = registryKey?.GetValue("Secret");
                 if (!(value is string token)) return null;
 
-                Log.Output("Found token for patrons in the registry.");
+                Program.Logger.Info("Found a `Secret` token used by subscribers in the registry");
                 return token;
             }
         }
 
-        public static async Task<string> VerifyToken(string mainPcKey)
+        public static async Task<string> VerifyToken(string registrySecret)
         {
             try
             {
                 List<KeyValuePair<string, string>> postData = new List<KeyValuePair<string, string>>
                 {
-                    new KeyValuePair<string, string>("token", mainPcKey),
-                    new KeyValuePair<string, string>("MACAddress", ComputerInfo.GetMacAddress()),
+                    new KeyValuePair<string, string>("token", registrySecret),
                     new KeyValuePair<string, string>("motherboardId", ComputerInfo.GetMotherboardSerialNumber()),
                     new KeyValuePair<string, string>("cpuId", ComputerInfo.GetCpuSerialNumber()),
                     new KeyValuePair<string, string>("diskId", ComputerInfo.GetHardDriveSerialNumber())
                 };
 
-                FormUrlEncodedContent content = new FormUrlEncodedContent(postData);
-                HttpResponseMessage response = await Program.SefinWebClient.PostAsync($"{Program.WebApi}/genshin-stella-mod/access/launcher/verify", content).ConfigureAwait(false);
-
-                if (response.IsSuccessStatusCode)
+                using (HttpClient httpClient = new HttpClient())
                 {
-                    string json = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                    FormUrlEncodedContent content = new FormUrlEncodedContent(postData);
+                    HttpResponseMessage response = await httpClient.PostAsync($"{Program.WebApi}/genshin-stella-mod/access/launcher/verify", content);
+
+                    string json = await response.Content.ReadAsStringAsync();
+
+                    if (!response.IsSuccessStatusCode) Program.Logger.Error("Secret.VerifyToken(): " + json);
+
                     return json;
                 }
-
-                // TODO
-                string msg =
-                    $"Your subscription couldn't be verified by the server for some reason. The verification server is probably temporarily unavailable, or there might be another network error. Please try again or get in touch with Sefinek if the problem continues.\n\nHTTP Status Code: {response.StatusCode}, Reason Phrase: {response.ReasonPhrase}";
-
-                MessageBox.Show(msg, Program.AppName, MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-
-                Log.SaveError(msg);
-                return null;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(
-                    $"An unrecoverable error occurred while communicating with the API interface in Warsaw, Poland. The application must be closed immediately.\n\n{ex.InnerException ?? ex}",
+                    $"A critical error occurred during the verification of your subscription. For some reason, your computer was unable to send a request to the API interface located in Warsaw, Poland. Please check your antivirus software or visit the status page at status.sefinek.net.\n\nThe application must be closed immediately. Below, you will find error details. If you are unsure about what to do in this situation, please contact the software developer. Subscribers are provided with continuous technical support. Good luck!\n\n{ex.InnerException ?? ex}",
                     Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 Log.ErrorAndExit(ex);

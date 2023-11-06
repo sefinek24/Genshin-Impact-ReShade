@@ -56,14 +56,14 @@ namespace StellaLauncher.Scripts.Download
             }
             catch (Exception e)
             {
-                Log.SaveError(e.ToString());
+                Program.Logger.Error(e.ToString());
             }
 
             // Date
             DateTime date = DateTime.Parse(remoteResDate, null, DateTimeStyles.RoundtripKind).ToUniversalTime().ToLocalTime();
 
             // Log
-            Log.Output($"Found the new update of resources from {date} - {remoteResDate}");
+            Program.Logger.Info($"Found the new update of resources from {date} - {remoteResDate}");
 
             Default._status_Label.Text += $"[i] {string.Format(Resources.StellaResources_NewResourcesUpdateIsAvailable, date)}\n";
             _stellaResZip = Path.Combine(Default.ResourcesPath, $"Stella resources - v{remoteResVersion}.zip");
@@ -79,7 +79,7 @@ namespace StellaLauncher.Scripts.Download
 
                 // Final
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
-                Log.Output(string.Format(Resources.StellaResources_UpdateSize, $"{updateSize} MB"));
+                Program.Logger.Info(string.Format(Resources.StellaResources_UpdateSize, $"{updateSize} MB"));
             }
 
             // Taskbar
@@ -88,7 +88,7 @@ namespace StellaLauncher.Scripts.Download
 
         private static async void Update_Event(object sender, EventArgs e)
         {
-            Log.Output(Resources.NormalRelease_PreparingToDownloadNewUpdate);
+            Program.Logger.Info(Resources.NormalRelease_PreparingToDownloadNewUpdate);
             TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Normal);
 
             Default._updates_LinkLabel.LinkColor = Color.DodgerBlue;
@@ -107,7 +107,7 @@ namespace StellaLauncher.Scripts.Download
 
             try
             {
-                Log.Output("Starting...");
+                Program.Logger.Info("Starting...");
                 await StartDownload();
             }
             catch (Exception ex)
@@ -116,7 +116,7 @@ namespace StellaLauncher.Scripts.Download
                 Log.ThrowError(ex);
             }
 
-            Log.Output($"Output: {_stellaResZip}");
+            Program.Logger.Info($"Output: {_stellaResZip}");
         }
 
 
@@ -124,7 +124,7 @@ namespace StellaLauncher.Scripts.Download
         {
             if (File.Exists(Default.ResourcesPath)) File.Delete(Default.ResourcesPath);
 
-            Log.Output("Downloading in progress...");
+            Program.Logger.Info("Downloading in progress...");
             TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Normal);
 
             using (WebClient client = new WebClient())
@@ -159,7 +159,7 @@ namespace StellaLauncher.Scripts.Download
 
             Default._preparingPleaseWait.Text = $@"{string.Format(Resources.StellaResources_DownloadingResources, $"{bytesReceivedMb:00.00}", $"{bytesReceiveMb:00.00}")} [{downloadSpeedInMb:00.00} MB/s]";
 
-            Log.Output($"Downloading new update... {bytesReceivedMb:00.00} MB of {bytesReceiveMb:000.00} MB / {downloadSpeedInMb:00.00} MB/s");
+            Program.Logger.Info($"Downloading new update... {bytesReceivedMb:00.00} MB of {bytesReceiveMb:000.00} MB / {downloadSpeedInMb:00.00} MB/s");
         }
 
         private static async void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
@@ -226,7 +226,7 @@ namespace StellaLauncher.Scripts.Download
                     Default._preparingPleaseWait.Text = string.Format(Resources.StellaResources_UnpackingFiles_From_, currentEntry, totalEntries);
                 }
 
-                Log.Output($"Successfully unpacked; totalEntries {totalEntries}; totalBytes: {totalBytes}; totalBytesToExtract: {totalBytesToExtract};");
+                Program.Logger.Info($"Successfully unpacked; totalEntries {totalEntries}; totalBytes: {totalBytes}; totalBytesToExtract: {totalBytesToExtract};");
             }
         }
     }

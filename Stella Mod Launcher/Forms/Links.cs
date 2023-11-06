@@ -20,7 +20,7 @@ namespace StellaLauncher.Forms
         {
             Discord.SetStatus(Resources.Links_DRPC_OnTheWindowWithLinks);
 
-            Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
+            Program.Logger.Info(string.Format(Resources.Main_LoadedForm_, Text));
         }
 
         private void MouseDown_Event(object sender, MouseEventArgs e)
@@ -44,7 +44,7 @@ namespace StellaLauncher.Forms
 
         private void Exit_Click(object sender, EventArgs e)
         {
-            Log.Output(string.Format(Resources.Main_ClosedForm_, Text));
+            Program.Logger.Info(string.Format(Resources.Main_ClosedForm_, Text));
             Close();
 
             Discord.Home();

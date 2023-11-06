@@ -1,16 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Security;
 using System.Threading.Tasks;
-using Microsoft.Win32;
 using StellaLauncher.Forms;
 
 namespace StellaLauncher.Scripts.Patrons
 {
     internal static class DeleteBenefits
     {
-        public static async void Run()
+        public static async void Start()
         {
             // Delete presets for patrons
             string presets = Path.Combine(Default.ResourcesPath, "ReShade", "Presets", "3. Only for patrons");
@@ -43,8 +41,6 @@ namespace StellaLauncher.Scripts.Patrons
                 if (Directory.Exists(cmdDir)) await DeleteDirectory(cmdDir);
             }
 
-            // Delete registry value for patrons
-            DeleteRegistryValue();
 
             // Update ReShade.ini config
             await RsConfig.Prepare();
@@ -54,7 +50,7 @@ namespace StellaLauncher.Scripts.Patrons
         // Delete specific files in a folder
         private static void DeleteFiles(string folderPath, IEnumerable<string> filesToDelete)
         {
-            Log.Output($"Deleting files in folder: {folderPath}");
+            Program.Logger.Info($"Deleting files in folder: {folderPath}");
 
             try
             {
@@ -65,18 +61,18 @@ namespace StellaLauncher.Scripts.Patrons
                     if (File.Exists(filePath))
                     {
                         File.Delete(filePath);
-                        Log.Output($"Deleted file: {fileName}");
+                        Program.Logger.Info($"Deleted file: {fileName}");
                     }
                     else
                     {
-                        Log.Output($"File not found: {fileName}");
+                        Program.Logger.Info($"File not found: {fileName}");
                     }
                 }
             }
             catch (Exception ex)
             {
-                Log.Output($"An error occurred while deleting files in folder: {Path.GetDirectoryName(folderPath)}");
-                Log.SaveError(ex.ToString());
+                Program.Logger.Info($"An error occurred while deleting files in folder: {Path.GetDirectoryName(folderPath)}");
+                Program.Logger.Error(ex.ToString());
             }
         }
 
@@ -87,59 +83,13 @@ namespace StellaLauncher.Scripts.Patrons
             {
                 await Task.Run(() => { Directory.Delete(directoryPath, true); });
 
-                Log.Output($"Deleted directory: {directoryPath}");
+                Program.Logger.Info($"Deleted directory: {directoryPath}");
             }
             catch (Exception ex)
             {
-                Log.Output($"An error occurred while deleting folder: {Path.GetDirectoryName(directoryPath)}");
-                Log.SaveError(ex.ToString());
-            }
-        }
+                Program.Logger.Info($"An error occurred while deleting folder: {Path.GetDirectoryName(directoryPath)}");
 
-
-        // Delete registry key for patrons. Written by ChatGPT.
-        private static void DeleteRegistryValue()
-        {
-            const string secret = "Secret";
-
-            try
-            {
-                const string registryKeyPath = Secret.RegistryKeyPath;
-                using (RegistryKey key = Registry.CurrentUser.OpenSubKey(registryKeyPath, true))
-                {
-                    if (key != null)
-                    {
-                        object value = key.GetValue(secret);
-                        if (value != null)
-                        {
-                            key.DeleteValue(secret);
-                            Log.Output($"Deleted REG_SZ value '{secret}' from the registry.");
-                        }
-                        else
-                        {
-                            Log.Output($"REG_SZ value '{secret}' not found in the registry.");
-                        }
-                    }
-                    else
-                    {
-                        Log.Output($"Registry key '{secret}' not found.");
-                    }
-                }
-            }
-            catch (SecurityException securityEx)
-            {
-                Log.Output($"Permission error while deleting registry value '{secret}': {securityEx.Message}");
-                Log.SaveError(securityEx.ToString());
-            }
-            catch (IOException ioEx)
-            {
-                Log.Output($"I/O error while deleting registry value '{secret}': {ioEx.Message}");
-                Log.SaveError(ioEx.ToString());
-            }
-            catch (Exception ex)
-            {
-                Log.Output($"An error occurred while deleting registry value '{secret}': {ex.Message}");
-                Log.SaveError(ex.ToString());
+                Program.Logger.Error(ex.ToString());
             }
         }
     }

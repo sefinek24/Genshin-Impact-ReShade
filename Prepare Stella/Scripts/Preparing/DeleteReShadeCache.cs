@@ -52,11 +52,11 @@ namespace PrepareStella.Scripts.Preparing
             try
             {
                 await Task.Run(() => File.Delete(filePath));
-                Log.Output($"Deleted cache file: {filePath}");
+                Program.Logger.Info($"Deleted cache file: {filePath}");
             }
             catch (Exception ex)
             {
-                Log.Output($"Error deleting file {filePath}: {ex.Message}");
+                Program.Logger.Info($"Error deleting file {filePath}: {ex.Message}");
             }
         }
     }

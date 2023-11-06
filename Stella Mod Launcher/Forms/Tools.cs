@@ -25,7 +25,7 @@ namespace StellaLauncher.Forms
         {
             Discord.SetStatus(Resources.Tools_BrowsingUtils);
 
-            Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
+            Program.Logger.Info(string.Format(Resources.Main_LoadedForm_, Text));
         }
 
         private void MouseDown_Event(object sender, MouseEventArgs e)
@@ -49,7 +49,7 @@ namespace StellaLauncher.Forms
 
         private void Exit_Click(object sender, EventArgs e)
         {
-            Log.Output(string.Format(Resources.Main_ClosedForm_, Text));
+            Program.Logger.Info(string.Format(Resources.Main_ClosedForm_, Text));
             Close();
 
             Discord.Home();
@@ -168,7 +168,7 @@ namespace StellaLauncher.Forms
             if (!Directory.Exists(Log.Folder))
             {
                 MessageBox.Show($"Directory with the Stella Logs was not found in:\n\n{Log.Folder}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Log.Output($"Directory with the Stella Logs was not found in: {Log.Folder}");
+                Program.Logger.Info($"Directory with the Stella Logs was not found in: {Log.Folder}");
                 return;
             }
 

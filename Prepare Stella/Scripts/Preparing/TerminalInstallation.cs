@@ -21,7 +21,7 @@ namespace PrepareStella.Scripts.Preparing
                 string wtSettingsJson = Path.Combine(wtAppDataLocal, "settings.json");
                 string wtStateJson = Path.Combine(wtAppDataLocal, "state.json");
                 string readMeTxt = Path.Combine(wtAppDataLocal, "README.txt");
-                Log.Output($"Files and directories of backup.\n» wtAppDataLocal: {wtAppDataLocal}\n» wtSettingsJson: {wtSettingsJson}\n» wtStateJson: {wtStateJson}\n» readMeTxt: {readMeTxt}");
+                Program.Logger.Info($"Files and directories of backup.\n» wtAppDataLocal: {wtAppDataLocal}\n» wtSettingsJson: {wtSettingsJson}\n» wtStateJson: {wtStateJson}\n» readMeTxt: {readMeTxt}");
 
                 string localShortcut = Path.Combine(wtAppDataLocal, "WT Backup Folder.lnk");
                 if (File.Exists(localShortcut)) File.Delete(localShortcut);
@@ -39,7 +39,7 @@ namespace PrepareStella.Scripts.Preparing
                     if (!Directory.Exists(stellaWtBkp)) Directory.CreateDirectory(stellaWtBkp);
                     await Zip.CreateAsync(wtAppDataLocal, zipFile);
 
-                    Log.Output($"The Windows Terminal application configuration files have been backed up.\n» Source: {wtAppDataLocal}\n» Backup: {zipFile}");
+                    Program.Logger.Info($"The Windows Terminal application configuration files have been backed up.\n» Source: {wtAppDataLocal}\n» Backup: {zipFile}");
                 }
                 catch (Exception e)
                 {
@@ -54,7 +54,7 @@ namespace PrepareStella.Scripts.Preparing
                 shBkpWt.TargetPath = stellaWtBkp;
                 shBkpWt.Save();
 
-                Log.Output($@"Created: {Path.Combine(wtAppDataLocal, "Stella WT Backup.lnk")}");
+                Program.Logger.Info($@"Created: {Path.Combine(wtAppDataLocal, "Stella WT Backup.lnk")}");
                 Console.WriteLine(@"Saved in Stella AppData.");
             }
 
@@ -87,7 +87,7 @@ namespace PrepareStella.Scripts.Preparing
             }
             else
             {
-                Log.Output($"Windows Terminal has been successfully installed in {wtProgramFiles}");
+                Program.Logger.Info($"Windows Terminal has been successfully installed in {wtProgramFiles}");
 
                 string wtAppData2 = Utils.GetAppData();
                 if (string.IsNullOrEmpty(wtAppData2))

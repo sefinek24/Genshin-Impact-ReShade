@@ -17,12 +17,12 @@ namespace StellaLauncher.Forms.Errors
         {
             SystemSounds.Beep.Play();
 
-            Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
+            Program.Logger.Info(string.Format(Resources.Main_LoadedForm_, Text));
         }
 
         private void NotCompatible_Closed(object sender, FormClosedEventArgs e)
         {
-            Log.Output(string.Format(Resources.Main_ClosedForm_, Text));
+            Program.Logger.Info(string.Format(Resources.Main_ClosedForm_, Text));
         }
 
         private void DownloadInstaller_Click(object sender, EventArgs e)

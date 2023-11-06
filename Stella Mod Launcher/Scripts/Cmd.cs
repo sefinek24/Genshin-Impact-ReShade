@@ -20,12 +20,12 @@ namespace StellaLauncher.Scripts
 
             string commandArguments = cliWrapCommand.Arguments != null ? cliWrapCommand.Arguments.Build() : string.Empty;
 
-            Log.Output($"CliWrap: {cliWrapCommand.App} {commandArguments} {cliWrapCommand.WorkingDir}");
+            Program.Logger.Info($"CliWrap: {cliWrapCommand.App} {commandArguments} {cliWrapCommand.WorkingDir}");
 
             if (Default.UpdateIsAvailable && !cliWrapCommand.DownloadingSetup)
             {
                 MessageBox.Show(Resources.Cmd_UpdateIsRequired, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Log.Output("CliWrap: Command execution failed. An update is required.");
+                Program.Logger.Info("CliWrap: Command execution failed. An update is required.");
                 return false;
             }
 
@@ -45,7 +45,7 @@ namespace StellaLauncher.Scripts
                 // StandardOutput
                 string stdoutLine = !string.IsNullOrEmpty(stdout) ? $"\n✅ STDOUT: {stdout}" : "";
                 string stderrLine = !string.IsNullOrEmpty(stderr) ? $"\n❌ STDERR: {stderr}" : "";
-                Log.Output($"CliWrap: Successfully executed {cliWrapCommand.App}; Exit code: {result.ExitCode}; Start time: {result.StartTime}; Exit time: {result.ExitTime}{stdoutLine}{stderrLine};");
+                Program.Logger.Info($"CliWrap: Successfully executed {cliWrapCommand.App}; Exit code: {result.ExitCode}; Start time: {result.StartTime}; Exit time: {result.ExitTime}{stdoutLine}{stderrLine};");
 
                 // StandardError
                 if (result.ExitCode == 0) return true;
@@ -77,11 +77,11 @@ namespace StellaLauncher.Scripts
                         }
                         catch (Exception ex)
                         {
-                            Log.SaveError(ex.ToString());
+                            Program.Logger.Error(ex.ToString());
                         }
 
                         MessageBox.Show(Resources.Cmd_TheRequestOperationWasSuccessfulButYourPCNeedsToBeRebooted, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Log.Output($"CliWrap: {cliWrapCommand.App} installed. Exit code: {result.ExitCode}\nThe requested operation is successful. Changes will not be effective until the system is rebooted");
+                        Program.Logger.Info($"CliWrap: {cliWrapCommand.App} installed. Exit code: {result.ExitCode}\nThe requested operation is successful. Changes will not be effective until the system is rebooted");
                         return false;
                     }
 
@@ -89,7 +89,7 @@ namespace StellaLauncher.Scripts
                         string mainInfo = Resources.Cmd_FailedToUpdate;
                         MessageBox.Show(mainInfo, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                        Log.SaveError($"{mainInfo}\nRestart your computer or suspend antivirus program and try again.{info}");
+                        Program.Logger.Error($"{mainInfo}\nRestart your computer or suspend antivirus program and try again.{info}");
                         return false;
 
                     default:
@@ -97,7 +97,7 @@ namespace StellaLauncher.Scripts
                         if (!cliWrapCommand.DownloadingSetup)
                             Log.ErrorAndExit(new Exception($"Command execution failed because the underlying process ({cliWrapCommand.App}) returned a non-zero exit code - {result.ExitCode}.\n\n{info}"));
                         else
-                            Log.SaveError(info);
+                            Program.Logger.Error(info);
                         return false;
                     }
                 }
@@ -112,7 +112,7 @@ namespace StellaLauncher.Scripts
         public static void Start(string process)
         {
             Process.Start(process);
-            Log.Output($"Process.Start = {process}");
+            Program.Logger.Info($"Process.Start = {process}");
             Music.PlaySound("winxp", "restore");
         }
 

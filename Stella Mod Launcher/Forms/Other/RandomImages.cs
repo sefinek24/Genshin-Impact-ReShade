@@ -50,12 +50,12 @@ namespace StellaLauncher.Forms.Other
 
             Discord.SetStatus(Resources.RandomImages_GeneratingBeautifulPictures);
 
-            Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
+            Program.Logger.Info(string.Format(Resources.Main_LoadedForm_, Text));
         }
 
         private void RandomImg_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Log.Output(string.Format(Resources.Main_ClosedForm_, Text));
+            Program.Logger.Info(string.Format(Resources.Main_ClosedForm_, Text));
             Discord.Home();
         }
 
@@ -94,7 +94,7 @@ namespace StellaLauncher.Forms.Other
                 else
                     MessageBox.Show(e.Message, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                Log.SaveError(string.Format(Resources.RandomImages_ErrorWithTheAPI, url, e));
+                Program.Logger.Error(string.Format(Resources.RandomImages_ErrorWithTheAPI, url, e));
                 return null;
             }
         }
@@ -109,7 +109,7 @@ namespace StellaLauncher.Forms.Other
             webView21.CoreWebView2.Navigate(res.Message);
             text_Label.Visible = false;
 
-            Log.Output($"{string.Format(Resources.RandomImages_ReceivedDataFrom, new Uri(url).Host)}: {res.Success} {res.Status} {res.Category} {res.Endpoint} {res.Message}");
+            Program.Logger.Info($"{string.Format(Resources.RandomImages_ReceivedDataFrom, new Uri(url).Host)}: {res.Success} {res.Status} {res.Category} {res.Endpoint} {res.Message}");
         }
 
         private async void NekosBest(string url, bool gif) // The best api uwu
@@ -137,7 +137,7 @@ namespace StellaLauncher.Forms.Other
             text_Label.Visible = true;
             _sourceUrl = res.Results[0].Source_url;
 
-            Log.Output($"{string.Format(Resources.RandomImages_ReceivedDataFrom, new Uri(url).Host)}: {res.Results[0].Anime_name} {res.Results[0].Source_url} {res.Results[0].Url}");
+            Program.Logger.Info($"{string.Format(Resources.RandomImages_ReceivedDataFrom, new Uri(url).Host)}: {res.Results[0].Anime_name} {res.Results[0].Source_url} {res.Results[0].Url}");
         }
 
         private async void PurrBot(string url)
@@ -151,7 +151,7 @@ namespace StellaLauncher.Forms.Other
             _sourceUrl = res.Link;
             text_Label.Visible = false;
 
-            Log.Output($"{string.Format(Resources.RandomImages_ReceivedDataFrom, new Uri(url).Host)}: {res.Link}");
+            Program.Logger.Info($"{string.Format(Resources.RandomImages_ReceivedDataFrom, new Uri(url).Host)}: {res.Link}");
         }
 
         private async void NekoBot(string url)
@@ -172,7 +172,7 @@ namespace StellaLauncher.Forms.Other
             text_Label.Visible = true;
             _sourceUrl = res.Message;
 
-            Log.Output($"{string.Format(Resources.RandomImages_ReceivedDataFrom, new Uri(url).Host)}: {res.Color} {rgbColor} {res.Message}");
+            Program.Logger.Info($"{string.Format(Resources.RandomImages_ReceivedDataFrom, new Uri(url).Host)}: {res.Color} {rgbColor} {res.Message}");
         }
 
         /* Random animals */

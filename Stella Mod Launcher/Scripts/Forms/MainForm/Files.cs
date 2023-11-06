@@ -12,37 +12,32 @@ namespace StellaLauncher.Scripts.Forms.MainForm
     {
         public static async Task ScanAsync()
         {
-            await CheckFileAsync(Program.FpsUnlockerExePath);
-            await CheckFileAsync(Program.InjectorPath);
-            await CheckFileAsync(Program.ReShadePath);
+            CheckIfExists(Program.FpsUnlockerExePath);
+            CheckIfExists(Program.InjectorPath);
+            CheckIfExists(Program.ReShadePath);
 
-            if (!File.Exists(Program.FpsUnlockerCfgPath) && !Debugger.IsAttached)
-                await FpsUnlockerCfg.RunAsync();
-
-            if (Default._status_Label.Text.Length > 0)
-                Log.SaveError(Default._status_Label.Text);
+            if (!File.Exists(Program.FpsUnlockerCfgPath) && !Debugger.IsAttached) await FpsUnlockerCfg.RunAsync();
         }
 
-        private static async Task CheckFileAsync(string filePath)
+        private static void CheckIfExists(string filePath)
         {
-            if (!File.Exists(filePath) && !Debugger.IsAttached)
-                await Task.Run(() => { Default._status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, filePath)}\n"; });
+            if (!File.Exists(filePath) && !Debugger.IsAttached) Default._status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, filePath)}\n";
         }
 
-        public static async Task DeleteSetupAsync()
+        public static void DeleteSetupAsync()
         {
             if (!File.Exists(NormalRelease.SetupPathExe)) return;
 
             try
             {
-                await Task.Run(() => File.Delete(NormalRelease.SetupPathExe));
+                File.Delete(NormalRelease.SetupPathExe);
                 Default._status_Label.Text += $"{Resources.Default_DeletedOldSetupFromTempDirectory}\n";
-                Log.Output($"Deleted old setup file from temp folder: {NormalRelease.SetupPathExe}");
+                Program.Logger.Info($"Deleted old setup file from temp folder: {NormalRelease.SetupPathExe}");
             }
             catch (Exception ex)
             {
                 Default._status_Label.Text += $"[x] {ex.Message}\n";
-                Log.SaveError(ex.ToString());
+                Program.Logger.Error(ex.ToString());
             }
         }
     }

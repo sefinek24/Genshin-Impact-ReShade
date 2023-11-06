@@ -11,7 +11,7 @@ namespace StellaLauncher.Scripts
         public static void Opened()
         {
             MethodBase m = MethodBase.GetCurrentMethod();
-            Log.Output($"{Info} Delivered telemetry data '{m?.ReflectedType?.Name}' [{1}].");
+            Program.Logger.Info($"{Info} Delivered telemetry data '{m?.ReflectedType?.Name}' [{1}].");
         }
 
         public static void SendLogFiles()
@@ -24,9 +24,9 @@ namespace StellaLauncher.Scripts
 
 
                 // Last logs
-                Log.Output($"{Info} {Resources.Telemetry_LogFilesWasSentToDeveloper}");
+                Program.Logger.Info($"{Info} {Resources.Telemetry_LogFilesWasSentToDeveloper}");
                 MethodBase m = MethodBase.GetCurrentMethod();
-                Log.Output($"{Info} Delivered telemetry data '{m?.ReflectedType?.Name}' [{2}].");
+                Program.Logger.Info($"{Info} Delivered telemetry data '{m?.ReflectedType?.Name}' [{2}].");
             }
             catch (Exception ex)
             {
@@ -37,19 +37,19 @@ namespace StellaLauncher.Scripts
         public static void SupportMe_AnswYes()
         {
             MethodBase m = MethodBase.GetCurrentMethod();
-            Log.Output($"{Info} Delivered telemetry data '{m?.ReflectedType?.Name}' [3].");
+            Program.Logger.Info($"{Info} Delivered telemetry data '{m?.ReflectedType?.Name}' [3].");
         }
 
         public static void SupportMe_AnswNo()
         {
             MethodBase m = MethodBase.GetCurrentMethod();
-            Log.Output($"{Info} Delivered telemetry data '{m?.ReflectedType?.Name}' [4].");
+            Program.Logger.Info($"{Info} Delivered telemetry data '{m?.ReflectedType?.Name}' [4].");
         }
 
         public static void Error(Exception ex)
         {
             MethodBase m = MethodBase.GetCurrentMethod();
-            Log.Output($"{Info} Delivered telemetry data '{m?.ReflectedType?.Name}' [1].");
+            Program.Logger.Info($"{Info} Delivered telemetry data '{m?.ReflectedType?.Name}' [1].");
         }
     }
 }

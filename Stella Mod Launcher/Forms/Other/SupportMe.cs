@@ -37,12 +37,12 @@ namespace StellaLauncher.Forms.Other
 
         private void SupportMe_Shown(object sender, EventArgs e)
         {
-            Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
+            Program.Logger.Info(string.Format(Resources.Main_LoadedForm_, Text));
         }
 
         private void Exit_Click(object sender, EventArgs e)
         {
-            Log.Output(string.Format(Resources.Main_ClosedForm_, Text));
+            Program.Logger.Info(string.Format(Resources.Main_ClosedForm_, Text));
             Close();
         }
 
@@ -89,7 +89,7 @@ namespace StellaLauncher.Forms.Other
         {
             Close();
 
-            Log.Output(string.Format(Resources.Main_ClickedNoInForm_, Text));
+            Program.Logger.Info(string.Format(Resources.Main_ClickedNoInForm_, Text));
             Telemetry.SupportMe_AnswNo();
         }
 
@@ -98,7 +98,7 @@ namespace StellaLauncher.Forms.Other
             Close();
             MessageBox.Show(Resources.SupportMe_Thanks, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            Log.Output(string.Format(Resources.Main_ClickedYesInForm_, Text));
+            Program.Logger.Info(string.Format(Resources.Main_ClickedYesInForm_, Text));
             Telemetry.SupportMe_AnswYes();
         }
     }

@@ -14,7 +14,7 @@ namespace GenshinStellaMod.Scripts
             {
                 string commandArguments = cliWrapCommand.Arguments != null ? cliWrapCommand.Arguments.Build() : string.Empty;
 
-                Log.Output($"CliWrap: Run app: {cliWrapCommand.App}; Arguments {commandArguments}; WorkingDir {cliWrapCommand.WorkingDir};");
+                Program.Logger.Info($"CliWrap: Run app: {cliWrapCommand.App}; Arguments {commandArguments}; WorkingDir {cliWrapCommand.WorkingDir};");
 
 
                 // CliWrap
@@ -34,7 +34,7 @@ namespace GenshinStellaMod.Scripts
                 // StandardOutput
                 string stdoutLine = !string.IsNullOrEmpty(stdout) ? $"\nSTDOUT: {stdout}" : "";
                 string stderrLine = !string.IsNullOrEmpty(stderr) ? $"\nSTDERR: {stderr}" : "";
-                Log.Output($"CliWrap: Successfully executed {cliWrapCommand.App}; Exit code: {result.ExitCode}; Start time: {result.StartTime}; Exit time: {result.ExitTime}{stdoutLine}{stderrLine};");
+                Program.Logger.Info($"CliWrap: Successfully executed {cliWrapCommand.App}; Exit code: {result.ExitCode}; Start time: {result.StartTime}; Exit time: {result.ExitTime}{stdoutLine}{stderrLine};");
 
                 // Success?
                 if (result.ExitCode == 0 || (result.ExitCode == 2 && cliWrapCommand.ReloadExplorer)) return;

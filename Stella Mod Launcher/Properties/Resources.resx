@@ -271,7 +271,7 @@ Would you like to visit Patreon.com and make subscribe? You will gain access to 
   </data>
   <data name="Default_CachedAppBackground_ID" xml:space="preserve">
     <value>Cached app background in RAM memory '{0}'; ID: {1};</value>
-    <comment>Used for Log.Output</comment>
+    <comment>Used for Program.Logger.Info</comment>
   </data>
   <data name="Program_DoYouWantToJoinOurDiscord" xml:space="preserve">
     <value>Do you want to join our Discord server?</value>
@@ -321,7 +321,7 @@ Quit the process with name {0} and try again.</value>
   </data>
   <data name="Default_ChangedTheLauncherBackground_ID" xml:space="preserve">
     <value>Changed the launcher background. ID: {0}</value>
-    <comment>Used for Log.Output</comment>
+    <comment>Used for Program.Logger.Info</comment>
   </data>
   <data name="WebView2Handler_OhhSorrySomethingWentWrongWithWV2" xml:space="preserve">
     <value>Sorry. Something went wrong with WebView2.</value>
@@ -450,7 +450,7 @@ Do you want to see these files?</value>
   </data>
   <data name="Main_LoadedForm_" xml:space="preserve">
     <value>Loaded form {0}.</value>
-    <comment>Used for Log.Output</comment>
+    <comment>Used for Program.Logger.Info</comment>
   </data>
   <data name="StellaResources_SuccessfullyUnpacked" xml:space="preserve">
     <value>Successfully unpacked: {0}</value>
@@ -532,7 +532,7 @@ Do you want to reconfigure Stella Mod in the configuration window?</value>
   </data>
   <data name="Default_SuccessfullyUpdatedReShadeCfgAndSavedIn" xml:space="preserve">
     <value>Successfully downloaded ReShade.ini and saved in: {0}</value>
-    <comment>Used for Log.Output</comment>
+    <comment>Used for Program.Logger.Info</comment>
   </data>
   <data name="NormalRelease_EverythingIsOkay_StartingSetup" xml:space="preserve">
     <value>Everything is okay! Starting setup...</value>
@@ -550,7 +550,7 @@ Do you want to reconfigure Stella Mod in the configuration window?</value>
   </data>
   <data name="Default_TheReShadeIniFileStillDoesNotExist" xml:space="preserve">
     <value>The ReShade.ini file still does not exist!</value>
-    <comment>Used for Log.Output</comment>
+    <comment>Used for Program.Logger.Info</comment>
   </data>
   <data name="Utils_File_WasNotFoundAt_" xml:space="preserve">
     <value>File '{0}' was not found at '{1}'.</value>
@@ -608,7 +608,7 @@ If, for any reason, you are unable to update Stella Mod through the Launcher, pl
   </data>
   <data name="Main_ClosedForm_" xml:space="preserve">
     <value>Closed form {0}.</value>
-    <comment>Used for Log.Output</comment>
+    <comment>Used for Program.Logger.Info</comment>
   </data>
   <data name="error" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\asdfasfa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -733,7 +733,7 @@ Do you want to reconfigure Stella Mod in the configuration window?</value>
   </data>
   <data name="Default_FileDownloadHasBeenCanceledByTheUser" xml:space="preserve">
     <value>File download has been canceled by the user.</value>
-    <comment>Used for Log.Output</comment>
+    <comment>Used for Program.Logger.Info</comment>
   </data>
   <data name="flaticon_redo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\redo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

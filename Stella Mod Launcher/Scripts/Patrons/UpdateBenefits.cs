@@ -31,19 +31,19 @@ namespace StellaLauncher.Scripts.Patrons
             if (!Directory.Exists(BenefitsTempFile))
             {
                 Directory.CreateDirectory(BenefitsTempFile);
-                Log.Output($"Created dir: {BenefitsTempFile}");
+                Program.Logger.Info($"Created dir: {BenefitsTempFile}");
             }
 
             _zipFile = Path.Combine(BenefitsTempFile, zipFilename);
             if (File.Exists(_zipFile))
             {
                 File.Delete(_zipFile);
-                Log.Output($"Deleted file: {_zipFile}");
+                Program.Logger.Info($"Deleted file: {_zipFile}");
             }
 
             _outputDir = dirPathToUnpack;
 
-            Log.Output($"Found the new version of: {benefitName}");
+            Program.Logger.Info($"Found the new version of: {benefitName}");
 
             switch (benefitName)
             {
@@ -98,7 +98,7 @@ namespace StellaLauncher.Scripts.Patrons
                 }
                 catch (Exception ex)
                 {
-                    Log.SaveError(ex.ToString());
+                    Program.Logger.Error(ex.ToString());
                 }
             }
         }
@@ -125,16 +125,16 @@ namespace StellaLauncher.Scripts.Patrons
             double downloadSpeedInMb = _downloadSpeed / (1024 * 1024);
 
             Default._preparingPleaseWait.Text = $@"{string.Format(Resources.NormalRelease_DownloadingUpdate_, $"{bytesReceivedMb:00.00}", $"{bytesReceiveMb:000.00}")} [{downloadSpeedInMb:00.00} MB/s]";
-            Log.Output($"Downloading new update... {bytesReceivedMb:00.00} MB of {bytesReceiveMb:000.00} MB / {downloadSpeedInMb:00.00} MB/s");
+            Program.Logger.Info($"Downloading new update... {bytesReceivedMb:00.00} MB of {bytesReceiveMb:000.00} MB / {downloadSpeedInMb:00.00} MB/s");
         }
 
         private static async void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
             // Unpack files
-            Log.Output($"Unpacking {_zipFile} to {_outputDir}");
+            Program.Logger.Info($"Unpacking {_zipFile} to {_outputDir}");
             Default._preparingPleaseWait.Text = Resources.StellaResources_UnpackingFiles;
             await DownloadResources.UnzipWithProgress(_zipFile, _outputDir);
-            Log.Output($"Unpacked: {_zipFile}");
+            Program.Logger.Info($"Unpacked: {_zipFile}");
 
             // Delete file
             File.Delete(_zipFile);
@@ -143,7 +143,7 @@ namespace StellaLauncher.Scripts.Patrons
             Default._progressBar1.Hide();
             Default._preparingPleaseWait.Hide();
             Default._status_Label.Text += $"[✓] {_successfullyUpdated}\n";
-            Log.Output(_successfullyUpdated);
+            Program.Logger.Info(_successfullyUpdated);
 
             // Check for updates again
             int foundUpdated = await CheckForUpdates.Analyze();

@@ -245,7 +245,7 @@ namespace PrepareStella
                         $"/r /t 30 /c \"{AppName} - scheduled reboot.\n\nThank you for installing. If you need help, add me on Discord: sefinek\n\nGood luck and have fun!\"", null);
 
                     Console.WriteLine(@"Your computer will restart in 30 seconds. Save your work!");
-                    Log.Output("PC reboot was scheduled.");
+                    Program.Logger.Info("PC reboot was scheduled.");
                 }
             }
             else

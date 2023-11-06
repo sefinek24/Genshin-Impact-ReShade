@@ -27,7 +27,7 @@ namespace StellaLauncher.Scripts.Forms
                 MessageBox.Show(Resources.WebView2Handler_OhhSorrySomethingWentWrongWithWV2, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            Log.SaveError(ex.ToString());
+            Program.Logger.Error(ex.ToString());
         }
     }
 }

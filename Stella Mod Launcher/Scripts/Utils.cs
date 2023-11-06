@@ -30,7 +30,7 @@ namespace StellaLauncher.Scripts
             if (!File.Exists(fullGamePath))
             {
                 DialogResult result = MessageBox.Show(string.Format(Resources.Utils_FileWithGamePathWasNotFoundIn_DoYouWantToResetAllSMSettings, fullGamePath), Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                Log.Output($"File with game path was not found in: {fullGamePath}");
+                Program.Logger.Info($"File with game path was not found in: {fullGamePath}");
 
                 if (result != DialogResult.Yes) return string.Empty;
                 using (RegistryKey newKey = Registry.CurrentUser.CreateSubKey(Program.RegistryPath))
@@ -50,7 +50,7 @@ namespace StellaLauncher.Scripts
                 case "giDir":
                 {
                     string path = Path.GetDirectoryName(Path.GetDirectoryName(fullGamePath));
-                    Log.Output($"giDir: {path}");
+                    Program.Logger.Info($"giDir: {path}");
 
                     return path;
                 }
@@ -61,7 +61,7 @@ namespace StellaLauncher.Scripts
                     string giGameDir = Path.Combine(path);
                     if (Directory.Exists(giGameDir)) return giGameDir;
 
-                    Log.Output($"giGameDir: {giGameDir}");
+                    Program.Logger.Info($"giGameDir: {giGameDir}");
                     return string.Empty;
                 }
 
@@ -78,11 +78,11 @@ namespace StellaLauncher.Scripts
                     if (!File.Exists(genshinImpactExe))
                     {
                         MessageBox.Show(string.Format(Resources.Utils_LauncherFileDoesNotExists, genshinImpactExe), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        Log.Output($"Launcher file does not exists in: {genshinImpactExe} [giLauncher]");
+                        Program.Logger.Info($"Launcher file does not exists in: {genshinImpactExe} [giLauncher]");
                         return string.Empty;
                     }
 
-                    Log.Output($"giLauncher: {genshinImpactExe}");
+                    Program.Logger.Info($"giLauncher: {genshinImpactExe}");
                     return genshinImpactExe;
                 }
 
@@ -119,7 +119,7 @@ namespace StellaLauncher.Scripts
             try
             {
                 Process.Start(url);
-                Log.Output($"Opened '{url}' in default browser.");
+                Program.Logger.Info($"Opened '{url}' in default browser.");
             }
             catch (Exception ex)
             {
@@ -144,7 +144,7 @@ namespace StellaLauncher.Scripts
             string filePath = Path.Combine(fileName);
             bool fileExists = File.Exists(filePath);
 
-            Log.Output(fileExists ? $"File '{fileName}' was found at '{filePath}'." : $"File '{fileName}' was not found at '{filePath}'.");
+            Program.Logger.Info(fileExists ? $"File '{fileName}' was found at '{filePath}'." : $"File '{fileName}' was not found at '{filePath}'.");
 
             return fileExists;
         }
@@ -160,7 +160,7 @@ namespace StellaLauncher.Scripts
                 shortcut.TargetPath = Shortcut.ProgramExe;
                 shortcut.Save();
 
-                Log.Output($"Desktop shortcut has been created in: {Shortcut.ScPath}");
+                Program.Logger.Info($"Desktop shortcut has been created in: {Shortcut.ScPath}");
                 return true;
             }
             catch (Exception ex)
@@ -201,7 +201,7 @@ namespace StellaLauncher.Scripts
 
         public static void ShowToast(string title, string desc)
         {
-            Log.Output($"ShowToast: {title}");
+            Program.Logger.Info($"ShowToast: {title}");
 
             try
             {
@@ -211,8 +211,9 @@ namespace StellaLauncher.Scripts
                     .Show();
             }
             catch (Exception ex)
+
             {
-                Log.SaveError(ex.ToString());
+                Program.Logger.Error(ex.ToString());
             }
         }
     }

@@ -29,11 +29,11 @@ namespace StellaLauncher.Scripts
 
                     if (existingShortcut.TargetPath == ProgramExe && existingShortcut.WorkingDirectory == Program.AppPath)
                     {
-                        Log.Output("The desktop shortcut is already up to date.");
+                        Program.Logger.Info("The desktop shortcut is already up to date.");
                     }
                     else
                     {
-                        Log.Output("A desktop shortcut was found, but it has a different path. It will be overwritten.");
+                        Program.Logger.Info("A desktop shortcut was found, but it has a different path. It will be overwritten.");
                         createOrUpdateShortcut = true;
                     }
                 }
@@ -46,7 +46,7 @@ namespace StellaLauncher.Scripts
                 shortcut.TargetPath = ProgramExe;
                 shortcut.Save();
 
-                Log.Output("Created or updated the desktop shortcut.");
+                Program.Logger.Info("Created or updated the desktop shortcut.");
 
                 try
                 {
@@ -57,12 +57,12 @@ namespace StellaLauncher.Scripts
                 }
                 catch (Exception ex)
                 {
-                    Log.SaveError(ex.ToString());
+                    Program.Logger.Error(ex.ToString());
                 }
             }
             catch (Exception ex)
             {
-                Log.SaveError("An error occurred while checking desktop shortcut: " + ex.Message);
+                Program.Logger.Error("An error occurred while checking desktop shortcut: " + ex.Message);
             }
         }
     }

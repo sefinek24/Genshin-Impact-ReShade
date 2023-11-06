@@ -23,17 +23,17 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 case 20:
                 case 30:
                     DialogResult discordResult = MessageBox.Show(Resources.Program_DoYouWantToJoinOurDiscord, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    Log.Output($"Question (MessageBox): {Resources.Program_DoYouWantToJoinOurDiscord}");
+                    Program.Logger.Info($"Question (MessageBox): {Resources.Program_DoYouWantToJoinOurDiscord}");
                     if (discordResult == DialogResult.Yes) Utils.OpenUrl(Discord.Invitation);
-                    Log.Output($"Selected: {discordResult}");
+                    Program.Logger.Info($"Selected: {discordResult}");
                     break;
 
                 case 4:
                 case 17:
                     DialogResult feedbackResult = MessageBox.Show(Resources.Program_WouldYouShareOpinionAboutStellaMod, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    Log.Output($"Question (MessageBox): {Resources.Program_WouldYouShareOpinionAboutStellaMod}");
+                    Program.Logger.Info($"Question (MessageBox): {Resources.Program_WouldYouShareOpinionAboutStellaMod}");
                     if (feedbackResult == DialogResult.Yes) Utils.OpenUrl("https://www.trustpilot.com/review/genshin.sefinek.net");
-                    Log.Output($"Selected: {feedbackResult}");
+                    Program.Logger.Info($"Selected: {feedbackResult}");
                     break;
 
                 case 2:
@@ -54,7 +54,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 // case 80:
                 // case 110:
                 //     DialogResult logFilesResult = MessageBox.Show(Resources.Program_DoYouWantToSendUsanonymousLogFiles, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                //     Log.Output($"Question (MessageBox): Do you want to send log files? Selected: {logFilesResult}");
+                //     Program.Logger.Info($"Question (MessageBox): Do you want to send log files? Selected: {logFilesResult}");
                 //     if (logFilesResult == DialogResult.Yes)
                 //     {
                 //         Telemetry.SendLogFiles();
@@ -63,7 +63,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 //       if (showFilesResult == DialogResult.Yes)
                 //       {
                 //           Process.Start(Log.Folder);
-                //           Log.Output($"Opened: {Log.Folder}");
+                //           Program.Logger.Info($"Opened: {Log.Folder}");
                 //       }
                 //    }
 
@@ -95,6 +95,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 case 40:
                 case 50:
                     await ShowMessage(MessageType.ThankYouForYourSupport);
+
                     break;
             }
         }
@@ -106,7 +107,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 case MessageType.MessageBox:
                 {
                     MessageBox.Show(Resources.Default_ItAppersThatIsYourFirstTimeLaunchingTheLauncher, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Log.Output(Resources.Default_ItAppersThatIsYourFirstTimeLaunchingTheLauncher);
+                    Program.Logger.Info(Resources.Default_ItAppersThatIsYourFirstTimeLaunchingTheLauncher);
                     break;
                 }
                 case MessageType.StatusLabel:
@@ -116,7 +117,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                     else
                         Default._status_Label.Text += $"[i] {Resources.Default_ClickStartGameButtonToInjectReShadeAndUseFPSUnlock}\n[i] {Resources.LaunchCount_TheSimultaneousOfUseRSFU3DM}\n";
 
-                    Log.Output(Default._status_Label.Text);
+                    Program.Logger.Info(Default._status_Label.Text);
                     break;
                 }
                 case MessageType.TheSimultaneousOfUse:
@@ -124,7 +125,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                     if (!Secret.IsMyPatron)
                         Default._status_Label.Text += $"[i] {Resources.LaunchCount_TheSimultaneousOfUseRSFU3DM}\n";
 
-                    Log.Output(Default._status_Label.Text);
+                    Program.Logger.Info(Default._status_Label.Text);
                     break;
                 }
                 case MessageType.ThankYouForYourSupport:
@@ -132,7 +133,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                     if (Secret.IsMyPatron)
                         Default._status_Label.Text += $"[i] {Resources.LaunchCount_ThankYouForYourSupport}\n";
 
-                    Log.Output(Default._status_Label.Text);
+                    Program.Logger.Info(Default._status_Label.Text);
                     break;
                 }
                 default:

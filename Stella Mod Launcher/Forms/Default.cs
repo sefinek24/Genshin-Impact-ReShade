@@ -127,20 +127,20 @@ namespace StellaLauncher.Forms
 
             if (string.IsNullOrEmpty(resourcesPath))
             {
-                Log.SaveError("Path of the resources was not found. Is null or empty.");
+                Program.Logger.Error("Path of the resources was not found. Is null or empty.");
                 MessageBox.Show(Resources.Default_ResourceDirNotFound, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             if (!Directory.Exists(resourcesPath))
             {
-                Log.SaveError($"Directory with the resources '{resourcesPath}' was not found.");
+                Program.Logger.Error($"Directory with the resources '{resourcesPath}' was not found.");
                 MessageBox.Show(string.Format(Resources.Default_Directory_WasNotFound, resourcesPath), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             if (string.IsNullOrEmpty(resourcesPath) || !Directory.Exists(resourcesPath))
             {
                 _ = Cmd.Execute(new Cmd.CliWrap { App = Program.PrepareLauncher });
-                Environment.Exit(997890421);
+                Environment.Exit(0);
             }
 
             ResourcesPath = resourcesPath;
@@ -175,44 +175,58 @@ namespace StellaLauncher.Forms
 
 
             // Is user my Patron?
-            string mainPcKey = Secret.GetTokenFromRegistry();
+            string registrySecret = Secret.GetTokenFromRegistry();
             progressBar1.Value = 37;
-            if (mainPcKey != null)
+            if (registrySecret != null)
             {
                 label1.Text = @"/ᐠ. ｡.ᐟ\ᵐᵉᵒʷˎˊ˗";
 
-                string data = await Secret.VerifyToken(mainPcKey);
+                string data = await Secret.VerifyToken(registrySecret);
                 if (data == null)
                 {
                     Secret.IsMyPatron = false;
-                    Log.Output("Received null from the server. Deleting benefits in progress...");
 
-                    DeleteBenefits.Run();
-                    MessageBox.Show("Zero data received from the server. What happened? I don't know, but Sefinek probably will (:\nReport this error as soon as possible.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Environment.Exit(6660666);
+                    Program.Logger.Info("Received null from the server. Deleting benefits in progress...");
+                    DeleteBenefits.Start();
+                    Delete.RegistryKey("Secret");
+
+                    MessageBox.Show(
+                        "The customer received zero data. Your subscription cannot be verified for some reason. No further details are available. Please contact the software creator for more information.\n\nThe launcher will be started without the benefits of a subscription.",
+                        Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    label1.Text = @"null :c";
                 }
                 else
                 {
                     VerifyToken remote = JsonConvert.DeserializeObject<VerifyToken>(data);
-                    Log.Output($"Status: {remote.Status}; Tier {remote.TierId}; Message: {remote.Message ?? "Unknown"};");
+
+                    if (remote.DeleteBenefits) DeleteBenefits.Start();
+                    if (remote.DeleteToken) Delete.RegistryKey("Secret");
 
                     switch (remote.Status)
                     {
                         case 200:
                             Secret.IsMyPatron = true;
-                            Log.Output($"User is my Patron; {Secret.IsMyPatron}; Benefits are enabled;");
-
                             label1.Text = Resources.Default_GenshinStellaModForPatrons;
                             label1.TextAlign = ContentAlignment.MiddleRight;
 
+                            Program.Logger.Info($"The user is a subscriber to Stella Mod Plus ({Secret.IsMyPatron}). The benefits have been unlocked.");
                             Secret.BearerToken = remote.Token;
+                            break;
+
+                        case 400:
+                            Secret.IsMyPatron = false;
+                            label1.Text = @"Something went wrong /ᐠﹷ ‸ ﹷ ᐟ\ﾉ";
+
+                            MessageBox.Show(
+                                $"Oh, it looks like something went wrong during the verification of your subscription. The client sent incorrect information to the server. An error with code {remote.Status} has been received. Please check if you are not using VPNs or proxies.\n\nUnfortunately, the benefits of the subscription will not be available at this time. Please try again or contact the software creator (preferably on the Discord server or via email: contact@sefinek.net).\n\n\n{remote.Message}",
+                                Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             break;
 
                         case 500:
                             Secret.IsMyPatron = false;
-                            label1.Text = @"Something went wrong ( ̿–ᆺ ̿–)";
+                            label1.Text = @"Fatal server error /ᐠ_ ꞈ _ᐟ\";
 
-                            DeleteBenefits.Run();
                             MessageBox.Show(
                                 $"Unfortunately, there was a server-side error during the verification of your benefits. Please report this error on the Discord server or via email. Remember to provide your `backup code` as well.\nIf you launch the game after closing this message, you will be playing the free version.\n\n{remote.Message}",
                                 Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -222,9 +236,8 @@ namespace StellaLauncher.Forms
                             Secret.IsMyPatron = false;
                             label1.Text = @"Oh nooo... Sad cat... ( ̿–ᆺ ̿–)";
 
-                            DeleteBenefits.Run();
                             MessageBox.Show(
-                                $"An error occurred while verifying the benefits of your subscription. The server informed the client that it sent an invalid request. If you launch the game after closing this message, you will be playing the free version. Please contact Sefinek for more information. Error details can be found below.\n\n{remote.Message}",
+                                $"An error occurred while verifying the benefits of your subscription (error code {remote.Status}). The server informed the client that it sent an invalid request. If you launch the game after closing this message, you will be playing the free version. Please contact Sefinek for more information. Error details can be found below.\n\n{remote.Message}",
                                 Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             break;
                     }
@@ -233,7 +246,9 @@ namespace StellaLauncher.Forms
             else
             {
                 Secret.IsMyPatron = false;
-                DeleteBenefits.Run();
+
+                DeleteBenefits.Start();
+                Delete.RegistryKey("Secret");
             }
 
 
@@ -243,23 +258,23 @@ namespace StellaLauncher.Forms
 
             // Delete setup file from Temp directory
             progressBar1.Value = 50;
-            await Files.DeleteSetupAsync();
+            Files.DeleteSetupAsync();
 
             // Loaded form
-            Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
+            Program.Logger.Info(string.Format(Resources.Main_LoadedForm_, Text));
 
             // Launch count
             await LaunchCountHelper.CheckLaunchCountAndShowMessages();
             progressBar1.Value = 57;
 
             // Telemetry
-            Telemetry.Opened();
+            // Telemetry.Opened();
 
             // Discord RPC
             Discord.InitRpc();
 
 
-            // Updated was updated?
+            // Updated?
             int updatedLauncher = Program.Settings.ReadInt("Updates", "UpdateAvailable", 0);
             string oldVersion = Program.Settings.ReadString("Updates", "OldVersion", null);
             if (updatedLauncher == 1 && oldVersion != Program.AppVersion)
@@ -289,12 +304,15 @@ namespace StellaLauncher.Forms
                     if (!Secret.IsMyPatron)
                     {
                         status_Label.Text += @"[x] You cannot use batch files in Genshin Stella Mod without being a patron.";
-                        Log.SaveError("You cannot use batch files without being a patron.");
+                        Program.Logger.Error("You cannot use batch files without being a patron.");
                     }
 
                     break;
                 }
             }
+
+
+            status_Label.Text += "[i] You are currently using the API in version v5, which is still in development.\n";
 
 
             // Check for updates
@@ -320,12 +338,12 @@ namespace StellaLauncher.Forms
 
         private void Default_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Log.Output(string.Format(Resources.Main_ClosingForm_, Text));
+            Program.Logger.Info(string.Format(Resources.Main_ClosingForm_, Text));
         }
 
         private void Default_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Log.Output(Resources.Main_Closed);
+            Program.Logger.Info(Resources.Main_Closed);
         }
 
         private void MouseDown_Event(object sender, MouseEventArgs e)
@@ -401,7 +419,7 @@ namespace StellaLauncher.Forms
             if (string.IsNullOrEmpty(giLauncher))
             {
                 MessageBox.Show(Resources.Default_GameLauncherWasNotFound, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Log.SaveError(string.Format(Resources.Default_GameLauncherWasNotFoundIn, giLauncher));
+                Program.Logger.Error(string.Format(Resources.Default_GameLauncherWasNotFoundIn, giLauncher));
                 return;
             }
 

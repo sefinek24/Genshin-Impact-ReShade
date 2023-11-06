@@ -12,7 +12,7 @@ namespace GenshinStellaMod.Scripts
             string wavPath = Path.Combine(Program.AppPath, "data", "sounds", dir, $"{fileName}.wav");
             if (!File.Exists(wavPath))
             {
-                Log.SaveError($"The sound file with music was not found in the location: {wavPath}");
+                 Program.Logger.Error($"The sound file with music was not found in the location: {wavPath}");
                 return;
             }
 
@@ -36,11 +36,11 @@ namespace GenshinStellaMod.Scripts
                     }
                 }
 
-                Log.Output($"Playing sound file: {wavPath}");
+                Program.Logger.Info($"Playing sound file: {wavPath}");
             }
             catch (Exception ex)
             {
-                Log.SaveError(ex.ToString());
+                 Program.Logger.Error(ex.ToString());
             }
         }
     }

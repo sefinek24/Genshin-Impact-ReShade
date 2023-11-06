@@ -174,7 +174,7 @@ Ta czynność spowoduje utratę wszelkich niestandardowych konfiguracji, jakie d
   </data>
   <data name="Default_CachedAppBackground_ID" xml:space="preserve">
     <value>Zapisano tło '{0}' w pamięci RAM; Identyfikator: {1};</value>
-    <comment>Używane do Log.Output</comment>
+    <comment>Używane do Program.Logger.Info</comment>
   </data>
   <data name="Default_CanceledByTheUser_AreYouSureOfWhatYoureDoing" xml:space="preserve">
     <value>Anulowane przez użytkownika. Czy jesteś pewien tego, co robisz?</value>
@@ -284,7 +284,7 @@ PAMIĘTAJ, ABY NIE UDOSTĘPNIAĆ NIKOMU SWOJEGO UID Z WIDOCZNYMI SHADERAMI!</val
   </data>
   <data name="Default_SuccessfullyUpdatedReShadeCfgAndSavedIn" xml:space="preserve">
     <value>Pomyślnie pobrano plik ReShade.ini i zapisano w: {0}</value>
-    <comment>Używane do Log.Output</comment>
+    <comment>Używane do Program.Logger.Info</comment>
   </data>
   <data name="Default_SuccessfullyRetrievedAndUpdatedTheCachedAppBackgroundWithID_" xml:space="preserve">
     <value>Pomyślnie odebrano i zaktualizowano tło aplikacji z pamięci podręcznej (cache) o identyfikatorze {0}.</value>
@@ -299,7 +299,7 @@ Czy chciałbyś teraz pobrać ten plik, aby zapobiec przyszłym błędom i ręcz
   </data>
   <data name="Default_TheReShadeIniFileStillDoesNotExist" xml:space="preserve">
     <value>Plik ReShade.ini nadal nie istnieje!</value>
-    <comment>Używane do Log.Output</comment>
+    <comment>Używane do Program.Logger.Info</comment>
   </data>
   <data name="Default_TheSoundFileWithMusicWasNotFound" xml:space="preserve">
     <value>Nie odnaleziono pliku dźwiękowego z muzyką.</value>
@@ -381,14 +381,14 @@ Czy chciałbyś teraz pobrać ten plik, aby zapobiec przyszłym błędom i ręcz
   </data>
   <data name="Main_ClosedForm_" xml:space="preserve">
     <value>Zamknięto formularz {0}.</value>
-    <comment>Używane do Log.Output</comment>
+    <comment>Używane do Program.Logger.Info</comment>
   </data>
   <data name="Main_ClosingForm_" xml:space="preserve">
     <value>Zamykanie formularzu {0}...</value>
   </data>
   <data name="Main_LoadedForm_" xml:space="preserve">
     <value>Załadowano formularz {0}.</value>
-    <comment>Używane do Log.Output</comment>
+    <comment>Używane do Program.Logger.Info</comment>
   </data>
   <data name="Main_PleaseWait" xml:space="preserve">
     <value>Proszę czekać...</value>

@@ -38,7 +38,7 @@ namespace PrepareStella.Scripts
             try
             {
                 Process.Start(url);
-                Log.Output($"Opened '{url}' in default browser.");
+                Program.Logger.Info($"Opened '{url}' in default browser.");
             }
             catch (Exception ex)
             {
@@ -50,7 +50,7 @@ namespace PrepareStella.Scripts
         {
             if (!Directory.Exists(Program.WindowsApps))
             {
-                Log.Output($"{Program.WindowsApps} was not found.");
+                Program.Logger.Info($"{Program.WindowsApps} was not found.");
                 return null;
             }
 

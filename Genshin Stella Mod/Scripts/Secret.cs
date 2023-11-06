@@ -20,7 +20,7 @@ namespace GenshinStellaMod.Scripts
                 object value = registryKey?.GetValue("Secret");
                 if (!(value is string token)) return null;
 
-                Log.Output("Found token for patrons in the registry.");
+                Program.Logger.Info("Found token for patrons in the registry.");
                 return token;
             }
         }

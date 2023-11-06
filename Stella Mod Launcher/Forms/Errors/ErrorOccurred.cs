@@ -24,12 +24,12 @@ namespace StellaLauncher.Forms.Errors
 
         private void ErrorOccurred_Shown(object sender, EventArgs e)
         {
-            Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
+            Program.Logger.Info(string.Format(Resources.Main_LoadedForm_, Text));
         }
 
         private void ErrorOccurred_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Log.Output(string.Format(Resources.Main_ClosedForm_, Text));
+            Program.Logger.Info(string.Format(Resources.Main_ClosedForm_, Text));
         }
 
         private void SeeLogs_Button(object sender, EventArgs e)

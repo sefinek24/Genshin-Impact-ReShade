@@ -40,7 +40,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
             string cacheKey = $"background_{bgInt}";
             if (Cache.Contains(cacheKey) && Cache.Get(cacheKey) is Bitmap cachedImage)
             {
-                Log.Output(string.Format(Resources.Default_SuccessfullyRetrievedAndUpdatedTheCachedAppBackgroundWithID_, bgInt + 1));
+                Program.Logger.Info(string.Format(Resources.Default_SuccessfullyRetrievedAndUpdatedTheCachedAppBackgroundWithID_, bgInt + 1));
                 return cachedImage;
             }
 
@@ -49,13 +49,13 @@ namespace StellaLauncher.Scripts.Forms.MainForm
             if (!Utils.CheckFileExists(localization))
             {
                 MessageBox.Show(string.Format(Resources.Default_Sorry_Background_WasNotFound, BackgroundFiles[bgInt]), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Log.SaveError($"Sorry. Background {Path.GetFileName(localization)} was not found in: {Path.GetDirectoryName(localization)}");
+                Program.Logger.Error($"Sorry. Background {Path.GetFileName(localization)} was not found in: {Path.GetDirectoryName(localization)}");
                 return null;
             }
 
             Bitmap backgroundImage = new Bitmap(localization);
             Cache.Add(cacheKey, backgroundImage, new CacheItemPolicy { AbsoluteExpiration = DateTimeOffset.Now.AddMinutes(20) });
-            Log.Output($"Cached app background in RAM memory '{localization}'; ID: {bgInt + 1};");
+            Program.Logger.Info($"Cached app background in RAM memory '{localization}'; ID: {bgInt + 1};");
 
             toolTip.SetToolTip(changeBg, string.Format(Resources.Default_CurrentBackground, BackgroundFiles[bgInt]));
             return backgroundImage;
@@ -83,7 +83,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
             Program.Settings.WriteInt("Launcher", "Background", bgInt);
             Program.Settings.Save();
 
-            Log.Output(string.Format(Resources.Default_ChangedTheLauncherBackground_ID, bgInt));
+            Program.Logger.Info(string.Format(Resources.Default_ChangedTheLauncherBackground_ID, bgInt));
             return backgroundImage;
         }
 
@@ -98,7 +98,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
             string cacheKey = $"background_{bgInt}";
             if (Cache.Contains(cacheKey) && Cache.Get(cacheKey) is Bitmap cachedImage)
             {
-                Log.Output(string.Format(Resources.Default_SuccessfullyRetrievedAndUpdatedTheCachedAppBackgroundWithID_, bgInt + 1));
+                Program.Logger.Info(string.Format(Resources.Default_SuccessfullyRetrievedAndUpdatedTheCachedAppBackgroundWithID_, bgInt + 1));
                 return cachedImage;
             }
 
@@ -107,14 +107,14 @@ namespace StellaLauncher.Scripts.Forms.MainForm
             {
                 // If the file does not exist, show an error message and log the exception
                 MessageBox.Show(string.Format(Resources.Default_Sorry_Background_WasNotFound, BackgroundFiles[bgInt]), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Log.SaveError(string.Format(Resources.Default_Sorry_Background_WasNotFound, localization, bgInt));
+                Program.Logger.Error(string.Format(Resources.Default_Sorry_Background_WasNotFound, localization, bgInt));
                 return null;
             }
 
             Bitmap backgroundImage = new Bitmap(localization);
             Cache.Add(cacheKey, backgroundImage, new CacheItemPolicy { AbsoluteExpiration = DateTimeOffset.Now.AddMinutes(20) });
 
-            Log.Output(string.Format(Resources.Default_CachedAppBackground_ID, localization, bgInt + 1));
+            Program.Logger.Info(string.Format(Resources.Default_CachedAppBackground_ID, localization, bgInt + 1));
             return backgroundImage;
         }
 
@@ -131,7 +131,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
             Program.Settings.WriteInt("Launcher", "Background", 0);
             Program.Settings.Save();
             toolTip.SetToolTip(changeBg, Resources.Default_CurrentBackground_Default);
-            Log.Output(string.Format(Resources.Default_TheApplicationBackgroundHasBeenChangedToDefault_ID, 0));
+            Program.Logger.Info(string.Format(Resources.Default_TheApplicationBackgroundHasBeenChangedToDefault_ID, 0));
             return bgFormImage;
         }
     }

@@ -24,7 +24,7 @@ namespace PrepareStella.Scripts.Preparing
 
             if (!File.Exists(reshadeIniPath) || !File.Exists(reshadeLogPath)) Log.ErrorAndExit(new Exception($"Something went wrong. Config or log file for ReShade was not found in: {giGame}"), false, false);
 
-            Log.Output($"{Path.GetFileName(reshadeIniPath)} and {Path.GetFileName(reshadeLogPath)} were successfully downloaded.");
+            Program.Logger.Info($"{Path.GetFileName(reshadeIniPath)} and {Path.GetFileName(reshadeLogPath)} were successfully downloaded.");
 
             string cache = Path.Combine(Program.ResourcesGlobal, "ReShade", "Cache");
             if (!Directory.Exists(cache))

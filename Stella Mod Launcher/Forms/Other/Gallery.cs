@@ -19,7 +19,7 @@ namespace StellaLauncher.Forms.Other
 
             Discord.SetStatus(Resources.Gallery_BrowsingTheGallery);
 
-            Log.Output(string.Format(Resources.Main_LoadedForm_, Text));
+            Program.Logger.Info(string.Format(Resources.Main_LoadedForm_, Text));
         }
 
         private async void InitBrowser()
@@ -34,7 +34,7 @@ namespace StellaLauncher.Forms.Other
         {
             Discord.SetStatus(Resources.Gallery_ExitedTheGallery);
 
-            Log.Output(string.Format(Resources.Main_ClosedForm_, Text));
+            Program.Logger.Info(string.Format(Resources.Main_ClosedForm_, Text));
         }
     }
 }

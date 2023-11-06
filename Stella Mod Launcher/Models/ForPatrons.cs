@@ -29,6 +29,8 @@ namespace StellaLauncher.Models
         public bool Success { get; set; }
         public int Status { get; set; }
         public string Message { get; set; }
+        public bool DeleteBenefits { get; set; }
+        public bool DeleteToken { get; set; }
         public string Token { get; set; }
         public int TierId { get; set; }
     }
