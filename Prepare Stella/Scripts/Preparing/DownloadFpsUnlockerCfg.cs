@@ -20,7 +20,7 @@ namespace PrepareStella.Scripts.Preparing
                     string fpsUnlockerConfig = await httpClient.GetStringAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/unlocker.config.json");
 
                     string fpsUnlockerConfigPath = Path.Combine(unlockerFolderPath, "unlocker.config.json");
-                    string gameExePath = Program.SavedGamePath?.Replace("\\", "\\\\");
+                    string gameExePath = Start.SavedGamePath?.Replace("\\", "\\\\");
                     string fpsUnlockerConfigContent = fpsUnlockerConfig.Replace("{GamePath}", gameExePath ?? string.Empty);
 
                     await WriteToFileAsync(fpsUnlockerConfigPath, fpsUnlockerConfigContent);

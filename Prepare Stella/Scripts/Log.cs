@@ -16,8 +16,9 @@ namespace PrepareStella.Scripts
             Console.ForegroundColor = ConsoleColor.Blue;
             const string prompt = "\n» Something went wrong. Press ENTER to";
             Console.WriteLine(tryAgain ? $"{prompt} try again..." : $"{prompt} continue...");
-            Console.ReadLine();
+            Program.Logger.Warn(prompt);
 
+            Console.ReadLine();
             Console.WriteLine(@">> Waiting 5 seconds. Please wait... <<");
             Thread.Sleep(5000);
 
@@ -25,42 +26,9 @@ namespace PrepareStella.Scripts
             TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Normal);
         }
 
-
-        public static void Output(string log)
-        {
-            if (!Directory.Exists(Program.AppData)) Directory.CreateDirectory(Program.AppData);
-            if (!Directory.Exists(Folder)) Directory.CreateDirectory(Folder);
-
-            using (StreamWriter sw = File.AppendText(OutputFile))
-            {
-                sw.WriteLine($"[{DateTime.Now}]: {Console.Title}\n{log.Trim()}\n");
-            }
-        }
-
-        public static async void SaveErrorLog(Exception log, bool sendTelemetry)
-        {
-            if (!Directory.Exists(Program.AppData)) Directory.CreateDirectory(Program.AppData);
-            if (!Directory.Exists(Folder)) Directory.CreateDirectory(Folder);
-
-            using (StreamWriter sw = File.AppendText(OutputFile))
-            {
-                await sw.WriteLineAsync($"[{DateTime.Now}]: {Console.Title}\n{log}\n\n");
-            }
-
-            if (!sendTelemetry) return;
-            try
-            {
-                // await Telemetry.Error(log);
-            }
-            catch (Exception e)
-            {
-                Output($"Output() SaveErrorLog() - Telemetry error {e}");
-            }
-        }
-
         public static void ThrowError(Exception msg, bool tryAgain)
         {
-            SaveErrorLog(msg, true);
+            Program.Logger.Error(msg);
 
             try
             {
@@ -71,9 +39,9 @@ namespace PrepareStella.Scripts
 
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                SaveErrorLog(e, false);
+                Program.Logger.Error(ex);
             }
 
             Console.ForegroundColor = ConsoleColor.Red;
@@ -84,7 +52,7 @@ namespace PrepareStella.Scripts
 
         public static void ErrorAndExit(Exception log, bool hideError, bool reportIssue)
         {
-            SaveErrorLog(log, true);
+            Program.Logger.Error(log);
 
             if (!hideError)
             {
@@ -97,9 +65,9 @@ namespace PrepareStella.Scripts
 
                     TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
                 }
-                catch (Exception e)
+                catch (Exception ex)
                 {
-                    SaveErrorLog(e, false);
+                    Program.Logger.Error(ex);
                 }
 
                 Console.ForegroundColor = ConsoleColor.Red;

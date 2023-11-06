@@ -48,13 +48,13 @@ namespace PrepareStella.Scripts
 
         public static string GetWtProgramFiles()
         {
-            if (!Directory.Exists(Program.WindowsApps))
+            if (!Directory.Exists(Start.WindowsApps))
             {
-                Program.Logger.Info($"{Program.WindowsApps} was not found.");
+                Program.Logger.Info($"{Start.WindowsApps} was not found.");
                 return null;
             }
 
-            string[] dirs = Directory.GetDirectories(Program.WindowsApps, "Microsoft.WindowsTerminal_*", SearchOption.AllDirectories);
+            string[] dirs = Directory.GetDirectories(Start.WindowsApps, "Microsoft.WindowsTerminal_*", SearchOption.AllDirectories);
 
             string path = "";
             foreach (string dir in dirs) path = dir;

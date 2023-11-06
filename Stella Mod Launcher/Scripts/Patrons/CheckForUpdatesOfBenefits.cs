@@ -31,7 +31,7 @@ namespace StellaLauncher.Scripts.Patrons
 
                     MessageBox.Show(
                         $"The new update for 3DMigoto has been detected. This update will not affect any downloaded mods.\n\nClick OK to proceed with the update.\n\nYour version: v{migotoJsonConverted.Version} from {migotoJsonConverted.Date}\nNew version: v{remoteVersions.Message.Resources.Migoto}",
-                        Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     UpdateBenefits.Download("3dmigoto", $"3DMigoto Update - v{remoteVersions.Message.Resources.Migoto}.zip", Path.GetDirectoryName(migotoVerPath));
                     return 1;
@@ -56,7 +56,7 @@ namespace StellaLauncher.Scripts.Patrons
 
                     MessageBox.Show(
                         $"A new version of the default mod pack for patrons has been detected. Your custom mods will not be removed as long as they are located in folder number 3. The software developer is not responsible for any accidental removal of any mods.\n\nIf character models appear strange after the update, remove the default mod from the pack. Each character can have only 1 mod. In any case, if you encounter any issues, please visit the Genshin Stella Mod Discord server and request assistance.\n\nClick the OK button to continue.\n\nYour version: v{modsJsonConverted.Version} from {modsJsonConverted.Date}\nNew version: v{remoteVersions.Message.Resources.Mods}",
-                        Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Delete old mods
                     Default._preparingPleaseWait.Text = Resources.StellaResources_DeletingThePreviousVersionOfTheModPack;
@@ -84,7 +84,7 @@ namespace StellaLauncher.Scripts.Patrons
 
                     MessageBox.Show(
                         $"The new update for ReShade addons is available! Click the OK button to proceed with the update.\n\nYour version: v{addonsJsonConverted.Version} from {addonsJsonConverted.Date}\nNew version: v{remoteVersions.Message.Resources.Addons}",
-                        Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     UpdateBenefits.Download("addons", $"Addons update - v{remoteVersions.Message.Resources.Addons}.zip", Path.GetDirectoryName(addonsVersionPath));
                     return 1;
@@ -109,7 +109,7 @@ namespace StellaLauncher.Scripts.Patrons
 
                     MessageBox.Show(
                         $"A new version of the Presets is available.\n\nYour version: v{presetsJsonConverted.Version} from {presetsJsonConverted.Date}\nNew version: v{remoteVersions.Message.Resources.Presets}",
-                        Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     UpdateBenefits.Download("presets", $"Presets update - v{remoteVersions.Message.Resources.Presets}.zip", Path.GetDirectoryName(presetsVersionPath));
                     return 1;
@@ -134,7 +134,7 @@ namespace StellaLauncher.Scripts.Patrons
 
                     MessageBox.Show(
                         $"A new version of the Shaders is available.\n\nYour version: v{shadersJsonConverted.Version} from {shadersJsonConverted.Date}\nNew version: v{remoteVersions.Message.Resources.Shaders}",
-                        Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     UpdateBenefits.Download("shaders", $"Shaders update - v{remoteVersions.Message.Resources.Shaders}.zip", Path.GetDirectoryName(shadersVersionPath));
                     return 1;
@@ -159,7 +159,7 @@ namespace StellaLauncher.Scripts.Patrons
 
                     MessageBox.Show(
                         $"A new version of the CMD files is available.\n\nYour version: v{cmdJsonConverted.Version} from {cmdJsonConverted.Date}\nNew version: v{remoteVersions.Message.Resources.Cmd}",
-                        Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     UpdateBenefits.Download("cmd", $"Batch files update - {remoteVersions.Message.Resources.Cmd}.zip", Path.GetDirectoryName(cmdVersionPath));
                     return 1;
@@ -191,13 +191,13 @@ namespace StellaLauncher.Scripts.Patrons
                     using (StreamReader reader = new StreamReader(response.GetResponseStream()))
                     {
                         string errorResponse = await reader.ReadToEndAsync();
-                        MessageBox.Show($@"An error occurred: {errorResponse}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($@"An error occurred: {errorResponse}", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         Log.ErrorAndExit(new Exception(errorResponse));
                     }
                 }
                 else
                 {
-                    MessageBox.Show($@"An unrecoverable error occurred: {webEx.Message}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($@"An unrecoverable error occurred: {webEx.Message}", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Log.ErrorAndExit(webEx);
                 }
 
@@ -207,7 +207,7 @@ namespace StellaLauncher.Scripts.Patrons
             {
                 MessageBox.Show(
                     $"An unrecoverable error occurred while communicating with the API interface in Warsaw, Poland. The application must be closed immediately.\n\n{ex.InnerException ?? ex}",
-                    Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 Log.ErrorAndExit(ex);
                 return null;

@@ -30,7 +30,7 @@ namespace PrepareStella.Forms
             {
                 using (OpenFileDialog dialog = new OpenFileDialog())
                 {
-                    dialog.InitialDirectory = Program.ProgramFiles;
+                    dialog.InitialDirectory = Start.ProgramFiles;
                     dialog.Filter = @"Process (*.exe)|*.exe";
                     dialog.FilterIndex = 0;
                     dialog.RestoreDirectory = true;
@@ -81,12 +81,12 @@ namespace PrepareStella.Forms
                 return;
             }
 
-            using (RegistryKey key = Registry.CurrentUser.CreateSubKey(Program.RegistryPath))
+            using (RegistryKey key = Registry.CurrentUser.CreateSubKey(Start.RegistryPath))
             {
                 key?.SetValue("GameVersion", Path.GetFileName(selectedFile) == "GenshinImpact.exe" ? "1" : "2");
             }
 
-            Program.SavedGamePath = selectedFile;
+            Start.SavedGamePath = selectedFile;
             Close();
         }
 

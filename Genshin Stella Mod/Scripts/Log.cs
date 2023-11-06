@@ -15,56 +15,11 @@ namespace GenshinStellaMod.Scripts
             if (!Directory.Exists(Folder)) Directory.CreateDirectory(Folder);
         }
 
-        public static async void Output(string log)
-        {
-            try
-            {
-                using (StreamWriter sw = File.AppendText(OutputFile))
-                {
-                    await sw.WriteLineAsync($"[{Program.AppVersion}: {DateTime.Now}]: {log}");
-                }
-            }
-            catch
-            {
-                // . . .
-            }
-        }
-
-        public static async void WriteLine(string log)
-        {
-            try
-            {
-                using (StreamWriter sw = File.AppendText(OutputFile))
-                {
-                    await sw.WriteLineAsync($"[{Program.AppVersion}: {DateTime.Now}]: {log}");
-                }
-            }
-            catch
-            {
-                // . . .
-            }
-        }
-
-        public static async void SaveError(string log)
-        {
-            try
-            {
-                using (StreamWriter sw = File.AppendText(OutputFile))
-                {
-                    await sw.WriteLineAsync($"[{Program.AppVersion}: {DateTime.Now}]: SaveError() • {Assembly.GetExecutingAssembly().GetName().Name}\n{log}\n");
-                }
-            }
-            catch
-            {
-                // . . .
-            }
-        }
-
         public static void ThrowError(Exception ex)
         {
             Console.WriteLine($"{ex.Message}\n");
 
-            SaveError(ex.ToString());
+            Program.Logger.Error(ex);
         }
 
         public static void ThrowErrorString(string log)
@@ -77,7 +32,7 @@ namespace GenshinStellaMod.Scripts
 
             Music.PlaySound("winxp", "exclamation");
 
-            SaveError(log);
+            Program.Logger.Error(log);
             Utils.Pause();
         }
 

@@ -22,7 +22,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 case 3:
                 case 20:
                 case 30:
-                    DialogResult discordResult = MessageBox.Show(Resources.Program_DoYouWantToJoinOurDiscord, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult discordResult = MessageBox.Show(Resources.Program_DoYouWantToJoinOurDiscord, Program.AppNameVer, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     Program.Logger.Info($"Question (MessageBox): {Resources.Program_DoYouWantToJoinOurDiscord}");
                     if (discordResult == DialogResult.Yes) Utils.OpenUrl(Discord.Invitation);
                     Program.Logger.Info($"Selected: {discordResult}");
@@ -30,7 +30,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 
                 case 4:
                 case 17:
-                    DialogResult feedbackResult = MessageBox.Show(Resources.Program_WouldYouShareOpinionAboutStellaMod, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult feedbackResult = MessageBox.Show(Resources.Program_WouldYouShareOpinionAboutStellaMod, Program.AppNameVer, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     Program.Logger.Info($"Question (MessageBox): {Resources.Program_WouldYouShareOpinionAboutStellaMod}");
                     if (feedbackResult == DialogResult.Yes) Utils.OpenUrl("https://www.trustpilot.com/review/genshin.sefinek.net");
                     Program.Logger.Info($"Selected: {feedbackResult}");
@@ -106,7 +106,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
             {
                 case MessageType.MessageBox:
                 {
-                    MessageBox.Show(Resources.Default_ItAppersThatIsYourFirstTimeLaunchingTheLauncher, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(Resources.Default_ItAppersThatIsYourFirstTimeLaunchingTheLauncher, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Program.Logger.Info(Resources.Default_ItAppersThatIsYourFirstTimeLaunchingTheLauncher);
                     break;
                 }

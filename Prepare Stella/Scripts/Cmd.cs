@@ -53,10 +53,9 @@ namespace PrepareStella.Scripts
                     // VcLibs
                     if (_vcLibsAttemptNumber >= 3)
                     {
-                        Log.ErrorAndExit(
-                            new Exception(
-                                $"Command execution failed because the underlying process (PowerShell) returned a non-zero exit code - {result.ExitCode}.\nI can't install this required package. Reboot your PC or close all opened apps and try again.{info}"),
-                            false, false);
+                        Program.Logger.Error(
+                            $"Command execution failed because the underlying process (PowerShell) returned a non-zero exit code - {result.ExitCode}.\nI can't install this required package. Reboot your PC or close all opened apps and try again.{info}");
+                        Environment.Exit(4242141);
                         return;
                     }
 
@@ -69,7 +68,7 @@ namespace PrepareStella.Scripts
                         Console.WriteLine(
                             $"     » We cannot install this package because some process is currently in use.\n       Reboot your PC or close all opened apps from Microsoft Store.\n\n{stderr}");
 
-                         Program.Logger.ErrorLog(new Exception($"I cannot install this package because some process is currently open.\n\n» Attempt: {_vcLibsAttemptNumber}\n» Exit code: 80073D02\n\n{stderr}"), true);
+                        Program.Logger.Error($"I cannot install this package because some process is currently open.\n\n» Attempt: {_vcLibsAttemptNumber}\n» Exit code: 80073D02\n\n{stderr}");
 
                         TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
 
@@ -79,7 +78,7 @@ namespace PrepareStella.Scripts
 
                         Program.Logger.Info("Restarting session...");
                         Console.ResetColor();
-                        await Program.Start();
+                        await Start.Run();
                         return;
                     }
 
@@ -87,7 +86,7 @@ namespace PrepareStella.Scripts
                     {
                         _vcLibsAttemptNumber++;
 
-                         Program.Logger.ErrorLog(new Exception($"Found missing dependency Microsoft.VCLibs.\n\nAttempt {_vcLibsAttemptNumber}\nExit code: 80073CF3\n\n{stderr}"), true);
+                        Program.Logger.Error($"Found missing dependency Microsoft.VCLibs.\n\nAttempt {_vcLibsAttemptNumber}\nExit code: 80073CF3\n\n{stderr}");
 
                         try
                         {
@@ -98,7 +97,7 @@ namespace PrepareStella.Scripts
                         }
                         catch (Exception ex)
                         {
-                             Program.Logger.ErrorLog(ex, true);
+                            Program.Logger.Error(ex);
                             return;
                         }
 
@@ -137,7 +136,7 @@ namespace PrepareStella.Scripts
                         }
                         catch (Exception ex)
                         {
-                             Program.Logger.ErrorLog(ex, true);
+                            Program.Logger.Error(ex);
                         }
 
                         // Completed!
@@ -180,7 +179,7 @@ namespace PrepareStella.Scripts
                             }
                             catch (Exception ex)
                             {
-                                 Program.Logger.ErrorLog(ex, true);
+                                Program.Logger.Error(ex);
                             }
 
                             Program.Logger.Info($"{app} installed. Exit code: {result.ExitCode}\nThe requested operation is successful. Changes will not be effective until the system is rebooted.");

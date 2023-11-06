@@ -63,13 +63,13 @@ namespace StellaLauncher.Forms
         // -------------------------------- Launcher --------------------------------
         private async void OpenConfWindow_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            DialogResult res = MessageBox.Show(Resources.Tools_AreYouSureToRunStellaConfigurationWindowAgain, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult res = MessageBox.Show(Resources.Tools_AreYouSureToRunStellaConfigurationWindowAgain, Program.AppNameVer, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (res == DialogResult.No) return;
 
             if (!File.Exists(Program.PrepareLauncher))
             {
                 string fileName = Path.GetFileName(Program.PrepareLauncher);
-                MessageBox.Show(Resources.Program_RequiredFileFisrtAppLaunchExeWasNotFound_, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Resources.Program_RequiredFileFisrtAppLaunchExeWasNotFound_, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Program.Logger.Error($"Required file was not found in: {fileName}");
                 return;
             }
@@ -93,7 +93,7 @@ namespace StellaLauncher.Forms
         private void CreateShortcut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             bool success = Utils.CreateShortcut();
-            if (success) MessageBox.Show(Resources.Tools_TheShortcutHasBeenSuccessfullyCreated, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (success) MessageBox.Show(Resources.Tools_TheShortcutHasBeenSuccessfullyCreated, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void MuteMusic_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -109,7 +109,7 @@ namespace StellaLauncher.Forms
                     break;
                 default:
                     Program.Logger.Error(Resources.Tools_WrongEnableMusicValueInTheIniFile);
-                    MessageBox.Show(Resources.Tools_WrongEnableMusicValueInTheIniFile, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(Resources.Tools_WrongEnableMusicValueInTheIniFile, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
             }
 
@@ -130,7 +130,7 @@ namespace StellaLauncher.Forms
                     break;
                 default:
                     Program.Logger.Error(Resources.Tools_WrongEnableMusicValueInTheIniFile);
-                    MessageBox.Show(Resources.Tools_WrongEnableMusicValueInTheIniFile, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(Resources.Tools_WrongEnableMusicValueInTheIniFile, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
             }
         }
@@ -146,7 +146,7 @@ namespace StellaLauncher.Forms
                     Discord.InitRpc();
 
                     if (!string.IsNullOrEmpty(Discord.Username))
-                        MessageBox.Show(string.Format(Resources.Tools_YoureConnectedAs__HiAndNiceToMeetYou_CheckYourDiscordActivity, Discord.Username), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(string.Format(Resources.Tools_YoureConnectedAs__HiAndNiceToMeetYou_CheckYourDiscordActivity, Discord.Username), Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     break;
 
@@ -193,7 +193,7 @@ namespace StellaLauncher.Forms
             if (currentPreset == null) return;
 
             MessageBox.Show($"Successfully updated the ReShade.ini file. Paths to resource locations have been changed to current, and similar changes have been made.\n\nCurrent preset:\n{Path.GetFileNameWithoutExtension(currentPreset).Trim()}",
-                Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             Program.Logger.Info($"Updated ReShade config.\nCurrent preset: {currentPreset}");
         }

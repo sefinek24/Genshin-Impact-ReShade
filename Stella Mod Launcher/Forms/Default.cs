@@ -128,13 +128,13 @@ namespace StellaLauncher.Forms
             if (string.IsNullOrEmpty(resourcesPath))
             {
                 Program.Logger.Error("Path of the resources was not found. Is null or empty.");
-                MessageBox.Show(Resources.Default_ResourceDirNotFound, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(Resources.Default_ResourceDirNotFound, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             if (!Directory.Exists(resourcesPath))
             {
                 Program.Logger.Error($"Directory with the resources '{resourcesPath}' was not found.");
-                MessageBox.Show(string.Format(Resources.Default_Directory_WasNotFound, resourcesPath), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format(Resources.Default_Directory_WasNotFound, resourcesPath), Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             if (string.IsNullOrEmpty(resourcesPath) || !Directory.Exists(resourcesPath))
@@ -155,7 +155,7 @@ namespace StellaLauncher.Forms
             NotifyIcon trayIcon = new NotifyIcon
             {
                 Icon = Program.Ico,
-                Text = Program.AppName,
+                Text = Program.AppNameVer,
                 Visible = true,
                 ContextMenuStrip = new ContextMenuStrip()
             };
@@ -192,7 +192,7 @@ namespace StellaLauncher.Forms
 
                     MessageBox.Show(
                         "The customer received zero data. Your subscription cannot be verified for some reason. No further details are available. Please contact the software creator for more information.\n\nThe launcher will be started without the benefits of a subscription.",
-                        Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     label1.Text = @"null :c";
                 }
@@ -220,7 +220,7 @@ namespace StellaLauncher.Forms
 
                             MessageBox.Show(
                                 $"Oh, it looks like something went wrong during the verification of your subscription. The client sent incorrect information to the server. An error with code {remote.Status} has been received. Please check if you are not using VPNs or proxies.\n\nUnfortunately, the benefits of the subscription will not be available at this time. Please try again or contact the software creator (preferably on the Discord server or via email: contact@sefinek.net).\n\n\n{remote.Message}",
-                                Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             break;
 
                         case 500:
@@ -229,7 +229,7 @@ namespace StellaLauncher.Forms
 
                             MessageBox.Show(
                                 $"Unfortunately, there was a server-side error during the verification of your benefits. Please report this error on the Discord server or via email. Remember to provide your `backup code` as well.\nIf you launch the game after closing this message, you will be playing the free version.\n\n{remote.Message}",
-                                Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             break;
 
                         default:
@@ -238,7 +238,7 @@ namespace StellaLauncher.Forms
 
                             MessageBox.Show(
                                 $"An error occurred while verifying the benefits of your subscription (error code {remote.Status}). The server informed the client that it sent an invalid request. If you launch the game after closing this message, you will be playing the free version. Please contact Sefinek for more information. Error details can be found below.\n\n{remote.Message}",
-                                Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             break;
                     }
                 }
@@ -310,9 +310,6 @@ namespace StellaLauncher.Forms
                     break;
                 }
             }
-
-
-            status_Label.Text += "[i] You are currently using the API in version v5, which is still in development.\n";
 
 
             // Check for updates
@@ -418,7 +415,7 @@ namespace StellaLauncher.Forms
             string giLauncher = await Utils.GetGame("giLauncher");
             if (string.IsNullOrEmpty(giLauncher))
             {
-                MessageBox.Show(Resources.Default_GameLauncherWasNotFound, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(Resources.Default_GameLauncherWasNotFound, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Program.Logger.Error(string.Format(Resources.Default_GameLauncherWasNotFoundIn, giLauncher));
                 return;
             }
@@ -493,7 +490,7 @@ namespace StellaLauncher.Forms
 
         private void MadeBySefinek_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Resources.Default_ItsJustText_WhatMoreDoYouWant, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Question);
+            MessageBox.Show(Resources.Default_ItsJustText_WhatMoreDoYouWant, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Question);
             Utils.OpenUrl("https://www.youtube.com/watch?v=RpDf3XFHVNI");
         }
 

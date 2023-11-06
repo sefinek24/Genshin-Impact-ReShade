@@ -48,7 +48,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
             string localization = Path.Combine(Program.AppPath, "data", "images", "launcher", "backgrounds", $"{BackgroundFiles[bgInt]}.png");
             if (!Utils.CheckFileExists(localization))
             {
-                MessageBox.Show(string.Format(Resources.Default_Sorry_Background_WasNotFound, BackgroundFiles[bgInt]), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(string.Format(Resources.Default_Sorry_Background_WasNotFound, BackgroundFiles[bgInt]), Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Program.Logger.Error($"Sorry. Background {Path.GetFileName(localization)} was not found in: {Path.GetDirectoryName(localization)}");
                 return null;
             }
@@ -106,7 +106,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
             if (!Utils.CheckFileExists(localization))
             {
                 // If the file does not exist, show an error message and log the exception
-                MessageBox.Show(string.Format(Resources.Default_Sorry_Background_WasNotFound, BackgroundFiles[bgInt]), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(string.Format(Resources.Default_Sorry_Background_WasNotFound, BackgroundFiles[bgInt]), Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Program.Logger.Error(string.Format(Resources.Default_Sorry_Background_WasNotFound, localization, bgInt));
                 return null;
             }

@@ -288,9 +288,6 @@
   <data name="madeBySefinek_Label.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="madeBySefinek_Label.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="madeBySefinek_Label.Font" type="System.Drawing.Font, System.Drawing">
     <value>Comic Sans MS, 17.25pt</value>
   </data>
@@ -298,10 +295,10 @@
     <value>TopRight</value>
   </data>
   <data name="madeBySefinek_Label.Location" type="System.Drawing.Point, System.Drawing">
-    <value>835, 87</value>
+    <value>658, 87</value>
   </data>
   <data name="madeBySefinek_Label.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 31</value>
+    <value>368, 31</value>
   </data>
   <data name="madeBySefinek_Label.TabIndex" type="System.Int32, mscorlib">
     <value>74</value>
@@ -310,7 +307,7 @@
     <value>made by Sefinek</value>
   </data>
   <data name="madeBySefinek_Label.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopRight</value>
+    <value>MiddleRight</value>
   </data>
   <data name="madeBySefinek_Label.ToolTip" xml:space="preserve">
     <value>&gt;~~&lt;</value>

@@ -96,7 +96,7 @@ namespace StellaLauncher.Forms.Other
         private void OkayDone_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Close();
-            MessageBox.Show(Resources.SupportMe_Thanks, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(Resources.SupportMe_Thanks, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             Program.Logger.Info(string.Format(Resources.Main_ClickedYesInForm_, Text));
             Telemetry.SupportMe_AnswYes();

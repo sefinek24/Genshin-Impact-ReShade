@@ -54,11 +54,11 @@ namespace StellaLauncher.Forms.Other
 
 This option is intended for users with any knowledge in the IT field and in the Batch scripting language. With this option, you can have full control over the injection process in the .cmd file.
 
-!!! THE CREATOR OF THIS SOFTWARE TAKES NO RESPONSIBILITY FOR ANY BANS IN THE GAME. BY USING THIS FUNCTION, YOU ACCEPT THIS RISK !!!", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+!!! THE CREATOR OF THIS SOFTWARE TAKES NO RESPONSIBILITY FOR ANY BANS IN THE GAME. BY USING THIS FUNCTION, YOU ACCEPT THIS RISK !!!", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
                     {
-                        MessageBox.Show(@"Only patrons can use this option.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(@"Only patrons can use this option.", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
                     break;

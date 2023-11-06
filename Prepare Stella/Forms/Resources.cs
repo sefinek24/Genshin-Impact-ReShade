@@ -26,7 +26,7 @@ namespace PrepareStella.Forms
             {
                 using (FolderBrowserDialog dialog = new FolderBrowserDialog())
                 {
-                    dialog.SelectedPath = Program.ProgramFiles;
+                    dialog.SelectedPath = Start.ProgramFiles;
                     dialog.Description = @"Select a custom folder for your mod resources.";
 
                     if (dialog.ShowDialog() != DialogResult.OK) return;
@@ -58,8 +58,8 @@ namespace PrepareStella.Forms
         {
             string selectedFile = comboBox1.GetItemText(comboBox1.SelectedItem);
 
-            Program.ResourcesGlobal = selectedFile;
-            File.WriteAllText(Path.Combine(Program.AppData, "resources-path.sfn"), Program.ResourcesGlobal);
+            Start.ResourcesGlobal = selectedFile;
+            File.WriteAllText(Path.Combine(Program.AppData, "resources-path.sfn"), Start.ResourcesGlobal);
 
             Close();
         }

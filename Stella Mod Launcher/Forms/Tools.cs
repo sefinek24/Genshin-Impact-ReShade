@@ -86,7 +86,7 @@ namespace StellaLauncher.Forms
 
             if (!File.Exists(reShadeIni))
             {
-                MessageBox.Show(string.Format(Resources.Tools_ReShadeConfigFileWasNotFoundIn_, reShadeIni), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(string.Format(Resources.Tools_ReShadeConfigFileWasNotFoundIn_, reShadeIni), Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -167,7 +167,7 @@ namespace StellaLauncher.Forms
         {
             if (!Directory.Exists(Log.Folder))
             {
-                MessageBox.Show($"Directory with the Stella Logs was not found in:\n\n{Log.Folder}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"Directory with the Stella Logs was not found in:\n\n{Log.Folder}", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Program.Logger.Info($"Directory with the Stella Logs was not found in: {Log.Folder}");
                 return;
             }
@@ -209,7 +209,7 @@ namespace StellaLauncher.Forms
             string logFile = Path.Combine(gameDir, "ReShade.log");
 
             if (!Directory.Exists(gameDir) || !File.Exists(logFile))
-                MessageBox.Show(string.Format(Resources.Tools_ReShadeLogFileWasNotFoundIn_, logFile), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(string.Format(Resources.Tools_ReShadeLogFileWasNotFoundIn_, logFile), Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
                 await Cmd.Execute(new Cmd.CliWrap
                 {

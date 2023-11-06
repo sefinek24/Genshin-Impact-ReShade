@@ -11,7 +11,7 @@ namespace StellaLauncher.Scripts
         {
             if (!Directory.Exists(Default.ResourcesPath))
             {
-                MessageBox.Show(@"Stella Resources was not found.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(@"Stella Resources was not found.", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return null;
             }
 
@@ -40,7 +40,7 @@ namespace StellaLauncher.Scripts
                 }
                 else
                 {
-                    MessageBox.Show($@"Preset for Patrons '{Path.GetFileNameWithoutExtension(rtPreset).Trim()}' was not found. We will set the default preset for ReShade.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show($@"Preset for Patrons '{Path.GetFileNameWithoutExtension(rtPreset).Trim()}' was not found. We will set the default preset for ReShade.", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     ini.WriteString("GENERAL", "PresetPath", defaultPreset);
                     currentPreset = defaultPreset;
                 }

@@ -24,7 +24,7 @@ namespace StellaLauncher.Scripts
 
             if (Default.UpdateIsAvailable && !cliWrapCommand.DownloadingSetup)
             {
-                MessageBox.Show(Resources.Cmd_UpdateIsRequired, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Resources.Cmd_UpdateIsRequired, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Program.Logger.Info("CliWrap: Command execution failed. An update is required.");
                 return false;
             }
@@ -80,14 +80,14 @@ namespace StellaLauncher.Scripts
                             Program.Logger.Error(ex.ToString());
                         }
 
-                        MessageBox.Show(Resources.Cmd_TheRequestOperationWasSuccessfulButYourPCNeedsToBeRebooted, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(Resources.Cmd_TheRequestOperationWasSuccessfulButYourPCNeedsToBeRebooted, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Program.Logger.Info($"CliWrap: {cliWrapCommand.App} installed. Exit code: {result.ExitCode}\nThe requested operation is successful. Changes will not be effective until the system is rebooted");
                         return false;
                     }
 
                     case 5:
                         string mainInfo = Resources.Cmd_FailedToUpdate;
-                        MessageBox.Show(mainInfo, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(mainInfo, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                         Program.Logger.Error($"{mainInfo}\nRestart your computer or suspend antivirus program and try again.{info}");
                         return false;

@@ -151,7 +151,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
         {
             if (!Secret.IsMyPatron)
             {
-                DialogResult result = MessageBox.Show(Resources.Default_ThisFeatureIsAvailableOnlyForMyPatrons, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show(Resources.Default_ThisFeatureIsAvailableOnlyForMyPatrons, Program.AppNameVer, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes) Utils.OpenUrl("https://www.patreon.com/sefinek");
                 return;
             }

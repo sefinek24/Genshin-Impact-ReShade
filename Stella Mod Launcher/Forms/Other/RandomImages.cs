@@ -90,9 +90,9 @@ namespace StellaLauncher.Forms.Other
             catch (WebException e)
             {
                 if (e.Status == WebExceptionStatus.ProtocolError && e.Response is HttpWebResponse response)
-                    MessageBox.Show(e.Message, Program.AppName, MessageBoxButtons.OK, (int)response.StatusCode >= 500 ? MessageBoxIcon.Warning : MessageBoxIcon.Information);
+                    MessageBox.Show(e.Message, Program.AppNameVer, MessageBoxButtons.OK, (int)response.StatusCode >= 500 ? MessageBoxIcon.Warning : MessageBoxIcon.Information);
                 else
-                    MessageBox.Show(e.Message, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(e.Message, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 Program.Logger.Error(string.Format(Resources.RandomImages_ErrorWithTheAPI, url, e));
                 return null;

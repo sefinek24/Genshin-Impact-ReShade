@@ -29,7 +29,7 @@ namespace StellaLauncher.Scripts
 
             if (!File.Exists(fullGamePath))
             {
-                DialogResult result = MessageBox.Show(string.Format(Resources.Utils_FileWithGamePathWasNotFoundIn_DoYouWantToResetAllSMSettings, fullGamePath), Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show(string.Format(Resources.Utils_FileWithGamePathWasNotFoundIn_DoYouWantToResetAllSMSettings, fullGamePath), Program.AppNameVer, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 Program.Logger.Info($"File with game path was not found in: {fullGamePath}");
 
                 if (result != DialogResult.Yes) return string.Empty;
@@ -77,7 +77,7 @@ namespace StellaLauncher.Scripts
                     string genshinImpactExe = Path.Combine(giDir, "launcher.exe");
                     if (!File.Exists(genshinImpactExe))
                     {
-                        MessageBox.Show(string.Format(Resources.Utils_LauncherFileDoesNotExists, genshinImpactExe), Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(string.Format(Resources.Utils_LauncherFileDoesNotExists, genshinImpactExe), Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         Program.Logger.Info($"Launcher file does not exists in: {genshinImpactExe} [giLauncher]");
                         return string.Empty;
                     }
@@ -213,7 +213,7 @@ namespace StellaLauncher.Scripts
             catch (Exception ex)
 
             {
-                Program.Logger.Error(ex.ToString());
+                Program.Logger.Error(ex);
             }
         }
     }

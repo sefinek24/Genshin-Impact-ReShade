@@ -22,7 +22,8 @@ namespace StellaLauncher
     {
         // App
         public static readonly string AppVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
-        public static readonly string AppName = $"{Assembly.GetExecutingAssembly().GetName().Name} • v{AppVersion}";
+        private static readonly string AppName = Assembly.GetExecutingAssembly().GetName().Name;
+        public static readonly string AppNameVer = $"{AppName} • v{AppVersion}";
         private static readonly string AppWebsiteSub = "https://genshin.sefinek.net";
         public static readonly string AppWebsiteFull = "https://sefinek.net/genshin-impact-reshade";
 
@@ -34,6 +35,7 @@ namespace StellaLauncher
         public static readonly string InjectorPath = Path.Combine(AppPath, "data", "reshade", "inject64.exe");
         public static readonly string FpsUnlockerExePath = Path.Combine(AppPath, "data", "unlocker", "unlockfps_clr.exe");
         public static readonly string FpsUnlockerCfgPath = Path.Combine(AppPath, "data", "unlocker", "unlocker.config.json");
+        public static readonly IniFile Settings = new IniFile(Path.Combine(AppData, "settings.ini"));
         public static readonly Icon Ico = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
 
         // Web
@@ -47,11 +49,15 @@ namespace StellaLauncher
             return httpClient;
         });
 
+        // public static void DisposeHttpClient()
+        // {
+        //     if (WbClient.IsValueCreated) WbClient.Value.Dispose();
+        // }
+
+        public static HttpClient SefinWebClient => WbClient.Value;
+
         public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v5" : "https://api.sefinek.net/api/v5";
         //  public static readonly string WebApi = "https://api.sefinek.net/api/v5";
-
-        // Config
-        public static readonly IniFile Settings = new IniFile(Path.Combine(AppData, "settings.ini"));
 
         // Lang
         private static readonly string[] SupportedLangs = { "en", "pl" };
@@ -59,20 +65,15 @@ namespace StellaLauncher
         // Registry
         public static readonly string RegistryPath = @"Software\Stella Mod Launcher";
 
-        // public static void DisposeHttpClient()
-        // {
-        //     if (WbClient.IsValueCreated) WbClient.Value.Dispose();
-        // }
-
+        // Logger
         public static Logger Logger = LogManager.GetCurrentClassLogger();
-
-        public static HttpClient SefinWebClient => WbClient.Value;
 
         [DllImport("user32.dll")]
         private static extern bool SetProcessDpiAwarenessContext(IntPtr dpiContext);
 
         private static void Main()
         {
+            Logger = Logger.WithProperty("AppName", "Launcher");
             Logger = Logger.WithProperty("AppVersion", AppVersion);
 
             // Set language
@@ -101,10 +102,10 @@ namespace StellaLauncher
             if (Debugger.IsAttached) Logger.Debug($"CPU Serial Number {ComputerInfo.GetCpuSerialNumber()}");
 
 
-            if (Process.GetProcessesByName(AppName).Length > 1)
+            if (Process.GetProcessesByName(AppNameVer).Length > 1)
             {
                 Logger.Info("One instance is currently open.");
-                MessageBox.Show(string.Format(Resources.Program_SorryOneInstanceIsCurrentlyOpen_, Path.GetFileNameWithoutExtension(Assembly.GetEntryAssembly()?.Location)), AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(string.Format(Resources.Program_SorryOneInstanceIsCurrentlyOpen_, Path.GetFileNameWithoutExtension(Assembly.GetEntryAssembly()?.Location)), AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 Environment.Exit(998765341);
             }

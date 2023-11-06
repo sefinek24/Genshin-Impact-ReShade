@@ -83,7 +83,7 @@ namespace PrepareStella.Scripts.Preparing
             string wtProgramFiles = Utils.GetWtProgramFiles();
             if (string.IsNullOrEmpty(wtProgramFiles))
             {
-                Log.ErrorAndExit(new Exception($"Windows Terminal directory was not found in: {Program.WindowsApps}"), false, false);
+                Log.ErrorAndExit(new Exception($"Windows Terminal directory was not found in: {Start.WindowsApps}"), false, false);
             }
             else
             {

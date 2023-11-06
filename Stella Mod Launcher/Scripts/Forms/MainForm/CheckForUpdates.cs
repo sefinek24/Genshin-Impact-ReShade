@@ -92,7 +92,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 {
                     case -2:
                     {
-                        DialogResult msgBoxResult = MessageBox.Show(Resources.Default_TheReShadeIniFileCouldNotBeLocatedInYourGameFiles, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        DialogResult msgBoxResult = MessageBox.Show(Resources.Default_TheReShadeIniFileCouldNotBeLocatedInYourGameFiles, Program.AppNameVer, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                         int number = await ReShadeIni.Download(resultInt, Default.ResourcesPath, msgBoxResult);
                         return number;
@@ -100,12 +100,12 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 
                     case 1:
                     {
-                        DialogResult msgReply = MessageBox.Show(Resources.Default_AreYouSureWantToUpdateReShadeConfiguration, Program.AppName, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                        DialogResult msgReply = MessageBox.Show(Resources.Default_AreYouSureWantToUpdateReShadeConfiguration, Program.AppNameVer, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
 
                         if (msgReply == DialogResult.No || msgReply == DialogResult.Cancel)
                         {
                             Program.Logger.Info("The update of ReShade.ini has been cancelled by the user.");
-                            MessageBox.Show(Resources.Default_ForSomeReasonYouDidNotGiveConsentForTheAutomaticUpdateOfTheReShadeFile, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                            MessageBox.Show(Resources.Default_ForSomeReasonYouDidNotGiveConsentForTheAutomaticUpdateOfTheReShadeFile, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
                             Utils.HideProgressBar(true);
                             return 1;

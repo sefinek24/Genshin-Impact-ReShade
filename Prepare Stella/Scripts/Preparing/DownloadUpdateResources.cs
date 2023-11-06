@@ -13,7 +13,7 @@ namespace PrepareStella.Scripts.Preparing
     {
         public static async Task RunAsync()
         {
-            string resourcesGlobalPath = Program.ResourcesGlobal;
+            string resourcesGlobalPath = Start.ResourcesGlobal;
 
             if (!Directory.Exists(resourcesGlobalPath))
             {
@@ -30,7 +30,7 @@ namespace PrepareStella.Scripts.Preparing
             using (WebClient webClient = new WebClient())
             {
                 webClient.Headers.Add("User-Agent", Program.UserAgent);
-                string responseContent = await webClient.DownloadStringTaskAsync("https://api.sefinek.net/api/v4/genshin-stella-mod/version/app/launcher/resources");
+                string responseContent = await webClient.DownloadStringTaskAsync($"{Program.WebApi}/genshin-stella-mod/version/app/launcher/resources");
                 StellaResources json = JsonConvert.DeserializeObject<StellaResources>(responseContent);
 
                 // Deleting existing resources zip file
@@ -40,6 +40,7 @@ namespace PrepareStella.Scripts.Preparing
                 {
                     Console.WriteLine($@"Deleting {zipPath}...");
                     File.Delete(zipPath);
+                    Program.Logger.Info($"Deleted {zipPath}");
                 }
 
                 // Downloading resources zip file
