@@ -64,16 +64,17 @@ namespace StellaLauncher
         //     if (WbClient.IsValueCreated) WbClient.Value.Dispose();
         // }
 
-        public static readonly Logger Logger = LogManager.GetCurrentClassLogger();
+        public static Logger Logger = LogManager.GetCurrentClassLogger();
 
         public static HttpClient SefinWebClient => WbClient.Value;
 
         [DllImport("user32.dll")]
         private static extern bool SetProcessDpiAwarenessContext(IntPtr dpiContext);
 
-        [STAThread]
         private static void Main()
         {
+            Logger = Logger.WithProperty("AppVersion", AppVersion);
+
             // Set language
             string currentLang = Settings.ReadString("Language", "UI", null);
             bool isSupportedLanguage = SupportedLangs.Contains(currentLang);
