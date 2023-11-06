@@ -39,6 +39,8 @@ namespace StellaLauncher.Scripts
 
                 using (HttpClient httpClient = new HttpClient())
                 {
+                    httpClient.DefaultRequestHeaders.UserAgent.ParseAdd(Program.UserAgent);
+
                     FormUrlEncodedContent content = new FormUrlEncodedContent(postData);
                     HttpResponseMessage response = await httpClient.PostAsync($"{Program.WebApi}/genshin-stella-mod/access/launcher/verify", content);
 
