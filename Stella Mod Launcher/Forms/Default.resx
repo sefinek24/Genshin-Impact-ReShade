@@ -304,7 +304,7 @@
     <value>74</value>
   </data>
   <data name="madeBySefinek_Label.Text" xml:space="preserve">
-    <value>made by Sefinek</value>
+    <value>release for the subscribers</value>
   </data>
   <data name="madeBySefinek_Label.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
