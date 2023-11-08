@@ -1,22 +1,21 @@
-namespace InformationWindow
+namespace InformationWindow;
+
+internal static class Program
 {
-    internal static class Program
+    /// <summary>
+    ///     The main entry point for the application.
+    /// </summary>
+    [STAThread]
+    private static void Main()
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        private static void Main()
+        try
         {
-            try
-            {
-                ApplicationConfiguration.Initialize();
-                Application.Run(new MainWindow());
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            ApplicationConfiguration.Initialize();
+            Application.Run(new MainWindow());
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(ex.Message, @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

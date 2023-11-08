@@ -49,13 +49,6 @@ namespace StellaLauncher
             return httpClient;
         });
 
-        // public static void DisposeHttpClient()
-        // {
-        //     if (WbClient.IsValueCreated) WbClient.Value.Dispose();
-        // }
-
-        public static HttpClient SefinWebClient => WbClient.Value;
-
         public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v5" : "https://api.sefinek.net/api/v5";
         //  public static readonly string WebApi = "https://api.sefinek.net/api/v5";
 
@@ -67,6 +60,13 @@ namespace StellaLauncher
 
         // Logger
         public static Logger Logger = LogManager.GetCurrentClassLogger();
+
+        // public static void DisposeHttpClient()
+        // {
+        //     if (WbClient.IsValueCreated) WbClient.Value.Dispose();
+        // }
+
+        public static HttpClient SefinWebClient => WbClient.Value;
 
         [DllImport("user32.dll")]
         private static extern bool SetProcessDpiAwarenessContext(IntPtr dpiContext);
