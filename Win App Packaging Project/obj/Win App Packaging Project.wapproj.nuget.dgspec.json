@@ -1,206 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Win App Packaging Project\\Win App Packaging Project.wapproj": {}
+    "C:\\GitHub\\VS\\Stella\\Genshin-Impact-ReShade\\Win App Packaging Project\\Win App Packaging Project.wapproj": {}
   },
   "projects": {
-    "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\First app launch\\Configuration window.csproj": {
-      "restore": {
-        "projectUniqueName": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\First app launch\\Configuration window.csproj",
-        "projectName": "Configuration window",
-        "projectPath": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\First app launch\\Configuration window.csproj",
-        "frameworks": {
-          "net48": {
-            "projectReferences": {}
-          }
-        }
-      },
-      "frameworks": {
-        "net48": {}
-      }
-    },
-    "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Genshin Stella Mod\\Stella Mod Launcher.csproj": {
+    "C:\\GitHub\\VS\\Stella\\Genshin-Impact-ReShade\\Win App Packaging Project\\Win App Packaging Project.wapproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Genshin Stella Mod\\Stella Mod Launcher.csproj",
-        "projectName": "Genshin Stella Mod",
-        "projectPath": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Genshin Stella Mod\\Stella Mod Launcher.csproj",
-        "packagesPath": "C:\\Users\\Sefinek\\.nuget\\packages\\",
-        "outputPath": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Genshin Stella Mod\\obj\\",
-        "projectStyle": "PackageReference",
-        "skipContentFileWrite": true,
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\Sefinek\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net48"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net48": {
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "allWarningsAsErrors": true
-        }
-      },
-      "frameworks": {
-        "net48": {
-          "dependencies": {
-            "ByteSize": {
-              "target": "Package",
-              "version": "[2.1.1, )"
-            },
-            "CliWrap": {
-              "target": "Package",
-              "version": "[3.6.4, )"
-            },
-            "DiscordRichPresence": {
-              "target": "Package",
-              "version": "[1.2.1.24, )"
-            },
-            "Microsoft.Toolkit.Uwp.Notifications": {
-              "target": "Package",
-              "version": "[7.1.3, )"
-            },
-            "Microsoft.Web.WebView2": {
-              "target": "Package",
-              "version": "[1.0.1901.177, )"
-            },
-            "NAudio": {
-              "target": "Package",
-              "version": "[2.1.0, )"
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.3, )"
-            },
-            "System.Runtime.Caching": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
-            "WindowsAPICodePack": {
-              "target": "Package",
-              "version": "[7.0.4, )"
-            }
-          }
-        }
-      },
-      "runtimes": {
-        "win": {
-          "#import": []
-        },
-        "win-arm64": {
-          "#import": []
-        },
-        "win-x64": {
-          "#import": []
-        },
-        "win-x86": {
-          "#import": []
-        }
-      }
-    },
-    "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Install required dependencies\\Prepare Stella Mod.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Install required dependencies\\Prepare Stella Mod.csproj",
-        "projectName": "Prepare Stella Mod",
-        "projectPath": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Install required dependencies\\Prepare Stella Mod.csproj",
-        "packagesPath": "C:\\Users\\Sefinek\\.nuget\\packages\\",
-        "outputPath": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Install required dependencies\\obj\\",
-        "projectStyle": "PackageReference",
-        "skipContentFileWrite": true,
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\Sefinek\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net48"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net48": {
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "allWarningsAsErrors": true
-        }
-      },
-      "frameworks": {
-        "net48": {
-          "dependencies": {
-            "CliWrap": {
-              "target": "Package",
-              "version": "[3.6.4, )"
-            },
-            "DotNetZip": {
-              "target": "Package",
-              "version": "[1.16.0, )"
-            },
-            "Microsoft.Toolkit.Uwp.Notifications": {
-              "target": "Package",
-              "version": "[7.1.3, )"
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.3, )"
-            },
-            "System.IO.Compression": {
-              "target": "Package",
-              "version": "[4.3.0, )"
-            },
-            "System.IO.Compression.ZipFile": {
-              "target": "Package",
-              "version": "[4.3.0, )"
-            },
-            "WindowsAPICodePack": {
-              "target": "Package",
-              "version": "[7.0.4, )"
-            }
-          }
-        }
-      },
-      "runtimes": {
-        "win": {
-          "#import": []
-        },
-        "win-arm64": {
-          "#import": []
-        },
-        "win-x64": {
-          "#import": []
-        },
-        "win-x86": {
-          "#import": []
-        }
-      }
-    },
-    "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Win App Packaging Project\\Win App Packaging Project.wapproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Win App Packaging Project\\Win App Packaging Project.wapproj",
+        "projectUniqueName": "C:\\GitHub\\VS\\Stella\\Genshin-Impact-ReShade\\Win App Packaging Project\\Win App Packaging Project.wapproj",
         "projectName": "Win App Packaging Project",
-        "projectPath": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Win App Packaging Project\\Win App Packaging Project.wapproj",
+        "projectPath": "C:\\GitHub\\VS\\Stella\\Genshin-Impact-ReShade\\Win App Packaging Project\\Win App Packaging Project.wapproj",
         "packagesPath": "C:\\Users\\Sefinek\\.nuget\\packages\\",
-        "outputPath": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Win App Packaging Project\\obj\\",
+        "outputPath": "C:\\GitHub\\VS\\Stella\\Genshin-Impact-ReShade\\Win App Packaging Project\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -220,17 +31,7 @@
         "frameworks": {
           "uap10.0.18362": {
             "targetAlias": "net451",
-            "projectReferences": {
-              "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\First app launch\\Configuration window.csproj": {
-                "projectPath": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\First app launch\\Configuration window.csproj"
-              },
-              "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Genshin Stella Mod\\Stella Mod Launcher.csproj": {
-                "projectPath": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Genshin Stella Mod\\Stella Mod Launcher.csproj"
-              },
-              "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Install required dependencies\\Prepare Stella Mod.csproj": {
-                "projectPath": "C:\\GitHub\\Stella\\Genshin-Impact-ReShade\\Install required dependencies\\Prepare Stella Mod.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -263,7 +64,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

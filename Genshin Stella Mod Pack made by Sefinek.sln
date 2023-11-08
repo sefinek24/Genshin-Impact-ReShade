@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. Prepare Stella", "Prepar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. Sefin Anti Cheat", "Sefin Anti Cheat\5. Sefin Anti Cheat.csproj", "{F53B112D-AC37-4FFE-854E-82DEA97FBFB9}"
 EndProject
-Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "6. Win App Packaging Project", "Win App Packaging Project\6. Win App Packaging Project.wapproj", "{1D6AC525-A490-4EEE-A83C-C614A9D97C0A}"
+Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "Win App Packaging Project", "Win App Packaging Project\Win App Packaging Project.wapproj", "{1D6AC525-A490-4EEE-A83C-C614A9D97C0A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Information 48793142", "MessageBOX48793142\Information 48793142.csproj", "{5A9340FA-7E3B-433D-9E37-88D86C48B975}"
 EndProject
