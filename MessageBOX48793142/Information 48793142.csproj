@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <StartupObject>InformationWindow.Program</StartupObject>
+    <BaseOutputPath>C:\GitHub\VS\Stella\Genshin-Impact-ReShade\Build</BaseOutputPath>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <Company>Sefinek Inc.</Company>
+    <Product>Stella Mod Information 48793142</Product>
+    <Copyright>Copyright 2023 © by Sefinek. All Rights Reserved.</Copyright>
+    <PackageProjectUrl>https://genshin.sefinek.net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/sefinek24/Genshin-Impact-ReShade</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <NeutralLanguage>en</NeutralLanguage>
+    <UseWPF>False</UseWPF>
+    <AssemblyName>48793142</AssemblyName>
+    <RootNamespace>InformationWindow</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>portable</DebugType>
+  </PropertyGroup>
+
+</Project>

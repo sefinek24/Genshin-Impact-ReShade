@@ -95,6 +95,7 @@
     <Compile Include="Scripts\Cmd.cs" />
     <Compile Include="Scripts\ComputerInfo.cs" />
     <Compile Include="Scripts\Data.cs" />
+    <Compile Include="Scripts\IniFile.cs" />
     <Compile Include="Scripts\Log.cs" />
     <Compile Include="Scripts\Logic.cs" />
     <Compile Include="Scripts\Music.cs" />

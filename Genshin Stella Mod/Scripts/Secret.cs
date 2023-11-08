@@ -9,7 +9,7 @@ namespace GenshinStellaMod.Scripts
 {
     internal static class Secret
     {
-        public const string RegistryPath = @"SOFTWARE\Stella Mod Launcher";
+        public const string RegistryPath = @"Software\Stella Mod Launcher";
         public static bool IsMyPatron = false;
         public static bool Attempt = false;
 

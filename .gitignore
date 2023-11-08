@@ -56,6 +56,10 @@ Win App Packaging Project/obj/project.nuget
 Sefin Anti Cheat/bin
 Sefin Anti Cheat/obj
 
+# Information 48793142
+MessageBOX48793142/bin
+MessageBOX48793142/obj
+
 # For patrons
 data/Patrons
 data/presets/New
