@@ -30,7 +30,7 @@ namespace StellaLauncher.Models
         public int Status { get; set; }
         public string Message { get; set; }
         public bool DeleteBenefits { get; set; }
-        public bool DeleteToken { get; set; }
+        public bool DeleteTokens { get; set; }
         public string Token { get; set; }
         public int TierId { get; set; }
     }

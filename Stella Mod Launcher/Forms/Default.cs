@@ -201,7 +201,7 @@ namespace StellaLauncher.Forms
                     VerifyToken remote = JsonConvert.DeserializeObject<VerifyToken>(data);
 
                     if (remote.DeleteBenefits) DeleteBenefits.Start();
-                    if (remote.DeleteToken) Delete.RegistryKey("Secret");
+                    if (remote.DeleteTokens) Delete.RegistryKey("Secret");
 
                     switch (remote.Status)
                     {
