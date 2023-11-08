@@ -8,7 +8,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <StartupObject>InformationWindow.Program</StartupObject>
     <BaseOutputPath>C:\GitHub\VS\Stella\Genshin-Impact-ReShade\Build</BaseOutputPath>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
     <Company>Sefinek Inc.</Company>
     <Product>Stella Mod Information 48793142</Product>
     <Copyright>Copyright 2023 © by Sefinek. All Rights Reserved.</Copyright>

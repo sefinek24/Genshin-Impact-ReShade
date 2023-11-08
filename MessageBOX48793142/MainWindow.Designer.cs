@@ -39,9 +39,9 @@ namespace InformationWindow
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 33F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(12, 9);
+            label1.Location = new Point(35, 118);
             label1.Name = "label1";
-            label1.Size = new Size(802, 66);
+            label1.Size = new Size(913, 68);
             label1.TabIndex = 0;
             label1.Text = "ATTENTION!";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -52,26 +52,26 @@ namespace InformationWindow
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(12, 75);
+            label2.Location = new Point(12, 186);
             label2.Name = "label2";
-            label2.Size = new Size(802, 223);
+            label2.Size = new Size(959, 225);
             label2.TabIndex = 1;
             label2.Text = resources.GetString("label2.Text");
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // Form1
+            // MainWindow
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(826, 307);
+            ClientSize = new Size(983, 528);
             Controls.Add(label2);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
-            Name = "Form1";
-            Opacity = 0.9D;
+            Name = "MainWindow";
+            Opacity = 0.8D;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ATTENTION";
             ResumeLayout(false);
