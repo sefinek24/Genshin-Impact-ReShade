@@ -60,7 +60,7 @@ Sefin Anti Cheat/obj
 MessageBOX48793142/bin
 MessageBOX48793142/obj
 
-# For patrons
+# Stella Mod Plus
 data/Patrons
 data/presets/New
 data/presets/Patrons
@@ -68,9 +68,6 @@ data/presets/For Patrons
 data/presets/Other/Previous versions
 data/presets/3. Only for patrons
 data/presets/3. Only for patrons/*.ini
-data/reshade/addons/licenses/ReshadeEffectShaderToggler.md
-data/reshade/addons/ReshadeEffectShaderToggler.addon64
-data/reshade/addons/ReshadeEffectShaderToggler.ini
 
 # Configs
 .eslintrc.js
