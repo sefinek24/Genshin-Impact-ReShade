@@ -32,7 +32,7 @@
 </div>
 
 
-## 📋 〢 Table of contents <-- {#toc} -->
+## 📋 〢 Table of contents
 - [⚠️ Information](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%F0%9F%93%84-%E3%80%A2-information)
 - [📂 Includes](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%F0%9F%93%82-%E3%80%A2-includes)
 - [📃 Changelog](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%E2%9C%A8-%E3%80%A2-requirements)
