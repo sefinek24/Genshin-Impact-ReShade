@@ -24,15 +24,15 @@
     <br><br>
     <img src="https://moe-counter.glitch.me/get/@genshin-stella-mod-readme?theme=rule34" alt="Views" title="README.md views - starts from Jun 15, 2023, 12:26 PM GMT+2">
     <h3>
-        🌠 » If you want to get Ray Tracing in game or other benefits, become <a href="https://www.patreon.com/sefinek" title="www.patreon.com/sefinek">my Patron</a> « 🌠<br>
-        ⭐ » Star the repo if you liked it. Have a nice day or night! « ⭐
+        🌠 » To enjoy Ray Tracing in-game and unlock numerous additional benefits, subscribe to <a href="https://sefinek.net/genshin-impact-reshade/subscription" title="Subscription: Unlock more benefits - Genshin Stella Mod">Stella Mod Plus</a> « 🌠<br>
+        ⭐ » Star the repository if you like it. Have a pleasant day or night! « ⭐
     </h3>
     <a href="https://patreon.com/sefinek" title="Patreon"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dsefinek%26type%3Dpledges&style=for-the-badge" id="patreon" height="32" alt="Support me on Patreon"></a>
     <a href="https://ko-fi.com/sefinek" title="Ko-fi"><img src="https://storage.ko-fi.com/cdn/brandasset/kofi_button_blue.png" id="kofi" height="32" alt="Support me on Ko-fi"></a>
 </div>
 
 
-## 📋 〢 Table of contents
+## 📋 〢 Table of contents <-- {#toc} -->
 - [⚠️ Information](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%F0%9F%93%84-%E3%80%A2-information)
 - [📂 Includes](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%F0%9F%93%82-%E3%80%A2-includes)
 - [📃 Changelog](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%E2%9C%A8-%E3%80%A2-requirements)
@@ -53,7 +53,7 @@
 </div>
 
 
-## 📄 〢 Information
+## 📄 〢 Information <-- {#information} -->
 Please note that sharing game screenshots displaying your UID, visible shaders, or ReShade overlay may result in a game ban.
 If you plan to record a video of the game for platforms like YouTube, remember to hide or censor your UID and username to avoid being banned.
 
