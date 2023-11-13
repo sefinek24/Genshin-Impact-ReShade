@@ -121,14 +121,11 @@
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
   </data>
-  <data name="pictureBox2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="changeBg_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>37, 14</value>
   </data>
   <data name="changeBg_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 18</value>
+    <value>122, 17</value>
   </data>
   <data name="changeBg_LinkLabel.Text" xml:space="preserve">
     <value>Zmień tło aplikacji</value>
@@ -138,9 +135,6 @@
   </data>
   <data name="close_Panel.ToolTip" xml:space="preserve">
     <value>Wyjdź z programu uruchamiającego</value>
-  </data>
-  <data name="panel1.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="githubUrl_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>666, 113</value>
@@ -158,10 +152,10 @@
     <value>autorstwa Sefinek</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>564, 43</value>
+    <value>598, 43</value>
   </data>
-  <data name="label1.ToolTip" xml:space="preserve">
-    <value />
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>430, 39</value>
   </data>
   <data name="githubIco_Picturebox.Location" type="System.Drawing.Point, System.Drawing">
     <value>634, 113</value>
@@ -331,20 +325,8 @@ Nie ma sensu używać tego, jeśli Twój monitor nie ma więcej niż 60 Hz.</val
   <data name="linkLabel2.ToolTip" xml:space="preserve">
     <value>Otwórz ustawienia</value>
   </data>
-  <data name="toolsIco_PictureBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="websiteIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>603, 565</value>
-  </data>
-  <data name="websiteIco_PictureBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="updateIco_PictureBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="versionIco_PictureBox.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="updates_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>796, 565</value>
@@ -355,44 +337,17 @@ Nie ma sensu używać tego, jeśli Twój monitor nie ma więcej niż 60 Hz.</val
   <data name="updates_LinkLabel.Text" xml:space="preserve">
     <value>Oczekiwanie...</value>
   </data>
-  <data name="updates_LinkLabel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="youtubeIco_Picturebox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="discordServerIco_Picturebox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="status_Label.ToolTip" xml:space="preserve">
-    <value />
+  <data name="status_Label.Size" type="System.Drawing.Size, System.Drawing">
+    <value>581, 143</value>
   </data>
   <data name="padIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>472, 565</value>
   </data>
-  <data name="padIco_PictureBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="supportMeIco_PictureBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="shortcutIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>381, 565</value>
   </data>
-  <data name="shortcutIco_PictureBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="paimon_PictureBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="progressBar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 565</value>
-  </data>
   <data name="progressBar1.Size" type="System.Drawing.Size, System.Drawing">
     <value>778, 23</value>
-  </data>
-  <data name="progressBar1.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="PreparingPleaseWait.Location" type="System.Drawing.Point, System.Drawing">
     <value>132, 541</value>
@@ -400,22 +355,10 @@ Nie ma sensu używać tego, jeśli Twój monitor nie ma więcej niż 60 Hz.</val
   <data name="PreparingPleaseWait.Text" xml:space="preserve">
     <value>Proszę czekać...</value>
   </data>
-  <data name="PreparingPleaseWait.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>272, 565</value>
   </data>
-  <data name="pictureBox1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>143, 565</value>
-  </data>
-  <data name="pictureBox3.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value />
   </data>
 </root>

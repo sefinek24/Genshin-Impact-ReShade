@@ -640,9 +640,6 @@ If, for any reason, you are unable to update Stella Mod through the Launcher, pl
   <data name="Log_SomethingWentWrong" xml:space="preserve">
     <value>Something went wrong</value>
   </data>
-  <data name="Default_GenshinStellaModForPatrons" xml:space="preserve">
-    <value>Genshin Stella Mod for Patrons</value>
-  </data>
   <data name="flaticon_log" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\flaticon_log1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

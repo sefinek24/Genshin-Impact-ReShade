@@ -117,74 +117,722 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="panel1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="websiteIco_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="youtubeIco_Picturebox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="runFpsUnlocker_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12pt</value>
+  </data>
+  <data name="&gt;&gt;linkLabel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="supportMe_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;PreparingPleaseWait.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="linkLabel2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12pt</value>
+  </data>
+  <data name="shortcutIco_PictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="&gt;&gt;startGame_LinkLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="runGiLauncher_LinkLabel.Text" xml:space="preserve">
+    <value>Genshin Impact Launcher</value>
+  </data>
+  <data name="&gt;&gt;youTube_LinkLabel.Name" xml:space="preserve">
+    <value>youTube_LinkLabel</value>
+  </data>
+  <data name="only3DMigoto_LinkLabel.Text" xml:space="preserve">
+    <value>Only 3DMigoto</value>
+  </data>
+  <data name="injectReShade_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 23</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="supportMeIco_PictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>99</value>
+  </data>
+  <data name="discordServerIco_Picturebox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gameplay_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="startGame_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>87, 193</value>
+  </data>
+  <data name="youtubeIco_Picturebox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="runGiLauncher_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="updates_LinkLabel.Text" xml:space="preserve">
+    <value>Waiting...</value>
+  </data>
+  <data name="gameplay_LinkLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <data name="&gt;&gt;toolsIco_PictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;runFpsUnlocker_LinkLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PreparingPleaseWait.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="linkLabel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12pt</value>
+  </data>
+  <data name="githubUrl_LinkLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="padIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>313, 565</value>
+  </data>
+  <data name="only3DMigoto_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Run Genshin Impact with only 3DMigoto.</value>
+  </data>
+  <data name="&gt;&gt;runGiLauncher_LinkLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="panel1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
+  </data>
+  <data name="&gt;&gt;gameplay_LinkLabel.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="supportMe_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;clickMe_LinkLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="paimon_PictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="runFpsUnlocker_LinkLabel.Text" xml:space="preserve">
+    <value>Only FPS Unlocker</value>
+  </data>
+  <data name="only3DMigoto_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;runFpsUnlocker_LinkLabel.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="status_Label.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="links_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Some links</value>
+  </data>
+  <data name="padIco_PictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;close_Panel.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="tools_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12pt</value>
+  </data>
+  <data name="supportMe_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="youTube_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 22</value>
+  </data>
+  <data name="version_LinkLabel.ToolTip" xml:space="preserve">
+    <value>See changelog on GitHub.</value>
+  </data>
+  <data name="&gt;&gt;runFpsUnlocker_LinkLabel.Name" xml:space="preserve">
+    <value>runFpsUnlocker_LinkLabel</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="githubIco_Picturebox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="updateIco_PictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>82</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;runGiLauncher_LinkLabel.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="pictureBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 11</value>
-  </data>
-  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 22</value>
-  </data>
-  <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>77</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
-    <value>pictureBox2</value>
-  </data>
   <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="linkLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>118</value>
   </data>
-  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="linkLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 565</value>
   </data>
-  <data name="changeBg_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+  <data name="runGiLauncher_LinkLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="gameplay_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="injectReShade_LinkLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>92</value>
+  </data>
+  <data name="links_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12pt</value>
+  </data>
+  <data name="supportMeIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 489</value>
+  </data>
+  <data name="&gt;&gt;gameplay_LinkLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="madeBySefinek_Label.ToolTip" xml:space="preserve">
+    <value>&gt;~~&lt;</value>
+  </data>
+  <data name="progressBar1.TabIndex" type="System.Int32, mscorlib">
+    <value>114</value>
+  </data>
+  <data name="&gt;&gt;supportMeIco_PictureBox.Name" xml:space="preserve">
+    <value>supportMeIco_PictureBox</value>
+  </data>
+  <data name="&gt;&gt;status_Label.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="changeBg_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="changeBg_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 11.25pt</value>
+  <data name="githubUrl_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12pt</value>
   </data>
-  <data name="changeBg_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 13</value>
+  <data name="runFpsUnlocker_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="changeBg_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 17</value>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
   </data>
-  <data name="changeBg_LinkLabel.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;githubUrl_LinkLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;supportMe_LinkLabel.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="githubUrl_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>362, 23</value>
+  </data>
+  <data name="youTube_LinkLabel.Text" xml:space="preserve">
+    <value>YouTube</value>
+  </data>
+  <data name="clickMe_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Tak kurwa tutaj ((:</value>
+  </data>
+  <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 23</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="runFpsUnlocker_LinkLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>93</value>
+  </data>
+  <data name="startGame_LinkLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="websiteIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>444, 565</value>
+  </data>
+  <data name="website_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12pt</value>
+  </data>
+  <data name="tools_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Utils and logs</value>
+  </data>
+  <data name="&gt;&gt;status_Label.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="websiteIco_PictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="madeBySefinek_Label.Size" type="System.Drawing.Size, System.Drawing">
+    <value>368, 31</value>
+  </data>
+  <data name="supportMe_LinkLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="linkLabel2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="youTube_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 23</value>
+  </data>
+  <data name="githubUrl_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="becomeMyPatron_LinkLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;youtubeIco_Picturebox.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="shortcutIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 565</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PreparingPleaseWait.Location" type="System.Drawing.Point, System.Drawing">
+    <value>134, 541</value>
+  </data>
+  <data name="versionIco_PictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="website_LinkLabel.ToolTip" xml:space="preserve">
+    <value>See official website</value>
+  </data>
+  <data name="injectReShade_LinkLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="paimon_PictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="youtubeIco_Picturebox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;becomeMyPatron_LinkLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="updateIco_PictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="toolsIco_PictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1045, 600</value>
+  </data>
+  <data name="website_LinkLabel.Text" xml:space="preserve">
+    <value>Website</value>
+  </data>
+  <data name="supportMeIco_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="linkLabel2.ToolTip" xml:space="preserve">
+    <value>Open Settings</value>
+  </data>
+  <data name="&gt;&gt;version_LinkLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="discordServer_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Join our Discord server if you need help.</value>
+  </data>
+  <data name="&gt;&gt;progressBar1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="only3DMigoto_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;website_LinkLabel.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="linkLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="close_Panel.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="toolsIco_PictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>79</value>
+  </data>
+  <data name="pictureBox3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 23</value>
+  </data>
+  <data name="&gt;&gt;only3DMigoto_LinkLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Genshin Stella Mod Launcher</value>
+  </data>
+  <data name="&gt;&gt;githubIco_Picturebox.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="runFpsUnlocker_LinkLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="links_LinkLabel.Text" xml:space="preserve">
+    <value>Links</value>
+  </data>
+  <data name="runFpsUnlocker_LinkLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>525, 48</value>
+  </data>
+  <data name="tools_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="startGame_LinkLabel.Text" xml:space="preserve">
+    <value>Start game</value>
+  </data>
+  <data name="githubUrl_LinkLabel.Text" xml:space="preserve">
+    <value>github.com/sefinek24/Genshin-Impact-ReShade</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="panel1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="githubUrl_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Main GitHub repository. Star the repo if you like my work.</value>
+  </data>
+  <data name="gameplay_LinkLabel.Text" xml:space="preserve">
+    <value>Gameplay</value>
+  </data>
+  <data name="&gt;&gt;version_LinkLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="discordServer_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 23</value>
+  </data>
+  <data name="madeBySefinek_Label.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="versionIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 23</value>
+  </data>
+  <data name="status_Label.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 50</value>
+  </data>
+  <data name="status_Label.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;linkLabel2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;becomeMyPatron_LinkLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;githubIco_Picturebox.Name" xml:space="preserve">
+    <value>githubIco_Picturebox</value>
+  </data>
+  <data name="&gt;&gt;website_LinkLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;progressBar1.Name" xml:space="preserve">
+    <value>progressBar1</value>
+  </data>
+  <data name="&gt;&gt;updates_LinkLabel.Name" xml:space="preserve">
+    <value>updates_LinkLabel</value>
+  </data>
+  <data name="&gt;&gt;githubUrl_LinkLabel.Name" xml:space="preserve">
+    <value>githubUrl_LinkLabel</value>
+  </data>
+  <data name="&gt;&gt;githubIco_Picturebox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="supportMe_LinkLabel.Text" xml:space="preserve">
+    <value>Support me</value>
+  </data>
+  <data name="websiteIco_PictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="&gt;&gt;version_LinkLabel.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="runGiLauncher_LinkLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>106</value>
+  </data>
+  <data name="madeBySefinek_Label.Text" xml:space="preserve">
+    <value>made by Sefinek</value>
+  </data>
+  <data name="&gt;&gt;injectReShade_LinkLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;status_Label.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="gameplay_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12pt</value>
+  </data>
+  <data name="&gt;&gt;madeBySefinek_Label.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="shortcutIco_PictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="links_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>244, 566</value>
+  </data>
+  <data name="&gt;&gt;tools_LinkLabel.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="discordServerIco_Picturebox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 512</value>
+  </data>
+  <data name="&gt;&gt;clickMe_LinkLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gameplay_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Watch gameplay</value>
+  </data>
+  <data name="runFpsUnlocker_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Run game with only FPS Unlocker.</value>
+  </data>
+  <data name="&gt;&gt;status_Label.Name" xml:space="preserve">
+    <value>status_Label</value>
+  </data>
+  <data name="only3DMigoto_LinkLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>117</value>
+  </data>
+  <data name="linkLabel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;becomeMyPatron_LinkLabel.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;shortcutIco_PictureBox.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="pictureBox1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="madeBySefinek_Label.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="close_Panel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>991, 16</value>
+  </data>
+  <data name="version_LinkLabel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="becomeMyPatron_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>36, 400</value>
+  </data>
+  <data name="&gt;&gt;shortcutIco_PictureBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="versionIco_PictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 23</value>
+  </data>
+  <data name="version_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>801, 538</value>
+  </data>
+  <data name="&gt;&gt;paimon_PictureBox.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;youtubeIco_Picturebox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;close_Panel.Name" xml:space="preserve">
+    <value>close_Panel</value>
+  </data>
+  <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>591, 565</value>
+  </data>
+  <data name="startGame_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 48pt</value>
+  </data>
+  <data name="paimon_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>989, 477</value>
+  </data>
+  <data name="runFpsUnlocker_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 23</value>
+  </data>
+  <data name="label1.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="version_LinkLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>85</value>
+  </data>
+  <data name="becomeMyPatron_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Go to https://patreon.com/sefinek</value>
+  </data>
+  <data name="supportMe_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 23</value>
+  </data>
+  <data name="&gt;&gt;youtubeIco_Picturebox.Name" xml:space="preserve">
+    <value>youtubeIco_Picturebox</value>
+  </data>
+  <data name="links_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="clickMe_LinkLabel.Text" xml:space="preserve">
+    <value>Click me ;w;</value>
+  </data>
+  <data name="paimon_PictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>107</value>
+  </data>
+  <data name="&gt;&gt;padIco_PictureBox.Name" xml:space="preserve">
+    <value>padIco_PictureBox</value>
+  </data>
+  <data name="PreparingPleaseWait.TabIndex" type="System.Int32, mscorlib">
+    <value>115</value>
+  </data>
+  <data name="toolsIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 23</value>
+  </data>
+  <data name="&gt;&gt;close_Panel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="githubIco_Picturebox.ToolTip" xml:space="preserve">
+    <value>GitHub icon</value>
+  </data>
+  <data name="&gt;&gt;supportMe_LinkLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="runGiLauncher_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tools_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 23</value>
+  </data>
+  <data name="&gt;&gt;version_LinkLabel.Name" xml:space="preserve">
+    <value>version_LinkLabel</value>
+  </data>
+  <data name="&gt;&gt;paimon_PictureBox.Name" xml:space="preserve">
+    <value>paimon_PictureBox</value>
+  </data>
+  <data name="&gt;&gt;supportMe_LinkLabel.Name" xml:space="preserve">
+    <value>supportMe_LinkLabel</value>
+  </data>
+  <data name="pictureBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;githubUrl_LinkLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 22</value>
+  </data>
+  <data name="label1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;links_LinkLabel.Name" xml:space="preserve">
+    <value>links_LinkLabel</value>
+  </data>
+  <data name="&gt;&gt;discordServer_LinkLabel.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;PreparingPleaseWait.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="version_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="padIco_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="updates_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>797, 565</value>
+  </data>
+  <data name="versionIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1010, 536</value>
+  </data>
+  <data name="toolsIco_PictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="tools_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>41, 565</value>
+  </data>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="updateIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1010, 565</value>
+  </data>
+  <data name="&gt;&gt;supportMe_LinkLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="website_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;versionIco_PictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;paimon_PictureBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="clickMe_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>939, 452</value>
+  </data>
+  <data name="&gt;&gt;discordServer_LinkLabel.Name" xml:space="preserve">
+    <value>discordServer_LinkLabel</value>
+  </data>
+  <data name="website_LinkLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>98</value>
+  </data>
+  <data name="padIco_PictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="&gt;&gt;youTube_LinkLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="updates_LinkLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>508, 39</value>
+  </data>
+  <data name="&gt;&gt;toolsIco_PictureBox.Name" xml:space="preserve">
+    <value>toolsIco_PictureBox</value>
+  </data>
+  <data name="startGame_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Launch Genshin Impact with ReShade, FPS Unlocker and 3DMigoto (for patrons).</value>
+  </data>
+  <data name="versionIco_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="supportMe_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 489</value>
+  </data>
+  <data name="PreparingPleaseWait.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="runGiLauncher_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 23</value>
+  </data>
+  <data name="youTube_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 535</value>
+  </data>
+  <data name="&gt;&gt;close_Panel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="discordServerIco_Picturebox.TabIndex" type="System.Int32, mscorlib">
     <value>88</value>
   </data>
-  <data name="changeBg_LinkLabel.Text" xml:space="preserve">
-    <value>Change background</value>
-  </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="changeBg_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Change the application background.</value>
-  </data>
-  <data name="&gt;&gt;changeBg_LinkLabel.Name" xml:space="preserve">
-    <value>changeBg_LinkLabel</value>
-  </data>
-  <data name="&gt;&gt;changeBg_LinkLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="pictureBox3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
   </data>
   <data name="&gt;&gt;changeBg_LinkLabel.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -192,1334 +840,746 @@
   <data name="&gt;&gt;changeBg_LinkLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="close_Panel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="close_Panel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="close_Panel.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="close_Panel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>991, 16</value>
-  </data>
-  <data name="close_Panel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 25</value>
-  </data>
-  <data name="close_Panel.TabIndex" type="System.Int32, mscorlib">
-    <value>76</value>
-  </data>
-  <data name="close_Panel.ToolTip" xml:space="preserve">
-    <value>Exit the launcher</value>
-  </data>
-  <data name="&gt;&gt;close_Panel.Name" xml:space="preserve">
-    <value>close_Panel</value>
-  </data>
-  <data name="&gt;&gt;close_Panel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;close_Panel.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;close_Panel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1045, 41</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>37</value>
-  </data>
-  <data name="githubUrl_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="githubUrl_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="githubUrl_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt</value>
   </data>
   <data name="githubUrl_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>667, 118</value>
   </data>
-  <data name="githubUrl_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>362, 23</value>
-  </data>
-  <data name="githubUrl_LinkLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>75</value>
-  </data>
-  <data name="githubUrl_LinkLabel.Text" xml:space="preserve">
-    <value>github.com/sefinek24/Genshin-Impact-ReShade</value>
-  </data>
-  <data name="githubUrl_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Main GitHub repository. Star the repo if you like my work.</value>
-  </data>
-  <data name="&gt;&gt;githubUrl_LinkLabel.Name" xml:space="preserve">
-    <value>githubUrl_LinkLabel</value>
-  </data>
-  <data name="&gt;&gt;githubUrl_LinkLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;githubUrl_LinkLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;githubUrl_LinkLabel.ZOrder" xml:space="preserve">
-    <value>34</value>
-  </data>
-  <data name="madeBySefinek_Label.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="madeBySefinek_Label.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 17.25pt</value>
-  </data>
-  <data name="madeBySefinek_Label.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopRight</value>
-  </data>
-  <data name="madeBySefinek_Label.Location" type="System.Drawing.Point, System.Drawing">
-    <value>658, 87</value>
-  </data>
-  <data name="madeBySefinek_Label.Size" type="System.Drawing.Size, System.Drawing">
-    <value>368, 31</value>
-  </data>
-  <data name="madeBySefinek_Label.TabIndex" type="System.Int32, mscorlib">
-    <value>74</value>
-  </data>
-  <data name="madeBySefinek_Label.Text" xml:space="preserve">
-    <value>release for the subscribers</value>
-  </data>
-  <data name="madeBySefinek_Label.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="madeBySefinek_Label.ToolTip" xml:space="preserve">
-    <value>&gt;~~&lt;</value>
-  </data>
-  <data name="&gt;&gt;madeBySefinek_Label.Name" xml:space="preserve">
-    <value>madeBySefinek_Label</value>
-  </data>
-  <data name="&gt;&gt;madeBySefinek_Label.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;madeBySefinek_Label.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;madeBySefinek_Label.ZOrder" xml:space="preserve">
-    <value>35</value>
-  </data>
-  <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 21pt, style=Bold</value>
-  </data>
-  <data name="label1.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopRight</value>
-  </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>566, 48</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>467, 39</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>73</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Genshin Impact Stella Mod 2023</value>
-  </data>
-  <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>36</value>
-  </data>
-  <data name="githubIco_Picturebox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="githubIco_Picturebox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>635, 118</value>
-  </data>
-  <data name="githubIco_Picturebox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 26</value>
-  </data>
-  <data name="githubIco_Picturebox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="githubIco_Picturebox.TabIndex" type="System.Int32, mscorlib">
-    <value>76</value>
-  </data>
-  <data name="githubIco_Picturebox.ToolTip" xml:space="preserve">
-    <value>GitHub icon</value>
-  </data>
-  <data name="&gt;&gt;githubIco_Picturebox.Name" xml:space="preserve">
-    <value>githubIco_Picturebox</value>
-  </data>
-  <data name="&gt;&gt;githubIco_Picturebox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;githubIco_Picturebox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;githubIco_Picturebox.ZOrder" xml:space="preserve">
-    <value>33</value>
-  </data>
-  <data name="tools_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="tools_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt</value>
-  </data>
-  <data name="tools_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 565</value>
-  </data>
-  <data name="tools_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 23</value>
-  </data>
-  <data name="tools_LinkLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>77</value>
-  </data>
-  <data name="tools_LinkLabel.Text" xml:space="preserve">
-    <value>Tools</value>
-  </data>
-  <data name="tools_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Utils and logs</value>
-  </data>
-  <data name="&gt;&gt;tools_LinkLabel.Name" xml:space="preserve">
-    <value>tools_LinkLabel</value>
-  </data>
-  <data name="&gt;&gt;tools_LinkLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tools_LinkLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tools_LinkLabel.ZOrder" xml:space="preserve">
-    <value>32</value>
-  </data>
-  <data name="discordServer_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="discordServer_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="discordServer_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt, style=Bold</value>
-  </data>
-  <data name="discordServer_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>37, 512</value>
-  </data>
-  <data name="discordServer_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 23</value>
-  </data>
-  <data name="discordServer_LinkLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>89</value>
-  </data>
-  <data name="discordServer_LinkLabel.Text" xml:space="preserve">
-    <value>Discord</value>
-  </data>
-  <data name="discordServer_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Join our Discord server if you need help.</value>
-  </data>
-  <data name="&gt;&gt;discordServer_LinkLabel.Name" xml:space="preserve">
-    <value>discordServer_LinkLabel</value>
-  </data>
-  <data name="&gt;&gt;discordServer_LinkLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;discordServer_LinkLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;discordServer_LinkLabel.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="youTube_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="youTube_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="youTube_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt, style=Bold</value>
-  </data>
-  <data name="youTube_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>37, 535</value>
-  </data>
-  <data name="youTube_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 23</value>
-  </data>
-  <data name="youTube_LinkLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>90</value>
-  </data>
-  <data name="youTube_LinkLabel.Text" xml:space="preserve">
-    <value>YouTube</value>
-  </data>
-  <data name="youTube_LinkLabel.ToolTip" xml:space="preserve">
-    <value>My YouTube channel. Subscribe me if you like this project.</value>
-  </data>
-  <data name="&gt;&gt;youTube_LinkLabel.Name" xml:space="preserve">
-    <value>youTube_LinkLabel</value>
-  </data>
-  <data name="&gt;&gt;youTube_LinkLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;youTube_LinkLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;youTube_LinkLabel.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="startGame_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="startGame_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 48pt</value>
-  </data>
-  <data name="startGame_LinkLabel.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>BottomLeft</value>
-  </data>
-  <data name="startGame_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 193</value>
-  </data>
-  <data name="startGame_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>401, 95</value>
-  </data>
-  <data name="startGame_LinkLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>94</value>
-  </data>
-  <data name="startGame_LinkLabel.Text" xml:space="preserve">
-    <value>Start game</value>
-  </data>
-  <data name="startGame_LinkLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="startGame_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Launch Genshin Impact with ReShade, FPS Unlocker and 3DMigoto (for patrons).</value>
-  </data>
-  <data name="startGame_LinkLabel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;startGame_LinkLabel.Name" xml:space="preserve">
-    <value>startGame_LinkLabel</value>
-  </data>
-  <data name="&gt;&gt;startGame_LinkLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;startGame_LinkLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;startGame_LinkLabel.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="website_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="website_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt</value>
-  </data>
-  <data name="website_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>473, 565</value>
-  </data>
-  <data name="website_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 23</value>
-  </data>
-  <data name="website_LinkLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>98</value>
-  </data>
-  <data name="website_LinkLabel.Text" xml:space="preserve">
-    <value>Website</value>
-  </data>
-  <data name="website_LinkLabel.ToolTip" xml:space="preserve">
-    <value>See official website</value>
-  </data>
-  <data name="&gt;&gt;website_LinkLabel.Name" xml:space="preserve">
-    <value>website_LinkLabel</value>
-  </data>
-  <data name="&gt;&gt;website_LinkLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;website_LinkLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;website_LinkLabel.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="gameplay_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="gameplay_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gameplay_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt</value>
-  </data>
-  <data name="gameplay_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 565</value>
-  </data>
-  <data name="gameplay_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 23</value>
-  </data>
-  <data name="gameplay_LinkLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>78</value>
-  </data>
-  <data name="gameplay_LinkLabel.Text" xml:space="preserve">
-    <value>Gameplay</value>
-  </data>
-  <data name="gameplay_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Watch gameplay</value>
-  </data>
-  <data name="&gt;&gt;gameplay_LinkLabel.Name" xml:space="preserve">
-    <value>gameplay_LinkLabel</value>
-  </data>
-  <data name="&gt;&gt;gameplay_LinkLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gameplay_LinkLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;gameplay_LinkLabel.ZOrder" xml:space="preserve">
-    <value>31</value>
-  </data>
-  <data name="supportMe_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="supportMe_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="supportMe_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt, style=Bold</value>
-  </data>
-  <data name="supportMe_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 489</value>
-  </data>
-  <data name="supportMe_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 23</value>
-  </data>
-  <data name="supportMe_LinkLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="supportMe_LinkLabel.Text" xml:space="preserve">
-    <value>Support me</value>
-  </data>
-  <data name="supportMe_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Support my work.</value>
-  </data>
-  <data name="&gt;&gt;supportMe_LinkLabel.Name" xml:space="preserve">
-    <value>supportMe_LinkLabel</value>
-  </data>
-  <data name="&gt;&gt;supportMe_LinkLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;supportMe_LinkLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;supportMe_LinkLabel.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="becomeMyPatron_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="becomeMyPatron_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="becomeMyPatron_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 15.75pt, style=Bold</value>
-  </data>
-  <data name="becomeMyPatron_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>36, 400</value>
-  </data>
-  <data name="becomeMyPatron_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>510, 60</value>
-  </data>
-  <data name="becomeMyPatron_LinkLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>111</value>
-  </data>
-  <data name="becomeMyPatron_LinkLabel.Text" xml:space="preserve">
-    <value>To get Ray Tracing in game, become my Patron.
-RTX cards are not required.</value>
-  </data>
-  <data name="becomeMyPatron_LinkLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="becomeMyPatron_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Go to https://patreon.com/sefinek</value>
-  </data>
-  <data name="becomeMyPatron_LinkLabel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;becomeMyPatron_LinkLabel.Name" xml:space="preserve">
-    <value>becomeMyPatron_LinkLabel</value>
-  </data>
-  <data name="&gt;&gt;becomeMyPatron_LinkLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;becomeMyPatron_LinkLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;becomeMyPatron_LinkLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="runGiLauncher_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="runGiLauncher_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="runGiLauncher_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt</value>
-  </data>
-  <data name="runGiLauncher_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>182, 340</value>
-  </data>
-  <data name="runGiLauncher_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 23</value>
-  </data>
-  <data name="runGiLauncher_LinkLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>106</value>
-  </data>
-  <data name="runGiLauncher_LinkLabel.Text" xml:space="preserve">
-    <value>Genshin Impact Launcher</value>
-  </data>
-  <data name="runGiLauncher_LinkLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="runGiLauncher_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Open the main game launcher.</value>
-  </data>
-  <data name="runGiLauncher_LinkLabel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;runGiLauncher_LinkLabel.Name" xml:space="preserve">
-    <value>runGiLauncher_LinkLabel</value>
-  </data>
-  <data name="&gt;&gt;runGiLauncher_LinkLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;runGiLauncher_LinkLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;runGiLauncher_LinkLabel.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="version_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="version_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt</value>
-  </data>
-  <data name="version_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>801, 538</value>
-  </data>
-  <data name="version_LinkLabel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="version_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 23</value>
-  </data>
-  <data name="version_LinkLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>85</value>
-  </data>
-  <data name="version_LinkLabel.Text" xml:space="preserve">
-    <value>Restart is optional</value>
-  </data>
-  <data name="version_LinkLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="version_LinkLabel.ToolTip" xml:space="preserve">
-    <value>See changelog on GitHub.</value>
-  </data>
-  <data name="&gt;&gt;version_LinkLabel.Name" xml:space="preserve">
-    <value>version_LinkLabel</value>
-  </data>
-  <data name="&gt;&gt;version_LinkLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;version_LinkLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;version_LinkLabel.ZOrder" xml:space="preserve">
-    <value>25</value>
-  </data>
-  <data name="links_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="links_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt</value>
-  </data>
-  <data name="links_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 566</value>
-  </data>
-  <data name="links_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 22</value>
-  </data>
-  <data name="links_LinkLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>104</value>
-  </data>
-  <data name="links_LinkLabel.Text" xml:space="preserve">
-    <value>Links</value>
-  </data>
-  <data name="links_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Some links</value>
-  </data>
-  <data name="&gt;&gt;links_LinkLabel.Name" xml:space="preserve">
-    <value>links_LinkLabel</value>
-  </data>
-  <data name="&gt;&gt;links_LinkLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;links_LinkLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;links_LinkLabel.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="clickMe_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="clickMe_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="clickMe_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 11.25pt, style=Bold</value>
-  </data>
-  <data name="clickMe_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>939, 452</value>
-  </data>
-  <data name="clickMe_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 21</value>
-  </data>
-  <data name="clickMe_LinkLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>116</value>
-  </data>
-  <data name="clickMe_LinkLabel.Text" xml:space="preserve">
-    <value>Click me ;w;</value>
-  </data>
-  <data name="clickMe_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Tak kurwa tutaj ((:</value>
-  </data>
-  <data name="&gt;&gt;clickMe_LinkLabel.Name" xml:space="preserve">
-    <value>clickMe_LinkLabel</value>
-  </data>
-  <data name="&gt;&gt;clickMe_LinkLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;clickMe_LinkLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;clickMe_LinkLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="injectReShade_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="injectReShade_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="injectReShade_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt</value>
-  </data>
-  <data name="injectReShade_LinkLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="injectReShade_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 302</value>
-  </data>
-  <data name="injectReShade_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 23</value>
-  </data>
-  <data name="injectReShade_LinkLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>92</value>
-  </data>
-  <data name="injectReShade_LinkLabel.Text" xml:space="preserve">
-    <value>Only ReShade</value>
-  </data>
-  <data name="injectReShade_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Run Genshin Impact with only ReShade.</value>
-  </data>
-  <data name="injectReShade_LinkLabel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;injectReShade_LinkLabel.Name" xml:space="preserve">
-    <value>injectReShade_LinkLabel</value>
-  </data>
-  <data name="&gt;&gt;injectReShade_LinkLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;injectReShade_LinkLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;injectReShade_LinkLabel.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="runFpsUnlocker_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="runFpsUnlocker_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="runFpsUnlocker_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt</value>
-  </data>
-  <data name="runFpsUnlocker_LinkLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="runFpsUnlocker_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>204, 302</value>
-  </data>
-  <data name="runFpsUnlocker_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 23</value>
-  </data>
-  <data name="runFpsUnlocker_LinkLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>93</value>
-  </data>
-  <data name="runFpsUnlocker_LinkLabel.Text" xml:space="preserve">
-    <value>Only FPS Unlocker</value>
-  </data>
-  <data name="runFpsUnlocker_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Run game with only FPS Unlocker.</value>
-  </data>
-  <data name="runFpsUnlocker_LinkLabel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;runFpsUnlocker_LinkLabel.Name" xml:space="preserve">
-    <value>runFpsUnlocker_LinkLabel</value>
-  </data>
-  <data name="&gt;&gt;runFpsUnlocker_LinkLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;runFpsUnlocker_LinkLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;runFpsUnlocker_LinkLabel.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="only3DMigoto_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="only3DMigoto_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="only3DMigoto_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt</value>
-  </data>
-  <data name="only3DMigoto_LinkLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="only3DMigoto_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>375, 302</value>
-  </data>
-  <data name="only3DMigoto_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 23</value>
-  </data>
-  <data name="only3DMigoto_LinkLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>117</value>
-  </data>
-  <data name="only3DMigoto_LinkLabel.Text" xml:space="preserve">
-    <value>Only 3DMigoto</value>
-  </data>
-  <data name="only3DMigoto_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Run Genshin Impact with only 3DMigoto.</value>
-  </data>
-  <data name="only3DMigoto_LinkLabel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;only3DMigoto_LinkLabel.Name" xml:space="preserve">
-    <value>only3DMigoto_LinkLabel</value>
-  </data>
-  <data name="&gt;&gt;only3DMigoto_LinkLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;only3DMigoto_LinkLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;only3DMigoto_LinkLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="linkLabel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="linkLabel1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt</value>
-  </data>
-  <data name="linkLabel1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>591, 565</value>
-  </data>
-  <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 22</value>
-  </data>
-  <data name="linkLabel1.TabIndex" type="System.Int32, mscorlib">
-    <value>118</value>
-  </data>
-  <data name="linkLabel1.Text" xml:space="preserve">
-    <value>Resources</value>
-  </data>
-  <data name="linkLabel1.ToolTip" xml:space="preserve">
-    <value>Go to Stella Resources</value>
-  </data>
-  <data name="&gt;&gt;linkLabel1.Name" xml:space="preserve">
-    <value>linkLabel1</value>
-  </data>
-  <data name="&gt;&gt;linkLabel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;linkLabel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;linkLabel1.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="linkLabel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="linkLabel2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt</value>
-  </data>
-  <data name="linkLabel2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="linkLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>132, 565</value>
-  </data>
-  <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 23</value>
-  </data>
-  <data name="linkLabel2.TabIndex" type="System.Int32, mscorlib">
-    <value>120</value>
-  </data>
-  <data name="linkLabel2.Text" xml:space="preserve">
-    <value>Settings</value>
-  </data>
-  <data name="linkLabel2.ToolTip" xml:space="preserve">
-    <value>Open Settings</value>
-  </data>
-  <data name="&gt;&gt;linkLabel2.Name" xml:space="preserve">
-    <value>linkLabel2</value>
-  </data>
-  <data name="&gt;&gt;linkLabel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;linkLabel2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;linkLabel2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="toolsIco_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="toolsIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 565</value>
-  </data>
-  <data name="toolsIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 23</value>
-  </data>
-  <data name="toolsIco_PictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="toolsIco_PictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>79</value>
-  </data>
-  <data name="&gt;&gt;toolsIco_PictureBox.Name" xml:space="preserve">
-    <value>toolsIco_PictureBox</value>
-  </data>
-  <data name="&gt;&gt;toolsIco_PictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolsIco_PictureBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;toolsIco_PictureBox.ZOrder" xml:space="preserve">
-    <value>30</value>
-  </data>
-  <data name="websiteIco_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="websiteIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>444, 565</value>
-  </data>
-  <data name="websiteIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 23</value>
-  </data>
-  <data name="websiteIco_PictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="websiteIco_PictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <data name="&gt;&gt;websiteIco_PictureBox.Name" xml:space="preserve">
-    <value>websiteIco_PictureBox</value>
-  </data>
-  <data name="&gt;&gt;websiteIco_PictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;websiteIco_PictureBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;websiteIco_PictureBox.ZOrder" xml:space="preserve">
-    <value>29</value>
-  </data>
-  <data name="updateIco_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="updateIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1010, 565</value>
-  </data>
-  <data name="updateIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 23</value>
-  </data>
-  <data name="updateIco_PictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="updateIco_PictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>82</value>
-  </data>
-  <data name="&gt;&gt;updateIco_PictureBox.Name" xml:space="preserve">
-    <value>updateIco_PictureBox</value>
-  </data>
-  <data name="&gt;&gt;updateIco_PictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateIco_PictureBox.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="&gt;&gt;updateIco_PictureBox.ZOrder" xml:space="preserve">
     <value>28</value>
   </data>
-  <data name="versionIco_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="versionIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1010, 536</value>
-  </data>
-  <data name="versionIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 23</value>
-  </data>
-  <data name="versionIco_PictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="versionIco_PictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>83</value>
-  </data>
-  <data name="&gt;&gt;versionIco_PictureBox.Name" xml:space="preserve">
-    <value>versionIco_PictureBox</value>
-  </data>
-  <data name="&gt;&gt;versionIco_PictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;versionIco_PictureBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;versionIco_PictureBox.ZOrder" xml:space="preserve">
-    <value>27</value>
-  </data>
-  <data name="updates_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="updates_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt</value>
-  </data>
-  <data name="updates_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>797, 565</value>
-  </data>
-  <data name="updates_LinkLabel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="updates_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 23</value>
-  </data>
-  <data name="updates_LinkLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>85</value>
-  </data>
-  <data name="updates_LinkLabel.Text" xml:space="preserve">
-    <value>Waiting...</value>
-  </data>
-  <data name="updates_LinkLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;updates_LinkLabel.Name" xml:space="preserve">
-    <value>updates_LinkLabel</value>
-  </data>
-  <data name="&gt;&gt;updates_LinkLabel.Type" xml:space="preserve">
+  <data name="&gt;&gt;website_LinkLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;updates_LinkLabel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;madeBySefinek_Label.Name" xml:space="preserve">
+    <value>madeBySefinek_Label</value>
   </data>
-  <data name="&gt;&gt;updates_LinkLabel.ZOrder" xml:space="preserve">
-    <value>26</value>
+  <data name="startGame_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>401, 95</value>
   </data>
-  <data name="youtubeIco_Picturebox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+  <data name="close_Panel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 25</value>
   </data>
-  <data name="youtubeIco_Picturebox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 535</value>
+  <data name="progressBar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 565</value>
   </data>
-  <data name="youtubeIco_Picturebox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 23</value>
+  <data name="supportMeIco_PictureBox.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="youtubeIco_Picturebox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 21pt, style=Bold</value>
   </data>
-  <data name="youtubeIco_Picturebox.TabIndex" type="System.Int32, mscorlib">
-    <value>87</value>
+  <data name="&gt;&gt;only3DMigoto_LinkLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="&gt;&gt;youtubeIco_Picturebox.Name" xml:space="preserve">
-    <value>youtubeIco_Picturebox</value>
+  <data name="madeBySefinek_Label.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 17.25pt</value>
   </data>
-  <data name="&gt;&gt;youtubeIco_Picturebox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="injectReShade_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12pt</value>
   </data>
-  <data name="&gt;&gt;youtubeIco_Picturebox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;youtubeIco_Picturebox.ZOrder" xml:space="preserve">
-    <value>24</value>
-  </data>
-  <data name="discordServerIco_Picturebox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="discordServerIco_Picturebox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 512</value>
-  </data>
-  <data name="discordServerIco_Picturebox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 23</value>
-  </data>
-  <data name="discordServerIco_Picturebox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="discordServerIco_Picturebox.TabIndex" type="System.Int32, mscorlib">
-    <value>88</value>
-  </data>
-  <data name="&gt;&gt;discordServerIco_Picturebox.Name" xml:space="preserve">
-    <value>discordServerIco_Picturebox</value>
-  </data>
-  <data name="&gt;&gt;discordServerIco_Picturebox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;discordServerIco_Picturebox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;discordServerIco_Picturebox.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="status_Label.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="status_Label.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Consolas, 9.75pt</value>
-  </data>
-  <data name="status_Label.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 50</value>
-  </data>
-  <data name="status_Label.Size" type="System.Drawing.Size, System.Drawing">
-    <value>547, 133</value>
-  </data>
-  <data name="status_Label.TabIndex" type="System.Int32, mscorlib">
-    <value>96</value>
-  </data>
-  <data name="status_Label.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;status_Label.Name" xml:space="preserve">
-    <value>status_Label</value>
-  </data>
-  <data name="&gt;&gt;status_Label.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;status_Label.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;status_Label.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="padIco_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="padIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>313, 565</value>
-  </data>
-  <data name="padIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 23</value>
-  </data>
-  <data name="padIco_PictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="padIco_PictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>97</value>
-  </data>
-  <data name="&gt;&gt;padIco_PictureBox.Name" xml:space="preserve">
-    <value>padIco_PictureBox</value>
-  </data>
-  <data name="&gt;&gt;padIco_PictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;padIco_PictureBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;padIco_PictureBox.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="supportMeIco_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="supportMeIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 489</value>
-  </data>
-  <data name="supportMeIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 23</value>
-  </data>
-  <data name="supportMeIco_PictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="supportMeIco_PictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>99</value>
-  </data>
-  <data name="&gt;&gt;supportMeIco_PictureBox.Name" xml:space="preserve">
-    <value>supportMeIco_PictureBox</value>
-  </data>
-  <data name="&gt;&gt;supportMeIco_PictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="linkLabel2.Text" xml:space="preserve">
+    <value>Settings</value>
   </data>
   <data name="&gt;&gt;supportMeIco_PictureBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;linkLabel1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;supportMeIco_PictureBox.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="shortcutIco_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="shortcutIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 565</value>
-  </data>
-  <data name="shortcutIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 23</value>
-  </data>
-  <data name="shortcutIco_PictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="shortcutIco_PictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>105</value>
-  </data>
-  <data name="&gt;&gt;shortcutIco_PictureBox.Name" xml:space="preserve">
-    <value>shortcutIco_PictureBox</value>
-  </data>
-  <data name="&gt;&gt;shortcutIco_PictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;shortcutIco_PictureBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;shortcutIco_PictureBox.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="paimon_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="paimon_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>989, 477</value>
-  </data>
-  <data name="paimon_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 42</value>
-  </data>
-  <data name="paimon_PictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="paimon_PictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>107</value>
-  </data>
-  <data name="&gt;&gt;paimon_PictureBox.Name" xml:space="preserve">
-    <value>paimon_PictureBox</value>
-  </data>
-  <data name="&gt;&gt;paimon_PictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;paimon_PictureBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;paimon_PictureBox.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="progressBar1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="progressBar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 565</value>
-  </data>
-  <data name="progressBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>779, 23</value>
-  </data>
-  <data name="progressBar1.TabIndex" type="System.Int32, mscorlib">
-    <value>114</value>
-  </data>
-  <data name="&gt;&gt;progressBar1.Name" xml:space="preserve">
-    <value>progressBar1</value>
-  </data>
-  <data name="&gt;&gt;progressBar1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;progressBar1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;progressBar1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="PreparingPleaseWait.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="PreparingPleaseWait.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="PreparingPleaseWait.Location" type="System.Drawing.Point, System.Drawing">
-    <value>134, 541</value>
-  </data>
-  <data name="PreparingPleaseWait.Size" type="System.Drawing.Size, System.Drawing">
-    <value>529, 20</value>
-  </data>
-  <data name="PreparingPleaseWait.TabIndex" type="System.Int32, mscorlib">
-    <value>115</value>
-  </data>
-  <data name="PreparingPleaseWait.Text" xml:space="preserve">
-    <value>Please wait...</value>
-  </data>
-  <data name="PreparingPleaseWait.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="becomeMyPatron_LinkLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;PreparingPleaseWait.Name" xml:space="preserve">
-    <value>PreparingPleaseWait</value>
-  </data>
-  <data name="&gt;&gt;PreparingPleaseWait.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PreparingPleaseWait.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;PreparingPleaseWait.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="pictureBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>562, 565</value>
-  </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 23</value>
-  </data>
-  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>119</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="pictureBox3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="pictureBox3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
-  </data>
-  <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 565</value>
-  </data>
-  <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 23</value>
-  </data>
-  <data name="pictureBox3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pictureBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>121</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Name" xml:space="preserve">
-    <value>pictureBox3</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="websiteIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 23</value>
+  </data>
+  <data name="linkLabel1.Text" xml:space="preserve">
+    <value>Resources</value>
+  </data>
+  <data name="becomeMyPatron_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 15.75pt, style=Bold</value>
+  </data>
+  <data name="status_Label.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="becomeMyPatron_LinkLabel.Text" xml:space="preserve">
+    <value>To get Ray Tracing in game, become my Patron.
+RTX cards are not required.</value>
+  </data>
+  <data name="clickMe_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="changeBg_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 13</value>
+  </data>
+  <data name="&gt;&gt;discordServer_LinkLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gameplay_LinkLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="status_Label.TabIndex" type="System.Int32, mscorlib">
+    <value>96</value>
+  </data>
+  <data name="discordServer_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;youtubeIco_Picturebox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
+  <data name="only3DMigoto_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 23</value>
+  </data>
+  <data name="youtubeIco_Picturebox.TabIndex" type="System.Int32, mscorlib">
+    <value>87</value>
+  </data>
+  <data name="&gt;&gt;youTube_LinkLabel.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;runGiLauncher_LinkLabel.Name" xml:space="preserve">
+    <value>runGiLauncher_LinkLabel</value>
+  </data>
+  <data name="shortcutIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 23</value>
+  </data>
+  <data name="&gt;&gt;versionIco_PictureBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="close_Panel.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="madeBySefinek_Label.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="updates_LinkLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>85</value>
+  </data>
+  <data name="githubUrl_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="changeBg_LinkLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>88</value>
+  </data>
+  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="progressBar1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;changeBg_LinkLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="becomeMyPatron_LinkLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>111</value>
+  </data>
+  <data name="tools_LinkLabel.Text" xml:space="preserve">
+    <value>Tools</value>
+  </data>
+  <data name="&gt;&gt;updateIco_PictureBox.Name" xml:space="preserve">
+    <value>updateIco_PictureBox</value>
+  </data>
+  <data name="versionIco_PictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>83</value>
+  </data>
+  <data name="&gt;&gt;discordServer_LinkLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="links_LinkLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>104</value>
+  </data>
+  <data name="runGiLauncher_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Open the main game launcher.</value>
+  </data>
+  <data name="changeBg_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
+    <value>pictureBox2</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="clickMe_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 21</value>
+  </data>
+  <data name="only3DMigoto_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12pt</value>
+  </data>
+  <data name="&gt;&gt;githubUrl_LinkLabel.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="&gt;&gt;updates_LinkLabel.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;discordServerIco_Picturebox.Name" xml:space="preserve">
+    <value>discordServerIco_Picturebox</value>
+  </data>
+  <data name="website_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>473, 565</value>
+  </data>
+  <data name="PreparingPleaseWait.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="status_Label.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 9.75pt</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="githubIco_Picturebox.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="&gt;&gt;tools_LinkLabel.Name" xml:space="preserve">
+    <value>tools_LinkLabel</value>
+  </data>
+  <data name="injectReShade_LinkLabel.Text" xml:space="preserve">
+    <value>Only ReShade</value>
+  </data>
+  <data name="&gt;&gt;madeBySefinek_Label.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;links_LinkLabel.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="PreparingPleaseWait.Size" type="System.Drawing.Size, System.Drawing">
+    <value>529, 20</value>
+  </data>
+  <data name="becomeMyPatron_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>510, 60</value>
+  </data>
+  <data name="linkLabel1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="injectReShade_LinkLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="changeBg_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Change the application background.</value>
+  </data>
+  <data name="&gt;&gt;padIco_PictureBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="startGame_LinkLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="linkLabel1.ToolTip" xml:space="preserve">
+    <value>Go to Stella Resources</value>
+  </data>
+  <data name="runGiLauncher_LinkLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="startGame_LinkLabel.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomLeft</value>
+  </data>
+  <data name="&gt;&gt;discordServerIco_Picturebox.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;linkLabel1.Name" xml:space="preserve">
+    <value>linkLabel1</value>
+  </data>
+  <data name="updates_LinkLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;linkLabel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="runFpsUnlocker_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;links_LinkLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 565</value>
+  </data>
+  <data name="&gt;&gt;clickMe_LinkLabel.Name" xml:space="preserve">
+    <value>clickMe_LinkLabel</value>
+  </data>
+  <data name="toolsIco_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;websiteIco_PictureBox.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="runFpsUnlocker_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>204, 302</value>
+  </data>
+  <data name="startGame_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="injectReShade_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 302</value>
+  </data>
+  <data name="&gt;&gt;discordServerIco_Picturebox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;startGame_LinkLabel.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;padIco_PictureBox.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;progressBar1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;youTube_LinkLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;website_LinkLabel.Name" xml:space="preserve">
+    <value>website_LinkLabel</value>
+  </data>
+  <data name="githubIco_Picturebox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 26</value>
+  </data>
+  <data name="updateIco_PictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gameplay_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 23</value>
+  </data>
+  <data name="clickMe_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 11.25pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;gameplay_LinkLabel.Name" xml:space="preserve">
+    <value>gameplay_LinkLabel</value>
+  </data>
+  <data name="&gt;&gt;injectReShade_LinkLabel.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 11</value>
+  </data>
+  <data name="&gt;&gt;only3DMigoto_LinkLabel.Name" xml:space="preserve">
+    <value>only3DMigoto_LinkLabel</value>
+  </data>
+  <data name="becomeMyPatron_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;tools_LinkLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="discordServer_LinkLabel.Text" xml:space="preserve">
+    <value>Discord</value>
+  </data>
+  <data name="youtubeIco_Picturebox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 23</value>
+  </data>
+  <data name="&gt;&gt;runGiLauncher_LinkLabel.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="runGiLauncher_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>182, 340</value>
+  </data>
+  <data name="clickMe_LinkLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>116</value>
+  </data>
+  <data name="status_Label.Size" type="System.Drawing.Size, System.Drawing">
+    <value>606, 143</value>
+  </data>
+  <data name="progressBar1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
+    <value>toolTip1</value>
+  </data>
+  <data name="&gt;&gt;injectReShade_LinkLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="discordServer_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 512</value>
+  </data>
+  <data name="&gt;&gt;paimon_PictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>37</value>
+  </data>
+  <data name="&gt;&gt;supportMeIco_PictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="becomeMyPatron_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;websiteIco_PictureBox.Name" xml:space="preserve">
+    <value>websiteIco_PictureBox</value>
+  </data>
+  <data name="&gt;&gt;shortcutIco_PictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Stella Mod Launcher</value>
+  </data>
+  <data name="supportMeIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 23</value>
+  </data>
+  <data name="&gt;&gt;becomeMyPatron_LinkLabel.Name" xml:space="preserve">
+    <value>becomeMyPatron_LinkLabel</value>
+  </data>
+  <data name="clickMe_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gameplay_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>342, 565</value>
+  </data>
+  <data name="&gt;&gt;websiteIco_PictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="changeBg_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 11.25pt</value>
+  </data>
+  <data name="pictureBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>121</value>
+  </data>
+  <data name="discordServer_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12pt, style=Bold</value>
+  </data>
+  <data name="shortcutIco_PictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>105</value>
+  </data>
+  <data name="injectReShade_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;changeBg_LinkLabel.Name" xml:space="preserve">
+    <value>changeBg_LinkLabel</value>
+  </data>
+  <data name="linkLabel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="changeBg_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 17</value>
+  </data>
+  <data name="githubIco_Picturebox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>635, 118</value>
+  </data>
+  <data name="&gt;&gt;injectReShade_LinkLabel.Name" xml:space="preserve">
+    <value>injectReShade_LinkLabel</value>
+  </data>
+  <data name="PreparingPleaseWait.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="madeBySefinek_Label.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="&gt;&gt;discordServerIco_Picturebox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="youTube_LinkLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="version_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 23</value>
+  </data>
+  <data name="&gt;&gt;padIco_PictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="updates_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;versionIco_PictureBox.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>562, 565</value>
+  </data>
+  <data name="only3DMigoto_LinkLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="close_Panel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;linkLabel2.Name" xml:space="preserve">
+    <value>linkLabel2</value>
+  </data>
+  <data name="&gt;&gt;clickMe_LinkLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;runFpsUnlocker_LinkLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;startGame_LinkLabel.Name" xml:space="preserve">
+    <value>startGame_LinkLabel</value>
+  </data>
+  <data name="pictureBox2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="&gt;&gt;websiteIco_PictureBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="&gt;&gt;shortcutIco_PictureBox.Name" xml:space="preserve">
+    <value>shortcutIco_PictureBox</value>
+  </data>
+  <data name="tools_LinkLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
+  <data name="padIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 23</value>
+  </data>
+  <data name="updateIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 23</value>
+  </data>
+  <data name="injectReShade_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Run Genshin Impact with only ReShade.</value>
+  </data>
+  <data name="updateIco_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>119</value>
+  </data>
+  <data name="discordServerIco_Picturebox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 23</value>
+  </data>
+  <data name="&gt;&gt;PreparingPleaseWait.Name" xml:space="preserve">
+    <value>PreparingPleaseWait</value>
+  </data>
+  <data name="&gt;&gt;progressBar1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="version_LinkLabel.Text" xml:space="preserve">
+    <value>Restart is optional</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;githubIco_Picturebox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;updateIco_PictureBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="progressBar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>779, 23</value>
+  </data>
+  <data name="&gt;&gt;updates_LinkLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="websiteIco_PictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="&gt;&gt;tools_LinkLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="updates_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 23</value>
+  </data>
+  <data name="startGame_LinkLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>94</value>
+  </data>
+  <data name="&gt;&gt;updates_LinkLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="discordServerIco_Picturebox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PreparingPleaseWait.Text" xml:space="preserve">
+    <value>Please wait...</value>
+  </data>
+  <data name="&gt;&gt;toolsIco_PictureBox.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;versionIco_PictureBox.Name" xml:space="preserve">
+    <value>versionIco_PictureBox</value>
+  </data>
+  <data name="&gt;&gt;toolsIco_PictureBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="&gt;&gt;startGame_LinkLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="paimon_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 42</value>
+  </data>
+  <data name="madeBySefinek_Label.Location" type="System.Drawing.Point, System.Drawing">
+    <value>658, 87</value>
+  </data>
+  <data name="&gt;&gt;updateIco_PictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="version_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12pt</value>
+  </data>
+  <data name="runGiLauncher_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12pt</value>
+  </data>
+  <data name="version_LinkLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="discordServer_LinkLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>89</value>
+  </data>
+  <data name="shortcutIco_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="updates_LinkLabel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="website_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 23</value>
+  </data>
+  <data name="youTube_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="toolsIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 565</value>
+  </data>
+  <data name="&gt;&gt;only3DMigoto_LinkLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="changeBg_LinkLabel.Text" xml:space="preserve">
+    <value>Change background</value>
+  </data>
+  <data name="&gt;&gt;linkLabel1.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="injectReShade_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="discordServer_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="padIco_PictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>97</value>
+  </data>
+  <data name="youTube_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12pt, style=Bold</value>
+  </data>
+  <data name="supportMe_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Support my work.</value>
+  </data>
+  <data name="youtubeIco_Picturebox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 535</value>
+  </data>
+  <data name="supportMeIco_PictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="youTube_LinkLabel.ToolTip" xml:space="preserve">
+    <value>My YouTube channel. Subscribe me if you like this project.</value>
+  </data>
+  <data name="close_Panel.ToolTip" xml:space="preserve">
+    <value>Exit the launcher</value>
+  </data>
+  <data name="&gt;&gt;madeBySefinek_Label.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="&gt;&gt;PreparingPleaseWait.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.Name" xml:space="preserve">
+    <value>pictureBox3</value>
+  </data>
+  <data name="discordServerIco_Picturebox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="paimon_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="githubIco_Picturebox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="updates_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 12pt</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;links_LinkLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="links_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 22</value>
+  </data>
+  <data name="&gt;&gt;linkLabel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="only3DMigoto_LinkLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="close_Panel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1045, 600</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Stella Mod Launcher</value>
-  </data>
-  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
-    <value>toolTip1</value>
-  </data>
-  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Default</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
+  <metadata name="panel1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

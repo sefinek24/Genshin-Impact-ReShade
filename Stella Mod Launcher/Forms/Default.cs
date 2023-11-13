@@ -207,10 +207,10 @@ namespace StellaLauncher.Forms
                     {
                         case 200:
                             Secret.IsMyPatron = true;
-                            label1.Text = Resources.Default_GenshinStellaModForPatrons;
-                            label1.TextAlign = ContentAlignment.MiddleRight;
+                            label1.Text = @"Genshin Stella Mod Plus Launcher";
+                            madeBySefinek_Label.Text = @"What will we be doing today?";
 
-                            Program.Logger.Info($"The user is a subscriber to Stella Mod Plus ({Secret.IsMyPatron}). The benefits have been unlocked.");
+                            Program.Logger.Info($"The user is a subscriber to Stella Mod Plus ({Secret.IsMyPatron}). Benefits have been unlocked.");
                             Secret.BearerToken = remote.Token;
                             break;
 
@@ -303,8 +303,8 @@ namespace StellaLauncher.Forms
 
                     if (!Secret.IsMyPatron)
                     {
-                        status_Label.Text += @"[x] You cannot use batch files in Genshin Stella Mod without being a patron.";
-                        Program.Logger.Error("You cannot use batch files without being a patron.");
+                        status_Label.Text += @"[x] Batch file usage in Genshin Stella Mod is exclusive to Stella Mod Plus subscribers.";
+                        Program.Logger.Error("To utilize batch files, a subscription to Stella Mod Plus is required.");
                     }
 
                     break;

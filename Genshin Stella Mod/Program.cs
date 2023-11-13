@@ -148,8 +148,8 @@ namespace GenshinStellaMod
                     {
                         case 200:
                             Secret.IsMyPatron = true;
-                            Logger.Info($"User is my Patron; {Secret.IsMyPatron}; Allowed;");
-                            Console.WriteLine("[✓] You're verified Patron");
+                            Logger.Info($"The user is a subscriber to Stella Mod Plus ({Secret.IsMyPatron}); Allowed;");
+                            Console.WriteLine("[✓] You're a verified Stella Mod Plus subscriber");
                             break;
 
                         case 500:
@@ -180,7 +180,7 @@ namespace GenshinStellaMod
             if (!Secret.IsMyPatron && (launchMode == "1" || launchMode == "5"))
             {
                 Console.WriteLine("[X] Not this time bro");
-                Logger.Error($"An attempt was made to use launchMode {launchMode} without being a patron; Secret.IsMyPatron: {Secret.IsMyPatron}; Secret.Attempt: {Secret.Attempt}");
+                Logger.Error($"An attempt was made to use launchMode {launchMode} without being a Stella Mod Plus subscriber; Secret.IsMyPatron: {Secret.IsMyPatron}; Secret.Attempt: {Secret.Attempt}");
                 MessageBox.Show("The security system has detected a breach.\n\nScrew you ((:", AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 Environment.Exit(1432166809);

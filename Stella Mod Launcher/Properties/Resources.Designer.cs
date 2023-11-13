@@ -435,15 +435,6 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Genshin Stella Mod for Patrons.
-        /// </summary>
-        internal static string Default_GenshinStellaModForPatrons {
-            get {
-                return ResourceManager.GetString("Default_GenshinStellaModForPatrons", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to It appears that you are launching the launcher for the first time! Take a moment to review the terms of use on the GitHub Wiki and other guidelines for this modification to avoid any unexpected issues.
         ///
         ///REMEMBER NOT TO SHARE YOUR UID WITH VISIBLE GAME SHADERS WITH ANYONE!.
@@ -533,15 +524,6 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Successfully downloaded ReShade.ini and saved in: {0}.
-        /// </summary>
-        internal static string Default_SuccessfullyUpdatedReShadeCfgAndSavedIn {
-            get {
-                return ResourceManager.GetString("Default_SuccessfullyUpdatedReShadeCfgAndSavedIn", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Successfully retrieved and updated the cached app background with ID {0}..
         /// </summary>
         internal static string Default_SuccessfullyRetrievedAndUpdatedTheCachedAppBackgroundWithID_ {
@@ -556,6 +538,15 @@ namespace StellaLauncher.Properties {
         internal static string Default_SuccessfullyUpdatedReShadeCfg {
             get {
                 return ResourceManager.GetString("Default_SuccessfullyUpdatedReShadeCfg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successfully downloaded ReShade.ini and saved in: {0}.
+        /// </summary>
+        internal static string Default_SuccessfullyUpdatedReShadeCfgAndSavedIn {
+            get {
+                return ResourceManager.GetString("Default_SuccessfullyUpdatedReShadeCfgAndSavedIn", resourceCulture);
             }
         }
         

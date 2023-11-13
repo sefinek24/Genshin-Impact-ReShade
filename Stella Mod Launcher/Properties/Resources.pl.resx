@@ -734,9 +734,6 @@ Czy chcesz pobrać tę zależność z witryny firmy Microsoft?</value>
   <data name="Tools_TheShortcutHasBeenSuccessfullyCreated" xml:space="preserve">
     <value>Skrót został pomyślnie utworzony.</value>
   </data>
-  <data name="Default_GenshinStellaModForPatrons" xml:space="preserve">
-    <value>Genshin Stella Mod dla Patronów</value>
-  </data>
   <data name="Default_ThisFeatureIsAvailableOnlyForMyPatrons" xml:space="preserve">
     <value>Ta funkcja jest dostępna tylko dla moich patronów.
 
