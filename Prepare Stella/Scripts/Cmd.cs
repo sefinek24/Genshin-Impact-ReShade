@@ -19,7 +19,7 @@ namespace PrepareStella.Scripts
 
         public static async Task CliWrap(string app, string args, string workingDir)
         {
-            Program.Logger.Info($"Execute command: {app} {args} {workingDir}");
+            Start.Logger.Info($"Execute command: {app} {args} {workingDir}");
 
             try
             {
@@ -36,7 +36,7 @@ namespace PrepareStella.Scripts
                 // StandardOutput
                 string stdoutLine = !string.IsNullOrEmpty(stdout) ? $"\n✅ STDOUT: {stdout}" : "";
                 string stderrLine = !string.IsNullOrEmpty(stderr) ? $"\n❌ STDERR: {stderr}" : "";
-                Program.Logger.Info($"Successfully executed {app} command. Exit code: {result.ExitCode}, start time: {result.StartTime}, exit time: {result.ExitTime}{stdoutLine}{stderrLine}");
+                Start.Logger.Info($"Successfully executed {app} command. Exit code: {result.ExitCode}, start time: {result.StartTime}, exit time: {result.ExitTime}{stdoutLine}{stderrLine}");
 
                 // StandardError
                 if (result.ExitCode != 0)
@@ -53,7 +53,7 @@ namespace PrepareStella.Scripts
                     // VcLibs
                     if (_vcLibsAttemptNumber >= 3)
                     {
-                        Program.Logger.Error(
+                        Start.Logger.Error(
                             $"Command execution failed because the underlying process (PowerShell) returned a non-zero exit code - {result.ExitCode}.\nI can't install this required package. Reboot your PC or close all opened apps and try again.{info}");
                         Environment.Exit(4242141);
                         return;
@@ -68,7 +68,7 @@ namespace PrepareStella.Scripts
                         Console.WriteLine(
                             $"     » We cannot install this package because some process is currently in use.\n       Reboot your PC or close all opened apps from Microsoft Store.\n\n{stderr}");
 
-                        Program.Logger.Error($"I cannot install this package because some process is currently open.\n\n» Attempt: {_vcLibsAttemptNumber}\n» Exit code: 80073D02\n\n{stderr}");
+                        Start.Logger.Error($"I cannot install this package because some process is currently open.\n\n» Attempt: {_vcLibsAttemptNumber}\n» Exit code: 80073D02\n\n{stderr}");
 
                         TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
 
@@ -76,9 +76,9 @@ namespace PrepareStella.Scripts
                         Console.WriteLine(@"     » Click ENTER to try again...");
                         Console.ReadLine();
 
-                        Program.Logger.Info("Restarting session...");
+                        Start.Logger.Info("Restarting session...");
                         Console.ResetColor();
-                        await Start.Run();
+                        await Program.Run();
                         return;
                     }
 
@@ -86,7 +86,7 @@ namespace PrepareStella.Scripts
                     {
                         _vcLibsAttemptNumber++;
 
-                        Program.Logger.Error($"Found missing dependency Microsoft.VCLibs.\n\nAttempt {_vcLibsAttemptNumber}\nExit code: 80073CF3\n\n{stderr}");
+                        Start.Logger.Error($"Found missing dependency Microsoft.VCLibs.\n\nAttempt {_vcLibsAttemptNumber}\nExit code: 80073CF3\n\n{stderr}");
 
                         try
                         {
@@ -97,7 +97,7 @@ namespace PrepareStella.Scripts
                         }
                         catch (Exception ex)
                         {
-                            Program.Logger.Error(ex);
+                            Start.Logger.Error(ex);
                             return;
                         }
 
@@ -120,11 +120,11 @@ namespace PrepareStella.Scripts
                         // Installing...
                         Console.WriteLine(@"Installing Microsoft Visual C++ 2015 UWP Desktop Package...");
 
-                        if (!File.Exists(Program.VcLibsAppx))
-                            Log.ErrorAndExit(new Exception($"I can't find a required file. Please unpack downloaded zip archive.\nNot found: {Program.VcLibsAppx}"), false, false);
+                        if (!File.Exists(Start.VcLibsAppx))
+                            Log.ErrorAndExit(new Exception($"I can't find a required file. Please unpack downloaded zip archive.\nNot found: {Start.VcLibsAppx}"), false, false);
 
-                        Program.Logger.Info("Installing missing dependency VCLibs...");
-                        await CliWrap("powershell", $"Add-AppxPackage -Path {Program.VcLibsAppx}", null);
+                        Start.Logger.Info("Installing missing dependency VCLibs...");
+                        await CliWrap("powershell", $"Add-AppxPackage -Path {Start.VcLibsAppx}", null);
 
                         // Throw info
                         try
@@ -136,11 +136,11 @@ namespace PrepareStella.Scripts
                         }
                         catch (Exception ex)
                         {
-                            Program.Logger.Error(ex);
+                            Start.Logger.Error(ex);
                         }
 
                         // Completed!
-                        Program.Logger.Info("Installed Microsoft Visual C++ 2015 UWP Desktop Package.");
+                        Start.Logger.Info("Installed Microsoft Visual C++ 2015 UWP Desktop Package.");
                         Console.WriteLine("      » Successfully! Please reboot your PC and open the installer again!\n");
 
                         // Reboot PC
@@ -152,11 +152,11 @@ namespace PrepareStella.Scripts
                         if (Regex.Match(rebootPc ?? string.Empty, "(?:y)", RegexOptions.IgnoreCase | RegexOptions.Singleline).Success)
                         {
                             await CliWrap("shutdown",
-                                $"/r /t 25 /c \"{Program.AppName} - scheduled reboot, version {Program.AppVersion}.\n\nAfter restarting, run the installer again. If you need help, add me on Discord Sefinek#0001.\n\nGood luck!\"",
+                                $"/r /t 25 /c \"{Start.AppName} - scheduled reboot, version {Start.AppVersion}.\n\nAfter restarting, run the installer again. If you need help, add me on Discord Sefinek#0001.\n\nGood luck!\"",
                                 null);
 
                             Console.WriteLine("Your computer will restart in 25 seconds. Save your work!\nAfter restarting, run the installer again.");
-                            Program.Logger.Info("PC reboot was scheduled. Installed VCLibs.");
+                            Start.Logger.Info("PC reboot was scheduled. Installed VCLibs.");
                         }
                         else
                         {
@@ -179,10 +179,10 @@ namespace PrepareStella.Scripts
                             }
                             catch (Exception ex)
                             {
-                                Program.Logger.Error(ex);
+                                Start.Logger.Error(ex);
                             }
 
-                            Program.Logger.Info($"{app} installed. Exit code: {result.ExitCode}\nThe requested operation is successful. Changes will not be effective until the system is rebooted.");
+                            Start.Logger.Info($"{app} installed. Exit code: {result.ExitCode}\nThe requested operation is successful. Changes will not be effective until the system is rebooted.");
 
                             RebootNeeded = true;
                             return;

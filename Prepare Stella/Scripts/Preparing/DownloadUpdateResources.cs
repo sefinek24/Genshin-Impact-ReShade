@@ -13,7 +13,7 @@ namespace PrepareStella.Scripts.Preparing
     {
         public static async Task RunAsync()
         {
-            string resourcesGlobalPath = Start.ResourcesGlobal;
+            string resourcesGlobalPath = Program.ResourcesGlobal;
 
             if (!Directory.Exists(resourcesGlobalPath))
             {
@@ -29,8 +29,8 @@ namespace PrepareStella.Scripts.Preparing
             Console.WriteLine(@"Checking current version of resources...");
             using (WebClient webClient = new WebClient())
             {
-                webClient.Headers.Add("User-Agent", Program.UserAgent);
-                string responseContent = await webClient.DownloadStringTaskAsync($"{Program.WebApi}/genshin-stella-mod/version/app/launcher/resources");
+                webClient.Headers.Add("User-Agent", Start.UserAgent);
+                string responseContent = await webClient.DownloadStringTaskAsync($"{Start.WebApi}/genshin-stella-mod/version/app/launcher/resources");
                 StellaResources json = JsonConvert.DeserializeObject<StellaResources>(responseContent);
 
                 // Deleting existing resources zip file
@@ -40,14 +40,14 @@ namespace PrepareStella.Scripts.Preparing
                 {
                     Console.WriteLine($@"Deleting {zipPath}...");
                     File.Delete(zipPath);
-                    Program.Logger.Info($"Deleted {zipPath}");
+                    Start.Logger.Info($"Deleted {zipPath}");
                 }
 
                 // Downloading resources zip file
                 Console.WriteLine(@"Downloading resources from GitHub...");
                 using (HttpClient httpClient = new HttpClient())
                 {
-                    httpClient.DefaultRequestHeaders.Add("user-agent", Program.UserAgent);
+                    httpClient.DefaultRequestHeaders.Add("user-agent", Start.UserAgent);
 
                     using (Stream stream = await httpClient.GetStreamAsync("https://github.com/sefinek24/Genshin-Stella-Resources/releases/latest/download/resources.zip"))
                     using (FileStream fs = File.Create(zipPath))

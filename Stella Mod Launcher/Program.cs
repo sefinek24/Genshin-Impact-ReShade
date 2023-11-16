@@ -22,12 +22,13 @@ namespace StellaLauncher
     {
         // App
         public static readonly string AppVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
-        public static readonly string AppName = $"{Assembly.GetExecutingAssembly().GetName().Name} • v{AppVersion}";
+        private static readonly string AppName = Assembly.GetExecutingAssembly().GetName().Name;
+        public static readonly string AppNameVer = $"{AppName} • v{AppVersion}";
         private static readonly string AppWebsiteSub = "https://genshin.sefinek.net";
         public static readonly string AppWebsiteFull = "https://sefinek.net/genshin-impact-reshade";
 
         // Files and folders
-        public static readonly string AppPath = AppContext.BaseDirectory;
+        public static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
         public static readonly string AppData = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
         public static readonly string PrepareLauncher = Path.Combine(AppPath, "Configuration.exe");
         public static readonly string ReShadePath = Path.Combine(AppPath, "data", "reshade", "ReShade64.dll");
@@ -35,6 +36,9 @@ namespace StellaLauncher
         public static readonly string FpsUnlockerExePath = Path.Combine(AppPath, "data", "unlocker", "unlockfps_clr.exe");
         public static readonly string FpsUnlockerCfgPath = Path.Combine(AppPath, "data", "unlocker", "unlocker.config.json");
         public static readonly Icon Ico = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
+
+        // Config
+        public static readonly IniFile Settings = new IniFile(Path.Combine(AppData, "settings.ini"));
 
         // Web
         public static readonly string UserAgent = $"Mozilla/5.0 (compatible; StellaLauncher/{AppVersion}; +{AppWebsiteSub}) WebClient/0.0";
@@ -47,11 +51,8 @@ namespace StellaLauncher
             return httpClient;
         });
 
-        public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v5" : "https://api.sefinek.net/api/v5";
-        //  public static readonly string WebApi = "https://api.sefinek.net/api/v5";
-
-        // Config
-        public static readonly IniFile Settings = new IniFile(Path.Combine(AppData, "settings.ini"));
+        // public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v5" : "https://api.sefinek.net/api/v5";
+        public static readonly string WebApi = "https://api.sefinek.net/api/v5";
 
         // Lang
         private static readonly string[] SupportedLangs = { "en", "pl" };
@@ -64,9 +65,10 @@ namespace StellaLauncher
         //     if (WbClient.IsValueCreated) WbClient.Value.Dispose();
         // }
 
-        public static readonly Logger Logger = LogManager.GetCurrentClassLogger();
-
         public static HttpClient SefinWebClient => WbClient.Value;
+
+        // Logger
+        public static Logger Logger = LogManager.GetCurrentClassLogger();
 
         [DllImport("user32.dll")]
         private static extern bool SetProcessDpiAwarenessContext(IntPtr dpiContext);
@@ -74,6 +76,9 @@ namespace StellaLauncher
         [STAThread]
         private static void Main()
         {
+            Logger = Logger.WithProperty("AppName", "Launcher");
+            Logger = Logger.WithProperty("AppVersion", AppVersion);
+
             // Set language
             string currentLang = Settings.ReadString("Language", "UI", null);
             bool isSupportedLanguage = SupportedLangs.Contains(currentLang);
@@ -103,7 +108,7 @@ namespace StellaLauncher
             if (Process.GetProcessesByName(AppName).Length > 1)
             {
                 Logger.Info("One instance is currently open.");
-                MessageBox.Show(string.Format(Resources.Program_SorryOneInstanceIsCurrentlyOpen_, Path.GetFileNameWithoutExtension(Assembly.GetEntryAssembly()?.Location)), AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(string.Format(Resources.Program_SorryOneInstanceIsCurrentlyOpen_, Path.GetFileNameWithoutExtension(Assembly.GetEntryAssembly()?.Location)), AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 Environment.Exit(998765341);
             }

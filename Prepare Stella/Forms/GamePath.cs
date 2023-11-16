@@ -30,7 +30,7 @@ namespace PrepareStella.Forms
             {
                 using (OpenFileDialog dialog = new OpenFileDialog())
                 {
-                    dialog.InitialDirectory = Start.ProgramFiles;
+                    dialog.InitialDirectory = Program.ProgramFiles;
                     dialog.Filter = @"Process (*.exe)|*.exe";
                     dialog.FilterIndex = 0;
                     dialog.RestoreDirectory = true;
@@ -40,14 +40,14 @@ namespace PrepareStella.Forms
 
                     if (!selectedFile.Contains("GenshinImpact.exe") && !selectedFile.Contains("YuanShen.exe"))
                     {
-                        MessageBox.Show("Please select the game exe.\n\n* GenshinImpact.exe for OS version\n* YuanShen.exe for CN version", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Please select the game exe.\n\n* GenshinImpact.exe for OS version\n* YuanShen.exe for CN version", Start.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
 
                     string directory = Path.GetDirectoryName(selectedFile);
                     if (!File.Exists(Path.Combine(directory, "UnityPlayer.dll")))
                     {
-                        MessageBox.Show($"That's not the right place.\n\nSelected path:\n{directory}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show($"That's not the right place.\n\nSelected path:\n{directory}", Start.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
 
@@ -70,23 +70,23 @@ namespace PrepareStella.Forms
             string selectedFile = comboBox1.GetItemText(comboBox1.SelectedItem);
             if (!selectedFile.Contains("GenshinImpact.exe") && !selectedFile.Contains("YuanShen.exe"))
             {
-                MessageBox.Show("We can't save your settings. Please select the game exe.\n\n* GenshinImpact.exe for OS version (main)\n* YuanShen.exe for CN (Chinese) version", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("We can't save your settings. Please select the game exe.\n\n* GenshinImpact.exe for OS version (main)\n* YuanShen.exe for CN (Chinese) version", Start.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             string directory = Path.GetDirectoryName(selectedFile);
             if (!File.Exists(Path.Combine(directory, "UnityPlayer.dll")))
             {
-                MessageBox.Show(@"That's not the right place. UnityPlayer.dll file was not found.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(@"That's not the right place. UnityPlayer.dll file was not found.", Start.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            using (RegistryKey key = Registry.CurrentUser.CreateSubKey(Start.RegistryPath))
+            using (RegistryKey key = Registry.CurrentUser.CreateSubKey(Program.RegistryPath))
             {
                 key?.SetValue("GameVersion", Path.GetFileName(selectedFile) == "GenshinImpact.exe" ? "1" : "2");
             }
 
-            Start.SavedGamePath = selectedFile;
+            Program.SavedGamePath = selectedFile;
             Close();
         }
 

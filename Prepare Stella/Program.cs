@@ -1,84 +1,251 @@
 using System;
-using System.Diagnostics;
-using System.Drawing;
 using System.IO;
-using System.Reflection;
-using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Win32;
 using Microsoft.WindowsAPICodePack.Taskbar;
-using NLog;
-using NLog.Config;
+using PrepareStella.Forms;
 using PrepareStella.Scripts;
+using PrepareStella.Scripts.Preparing;
 
 namespace PrepareStella
 {
     internal static class Program
     {
-        // App
-        public static readonly string AppName = Assembly.GetExecutingAssembly().GetName().Name;
-        public static readonly string AppVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
-        public static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
-        public static readonly string AppData = Utils.GetAppData();
+        // Files and folders
+        private static readonly IniFile PrepareIni = new IniFile(Path.Combine(Start.AppData, "prepare-stella.ini"));
+        public static readonly string ProgramFiles = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
+        public static readonly string GameGenshinImpact = Path.Combine(ProgramFiles, "Genshin Impact", "Genshin Impact game", "GenshinImpact.exe");
+        public static readonly string GameYuanShen = Path.Combine(ProgramFiles, "Genshin Impact", "Genshin Impact game", "YuanShen.exe");
+        public static readonly string WindowsApps = Path.Combine(ProgramFiles, "WindowsApps");
 
-        // Web
-        public static readonly string UserAgent = $"Mozilla/5.0 (compatible; PrepareStella/{AppVersion}; +{AppWebsite})";
+        // Global variables
+        public static string SavedGamePath;
+        public static string ResourcesGlobal;
 
-        public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v5" : "https://api.sefinek.net/api/v5";
-        //  public static readonly string WebApi = "https://api.sefinek.net/api/v5";
+        // Registry
+        public static readonly string RegistryPath = @"SOFTWARE\Stella Mod Launcher";
 
-        // Links
-        private static readonly string AppWebsite = "https://genshin.sefinek.net";
-        public static readonly string DiscordUrl = "https://discord.gg/SVcbaRc7gH";
-
-        // Dependencies
-        public static readonly string VcLibsAppx = Path.Combine("dependencies", "Microsoft.VCLibs.x64.14.00.Desktop.appx");
-        public static readonly string WtMsixBundle = Path.Combine("dependencies", "Microsoft.WindowsTerminal_1.18.2822.0_8wekyb3d8bbwe.msixbundle");
-
-        // Other
-        public static readonly string Line = "===============================================================================================";
-        public static readonly Icon Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
-
-        // Logger
-        public static Logger Logger = LogManager.GetCurrentClassLogger();
-
-        private static async Task Main()
+        [STAThread]
+        public static async Task Run()
         {
-            Logger = Logger.WithProperty("AppName", "Prepare Stella");
-            Logger = Logger.WithProperty("AppVersion", AppVersion);
-            LogManager.Configuration = new XmlLoggingConfiguration(Path.Combine(AppPath, "NLog_PS.config"));
+            TaskbarManager.Instance.SetProgressValue(12, 100);
 
-            Console.OutputEncoding = Encoding.UTF8;
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine("\n-- Select the correct localizations --");
 
+
+            // Check game path
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine(@"                               Genshin Impact Stella Mod - Prepare");
-            Console.WriteLine($"                                        Version: v{AppVersion}\n");
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine(@"» Author  : Sefinek [Country: Poland]");
-            Console.WriteLine(@"» Website : " + AppWebsite);
-            Console.WriteLine(@"» Discord : " + DiscordUrl);
+            Console.Write(@"» Game path: ");
             Console.ResetColor();
-            Console.WriteLine(Line);
 
-            Console.Title = $@"{AppName} • v{AppVersion}";
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
 
-            if (!Utils.IsRunAsAdmin())
+
+            // Get the game path from the registry
+            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(RegistryPath))
             {
-                TaskbarManager.Instance.SetProgressValue(100, 100);
-                Log.ErrorAndExit(new Exception("» This application requires administrator privileges to run."), false, false);
-                return;
+                if (key != null) SavedGamePath = (string)key.GetValue("GamePath");
             }
 
-            if (!Directory.Exists(AppData)) Directory.CreateDirectory(AppData);
+            // Try to find the game in the default localizations
+            if (string.IsNullOrEmpty(SavedGamePath))
+            {
+                if (File.Exists(GameGenshinImpact))
+                    SavedGamePath = GameGenshinImpact;
+                else if (File.Exists(GameYuanShen))
+                    SavedGamePath = GameYuanShen;
+                else
+                    new GamePath($"{GameGenshinImpact}\n{GameYuanShen}") { Icon = Start.Icon }.ShowDialog();
+            }
 
-            try
+            // Check if the path is valid
+            if (!File.Exists(SavedGamePath)) new GamePath(SavedGamePath) { Icon = Start.Icon }.ShowDialog();
+
+            // Check if the variable is empty or if the path is still not valid
+            if (string.IsNullOrEmpty(SavedGamePath) || !File.Exists(SavedGamePath))
             {
-                await Start.Run();
+                string errorMessage = SavedGamePath != null ? $"File was not found: {SavedGamePath}" : "Full game path was not found";
+                Log.ErrorAndExit(new Exception($"{errorMessage}\n\nYou must provide the specific location where the game is installed.\nThis program will not modify ANY game files."), false, false);
             }
-            catch (Exception ex)
+
+            // If the variable is not empty, save the data
+            if (!string.IsNullOrEmpty(SavedGamePath))
             {
-                Log.ErrorAndExit(ex, false, false);
+                using (RegistryKey key = Registry.CurrentUser.CreateSubKey(RegistryPath))
+                {
+                    key?.SetValue("GamePath", SavedGamePath);
+                }
+
+                Console.WriteLine(SavedGamePath);
             }
+
+
+            // Check resources
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write(@"» Resources: ");
+            Console.ResetColor();
+
+            // Get ResourcesPath from the registry
+            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(RegistryPath))
+            {
+                if (key != null) ResourcesGlobal = (string)key.GetValue("ResourcesPath");
+            }
+
+            // Path is not valid?
+            if (string.IsNullOrEmpty(SavedGamePath) || !Directory.Exists(ResourcesGlobal)) new Resources { Icon = Start.Icon }.ShowDialog();
+
+            // Path is now valid?
+            if (!string.IsNullOrEmpty(SavedGamePath) || Directory.Exists(ResourcesGlobal))
+            {
+                using (RegistryKey key = Registry.CurrentUser.CreateSubKey(RegistryPath))
+                {
+                    key?.SetValue("ResourcesPath", ResourcesGlobal);
+                }
+
+                Console.WriteLine(ResourcesGlobal);
+            }
+            else
+            {
+                Log.ErrorAndExit(new Exception("Unknown\n\nSorry. Directory with the resources was not found.\nIn the resources directory, files such as your shaders, presets, screenshots, and custom mods are stored."), false, false);
+            }
+
+            TaskbarManager.Instance.SetProgressValue(26, 100);
+
+
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine("\n-- Run the final configuration --");
+            Console.ResetColor();
+
+            // Read ini file
+            Console.WriteLine(@"Starting...");
+
+            // Save AppData path
+            File.WriteAllText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "stella-appdata.sfn"), Start.AppData);
+
+            int downloadOrUpdateShaders = PrepareIni.ReadInt("PrepareStella", "DownloadOrUpdateShaders", 1);
+            int updateReShadeCfg = PrepareIni.ReadInt("PrepareStella", "UpdateReShadeConfig", 1);
+            int updateFpsUnlockerCfg = PrepareIni.ReadInt("PrepareStella", "UpdateFpsUnlockerConfig", 1);
+            int delReShadeCache = PrepareIni.ReadInt("PrepareStella", "DeleteReShadeCache", 1);
+            int installWtUpdate = PrepareIni.ReadInt("PrepareStella", "InstOrUpdWT", 1);
+            int newShortcuts = PrepareIni.ReadInt("PrepareStella", "NewShortcutsOnDesktop", 1);
+            int newIntShortcuts = PrepareIni.ReadInt("PrepareStella", "InternetShortcutsInStartMenu", 1);
+
+
+            // Download shaders, presets and addons (Stella resources)
+            if (downloadOrUpdateShaders == 1)
+            {
+                Console.WriteLine(@"Checking Stella resources...");
+                await DownloadUpdateResources.RunAsync();
+                TaskbarManager.Instance.SetProgressValue(39, 100);
+            }
+
+            // Download and prepare ReShade config
+            if (updateReShadeCfg == 1)
+            {
+                Console.WriteLine(@"Downloading ReShade files...");
+                await UpdateReShadeCfg.RunAsync();
+                TaskbarManager.Instance.SetProgressValue(46, 100);
+            }
+
+            // Delete ReShade cache
+            if (delReShadeCache == 1)
+            {
+                Console.WriteLine(@"Deleting ReShade cache...");
+                await DeleteReShadeCache.RunAsync();
+                TaskbarManager.Instance.SetProgressValue(57, 100);
+            }
+
+            // Download FPS Unlocker config
+            if (updateFpsUnlockerCfg == 1)
+            {
+                Console.WriteLine(@"Downloading FPS Unlocker configuration...");
+                await DownloadFpsUnlockerCfg.RunAsync();
+                TaskbarManager.Instance.SetProgressValue(68, 100);
+            }
+
+            // Windows Terminal installation
+            if (installWtUpdate == 1)
+            {
+                Console.Write(@"Backing up the Windows Terminal configuration file in app data... ");
+                await TerminalInstallation.RunAsync();
+                TaskbarManager.Instance.SetProgressValue(77, 100);
+            }
+
+            // Create or update Desktop icon
+            if (newShortcuts == 1)
+            {
+                Console.WriteLine(@"Creating Desktop shortcut...");
+                await DesktopIcon.RunAsync();
+                TaskbarManager.Instance.SetProgressValue(89, 100);
+            }
+
+            // Create new Internet shortcuts in menu start
+            if (newIntShortcuts == 1)
+            {
+                Console.WriteLine(@"Creating new Internet shortcut...");
+                await InternetShortcuts.RunAsync();
+                TaskbarManager.Instance.SetProgressValue(96, 100);
+            }
+
+
+            // Create files
+            if (!Directory.Exists(Start.AppData)) Directory.CreateDirectory(Start.AppData);
+
+
+            // Registry
+            using (RegistryKey key = Registry.CurrentUser.CreateSubKey(RegistryPath))
+            {
+                key?.SetValue("AppIsConfigured", 1);
+                key?.SetValue("ConfugurationDate", DateTime.Now);
+                key?.SetValue("StellaPath", Start.AppPath);
+            }
+
+
+            // Final
+            TaskbarManager.Instance.SetProgressValue(100, 100);
+
+
+            // Reboot is required?
+            if (Cmd.RebootNeeded)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write(@"» Restart your computer now? This is required. [Yes/no]: ");
+                Console.ResetColor();
+
+                string rebootPc = Console.ReadLine();
+                if (Regex.Match(rebootPc ?? string.Empty, "(?:y)", RegexOptions.IgnoreCase | RegexOptions.Singleline).Success)
+                {
+                    await Cmd.CliWrap("shutdown",
+                        $"/r /t 30 /c \"{Start.AppName} - scheduled reboot.\n\nThank you for installing. If you need help, add me on Discord: sefinek\n\nGood luck and have fun!\"", null);
+
+                    Console.WriteLine(@"Your computer will restart in 30 seconds. Save your work!");
+                    Start.Logger.Info("PC reboot was scheduled.");
+                }
+            }
+            else
+            {
+                // Run Genshin Stella Mod
+                string stellaLauncher = Path.Combine(Start.AppPath, "Stella Mod Launcher.exe");
+
+                Console.WriteLine($@"Launching {Path.GetFileName(stellaLauncher)}...");
+                _ = Cmd.CliWrap(stellaLauncher, null, null);
+            }
+
+
+            // Close app
+            Console.WriteLine($"\n{Start.Line}\n");
+
+            const int seconds = 20;
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($@"» The program will close in {seconds} seconds.");
+            for (int i = seconds; i >= 1; i--) Thread.Sleep(1000);
+
+            TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
         }
     }
 }

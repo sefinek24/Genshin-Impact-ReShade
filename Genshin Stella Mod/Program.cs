@@ -87,10 +87,6 @@ namespace GenshinStellaMod
             Console.WriteLine("1/3 - Starting program...");
 
 
-            // Init dirs
-            Log.InitDirs();
-
-
             // Set app title etc.
             string launchMode = args[3];
             Logger.Info($"Launch mode: {launchMode}");

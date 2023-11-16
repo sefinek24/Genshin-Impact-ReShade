@@ -26,7 +26,7 @@ namespace PrepareStella.Forms
             {
                 using (FolderBrowserDialog dialog = new FolderBrowserDialog())
                 {
-                    dialog.SelectedPath = Start.ProgramFiles;
+                    dialog.SelectedPath = Program.ProgramFiles;
                     dialog.Description = @"Select a custom folder for your mod resources.";
 
                     if (dialog.ShowDialog() != DialogResult.OK) return;
@@ -34,7 +34,7 @@ namespace PrepareStella.Forms
 
                     if (File.Exists(Path.Combine(selectedFolder, "UnityPlayer.dll")) || File.Exists(Path.Combine(selectedFolder, "launcher.exe")))
                     {
-                        MessageBox.Show(@"That's not the right place.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(@"That's not the right place.", Start.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
 
@@ -58,8 +58,8 @@ namespace PrepareStella.Forms
         {
             string selectedFile = comboBox1.GetItemText(comboBox1.SelectedItem);
 
-            Start.ResourcesGlobal = selectedFile;
-            File.WriteAllText(Path.Combine(Program.AppData, "resources-path.sfn"), Start.ResourcesGlobal);
+            Program.ResourcesGlobal = selectedFile;
+            File.WriteAllText(Path.Combine(Start.AppData, "resources-path.sfn"), Program.ResourcesGlobal);
 
             Close();
         }

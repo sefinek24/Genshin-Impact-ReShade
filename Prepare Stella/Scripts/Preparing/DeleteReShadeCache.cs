@@ -16,7 +16,7 @@ namespace PrepareStella.Scripts.Preparing
         {
             int deletedFilesCount = 0;
             long savedSpace = 0;
-            string cacheDirectoryPath = Path.Combine(Start.ResourcesGlobal, "ReShade", "Cache");
+            string cacheDirectoryPath = Path.Combine(Program.ResourcesGlobal, "ReShade", "Cache");
 
             if (Directory.Exists(cacheDirectoryPath))
             {
@@ -52,11 +52,11 @@ namespace PrepareStella.Scripts.Preparing
             try
             {
                 await Task.Run(() => File.Delete(filePath));
-                Program.Logger.Info($"Deleted cache file: {filePath}");
+                Start.Logger.Info($"Deleted cache file: {filePath}");
             }
             catch (Exception ex)
             {
-                Program.Logger.Info($"Error deleting file {filePath}: {ex.Message}");
+                Start.Logger.Info($"Error deleting file {filePath}: {ex.Message}");
             }
         }
     }

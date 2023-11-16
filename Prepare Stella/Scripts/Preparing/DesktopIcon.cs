@@ -35,8 +35,8 @@ namespace PrepareStella.Scripts.Preparing
                     WshShell shell = new WshShell();
                     IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(shortcutPath);
                     shortcut.Description = Resources.Utils_RunOfficialLauncherForStellaModMadeBySefinek;
-                    shortcut.WorkingDirectory = Program.AppPath;
-                    shortcut.TargetPath = Path.Combine(Program.AppPath, "Stella Mod Launcher.exe");
+                    shortcut.WorkingDirectory = Start.AppPath;
+                    shortcut.TargetPath = Path.Combine(Start.AppPath, "Stella Mod Launcher.exe");
 
                     shortcut.Save();
                 }
@@ -57,8 +57,8 @@ namespace PrepareStella.Scripts.Preparing
                     string shortcutLocation = Path.Combine(appStartMenuPath, "Stella Mod Launcher.lnk");
                     IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(shortcutLocation);
                     shortcut.Description = Resources.Utils_RunOfficialLauncherForStellaModMadeBySefinek;
-                    shortcut.WorkingDirectory = Program.AppPath;
-                    shortcut.TargetPath = Path.Combine(Program.AppPath, "Stella Mod Launcher.exe");
+                    shortcut.WorkingDirectory = Start.AppPath;
+                    shortcut.TargetPath = Path.Combine(Start.AppPath, "Stella Mod Launcher.exe");
                     shortcut.Save();
                 }
                 catch (Exception e)

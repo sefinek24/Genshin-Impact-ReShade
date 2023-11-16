@@ -5,15 +5,6 @@ namespace GenshinStellaMod.Scripts
 {
     internal static class Log
     {
-        private static readonly string Folder = Path.Combine(Program.AppData, "logs");
-        private static readonly string OutputFile = Path.Combine(Folder, "gsmod.output.log");
-
-        public static void InitDirs()
-        {
-            if (!Directory.Exists(Program.AppData)) Directory.CreateDirectory(Program.AppData);
-            if (!Directory.Exists(Folder)) Directory.CreateDirectory(Folder);
-        }
-
         public static void ThrowError(Exception ex)
         {
             Console.WriteLine($"{ex.Message}\n");

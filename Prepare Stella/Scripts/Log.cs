@@ -8,15 +8,20 @@ namespace PrepareStella.Scripts
 {
     internal abstract class Log
     {
-        private static readonly string Folder = Path.Combine(Program.AppData, "logs");
-        private static readonly string OutputFile = Path.Combine(Folder, "prepare.output.log");
+        private static readonly string Folder = Path.Combine(Start.AppData, "logs");
+
+        public static void InitDirs()
+        {
+            if (!Directory.Exists(Folder)) Directory.CreateDirectory(Folder);
+            if (!Directory.Exists(Start.AppData)) Directory.CreateDirectory(Start.AppData);
+        }
 
         private static void TryAgain(bool tryAgain)
         {
             Console.ForegroundColor = ConsoleColor.Blue;
             const string prompt = "\n» Something went wrong. Press ENTER to";
             Console.WriteLine(tryAgain ? $"{prompt} try again..." : $"{prompt} continue...");
-            Program.Logger.Warn(prompt);
+            Start.Logger.Warn(prompt);
 
             Console.ReadLine();
             Console.WriteLine(@">> Waiting 5 seconds. Please wait... <<");
@@ -28,7 +33,7 @@ namespace PrepareStella.Scripts
 
         public static void ThrowError(Exception msg, bool tryAgain)
         {
-            Program.Logger.Error(msg);
+            Start.Logger.Error(msg);
 
             try
             {
@@ -41,7 +46,7 @@ namespace PrepareStella.Scripts
             }
             catch (Exception ex)
             {
-                Program.Logger.Error(ex);
+                Start.Logger.Error(ex);
             }
 
             Console.ForegroundColor = ConsoleColor.Red;
@@ -52,7 +57,7 @@ namespace PrepareStella.Scripts
 
         public static void ErrorAndExit(Exception log, bool hideError, bool reportIssue)
         {
-            Program.Logger.Error(log);
+            Start.Logger.Error(log);
 
             if (!hideError)
             {
@@ -67,7 +72,7 @@ namespace PrepareStella.Scripts
                 }
                 catch (Exception ex)
                 {
-                    Program.Logger.Error(ex);
+                    Start.Logger.Error(ex);
                 }
 
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -77,14 +82,14 @@ namespace PrepareStella.Scripts
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine(
-                        $"Oh nooo!! I'm sorry, but something went wrong. If you need help, please do one of the following:\n• Join my Discord server: {Program.DiscordUrl} [My username: sefinek]\n• Send an email: contact@sefinek.net\n• Use the chat available on my website.");
+                        $"Oh nooo!! I'm sorry, but something went wrong. If you need help, please do one of the following:\n• Join my Discord server: {Start.DiscordUrl} [My username: sefinek]\n• Send an email: contact@sefinek.net\n• Use the chat available on my website.");
                     Console.ResetColor();
                 }
                 else
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine(
-                        $"Visit our Discord server for help or try again. Good luck!\n• Discord: {Program.DiscordUrl} [My username: sefinek]\n• E-mail: contact@sefinek.net\n• Use the chat available on my website.");
+                        $"Visit our Discord server for help or try again. Good luck!\n• Discord: {Start.DiscordUrl} [My username: sefinek]\n• E-mail: contact@sefinek.net\n• Use the chat available on my website.");
 
                     Console.ForegroundColor = ConsoleColor.Blue;
                     Console.Write("\n» Would you like to join our Discord server? [Yes/no]: ");
@@ -95,7 +100,7 @@ namespace PrepareStella.Scripts
                     {
                         case "y":
                         case "yes":
-                            Utils.OpenUrl(Program.DiscordUrl);
+                            Utils.OpenUrl(Start.DiscordUrl);
 
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.WriteLine(@"An invitation to the server has been opened in your default web browser.");

@@ -11,16 +11,16 @@ namespace PrepareStella.Scripts.Preparing
         {
             try
             {
-                string unlockerFolderPath = Path.Combine(Program.AppPath, "data", "unlocker");
+                string unlockerFolderPath = Path.Combine(Start.AppPath, "data", "unlocker");
                 Directory.CreateDirectory(unlockerFolderPath);
 
                 using (HttpClient httpClient = new HttpClient())
                 {
-                    httpClient.DefaultRequestHeaders.Add("user-agent", Program.UserAgent);
+                    httpClient.DefaultRequestHeaders.Add("user-agent", Start.UserAgent);
                     string fpsUnlockerConfig = await httpClient.GetStringAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/unlocker.config.json");
 
                     string fpsUnlockerConfigPath = Path.Combine(unlockerFolderPath, "unlocker.config.json");
-                    string gameExePath = Start.SavedGamePath?.Replace("\\", "\\\\");
+                    string gameExePath = Program.SavedGamePath?.Replace("\\", "\\\\");
                     string fpsUnlockerConfigContent = fpsUnlockerConfig.Replace("{GamePath}", gameExePath ?? string.Empty);
 
                     await WriteToFileAsync(fpsUnlockerConfigPath, fpsUnlockerConfigContent);

@@ -38,7 +38,7 @@ namespace PrepareStella.Scripts
             try
             {
                 Process.Start(url);
-                Program.Logger.Info($"Opened '{url}' in default browser.");
+                Start.Logger.Info($"Opened '{url}' in default browser.");
             }
             catch (Exception ex)
             {
@@ -48,13 +48,13 @@ namespace PrepareStella.Scripts
 
         public static string GetWtProgramFiles()
         {
-            if (!Directory.Exists(Start.WindowsApps))
+            if (!Directory.Exists(Program.WindowsApps))
             {
-                Program.Logger.Info($"{Start.WindowsApps} was not found.");
+                Start.Logger.Info($"{Program.WindowsApps} was not found.");
                 return null;
             }
 
-            string[] dirs = Directory.GetDirectories(Start.WindowsApps, "Microsoft.WindowsTerminal_*", SearchOption.AllDirectories);
+            string[] dirs = Directory.GetDirectories(Program.WindowsApps, "Microsoft.WindowsTerminal_*", SearchOption.AllDirectories);
 
             string path = "";
             foreach (string dir in dirs) path = dir;
