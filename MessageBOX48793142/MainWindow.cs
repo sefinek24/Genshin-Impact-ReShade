@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 using NAudio.Wave;
 using Timer = System.Windows.Forms.Timer;
@@ -11,13 +12,13 @@ public partial class MainWindow : Form
     private const uint SwpNoMove = 0x0002;
     private readonly Timer _timer;
     private int _displayCount;
+    private bool _openedUrl;
 
     public MainWindow()
     {
         InitializeComponent();
 
-        _timer = new Timer();
-        _timer.Interval = 1000;
+        _timer = new Timer { Interval = 1000 };
         _timer.Tick += Timer_Tick;
 
         FormBorderStyle = FormBorderStyle.None;
@@ -27,16 +28,16 @@ public partial class MainWindow : Form
 
         _timer.Start();
 
-        Timer autoCloseTimer = new();
-        autoCloseTimer.Interval = 10000;
+        Timer autoCloseTimer = new() { Interval = 10000 };
         autoCloseTimer.Tick += AutoCloseTimer_Tick;
         autoCloseTimer.Start();
     }
 
-    [DllImport("user32.dll")]
-    private static extern bool SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int X, int Y, int cx, int cy, uint uFlags);
+    [LibraryImport("user32.dll")]
+    [return: MarshalAs(UnmanagedType.Bool)]
+    private static partial void SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int X, int Y, int cx, int cy, uint uFlags);
 
-    private void Timer_Tick(object sender, EventArgs e)
+    private void Timer_Tick(object? sender, EventArgs e)
     {
         if (_displayCount < 3)
         {
@@ -49,7 +50,7 @@ public partial class MainWindow : Form
         }
     }
 
-    private static void AutoCloseTimer_Tick(object sender, EventArgs e)
+    private static void AutoCloseTimer_Tick(object? sender, EventArgs e)
     {
         Application.Exit();
     }
@@ -65,27 +66,32 @@ public partial class MainWindow : Form
     private async void MeowButton_Click(object sender, EventArgs e)
     {
         Random random = new();
-        int randomNumber = random.Next(1, 5);
-        string mp3FilePath = @$"sound\meow{randomNumber}.mp3";
+        string mp3FilePath = Path.Combine("sound", $"meow{random.Next(1, 5)}.mp3");
 
         try
         {
-            using (AudioFileReader audioFile = new(mp3FilePath))
-            using (WaveChannel32 volumeStream = new(audioFile))
-            {
-                volumeStream.Volume = 0.3f;
-                using (WaveOutEvent outputDevice = new())
-                {
-                    outputDevice.Init(volumeStream);
-                    outputDevice.Play();
+            using AudioFileReader audioFile = new(mp3FilePath);
+            using WaveChannel32 volumeStream = new(audioFile);
+            volumeStream.Volume = 0.4f;
+            using WaveOutEvent outputDevice = new();
+            outputDevice.Init(volumeStream);
+            outputDevice.Play();
 
-                    await Task.Delay(TimeSpan.FromSeconds(audioFile.TotalTime.TotalSeconds)).ConfigureAwait(false);
-                }
-            }
+            await Task.Delay(TimeSpan.FromSeconds(audioFile.TotalTime.TotalSeconds)).ConfigureAwait(false);
         }
         catch (Exception ex)
         {
             MessageBox.Show(ex.Message);
         }
+    }
+
+    private void Copyright_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+    {
+        if (_openedUrl) return;
+
+        Process.Start(new ProcessStartInfo("https://sefinek.net") { UseShellExecute = true });
+        label3.Visible = true;
+
+        _openedUrl = true;
     }
 }
