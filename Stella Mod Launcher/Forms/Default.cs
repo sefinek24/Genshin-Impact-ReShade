@@ -425,9 +425,9 @@ namespace StellaLauncher.Forms
 
 
         // ------- Footer -------
-        private void Patreon_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void Subscription_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Utils.OpenUrl("https://www.patreon.com/sefinek");
+            Utils.OpenUrl("https://sefinek.net/genshin-impact-reshade/subscription");
         }
 
         private void SupportMe_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -267,7 +267,7 @@ namespace StellaLauncher.Forms
             this.becomeMyPatron_LinkLabel.Name = "becomeMyPatron_LinkLabel";
             this.becomeMyPatron_LinkLabel.TabStop = true;
             this.toolTip1.SetToolTip(this.becomeMyPatron_LinkLabel, resources.GetString("becomeMyPatron_LinkLabel.ToolTip"));
-            this.becomeMyPatron_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Patreon_LinkClicked);
+            this.becomeMyPatron_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Subscription_LinkClicked);
             // 
             // runGiLauncher_LinkLabel
             // 

@@ -153,6 +153,9 @@
   <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="changeBg_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -174,9 +177,6 @@
   <data name="changeBg_LinkLabel.Text" xml:space="preserve">
     <value>Change background</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="changeBg_LinkLabel.ToolTip" xml:space="preserve">
     <value>Change the application background.</value>
   </data>
@@ -393,6 +393,9 @@
   <data name="&gt;&gt;githubIco_Picturebox.ZOrder" xml:space="preserve">
     <value>33</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="tools_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -508,7 +511,7 @@
     <value>BottomLeft</value>
   </data>
   <data name="startGame_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>119, 210</value>
+    <value>115, 214</value>
   </data>
   <data name="startGame_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>401, 95</value>
@@ -655,17 +658,17 @@
     <value>Comic Sans MS, 15.75pt, style=Bold</value>
   </data>
   <data name="becomeMyPatron_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>66, 415</value>
+    <value>17, 417</value>
   </data>
   <data name="becomeMyPatron_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>510, 60</value>
+    <value>622, 60</value>
   </data>
   <data name="becomeMyPatron_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>111</value>
   </data>
   <data name="becomeMyPatron_LinkLabel.Text" xml:space="preserve">
-    <value>To get Ray Tracing in game, become my Patron.
-RTX cards are not required.</value>
+    <value>To unlock numerous benefits, subscribe to Stella Mod Plus.
+These include: Ray Tracing, mods, and much more!</value>
   </data>
   <data name="becomeMyPatron_LinkLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -698,7 +701,7 @@ RTX cards are not required.</value>
     <value>Comic Sans MS, 12pt</value>
   </data>
   <data name="runGiLauncher_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>214, 357</value>
+    <value>210, 361</value>
   </data>
   <data name="runGiLauncher_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 23</value>
@@ -851,7 +854,7 @@ RTX cards are not required.</value>
     <value>NoControl</value>
   </data>
   <data name="injectReShade_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>108, 319</value>
+    <value>104, 323</value>
   </data>
   <data name="injectReShade_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 23</value>
@@ -893,7 +896,7 @@ RTX cards are not required.</value>
     <value>NoControl</value>
   </data>
   <data name="runFpsUnlocker_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>236, 319</value>
+    <value>232, 323</value>
   </data>
   <data name="runFpsUnlocker_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 23</value>
@@ -935,7 +938,7 @@ RTX cards are not required.</value>
     <value>NoControl</value>
   </data>
   <data name="only3DMigoto_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>407, 319</value>
+    <value>403, 323</value>
   </data>
   <data name="only3DMigoto_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 23</value>
@@ -1244,7 +1247,7 @@ RTX cards are not required.</value>
     <value>9, 47</value>
   </data>
   <data name="status_Label.Size" type="System.Drawing.Size, System.Drawing">
-    <value>521, 143</value>
+    <value>561, 151</value>
   </data>
   <data name="status_Label.TabIndex" type="System.Int32, mscorlib">
     <value>96</value>
