@@ -1,6 +1,6 @@
 namespace StellaLauncher.Forms.Other
 {
-    partial class WebViewWindow
+    partial class WebView2Shake
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@ namespace StellaLauncher.Forms.Other
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WebViewWindow));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WebView2Shake));
             this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
             this.SuspendLayout();

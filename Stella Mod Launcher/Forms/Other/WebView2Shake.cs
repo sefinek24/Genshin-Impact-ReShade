@@ -4,12 +4,12 @@ using Microsoft.Web.WebView2.Core;
 
 namespace StellaLauncher.Forms.Other
 {
-    public partial class WebViewWindow : Form
+    public partial class WebView2Shake : Form
     {
         private static Random _random;
         private static Timer _shakeTimer;
 
-        public WebViewWindow()
+        public WebView2Shake()
         {
             InitializeComponent();
         }
@@ -22,8 +22,7 @@ namespace StellaLauncher.Forms.Other
             _random = new Random();
         }
 
-
-        public async void WebView2(string webView)
+        private async void WebView2(string webView)
         {
             try
             {

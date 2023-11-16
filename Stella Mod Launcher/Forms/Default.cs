@@ -505,7 +505,7 @@ namespace StellaLauncher.Forms
 
             if (ComputerInfo.GetSystemRegion() == "PL")
             {
-                WebViewWindow viewer = new WebViewWindow { DesktopLocation = DesktopLocation, Icon = Program.Ico };
+                WebView2Shake viewer = new WebView2Shake { DesktopLocation = DesktopLocation, Icon = Program.Ico };
                 viewer.Navigate("https://www.youtube.com/embed/2F2DdXUNyaQ?autoplay=1");
                 viewer.Show();
 
@@ -513,7 +513,7 @@ namespace StellaLauncher.Forms
             }
             else
             {
-                WebViewWindow viewer = new WebViewWindow { DesktopLocation = DesktopLocation, Icon = Program.Ico };
+                WebView2Shake viewer = new WebView2Shake { DesktopLocation = DesktopLocation, Icon = Program.Ico };
                 viewer.Navigate("https://www.youtube.com/embed/L3ky4gZU5gY?autoplay=1");
                 viewer.Show();
             }

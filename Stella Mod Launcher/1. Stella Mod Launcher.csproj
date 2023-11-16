@@ -122,11 +122,11 @@
     <Compile Include="Forms\Errors\RussianCunt.Designer.cs">
       <DependentUpon>RussianCunt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Other\Gallery.cs">
+    <Compile Include="Forms\Other\WebView2Window.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Other\Gallery.Designer.cs">
-      <DependentUpon>Gallery.cs</DependentUpon>
+    <Compile Include="Forms\Other\WebView2Window.Designer.cs">
+      <DependentUpon>WebView2Window.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Default.cs">
       <SubType>Form</SubType>
@@ -164,11 +164,11 @@
     <Compile Include="Forms\Other\SupportMe.Designer.cs">
       <DependentUpon>SupportMe.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Other\WebViewWindow.cs">
+    <Compile Include="Forms\Other\WebView2Shake.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Other\WebViewWindow.Designer.cs">
-      <DependentUpon>WebViewWindow.cs</DependentUpon>
+    <Compile Include="Forms\Other\WebView2Shake.Designer.cs">
+      <DependentUpon>WebView2Shake.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Tools.cs">
       <SubType>Form</SubType>
@@ -256,11 +256,11 @@
     <EmbeddedResource Include="Forms\Links.pl.resx">
       <DependentUpon>Links.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Other\Gallery.pl.resx">
-      <DependentUpon>Gallery.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Other\WebView2Window.pl.resx">
+      <DependentUpon>WebView2Window.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Other\Gallery.resx">
-      <DependentUpon>Gallery.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Other\WebView2Window.resx">
+      <DependentUpon>WebView2Window.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Default.resx">
       <DependentUpon>Default.cs</DependentUpon>
@@ -293,11 +293,11 @@
     <EmbeddedResource Include="Forms\Other\SupportMe.resx">
       <DependentUpon>SupportMe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Other\WebViewWindow.pl.resx">
-      <DependentUpon>WebViewWindow.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Other\WebView2Shake.pl.resx">
+      <DependentUpon>WebView2Shake.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Other\WebViewWindow.resx">
-      <DependentUpon>WebViewWindow.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Other\WebView2Shake.resx">
+      <DependentUpon>WebView2Shake.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tools.pl.resx">
       <DependentUpon>Tools.cs</DependentUpon>

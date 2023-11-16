@@ -72,6 +72,8 @@ namespace StellaLauncher.Forms
         // Top
         private void OpenInBrowser_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            if (Application.OpenForms.OfType<WebView2Window>().Any()) return;
+            new WebView2Window { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.Show();
             Utils.OpenUrl($"https://www.youtube.com/watch?v={VideoId}");
         }
 
@@ -79,18 +81,20 @@ namespace StellaLauncher.Forms
         // Bottom
         private void Videos_LinkLabel(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Utils.OpenUrl($"{Program.AppWebsiteFull}/videos");
+            if (Application.OpenForms.OfType<WebView2Window>().Any()) return;
+            new WebView2Window { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath), Url = $"{Program.AppWebsiteFull}/videos", Title = "Videos - sefinek.net" }.Show();
         }
 
         private void Documentation_LinkLabel(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Utils.OpenUrl($"{Program.AppWebsiteFull}/docs?page=introduction");
+            if (Application.OpenForms.OfType<WebView2Window>().Any()) return;
+            new WebView2Window { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath), Url = $"{Program.AppWebsiteFull}/docs?page=introduction", Title = "Documentation - sefinek.net" }.Show();
         }
 
         private void Gallery_LinkLabel(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (Application.OpenForms.OfType<Gallery>().Any()) return;
-            new Gallery { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.Show();
+            if (Application.OpenForms.OfType<WebView2Window>().Any()) return;
+            new WebView2Window { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath), Url = $"{Program.AppWebsiteFull}/gallery?page=1", Title = "Gallery - sefinek.net" }.Show();
         }
     }
 }

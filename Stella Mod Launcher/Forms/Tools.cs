@@ -229,7 +229,7 @@ namespace StellaLauncher.Forms
             string path = Path.Combine(Program.AppPath, "data", "videos", "poland-strong.mp4");
             if (!Utils.CheckFileExists(path)) return;
 
-            WebViewWindow viewer = new WebViewWindow { DesktopLocation = DesktopLocation, Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) };
+            WebView2Shake viewer = new WebView2Shake { DesktopLocation = DesktopLocation, Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) };
             viewer.Navigate(path);
             viewer.Show();
         }
