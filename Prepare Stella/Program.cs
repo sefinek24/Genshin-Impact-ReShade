@@ -17,8 +17,8 @@ namespace PrepareStella
         // Files and folders
         private static readonly IniFile PrepareIni = new IniFile(Path.Combine(Start.AppData, "prepare-stella.ini"));
         public static readonly string ProgramFiles = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
-        public static readonly string GameGenshinImpact = Path.Combine(ProgramFiles, "Genshin Impact", "Genshin Impact game", "GenshinImpact.exe");
-        public static readonly string GameYuanShen = Path.Combine(ProgramFiles, "Genshin Impact", "Genshin Impact game", "YuanShen.exe");
+        private static readonly string GameGenshinImpact = Path.Combine(ProgramFiles, "Genshin Impact", "Genshin Impact game", "GenshinImpact.exe");
+        private static readonly string GameYuanShen = Path.Combine(ProgramFiles, "Genshin Impact", "Genshin Impact game", "YuanShen.exe");
         public static readonly string WindowsApps = Path.Combine(ProgramFiles, "WindowsApps");
 
         // Global variables
