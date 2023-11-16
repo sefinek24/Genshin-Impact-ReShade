@@ -213,7 +213,7 @@ namespace StellaLauncher.Forms
             resources.ApplyResources(this.startGame_LinkLabel, "startGame_LinkLabel");
             this.startGame_LinkLabel.BackColor = System.Drawing.Color.Transparent;
             this.startGame_LinkLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.startGame_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.startGame_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.startGame_LinkLabel.LinkColor = System.Drawing.Color.DodgerBlue;
             this.startGame_LinkLabel.Name = "startGame_LinkLabel";
             this.startGame_LinkLabel.TabStop = true;
