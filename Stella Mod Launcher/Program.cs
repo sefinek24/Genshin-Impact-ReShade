@@ -60,15 +60,15 @@ namespace StellaLauncher
         // Registry
         public static readonly string RegistryPath = @"Software\Stella Mod Launcher";
 
+        // Logger
+        public static Logger Logger = LogManager.GetCurrentClassLogger();
+
         // public static void DisposeHttpClient()
         // {
         //     if (WbClient.IsValueCreated) WbClient.Value.Dispose();
         // }
 
         public static HttpClient SefinWebClient => WbClient.Value;
-
-        // Logger
-        public static Logger Logger = LogManager.GetCurrentClassLogger();
 
         [DllImport("user32.dll")]
         private static extern bool SetProcessDpiAwarenessContext(IntPtr dpiContext);
