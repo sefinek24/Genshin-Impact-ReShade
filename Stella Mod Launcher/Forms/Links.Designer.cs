@@ -63,13 +63,12 @@ namespace StellaLauncher.Forms
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel1.Name = "panel1";
-            this.toolTip1.SetToolTip(this.panel1, resources.GetString("panel1.ToolTip"));
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDown_Event);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MouseMove_Event);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MouseUp_Event);
@@ -90,18 +89,16 @@ namespace StellaLauncher.Forms
             this.pictureBox7.Image = global::StellaLauncher.Properties.Resources.icons8_shortcut;
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox7, resources.GetString("pictureBox7.ToolTip"));
             // 
             // createShortcut_Label
             // 
-            resources.ApplyResources(this.createShortcut_Label, "createShortcut_Label");
             this.createShortcut_Label.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.createShortcut_Label, "createShortcut_Label");
             this.createShortcut_Label.BackColor = System.Drawing.Color.Transparent;
             this.createShortcut_Label.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.createShortcut_Label.LinkColor = System.Drawing.Color.White;
             this.createShortcut_Label.Name = "createShortcut_Label";
             this.createShortcut_Label.TabStop = true;
-            this.toolTip1.SetToolTip(this.createShortcut_Label, resources.GetString("createShortcut_Label.ToolTip"));
             this.createShortcut_Label.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.GenshinMap1_LinkClicked);
             // 
             // pictureBox1
@@ -111,18 +108,16 @@ namespace StellaLauncher.Forms
             this.pictureBox1.Image = global::StellaLauncher.Properties.Resources.icons8_shortcut;
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox1, resources.GetString("pictureBox1.ToolTip"));
             // 
             // linkLabel1
             // 
-            resources.ApplyResources(this.linkLabel1, "linkLabel1");
             this.linkLabel1.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.linkLabel1, "linkLabel1");
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel1.LinkColor = System.Drawing.Color.White;
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel1, resources.GetString("linkLabel1.ToolTip"));
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.GenshinMap2_LinkClicked);
             // 
             // pictureBox2
@@ -132,18 +127,16 @@ namespace StellaLauncher.Forms
             this.pictureBox2.Image = global::StellaLauncher.Properties.Resources.icons8_shortcut;
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox2, resources.GetString("pictureBox2.ToolTip"));
             // 
             // linkLabel2
             // 
-            resources.ApplyResources(this.linkLabel2, "linkLabel2");
             this.linkLabel2.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.linkLabel2, "linkLabel2");
             this.linkLabel2.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel2.LinkColor = System.Drawing.Color.White;
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel2, resources.GetString("linkLabel2.ToolTip"));
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.TierList1_LinkClicked);
             // 
             // pictureBox3
@@ -153,18 +146,16 @@ namespace StellaLauncher.Forms
             this.pictureBox3.Image = global::StellaLauncher.Properties.Resources.icons8_shortcut;
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox3, resources.GetString("pictureBox3.ToolTip"));
             // 
             // linkLabel3
             // 
-            resources.ApplyResources(this.linkLabel3, "linkLabel3");
             this.linkLabel3.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.linkLabel3, "linkLabel3");
             this.linkLabel3.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel3.LinkColor = System.Drawing.Color.White;
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel3, resources.GetString("linkLabel3.ToolTip"));
             this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.TierList2_LinkClicked);
             // 
             // label1
@@ -173,7 +164,6 @@ namespace StellaLauncher.Forms
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.label1.Name = "label1";
-            this.toolTip1.SetToolTip(this.label1, resources.GetString("label1.ToolTip"));
             // 
             // label2
             // 
@@ -181,7 +171,6 @@ namespace StellaLauncher.Forms
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.label2.Name = "label2";
-            this.toolTip1.SetToolTip(this.label2, resources.GetString("label2.ToolTip"));
             // 
             // label3
             // 
@@ -189,7 +178,6 @@ namespace StellaLauncher.Forms
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.label3.Name = "label3";
-            this.toolTip1.SetToolTip(this.label3, resources.GetString("label3.ToolTip"));
             // 
             // pictureBox4
             // 
@@ -198,18 +186,16 @@ namespace StellaLauncher.Forms
             this.pictureBox4.Image = global::StellaLauncher.Properties.Resources.icons8_shortcut;
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox4, resources.GetString("pictureBox4.ToolTip"));
             // 
             // linkLabel4
             // 
-            resources.ApplyResources(this.linkLabel4, "linkLabel4");
             this.linkLabel4.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.linkLabel4, "linkLabel4");
             this.linkLabel4.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel4.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel4.LinkColor = System.Drawing.Color.White;
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel4, resources.GetString("linkLabel4.ToolTip"));
             this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Api_LinkClicked);
             // 
             // pictureBox5
@@ -219,18 +205,16 @@ namespace StellaLauncher.Forms
             this.pictureBox5.Image = global::StellaLauncher.Properties.Resources.icons8_shortcut;
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox5, resources.GetString("pictureBox5.ToolTip"));
             // 
             // linkLabel5
             // 
-            resources.ApplyResources(this.linkLabel5, "linkLabel5");
             this.linkLabel5.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.linkLabel5, "linkLabel5");
             this.linkLabel5.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel5.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel5.LinkColor = System.Drawing.Color.White;
             this.linkLabel5.Name = "linkLabel5";
             this.linkLabel5.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel5, resources.GetString("linkLabel5.ToolTip"));
             this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Cdn_LinkClicked);
             // 
             // pictureBox6
@@ -240,18 +224,16 @@ namespace StellaLauncher.Forms
             this.pictureBox6.Image = global::StellaLauncher.Properties.Resources.icons8_shortcut;
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox6, resources.GetString("pictureBox6.ToolTip"));
             // 
             // linkLabel6
             // 
-            resources.ApplyResources(this.linkLabel6, "linkLabel6");
             this.linkLabel6.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.linkLabel6, "linkLabel6");
             this.linkLabel6.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel6.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel6.LinkColor = System.Drawing.Color.White;
             this.linkLabel6.Name = "linkLabel6";
             this.linkLabel6.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel6, resources.GetString("linkLabel6.ToolTip"));
             this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Uptimerobot_LinkClicked);
             // 
             // panel2
@@ -259,7 +241,6 @@ namespace StellaLauncher.Forms
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Name = "panel2";
-            this.toolTip1.SetToolTip(this.panel2, resources.GetString("panel2.ToolTip"));
             this.panel2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Flower_MouseClick);
             // 
             // Links
@@ -289,7 +270,6 @@ namespace StellaLauncher.Forms
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Links";
-            this.toolTip1.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.Shown += new System.EventHandler(this.URLs_Shown);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
