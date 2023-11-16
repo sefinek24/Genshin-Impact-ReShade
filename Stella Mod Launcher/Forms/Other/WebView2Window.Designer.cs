@@ -44,13 +44,13 @@ namespace StellaLauncher.Forms.Other
             this.webView21.Name = "webView21";
             this.webView21.ZoomFactor = 1D;
             // 
-            // Gallery
+            // WebView2Window
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.webView21);
-            this.Name = "Gallery";
+            this.Name = "WebView2Window";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Gallery_FormClosed);
             this.Load += new System.EventHandler(this.Gallery_Load);
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).EndInit();
