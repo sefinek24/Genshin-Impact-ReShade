@@ -282,6 +282,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Other\SupportMe.resx">
       <DependentUpon>SupportMe.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Other\WebView2Shake.pl.resx">
       <DependentUpon>WebView2Shake.cs</DependentUpon>

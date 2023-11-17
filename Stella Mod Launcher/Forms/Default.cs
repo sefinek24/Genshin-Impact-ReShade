@@ -219,7 +219,7 @@ namespace StellaLauncher.Forms
                             label1.Text = @"Something went wrong /ᐠﹷ ‸ ﹷ ᐟ\ﾉ";
 
                             MessageBox.Show(
-                                $"Oh, it looks like something went wrong during the verification of your subscription. The client sent incorrect information to the server. An error with code {remote.Status} has been received. Please check if you are not using VPNs or proxies.\n\nUnfortunately, the benefits of the subscription will not be available at this time. Please try again or contact the software creator (preferably on the Discord server or via email: contact@sefinek.net).\n\n\n{remote.Message}",
+                                $"Oh, it looks like something went wrong during the verification of your subscription. The client sent incorrect information to the server. An error with code {remote.Status} has been received. Please check if you are not using VPNs or proxies.\n\nUnfortunately, the benefits of the subscription will not be available at this time. Please try again or contact the software creator (preferably on the Discord server or via email: {Data.Email}).\n\n\n{remote.Message}",
                                 Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             break;
 
