@@ -188,7 +188,7 @@ namespace StellaLauncher.Scripts.Patrons
             {
                 if (webEx.Response is HttpWebResponse response)
                 {
-                    using (StreamReader reader = new StreamReader(response.GetResponseStream()))
+                    using (StreamReader reader = new StreamReader(response.GetResponseStream() ?? throw new InvalidOperationException()))
                     {
                         string errorResponse = await reader.ReadToEndAsync();
                         MessageBox.Show($@"An error occurred: {errorResponse}", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -197,19 +197,20 @@ namespace StellaLauncher.Scripts.Patrons
                 }
                 else
                 {
-                    MessageBox.Show($@"An unrecoverable error occurred: {webEx.Message}", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Log.ErrorAndExit(webEx);
+                    string msg = $@"An unrecoverable error occurred: {webEx.Message}";
+                    MessageBox.Show(msg, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Program.Logger.Error(msg);
                 }
 
                 return null;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(
-                    $"An unrecoverable error occurred while communicating with the API interface in Warsaw, Poland. The application must be closed immediately.\n\n{ex.InnerException ?? ex}",
-                    Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string msg = $"An unrecoverable error occurred while communicating with the API interface in Piła, Poland. The application must be closed immediately.\n\n{ex.InnerException ?? ex}";
+                Program.Logger.Error(msg);
+                MessageBox.Show(msg, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                Log.ErrorAndExit(ex);
+                Environment.Exit(23451);
                 return null;
             }
         }

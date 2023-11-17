@@ -72,8 +72,6 @@ namespace StellaLauncher.Forms
         // Top
         private void OpenInBrowser_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (Application.OpenForms.OfType<WebView2Window>().Any()) return;
-            new WebView2Window { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.Show();
             Utils.OpenUrl($"https://www.youtube.com/watch?v={VideoId}");
         }
 
@@ -82,19 +80,19 @@ namespace StellaLauncher.Forms
         private void Videos_LinkLabel(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (Application.OpenForms.OfType<WebView2Window>().Any()) return;
-            new WebView2Window { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath), Url = $"{Program.AppWebsiteFull}/videos", Title = "Videos - sefinek.net" }.Show();
+            new WebView2Window { Title = "Videos - sefinek.net", Url = $"{Program.AppWebsiteFull}/videos" }.Show();
         }
 
         private void Documentation_LinkLabel(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (Application.OpenForms.OfType<WebView2Window>().Any()) return;
-            new WebView2Window { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath), Url = $"{Program.AppWebsiteFull}/docs?page=introduction", Title = "Documentation - sefinek.net" }.Show();
+            new WebView2Window { WindowState = FormWindowState.Maximized, Title = "Documentation - sefinek.net", Url = $"{Program.AppWebsiteFull}/docs?page=introduction" }.Show();
         }
 
         private void Gallery_LinkLabel(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (Application.OpenForms.OfType<WebView2Window>().Any()) return;
-            new WebView2Window { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath), Url = $"{Program.AppWebsiteFull}/gallery?page=1", Title = "Gallery - sefinek.net" }.Show();
+            new WebView2Window { WindowState = FormWindowState.Maximized, Title = "Gallery - sefinek.net", Url = $"{Program.AppWebsiteFull}/gallery?page=1" }.Show();
         }
     }
 }

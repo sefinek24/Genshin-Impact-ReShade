@@ -1,4 +1,5 @@
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 using Microsoft.Web.WebView2.Core;
 using StellaLauncher.Properties;
@@ -8,8 +9,8 @@ namespace StellaLauncher.Forms.Other
 {
     public partial class WebView2Window : Form
     {
-        internal string Url;
         internal string Title;
+        internal string Url;
 
         public WebView2Window()
         {
@@ -19,15 +20,15 @@ namespace StellaLauncher.Forms.Other
         private void Gallery_Load(object sender, EventArgs e)
         {
             Text = Title ?? "sefinek.net";
+            Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
 
-            InitBrowser();
+            InitWebView2();
 
             Discord.SetStatus(Resources.Gallery_BrowsingTheGallery);
-
             Program.Logger.Info(string.Format(Resources.Main_LoadedForm_, Text));
         }
 
-        private async void InitBrowser()
+        private async void InitWebView2()
         {
             CoreWebView2Environment coreWeb = await CoreWebView2Environment.CreateAsync(null, Program.AppData, new CoreWebView2EnvironmentOptions());
             await webView21.EnsureCoreWebView2Async(coreWeb);

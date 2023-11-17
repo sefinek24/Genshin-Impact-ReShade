@@ -403,10 +403,10 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="tools_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 601</value>
+    <value>42, 602</value>
   </data>
   <data name="tools_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 23</value>
+    <value>78, 25</value>
   </data>
   <data name="tools_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>77</value>
@@ -550,10 +550,10 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="website_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>503, 601</value>
+    <value>520, 602</value>
   </data>
   <data name="website_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 23</value>
+    <value>97, 25</value>
   </data>
   <data name="website_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>98</value>
@@ -579,17 +579,14 @@
   <data name="gameplay_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="gameplay_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="gameplay_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="gameplay_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>370, 601</value>
+    <value>387, 601</value>
   </data>
   <data name="gameplay_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 24</value>
+    <value>97, 25</value>
   </data>
   <data name="gameplay_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>78</value>
@@ -740,13 +737,13 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="version_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>902, 572</value>
+    <value>844, 572</value>
   </data>
   <data name="version_LinkLabel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
   <data name="version_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 25</value>
+    <value>216, 25</value>
   </data>
   <data name="version_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>85</value>
@@ -779,10 +776,10 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="links_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>269, 602</value>
+    <value>284, 602</value>
   </data>
   <data name="links_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 22</value>
+    <value>68, 25</value>
   </data>
   <data name="links_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>104</value>
@@ -977,10 +974,10 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>NoControl</value>
   </data>
   <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>633, 601</value>
+    <value>653, 601</value>
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 22</value>
+    <value>107, 25</value>
   </data>
   <data name="linkLabel1.TabIndex" type="System.Int32, mscorlib">
     <value>118</value>
@@ -1013,10 +1010,10 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>NoControl</value>
   </data>
   <data name="linkLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>145, 601</value>
+    <value>156, 601</value>
   </data>
   <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 23</value>
+    <value>92, 25</value>
   </data>
   <data name="linkLabel2.TabIndex" type="System.Int32, mscorlib">
     <value>120</value>
@@ -1043,7 +1040,7 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>None</value>
   </data>
   <data name="toolsIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 601</value>
+    <value>13, 602</value>
   </data>
   <data name="toolsIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -1070,7 +1067,7 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>None</value>
   </data>
   <data name="websiteIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>474, 601</value>
+    <value>490, 602</value>
   </data>
   <data name="websiteIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -1154,13 +1151,13 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="updates_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>906, 601</value>
+    <value>817, 601</value>
   </data>
   <data name="updates_LinkLabel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
   <data name="updates_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 23</value>
+    <value>243, 23</value>
   </data>
   <data name="updates_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>85</value>
@@ -1271,7 +1268,7 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>None</value>
   </data>
   <data name="padIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>341, 601</value>
+    <value>357, 602</value>
   </data>
   <data name="padIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -1325,7 +1322,7 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>None</value>
   </data>
   <data name="shortcutIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>240, 601</value>
+    <value>254, 602</value>
   </data>
   <data name="shortcutIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -1379,10 +1376,10 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>None</value>
   </data>
   <data name="progressBar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 601</value>
+    <value>13, 601</value>
   </data>
   <data name="progressBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>824, 24</value>
+    <value>798, 26</value>
   </data>
   <data name="progressBar1.TabIndex" type="System.Int32, mscorlib">
     <value>114</value>
@@ -1439,7 +1436,7 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>NoControl</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>604, 601</value>
+    <value>623, 602</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -1469,7 +1466,7 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>NoControl</value>
   </data>
   <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>116, 601</value>
+    <value>126, 602</value>
   </data>
   <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -1506,9 +1503,6 @@ These include: Ray Tracing, mods, and much more!</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1100, 635</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
