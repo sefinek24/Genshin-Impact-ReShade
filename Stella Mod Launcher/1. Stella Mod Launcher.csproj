@@ -280,9 +280,6 @@
     <EmbeddedResource Include="Forms\Other\RandomImages.resx">
       <DependentUpon>RandomImages.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Other\SupportMe.pl.resx">
-      <DependentUpon>SupportMe.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Other\SupportMe.resx">
       <DependentUpon>SupportMe.cs</DependentUpon>
     </EmbeddedResource>

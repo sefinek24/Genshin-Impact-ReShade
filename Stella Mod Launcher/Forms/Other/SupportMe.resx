@@ -144,7 +144,7 @@
     <value>0, 0</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1045, 41</value>
+    <value>1100, 44</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
@@ -160,7 +160,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <metadata name="panel2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -172,10 +172,10 @@
     <value>None</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>991, 16</value>
+    <value>1043, 17</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 25</value>
+    <value>26, 26</value>
   </data>
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>77</value>
@@ -205,20 +205,22 @@
     <value>True</value>
   </data>
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Ink Free, 21.7499962pt, style=Bold</value>
+    <value>Yu Gothic UI, 15.75pt, style=Bold</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 407</value>
+    <value>28, 381</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>648, 72</value>
+    <value>663, 120</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>By becoming a patron, you can gain new benefits.
-Beautiful mods, Ray Tracing and much more!</value>
+    <value>Being a subscriber to Stella Mod Plus,
+you can gain access to various game enhancements.
+Such as: using mods, new presets, a collection of shaders and mods,
+and much more!</value>
   </data>
   <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -233,7 +235,7 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="linkLabel6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -242,13 +244,13 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>True</value>
   </data>
   <data name="linkLabel6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Consolas, 21.75pt</value>
+    <value>Consolas, 24pt</value>
   </data>
   <data name="linkLabel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 555</value>
+    <value>12, 589</value>
   </data>
   <data name="linkLabel6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 34</value>
+    <value>270, 37</value>
   </data>
   <data name="linkLabel6.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -266,7 +268,7 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel6.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="linkLabel5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -275,19 +277,22 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>True</value>
   </data>
   <data name="linkLabel5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Consolas, 21.75pt</value>
+    <value>Consolas, 24pt</value>
   </data>
   <data name="linkLabel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>807, 555</value>
+    <value>836, 589</value>
   </data>
   <data name="linkLabel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 34</value>
+    <value>252, 37</value>
   </data>
   <data name="linkLabel5.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
   <data name="linkLabel5.Text" xml:space="preserve">
     <value>❤ Okay, done</value>
+  </data>
+  <data name="linkLabel5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;linkLabel5.Name" xml:space="preserve">
     <value>linkLabel5</value>
@@ -299,7 +304,7 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel5.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -308,13 +313,13 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>True</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Ink Free, 29.2499962pt, style=Bold</value>
+    <value>Consolas, 23.25pt, style=Bold</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 95</value>
+    <value>12, 65</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>613, 48</value>
+    <value>629, 37</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -335,7 +340,7 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="linkLabel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -347,7 +352,7 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>Comic Sans MS, 15pt</value>
   </data>
   <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 156</value>
+    <value>14, 127</value>
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>341, 28</value>
@@ -359,7 +364,7 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>» Support my work by clicking here</value>
   </data>
   <data name="linkLabel1.ToolTip" xml:space="preserve">
-    <value>Support my work - Sefinek Official Website</value>
+    <value>Support my work - Sefinek</value>
   </data>
   <data name="&gt;&gt;linkLabel1.Name" xml:space="preserve">
     <value>linkLabel1</value>
@@ -371,7 +376,7 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="linkLabel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -383,7 +388,7 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>Comic Sans MS, 15pt</value>
   </data>
   <data name="linkLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 214</value>
+    <value>14, 183</value>
   </data>
   <data name="linkLabel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>317, 28</value>
@@ -407,7 +412,7 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel3.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="linkLabel4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -419,7 +424,7 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>Comic Sans MS, 15pt</value>
   </data>
   <data name="linkLabel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 243</value>
+    <value>14, 295</value>
   </data>
   <data name="linkLabel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>311, 28</value>
@@ -431,7 +436,7 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>» Star the repository on GitHub</value>
   </data>
   <data name="linkLabel4.ToolTip" xml:space="preserve">
-    <value>Repositories - Genshin Impact Stella Mod</value>
+    <value>Repositories - Genshin Stella Mod</value>
   </data>
   <data name="&gt;&gt;linkLabel4.Name" xml:space="preserve">
     <value>linkLabel4</value>
@@ -443,7 +448,7 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel4.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="linkLabel7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -455,7 +460,7 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>Comic Sans MS, 15pt</value>
   </data>
   <data name="linkLabel7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 272</value>
+    <value>14, 267</value>
   </data>
   <data name="linkLabel7.Size" type="System.Drawing.Size, System.Drawing">
     <value>254, 28</value>
@@ -467,7 +472,7 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>» Join the Discord server</value>
   </data>
   <data name="linkLabel7.ToolTip" xml:space="preserve">
-    <value>Discord server</value>
+    <value>Join our Discord server</value>
   </data>
   <data name="&gt;&gt;linkLabel7.Name" xml:space="preserve">
     <value>linkLabel7</value>
@@ -479,7 +484,7 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel7.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="linkLabel8.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -491,7 +496,7 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>Comic Sans MS, 15pt</value>
   </data>
   <data name="linkLabel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 300</value>
+    <value>14, 239</value>
   </data>
   <data name="linkLabel8.Size" type="System.Drawing.Size, System.Drawing">
     <value>282, 28</value>
@@ -515,7 +520,7 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel8.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="linkLabel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -530,19 +535,19 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>NoControl</value>
   </data>
   <data name="linkLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 184</value>
+    <value>14, 155</value>
   </data>
   <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>461, 28</value>
+    <value>443, 28</value>
   </data>
   <data name="linkLabel2.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
   </data>
   <data name="linkLabel2.Text" xml:space="preserve">
-    <value>» Give me your useless skins in CS:GO if you can</value>
+    <value>» Send me your useless skins in CS2 if you can</value>
   </data>
   <data name="linkLabel2.ToolTip" xml:space="preserve">
-    <value>Leave your feedback on the Discord channel</value>
+    <value>Open trade url</value>
   </data>
   <data name="&gt;&gt;linkLabel2.Name" xml:space="preserve">
     <value>linkLabel2</value>
@@ -554,7 +559,7 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel2.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="linkLabel9.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -569,7 +574,7 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>NoControl</value>
   </data>
   <data name="linkLabel9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 328</value>
+    <value>14, 323</value>
   </data>
   <data name="linkLabel9.Size" type="System.Drawing.Size, System.Drawing">
     <value>362, 28</value>
@@ -581,7 +586,7 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>» Create a new Pull Request on GitHub</value>
   </data>
   <data name="linkLabel9.ToolTip" xml:space="preserve">
-    <value>Repositories - Genshin Impact Stella Mod</value>
+    <value>Pull requests · sefinek24/Genshin-Impact-ReShade</value>
   </data>
   <data name="&gt;&gt;linkLabel9.Name" xml:space="preserve">
     <value>linkLabel9</value>
@@ -593,7 +598,7 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel9.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -602,16 +607,16 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>True</value>
   </data>
   <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Ink Free, 23.9999962pt, style=Bold</value>
+    <value>Microsoft Sans Serif, 24.75pt</value>
   </data>
   <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 519</value>
+    <value>353, 551</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>400, 39</value>
+    <value>396, 38</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -632,7 +637,46 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
+  </data>
+  <data name="linkLabel10.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="linkLabel10.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="linkLabel10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 15pt</value>
+  </data>
+  <data name="linkLabel10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="linkLabel10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 211</value>
+  </data>
+  <data name="linkLabel10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>342, 28</value>
+  </data>
+  <data name="linkLabel10.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="linkLabel10.Text" xml:space="preserve">
+    <value>» Leave feedback on Trustpilot.com</value>
+  </data>
+  <data name="linkLabel10.ToolTip" xml:space="preserve">
+    <value>Stella Mod Launcher Reviews | Read Customer Service Reviews of genshin.sefinek.net</value>
+  </data>
+  <data name="&gt;&gt;linkLabel10.Name" xml:space="preserve">
+    <value>linkLabel10</value>
+  </data>
+  <data name="&gt;&gt;linkLabel10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;linkLabel10.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;linkLabel10.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -647,7 +691,10 @@ Beautiful mods, Ray Tracing and much more!</value>
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1045, 600</value>
+    <value>1100, 635</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

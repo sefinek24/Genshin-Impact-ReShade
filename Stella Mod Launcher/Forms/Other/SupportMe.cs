@@ -63,6 +63,21 @@ namespace StellaLauncher.Forms.Other
             Utils.OpenUrl("https://www.youtube.com/channel/UClrAIcAzcqIMbvGXZqK7e0A?sub_confirmation=1");
         }
 
+        private void TrustPilot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Utils.OpenUrl("https://www.trustpilot.com/review/genshin.sefinek.net");
+        }
+
+        private void DiscordFeedback_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Utils.OpenUrl(Discord.FeedbackChannel);
+        }
+
+        private void DiscordServer_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Utils.OpenUrl(Discord.Invitation);
+        }
+
         private void StarTheRepo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Utils.OpenUrl("https://sefinek.net/genshin-impact-reshade/repositories");
@@ -71,16 +86,6 @@ namespace StellaLauncher.Forms.Other
         private void PullRequest_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Utils.OpenUrl("https://github.com/sefinek24/Genshin-Impact-ReShade/pulls");
-        }
-
-        private void DiscordServer_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Utils.OpenUrl(Discord.Invitation);
-        }
-
-        private void LeaveFeedback_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Utils.OpenUrl(Discord.FeedbackChannel);
         }
 
 

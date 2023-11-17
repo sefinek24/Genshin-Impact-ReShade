@@ -45,6 +45,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel9 = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
+            this.linkLabel10 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -168,7 +169,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel8.Name = "linkLabel8";
             this.linkLabel8.TabStop = true;
             this.toolTip1.SetToolTip(this.linkLabel8, resources.GetString("linkLabel8.ToolTip"));
-            this.linkLabel8.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LeaveFeedback_LinkClicked);
+            this.linkLabel8.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.DiscordFeedback_LinkClicked);
             // 
             // linkLabel2
             // 
@@ -203,12 +204,26 @@ namespace StellaLauncher.Forms.Other
             this.label3.ForeColor = System.Drawing.Color.LightGreen;
             this.label3.Name = "label3";
             // 
+            // linkLabel10
+            // 
+            this.linkLabel10.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.linkLabel10, "linkLabel10");
+            this.linkLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel10.ForeColor = System.Drawing.Color.Transparent;
+            this.linkLabel10.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.linkLabel10.LinkColor = System.Drawing.Color.DeepSkyBlue;
+            this.linkLabel10.Name = "linkLabel10";
+            this.linkLabel10.TabStop = true;
+            this.toolTip1.SetToolTip(this.linkLabel10, resources.GetString("linkLabel10.ToolTip"));
+            this.linkLabel10.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.TrustPilot_LinkClicked);
+            // 
             // SupportMe
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::StellaLauncher.Properties.Resources.bg_support_me;
+            this.Controls.Add(this.linkLabel10);
             this.Controls.Add(this.linkLabel9);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.linkLabel2);
@@ -249,5 +264,6 @@ namespace StellaLauncher.Forms.Other
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel linkLabel9;
+        private System.Windows.Forms.LinkLabel linkLabel10;
     }
 }
