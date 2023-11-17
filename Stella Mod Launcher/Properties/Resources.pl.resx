@@ -225,11 +225,6 @@ Ta czynność spowoduje utratę wszelkich niestandardowych konfiguracji, jakie d
   <data name="Default_FailedToDownload" xml:space="preserve">
     <value>Nie udało się pobrać...</value>
   </data>
-  <data name="Default_FailedToDownloadUnlockerConfigJson" xml:space="preserve">
-    <value>Nie udało się pobrać pliku unlocker.config.json.
-
-{0}</value>
-  </data>
   <data name="Default_FileDownloadHasBeenCanceledByTheUser" xml:space="preserve">
     <value>Pobieranie pliku zostało anulowane przez użytkownika.</value>
   </data>
