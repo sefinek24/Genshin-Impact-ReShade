@@ -671,7 +671,7 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>MiddleCenter</value>
   </data>
   <data name="becomeMyPatron_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Go to https://patreon.com/sefinek</value>
+    <value>Go to https://sefinek.net/genshin-impact-reshade/subscription</value>
   </data>
   <data name="becomeMyPatron_LinkLabel.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
