@@ -1415,15 +1415,6 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Received data from {0}.
-        /// </summary>
-        internal static string RandomImages_ReceivedDataFrom {
-            get {
-                return ResourceManager.GetString("RandomImages_ReceivedDataFrom", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Source.
         /// </summary>
         internal static string RandomImages_Source {

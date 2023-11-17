@@ -442,7 +442,7 @@
     <value>10</value>
   </data>
   <data name="text_Label.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
+    <value>MiddleCenter</value>
   </data>
   <data name="&gt;&gt;text_Label.Name" xml:space="preserve">
     <value>text_Label</value>
@@ -1886,6 +1886,9 @@
   </data>
   <data name="&gt;&gt;poweredBy_Label.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="webView21.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="webView21.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>

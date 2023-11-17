@@ -24,8 +24,6 @@ namespace StellaLauncher.Forms.Other
         {
             InitializeComponent();
 
-            webView21.DefaultBackgroundColor = Color.Transparent;
-
             if (RegionInfo.CurrentRegion.Name == "PL") linkLabel46.Visible = true;
         }
 
@@ -99,17 +97,17 @@ namespace StellaLauncher.Forms.Other
             }
         }
 
-        private async void SkiffyApi(string url)
+        private async void SefinekApi(string url)
         {
             string json = await GetData(url);
             if (json == null) return;
 
-            SkiffyBotApi res = JsonConvert.DeserializeObject<SkiffyBotApi>(json);
+            SefinekApi res = JsonConvert.DeserializeObject<SefinekApi>(json);
 
             webView21.CoreWebView2.Navigate(res.Message);
             text_Label.Visible = false;
 
-            Program.Logger.Info($"{string.Format(Resources.RandomImages_ReceivedDataFrom, new Uri(url).Host)}: {res.Success} {res.Status} {res.Category} {res.Endpoint} {res.Message}");
+            Program.Logger.Info($"Received data from: {new Uri(url).Host}; Success {res.Success}; Status {res.Status}; Category {res.Info.Category}; Endpoint {res.Info.Endpoint}; Message {res.Message};");
         }
 
         private async void NekosBest(string url, bool gif) // The best api uwu
@@ -119,25 +117,28 @@ namespace StellaLauncher.Forms.Other
 
             NekosBest res = JsonConvert.DeserializeObject<NekosBest>(json);
 
-            webView21.CoreWebView2.Navigate(res.Results[0].Url);
+            string picUrl = res.Results[0].Url;
+            webView21.CoreWebView2.Navigate(picUrl);
+
+            string animeName = res.Results[0].Anime_name;
+            string sourceUrl = res.Results[0].Source_url;
 
             if (gif)
             {
-                text_Label.ActiveLinkColor = Color.Transparent;
-                text_Label.Text = $"{Resources.RandomImages_AnimeName}\n{res.Results[0].Anime_name}";
+                text_Label.Text = $"{Resources.RandomImages_AnimeName}\n{animeName}";
                 text_Label.LinkBehavior = LinkBehavior.NeverUnderline;
             }
             else
             {
                 text_Label.ActiveLinkColor = Color.DodgerBlue;
-                text_Label.Text = $"{Resources.RandomImages_Source}\n{Regex.Replace(res.Results[0].Source_url, @"(?:https?://|www\.)", "")}";
+                text_Label.Text = $"{Resources.RandomImages_Source}\n{Regex.Replace(sourceUrl, @"(?:https?://|www\.)", "")}";
                 text_Label.LinkBehavior = LinkBehavior.HoverUnderline;
             }
 
             text_Label.Visible = true;
-            _sourceUrl = res.Results[0].Source_url;
+            _sourceUrl = sourceUrl;
 
-            Program.Logger.Info($"{string.Format(Resources.RandomImages_ReceivedDataFrom, new Uri(url).Host)}: {res.Results[0].Anime_name} {res.Results[0].Source_url} {res.Results[0].Url}");
+            Program.Logger.Info($"Received data from {new Uri(url).Host}; Anime_name {animeName}; Source_url {sourceUrl}; Url {picUrl};");
         }
 
         private async void PurrBot(string url)
@@ -151,7 +152,7 @@ namespace StellaLauncher.Forms.Other
             _sourceUrl = res.Link;
             text_Label.Visible = false;
 
-            Program.Logger.Info($"{string.Format(Resources.RandomImages_ReceivedDataFrom, new Uri(url).Host)}: {res.Link}");
+            Program.Logger.Info($"Received data from {new Uri(url).Host}; Link {res.Link};");
         }
 
         private async void NekoBot(string url)
@@ -172,23 +173,23 @@ namespace StellaLauncher.Forms.Other
             text_Label.Visible = true;
             _sourceUrl = res.Message;
 
-            Program.Logger.Info($"{string.Format(Resources.RandomImages_ReceivedDataFrom, new Uri(url).Host)}: {res.Color} {rgbColor} {res.Message}");
+            Program.Logger.Info($"Received data from {new Uri(url).Host}; Color {res.Color} rgbColor {rgbColor}; Message {res.Message};");
         }
 
         /* Random animals */
         private void RandomCat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            SkiffyApi("https://api.sefinek.net/api/v2/random/animal/cat");
+            SefinekApi("https://api.sefinek.net/api/v2/random/animal/cat");
         }
 
         private void RandomDog_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            SkiffyApi("https://api.sefinek.net/api/v2/random/animal/dog");
+            SefinekApi("https://api.sefinek.net/api/v2/random/animal/dog");
         }
 
         private void RandomFox_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            SkiffyApi("https://api.sefinek.net/api/v2/random/animal/fox");
+            SefinekApi("https://api.sefinek.net/api/v2/random/animal/fox");
         }
 
         /* Random anime bitches */
@@ -402,7 +403,7 @@ namespace StellaLauncher.Forms.Other
         /* Random YouTube videos */
         private void HlCat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            SkiffyApi("https://api.sefinek.net/api/v2/random/yt-video/hl-cats");
+            SefinekApi("https://api.sefinek.net/api/v2/random/yt-video/hl-cats");
         }
 
         /* Footer */

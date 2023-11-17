@@ -2,16 +2,23 @@ using System.Collections.Generic;
 
 namespace StellaLauncher.Models
 {
-    public class SkiffyBotApi
+    public class CategoryData
+    {
+        public string Category { get; set; }
+        public string Endpoint { get; set; }
+    }
+
+    public class SefinekApi
     {
         public string Success { get; set; }
         public string Status { get; set; }
-        public string Category { get; set; }
+        public CategoryData Info { get; set; }
         public string Endpoint { get; set; }
         public string Message { get; set; }
     }
 
-    public class Result
+
+    public class ResultData
     {
         public string Anime_name { get; set; }
         public string Source_url { get; set; }
@@ -20,8 +27,9 @@ namespace StellaLauncher.Models
 
     public class NekosBest
     {
-        public List<Result> Results { get; set; }
+        public List<ResultData> Results { get; set; }
     }
+
 
     public class PurrBot
     {

@@ -652,9 +652,6 @@ If, for any reason, you are unable to update Stella Mod through the Launcher, pl
   <data name="icons8_recycle-bin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-recycle-bin-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RandomImages_ReceivedDataFrom" xml:space="preserve">
-    <value>Received data from {0}</value>
-  </data>
   <data name="new-release" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\352967288013211.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
