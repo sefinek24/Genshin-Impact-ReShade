@@ -36,18 +36,19 @@ namespace StellaLauncher.Forms.Other
             // webView21
             // 
             this.webView21.AllowExternalDrop = true;
-            resources.ApplyResources(this.webView21, "webView21");
+            this.webView21.BackColor = System.Drawing.Color.Black;
             this.webView21.CreationProperties = null;
-            this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView21.DefaultBackgroundColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.webView21, "webView21");
             this.webView21.Name = "webView21";
             this.webView21.ZoomFactor = 1D;
             // 
-            // WebViewWindow
+            // WebView2Shake
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.webView21);
-            this.Name = "WebViewWindow";
+            this.Name = "WebView2Shake";
             this.Load += new System.EventHandler(this.WebViewWindow_Load);
             this.Shown += new System.EventHandler(this.WebViewWindow_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).EndInit();
