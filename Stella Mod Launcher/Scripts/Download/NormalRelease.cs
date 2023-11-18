@@ -28,7 +28,7 @@ namespace StellaLauncher.Scripts.Download
         public static async void Run(string remoteVersion, DateTime remoteVerDate)
         {
             // 1
-            Default._version_LinkLabel.Text = $@"v{Program.AppVersion} → v{remoteVersion}";
+            Default._version_LinkLabel.Text = $@"v{Program.ProductVersion} → v{remoteVersion}";
 
             // 2
             Default._updates_LinkLabel.LinkColor = Color.Cyan;

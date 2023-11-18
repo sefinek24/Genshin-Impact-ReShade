@@ -147,7 +147,7 @@ namespace StellaLauncher.Forms
 
 
             // App version
-            version_LinkLabel.Text = $@"v{Program.AppVersion}";
+            version_LinkLabel.Text = @"Waiting...";
             progressBar1.Value = 18;
 
 

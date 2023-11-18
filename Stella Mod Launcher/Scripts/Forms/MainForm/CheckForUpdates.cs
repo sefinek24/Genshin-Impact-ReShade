@@ -138,13 +138,13 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 Default._updates_LinkLabel.Text = Resources.Default_CheckForUpdates;
                 Default._updateIco_PictureBox.Image = Resources.icons8_available_updates;
 
-                Default._version_LinkLabel.Text = $@"v{Program.AppVersion}";
+                Default._version_LinkLabel.Text = $@"v{(Program.AppVersion == Program.ProductVersion ? Program.AppVersion : $"{Program.ProductVersion}-dpr")}";
 
                 Utils.RemoveClickEvent(Default._updates_LinkLabel);
                 Default._updates_LinkLabel.Click += CheckUpdates_Click;
 
                 Default.UpdateIsAvailable = false;
-                Program.Logger.Info($"Not found any new updates. Your installed version: v{Program.AppVersion}");
+                Program.Logger.Info($"Not found any new updates. AppVersion v{Program.AppVersion}; ProductVersion v{Program.ProductVersion};");
 
                 Default._progressBar1.Value = 84;
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress);

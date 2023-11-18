@@ -59,12 +59,11 @@
             "net471",
             "net472",
             "net48",
-            "net7.0-windows10.0.22621",
+            "net8.0-windows10.0.22621",
             "net461"
           ],
           "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
+          "warn": true
         }
       },
       "runtimes": {

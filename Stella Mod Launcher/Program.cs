@@ -22,6 +22,7 @@ namespace StellaLauncher
     {
         // App
         public static readonly string AppVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+        public static readonly string ProductVersion = Application.ProductVersion;
         private static readonly string AppName = Assembly.GetExecutingAssembly().GetName().Name;
         public static readonly string AppNameVer = $"{AppName} • v{AppVersion}";
         private static readonly string AppWebsiteSub = "https://genshin.sefinek.net";
