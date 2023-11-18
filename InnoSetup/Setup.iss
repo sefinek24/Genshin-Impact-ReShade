@@ -38,8 +38,8 @@ UninstallDisplayIcon="..\Assets\Images\Icons\setup\52x52.ico"
 AppSupportURL=https://genshin.sefinek.net/support
 AppUpdatesURL=https://genshin.sefinek.net/docs?page=changelog_v7
 VersionInfoCompany={#AppPublisher}
-VersionInfoProductName={#AppName}
-VersionInfoProductTextVersion={#AppName} Setup
+VersionInfoProductName=Stella Mod Setup
+VersionInfoProductTextVersion={#AppVersion}
 VersionInfoDescription={#AppName + " v" + AppVersion + " Setup"}
 VersionInfoVersion={#AppVersion}
 VersionInfoProductVersion={#AppVersion}
