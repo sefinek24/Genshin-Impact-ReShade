@@ -21,15 +21,15 @@ namespace PrepareStella
         public static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
         public static readonly string AppData = Utils.GetAppData();
 
+        // Links
+        private static readonly string AppWebsite = "https://genshin.sefinek.net";
+        public static readonly string DiscordUrl = "https://discord.gg/SVcbaRc7gH";
+
         // Web
         public static readonly string UserAgent = $"Mozilla/5.0 (compatible; PrepareStella/{AppVersion}; +{AppWebsite})";
 
         public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v5" : "https://api.sefinek.net/api/v5";
         //  public static readonly string WebApi = "https://api.sefinek.net/api/v5";
-
-        // Links
-        private static readonly string AppWebsite = "https://genshin.sefinek.net";
-        public static readonly string DiscordUrl = "https://discord.gg/SVcbaRc7gH";
 
         // Dependencies
         public static readonly string VcLibsAppx = Path.Combine("dependencies", "Microsoft.VCLibs.x64.14.00.Desktop.appx");
