@@ -1,21 +1,23 @@
 #define AppName "Genshin Stella Mod"
-#define AppVersion "7.8.1.3"
+#define AppVersion "7.8.1.4"
 #define AppPublisher "Sefinek Inc."
 #define AppURL "https://genshin.sefinek.net"
 #define AppExeName "Stella Mod Launcher.exe"
+#define AppCopyright "Copyright 2023 © by Sefinek. All Rights Reserved."
 #define AppId "5D6E44F3-2141-4EA4-89E3-6C3018583FF7"
 #define public Dependency_Path_NetCoreCheck "dependencies\"
 #include "CodeDependencies.iss"
 
 [Setup]
-AppCopyright=Copyright 2023 © by Sefinek. All Rights Reserved.
+AppCopyright={#AppCopyright}
 AppId={#AppId}
 AppMutex={#AppId}
 AppName={#AppName}
 AppVersion={#AppVersion}
-AppVerName={#AppName} {#AppVersion}
+AppVerName={#AppName}
 AppPublisher={#AppPublisher}
 AppPublisherURL={#AppURL}
+AppContact=contact@sefinek.net
 
 ArchitecturesInstallIn64BitMode=x64
 ArchitecturesAllowed=x64
@@ -27,22 +29,22 @@ InfoBeforeFile=..\Build\Release\data\README.txt
 LicenseFile=..\Build\Release\LICENSE
 PrivilegesRequired=none
 OutputBaseFilename=Stella-Mod-Setup
-SolidCompression=yes
 WizardStyle=classic
 
 DirExistsWarning=no
 DisableProgramGroupPage=yes
-UninstallDisplayIcon="{app}\Genshin Stella Mod.exe"
+UninstallDisplayIcon="..\Assets\Images\Icons\setup\52x52.ico"
 
 AppSupportURL=https://genshin.sefinek.net/support
 AppUpdatesURL=https://genshin.sefinek.net/docs?page=changelog_v7
 VersionInfoCompany={#AppPublisher}
-VersionInfoTextVersion={#AppVersion}
 VersionInfoProductName={#AppName}
-VersionInfoProductTextVersion={#GetFileProductVersion(AppExeName)}
+VersionInfoProductTextVersion={#AppName} Setup
 VersionInfoDescription={#AppName + " v" + AppVersion + " Setup"}
-VersionInfoVersion={#GetFileVersion(AppExeName)}
-VersionInfoCopyright={#GetFileCopyright(AppExeName)}
+VersionInfoVersion={#AppVersion}
+VersionInfoProductVersion={#AppVersion}
+VersionInfoTextVersion={#AppVersion}
+VersionInfoCopyright={#AppCopyright}
 
 WizardImageFile="..\Assets\Images\InnoSetup\WizardImageFile.bmp"
 WizardSmallImageFile="..\Assets\Images\InnoSetup\WizardSmallImageFile.bmp"
@@ -62,6 +64,7 @@ Name: "finnish"; MessagesFile: "compiler:Languages\Finnish.isl"
 Name: "french"; MessagesFile: "compiler:Languages\French.isl"
 Name: "german"; MessagesFile: "compiler:Languages\German.isl"
 Name: "hebrew"; MessagesFile: "compiler:Languages\Hebrew.isl"
+Name: "hungarian"; MessagesFile: "compiler:Languages\Hungarian.isl"
 Name: "icelandic"; MessagesFile: "compiler:Languages\Icelandic.isl"
 Name: "italian"; MessagesFile: "compiler:Languages\Italian.isl"
 Name: "japanese"; MessagesFile: "compiler:Languages\Japanese.isl"
