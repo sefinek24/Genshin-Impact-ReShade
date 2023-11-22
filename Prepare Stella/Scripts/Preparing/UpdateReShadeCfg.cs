@@ -41,7 +41,7 @@ namespace PrepareStella.Scripts.Preparing
         {
             using (HttpClient httpClient = new HttpClient())
             {
-                httpClient.DefaultRequestHeaders.Add("user-agent", Start.UserAgent);
+                httpClient.DefaultRequestHeaders.Add("User-Agent", Start.UserAgent);
                 using (HttpResponseMessage response = await httpClient.GetAsync(url))
                 {
                     if (response.IsSuccessStatusCode)

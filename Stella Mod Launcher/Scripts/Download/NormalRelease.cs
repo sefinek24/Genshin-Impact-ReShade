@@ -135,7 +135,7 @@ namespace StellaLauncher.Scripts.Download
 
             using (WebClient client = new WebClient())
             {
-                client.Headers.Add("user-agent", Program.UserAgent);
+                client.Headers.Add("User-Agent", Program.UserAgent);
                 client.DownloadProgressChanged += Client_DownloadProgressChanged;
                 client.DownloadFileCompleted += Client_DownloadFileCompleted;
                 await client.DownloadFileTaskAsync(new Uri(DownloadUrl), SetupPathExe);

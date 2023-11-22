@@ -16,7 +16,7 @@ namespace PrepareStella.Scripts.Preparing
 
                 using (HttpClient httpClient = new HttpClient())
                 {
-                    httpClient.DefaultRequestHeaders.Add("user-agent", Start.UserAgent);
+                    httpClient.DefaultRequestHeaders.Add("User-Agent", Start.UserAgent);
                     string fpsUnlockerConfig = await httpClient.GetStringAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/unlocker.config.json");
 
                     string fpsUnlockerConfigPath = Path.Combine(unlockerFolderPath, "unlocker.config.json");

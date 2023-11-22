@@ -47,7 +47,7 @@ namespace PrepareStella.Scripts.Preparing
                 Console.WriteLine(@"Downloading resources from GitHub...");
                 using (HttpClient httpClient = new HttpClient())
                 {
-                    httpClient.DefaultRequestHeaders.Add("user-agent", Start.UserAgent);
+                    httpClient.DefaultRequestHeaders.Add("User-Agent", Start.UserAgent);
 
                     using (Stream stream = await httpClient.GetStreamAsync("https://github.com/sefinek24/Genshin-Stella-Resources/releases/latest/download/resources.zip"))
                     using (FileStream fs = File.Create(zipPath))

@@ -82,7 +82,7 @@ namespace StellaLauncher.Forms.Other
             try
             {
                 WebClient client = new WebClient();
-                client.Headers.Add("user-agent", Program.UserAgent);
+                client.Headers.Add("User-Agent", Program.UserAgent);
                 return await client.DownloadStringTaskAsync(url);
             }
             catch (WebException e)
