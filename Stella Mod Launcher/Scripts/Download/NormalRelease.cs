@@ -65,7 +65,7 @@ namespace StellaLauncher.Scripts.Download
 
             // Log
             Default._status_Label.Text += $"[i] {string.Format(Resources.NormalRelease_NewVersionFrom_IsAvailable, remoteVerDate)}\n";
-            Program.Logger.Info($"New release from {remoteVerDate} is available: v{Program.AppVersion} → v{remoteVersion}");
+            Program.Logger.Info($"New release from {remoteVerDate} is available: v{Program.ProductVersion} → v{remoteVersion}");
 
             // Taskbar
             TaskbarManager.Instance.SetProgressValue(100, 100);
