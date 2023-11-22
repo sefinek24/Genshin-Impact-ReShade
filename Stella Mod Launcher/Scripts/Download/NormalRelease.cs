@@ -73,7 +73,7 @@ namespace StellaLauncher.Scripts.Download
             // Check update size
             using (WebClient wc = new WebClient())
             {
-                wc.Headers.Add("user-agent", Program.UserAgent);
+                wc.Headers.Add("User-Agent", Program.UserAgent);
                 await wc.OpenReadTaskAsync(DownloadUrl);
                 string updateSize = ByteSize.FromBytes(Convert.ToInt64(wc.ResponseHeaders["Content-Length"])).MegaBytes.ToString("00.00");
                 Default._status_Label.Text += $"[i] {string.Format(Resources.StellaResources_UpdateSize, $"{updateSize} MB")}\n";
