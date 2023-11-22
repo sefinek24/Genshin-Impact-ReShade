@@ -5,7 +5,9 @@ using System.Net;
 using ByteSizeLib;
 using Microsoft.Toolkit.Uwp.Notifications;
 using Microsoft.WindowsAPICodePack.Taskbar;
+using Newtonsoft.Json;
 using StellaLauncher.Forms;
+using StellaLauncher.Models;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts.Download;
 using StellaLauncher.Scripts.Forms.MainForm;
@@ -19,7 +21,6 @@ namespace StellaLauncher.Scripts.Patrons
         private static long _lastBytesReceived;
         private static DateTime _lastUpdateTime = DateTime.Now;
 
-        private static readonly string DownloadUrl = $"{Program.WebApi}/genshin-stella-mod/patrons/benefits/download";
         private static string _zipFile;
         private static string _outputDir;
         private static string _successfullyUpdated;
@@ -45,6 +46,14 @@ namespace StellaLauncher.Scripts.Patrons
 
             Program.Logger.Info($"Found the new version of: {benefitName}");
 
+
+            // Get update URL (mirror)
+            string jsonResponse = await Program.SefinWebClient.GetStringAsync($"{Program.WebApi}/genshin-stella-mod/patrons/benefits/update?benefitType={benefitName}");
+            GetUpdateUrl data = JsonConvert.DeserializeObject<GetUpdateUrl>(jsonResponse);
+            Program.Logger.Info($"The download url is ready; {data.PreparedUrl}");
+
+
+            // Switch info
             switch (benefitName)
             {
                 case "3dmigoto":
@@ -72,6 +81,8 @@ namespace StellaLauncher.Scripts.Patrons
             Default._progressBar1.Show();
             Default._preparingPleaseWait.Show();
 
+
+            // Run download
             using (WebClient client = new WebClient())
             {
                 client.Headers.Add("user-agent", Program.UserAgent);
@@ -80,7 +91,7 @@ namespace StellaLauncher.Scripts.Patrons
                 client.DownloadProgressChanged += Client_DownloadProgressChanged;
                 client.DownloadFileCompleted += Client_DownloadFileCompleted;
 
-                await client.DownloadFileTaskAsync(new Uri($"{DownloadUrl}?benefitType={benefitName}"), _zipFile);
+                await client.DownloadFileTaskAsync(new Uri($"{data.PreparedUrl}?benefitType={benefitName}"), _zipFile);
             }
 
             // Prepare presets

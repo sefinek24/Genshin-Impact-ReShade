@@ -59,6 +59,14 @@ namespace StellaLauncher.Models
         public int Tier { get; set; }
     }
 
+    public class GetUpdateUrl
+    {
+        public bool Success { get; set; }
+        public int Status { get; set; }
+        public string Request { get; set; }
+        public string PreparedUrl { get; set; }
+    }
+
     // Version of benefits
     public class BenefitsJsonVersion
     {
