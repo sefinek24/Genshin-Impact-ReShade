@@ -85,7 +85,7 @@ namespace StellaLauncher.Scripts.Patrons
             // Run download
             using (WebClient client = new WebClient())
             {
-                client.Headers.Add("user-agent", Program.UserAgent);
+                client.Headers.Add("User-Agent", Program.UserAgent);
                 client.Headers.Add("Authorization", $"Bearer {Secret.BearerToken}");
 
                 client.DownloadProgressChanged += Client_DownloadProgressChanged;
