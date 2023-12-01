@@ -43,6 +43,7 @@ namespace GenshinStellaMod
             LogManager.Configuration = new XmlLoggingConfiguration(Path.Combine(AppPath, "NLog_GSM.config"));
 
             Console.OutputEncoding = Encoding.UTF8;
+            Console.Title = $"Genshin Stella Mod - v{AppVersion}";
 
             if (Utils.IsArrayEmpty(args))
             {
@@ -65,6 +66,7 @@ namespace GenshinStellaMod
 
                 Environment.Exit(violationCode);
             }
+
 
             bool isSubscriber = Data.IsUserMyPatron();
             Console.WriteLine("⠀  ⠀⠀⠀⠀⠀⠀⠀ ⢀⣤⡶⢶⣦⡀");
@@ -89,7 +91,6 @@ namespace GenshinStellaMod
             // Set app title etc.
             string launchMode = args[3];
             Logger.Info($"Launch mode: {launchMode}");
-            Console.Title = $"Genshin Stella Mod v{AppVersion}";
 
 
             // Verify that the application is running with administrative privileges.
@@ -144,7 +145,7 @@ namespace GenshinStellaMod
                         case 200:
                             Secret.IsMyPatron = true;
                             Logger.Info($"The user is a subscriber to Stella Mod Plus ({Secret.IsMyPatron}); Allowed;");
-                            Console.WriteLine("[✓] You're a verified Stella Mod Plus subscriber");
+                            Console.WriteLine("[✓] Verified Stella Mod Plus subscriber");
                             break;
 
                         case 500:
