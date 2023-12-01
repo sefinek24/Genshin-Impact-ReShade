@@ -70,7 +70,7 @@ namespace GenshinStellaMod
             Console.WriteLine("⠀  ⠀⠀⠀⠀⠀⠀⠀ ⢀⣤⡶⢶⣦⡀");
             Console.WriteLine("⠀  ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿");
             Console.WriteLine($"⠀  ⠀⠀⣿⡄⠀⠀⠀⠈⠀⠀⠀⠀⣾⡿                            {(!isSubscriber ? "Genshin Impact Stella Mod 2023" : "Genshin Impact Stella Mod Plus+ 2023")}");
-            Console.WriteLine($"⠀  ⠀⠀⠹⣿⣦⡀⠀⠀⠀⠀⢀⣾⣿                                   {(!isSubscriber ? "    Start the game" : "~ Release for subscribers ~")}");
+            Console.WriteLine($"⠀  ⠀⠀⠹⣿⣦⡀⠀⠀⠀⠀⢀⣾⣿                             {(!isSubscriber ? "        Start the game" : "    ~ Release for subscribers ~")}");
             Console.WriteLine("⠀  ⠀⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿");
             Console.WriteLine("⠀⠀  ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟");
             Console.WriteLine("⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀");
