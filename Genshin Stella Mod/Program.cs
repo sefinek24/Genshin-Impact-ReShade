@@ -28,7 +28,6 @@ namespace GenshinStellaMod
 
         // Files and folders
         public static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
-        public static readonly string AppData = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
 
         // API
         // public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v5" : "https://api.sefinek.net/api/v5";
@@ -71,7 +70,7 @@ namespace GenshinStellaMod
             Console.WriteLine("⠀  ⠀⠀⠀⠀⠀⠀⠀ ⢀⣤⡶⢶⣦⡀");
             Console.WriteLine("⠀  ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿");
             Console.WriteLine($"⠀  ⠀⠀⣿⡄⠀⠀⠀⠈⠀⠀⠀⠀⣾⡿                            {(!isSubscriber ? "Genshin Impact Stella Mod 2023" : "Genshin Impact Stella Mod Plus+ 2023")}");
-            Console.WriteLine($"⠀  ⠀⠀⠹⣿⣦⡀⠀⠀⠀⠀⢀⣾⣿                                   {(!isSubscriber ? "    Start the game" : "~ Release for Patrons ~")}");
+            Console.WriteLine($"⠀  ⠀⠀⠹⣿⣦⡀⠀⠀⠀⠀⢀⣾⣿                                   {(!isSubscriber ? "    Start the game" : "~ Release for subscribers ~")}");
             Console.WriteLine("⠀  ⠀⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿");
             Console.WriteLine("⠀⠀  ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟");
             Console.WriteLine("⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀");
