@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("This program will prepare the Genshin Stella Mod and Stella Mod Launcher applications for first use or after an update.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Sefinek Inc.")]
-[assembly: AssemblyProduct("Prepare Genshin Stella Mod Pack")]
+[assembly: AssemblyProduct("Prepare Stella Mod")]
 [assembly: AssemblyCopyright("Copyright 2023 © by Sefinek. All Rights Reserved.")]
 [assembly: AssemblyTrademark("© Sefinek Inc.")]
 [assembly: AssemblyCulture("")]

@@ -729,7 +729,7 @@
       <Version>13.0.3</Version>
     </PackageReference>
     <PackageReference Include="NLog">
-      <Version>5.2.6</Version>
+      <Version>5.2.7</Version>
     </PackageReference>
     <PackageReference Include="System.Runtime.Caching">
       <Version>8.0.0</Version>
