@@ -81,9 +81,8 @@ namespace StellaLauncher.Forms.Other
 
             try
             {
-                WebClient client = new WebClient();
-                client.Headers.Add("User-Agent", Program.UserAgent);
-                return await client.DownloadStringTaskAsync(url);
+                string jsonResponse = await Program.SefinWebClient.GetStringAsync(url);
+                return jsonResponse;
             }
             catch (WebException e)
             {
