@@ -47,7 +47,7 @@ namespace StellaLauncher.Forms.Other
             // WebView2Window
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.webView21);
             this.Name = "WebView2Window";

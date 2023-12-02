@@ -6,7 +6,6 @@ using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Reflection;
-using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
 using Microsoft.Win32;
@@ -71,9 +70,6 @@ namespace StellaLauncher
 
         public static HttpClient SefinWebClient => WbClient.Value;
 
-        [DllImport("user32.dll")]
-        private static extern bool SetProcessDpiAwarenessContext(IntPtr dpiContext);
-
         [STAThread]
         private static void Main()
         {
@@ -116,7 +112,6 @@ namespace StellaLauncher
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            SetProcessDpiAwarenessContext(new IntPtr(-4));
 
             // Found russian pig?
             // if (RegionInfo.CurrentRegion.Name == "RU")

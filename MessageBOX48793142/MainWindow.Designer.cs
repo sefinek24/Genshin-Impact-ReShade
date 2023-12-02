@@ -86,7 +86,7 @@ namespace InformationWindow
             // MainWindow
             // 
             resources.ApplyResources(this, "$this");
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.Black;
             Controls.Add(label3);
             Controls.Add(linkLabel1);

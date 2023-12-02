@@ -710,7 +710,7 @@ namespace StellaLauncher.Forms.Other
             // RandomImages
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
             this.Controls.Add(this.webView21);
             this.Controls.Add(this.poweredBy_Label);

@@ -47,8 +47,8 @@ namespace Configuration.Forms
             // 
             // linkLabel1
             // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.CornflowerBlue;
             resources.ApplyResources(this.linkLabel1, "linkLabel1");
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.CornflowerBlue;
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
@@ -172,7 +172,7 @@ namespace Configuration.Forms
             // Window
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackgroundImage = global::Configuration.Properties.Resources.bg;
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);

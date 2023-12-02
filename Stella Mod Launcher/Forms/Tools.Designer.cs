@@ -355,7 +355,7 @@ namespace StellaLauncher.Forms
             // Tools
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::StellaLauncher.Properties.Resources.bg_tools;
             this.Controls.Add(this.pictureBox16);

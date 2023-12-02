@@ -62,7 +62,7 @@ namespace StellaLauncher.Forms.Other
             // Language
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.Controls.Add(this.Version);
             this.Controls.Add(this.ChangeAppLang);

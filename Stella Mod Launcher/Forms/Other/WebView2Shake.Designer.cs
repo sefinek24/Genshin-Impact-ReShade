@@ -46,7 +46,7 @@ namespace StellaLauncher.Forms.Other
             // WebView2Shake
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.webView21);
             this.Name = "WebView2Shake";
             this.Load += new System.EventHandler(this.WebViewWindow_Load);

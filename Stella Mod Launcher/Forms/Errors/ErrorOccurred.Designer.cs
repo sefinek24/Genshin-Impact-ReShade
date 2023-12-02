@@ -94,7 +94,7 @@ namespace StellaLauncher.Forms.Errors
             // ErrorOccurred
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Maroon;
             this.Controls.Add(this.button4);
             this.Controls.Add(this.pictureBox1);

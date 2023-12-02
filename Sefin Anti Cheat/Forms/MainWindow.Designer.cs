@@ -77,14 +77,14 @@ namespace SefinAntiCheat.Forms
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label3.Location = new System.Drawing.Point(206, 100);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(446, 82);
             this.label3.TabIndex = 3;
-            this.label3.Text = "At this moment, this app literally does nothing, but maybe it will start someday " +
-    "<:";
+            this.label3.Text = "At this moment, this app literally does nothing,\r\nbut maybe it will start someday" +
+    " <:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // notifyIcon1
@@ -94,8 +94,8 @@ namespace SefinAntiCheat.Forms
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(673, 204);
             this.Controls.Add(this.label3);

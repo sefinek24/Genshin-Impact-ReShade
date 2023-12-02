@@ -55,7 +55,7 @@ namespace StellaLauncher.Forms.Other
             // InjectionMethod
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.Controls.Add(this.ChangeAppLang);
             this.Controls.Add(this.comboBox1);

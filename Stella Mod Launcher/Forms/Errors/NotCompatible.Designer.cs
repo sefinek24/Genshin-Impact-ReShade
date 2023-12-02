@@ -78,7 +78,7 @@ namespace StellaLauncher.Forms.Errors
             // NotCompatible
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.linkLabel1);

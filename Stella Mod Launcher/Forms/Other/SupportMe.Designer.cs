@@ -44,8 +44,8 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel8 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel9 = new System.Windows.Forms.LinkLabel();
-            this.label3 = new System.Windows.Forms.Label();
             this.linkLabel10 = new System.Windows.Forms.LinkLabel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -197,13 +197,6 @@ namespace StellaLauncher.Forms.Other
             this.toolTip1.SetToolTip(this.linkLabel9, resources.GetString("linkLabel9.ToolTip"));
             this.linkLabel9.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.PullRequest_LinkClicked);
             // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.ForeColor = System.Drawing.Color.LightGreen;
-            this.label3.Name = "label3";
-            // 
             // linkLabel10
             // 
             this.linkLabel10.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
@@ -217,10 +210,17 @@ namespace StellaLauncher.Forms.Other
             this.toolTip1.SetToolTip(this.linkLabel10, resources.GetString("linkLabel10.ToolTip"));
             this.linkLabel10.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.TrustPilot_LinkClicked);
             // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.Color.LightGreen;
+            this.label3.Name = "label3";
+            // 
             // SupportMe
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::StellaLauncher.Properties.Resources.bg_support_me;
             this.Controls.Add(this.linkLabel10);

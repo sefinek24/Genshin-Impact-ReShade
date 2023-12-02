@@ -118,50 +118,50 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="linkLabel1.Text" xml:space="preserve">
-    <value>&gt;&gt; Gotów! Ukończmy to teraz &lt;&lt;</value>
+    <value>&gt;&gt; Gotowe! Ukończmy to teraz &lt;&lt;</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="MadeBySefinek.Location" type="System.Drawing.Point, System.Drawing">
     <value>853, 73</value>
   </data>
   <data name="MadeBySefinek.Size" type="System.Drawing.Size, System.Drawing">
-    <value>313, 36</value>
+    <value>338, 38</value>
   </data>
   <data name="MadeBySefinek.Text" xml:space="preserve">
     <value>stworzone przez Sefinek</value>
   </data>
   <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>405, 24</value>
+    <value>364, 24</value>
   </data>
   <data name="checkBox1.Text" xml:space="preserve">
     <value>Zainstaluj lub zaktualizuj Windows Terminal *</value>
   </data>
   <data name="checkBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>298, 24</value>
+    <value>271, 24</value>
   </data>
   <data name="checkBox2.Text" xml:space="preserve">
     <value>Utwórz nowe skróty na pulpicie *</value>
   </data>
   <data name="checkBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>361, 24</value>
+    <value>326, 24</value>
   </data>
   <data name="checkBox3.Text" xml:space="preserve">
     <value>Utwórz skróty internetowe w menu Start</value>
   </data>
   <data name="checkBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>388, 24</value>
+    <value>347, 24</value>
   </data>
   <data name="checkBox4.Text" xml:space="preserve">
     <value>Zaktualizuj config ReShade (ReShade.ini) *</value>
   </data>
   <data name="checkBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 24</value>
+    <value>285, 24</value>
   </data>
   <data name="checkBox5.Text" xml:space="preserve">
     <value>Zaktualizuj config FPS Unlockera *</value>
   </data>
   <data name="checkBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>379, 24</value>
+    <value>355, 24</value>
   </data>
   <data name="checkBox6.Text" xml:space="preserve">
     <value>Usuń pamięć podręczną (cache) ReShade *</value>
@@ -179,6 +179,9 @@
     <value>Wygląda na to, że to Twoje pierwsze uruchomienie lub właśnie przed chwilą udało Ci się zaktualizować program!
 Gratulacje! Teraz przejdźmy do ukończenia ostatnich kroków. Proszę wybierz odpowiednie pola.</value>
   </data>
+  <data name="checkBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>467, 24</value>
+  </data>
   <data name="checkBox7.Text" xml:space="preserve">
     <value>Pobierz lub zaktualizuj zasoby (shadery, presety, dodatki) *</value>
   </data>
@@ -187,12 +190,12 @@ Gratulacje! Teraz przejdźmy do ukończenia ostatnich kroków. Proszę wybierz o
 Jednakże Twoje ustawienia wstępne i inne niestandardowe shadery nie zostaną usunięte.</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>838, 23</value>
+    <value>792, 18</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
     <value>Zaleca się wybranie pól oznaczonych gwiazdką (*). Jeśli nie jesteś pewien, co robisz, nie odznaczaj żadnego pola.</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Przygotuj Stella Mod Launcher</value>
+    <value>Przygotuj Genshin Stella Mod</value>
   </data>
 </root>
