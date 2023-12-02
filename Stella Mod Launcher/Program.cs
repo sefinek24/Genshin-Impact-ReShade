@@ -41,12 +41,12 @@ namespace StellaLauncher
         public static readonly IniFile Settings = new IniFile(Path.Combine(AppData, "settings.ini"));
 
         // Web
-        public static readonly string UserAgent = $"Mozilla/5.0 (compatible; StellaLauncher/{ProductVersion}; +{AppWebsiteSub}) WebClient/0.0";
+        public static readonly string UserAgent = $"Mozilla/5.0 (compatible; StellaLauncher/{ProductVersion}; +{AppWebsiteSub}) WebClient/0.1";
 
         private static readonly Lazy<HttpClient> WbClient = new Lazy<HttpClient>(() =>
         {
             HttpClient httpClient = new HttpClient();
-            httpClient.DefaultRequestHeaders.UserAgent.ParseAdd($"Mozilla/5.0 (compatible; StellaLauncher/{ProductVersion}; +{AppWebsiteSub}) HttpClient/0.0");
+            httpClient.DefaultRequestHeaders.UserAgent.ParseAdd($"Mozilla/5.0 (compatible; StellaLauncher/{ProductVersion}; +{AppWebsiteSub}) HttpClient/0.2");
 
             return httpClient;
         });
