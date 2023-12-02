@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Threading.Tasks;
+using IWshRuntimeLibrary;
 using PrepareStella.Properties;
 
 namespace PrepareStella.Scripts.Preparing

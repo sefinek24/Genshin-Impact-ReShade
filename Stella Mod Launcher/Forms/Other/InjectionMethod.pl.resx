@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,16 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="comboBox1.Items" xml:space="preserve">
-    <value>Genshin Stella Mod (łatwe i zalecane)</value>
-  </data>
-  <data name="comboBox1.Items1" xml:space="preserve">
-    <value />
+  <data name="$this.Text" xml:space="preserve">
+    <value>Metoda wtryskiwania</value>
   </data>
   <data name="ChangeAppLang.Text" xml:space="preserve">
-    <value>Zmień metodę wstrzykiwania</value>
+    <value>Zmiana metody injectowania</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Metoda wstrzykiwania</value>
+  <data name="comboBox1.Items" xml:space="preserve">
+    <value>Genshin Stella Mod (łatwy i zalecany)</value>
+  </data>
+  <data name="comboBox1.Items1" xml:space="preserve">
+    <value>Pliki wsadowe (dla doświadczonych użytkowników z językiem wsadowym)</value>
   </data>
 </root>

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="RequiredFile_WasNotFound" xml:space="preserve">
-    <value>Required file '{exeFile}' was not found. Please reinstall this app or join our Discord server.</value>
+    <value>Nie znaleziono wymaganego pliku '{exeFile}'. Zainstaluj ponownie tę aplikację lub dołącz do naszego serwera Discord.</value>
   </data>
   <data name="TheStellaResourcesDirWasNotFoundOnYourPC" xml:space="preserve">
     <value>Katalog zasobów Stella nie został znaleziony na twoim komputerze, więc nie możesz odznaczyć tego pola wyboru.</value>

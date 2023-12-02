@@ -50,7 +50,6 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel14 = new System.Windows.Forms.LinkLabel();
             this.linkLabel15 = new System.Windows.Forms.LinkLabel();
             this.linkLabel16 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel17 = new System.Windows.Forms.LinkLabel();
             this.linkLabel18 = new System.Windows.Forms.LinkLabel();
             this.linkLabel20 = new System.Windows.Forms.LinkLabel();
             this.linkLabel19 = new System.Windows.Forms.LinkLabel();
@@ -312,17 +311,6 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel16.Name = "linkLabel16";
             this.linkLabel16.TabStop = true;
             this.linkLabel16.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Cuddle_LinkClicked);
-            // 
-            // linkLabel17
-            // 
-            this.linkLabel17.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
-            resources.ApplyResources(this.linkLabel17, "linkLabel17");
-            this.linkLabel17.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.linkLabel17.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel17.LinkColor = System.Drawing.Color.White;
-            this.linkLabel17.Name = "linkLabel17";
-            this.linkLabel17.TabStop = true;
             // 
             // linkLabel18
             // 
@@ -745,7 +733,6 @@ namespace StellaLauncher.Forms.Other
             this.Controls.Add(this.linkLabel19);
             this.Controls.Add(this.linkLabel20);
             this.Controls.Add(this.linkLabel18);
-            this.Controls.Add(this.linkLabel17);
             this.Controls.Add(this.linkLabel16);
             this.Controls.Add(this.linkLabel15);
             this.Controls.Add(this.linkLabel14);
@@ -801,7 +788,6 @@ namespace StellaLauncher.Forms.Other
         private System.Windows.Forms.LinkLabel linkLabel14;
         private System.Windows.Forms.LinkLabel linkLabel15;
         private System.Windows.Forms.LinkLabel linkLabel16;
-        private System.Windows.Forms.LinkLabel linkLabel17;
         private System.Windows.Forms.LinkLabel linkLabel18;
         private System.Windows.Forms.LinkLabel linkLabel20;
         private System.Windows.Forms.LinkLabel linkLabel19;

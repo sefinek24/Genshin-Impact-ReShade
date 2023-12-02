@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,4 +117,67 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="panel2.ToolTip" xml:space="preserve">
+    <value>Zamknij</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Genshin Stella Mod Launcher 2023</value>
+  </data>
+  <data name="SettingsAndUtils.Text" xml:space="preserve">
+    <value>&gt;&gt; Ustawienia &lt;&lt;</value>
+  </data>
+  <data name="CreateShortcut.Text" xml:space="preserve">
+    <value>Utwórz skrót na pulpicie</value>
+  </data>
+  <data name="CreateShortcut.ToolTip" xml:space="preserve">
+    <value>Utwórz skrót do Stella Mod Launcher na pulpicie. Jest to przydatne w razie przypadkowego usunięcia ikony Stella Mod Launcher.</value>
+  </data>
+  <data name="Launcher.Text" xml:space="preserve">
+    <value>Launcher</value>
+  </data>
+  <data name="MuteMusicOnStart.Text" xml:space="preserve">
+    <value>Wycisz muzyke na start</value>
+  </data>
+  <data name="MuteMusicOnStart.ToolTip" xml:space="preserve">
+    <value>Włączenie lub wyciszenie muzyki odtwarzanej podczas uruchamiania tego programu uruchamiającego</value>
+  </data>
+  <data name="DisableDiscordRPC.Text" xml:space="preserve">
+    <value>Wyłącz Discord RPC</value>
+  </data>
+  <data name="DisableDiscordRPC.ToolTip" xml:space="preserve">
+    <value>Włącz lub wyłącz status "Gra w Genshin Stella Mod" na Discordzie</value>
+  </data>
+  <data name="ChangeLanguage.Text" xml:space="preserve">
+    <value>Zmiana języka</value>
+  </data>
+  <data name="ChangeLanguage.ToolTip" xml:space="preserve">
+    <value>Zmiana języka aplikacji Stella Mod Launcher</value>
+  </data>
+  <data name="linkLabel1.Text" xml:space="preserve">
+    <value>Otwórz okno konfiguracyjne</value>
+  </data>
+  <data name="linkLabel1.ToolTip" xml:space="preserve">
+    <value>Ponownie skonfiguruj Stella Mod</value>
+  </data>
+  <data name="linkLabel3.Text" xml:space="preserve">
+    <value>Konfiguracja ReShade</value>
+  </data>
+  <data name="linkLabel3.ToolTip" xml:space="preserve">
+    <value>Automatycznie skonfiguruj ReShade i ustaw odpowiednie ścieżki katalogów</value>
+  </data>
+  <data name="linkLabel2.Text" xml:space="preserve">
+    <value>Zmiana metody injectora</value>
+  </data>
+  <data name="linkLabel2.ToolTip" xml:space="preserve">
+    <value>Zmiana sposobu uruchamiania wtryskiwaczy</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>ReShade</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Wtryskiwanie</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Ustawienia</value>
+  </data>
 </root>

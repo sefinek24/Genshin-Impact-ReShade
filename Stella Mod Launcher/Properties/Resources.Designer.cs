@@ -589,7 +589,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The sound file with music was not found in the location: &apos;{0}&apos;.
+        ///   Looks up a localized string similar to The sound file with music was not found in the location: {0}.
         /// </summary>
         internal static string Default_TheSoundFileWithMusicWasNotFoundInTheLocalization_ {
             get {
@@ -598,9 +598,9 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This feature is available only for my patrons.
+        ///   Looks up a localized string similar to This feature is only available to those with a Stella Mod Plus subscription.
         ///
-        ///Would you like to visit Patreon.com and make subscribe? You will gain access to numerous benefits! You will also be able to enjoy ReShade, 3DMigoto, and FPS Unlocker simultaneously..
+        ///Would you like to visit the official website and subscribe? You&apos;ll gain access to numerous benefits, including the ability to use ReShade, 3DMigoto, and FPS Unlocker simultaneously..
         /// </summary>
         internal static string Default_ThisFeatureIsAvailableOnlyForMyPatrons {
             get {
@@ -627,7 +627,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The best mod for Genshin Impact with ReShade, custom graphics presets, FPS unlock, custom launcher, and more!.
+        ///   Looks up a localized string similar to The best and safe mod for Genshin Impact that enhances graphics and more!.
         /// </summary>
         internal static string Discord_Desc {
             get {
@@ -966,7 +966,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The simultaneous use of ReShade, FPS Unlock, and 3DMigoto is only possible for patrons..
+        ///   Looks up a localized string similar to The simultaneous use of ReShade, 3DMigoto, and FPS Unlock is only possible for Stella Mod Plus subscribers..
         /// </summary>
         internal static string LaunchCount_TheSimultaneousOfUseRSFU3DM {
             get {
@@ -1742,7 +1742,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Successfully updated 3DMigoto software for patrons..
+        ///   Looks up a localized string similar to The 3DMigoto software for Stella Mod Plus subscribers has been successfully updated.
         /// </summary>
         internal static string UpdateBenefits_SuccessfullyUpdated3DMigoto {
             get {
@@ -1857,7 +1857,7 @@ namespace StellaLauncher.Properties {
         ///   Looks up a localized string similar to File with game path was not found in:
         ///{0}
         ///
-        ///Do you want to reconfigure Stella Mod in the configuration window?.
+        ///Do you want to reconfigure Stella Mod in the Configuration Window?.
         /// </summary>
         internal static string Utils_FileWithGamePathWasNotFoundIn_DoYouWantToResetAllSMSettings {
             get {

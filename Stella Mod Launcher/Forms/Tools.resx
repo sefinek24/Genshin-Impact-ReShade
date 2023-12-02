@@ -859,7 +859,7 @@
     <value>121</value>
   </data>
   <data name="linkLabel2.Text" xml:space="preserve">
-    <value>Remove all Stella notifications</value>
+    <value>Remove all Stella's notifications</value>
   </data>
   <data name="linkLabel2.ToolTip" xml:space="preserve">
     <value>After clicking this button, all notifications from the Stella Mod Launcher application will be deleted.</value>

@@ -41,9 +41,8 @@ namespace StellaLauncher.Forms
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tools_LinkLabel = new System.Windows.Forms.LinkLabel();
             this.discordServer_LinkLabel = new System.Windows.Forms.LinkLabel();
-            this.youTube_LinkLabel = new System.Windows.Forms.LinkLabel();
+            this.web_LinkLabel = new System.Windows.Forms.LinkLabel();
             this.startGame_LinkLabel = new System.Windows.Forms.LinkLabel();
-            this.website_LinkLabel = new System.Windows.Forms.LinkLabel();
             this.gameplay_LinkLabel = new System.Windows.Forms.LinkLabel();
             this.supportMe_LinkLabel = new System.Windows.Forms.LinkLabel();
             this.becomeMyPatron_LinkLabel = new System.Windows.Forms.LinkLabel();
@@ -57,11 +56,10 @@ namespace StellaLauncher.Forms
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.toolsIco_PictureBox = new System.Windows.Forms.PictureBox();
-            this.websiteIco_PictureBox = new System.Windows.Forms.PictureBox();
             this.updateIco_PictureBox = new System.Windows.Forms.PictureBox();
             this.versionIco_PictureBox = new System.Windows.Forms.PictureBox();
             this.updates_LinkLabel = new System.Windows.Forms.LinkLabel();
-            this.youtubeIco_Picturebox = new System.Windows.Forms.PictureBox();
+            this.webIco_Picturebox = new System.Windows.Forms.PictureBox();
             this.discordServerIco_Picturebox = new System.Windows.Forms.PictureBox();
             this.status_Label = new System.Windows.Forms.Label();
             this.padIco_PictureBox = new System.Windows.Forms.PictureBox();
@@ -76,10 +74,9 @@ namespace StellaLauncher.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.githubIco_Picturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolsIco_PictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.websiteIco_PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.updateIco_PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.versionIco_PictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.youtubeIco_Picturebox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webIco_Picturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.discordServerIco_Picturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.padIco_PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.supportMeIco_PictureBox)).BeginInit();
@@ -195,17 +192,17 @@ namespace StellaLauncher.Forms
             this.toolTip1.SetToolTip(this.discordServer_LinkLabel, resources.GetString("discordServer_LinkLabel.ToolTip"));
             this.discordServer_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.DiscordServer_LinkClicked);
             // 
-            // youTube_LinkLabel
+            // web_LinkLabel
             // 
-            this.youTube_LinkLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.youTube_LinkLabel, "youTube_LinkLabel");
-            this.youTube_LinkLabel.BackColor = System.Drawing.Color.Transparent;
-            this.youTube_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.youTube_LinkLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(61)))), ((int)(((byte)(0)))));
-            this.youTube_LinkLabel.Name = "youTube_LinkLabel";
-            this.youTube_LinkLabel.TabStop = true;
-            this.toolTip1.SetToolTip(this.youTube_LinkLabel, resources.GetString("youTube_LinkLabel.ToolTip"));
-            this.youTube_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.YouTube_LinkClicked);
+            this.web_LinkLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.web_LinkLabel, "web_LinkLabel");
+            this.web_LinkLabel.BackColor = System.Drawing.Color.Transparent;
+            this.web_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.web_LinkLabel.LinkColor = System.Drawing.Color.Cyan;
+            this.web_LinkLabel.Name = "web_LinkLabel";
+            this.web_LinkLabel.TabStop = true;
+            this.toolTip1.SetToolTip(this.web_LinkLabel, resources.GetString("web_LinkLabel.ToolTip"));
+            this.web_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.YouTube_LinkClicked);
             // 
             // startGame_LinkLabel
             // 
@@ -219,18 +216,6 @@ namespace StellaLauncher.Forms
             this.startGame_LinkLabel.TabStop = true;
             this.toolTip1.SetToolTip(this.startGame_LinkLabel, resources.GetString("startGame_LinkLabel.ToolTip"));
             this.startGame_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.StartGame_LinkClicked);
-            // 
-            // website_LinkLabel
-            // 
-            this.website_LinkLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.website_LinkLabel, "website_LinkLabel");
-            this.website_LinkLabel.BackColor = System.Drawing.Color.Transparent;
-            this.website_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.website_LinkLabel.LinkColor = System.Drawing.Color.White;
-            this.website_LinkLabel.Name = "website_LinkLabel";
-            this.website_LinkLabel.TabStop = true;
-            this.toolTip1.SetToolTip(this.website_LinkLabel, resources.GetString("website_LinkLabel.ToolTip"));
-            this.website_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Website_LinkClicked);
             // 
             // gameplay_LinkLabel
             // 
@@ -309,6 +294,7 @@ namespace StellaLauncher.Forms
             // 
             this.clickMe_LinkLabel.ActiveLinkColor = System.Drawing.Color.DeepSkyBlue;
             resources.ApplyResources(this.clickMe_LinkLabel, "clickMe_LinkLabel");
+            this.clickMe_LinkLabel.AutoEllipsis = true;
             this.clickMe_LinkLabel.BackColor = System.Drawing.Color.Transparent;
             this.clickMe_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.clickMe_LinkLabel.LinkColor = System.Drawing.Color.DodgerBlue;
@@ -388,15 +374,6 @@ namespace StellaLauncher.Forms
             this.toolsIco_PictureBox.Name = "toolsIco_PictureBox";
             this.toolsIco_PictureBox.TabStop = false;
             // 
-            // websiteIco_PictureBox
-            // 
-            resources.ApplyResources(this.websiteIco_PictureBox, "websiteIco_PictureBox");
-            this.websiteIco_PictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.websiteIco_PictureBox.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.websiteIco_PictureBox.Image = global::StellaLauncher.Properties.Resources.web;
-            this.websiteIco_PictureBox.Name = "websiteIco_PictureBox";
-            this.websiteIco_PictureBox.TabStop = false;
-            // 
             // updateIco_PictureBox
             // 
             resources.ApplyResources(this.updateIco_PictureBox, "updateIco_PictureBox");
@@ -426,14 +403,14 @@ namespace StellaLauncher.Forms
             this.updates_LinkLabel.TabStop = true;
             this.updates_LinkLabel.Click += new System.EventHandler(this.CheckUpdates_Worker);
             // 
-            // youtubeIco_Picturebox
+            // webIco_Picturebox
             // 
-            resources.ApplyResources(this.youtubeIco_Picturebox, "youtubeIco_Picturebox");
-            this.youtubeIco_Picturebox.BackColor = System.Drawing.Color.Transparent;
-            this.youtubeIco_Picturebox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.youtubeIco_Picturebox.Image = global::StellaLauncher.Properties.Resources.icons8_youtube;
-            this.youtubeIco_Picturebox.Name = "youtubeIco_Picturebox";
-            this.youtubeIco_Picturebox.TabStop = false;
+            resources.ApplyResources(this.webIco_Picturebox, "webIco_Picturebox");
+            this.webIco_Picturebox.BackColor = System.Drawing.Color.Transparent;
+            this.webIco_Picturebox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.webIco_Picturebox.Image = global::StellaLauncher.Properties.Resources.web;
+            this.webIco_Picturebox.Name = "webIco_Picturebox";
+            this.webIco_Picturebox.TabStop = false;
             // 
             // discordServerIco_Picturebox
             // 
@@ -541,21 +518,19 @@ namespace StellaLauncher.Forms
             this.Controls.Add(this.links_LinkLabel);
             this.Controls.Add(this.supportMe_LinkLabel);
             this.Controls.Add(this.supportMeIco_PictureBox);
-            this.Controls.Add(this.website_LinkLabel);
             this.Controls.Add(this.padIco_PictureBox);
             this.Controls.Add(this.status_Label);
             this.Controls.Add(this.startGame_LinkLabel);
             this.Controls.Add(this.runFpsUnlocker_LinkLabel);
             this.Controls.Add(this.injectReShade_LinkLabel);
-            this.Controls.Add(this.youTube_LinkLabel);
+            this.Controls.Add(this.web_LinkLabel);
             this.Controls.Add(this.discordServer_LinkLabel);
             this.Controls.Add(this.discordServerIco_Picturebox);
-            this.Controls.Add(this.youtubeIco_Picturebox);
+            this.Controls.Add(this.webIco_Picturebox);
             this.Controls.Add(this.version_LinkLabel);
             this.Controls.Add(this.updates_LinkLabel);
             this.Controls.Add(this.versionIco_PictureBox);
             this.Controls.Add(this.updateIco_PictureBox);
-            this.Controls.Add(this.websiteIco_PictureBox);
             this.Controls.Add(this.toolsIco_PictureBox);
             this.Controls.Add(this.gameplay_LinkLabel);
             this.Controls.Add(this.tools_LinkLabel);
@@ -575,10 +550,9 @@ namespace StellaLauncher.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.githubIco_Picturebox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolsIco_PictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.websiteIco_PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.updateIco_PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.versionIco_PictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.youtubeIco_Picturebox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webIco_Picturebox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.discordServerIco_Picturebox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.padIco_PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.supportMeIco_PictureBox)).EndInit();
@@ -603,18 +577,16 @@ namespace StellaLauncher.Forms
         private System.Windows.Forms.LinkLabel changeBg_LinkLabel;
         private System.Windows.Forms.LinkLabel tools_LinkLabel;
         private System.Windows.Forms.PictureBox toolsIco_PictureBox;
-        private System.Windows.Forms.PictureBox websiteIco_PictureBox;
         private System.Windows.Forms.PictureBox updateIco_PictureBox;
         private System.Windows.Forms.PictureBox versionIco_PictureBox;
         private System.Windows.Forms.LinkLabel updates_LinkLabel;
         private System.Windows.Forms.LinkLabel version_LinkLabel;
-        private System.Windows.Forms.PictureBox youtubeIco_Picturebox;
+        private System.Windows.Forms.PictureBox webIco_Picturebox;
         private System.Windows.Forms.PictureBox discordServerIco_Picturebox;
         private System.Windows.Forms.LinkLabel discordServer_LinkLabel;
-        private System.Windows.Forms.LinkLabel youTube_LinkLabel;
+        private System.Windows.Forms.LinkLabel web_LinkLabel;
         private System.Windows.Forms.LinkLabel startGame_LinkLabel;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.LinkLabel website_LinkLabel;
         private System.Windows.Forms.LinkLabel gameplay_LinkLabel;
         private System.Windows.Forms.PictureBox padIco_PictureBox;
         private System.Windows.Forms.LinkLabel supportMe_LinkLabel;

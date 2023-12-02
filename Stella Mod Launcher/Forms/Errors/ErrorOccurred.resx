@@ -335,7 +335,7 @@ Discord: {0} ┃ E-mail: {1}</value>
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Error - Stella Mod</value>
+    <value>Error - Stella Mod Launcher</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ErrorOccurred</value>

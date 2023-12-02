@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,4 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="panel3.ToolTip" xml:space="preserve">
+    <value>Zamknij</value>
+  </data>
+  <data name="createShortcut_Label.Text" xml:space="preserve">
+    <value>Interaktywna mapa Teyvat</value>
+  </data>
+  <data name="linkLabel1.Text" xml:space="preserve">
+    <value>Interaktywna mapa świata Genshin Impact</value>
+  </data>
+  <data name="linkLabel2.Text" xml:space="preserve">
+    <value>Lista poziomów najlepszych postaci Genshin Impact</value>
+  </data>
+  <data name="linkLabel3.Text" xml:space="preserve">
+    <value>4.1 Lista poziomów i najlepsze postacie na październik 2023</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Mapa gry</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Postacie</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Inne linki</value>
+  </data>
+  <data name="linkLabel4.Text" xml:space="preserve">
+    <value>Interfejs programowania aplikacji</value>
+  </data>
+  <data name="linkLabel5.Text" xml:space="preserve">
+    <value>Sieć dostarczania treści</value>
+  </data>
+  <data name="linkLabel6.Text" xml:space="preserve">
+    <value>Oficjalna strona statusu</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Linki</value>
+  </data>
 </root>

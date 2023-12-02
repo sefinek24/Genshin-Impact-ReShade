@@ -164,7 +164,7 @@
     <value>355, 24</value>
   </data>
   <data name="checkBox6.Text" xml:space="preserve">
-    <value>Usuń pamięć podręczną (cache) ReShade *</value>
+    <value>Usuń cache ReShade</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 108</value>
@@ -197,5 +197,8 @@ Jednakże Twoje ustawienia wstępne i inne niestandardowe shadery nie zostaną u
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Przygotuj Genshin Stella Mod</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Genshin Impact Stella Mod</value>
   </data>
 </root>

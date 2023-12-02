@@ -117,14 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Cmd_CommandExecutionFailed" xml:space="preserve">
-    <value>CliWrap: Nieudane wykonanie polecenia. Wymagana jest aktualizacja.</value>
-  </data>
-  <data name="Cmd_CommandExecutionFailedBeacuseTheUnderlyingProcessReturnedANonZeroExitCode" xml:space="preserve">
-    <value>Wystąpił błąd wykonania polecenia, ponieważ zasadniczy proces ({0}) zwrócił kod wyjścia różny od zera - {1}.
-
-{2}</value>
-  </data>
   <data name="Cmd_Error" xml:space="preserve">
     <value>Błąd</value>
   </data>
@@ -139,9 +131,6 @@
   </data>
   <data name="Cmd_RebootIsRequired" xml:space="preserve">
     <value>Ponowne uruchomienie jest wymagane</value>
-  </data>
-  <data name="Cmd_RestartYourComputerOrSuspendAntivirusProgramAndTryAgain" xml:space="preserve">
-    <value>Uruchom ponownie komputer lub wstrzymaj program antywirusowy i spróbuj ponownie.</value>
   </data>
   <data name="Cmd_TheRequestOperationWasSuccessfulButYourPCNeedsToBeRebooted" xml:space="preserve">
     <value>The requested operation was successful, but your PC needs to be rebooted.</value>
@@ -158,11 +147,6 @@ Jeśli z jakiegoś powodu nie możesz zaktualizować Stella Mod za pomocą Launc
   </data>
   <data name="Cmd_WorkingDirectory" xml:space="preserve">
     <value>Katalog roboczy</value>
-  </data>
-  <data name="Cmd__AppInstalled" xml:space="preserve">
-    <value>CliWrap: Zainstalowano {0}. Kod wyjścia: {1}
-
-Żądane działanie zostało pomyślnie wykonane. Zmiany będą obowiązywać dopiero po ponownym uruchomieniu systemu.</value>
   </data>
   <data name="Default_AreYouSureWantToUpdateReShadeConfiguration" xml:space="preserve">
     <value>Jesteś pewien, że chcesz zaktualizować konfigurację ReShade?
@@ -204,14 +188,8 @@ Ta czynność spowoduje utratę wszelkich niestandardowych konfiguracji, jakie d
   <data name="Default_DeletedOldSetupFromTempDirectory" xml:space="preserve">
     <value>Usunięto stary plik instalacyjny z katalogu tymczasowego.</value>
   </data>
-  <data name="Default_DeletedOldSetupFromTempFolder" xml:space="preserve">
-    <value>Usunięto stary plik instalacyjny z folderu tymczasowego: {0}</value>
-  </data>
   <data name="Default_Directory_WasNotFound" xml:space="preserve">
     <value>Katalog {0} nie został odnaleziony.</value>
-  </data>
-  <data name="Default_Done" xml:space="preserve">
-    <value>Zrobione.</value>
   </data>
   <data name="Default_DownloadedReShadeIniWasNotFoundIn_" xml:space="preserve">
     <value>Nie znaleziono pobranego pliku ReShade.ini w: {0}</value>
@@ -220,7 +198,7 @@ Ta czynność spowoduje utratę wszelkich niestandardowych konfiguracji, jakie d
     <value>Pobieranie...</value>
   </data>
   <data name="Default_DownloadingConfigFileForFPSUnlocker" xml:space="preserve">
-    <value>Pobieranie pliku konfiguracyjnego dla FPS Unlockera...</value>
+    <value>Pobieranie pliku konfiguracyjnego dla FPS Unlockera....</value>
   </data>
   <data name="Default_FailedToDownload" xml:space="preserve">
     <value>Nie udało się pobrać...</value>
@@ -254,14 +232,8 @@ PAMIĘTAJ, ABY NIE UDOSTĘPNIAĆ NIKOMU SWOJEGO UID Z WIDOCZNYMI SHADERAMI!</val
   <data name="Default_Meeow_FailedToDownloadReShadeIni_TryAgain" xml:space="preserve">
     <value>Miałł! Nie udało się pobrać ReShade.ini. Spróbuj ponownie.</value>
   </data>
-  <data name="Default_NotFoundAnyNewUpdates_YourInstalledVersion_" xml:space="preserve">
-    <value>Nie znaleziono żadnych nowych aktualizacji. Twoja zainstalowana wersja: v{0}.</value>
-  </data>
   <data name="Default_OhhSomethingWentWrong" xml:space="preserve">
     <value>Ouh, coś poszło nie tak</value>
-  </data>
-  <data name="Default_PlayingSoundFile_" xml:space="preserve">
-    <value>Odtwarzanie pliku dźwiękowego: {0}</value>
   </data>
   <data name="Default_SomethingWentWrongWhileCheckingForNewUpdates" xml:space="preserve">
     <value>Wystąpił problem podczas sprawdzania nowych aktualizacji.
@@ -300,16 +272,13 @@ Czy chciałbyś teraz pobrać ten plik, aby zapobiec przyszłym błędom i ręcz
     <value>Nie odnaleziono pliku dźwiękowego z muzyką.</value>
   </data>
   <data name="Default_TheSoundFileWithMusicWasNotFoundInTheLocalization_" xml:space="preserve">
-    <value>Plik dźwiękowy z muzyką nie został odnaleziony w lokalizacji: '{0}' </value>
-  </data>
-  <data name="Default_TheUpdateOfReShadIniHasBeenCanceledByTheUser" xml:space="preserve">
-    <value>Aktualizacja pliku ReShade.ini została anulowana przez użytkownika.</value>
+    <value>Plik dźwiękowy z muzyką nie został znaleziony w lokalizacji: {0}</value>
   </data>
   <data name="Default_YouHaveTheLatestVersion" xml:space="preserve">
     <value>Masz najnowszą wersję</value>
   </data>
   <data name="Discord_Desc" xml:space="preserve">
-    <value>Najlepszy mod do Genshin Impact z ReShade, niestandardowym wyglądem graficznym, odblokowywaniem FPS, własnym launcherem itp.!</value>
+    <value>Najlepszy i bezpieczny mod do Genshin Impact, który poprawia grafikę i nie tylko!</value>
   </data>
   <data name="Discord_DiscordServer" xml:space="preserve">
     <value>Serwer Discord</value>
@@ -319,27 +288,6 @@ Czy chciałbyś teraz pobrać ten plik, aby zapobiec przyszłym błędom i ręcz
   </data>
   <data name="Discord_OfficialWebsite" xml:space="preserve">
     <value>Oficjalna strona internetowa</value>
-  </data>
-  <data name="Discord_OnClose" xml:space="preserve">
-    <value>Discord RPC: Zamknięto.</value>
-  </data>
-  <data name="Discord_OnConnectionEstablished" xml:space="preserve">
-    <value>Discord RPC: Pomyślnie połączono.</value>
-  </data>
-  <data name="Discord_OnError" xml:space="preserve">
-    <value>Discord RPC: Wystąpił błąd podczas przesyłania wiadomości.</value>
-  </data>
-  <data name="Discord_OnPresenceUpdate" xml:space="preserve">
-    <value>Discord RPC: Status został zaktualizowany.</value>
-  </data>
-  <data name="Discord_OnReady" xml:space="preserve">
-    <value>Discord RPC: Połączono się Discordem, użytkownik {0}.</value>
-  </data>
-  <data name="Discord_OnUnsubscribe" xml:space="preserve">
-    <value>Discord RPC: Anulowano subskrypcję.</value>
-  </data>
-  <data name="Discord_RPCWasNotUpdated" xml:space="preserve">
-    <value>Discord Rich Presence nie został zaktualizowany. Data: {0}; IsReady: {1}</value>
   </data>
   <data name="Discord_Version_" xml:space="preserve">
     <value>Wersja: {0}</value>
@@ -391,23 +339,11 @@ Czy chciałbyś teraz pobrać ten plik, aby zapobiec przyszłym błędom i ręcz
   <data name="MajorRelease_MajorVersionIsAvailable" xml:space="preserve">
     <value>Dostępna jest główna aktualizacja</value>
   </data>
-  <data name="MajorRelease_NewMajorVersionFrom_IsAvailable_v_" xml:space="preserve">
-    <value>Nowe główne wydanie z {0} jest dostępne: v{1} → v{2}</value>
-  </data>
   <data name="NormalRelease_ClickHereToUpdate" xml:space="preserve">
     <value>Kliknij, by zaktualizować</value>
   </data>
-  <data name="NormalRelease_Closing" xml:space="preserve">
-    <value>Zamykanie...</value>
-  </data>
-  <data name="NormalRelease_ClosingLauncherIn_" xml:space="preserve">
-    <value>Zamknięcie programu uruchamiającego za {0}s...</value>
-  </data>
   <data name="NormalRelease_DeletedOldSetupFileFromTempDir" xml:space="preserve">
     <value>Usunięto stary plik instalacyjny z katalogu tymczasowego.</value>
-  </data>
-  <data name="NormalRelease_DeletedOldSetupFireFrom_" xml:space="preserve">
-    <value>Usunięto plik instalacyjny z: {0}</value>
   </data>
   <data name="NormalRelease_DownloadingInProgress" xml:space="preserve">
     <value>Trwa pobieranie...</value>
@@ -448,9 +384,6 @@ Czy chciałbyś teraz pobrać ten plik, aby zapobiec przyszłym błędom i ręcz
   <data name="NormalRelease_SomethingWentWrong" xml:space="preserve">
     <value>Coś poszło nie tak???</value>
   </data>
-  <data name="NormalRelease_Starting" xml:space="preserve">
-    <value>Zaczynanie...</value>
-  </data>
   <data name="NormalRelease_UpdateSize" xml:space="preserve">
     <value>Rozmiar aktualizacji: {0} MB</value>
   </data>
@@ -461,7 +394,7 @@ Czy chciałbyś teraz pobrać ten plik, aby zapobiec przyszłym błędom i ręcz
     <value>Oczekiwanie {0}s...</value>
   </data>
   <data name="NormalRelease_WeFoundNewUpdates" xml:space="preserve">
-    <value>Znaleziono nowe aktualizacje.</value>
+    <value>Znaleźliśmy nowe aktualizacje</value>
   </data>
   <data name="Os_FailedToRetrieveDeviceIdentifier" xml:space="preserve">
     <value>Nie udało się uzyskać identyfikatora urządzenia.</value>
@@ -487,18 +420,6 @@ Czy chciałbyś teraz pobrać ten plik, aby zapobiec przyszłym błędom i ręcz
 
 Chcesz zobaczyć te pliki?</value>
   </data>
-  <data name="Program_OneInstanceIsCurrentlyOpen" xml:space="preserve">
-    <value>Obecnie jest uruchomiona jedna instancja.</value>
-  </data>
-  <data name="Program_QuestionMessageBox_DoYouWantToSendUsanonymousLogFiles_" xml:space="preserve">
-    <value>Pytanie (Okno MessageBox): Czy chcesz przesłać pliki dziennika (logi)? Wybrano: {0}</value>
-  </data>
-  <data name="Program_QuestionMessageBox_DoYouWantToJoinOurDiscord_" xml:space="preserve">
-    <value>Pytanie (Okno MessageBox): Czy chcesz dołączyć do naszego serwera Discord? Wybrano: {0}</value>
-  </data>
-  <data name="Program_QuestionMessageBox_WouldYouShareOpinionAboutStellaMod" xml:space="preserve">
-    <value>Pytanie (MessageBox): Czy podzielisz się swoją opinią na temat Stella Mod na trustpilot.com? Będziemy bardzo wdzięczni! Wybrano: {0}</value>
-  </data>
   <data name="Program_RequiredFileFisrtAppLaunchExeWasNotFound_" xml:space="preserve">
     <value>Nie znaleziono wymaganego pliku "Configuration.exe". Proszę ponownie zainstalować tę aplikację lub dołączyć do naszego serwera Discord, aby uzyskać pomoc.</value>
   </data>
@@ -508,7 +429,7 @@ Chcesz zobaczyć te pliki?</value>
 Zamknij proces o nazwie {0} i spróbuj ponownie.</value>
   </data>
   <data name="Program_WouldYouShareOpinionAboutStellaMod" xml:space="preserve">
-    <value>Czy podzielisz się swoją opinią na temat Stella Mod na trustpilot.com? Będziemy bardzo wdzięczni!</value>
+    <value>Czy mógłbyś podzielić się swoją opinią na temat Stella Mod na trustpilot.com? Byłbym bardzo wdzięczny.</value>
   </data>
   <data name="RandomImages_AnimeName" xml:space="preserve">
     <value>Nazwa anime</value>
@@ -523,9 +444,6 @@ Zamknij proces o nazwie {0} i spróbuj ponownie.</value>
   </data>
   <data name="RandomImages_OpenImageInDefaultBrowser" xml:space="preserve">
     <value>Otwórz zdjęcie w domyślnej przeglądarce</value>
-  </data>
-  <data name="RandomImages_ReceivedDataFrom" xml:space="preserve">
-    <value>Odebrano dane z {0}</value>
   </data>
   <data name="RandomImages_Source" xml:space="preserve">
     <value>Źródło</value>
@@ -590,14 +508,8 @@ Zamknij proces o nazwie {0} i spróbuj ponownie.</value>
   <data name="SupportMe_Thanks" xml:space="preserve">
     <value>Dzięki :3</value>
   </data>
-  <data name="Telemetry_DeliveredTelemetryData" xml:space="preserve">
-    <value>Dostarczono dane telemetryczne „{0}” [{1}].</value>
-  </data>
   <data name="Telemetry_LogFilesWasSentToDeveloper" xml:space="preserve">
     <value>Pliki dziennika zostały wysłane do programisty.</value>
-  </data>
-  <data name="Telemetry_ThisFeatureDoesntDoAnything" xml:space="preserve">
-    <value>Ta funkcja nie robi nic w tej wersji, ponieważ nie została jeszcze utworzona!</value>
   </data>
   <data name="Tools_BrowsingUtils" xml:space="preserve">
     <value>Przegląda narzędzia 🔧</value>
@@ -637,14 +549,6 @@ Zamknij proces o nazwie {0} i spróbuj ponownie.</value>
 
 {0}</value>
   </data>
-  <data name="Utils_DesktopShortcutHasBeenCreated" xml:space="preserve">
-    <value>Skrót na pulpicie został utworzony.</value>
-  </data>
-  <data name="Utils_FailedToOpen_InDefaultBrowser" xml:space="preserve">
-    <value>Nie udało się otworzyć '{0}' w domyślnej przeglądarce.
-
-{1}</value>
-  </data>
   <data name="Utils_FileDoesNotExistsIn" xml:space="preserve">
     <value>Plik nie istnieje w: {0} [{1}]</value>
   </data>
@@ -653,14 +557,11 @@ Zamknij proces o nazwie {0} i spróbuj ponownie.</value>
 
 {0}</value>
   </data>
-  <data name="Utils_FileWithGamePathWasNotFoundIn" xml:space="preserve">
-    <value>Nie znaleziono pliku ze ścieżką gry w: {0}</value>
-  </data>
   <data name="Utils_FileWithGamePathWasNotFoundIn_DoYouWantToResetAllSMSettings" xml:space="preserve">
     <value>Plik ze ścieżką gry nie został znaleziony w:
 {0}
 
-Czy chcesz ponownie skonfigurować Stella Mod w oknie konfiguracji?</value>
+Czy chcesz ponownie skonfigurować Stella Mod w Oknie Konfiguracji?</value>
   </data>
   <data name="Utils_File_DoesntNotExists" xml:space="preserve">
     <value>Plik {0} nie został odnaleziony.</value>
@@ -680,25 +581,10 @@ Czy chcesz ponownie skonfigurować Stella Mod w oknie konfiguracji?</value>
   <data name="Utils_FoundGiExe" xml:space="preserve">
     <value>Znaleziono exe Genshin Impact w: {0} [{1}]</value>
   </data>
-  <data name="Utils_FoundGIgameDir__" xml:space="preserve">
-    <value>Znaleziono folder Genshin Impact game: {0} [{1}]</value>
-  </data>
-  <data name="Utils_FoundGILauncherIn_" xml:space="preserve">
-    <value>Znaleziono Launcher Genshin Impact w: {0}</value>
-  </data>
-  <data name="Utils_FoundMainGIDir" xml:space="preserve">
-    <value>Znaleziono główny katalog gry Genshin Impact: {0} [{1}]</value>
-  </data>
   <data name="Utils_LauncherFileDoesNotExists" xml:space="preserve">
     <value>Plik programu uruchamiającego nie istnieje.
 
 {0}</value>
-  </data>
-  <data name="Utils_LauncherFileDoesNotExistsIn_" xml:space="preserve">
-    <value>Plik programu uruchamiającego nie istnieje w: {0} [{1}]</value>
-  </data>
-  <data name="Utils_Opened_InDefaultBrowser" xml:space="preserve">
-    <value>Otwarto '{0}' w domyślnej przeglądarce.</value>
   </data>
   <data name="Utils_RunOfficialLauncherForStellaModMadeBySefinek" xml:space="preserve">
     <value>Uruchom oficjalny launcher do Genshin Stella Mod autorstwa Sefinka.</value>
@@ -720,9 +606,6 @@ Czy chcesz pobrać tę zależność z witryny firmy Microsoft?</value>
   <data name="WebView2Handler_OhhSorrySomethingWentWrongWithWV2" xml:space="preserve">
     <value>Przepraszamy. Coś poszło nie tak z WebView2.</value>
   </data>
-  <data name="Cmd_SuccessfullyExecutedCommand" xml:space="preserve">
-    <value>CliWrap: Pomyślnie wykonano {0}; Kod wyjścia: {1}; Czas rozpoczęcia: {2}; Czas zakończenia: {3}{4}{5};</value>
-  </data>
   <data name="Tools_AreYouSureToRunStellaConfigurationWindowAgain" xml:space="preserve">
     <value>Czy na pewno chcesz ponownie uruchomić Okno Konfiguracji Stella?</value>
   </data>
@@ -730,9 +613,9 @@ Czy chcesz pobrać tę zależność z witryny firmy Microsoft?</value>
     <value>Skrót został pomyślnie utworzony.</value>
   </data>
   <data name="Default_ThisFeatureIsAvailableOnlyForMyPatrons" xml:space="preserve">
-    <value>Ta funkcja jest dostępna tylko dla moich patronów.
+    <value>Ta funkcja jest dostępna tylko dla posiadaczy subskrypcji Stella Mod Plus.
 
-Czy chcesz odwiedzić Patreon.com i dokonać subskrypcji? Zyskasz dostęp do wielu korzyści! Będziesz także mógł jednocześnie korzystać z ReShade, 3DMigoto i FPS Unlockera.</value>
+Czy chciałbyś odwiedzić oficjalną stronę i dokonać subskrypcji? Zyskasz dostęp do wielu korzyści, w tym możliwość jednoczesnego korzystania z ReShade, 3DMigoto i FPS Unlocker.</value>
   </data>
   <data name="Utils_OopsAnErrorOccurred" xml:space="preserve">
     <value>Aw, wystąpił jakiś błąd</value>
@@ -764,5 +647,26 @@ W nowszych wersjach Stella Mod zapisywanie ścieżek zostało przeniesione do re
   </data>
   <data name="StellaResources_DeletingThePreviousVersionOfTheModPack" xml:space="preserve">
     <value>Usuwanie poprzedniej wersji paczki modów...</value>
+  </data>
+  <data name="LaunchCount_ABigThankYouTouYouForYourWillingnessToSupport" xml:space="preserve">
+    <value>Wielkie dzięki za chęć wsparcia! ~ Sefinek</value>
+  </data>
+  <data name="Default_UpdatingBenefits" xml:space="preserve">
+    <value>Aktualizowanie korzyści...</value>
+  </data>
+  <data name="UpdateBenefits_SuccessfullyUpdated3DMigoto" xml:space="preserve">
+    <value>Oprogramowanie 3DMigoto dla subskrybentów Stella Mod Plus zostało pomyślnie zaktualizowane</value>
+  </data>
+  <data name="LaunchCount_ThankYouForYourSupport" xml:space="preserve">
+    <value>Witaj! Dziękujemy za wsparcie! Miłego dnia!</value>
+  </data>
+  <data name="LaunchCount_TheSimultaneousOfUseRSFU3DM" xml:space="preserve">
+    <value>Jednoczesne korzystanie z ReShade, 3DMigoto i FPS Unlock jest możliwe tylko dla subskrybentów Stella Mod Plus.</value>
+  </data>
+  <data name="Default_Congratulations" xml:space="preserve">
+    <value>Gratulacje!</value>
+  </data>
+  <data name="Default_SMLSuccessfullyUpdatedToVersion_" xml:space="preserve">
+    <value>Stella Mod Launcher został pomyślnie zaktualizowany do wersji: v{0}</value>
   </data>
 </root>

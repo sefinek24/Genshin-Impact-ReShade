@@ -571,7 +571,7 @@
     <value>111</value>
   </data>
   <data name="linkLabel4.Text" xml:space="preserve">
-    <value>Application Programming Interface</value>
+    <value>Application programming interface</value>
   </data>
   <data name="&gt;&gt;linkLabel4.Name" xml:space="preserve">
     <value>linkLabel4</value>
@@ -631,7 +631,7 @@
     <value>113</value>
   </data>
   <data name="linkLabel5.Text" xml:space="preserve">
-    <value>Content Delivery Network</value>
+    <value>Content delivery network</value>
   </data>
   <data name="&gt;&gt;linkLabel5.Name" xml:space="preserve">
     <value>linkLabel5</value>

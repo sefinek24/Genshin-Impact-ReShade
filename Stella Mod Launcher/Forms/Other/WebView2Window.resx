@@ -160,7 +160,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>WebView2</value>
+    <value>WebView2 browser</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>WebView2Window</value>

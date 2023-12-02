@@ -130,7 +130,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1255, 151</value>
+    <value>1297, 151</value>
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 25</value>
@@ -151,7 +151,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel1.ZOrder" xml:space="preserve">
-    <value>53</value>
+    <value>52</value>
   </data>
   <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
@@ -163,7 +163,7 @@
     <value>Comic Sans MS, 20.25pt</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1238, 108</value>
+    <value>1280, 108</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>197, 38</value>
@@ -184,7 +184,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>52</value>
+    <value>51</value>
   </data>
   <data name="linkLabel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
@@ -196,7 +196,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1368, 151</value>
+    <value>1410, 151</value>
   </data>
   <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -217,7 +217,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel2.ZOrder" xml:space="preserve">
-    <value>51</value>
+    <value>50</value>
   </data>
   <data name="linkLabel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
@@ -229,7 +229,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1492, 151</value>
+    <value>1534, 151</value>
   </data>
   <data name="linkLabel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 25</value>
@@ -250,7 +250,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel3.ZOrder" xml:space="preserve">
-    <value>50</value>
+    <value>49</value>
   </data>
   <data name="label2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
@@ -262,7 +262,7 @@
     <value>Comic Sans MS, 20.25pt</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1238, 202</value>
+    <value>1280, 202</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>319, 38</value>
@@ -283,7 +283,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>49</value>
+    <value>48</value>
   </data>
   <data name="linkLabel4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
@@ -295,7 +295,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1491, 273</value>
+    <value>1533, 273</value>
   </data>
   <data name="linkLabel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 25</value>
@@ -316,7 +316,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel4.ZOrder" xml:space="preserve">
-    <value>46</value>
+    <value>45</value>
   </data>
   <data name="linkLabel5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
@@ -328,7 +328,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1367, 245</value>
+    <value>1409, 245</value>
   </data>
   <data name="linkLabel5.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 25</value>
@@ -343,7 +343,7 @@
     <value>17, 17</value>
   </metadata>
   <data name="linkLabel5.ToolTip" xml:space="preserve">
-    <value>Lisie anime dziewczynki</value>
+    <value>Anime fox girls</value>
   </data>
   <data name="&gt;&gt;linkLabel5.Name" xml:space="preserve">
     <value>linkLabel5</value>
@@ -355,7 +355,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel5.ZOrder" xml:space="preserve">
-    <value>47</value>
+    <value>46</value>
   </data>
   <data name="linkLabel6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
@@ -367,7 +367,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1255, 245</value>
+    <value>1297, 245</value>
   </data>
   <data name="linkLabel6.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 25</value>
@@ -379,7 +379,7 @@
     <value>Cat girl</value>
   </data>
   <data name="linkLabel6.ToolTip" xml:space="preserve">
-    <value>Koto anime dziewczynki</value>
+    <value>Anime cat girls</value>
   </data>
   <data name="&gt;&gt;linkLabel6.Name" xml:space="preserve">
     <value>linkLabel6</value>
@@ -391,7 +391,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel6.ZOrder" xml:space="preserve">
-    <value>48</value>
+    <value>47</value>
   </data>
   <data name="linkLabel7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
@@ -403,7 +403,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1491, 245</value>
+    <value>1533, 245</value>
   </data>
   <data name="linkLabel7.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 25</value>
@@ -424,7 +424,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel7.ZOrder" xml:space="preserve">
-    <value>45</value>
+    <value>44</value>
   </data>
   <data name="text_Label.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -433,7 +433,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="text_Label.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1238, 782</value>
+    <value>1286, 782</value>
   </data>
   <data name="text_Label.Size" type="System.Drawing.Size, System.Drawing">
     <value>509, 80</value>
@@ -454,7 +454,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;text_Label.ZOrder" xml:space="preserve">
-    <value>44</value>
+    <value>43</value>
   </data>
   <data name="label3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
@@ -466,7 +466,7 @@
     <value>Comic Sans MS, 20.25pt</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1238, 327</value>
+    <value>1280, 327</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>273, 38</value>
@@ -487,7 +487,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>43</value>
+    <value>42</value>
   </data>
   <data name="linkLabel8.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
@@ -499,7 +499,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1256, 454</value>
+    <value>1298, 454</value>
   </data>
   <data name="linkLabel8.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 25</value>
@@ -520,7 +520,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel8.ZOrder" xml:space="preserve">
-    <value>42</value>
+    <value>41</value>
   </data>
   <data name="linkLabel9.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
@@ -532,7 +532,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1492, 426</value>
+    <value>1534, 426</value>
   </data>
   <data name="linkLabel9.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 25</value>
@@ -553,7 +553,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel9.ZOrder" xml:space="preserve">
-    <value>41</value>
+    <value>40</value>
   </data>
   <data name="linkLabel10.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
@@ -565,16 +565,16 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1492, 482</value>
+    <value>1534, 482</value>
   </data>
   <data name="linkLabel10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 25</value>
+    <value>96, 25</value>
   </data>
   <data name="linkLabel10.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
   <data name="linkLabel10.Text" xml:space="preserve">
-    <value>Pat</value>
+    <value>*pat pat*</value>
   </data>
   <data name="&gt;&gt;linkLabel10.Name" xml:space="preserve">
     <value>linkLabel10</value>
@@ -586,7 +586,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel10.ZOrder" xml:space="preserve">
-    <value>40</value>
+    <value>39</value>
   </data>
   <data name="linkLabel11.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
@@ -598,7 +598,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1255, 594</value>
+    <value>1409, 538</value>
   </data>
   <data name="linkLabel11.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 25</value>
@@ -619,7 +619,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel11.ZOrder" xml:space="preserve">
-    <value>39</value>
+    <value>38</value>
   </data>
   <data name="linkLabel12.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
@@ -631,7 +631,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1255, 398</value>
+    <value>1297, 398</value>
   </data>
   <data name="linkLabel12.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 25</value>
@@ -652,7 +652,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel12.ZOrder" xml:space="preserve">
-    <value>38</value>
+    <value>37</value>
   </data>
   <data name="linkLabel13.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
@@ -664,7 +664,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1368, 566</value>
+    <value>1410, 566</value>
   </data>
   <data name="linkLabel13.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 25</value>
@@ -685,7 +685,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel13.ZOrder" xml:space="preserve">
-    <value>37</value>
+    <value>36</value>
   </data>
   <data name="linkLabel14.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
@@ -697,7 +697,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1615, 566</value>
+    <value>1657, 566</value>
   </data>
   <data name="linkLabel14.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 25</value>
@@ -718,7 +718,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel14.ZOrder" xml:space="preserve">
-    <value>36</value>
+    <value>35</value>
   </data>
   <data name="linkLabel15.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
@@ -730,7 +730,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1492, 454</value>
+    <value>1534, 454</value>
   </data>
   <data name="linkLabel15.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 25</value>
@@ -751,7 +751,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel15.ZOrder" xml:space="preserve">
-    <value>35</value>
+    <value>34</value>
   </data>
   <data name="linkLabel16.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
@@ -763,7 +763,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1368, 398</value>
+    <value>1410, 398</value>
   </data>
   <data name="linkLabel16.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 25</value>
@@ -784,39 +784,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel16.ZOrder" xml:space="preserve">
-    <value>34</value>
-  </data>
-  <data name="linkLabel17.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="linkLabel17.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="linkLabel17.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei, 14.25pt</value>
-  </data>
-  <data name="linkLabel17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1368, 538</value>
-  </data>
-  <data name="linkLabel17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 25</value>
-  </data>
-  <data name="linkLabel17.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="linkLabel17.Text" xml:space="preserve">
-    <value>Smile</value>
-  </data>
-  <data name="&gt;&gt;linkLabel17.Name" xml:space="preserve">
-    <value>linkLabel17</value>
-  </data>
-  <data name="&gt;&gt;linkLabel17.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;linkLabel17.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;linkLabel17.ZOrder" xml:space="preserve">
     <value>33</value>
   </data>
   <data name="linkLabel18.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -829,7 +796,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1255, 538</value>
+    <value>1297, 538</value>
   </data>
   <data name="linkLabel18.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 25</value>
@@ -862,7 +829,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1492, 370</value>
+    <value>1534, 370</value>
   </data>
   <data name="linkLabel20.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 25</value>
@@ -895,7 +862,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1615, 454</value>
+    <value>1657, 454</value>
   </data>
   <data name="linkLabel19.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 25</value>
@@ -928,7 +895,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1368, 510</value>
+    <value>1410, 510</value>
   </data>
   <data name="linkLabel21.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 25</value>
@@ -961,7 +928,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel22.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1614, 245</value>
+    <value>1656, 245</value>
   </data>
   <data name="linkLabel22.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 25</value>
@@ -994,7 +961,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel23.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1255, 370</value>
+    <value>1297, 370</value>
   </data>
   <data name="linkLabel23.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 25</value>
@@ -1027,7 +994,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel24.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1368, 370</value>
+    <value>1410, 370</value>
   </data>
   <data name="linkLabel24.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 25</value>
@@ -1060,7 +1027,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel25.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1615, 370</value>
+    <value>1657, 370</value>
   </data>
   <data name="linkLabel25.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 25</value>
@@ -1093,7 +1060,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel26.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1492, 398</value>
+    <value>1534, 398</value>
   </data>
   <data name="linkLabel26.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 25</value>
@@ -1126,7 +1093,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel27.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1615, 398</value>
+    <value>1657, 398</value>
   </data>
   <data name="linkLabel27.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 25</value>
@@ -1159,7 +1126,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel28.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1255, 426</value>
+    <value>1297, 426</value>
   </data>
   <data name="linkLabel28.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 25</value>
@@ -1192,7 +1159,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel29.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1368, 426</value>
+    <value>1410, 426</value>
   </data>
   <data name="linkLabel29.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 25</value>
@@ -1225,7 +1192,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel30.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1615, 426</value>
+    <value>1657, 426</value>
   </data>
   <data name="linkLabel30.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 25</value>
@@ -1258,7 +1225,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel31.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1368, 454</value>
+    <value>1410, 454</value>
   </data>
   <data name="linkLabel31.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 25</value>
@@ -1291,7 +1258,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel32.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1368, 482</value>
+    <value>1410, 482</value>
   </data>
   <data name="linkLabel32.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 25</value>
@@ -1324,7 +1291,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel33.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1615, 482</value>
+    <value>1657, 482</value>
   </data>
   <data name="linkLabel33.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 25</value>
@@ -1357,7 +1324,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel34.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1255, 510</value>
+    <value>1297, 510</value>
   </data>
   <data name="linkLabel34.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 25</value>
@@ -1390,7 +1357,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel35.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1492, 510</value>
+    <value>1534, 510</value>
   </data>
   <data name="linkLabel35.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 25</value>
@@ -1423,7 +1390,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel36.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1615, 510</value>
+    <value>1657, 510</value>
   </data>
   <data name="linkLabel36.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 25</value>
@@ -1456,7 +1423,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel37.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1492, 538</value>
+    <value>1534, 538</value>
   </data>
   <data name="linkLabel37.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 25</value>
@@ -1489,7 +1456,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel38.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1615, 538</value>
+    <value>1657, 538</value>
   </data>
   <data name="linkLabel38.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 25</value>
@@ -1522,7 +1489,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel39.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1492, 566</value>
+    <value>1534, 566</value>
   </data>
   <data name="linkLabel39.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 25</value>
@@ -1555,7 +1522,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel40.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1253, 650</value>
+    <value>1301, 650</value>
   </data>
   <data name="linkLabel40.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 25</value>
@@ -1588,7 +1555,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel41.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1358, 650</value>
+    <value>1406, 650</value>
   </data>
   <data name="linkLabel41.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 25</value>
@@ -1621,7 +1588,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel42.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1255, 273</value>
+    <value>1297, 273</value>
   </data>
   <data name="linkLabel42.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 25</value>
@@ -1654,7 +1621,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel43.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1255, 566</value>
+    <value>1297, 566</value>
   </data>
   <data name="linkLabel43.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 25</value>
@@ -1687,7 +1654,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel44.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1367, 273</value>
+    <value>1409, 273</value>
   </data>
   <data name="linkLabel44.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 25</value>
@@ -1720,7 +1687,7 @@
     <value>Comic Sans MS, 20.25pt</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1243, 651</value>
+    <value>1291, 651</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>313, 38</value>
@@ -1753,7 +1720,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel45.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1255, 694</value>
+    <value>1303, 694</value>
   </data>
   <data name="linkLabel45.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 25</value>
@@ -1786,7 +1753,7 @@
     <value>Microsoft YaHei, 14.25pt</value>
   </data>
   <data name="linkLabel46.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1254, 722</value>
+    <value>1302, 722</value>
   </data>
   <data name="linkLabel46.Size" type="System.Drawing.Size, System.Drawing">
     <value>153, 25</value>
@@ -1825,7 +1792,7 @@
     <value>NoControl</value>
   </data>
   <data name="linkLabel47.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1256, 482</value>
+    <value>1298, 482</value>
   </data>
   <data name="linkLabel47.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 25</value>
@@ -1858,7 +1825,7 @@
     <value>NoControl</value>
   </data>
   <data name="poweredBy_Label.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1422, 12</value>
+    <value>1470, 12</value>
   </data>
   <data name="poweredBy_Label.Size" type="System.Drawing.Size, System.Drawing">
     <value>325, 21</value>
@@ -1867,7 +1834,7 @@
     <value>54</value>
   </data>
   <data name="poweredBy_Label.Text" xml:space="preserve">
-    <value>Powered by: &lt;&gt;</value>
+    <value>Powered by: {0}</value>
   </data>
   <data name="poweredBy_Label.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
@@ -1894,7 +1861,7 @@
     <value>12, 12</value>
   </data>
   <data name="webView21.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1220, 850</value>
+    <value>1255, 850</value>
   </data>
   <data name="webView21.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
@@ -1924,7 +1891,7 @@
     <value>None</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1759, 874</value>
+    <value>1807, 874</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

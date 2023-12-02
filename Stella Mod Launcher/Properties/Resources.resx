@@ -186,7 +186,7 @@ In newer versions of Stella Mod, saving paths has been moved to the registry. If
     <value>..\Resources\exchange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Discord_Desc" xml:space="preserve">
-    <value>The best mod for Genshin Impact with ReShade, custom graphics presets, FPS unlock, custom launcher, and more!</value>
+    <value>The best and safe mod for Genshin Impact that enhances graphics and more!</value>
   </data>
   <data name="bg_tools" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tools.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -245,9 +245,9 @@ This action will result in the loss of any custom configurations you have made. 
     <value>Closing form {0}...</value>
   </data>
   <data name="Default_ThisFeatureIsAvailableOnlyForMyPatrons" xml:space="preserve">
-    <value>This feature is available only for my patrons.
+    <value>This feature is only available to those with a Stella Mod Plus subscription.
 
-Would you like to visit Patreon.com and make subscribe? You will gain access to numerous benefits! You will also be able to enjoy ReShade, 3DMigoto, and FPS Unlocker simultaneously.</value>
+Would you like to visit the official website and subscribe? You'll gain access to numerous benefits, including the ability to use ReShade, 3DMigoto, and FPS Unlocker simultaneously.</value>
   </data>
   <data name="Program_RequiredFileFisrtAppLaunchExeWasNotFound_" xml:space="preserve">
     <value>Required file 'Configuration.exe' was not found. Please reinstall this app or join our Discord server for help.</value>
@@ -330,7 +330,7 @@ Quit the process with name {0} and try again.</value>
     <value>For some reason, you did not give consent for the automatic update of the ReShade file. Please note that older versions of this file may not be compatible with newer versions of Stella Mod. I hope you know what you're doing.</value>
   </data>
   <data name="Default_TheSoundFileWithMusicWasNotFoundInTheLocalization_" xml:space="preserve">
-    <value>The sound file with music was not found in the location: '{0}'</value>
+    <value>The sound file with music was not found in the location: {0}</value>
   </data>
   <data name="Tools_BrowsingUtils" xml:space="preserve">
     <value>Browsing utils 🔧</value>
@@ -465,7 +465,7 @@ Do you want to see these files?</value>
     <value>Updating benefits...</value>
   </data>
   <data name="UpdateBenefits_SuccessfullyUpdated3DMigoto" xml:space="preserve">
-    <value>Successfully updated 3DMigoto software for patrons.</value>
+    <value>The 3DMigoto software for Stella Mod Plus subscribers has been successfully updated</value>
   </data>
   <data name="NormalRelease_SomethingWentWrong" xml:space="preserve">
     <value>Something went wrong???</value>
@@ -474,7 +474,7 @@ Do you want to see these files?</value>
     <value>File with game path was not found in:
 {0}
 
-Do you want to reconfigure Stella Mod in the configuration window?</value>
+Do you want to reconfigure Stella Mod in the Configuration Window?</value>
   </data>
   <data name="RandomImages_Source" xml:space="preserve">
     <value>Source</value>
@@ -565,7 +565,7 @@ Do you want to reconfigure Stella Mod in the configuration window?</value>
     <value>The required dependency has been successfully installed, but your computer needs to be restarted.</value>
   </data>
   <data name="LaunchCount_TheSimultaneousOfUseRSFU3DM" xml:space="preserve">
-    <value>The simultaneous use of ReShade, FPS Unlock, and 3DMigoto is only possible for patrons.</value>
+    <value>The simultaneous use of ReShade, 3DMigoto, and FPS Unlock is only possible for Stella Mod Plus subscribers.</value>
   </data>
   <data name="StellaResources_NewResourcesUpdateIsAvailable" xml:space="preserve">
     <value>New update of the resources is available from {0}.</value>

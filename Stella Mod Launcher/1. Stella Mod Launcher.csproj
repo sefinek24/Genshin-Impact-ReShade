@@ -233,6 +233,9 @@
     <Compile Include="Scripts\Download\ReShadeIni.cs" />
     <Compile Include="Scripts\Utils.cs" />
     <Compile Include="Scripts\Forms\WebView2Handler.cs" />
+    <EmbeddedResource Include="Forms\Default.pl.resx">
+      <DependentUpon>Default.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Errors\ErrorOccurred.pl.resx">
       <DependentUpon>ErrorOccurred.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,7 +250,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Gameplay.pl.resx">
       <DependentUpon>Gameplay.cs</DependentUpon>
-      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Links.pl.resx">
+      <DependentUpon>Links.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Other\InjectionMethod.pl.resx">
+      <DependentUpon>InjectionMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Other\RandomImages.pl.resx">
+      <DependentUpon>RandomImages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Other\SupportMe.pl.resx">
+      <DependentUpon>SupportMe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Other\WebView2Window.pl.resx">
       <DependentUpon>WebView2Window.cs</DependentUpon>
@@ -262,20 +276,11 @@
     <EmbeddedResource Include="Forms\Errors\NotCompatible.resx">
       <DependentUpon>NotCompatible.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Other\InjectionMethod.pl.resx">
-      <DependentUpon>InjectionMethod.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Other\InjectionMethod.resx">
       <DependentUpon>InjectionMethod.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Other\Language.pl.resx">
-      <DependentUpon>Language.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Other\Language.resx">
       <DependentUpon>Language.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Other\RandomImages.pl.resx">
-      <DependentUpon>RandomImages.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Other\RandomImages.resx">
       <DependentUpon>RandomImages.cs</DependentUpon>
@@ -289,6 +294,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Other\WebView2Shake.resx">
       <DependentUpon>WebView2Shake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings.pl.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools.pl.resx">
+      <DependentUpon>Tools.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tools.resx">
       <DependentUpon>Tools.cs</DependentUpon>

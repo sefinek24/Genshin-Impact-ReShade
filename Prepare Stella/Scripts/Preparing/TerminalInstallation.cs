@@ -2,6 +2,8 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
+using IWshRuntimeLibrary;
+using File = System.IO.File;
 
 namespace PrepareStella.Scripts.Preparing
 {

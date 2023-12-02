@@ -304,7 +304,7 @@
     <value>Create shortcut on desktop</value>
   </data>
   <data name="CreateShortcut.ToolTip" xml:space="preserve">
-    <value>Create a shortcut for Stella Mod Launcher on your desktop. This is useful if you accidentally deleted the mod icon.</value>
+    <value>Create a shortcut for Stella Mod Launcher on your desktop. This is useful if you accidentally deleted the Stella Mod Launcher icon.</value>
   </data>
   <data name="&gt;&gt;CreateShortcut.Name" xml:space="preserve">
     <value>CreateShortcut</value>
@@ -373,7 +373,7 @@
     <value>Mute music on start</value>
   </data>
   <data name="MuteMusicOnStart.ToolTip" xml:space="preserve">
-    <value>Enable or mute the music played during the startup of this launcher program.</value>
+    <value>Enable or mute the music played during the startup of this launcher program</value>
   </data>
   <data name="&gt;&gt;MuteMusicOnStart.Name" xml:space="preserve">
     <value>MuteMusicOnStart</value>
@@ -409,7 +409,7 @@
     <value>Disable Discord RPC</value>
   </data>
   <data name="DisableDiscordRPC.ToolTip" xml:space="preserve">
-    <value>Enable or disable the "Playing Genshin Stella Mod" status on Discord.</value>
+    <value>Enable or disable the "Playing Genshin Stella Mod" status on Discord</value>
   </data>
   <data name="&gt;&gt;DisableDiscordRPC.Name" xml:space="preserve">
     <value>DisableDiscordRPC</value>
@@ -445,7 +445,7 @@
     <value>Change langauge</value>
   </data>
   <data name="ChangeLanguage.ToolTip" xml:space="preserve">
-    <value>Change the language of the Stella Mod Launcher application.</value>
+    <value>Change the language of the Stella Mod Launcher application</value>
   </data>
   <data name="&gt;&gt;ChangeLanguage.Name" xml:space="preserve">
     <value>ChangeLanguage</value>
@@ -484,7 +484,7 @@
     <value>Open configuration window</value>
   </data>
   <data name="linkLabel1.ToolTip" xml:space="preserve">
-    <value>Reconfigure Stella Mod again.</value>
+    <value>Reconfigure Stella Mod again</value>
   </data>
   <data name="&gt;&gt;linkLabel1.Name" xml:space="preserve">
     <value>linkLabel1</value>
@@ -523,7 +523,7 @@
     <value>Configure ReShade</value>
   </data>
   <data name="linkLabel3.ToolTip" xml:space="preserve">
-    <value>Automatically configure ReShade and set the appropriate directory paths.</value>
+    <value>Automatically configure ReShade and set the appropriate directory paths</value>
   </data>
   <data name="&gt;&gt;linkLabel3.Name" xml:space="preserve">
     <value>linkLabel3</value>
@@ -562,7 +562,7 @@
     <value>Change the injection method</value>
   </data>
   <data name="linkLabel2.ToolTip" xml:space="preserve">
-    <value>Change the way injectors are launched.</value>
+    <value>Change the way injectors are launched</value>
   </data>
   <data name="&gt;&gt;linkLabel2.Name" xml:space="preserve">
     <value>linkLabel2</value>

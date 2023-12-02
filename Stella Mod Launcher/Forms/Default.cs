@@ -94,8 +94,8 @@ namespace StellaLauncher.Forms
             _discordServer_LinkLabel = discordServer_LinkLabel;
             _supportMeIco_PictureBox = supportMeIco_PictureBox;
             _supportMe_LinkLabel = supportMe_LinkLabel;
-            _youtubeIco_Picturebox = youtubeIco_Picturebox;
-            _youTube_LinkLabel = youTube_LinkLabel;
+            _youtubeIco_Picturebox = webIco_Picturebox;
+            _youTube_LinkLabel = web_LinkLabel;
 
             _startGame_LinkLabel = startGame_LinkLabel;
             _injectReShade_LinkLabel = injectReShade_LinkLabel;

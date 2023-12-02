@@ -136,11 +136,9 @@
   <data name="label2.Text" xml:space="preserve">
     <value>GRA WKRÓTCE ZOSTANIE URUCHOMIONA. UPEWNIJ SIĘ, ŻE KORZYSTASZ Z OPROGRAMOWANIA STELLA MOD W SPOSÓB ODPOWIEDZIALNY, ŚCIŚLE PRZESTRZEGAJĄC JEGO WYTYCZNYCH UŻYTKOWANIA. SZANUJ INTEGRALNOŚĆ GRY I ZASADY HOYOVERSE. INFORMUJEMY, ŻE WSZELKIE DZIAŁANIA MAJĄCE NA CELU ZASZKODZENIE GRZE ZA POŚREDNICTWEM OPROGRAMOWANIA STELLA MOD BĘDĄ ZGŁASZANE FIRMIE HOYOVERSE.
 
-Najważniejsze zasady to: nie cheatuj, nie szkodź, nie angażuj się w działania zabronione przez prawo.
+Najważniejsze zasady to: nie cheatować, nie szkodzić, nie angażować się w działania zabronione przez prawo.
 
-Przestrzegając tych zasad, możesz mieć pewność, że Twoje konto pozostanie bezpieczne, a Ty unikniesz ryzyka wykluczenia z gry podczas korzystania ze Stella Mod (:
-
-Przetłumaczono z www.DeepL.com/Translator (wersja darmowa)</value>
+Przestrzegając tych zasad, możesz mieć pewność, że Twoje konto pozostanie bezpieczne, a Ty unikniesz ryzyka bana w grze podczas korzystania ze Stella Mod (:</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 79</value>
@@ -353,5 +351,8 @@ Witryna sefinek.net została uruchomiona w domyślnej przeglądarce.</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Przeczytaj przed rozpoczęciem gry</value>
+  </data>
+  <data name="linkLabel1.Text" xml:space="preserve">
+    <value>Copyright 2023 © by Sefinek. Wszelkie prawa zastrzeżone.</value>
   </data>
 </root>
