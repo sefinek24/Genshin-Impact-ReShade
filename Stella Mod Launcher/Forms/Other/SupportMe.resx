@@ -186,17 +186,14 @@
   <data name="label2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Yu Gothic UI, 15.75pt, style=Bold</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 381</value>
+    <value>19, 378</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>663, 120</value>
+    <value>718, 120</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
