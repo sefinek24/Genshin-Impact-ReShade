@@ -16,7 +16,7 @@ public partial class MainWindow : Form
     private readonly Timer _timer;
     private int _displayCount;
     private bool _openedUrl;
-    private int _remainingSeconds = 25;
+    private int _remainingSeconds = 23;
 
     public MainWindow()
     {
