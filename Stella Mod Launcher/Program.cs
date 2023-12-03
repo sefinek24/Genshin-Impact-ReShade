@@ -104,7 +104,7 @@ namespace StellaLauncher
 
             if (Process.GetProcessesByName(AppName).Length > 1)
             {
-                Logger.Info("One instance is currently open.");
+                Logger.Info("One instance is currently open");
                 MessageBox.Show(string.Format(Resources.Program_SorryOneInstanceIsCurrentlyOpen_, Path.GetFileNameWithoutExtension(Assembly.GetEntryAssembly()?.Location)), AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 Environment.Exit(998765341);
