@@ -328,10 +328,10 @@
     <value>Comic Sans MS, 15.75pt</value>
   </data>
   <data name="Launcher.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 142</value>
+    <value>51, 146</value>
   </data>
   <data name="Launcher.Size" type="System.Drawing.Size, System.Drawing">
-    <value>237, 35</value>
+    <value>240, 33</value>
   </data>
   <data name="Launcher.TabIndex" type="System.Int32, mscorlib">
     <value>100</value>
@@ -703,10 +703,10 @@
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>54, 340</value>
+    <value>51, 339</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 35</value>
+    <value>240, 33</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>124</value>
@@ -799,10 +799,10 @@
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>54, 416</value>
+    <value>51, 415</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 35</value>
+    <value>240, 33</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>127</value>
