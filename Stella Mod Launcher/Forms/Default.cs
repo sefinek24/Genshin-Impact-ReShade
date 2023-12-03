@@ -166,10 +166,11 @@ namespace StellaLauncher.Forms
                 new ToolStripMenuItem("Toggle Minimize/Restore", null, trayHandler.ToggleMinimizeRestore),
                 new ToolStripMenuItem("Reload window", null, trayHandler.ReloadForm),
                 new ToolStripMenuItem("Official website", null, Tray.OfficialWebsite),
-                new ToolStripMenuItem("Discord server", null, Tray.DiscordServer),
+                new ToolStripMenuItem("Stella Mod Plus", null, Tray.StellaModPlus),
+                new ToolStripMenuItem("Visit Discord server", null, Tray.DiscordServer),
                 new ToolStripMenuItem("Support", null, Tray.Support),
-                new ToolStripMenuItem("Donations", null, Tray.Donations),
                 new ToolStripMenuItem("Leave your feedback", null, Tray.Feedback),
+                new ToolStripMenuItem("Donations", null, Tray.Donations),
                 new ToolStripMenuItem("Quit", null, Tray.OnQuitClick)
             });
 
@@ -317,8 +318,23 @@ namespace StellaLauncher.Forms
             int found = await CheckForUpdates.Analyze();
             if (found == 1) return;
 
-
             progressBar1.Value = 88;
+
+            // Check Genshin Stella Mod.exe
+            string gsMod = Path.Combine(Program.AppPath, "Genshin Stella Mod.exe");
+            if (!File.Exists(gsMod))
+            {
+                string fileName = Path.GetFileName(gsMod);
+                string dirPath = Path.GetDirectoryName(gsMod);
+
+                Program.Logger.Error($"{fileName} was not found in {gsMod}");
+                status_Label.Text += $"[x] Not found `{fileName}` in:\n[x] {dirPath}\n";
+
+                MessageBox.Show($"Required file {fileName} was not found.\n\nReinstalling the application may be necessary.", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(89675);
+            }
+
+            progressBar1.Value = 94;
 
             // Music
             _ = Music.PlayBg();
