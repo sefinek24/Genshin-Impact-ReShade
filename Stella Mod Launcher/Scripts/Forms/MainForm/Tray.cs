@@ -36,9 +36,9 @@ namespace StellaLauncher.Scripts.Forms.MainForm
             ToolStripMenuItem toggleButton = _trayIcon.ContextMenuStrip.Items[0] as ToolStripMenuItem;
 
             if (_mainForm.WindowState == FormWindowState.Normal || _mainForm.WindowState == FormWindowState.Maximized)
-                toggleButton.Text = "Minimize";
+                toggleButton.Text = @"Minimize";
             else
-                toggleButton.Text = "Restore";
+                toggleButton.Text = @"Restore";
         }
 
 
@@ -53,6 +53,11 @@ namespace StellaLauncher.Scripts.Forms.MainForm
             Utils.OpenUrl(Program.AppWebsiteFull);
         }
 
+        public static void StellaModPlus(object sender, EventArgs e)
+        {
+            Utils.OpenUrl($"{Program.AppWebsiteFull}/subscription");
+        }
+
         public static void DiscordServer(object sender, EventArgs e)
         {
             Utils.OpenUrl(Discord.Invitation);
@@ -63,14 +68,14 @@ namespace StellaLauncher.Scripts.Forms.MainForm
             Utils.OpenUrl($"{Program.AppWebsiteFull}/support");
         }
 
-        public static void Donations(object sender, EventArgs e)
-        {
-            Utils.OpenUrl("https://sefinek.net/support");
-        }
-
         public static void Feedback(object sender, EventArgs e)
         {
             Utils.OpenUrl($"{Program.AppWebsiteFull}/feedback");
+        }
+
+        public static void Donations(object sender, EventArgs e)
+        {
+            Utils.OpenUrl("https://sefinek.net/support-me");
         }
 
 
