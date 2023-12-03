@@ -39,9 +39,9 @@ namespace StellaLauncher.Forms.Errors
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Base 05", 41.25F);
             this.label1.ForeColor = System.Drawing.Color.Snow;
-            this.label1.Location = new System.Drawing.Point(12, 455);
+            this.label1.Location = new System.Drawing.Point(12, 447);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(450, 68);
+            this.label1.Size = new System.Drawing.Size(442, 68);
             this.label1.TabIndex = 0;
             this.label1.Text = "cunt xD";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -55,7 +55,7 @@ namespace StellaLauncher.Forms.Errors
             this.label2.ForeColor = System.Drawing.Color.Snow;
             this.label2.Location = new System.Drawing.Point(12, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(450, 67);
+            this.label2.Size = new System.Drawing.Size(442, 73);
             this.label2.TabIndex = 1;
             this.label2.Text = "Russian ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -66,7 +66,7 @@ namespace StellaLauncher.Forms.Errors
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackgroundImage = global::StellaLauncher.Properties.Resources.cat;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(474, 532);
+            this.ClientSize = new System.Drawing.Size(466, 524);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
