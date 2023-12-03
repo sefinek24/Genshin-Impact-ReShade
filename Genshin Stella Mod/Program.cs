@@ -177,7 +177,7 @@ namespace GenshinStellaMod
             {
                 Console.WriteLine("[X] Not this time bro");
                 Logger.Error($"An attempt was made to use launchMode {launchMode} without being a Stella Mod Plus subscriber; Secret.IsMyPatron: {Secret.IsMyPatron}; Secret.Attempt: {Secret.Attempt}");
-                MessageBox.Show("The security system has detected a breach.\n\nScrew you ((:", AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("The security system has detected a breach.", AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 Environment.Exit(1432166809);
             }
