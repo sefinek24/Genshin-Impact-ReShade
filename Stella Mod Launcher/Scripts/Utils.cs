@@ -119,11 +119,11 @@ namespace StellaLauncher.Scripts
             try
             {
                 Process.Start(url);
-                Program.Logger.Info($"Opened '{url}' in default browser.");
+                Program.Logger.Info($"Opened '{url}' in default browser");
             }
             catch (Exception ex)
             {
-                Log.ThrowError(new Exception($"Failed to open '{url}' in default browser.\n\n{ex}"));
+                Log.ThrowError(new Exception($"Failed to open '{url}' in default browser\n\n{ex}"));
             }
         }
 
@@ -144,7 +144,7 @@ namespace StellaLauncher.Scripts
             string filePath = Path.Combine(fileName);
             bool fileExists = File.Exists(filePath);
 
-            Program.Logger.Info(fileExists ? $"File '{fileName}' was found at '{filePath}'." : $"File '{fileName}' was not found at '{filePath}'.");
+            Program.Logger.Info(fileExists ? $"File '{fileName}' was found at '{filePath}'" : $"File '{fileName}' was not found at '{filePath}'");
 
             return fileExists;
         }
