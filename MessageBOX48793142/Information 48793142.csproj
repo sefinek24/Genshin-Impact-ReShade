@@ -21,7 +21,7 @@
     <RootNamespace>InformationWindow</RootNamespace>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <PackageIcon></PackageIcon>
-    <ApplicationIcon>angry-paimon.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\angry-paimon.ico</ApplicationIcon>
     <PackageOutputPath>$(OutputPath)</PackageOutputPath>
     <AssemblyVersion>0.1.0.0</AssemblyVersion>
     <FileVersion>0.1.0.0</FileVersion>
@@ -41,7 +41,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="angry-paimon.ico" />
+    <Content Include="Resources\angry-paimon.ico" />
   </ItemGroup>
 
   <ItemGroup>
