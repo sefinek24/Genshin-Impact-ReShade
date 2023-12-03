@@ -27,7 +27,7 @@ namespace StellaLauncher.Scripts.Patrons
             string[] filesToDelete = { "d3d11.dll", "d3dcompiler_46.dll", "loader.exe", "nvapi64.dll", "3dmigoto.dll" };
             DeleteFiles(migotoDir, filesToDelete);
 
-            // Delete 3DMigoto default mods
+            // Delete 3DMigoto default mod pack
             string migotoCharsMods = Path.Combine(Default.ResourcesPath, "3DMigoto", "Mods", "1. Characters");
             if (Directory.Exists(migotoCharsMods)) await DeleteDirectory(migotoCharsMods);
             string migotoOtherMods = Path.Combine(Default.ResourcesPath, "3DMigoto", "Mods", "2. Other");
