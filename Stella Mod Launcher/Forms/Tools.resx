@@ -127,6 +127,9 @@
   <metadata name="panel2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="panel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -144,9 +147,6 @@
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>76</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="panel2.ToolTip" xml:space="preserve">
     <value>Close</value>
   </data>
@@ -265,7 +265,7 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="DeleteAllCacheAndLogFiles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 471</value>
+    <value>49, 471</value>
   </data>
   <data name="DeleteAllCacheAndLogFiles.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 24</value>
@@ -691,7 +691,7 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="ScanAndRepairSysFiles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>354, 196</value>
+    <value>353, 196</value>
   </data>
   <data name="ScanAndRepairSysFiles.Size" type="System.Drawing.Size, System.Drawing">
     <value>237, 24</value>
@@ -702,6 +702,9 @@
   <data name="ScanAndRepairSysFiles.Text" xml:space="preserve">
     <value>Scan and repair system files</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="ScanAndRepairSysFiles.ToolTip" xml:space="preserve">
     <value>Clicking this button will initiate the scanning and repair of system files. This option is safe and recommended in most cases.</value>
   </data>
@@ -850,10 +853,10 @@
     <value>NoControl</value>
   </data>
   <data name="linkLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>354, 227</value>
+    <value>354, 226</value>
   </data>
   <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>256, 24</value>
+    <value>271, 24</value>
   </data>
   <data name="linkLabel2.TabIndex" type="System.Int32, mscorlib">
     <value>121</value>
