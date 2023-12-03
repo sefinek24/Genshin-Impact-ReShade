@@ -106,7 +106,7 @@ namespace PrepareStella.Scripts
 
                         TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine(@"     » ATTENTION: Close all Microsoft Store apps and press ENTER to continue...");
+                        Console.WriteLine(@"    » ATTENTION: Close all Microsoft Store apps and press ENTER to continue...");
                         Console.ResetColor();
 
                         Console.ReadLine();
