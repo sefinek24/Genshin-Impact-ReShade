@@ -21,10 +21,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 
         private static void CheckIfExists(string filePath)
         {
-            if (!File.Exists(filePath) && !Debugger.IsAttached)
-            {
-                Default._status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, filePath)}\n";
-            }
+            if (!File.Exists(filePath) && !Debugger.IsAttached) Default._status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, filePath)}\n";
         }
 
         public static void DeleteSetupAsync()
