@@ -1,7 +1,9 @@
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GenshinStellaMod.Models;
@@ -101,7 +103,7 @@ namespace GenshinStellaMod
             // Verify that the application is running with administrative privileges.
             if (!Utils.IsRunningWithAdminPrivileges())
             {
-                Log.ThrowErrorString("[x] This file needs to be executed with administrative privileges.");
+                Log.ThrowErrorString("[x] This file needs to be executed with administrative privileges");
                 Utils.Pause();
             }
 
@@ -192,6 +194,30 @@ namespace GenshinStellaMod
             // Start
             try
             {
+                const string id = "48793142";
+                string path = Path.Combine(AppPath, "net8.0-windows10.0.18362.0", $"{id}.exe");
+
+                using (RegistryKey key = Registry.CurrentUser.OpenSubKey(Secret.RegistryPath, true))
+                {
+                    int value = (int)(key?.GetValue(id) ?? 0);
+                    if (value == 0)
+                    {
+                        if (!File.Exists(path)) return;
+                        _ = Cmd.Execute(new Cmd.CliWrap { App = path });
+                        key?.SetValue(id, 1);
+
+                        bool processFound = false;
+
+                        while (!processFound)
+                        {
+                            Process[] processes = Process.GetProcessesByName(id);
+                            if (processes.Length == 0) processFound = true;
+
+                            Thread.Sleep(1000);
+                        }
+                    }
+                }
+
                 await Action.Run(launchMode);
             }
             catch (Exception ex)
