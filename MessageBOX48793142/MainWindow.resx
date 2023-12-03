@@ -123,13 +123,13 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 35.25pt</value>
+    <value>Segoe UI, 39pt</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>464, 121</value>
+    <value>485, 154</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>552, 68</value>
+    <value>672, 68</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
@@ -157,13 +157,13 @@
     <value>None</value>
   </data>
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+    <value>Segoe UI, 15pt</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>119, 258</value>
+    <value>12, 261</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1017, 210</value>
+    <value>1348, 316</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -194,7 +194,7 @@ By following these rules diligently, you can be confident that your account will
     <value>None</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>264, 75</value>
+    <value>295, 108</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 150</value>
@@ -221,7 +221,7 @@ By following these rules diligently, you can be confident that your account will
     <value>Bottom</value>
   </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>546, 571</value>
+    <value>609, 637</value>
   </data>
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
     <value>157, 23</value>
@@ -254,7 +254,7 @@ By following these rules diligently, you can be confident that your account will
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>936, 580</value>
+    <value>1062, 646</value>
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>298, 17</value>
@@ -287,7 +287,7 @@ By following these rules diligently, you can be confident that your account will
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>836, 544</value>
+    <value>962, 610</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>398, 34</value>
@@ -327,7 +327,7 @@ The sefinek.net website has been launched in your default browser.</value>
     <value>None</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1246, 606</value>
+    <value>1372, 672</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
