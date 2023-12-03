@@ -35,6 +35,7 @@ namespace InformationWindow
             button1 = new Button();
             linkLabel1 = new LinkLabel();
             label3 = new Label();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -83,23 +84,30 @@ namespace InformationWindow
             label3.ForeColor = Color.White;
             label3.Name = "label3";
             // 
+            // label4
+            // 
+            label4.BackColor = Color.Transparent;
+            resources.ApplyResources(label4, "label4");
+            label4.ForeColor = Color.White;
+            label4.Name = "label4";
+            // 
             // MainWindow
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.Black;
+            Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(linkLabel1);
             Controls.Add(button1);
             Controls.Add(pictureBox1);
             Controls.Add(label2);
             Controls.Add(label1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.None;
             MaximizeBox = false;
             Name = "MainWindow";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -110,5 +118,6 @@ namespace InformationWindow
         private Button button1;
         private LinkLabel linkLabel1;
         private Label label3;
+        private Label label4;
     }
 }

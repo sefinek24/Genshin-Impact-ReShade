@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using InformationWindow.Properties;
 using NAudio.Wave;
 using Timer = System.Windows.Forms.Timer;
 
@@ -10,27 +11,32 @@ public partial class MainWindow : Form
     private const int HwndTopmost = -1;
     private const uint SwpNoSize = 0x0001;
     private const uint SwpNoMove = 0x0002;
+
+    private readonly Timer _autoCloseTimer;
     private readonly Timer _timer;
     private int _displayCount;
     private bool _openedUrl;
+    private int _remainingSeconds = 25;
 
     public MainWindow()
     {
         InitializeComponent();
-
-        _timer = new Timer { Interval = 1000 };
-        _timer.Tick += Timer_Tick;
 
         FormBorderStyle = FormBorderStyle.None;
         WindowState = FormWindowState.Maximized;
         TopMost = true;
         ShowInTaskbar = false;
 
+        _timer = new Timer { Interval = 1000 };
+        _timer.Tick += Timer_Tick;
         _timer.Start();
 
-        Timer autoCloseTimer = new() { Interval = 10000 };
-        autoCloseTimer.Tick += AutoCloseTimer_Tick;
-        autoCloseTimer.Start();
+        _autoCloseTimer = new Timer { Interval = 1000 };
+        _autoCloseTimer.Tick += AutoCloseTimer_Tick;
+        _autoCloseTimer.Start();
+
+        TimeSpan time = TimeSpan.FromSeconds(_remainingSeconds);
+        label4.Text = string.Format(Resources.PleaseWait, $"{time.Seconds:D2}");
     }
 
     [LibraryImport("user32.dll")]
@@ -50,9 +56,20 @@ public partial class MainWindow : Form
         }
     }
 
-    private static void AutoCloseTimer_Tick(object? sender, EventArgs e)
+    private void AutoCloseTimer_Tick(object? sender, EventArgs e)
     {
-        Application.Exit();
+        _remainingSeconds--;
+        if (_remainingSeconds >= 0)
+        {
+            TimeSpan time = TimeSpan.FromSeconds(_remainingSeconds);
+            label4.Text = string.Format(Resources.PleaseWait, $"{time.Seconds:D2}");
+        }
+        else
+        {
+            _autoCloseTimer.Stop();
+            label4.Text = Resources.Closing;
+            Application.Exit();
+        }
     }
 
     protected override void OnLoad(EventArgs e)
@@ -72,7 +89,7 @@ public partial class MainWindow : Form
         {
             using AudioFileReader audioFile = new(mp3FilePath);
             using WaveChannel32 volumeStream = new(audioFile);
-            volumeStream.Volume = 0.4f;
+            volumeStream.Volume = 0.46f;
             using WaveOutEvent outputDevice = new();
             outputDevice.Init(volumeStream);
             outputDevice.Play();

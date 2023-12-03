@@ -355,4 +355,7 @@ Witryna sefinek.net została uruchomiona w domyślnej przeglądarce.</value>
   <data name="linkLabel1.Text" xml:space="preserve">
     <value>Copyright 2023 © by Sefinek. Wszelkie prawa zastrzeżone.</value>
   </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Proszę czekać...</value>
+  </data>
 </root>
