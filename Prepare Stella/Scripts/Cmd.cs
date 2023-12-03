@@ -8,8 +8,6 @@ using CliWrap.Buffered;
 using Microsoft.Toolkit.Uwp.Notifications;
 using Microsoft.WindowsAPICodePack.Taskbar;
 
-// using Microsoft.WindowsAPICodePack.Taskbar;
-
 namespace PrepareStella.Scripts
 {
     internal abstract class Cmd
