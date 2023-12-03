@@ -113,7 +113,6 @@ namespace StellaLauncher
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // Found russian pig?
             // if (RegionInfo.CurrentRegion.Name == "RU")
             // {
             //     Music.PlaySound("winxp", "battery-critical");
