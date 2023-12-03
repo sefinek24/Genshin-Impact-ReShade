@@ -10,17 +10,21 @@ namespace StellaLauncher.Scripts.Patrons
     {
         public static async void Start()
         {
-            // Delete presets for patrons
+            // Delete presets
             string presets = Path.Combine(Default.ResourcesPath, "ReShade", "Presets", "3. Only for patrons");
             if (Directory.Exists(presets)) await DeleteDirectory(presets);
 
-            // Delete addons for patrons
+            // Delete addons
             string addons = Path.Combine(Default.ResourcesPath, "ReShade", "Addons");
-            if (Directory.Exists(addons)) await DeleteDirectory(addons);
+            if (Directory.Exists(addons))
+            {
+                string[] cmdFilesToDelete = { "ReshadeEffectShaderToggler.addon64", "version.json" };
+                DeleteFiles(addons, cmdFilesToDelete);
+            }
 
             // Delete 3DMigoto files
             string migotoDir = Path.Combine(Default.ResourcesPath, "3DMigoto");
-            string[] filesToDelete = { "d3d11.dll", "d3dcompiler_46.dll", "loader.exe", "nvapi64.dll" };
+            string[] filesToDelete = { "d3d11.dll", "d3dcompiler_46.dll", "loader.exe", "nvapi64.dll", "3dmigoto.dll" };
             DeleteFiles(migotoDir, filesToDelete);
 
             // Delete 3DMigoto default mods
@@ -29,23 +33,14 @@ namespace StellaLauncher.Scripts.Patrons
             string migotoOtherMods = Path.Combine(Default.ResourcesPath, "3DMigoto", "Mods", "2. Other");
             if (Directory.Exists(migotoOtherMods)) await DeleteDirectory(migotoOtherMods);
 
-            // Delete cmd files: data/cmd
-            string cmdPath = Path.Combine(Program.AppPath, "data", "cmd");
-            if (Directory.Exists(cmdPath))
-            {
-                string[] cmdFilesToDelete = { "run.cmd", "run-patrons.cmd" };
-                DeleteFiles(cmdPath, cmdFilesToDelete);
-
-                // Delete: data/cmd/start
-                string cmdDir = Path.Combine(cmdPath, "start");
-                if (Directory.Exists(cmdDir)) await DeleteDirectory(cmdDir);
-            }
+            // Delete cmd (batch) files
+            string cmdPath = Path.Combine(Program.AppPath, "data", "cmd", "patrons");
+            if (Directory.Exists(cmdPath)) await DeleteDirectory(cmdPath);
 
 
             // Update ReShade.ini config
             await RsConfig.Prepare();
         }
-
 
         // Delete specific files in a folder
         private static void DeleteFiles(string folderPath, IEnumerable<string> filesToDelete)
@@ -76,7 +71,7 @@ namespace StellaLauncher.Scripts.Patrons
             }
         }
 
-        // Delete a directory and its contents
+        // Delete directory & content
         public static async Task DeleteDirectory(string directoryPath)
         {
             try
