@@ -38,17 +38,14 @@ namespace StellaLauncher.Forms.Other
             switch (comboBox1.SelectedIndex)
             {
                 case 0:
-                    Program.Settings.WriteString("Injection", "Method", "exe");
-                    Run.InjectType = "exe";
+                    SetToGenshinStellaMod();
                     break;
 
 
                 case 1:
                     if (Secret.IsMyPatron)
                     {
-                        Program.Settings.WriteString("Injection", "Method", "cmd");
-                        Program.Settings.Save();
-                        Run.InjectType = "cmd";
+                        SetToBatchFiles();
 
                         MessageBox.Show(@"WARNING! SETTING CHANGED TO ONE DIFFERENT FROM THE RECOMMENDED ONE! I HOPE YOU KNOW WHAT YOU'RE DOING! 
 
@@ -58,11 +55,38 @@ This option is intended for users with any knowledge in the IT field and in the 
                     }
                     else
                     {
-                        MessageBox.Show(@"Only patrons can use this option.", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        SetToGenshinStellaMod();
+
+                        MessageBox.Show(@"Only Stella Mod Plus subscribers have the ability to change the injection method.
+
+Subscribe to have full control over what is to be injected using batch files. Remember not to break the game rules and avoid cheating!", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
                     break;
+
+                default:
+                    SetToGenshinStellaMod();
+
+                    MessageBox.Show(@"Unknown choice. Data has been restored to the default value.", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    break;
             }
+        }
+
+        private void SetToGenshinStellaMod()
+        {
+            comboBox1.SelectedIndex = 0;
+            Program.Settings.WriteString("Injection", "Method", "exe");
+            Program.Settings.Save();
+            Run.InjectType = "exe";
+        }
+
+        private void SetToBatchFiles()
+        {
+            comboBox1.SelectedIndex = 1;
+            Program.Settings.WriteString("Injection", "Method", "cmd");
+            Program.Settings.Save();
+            Run.InjectType = "cmd";
         }
     }
 }
