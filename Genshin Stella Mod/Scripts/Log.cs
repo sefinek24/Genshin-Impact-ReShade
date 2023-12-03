@@ -13,8 +13,10 @@ namespace GenshinStellaMod.Scripts
 
         public static void ThrowErrorString(string log)
         {
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(log);
 
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("\n=========================================================================================");
             Console.WriteLine("[x] Meeow (=〃ﻌ〃=)! We're sorry. It seems like we've encountered an issue.");
             Console.WriteLine("[i] If you require assistance, kindly visit: https://genshin.sefinek.net/support");

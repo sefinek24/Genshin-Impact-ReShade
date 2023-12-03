@@ -45,6 +45,8 @@ namespace GenshinStellaMod
             Console.OutputEncoding = Encoding.UTF8;
             Console.Title = $"Genshin Stella Mod - v{AppVersion}";
 
+            Console.ForegroundColor = ConsoleColor.White;
+
             if (Utils.IsArrayEmpty(args))
             {
                 Console.Title = @" /ᐠ –ꞈ –ᐟ\";
@@ -68,6 +70,7 @@ namespace GenshinStellaMod
             }
 
 
+            Console.ForegroundColor = ConsoleColor.White;
             bool isSubscriber = Data.IsUserMyPatron();
             Console.WriteLine("⠀  ⠀⠀⠀⠀⠀⠀⠀ ⢀⣤⡶⢶⣦⡀");
             Console.WriteLine("⠀  ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿");
@@ -85,7 +88,9 @@ namespace GenshinStellaMod
             Console.WriteLine("=========================================================================================\n");
 
             /***** 1 *****/
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("1/3 - Starting program...");
+            Console.ResetColor();
 
 
             // Set app title etc.
@@ -96,7 +101,7 @@ namespace GenshinStellaMod
             // Verify that the application is running with administrative privileges.
             if (!Utils.IsRunningWithAdminPrivileges())
             {
-                Log.ThrowErrorString("[X] This file needs to be executed with administrative privileges.");
+                Log.ThrowErrorString("[x] This file needs to be executed with administrative privileges.");
                 Utils.Pause();
             }
 
@@ -109,7 +114,7 @@ namespace GenshinStellaMod
                 int value = (int)(key?.GetValue("AppIsConfigured") ?? 0);
                 if (value == 0)
                 {
-                    Log.ThrowErrorString("[X] The software is not configured yet. Please run the launcher first");
+                    Log.ThrowErrorString("[x] The software is not configured yet. Please run the launcher first");
 
                     Utils.Pause();
                 }
@@ -175,7 +180,8 @@ namespace GenshinStellaMod
             // Good?
             if (!Secret.IsMyPatron && (launchMode == "1" || launchMode == "5"))
             {
-                Console.WriteLine("[X] Not this time bro");
+                Console.WriteLine("[x] Not this time bro");
+
                 Logger.Error($"An attempt was made to use launchMode {launchMode} without being a Stella Mod Plus subscriber; Secret.IsMyPatron: {Secret.IsMyPatron}; Secret.Attempt: {Secret.Attempt}");
                 MessageBox.Show("The security system has detected a breach.", AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -192,6 +198,7 @@ namespace GenshinStellaMod
             {
                 Log.ThrowError(ex);
 
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("=========================================================================================");
                 Console.WriteLine("[x] We apologize, but unfortunately something didn't go according to our plan ):");
                 Console.WriteLine("[i] If you believe this error is not your fault, please report it: https://genshin.sefinek.net/support");

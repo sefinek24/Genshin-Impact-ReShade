@@ -24,7 +24,7 @@ namespace GenshinStellaMod.Scripts
         {
             if (string.IsNullOrEmpty(processName))
             {
-                Log.ThrowErrorString("[X] Process name cannot be null or empty.");
+                Log.ThrowErrorString("[x] Process name cannot be null or empty.");
                 return;
             }
 
