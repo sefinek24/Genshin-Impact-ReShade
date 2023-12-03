@@ -85,7 +85,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
                 }
 
 
-                Default._progressBar1.Value = 79;
+                Default._progressBar1.Value = 80;
                 // == Check new updates for ReShade.ini file ==
                 int resultInt = await ReShadeIni.CheckForUpdates();
                 switch (resultInt)
@@ -104,7 +104,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 
                         if (msgReply == DialogResult.No || msgReply == DialogResult.Cancel)
                         {
-                            Program.Logger.Info("The update of ReShade.ini has been cancelled by the user.");
+                            Program.Logger.Info("The update of ReShade.ini has been cancelled by the user");
                             MessageBox.Show(Resources.Default_ForSomeReasonYouDidNotGiveConsentForTheAutomaticUpdateOfTheReShadeFile, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
                             Utils.HideProgressBar(true);
