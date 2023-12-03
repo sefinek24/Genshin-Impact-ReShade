@@ -440,9 +440,9 @@ namespace StellaLauncher.Forms
             Utils.OpenUrl(Discord.Invitation);
         }
 
-        private void YouTube_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void Website_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Utils.OpenUrl("https://www.youtube.com/@sefinek");
+            Utils.OpenUrl(Program.AppWebsiteFull);
         }
 
         private void Tools_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -476,11 +476,6 @@ namespace StellaLauncher.Forms
             if (Application.OpenForms.OfType<Links>().Any()) return;
             new Links { DesktopLocation = DesktopLocation, Icon = Program.Ico }.Show();
             Music.PlaySound("winxp", "navigation_start");
-        }
-
-        private void Website_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Utils.OpenUrl(Program.AppWebsiteFull);
         }
 
         private void Version_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -202,7 +202,7 @@ namespace StellaLauncher.Forms
             this.web_LinkLabel.Name = "web_LinkLabel";
             this.web_LinkLabel.TabStop = true;
             this.toolTip1.SetToolTip(this.web_LinkLabel, resources.GetString("web_LinkLabel.ToolTip"));
-            this.web_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.YouTube_LinkClicked);
+            this.web_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Website_LinkClicked);
             // 
             // startGame_LinkLabel
             // 
