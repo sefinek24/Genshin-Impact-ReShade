@@ -55,7 +55,7 @@ namespace StellaLauncher.Forms.Other
 
         private void CsGoSkins_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Utils.OpenUrl("https://steamcommunity.com/tradeoffer/new/?partner=1156692850&token=smcSsTMe");
+            Utils.OpenUrl("https://steamcommunity.com/tradeoffer/new?partner=1156692850&token=smcSsTMe");
         }
 
         private void SubscribeMe_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
