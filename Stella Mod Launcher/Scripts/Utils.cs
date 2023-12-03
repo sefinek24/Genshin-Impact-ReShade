@@ -211,7 +211,6 @@ namespace StellaLauncher.Scripts
                     .Show();
             }
             catch (Exception ex)
-
             {
                 Program.Logger.Error(ex);
             }
