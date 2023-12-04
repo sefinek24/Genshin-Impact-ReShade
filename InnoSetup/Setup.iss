@@ -1,5 +1,5 @@
 #define AppName "Genshin Stella Mod"
-#define AppVersion "7.9.1.0"
+#define AppVersion "7.9.1.1"
 #define AppPublisher "Sefinek Inc."
 #define AppURL "https://genshin.sefinek.net"
 #define AppExeName "Stella Mod Launcher.exe"
@@ -100,6 +100,7 @@ begin
 
   Dependency_AddDotNet48;
   Dependency_AddDotNet70;
+  Dependency_AddDotNet80;
 
   Dependency_ForceX86 := True;
   Dependency_AddVC2015To2022;
