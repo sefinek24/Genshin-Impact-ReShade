@@ -134,7 +134,7 @@ that the game runs smoothly and looks its best.
 ## 🛠️ 〢 Tested game versions
 | 😻 Stella | 🎮 Game | 💻 System               | 📝 OS build | 😅 Status                                                                            | 📆 Date tested</div> |
 |:----------|---------|:------------------------|:------------|--------------------------------------------------------------------------------------|----------------------|
-| v-.-.-.-  | v4.3.0  | -                       | -           | [-](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend)  | -                    |
+| v-.-.-.-  | v4.3.0  | -                       | -           | [❓](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend)  | -                    |
 | v7.8.1.3  | v4.2.0  | MS Windows 10 Home 22H2 | 19045.3636  | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend) | November 08, 2023    |
 | v7.6.6.0  | v4.1.0  | MS Windows 10 Home 22H2 | 19045.3448  | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend) | September 27, 2023   |
 | v7.6.6.0  | v4.0.1  | MS Windows 10 Home 22H2 | 19045.3448  | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend) | September 12, 2023   |
