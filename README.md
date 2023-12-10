@@ -58,7 +58,7 @@ Please note that sharing game screenshots displaying your UID, visible shaders, 
 If you plan to record a video of the game for platforms like YouTube, remember to hide or censor your UID and username to avoid being banned.
 
 Also, it is highly recommended to update your graphics card and chipset drivers to ensure smooth gameplay, minimize graphics-related issues, and prevent crashes.
-Please familiarize yourself with the [system requirements](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%E2%9C%A8-%E3%80%A2-requirements&referrer=stella_readme) as well.
+Please familiarize yourself with the [system requirements](https://github.com/sefinek24/Genshin-Impact-ReShade#-%E3%80%A2-requirements) as well.
 
 For more information and details about the Genshin Stella Mod project, visit our [Documentation](https://sefinek.net/genshin-impact-reshade/docs?page=introduction&referrer=stella_readme).
 The wiki provides a comprehensive installation and usage guide for ReShade, along with frequently asked questions and troubleshooting tips.
@@ -70,7 +70,7 @@ You can also check out the latest [screenshots](https://sefinek.net/genshin-impa
 The main server of [sefinek.net](https://sefinek.net/?referrer=stella_readme) is located in Poland, while the [Cloudflare](https://www.cloudflare.com) servers that [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel) connects to are in Warsaw and Frankfurt.
 
 > [!IMPORTANT]
-> By using this software, you agree to the terms of the [License agreement](https://sefinek.net/genshin-impact-reshade/docs?page=license_stella&referrer=stella_readme), [Terms of use](https://sefinek.net/genshin-impact-reshade/docs?page=tos#%F0%9F%93%8B-%C2%A71-terms-of-use&referrer=stella_readme) and [Rules](https://sefinek.net/genshin-impact-reshade/docs?page=tos#%E2%9C%85-%C2%A72-rules-etc?referrer=stella_readme).
+> By using this software, you agree to the terms of the [License agreement](https://sefinek.net/genshin-impact-reshade/docs?page=license_stella&referrer=stella_readme), [Terms of use](https://sefinek.net/genshin-impact-reshade/docs?page=tos#tos&referrer=stella_readme) and [Rules](https://sefinek.net/genshin-impact-reshade/docs?page=tos#rules&referrer=stella_readme).
 > In addition, we are not responsible for any potential bans in the game, although the chances of this happening **are negligible**.
 
 
@@ -121,8 +121,8 @@ The main server of [sefinek.net](https://sefinek.net/?referrer=stella_readme) is
 
 
 ## 📥 〢 How to install?
-1. [Fast Installation via InnoSetup](https://sefinek.net/genshin-impact-reshade/docs?page=installation#%E2%9C%94%EF%B8%8F-fast-installation-via-innosetup&referrer=stella_readme)
-2. [Manual Installation - Compilation via VSC 2022](https://sefinek.net/genshin-impact-reshade/docs?page=installation#%E2%9C%94%EF%B8%8F-manual-installation---compilation-via-vsc-2022&referrer=stella_readme)
+1. [Fast Installation via InnoSetup](https://sefinek.net/genshin-impact-reshade/docs?page=installation#installation-via-innosetup)
+2. [Manual Installation - Compilation via VSC 2022](https://sefinek.net/genshin-impact-reshade/docs?page=installation#comililation-via-vsc)
 
 ### 📝 » Note
 After the installation is complete, you should open the Stella Launcher and start the game by clicking on the **Start game** button.
