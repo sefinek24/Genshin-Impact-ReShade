@@ -53,7 +53,7 @@
 </div>
 
 
-## 📄 〢 Information <-- {#information} -->
+## 📄 〢 Information
 Please note that sharing game screenshots displaying your UID, visible shaders, or ReShade overlay may result in a game ban.
 If you plan to record a video of the game for platforms like YouTube, remember to hide or censor your UID and username to avoid being banned.
 
