@@ -132,21 +132,21 @@ that the game runs smoothly and looks its best.
 
 
 ## 🛠️ 〢 Tested game versions
-| 😻 Stella | 🎮 Game | 💻 System               | 📝 OS build | 😅 Status                                                                            | 📆 Date tested</div> |
-|:----------|---------|:------------------------|:------------|--------------------------------------------------------------------------------------|----------------------|
-| v-.-.-.-  | v4.3.0  | -                       | -           | [❓](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend)  | -                    |
-| v7.8.1.3  | v4.2.0  | MS Windows 10 Home 22H2 | 19045.3636  | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend) | November 08, 2023    |
-| v7.6.6.0  | v4.1.0  | MS Windows 10 Home 22H2 | 19045.3448  | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend) | September 27, 2023   |
-| v7.6.6.0  | v4.0.1  | MS Windows 10 Home 22H2 | 19045.3448  | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend) | September 12, 2023   |
-| v7.6.1.0  | v3.8.0  | MS Windows 11 Home 22H2 | 22621.1992  | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend) | July 31, 2023        |
-| N/A       | v3.8.0  | MS Windows 10 Home 22H2 | 19045.3155  | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend) | July 09, 2023        |
-| N/A       | v3.7.0  | MS Windows 10 Home 22H2 | 19045.3031  | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend) | May 24, 2023         |
-| N/A       | v3.6.0  |                         |             | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend)  | April 12, 2023       |
-| N/A       | v3.5.0  |                         |             | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend)  | March 01, 2023       |
-| N/A       | v3.4.0  |                         |             | [❌️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend) | January 18, 2023     |
-| N/A       | v3.3.0  |                         |             | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend)  | November 9, 2022     |
-| N/A       | v3.2.0  |                         |             | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend)  | November 2, 2022     |
-| N/A       | v3.1.0  |                         |             | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend)  | November 1, 2022     |
+| 😻 Stella | 🎮 Game | 💻 System            | 📝 OS build | 😅 Status                                                                            | 📆 Date tested</div> |
+|:----------|---------|:---------------------|:------------|--------------------------------------------------------------------------------------|----------------------|
+| v-.-.-.-  | v4.3.0  | -                    | -           | [❓](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend)  | -                    |
+| v7.8.1.3  | v4.2.0  | Windows 10 Home 22H2 | 19045.3636  | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend) | November 08, 2023    |
+| v7.6.6.0  | v4.1.0  | Windows 10 Home 22H2 | 19045.3448  | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend) | September 27, 2023   |
+| v7.6.6.0  | v4.0.1  | Windows 10 Home 22H2 | 19045.3448  | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend) | September 12, 2023   |
+| v7.6.1.0  | v3.8.0  | Windows 11 Home 22H2 | 22621.1992  | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend) | July 31, 2023        |
+| N/A       | v3.8.0  | Windows 10 Home 22H2 | 19045.3155  | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend) | July 09, 2023        |
+| N/A       | v3.7.0  | Windows 10 Home 22H2 | 19045.3031  | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend) | May 24, 2023         |
+| N/A       | v3.6.0  |                      |             | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend)  | April 12, 2023       |
+| N/A       | v3.5.0  |                      |             | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend)  | March 01, 2023       |
+| N/A       | v3.4.0  |                      |             | [❌️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend) | January 18, 2023     |
+| N/A       | v3.3.0  |                      |             | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend)  | November 9, 2022     |
+| N/A       | v3.2.0  |                      |             | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend)  | November 2, 2022     |
+| N/A       | v3.1.0  |                      |             | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend)  | November 1, 2022     |
 
 
 ## ⚙️ 〢 Recommended settings for game
