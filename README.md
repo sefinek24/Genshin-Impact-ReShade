@@ -97,7 +97,7 @@ The main server of [sefinek.net](https://sefinek.net/?referrer=stella_readme) is
 
 ## ✨ 〢 Requirements
 > [!NOTE]
-> Make sure your PC meets the following requirements before installing the mod.
+> Before installing the Stella Mod software, make sure that your computer meets the following requirements.
 
 | 🗝️ Your PC & Network                      | 📂 Required Dependencies                                                                                                                                                                                              |
 |:-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
