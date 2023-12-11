@@ -95,7 +95,6 @@ namespace StellaLauncher
                 $"* Debugger.IsAttached: {Debugger.IsAttached}\n" +
                 $"* AppPath: {AppPath}\n" +
                 $"* AppData: {AppData}\n" +
-                $"* FpsUnlockerCfgPath: {FpsUnlockerCfgPath}\n" +
                 $"* Language: {currentLang}");
 
             if (Debugger.IsAttached) Logger.Debug($"* CPU Serial Number {ComputerInfo.GetCpuSerialNumber()}");
