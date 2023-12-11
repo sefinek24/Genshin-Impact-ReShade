@@ -399,7 +399,7 @@ namespace StellaLauncher.Forms
 
 
         // ------- Start the game -------
-        // 1 = ReShade       + 3DMigoto      + FPS Unlocker  = 1 (default for patrons)
+        // 1 = ReShade       + 3DMigoto      + FPS Unlocker  = 1 (default for Stella Mod Plus)
         // 2 = ReShade       + 3DMigoto                      = 2
         // 6 = ReShade       + FPS Unlocker                  = 6 (default)
         // 4 = FPS Unlocker                                  = 4
