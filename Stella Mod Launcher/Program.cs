@@ -140,9 +140,6 @@ namespace StellaLauncher
             //     Environment.Exit(997890421);
             // }
 
-            // Check shortcut
-            Shortcut.Check();
-
 
             // Run
             try

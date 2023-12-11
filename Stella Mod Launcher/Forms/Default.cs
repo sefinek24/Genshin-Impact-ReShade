@@ -12,6 +12,7 @@ using StellaLauncher.Scripts;
 using StellaLauncher.Scripts.Forms;
 using StellaLauncher.Scripts.Forms.MainForm;
 using StellaLauncher.Scripts.Patrons;
+using Shortcut = StellaLauncher.Scripts.Shortcut;
 
 namespace StellaLauncher.Forms
 {
@@ -333,6 +334,9 @@ namespace StellaLauncher.Forms
                 MessageBox.Show($"Required file {fileName} was not found.\n\nReinstalling the application may be necessary.", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Environment.Exit(89675);
             }
+
+            // Check shortcut
+            Shortcut.Check();
 
             progressBar1.Value = 94;
 
