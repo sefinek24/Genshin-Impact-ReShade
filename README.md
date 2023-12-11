@@ -112,7 +112,7 @@ The main server of [sefinek.net](https://sefinek.net/?referrer=stella_readme) is
 ## 🔧 〢 Supported operating systems
 | 🌌 System       | 🔖 Version | 🙀 Status                                                                             | 🤔 Recommended?                                                                       |
 |-----------------|:-----------|:--------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------|
-| Windows 11      | 22H2       | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend)  | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend)   |
+| Windows 11      | 23H2       | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend)  | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend)   |
 | Windows 10      | 22H2       | [✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend)  | [️✔️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend) | 
 | Windows 8 / 8.1 |            | [🎯️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend) | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend)   | 
 | Windows 7       |            | [🎯️](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend) | [❌](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend)   | 
