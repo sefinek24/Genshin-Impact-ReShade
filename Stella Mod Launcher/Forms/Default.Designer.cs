@@ -70,6 +70,7 @@ namespace StellaLauncher.Forms
             this.PreparingPleaseWait = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.githubIco_Picturebox)).BeginInit();
@@ -90,6 +91,7 @@ namespace StellaLauncher.Forms
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Controls.Add(this.linkLabel3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.changeBg_LinkLabel);
             this.panel1.Controls.Add(this.close_Panel);
@@ -497,6 +499,17 @@ namespace StellaLauncher.Forms
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
             // 
+            // linkLabel3
+            // 
+            this.linkLabel3.ActiveLinkColor = System.Drawing.Color.DeepSkyBlue;
+            resources.ApplyResources(this.linkLabel3, "linkLabel3");
+            this.linkLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel3.ForeColor = System.Drawing.Color.Transparent;
+            this.linkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.UwU_LinkClicked);
+            // 
             // Default
             // 
             resources.ApplyResources(this, "$this");
@@ -607,6 +620,7 @@ namespace StellaLauncher.Forms
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel linkLabel3;
     }
 }
 

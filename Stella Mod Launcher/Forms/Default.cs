@@ -350,6 +350,9 @@ namespace StellaLauncher.Forms
 
             // Done (:
             Utils.HideProgressBar(false);
+
+            // 2024
+            status_Label.Text += @"[i] Happy New Year 2024! Thank you all for your trust ~~ Sefinek";
         }
 
         private void Exit_Click(object sender, EventArgs e)
@@ -549,6 +552,11 @@ namespace StellaLauncher.Forms
         {
             status_Label.Visible = !string.IsNullOrEmpty(status_Label.Text);
             Music.PlaySound("winxp", "balloon");
+        }
+
+        private void UwU_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Utils.OpenUrl("https://theannoyingsite.com/cat.mp4");
         }
     }
 }
