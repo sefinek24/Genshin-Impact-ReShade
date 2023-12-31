@@ -16,12 +16,12 @@ namespace StellaLauncher.Scripts.Forms.MainForm
             CheckIfExists(Program.InjectorPath);
             CheckIfExists(Program.ReShadePath);
 
-            if (!File.Exists(Program.FpsUnlockerCfgPath) && !Debugger.IsAttached) await FpsUnlockerCfg.RunAsync();
+            if (!File.Exists(Program.FpsUnlockerCfgPath)) await FpsUnlockerCfg.RunAsync();
         }
 
         private static void CheckIfExists(string filePath)
         {
-            if (!File.Exists(filePath) && !Debugger.IsAttached) Default._status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, filePath)}\n";
+            if (!File.Exists(filePath)) Default._status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, filePath)}\n";
         }
 
         public static void DeleteSetupAsync()

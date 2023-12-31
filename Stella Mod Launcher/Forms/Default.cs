@@ -9,6 +9,7 @@ using StellaLauncher.Forms.Other;
 using StellaLauncher.Models;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
+using StellaLauncher.Scripts.Download;
 using StellaLauncher.Scripts.Forms;
 using StellaLauncher.Scripts.Forms.MainForm;
 using StellaLauncher.Scripts.Patrons;
@@ -334,6 +335,9 @@ namespace StellaLauncher.Forms
                 MessageBox.Show($"Required file {fileName} was not found.\n\nReinstalling the application may be necessary.", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Environment.Exit(89675);
             }
+
+            // Check if ReShade.ini exists
+            await ReShadeIni.CheckIfExists();
 
             // Check shortcut
             Shortcut.Check();

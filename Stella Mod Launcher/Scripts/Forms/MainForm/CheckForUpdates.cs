@@ -3,7 +3,6 @@ using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using Newtonsoft.Json;
 using StellaLauncher.Forms;
@@ -87,34 +86,34 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 
                 Default._progressBar1.Value = 80;
                 // == Check new updates for ReShade.ini file ==
-                int resultInt = await ReShadeIni.CheckForUpdates();
-                switch (resultInt)
-                {
-                    case -2:
-                    {
-                        DialogResult msgBoxResult = MessageBox.Show(Resources.Default_TheReShadeIniFileCouldNotBeLocatedInYourGameFiles, Program.AppNameVer, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                // int resultInt = await ReShadeIni.CheckForUpdates();
+                //switch (resultInt)
+                //{
+                //    case -2:
+                //   {
+                //        DialogResult msgBoxResult = MessageBox.Show(Resources.Default_TheReShadeIniFileCouldNotBeLocatedInYourGameFiles, Program.AppNameVer, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                        int number = await ReShadeIni.Download(resultInt, Default.ResourcesPath, msgBoxResult);
-                        return number;
-                    }
+                //        int number = await ReShadeIni.Download(resultInt, Default.ResourcesPath, msgBoxResult);
+                //        return number;
+                //    }
 
-                    case 1:
-                    {
-                        DialogResult msgReply = MessageBox.Show(Resources.Default_AreYouSureWantToUpdateReShadeConfiguration, Program.AppNameVer, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                //    case 1:
+                //    {
+                //        DialogResult msgReply = MessageBox.Show(Resources.Default_AreYouSureWantToUpdateReShadeConfiguration, Program.AppNameVer, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
 
-                        if (msgReply == DialogResult.No || msgReply == DialogResult.Cancel)
-                        {
-                            Program.Logger.Info("The update of ReShade.ini has been cancelled by the user");
-                            MessageBox.Show(Resources.Default_ForSomeReasonYouDidNotGiveConsentForTheAutomaticUpdateOfTheReShadeFile, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                //        if (msgReply == DialogResult.No || msgReply == DialogResult.Cancel)
+                //       {
+                //            Program.Logger.Info("The update of ReShade.ini has been cancelled by the user");
+                //            MessageBox.Show(Resources.Default_ForSomeReasonYouDidNotGiveConsentForTheAutomaticUpdateOfTheReShadeFile, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
-                            Utils.HideProgressBar(true);
-                            return 1;
-                        }
+                //            Utils.HideProgressBar(true);
+                //            return 1;
+                //        }
 
-                        int number = await ReShadeIni.Download(resultInt, Default.ResourcesPath, DialogResult.Yes);
-                        return number;
-                    }
-                }
+                //        int number = await ReShadeIni.Download(resultInt, Default.ResourcesPath, DialogResult.Yes);
+                //        return number;
+                //    }
+                // }
 
 
                 // == For patrons ==

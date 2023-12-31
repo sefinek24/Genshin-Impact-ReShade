@@ -32,7 +32,7 @@ namespace StellaLauncher
         public static readonly string PrepareLauncher = Path.Combine(AppPath, "Configuration.exe");
         public static readonly string ReShadePath = Path.Combine(AppPath, "data", "reshade", "ReShade64.dll");
         public static readonly string InjectorPath = Path.Combine(AppPath, "data", "reshade", "inject64.exe");
-        public static readonly string FpsUnlockerExePath = Path.Combine(AppPath, "data", "unlocker", "unlockfps_clr.exe");
+        public static readonly string FpsUnlockerExePath = Path.Combine(AppPath, "data", "unlocker", "gen-fps-unlocker.exe");
         public static readonly string FpsUnlockerCfgPath = Path.Combine(AppPath, "data", "unlocker", "unlocker.config.json");
         public static readonly Icon Ico = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
 

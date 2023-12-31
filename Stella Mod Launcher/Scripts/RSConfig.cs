@@ -17,6 +17,7 @@ namespace StellaLauncher.Scripts
 
             string gameDir = await Utils.GetGame("giGameDir");
             string reShadePath = Path.Combine(gameDir, "ReShade.ini");
+            if (!File.Exists(reShadePath)) return null;
 
             // Presets
             string defaultPreset = Path.Combine(Default.ResourcesPath, "ReShade", "Presets", "1. Default preset - Medium settings.ini");

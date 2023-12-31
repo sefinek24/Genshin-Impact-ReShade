@@ -345,6 +345,15 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Downloaded the configuration file (unlocker.config.json) for FPS Unlocker.
+        /// </summary>
+        internal static string Default_DownloadedConfigFileForFPSUnlocker {
+            get {
+                return ResourceManager.GetString("Default_DownloadedConfigFileForFPSUnlocker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Downloaded ReShade.ini was not found in: {0}.
         /// </summary>
         internal static string Default_DownloadedReShadeIniWasNotFoundIn_ {
@@ -359,15 +368,6 @@ namespace StellaLauncher.Properties {
         internal static string Default_Downloading {
             get {
                 return ResourceManager.GetString("Default_Downloading", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Downloading the configuration file for FPS Unlocker.....
-        /// </summary>
-        internal static string Default_DownloadingConfigFileForFPSUnlocker {
-            get {
-                return ResourceManager.GetString("Default_DownloadingConfigFileForFPSUnlocker", resourceCulture);
             }
         }
         
@@ -520,6 +520,15 @@ namespace StellaLauncher.Properties {
         internal static string Default_Success {
             get {
                 return ResourceManager.GetString("Default_Success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successfully downloaded the ReShade.ini file!.
+        /// </summary>
+        internal static string Default_SuccessfullyDownloadedReShadeCfg {
+            get {
+                return ResourceManager.GetString("Default_SuccessfullyDownloadedReShadeCfg", resourceCulture);
             }
         }
         

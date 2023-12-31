@@ -493,8 +493,8 @@ Do you want to reconfigure Stella Mod in the Configuration Window?</value>
   <data name="Tools_DisableDiscordRPC" xml:space="preserve">
     <value>Disable Discord RPC</value>
   </data>
-  <data name="Default_DownloadingConfigFileForFPSUnlocker" xml:space="preserve">
-    <value>Downloading the configuration file for FPS Unlocker....</value>
+  <data name="Default_DownloadedConfigFileForFPSUnlocker" xml:space="preserve">
+    <value>Downloaded the configuration file (unlocker.config.json) for FPS Unlocker</value>
   </data>
   <data name="Program_WouldYouShareOpinionAboutStellaMod" xml:space="preserve">
     <value>Would you share your opinion about Stella Mod on trustpilot.com? I would be very grateful.</value>
@@ -539,6 +539,9 @@ Do you want to reconfigure Stella Mod in the Configuration Window?</value>
   </data>
   <data name="ReShadeIniUpdate_ReShadeIniWasNotFoundIn_" xml:space="preserve">
     <value>ReShade.ini was not found in: {0}</value>
+  </data>
+  <data name="Default_SuccessfullyDownloadedReShadeCfg" xml:space="preserve">
+    <value>Successfully downloaded the ReShade.ini file!</value>
   </data>
   <data name="Default_SuccessfullyUpdatedReShadeCfg" xml:space="preserve">
     <value>Successfully updated the ReShade.ini file!</value>

@@ -13,13 +13,8 @@ namespace StellaLauncher.Scripts.Download
     /// </summary>
     internal static class FpsUnlockerCfg
     {
-        /// <summary>
-        ///     Starts the process of downloading and updating the FPS unlocker config file.
-        /// </summary>
         public static async Task RunAsync()
         {
-            Default._status_Label.Text += $"[i] {Resources.Default_DownloadingConfigFileForFPSUnlocker}\n";
-
             Program.Logger.Info("Downloading config file for FPS Unlocker...");
 
             await StartDownload();
@@ -51,7 +46,7 @@ namespace StellaLauncher.Scripts.Download
                     File.WriteAllText(Program.FpsUnlockerCfgPath, updatedJson);
 
                     // Update the status label to indicate successful completion
-                    Default._status_Label.Text += $"[✓] {Resources.Default_Success}\n";
+                    Default._status_Label.Text += $"[✓] {Resources.Default_DownloadedConfigFileForFPSUnlocker}\n";
                     Program.Logger.Info("Done.");
                 }
                 else
