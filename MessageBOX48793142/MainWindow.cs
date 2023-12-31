@@ -83,13 +83,13 @@ public partial class MainWindow : Form
     private async void MeowButton_Click(object sender, EventArgs e)
     {
         Random random = new();
-        string mp3FilePath = Path.Combine("sound", $"meow{random.Next(1, 5)}.mp3");
+        string mp3FilePath = Path.Combine(Directory.GetCurrentDirectory(), "sound", $"meow{random.Next(1, 5)}.mp3");
 
         try
         {
             using AudioFileReader audioFile = new(mp3FilePath);
             using WaveChannel32 volumeStream = new(audioFile);
-            volumeStream.Volume = 0.46f;
+            volumeStream.Volume = 0.68f;
             using WaveOutEvent outputDevice = new();
             outputDevice.Init(volumeStream);
             outputDevice.Play();

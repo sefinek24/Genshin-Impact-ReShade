@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("Official launcher for Genshin Impact Stella Mod 2023 made by Sefinek.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Sefinek Inc.")]
-[assembly: AssemblyProduct("The best Genshin Impact mod pack with custom presets for ReShade and FPS Unlocker.")]
+[assembly: AssemblyProduct("The best Genshin Impact mod pack with custom presets for ReShade & FPS Unlocker and 3DMigoto.")]
 [assembly: AssemblyCopyright("Copyright 2023 © by Sefinek. All Rights Reserved.")]
 [assembly: AssemblyTrademark("© Sefinek Inc.")]
 [assembly: AssemblyCulture("")]
@@ -32,6 +32,6 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("7.9.2.0")]
-[assembly: AssemblyFileVersion("7.9.2.0")]
+[assembly: AssemblyVersion("7.9.3.0")]
+[assembly: AssemblyFileVersion("7.9.3.0")]
 [assembly: NeutralResourcesLanguage("en")]
