@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Genshin Stella Mod Launcher")]
-[assembly: AssemblyDescription("Official launcher for Genshin Impact Stella Mod 2023 made by Sefinek.")]
+[assembly: AssemblyDescription("Official launcher for Genshin Impact Stella Mod 2024 made by Sefinek.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Sefinek Inc.")]
 [assembly: AssemblyProduct("The best Genshin Impact mod pack with custom presets for ReShade & FPS Unlocker and 3DMigoto.")]
-[assembly: AssemblyCopyright("Copyright 2023 © by Sefinek. All Rights Reserved.")]
+[assembly: AssemblyCopyright("Copyright 2024 © by Sefinek. All Rights Reserved.")]
 [assembly: AssemblyTrademark("© Sefinek Inc.")]
 [assembly: AssemblyCulture("")]
 

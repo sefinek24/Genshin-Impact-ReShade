@@ -8,7 +8,7 @@
 ]]> -->
 
 <div align="center">
-    <h1 class="header">🌟 Genshin Impact Stella Mod 2023 🌟</h1>
+    <h1 class="header">🌟 Genshin Impact Stella Mod 2024 🌟</h1>
     <p>
         <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Assets/Images/Banners/rounded-corners/compressed.png" title="See preview">
             <img src="Assets/Images/Banners/rounded-corners/compressed.png" id="header-pic" alt="Header image">

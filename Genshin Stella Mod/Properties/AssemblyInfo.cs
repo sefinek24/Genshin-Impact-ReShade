@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Sefinek Inc.")]
 [assembly: AssemblyProduct("Genshin Stella Mod made by Sefinek")]
-[assembly: AssemblyCopyright("Copyright 2023 © by Sefinek. All Rights Reserved.")]
+[assembly: AssemblyCopyright("Copyright 2024 © by Sefinek. All Rights Reserved.")]
 [assembly: AssemblyTrademark("© Sefinek Inc.")]
 [assembly: AssemblyCulture("")]
 
