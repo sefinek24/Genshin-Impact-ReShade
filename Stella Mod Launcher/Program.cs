@@ -111,8 +111,6 @@ namespace StellaLauncher
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            MessageBox.Show($"ComputerInfo.GetHardDriveSerialNumber():\n\n{ComputerInfo.GetHardDriveSerialNumber()}");
-
             // if (RegionInfo.CurrentRegion.Name == "RU")
             // {
             //     Music.PlaySound("winxp", "battery-critical");
