@@ -352,7 +352,7 @@ namespace StellaLauncher.Forms
             Utils.HideProgressBar(false);
 
             // 2024
-            status_Label.Text += @"[i] Happy New Year 2024! Thank you all for your trust ~~ Sefinek";
+            // status_Label.Text += @"[i] Happy New Year 2024! Thank you all for your trust ~~ Sefinek";
         }
 
         private void Exit_Click(object sender, EventArgs e)
