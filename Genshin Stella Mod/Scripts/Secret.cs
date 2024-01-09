@@ -36,7 +36,7 @@ namespace GenshinStellaMod.Scripts
                     List<KeyValuePair<string, string>> postData = new List<KeyValuePair<string, string>>
                     {
                         new KeyValuePair<string, string>("token", mainPcKey),
-                        new KeyValuePair<string, string>("MACAddress", ComputerInfo.GetMacAddress()),
+                        // new KeyValuePair<string, string>("MACAddress", ComputerInfo.GetMacAddress()),
                         new KeyValuePair<string, string>("motherboardId", ComputerInfo.GetMotherboardSerialNumber()),
                         new KeyValuePair<string, string>("cpuId", ComputerInfo.GetCpuSerialNumber()),
                         new KeyValuePair<string, string>("diskId", ComputerInfo.GetHardDriveSerialNumber())

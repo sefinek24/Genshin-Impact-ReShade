@@ -74,20 +74,20 @@ namespace GenshinStellaMod
 
             Console.ForegroundColor = ConsoleColor.White;
             bool isSubscriber = Data.IsUserMyPatron();
-            Console.WriteLine("⠀  ⠀⠀⠀⠀⠀⠀⠀ ⢀⣤⡶⢶⣦⡀");
-            Console.WriteLine("⠀  ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿");
-            Console.WriteLine($"⠀  ⠀⠀⣿⡄⠀⠀⠀⠈⠀⠀⠀⠀⣾⡿                            {(!isSubscriber ? "Genshin Impact Stella Mod 2024" : "Genshin Impact Stella Mod Plus+ 2024")}");
-            Console.WriteLine($"⠀  ⠀⠀⠹⣿⣦⡀⠀⠀⠀⠀⢀⣾⣿                             {(!isSubscriber ? "        Start the game" : "    ~ Release for subscribers ~")}");
-            Console.WriteLine("⠀  ⠀⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿");
-            Console.WriteLine("⠀⠀  ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟");
-            Console.WriteLine("⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀");
-            Console.WriteLine("⠀⠀⠀  ⠀⠀⡟⢦⡀⠇⠀⠀⣀⠞⠀⠀⠘⡀⢀⡠⠚⣉⠤⠂⠀⠀⠀⠈⠙⢦⡀");
-            Console.WriteLine("⠀⠀⠀  ⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆      » Mod version          : v" + (args[0].EndsWith(".0") ? args[0].Substring(0, args[0].Length - 2) : args[0]));
-            Console.WriteLine("⠀⠀  ⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆    » ReShade version      : v" + args[1]);
-            Console.WriteLine("  ⠀⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇     » FPS Unlocker version : v" + args[2]);
-            Console.WriteLine("  ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉⠀⠀⠀⠀⣠⠟");
-            Console.WriteLine("  ⠀⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⡴⠟⠁                                         ~ Made by Sefinek");
-            Console.WriteLine("=========================================================================================\n");
+            Console.WriteLine("⠀   ⠀⠀⠀⠀⠀⠀⠀ ⢀⣤⡶⢶⣦⡀");
+            Console.WriteLine("⠀   ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿");
+            Console.WriteLine($"⠀   ⠀⠀⣿⡄⠀⠀⠀⠈⠀⠀⠀⠀⣾⡿                                 {(!isSubscriber ? "Genshin Impact Stella Mod 2024" : "Genshin Impact Stella Mod Plus+ 2024")}");
+            Console.WriteLine($"⠀   ⠀⠀⠹⣿⣦⡀⠀⠀⠀⠀⢀⣾⣿                                  {(!isSubscriber ? "        Start the game" : "    ~ Release for subscribers ~")}");
+            Console.WriteLine("⠀   ⠀⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿");
+            Console.WriteLine("⠀⠀   ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟");
+            Console.WriteLine("⠀⠀ ⠀  ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀");
+            Console.WriteLine("⠀⠀ ⠀  ⠀⠀⡟⢦⡀⠇⠀⠀⣀⠞⠀⠀⠘⡀⢀⡠⠚⣉⠤⠂⠀⠀⠀⠈⠙⢦⡀");
+            Console.WriteLine("⠀⠀ ⠀  ⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆           » Mod version          : v" + (args[0].EndsWith(".0") ? args[0].Substring(0, args[0].Length - 2) : args[0]));
+            Console.WriteLine("⠀⠀   ⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆         » ReShade version      : v" + args[1]);
+            Console.WriteLine("   ⠀⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇          » FPS Unlocker version : v" + args[2]);
+            Console.WriteLine("   ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉⠀⠀⠀⠀⣠⠟");
+            Console.WriteLine("   ⠀⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⡴⠟⠁                                   ~ https://genshin.sefinek.net");
+            Console.WriteLine("===============================================================================================\n");
 
             /***** 1 *****/
             Console.ForegroundColor = ConsoleColor.Blue;
@@ -169,6 +169,8 @@ namespace GenshinStellaMod
                             MessageBox.Show(
                                 $"An error occurred while verifying the benefits of your subscription. The server informed the client that it sent an invalid request. If you launch the game after closing this message, you will be playing the free version. Please contact Sefinek for more information. Error details can be found below.\n\n{remote.Message}",
                                 AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                            Environment.Exit(784121);
                             break;
                     }
                 }
