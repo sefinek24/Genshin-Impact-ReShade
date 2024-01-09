@@ -12,13 +12,7 @@ namespace SefinAntiCheat
 		public static readonly string AppVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
 		/// <summary>
-		///    The
-		///    main
-		///    entry
-		///    point
-		///    for
-		///    the
-		///    application.
+		///    The main entry point for the application.
 		/// </summary>
 		[STAThread]
 		private static void Main()
