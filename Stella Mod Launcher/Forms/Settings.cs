@@ -192,7 +192,8 @@ namespace StellaLauncher.Forms
 			string currentPreset = await RsConfig.Prepare();
 			if (currentPreset == null) return;
 
-			MessageBox.Show($"Successfully updated the ReShade.ini file. Paths to resource locations have been changed to current, and similar changes have been made.\n\nCurrent preset:\n{Path.GetFileNameWithoutExtension(currentPreset).Trim()}",
+			MessageBox.Show(
+				$"Successfully updated the ReShade.ini file. Paths to resource locations have been changed to current, and similar changes have been made.\n\nCurrent preset:\n{Path.GetFileNameWithoutExtension(currentPreset).Trim()}",
 				Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 			Program.Logger.Info($"Updated ReShade config.\nCurrent preset: {currentPreset}");
