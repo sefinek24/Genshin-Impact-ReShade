@@ -31,7 +31,6 @@ dotnet_naming_rule.method_rule.style = upper_camel_case_underscore_tolerant_styl
 dotnet_naming_rule.method_rule.symbols = method_symbols
 dotnet_naming_rule.public_fields_rule.import_to_resharper = as_predefined
 dotnet_naming_rule.public_fields_rule.resharper_style = _ + aaBb_AaBb, AaBb
-dotnet_naming_rule.public_fields_rule.severity = warning
 dotnet_naming_rule.public_fields_rule.style = lower_camel_case_underscore_tolerant_style
 dotnet_naming_rule.public_fields_rule.symbols = public_fields_symbols
 dotnet_naming_rule.static_readonly_rule.import_to_resharper = as_predefined
