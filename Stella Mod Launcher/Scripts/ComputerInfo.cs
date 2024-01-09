@@ -21,12 +21,8 @@ namespace StellaLauncher.Scripts
                 using (ManagementObjectSearcher searcher = new ManagementObjectSearcher(query))
                 {
                     foreach (ManagementObject obj in searcher.Get().Cast<ManagementObject>())
-                    {
                         if (wmiMustBeTrue == null || obj[wmiMustBeTrue]?.ToString() == "True")
-                        {
                             return obj[wmiProperty]?.ToString() ?? string.Empty;
-                        }
-                    }
                 }
             }
             catch (ManagementException ex)
