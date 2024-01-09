@@ -1,5 +1,5 @@
 <div align="center">
-   <h1>📝 » Semantic Versioning 2.0.0</h1>
+   <h1>Semantic Versioning 2.0.0</h1>
    [<a href="https://semver.org">EN</a>]
    [<a href="https://semver.org/lang/pl">PL</a>]
    [<a href="https://semver.org/lang/de">DE</a>]
