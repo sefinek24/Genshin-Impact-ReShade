@@ -30,7 +30,7 @@ namespace DeviceIdentifier
             Console.WriteLine($"Hard drive serial number: {ComputerInfo.GetHardDriveSerialNumber()}");
 
 
-            Console.WriteLine($"\n\nPress [ENTER] to exit this program...");
+            Console.WriteLine("\n\nPress [ENTER] to exit this program...");
             Console.ReadLine();
         }
     }
