@@ -42,7 +42,7 @@ namespace StellaLauncher
         // Web
         public static readonly string UserAgent = $"Mozilla/5.0 (compatible; StellaLauncher/{ProductVersion}; +{AppWebsiteSub}) WebClient/0.1";
 
-        private static readonly Lazy<HttpClient> WbClient = new Lazy<HttpClient>(() =>
+        public static readonly Lazy<HttpClient> WbClient = new Lazy<HttpClient>(() =>
         {
             HttpClient httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.UserAgent.ParseAdd($"Mozilla/5.0 (compatible; StellaLauncher/{ProductVersion}; +{AppWebsiteSub}) HttpClient/0.2");
