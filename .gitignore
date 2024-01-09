@@ -39,13 +39,17 @@ Configuration/obj
 Prepare Stella/bin
 Prepare Stella/obj
 
+# Information 48793142
+Information 48793142/bin
+Information 48793142/obj
+
+# Device Identifier
+Device Identifier/bin
+Device Identifier/obj
+
 # Sefin Anti Cheat Soultion
 Sefin Anti Cheat/bin
 Sefin Anti Cheat/obj
-
-# 48793142 Soultion
-Information 48793142/bin
-Information 48793142/obj
 
 # Stella Mod Plus
 data/Patrons
@@ -56,9 +60,6 @@ data/presets/Other/Previous versions
 data/presets/3. Only for patrons
 data/presets/3. Only for patrons/*.ini
 
-# InnoSetup
-InnoSetup/Output/*.exe
-
 # Win App Packaging Project
 Win App Packaging Project/AppPackages
 Win App Packaging Project/bin
@@ -68,6 +69,11 @@ Win App Packaging Project/obj/Release
 Win App Packaging Project/obj/x64
 Win App Packaging Project/obj/x86
 Win App Packaging Project/obj/project.nuget
+
+# InnoSetup
+InnoSetup/Output/*.exe
+
+
 
 # Configs
 .eslintrc.js

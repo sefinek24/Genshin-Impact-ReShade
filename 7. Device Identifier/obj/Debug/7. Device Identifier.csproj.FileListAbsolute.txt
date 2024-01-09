@@ -1,7 +1,0 @@
-C:\GitHub\VS\Stella\Genshin-Impact-ReShade\7. Device Identifier\obj\Debug\7. Device Identifier.csproj.AssemblyReference.cache
-C:\GitHub\VS\Stella\Genshin-Impact-ReShade\7. Device Identifier\obj\Debug\7. Device Identifier.csproj.CoreCompileInputs.cache
-C:\GitHub\VS\Stella\Genshin-Impact-ReShade\7. Device Identifier\bin\Debug\Device Identifier.exe.config
-C:\GitHub\VS\Stella\Genshin-Impact-ReShade\7. Device Identifier\bin\Debug\Device Identifier.exe
-C:\GitHub\VS\Stella\Genshin-Impact-ReShade\7. Device Identifier\bin\Debug\Device Identifier.pdb
-C:\GitHub\VS\Stella\Genshin-Impact-ReShade\7. Device Identifier\obj\Debug\Device Identifier.exe
-C:\GitHub\VS\Stella\Genshin-Impact-ReShade\7. Device Identifier\obj\Debug\Device Identifier.pdb
