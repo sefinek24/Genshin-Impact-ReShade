@@ -1,10 +1,14 @@
 # Default
 .vs
+.idea
 .idea/shelf/
 .idea/workspace.xml
 *.wapproj.user
 *.assets.cache
 *.cache
+*.bin
+*.patrons
+*.stellamodplus
 
 # Editor-based HTTP Client requests
 .idea/httpRequests/
@@ -71,9 +75,8 @@ Win App Packaging Project/obj/x86
 Win App Packaging Project/obj/project.nuget
 
 # InnoSetup
-InnoSetup/Output/*.exe
-
-
+InnoSetup/*.exe
+InnoSetup/Output
 
 # Configs
 .eslintrc.js
