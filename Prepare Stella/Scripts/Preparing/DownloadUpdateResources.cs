@@ -9,70 +9,70 @@ using PrepareStella.Models;
 
 namespace PrepareStella.Scripts.Preparing
 {
-    internal static class DownloadUpdateResources
-    {
-        public static async Task RunAsync()
-        {
-            string resourcesGlobalPath = Program.ResourcesGlobal;
+	internal static class DownloadUpdateResources
+	{
+		public static async Task RunAsync()
+		{
+			string resourcesGlobalPath = Program.ResourcesGlobal;
 
-            if (!Directory.Exists(resourcesGlobalPath))
-            {
-                Directory.CreateDirectory(resourcesGlobalPath);
-                Console.WriteLine($@"Created folder: {resourcesGlobalPath}");
-            }
-            else
-            {
-                Console.WriteLine($@"Found: {resourcesGlobalPath}");
-            }
+			if (!Directory.Exists(resourcesGlobalPath))
+			{
+				Directory.CreateDirectory(resourcesGlobalPath);
+				Console.WriteLine($@"Created folder: {resourcesGlobalPath}");
+			}
+			else
+			{
+				Console.WriteLine($@"Found: {resourcesGlobalPath}");
+			}
 
-            // Checking current version of resources
-            Console.WriteLine(@"Checking current version of resources...");
-            using (WebClient webClient = new WebClient())
-            {
-                webClient.Headers.Add("User-Agent", Start.UserAgent);
-                string responseContent = await webClient.DownloadStringTaskAsync($"{Start.WebApi}/genshin-stella-mod/version/app/launcher/resources");
-                StellaResources json = JsonConvert.DeserializeObject<StellaResources>(responseContent);
+			// Checking current version of resources
+			Console.WriteLine(@"Checking current version of resources...");
+			using (WebClient webClient = new WebClient())
+			{
+				webClient.Headers.Add("User-Agent", Start.UserAgent);
+				string responseContent = await webClient.DownloadStringTaskAsync($"{Start.WebApi}/genshin-stella-mod/version/app/launcher/resources");
+				StellaResources json = JsonConvert.DeserializeObject<StellaResources>(responseContent);
 
-                // Deleting existing resources zip file
-                string zipPath = Path.Combine(resourcesGlobalPath, "Temp files", $"Stella Mod Resources - v{json.Message}.zip");
-                if (!Directory.Exists(Path.GetDirectoryName(zipPath))) Directory.CreateDirectory(Path.GetDirectoryName(zipPath) ?? string.Empty);
-                if (File.Exists(zipPath))
-                {
-                    Console.WriteLine($@"Deleting {zipPath}...");
-                    File.Delete(zipPath);
-                    Start.Logger.Info($"Deleted {zipPath}");
-                }
+				// Deleting existing resources zip file
+				string zipPath = Path.Combine(resourcesGlobalPath, "Temp files", $"Stella Mod Resources - v{json.Message}.zip");
+				if (!Directory.Exists(Path.GetDirectoryName(zipPath))) Directory.CreateDirectory(Path.GetDirectoryName(zipPath) ?? string.Empty);
+				if (File.Exists(zipPath))
+				{
+					Console.WriteLine($@"Deleting {zipPath}...");
+					File.Delete(zipPath);
+					Start.Logger.Info($"Deleted {zipPath}");
+				}
 
-                // Downloading resources zip file
-                Console.WriteLine(@"Downloading resources from GitHub...");
-                using (HttpClient httpClient = new HttpClient())
-                {
-                    httpClient.DefaultRequestHeaders.Add("User-Agent", Start.UserAgent);
+				// Downloading resources zip file
+				Console.WriteLine(@"Downloading resources from GitHub...");
+				using (HttpClient httpClient = new HttpClient())
+				{
+					httpClient.DefaultRequestHeaders.Add("User-Agent", Start.UserAgent);
 
-                    using (Stream stream = await httpClient.GetStreamAsync("https://github.com/sefinek24/Genshin-Stella-Resources/releases/latest/download/resources.zip"))
-                    using (FileStream fs = File.Create(zipPath))
-                    {
-                        await stream.CopyToAsync(fs);
-                    }
-                }
+					using (Stream stream = await httpClient.GetStreamAsync("https://github.com/sefinek24/Genshin-Stella-Resources/releases/latest/download/resources.zip"))
+					using (FileStream fs = File.Create(zipPath))
+					{
+						await stream.CopyToAsync(fs);
+					}
+				}
 
-                // Unpacking resources
-                Console.WriteLine(@"Unpacking resources...");
-                using (ZipArchive archive = ZipFile.OpenRead(zipPath))
-                {
-                    foreach (ZipArchiveEntry entry in archive.Entries)
-                    {
-                        string fullPath = Path.Combine(resourcesGlobalPath, entry.FullName);
-                        if (entry.Name == "")
-                        {
-                            Directory.CreateDirectory(Path.GetDirectoryName(fullPath));
-                            continue;
-                        }
+				// Unpacking resources
+				Console.WriteLine(@"Unpacking resources...");
+				using (ZipArchive archive = ZipFile.OpenRead(zipPath))
+				{
+					foreach (ZipArchiveEntry entry in archive.Entries)
+					{
+						string fullPath = Path.Combine(resourcesGlobalPath, entry.FullName);
+						if (entry.Name == "")
+						{
+							Directory.CreateDirectory(Path.GetDirectoryName(fullPath));
+							continue;
+						}
 
-                        await Task.Run(() => entry.ExtractToFile(fullPath, true));
-                    }
-                }
-            }
-        }
-    }
+						await Task.Run(() => entry.ExtractToFile(fullPath, true));
+					}
+				}
+			}
+		}
+	}
 }

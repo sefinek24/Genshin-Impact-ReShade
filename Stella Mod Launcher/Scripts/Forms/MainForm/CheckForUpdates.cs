@@ -13,176 +13,176 @@ using StellaLauncher.Scripts.Patrons;
 
 namespace StellaLauncher.Scripts.Forms.MainForm
 {
-    internal static class CheckForUpdates
-    {
-        public static async Task<int> Analyze()
-        {
-            Default._updates_LinkLabel.LinkColor = Color.White;
-            Default._updates_LinkLabel.Text = Resources.Default_CheckingForUpdates;
+	internal static class CheckForUpdates
+	{
+		public static async Task<int> Analyze()
+		{
+			Default._updates_LinkLabel.LinkColor = Color.White;
+			Default._updates_LinkLabel.Text = Resources.Default_CheckingForUpdates;
 
-            TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
-            Program.Logger.Info("Checking for new updates...");
+			TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
+			Program.Logger.Info("Checking for new updates...");
 
-            try
-            {
-                string json = await Program.SefinWebClient.GetStringAsync($"{Program.WebApi}/genshin-stella-mod/version/app/launcher");
-                StellaApiVersion res = JsonConvert.DeserializeObject<StellaApiVersion>(json);
+			try
+			{
+				string json = await Program.SefinWebClient.GetStringAsync($"{Program.WebApi}/genshin-stella-mod/version/app/launcher");
+				StellaApiVersion res = JsonConvert.DeserializeObject<StellaApiVersion>(json);
 
-                string remoteVersion = res.Launcher.Version;
-                DateTime remoteVerDate = DateTime.Parse(res.Launcher.ReleaseDate, null, DateTimeStyles.RoundtripKind).ToUniversalTime().ToLocalTime();
-
-
-                Default._progressBar1.Value = 62;
-                // == Major release ==
-                if (Program.AppVersion[0] != remoteVersion[0])
-                {
-                    Default.UpdateIsAvailable = true;
-
-                    MajorRelease.Run(remoteVersion, remoteVerDate);
-                    return 1;
-                }
+				string remoteVersion = res.Launcher.Version;
+				DateTime remoteVerDate = DateTime.Parse(res.Launcher.ReleaseDate, null, DateTimeStyles.RoundtripKind).ToUniversalTime().ToLocalTime();
 
 
-                Default._progressBar1.Value = 68;
-                // == Normal release ==
-                if (Program.AppVersion != remoteVersion)
-                {
-                    Default.UpdateIsAvailable = true;
+				Default._progressBar1.Value = 62;
+				// == Major release ==
+				if (Program.AppVersion[0] != remoteVersion[0])
+				{
+					Default.UpdateIsAvailable = true;
 
-                    NormalRelease.Run(remoteVersion, remoteVerDate);
-                    return 1;
-                }
-
-
-                Default._progressBar1.Value = 74;
-                // == Check new updates of resources ==
-                if (!Secret.IsMyPatron)
-                {
-                    string jsonFile = Path.Combine(Default.ResourcesPath, "data.json");
-                    if (!File.Exists(jsonFile))
-                    {
-                        Default._status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, jsonFile)}\n";
-                        Program.Logger.Error($"File {jsonFile} was not found.");
-
-                        Utils.HideProgressBar(true);
-                        return -1;
-                    }
-
-                    string jsonContent = File.ReadAllText(jsonFile);
-                    LocalResources data = JsonConvert.DeserializeObject<LocalResources>(jsonContent);
-
-                    string resJson = await Program.SefinWebClient.GetStringAsync($"{Program.WebApi}/genshin-stella-mod/version/app/launcher/resources");
-                    StellaResources resourcesRes = JsonConvert.DeserializeObject<StellaResources>(resJson);
-
-                    if (data.Version != resourcesRes.Message)
-                    {
-                        Default.UpdateIsAvailable = true;
-
-                        DownloadResources.Run(data.Version, resourcesRes.Message, resourcesRes.Date);
-                        return 1;
-                    }
-                }
+					MajorRelease.Run(remoteVersion, remoteVerDate);
+					return 1;
+				}
 
 
-                Default._progressBar1.Value = 80;
-                // == Check new updates for ReShade.ini file ==
-                // int resultInt = await ReShadeIni.CheckForUpdates();
-                //switch (resultInt)
-                //{
-                //    case -2:
-                //   {
-                //        DialogResult msgBoxResult = MessageBox.Show(Resources.Default_TheReShadeIniFileCouldNotBeLocatedInYourGameFiles, Program.AppNameVer, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+				Default._progressBar1.Value = 68;
+				// == Normal release ==
+				if (Program.AppVersion != remoteVersion)
+				{
+					Default.UpdateIsAvailable = true;
 
-                //        int number = await ReShadeIni.Download(resultInt, Default.ResourcesPath, msgBoxResult);
-                //        return number;
-                //    }
-
-                //    case 1:
-                //    {
-                //        DialogResult msgReply = MessageBox.Show(Resources.Default_AreYouSureWantToUpdateReShadeConfiguration, Program.AppNameVer, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-
-                //        if (msgReply == DialogResult.No || msgReply == DialogResult.Cancel)
-                //       {
-                //            Program.Logger.Info("The update of ReShade.ini has been cancelled by the user");
-                //            MessageBox.Show(Resources.Default_ForSomeReasonYouDidNotGiveConsentForTheAutomaticUpdateOfTheReShadeFile, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Stop);
-
-                //            Utils.HideProgressBar(true);
-                //            return 1;
-                //        }
-
-                //        int number = await ReShadeIni.Download(resultInt, Default.ResourcesPath, DialogResult.Yes);
-                //        return number;
-                //    }
-                // }
+					NormalRelease.Run(remoteVersion, remoteVerDate);
+					return 1;
+				}
 
 
-                // == For patrons ==
-                if (Secret.IsMyPatron)
-                {
-                    int found = await CheckForUpdatesOfBenefits.Analyze();
-                    if (found == 1)
-                    {
-                        Labels.HideStartGameBtns();
+				Default._progressBar1.Value = 74;
+				// == Check new updates of resources ==
+				if (!Secret.IsMyPatron)
+				{
+					string jsonFile = Path.Combine(Default.ResourcesPath, "data.json");
+					if (!File.Exists(jsonFile))
+					{
+						Default._status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, jsonFile)}\n";
+						Program.Logger.Error($"File {jsonFile} was not found.");
 
-                        Default._updates_LinkLabel.LinkColor = Color.Cyan;
-                        Default._updates_LinkLabel.Text = Resources.Default_UpdatingBenefits;
-                        Default._updateIco_PictureBox.Image = Resources.icons8_download_from_the_cloud;
-                        Utils.RemoveClickEvent(Default._updates_LinkLabel);
-                        return found;
-                    }
-                }
+						Utils.HideProgressBar(true);
+						return -1;
+					}
+
+					string jsonContent = File.ReadAllText(jsonFile);
+					LocalResources data = JsonConvert.DeserializeObject<LocalResources>(jsonContent);
+
+					string resJson = await Program.SefinWebClient.GetStringAsync($"{Program.WebApi}/genshin-stella-mod/version/app/launcher/resources");
+					StellaResources resourcesRes = JsonConvert.DeserializeObject<StellaResources>(resJson);
+
+					if (data.Version != resourcesRes.Message)
+					{
+						Default.UpdateIsAvailable = true;
+
+						DownloadResources.Run(data.Version, resourcesRes.Message, resourcesRes.Date);
+						return 1;
+					}
+				}
 
 
-                // == Not found any new updates ==
-                Default._updates_LinkLabel.Text = Resources.Default_CheckForUpdates;
-                Default._updateIco_PictureBox.Image = Resources.icons8_available_updates;
+				Default._progressBar1.Value = 80;
+				// == Check new updates for ReShade.ini file ==
+				// int resultInt = await ReShadeIni.CheckForUpdates();
+				//switch (resultInt)
+				//{
+				//    case -2:
+				//   {
+				//        DialogResult msgBoxResult = MessageBox.Show(Resources.Default_TheReShadeIniFileCouldNotBeLocatedInYourGameFiles, Program.AppNameVer, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                Default._version_LinkLabel.Text = $@"v{(Program.AppVersion == Program.ProductVersion ? Program.AppVersion : $"{Program.ProductVersion}-dprp")}";
+				//        int number = await ReShadeIni.Download(resultInt, Default.ResourcesPath, msgBoxResult);
+				//        return number;
+				//    }
 
-                Utils.RemoveClickEvent(Default._updates_LinkLabel);
-                Default._updates_LinkLabel.Click += CheckUpdates_Click;
+				//    case 1:
+				//    {
+				//        DialogResult msgReply = MessageBox.Show(Resources.Default_AreYouSureWantToUpdateReShadeConfiguration, Program.AppNameVer, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
 
-                Default.UpdateIsAvailable = false;
-                Program.Logger.Info($"Not found any new updates. AppVersion v{Program.AppVersion}; ProductVersion v{Program.ProductVersion};");
+				//        if (msgReply == DialogResult.No || msgReply == DialogResult.Cancel)
+				//       {
+				//            Program.Logger.Info("The update of ReShade.ini has been cancelled by the user");
+				//            MessageBox.Show(Resources.Default_ForSomeReasonYouDidNotGiveConsentForTheAutomaticUpdateOfTheReShadeFile, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
-                Default._progressBar1.Value = 84;
-                TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress);
+				//            Utils.HideProgressBar(true);
+				//            return 1;
+				//        }
 
-                Utils.ShowStartGameBts();
-                return 0;
-            }
-            catch (Exception e)
-            {
-                Default.UpdateIsAvailable = false;
+				//        int number = await ReShadeIni.Download(resultInt, Default.ResourcesPath, DialogResult.Yes);
+				//        return number;
+				//    }
+				// }
 
-                Default._updates_LinkLabel.LinkColor = Color.Red;
-                Default._updates_LinkLabel.Text = Resources.Default_OhhSomethingWentWrong;
-                Default._status_Label.Text += $"[x] {e.Message}\n";
 
-                Program.Logger.Error(string.Format(Resources.Default_SomethingWentWrongWhileCheckingForNewUpdates, e));
-                Utils.HideProgressBar(true);
-                return -1;
-            }
-        }
+				// == For patrons ==
+				if (Secret.IsMyPatron)
+				{
+					int found = await CheckForUpdatesOfBenefits.Analyze();
+					if (found == 1)
+					{
+						Labels.HideStartGameBtns();
 
-        public static async void CheckUpdates_Click(object sender, EventArgs e)
-        {
-            Music.PlaySound("winxp", "hardware_insert");
-            int update = await Analyze();
+						Default._updates_LinkLabel.LinkColor = Color.Cyan;
+						Default._updates_LinkLabel.Text = Resources.Default_UpdatingBenefits;
+						Default._updateIco_PictureBox.Image = Resources.icons8_download_from_the_cloud;
+						Utils.RemoveClickEvent(Default._updates_LinkLabel);
+						return found;
+					}
+				}
 
-            if (update == -1)
-            {
-                Music.PlaySound("winxp", "hardware_fail");
-                return;
-            }
 
-            if (update != 0) return;
+				// == Not found any new updates ==
+				Default._updates_LinkLabel.Text = Resources.Default_CheckForUpdates;
+				Default._updateIco_PictureBox.Image = Resources.icons8_available_updates;
 
-            Music.PlaySound("winxp", "hardware_remove");
+				Default._version_LinkLabel.Text = $@"v{(Program.AppVersion == Program.ProductVersion ? Program.AppVersion : $"{Program.ProductVersion}-dprp")}";
 
-            Default._updates_LinkLabel.LinkColor = Color.LawnGreen;
-            Default._updates_LinkLabel.Text = Resources.Default_YouHaveTheLatestVersion;
-            Default._updateIco_PictureBox.Image = Resources.icons8_available_updates;
-        }
-    }
+				Utils.RemoveClickEvent(Default._updates_LinkLabel);
+				Default._updates_LinkLabel.Click += CheckUpdates_Click;
+
+				Default.UpdateIsAvailable = false;
+				Program.Logger.Info($"Not found any new updates. AppVersion v{Program.AppVersion}; ProductVersion v{Program.ProductVersion};");
+
+				Default._progressBar1.Value = 84;
+				TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress);
+
+				Utils.ShowStartGameBts();
+				return 0;
+			}
+			catch (Exception e)
+			{
+				Default.UpdateIsAvailable = false;
+
+				Default._updates_LinkLabel.LinkColor = Color.Red;
+				Default._updates_LinkLabel.Text = Resources.Default_OhhSomethingWentWrong;
+				Default._status_Label.Text += $"[x] {e.Message}\n";
+
+				Program.Logger.Error(string.Format(Resources.Default_SomethingWentWrongWhileCheckingForNewUpdates, e));
+				Utils.HideProgressBar(true);
+				return -1;
+			}
+		}
+
+		public static async void CheckUpdates_Click(object sender, EventArgs e)
+		{
+			Music.PlaySound("winxp", "hardware_insert");
+			int update = await Analyze();
+
+			if (update == -1)
+			{
+				Music.PlaySound("winxp", "hardware_fail");
+				return;
+			}
+
+			if (update != 0) return;
+
+			Music.PlaySound("winxp", "hardware_remove");
+
+			Default._updates_LinkLabel.LinkColor = Color.LawnGreen;
+			Default._updates_LinkLabel.Text = Resources.Default_YouHaveTheLatestVersion;
+			Default._updateIco_PictureBox.Image = Resources.icons8_available_updates;
+		}
+	}
 }

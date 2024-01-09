@@ -8,66 +8,66 @@ using StellaLauncher.Properties;
 
 namespace StellaLauncher.Scripts.Forms
 {
-    internal static class Music
-    {
-        private static readonly Random Random = new Random();
+	internal static class Music
+	{
+		private static readonly Random Random = new Random();
 
-        public static async Task PlayBg()
-        {
-            if (Program.Settings.ReadInt("Launcher", "EnableMusic", 1) == 0 || Debugger.IsAttached) return;
+		public static async Task PlayBg()
+		{
+			if (Program.Settings.ReadInt("Launcher", "EnableMusic", 1) == 0 || Debugger.IsAttached) return;
 
-            string wavPath = GetRandomBgWavPath();
-            if (string.IsNullOrEmpty(wavPath)) return;
+			string wavPath = GetRandomBgWavPath();
+			if (string.IsNullOrEmpty(wavPath)) return;
 
-            await Task.Run(() => PlaySoundAsync(wavPath, 0.76f));
-        }
+			await Task.Run(() => PlaySoundAsync(wavPath, 0.76f));
+		}
 
-        private static string GetRandomBgWavPath()
-        {
-            int randomBgNumber = Random.Next(1, 6 + 1);
-            string wavPath = Path.Combine(Program.AppPath, "data", "sounds", "bg", $"{randomBgNumber}.wav");
-            return File.Exists(wavPath) ? wavPath : null;
-        }
+		private static string GetRandomBgWavPath()
+		{
+			int randomBgNumber = Random.Next(1, 6 + 1);
+			string wavPath = Path.Combine(Program.AppPath, "data", "sounds", "bg", $"{randomBgNumber}.wav");
+			return File.Exists(wavPath) ? wavPath : null;
+		}
 
-        public static void PlaySound(string dir, string fileName)
-        {
-            if (Program.Settings.ReadInt("Launcher", "EnableBgSounds", 1) == 0) return;
+		public static void PlaySound(string dir, string fileName)
+		{
+			if (Program.Settings.ReadInt("Launcher", "EnableBgSounds", 1) == 0) return;
 
-            string wavPath = Path.Combine(Program.AppPath, "data", "sounds", dir, $"{fileName}.wav");
-            if (!File.Exists(wavPath))
-            {
-                Default._status_Label.Text += $"[x] {Resources.Default_TheSoundFileWithMusicWasNotFound}\n";
-                Program.Logger.Error($"The sound file with music was not found in the location: {wavPath}");
-                return;
-            }
+			string wavPath = Path.Combine(Program.AppPath, "data", "sounds", dir, $"{fileName}.wav");
+			if (!File.Exists(wavPath))
+			{
+				Default._status_Label.Text += $"[x] {Resources.Default_TheSoundFileWithMusicWasNotFound}\n";
+				Program.Logger.Error($"The sound file with music was not found in the location: {wavPath}");
+				return;
+			}
 
-            Task.Run(() => PlaySoundAsync(wavPath, fileName == "information_bar" ? 0.44f : 1.54f));
-        }
+			Task.Run(() => PlaySoundAsync(wavPath, fileName == "information_bar" ? 0.44f : 1.54f));
+		}
 
-        private static async Task PlaySoundAsync(string wavPath, float volume)
-        {
-            try
-            {
-                using (AudioFileReader audioFile = new AudioFileReader(wavPath))
-                using (WaveChannel32 volumeStream = new WaveChannel32(audioFile))
-                {
-                    volumeStream.Volume = volume;
-                    using (WaveOutEvent outputDevice = new WaveOutEvent())
-                    {
-                        outputDevice.Init(volumeStream);
-                        outputDevice.Play();
+		private static async Task PlaySoundAsync(string wavPath, float volume)
+		{
+			try
+			{
+				using (AudioFileReader audioFile = new AudioFileReader(wavPath))
+				using (WaveChannel32 volumeStream = new WaveChannel32(audioFile))
+				{
+					volumeStream.Volume = volume;
+					using (WaveOutEvent outputDevice = new WaveOutEvent())
+					{
+						outputDevice.Init(volumeStream);
+						outputDevice.Play();
 
-                        await Task.Delay(TimeSpan.FromSeconds(audioFile.TotalTime.TotalSeconds));
-                    }
-                }
+						await Task.Delay(TimeSpan.FromSeconds(audioFile.TotalTime.TotalSeconds));
+					}
+				}
 
-                Program.Logger.Info($"Playing sound file: {wavPath}");
-            }
-            catch (Exception ex)
-            {
-                Default._status_Label.Text += $"[x] {ex.Message}\n";
-                Program.Logger.Error(ex.ToString());
-            }
-        }
-    }
+				Program.Logger.Info($"Playing sound file: {wavPath}");
+			}
+			catch (Exception ex)
+			{
+				Default._status_Label.Text += $"[x] {ex.Message}\n";
+				Program.Logger.Error(ex.ToString());
+			}
+		}
+	}
 }
