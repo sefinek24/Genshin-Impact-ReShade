@@ -89,7 +89,7 @@ public partial class MainWindow : Form
         {
             using AudioFileReader audioFile = new(mp3FilePath);
             using WaveChannel32 volumeStream = new(audioFile);
-            volumeStream.Volume = 0.68f;
+            volumeStream.Volume = 0.74f;
             using WaveOutEvent outputDevice = new();
             outputDevice.Init(volumeStream);
             outputDevice.Play();
