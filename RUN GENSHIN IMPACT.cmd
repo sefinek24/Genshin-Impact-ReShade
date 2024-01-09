@@ -1,22 +1,22 @@
 @echo off
-title Outdated method: Genshin Stella Mod
+title Deprecated Method
 
-echo ------------------------------ This injection method is outdated ------------------------------
+echo ------------------------------ This Launch Method is No Longer Available ------------------------------
 echo.
-echo If you used the 'git clone [Repository Link]' command, you've downloaded the source code of
-echo our software in this case. Compiling the code on your machine may not be possible because some
-echo files are not publicly available for security reasons.
+echo If you used the 'git clone [Repository Link]' command, you have downloaded the source code of our software.
+echo Compiling the code on your machine might not be feasible, as certain files are not publicly accessible
+echo due to security reasons.
 echo.
-echo If you want to install the Genshin Stella Mod, please visit https://genshin.sefinek.net
-echo and click the 'Download' button.
+echo To install the Genshin Stella Mod, please visit https://genshin.sefinek.net and click on the 'Download' button.
 echo.
-echo I also want to inform you that the YouTube video titled
-echo "How to install Genshin Impact Reshade Mod to get better graphics quality and unlock frames? 2022" is outdated.
+echo Additionally, be aware that the YouTube video titled
+echo "How to Install Genshin Impact Reshade Mod for Enhanced Graphics Quality and Unlocked Frame Rates? 2022"
+echo is deprecated.
 echo.
-echo ~ Good luck!
+echo ~ Wishing you the best of luck!
 
 goto done
 
 :done
     pause >nul
-    goto done
+    exit
