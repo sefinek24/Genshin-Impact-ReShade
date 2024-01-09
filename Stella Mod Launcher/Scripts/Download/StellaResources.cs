@@ -7,6 +7,7 @@ using System.IO.Compression;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using ByteSizeLib;
 using Microsoft.Toolkit.Uwp.Notifications;
 using Microsoft.WindowsAPICodePack.Taskbar;
@@ -185,6 +186,25 @@ namespace StellaLauncher.Scripts.Download
 
         public static async Task UnzipWithProgress(string zipFilePath, string extractPath)
         {
+            FileInfo fileInfo = new FileInfo(zipFilePath);
+            if (!fileInfo.Exists)
+            {
+                string msg = $"The downloaded file cannot be unzipped because it does not exist. This is really strange. Please check your antivirus software. Contact the application developer for assistance.\n\nPath: {zipFilePath}";
+                Program.Logger.Error(msg);
+                MessageBox.Show(msg, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(412411);
+            }
+
+            if (fileInfo.Length == 0)
+            {
+                const string msg =
+                    "The downloaded ZIP file is empty and cannot be unzipped. This situation might be due to a problem with the download process or a corruption of the archive. Please verify your antivirus software or check your internet connection. The file will be automatically deleted from your hard drive once this message is closed. If you require further assistance, do not hesitate to contact the developer.";
+                Program.Logger.Error(msg);
+                MessageBox.Show(msg, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                File.Delete(fileInfo.FullName);
+                Environment.Exit(412412);
+            }
+
             using (ZipArchive archive = ZipFile.OpenRead(zipFilePath))
             {
                 int totalEntries = archive.Entries.Count;

@@ -1,7 +1,10 @@
 using System;
 using System.ComponentModel;
 using System.IO;
-using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 using ByteSizeLib;
 using Microsoft.Toolkit.Uwp.Notifications;
 using Microsoft.WindowsAPICodePack.Taskbar;
@@ -83,60 +86,116 @@ namespace StellaLauncher.Scripts.Patrons
 
 
             // Run download
-            using (WebClient client = new WebClient())
-            {
-                client.Headers.Add("User-Agent", Program.UserAgent);
-                client.Headers.Add("Authorization", $"Bearer {Secret.BearerToken}");
-
-                client.DownloadProgressChanged += Client_DownloadProgressChanged;
-                client.DownloadFileCompleted += Client_DownloadFileCompleted;
-
-                await client.DownloadFileTaskAsync(new Uri($"{data.PreparedUrl}?benefitType={benefitName}"), _zipFile);
-            }
+            await DownloadFileAsync($"{data.PreparedUrl}?benefitType={benefitName}", _zipFile);
 
             // Prepare presets
-            if (benefitName == "presets")
-            {
-                string currentPreset = await RsConfig.Prepare();
-                if (currentPreset == null) return;
+            if (benefitName != "presets") return;
 
-                try
-                {
-                    new ToastContentBuilder()
-                        .AddText("ReShade configuration")
-                        .AddText($"The ReShade configuration file has also been updated, including setting the default preset to {Path.GetFileNameWithoutExtension(currentPreset)}.")
-                        .Show();
-                }
-                catch (Exception ex)
-                {
-                    Program.Logger.Error(ex.ToString());
-                }
+            string currentPreset = await RsConfig.Prepare();
+            if (currentPreset == null) return;
+
+            try
+            {
+                new ToastContentBuilder()
+                    .AddText("ReShade configuration")
+                    .AddText($"The ReShade configuration file has also been updated, including setting the default preset to {Path.GetFileNameWithoutExtension(currentPreset)}.")
+                    .Show();
+            }
+            catch (Exception ex)
+            {
+                Program.Logger.Error(ex.ToString());
             }
         }
 
-        private static void Client_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+        private static async Task DownloadFileAsync(string requestUri, string filename)
         {
-            int progress = (int)Math.Floor(e.BytesReceived * 100.0 / e.TotalBytesToReceive);
+            HttpClient client = Program.WbClient.Value;
+
+            try
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Secret.BearerToken);
+
+                HttpResponseMessage response = await client.GetAsync(requestUri, HttpCompletionOption.ResponseHeadersRead);
+                response.EnsureSuccessStatusCode();
+
+                long totalBytes = response.Content.Headers.ContentLength.GetValueOrDefault(-1L);
+                long totalBytesRead = 0L;
+                long readCount = 0L;
+                byte[] buffer = new byte[8192];
+                bool isMoreToRead = true;
+
+                using (FileStream fileStream = new FileStream(filename, FileMode.Create, FileAccess.Write, FileShare.None, 8192, true))
+                {
+                    using (Stream contentStream = await response.Content.ReadAsStreamAsync())
+                    {
+                        do
+                        {
+                            int bytesRead = await contentStream.ReadAsync(buffer, 0, buffer.Length);
+                            if (bytesRead == 0)
+                            {
+                                isMoreToRead = false;
+                                continue;
+                            }
+
+                            await fileStream.WriteAsync(buffer, 0, bytesRead);
+
+                            totalBytesRead += bytesRead;
+                            readCount += 1;
+
+                            if (readCount % 100 == 0) UpdateUi(totalBytesRead, totalBytes);
+                        } while (isMoreToRead);
+                    }
+                }
+
+                if (totalBytesRead != totalBytes) throw new IOException($"Expected {totalBytes} bytes but got {totalBytesRead} bytes.");
+            }
+            catch (HttpRequestException ex)
+            {
+                Program.Logger.Error($"HttpRequestException: {ex.Message}");
+                MessageBox.Show($"{ex.Message}\n\nAuthorization server returned a different status code than expected. Please contact the developer.",
+                    Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                Environment.Exit(563211);
+            }
+            catch (Exception ex)
+            {
+                Program.Logger.Error($"Exception: {ex.Message}");
+                MessageBox.Show($"An unexpected error occurred {ex.Message}\n\nPlease contact the application developer for assistance.",
+                    Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(563212);
+            }
+            finally
+            {
+                client.DefaultRequestHeaders.Authorization = null;
+            }
+
+
+            Client_DownloadFileCompleted(null, null);
+        }
+
+        private static void UpdateUi(long bytesRead, long totalBytes)
+        {
+            int progress = (int)(bytesRead * 100 / totalBytes);
             Default._progressBar1.Value = progress;
             TaskbarManager.Instance.SetProgressValue(progress, 100);
 
             DateTime currentTime = DateTime.Now;
             TimeSpan elapsedTime = currentTime - _lastUpdateTime;
-            long bytesReceived = e.BytesReceived - _lastBytesReceived;
+            long bytesReceivedSinceLastUpdate = bytesRead - _lastBytesReceived;
 
-            if (!(elapsedTime.TotalMilliseconds > 1000)) return;
+            if (elapsedTime.TotalMilliseconds <= 1000) return;
 
             _lastUpdateTime = currentTime;
-            _lastBytesReceived = e.BytesReceived;
+            _lastBytesReceived = bytesRead;
 
-            double bytesReceivedMb = ByteSize.FromBytes(e.BytesReceived).MegaBytes;
-            double bytesReceiveMb = ByteSize.FromBytes(e.TotalBytesToReceive).MegaBytes;
+            double bytesReceivedMb = ByteSize.FromBytes(bytesRead).MegaBytes;
+            double totalBytesMb = ByteSize.FromBytes(totalBytes).MegaBytes;
 
-            _downloadSpeed = bytesReceived / elapsedTime.TotalSeconds;
+            _downloadSpeed = bytesReceivedSinceLastUpdate / elapsedTime.TotalSeconds;
             double downloadSpeedInMb = _downloadSpeed / (1024 * 1024);
 
-            Default._preparingPleaseWait.Text = $@"{string.Format(Resources.NormalRelease_DownloadingUpdate_, $"{bytesReceivedMb:00.00}", $"{bytesReceiveMb:000.00}")} [{downloadSpeedInMb:00.00} MB/s]";
-            Program.Logger.Info($"Downloading new update... {bytesReceivedMb:00.00} MB of {bytesReceiveMb:000.00} MB / {downloadSpeedInMb:00.00} MB/s");
+            Default._preparingPleaseWait.Text = $@"{string.Format(Resources.NormalRelease_DownloadingUpdate_, $"{bytesReceivedMb:00.00}", $"{totalBytesMb:000.00}")} [{downloadSpeedInMb:00.00} MB/s]";
+            Program.Logger.Info($"Downloading new update... {bytesReceivedMb:00.00} MB of {totalBytesMb:000.00} MB / {downloadSpeedInMb:00.00} MB/s");
         }
 
         private static async void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
