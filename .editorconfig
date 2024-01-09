@@ -10,9 +10,6 @@ indent_style = space
 indent_size = 4
 trim_trailing_whitespace = true
 
-# Standard properties
-max_line_length = 0
-
 # Microsoft .NET properties
 csharp_new_line_before_members_in_object_initializers = false
 csharp_preferred_modifier_order = public, private, protected, internal, static, readonly, volatile, override, abstract, sealed, unsafe, extern, file, new, virtual, async, required:suggestion
@@ -65,11 +62,13 @@ dotnet_style_qualification_for_property = false:suggestion
 dotnet_style_require_accessibility_modifiers = for_non_interface_members:suggestion
 
 # ReSharper properties
+resharper_csharp_max_line_length = 240
 resharper_csharp_naming_rule.constants = AaBb
 resharper_csharp_naming_rule.static_readonly = AaBb
 resharper_enforce_line_ending_style = true
 resharper_show_autodetect_configure_formatting_tip = false
 resharper_use_indent_from_vs = false
+resharper_wrap_before_eq = true
 resharper_wrap_lines = true
 resharper_xml_blank_line_after_pi = false
 resharper_xml_indent_style = tab
@@ -140,7 +139,6 @@ resharper_suggest_var_or_type_simple_types_highlighting = hint
 
 # Code analysis settings for C#
 [*.cs]
-max_line_length = 0
 dotnet_diagnostic.ca1062.severity = error
 dotnet_diagnostic.ca1303.severity = error
 dotnet_diagnostic.ca1822.severity = error
