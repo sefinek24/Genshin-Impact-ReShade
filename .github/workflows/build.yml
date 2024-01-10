@@ -23,4 +23,4 @@ jobs:
         run: msbuild "Stella Mod Launcher\1. Stella Mod Launcher.csproj" -p:Configuration=Release -p:Platform="Any CPU" -p:OutputPath=../Build/Release
 
       - name: Run Stella Mod Launcher
-        run: start ".\Build\Release\Stella Mod Launcher.exe"
+        run: start ".\Build\Release\Stella Mod Launcher.exe" --gh-actions
