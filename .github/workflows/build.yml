@@ -11,16 +11,16 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Setup MSBuild Path
-        uses: microsoft/setup-msbuild@v1.0.2
+        uses: microsoft/setup-msbuild@v1
 
       - name: Restore NuGet Packages
         run: msbuild -t:restore
 
       - name: Build Solution
-        run: msbuild Genshin-Stella-Mod.sln -p:Configuration=Release -p:Platform="Any CPU"
+        run: msbuild "Genshin Stella Mod Pack made by Sefinek.sln" -p:Configuration=Release -p:Platform="Any CPU"
 
       - name: Run Genshin Stella Mod
         run: .\Build\Release\Stella Mod Launcher.exe
