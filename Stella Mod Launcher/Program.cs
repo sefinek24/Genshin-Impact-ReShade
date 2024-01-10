@@ -70,7 +70,7 @@ namespace StellaLauncher
 		public static HttpClient SefinWebClient => WbClient.Value;
 
 		[STAThread]
-		private static void Main()
+		private static void Main(string[] args)
 		{
 			Logger = Logger.WithProperty("AppName", "Launcher");
 			Logger = Logger.WithProperty("AppVersion", AppVersion);
@@ -108,8 +108,20 @@ namespace StellaLauncher
 				Environment.Exit(998765341);
 			}
 
+
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
+
+
+			// GitHub Actions
+			foreach (string arg in args)
+			{
+				if (arg != "--gh-actions") continue;
+
+				Logger.Info("Application closed due to detection of the `--gh-actions` parameter.");
+				Environment.Exit(0);
+			}
+
 
 			// if (RegionInfo.CurrentRegion.Name == "RU")
 			// {
