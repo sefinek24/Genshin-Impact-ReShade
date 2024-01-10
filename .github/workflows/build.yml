@@ -1,4 +1,4 @@
-name: Build and Run Genshin Stella Mod
+name: Build Stella Mod Launcher
 
 on:
   push:
@@ -16,11 +16,11 @@ jobs:
       - name: Setup MSBuild Path
         uses: microsoft/setup-msbuild@v1
 
-      - name: Restore NuGet Packages
-        run: msbuild -t:restore
+      - name: Restore NuGet Packages for Stella Mod Launcher
+        run: msbuild -t:restore "Stella Mod Launcher\1. Stella Mod Launcher.csproj"
 
-      - name: Build Solution
-        run: msbuild "Genshin Stella Mod Pack made by Sefinek.sln" -p:Configuration=Release -p:Platform="Any CPU"
+      - name: Build Stella Mod Launcher
+        run: msbuild "Stella Mod Launcher\1. Stella Mod Launcher.csproj" -p:Configuration=Release -p:Platform="Any CPU"
 
-      - name: Run Genshin Stella Mod
+      - name: Run Stella Mod Launcher
         run: .\Build\Release\Stella Mod Launcher.exe
