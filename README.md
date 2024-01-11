@@ -1,10 +1,10 @@
 <!-- [[> SEO
-###### Number: 2
+###### Number: 1.2
 
 ###### Title: Genshin Stella Mod Pack: Installation, Requirements, and Screenshots
 ###### Description: Learn how to install the Genshin Impact Stella Shader Pack. Check the system requirements, and view in-game screenshots. Enhance your gaming experience now!
 ###### Tags: genshin impact, genshin shaders, genshin impact shaders, stella mod, reshade, installation, system requirements, screenshots, gaming, mods, stella mod readme, genshin impact stella mod readme, genshin stella mod readme
-###### Canonical: github-readme
+###### Canonical: /genshin-impact-reshade/docs?page=github-readme
 ]]> -->
 
 <div align="center">
