@@ -673,10 +673,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="ByteSize">
-      <Version>2.1.1</Version>
+      <Version>2.1.2</Version>
     </PackageReference>
     <PackageReference Include="CliWrap">
-      <Version>3.6.4</Version>
+      <Version>3.6.6</Version>
     </PackageReference>
     <PackageReference Include="DiscordRichPresence">
       <Version>1.2.1.24</Version>
