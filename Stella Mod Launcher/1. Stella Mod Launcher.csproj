@@ -336,10 +336,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="data\unlocker\gen-fps-unlocker.deps.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="data\unlocker\gen-fps-unlocker.runtimeconfig.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="data\unlocker\unlocker.config.default.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -548,22 +548,22 @@
     <Content Include="data\sounds\winxp\Windows XP Start.wav" />
     <Content Include="data\sounds\winxp\Windows XP Startup.wav" />
     <Content Include="data\unlocker\gen-fps-unlocker.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="data\unlocker\gen-fps-unlocker.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="data\unlocker\gen-fps-unlocker.pdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="data\unlocker\Microsoft.Extensions.DependencyInjection.Abstractions.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="data\unlocker\Microsoft.Extensions.DependencyInjection.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="data\unlocker\Newtonsoft.Json.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="data\videos\gengbeng.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
