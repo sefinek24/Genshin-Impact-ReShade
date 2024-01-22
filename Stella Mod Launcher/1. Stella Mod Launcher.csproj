@@ -335,9 +335,15 @@
     <None Include="data\OLD_CHANGELOG.md">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="data\unlocker\gen-fps-unlocker.deps.json" />
-    <None Include="data\unlocker\gen-fps-unlocker.runtimeconfig.json" />
-    <None Include="data\unlocker\README.md" />
+    <None Include="data\unlocker\gen-fps-unlocker.deps.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="data\unlocker\gen-fps-unlocker.runtimeconfig.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="data\unlocker\README.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="data\unlocker\unlocker.config.default.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -544,12 +550,24 @@
     <Content Include="data\sounds\winxp\Windows XP Shutdown.wav" />
     <Content Include="data\sounds\winxp\Windows XP Start.wav" />
     <Content Include="data\sounds\winxp\Windows XP Startup.wav" />
-    <Content Include="data\unlocker\gen-fps-unlocker.dll" />
-    <Content Include="data\unlocker\gen-fps-unlocker.exe" />
-    <Content Include="data\unlocker\gen-fps-unlocker.pdb" />
-    <Content Include="data\unlocker\Microsoft.Extensions.DependencyInjection.Abstractions.dll" />
-    <Content Include="data\unlocker\Microsoft.Extensions.DependencyInjection.dll" />
-    <Content Include="data\unlocker\Newtonsoft.Json.dll" />
+    <Content Include="data\unlocker\gen-fps-unlocker.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\unlocker\gen-fps-unlocker.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\unlocker\gen-fps-unlocker.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\unlocker\Microsoft.Extensions.DependencyInjection.Abstractions.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\unlocker\Microsoft.Extensions.DependencyInjection.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\unlocker\Newtonsoft.Json.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="data\videos\gengbeng.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
