@@ -39,7 +39,7 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\nahida-icon.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\Chibi Nahida.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CliWrap">
@@ -120,10 +120,12 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\nahida-icon.ico" />
+    <Content Include="Resources\Chibi Nahida.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
