@@ -38,7 +38,7 @@ namespace StellaLauncher.Scripts
 					newKey?.SetValue("AppIsConfigured", 0);
 				}
 
-				_ = Cmd.Execute(new Cmd.CliWrap { App = Program.PrepareLauncher });
+				_ = Cmd.Execute(new Cmd.CliWrap { App = Program.ConfigurationWindow });
 
 				Environment.Exit(99587986);
 				return string.Empty;

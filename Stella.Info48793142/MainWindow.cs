@@ -6,7 +6,7 @@ using Timer = System.Windows.Forms.Timer;
 
 namespace InformationWindow;
 
-public partial class MainWindow : Form
+public sealed partial class MainWindow : Form
 {
 	private const int HwndTopmost = -1;
 	private const uint SwpNoSize = 0x0001;
@@ -21,6 +21,8 @@ public partial class MainWindow : Form
 	public MainWindow()
 	{
 		InitializeComponent();
+
+		DoubleBuffered = true;
 
 		FormBorderStyle = FormBorderStyle.None;
 		WindowState = FormWindowState.Maximized;
@@ -89,7 +91,7 @@ public partial class MainWindow : Form
 		{
 			using AudioFileReader audioFile = new(mp3FilePath);
 			using WaveChannel32 volumeStream = new(audioFile);
-			volumeStream.Volume = 0.74f;
+			volumeStream.Volume = 0.82f;
 			using WaveOutEvent outputDevice = new();
 			outputDevice.Init(volumeStream);
 			outputDevice.Play();

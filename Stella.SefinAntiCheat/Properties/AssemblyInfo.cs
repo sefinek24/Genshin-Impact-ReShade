@@ -1,14 +1,14 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("5. Sefin Anti Cheat")]
+[assembly: AssemblyTitle("Sefin Anti Cheat")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("5. Sefin Anti Cheat")]
+[assembly: AssemblyProduct("Sefin Anti Cheat")]
 [assembly: AssemblyCopyright("Copyright 2024 © by Sefinek. All Rights Reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

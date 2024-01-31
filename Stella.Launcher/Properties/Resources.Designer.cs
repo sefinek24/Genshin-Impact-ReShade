@@ -1357,7 +1357,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Required file &apos;Configuration.exe&apos; was not found. Please reinstall this app or join our Discord server for help..
+        ///   Looks up a localized string similar to Required file &apos;ConfigurationWindow.exe&apos; was not found. Please reinstall this app or join our Discord server for help..
         /// </summary>
         internal static string Program_RequiredFileFisrtAppLaunchExeWasNotFound_ {
             get {

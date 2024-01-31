@@ -5,10 +5,10 @@ using ConfigurationNC.Scripts;
 
 namespace ConfigurationNC.Forms;
 
-public partial class Window : Form
+public sealed partial class Window : Form
 {
 	public static readonly string? AppName = Assembly.GetExecutingAssembly().GetName().Name;
-	private static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
+	private static readonly string AppPath = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ".."));
 	private static readonly string AppData = GetAppData();
 
 	private static int _newShortcutsOnDesktop;
@@ -23,9 +23,10 @@ public partial class Window : Form
 
 	public Window()
 	{
-		_prepareIni = new IniFile(Path.Combine(AppData, "prepare-stella.ini"));
-
 		InitializeComponent();
+
+		_prepareIni = new IniFile(Path.Combine(AppData, "prepare-stella.ini"));
+		DoubleBuffered = true;
 	}
 
 	private static string GetAppData()

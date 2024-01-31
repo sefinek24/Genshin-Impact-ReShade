@@ -68,9 +68,9 @@ namespace StellaLauncher.Forms
 			DialogResult res = MessageBox.Show(Resources.Tools_AreYouSureToRunStellaConfigurationWindowAgain, Program.AppNameVer, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 			if (res == DialogResult.No) return;
 
-			if (!File.Exists(Program.PrepareLauncher))
+			if (!File.Exists(Program.ConfigurationWindow))
 			{
-				string fileName = Path.GetFileName(Program.PrepareLauncher);
+				string fileName = Path.GetFileName(Program.ConfigurationWindow);
 				MessageBox.Show(Resources.Program_RequiredFileFisrtAppLaunchExeWasNotFound_, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
 				Program.Logger.Error($"Required file was not found in: {fileName}");
 				return;
@@ -83,7 +83,7 @@ namespace StellaLauncher.Forms
 
 			Cmd.CliWrap cliWrapCommand2 = new Cmd.CliWrap
 			{
-				App = Program.PrepareLauncher,
+				App = Program.ConfigurationWindow,
 				WorkingDir = Program.AppPath,
 				BypassUpdates = true
 			};

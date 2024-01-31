@@ -26,7 +26,7 @@ namespace PrepareStella
 		public static string ResourcesGlobal;
 
 		// Registry
-		public static readonly string RegistryPath = @"SOFTWARE\Stella Mod Launcher";
+		public static readonly string RegistryPath = @"Software\Stella Mod Launcher";
 
 		[STAThread]
 		public static async Task Run()

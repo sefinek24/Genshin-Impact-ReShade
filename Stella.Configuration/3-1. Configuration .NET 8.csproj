@@ -25,7 +25,13 @@
     <RepositoryUrl>https://github.com/sefinek24/Genshin-Impact-ReShade</RepositoryUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <AssemblyName>ConfigurationWindow</AssemblyName>
+    <StartupObject>ConfigurationNC.Program</StartupObject>
+    <ApplicationIcon>Resources\cat.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\cat.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Include="..\LICENSE">

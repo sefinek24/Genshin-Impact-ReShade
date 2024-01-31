@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Sefinek Inc.")]
-[assembly: AssemblyProduct("Device Identifier")]
+[assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("Copyright 2024 © by Sefinek. All Rights Reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

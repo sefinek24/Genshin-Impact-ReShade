@@ -1,6 +1,6 @@
 namespace ConfigurationNC.Forms
 {
-    partial class Window
+	sealed partial class Window
     {
         /// <summary>
         /// Required designer variable.

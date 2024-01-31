@@ -1,6 +1,6 @@
 namespace InformationWindow
 {
-    partial class MainWindow
+	sealed partial class MainWindow
     {
         /// <summary>
         ///  Required designer variable.

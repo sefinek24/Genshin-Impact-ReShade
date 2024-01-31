@@ -81,7 +81,9 @@ namespace ConfigurationNC.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Required file &apos;{exeFile}&apos; was not found. Please reinstall this app or join our Discord server..
+        ///   Looks up a localized string similar to Required file &apos;{0}&apos; was not found.
+        ///
+        ///Please reinstall this app or join our Discord server..
         /// </summary>
         internal static string RequiredFile_WasNotFound {
             get {
@@ -95,24 +97,6 @@ namespace ConfigurationNC.Properties {
         internal static string TheStellaResourcesDirWasNotFoundOnYourPC {
             get {
                 return ResourceManager.GetString("TheStellaResourcesDirWasNotFoundOnYourPC", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to You cannot create a new icon on your Desktop when an application is installed from the Microsoft Store..
-        /// </summary>
-        internal static string YouCannotCreateANewIconOnYourDesktopWhenAnAppIsInstalledFromTheMStore {
-            get {
-                return ResourceManager.GetString("YouCannotCreateANewIconOnYourDesktopWhenAnAppIsInstalledFromTheMStore", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to You cannot create new icons in the Start Menu when an application is installed from the Microsoft Store..
-        /// </summary>
-        internal static string YouCannotCreateANewIconsInTheSMWhenAnAppIsInstalledFromTheMStore {
-            get {
-                return ResourceManager.GetString("YouCannotCreateANewIconsInTheSMWhenAnAppIsInstalledFromTheMStore", resourceCulture);
             }
         }
     }

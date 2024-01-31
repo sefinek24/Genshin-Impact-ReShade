@@ -250,7 +250,7 @@ This action will result in the loss of any custom configurations you have made. 
 Would you like to visit the official website and subscribe? You'll gain access to numerous benefits, including the ability to use ReShade, 3DMigoto, and FPS Unlocker simultaneously.</value>
   </data>
   <data name="Program_RequiredFileFisrtAppLaunchExeWasNotFound_" xml:space="preserve">
-    <value>Required file 'Configuration.exe' was not found. Please reinstall this app or join our Discord server for help.</value>
+    <value>Required file 'ConfigurationWindow.exe' was not found. Please reinstall this app or join our Discord server for help.</value>
   </data>
   <data name="icons8_github" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-github-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
