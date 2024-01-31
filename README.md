@@ -112,8 +112,8 @@ The main server of [sefinek.net](https://sefinek.net/?referrer=stella_readme) is
 
 
 ## 📥 〢 How to install?
-1. [Fast Installation via InnoSetup](https://sefinek.net/genshin-impact-reshade/docs?page=installation#installation-via-innosetup)
-2. [Manual Installation - Compilation via VSC 2022](https://sefinek.net/genshin-impact-reshade/docs?page=installation#comililation-via-vsc)
+1. [Fast Installation via InnoSetup](https://sefinek.net/genshin-impact-reshade/docs?page=installation)
+2. [Compilation via VSC 2022](https://sefinek.net/genshin-impact-reshade/docs?page=compilation)
 
 ### 📝 » Note
 After the installation is complete, you should open the Stella Launcher and start the game by clicking on the **Start game** button.
