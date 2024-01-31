@@ -12,14 +12,5 @@
 ## 📥 Changelog for v7.x.x
 https://sefinek.net/genshin-impact-reshade/docs?page=changelog_v7
 
-## 📥 Changelog for v6.x.x
-https://sefinek.net/genshin-impact-reshade/docs?page=changelog_v6
-
-## 📥 Changelog for v5.x.x
-https://sefinek.net/genshin-impact-reshade/docs?page=changelog_v5
-
-## 📥 Changelog for v4.x.x
-https://sefinek.net/genshin-impact-reshade/docs?page=changelog_v4
-
-## 📥 Changelog for v3.x.x
-https://sefinek.net/genshin-impact-reshade/docs?page=changelog_v3
+## 🗑️ Deprecated releases
+https://sefinek.net/genshin-impact-reshade/docs?page=deprecated-releases
