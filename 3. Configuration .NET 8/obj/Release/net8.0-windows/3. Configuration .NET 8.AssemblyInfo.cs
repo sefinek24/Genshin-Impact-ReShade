@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("3. Configuration .NET 8")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fca66fd5136cb0633ab4e105e46c60219e35225c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+751ddff3806aeaf43a4fe6a80d8d659efbfde65b")]
 [assembly: System.Reflection.AssemblyProductAttribute("3. Configuration .NET 8")]
 [assembly: System.Reflection.AssemblyTitleAttribute("3. Configuration .NET 8")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
