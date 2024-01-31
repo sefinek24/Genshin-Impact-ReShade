@@ -9,7 +9,7 @@
 - Supports OS and CN version.
 - Should work for future updates.
 - If the source needs to be updated, I'll try to do it as soon as possible.
-- You can download the compiled binary over at [Release](https://github.com/sefinek24/genshin-fps-unlock/releases) if you don't want to compile it yourself.
+- You can download the compiled binary over at [Release](https://github.com/sefinek24/Genshin-FPS-Unlocker/releases) if you don't want to compile it yourself.
 
 ## Usage
 - Make sure you have the [.NET 8.0 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-8.0.0-windows-x64-installer). Usually it should come installed.
