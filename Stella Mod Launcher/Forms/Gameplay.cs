@@ -20,6 +20,8 @@ namespace StellaLauncher.Forms
 		public Gameplay()
 		{
 			InitializeComponent();
+
+			DoubleBuffered = true;
 		}
 
 		private async void Tutorial_Shown(object sender, EventArgs e)

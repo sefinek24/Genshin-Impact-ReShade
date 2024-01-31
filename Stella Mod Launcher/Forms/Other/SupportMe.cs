@@ -6,7 +6,7 @@ using StellaLauncher.Scripts;
 
 namespace StellaLauncher.Forms.Other
 {
-	public partial class SupportMe : Form
+	public sealed partial class SupportMe : Form
 	{
 		private bool _mouseDown;
 		private Point _offset;
@@ -14,6 +14,8 @@ namespace StellaLauncher.Forms.Other
 		public SupportMe()
 		{
 			InitializeComponent();
+
+			DoubleBuffered = true;
 		}
 
 		private void MouseDown_Event(object sender, MouseEventArgs e)

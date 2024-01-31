@@ -5,13 +5,15 @@ using StellaLauncher.Scripts.Forms.MainForm;
 
 namespace StellaLauncher.Forms.Other
 {
-	public partial class InjectionMethod : Form
+	public sealed partial class InjectionMethod : Form
 	{
 		private bool _isLoading;
 
 		public InjectionMethod()
 		{
 			InitializeComponent();
+
+			DoubleBuffered = true;
 		}
 
 		private void InjectionMethod_Load(object sender, EventArgs e)

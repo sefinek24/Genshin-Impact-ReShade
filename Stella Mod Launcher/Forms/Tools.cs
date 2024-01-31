@@ -19,6 +19,8 @@ namespace StellaLauncher.Forms
 		public Tools()
 		{
 			InitializeComponent();
+
+			DoubleBuffered = true;
 		}
 
 		private void Utils_Shown(object sender, EventArgs e)

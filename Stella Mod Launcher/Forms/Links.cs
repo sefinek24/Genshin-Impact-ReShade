@@ -6,7 +6,7 @@ using StellaLauncher.Scripts;
 
 namespace StellaLauncher.Forms
 {
-	public partial class Links : Form
+	public sealed partial class Links : Form
 	{
 		private bool _mouseDown;
 		private Point _offset;
@@ -14,6 +14,8 @@ namespace StellaLauncher.Forms
 		public Links()
 		{
 			InitializeComponent();
+
+			DoubleBuffered = true;
 		}
 
 		private void URLs_Shown(object sender, EventArgs e)

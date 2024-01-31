@@ -1,6 +1,6 @@
 namespace StellaLauncher.Forms.Other
 {
-    partial class InjectionMethod
+	sealed partial class InjectionMethod
     {
         /// <summary>
         /// Required designer variable.

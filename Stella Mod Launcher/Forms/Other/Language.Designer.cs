@@ -1,6 +1,6 @@
 namespace StellaLauncher.Forms.Other
 {
-    partial class Language
+	sealed partial class Language
     {
         /// <summary>
         /// Required designer variable.

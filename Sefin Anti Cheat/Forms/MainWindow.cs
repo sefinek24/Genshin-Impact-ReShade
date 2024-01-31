@@ -5,7 +5,7 @@ using SefinAntiCheat.Properties;
 
 namespace SefinAntiCheat.Forms
 {
-	public partial class MainWindow : Form
+	public sealed partial class MainWindow : Form
 	{
 		private const int MinimizeMargin = 9;
 		private bool _balloonTipShown;
@@ -15,6 +15,7 @@ namespace SefinAntiCheat.Forms
 		public MainWindow()
 		{
 			InitializeComponent();
+			DoubleBuffered = true;
 
 			InitializeWindow();
 			InitializeTray();

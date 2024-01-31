@@ -1,6 +1,6 @@
 namespace StellaLauncher.Forms.Errors
 {
-    partial class NotCompatible
+	sealed partial class NotCompatible
     {
         /// <summary>
         /// Required designer variable.

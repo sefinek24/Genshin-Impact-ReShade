@@ -15,7 +15,7 @@ using StellaLauncher.Scripts.Forms;
 
 namespace StellaLauncher.Forms.Other
 {
-	public partial class RandomImages : Form
+	public sealed partial class RandomImages : Form
 	{
 		private static Label _poweredBy;
 		private string _sourceUrl;
@@ -23,6 +23,8 @@ namespace StellaLauncher.Forms.Other
 		public RandomImages()
 		{
 			InitializeComponent();
+
+			DoubleBuffered = true;
 
 			if (RegionInfo.CurrentRegion.Name == "PL") linkLabel46.Visible = true;
 		}

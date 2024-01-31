@@ -8,11 +8,13 @@ using StellaLauncher.Scripts.Forms;
 
 namespace StellaLauncher.Forms.Errors
 {
-	public partial class ErrorOccurred : Form
+	public sealed partial class ErrorOccurred : Form
 	{
 		public ErrorOccurred()
 		{
 			InitializeComponent();
+
+			DoubleBuffered = true;
 		}
 
 		private void ErrorOccurred_Load(object sender, EventArgs e)

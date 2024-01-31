@@ -15,6 +15,8 @@ namespace StellaLauncher.Forms.Errors
 		public RussianCunt()
 		{
 			InitializeComponent();
+
+			DoubleBuffered = true;
 		}
 
 		private void WrongCountry_Shown(object sender, EventArgs e)

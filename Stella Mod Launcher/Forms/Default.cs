@@ -68,6 +68,8 @@ namespace StellaLauncher.Forms
 		public Default()
 		{
 			InitializeComponent();
+
+			DoubleBuffered = true;
 		}
 
 		private void Default_Load(object sender, EventArgs e)

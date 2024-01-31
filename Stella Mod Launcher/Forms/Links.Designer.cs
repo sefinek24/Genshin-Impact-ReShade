@@ -1,6 +1,6 @@
 namespace StellaLauncher.Forms
 {
-    partial class Links
+	sealed partial class Links
     {
         /// <summary>
         /// Required designer variable.

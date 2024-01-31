@@ -112,7 +112,6 @@ namespace StellaLauncher
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 
-
 			// GitHub Actions
 			foreach (string arg in args)
 			{

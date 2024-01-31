@@ -6,13 +6,15 @@ using System.Windows.Forms;
 
 namespace StellaLauncher.Forms.Other
 {
-	public partial class Language : Form
+	public sealed partial class Language : Form
 	{
 		private readonly bool _isInitializing;
 
 		public Language()
 		{
 			InitializeComponent();
+
+			DoubleBuffered = true;
 
 			_isInitializing = true;
 			int selected = Program.Settings.ReadInt("Language", "ID", 0);

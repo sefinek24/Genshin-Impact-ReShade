@@ -6,11 +6,13 @@ using StellaLauncher.Scripts;
 
 namespace StellaLauncher.Forms.Errors
 {
-	public partial class NotCompatible : Form
+	public sealed partial class NotCompatible : Form
 	{
 		public NotCompatible()
 		{
 			InitializeComponent();
+
+			DoubleBuffered = true;
 		}
 
 		private void NotCompatible_Shown(object sender, EventArgs e)

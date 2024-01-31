@@ -1,6 +1,6 @@
 namespace StellaLauncher.Forms.Errors
 {
-    partial class ErrorOccurred
+	sealed partial class ErrorOccurred
     {
         /// <summary>
         /// Required designer variable.

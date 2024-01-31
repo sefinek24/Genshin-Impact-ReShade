@@ -369,6 +369,7 @@
     <None Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="Properties\App.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Scripts\Download\ReShadeIni.cs.old" />
     <None Include="www\LICENSE">

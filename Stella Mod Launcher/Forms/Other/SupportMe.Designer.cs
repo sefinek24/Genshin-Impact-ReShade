@@ -1,6 +1,6 @@
 namespace StellaLauncher.Forms.Other
 {
-    partial class SupportMe
+	sealed partial class SupportMe
     {
         /// <summary>
         /// Required designer variable.

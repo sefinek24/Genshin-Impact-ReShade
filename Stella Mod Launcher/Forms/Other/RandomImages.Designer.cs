@@ -1,6 +1,6 @@
 namespace StellaLauncher.Forms.Other
 {
-    partial class RandomImages
+	sealed partial class RandomImages
     {
         /// <summary>
         /// Required designer variable.
@@ -754,7 +754,6 @@ namespace StellaLauncher.Forms.Other
             this.Controls.Add(this.label1);
             this.Controls.Add(this.linkLabel1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "RandomImages";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RandomImg_FormClosed);
             this.Load += new System.EventHandler(this.RandomThings_Load);
