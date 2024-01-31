@@ -30,9 +30,8 @@ namespace StellaLauncher.Forms.Other
 
 		private async void InitWebView2()
 		{
-			CoreWebView2Environment coreWeb = await CoreWebView2Environment.CreateAsync(null, Program.AppData, new CoreWebView2EnvironmentOptions());
-			await webView21.EnsureCoreWebView2Async(coreWeb);
-
+			await webView21.EnsureCoreWebView2Async(await CoreWebView2Environment.CreateAsync(null, Program.AppData, new CoreWebView2EnvironmentOptions()));
+			webView21.CoreWebView2.Settings.UserAgent += $" StellaLauncher/{Program.ProductVersion}";
 			webView21.CoreWebView2.Navigate(Url);
 		}
 
