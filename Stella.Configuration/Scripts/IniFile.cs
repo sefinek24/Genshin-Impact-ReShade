@@ -12,10 +12,10 @@ public class IniFile
 		_path = path;
 	}
 
-	[DllImport("kernel32.dll")]
+	[DllImport("kernel32.dll", CharSet = CharSet.Unicode)]
 	private static extern long WritePrivateProfileString(string section, string key, string val, string filePath);
 
-	[DllImport("kernel32.dll")]
+	[DllImport("kernel32.dll", CharSet = CharSet.Unicode)]
 	private static extern int GetPrivateProfileString(string section, string key, string def, StringBuilder retVal, int size, string filePath);
 
 	public void WriteInt(string section, string key, int value)
