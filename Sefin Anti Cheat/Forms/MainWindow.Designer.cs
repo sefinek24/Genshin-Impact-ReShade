@@ -1,6 +1,6 @@
 namespace SefinAntiCheat.Forms
 {
-    partial class MainWindow
+	sealed partial class MainWindow
     {
         /// <summary>
         /// Required designer variable.
