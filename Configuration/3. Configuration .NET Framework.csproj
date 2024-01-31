@@ -102,9 +102,6 @@
   <ItemGroup>
     <None Include="Resources\bg.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bg1.jpg" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>

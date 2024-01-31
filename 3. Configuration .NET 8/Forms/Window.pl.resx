@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,23 +117,88 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RequiredFile_WasNotFound" xml:space="preserve">
-    <value>Required file '{exeFile}' was not found. Please reinstall this app or join our Discord server.</value>
+  <data name="linkLabel1.Text" xml:space="preserve">
+    <value>&gt;&gt; Gotowe! Ukończmy to teraz &lt;&lt;</value>
   </data>
-  <data name="YouCannotCreateANewIconOnYourDesktopWhenAnAppIsInstalledFromTheMStore" xml:space="preserve">
-    <value>You cannot create a new icon on your Desktop when an application is installed from the Microsoft Store.</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="MadeBySefinek.Location" type="System.Drawing.Point, System.Drawing">
+    <value>853, 73</value>
   </data>
-  <data name="TheStellaResourcesDirWasNotFoundOnYourPC" xml:space="preserve">
-    <value>The Stella resources directory was not found on your computer, so you cannot uncheck the checkbox.</value>
+  <data name="MadeBySefinek.Size" type="System.Drawing.Size, System.Drawing">
+    <value>338, 38</value>
   </data>
-  <data name="YouCannotCreateANewIconsInTheSMWhenAnAppIsInstalledFromTheMStore" xml:space="preserve">
-    <value>You cannot create new icons in the Start Menu when an application is installed from the Microsoft Store.</value>
+  <data name="MadeBySefinek.Text" xml:space="preserve">
+    <value>stworzone przez Sefinek</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cat.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>364, 24</value>
   </data>
-  <data name="bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="checkBox1.Text" xml:space="preserve">
+    <value>Zainstaluj lub zaktualizuj Windows Terminal *</value>
+  </data>
+  <data name="checkBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 24</value>
+  </data>
+  <data name="checkBox2.Text" xml:space="preserve">
+    <value>Utwórz nowe skróty na pulpicie *</value>
+  </data>
+  <data name="checkBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 24</value>
+  </data>
+  <data name="checkBox3.Text" xml:space="preserve">
+    <value>Utwórz skróty internetowe w menu Start</value>
+  </data>
+  <data name="checkBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>347, 24</value>
+  </data>
+  <data name="checkBox4.Text" xml:space="preserve">
+    <value>Zaktualizuj config ReShade (ReShade.ini) *</value>
+  </data>
+  <data name="checkBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>285, 24</value>
+  </data>
+  <data name="checkBox5.Text" xml:space="preserve">
+    <value>Zaktualizuj config FPS Unlockera *</value>
+  </data>
+  <data name="checkBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>355, 24</value>
+  </data>
+  <data name="checkBox6.Text" xml:space="preserve">
+    <value>Usuń cache ReShade</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 108</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Witaj w oknie konfiguracyjnym</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 194</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Wygląda na to, że to Twoje pierwsze uruchomienie lub właśnie przed chwilą udało Ci się zaktualizować program!
+Gratulacje! Teraz przejdźmy do ukończenia ostatnich kroków. Proszę wybierz odpowiednie pola.</value>
+  </data>
+  <data name="checkBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>467, 24</value>
+  </data>
+  <data name="checkBox7.Text" xml:space="preserve">
+    <value>Pobierz lub zaktualizuj zasoby (shadery, presety, dodatki) *</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Należy pamiętać, że poprzednie pliki konfiguracyjne, w tym ReShade i FPS Unlockera, mogą zostać utracone.
+Jednakże Twoje ustawienia wstępne i inne niestandardowe shadery nie zostaną usunięte.</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>792, 18</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Zaleca się wybranie pól oznaczonych gwiazdką (*). Jeśli nie jesteś pewien, co robisz, nie odznaczaj żadnego pola.</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Przygotuj Genshin Stella Mod</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Genshin Impact Stella Mod</value>
   </data>
 </root>
