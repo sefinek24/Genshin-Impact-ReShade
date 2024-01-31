@@ -25,39 +25,39 @@ Screenshots/*.jpeg
 Screenshots/*.bmp
 
 # Stella Mod Launcher Solution
-Stella Mod Launcher/bin
-Stella Mod Launcher/obj
-Stella Mod Launcher/data/cmd/run_patrons.cmd
+Stella.Launcher/bin
+Stella.Launcher/obj
+Stella.Launcher/data/cmd/run_patrons.cmd
 
 # Genshin Stella Mod Solution
-Genshin Stella Mod/Action.cs
-Genshin Stella Mod/Scripts/Logic.cs
-Genshin Stella Mod/bin
-Genshin Stella Mod/obj
+Stella.Worker/Action.cs
+Stella.Worker/Scripts/Logic.cs
+Stella.Worker/bin
+Stella.Worker/obj
 
-# Configuration Window Solution
-3. Configuration .NET 8/bin
-3. Configuration .NET 8/obj
+# Stella.ConfigurationOld Window Solution
+Stella.Configuration/bin
+Stella.Configuration/obj
 
-# Configuration Window Solution
-Configuration/bin
-Configuration/obj
+# Stella.ConfigurationOld Window Solution
+Stella.ConfigurationOld/bin
+Stella.ConfigurationOld/obj
 
 # Prepare Stella Solution
-Prepare Stella/bin
-Prepare Stella/obj
+Stella.Prepare/bin
+Stella.Prepare/obj
 
 # Information 48793142
-Information 48793142/bin
-Information 48793142/obj
+Stella.Info48793142/bin
+Stella.Info48793142/obj
 
 # Device Identifier
-Device Identifier/bin
-Device Identifier/obj
+Stella.DeviceIdentifier/bin
+Stella.DeviceIdentifier/obj
 
-# Sefin Anti Cheat Soultion
-Sefin Anti Cheat/bin
-Sefin Anti Cheat/obj
+# Stella.SefinAntiCheat Soultion
+Stella.SefinAntiCheat/bin
+Stella.SefinAntiCheat/obj
 
 # Stella Mod Plus
 data/Patrons

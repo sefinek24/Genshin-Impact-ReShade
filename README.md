@@ -13,7 +13,7 @@
     <a href="https://github.com/sefinek24/Genshin-Impact-ReShade/commits/main" title="Commit activity"><img src="https://img.shields.io/github/commit-activity/w/sefinek24/Genshin-Impact-ReShade?label=Commit%20activity" alt="Commit activity"></a>
     <a href="https://discord.com/invite/SVcbaRc7gH" title="Official Discord server"><img src="https://img.shields.io/discord/1044713077125435492?label=Discord%20server" alt="Our Discord server"></a>
     <br><br>
-    <img src="https://moe-counter.glitch.me/get/@genshin-stella-mod-readme?theme=rule34" alt="Views" title="README.md views - starts from Jun 15, 2023, 12:26 PM GMT+2">
+    <img src="https://api.sefinek.net/api/v2/moecounter/@Genshin-Stella-Mod-Repo?theme=rule34" alt="Views" title="README.md views - starts from Jun 15, 2023, 12:26 PM GMT+2">
     <h3>
         🌠 » To enjoy Ray Tracing in-game and unlock numerous additional benefits, subscribe to <a href="https://sefinek.net/genshin-impact-reshade/subscription" title="Subscription: Unlock more benefits - Genshin Stella Mod">Stella Mod Plus</a> « 🌠<br>
         ⭐ » Star the repository if you like it. Have a pleasant day or night! « ⭐
@@ -176,13 +176,13 @@ Do not change FPS settings in the game if you are using FPS unlock.
 ## 📷 〢 Other screenshots (without Ray Tracing)
 <div id="images">
     <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Stella%20Mod%20Launcher/data/images/launcher/backgrounds/nahida/1.png?referrer=stella_readme" title="See preview [1.png]">
-        <img src="Stella Mod Launcher/data/images/launcher/backgrounds/nahida/1.png" alt="Screenshot number 1">
+        <img src="Stella.Launcher/data/images/launcher/backgrounds/nahida/1.png" alt="Screenshot number 1">
     </a>
     <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Stella%20Mod%20Launcher/data/images/launcher/backgrounds/hutao/4.png?referrer=stella_readme" title="See preview [4.png]">
-        <img src="Stella Mod Launcher/data/images/launcher/backgrounds/hutao/4.png" alt="Screenshot number 2">
+        <img src="Stella.Launcher/data/images/launcher/backgrounds/hutao/4.png" alt="Screenshot number 2">
     </a>
     <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Stella%20Mod%20Launcher/data/images/launcher/backgrounds/yaoyao/2.png?referrer=stella_readme" title="See preview [2.png]">
-        <img src="Stella Mod Launcher/data/images/launcher/backgrounds/yaoyao/2.png" alt="Screenshot number 3">
+        <img src="Stella.Launcher/data/images/launcher/backgrounds/yaoyao/2.png" alt="Screenshot number 3">
     </a>
 </div>
 

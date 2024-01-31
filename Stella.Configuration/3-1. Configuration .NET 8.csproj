@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.18362.0</TargetFramework>
+    <RootNamespace>ConfigurationNC</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <BaseOutputPath>..\Build\</BaseOutputPath>
+    <NeutralLanguage>en</NeutralLanguage>
+    <Authors>Sefinek</Authors>
+    <Description>Configuration window of Genshin Stella Mod.</Description>
+    <Copyright>Copyright 2024 © by Sefinek. All Rights Reserved.</Copyright>
+    <Company>Sefinek Inc.</Company>
+    <Version>1.0.0.0</Version>
+    <Title>Configuration window of Genshin Stella Mod.</Title>
+    <PackageId>Stella Configuration Window</PackageId>
+    <PackageProjectUrl>https://genshin.sefinek.net</PackageProjectUrl>
+    <PackageIcon>cat.ico</PackageIcon>
+    <RepositoryType>git</RepositoryType>
+    <Product>ConfigurationWindow</Product>
+    <RepositoryUrl>https://github.com/sefinek24/Genshin-Impact-ReShade</RepositoryUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <AssemblyName>ConfigurationWindow</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Forms\Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\cat.ico">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
