@@ -24,17 +24,17 @@
 
 
 ## 📋 〢 Table of contents
-- [⚠️ Information](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%F0%9F%93%84-%E3%80%A2-information)
-- [📂 Includes](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%F0%9F%93%82-%E3%80%A2-includes)
-- [📃 Changelog](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%E2%9C%A8-%E3%80%A2-requirements)
-- [✨ Requirements](https://sefinek.net/genshin-impact-reshade/docs?page=changelog_v7)
-- [🔧 Supported systems](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%F0%9F%94%A7-%E3%80%A2-supported-operating-systems)
-- [📥 How to install](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%F0%9F%93%A5-%E3%80%A2-how-to-install)
-- [🛠️ Tested game versions](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%F0%9F%9B%A0%EF%B8%8F-%E3%80%A2-tested-game-versions)
-- [⚙️ Recommended settings for game](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%E2%9A%99%EF%B8%8F-%E3%80%A2-recommended-settings-for-game)
-- [📷 Other screenshots](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%F0%9F%93%B7-%E3%80%A2-other-screenshots-without-ray-tracing)
+- [⚠️ Information](https://sefinek.net/genshin-impact-reshade/docs?page=introduction)
+- [📂 Includes](https://sefinek.net/genshin-impact-reshade/docs?page=about#includes)
+- [📃 Changelog](https://sefinek.net/genshin-impact-reshade/docs?page=changelog_v7)
+- [✨ Requirements](https://sefinek.net/genshin-impact-reshade/docs?page=about#requirements)
+- [🔧 Supported systems](https://sefinek.net/genshin-impact-reshade/docs?page=about#supported-os)
+- [📥 How to install](https://sefinek.net/genshin-impact-reshade/docs?page=installation)
+- [🛠️ Tested game versions](https://sefinek.net/genshin-impact-reshade/docs?page=about#tested-game-versions)
+- [⚙️ Recommended settings for game](https://sefinek.net/genshin-impact-reshade/docs?page=about#recommended-settings-for-game)
+- [📷 Gallery](https://sefinek.net/genshin-impact-reshade/gallery?page=1)
 - [🧀 Legend](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend)
-- [🧶 Sources](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%F0%9F%A7%B6-%E3%80%A2-sources)
+- [🧶 Credits](https://sefinek.net/genshin-impact-reshade/docs?page=credits)
 
 <div align="center" id="labels">
     <a href="https://sefinek.net/genshin-impact-reshade/download?referrer=stella_readme&hash=null" title="Download stable release"><img src="Assets/Images/Readme/labels/download.png" alt="Download" height="148px"></a>
@@ -117,7 +117,7 @@ The main server of [sefinek.net](https://sefinek.net/?referrer=stella_readme) is
 
 ### 📝 » Note
 After the installation is complete, you should open the Stella Launcher and start the game by clicking on the **Start game** button.
-Once the game has launched, it is crucial to verify that [the recommended graphics settings](https://sefinek.net/genshin-impact-reshade/docs?page=github-readme#%E2%9A%99%EF%B8%8F-%E3%80%A2-recommended-settings-for-game) are configured correctly.
+Once the game has launched, it is crucial to verify that [the recommended graphics settings](https://sefinek.net/genshin-impact-reshade/docs?page=about#recommended-settings-for-game) are configured correctly.
 Then, adjust the settings according to the recommended values based on your system's capabilities. This will help to ensure
 that the game runs smoothly and looks its best.
 
