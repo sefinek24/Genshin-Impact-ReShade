@@ -16,7 +16,7 @@ internal static class Program
 
 		try
 		{
-			Application.Run(new Window { Icon = Resources.catIcon });
+			Application.Run(new Window { Icon = Resources.cat_white_52x52 });
 		}
 		catch (Exception ex)
 		{

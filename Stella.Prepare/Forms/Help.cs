@@ -2,11 +2,13 @@ using System.Windows.Forms;
 
 namespace PrepareStella.Forms
 {
-	public partial class Help : Form
+	public sealed partial class Help : Form
 	{
 		public Help()
 		{
 			InitializeComponent();
+
+			DoubleBuffered = true;
 		}
 	}
 }

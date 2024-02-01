@@ -73,9 +73,9 @@ namespace ConfigurationNC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon catIcon {
+        internal static System.Drawing.Icon cat_white_52x52 {
             get {
-                object obj = ResourceManager.GetObject("catIcon", resourceCulture);
+                object obj = ResourceManager.GetObject("cat_white_52x52", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }

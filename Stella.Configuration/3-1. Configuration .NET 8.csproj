@@ -12,29 +12,33 @@
     <BaseOutputPath>..\Build\</BaseOutputPath>
     <NeutralLanguage>en</NeutralLanguage>
     <Authors>Sefinek</Authors>
-    <Description>Configuration window of Genshin Stella Mod.</Description>
+    <Description>Configuration window for Genshin Stella Mod.</Description>
     <Copyright>Copyright 2024 © by Sefinek. All Rights Reserved.</Copyright>
     <Company>Sefinek Inc.</Company>
     <Version>1.0.0.0</Version>
     <Title>Configuration window of Genshin Stella Mod.</Title>
     <PackageId>Stella Configuration Window</PackageId>
     <PackageProjectUrl>https://genshin.sefinek.net</PackageProjectUrl>
-    <PackageIcon>cat.ico</PackageIcon>
     <RepositoryType>git</RepositoryType>
-    <Product>ConfigurationWindow</Product>
+    <Product>Configuration window of Genshin Stella Mod</Product>
     <RepositoryUrl>https://github.com/sefinek24/Genshin-Impact-ReShade</RepositoryUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <AssemblyName>ConfigurationWindow</AssemblyName>
+    <AssemblyName>Configuration Window</AssemblyName>
     <StartupObject>ConfigurationNC.Program</StartupObject>
-    <ApplicationIcon>Resources\cat-52x52.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\cat-black_52x52.ico</ApplicationIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Resources\cat-52x52.ico" />
+    <Content Include="Resources\cat-black_52x52.ico" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
@@ -59,6 +63,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Resources\cat-original-black.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Update="Resources\cat.ico">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>

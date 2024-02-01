@@ -7,13 +7,15 @@ using Microsoft.Win32;
 
 namespace PrepareStella.Forms
 {
-	public partial class GamePath : Form
+	public sealed partial class GamePath : Form
 	{
 		private readonly string _inputString;
 
 		public GamePath(string inputString)
 		{
 			InitializeComponent();
+
+			DoubleBuffered = true;
 			_inputString += inputString;
 		}
 

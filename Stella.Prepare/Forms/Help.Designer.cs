@@ -1,6 +1,6 @@
 namespace PrepareStella.Forms
 {
-    partial class Help
+	sealed partial class Help
     {
         /// <summary>
         /// Required designer variable.

@@ -5,11 +5,13 @@ using System.Windows.Forms;
 
 namespace PrepareStella.Forms
 {
-	public partial class Resources : Form
+	public sealed partial class Resources : Form
 	{
 		public Resources()
 		{
 			InitializeComponent();
+
+			DoubleBuffered = true;
 		}
 
 		private void SelectShadersPath_Load(object sender, EventArgs e)

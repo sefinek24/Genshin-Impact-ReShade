@@ -1,6 +1,6 @@
 namespace PrepareStella.Forms
 {
-    partial class GamePath
+	sealed partial class GamePath
     {
         /// <summary>
         /// Required designer variable.
@@ -52,7 +52,7 @@ namespace PrepareStella.Forms
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(473, 369);
+            this.button3.Location = new System.Drawing.Point(190, 354);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(129, 32);
             this.button3.TabIndex = 13;
@@ -62,7 +62,7 @@ namespace PrepareStella.Forms
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(195, 369);
+            this.button2.Location = new System.Drawing.Point(475, 354);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(129, 32);
             this.button2.TabIndex = 12;
