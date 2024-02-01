@@ -6,7 +6,7 @@
 #define AppCopyright "Copyright 2024 © by Sefinek. All Rights Reserved."
 #define AppId "5D6E44F3-2141-4EA4-89E3-6C3018583FF7"
 #define public Dependency_Path_NetCoreCheck "Dependencies\"
-#include "CodeDependencies.iss"
+#include "Dependencies\DependencyInstaller.iss"
 
 [Setup]
 AppCopyright={#AppCopyright}
@@ -99,7 +99,6 @@ begin
   Dependency_AddWebView2;
 
   Dependency_AddDotNet48;
-  Dependency_AddDotNet70;
   Dependency_AddDotNet80;
 
   Dependency_ForceX86 := True;
