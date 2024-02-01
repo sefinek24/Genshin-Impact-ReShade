@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!--
-    Microsoft ResX Schema
-
+  <!-- 
+    Microsoft ResX Schema 
+    
     Version 2.0
-
-    The primary goals of this format is to allow a simple XML format
-    that is mostly human readable. The generation and parsing of the
-    various data types are done through the TypeConverter classes
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
     associated with the data types.
-
+    
     Example:
-
+    
     ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
@@ -26,36 +26,36 @@
         <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
         <comment>This is a comment</comment>
     </data>
-
-    There are any number of "resheader" rows that contain simple
+                
+    There are any number of "resheader" rows that contain simple 
     name/value pairs.
-
-    Each data row contains a name, and value. The row also contains a
-    type or mimetype. Type corresponds to a .NET class that support
-    text/value conversion through the TypeConverter architecture.
-    Classes that don't support this are serialized and stored with the
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
     mimetype set.
-
-    The mimetype is used for serialized objects, and tells the
-    ResXResourceReader how to depersist the object. This is currently not
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
     extensible. For a given mimetype the value must be set accordingly:
-
-    Note - application/x-microsoft.net.object.binary.base64 is the format
-    that the ResXResourceWriter will generate, however the reader can
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
     read any of the formats listed below.
-
+    
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with
+    value   : The object must be serialized with 
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-
+    
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with
+    value   : The object must be serialized with 
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array
+    value   : The object must be serialized into a byte array 
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
@@ -124,47 +124,20 @@
   <data name="panel1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="linkLabel3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="linkLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1051, 1</value>
-  </data>
-  <data name="linkLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 13</value>
-  </data>
-  <data name="linkLabel3.TabIndex" type="System.Int32, mscorlib">
-    <value>122</value>
-  </data>
-  <data name="linkLabel3.Text" xml:space="preserve">
-    <value>uwuwuw</value>
-  </data>
-  <data name="&gt;&gt;linkLabel3.Name" xml:space="preserve">
-    <value>linkLabel3</value>
-  </data>
-  <data name="&gt;&gt;linkLabel3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;linkLabel3.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;linkLabel3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="pictureBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
+    <value>12, 13</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 22</value>
+    <value>24, 24</value>
   </data>
   <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
     <value>77</value>
   </data>
@@ -178,8 +151,11 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="changeBg_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -187,13 +163,13 @@
     <value>True</value>
   </data>
   <data name="changeBg_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="changeBg_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>37, 14</value>
+    <value>40, 14</value>
   </data>
   <data name="changeBg_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 18</value>
+    <value>153, 20</value>
   </data>
   <data name="changeBg_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>88</value>
@@ -201,9 +177,6 @@
   <data name="changeBg_LinkLabel.Text" xml:space="preserve">
     <value>Change background</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="changeBg_LinkLabel.ToolTip" xml:space="preserve">
     <value>Change the application background</value>
   </data>
@@ -217,7 +190,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;changeBg_LinkLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <metadata name="close_Panel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -229,10 +202,10 @@
     <value>None</value>
   </data>
   <data name="close_Panel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1043, 17</value>
+    <value>1175, 19</value>
   </data>
   <data name="close_Panel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 26</value>
+    <value>26, 29</value>
   </data>
   <data name="close_Panel.TabIndex" type="System.Int32, mscorlib">
     <value>76</value>
@@ -250,7 +223,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;close_Panel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -259,7 +232,7 @@
     <value>0, 0</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1100, 44</value>
+    <value>1238, 48</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -274,7 +247,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>35</value>
+    <value>36</value>
   </data>
   <data name="githubUrl_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -283,13 +256,13 @@
     <value>True</value>
   </data>
   <data name="githubUrl_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt</value>
+    <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="githubUrl_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>718, 129</value>
+    <value>825, 123</value>
   </data>
   <data name="githubUrl_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>362, 23</value>
+    <value>396, 24</value>
   </data>
   <data name="githubUrl_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>75</value>
@@ -310,19 +283,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;githubUrl_LinkLabel.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>33</value>
   </data>
   <data name="madeBySefinek_Label.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="madeBySefinek_Label.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Consolas, 17.25pt</value>
+    <value>Consolas, 18.75pt</value>
   </data>
   <data name="madeBySefinek_Label.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopRight</value>
   </data>
   <data name="madeBySefinek_Label.Location" type="System.Drawing.Point, System.Drawing">
-    <value>606, 97</value>
+    <value>749, 91</value>
   </data>
   <data name="madeBySefinek_Label.Size" type="System.Drawing.Size, System.Drawing">
     <value>474, 31</value>
@@ -349,13 +322,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;madeBySefinek_Label.ZOrder" xml:space="preserve">
-    <value>33</value>
+    <value>34</value>
   </data>
   <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 21pt, style=Bold</value>
+    <value>Comic Sans MS, 24pt, style=Bold</value>
   </data>
   <data name="label1.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopRight</value>
@@ -364,10 +337,10 @@
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>576, 59</value>
+    <value>631, 51</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>508, 39</value>
+    <value>595, 39</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>73</value>
@@ -388,16 +361,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>34</value>
+    <value>35</value>
   </data>
   <data name="githubIco_Picturebox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="githubIco_Picturebox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>687, 130</value>
+    <value>791, 123</value>
   </data>
   <data name="githubIco_Picturebox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 26</value>
+    <value>29, 29</value>
   </data>
   <data name="githubIco_Picturebox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -418,16 +391,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;githubIco_Picturebox.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>32</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="tools_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="tools_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12.75pt</value>
+    <value>Comic Sans MS, 14.25pt</value>
   </data>
   <data name="tools_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 601</value>
+    <value>42, 653</value>
   </data>
   <data name="tools_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 25</value>
@@ -451,7 +427,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tools_LinkLabel.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>31</value>
   </data>
   <data name="discordServer_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -460,13 +436,13 @@
     <value>True</value>
   </data>
   <data name="discordServer_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 12.75pt, style=Bold</value>
+    <value>Corbel, 14.25pt, style=Bold</value>
   </data>
   <data name="discordServer_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 572</value>
+    <value>40, 621</value>
   </data>
   <data name="discordServer_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 21</value>
+    <value>73, 23</value>
   </data>
   <data name="discordServer_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>89</value>
@@ -487,7 +463,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;discordServer_LinkLabel.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>22</value>
   </data>
   <data name="web_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -496,13 +472,13 @@
     <value>True</value>
   </data>
   <data name="web_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 12.75pt, style=Bold</value>
+    <value>Corbel, 14.25pt, style=Bold</value>
   </data>
   <data name="web_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 546</value>
+    <value>40, 595</value>
   </data>
   <data name="web_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 21</value>
+    <value>77, 23</value>
   </data>
   <data name="web_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>90</value>
@@ -523,22 +499,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;web_LinkLabel.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="startGame_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="startGame_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Ebrima, 53.25pt</value>
-  </data>
-  <data name="startGame_LinkLabel.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>BottomLeft</value>
+    <value>Georgia, 54.75pt</value>
   </data>
   <data name="startGame_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>69, 214</value>
+    <value>89, 211</value>
   </data>
   <data name="startGame_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>501, 95</value>
+    <value>501, 109</value>
   </data>
   <data name="startGame_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>94</value>
@@ -565,16 +538,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;startGame_LinkLabel.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="gameplay_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="gameplay_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12.75pt</value>
+    <value>Comic Sans MS, 14.25pt</value>
   </data>
   <data name="gameplay_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>470, 600</value>
+    <value>473, 653</value>
   </data>
   <data name="gameplay_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 25</value>
@@ -598,7 +571,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;gameplay_LinkLabel.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>30</value>
   </data>
   <data name="supportMe_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -607,13 +580,13 @@
     <value>True</value>
   </data>
   <data name="supportMe_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 12.75pt, style=Bold</value>
+    <value>Corbel, 14.25pt, style=Bold</value>
   </data>
   <data name="supportMe_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 520</value>
+    <value>40, 568</value>
   </data>
   <data name="supportMe_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 21</value>
+    <value>106, 23</value>
   </data>
   <data name="supportMe_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>100</value>
@@ -634,7 +607,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;supportMe_LinkLabel.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="becomeMyPatron_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -646,7 +619,7 @@
     <value>Yu Gothic UI, 15.75pt, style=Bold</value>
   </data>
   <data name="becomeMyPatron_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 428</value>
+    <value>62, 422</value>
   </data>
   <data name="becomeMyPatron_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>576, 60</value>
@@ -677,7 +650,7 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;becomeMyPatron_LinkLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="runGiLauncher_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -686,13 +659,13 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>True</value>
   </data>
   <data name="runGiLauncher_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt</value>
+    <value>Comic Sans MS, 14.25pt</value>
   </data>
   <data name="runGiLauncher_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 361</value>
+    <value>225, 363</value>
   </data>
   <data name="runGiLauncher_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 23</value>
+    <value>232, 26</value>
   </data>
   <data name="runGiLauncher_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>106</value>
@@ -719,22 +692,22 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;runGiLauncher_LinkLabel.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="version_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="version_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12.75pt</value>
+    <value>Comic Sans MS, 14.25pt</value>
   </data>
   <data name="version_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>843, 572</value>
+    <value>953, 626</value>
   </data>
   <data name="version_LinkLabel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
   <data name="version_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 25</value>
+    <value>242, 25</value>
   </data>
   <data name="version_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>85</value>
@@ -758,16 +731,16 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;version_LinkLabel.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>25</value>
   </data>
   <data name="links_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="links_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12.75pt</value>
+    <value>Comic Sans MS, 14.25pt</value>
   </data>
   <data name="links_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 602</value>
+    <value>317, 653</value>
   </data>
   <data name="links_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 25</value>
@@ -791,19 +764,19 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;links_LinkLabel.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="clickMe_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="clickMe_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 11.25pt, style=Bold</value>
+    <value>Comic Sans MS, 12pt, style=Bold</value>
   </data>
   <data name="clickMe_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>968, 499</value>
+    <value>1095, 546</value>
   </data>
   <data name="clickMe_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 21</value>
+    <value>132, 20</value>
   </data>
   <data name="clickMe_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>116</value>
@@ -827,7 +800,7 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;clickMe_LinkLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="injectReShade_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -836,16 +809,16 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>True</value>
   </data>
   <data name="injectReShade_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt</value>
+    <value>Comic Sans MS, 14.25pt</value>
   </data>
   <data name="injectReShade_LinkLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="injectReShade_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>104, 323</value>
+    <value>100, 325</value>
   </data>
   <data name="injectReShade_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 23</value>
+    <value>134, 26</value>
   </data>
   <data name="injectReShade_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>92</value>
@@ -871,7 +844,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>$this</value>
   </data>
   <data name="&gt;&gt;injectReShade_LinkLabel.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="runFpsUnlocker_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -880,16 +853,16 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>True</value>
   </data>
   <data name="runFpsUnlocker_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt</value>
+    <value>Comic Sans MS, 14.25pt</value>
   </data>
   <data name="runFpsUnlocker_LinkLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="runFpsUnlocker_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>232, 323</value>
+    <value>252, 325</value>
   </data>
   <data name="runFpsUnlocker_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 23</value>
+    <value>177, 26</value>
   </data>
   <data name="runFpsUnlocker_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>93</value>
@@ -913,7 +886,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>$this</value>
   </data>
   <data name="&gt;&gt;runFpsUnlocker_LinkLabel.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="only3DMigoto_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -922,16 +895,16 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>True</value>
   </data>
   <data name="only3DMigoto_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt</value>
+    <value>Comic Sans MS, 14.25pt</value>
   </data>
   <data name="only3DMigoto_LinkLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="only3DMigoto_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>403, 323</value>
+    <value>447, 325</value>
   </data>
   <data name="only3DMigoto_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 23</value>
+    <value>143, 26</value>
   </data>
   <data name="only3DMigoto_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>117</value>
@@ -955,19 +928,19 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>$this</value>
   </data>
   <data name="&gt;&gt;only3DMigoto_LinkLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="linkLabel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="linkLabel1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12.75pt</value>
+    <value>Comic Sans MS, 14.25pt</value>
   </data>
   <data name="linkLabel1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>612, 600</value>
+    <value>619, 652</value>
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 25</value>
@@ -991,19 +964,19 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="linkLabel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="linkLabel2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12.75pt</value>
+    <value>Comic Sans MS, 14.25pt</value>
   </data>
   <data name="linkLabel2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="linkLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 600</value>
+    <value>175, 653</value>
   </data>
   <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 25</value>
@@ -1027,16 +1000,16 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel2.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="toolsIco_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="toolsIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 601</value>
+    <value>11, 654</value>
   </data>
   <data name="toolsIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
+    <value>25, 25</value>
   </data>
   <data name="toolsIco_PictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -1054,16 +1027,16 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>$this</value>
   </data>
   <data name="&gt;&gt;toolsIco_PictureBox.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>29</value>
   </data>
   <data name="updateIco_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="updateIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1065, 601</value>
+    <value>1201, 655</value>
   </data>
   <data name="updateIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
+    <value>25, 25</value>
   </data>
   <data name="updateIco_PictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -1081,16 +1054,16 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>$this</value>
   </data>
   <data name="&gt;&gt;updateIco_PictureBox.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>28</value>
   </data>
   <data name="versionIco_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="versionIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1065, 572</value>
+    <value>1201, 626</value>
   </data>
   <data name="versionIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
+    <value>25, 25</value>
   </data>
   <data name="versionIco_PictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -1108,28 +1081,28 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>$this</value>
   </data>
   <data name="&gt;&gt;versionIco_PictureBox.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>27</value>
   </data>
   <data name="updates_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="updates_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12.75pt</value>
+    <value>Comic Sans MS, 14.25pt</value>
   </data>
   <data name="updates_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>816, 600</value>
+    <value>953, 655</value>
   </data>
   <data name="updates_LinkLabel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
   <data name="updates_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 25</value>
+    <value>242, 25</value>
   </data>
   <data name="updates_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>85</value>
   </data>
   <data name="updates_LinkLabel.Text" xml:space="preserve">
-    <value>&gt;&gt; Click here &lt;&lt;</value>
+    <value>Loading data...</value>
   </data>
   <data name="updates_LinkLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
@@ -1144,16 +1117,16 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>$this</value>
   </data>
   <data name="&gt;&gt;updates_LinkLabel.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>26</value>
   </data>
   <data name="webIco_Picturebox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="webIco_Picturebox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 544</value>
+    <value>11, 595</value>
   </data>
   <data name="webIco_Picturebox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 25</value>
+    <value>26, 26</value>
   </data>
   <data name="webIco_Picturebox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -1171,16 +1144,16 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>$this</value>
   </data>
   <data name="&gt;&gt;webIco_Picturebox.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>24</value>
   </data>
   <data name="discordServerIco_Picturebox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="discordServerIco_Picturebox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 570</value>
+    <value>11, 621</value>
   </data>
   <data name="discordServerIco_Picturebox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 25</value>
+    <value>26, 26</value>
   </data>
   <data name="discordServerIco_Picturebox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -1198,7 +1171,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>$this</value>
   </data>
   <data name="&gt;&gt;discordServerIco_Picturebox.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>23</value>
   </data>
   <data name="status_Label.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1207,7 +1180,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>Consolas, 9.75pt</value>
   </data>
   <data name="status_Label.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 47</value>
+    <value>12, 51</value>
   </data>
   <data name="status_Label.Size" type="System.Drawing.Size, System.Drawing">
     <value>561, 151</value>
@@ -1228,16 +1201,16 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>$this</value>
   </data>
   <data name="&gt;&gt;status_Label.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="padIco_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="padIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>440, 601</value>
+    <value>442, 654</value>
   </data>
   <data name="padIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
+    <value>25, 25</value>
   </data>
   <data name="padIco_PictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -1255,16 +1228,16 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>$this</value>
   </data>
   <data name="&gt;&gt;padIco_PictureBox.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="supportMeIco_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="supportMeIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 517</value>
+    <value>11, 568</value>
   </data>
   <data name="supportMeIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 25</value>
+    <value>26, 26</value>
   </data>
   <data name="supportMeIco_PictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -1282,16 +1255,16 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>$this</value>
   </data>
   <data name="&gt;&gt;supportMeIco_PictureBox.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="shortcutIco_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="shortcutIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>297, 602</value>
+    <value>288, 654</value>
   </data>
   <data name="shortcutIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
+    <value>25, 25</value>
   </data>
   <data name="shortcutIco_PictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -1309,16 +1282,16 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>$this</value>
   </data>
   <data name="&gt;&gt;shortcutIco_PictureBox.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="paimon_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="paimon_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1046, 523</value>
+    <value>1181, 572</value>
   </data>
   <data name="paimon_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 42</value>
+    <value>44, 44</value>
   </data>
   <data name="paimon_PictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -1336,16 +1309,19 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>$this</value>
   </data>
   <data name="&gt;&gt;paimon_PictureBox.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="progressBar1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
+  <data name="progressBar1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="progressBar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 601</value>
+    <value>11, 654</value>
   </data>
   <data name="progressBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>798, 26</value>
+    <value>936, 26</value>
   </data>
   <data name="progressBar1.TabIndex" type="System.Int32, mscorlib">
     <value>114</value>
@@ -1360,7 +1336,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>$this</value>
   </data>
   <data name="&gt;&gt;progressBar1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="PreparingPleaseWait.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1369,7 +1345,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>Calibri, 14.25pt</value>
   </data>
   <data name="PreparingPleaseWait.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 574</value>
+    <value>176, 627</value>
   </data>
   <data name="PreparingPleaseWait.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
@@ -1378,7 +1354,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>115</value>
   </data>
   <data name="PreparingPleaseWait.Text" xml:space="preserve">
-    <value>Please wait...</value>
+    <value>Waiting for UI stabilization...</value>
   </data>
   <data name="PreparingPleaseWait.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1393,7 +1369,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>$this</value>
   </data>
   <data name="&gt;&gt;PreparingPleaseWait.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="pictureBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1402,10 +1378,10 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>NoControl</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>582, 601</value>
+    <value>588, 654</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
+    <value>25, 25</value>
   </data>
   <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -1423,7 +1399,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="pictureBox3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1432,10 +1408,10 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>NoControl</value>
   </data>
   <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 601</value>
+    <value>144, 654</value>
   </data>
   <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
+    <value>25, 25</value>
   </data>
   <data name="pictureBox3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -1453,7 +1429,31 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
+  </data>
+  <data name="webView21.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="webView21.Location" type="System.Drawing.Point, System.Drawing">
+    <value>289, 519</value>
+  </data>
+  <data name="webView21.Size" type="System.Drawing.Size, System.Drawing">
+    <value>347, 104</value>
+  </data>
+  <data name="webView21.TabIndex" type="System.Int32, mscorlib">
+    <value>122</value>
+  </data>
+  <data name="&gt;&gt;webView21.Name" xml:space="preserve">
+    <value>webView21</value>
+  </data>
+  <data name="&gt;&gt;webView21.Type" xml:space="preserve">
+    <value>Microsoft.Web.WebView2.WinForms.WebView2, Microsoft.Web.WebView2.WinForms, Version=1.0.2210.55, Culture=neutral, PublicKeyToken=2a8ab48044d2601e</value>
+  </data>
+  <data name="&gt;&gt;webView21.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;webView21.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1468,7 +1468,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1100, 635</value>
+    <value>1238, 690</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

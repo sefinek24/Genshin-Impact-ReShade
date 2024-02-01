@@ -32,7 +32,6 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 				DateTime remoteVerDate = DateTime.Parse(res.Launcher.ReleaseDate, null, DateTimeStyles.RoundtripKind).ToUniversalTime().ToLocalTime();
 
 
-				Default._progressBar1.Value = 62;
 				// == Major release ==
 				if (Program.AppVersion[0] != remoteVersion[0])
 				{
@@ -43,7 +42,6 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 				}
 
 
-				Default._progressBar1.Value = 68;
 				// == Normal release ==
 				if (Program.AppVersion != remoteVersion)
 				{
@@ -54,7 +52,6 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 				}
 
 
-				Default._progressBar1.Value = 74;
 				// == Check new updates of resources ==
 				if (!Secret.IsMyPatron)
 				{
@@ -84,7 +81,6 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 				}
 
 
-				Default._progressBar1.Value = 80;
 				// == Check new updates for ReShade.ini file ==
 				// int resultInt = await ReShadeIni.CheckForUpdates();
 				//switch (resultInt)
@@ -145,7 +141,6 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 				Default.UpdateIsAvailable = false;
 				Program.Logger.Info($"Not found any new updates. AppVersion v{Program.AppVersion}; ProductVersion v{Program.ProductVersion};");
 
-				Default._progressBar1.Value = 84;
 				TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress);
 
 				Utils.ShowStartGameBts();

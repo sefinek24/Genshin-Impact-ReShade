@@ -127,6 +127,9 @@
   <metadata name="panel3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="panel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -135,18 +138,15 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1043, 17</value>
+    <value>1175, 19</value>
   </data>
   <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 26</value>
+    <value>26, 29</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="panel3.TabIndex" type="System.Int32, mscorlib">
     <value>110</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="panel3.ToolTip" xml:space="preserve">
     <value>Close</value>
   </data>
@@ -169,7 +169,7 @@
     <value>0, 0</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1100, 44</value>
+    <value>1238, 48</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -190,7 +190,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 166</value>
+    <value>52, 198</value>
   </data>
   <data name="pictureBox7.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -223,7 +223,7 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="createShortcut_Label.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 166</value>
+    <value>82, 198</value>
   </data>
   <data name="createShortcut_Label.Size" type="System.Drawing.Size, System.Drawing">
     <value>201, 24</value>
@@ -250,7 +250,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 196</value>
+    <value>52, 228</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -283,7 +283,7 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 196</value>
+    <value>82, 228</value>
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>323, 24</value>
@@ -310,7 +310,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 314</value>
+    <value>52, 346</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -343,7 +343,7 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="linkLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 314</value>
+    <value>82, 346</value>
   </data>
   <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>341, 24</value>
@@ -370,7 +370,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 344</value>
+    <value>52, 376</value>
   </data>
   <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -403,7 +403,7 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="linkLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 344</value>
+    <value>82, 376</value>
   </data>
   <data name="linkLabel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>470, 24</value>
@@ -433,7 +433,7 @@
     <value>Comic Sans MS, 33.75pt</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 101</value>
+    <value>52, 133</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>515, 62</value>
@@ -466,7 +466,7 @@
     <value>Comic Sans MS, 33.75pt</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 249</value>
+    <value>52, 281</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>515, 62</value>
@@ -492,6 +492,9 @@
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="label3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -499,7 +502,7 @@
     <value>Comic Sans MS, 33.75pt</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 400</value>
+    <value>52, 432</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>515, 62</value>
@@ -529,7 +532,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 495</value>
+    <value>52, 527</value>
   </data>
   <data name="pictureBox4.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -562,10 +565,10 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="linkLabel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 495</value>
+    <value>82, 527</value>
   </data>
   <data name="linkLabel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 24</value>
+    <value>285, 24</value>
   </data>
   <data name="linkLabel4.TabIndex" type="System.Int32, mscorlib">
     <value>111</value>
@@ -589,7 +592,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 525</value>
+    <value>52, 557</value>
   </data>
   <data name="pictureBox5.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -622,10 +625,10 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="linkLabel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 525</value>
+    <value>82, 557</value>
   </data>
   <data name="linkLabel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>223, 24</value>
+    <value>216, 24</value>
   </data>
   <data name="linkLabel5.TabIndex" type="System.Int32, mscorlib">
     <value>113</value>
@@ -649,7 +652,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 465</value>
+    <value>52, 497</value>
   </data>
   <data name="pictureBox6.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -682,7 +685,7 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="linkLabel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 465</value>
+    <value>82, 497</value>
   </data>
   <data name="linkLabel6.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 24</value>
@@ -709,7 +712,7 @@
     <value>None</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>806, 341</value>
+    <value>875, 369</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>13, 12</value>
@@ -742,7 +745,7 @@
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1100, 635</value>
+    <value>1238, 690</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>Manual</value>

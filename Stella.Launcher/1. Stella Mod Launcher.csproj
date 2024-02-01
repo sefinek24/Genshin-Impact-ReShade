@@ -208,6 +208,8 @@
     <Compile Include="Scripts\Delete.cs" />
     <Compile Include="Scripts\Forms\MainForm\Tray.cs" />
     <Compile Include="Scripts\Forms\MainForm\Run.cs" />
+    <Compile Include="Scripts\Forms\Stages.cs" />
+    <Compile Include="Scripts\Forms\WebViewHelper.cs" />
     <Compile Include="Scripts\RSConfig.cs" />
     <Compile Include="Scripts\Shortcut.cs" />
     <Compile Include="Scripts\Forms\MainForm\Background.cs" />
@@ -323,6 +325,9 @@
     <EmbeddedResource Include="Properties\Resources.pl.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <None Include="..\CHANGELOG.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="data\cmd\delete_cache.cmd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -363,7 +368,7 @@
     <None Include="dependencies\Microsoft.WindowsTerminal_1.18.3181.0_8wekyb3d8bbwe.msixbundle">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="LICENSE">
+    <None Include="..\LICENSE">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="NLog.config">
@@ -371,6 +376,9 @@
     </None>
     <None Include="Properties\App.config" />
     <None Include="Properties\app.manifest" />
+    <None Include="..\README.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Scripts\Download\ReShadeIni.cs.old" />
     <None Include="www\LICENSE">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -585,6 +593,10 @@
     <None Include="Resources\flaticon_settings.png" />
     <None Include="Resources\flaticon_log1.png" />
     <None Include="Resources\flaticon_config.png" />
+    <None Include="Resources\heart-flaticon.png" />
+    <Content Include="data\videos\theannoyingcat.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="www\css\default.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -642,7 +654,6 @@
     <None Include="Resources\tools.png" />
     <None Include="Resources\links.png" />
     <None Include="Resources\main.png" />
-    <None Include="Resources\donation.png" />
     <None Include="Resources\IMG_20220810_133130-1-1.png" />
     <None Include="Resources\775295135108825088.gif" />
     <None Include="Resources\party-popper_1f389.png" />

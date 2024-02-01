@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!--
-    Microsoft ResX Schema
-
+  <!-- 
+    Microsoft ResX Schema 
+    
     Version 2.0
-
-    The primary goals of this format is to allow a simple XML format
-    that is mostly human readable. The generation and parsing of the
-    various data types are done through the TypeConverter classes
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
     associated with the data types.
-
+    
     Example:
-
+    
     ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
@@ -26,36 +26,36 @@
         <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
         <comment>This is a comment</comment>
     </data>
-
-    There are any number of "resheader" rows that contain simple
+                
+    There are any number of "resheader" rows that contain simple 
     name/value pairs.
-
-    Each data row contains a name, and value. The row also contains a
-    type or mimetype. Type corresponds to a .NET class that support
-    text/value conversion through the TypeConverter architecture.
-    Classes that don't support this are serialized and stored with the
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
     mimetype set.
-
-    The mimetype is used for serialized objects, and tells the
-    ResXResourceReader how to depersist the object. This is currently not
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
     extensible. For a given mimetype the value must be set accordingly:
-
-    Note - application/x-microsoft.net.object.binary.base64 is the format
-    that the ResXResourceWriter will generate, however the reader can
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
     read any of the formats listed below.
-
+    
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with
+    value   : The object must be serialized with 
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-
+    
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with
+    value   : The object must be serialized with 
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array
+    value   : The object must be serialized into a byte array 
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
@@ -117,32 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="startGame_LinkLabel.Text" xml:space="preserve">
-    <value>Uruchom grę</value>
+  <data name="pictureBox2.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="tools_LinkLabel.Text" xml:space="preserve">
-    <value>Narzędzia</value>
-  </data>
-  <data name="tools_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Wyświetl narzędzia oraz logi</value>
-  </data>
-  <data name="links_LinkLabel.Text" xml:space="preserve">
-    <value>Linki</value>
-  </data>
-  <data name="supportMe_LinkLabel.Text" xml:space="preserve">
-    <value>Wesprzyj mnie</value>
-  </data>
-  <data name="gameplay_LinkLabel.Text" xml:space="preserve">
-    <value>Rozgrywka</value>
-  </data>
-  <data name="website_LinkLabel.Text" xml:space="preserve">
-    <value>Witryna</value>
-  </data>
-  <data name="linkLabel2.Text" xml:space="preserve">
-    <value>Ustawienia</value>
-  </data>
-  <data name="linkLabel1.Text" xml:space="preserve">
-    <value>Zasoby</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="changeBg_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 20</value>
   </data>
   <data name="changeBg_LinkLabel.Text" xml:space="preserve">
     <value>Zmień tło aplikacji</value>
@@ -153,8 +133,8 @@
   <data name="close_Panel.ToolTip" xml:space="preserve">
     <value>Wyjdź z programu</value>
   </data>
-  <data name="githubUrl_LinkLabel.Text" xml:space="preserve">
-    <value>github.com/sefinek24/Genshin-Impact-ReShade</value>
+  <data name="panel1.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="githubUrl_LinkLabel.ToolTip" xml:space="preserve">
     <value>Główne repozytorium GitHub. Oznacz je gwiazdką, jeśli podoba Ci się to oprogramowanie.</value>
@@ -162,97 +142,182 @@
   <data name="madeBySefinek_Label.Text" xml:space="preserve">
     <value>autorstwa Sefinek</value>
   </data>
-  <data name="madeBySefinek_Label.ToolTip" xml:space="preserve">
-    <value>&gt;~~&lt;</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Genshin Stella Mod Launcher 2024</value>
+  <data name="label1.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="githubIco_Picturebox.ToolTip" xml:space="preserve">
     <value>Ikona GitHub</value>
   </data>
-  <data name="discordServer_LinkLabel.Text" xml:space="preserve">
-    <value>Discord</value>
+  <data name="tools_LinkLabel.Text" xml:space="preserve">
+    <value>Narzędzia</value>
+  </data>
+  <data name="tools_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Wyświetl narzędzia oraz logi</value>
   </data>
   <data name="discordServer_LinkLabel.ToolTip" xml:space="preserve">
     <value>Dołącz na nasz serwer Discord jeśli potrzebujesz pomocy</value>
   </data>
-  <data name="web_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Otwórz naszą oficjalną stronę internetową</value>
+  <data name="web_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 23</value>
   </data>
   <data name="web_LinkLabel.Text" xml:space="preserve">
     <value>Strona www</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Stella Mod Launcher</value>
+  <data name="web_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Otwórz naszą oficjalną stronę internetową</value>
   </data>
-  <data name="PreparingPleaseWait.Text" xml:space="preserve">
-    <value>Proszę czekać...</value>
+  <data name="startGame_LinkLabel.Text" xml:space="preserve">
+    <value>Uruchom grę</value>
   </data>
-  <data name="updates_LinkLabel.Text" xml:space="preserve">
-    <value>&gt;&gt; Kliknij tutaj &lt;&lt;</value>
+  <data name="startGame_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Uruchom Genshin Impact jednocześnie z ReShade, 3DMigoto (dostępne tylko dla subskrybentów Stella Mod Plus) i FPS Unlocker</value>
   </data>
-  <data name="linkLabel2.ToolTip" xml:space="preserve">
-    <value>Otwórz ustawienia</value>
+  <data name="gameplay_LinkLabel.Text" xml:space="preserve">
+    <value>Rozgrywka</value>
   </data>
-  <data name="linkLabel1.ToolTip" xml:space="preserve">
-    <value>Przejdź do zasobów Stelli</value>
+  <data name="gameplay_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Obejrzyj rozgrywkę</value>
   </data>
-  <data name="only3DMigoto_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Uruchomienie Genshin Impact tylko z wstrzykniętym 3DMigoto (opcja dla subskrybentów Stella Mod Plus)</value>
+  <data name="supportMe_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 23</value>
   </data>
-  <data name="only3DMigoto_LinkLabel.Text" xml:space="preserve">
-    <value>Tylkok 3DMigoto</value>
+  <data name="supportMe_LinkLabel.Text" xml:space="preserve">
+    <value>Wesprzyj mnie</value>
   </data>
-  <data name="runFpsUnlocker_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Uruchom grę z odblokowaną liczbą klatek na sekundę [FPS]</value>
+  <data name="supportMe_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Wspieraj moją pracę</value>
   </data>
-  <data name="runFpsUnlocker_LinkLabel.Text" xml:space="preserve">
-    <value>Tylko FPS Unlocker</value>
+  <data name="becomeMyPatron_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 60</value>
+  </data>
+  <data name="becomeMyPatron_LinkLabel.Text" xml:space="preserve">
+    <value>Aby odblokować liczne korzyści, subskrybuj Stella Mod Plus.
+Obejmują one: Ray Tracing, mody i wiele więcej!</value>
+  </data>
+  <data name="becomeMyPatron_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Przejdź do https://genshin.sefinek.net/subscription</value>
+  </data>
+  <data name="runGiLauncher_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Otwórz główny program uruchamiający grę</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="version_LinkLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="version_LinkLabel.Text" xml:space="preserve">
+    <value>Restart jest opcjonalny</value>
+  </data>
+  <data name="version_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Wyświetl listę zmian oprogramowania</value>
+  </data>
+  <data name="links_LinkLabel.Text" xml:space="preserve">
+    <value>Linki</value>
+  </data>
+  <data name="links_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Przydatne linki</value>
+  </data>
+  <data name="clickMe_LinkLabel.Text" xml:space="preserve">
+    <value>Kliknij mnie ;w;</value>
+  </data>
+  <data name="clickMe_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Tak, kurwa tutaj!</value>
+  </data>
+  <data name="injectReShade_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 26</value>
+  </data>
+  <data name="injectReShade_LinkLabel.Text" xml:space="preserve">
+    <value>Tylko ReShade</value>
   </data>
   <data name="injectReShade_LinkLabel.ToolTip" xml:space="preserve">
     <value>Uruchom grę tylko z ReShade.
 
 Zaleca się kliknięcie przycisku "Rozpocznij grę" u góry, aby jednocześnie korzystać z ReShade + 3DMigoto (dla subskrybentów Stella Mod Plus) i odblokować FPS, jeśli monitor ma częstotliwość odświeżania wyższą niż 60 Hz.</value>
   </data>
-  <data name="injectReShade_LinkLabel.Text" xml:space="preserve">
-    <value>Tylko ReShade</value>
+  <data name="runFpsUnlocker_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 26</value>
   </data>
-  <data name="clickMe_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Tak, kurwa tutaj!</value>
+  <data name="runFpsUnlocker_LinkLabel.Text" xml:space="preserve">
+    <value>Tylko FPS Unlocker</value>
   </data>
-  <data name="clickMe_LinkLabel.Text" xml:space="preserve">
-    <value>Kliknij mnie ;w;</value>
+  <data name="runFpsUnlocker_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Uruchom grę z odblokowaną liczbą klatek na sekundę [FPS]</value>
   </data>
-  <data name="links_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Przydatne linki</value>
+  <data name="only3DMigoto_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 26</value>
   </data>
-  <data name="version_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Wyświetl listę zmian oprogramowania</value>
+  <data name="only3DMigoto_LinkLabel.Text" xml:space="preserve">
+    <value>Tylkok 3DMigoto</value>
   </data>
-  <data name="version_LinkLabel.Text" xml:space="preserve">
-    <value>Restart jest opcjonalny</value>
+  <data name="only3DMigoto_LinkLabel.ToolTip" xml:space="preserve">
+    <value>Uruchomienie Genshin Impact tylko z wstrzykniętym 3DMigoto (opcja dla subskrybentów Stella Mod Plus)</value>
   </data>
-  <data name="runGiLauncher_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Otwórz główny program uruchamiający grę</value>
+  <data name="linkLabel1.Text" xml:space="preserve">
+    <value>Zasoby</value>
   </data>
-  <data name="becomeMyPatron_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Przejdź do https://genshin.sefinek.net/subscription</value>
+  <data name="linkLabel1.ToolTip" xml:space="preserve">
+    <value>Przejdź do zasobów Stelli</value>
   </data>
-  <data name="becomeMyPatron_LinkLabel.Text" xml:space="preserve">
-    <value>Aby odblokować liczne korzyści, subskrybuj Stella Mod Plus.
-Obejmują one: Ray Tracing, mody i wiele więcej!</value>
+  <data name="linkLabel2.Text" xml:space="preserve">
+    <value>Ustawienia</value>
   </data>
-  <data name="runGiLauncher_LinkLabel.Text" xml:space="preserve">
-    <value>Genshin Impact Launcher</value>
+  <data name="linkLabel2.ToolTip" xml:space="preserve">
+    <value>Otwórz ustawienia</value>
   </data>
-  <data name="supportMe_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Wspieraj moją pracę</value>
+  <data name="toolsIco_PictureBox.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="gameplay_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Obejrzyj rozgrywkę</value>
+  <data name="updateIco_PictureBox.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="startGame_LinkLabel.ToolTip" xml:space="preserve">
-    <value>Uruchom Genshin Impact jednocześnie z ReShade, 3DMigoto (dostępne tylko dla subskrybentów Stella Mod Plus) i FPS Unlocker</value>
+  <data name="versionIco_PictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="updates_LinkLabel.Text" xml:space="preserve">
+    <value>Ładowanie danych...</value>
+  </data>
+  <data name="updates_LinkLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="webIco_Picturebox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="discordServerIco_Picturebox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="status_Label.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="padIco_PictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="supportMeIco_PictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="shortcutIco_PictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="paimon_PictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="progressBar1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PreparingPleaseWait.Text" xml:space="preserve">
+    <value>Oczekiwanie na stabilizację interfejsu użytkownika...</value>
+  </data>
+  <data name="PreparingPleaseWait.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="webView21.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
   </data>
 </root>

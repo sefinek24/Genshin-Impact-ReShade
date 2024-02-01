@@ -10,7 +10,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 {
 	internal static class LaunchCountHelper
 	{
-		public static async Task CheckLaunchCountAndShowMessages()
+		public static async Task<int> CheckLaunchCountAndShowMessages()
 		{
 			RegistryKey key = Registry.CurrentUser.CreateSubKey(Program.RegistryPath);
 			int launchCount = (int)(key?.GetValue("LaunchCount") ?? 0);
@@ -98,6 +98,8 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 
 					break;
 			}
+
+			return launchCount;
 		}
 
 		private static Task ShowMessage(MessageType type)

@@ -129,10 +129,10 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1043, 17</value>
+    <value>1175, 19</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 26</value>
+    <value>26, 29</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
@@ -169,7 +169,7 @@
     <value>0, 0</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1100, 44</value>
+    <value>1238, 48</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -193,7 +193,7 @@
     <value>Comic Sans MS, 12pt</value>
   </data>
   <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>432, 69</value>
+    <value>532, 81</value>
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>261, 23</value>
@@ -225,8 +225,11 @@
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Comic Sans MS, 12pt</value>
   </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 504</value>
+    <value>63, 564</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>670, 46</value>
@@ -260,7 +263,7 @@ Thank you for using Stella. Support me if you find it helpful. Enjoy!</value>
     <value>Comic Sans MS, 14.25pt</value>
   </data>
   <data name="linkLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>237, 573</value>
+    <value>275, 630</value>
   </data>
   <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>232, 26</value>
@@ -296,7 +299,7 @@ Thank you for using Stella. Support me if you find it helpful. Enjoy!</value>
     <value>Comic Sans MS, 14.25pt</value>
   </data>
   <data name="linkLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>515, 573</value>
+    <value>553, 630</value>
   </data>
   <data name="linkLabel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>178, 29</value>
@@ -332,7 +335,7 @@ Thank you for using Stella. Support me if you find it helpful. Enjoy!</value>
     <value>Comic Sans MS, 14.25pt</value>
   </data>
   <data name="linkLabel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 572</value>
+    <value>56, 629</value>
   </data>
   <data name="linkLabel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 29</value>
@@ -368,7 +371,7 @@ Thank you for using Stella. Support me if you find it helpful. Enjoy!</value>
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>623, 560</value>
+    <value>748, 615</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>432, 24</value>
@@ -398,7 +401,7 @@ Thank you for using Stella. Support me if you find it helpful. Enjoy!</value>
     <value>None</value>
   </data>
   <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>849, 591</value>
+    <value>974, 646</value>
   </data>
   <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 32</value>
@@ -428,7 +431,7 @@ Thank you for using Stella. Support me if you find it helpful. Enjoy!</value>
     <value>None</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>797, 591</value>
+    <value>922, 646</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 32</value>
@@ -458,10 +461,10 @@ Thank you for using Stella. Support me if you find it helpful. Enjoy!</value>
     <value>None</value>
   </data>
   <data name="webView21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 95</value>
+    <value>22, 107</value>
   </data>
   <data name="webView21.Size" type="System.Drawing.Size, System.Drawing">
-    <value>670, 386</value>
+    <value>767, 431</value>
   </data>
   <data name="webView21.TabIndex" type="System.Int32, mscorlib">
     <value>101</value>
@@ -491,7 +494,7 @@ Thank you for using Stella. Support me if you find it helpful. Enjoy!</value>
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1100, 635</value>
+    <value>1238, 690</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>Manual</value>

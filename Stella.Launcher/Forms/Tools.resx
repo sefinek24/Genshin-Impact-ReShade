@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!--
-    Microsoft ResX Schema
-
+  <!-- 
+    Microsoft ResX Schema 
+    
     Version 2.0
-
-    The primary goals of this format is to allow a simple XML format
-    that is mostly human readable. The generation and parsing of the
-    various data types are done through the TypeConverter classes
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
     associated with the data types.
-
+    
     Example:
-
+    
     ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
@@ -26,36 +26,36 @@
         <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
         <comment>This is a comment</comment>
     </data>
-
-    There are any number of "resheader" rows that contain simple
+                
+    There are any number of "resheader" rows that contain simple 
     name/value pairs.
-
-    Each data row contains a name, and value. The row also contains a
-    type or mimetype. Type corresponds to a .NET class that support
-    text/value conversion through the TypeConverter architecture.
-    Classes that don't support this are serialized and stored with the
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
     mimetype set.
-
-    The mimetype is used for serialized objects, and tells the
-    ResXResourceReader how to depersist the object. This is currently not
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
     extensible. For a given mimetype the value must be set accordingly:
-
-    Note - application/x-microsoft.net.object.binary.base64 is the format
-    that the ResXResourceWriter will generate, however the reader can
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
     read any of the formats listed below.
-
+    
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with
+    value   : The object must be serialized with 
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-
+    
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with
+    value   : The object must be serialized with 
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array
+    value   : The object must be serialized into a byte array 
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
@@ -138,10 +138,10 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1043, 17</value>
+    <value>1175, 19</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 26</value>
+    <value>26, 29</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
@@ -169,7 +169,7 @@
     <value>0, 0</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1100, 44</value>
+    <value>1238, 48</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -196,7 +196,7 @@
     <value>TopRight</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>247, 52</value>
+    <value>316, 51</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>600, 37</value>
@@ -229,7 +229,7 @@
     <value>Comic Sans MS, 15.75pt</value>
   </data>
   <data name="SettingsAndUtils.Location" type="System.Drawing.Point, System.Drawing">
-    <value>345, 89</value>
+    <value>414, 88</value>
   </data>
   <data name="SettingsAndUtils.Size" type="System.Drawing.Size, System.Drawing">
     <value>400, 30</value>
@@ -265,7 +265,7 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="DeleteAllCacheAndLogFiles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 471</value>
+    <value>118, 499</value>
   </data>
   <data name="DeleteAllCacheAndLogFiles.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 24</value>
@@ -292,7 +292,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 471</value>
+    <value>88, 499</value>
   </data>
   <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -325,7 +325,7 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="ReShadeLogs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 389</value>
+    <value>118, 417</value>
   </data>
   <data name="ReShadeLogs.Size" type="System.Drawing.Size, System.Drawing">
     <value>109, 24</value>
@@ -379,7 +379,7 @@
 </value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 389</value>
+    <value>88, 417</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -412,7 +412,7 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="LauncherLogs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 329</value>
+    <value>118, 357</value>
   </data>
   <data name="LauncherLogs.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 24</value>
@@ -466,7 +466,7 @@
 </value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 329</value>
+    <value>88, 357</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -496,7 +496,7 @@
     <value>Comic Sans MS, 15pt</value>
   </data>
   <data name="LogFiles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>52, 264</value>
+    <value>121, 292</value>
   </data>
   <data name="LogFiles.Size" type="System.Drawing.Size, System.Drawing">
     <value>241, 35</value>
@@ -529,7 +529,7 @@
     <value>Comic Sans MS, 15pt</value>
   </data>
   <data name="ConfigFiles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>53, 160</value>
+    <value>122, 188</value>
   </data>
   <data name="ConfigFiles.Size" type="System.Drawing.Size, System.Drawing">
     <value>233, 35</value>
@@ -565,7 +565,7 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="SeeReShadeConfig.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 196</value>
+    <value>118, 224</value>
   </data>
   <data name="SeeReShadeConfig.Size" type="System.Drawing.Size, System.Drawing">
     <value>81, 24</value>
@@ -595,7 +595,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 196</value>
+    <value>88, 224</value>
   </data>
   <data name="pictureBox4.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -628,7 +628,7 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="SeeFPSUnlockerConfig.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 227</value>
+    <value>118, 255</value>
   </data>
   <data name="SeeFPSUnlockerConfig.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 24</value>
@@ -658,7 +658,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 227</value>
+    <value>88, 255</value>
   </data>
   <data name="pictureBox5.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -691,7 +691,7 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="ScanAndRepairSysFiles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>353, 196</value>
+    <value>422, 224</value>
   </data>
   <data name="ScanAndRepairSysFiles.Size" type="System.Drawing.Size, System.Drawing">
     <value>237, 24</value>
@@ -721,7 +721,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>324, 196</value>
+    <value>393, 224</value>
   </data>
   <data name="pictureBox6.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -751,7 +751,7 @@
     <value>Comic Sans MS, 17.25pt</value>
   </data>
   <data name="CacheAndLogs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>52, 435</value>
+    <value>121, 463</value>
   </data>
   <data name="CacheAndLogs.Size" type="System.Drawing.Size, System.Drawing">
     <value>241, 35</value>
@@ -781,7 +781,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 501</value>
+    <value>88, 529</value>
   </data>
   <data name="pictureBox8.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -814,7 +814,7 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="DeleteOnlyWebView2Cache.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 501</value>
+    <value>118, 529</value>
   </data>
   <data name="DeleteOnlyWebView2Cache.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 24</value>
@@ -853,7 +853,7 @@
     <value>NoControl</value>
   </data>
   <data name="linkLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>354, 226</value>
+    <value>423, 254</value>
   </data>
   <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>271, 24</value>
@@ -883,10 +883,10 @@
     <value>None</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>970, 191</value>
+    <value>1090, 205</value>
   </data>
   <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 33</value>
+    <value>34, 42</value>
   </data>
   <data name="panel3.TabIndex" type="System.Int32, mscorlib">
     <value>104</value>
@@ -934,7 +934,7 @@
 </value>
   </data>
   <data name="pictureBox9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 359</value>
+    <value>88, 387</value>
   </data>
   <data name="pictureBox9.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -967,7 +967,7 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="InstallationLogs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 359</value>
+    <value>118, 387</value>
   </data>
   <data name="InstallationLogs.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 24</value>
@@ -994,7 +994,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 299</value>
+    <value>88, 327</value>
   </data>
   <data name="pictureBox10.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -1027,7 +1027,7 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="InnoSetupLogs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 299</value>
+    <value>118, 327</value>
   </data>
   <data name="InnoSetupLogs.Size" type="System.Drawing.Size, System.Drawing">
     <value>129, 24</value>
@@ -1060,7 +1060,7 @@
     <value>Comic Sans MS, 12pt</value>
   </data>
   <data name="madeWith_Label.Location" type="System.Drawing.Point, System.Drawing">
-    <value>459, 603</value>
+    <value>526, 658</value>
   </data>
   <data name="madeWith_Label.Size" type="System.Drawing.Size, System.Drawing">
     <value>188, 23</value>
@@ -1093,7 +1093,7 @@
     <value>Comic Sans MS, 15.75pt</value>
   </data>
   <data name="Misc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>360, 159</value>
+    <value>429, 187</value>
   </data>
   <data name="Misc.Size" type="System.Drawing.Size, System.Drawing">
     <value>233, 35</value>
@@ -1126,7 +1126,7 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>324, 227</value>
+    <value>393, 255</value>
   </data>
   <data name="pictureBox16.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -1162,7 +1162,7 @@
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1100, 635</value>
+    <value>1238, 690</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>Manual</value>

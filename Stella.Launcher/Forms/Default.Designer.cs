@@ -70,6 +70,7 @@ namespace StellaLauncher.Forms
             this.PreparingPleaseWait = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.githubIco_Picturebox)).BeginInit();
@@ -84,6 +85,7 @@ namespace StellaLauncher.Forms
             ((System.ComponentModel.ISupportInitialize)(this.paimon_PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -444,7 +446,7 @@ namespace StellaLauncher.Forms
             resources.ApplyResources(this.supportMeIco_PictureBox, "supportMeIco_PictureBox");
             this.supportMeIco_PictureBox.BackColor = System.Drawing.Color.Transparent;
             this.supportMeIco_PictureBox.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.supportMeIco_PictureBox.Image = global::StellaLauncher.Properties.Resources.flaticon_donation;
+            this.supportMeIco_PictureBox.Image = global::StellaLauncher.Properties.Resources.flaticon_heart;
             this.supportMeIco_PictureBox.Name = "supportMeIco_PictureBox";
             this.supportMeIco_PictureBox.TabStop = false;
             // 
@@ -497,12 +499,24 @@ namespace StellaLauncher.Forms
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
             // 
+            // webView21
+            // 
+            this.webView21.AllowExternalDrop = true;
+            resources.ApplyResources(this.webView21, "webView21");
+            this.webView21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.webView21.CreationProperties = null;
+            this.webView21.DefaultBackgroundColor = System.Drawing.Color.Transparent;
+            this.webView21.ForeColor = System.Drawing.Color.White;
+            this.webView21.Name = "webView21";
+            this.webView21.ZoomFactor = 1D;
+            // 
             // Default
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::StellaLauncher.Properties.Resources.bg_main;
+            this.Controls.Add(this.webView21);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.linkLabel2);
@@ -560,6 +574,7 @@ namespace StellaLauncher.Forms
             ((System.ComponentModel.ISupportInitialize)(this.paimon_PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webView21)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -607,6 +622,7 @@ namespace StellaLauncher.Forms
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.LinkLabel linkLabel2;
-    }
+		  private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
+	 }
 }
 

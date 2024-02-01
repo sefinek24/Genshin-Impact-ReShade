@@ -81,14 +81,6 @@ namespace StellaLauncher.Forms
 
 		private async void Main_Shown(object sender, EventArgs e)
 		{
-			// Registry
-			using (RegistryKey key2 = Registry.CurrentUser.CreateSubKey(Program.RegistryPath, true))
-			{
-				key2?.SetValue("LastRunTime", DateTime.Now);
-			}
-
-			progressBar1.Value = 6;
-
 			// First
 			_status_Label = status_Label;
 			_preparingPleaseWait = PreparingPleaseWait;
@@ -121,6 +113,14 @@ namespace StellaLauncher.Forms
 			_updates_LinkLabel = updates_LinkLabel;
 			_updateIco_PictureBox = updateIco_PictureBox;
 
+			Stages.UpdateStage(1, "Updating `LastRunTime` in the registry...");
+
+			// Registry
+			using (RegistryKey key2 = Registry.CurrentUser.CreateSubKey(Program.RegistryPath, true))
+			{
+				key2?.SetValue("LastRunTime", DateTime.Now);
+			}
+
 
 			// Get resources path
 			string resourcesPath = null;
@@ -151,8 +151,7 @@ namespace StellaLauncher.Forms
 
 
 			// App version
-			version_LinkLabel.Text = @"Waiting...";
-			progressBar1.Value = 18;
+			Stages.UpdateStage(2, "Loading Stella Mod into the Tray...");
 
 
 			// Tray
@@ -180,8 +179,11 @@ namespace StellaLauncher.Forms
 
 
 			// Is user my Patron?
+			Stages.UpdateStage(3, "Checking Stella Mod Plus subscription...");
 			string registrySecret = Secret.GetTokenFromRegistry();
-			progressBar1.Value = 37;
+
+			Stages.UpdateStage(4, "Verifying Stella Mod Plus subscription...");
+
 			if (registrySecret != null)
 			{
 				label1.Text = @"/ᐠ. ｡.ᐟ\ᵐᵉᵒʷˎˊ˗";
@@ -258,19 +260,38 @@ namespace StellaLauncher.Forms
 
 
 			// Check if all required files exists
-			progressBar1.Value = 44;
+			Stages.UpdateStage(5, "Verifying required files..");
 			await Files.ScanAsync();
 
 			// Delete setup file from Temp directory
-			progressBar1.Value = 50;
+			Stages.UpdateStage(6, "Checking the installation file after the update...");
 			Files.DeleteSetupAsync();
 
 			// Loaded form
 			Program.Logger.Info(string.Format(Resources.Main_LoadedForm_, Text));
 
 			// Launch count
-			await LaunchCountHelper.CheckLaunchCountAndShowMessages();
-			progressBar1.Value = 57;
+			Stages.UpdateStage(7, "Checking `LaunchCount`...");
+
+			int launchCount = await LaunchCountHelper.CheckLaunchCountAndShowMessages();
+			try
+			{
+				await WebViewHelper.Initialize(webView21, $"https://api.sefinek.net/api/v2/moecounter?number={launchCount}&length=7&theme=rule34");
+			}
+			catch (Exception ex)
+			{
+				WebView2.HandleError(ex);
+			}
+
+			if (launchCount == 100)
+			{
+				MessageBox.Show("This is your hundredth (100th) launch of the program by you on your device.\n\nThank you!", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+				string path = Path.Combine(Program.AppPath, "data", "videos", "theannoyingcat.mp4");
+				if (Utils.CheckFileExists(path)) Utils.OpenUrl(path);
+			}
+
+			Stages.UpdateStage(8, "Initializing Discord RPC...");
 
 			// Telemetry
 			// Telemetry.Opened();
@@ -318,11 +339,11 @@ namespace StellaLauncher.Forms
 
 
 			// Check for updates
-			progressBar1.Value = 68;
+			Stages.UpdateStage(9, "Checking for updates...");
 			int found = await CheckForUpdates.Analyze();
 			if (found == 1) return;
 
-			progressBar1.Value = 88;
+			Stages.UpdateStage(10, "Checking Genshin Stella Mod.exe and ReShade.ini...");
 
 			// Check Genshin Stella Mod.exe
 			string gsMod = Path.Combine(Program.AppPath, "Genshin Stella Mod.exe");
@@ -344,14 +365,11 @@ namespace StellaLauncher.Forms
 			// Check shortcut
 			Shortcut.Check();
 
-			progressBar1.Value = 94;
+			Stages.UpdateStage(11, "Finishing...");
 
 			// Music
 			_ = Music.PlayBg();
 
-
-			// Done (:
-			Utils.HideProgressBar(false);
 
 			// 2024
 			// status_Label.Text += @"[i] Happy New Year 2024! Thank you all for your trust ~~ Sefinek";
@@ -533,7 +551,7 @@ namespace StellaLauncher.Forms
 				viewer.Navigate("https://www.youtube.com/embed/2F2DdXUNyaQ?autoplay=1");
 				viewer.Show();
 
-				MessageBox.Show(@"Pamiętaj by nie grać w lola, gdyż to grzech ciężki.", "kurwa");
+				MessageBox.Show(@"Pamiętaj by nie grać w lola, gdyż to grzech ciężki.", @"kurwa");
 			}
 			else
 			{
@@ -554,11 +572,6 @@ namespace StellaLauncher.Forms
 		{
 			status_Label.Visible = !string.IsNullOrEmpty(status_Label.Text);
 			Music.PlaySound("winxp", "balloon");
-		}
-
-		private void UwU_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			Utils.OpenUrl("https://theannoyingsite.com/cat.mp4");
 		}
 	}
 }
