@@ -36,8 +36,8 @@ namespace StellaLauncher.Forms.Other
             // webView21
             // 
             this.webView21.AllowExternalDrop = true;
-            resources.ApplyResources(this.webView21, "webView21");
             this.webView21.BackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.webView21, "webView21");
             this.webView21.CreationProperties = null;
             this.webView21.DefaultBackgroundColor = System.Drawing.Color.Transparent;
             this.webView21.ForeColor = System.Drawing.Color.Transparent;
