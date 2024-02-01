@@ -6,7 +6,6 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ByteSizeLib;
-using Microsoft.Toolkit.Uwp.Notifications;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using Newtonsoft.Json;
 using StellaLauncher.Forms;
@@ -94,17 +93,7 @@ namespace StellaLauncher.Scripts.Patrons
 			string currentPreset = await RsConfig.Prepare();
 			if (currentPreset == null) return;
 
-			try
-			{
-				new ToastContentBuilder()
-					.AddText("ReShade configuration")
-					.AddText($"The ReShade configuration file has also been updated, including setting the default preset to {Path.GetFileNameWithoutExtension(currentPreset)}.")
-					.Show();
-			}
-			catch (Exception ex)
-			{
-				Program.Logger.Error(ex.ToString());
-			}
+			BalloonTip.Show("ReShade configuration", $"The ReShade configuration file has also been updated, including setting the default preset to {Path.GetFileNameWithoutExtension(currentPreset)}.");
 		}
 
 		private static async Task DownloadFileAsync(string requestUri, string filename)

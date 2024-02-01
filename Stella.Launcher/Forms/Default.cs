@@ -26,6 +26,7 @@ namespace StellaLauncher.Forms
 		public static Label _status_Label;
 		public static Label _preparingPleaseWait;
 		public static ProgressBar _progressBar1;
+		public static NotifyIcon _notifyIcon1;
 
 		// Left
 		public static PictureBox _discordServerIco_Picturebox;
@@ -85,6 +86,7 @@ namespace StellaLauncher.Forms
 			_status_Label = status_Label;
 			_preparingPleaseWait = PreparingPleaseWait;
 			_progressBar1 = progressBar1;
+			_notifyIcon1 = notifyIcon1;
 
 			_discordServerIco_Picturebox = discordServerIco_Picturebox;
 			_discordServer_LinkLabel = discordServer_LinkLabel;
@@ -155,7 +157,7 @@ namespace StellaLauncher.Forms
 
 
 			// Tray
-			NotifyIcon trayIcon = new NotifyIcon
+			Global.NotifyIconInstance = new NotifyIcon
 			{
 				Icon = Program.Ico,
 				Text = Program.AppNameVer,
@@ -163,8 +165,8 @@ namespace StellaLauncher.Forms
 				ContextMenuStrip = new ContextMenuStrip()
 			};
 
-			Tray trayHandler = new Tray(trayIcon, this);
-			trayIcon.ContextMenuStrip.Items.AddRange(new ToolStripItem[]
+			Tray trayHandler = new Tray(Global.NotifyIconInstance, this);
+			Global.NotifyIconInstance.ContextMenuStrip.Items.AddRange(new ToolStripItem[]
 			{
 				new ToolStripMenuItem("Toggle Minimize/Restore", null, trayHandler.ToggleMinimizeRestore),
 				new ToolStripMenuItem("Reload window", null, trayHandler.ReloadForm),
@@ -177,6 +179,8 @@ namespace StellaLauncher.Forms
 				new ToolStripMenuItem("Quit", null, Tray.OnQuitClick)
 			});
 
+
+			BalloonTip.Show("kurwa1", "kurwa2");
 
 			// Is user my Patron?
 			Stages.UpdateStage(3, "Checking Stella Mod Plus subscription...");
@@ -383,6 +387,11 @@ namespace StellaLauncher.Forms
 		private void Default_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			Program.Logger.Info(string.Format(Resources.Main_ClosingForm_, Text));
+
+			if (Global.NotifyIconInstance == null) return;
+			Global.NotifyIconInstance.Visible = false;
+			Global.NotifyIconInstance.Dispose();
+			Program.Logger.Info("Disposed NotifyIconInstance");
 		}
 
 		private void Default_FormClosed(object sender, FormClosedEventArgs e)
@@ -572,6 +581,11 @@ namespace StellaLauncher.Forms
 		{
 			status_Label.Visible = !string.IsNullOrEmpty(status_Label.Text);
 			Music.PlaySound("winxp", "balloon");
+		}
+
+		public static class Global
+		{
+			public static NotifyIcon NotifyIconInstance;
 		}
 	}
 }

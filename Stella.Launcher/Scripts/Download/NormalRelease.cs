@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ByteSizeLib;
 using CliWrap.Builders;
-using Microsoft.Toolkit.Uwp.Notifications;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using StellaLauncher.Forms;
 using StellaLauncher.Properties;
@@ -50,18 +49,8 @@ namespace StellaLauncher.Scripts.Download
 
 			Default._progressBar1.Value = 0;
 
-			// ToastContentBuilder
-			try
-			{
-				new ToastContentBuilder()
-					.AddText($"📥 {Resources.NormalRelease_WeFoundNewUpdates}")
-					.AddText(Resources.NormalRelease_NewReleaseIsAvailableDownloadNow)
-					.Show();
-			}
-			catch (Exception ex)
-			{
-				Program.Logger.Error(ex.ToString());
-			}
+			// BalloonTip
+			BalloonTip.Show($"📥 {Resources.NormalRelease_WeFoundNewUpdates}", Resources.NormalRelease_NewReleaseIsAvailableDownloadNow);
 
 			// Log
 			Default._status_Label.Text += $"[i] {string.Format(Resources.NormalRelease_NewVersionFrom_IsAvailable, remoteVerDate)}\n";

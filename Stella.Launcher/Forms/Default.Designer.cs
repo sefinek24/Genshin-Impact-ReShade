@@ -71,6 +71,7 @@ namespace StellaLauncher.Forms
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.githubIco_Picturebox)).BeginInit();
@@ -510,6 +511,10 @@ namespace StellaLauncher.Forms
             this.webView21.Name = "webView21";
             this.webView21.ZoomFactor = 1D;
             // 
+            // notifyIcon1
+            // 
+            resources.ApplyResources(this.notifyIcon1, "notifyIcon1");
+            // 
             // Default
             // 
             resources.ApplyResources(this, "$this");
@@ -623,6 +628,7 @@ namespace StellaLauncher.Forms
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.LinkLabel linkLabel2;
 		  private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
+		  private System.Windows.Forms.NotifyIcon notifyIcon1;
 	 }
 }
 

@@ -9,7 +9,6 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ByteSizeLib;
-using Microsoft.Toolkit.Uwp.Notifications;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using StellaLauncher.Forms;
 using StellaLauncher.Properties;
@@ -47,18 +46,9 @@ namespace StellaLauncher.Scripts.Download
 
 			Default._progressBar1.Value = 0;
 
-			// ToastContentBuilder
-			try
-			{
-				new ToastContentBuilder()
-					.AddText($"📥 {Resources.NormalRelease_WeFoundNewUpdates}")
-					.AddText(Resources.NormalRelease_NewReleaseIsAvailableDownloadNow)
-					.Show();
-			}
-			catch (Exception e)
-			{
-				Program.Logger.Error(e.ToString());
-			}
+			// BalloonTip
+			BalloonTip.Show($"📥 {Resources.NormalRelease_WeFoundNewUpdates}", Resources.NormalRelease_NewReleaseIsAvailableDownloadNow);
+
 
 			// Date
 			DateTime date = DateTime.Parse(remoteResDate, null, DateTimeStyles.RoundtripKind).ToUniversalTime().ToLocalTime();

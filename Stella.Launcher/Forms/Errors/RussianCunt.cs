@@ -3,8 +3,8 @@ using System.Diagnostics;
 using System.IO;
 using System.Media;
 using System.Windows.Forms;
-using Microsoft.Toolkit.Uwp.Notifications;
 using StellaLauncher.Properties;
+using StellaLauncher.Scripts;
 
 namespace StellaLauncher.Forms.Errors
 {
@@ -66,17 +66,7 @@ namespace StellaLauncher.Forms.Errors
 			};
 			closeAppTimer.Start();
 
-			try
-			{
-				new ToastContentBuilder()
-					.AddText("slava poland kurwo")
-					.AddText("axaxaxaxaxaxaxa language for monkeys lol")
-					.Show();
-			}
-			catch (Exception ex)
-			{
-				Program.Logger.Error(ex.ToString());
-			}
+			BalloonTip.Show("slava poland kurwo", "axaxaxaxaxaxaxa language for monkeys lol");
 
 			Program.Logger.Info(string.Format(Resources.Main_LoadedForm_, Text));
 		}

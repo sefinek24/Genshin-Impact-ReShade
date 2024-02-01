@@ -204,7 +204,12 @@ namespace GenshinStellaMod
 					int value = (int)(key?.GetValue(id) ?? 0);
 					if (value == 0)
 					{
-						if (!File.Exists(path)) return;
+						if (!File.Exists(path))
+						{
+							MessageBox.Show($@"File {path} was not found.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+							return;
+						}
+
 						_ = Cmd.Execute(new Cmd.CliWrap { App = path });
 						key?.SetValue(id, 1);
 

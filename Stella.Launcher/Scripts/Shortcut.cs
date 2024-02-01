@@ -2,7 +2,6 @@ using System;
 using System.IO;
 using System.Reflection;
 using IWshRuntimeLibrary;
-using Microsoft.Toolkit.Uwp.Notifications;
 using StellaLauncher.Properties;
 using File = System.IO.File;
 
@@ -48,17 +47,7 @@ namespace StellaLauncher.Scripts
 
 				Program.Logger.Info("Created or updated the desktop shortcut.");
 
-				try
-				{
-					new ToastContentBuilder()
-						.AddText("Desktop shortcut 🖥️")
-						.AddText("The program icon on your desktop has been successfully updated. Other shortcuts may stop working.")
-						.Show();
-				}
-				catch (Exception ex)
-				{
-					Program.Logger.Error(ex.ToString());
-				}
+				BalloonTip.Show("Desktop shortcut 🖥️", "The program icon on your desktop has been successfully updated. Other shortcuts may stop working.");
 			}
 			catch (Exception ex)
 			{

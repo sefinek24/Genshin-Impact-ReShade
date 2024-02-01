@@ -3,7 +3,6 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using CliWrap.Builders;
-using Microsoft.Toolkit.Uwp.Notifications;
 using StellaLauncher.Forms.Other;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
@@ -72,11 +71,6 @@ namespace StellaLauncher.Forms
 					.Add(Data.UnlockerVer)
 			};
 			await Cmd.Execute(command);
-		}
-
-		private void RemoveStellaNotifications_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			ToastNotificationManagerCompat.History.Clear();
 		}
 
 
@@ -161,7 +155,8 @@ namespace StellaLauncher.Forms
 			int logSharingAlert = Program.Settings.ReadInt("Launcher", "LogSharingAlert", 0);
 			if (logSharingAlert >= 2) return;
 
-			Utils.ShowToast("Important", "Remember not to share log files with unfamiliar individuals, as they might contain sensitive data. Share them only with the Stella Mod developer.");
+			BalloonTip.Show("Important", "Remember not to share log files with unfamiliar individuals, as they might contain sensitive data. Share them only with the Stella Mod developer.");
+
 			Program.Settings.WriteInt("Launcher", "LogSharingAlert", logSharingAlert + 1);
 		}
 

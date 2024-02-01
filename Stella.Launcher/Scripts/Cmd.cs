@@ -5,7 +5,6 @@ using System.Windows.Forms;
 using CliWrap;
 using CliWrap.Buffered;
 using CliWrap.Builders;
-using Microsoft.Toolkit.Uwp.Notifications;
 using StellaLauncher.Forms;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts.Forms;
@@ -68,17 +67,7 @@ namespace StellaLauncher.Scripts
 				{
 					case 3010:
 					{
-						try
-						{
-							new ToastContentBuilder()
-								.AddText($"{Resources.Cmd_RebootIsRequired} 📄")
-								.AddText(Resources.Cmd_TheRequiredDependencyHasBeenSuccessfullyInstalledButyourComputerNeedsToBeRestart)
-								.Show();
-						}
-						catch (Exception ex)
-						{
-							Program.Logger.Error(ex.ToString());
-						}
+						BalloonTip.Show($"{Resources.Cmd_RebootIsRequired} 📄", Resources.Cmd_TheRequiredDependencyHasBeenSuccessfullyInstalledButyourComputerNeedsToBeRestart);
 
 						MessageBox.Show(Resources.Cmd_TheRequestOperationWasSuccessfulButYourPCNeedsToBeRebooted, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 						Program.Logger.Info($"CliWrap: {cliWrapCommand.App} installed. Exit code: {result.ExitCode}\nThe requested operation is successful. Changes will not be effective until the system is rebooted");

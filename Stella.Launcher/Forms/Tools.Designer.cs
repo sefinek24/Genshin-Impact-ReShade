@@ -52,7 +52,6 @@ namespace StellaLauncher.Forms
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.DeleteOnlyWebView2Cache = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.InstallationLogs = new System.Windows.Forms.LinkLabel();
@@ -60,7 +59,6 @@ namespace StellaLauncher.Forms
             this.InnoSetupLogs = new System.Windows.Forms.LinkLabel();
             this.madeWith_Label = new System.Windows.Forms.Label();
             this.Misc = new System.Windows.Forms.Label();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -71,7 +69,6 @@ namespace StellaLauncher.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -271,18 +268,6 @@ namespace StellaLauncher.Forms
             this.DeleteOnlyWebView2Cache.TabStop = true;
             this.DeleteOnlyWebView2Cache.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.DeleteWebViewCache_LinkClicked);
             // 
-            // linkLabel2
-            // 
-            this.linkLabel2.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.linkLabel2, "linkLabel2");
-            this.linkLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel2.LinkColor = System.Drawing.Color.White;
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel2, resources.GetString("linkLabel2.ToolTip"));
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.RemoveStellaNotifications_LinkClicked);
-            // 
             // panel3
             // 
             resources.ApplyResources(this.panel3, "panel3");
@@ -343,23 +328,12 @@ namespace StellaLauncher.Forms
             this.Misc.ForeColor = System.Drawing.Color.White;
             this.Misc.Name = "Misc";
             // 
-            // pictureBox16
-            // 
-            resources.ApplyResources(this.pictureBox16, "pictureBox16");
-            this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox16.Image = global::StellaLauncher.Properties.Resources.icons8_recycle_bin;
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.TabStop = false;
-            // 
             // Tools
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::StellaLauncher.Properties.Resources.bg_tools;
-            this.Controls.Add(this.pictureBox16);
-            this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.madeWith_Label);
             this.Controls.Add(this.Misc);
             this.Controls.Add(this.pictureBox10);
@@ -401,7 +375,6 @@ namespace StellaLauncher.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -438,7 +411,5 @@ namespace StellaLauncher.Forms
         private System.Windows.Forms.LinkLabel InnoSetupLogs;
         private System.Windows.Forms.Label madeWith_Label;
         private System.Windows.Forms.Label Misc;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.PictureBox pictureBox16;
     }
 }
