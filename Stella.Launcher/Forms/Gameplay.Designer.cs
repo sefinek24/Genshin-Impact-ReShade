@@ -171,6 +171,7 @@ namespace StellaLauncher.Forms
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::StellaLauncher.Properties.Resources.bg_gameplay;
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.webView21);
