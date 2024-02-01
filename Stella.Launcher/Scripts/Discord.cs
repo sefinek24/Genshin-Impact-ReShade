@@ -40,25 +40,25 @@ namespace StellaLauncher.Scripts
 			Client.OnReady += (sender, msg) =>
 			{
 				Username = msg.User.Username;
-				Program.Logger.Info($"Discord RPC: Connected to Discord with user {Username}.");
+				Program.Logger.Info($"Discord RPC: Connected to Discord with user {Username}");
 
 				IsReady = true;
 			};
-			Client.OnPresenceUpdate += (sender, msg) => Program.Logger.Info("Discord RPC: Presence has been updated.");
+			Client.OnPresenceUpdate += (sender, msg) => Program.Logger.Info("Discord RPC: Presence has been updated");
 			Client.OnClose += (sender, msg) =>
 			{
-				Program.Logger.Info("Discord RPC: Closed.");
+				Program.Logger.Info("Discord RPC: Closed");
 				IsReady = false;
 			};
 			Client.OnUnsubscribe += (sender, msg) =>
 			{
-				Program.Logger.Info("Discord RPC: Unsubscribed.");
+				Program.Logger.Warn("Discord RPC: Unsubscribed");
 				IsReady = false;
 			};
-			Client.OnConnectionEstablished += (sender, msg) => Program.Logger.Info("Discord RPC: Connection successfully.");
+			Client.OnConnectionEstablished += (sender, msg) => Program.Logger.Info("Discord RPC: Connection successfully");
 			Client.OnError += (sender, msg) =>
 			{
-				Program.Logger.Error("Discord RPC: An error occurred during the transmission of a message.");
+				Program.Logger.Error("Discord RPC: An error occurred during the transmission of a message");
 				IsReady = false;
 			};
 
