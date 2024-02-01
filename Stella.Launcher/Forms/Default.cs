@@ -180,8 +180,6 @@ namespace StellaLauncher.Forms
 			});
 
 
-			BalloonTip.Show("kurwa1", "kurwa2");
-
 			// Is user my Patron?
 			Stages.UpdateStage(3, "Checking Stella Mod Plus subscription...");
 			string registrySecret = Secret.GetTokenFromRegistry();
