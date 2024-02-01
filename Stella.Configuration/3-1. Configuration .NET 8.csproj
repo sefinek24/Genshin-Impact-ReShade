@@ -26,11 +26,11 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <AssemblyName>ConfigurationWindow</AssemblyName>
     <StartupObject>ConfigurationNC.Program</StartupObject>
-    <ApplicationIcon>Resources\cat.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\cat-52x52.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Resources\cat.ico" />
+    <Content Include="Resources\cat-52x52.ico" />
   </ItemGroup>
 
   <ItemGroup>
