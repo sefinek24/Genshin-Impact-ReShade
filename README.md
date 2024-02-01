@@ -49,7 +49,7 @@ Please note that sharing game screenshots displaying your UID, visible shaders, 
 If you plan to record a video of the game for platforms like YouTube, remember to hide or censor your UID and username to avoid being banned.
 
 Also, it is highly recommended to update your graphics card and chipset drivers to ensure smooth gameplay, minimize graphics-related issues, and prevent crashes.
-Please familiarize yourself with the [system requirements](https://github.com/sefinek24/Genshin-Impact-ReShade#-%E3%80%A2-requirements) as well.
+Please familiarize yourself with the [system requirements](https://sefinek.net/genshin-impact-reshade/docs?page=about#requirements) as well.
 
 For more information and details about the Genshin Stella Mod project, visit our [Documentation](https://sefinek.net/genshin-impact-reshade/docs?page=introduction&referrer=stella_readme).
 The wiki provides a comprehensive installation and usage guide for ReShade, along with frequently asked questions and troubleshooting tips.
