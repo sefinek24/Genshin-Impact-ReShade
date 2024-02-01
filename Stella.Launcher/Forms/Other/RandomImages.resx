@@ -318,6 +318,9 @@
   <data name="&gt;&gt;linkLabel4.ZOrder" xml:space="preserve">
     <value>45</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="linkLabel5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
   </data>
@@ -339,9 +342,6 @@
   <data name="linkLabel5.Text" xml:space="preserve">
     <value>Fox girl</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="linkLabel5.ToolTip" xml:space="preserve">
     <value>Anime fox girls</value>
   </data>
@@ -1779,6 +1779,9 @@
   <data name="&gt;&gt;linkLabel46.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="linkLabel47.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
   </data>
