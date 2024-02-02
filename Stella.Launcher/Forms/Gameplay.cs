@@ -26,17 +26,7 @@ namespace StellaLauncher.Forms
 
 		private async void Tutorial_Shown(object sender, EventArgs e)
 		{
-			try
-			{
-				CoreWebView2Environment coreWebView2Env = await CoreWebView2Environment.CreateAsync(null, Program.AppData, new CoreWebView2EnvironmentOptions());
-				await webView21.EnsureCoreWebView2Async(coreWebView2Env);
-
-				webView21.CoreWebView2.Navigate($"https://www.youtube.com/embed/{VideoId}");
-			}
-			catch (Exception ex)
-			{
-				WebView2.HandleError(ex);
-			}
+			await WebViewHelper.Initialize(webView21, $"https://www.youtube.com/embed/{VideoId}");
 
 			Discord.SetStatus(Resources.Gameplay_WatchingGameplay);
 

@@ -1,6 +1,7 @@
 using System;
 using System.Windows.Forms;
 using Microsoft.Web.WebView2.Core;
+using StellaLauncher.Scripts.Forms;
 
 namespace StellaLauncher.Forms.Other
 {
@@ -28,17 +29,7 @@ namespace StellaLauncher.Forms.Other
 
 		private async void WebView2(string webView)
 		{
-			try
-			{
-				CoreWebView2Environment coreWebView2Env = await CoreWebView2Environment.CreateAsync(null, Program.AppData, new CoreWebView2EnvironmentOptions());
-				await webView21.EnsureCoreWebView2Async(coreWebView2Env);
-
-				webView21.CoreWebView2.Navigate(webView);
-			}
-			catch (Exception ex)
-			{
-				Scripts.Forms.WebView2.HandleError(ex);
-			}
+			await WebViewHelper.Initialize(webView21, webView);
 		}
 
 		public void Navigate(string url)

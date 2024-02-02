@@ -37,16 +37,7 @@ namespace StellaLauncher.Forms.Other
 
 		private async void RandomImg_Shown(object sender, EventArgs e)
 		{
-			try
-			{
-				CoreWebView2Environment coreWeb = await CoreWebView2Environment.CreateAsync(null, Program.AppData, new CoreWebView2EnvironmentOptions());
-				await webView21.EnsureCoreWebView2Async(coreWeb);
-			}
-			catch (Exception ex)
-			{
-				WebView2.HandleError(ex);
-				Close();
-			}
+			await WebViewHelper.Initialize(webView21, null);
 
 			Discord.SetStatus(Resources.RandomImages_GeneratingBeautifulPictures);
 

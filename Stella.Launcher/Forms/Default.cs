@@ -276,14 +276,8 @@ namespace StellaLauncher.Forms
 			Stages.UpdateStage(7, "Checking `LaunchCount`...");
 
 			int launchCount = await LaunchCountHelper.CheckLaunchCountAndShowMessages();
-			try
-			{
-				await WebViewHelper.Initialize(webView21, $"https://api.sefinek.net/api/v2/moecounter?number={launchCount}&length=7&theme=rule34");
-			}
-			catch (Exception ex)
-			{
-				WebView2.HandleError(ex);
-			}
+			await WebViewHelper.Initialize(webView21, $"https://api.sefinek.net/api/v2/moecounter?number={launchCount}&length=7&theme=rule34");
+
 
 			if (launchCount == 100)
 			{

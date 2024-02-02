@@ -235,7 +235,6 @@
     <Compile Include="Scripts\Download\NormalRelease.cs" />
     <Compile Include="Scripts\Download\ReShadeIni.cs" />
     <Compile Include="Scripts\Utils.cs" />
-    <Compile Include="Scripts\Forms\WebView2Handler.cs" />
     <EmbeddedResource Include="Forms\Default.pl.resx">
       <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>

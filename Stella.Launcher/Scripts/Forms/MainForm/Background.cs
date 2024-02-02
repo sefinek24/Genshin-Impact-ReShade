@@ -8,16 +8,7 @@ using StellaLauncher.Properties;
 namespace StellaLauncher.Scripts.Forms.MainForm
 {
 	/// <summary>
-	///    Utility
-	///    class
-	///    for
-	///    managing
-	///    background
-	///    images
-	///    in
-	///    the
-	///    main
-	///    form.
+	///    Utility class for managing background images in the main form.
 	/// </summary>
 	internal static class Background
 	{
@@ -33,46 +24,11 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 		};
 
 		/// <summary>
-		///    Sets
-		///    the
-		///    initial
-		///    background
-		///    image
-		///    for
-		///    the
-		///    main
-		///    form.
+		///    Sets the initial background image for the main form.
 		/// </summary>
-		/// <param
-		///    name="toolTip">
-		///    ToolTip
-		///    instance
-		///    to
-		///    show
-		///    tooltip
-		///    text.
-		/// </param>
-		/// <param
-		///    name="changeBg">
-		///    LinkLabel
-		///    control
-		///    for
-		///    changing
-		///    the
-		///    background.
-		/// </param>
-		/// <returns>
-		///    The
-		///    initial
-		///    background
-		///    image
-		///    or
-		///    null
-		///    if
-		///    it's
-		///    not
-		///    found.
-		/// </returns>
+		/// <param name="toolTip">ToolTip instance to show tooltip text.</param>
+		/// <param name="changeBg">LinkLabel control for changing the background.</param>
+		/// <returns>The initial background image or null if it's not found.</returns>
 		public static Image OnStart(ToolTip toolTip, LinkLabel changeBg)
 		{
 			// Read the index of the last used background from settings
@@ -106,60 +62,12 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 		}
 
 		/// <summary>
-		///    Changes
-		///    the
-		///    background
-		///    image
-		///    for
-		///    the
-		///    main
-		///    form.
+		/// Changes the background image for the main form.
 		/// </summary>
-		/// <param
-		///    name="bgFormImage">
-		///    Current
-		///    background
-		///    image
-		///    of
-		///    the
-		///    main
-		///    form.
-		/// </param>
-		/// <param
-		///    name="toolTip">
-		///    ToolTip
-		///    instance
-		///    to
-		///    show
-		///    tooltip
-		///    text.
-		/// </param>
-		/// <param
-		///    name="changeBg">
-		///    LinkLabel
-		///    control
-		///    for
-		///    changing
-		///    the
-		///    background.
-		/// </param>
-		/// <returns>
-		///    The
-		///    new
-		///    background
-		///    image
-		///    after
-		///    the
-		///    change
-		///    or
-		///    null
-		///    if
-		///    the
-		///    image
-		///    is
-		///    not
-		///    found.
-		/// </returns>
+		/// <param name="bgFormImage"> Current background image of the main form.</param>
+		/// <param name="toolTip">ToolTip instance to show tooltip text.</param>
+		/// <param name="changeBg">LinkLabel control for changing the background.</param>
+		/// <returns>The new background image after the change or null if the image is not found.</returns>
 		public static Image Change(Image bgFormImage, ToolTip toolTip, LinkLabel changeBg)
 		{
 			int bgInt = Program.Settings.ReadInt("Launcher", "Background", 0);
@@ -180,48 +88,10 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 		}
 
 		/// <summary>
-		///    Gets
-		///    the
-		///    cached
-		///    background
-		///    image
-		///    for
-		///    the
-		///    given
-		///    index
-		///    or
-		///    loads
-		///    it
-		///    from
-		///    file
-		///    if
-		///    not
-		///    found
-		///    in
-		///    the
-		///    cache.
+		///    Gets the cached background image for the given index or loads it from file if not found in the cache.
 		/// </summary>
-		/// <param
-		///    name="bgInt">
-		///    The
-		///    index
-		///    of
-		///    the
-		///    background
-		///    image.
-		/// </param>
-		/// <returns>
-		///    The
-		///    cached
-		///    background
-		///    image
-		///    or
-		///    the
-		///    loaded
-		///    image
-		///    from
-		///    file.
-		/// </returns>
+		/// <param name="bgInt"> The index of the background image.</param>
+		/// <returns>The cached background image or the loaded image from file.</returns>
 		private static Image GetCachedOrLoadImage(int bgInt)
 		{
 			// Create a cache key based on the background index
@@ -249,50 +119,12 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 		}
 
 		/// <summary>
-		///    Sets
-		///    the
-		///    default
-		///    background
-		///    image
-		///    for
-		///    the
-		///    main
-		///    form.
+		///    Sets the default background image for the main form.
 		/// </summary>
-		/// <param
-		///    name="bgFormImage">
-		///    Current
-		///    background
-		///    image
-		///    of
-		///    the
-		///    main
-		///    form.
-		/// </param>
-		/// <param
-		///    name="toolTip">
-		///    ToolTip
-		///    instance
-		///    to
-		///    show
-		///    tooltip
-		///    text.
-		/// </param>
-		/// <param
-		///    name="changeBg">
-		///    LinkLabel
-		///    control
-		///    for
-		///    changing
-		///    the
-		///    background.
-		/// </param>
-		/// <returns>
-		///    The
-		///    default
-		///    background
-		///    image.
-		/// </returns>
+		/// <param name="bgFormImage"> Current background image of the main form.</param>
+		/// <param name="toolTip">ToolTip instance to show tooltip text.</param>
+		/// <param name="changeBg">LinkLabel control for changing the background.</param>
+		/// <returns>The default background image.</returns>
 		private static Image SetDefaultBackground(Image bgFormImage, ToolTip toolTip, Control changeBg)
 		{
 			bgFormImage = Resources.bg_main;
