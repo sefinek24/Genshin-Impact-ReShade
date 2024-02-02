@@ -262,7 +262,7 @@ namespace StellaLauncher.Forms
 
 
 			// Check if all required files exists
-			Stages.UpdateStage(5, "Verifying required files..");
+			Stages.UpdateStage(5, "Verifying required files...");
 			await Files.ScanAsync();
 
 			// Delete setup file from Temp directory
