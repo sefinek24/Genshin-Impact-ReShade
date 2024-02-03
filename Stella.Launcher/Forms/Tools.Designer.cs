@@ -364,6 +364,7 @@ namespace StellaLauncher.Forms
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Tools";
+            this.Load += new System.EventHandler(this.Tools_Load);
             this.Shown += new System.EventHandler(this.Utils_Shown);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

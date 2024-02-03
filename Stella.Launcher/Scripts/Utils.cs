@@ -6,9 +6,9 @@ using System.IO;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClassLibrary;
 using IWshRuntimeLibrary;
 using Microsoft.Win32;
-using Microsoft.WindowsAPICodePack.Taskbar;
 using StellaLauncher.Forms;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts.Forms;
@@ -188,8 +188,8 @@ namespace StellaLauncher.Scripts
 				Default._updates_LinkLabel.LinkColor = Color.Red;
 				Default._updates_LinkLabel.Text = Resources.Utils_OopsAnErrorOccurred;
 
-				TaskbarManager.Instance.SetProgressValue(100, 100);
-				TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
+				TaskbarProgress.SetProgressValue(100);
+				TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Error);
 			}
 
 			Default._progressBar1.Hide();

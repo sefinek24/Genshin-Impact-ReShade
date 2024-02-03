@@ -6,6 +6,7 @@ using CliWrap.Builders;
 using StellaLauncher.Forms.Other;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
+using StellaLauncher.Scripts.Forms;
 using StellaLauncher.Scripts.Forms.MainForm;
 
 namespace StellaLauncher.Forms
@@ -20,6 +21,11 @@ namespace StellaLauncher.Forms
 			InitializeComponent();
 
 			DoubleBuffered = true;
+		}
+
+		private void Tools_Load(object sender, EventArgs e)
+		{
+			RoundedCorners.Apply(this);
 		}
 
 		private void Utils_Shown(object sender, EventArgs e)

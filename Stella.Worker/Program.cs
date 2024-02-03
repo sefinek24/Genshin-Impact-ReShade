@@ -206,7 +206,7 @@ namespace GenshinStellaMod
 					{
 						if (!File.Exists(path))
 						{
-							MessageBox.Show($@"File {path} was not found.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+							MessageBox.Show($@"File {path} was not found.", AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 							return;
 						}
 

@@ -9,7 +9,7 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ByteSizeLib;
-using Microsoft.WindowsAPICodePack.Taskbar;
+using ClassLibrary;
 using StellaLauncher.Forms;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts.Forms.MainForm;
@@ -69,18 +69,18 @@ namespace StellaLauncher.Scripts.Download
 				Default._status_Label.Text += $"[i] {string.Format(Resources.StellaResources_UpdateSize, $"{updateSize} MB")}\n";
 
 				// Final
-				TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
+				TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Paused);
 				Program.Logger.Info(string.Format(Resources.StellaResources_UpdateSize, $"{updateSize} MB"));
 			}
 
 			// Taskbar
-			TaskbarManager.Instance.SetProgressValue(100, 100);
+			TaskbarProgress.SetProgressValue(100);
 		}
 
 		private static async void Update_Event(object sender, EventArgs e)
 		{
 			Program.Logger.Info(Resources.NormalRelease_PreparingToDownloadNewUpdate);
-			TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Normal);
+			TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Normal);
 
 			Default._updates_LinkLabel.LinkColor = Color.DodgerBlue;
 			Default._updates_LinkLabel.Text = Resources.NormalRelease_UpdatingPleaseWait;
@@ -116,7 +116,7 @@ namespace StellaLauncher.Scripts.Download
 			if (File.Exists(Default.ResourcesPath)) File.Delete(Default.ResourcesPath);
 
 			Program.Logger.Info("Downloading in progress...");
-			TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Normal);
+			TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Normal);
 
 			using (WebClient client = new WebClient())
 			{
@@ -131,7 +131,7 @@ namespace StellaLauncher.Scripts.Download
 		{
 			int progress = (int)Math.Floor(e.BytesReceived * 100.0 / e.TotalBytesToReceive);
 			Default._progressBar1.Value = progress;
-			TaskbarManager.Instance.SetProgressValue(progress, 100);
+			TaskbarProgress.SetProgressValue((ulong)progress);
 
 			DateTime currentTime = DateTime.Now;
 			TimeSpan elapsedTime = currentTime - _lastUpdateTime;
@@ -227,7 +227,7 @@ namespace StellaLauncher.Scripts.Download
 
 							int progressPercentage = (int)((double)totalBytes / totalBytesToExtract * 100);
 							Default._progressBar1.Value = progressPercentage;
-							TaskbarManager.Instance.SetProgressValue(progressPercentage, 100);
+							TaskbarProgress.SetProgressValue((ulong)progressPercentage);
 						}
 					}
 

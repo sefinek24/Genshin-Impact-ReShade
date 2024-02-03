@@ -3,10 +3,10 @@ using System.Diagnostics;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using ClassLibrary;
 using CliWrap;
 using CliWrap.Buffered;
 using Microsoft.Toolkit.Uwp.Notifications;
-using Microsoft.WindowsAPICodePack.Taskbar;
 
 namespace PrepareStella.Scripts
 {
@@ -68,7 +68,7 @@ namespace PrepareStella.Scripts
 
 						Start.Logger.Error($"I cannot install this package because some process is currently open.\n\n» Attempt: {_vcLibsAttemptNumber}\n» Exit code: 80073D02\n\n{stderr}");
 
-						TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
+						TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Paused);
 
 						Console.ForegroundColor = ConsoleColor.Yellow;
 						Console.WriteLine(@"     » Click ENTER to try again...");
@@ -102,7 +102,7 @@ namespace PrepareStella.Scripts
 						// Preparing...
 						Console.WriteLine($@"Preparing to install Microsoft Visual C++ 2015 UWP Desktop Package (attempt {_vcLibsAttemptNumber}/3)...");
 
-						TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
+						TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Paused);
 						Console.ForegroundColor = ConsoleColor.Yellow;
 						Console.WriteLine(@"    » ATTENTION: Close all Microsoft Store apps and press ENTER to continue...");
 						Console.ResetColor();

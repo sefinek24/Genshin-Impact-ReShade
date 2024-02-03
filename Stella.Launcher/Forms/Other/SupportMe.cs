@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
+using StellaLauncher.Scripts.Forms;
 
 namespace StellaLauncher.Forms.Other
 {
@@ -16,6 +17,11 @@ namespace StellaLauncher.Forms.Other
 			InitializeComponent();
 
 			DoubleBuffered = true;
+		}
+
+		private void SupportMe_Load(object sender, EventArgs e)
+		{
+			RoundedCorners.Apply(this);
 		}
 
 		private void MouseDown_Event(object sender, MouseEventArgs e)

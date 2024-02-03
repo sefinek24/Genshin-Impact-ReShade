@@ -6,8 +6,8 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ByteSizeLib;
+using ClassLibrary;
 using CliWrap.Builders;
-using Microsoft.WindowsAPICodePack.Taskbar;
 using StellaLauncher.Forms;
 using StellaLauncher.Properties;
 
@@ -57,7 +57,7 @@ namespace StellaLauncher.Scripts.Download
 			Program.Logger.Info($"New release from {remoteVerDate} is available: v{Program.ProductVersion} → v{remoteVersion}");
 
 			// Taskbar
-			TaskbarManager.Instance.SetProgressValue(100, 100);
+			TaskbarProgress.SetProgressValue(100);
 
 			// Check update size
 			using (WebClient wc = new WebClient())
@@ -68,7 +68,7 @@ namespace StellaLauncher.Scripts.Download
 				Default._status_Label.Text += $"[i] {string.Format(Resources.StellaResources_UpdateSize, $"{updateSize} MB")}\n";
 
 				// Final
-				TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
+				TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Paused);
 				Program.Logger.Info($"Update size: {updateSize} MB");
 			}
 		}
@@ -76,7 +76,7 @@ namespace StellaLauncher.Scripts.Download
 		private static async void Update_Event(object sender, EventArgs e)
 		{
 			Program.Logger.Info(Resources.NormalRelease_PreparingToDownloadNewUpdate);
-			TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
+			TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Indeterminate);
 
 			Default._updates_LinkLabel.LinkColor = Color.DodgerBlue;
 			Default._updates_LinkLabel.Text = Resources.NormalRelease_UpdatingPleaseWait;
@@ -120,7 +120,7 @@ namespace StellaLauncher.Scripts.Download
 			}
 
 			Program.Logger.Info(Resources.NormalRelease_DownloadingInProgress);
-			TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Normal);
+			TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Normal);
 
 			using (WebClient client = new WebClient())
 			{
@@ -135,7 +135,8 @@ namespace StellaLauncher.Scripts.Download
 		{
 			int progress = (int)Math.Floor(e.BytesReceived * 100.0 / e.TotalBytesToReceive);
 			Default._progressBar1.Value = progress;
-			TaskbarManager.Instance.SetProgressValue(progress, 100);
+
+			TaskbarProgress.SetProgressValue((ulong)progress);
 
 			DateTime currentTime = DateTime.Now;
 			TimeSpan elapsedTime = currentTime - _lastUpdateTime;
@@ -176,7 +177,7 @@ namespace StellaLauncher.Scripts.Download
 			}
 
 			Default._preparingPleaseWait.Text = Resources.NormalRelease_EverythingIsOkay_StartingSetup;
-			TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
+			TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Indeterminate);
 
 			await Task.Delay(500);
 

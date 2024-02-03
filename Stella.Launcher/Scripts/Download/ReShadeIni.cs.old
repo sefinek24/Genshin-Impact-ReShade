@@ -67,7 +67,7 @@ namespace StellaLauncher.Scripts.Download
                 Default._status_Label.Text += $"[x] {Resources.ReShadeIniUpdate_TheVersionOfReShadeCfgWasNotFound}\n";
                 Default._updateIco_PictureBox.Image = Resources.icons8_download_from_the_cloud;
                 Program.Logger.Info("STELLA.ConfigVersion is null in ReShade.ini");
-                TaskbarManager.Instance.SetProgressValue(100, 100);
+                TaskbarProgress.SetProgressValue(100);
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Error);
                 return -2;
             }
@@ -90,8 +90,8 @@ namespace StellaLauncher.Scripts.Download
                 string updateSize = ByteSize.FromBytes(contentLength).KiloBytes.ToString("0.00");
                 Default._status_Label.Text += $"{string.Format(Resources.ReShadeIniUpdate_UpdateSize_KB, updateSize)}\n";
                 Program.Logger.Info($"File size: {updateSize} KB");
-                TaskbarManager.Instance.SetProgressValue(100, 100);
-                TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
+                TaskbarProgress.SetProgressValue(100);
+                TaskbarProgress.SetProgressState(TaskbarProgress.TBPFLAG.TBPF_PAUSED);
                 return 1;
             }
         }

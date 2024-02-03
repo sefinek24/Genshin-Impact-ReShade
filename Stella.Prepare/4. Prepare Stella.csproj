@@ -149,9 +149,6 @@
     <PackageReference Include="NLog">
       <Version>5.2.8</Version>
     </PackageReference>
-    <PackageReference Include="WindowsAPICodePack">
-      <Version>7.0.4</Version>
-    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="IWshRuntimeLibrary">
@@ -164,7 +161,12 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Stella.ClassLibrary\8. Class Library.csproj">
+      <Project>{329952c4-25ea-4533-8ec0-772d7838c946}</Project>
+      <Name>8. Class Library</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>

@@ -4,8 +4,8 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClassLibrary;
 using Microsoft.Win32;
-using Microsoft.WindowsAPICodePack.Taskbar;
 using PrepareStella.Forms;
 using PrepareStella.Scripts;
 using PrepareStella.Scripts.Preparing;
@@ -31,8 +31,7 @@ namespace PrepareStella
 		[STAThread]
 		public static async Task Run()
 		{
-			TaskbarManager.Instance.SetProgressValue(12, 100);
-
+			TaskbarProgress.SetProgressValue(12);
 			Console.ForegroundColor = ConsoleColor.Magenta;
 			Console.WriteLine("\n-- Select the correct localizations --");
 
@@ -114,8 +113,7 @@ namespace PrepareStella
 				Log.ErrorAndExit(new Exception("Unknown\n\nSorry. Directory with the resources was not found.\nIn the resources directory, files such as your shaders, presets, screenshots, and custom mods are stored."), false, false);
 			}
 
-			TaskbarManager.Instance.SetProgressValue(26, 100);
-
+			TaskbarProgress.SetProgressValue(26);
 
 			Console.ForegroundColor = ConsoleColor.Magenta;
 			Console.WriteLine("\n-- Run the final configuration --");
@@ -141,7 +139,7 @@ namespace PrepareStella
 			{
 				Console.WriteLine(@"Checking Stella resources...");
 				await DownloadUpdateResources.RunAsync();
-				TaskbarManager.Instance.SetProgressValue(39, 100);
+				TaskbarProgress.SetProgressValue(39);
 			}
 
 			// Download and prepare ReShade config
@@ -149,7 +147,7 @@ namespace PrepareStella
 			{
 				Console.WriteLine(@"Downloading ReShade files...");
 				await UpdateReShadeCfg.RunAsync();
-				TaskbarManager.Instance.SetProgressValue(46, 100);
+				TaskbarProgress.SetProgressValue(46);
 			}
 
 			// Delete ReShade cache
@@ -157,7 +155,7 @@ namespace PrepareStella
 			{
 				Console.WriteLine(@"Deleting ReShade cache...");
 				await DeleteReShadeCache.RunAsync();
-				TaskbarManager.Instance.SetProgressValue(57, 100);
+				TaskbarProgress.SetProgressValue(57);
 			}
 
 			// Download FPS Unlocker config
@@ -165,7 +163,7 @@ namespace PrepareStella
 			{
 				Console.WriteLine(@"Downloading FPS Unlocker configuration...");
 				await DownloadFpsUnlockerCfg.RunAsync();
-				TaskbarManager.Instance.SetProgressValue(68, 100);
+				TaskbarProgress.SetProgressValue(68);
 			}
 
 			// Windows Terminal installation
@@ -173,7 +171,7 @@ namespace PrepareStella
 			{
 				Console.Write(@"Backing up the Windows Terminal configuration file in app data... ");
 				await TerminalInstallation.RunAsync();
-				TaskbarManager.Instance.SetProgressValue(77, 100);
+				TaskbarProgress.SetProgressValue(77);
 			}
 
 			// Create or update Desktop icon
@@ -181,7 +179,7 @@ namespace PrepareStella
 			{
 				Console.WriteLine(@"Creating Desktop shortcut...");
 				await DesktopIcon.RunAsync();
-				TaskbarManager.Instance.SetProgressValue(89, 100);
+				TaskbarProgress.SetProgressValue(89);
 			}
 
 			// Create new Internet shortcuts in menu start
@@ -189,7 +187,7 @@ namespace PrepareStella
 			{
 				Console.WriteLine(@"Creating new Internet shortcut...");
 				await InternetShortcuts.RunAsync();
-				TaskbarManager.Instance.SetProgressValue(96, 100);
+				TaskbarProgress.SetProgressValue(96);
 			}
 
 
@@ -207,7 +205,7 @@ namespace PrepareStella
 
 
 			// Final
-			TaskbarManager.Instance.SetProgressValue(100, 100);
+			TaskbarProgress.SetProgressValue(100);
 
 
 			// Reboot is required?
@@ -245,7 +243,7 @@ namespace PrepareStella
 			Console.WriteLine($@"» The program will close in {seconds} seconds.");
 			for (int i = seconds; i >= 1; i--) Thread.Sleep(1000);
 
-			TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
+			TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Indeterminate);
 		}
 	}
 }

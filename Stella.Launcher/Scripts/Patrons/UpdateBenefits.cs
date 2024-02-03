@@ -6,7 +6,7 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ByteSizeLib;
-using Microsoft.WindowsAPICodePack.Taskbar;
+using ClassLibrary;
 using Newtonsoft.Json;
 using StellaLauncher.Forms;
 using StellaLauncher.Models;
@@ -166,7 +166,8 @@ namespace StellaLauncher.Scripts.Patrons
 		{
 			int progress = (int)(bytesRead * 100 / totalBytes);
 			Default._progressBar1.Value = progress;
-			TaskbarManager.Instance.SetProgressValue(progress, 100);
+
+			TaskbarProgress.SetProgressValue((ulong)progress);
 
 			DateTime currentTime = DateTime.Now;
 			TimeSpan elapsedTime = currentTime - _lastUpdateTime;

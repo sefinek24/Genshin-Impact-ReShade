@@ -23,6 +23,11 @@ namespace StellaLauncher.Forms
 			DoubleBuffered = true;
 		}
 
+		private void Gameplay_Load(object sender, EventArgs e)
+		{
+			RoundedCorners.Apply(this);
+		}
+
 		private async void Tutorial_Shown(object sender, EventArgs e)
 		{
 			await WebViewHelper.Initialize(webView21, $"https://www.youtube.com/embed/{VideoId}");

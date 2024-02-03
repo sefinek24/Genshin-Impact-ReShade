@@ -3,6 +3,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using ClassLibrary;
 using Microsoft.Win32;
 using Newtonsoft.Json;
 using StellaLauncher.Forms.Other;
@@ -26,7 +27,6 @@ namespace StellaLauncher.Forms
 		public static Label _status_Label;
 		public static Label _preparingPleaseWait;
 		public static ProgressBar _progressBar1;
-		public static NotifyIcon _notifyIcon1;
 
 		// Left
 		public static PictureBox _discordServerIco_Picturebox;
@@ -61,6 +61,7 @@ namespace StellaLauncher.Forms
 			InitializeComponent();
 
 			DoubleBuffered = true;
+			TaskbarProgress.MainWinHandle = Handle;
 		}
 
 		private void Default_Load(object sender, EventArgs e)
@@ -78,7 +79,6 @@ namespace StellaLauncher.Forms
 			_status_Label = status_Label;
 			_preparingPleaseWait = PreparingPleaseWait;
 			_progressBar1 = progressBar1;
-			_notifyIcon1 = notifyIcon1;
 
 			_discordServerIco_Picturebox = discordServerIco_Picturebox;
 			_discordServer_LinkLabel = discordServer_LinkLabel;
@@ -97,6 +97,8 @@ namespace StellaLauncher.Forms
 			_version_LinkLabel = version_LinkLabel;
 			_updates_LinkLabel = updates_LinkLabel;
 			_updateIco_PictureBox = updateIco_PictureBox;
+
+			TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Indeterminate);
 
 			Stages.UpdateStage(1, "Updating `LastRunTime` in the registry...");
 

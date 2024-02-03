@@ -59,6 +59,10 @@ Stella.DeviceIdentifier/obj
 Stella.SefinAntiCheat/bin
 Stella.SefinAntiCheat/obj
 
+# Stella.SefinAntiCheat Soultion
+Stella.ClassLibrary/bin
+Stella.ClassLibrary/obj
+
 # Stella Mod Plus
 data/Patrons
 data/presets/New

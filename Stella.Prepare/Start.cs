@@ -1,12 +1,12 @@
 using System;
-using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.WindowsAPICodePack.Taskbar;
+using ClassLibrary;
 using NLog;
 using NLog.Config;
 using PrepareStella.Scripts;
@@ -28,8 +28,8 @@ namespace PrepareStella
 		// Web
 		public static readonly string UserAgent = $"Mozilla/5.0 (compatible; PrepareStella/{AppVersion}; +{AppWebsite})";
 
-		public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v5" : "https://api.sefinek.net/api/v5";
-		//  public static readonly string WebApi = "https://api.sefinek.net/api/v5";
+		// public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v5" : "https://api.sefinek.net/api/v5";
+		public static readonly string WebApi = "https://api.sefinek.net/api/v5";
 
 		// Dependencies
 		public static readonly string VcLibsAppx = Path.Combine("dependencies", "Microsoft.VCLibs.x64.14.00.Desktop.appx");
@@ -41,6 +41,9 @@ namespace PrepareStella
 
 		// Logger
 		public static Logger Logger = LogManager.GetCurrentClassLogger();
+
+		[DllImport("kernel32.dll")]
+		private static extern IntPtr GetConsoleWindow();
 
 		private static async Task Main()
 		{
@@ -64,7 +67,7 @@ namespace PrepareStella
 
 			if (!Utils.IsRunAsAdmin())
 			{
-				TaskbarManager.Instance.SetProgressValue(100, 100);
+				TaskbarProgress.SetProgressValue(100);
 				Log.ErrorAndExit(new Exception("» This application requires administrator privileges to run."), false, false);
 				return;
 			}
@@ -72,6 +75,8 @@ namespace PrepareStella
 
 			Log.InitDirs();
 
+			IntPtr consoleHandle = GetConsoleWindow();
+			TaskbarProgress.MainWinHandle = consoleHandle;
 
 			try
 			{

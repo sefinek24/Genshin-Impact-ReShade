@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Threading.Tasks;
-using Microsoft.WindowsAPICodePack.Taskbar;
+using ClassLibrary;
 using Newtonsoft.Json;
 using StellaLauncher.Forms;
 using StellaLauncher.Models;
@@ -20,7 +20,8 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 			Default._updates_LinkLabel.LinkColor = Color.White;
 			Default._updates_LinkLabel.Text = Resources.Default_CheckingForUpdates;
 
-			TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
+			TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Indeterminate);
+
 			Program.Logger.Info("Checking for new updates...");
 
 			try
@@ -141,7 +142,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 				Default.UpdateIsAvailable = false;
 				Program.Logger.Info($"Not found any new updates. AppVersion v{Program.AppVersion}; ProductVersion v{Program.ProductVersion};");
 
-				TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress);
+				TaskbarProgress.SetProgressState(TaskbarProgress.Flags.NoProgress);
 
 				Utils.ShowStartGameBts();
 				return 0;

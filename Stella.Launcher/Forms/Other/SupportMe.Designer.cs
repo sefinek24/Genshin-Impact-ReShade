@@ -240,6 +240,7 @@ namespace StellaLauncher.Forms.Other
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SupportMe";
+            this.Load += new System.EventHandler(this.SupportMe_Load);
             this.Shown += new System.EventHandler(this.SupportMe_Shown);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -270,6 +270,7 @@ namespace StellaLauncher.Forms
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Links";
+            this.Load += new System.EventHandler(this.Links_Load);
             this.Shown += new System.EventHandler(this.URLs_Shown);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();

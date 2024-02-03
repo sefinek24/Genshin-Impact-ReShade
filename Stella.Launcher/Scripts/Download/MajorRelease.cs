@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.WindowsAPICodePack.Taskbar;
+using ClassLibrary;
 using StellaLauncher.Forms;
 using StellaLauncher.Forms.Errors;
 using StellaLauncher.Properties;
@@ -18,8 +18,8 @@ namespace StellaLauncher.Scripts.Download
 			Default._updateIco_PictureBox.Image = Resources.icons8_download_from_the_cloud;
 			Program.Logger.Info($"New major version from {remoteVerDate} is available: v{Program.AppVersion} → v{remoteVersion}");
 
-			TaskbarManager.Instance.SetProgressValue(100, 100);
-			TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
+			TaskbarProgress.SetProgressValue(100);
+			TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Paused);
 			new NotCompatible { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.ShowDialog();
 
 			Environment.Exit(0);

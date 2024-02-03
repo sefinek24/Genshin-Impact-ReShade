@@ -185,6 +185,7 @@ namespace StellaLauncher.Forms
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Gameplay";
+            this.Load += new System.EventHandler(this.Gameplay_Load);
             this.Shown += new System.EventHandler(this.Tutorial_Shown);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

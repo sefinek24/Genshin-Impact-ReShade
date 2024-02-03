@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7. Device Identifier", "Ste
 EndProject
 Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "Win App Packaging Project", "Win App Packaging Project\Win App Packaging Project.wapproj", "{1D6AC525-A490-4EEE-A83C-C614A9D97C0A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8. Class Library", "Stella.ClassLibrary\8. Class Library.csproj", "{329952C4-25EA-4533-8EC0-772D7838C946}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -225,6 +227,26 @@ Global
 		{1D6AC525-A490-4EEE-A83C-C614A9D97C0A}.Release|x86.ActiveCfg = Release|x86
 		{1D6AC525-A490-4EEE-A83C-C614A9D97C0A}.Release|x86.Build.0 = Release|x86
 		{1D6AC525-A490-4EEE-A83C-C614A9D97C0A}.Release|x86.Deploy.0 = Release|x86
+		{329952C4-25EA-4533-8EC0-772D7838C946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{329952C4-25EA-4533-8EC0-772D7838C946}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{329952C4-25EA-4533-8EC0-772D7838C946}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{329952C4-25EA-4533-8EC0-772D7838C946}.Debug|ARM.Build.0 = Debug|Any CPU
+		{329952C4-25EA-4533-8EC0-772D7838C946}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{329952C4-25EA-4533-8EC0-772D7838C946}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{329952C4-25EA-4533-8EC0-772D7838C946}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{329952C4-25EA-4533-8EC0-772D7838C946}.Debug|x64.Build.0 = Debug|Any CPU
+		{329952C4-25EA-4533-8EC0-772D7838C946}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{329952C4-25EA-4533-8EC0-772D7838C946}.Debug|x86.Build.0 = Debug|Any CPU
+		{329952C4-25EA-4533-8EC0-772D7838C946}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{329952C4-25EA-4533-8EC0-772D7838C946}.Release|Any CPU.Build.0 = Release|Any CPU
+		{329952C4-25EA-4533-8EC0-772D7838C946}.Release|ARM.ActiveCfg = Release|Any CPU
+		{329952C4-25EA-4533-8EC0-772D7838C946}.Release|ARM.Build.0 = Release|Any CPU
+		{329952C4-25EA-4533-8EC0-772D7838C946}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{329952C4-25EA-4533-8EC0-772D7838C946}.Release|ARM64.Build.0 = Release|Any CPU
+		{329952C4-25EA-4533-8EC0-772D7838C946}.Release|x64.ActiveCfg = Release|Any CPU
+		{329952C4-25EA-4533-8EC0-772D7838C946}.Release|x64.Build.0 = Release|Any CPU
+		{329952C4-25EA-4533-8EC0-772D7838C946}.Release|x86.ActiveCfg = Release|Any CPU
+		{329952C4-25EA-4533-8EC0-772D7838C946}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,6 +6,7 @@ using Microsoft.Win32;
 using StellaLauncher.Forms.Other;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts;
+using StellaLauncher.Scripts.Forms;
 
 namespace StellaLauncher.Forms
 {
@@ -23,6 +24,8 @@ namespace StellaLauncher.Forms
 
 		private void Tools_Load(object sender, EventArgs e)
 		{
+			RoundedCorners.Apply(this);
+
 			MusicLabel_Set();
 			RPCLabel_Set();
 		}
