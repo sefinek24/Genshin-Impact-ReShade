@@ -7,7 +7,7 @@ namespace StellaLauncher.Scripts.Forms
 {
 	internal static class RoundedCorners
 	{
-		public static void Apply(Form form, int radius = 20)
+		public static void Apply(Form form, int radius = 16)
 		{
 			if (form == null) throw new ArgumentNullException(nameof(form));
 
