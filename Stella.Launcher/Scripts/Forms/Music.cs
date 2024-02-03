@@ -41,7 +41,7 @@ namespace StellaLauncher.Scripts.Forms
 				return;
 			}
 
-			float volume = fileName == "information_bar" ? 0.44f : 1.54f;
+			float volume = fileName == "information_bar" ? 0.44f : 0.9f;
 			PlaySoundAsync(wavPath, volume).ConfigureAwait(false);
 		}
 
