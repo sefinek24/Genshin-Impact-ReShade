@@ -3,13 +3,14 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Web.WebView2.Core;
+using Microsoft.Web.WebView2.WinForms;
 using StellaLauncher.Properties;
 
 namespace StellaLauncher.Scripts.Forms
 {
 	internal static class WebViewHelper
 	{
-		public static async Task Initialize(Microsoft.Web.WebView2.WinForms.WebView2 webView21, string url)
+		public static async Task Initialize(WebView2 webView21, string url)
 		{
 			try
 			{

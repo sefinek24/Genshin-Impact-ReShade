@@ -1,138 +1,105 @@
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Runtime.Caching;
 using System.Windows.Forms;
-using StellaLauncher.Properties;
 
 namespace StellaLauncher.Scripts.Forms.MainForm
 {
-	/// <summary>
-	///    Utility class for managing background images in the main form.
-	/// </summary>
 	internal static class Background
 	{
 		private static readonly ObjectCache Cache = MemoryCache.Default;
+		private static readonly string BackgroundImagesPath = Path.Combine(Program.AppPath, "data", "images", "backgrounds", "main");
+		private static readonly string[] Extensions = { "*.png", "*.jpg", "*.jpeg", "*.bmp" };
 
-		// Array of background image file names
-		private static readonly string[] BackgroundFiles =
+		private static string[] LoadBackgroundFiles()
 		{
-			@"nahida\1",
-			@"yaoyao\1", @"yaoyao\2",
-			@"ayaka\1", @"ayaka\2", @"ayaka\3", @"ayaka\4",
-			@"hutao\1", @"hutao\2", @"hutao\3", @"hutao\4"
-		};
+			try
+			{
+				if (!Directory.Exists(BackgroundImagesPath))
+				{
+					MessageBox.Show($@"Background folder does not exist: {BackgroundImagesPath}", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
+					return Array.Empty<string>();
+				}
 
-		/// <summary>
-		///    Sets the initial background image for the main form.
-		/// </summary>
-		/// <param name="toolTip">ToolTip instance to show tooltip text.</param>
-		/// <param name="changeBg">LinkLabel control for changing the background.</param>
-		/// <returns>The initial background image or null if it's not found.</returns>
+				List<string> fileList = new List<string>();
+				foreach (string ext in Extensions) fileList.AddRange(Directory.GetFiles(BackgroundImagesPath, ext, SearchOption.AllDirectories));
+
+				return fileList.ToArray();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show($@"Error occurred while loading background files: {ex.Message}", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return Array.Empty<string>();
+			}
+		}
+
 		public static Image OnStart(ToolTip toolTip, LinkLabel changeBg)
 		{
-			// Read the index of the last used background from settings
-			int bgInt = Program.Settings.ReadInt("Launcher", "Background", 0);
-			if (bgInt == 0) return null;
+			string[] backgroundFiles = LoadBackgroundFiles();
+			if (backgroundFiles.Length == 0) return null;
 
-			bgInt--;
+			int bgInt = Program.Settings.ReadInt("Launcher", "Background", 0);
+			bgInt = bgInt >= backgroundFiles.Length || bgInt < 0 ? 0 : bgInt;
+
+			return GetCachedOrLoadImage(bgInt, backgroundFiles, toolTip, changeBg);
+		}
+
+		private static Image GetCachedOrLoadImage(int bgInt, IReadOnlyList<string> backgroundFiles, ToolTip toolTip, Control changeBg)
+		{
+			if (backgroundFiles.Count == 0) return null;
 
 			string cacheKey = $"background_{bgInt}";
 			if (Cache.Contains(cacheKey) && Cache.Get(cacheKey) is Bitmap cachedImage)
 			{
-				Program.Logger.Info(string.Format(Resources.Default_SuccessfullyRetrievedAndUpdatedTheCachedAppBackgroundWithID_, bgInt + 1));
+				toolTip.SetToolTip(changeBg, $"Current background: {Path.GetFileName(backgroundFiles[bgInt])}");
 				return cachedImage;
 			}
 
-			// Get the localization path of the background image
-			string localization = Path.Combine(Program.AppPath, "data", "images", "launcher", "backgrounds", $"{BackgroundFiles[bgInt]}.png");
-			if (!Utils.CheckFileExists(localization))
+			if (!File.Exists(backgroundFiles[bgInt]))
 			{
-				MessageBox.Show(string.Format(Resources.Default_Sorry_Background_WasNotFound, BackgroundFiles[bgInt]), Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-				Program.Logger.Error($"Sorry. Background {Path.GetFileName(localization)} was not found in: {Path.GetDirectoryName(localization)}");
+				MessageBox.Show($@"Sorry, background {Path.GetFileName(backgroundFiles[bgInt])} was not found.", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Warning);
 				return null;
 			}
 
-			Bitmap backgroundImage = new Bitmap(localization);
+			Bitmap backgroundImage = new Bitmap(backgroundFiles[bgInt]);
 			Cache.Add(cacheKey, backgroundImage, new CacheItemPolicy { AbsoluteExpiration = DateTimeOffset.Now.AddMinutes(20) });
-			Program.Logger.Info($"Cached app background in RAM memory '{localization}'; ID: {bgInt + 1};");
+			SetToolTipForBackground(changeBg, toolTip, backgroundFiles[bgInt]);
 
-			toolTip.SetToolTip(changeBg, string.Format(Resources.Default_CurrentBackground, BackgroundFiles[bgInt]));
 			return backgroundImage;
 		}
 
-		/// <summary>
-		/// Changes the background image for the main form.
-		/// </summary>
-		/// <param name="bgFormImage"> Current background image of the main form.</param>
-		/// <param name="toolTip">ToolTip instance to show tooltip text.</param>
-		/// <param name="changeBg">LinkLabel control for changing the background.</param>
-		/// <returns>The new background image after the change or null if the image is not found.</returns>
-		public static Image Change(Image bgFormImage, ToolTip toolTip, LinkLabel changeBg)
+		private static void SetToolTipForBackground(Control changeBg, ToolTip toolTip, string filePath)
 		{
+			string[] pathParts = filePath.Split(Path.DirectorySeparatorChar);
+			if (pathParts.Length > 3)
+			{
+				string folderNames = $@"{pathParts[pathParts.Length - 3]}\{pathParts[pathParts.Length - 2]}";
+				string fileName = Path.GetFileName(filePath);
+				toolTip.SetToolTip(changeBg, $@"Current background: {folderNames}\{fileName}");
+			}
+			else
+			{
+				toolTip.SetToolTip(changeBg, $"Current background file: {Path.GetFileName(filePath)}");
+			}
+		}
+
+		public static Image Change(ToolTip toolTip, LinkLabel changeBg)
+		{
+			string[] backgroundFiles = LoadBackgroundFiles();
+			if (backgroundFiles.Length == 0)
+			{
+				MessageBox.Show(@"No background images found.", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return null;
+			}
+
 			int bgInt = Program.Settings.ReadInt("Launcher", "Background", 0);
-			if (bgInt >= BackgroundFiles.Length) return SetDefaultBackground(bgFormImage, toolTip, changeBg);
-
-			Image backgroundImage = GetCachedOrLoadImage(bgInt);
-			if (backgroundImage == null) return null;
-
-			toolTip.SetToolTip(changeBg, string.Format(Resources.Default_CurrentBackground, BackgroundFiles[bgInt]));
-
-			// Increment the index and save it to settings
-			bgInt++;
+			bgInt = (bgInt + 1) % backgroundFiles.Length;
 			Program.Settings.WriteInt("Launcher", "Background", bgInt);
 			Program.Settings.Save();
 
-			Program.Logger.Info(string.Format(Resources.Default_ChangedTheLauncherBackground_ID, bgInt));
-			return backgroundImage;
-		}
-
-		/// <summary>
-		///    Gets the cached background image for the given index or loads it from file if not found in the cache.
-		/// </summary>
-		/// <param name="bgInt"> The index of the background image.</param>
-		/// <returns>The cached background image or the loaded image from file.</returns>
-		private static Image GetCachedOrLoadImage(int bgInt)
-		{
-			// Create a cache key based on the background index
-			string cacheKey = $"background_{bgInt}";
-			if (Cache.Contains(cacheKey) && Cache.Get(cacheKey) is Bitmap cachedImage)
-			{
-				Program.Logger.Info(string.Format(Resources.Default_SuccessfullyRetrievedAndUpdatedTheCachedAppBackgroundWithID_, bgInt + 1));
-				return cachedImage;
-			}
-
-			string localization = Path.Combine(Program.AppPath, "data", "images", "launcher", "backgrounds", $"{BackgroundFiles[bgInt]}.png");
-			if (!Utils.CheckFileExists(localization))
-			{
-				// If the file does not exist, show an error message and log the exception
-				MessageBox.Show(string.Format(Resources.Default_Sorry_Background_WasNotFound, BackgroundFiles[bgInt]), Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-				Program.Logger.Error(string.Format(Resources.Default_Sorry_Background_WasNotFound, localization, bgInt));
-				return null;
-			}
-
-			Bitmap backgroundImage = new Bitmap(localization);
-			Cache.Add(cacheKey, backgroundImage, new CacheItemPolicy { AbsoluteExpiration = DateTimeOffset.Now.AddMinutes(20) });
-
-			Program.Logger.Info(string.Format(Resources.Default_CachedAppBackground_ID, localization, bgInt + 1));
-			return backgroundImage;
-		}
-
-		/// <summary>
-		///    Sets the default background image for the main form.
-		/// </summary>
-		/// <param name="bgFormImage"> Current background image of the main form.</param>
-		/// <param name="toolTip">ToolTip instance to show tooltip text.</param>
-		/// <param name="changeBg">LinkLabel control for changing the background.</param>
-		/// <returns>The default background image.</returns>
-		private static Image SetDefaultBackground(Image bgFormImage, ToolTip toolTip, Control changeBg)
-		{
-			bgFormImage = Resources.bg_main;
-			Program.Settings.WriteInt("Launcher", "Background", 0);
-			Program.Settings.Save();
-			toolTip.SetToolTip(changeBg, Resources.Default_CurrentBackground_Default);
-			Program.Logger.Info(string.Format(Resources.Default_TheApplicationBackgroundHasBeenChangedToDefault_ID, 0));
-			return bgFormImage;
+			return GetCachedOrLoadImage(bgInt, backgroundFiles, toolTip, changeBg);
 		}
 	}
 }

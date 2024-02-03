@@ -1,5 +1,6 @@
 using System;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -44,16 +45,6 @@ namespace StellaLauncher.Forms
 		public static LinkLabel _runGiLauncher_LinkLabel;
 		public static LinkLabel _becomeMyPatron_LinkLabel;
 
-		// Bottom
-		// public static PictureBox _toolsIco_PictureBox;
-		// public static LinkLabel _tools_LinkLabel;
-		// public static PictureBox _shortcutIco_PictureBox;
-		// public static LinkLabel _links_LinkLabel;
-		// public static PictureBox _padIco_PictureBox;
-		// public static LinkLabel _gameplay_LinkLabel;
-		// public static PictureBox _websiteIco_PictureBox;
-		// public static LinkLabel _website_LinkLabel;
-
 		// Right
 		public static LinkLabel _version_LinkLabel;
 		public static LinkLabel _updates_LinkLabel;
@@ -78,6 +69,8 @@ namespace StellaLauncher.Forms
 			// Set background
 			Image newBackground = Background.OnStart(toolTip1, changeBg_LinkLabel);
 			if (newBackground != null) BackgroundImage = newBackground;
+
+			RoundedCorners.Apply(this);
 		}
 
 		private async void Main_Shown(object sender, EventArgs e)
@@ -101,15 +94,6 @@ namespace StellaLauncher.Forms
 			_only3DMigoto_LinkLabel = only3DMigoto_LinkLabel;
 			_runGiLauncher_LinkLabel = runGiLauncher_LinkLabel;
 			_becomeMyPatron_LinkLabel = becomeMyPatron_LinkLabel;
-
-			// _toolsIco_PictureBox = toolsIco_PictureBox;
-			// _tools_LinkLabel = tools_LinkLabel;
-			// _shortcutIco_PictureBox = shortcutIco_PictureBox;
-			// _links_LinkLabel = links_LinkLabel;
-			// _padIco_PictureBox = padIco_PictureBox;
-			// _gameplay_LinkLabel = gameplay_LinkLabel;
-			// _websiteIco_PictureBox = websiteIco_PictureBox;
-			// _website_LinkLabel = website_LinkLabel;
 
 			_version_LinkLabel = version_LinkLabel;
 			_updates_LinkLabel = updates_LinkLabel;
@@ -412,7 +396,7 @@ namespace StellaLauncher.Forms
 
 		private void ChangeBg_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			Image newBackground = Background.Change(BackgroundImage, toolTip1, changeBg_LinkLabel);
+			Image newBackground = Background.Change(toolTip1, changeBg_LinkLabel);
 			if (newBackground != null) BackgroundImage = newBackground;
 
 			Music.PlaySound("winxp", "menu_command");

@@ -19,12 +19,12 @@ namespace StellaLauncher.Scripts.Forms
 			string wavPath = GetRandomBgWavPath();
 			if (string.IsNullOrEmpty(wavPath)) return;
 
-			await Task.Run(() => PlaySoundAsync(wavPath, 0.76f));
+			await PlaySoundAsync(wavPath, 0.76f);
 		}
 
 		private static string GetRandomBgWavPath()
 		{
-			int randomBgNumber = Random.Next(1, 6 + 1);
+			int randomBgNumber = Random.Next(1, 7);
 			string wavPath = Path.Combine(Program.AppPath, "data", "sounds", "bg", $"{randomBgNumber}.wav");
 			return File.Exists(wavPath) ? wavPath : null;
 		}
@@ -41,7 +41,8 @@ namespace StellaLauncher.Scripts.Forms
 				return;
 			}
 
-			Task.Run(() => PlaySoundAsync(wavPath, fileName == "information_bar" ? 0.44f : 1.54f));
+			float volume = fileName == "information_bar" ? 0.44f : 1.54f;
+			PlaySoundAsync(wavPath, volume).ConfigureAwait(false);
 		}
 
 		private static async Task PlaySoundAsync(string wavPath, float volume)
@@ -56,7 +57,6 @@ namespace StellaLauncher.Scripts.Forms
 					{
 						outputDevice.Init(volumeStream);
 						outputDevice.Play();
-
 						await Task.Delay(TimeSpan.FromSeconds(audioFile.TotalTime.TotalSeconds));
 					}
 				}

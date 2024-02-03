@@ -5,6 +5,7 @@ namespace StellaLauncher.Scripts
 {
 	public class IniFile
 	{
+		private const int BufferSize = 1024;
 		private readonly string _path;
 
 		public IniFile(string path)
@@ -12,32 +13,32 @@ namespace StellaLauncher.Scripts
 			_path = path;
 		}
 
-		[DllImport("kernel32.dll")]
+		[DllImport("kernel32.dll", CharSet = CharSet.Auto)]
 		private static extern long WritePrivateProfileString(string section, string key, string val, string filePath);
 
-		[DllImport("kernel32.dll")]
+		[DllImport("kernel32.dll", CharSet = CharSet.Auto)]
 		private static extern int GetPrivateProfileString(string section, string key, string def, StringBuilder retVal, int size, string filePath);
 
-		public void WriteInt(string section, string key, int value)
+		public bool WriteInt(string section, string key, int value)
 		{
-			WriteString(section, key, value.ToString());
+			return WriteString(section, key, value.ToString());
 		}
 
 		public int ReadInt(string section, string key, int defaultValue)
 		{
-			int.TryParse(ReadString(section, key, defaultValue.ToString()), out int value);
-			return value;
+			string result = ReadString(section, key, defaultValue.ToString());
+			return int.TryParse(result, out int value) ? value : defaultValue;
 		}
 
-		public void WriteString(string section, string key, string value)
+		public bool WriteString(string section, string key, string value)
 		{
-			WritePrivateProfileString(section, key, value, _path);
+			return WritePrivateProfileString(section, key, value, _path) != 0;
 		}
 
 		public string ReadString(string section, string key, string defaultValue)
 		{
-			StringBuilder sb = new StringBuilder(255);
-			GetPrivateProfileString(section, key, defaultValue, sb, 255, _path);
+			StringBuilder sb = new StringBuilder(BufferSize);
+			GetPrivateProfileString(section, key, defaultValue, sb, sb.Capacity, _path);
 			return sb.ToString();
 		}
 

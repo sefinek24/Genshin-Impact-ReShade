@@ -209,6 +209,7 @@
     <Compile Include="Scripts\Delete.cs" />
     <Compile Include="Scripts\Forms\MainForm\Tray.cs" />
     <Compile Include="Scripts\Forms\MainForm\Run.cs" />
+    <Compile Include="Scripts\Forms\RoundedCorners.cs" />
     <Compile Include="Scripts\Forms\Stages.cs" />
     <Compile Include="Scripts\Forms\WebViewHelper.cs" />
     <Compile Include="Scripts\RSConfig.cs" />
@@ -420,86 +421,109 @@
     <Content Include="data\images\icons\README.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\ayaka\1.png">
+    <None Include="data\images\backgrounds\forms\compressed\gameplay.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="data\images\backgrounds\forms\compressed\links.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\ayaka\2.png">
+    <Content Include="data\images\backgrounds\forms\compressed\main.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\ayaka\3.png">
+    <Content Include="data\images\backgrounds\forms\compressed\settings.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\ayaka\4.png">
+    <Content Include="data\images\backgrounds\forms\compressed\support-me.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\ayaka\other\1.png">
+    <Content Include="data\images\backgrounds\forms\compressed\tools.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\ayaka\other\2.png">
+    <Content Include="data\images\backgrounds\forms\original\default.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\ayaka\other\3.png">
+    <Content Include="data\images\backgrounds\forms\original\gameplay.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\ayaka\other\4.png">
+    <Content Include="data\images\backgrounds\forms\original\links.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\forms\gameplay\tutorial.png">
+    <Content Include="data\images\backgrounds\forms\original\settings.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\forms\links\links.png">
+    <Content Include="data\images\backgrounds\forms\original\support-me.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\forms\support-me\1.png">
+    <Content Include="data\images\backgrounds\forms\original\tools.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\forms\tools\1.png">
+    <Content Include="data\images\backgrounds\main\ayaka\1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\forms\settings\1.png">
+    <Content Include="data\images\backgrounds\main\ayaka\2.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\hutao\1.png">
+    <Content Include="data\images\backgrounds\main\ayaka\3.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\hutao\2.png">
+    <Content Include="data\images\backgrounds\main\ayaka\4.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\hutao\3.png">
+    <Content Include="data\images\backgrounds\main\ayaka\other\1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\hutao\4.png">
+    <Content Include="data\images\backgrounds\main\ayaka\other\2.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\main.png" />
-    <Content Include="data\images\launcher\backgrounds\nahida\1.png">
+    <Content Include="data\images\backgrounds\main\ayaka\other\3.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\yaoyao\1.png">
+    <Content Include="data\images\backgrounds\main\ayaka\other\4.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\yaoyao\2.png">
+    <Content Include="data\images\backgrounds\main\hutao\1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\yoimiya\1.png">
+    <Content Include="data\images\backgrounds\main\hutao\2.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\yoimiya\2.png">
+    <Content Include="data\images\backgrounds\main\hutao\3.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\yoimiya\3.png">
+    <Content Include="data\images\backgrounds\main\hutao\4.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\yoimiya\4.png">
+    <Content Include="data\images\backgrounds\main\default.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\yoimiya\5.png">
+    <Content Include="data\images\backgrounds\main\nahida\1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\yoimiya\6.png">
+    <Content Include="data\images\backgrounds\main\yaoyao\1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\launcher\backgrounds\yoimiya\7.png">
+    <Content Include="data\images\backgrounds\main\yaoyao\2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\images\backgrounds\main\yoimiya\1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\images\backgrounds\main\yoimiya\2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\images\backgrounds\main\yoimiya\3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\images\backgrounds\main\yoimiya\4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\images\backgrounds\main\yoimiya\5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\images\backgrounds\main\yoimiya\6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\images\backgrounds\main\yoimiya\7.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="data\README.txt">

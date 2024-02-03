@@ -127,9 +127,6 @@
   <metadata name="panel2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="panel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -147,6 +144,9 @@
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>76</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="panel2.ToolTip" xml:space="preserve">
     <value>Close</value>
   </data>
@@ -306,9 +306,6 @@
   <data name="CreateShortcut.Text" xml:space="preserve">
     <value>Create shortcut on desktop</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="CreateShortcut.ToolTip" xml:space="preserve">
     <value>Create a shortcut for Stella Mod Launcher on your desktop. This is useful if you accidentally deleted the Stella Mod Launcher icon.</value>
   </data>
