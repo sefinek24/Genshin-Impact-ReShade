@@ -153,6 +153,9 @@
   <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="changeBg_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -174,9 +177,6 @@
   <data name="changeBg_LinkLabel.Text" xml:space="preserve">
     <value>Change background</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="changeBg_LinkLabel.ToolTip" xml:space="preserve">
     <value>Change the application background</value>
   </data>
@@ -393,6 +393,9 @@
   <data name="&gt;&gt;githubIco_Picturebox.ZOrder" xml:space="preserve">
     <value>32</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="tools_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1432,10 +1435,10 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>None</value>
   </data>
   <data name="webView21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>292, 519</value>
+    <value>248, 521</value>
   </data>
   <data name="webView21.Size" type="System.Drawing.Size, System.Drawing">
-    <value>347, 104</value>
+    <value>321, 104</value>
   </data>
   <data name="webView21.TabIndex" type="System.Int32, mscorlib">
     <value>122</value>
