@@ -6,7 +6,6 @@ using System.Net;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.Web.WebView2.Core;
 using Newtonsoft.Json;
 using StellaLauncher.Models;
 using StellaLauncher.Properties;

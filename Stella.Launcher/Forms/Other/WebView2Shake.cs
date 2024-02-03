@@ -1,6 +1,5 @@
 using System;
 using System.Windows.Forms;
-using Microsoft.Web.WebView2.Core;
 using StellaLauncher.Scripts.Forms;
 
 namespace StellaLauncher.Forms.Other
