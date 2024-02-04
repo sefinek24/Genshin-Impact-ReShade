@@ -144,9 +144,6 @@ i wiele więcej!</value>
   <data name="linkLabel3.Text" xml:space="preserve">
     <value>» Subskrybuj mój kanał YouTube</value>
   </data>
-  <data name="linkLabel3.ToolTip" xml:space="preserve">
-    <value>Sefinek - YouTube</value>
-  </data>
   <data name="linkLabel4.Text" xml:space="preserve">
     <value>» Oznacz gwiazdką repo GitHub</value>
   </data>
@@ -160,7 +157,7 @@ i wiele więcej!</value>
     <value>Dołącz na nasz serwer Discord</value>
   </data>
   <data name="linkLabel8.Text" xml:space="preserve">
-    <value>» Leave feedback on Discord</value>
+	  <value>» Zostaw opinię na Discordzie</value>
   </data>
   <data name="linkLabel8.ToolTip" xml:space="preserve">
     <value>Zostaw swoją opinię na kanale Discord</value>

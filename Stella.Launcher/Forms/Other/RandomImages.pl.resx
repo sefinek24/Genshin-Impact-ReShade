@@ -132,9 +132,6 @@
   <data name="linkLabel1.Text" xml:space="preserve">
     <value>Kot</value>
   </data>
-  <data name="linkLabel10.Text" xml:space="preserve">
-    <value>*pat pat*</value>
-  </data>
   <data name="linkLabel11.Text" xml:space="preserve">
     <value>Mrugnięcie</value>
   </data>
@@ -168,12 +165,6 @@
   <data name="linkLabel21.Text" xml:space="preserve">
     <value>Strzał</value>
   </data>
-  <data name="linkLabel22.Text" xml:space="preserve">
-    <value>Waifu</value>
-  </data>
-  <data name="linkLabel23.Text" xml:space="preserve">
-    <value>Baka</value>
-  </data>
   <data name="linkLabel24.Text" xml:space="preserve">
     <value>Ugryzienie</value>
   </data>
@@ -201,17 +192,8 @@
   <data name="linkLabel31.Text" xml:space="preserve">
     <value>Kopniak</value>
   </data>
-  <data name="linkLabel32.Text" xml:space="preserve">
-    <value>Poke</value>
-  </data>
-  <data name="linkLabel33.Text" xml:space="preserve">
-    <value>Pout</value>
-  </data>
   <data name="linkLabel34.Text" xml:space="preserve">
     <value>Uderzenie</value>
-  </data>
-  <data name="linkLabel35.Text" xml:space="preserve">
-    <value>Shrug</value>
   </data>
   <data name="linkLabel36.Text" xml:space="preserve">
     <value>Klaps</value>
@@ -231,17 +213,8 @@
   <data name="linkLabel40.Text" xml:space="preserve">
     <value>Łaskotanie</value>
   </data>
-  <data name="linkLabel41.Text" xml:space="preserve">
-    <value>Yeet</value>
-  </data>
-  <data name="linkLabel42.Text" xml:space="preserve">
-    <value>Holo</value>
-  </data>
   <data name="linkLabel43.Text" xml:space="preserve">
     <value>Ogon</value>
-  </data>
-  <data name="linkLabel44.Text" xml:space="preserve">
-    <value>Shiro</value>
   </data>
   <data name="linkLabel45.Text" xml:space="preserve">
     <value>Kot Half-Life</value>

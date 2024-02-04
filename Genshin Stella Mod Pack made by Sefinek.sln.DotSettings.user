@@ -12,8 +12,8 @@
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FOther_002FWebView2Shake/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FOther_002FWebView2Window/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FSettings/@EntryIndexedValue">False</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FTools/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FProperties_002FResources/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FTools/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FProperties_002FResources/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/Initialized/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/OrderByFullPath/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/ShowComments/@EntryValue">False</s:Boolean>

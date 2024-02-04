@@ -669,4 +669,7 @@ W nowszych wersjach Stella Mod zapisywanie ścieżek zostało przeniesione do re
   <data name="Default_DownloadedConfigFileForFPSUnlocker" xml:space="preserve">
 	  <value>Pobrano plik konfiguracyjny (unlocker.config.json) dla programu FPS Unlocker</value>
   </data>
+  <data name="Default_SuccessfullyDownloadedReShadeCfg" xml:space="preserve">
+	  <value>Pomyślnie pobrano plik ReShade.ini!</value>
+  </data>
 </root>

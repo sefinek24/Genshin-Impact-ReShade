@@ -120,9 +120,6 @@
   <data name="panel2.ToolTip" xml:space="preserve">
     <value>Zamknij</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Genshin Stella Mod Launcher 2024</value>
-  </data>
   <data name="SettingsAndUtils.Text" xml:space="preserve">
     <value>&gt;&gt; Ustawienia &lt;&lt;</value>
   </data>
@@ -131,9 +128,6 @@
   </data>
   <data name="CreateShortcut.ToolTip" xml:space="preserve">
     <value>Utwórz skrót do Stella Mod Launcher na pulpicie. Jest to przydatne w razie przypadkowego usunięcia ikony Stella Mod Launcher.</value>
-  </data>
-  <data name="Launcher.Text" xml:space="preserve">
-    <value>Launcher</value>
   </data>
   <data name="MuteMusicOnStart.Text" xml:space="preserve">
     <value>Wycisz muzyke na start</value>
@@ -171,11 +165,8 @@
   <data name="linkLabel2.ToolTip" xml:space="preserve">
     <value>Zmiana sposobu uruchamiania wtryskiwaczy</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>ReShade</value>
-  </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>Wtryskiwanie</value>
+	  <value>Wtryskiwacz</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Ustawienia</value>
