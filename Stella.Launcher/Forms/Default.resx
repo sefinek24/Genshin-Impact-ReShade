@@ -1183,7 +1183,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>12, 51</value>
   </data>
   <data name="status_Label.Size" type="System.Drawing.Size, System.Drawing">
-    <value>561, 151</value>
+    <value>638, 160</value>
   </data>
   <data name="status_Label.TabIndex" type="System.Int32, mscorlib">
     <value>96</value>

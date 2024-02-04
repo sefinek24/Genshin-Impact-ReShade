@@ -150,7 +150,7 @@ In newer versions of Stella Mod, saving paths has been moved to the registry. If
     <value>In the main window</value>
   </data>
   <data name="UpdateBenefits_SuccessfullyUpdated3DMigotoMods" xml:space="preserve">
-    <value>Successfully updated 3DMigoto Mods for patrons.</value>
+    <value>Successfully updated 3DMigoto mods for Stella Mod Plus subscribers.</value>
   </data>
   <data name="SupportMe_Thanks" xml:space="preserve">
     <value>Thanks :3</value>
@@ -271,7 +271,7 @@ Would you like to visit the official website and subscribe? You'll gain access t
     <value>Error</value>
   </data>
   <data name="UpdateBenefits_SuccessfullyUpdatedPresets" xml:space="preserve">
-    <value>Successfully updated presets (with or without RT) for patrons.</value>
+    <value>Successfully updated presets for Stella Mod Plus subscribers.</value>
   </data>
   <data name="Program_DoYouWantToJoinOurDiscord" xml:space="preserve">
     <value>Do you want to join our Discord server?</value>
@@ -453,7 +453,7 @@ Do you want to see these files?</value>
     <value>Updating benefits...</value>
   </data>
   <data name="UpdateBenefits_SuccessfullyUpdated3DMigoto" xml:space="preserve">
-    <value>The 3DMigoto software for Stella Mod Plus subscribers has been successfully updated</value>
+    <value>Successfully updated 3DMigoto for Stella Mod Plus subscribers.</value>
   </data>
   <data name="NormalRelease_SomethingWentWrong" xml:space="preserve">
     <value>Something went wrong???</value>
@@ -504,7 +504,7 @@ Do you want to reconfigure Stella Mod in the Configuration Window?</value>
 * App data: {3}
 * configured.sfn file: {4}
 * FPS Unlocker config path: {5}
-* Directory for patrons: {6}</value>
+* Directory for Stella Mod Plus subscribers: {6}</value>
   </data>
   <data name="NormalRelease_PreparingToDownloadNewUpdate" xml:space="preserve">
     <value>Preparing to download new update...</value>
@@ -537,8 +537,8 @@ Do you want to reconfigure Stella Mod in the Configuration Window?</value>
   <data name="Tools_BrowsingUtils" xml:space="preserve">
     <value>Browsing utils 🔧</value>
   </data>
-  <data name="Utils_LauncherFileDoesNotExists" xml:space="preserve">
-    <value>Launcher file does not exists.
+  <data name="Utils_LauncherFileDoesNotExist" xml:space="preserve">
+    <value>Launcher file does not exist.
 
 {0}</value>
   </data>
@@ -636,7 +636,7 @@ If, for any reason, you are unable to update Stella Mod through the Launcher, pl
     <value>Something went wrong</value>
   </data>
   <data name="UpdateBenefits_SuccessfullyUpdatedShaders" xml:space="preserve">
-    <value>Successfully updated shaders for patrons to the latest version.</value>
+    <value>Successfully updated shaders to the latest version for Stella Mod Plus subscribers.</value>
   </data>
   <data name="NormalRelease_DownloadingInProgress" xml:space="preserve">
     <value>Downloading in progress...</value>
@@ -683,8 +683,8 @@ Would you like to download this file now to prevent future errors and manual con
 
 Do you want to download this dependency from Microsoft website?</value>
   </data>
-  <data name="Utils_FileDoesNotExistsIn" xml:space="preserve">
-    <value>File does not exists in: {0} [{1}]</value>
+  <data name="Utils_FileDoesNotExistIn" xml:space="preserve">
+    <value>File does not exist in: {0} [{1}]</value>
   </data>
   <data name="icons8_tools" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-tools-65.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -698,8 +698,8 @@ Do you want to download this dependency from Microsoft website?</value>
   <data name="NormalRelease_InstallANewVersionInTheWizard_ClosingLauncherIn_" xml:space="preserve">
     <value>Install a new version in the wizard. Closing launcher in {0}s...</value>
   </data>
-  <data name="Utils_FolderWithGamePathDoesNotExists_DoYouWantToResetAllSMSettings" xml:space="preserve">
-    <value>Folder with game path does not exists:
+  <data name="Utils_FolderWithGamePathDoesNotExist_DoYouWantToResetAllSMSettings" xml:space="preserve">
+    <value>Folder with game path does not exist:
 {0}
 
 Do you want to reconfigure Stella Mod in the configuration window?</value>
@@ -739,7 +739,7 @@ Do you want to reconfigure Stella Mod in the configuration window?</value>
     <value>Exit code</value>
   </data>
   <data name="UpdateBenefits_SuccessfullyUpdatedAddons" xml:space="preserve">
-    <value>Successfully updated ReShade Addons for patrons.</value>
+    <value>Successfully updated ReShade Addons for Stella Mod Plus subscribers.</value>
   </data>
   <data name="Default_YouHaveTheLatestVersion" xml:space="preserve">
     <value>You have the latest version</value>
@@ -747,8 +747,8 @@ Do you want to reconfigure Stella Mod in the configuration window?</value>
   <data name="Default_ForSomeReasonYouDidNotGiveConsentForTheAutomaticUpdateOfTheReShadeFile" xml:space="preserve">
     <value>For some reason, you did not give consent for the automatic update of the ReShade file. Please note that older versions of this file may not be compatible with newer versions of Stella Mod. I hope you know what you're doing.</value>
   </data>
-  <data name="Utils_FileDoesntNotExists_" xml:space="preserve">
-    <value>File does not exists.
+  <data name="Utils_FileDoesntNotExist_" xml:space="preserve">
+    <value>File does not exist.
 
 {0}</value>
   </data>

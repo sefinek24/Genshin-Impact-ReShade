@@ -1319,7 +1319,7 @@ namespace StellaLauncher.Properties {
         ///* App data: {3}
         ///* configured.sfn file: {4}
         ///* FPS Unlocker config path: {5}
-        ///* Directory for patrons: {6}.
+        ///* Directory for Stella Mod Plus subscribers: {6}.
         /// </summary>
         internal static string Program_ARequestToStartTheProgramHasBeenReceived {
             get {
@@ -1751,7 +1751,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The 3DMigoto software for Stella Mod Plus subscribers has been successfully updated.
+        ///   Looks up a localized string similar to Successfully updated 3DMigoto for Stella Mod Plus subscribers..
         /// </summary>
         internal static string UpdateBenefits_SuccessfullyUpdated3DMigoto {
             get {
@@ -1760,7 +1760,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Successfully updated 3DMigoto Mods for patrons..
+        ///   Looks up a localized string similar to Successfully updated 3DMigoto mods for Stella Mod Plus subscribers..
         /// </summary>
         internal static string UpdateBenefits_SuccessfullyUpdated3DMigotoMods {
             get {
@@ -1769,7 +1769,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Successfully updated ReShade Addons for patrons..
+        ///   Looks up a localized string similar to Successfully updated ReShade Addons for Stella Mod Plus subscribers..
         /// </summary>
         internal static string UpdateBenefits_SuccessfullyUpdatedAddons {
             get {
@@ -1787,7 +1787,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Successfully updated presets (with or without RT) for patrons..
+        ///   Looks up a localized string similar to Successfully updated presets for Stella Mod Plus subscribers..
         /// </summary>
         internal static string UpdateBenefits_SuccessfullyUpdatedPresets {
             get {
@@ -1796,7 +1796,7 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Successfully updated shaders for patrons to the latest version..
+        ///   Looks up a localized string similar to Successfully updated shaders to the latest version for Stella Mod Plus subscribers..
         /// </summary>
         internal static string UpdateBenefits_SuccessfullyUpdatedShaders {
             get {
@@ -1843,22 +1843,22 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to File does not exists in: {0} [{1}].
+        ///   Looks up a localized string similar to File does not exist in: {0} [{1}].
         /// </summary>
-        internal static string Utils_FileDoesNotExistsIn {
+        internal static string Utils_FileDoesNotExistIn {
             get {
-                return ResourceManager.GetString("Utils_FileDoesNotExistsIn", resourceCulture);
+                return ResourceManager.GetString("Utils_FileDoesNotExistIn", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to File does not exists.
+        ///   Looks up a localized string similar to File does not exist.
         ///
         ///{0}.
         /// </summary>
-        internal static string Utils_FileDoesntNotExists_ {
+        internal static string Utils_FileDoesntNotExist_ {
             get {
-                return ResourceManager.GetString("Utils_FileDoesntNotExists_", resourceCulture);
+                return ResourceManager.GetString("Utils_FileDoesntNotExist_", resourceCulture);
             }
         }
         
@@ -1875,14 +1875,14 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Folder with game path does not exists:
+        ///   Looks up a localized string similar to Folder with game path does not exist:
         ///{0}
         ///
         ///Do you want to reconfigure Stella Mod in the configuration window?.
         /// </summary>
-        internal static string Utils_FolderWithGamePathDoesNotExists_DoYouWantToResetAllSMSettings {
+        internal static string Utils_FolderWithGamePathDoesNotExist_DoYouWantToResetAllSMSettings {
             get {
-                return ResourceManager.GetString("Utils_FolderWithGamePathDoesNotExists_DoYouWantToResetAllSMSettings", resourceCulture);
+                return ResourceManager.GetString("Utils_FolderWithGamePathDoesNotExist_DoYouWantToResetAllSMSettings", resourceCulture);
             }
         }
         
@@ -1896,13 +1896,13 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Launcher file does not exists.
+        ///   Looks up a localized string similar to Launcher file does not exist.
         ///
         ///{0}.
         /// </summary>
-        internal static string Utils_LauncherFileDoesNotExists {
+        internal static string Utils_LauncherFileDoesNotExist {
             get {
-                return ResourceManager.GetString("Utils_LauncherFileDoesNotExists", resourceCulture);
+                return ResourceManager.GetString("Utils_LauncherFileDoesNotExist", resourceCulture);
             }
         }
         

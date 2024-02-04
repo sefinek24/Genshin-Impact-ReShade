@@ -113,7 +113,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 				// }
 
 
-				// == For patrons ==
+				// == For Stella Mod Plus subscribers ==
 				if (Secret.IsMyPatron)
 				{
 					int found = await CheckForUpdatesOfBenefits.Analyze();

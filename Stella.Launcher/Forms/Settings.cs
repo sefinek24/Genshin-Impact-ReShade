@@ -195,7 +195,7 @@ namespace StellaLauncher.Forms
 		private async void ConfReShade_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
 			string currentPreset = await RsConfig.Prepare();
-			if (currentPreset == null) return;
+			if (string.IsNullOrEmpty(currentPreset)) return;
 
 			MessageBox.Show(
 				$"Successfully updated the ReShade.ini file. Paths to resource locations have been changed to current, and similar changes have been made.\n\nCurrent preset:\n{Path.GetFileNameWithoutExtension(currentPreset).Trim()}",

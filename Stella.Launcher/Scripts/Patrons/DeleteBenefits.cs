@@ -11,7 +11,7 @@ namespace StellaLauncher.Scripts.Patrons
 		public static async void Start()
 		{
 			// Delete presets
-			string presets = Path.Combine(Default.ResourcesPath, "ReShade", "Presets", "3. Only for patrons");
+			string presets = Path.Combine(Default.ResourcesPath, "ReShade", "Presets", "3. Stella Mod Plus");
 			if (Directory.Exists(presets)) await DeleteDirectory(presets);
 
 			// Delete addons

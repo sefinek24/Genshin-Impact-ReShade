@@ -197,9 +197,6 @@ Ta czynność spowoduje utratę wszelkich niestandardowych konfiguracji, jakie d
   <data name="Default_Downloading" xml:space="preserve">
     <value>Pobieranie...</value>
   </data>
-  <data name="Default_DownloadingConfigFileForFPSUnlocker" xml:space="preserve">
-    <value>Pobieranie pliku konfiguracyjnego dla FPS Unlockera....</value>
-  </data>
   <data name="Default_FailedToDownload" xml:space="preserve">
     <value>Nie udało się pobrać...</value>
   </data>
@@ -549,10 +546,10 @@ Zamknij proces o nazwie {0} i spróbuj ponownie.</value>
 
 {0}</value>
   </data>
-  <data name="Utils_FileDoesNotExistsIn" xml:space="preserve">
+  <data name="Utils_FileDoesNotExistIn" xml:space="preserve">
     <value>Plik nie istnieje w: {0} [{1}]</value>
   </data>
-  <data name="Utils_FileDoesntNotExists_" xml:space="preserve">
+  <data name="Utils_FileDoesntNotExist_" xml:space="preserve">
     <value>Plik nie istnieje.
 
 {0}</value>
@@ -572,7 +569,7 @@ Czy chcesz ponownie skonfigurować Stella Mod w Oknie Konfiguracji?</value>
   <data name="Utils_File_WasNotFoundAt_" xml:space="preserve">
     <value>Plik '{0}' nie został znaleziony w '{1}'.</value>
   </data>
-  <data name="Utils_FolderWithGamePathDoesNotExists_DoYouWantToResetAllSMSettings" xml:space="preserve">
+  <data name="Utils_FolderWithGamePathDoesNotExist_DoYouWantToResetAllSMSettings" xml:space="preserve">
     <value>Folder ze ścieżką gry nie istnieje:
 {0}
 
@@ -581,7 +578,7 @@ Czy chcesz ponownie skonfigurować Stella Mod w oknie konfiguracji?</value>
   <data name="Utils_FoundGiExe" xml:space="preserve">
     <value>Znaleziono exe Genshin Impact w: {0} [{1}]</value>
   </data>
-  <data name="Utils_LauncherFileDoesNotExists" xml:space="preserve">
+  <data name="Utils_LauncherFileDoesNotExist" xml:space="preserve">
     <value>Plik programu uruchamiającego nie istnieje.
 
 {0}</value>

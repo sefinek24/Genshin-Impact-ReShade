@@ -148,9 +148,6 @@ Dziękuję za korzystanie ze Stelli. Wesprzyj mnie, jeśli uznasz to za pomocne.
   <data name="label2.Text" xml:space="preserve">
     <value>Stworzone przez: Sefinek</value>
   </data>
-  <data name="pictureBox3.ToolTip" xml:space="preserve">
-    <value>English</value>
-  </data>
   <data name="pictureBox2.ToolTip" xml:space="preserve">
     <value>Polski</value>
   </data>

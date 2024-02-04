@@ -161,6 +161,7 @@ namespace StellaLauncher.Forms
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::StellaLauncher.Properties.Resources.flaticon_log;
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 
@@ -280,6 +281,7 @@ namespace StellaLauncher.Forms
             resources.ApplyResources(this.pictureBox9, "pictureBox9");
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox9.Image = global::StellaLauncher.Properties.Resources.flaticon_log;
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.TabStop = false;
             // 

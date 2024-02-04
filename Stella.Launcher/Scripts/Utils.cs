@@ -76,7 +76,7 @@ namespace StellaLauncher.Scripts
 					string genshinImpactExe = Path.Combine(giDir, "launcher.exe");
 					if (!File.Exists(genshinImpactExe))
 					{
-						MessageBox.Show(string.Format(Resources.Utils_LauncherFileDoesNotExists, genshinImpactExe), Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+						MessageBox.Show(string.Format(Resources.Utils_LauncherFileDoesNotExist, genshinImpactExe), Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Warning);
 						Program.Logger.Info($"Launcher file does not exists in: {genshinImpactExe} [giLauncher]");
 						return string.Empty;
 					}

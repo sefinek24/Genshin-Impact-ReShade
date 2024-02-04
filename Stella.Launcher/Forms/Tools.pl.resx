@@ -120,17 +120,11 @@
   <data name="panel2.ToolTip" xml:space="preserve">
     <value>Zamknij</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Genshin Stella Mod Launcher 2024</value>
-  </data>
   <data name="SettingsAndUtils.Text" xml:space="preserve">
     <value>&gt;&gt; Narzędzia i dzienniki &lt;&lt;</value>
   </data>
   <data name="DeleteAllCacheAndLogFiles.Text" xml:space="preserve">
     <value>Pamięć podręczna + pliki dziennika</value>
-  </data>
-  <data name="ReShadeLogs.Text" xml:space="preserve">
-    <value>ReShade.log</value>
   </data>
   <data name="LauncherLogs.Text" xml:space="preserve">
     <value>Program uruchamiający</value>
@@ -141,21 +135,6 @@
   <data name="ConfigFiles.Text" xml:space="preserve">
     <value>Pliki konfiguracyjne</value>
   </data>
-  <data name="SeeReShadeConfig.Text" xml:space="preserve">
-    <value>ReShade</value>
-  </data>
-  <data name="SeeReShadeConfig.ToolTip" xml:space="preserve">
-    <value>ReShade.ini</value>
-  </data>
-  <data name="SeeFPSUnlockerConfig.Text" xml:space="preserve">
-    <value>FPS Unlocker</value>
-  </data>
-  <data name="SeeFPSUnlockerConfig.ToolTip" xml:space="preserve">
-    <value>unlocker.config.json</value>
-  </data>
-  <data name="ScanAndRepairSysFiles.Text" xml:space="preserve">
-    <value>Scan and repair system files</value>
-  </data>
   <data name="ScanAndRepairSysFiles.ToolTip" xml:space="preserve">
     <value>Kliknięcie tego przycisku spowoduje rozpoczęcie skanowania i naprawy plików systemowych. Ta opcja jest bezpieczna i zalecana w większości przypadków.</value>
   </data>
@@ -164,15 +143,6 @@
   </data>
   <data name="DeleteOnlyWebView2Cache.Text" xml:space="preserve">
     <value>Tylko pamięć podręczną</value>
-  </data>
-  <data name="linkLabel2.Text" xml:space="preserve">
-    <value>Usuń wszystkie powiadomienia Stelli</value>
-  </data>
-  <data name="linkLabel2.ToolTip" xml:space="preserve">
-    <value>Po kliknięciu tego przycisku wszystkie powiadomienia z aplikacji Stella Mod Launcher zostaną usunięte.</value>
-  </data>
-  <data name="InstallationLogs.Text" xml:space="preserve">
-    <value>Genshin Stella Mod</value>
   </data>
   <data name="InnoSetupLogs.Text" xml:space="preserve">
     <value>Wyświetl katalog</value>

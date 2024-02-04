@@ -98,7 +98,7 @@ namespace StellaLauncher.Scripts.Patrons
 
 
 			// Presets
-			string presetsVersionPath = Path.Combine(Default.ResourcesPath, "ReShade", "Presets", "3. Only for patrons", "version.json");
+			string presetsVersionPath = Path.Combine(Default.ResourcesPath, "ReShade", "Presets", "3. Stella Mod Plus", "version.json");
 			if (File.Exists(presetsVersionPath))
 			{
 				string presetsJson = File.ReadAllText(presetsVersionPath);
@@ -111,7 +111,7 @@ namespace StellaLauncher.Scripts.Patrons
 						$"A new version of presets has been detected.\n\nYour version: v{presetsJsonConverted.Version} from {presetsJsonConverted.Date}\nNew version: v{remoteVersions.Message.Resources.Presets}",
 						Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-					string presets = Path.Combine(Default.ResourcesPath, "ReShade", "Presets", "3. Only for patrons");
+					string presets = Path.Combine(Default.ResourcesPath, "ReShade", "Presets", "3. Stella Mod Plus");
 					if (Directory.Exists(presets)) await DeleteBenefits.DeleteDirectory(presets);
 
 					UpdateBenefits.Download("presets", $"Presets update - v{remoteVersions.Message.Resources.Presets}.zip", Path.GetDirectoryName(presetsVersionPath));
