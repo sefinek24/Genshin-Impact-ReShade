@@ -666,4 +666,7 @@ W nowszych wersjach Stella Mod zapisywanie ścieżek zostało przeniesione do re
   <data name="Default_SMLSuccessfullyUpdatedToVersion_" xml:space="preserve">
     <value>Stella Mod Launcher został pomyślnie zaktualizowany do wersji: v{0}</value>
   </data>
+  <data name="Default_DownloadedConfigFileForFPSUnlocker" xml:space="preserve">
+	  <value>Pobrano plik konfiguracyjny (unlocker.config.json) dla programu FPS Unlocker</value>
+  </data>
 </root>

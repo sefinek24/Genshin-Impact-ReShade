@@ -1,20 +1,21 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FDefault/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FErrors_002FErrorOccurred/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FErrors_002FNotCompatible/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FErrors_002FRussianCunt/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FGameplay/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FLinks/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FOther_002FInjectionMethod/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FOther_002FLanguage/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FOther_002FRandomImages/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FOther_002FSupportMe/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FOther_002FWebView2Shake/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FOther_002FWebView2Window/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FSettings/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FDefault/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FErrors_002FErrorOccurred/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FErrors_002FNotCompatible/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FErrors_002FRussianCunt/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FGameplay/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FLinks/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FOther_002FInjectionMethod/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FOther_002FLanguage/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FOther_002FRandomImages/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FOther_002FSupportMe/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FOther_002FWebView2Shake/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FOther_002FWebView2Window/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FSettings/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FForms_002FTools/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FProperties_002FResources/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=1_002E_0020Stella_0020Mod_0020Launcher_002FProperties_002FResources/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/Initialized/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/OrderByFullPath/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/ShowComments/@EntryValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/ShowOnlyErrors/@EntryValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=addon/@EntryIndexedValue">True</s:Boolean>

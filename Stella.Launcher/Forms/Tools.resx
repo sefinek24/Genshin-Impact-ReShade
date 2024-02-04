@@ -117,50 +117,38 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="panel1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panel1.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="panel1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
-  <metadata name="panel2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="panel2.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>17, 17</value>
+  </data>
   <data name="panel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="panel2.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>1175, 19</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>26, 29</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>76</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="panel2.ToolTip" xml:space="preserve">
     <value>Close</value>
-  </data>
-  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -173,18 +161,6 @@
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>26</value>
   </data>
   <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -210,18 +186,6 @@
   <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>25</value>
-  </data>
   <data name="SettingsAndUtils.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -242,18 +206,6 @@
   </data>
   <data name="SettingsAndUtils.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;SettingsAndUtils.Name" xml:space="preserve">
-    <value>SettingsAndUtils</value>
-  </data>
-  <data name="&gt;&gt;SettingsAndUtils.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SettingsAndUtils.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;SettingsAndUtils.ZOrder" xml:space="preserve">
-    <value>22</value>
   </data>
   <data name="DeleteAllCacheAndLogFiles.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -276,18 +228,6 @@
   <data name="DeleteAllCacheAndLogFiles.Text" xml:space="preserve">
     <value>Cache + log files</value>
   </data>
-  <data name="&gt;&gt;DeleteAllCacheAndLogFiles.Name" xml:space="preserve">
-    <value>DeleteAllCacheAndLogFiles</value>
-  </data>
-  <data name="&gt;&gt;DeleteAllCacheAndLogFiles.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DeleteAllCacheAndLogFiles.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;DeleteAllCacheAndLogFiles.ZOrder" xml:space="preserve">
-    <value>24</value>
-  </data>
   <data name="pictureBox3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -302,18 +242,6 @@
   </data>
   <data name="pictureBox3.TabIndex" type="System.Int32, mscorlib">
     <value>81</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Name" xml:space="preserve">
-    <value>pictureBox3</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
-    <value>23</value>
   </data>
   <data name="ReShadeLogs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -336,47 +264,8 @@
   <data name="ReShadeLogs.Text" xml:space="preserve">
     <value>ReShade.log</value>
   </data>
-  <data name="&gt;&gt;ReShadeLogs.Name" xml:space="preserve">
-    <value>ReShadeLogs</value>
-  </data>
-  <data name="&gt;&gt;ReShadeLogs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ReShadeLogs.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ReShadeLogs.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
   <data name="pictureBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
-  </data>
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
-        1wAAAdcBjJIIaAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAS9SURBVHhe7Ztb
-        bBRlFMcXS4Ii8EI0xgcefFDiA8YH4zWCJH0wJmoCmAgBYzREE3jhwZblYiykoQbjBSMQBBuhBcvVFDHE
-        QCGANnG3V3vvbi/QFlq6GG5SCxy+8/Xb2fmGs2XOsJ3p53qSX9L9z5kz5/w7szPfbjY0Wiwog5zXShJh
-        QYcAgmJH/VC0ogImqrb8izmliVVUQ35zuucWHGz7t9V3E8TBu5zNBAEa0HwJ/DeBaiYIkgb4bgLVTBDY
-        DfDVBKqZIHAa4JsJVDNBQBngiwlUM0GQzgBkTE2gmgmC0QxAxswEqpkguJcByJiYQDUTBG4MQDJuAtVM
-        ELg1AMmoCVQzQcAxAMmYCVQzQcA1AMmICVQzQeDFAOS+TaCaCYLy2LA0wQvba4eiahx+UM2YiBqHH1Qx
-        E1Hj8IMqZiJqHH5QxUxEjcMPqpiJqHH4QRUzETUOP6hiJqLG4QdVzETUOPygipmIGocfVDETUePwgypm
-        ImocflDFTESNww+qmImocfhBFTMRNU6aWFCWE8qLrBZ0CCBLELNGw3J28QKHp5KyAGGC+KPr7g1ZQxwN
-        oDaMGTkro/BIQS3M2FAPD6+pJnOcPLiqSuY/uq5W7k/leIYUGRTXXIY/z9+0SNfg1LXV8NnxfohcuKl9
-        blfedh3e/DFO7jN7axvsbbyq5UfF/gUVAzDtU3fm3RNSZOBskDJgYjgKB5qvaXlOFpV1a/vk7miHhsHb
-        ZC6C9bCufR9PkCIDNwbML+3UcvY3XYPwbxeguj/1aS+eGQ+trpL5D+RH4FjnkLWtbuA2rDnWDzvrrlga
-        8tbOjruOxYYUGbgxYFPlJS3niaK/pJ539Lymv7ylVepPbmzQ9MKTF6U+vaBG0zecGtHvC1Jk4MaAQy3X
-        yZx393RpOr5G/Y3iuKYvPXTOqlUzkDprfqi+bOmeIUUGbgw4bjudkQniFEf9nd36pZEcdOFPujEfHDhr
-        1aqyXTYl9Vcs3TOkyMCNARXd7gz4+Oceqb+3r1vT7QZkHFJk8L8BPhnweGEdfPVHQmPFkT7tOJ4gRQZ+
-        GTDzC/3OgJQ1XNWO4wlSZOCXAY+tr5NPgEdjNyz9P2fAR8qAxXvTvwcUiXt/UjfGgF/a/9Fy0hmwRAyO
-        +rwSXf/wYOo5YOOZQUs3xgBcMNlzkguZpWIwu/56cUzqL25u0XR8bE7W2mV7HB6XBsz9vh3mbGuTvCpW
-        c5izrLxHy1nxax88+00zHImlzoymBMjlLuZPEcvk+ouphVBl7zC88F0LvC2e/TEvqY9LA+zgIgZzpov1
-        v3MZ7OTz04Na3XUnBsg8pFGZYIwByPPiP/h7zzCZtyXyt/yv2+tOFitD56WD4J3gsHpPGRcGPPN1E7yy
-        tZXkpc0jq7skk8JVkLu9Hd7ffxaWH+6Vz/xPifu7PcfJc982yzfHZeW98rLCpfLTXzbK2rPEsal9WITy
-        I53khuwgJs6AaJjYkC3kj3wv8ElkpXiRTd8LxAX5I98LjBLUtywmosbhB1XMRNQ4/KCKmYgahx9UMRNR
-        4/CDKmYiahx+UMVMRI3DD7Fzp7OYgYiHHY8hdsZfjlNFjWFuaUI87HgM/Pk8FhCFAv35vEfi2DvOoMYh
-        IhS6AwQ41z5mYnbzAAAAAElFTkSuQmCC
-</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>88, 417</value>
@@ -389,18 +278,6 @@
   </data>
   <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
     <value>84</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>20</value>
   </data>
   <data name="LauncherLogs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -423,18 +300,6 @@
   <data name="LauncherLogs.Text" xml:space="preserve">
     <value>Launcher</value>
   </data>
-  <data name="&gt;&gt;LauncherLogs.Name" xml:space="preserve">
-    <value>LauncherLogs</value>
-  </data>
-  <data name="&gt;&gt;LauncherLogs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LauncherLogs.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;LauncherLogs.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
   <data name="pictureBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -449,18 +314,6 @@
   </data>
   <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
     <value>86</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
-    <value>pictureBox2</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>18</value>
   </data>
   <data name="LogFiles.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -483,18 +336,6 @@
   <data name="LogFiles.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="&gt;&gt;LogFiles.Name" xml:space="preserve">
-    <value>LogFiles</value>
-  </data>
-  <data name="&gt;&gt;LogFiles.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LogFiles.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;LogFiles.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
   <data name="ConfigFiles.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -515,18 +356,6 @@
   </data>
   <data name="ConfigFiles.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;ConfigFiles.Name" xml:space="preserve">
-    <value>ConfigFiles</value>
-  </data>
-  <data name="&gt;&gt;ConfigFiles.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ConfigFiles.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ConfigFiles.ZOrder" xml:space="preserve">
-    <value>16</value>
   </data>
   <data name="SeeReShadeConfig.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -552,18 +381,6 @@
   <data name="SeeReShadeConfig.ToolTip" xml:space="preserve">
     <value>ReShade.ini</value>
   </data>
-  <data name="&gt;&gt;SeeReShadeConfig.Name" xml:space="preserve">
-    <value>SeeReShadeConfig</value>
-  </data>
-  <data name="&gt;&gt;SeeReShadeConfig.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SeeReShadeConfig.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;SeeReShadeConfig.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
   <data name="pictureBox4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -578,18 +395,6 @@
   </data>
   <data name="pictureBox4.TabIndex" type="System.Int32, mscorlib">
     <value>91</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Name" xml:space="preserve">
-    <value>pictureBox4</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.ZOrder" xml:space="preserve">
-    <value>14</value>
   </data>
   <data name="SeeFPSUnlockerConfig.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -615,18 +420,6 @@
   <data name="SeeFPSUnlockerConfig.ToolTip" xml:space="preserve">
     <value>unlocker.config.json</value>
   </data>
-  <data name="&gt;&gt;SeeFPSUnlockerConfig.Name" xml:space="preserve">
-    <value>SeeFPSUnlockerConfig</value>
-  </data>
-  <data name="&gt;&gt;SeeFPSUnlockerConfig.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SeeFPSUnlockerConfig.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;SeeFPSUnlockerConfig.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
   <data name="pictureBox5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -641,18 +434,6 @@
   </data>
   <data name="pictureBox5.TabIndex" type="System.Int32, mscorlib">
     <value>93</value>
-  </data>
-  <data name="&gt;&gt;pictureBox5.Name" xml:space="preserve">
-    <value>pictureBox5</value>
-  </data>
-  <data name="&gt;&gt;pictureBox5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox5.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox5.ZOrder" xml:space="preserve">
-    <value>12</value>
   </data>
   <data name="ScanAndRepairSysFiles.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -678,18 +459,6 @@
   <data name="ScanAndRepairSysFiles.ToolTip" xml:space="preserve">
     <value>Clicking this button will initiate the scanning and repair of system files. This option is safe and recommended in most cases.</value>
   </data>
-  <data name="&gt;&gt;ScanAndRepairSysFiles.Name" xml:space="preserve">
-    <value>ScanAndRepairSysFiles</value>
-  </data>
-  <data name="&gt;&gt;ScanAndRepairSysFiles.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ScanAndRepairSysFiles.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ScanAndRepairSysFiles.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
   <data name="pictureBox6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -704,18 +473,6 @@
   </data>
   <data name="pictureBox6.TabIndex" type="System.Int32, mscorlib">
     <value>96</value>
-  </data>
-  <data name="&gt;&gt;pictureBox6.Name" xml:space="preserve">
-    <value>pictureBox6</value>
-  </data>
-  <data name="&gt;&gt;pictureBox6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox6.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox6.ZOrder" xml:space="preserve">
-    <value>10</value>
   </data>
   <data name="CacheAndLogs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -738,18 +495,6 @@
   <data name="CacheAndLogs.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="&gt;&gt;CacheAndLogs.Name" xml:space="preserve">
-    <value>CacheAndLogs</value>
-  </data>
-  <data name="&gt;&gt;CacheAndLogs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CacheAndLogs.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;CacheAndLogs.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
   <data name="pictureBox8.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -764,18 +509,6 @@
   </data>
   <data name="pictureBox8.TabIndex" type="System.Int32, mscorlib">
     <value>103</value>
-  </data>
-  <data name="&gt;&gt;pictureBox8.Name" xml:space="preserve">
-    <value>pictureBox8</value>
-  </data>
-  <data name="&gt;&gt;pictureBox8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox8.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox8.ZOrder" xml:space="preserve">
-    <value>7</value>
   </data>
   <data name="DeleteOnlyWebView2Cache.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -798,18 +531,6 @@
   <data name="DeleteOnlyWebView2Cache.Text" xml:space="preserve">
     <value>Only cache</value>
   </data>
-  <data name="&gt;&gt;DeleteOnlyWebView2Cache.Name" xml:space="preserve">
-    <value>DeleteOnlyWebView2Cache</value>
-  </data>
-  <data name="&gt;&gt;DeleteOnlyWebView2Cache.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DeleteOnlyWebView2Cache.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;DeleteOnlyWebView2Cache.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
   <data name="panel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -821,18 +542,6 @@
   </data>
   <data name="panel3.TabIndex" type="System.Int32, mscorlib">
     <value>104</value>
-  </data>
-  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>6</value>
   </data>
   <data name="pictureBox9.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -848,18 +557,6 @@
   </data>
   <data name="pictureBox9.TabIndex" type="System.Int32, mscorlib">
     <value>106</value>
-  </data>
-  <data name="&gt;&gt;pictureBox9.Name" xml:space="preserve">
-    <value>pictureBox9</value>
-  </data>
-  <data name="&gt;&gt;pictureBox9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox9.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox9.ZOrder" xml:space="preserve">
-    <value>4</value>
   </data>
   <data name="InstallationLogs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -882,18 +579,6 @@
   <data name="InstallationLogs.Text" xml:space="preserve">
     <value>Genshin Stella Mod</value>
   </data>
-  <data name="&gt;&gt;InstallationLogs.Name" xml:space="preserve">
-    <value>InstallationLogs</value>
-  </data>
-  <data name="&gt;&gt;InstallationLogs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;InstallationLogs.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;InstallationLogs.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
   <data name="pictureBox10.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -908,18 +593,6 @@
   </data>
   <data name="pictureBox10.TabIndex" type="System.Int32, mscorlib">
     <value>108</value>
-  </data>
-  <data name="&gt;&gt;pictureBox10.Name" xml:space="preserve">
-    <value>pictureBox10</value>
-  </data>
-  <data name="&gt;&gt;pictureBox10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox10.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox10.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="InnoSetupLogs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -941,18 +614,6 @@
   </data>
   <data name="InnoSetupLogs.Text" xml:space="preserve">
     <value>View directory</value>
-  </data>
-  <data name="&gt;&gt;InnoSetupLogs.Name" xml:space="preserve">
-    <value>InnoSetupLogs</value>
-  </data>
-  <data name="&gt;&gt;InnoSetupLogs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;InnoSetupLogs.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;InnoSetupLogs.ZOrder" xml:space="preserve">
-    <value>3</value>
   </data>
   <data name="madeWith_Label.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -978,18 +639,6 @@
   <data name="madeWith_Label.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
-  <data name="&gt;&gt;madeWith_Label.Name" xml:space="preserve">
-    <value>madeWith_Label</value>
-  </data>
-  <data name="&gt;&gt;madeWith_Label.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;madeWith_Label.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;madeWith_Label.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="Misc.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1011,24 +660,12 @@
   <data name="Misc.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="&gt;&gt;Misc.Name" xml:space="preserve">
-    <value>Misc</value>
-  </data>
-  <data name="&gt;&gt;Misc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Misc.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Misc.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </data>
+  <data name="$this.TrayHeight" type="System.Int32, mscorlib">
     <value>25</value>
-  </metadata>
+  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>96, 96</value>
   </data>
@@ -1043,17 +680,5 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Tools</value>
-  </data>
-  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
-    <value>toolTip1</value>
-  </data>
-  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Tools</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
