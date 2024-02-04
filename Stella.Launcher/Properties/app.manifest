@@ -4,7 +4,7 @@
 	<trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
 		<security>
 			<requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
-				<!--
+			<!--
                 UAC Manifest Options
                 If you want to change the Windows User Account Control level replace the 
                 requestedExecutionLevel node with one of the following.
@@ -24,7 +24,7 @@
 
 	<compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
 		<application>
-			<!-- A list of the Windows versions that this application has been tested on
+           <!-- A list of the Windows versions that this application has been tested on
            and is designed to work with. Uncomment the appropriate elements
            and Windows will automatically select the most compatible environment. -->
 
