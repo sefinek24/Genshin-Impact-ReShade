@@ -1273,6 +1273,15 @@ namespace StellaLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to We&apos;ve renamed your resource folder by adding `{0}` to the end..
+        /// </summary>
+        internal static string NotCompatible_WeveRenamedYourResourceFolderByAdding__ToTheEnd {
+            get {
+                return ResourceManager.GetString("NotCompatible_WeveRenamedYourResourceFolderByAdding__ToTheEnd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to retrieve device identifier..
         /// </summary>
         internal static string Os_FailedToRetrieveDeviceIdentifier {

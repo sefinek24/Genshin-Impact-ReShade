@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="$this.Text" xml:space="preserve">
-    <value>Duża aktualizacja - Stella Mod</value>
+	  <value>Duża aktualizacja</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Twoja wersja nie jest kompatybilna z nową. Prosimy o ponowną instalację oprogramowania.</value>
+	  <value>Twoja wersja jest niekompatybilna z nową. Prosimy przeinstalować oprogramowanie. Upewnij się, że masz najnowszą wersję swojego systemu operacyjnego. Ponowna konfiguracja będzie konieczna po instalacji.</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Nowa duża aktualizacja jest już dostępna!</value>
