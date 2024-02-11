@@ -382,10 +382,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="data\build.cmd" />
-    <None Include="dependencies\Microsoft.WindowsTerminal_1.18.3181.0_8wekyb3d8bbwe.msixbundle">
+    <None Include="..\LICENSE">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\LICENSE">
+    <None Include="dependencies\Microsoft.WindowsTerminal_1.19.10302.0_8wekyb3d8bbwe.msixbundle">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="NLog.config">

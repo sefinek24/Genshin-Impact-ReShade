@@ -33,7 +33,7 @@ namespace PrepareStella
 
 		// Dependencies
 		public static readonly string VcLibsAppx = Path.Combine("dependencies", "Microsoft.VCLibs.x64.14.00.Desktop.appx");
-		public static readonly string WtMsixBundle = Path.Combine("dependencies", "Microsoft.WindowsTerminal_1.18.3181.0_8wekyb3d8bbwe.msixbundle");
+		public static readonly string WtMsixBundle = Path.Combine("dependencies", "Microsoft.WindowsTerminal_1.19.10302.0_8wekyb3d8bbwe.msixbundle");
 
 		// Other
 		public static readonly string Line = "===============================================================================================";
