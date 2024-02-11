@@ -192,9 +192,6 @@ Obejmują one: Ray Tracing, mody i wiele więcej!</value>
     <value>Otwórz główny program uruchamiający grę</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="version_LinkLabel.Text" xml:space="preserve">
-    <value>Restart jest opcjonalny</value>
-  </data>
   <data name="version_LinkLabel.ToolTip" xml:space="preserve">
     <value>Wyświetl listę zmian oprogramowania</value>
   </data>
@@ -256,5 +253,8 @@ Zaleca się kliknięcie przycisku "Rozpocznij grę" u góry, aby jednocześnie k
   </data>
   <data name="PreparingPleaseWait.Text" xml:space="preserve">
     <value>Oczekiwanie na stabilizację interfejsu użytkownika...</value>
+  </data>
+  <data name="version_LinkLabel.Text" xml:space="preserve">
+	  <value>Oczekiwanie...</value>
   </data>
 </root>
