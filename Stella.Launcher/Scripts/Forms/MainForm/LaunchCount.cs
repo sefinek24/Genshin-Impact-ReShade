@@ -53,7 +53,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 				// case 40:
 				// case 80:
 				// case 110:
-				//     DialogResult logFilesResult = MessageBox.Show(Resources.Program_DoYouWantToSendUsanonymousLogFiles, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+				//     DialogResult logFilesResult = MessageBox.Show(Resources.Program_DoYouWantToSendUsAnonymousLogFiles, Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 				//     Program.Logger.Info($"Question (MessageBox): Do you want to send log files? Selected: {logFilesResult}");
 				//     if (logFilesResult == DialogResult.Yes)
 				//     {

@@ -409,7 +409,7 @@ Czy chciałbyś teraz pobrać ten plik, aby zapobiec przyszłym błędom i ręcz
   <data name="Program_DoYouWantToJoinOurDiscord" xml:space="preserve">
     <value>Czy chcesz dołączyć na nasz serwer Discord?</value>
   </data>
-  <data name="Program_DoYouWantToSendUsanonymousLogFiles" xml:space="preserve">
+  <data name="Program_DoYouWantToSendUsAnonymousLogFiles" xml:space="preserve">
     <value>Czy chcesz przesłać nam anonimowe pliki dziennika (logi)?</value>
   </data>
   <data name="Program_IfYouWishToSendLogsToTheDeveloperPleaseSendThemToMeOnDiscord" xml:space="preserve">

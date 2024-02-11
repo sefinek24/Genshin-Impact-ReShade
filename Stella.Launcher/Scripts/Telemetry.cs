@@ -34,13 +34,13 @@ namespace StellaLauncher.Scripts
 			}
 		}
 
-		public static void SupportMe_AnswYes()
+		public static void SupportMe_AnswerYes()
 		{
 			MethodBase m = MethodBase.GetCurrentMethod();
 			Program.Logger.Info($"{Info} Delivered telemetry data '{m?.ReflectedType?.Name}' [3].");
 		}
 
-		public static void SupportMe_AnswNo()
+		public static void SupportMe_AnswerNo()
 		{
 			MethodBase m = MethodBase.GetCurrentMethod();
 			Program.Logger.Info($"{Info} Delivered telemetry data '{m?.ReflectedType?.Name}' [4].");

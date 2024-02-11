@@ -103,7 +103,7 @@ namespace StellaLauncher.Forms.Other
 			Close();
 
 			Program.Logger.Info(string.Format(Resources.Main_ClickedNoInForm_, Text));
-			Telemetry.SupportMe_AnswNo();
+			Telemetry.SupportMe_AnswerNo();
 		}
 
 		private void OkayDone_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -112,7 +112,7 @@ namespace StellaLauncher.Forms.Other
 			MessageBox.Show(Resources.SupportMe_Thanks, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 			Program.Logger.Info(string.Format(Resources.Main_ClickedYesInForm_, Text));
-			Telemetry.SupportMe_AnswYes();
+			Telemetry.SupportMe_AnswerYes();
 		}
 	}
 }

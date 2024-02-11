@@ -2,7 +2,7 @@ using StellaLauncher.Forms;
 
 namespace StellaLauncher.Scripts.Forms.MainForm
 {
-	internal class Labels
+	internal static class Labels
 	{
 		public static void ShowStartGameBtns()
 		{

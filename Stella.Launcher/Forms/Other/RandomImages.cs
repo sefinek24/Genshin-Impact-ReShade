@@ -326,7 +326,7 @@ namespace StellaLauncher.Forms.Other
 			NekosBest("https://nekos.best/api/v2/handhold", true);
 		}
 
-		private void Highfive_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		private void HighFive_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
 			NekosBest("https://nekos.best/api/v2/highfive", true);
 		}

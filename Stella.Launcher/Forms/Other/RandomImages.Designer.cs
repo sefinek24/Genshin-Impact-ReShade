@@ -466,7 +466,7 @@ namespace StellaLauncher.Forms.Other
             this.linkLabel30.LinkColor = System.Drawing.Color.White;
             this.linkLabel30.Name = "linkLabel30";
             this.linkLabel30.TabStop = true;
-            this.linkLabel30.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Highfive_LinkClicked);
+            this.linkLabel30.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.HighFive_LinkClicked);
             // 
             // linkLabel31
             // 

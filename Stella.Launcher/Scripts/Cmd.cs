@@ -113,11 +113,6 @@ namespace StellaLauncher.Scripts
 			public CommandResultValidation Validation { get; set; }
 			public bool BypassUpdates { get; set; }
 			public bool DownloadingSetup { get; set; }
-
-			public static implicit operator CliWrap(bool v)
-			{
-				throw new NotImplementedException();
-			}
 		}
 	}
 }

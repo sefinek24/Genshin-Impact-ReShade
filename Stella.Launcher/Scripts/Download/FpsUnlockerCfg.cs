@@ -9,17 +9,7 @@ using StellaLauncher.Properties;
 namespace StellaLauncher.Scripts.Download
 {
 	/// <summary>
-	///    Class
-	///    responsible
-	///    for
-	///    downloading
-	///    and
-	///    updating
-	///    the
-	///    FPS
-	///    unlocker
-	///    config
-	///    file.
+	///    Class responsible for downloading and updating the FPS unlocker config file.
 	/// </summary>
 	internal static class FpsUnlockerCfg
 	{
