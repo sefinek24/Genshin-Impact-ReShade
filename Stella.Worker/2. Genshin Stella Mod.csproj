@@ -100,7 +100,7 @@
     <Compile Include="Scripts\Data.cs" />
     <Compile Include="Scripts\Log.cs" />
     <Compile Include="Scripts\Logic.cs" />
-    <Compile Include="Scripts\Music.cs" />
+    <Compile Include="Scripts\Sound.cs" />
     <Compile Include="Scripts\Secret.cs" />
     <Compile Include="Scripts\Utils.cs" />
   </ItemGroup>

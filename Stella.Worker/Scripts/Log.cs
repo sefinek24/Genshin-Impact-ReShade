@@ -21,7 +21,7 @@ namespace GenshinStellaMod.Scripts
 			Console.WriteLine("[x] Meeow (=〃ﻌ〃=)! We're sorry. It seems like we've encountered an issue.");
 			Console.WriteLine("[i] If you require assistance, kindly visit: https://genshin.sefinek.net/support");
 
-			Music.PlaySound("winxp", "exclamation");
+			Sound.Play("winxp", "exclamation");
 
 			Program.Logger.Error(log);
 			Utils.Pause();

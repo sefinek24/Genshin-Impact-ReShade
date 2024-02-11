@@ -5,9 +5,9 @@ using NAudio.Wave;
 
 namespace GenshinStellaMod.Scripts
 {
-	internal static class Music
+	internal static class Sound
 	{
-		public static void PlaySound(string dir, string fileName)
+		public static void Play(string dir, string fileName)
 		{
 			string wavPath = Path.Combine(Program.AppPath, "data", "sounds", dir, $"{fileName}.wav");
 			if (!File.Exists(wavPath))
@@ -16,10 +16,10 @@ namespace GenshinStellaMod.Scripts
 				return;
 			}
 
-			Task.Run(() => PlaySoundAsync(wavPath, fileName == "information_bar" ? 0.59f : 1.61f));
+			Task.Run(() => Worker(wavPath, fileName == "information_bar" ? 0.59f : 1.61f));
 		}
 
-		private static async Task PlaySoundAsync(string wavPath, float volume)
+		private static async Task Worker(string wavPath, float volume)
 		{
 			try
 			{

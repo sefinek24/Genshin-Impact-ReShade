@@ -236,7 +236,7 @@ namespace GenshinStellaMod
 				Console.WriteLine("[x] We apologize, but unfortunately something didn't go according to our plan ):");
 				Console.WriteLine("[i] If you believe this error is not your fault, please report it: https://genshin.sefinek.net/support");
 
-				Music.PlaySound("winxp", "critical_stop");
+				Sound.Play("winxp", "critical_stop");
 			}
 		}
 	}
