@@ -1,0 +1,8 @@
+﻿Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-2. Configuration .NET Framework", "Stella.ConfigurationOld\3-2. Configuration .NET Framework.csproj", "{91FBB412-D343-4E78-95B5-F18E6EB6001C}"
+EndProject
+
+Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "Win App Packaging Project", "Win App Packaging Project\Win App Packaging Project.wapproj", "{1D6AC525-A490-4EEE-A83C-C614A9D97C0A}"
+EndProject
+
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. Sefin Anti Cheat", "Stella.SefinAntiCheat\5. Sefin Anti Cheat.csproj", "{F53B112D-AC37-4FFE-854E-82DEA97FBFB9}"
+EndProject
