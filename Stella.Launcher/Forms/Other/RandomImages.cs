@@ -111,7 +111,7 @@ namespace StellaLauncher.Forms.Other
 			string picUrl = res.Results[0].Url;
 			webView21.CoreWebView2.Navigate(picUrl);
 
-			string animeName = res.Results[0].Anime_name;
+			string animeName = res.Results[0].Anime_name ?? "N/A";
 			string sourceUrl = res.Results[0].Source_url;
 
 			if (gif)
