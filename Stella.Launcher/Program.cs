@@ -78,8 +78,7 @@ namespace StellaLauncher
 
 			// Set the correct language for WinForms
 			string currentLang = Settings.ReadString("Language", "UI", null);
-			bool isSupportedLanguage = SupportedLangs.Contains(currentLang);
-			if (string.IsNullOrEmpty(currentLang) || !isSupportedLanguage)
+			if (string.IsNullOrEmpty(currentLang) || !SupportedLangs.Contains(currentLang))
 			{
 				string sysLang = CultureInfo.InstalledUICulture.Name.Substring(0, 2);
 				currentLang = SupportedLangs.Contains(sysLang) ? sysLang : "en";
