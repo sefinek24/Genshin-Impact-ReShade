@@ -701,19 +701,19 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>Comic Sans MS, 14.25pt</value>
   </data>
   <data name="version_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>953, 626</value>
+    <value>941, 626</value>
   </data>
   <data name="version_LinkLabel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
   <data name="version_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 25</value>
+    <value>254, 25</value>
   </data>
   <data name="version_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>85</value>
   </data>
   <data name="version_LinkLabel.Text" xml:space="preserve">
-    <value>Restart is optional</value>
+    <value>Waiting...</value>
   </data>
   <data name="version_LinkLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
@@ -1090,13 +1090,13 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>Comic Sans MS, 14.25pt</value>
   </data>
   <data name="updates_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>953, 655</value>
+    <value>936, 655</value>
   </data>
   <data name="updates_LinkLabel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
   <data name="updates_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 25</value>
+    <value>259, 25</value>
   </data>
   <data name="updates_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>85</value>
@@ -1321,7 +1321,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>11, 654</value>
   </data>
   <data name="progressBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>936, 26</value>
+    <value>919, 26</value>
   </data>
   <data name="progressBar1.TabIndex" type="System.Int32, mscorlib">
     <value>114</value>
@@ -1447,7 +1447,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>webView21</value>
   </data>
   <data name="&gt;&gt;webView21.Type" xml:space="preserve">
-    <value>Microsoft.Web.WebView2.WinForms.WebView2, Microsoft.Web.WebView2.WinForms, Version=1.0.2210.55, Culture=neutral, PublicKeyToken=2a8ab48044d2601e</value>
+    <value>Microsoft.Web.WebView2.WinForms.WebView2, Microsoft.Web.WebView2.WinForms, Version=1.0.2277.86, Culture=neutral, PublicKeyToken=2a8ab48044d2601e</value>
   </data>
   <data name="&gt;&gt;webView21.Parent" xml:space="preserve">
     <value>$this</value>
