@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. Genshin Stella Mod", "St
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3-1. Configuration .NET 8", "Stella.Configuration\3-1. Configuration .NET 8.csproj", "{47D8C976-0482-4A63-B0EC-9733961ECC0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-2. Configuration .NET Framework", "Stella.ConfigurationOld\3-2. Configuration .NET Framework.csproj", "{91FBB412-D343-4E78-95B5-F18E6EB6001C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. Prepare Stella", "Stella.Prepare\4. Prepare Stella.csproj", "{377E01DA-E164-4E79-A540-23F68FB2CD8B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. Sefin Anti Cheat", "Stella.SefinAntiCheat\5. Sefin Anti Cheat.csproj", "{F53B112D-AC37-4FFE-854E-82DEA97FBFB9}"
