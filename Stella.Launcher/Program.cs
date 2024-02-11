@@ -72,10 +72,11 @@ namespace StellaLauncher
 		[STAThread]
 		private static void Main(string[] args)
 		{
+			// Prepare NLog
 			Logger = Logger.WithProperty("AppName", "Launcher");
 			Logger = Logger.WithProperty("AppVersion", AppVersion);
 
-			// Set language
+			// Set the correct language for WinForms
 			string currentLang = Settings.ReadString("Language", "UI", null);
 			bool isSupportedLanguage = SupportedLangs.Contains(currentLang);
 			if (string.IsNullOrEmpty(currentLang) || !isSupportedLanguage)
@@ -99,7 +100,7 @@ namespace StellaLauncher
 
 			if (Debugger.IsAttached) Logger.Debug($"* CPU Serial Number {ComputerInfo.GetCpuSerialNumber()}");
 
-
+			// Check the number of running instances of Stella Mod Launcher. Only allow 1 process
 			if (Process.GetProcessesByName(AppName).Length > 1)
 			{
 				Logger.Info("One instance is currently open");
@@ -108,11 +109,11 @@ namespace StellaLauncher
 				Environment.Exit(998765341);
 			}
 
-
+			// Execute the necessary functions for WinForms
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 
-			// GitHub Actions
+			// Used exclusively for GitHub Actions. Currently, it is useless See https://github.com/sefinek24/Genshin-Impact-ReShade/blob/main/.github/workflows/build.yml
 			foreach (string arg in args)
 			{
 				if (arg != "--gh-actions") continue;
@@ -121,7 +122,7 @@ namespace StellaLauncher
 				Environment.Exit(0);
 			}
 
-
+			// Block the software in Russia
 			// if (RegionInfo.CurrentRegion.Name == "RU")
 			// {
 			//     Music.PlaySound("winxp", "battery-critical");
@@ -129,7 +130,7 @@ namespace StellaLauncher
 			//     Environment.Exit(999222999);
 			// }
 
-			// Is launcher configured?
+			// Has the software been configured on the user's PC?
 			using (RegistryKey key = Registry.CurrentUser.OpenSubKey(RegistryPath, true))
 			{
 				int value = (int)(key?.GetValue("AppIsConfigured") ?? 0);
@@ -140,7 +141,7 @@ namespace StellaLauncher
 				}
 			}
 
-			// Is launcher updated?
+			// Has the launcher been successfully updated? If so, show the Configuration Window again.
 			// IniFile prepareIni = new IniFile(Path.Combine(AppData, "prepare-stella.ini"));
 			// int newUpdate = prepareIni.ReadInt("Launcher", "UserIsMyPatron", 0);
 			// if (newUpdate == 1)
@@ -150,7 +151,7 @@ namespace StellaLauncher
 			// }
 
 
-			// Run
+			// Launch the default form (main window Forms\Default.cs)
 			try
 			{
 				Application.Run(new Default { Icon = Ico });
