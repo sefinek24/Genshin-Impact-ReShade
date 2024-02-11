@@ -5,8 +5,8 @@
 #define AppExeName "Stella Mod Launcher.exe"
 #define AppCopyright "Copyright 2024 © by Sefinek. All Rights Reserved."
 #define AppId "5D6E44F3-2141-4EA4-89E3-6C3018583FF7"
-#define public Dependency_Path_NetCoreCheck "Dependencies\"
-#include "Dependencies\DependencyInstaller.iss"
+#define public Dependency_Path_NetCoreCheck "Data\Dependencies\"
+#include "Data\Dependencies\DependencyInstaller.iss"
 
 [Setup]
 AppCopyright={#AppCopyright}
