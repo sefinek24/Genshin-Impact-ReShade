@@ -23,7 +23,7 @@ namespace PrepareStella
 
 		// Links
 		private static readonly string AppWebsite = "https://genshin.sefinek.net";
-		public static readonly string DiscordUrl = "https://discord.gg/SVcbaRc7gH";
+		public static readonly string DiscordUrl = "https://discord.gg/k2wfGRq4dT";
 
 		// Web
 		public static readonly string UserAgent = $"Mozilla/5.0 (compatible; PrepareStella/{AppVersion}; +{AppWebsite})";

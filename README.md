@@ -54,7 +54,7 @@ Please familiarize yourself with the [system requirements](https://sefinek.net/g
 For more information and details about the Genshin Stella Mod project, visit our [Documentation](https://sefinek.net/genshin-impact-reshade/docs?page=introduction&referrer=stella_readme).
 The wiki provides a comprehensive installation and usage guide for ReShade, along with frequently asked questions and troubleshooting tips.
 
-If you need further assistance, feel free to join our [Discord server](https://discord.gg/SVcbaRc7gH).
+If you need further assistance, feel free to join our [Discord server](https://discord.gg/k2wfGRq4dT).
 Additionally, if you wish to contribute to the project, please create a new [Pull request](https://github.com/sefinek24/Genshin-Impact-ReShade/pulls).
 You can also check out the latest [screenshots](https://sefinek.net/genshin-impact-reshade/gallery?page=1&referrer=stella_readme) on our website and watch [YouTube videos](https://sefinek.net/genshin-impact-reshade/videos?referrer=stella_readme) for more.
 
