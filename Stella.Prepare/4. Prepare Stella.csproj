@@ -101,6 +101,10 @@
     <Compile Include="Start.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\LICENSE">
+      <Link>LICENSE</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="App.config" />
     <None Include="NLog_PS.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
