@@ -26,7 +26,6 @@ namespace StellaLauncher.Scripts.Download
 		private static long _lastBytesReceived;
 		private static DateTime _lastUpdateTime = DateTime.Now;
 
-
 		public static async void Run(string localResVersion, string remoteResVersion, string remoteResDate)
 		{
 			// 1
