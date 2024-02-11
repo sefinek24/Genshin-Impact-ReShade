@@ -23,8 +23,6 @@ namespace StellaLauncher
 		public static readonly string ProductVersion = Application.ProductVersion;
 		private static readonly string AppName = Assembly.GetExecutingAssembly().GetName().Name;
 		public static readonly string AppNameVer = $"{AppName} • v{ProductVersion}";
-		private static readonly string AppWebsiteSub = "https://genshin.sefinek.net";
-		public static readonly string AppWebsiteFull = "https://sefinek.net/genshin-impact-reshade";
 
 		// Files and folders
 		public static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
@@ -39,7 +37,11 @@ namespace StellaLauncher
 		// Config
 		public static readonly IniFile Settings = new IniFile(Path.Combine(AppData, "settings.ini"));
 
-		// Web
+		// Links
+		private static readonly string AppWebsiteSub = "https://genshin.sefinek.net";
+		public static readonly string AppWebsiteFull = "https://sefinek.net/genshin-impact-reshade";
+
+		// WebClient & HttpClient
 		public static readonly string UserAgent = $"Mozilla/5.0 (compatible; StellaLauncher/{ProductVersion}; +{AppWebsiteSub}) WebClient/0.1";
 
 		public static readonly Lazy<HttpClient> WbClient = new Lazy<HttpClient>(() =>
@@ -53,13 +55,13 @@ namespace StellaLauncher
 		// public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v5" : "https://api.sefinek.net/api/v5";
 		public static readonly string WebApi = "https://api.sefinek.net/api/v5";
 
-		// Lang
+		// Supported languages
 		private static readonly string[] SupportedLangs = { "en", "pl" };
 
 		// Registry
 		public static readonly string RegistryPath = @"Software\Stella Mod Launcher";
 
-		// Logger
+		// NLog
 		public static Logger Logger = LogManager.GetCurrentClassLogger();
 
 		// public static void DisposeHttpClient()
