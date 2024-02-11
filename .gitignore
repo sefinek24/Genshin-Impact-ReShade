@@ -9,7 +9,7 @@
 *.bin
 *.patrons
 *.stellamodplus
-# *.user
+*.user
 
 # Editor-based HTTP Client requests
 .idea/httpRequests/
