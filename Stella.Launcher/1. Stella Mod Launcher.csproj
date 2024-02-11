@@ -757,7 +757,7 @@
     <PackageReference Include="DiscordRichPresence">
       <Version>1.2.1.24</Version>
     </PackageReference>
-    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2210.55" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2277.86" />
     <PackageReference Include="NAudio">
       <Version>2.2.1</Version>
     </PackageReference>
