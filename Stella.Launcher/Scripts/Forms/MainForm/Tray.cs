@@ -81,7 +81,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 
 		public static void OnQuitClick(object sender, EventArgs e)
 		{
-			Environment.Exit(0);
+			Application.Exit();
 		}
 	}
 }

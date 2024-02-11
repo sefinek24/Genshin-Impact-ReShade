@@ -7,37 +7,17 @@ using StellaLauncher.Forms.Errors;
 namespace StellaLauncher.Scripts
 {
 	/// <summary>
-	///    Provides
-	///    logging
-	///    functionality
-	///    for
-	///    the
-	///    launcher.
+	///    Provides logging functionality for the launcher.
 	/// </summary>
 	internal static class Log
 	{
 		public static readonly string Folder = Path.Combine(Program.AppData, "logs");
-		public static readonly string CmdLogs = Path.Combine(Program.AppData, "logs", "cmd.output.log");
+		public static readonly string CmdLogs = Path.Combine(Folder, "cmd.output.log");
 
 		/// <summary>
-		///    Logs
-		///    the
-		///    provided
-		///    exception
-		///    and
-		///    shows
-		///    an
-		///    error
-		///    dialog.
+		///    Logs the provided exception and shows an error dialog.
 		/// </summary>
-		/// <param
-		///    name="ex">
-		///    The
-		///    exception
-		///    to
-		///    be
-		///    logged.
-		/// </param>
+		/// <param name="ex"> The exception to be logged.</param>
 		public static void ThrowError(Exception ex)
 		{
 			Program.Logger.Error(ex);
@@ -47,32 +27,9 @@ namespace StellaLauncher.Scripts
 		}
 
 		/// <summary>
-		///    Logs
-		///    the
-		///    provided
-		///    exception,
-		///    sends
-		///    telemetry
-		///    data,
-		///    shows
-		///    an
-		///    error
-		///    dialog,
-		///    and
-		///    exits
-		///    the
-		///    application.
+		///    Logs the provided exception, sends telemetry data, shows an error dialog, and exits the application.
 		/// </summary>
-		/// <param
-		///    name="ex">
-		///    The
-		///    exception
-		///    to
-		///    be
-		///    logged
-		///    and
-		///    reported.
-		/// </param>
+		/// <param name="ex">The exception to be logged and reported.</param>
 		public static void ErrorAndExit(Exception ex)
 		{
 			Telemetry.Error(ex);

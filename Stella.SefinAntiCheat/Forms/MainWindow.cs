@@ -69,7 +69,7 @@ namespace SefinAntiCheat.Forms
 		{
 			_trayIcon.Visible = false;
 			_trayIcon.Dispose(); // Dispose the NotifyIcon when the application exits
-			Environment.Exit(0);
+			Application.Exit();
 		}
 
 		protected override void OnResize(EventArgs e)

@@ -92,7 +92,7 @@ namespace StellaLauncher.Forms
 			};
 			await Cmd.Execute(cliWrapCommand2);
 
-			Environment.Exit(0);
+			Application.Exit();
 		}
 
 		private void CreateShortcut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

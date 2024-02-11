@@ -60,7 +60,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 			}
 
 			bool res = await Cmd.Execute(command);
-			if (res) Environment.Exit(0);
+			if (res) Application.Exit();
 		}
 
 		public static async Task ReShade()
@@ -102,7 +102,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 			}
 
 			bool res = await Cmd.Execute(command);
-			if (res) Environment.Exit(0);
+			if (res) Application.Exit();
 		}
 
 		public static async Task FpsUnlocker()
@@ -144,7 +144,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 
 
 			bool res = await Cmd.Execute(command);
-			if (res) Environment.Exit(0);
+			if (res) Application.Exit();
 		}
 
 		public static async Task Migoto()
@@ -192,7 +192,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 
 			// Run file
 			bool res = await Cmd.Execute(command);
-			if (res) Environment.Exit(0);
+			if (res) Application.Exit();
 		}
 	}
 }

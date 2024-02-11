@@ -22,7 +22,7 @@ namespace StellaLauncher.Scripts.Download
 			TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Paused);
 			new NotCompatible { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) }.ShowDialog();
 
-			Environment.Exit(0);
+			Application.Exit();
 		}
 	}
 }

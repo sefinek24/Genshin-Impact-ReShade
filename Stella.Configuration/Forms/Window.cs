@@ -146,6 +146,6 @@ public sealed partial class Window : Form
 			UseShellExecute = true
 		});
 
-		Environment.Exit(0);
+		Application.Exit();
 	}
 }

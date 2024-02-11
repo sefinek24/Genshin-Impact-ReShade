@@ -120,7 +120,7 @@ namespace StellaLauncher
 				if (arg != "--gh-actions") continue;
 
 				Logger.Info("Application closed due to detection of the `--gh-actions` parameter.");
-				Environment.Exit(0);
+				Application.Exit();
 			}
 
 			// Block the software in Russia

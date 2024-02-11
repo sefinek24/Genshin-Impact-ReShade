@@ -180,7 +180,7 @@ namespace Configuration.Forms
 				UseShellExecute = true
 			});
 
-			Environment.Exit(0);
+			Application.Exit();
 		}
 	}
 }

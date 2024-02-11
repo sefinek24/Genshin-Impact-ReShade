@@ -131,7 +131,7 @@ namespace StellaLauncher.Forms
 			if (string.IsNullOrEmpty(resourcesPath) || !Directory.Exists(resourcesPath))
 			{
 				_ = Cmd.Execute(new Cmd.CliWrap { App = Program.ConfigurationWindow });
-				Environment.Exit(0);
+				Application.Exit();
 			}
 
 			ResourcesPath = resourcesPath;

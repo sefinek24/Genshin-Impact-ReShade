@@ -212,7 +212,7 @@ namespace StellaLauncher.Scripts.Download
 			}
 
 			Program.Logger.Info("Closing...");
-			Environment.Exit(0);
+			Application.Exit();
 		}
 	}
 }

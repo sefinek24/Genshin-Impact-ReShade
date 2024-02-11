@@ -62,7 +62,7 @@ namespace StellaLauncher.Forms.Errors
 					"После обдумывания, присоединитесь к серверу Discord и отправьте сообщение создателю. Представьте свою ценность на английском языке и объясните, почему вы хотели бы получить доступ к Stella Mod.");
 				Process.Start("notepad.exe", filePath);
 
-				Environment.Exit(2137);
+				Application.Exit();
 			};
 			closeAppTimer.Start();
 

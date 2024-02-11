@@ -1,5 +1,6 @@
 using System;
 using System.Security.Principal;
+using System.Windows.Forms;
 using Microsoft.Win32;
 
 namespace GenshinStellaMod.Scripts
@@ -41,7 +42,7 @@ namespace GenshinStellaMod.Scripts
 			Console.ReadKey();
 
 			Program.Logger.Info("Exiting...");
-			Environment.Exit(0);
+			Application.Exit();
 		}
 	}
 }
