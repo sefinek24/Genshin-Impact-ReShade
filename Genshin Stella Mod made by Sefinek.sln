@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. Prepare Stella", "Stella
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. Sefin Anti Cheat", "Stella.SefinAntiCheat\5. Sefin Anti Cheat.csproj", "{F53B112D-AC37-4FFE-854E-82DEA97FBFB9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6. Information 48793142", "Stella.Info48793142\6. Information 48793142.csproj", "{5A9340FA-7E3B-433D-9E37-88D86C48B975}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6. Information 48793142", "Stella.Info-48793142\6. Information 48793142.csproj", "{5A9340FA-7E3B-433D-9E37-88D86C48B975}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7. Device Identifier", "Stella.DeviceIdentifier\7. Device Identifier.csproj", "{3440EBBF-9275-4194-A6B4-5BBE140FF3B0}"
 EndProject
