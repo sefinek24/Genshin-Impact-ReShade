@@ -176,14 +176,14 @@ Do not change FPS settings in the game if you are using FPS unlock.
 
 ## 📷 〢 Other screenshots (without Ray Tracing)
 <div id="images">
-    <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Stella%20Mod%20Launcher/data/images/launcher/backgrounds/nahida/1.png?referrer=stella_readme" title="See preview [1.png]">
-        <img src="Stella.Launcher/data/images/launcher/backgrounds/nahida/1.png" alt="Screenshot number 1">
+    <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Stella.Launcher/data/images/backgrounds/main/nahida/1.png?referrer=stella_readme" title="See preview [1.png]">
+        <img src="Stella.Launcher/data/images/backgrounds/main/nahida/1.png" alt="Screenshot number 1">
     </a>
-    <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Stella%20Mod%20Launcher/data/images/launcher/backgrounds/hutao/4.png?referrer=stella_readme" title="See preview [4.png]">
-        <img src="Stella.Launcher/data/images/launcher/backgrounds/hutao/4.png" alt="Screenshot number 2">
+    <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Stella.Launcher/data/images/backgrounds/main/hutao/4.png?referrer=stella_readme" title="See preview [4.png]">
+        <img src="Stella.Launcher/data/images/backgrounds/main/hutao/4.png" alt="Screenshot number 2">
     </a>
-    <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Stella%20Mod%20Launcher/data/images/launcher/backgrounds/yaoyao/2.png?referrer=stella_readme" title="See preview [2.png]">
-        <img src="Stella.Launcher/data/images/launcher/backgrounds/yaoyao/2.png" alt="Screenshot number 3">
+    <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Stella.Launcher/data/images/backgrounds/main/yaoyao/2.png?referrer=stella_readme" title="See preview [2.png]">
+        <img src="Stella.Launcher/data/images/backgrounds/main/yaoyao/2.png" alt="Screenshot number 3">
     </a>
 </div>
 
