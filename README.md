@@ -15,7 +15,6 @@
         🌠 » To enjoy the enhanced version (mods & 3DMigoto), subscribe to <a href="https://sefinek.net/genshin-impact-reshade/subscription" title="Subscription: Unlock more benefits - Genshin Stella Mod">Stella Mod Plus</a>. « 🌠<br>
         ⭐ » Star the repository if you like it. Have a pleasant day or night! « ⭐
     </h3>
-    <br>
     <img src="https://api.sefinek.net/api/v2/moecounter/@Genshin-Stella-Mod-Repo?theme=rule34" alt="Views" title="README.md views - starts from Jun 15, 2023, 12:26 PM GMT+2">
     <br>
     <a href="https://patreon.com/sefinek" title="Patreon"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dsefinek%26type%3Dpledges&style=for-the-badge" id="patreon" height="32" alt="Support me on Patreon"></a>
