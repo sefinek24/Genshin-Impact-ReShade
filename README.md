@@ -43,12 +43,13 @@
 - [🧶 Credits](https://sefinek.net/genshin-impact-reshade/docs?page=credits)
 - [💙 Contributors](https://sefinek.net/genshin-impact-reshade/docs?page=contributors)
 
-<div align="center" id="labels">
-    <a href="https://sefinek.net/genshin-impact-reshade/download?referrer=stella_readme&time=undefined" title="Download stable release"><img src="https://sefinek.net/images/stella/mafumafu/download.png" alt="Download" height="148px"></a>
+<div align="center">
+    <a href="https://sefinek.net/genshin-impact-reshade/download?referrer=stella_readme&time=undefined" title="Download stable release"><img src="https://sefinek.net/images/stella/mafumafu/download.png" alt="Download" height="144px"></a>
     <br>
-    <a href="https://genshin.sefinek.net" title="Official website"><img src="https://sefinek.net/images/stella/mafumafu/website.png" alt="Website" height="140px"></a>
-    <a href="https://discord.com/invite/SVcbaRc7gH" title="Our Discord server"><img src="https://sefinek.net/images/stella/mafumafu/discord.png" alt="Discord" height="140px"></a>
+    <a href="https://genshin.sefinek.net" title="Official website"><img src="https://sefinek.net/images/stella/mafumafu/website.png" alt="Website" height="138px"></a>
+    <a href="https://discord.com/invite/SVcbaRc7gH" title="Our Discord server"><img src="https://sefinek.net/images/stella/mafumafu/discord.png" alt="Discord" height="138px"></a>
 </div>
+<br>
 
 Welcome to the official GitHub repository for Stella Mod! We've made some important updates to how we host our documentation.
 
