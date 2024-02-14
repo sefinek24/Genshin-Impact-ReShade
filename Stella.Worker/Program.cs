@@ -81,8 +81,8 @@ namespace GenshinStellaMod
 			Console.WriteLine("⠀   ⠀⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿");
 			Console.WriteLine("⠀⠀   ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟");
 			Console.WriteLine("⠀⠀ ⠀  ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀");
-			Console.WriteLine("⠀⠀ ⠀  ⠀⠀⡟⢦⡀⠇⠀⠀⣀⠞⠀⠀⠘⡀⢀⡠⠚⣉⠤⠂⠀⠀⠀⠈⠙⢦⡀");
-			Console.WriteLine("⠀⠀ ⠀  ⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆           » Mod version          : v" + (args[0].EndsWith(".0") ? args[0].Substring(0, args[0].Length - 2) : args[0]));
+			Console.WriteLine("⠀⠀ ⠀  ⠀⠀⡟⢦⡀⠇⠀⠀⣀⠞⠀⠀⠘⡀⢀⡠⠚⣉⠤⠂⠀⠀⠀⠈⠙⢦⡀            » Stella version       : v" + AppVersion);
+			Console.WriteLine("⠀⠀ ⠀  ⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆           » Launcher version     : v" + (args[0].EndsWith(".0") ? args[0].Substring(0, args[0].Length - 2) : args[0]));
 			Console.WriteLine("⠀⠀   ⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆         » ReShade version      : v" + args[1]);
 			Console.WriteLine("   ⠀⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇          » FPS Unlocker version : v" + args[2]);
 			Console.WriteLine("   ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉⠀⠀⠀⠀⣠⠟");

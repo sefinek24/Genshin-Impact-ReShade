@@ -611,9 +611,9 @@ namespace StellaLauncher.Properties {
         ///
         ///Would you like to visit the official website and subscribe? You&apos;ll gain access to numerous benefits, including the ability to use ReShade, 3DMigoto, and FPS Unlocker simultaneously..
         /// </summary>
-        internal static string Default_ThisFeatureIsAvailableOnlyForMyPatrons {
+        internal static string Default_ThisFeatureIsAvailableOnlyForStellaModPlusSubscribers {
             get {
-                return ResourceManager.GetString("Default_ThisFeatureIsAvailableOnlyForMyPatrons", resourceCulture);
+                return ResourceManager.GetString("Default_ThisFeatureIsAvailableOnlyForStellaModPlusSubscribers", resourceCulture);
             }
         }
         

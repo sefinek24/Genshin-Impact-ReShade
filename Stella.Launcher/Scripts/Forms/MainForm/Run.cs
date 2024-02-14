@@ -32,7 +32,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 						App = "wt.exe",
 						Arguments = new ArgumentsBuilder()
 							.Add(GsmPath) // 0
-							.Add(Program.AppVersion) // 1
+							.Add(Program.ProductVersion) // 1
 							.Add(Data.ReShadeVer) // 2
 							.Add(Data.UnlockerVer) // 3
 							.Add(Secret.IsMyPatron ? 1 : 6) // 4
@@ -45,7 +45,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 						WorkingDir = Program.AppPath,
 						Arguments = new ArgumentsBuilder()
 							.Add(BatchRunPatrons) // 0
-							.Add(Program.AppVersion) // 1
+							.Add(Program.ProductVersion) // 1
 							.Add(Data.ReShadeVer) // 2
 							.Add(Data.UnlockerVer) // 3
 							.Add(Secret.IsMyPatron ? 1 : 6) // 4
@@ -74,7 +74,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 						App = "wt.exe",
 						Arguments = new ArgumentsBuilder()
 							.Add(GsmPath) // 0
-							.Add(Program.AppVersion) // 1
+							.Add(Program.ProductVersion) // 1
 							.Add(Data.ReShadeVer) // 2
 							.Add(Data.UnlockerVer) // 3
 							.Add(3) // 4
@@ -87,7 +87,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 						WorkingDir = Program.AppPath,
 						Arguments = new ArgumentsBuilder()
 							.Add(BatchRunPatrons) // 0
-							.Add(Program.AppVersion) // 1
+							.Add(Program.ProductVersion) // 1
 							.Add(Data.ReShadeVer) // 2
 							.Add(Data.UnlockerVer) // 3
 							.Add(3) // 4
@@ -115,7 +115,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 						App = "wt.exe",
 						Arguments = new ArgumentsBuilder()
 							.Add(GsmPath) // 0
-							.Add(Program.AppVersion) // 1
+							.Add(Program.ProductVersion) // 1
 							.Add(Data.ReShadeVer) // 2
 							.Add(Data.UnlockerVer) // 3
 							.Add(4) // 4
@@ -128,7 +128,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 						WorkingDir = Program.AppPath,
 						Arguments = new ArgumentsBuilder()
 							.Add(BatchRunPatrons) // 0
-							.Add(Program.AppVersion) // 1
+							.Add(Program.ProductVersion) // 1
 							.Add(Data.ReShadeVer) // 2
 							.Add(Data.UnlockerVer) // 3
 							.Add(4) // 4
@@ -150,8 +150,8 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 		{
 			if (!Secret.IsMyPatron)
 			{
-				DialogResult result = MessageBox.Show(Resources.Default_ThisFeatureIsAvailableOnlyForMyPatrons, Program.AppNameVer, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-				if (result == DialogResult.Yes) Utils.OpenUrl("https://www.patreon.com/sefinek");
+				DialogResult result = MessageBox.Show(Resources.Default_ThisFeatureIsAvailableOnlyForStellaModPlusSubscribers, Program.AppNameVer, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+				if (result == DialogResult.Yes) Utils.OpenUrl("https://sefinek.net/genshin-impact-reshade/subscription");
 				return;
 			}
 

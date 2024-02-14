@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -6,6 +7,7 @@ using System.Windows.Forms;
 using ClassLibrary;
 using Microsoft.Win32;
 using Newtonsoft.Json;
+using NuGet.Versioning;
 using StellaLauncher.Forms.Other;
 using StellaLauncher.Models;
 using StellaLauncher.Properties;
@@ -256,6 +258,13 @@ namespace StellaLauncher.Forms
 
 			// Loaded form
 			Program.Logger.Info(string.Format(Resources.Main_LoadedForm_, Text));
+
+			// Check ReShade & FPS Unlock version
+			Stages.UpdateStage(6, "Checking ReShade & FPS Unlock version...");
+			NuGetVersion reshadeVersion = NuGetVersion.Parse(FileVersionInfo.GetVersionInfo(Program.ReShadePath).ProductVersion);
+			NuGetVersion fpsUnlockVersion = NuGetVersion.Parse(FileVersionInfo.GetVersionInfo(Program.FpsUnlockerExePath).ProductVersion);
+			Data.ReShadeVer = reshadeVersion.ToString();
+			Data.UnlockerVer = fpsUnlockVersion.ToString();
 
 			// Launch count
 			Stages.UpdateStage(7, "Checking `LaunchCount`...");

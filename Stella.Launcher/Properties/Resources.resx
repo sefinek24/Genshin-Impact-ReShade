@@ -242,7 +242,7 @@ This action will result in the loss of any custom configurations you have made. 
   <data name="Main_ClosingForm_" xml:space="preserve">
     <value>Closing form {0}...</value>
   </data>
-  <data name="Default_ThisFeatureIsAvailableOnlyForMyPatrons" xml:space="preserve">
+  <data name="Default_ThisFeatureIsAvailableOnlyForStellaModPlusSubscribers" xml:space="preserve">
     <value>This feature is only available to those with a Stella Mod Plus subscription.
 
 Would you like to visit the official website and subscribe? You'll gain access to numerous benefits, including the ability to use ReShade, 3DMigoto, and FPS Unlocker simultaneously.</value>
