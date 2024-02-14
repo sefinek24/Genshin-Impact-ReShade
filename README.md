@@ -53,10 +53,10 @@
 
 Welcome to the official GitHub repository for Stella Mod! We've made some important updates to how we host our documentation.
 
-The complete documentation for Stella Mod has now been transferred to our official website.
+The entire documentation for Stella Mod has now been transferred to our official website.
 This move allows us to provide you with the most up-to-date information, guides, and resources in a more organized and accessible manner.
 
-To access the documentation, please visit our official website.
+To access the documentation, please visit our [official website](https://sefinek.net/genshin-impact-reshade/docs).
 We've ensured that the documentation is comprehensive and easy to navigate, allowing you to find everything you need quickly.
 
 We appreciate your understanding and hope you find the new documentation helpful.
