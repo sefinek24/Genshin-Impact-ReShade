@@ -25,13 +25,11 @@
 
 ## 📋 〢 Documentation
 - [👋 Introduction](https://sefinek.net/genshin-impact-reshade/docs?page=introduction)
-
 - [📂 Includes](https://sefinek.net/genshin-impact-reshade/docs?page=requirements#includes)
 - [✨ Requirements](https://sefinek.net/genshin-impact-reshade/docs?page=requirements#requirements)
 - [🔧 Supported systems](https://sefinek.net/genshin-impact-reshade/docs?page=requirements#supported-os)
 - [⚙️ Recommended settings for game](https://sefinek.net/genshin-impact-reshade/docs?page=requirements#recommended-settings-for-game)
 - [🛠️ Tested game versions](https://sefinek.net/genshin-impact-reshade/docs?page=requirements#tested-game-versions)
-
 - [🐈 What is ReShade and FPS Unlock?](https://sefinek.net/genshin-impact-reshade/docs?page=what-is)
 - [🤔 FAQ](https://sefinek.net/genshin-impact-reshade/docs?page=faq)
 - [🐕‍🦺 Support](https://sefinek.net/genshin-impact-reshade/docs?page=support)
@@ -39,10 +37,8 @@
 - [🔒 Privacy policy](https://sefinek.net/genshin-impact-reshade/docs?page=privacy-policy)
 - [📥 Installation](https://sefinek.net/genshin-impact-reshade/docs?page=installation)
 - [🔧 Compilation](https://sefinek.net/genshin-impact-reshade/docs?page=compilation)
-
 - [📷 Gallery](https://sefinek.net/genshin-impact-reshade/gallery?page=1)
 - [📃 Changelogs](https://sefinek.net/genshin-impact-reshade/docs?page=changelog_v7)
-
 - [🧀 Legend](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend)
 - [🧶 Credits](https://sefinek.net/genshin-impact-reshade/docs?page=credits)
 - [💙 Contributors](https://sefinek.net/genshin-impact-reshade/docs?page=contributors)
