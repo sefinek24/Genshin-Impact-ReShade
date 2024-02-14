@@ -11,12 +11,12 @@
     <a href="https://github.com/sefinek24/Genshin-Impact-ReShade" title="Repository size"><img src="https://img.shields.io/github/repo-size/sefinek24/Genshin-Impact-ReShade?label=Repo%20size" alt="Repo size"></a>
     <a href="https://github.com/sefinek24/Genshin-Impact-ReShade/commits/main" title="Commit activity"><img src="https://img.shields.io/github/commit-activity/w/sefinek24/Genshin-Impact-ReShade?label=Commit%20activity" alt="Commit activity"></a>
     <a href="https://discord.com/invite/SVcbaRc7gH" title="Official Discord server"><img src="https://img.shields.io/discord/1044713077125435492?label=Discord%20server" alt="Our Discord server"></a>
-    <br><br>
-    <img src="https://api.sefinek.net/api/v2/moecounter/@Genshin-Stella-Mod-Repo?theme=rule34" alt="Views" title="README.md views - starts from Jun 15, 2023, 12:26 PM GMT+2">
     <h3>
         🌠 » To enjoy the enhanced version (mods & 3DMigoto), subscribe to <a href="https://sefinek.net/genshin-impact-reshade/subscription" title="Subscription: Unlock more benefits - Genshin Stella Mod">Stella Mod Plus</a>. « 🌠<br>
         ⭐ » Star the repository if you like it. Have a pleasant day or night! « ⭐
     </h3>
+    <br>
+    <img src="https://api.sefinek.net/api/v2/moecounter/@Genshin-Stella-Mod-Repo?theme=rule34" alt="Views" title="README.md views - starts from Jun 15, 2023, 12:26 PM GMT+2">
     <a href="https://patreon.com/sefinek" title="Patreon"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dsefinek%26type%3Dpledges&style=for-the-badge" id="patreon" height="32" alt="Support me on Patreon"></a>
     <a href="https://ko-fi.com/sefinek" title="Ko-fi"><img src="https://storage.ko-fi.com/cdn/brandasset/kofi_button_blue.png" id="kofi" height="32" alt="Support me on Ko-fi"></a>
 </div>
