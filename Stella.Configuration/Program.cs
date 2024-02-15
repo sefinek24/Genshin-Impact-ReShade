@@ -1,4 +1,3 @@
-using System.Reflection;
 using ConfigurationNC.Forms;
 using ConfigurationNC.Properties;
 using NLog;

@@ -42,13 +42,9 @@ public sealed partial class Window : Form
 	{
 		// Shortcut
 		if (!File.Exists(PrepareCfgPath))
-		{
 			checkBox2.Checked = true;
-		}
 		else
-		{
 			checkBox3.Checked = _prepareIni.ReadInt("PrepareStella", "InternetShortcutsInStartMenu", 1) != 0;
-		}
 
 		// Resources
 		bool foundResources = CheckData.ResourcesPath();

@@ -59,7 +59,7 @@ namespace PrepareStella.Scripts.Preparing
 					{
 						await fs.WriteAsync(buffer, 0, bytesRead);
 						receivedBytes += bytesRead;
-						int percentage = (int)((receivedBytes * 100) / totalBytes.GetValueOrDefault(1));
+						int percentage = (int)(receivedBytes * 100 / totalBytes.GetValueOrDefault(1));
 						TimeSpan elapsed = DateTime.Now - startTime;
 						double speed = receivedBytes / elapsed.TotalSeconds;
 
