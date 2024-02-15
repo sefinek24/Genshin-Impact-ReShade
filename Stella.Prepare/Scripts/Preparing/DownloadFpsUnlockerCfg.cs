@@ -7,6 +7,8 @@ namespace PrepareStella.Scripts.Preparing
 {
 	internal static class DownloadFpsUnlockerCfg
 	{
+		private const string JsonFileUrl = "https://cdn.sefinek.net/resources/v3/genshin-stella-mod/unlocker.config.json";
+
 		public static async Task RunAsync()
 		{
 			try
@@ -19,9 +21,8 @@ namespace PrepareStella.Scripts.Preparing
 				using (HttpClient httpClient = new HttpClient())
 				{
 					httpClient.DefaultRequestHeaders.Add("User-Agent", Start.UserAgent);
-					const string url = "https://cdn.sefinek.net/resources/v3/genshin-stella-mod/unlocker.config.json";
 
-					using (HttpResponseMessage headResponse = await httpClient.SendAsync(new HttpRequestMessage(HttpMethod.Head, url)))
+					using (HttpResponseMessage headResponse = await httpClient.SendAsync(new HttpRequestMessage(HttpMethod.Head, JsonFileUrl)))
 					{
 						if (headResponse.IsSuccessStatusCode)
 						{
@@ -34,7 +35,7 @@ namespace PrepareStella.Scripts.Preparing
 						}
 					}
 
-					string fpsUnlockerConfig = await httpClient.GetStringAsync(url);
+					string fpsUnlockerConfig = await httpClient.GetStringAsync(JsonFileUrl);
 					string fpsUnlockerConfigContent = fpsUnlockerConfig.Replace("{GamePath}", Program.SavedGamePath?.Replace("\\", "\\\\") ?? string.Empty);
 
 					await WriteToFileAsync(fpsUnlockerConfigPath, fpsUnlockerConfigContent);
