@@ -2,7 +2,6 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Security.Principal;
-using Windows.Storage;
 
 namespace PrepareStella.Scripts
 {
@@ -13,18 +12,6 @@ namespace PrepareStella.Scripts
 			WindowsIdentity identity = WindowsIdentity.GetCurrent();
 			WindowsPrincipal principal = new WindowsPrincipal(identity);
 			return principal.IsInRole(WindowsBuiltInRole.Administrator);
-		}
-
-		public static string GetAppData()
-		{
-			try
-			{
-				return Path.Combine(ApplicationData.Current?.LocalFolder?.Path);
-			}
-			catch (InvalidOperationException)
-			{
-				return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
-			}
 		}
 
 		public static void OpenUrl(string url)

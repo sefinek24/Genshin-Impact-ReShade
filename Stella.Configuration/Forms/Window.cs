@@ -8,8 +8,13 @@ namespace ConfigurationNC.Forms;
 public sealed partial class Window : Form
 {
 	public static readonly string? AppName = Assembly.GetExecutingAssembly().GetName().Name;
-	private static readonly string AppPath = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ".."));
+	public static readonly string AppVersion = Assembly.GetExecutingAssembly().GetName().Version!.ToString();
+	public static readonly string StellaDirPath = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ".."));
+	public static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
 	private static readonly string AppData = GetAppData();
+
+	private static readonly string PrepareCfgPath = Path.Combine(AppData, "prepare-stella.ini");
+	private static IniFile _prepareIni = null!;
 
 	private static int _newShortcutsOnDesktop;
 	private static int _newInternetShortcutsOnDesktop;
@@ -19,13 +24,11 @@ public sealed partial class Window : Form
 	private static int _deleteReShadeCache;
 	private static int _instOrUpdWt;
 
-	private static IniFile _prepareIni = null!;
-
 	public Window()
 	{
 		InitializeComponent();
 
-		_prepareIni = new IniFile(Path.Combine(AppData, "prepare-stella.ini"));
+		_prepareIni = new IniFile(PrepareCfgPath);
 		DoubleBuffered = true;
 	}
 
@@ -37,9 +40,17 @@ public sealed partial class Window : Form
 
 	private void Main_Load(object sender, EventArgs e)
 	{
-		checkBox2.Checked = _prepareIni.ReadInt("PrepareStella", "NewShortcutsOnDesktop", 1) != 0;
-		checkBox3.Checked = _prepareIni.ReadInt("PrepareStella", "InternetShortcutsInStartMenu", 1) != 0;
+		// Shortcut
+		if (!File.Exists(PrepareCfgPath))
+		{
+			checkBox2.Checked = true;
+		}
+		else
+		{
+			checkBox3.Checked = _prepareIni.ReadInt("PrepareStella", "InternetShortcutsInStartMenu", 1) != 0;
+		}
 
+		// Resources
 		bool foundResources = CheckData.ResourcesPath();
 		if (!foundResources)
 		{
@@ -48,7 +59,7 @@ public sealed partial class Window : Form
 		}
 		else
 		{
-			bool isMyPatron = CheckData.IsUserMyPatron();
+			bool isMyPatron = CheckData.IsAStellaPlusSubscriber();
 			if (isMyPatron)
 			{
 				checkBox7.Checked = false;
@@ -63,7 +74,18 @@ public sealed partial class Window : Form
 		checkBox4.Checked = _prepareIni.ReadInt("PrepareStella", "UpdateReShadeConfig", 1) != 0;
 		checkBox5.Checked = _prepareIni.ReadInt("PrepareStella", "UpdateFpsUnlockerConfig", 1) != 0;
 		checkBox6.Checked = _prepareIni.ReadInt("PrepareStella", "DeleteReShadeCache", 1) != 0;
-		checkBox1.Checked = _prepareIni.ReadInt("PrepareStella", "InstOrUpdWT", 1) != 0;
+
+		// Windows Terminal
+		bool wtIsInstalled = CheckData.IsWindowsTerminalInstalled();
+		if (!wtIsInstalled)
+		{
+			checkBox1.Checked = true;
+			checkBox1.Enabled = false;
+		}
+		else
+		{
+			checkBox1.Checked = _prepareIni.ReadInt("PrepareStella", "InstOrUpdWT", 1) != 0;
+		}
 
 		SaveIniData();
 	}
@@ -89,6 +111,8 @@ public sealed partial class Window : Form
 		if (!foundResources && !checkBox7.Checked)
 		{
 			checkBox7.Checked = true;
+			Program.Logger.Error($"The Stella Mod resources was not found: {foundResources}");
+
 			MessageBox.Show(Resources.TheStellaResourcesDirWasNotFoundOnYourPC, AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 			return;
 		}
@@ -125,15 +149,18 @@ public sealed partial class Window : Form
 		_prepareIni.WriteInt("PrepareStella", "UpdateFpsUnlockerConfig", _updateFpsUnlockerConfig);
 		_prepareIni.WriteInt("PrepareStella", "DeleteReShadeCache", _deleteReShadeCache);
 		_prepareIni.WriteInt("PrepareStella", "InstOrUpdWT", _instOrUpdWt);
+
+		Program.Logger.Info("Saved ini config");
 	}
 
 	private void LetsGo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
 		SaveIniData();
 
-		string prepareStellaExe = Path.Combine(AppPath, "Prepare Stella Mod.exe");
+		string prepareStellaExe = Path.Combine(StellaDirPath, "Prepare Stella Mod.exe");
 		if (!File.Exists(prepareStellaExe))
 		{
+			Program.Logger.Error($"File {prepareStellaExe} was not found");
 			MessageBox.Show(string.Format(Resources.RequiredFile_WasNotFound, prepareStellaExe), AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 			return;
 		}
@@ -141,7 +168,7 @@ public sealed partial class Window : Form
 		Process.Start(new ProcessStartInfo
 		{
 			FileName = prepareStellaExe,
-			WorkingDirectory = AppPath,
+			WorkingDirectory = StellaDirPath,
 			Verb = "runas",
 			UseShellExecute = true
 		});

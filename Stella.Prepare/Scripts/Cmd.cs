@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using ClassLibrary;
 using CliWrap;
 using CliWrap.Buffered;
-using Microsoft.Toolkit.Uwp.Notifications;
 
 namespace PrepareStella.Scripts
 {
@@ -86,18 +85,7 @@ namespace PrepareStella.Scripts
 
 						Start.Logger.Error($"Found missing dependency Microsoft.VCLibs.\n\nAttempt {_vcLibsAttemptNumber}\nExit code: 80073CF3\n\n{stderr}");
 
-						try
-						{
-							new ToastContentBuilder()
-								.AddText("Ughh, sorry. We need more time 😥")
-								.AddText("Found missing dependency with name VCLibs.\nClose all Microsoft Store apps and go back to the setup!")
-								.Show();
-						}
-						catch (Exception ex)
-						{
-							Start.Logger.Error(ex);
-							return;
-						}
+						BalloonTip.Show("Ughh, sorry. We need more time 😥", "Found missing dependency with name VCLibs.\nClose all Microsoft Store apps and go back to the setup!");
 
 						// Preparing...
 						Console.WriteLine($@"Preparing to install Microsoft Visual C++ 2015 UWP Desktop Package (attempt {_vcLibsAttemptNumber}/3)...");
@@ -125,17 +113,7 @@ namespace PrepareStella.Scripts
 						await CliWrap("powershell", $"Add-AppxPackage -Path {Start.VcLibsAppx}", null);
 
 						// Throw info
-						try
-						{
-							new ToastContentBuilder()
-								.AddText("First part was finished 🎉")
-								.AddText("VCLibs has been successfully installed, but now we need to restart your computer.")
-								.Show();
-						}
-						catch (Exception ex)
-						{
-							Start.Logger.Error(ex);
-						}
+						BalloonTip.Show("First part was finished 🎉", "VCLibs has been successfully installed, but now we need to restart your computer.");
 
 						// Completed!
 						Start.Logger.Info("Installed Microsoft Visual C++ 2015 UWP Desktop Package.");
@@ -168,17 +146,7 @@ namespace PrepareStella.Scripts
 					switch (result.ExitCode)
 					{
 						case 3010:
-							try
-							{
-								new ToastContentBuilder()
-									.AddText("Installation alert 📄")
-									.AddText("Required dependency has been successfully installed, but your computer needs a restart. Please wait to complete installation.")
-									.Show();
-							}
-							catch (Exception ex)
-							{
-								Start.Logger.Error(ex);
-							}
+							BalloonTip.Show("Installation alert 📄", "Required dependency has been successfully installed, but your computer needs a restart. Please wait to complete installation.");
 
 							Start.Logger.Info($"{app} installed. Exit code: {result.ExitCode}\nThe requested operation is successful. Changes will not be effective until the system is rebooted.");
 

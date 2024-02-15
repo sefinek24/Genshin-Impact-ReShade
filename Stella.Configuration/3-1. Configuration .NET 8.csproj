@@ -41,6 +41,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="NLog" Version="5.2.8" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Forms\Window.cs" />
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -57,6 +61,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="NLog_CW.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\cat-original-black.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>

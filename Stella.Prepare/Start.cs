@@ -19,7 +19,7 @@ namespace PrepareStella
 		public static readonly string AppName = Assembly.GetExecutingAssembly().GetName().Name;
 		public static readonly string AppVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 		public static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
-		public static readonly string AppData = Utils.GetAppData();
+		public static readonly string AppData = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
 
 		// Links
 		private static readonly string AppWebsite = "https://genshin.sefinek.net";
@@ -37,6 +37,7 @@ namespace PrepareStella
 
 		// Other
 		public static readonly string Line = "===============================================================================================";
+		public static NotifyIcon NotifyIconInstance;
 		public static readonly Icon Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
 
 		// Logger
@@ -72,11 +73,25 @@ namespace PrepareStella
 				return;
 			}
 
+			// WinForms
+			Application.EnableVisualStyles();
+			Application.SetCompatibleTextRenderingDefault(false);
+
+			// Tray
+			NotifyIconInstance = new NotifyIcon
+			{
+				Icon = Icon,
+				Text = AppName,
+				Visible = true
+			};
 
 			Log.InitDirs();
 
 			IntPtr consoleHandle = GetConsoleWindow();
 			TaskbarProgress.MainWinHandle = consoleHandle;
+
+			AppDomain.CurrentDomain.ProcessExit += OnProcessExit;
+			Console.CancelKeyPress += OnCancelKeyPress;
 
 			try
 			{
@@ -86,6 +101,17 @@ namespace PrepareStella
 			{
 				Log.ErrorAndExit(ex, false, false);
 			}
+		}
+
+		private static void OnProcessExit(object sender, EventArgs e)
+		{
+			NotifyIconInstance?.Dispose();
+		}
+
+		private static void OnCancelKeyPress(object sender, ConsoleCancelEventArgs e)
+		{
+			NotifyIconInstance?.Dispose();
+			NotifyIconInstance = null;
 		}
 	}
 }

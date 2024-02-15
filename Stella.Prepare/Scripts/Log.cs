@@ -2,7 +2,6 @@ using System;
 using System.IO;
 using System.Threading;
 using ClassLibrary;
-using Microsoft.Toolkit.Uwp.Notifications;
 
 namespace PrepareStella.Scripts
 {
@@ -35,19 +34,7 @@ namespace PrepareStella.Scripts
 		{
 			Start.Logger.Error(msg);
 
-			try
-			{
-				new ToastContentBuilder()
-					.AddText("Oh no! Error occurred 😿")
-					.AddText("Go back to the configuration window.")
-					.Show();
-
-				TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Error);
-			}
-			catch (Exception ex)
-			{
-				Start.Logger.Error(ex);
-			}
+			BalloonTip.Show("Oh no! Error occurred 😿", "Go back to the configuration window.");
 
 			Console.ForegroundColor = ConsoleColor.Red;
 			Console.WriteLine(string.IsNullOrEmpty(msg.InnerException?.ToString()) ? msg : msg.InnerException);
@@ -61,19 +48,7 @@ namespace PrepareStella.Scripts
 
 			if (!hideError)
 			{
-				try
-				{
-					new ToastContentBuilder()
-						.AddText("Failed 😿")
-						.AddText("🎶 Sad song... Could you please try again?")
-						.Show();
-
-					TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Error);
-				}
-				catch (Exception ex)
-				{
-					Start.Logger.Error(ex);
-				}
+				BalloonTip.Show("Failed 😿", "🎶 Sad song... Could you please try again?");
 
 				Console.ForegroundColor = ConsoleColor.Red;
 				Console.WriteLine($"{log.Message}\n");

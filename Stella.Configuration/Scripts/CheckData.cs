@@ -5,8 +5,9 @@ namespace ConfigurationNC.Scripts;
 internal static class CheckData
 {
 	private const string RegistryPath = @"Software\Stella Mod Launcher";
+	private const string WtRegistry = @"SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\wt.exe";
 
-	public static bool IsUserMyPatron()
+	public static bool IsAStellaPlusSubscriber()
 	{
 		return TryGetRegistryValue("Secret", out string? data) && !string.IsNullOrEmpty(data);
 	}
@@ -24,15 +25,29 @@ internal static class CheckData
 			if (key is not null)
 			{
 				value = key.GetValue(keyName) as string;
-				return !string.IsNullOrEmpty(value);
+				bool data = !string.IsNullOrEmpty(value);
+				Program.Logger.Info($"{keyName}: {data}");
+
+				return data;
 			}
 		}
 		catch (Exception ex)
 		{
+			Program.Logger.Error(ex);
 			MessageBox.Show($"Sorry, but something went wrong. Please report this issue.\n\n{ex.Message}", @"Fatal error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 		}
 
 		value = null;
 		return false;
+	}
+
+	public static bool IsWindowsTerminalInstalled()
+	{
+		using RegistryKey? key = Registry.LocalMachine.OpenSubKey(WtRegistry);
+
+		bool isInstalled = key != null;
+		Program.Logger.Info($"WT is installed: {isInstalled}");
+
+		return isInstalled;
 	}
 }

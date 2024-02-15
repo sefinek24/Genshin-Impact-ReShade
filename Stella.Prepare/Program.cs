@@ -3,7 +3,6 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using ClassLibrary;
 using Microsoft.Win32;
 using PrepareStella.Forms;
@@ -40,9 +39,6 @@ namespace PrepareStella
 			Console.ForegroundColor = ConsoleColor.Green;
 			Console.Write(@"» Game path: ");
 			Console.ResetColor();
-
-			Application.EnableVisualStyles();
-			Application.SetCompatibleTextRenderingDefault(false);
 
 
 			// Get the game path from the registry
@@ -125,6 +121,7 @@ namespace PrepareStella
 			// Save AppData path
 			File.WriteAllText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "stella-appdata.sfn"), Start.AppData);
 
+			// Load cfg
 			int downloadOrUpdateShaders = PrepareIni.ReadInt("PrepareStella", "DownloadOrUpdateShaders", 1);
 			int updateReShadeCfg = PrepareIni.ReadInt("PrepareStella", "UpdateReShadeConfig", 1);
 			int updateFpsUnlockerCfg = PrepareIni.ReadInt("PrepareStella", "UpdateFpsUnlockerConfig", 1);
@@ -170,7 +167,11 @@ namespace PrepareStella
 			if (installWtUpdate == 1)
 			{
 				Console.Write(@"Backing up the Windows Terminal configuration file in app data... ");
-				await TerminalInstallation.RunAsync();
+				await Terminal.MakeBackup();
+				TaskbarProgress.SetProgressValue(72);
+
+				Console.WriteLine(@"Installing the latest Windows Terminal...");
+				await Terminal.Install();
 				TaskbarProgress.SetProgressValue(77);
 			}
 
@@ -207,7 +208,6 @@ namespace PrepareStella
 			// Final
 			TaskbarProgress.SetProgressValue(100);
 
-
 			// Reboot is required?
 			if (Cmd.RebootNeeded)
 			{
@@ -218,10 +218,22 @@ namespace PrepareStella
 				string rebootPc = Console.ReadLine();
 				if (Regex.Match(rebootPc ?? string.Empty, "(?:y)", RegexOptions.IgnoreCase | RegexOptions.Singleline).Success)
 				{
-					await Cmd.CliWrap("shutdown",
-						$"/r /t 30 /c \"{Start.AppName} - scheduled reboot.\n\nThank you for installing. If you need help, add me on Discord: sefinek\n\nGood luck and have fun!\"", null);
+					await Cmd.CliWrap(
+						"shutdown",
+						$"/r /t 30 /c \"{Start.AppName} - scheduled reboot.\n\nThank you for installing. If you need help, add me on Discord: sefinek\n\nGood luck and have fun!\"", null
+					);
 
-					Console.WriteLine(@"Your computer will restart in 30 seconds. Save your work!");
+					int cursorTop1 = Console.CursorTop;
+					int cursorLeft1 = Console.CursorLeft;
+					for (int i = 30; i >= 0; i--)
+					{
+						Console.SetCursorPosition(cursorLeft1, cursorTop1);
+						Console.Write(new string(' ', Console.WindowWidth));
+						Console.SetCursorPosition(cursorLeft1, cursorTop1);
+						Console.WriteLine($@"Your computer will restart in {i + 1} seconds. Save your work!");
+						Thread.Sleep(1000);
+					}
+
 					Start.Logger.Info("PC reboot was scheduled.");
 				}
 			}
@@ -237,13 +249,20 @@ namespace PrepareStella
 
 			// Close app
 			Console.WriteLine($"\n{Start.Line}\n");
-
-			const int seconds = 20;
 			Console.ForegroundColor = ConsoleColor.Green;
-			Console.WriteLine($@"» The program will close in {seconds} seconds.");
-			for (int i = seconds; i >= 1; i--) Thread.Sleep(1000);
 
-			TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Indeterminate);
+			int cursorTop2 = Console.CursorTop;
+			int cursorLeft2 = Console.CursorLeft;
+			for (int i = 15; i >= 0; i--)
+			{
+				Console.SetCursorPosition(cursorLeft2, cursorTop2);
+				Console.Write(new string(' ', Console.WindowWidth));
+				Console.SetCursorPosition(cursorLeft2, cursorTop2);
+				Console.Write($@"» The program will close in {i + 1} seconds.");
+				Thread.Sleep(1000);
+			}
+
+			Start.NotifyIconInstance?.Dispose();
 		}
 	}
 }

@@ -7,9 +7,9 @@ using File = System.IO.File;
 
 namespace PrepareStella.Scripts.Preparing
 {
-	internal static class TerminalInstallation
+	internal static class Terminal
 	{
-		public static async Task RunAsync()
+		public static async Task MakeBackup()
 		{
 			string wtAppDataLocal = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Microsoft", "Windows Terminal");
 			if (!Directory.Exists(wtAppDataLocal))
@@ -57,10 +57,10 @@ namespace PrepareStella.Scripts.Preparing
 				Start.Logger.Info($@"Created: {Path.Combine(wtAppDataLocal, "Stella WT Backup.lnk")}");
 				Console.WriteLine(@"Saved in Stella AppData.");
 			}
+		}
 
-			// Installing
-			Console.WriteLine(@"Installing the latest Windows Terminal...");
-
+		public static async Task<Task> Install()
+		{
 			if (!File.Exists(Start.WtMsixBundle))
 				Log.ErrorAndExit(new Exception($"I can't find a required file: {Start.WtMsixBundle}"), false, false);
 
@@ -69,6 +69,7 @@ namespace PrepareStella.Scripts.Preparing
 			Process[] wtName = Process.GetProcessesByName("WindowsTerminal");
 			if (wtName.Length != 0) await Cmd.CliWrap("taskkill", "/F /IM WindowsTerminal.exe", null);
 
+			// Install
 			try
 			{
 				await Cmd.CliWrap("powershell", $"Add-AppxPackage -Path \"{Start.WtMsixBundle}\"", Start.AppPath);
@@ -89,10 +90,12 @@ namespace PrepareStella.Scripts.Preparing
 			{
 				Start.Logger.Info($"Windows Terminal has been successfully installed in {wtProgramFiles}");
 
-				string wtAppData2 = Utils.GetAppData();
-				if (string.IsNullOrEmpty(wtAppData2))
+				if (string.IsNullOrEmpty(Start.AppData))
 					Log.ErrorAndExit(new Exception("Fatal error. Code: 3781780149"), false, true);
 			}
+
+
+			return Task.CompletedTask;
 		}
 	}
 }

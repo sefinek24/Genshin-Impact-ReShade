@@ -1,7 +1,6 @@
 using System;
 using System.IO;
 using System.IO.Compression;
-using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -27,13 +26,12 @@ namespace PrepareStella.Scripts.Preparing
 
 			// Checking current version of resources
 			Console.WriteLine(@"Checking current version of resources...");
-			using (WebClient webClient = new WebClient())
+			using (HttpClient httpClient = new HttpClient())
 			{
-				webClient.Headers.Add("User-Agent", Start.UserAgent);
-				string responseContent = await webClient.DownloadStringTaskAsync($"{Start.WebApi}/genshin-stella-mod/version/app/launcher/resources");
+				httpClient.DefaultRequestHeaders.Add("User-Agent", Start.UserAgent);
+				string responseContent = await httpClient.GetStringAsync($"{Start.WebApi}/genshin-stella-mod/version/app/launcher/resources");
 				StellaResources json = JsonConvert.DeserializeObject<StellaResources>(responseContent);
 
-				// Deleting existing resources zip file
 				string zipPath = Path.Combine(resourcesGlobalPath, "Temp files", $"Stella Mod Resources - v{json.Message}.zip");
 				if (!Directory.Exists(Path.GetDirectoryName(zipPath))) Directory.CreateDirectory(Path.GetDirectoryName(zipPath) ?? string.Empty);
 				if (File.Exists(zipPath))
@@ -43,20 +41,35 @@ namespace PrepareStella.Scripts.Preparing
 					Start.Logger.Info($"Deleted {zipPath}");
 				}
 
-				// Downloading resources zip file
-				Console.WriteLine(@"Downloading resources from GitHub...");
-				using (HttpClient httpClient = new HttpClient())
-				{
-					httpClient.DefaultRequestHeaders.Add("User-Agent", Start.UserAgent);
+				Console.Write(@"Preparing to download resources...");
 
-					using (Stream stream = await httpClient.GetStreamAsync("https://github.com/sefinek24/Genshin-Stella-Resources/releases/latest/download/resources.zip"))
-					using (FileStream fs = File.Create(zipPath))
+				long receivedBytes = 0;
+				int lastPercentage = 0;
+				DateTime startTime = DateTime.Now;
+
+				HttpResponseMessage response = await httpClient.GetAsync("https://github.com/sefinek24/Genshin-Stella-Resources/releases/latest/download/resources.zip", HttpCompletionOption.ResponseHeadersRead);
+				long? totalBytes = response.Content.Headers.ContentLength;
+
+				using (Stream stream = await response.Content.ReadAsStreamAsync())
+				using (FileStream fs = new FileStream(zipPath, FileMode.Create, FileAccess.Write, FileShare.None))
+				{
+					byte[] buffer = new byte[8192];
+					int bytesRead;
+					while ((bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length)) > 0)
 					{
-						await stream.CopyToAsync(fs);
+						await fs.WriteAsync(buffer, 0, bytesRead);
+						receivedBytes += bytesRead;
+						int percentage = (int)((receivedBytes * 100) / totalBytes.GetValueOrDefault(1));
+						TimeSpan elapsed = DateTime.Now - startTime;
+						double speed = receivedBytes / elapsed.TotalSeconds;
+
+						if (percentage == lastPercentage) continue;
+						Console.SetCursorPosition(0, Console.CursorTop);
+						Console.Write($"\rDownloading Stella Mod resources... {receivedBytes}/{totalBytes} bytes ({percentage}%) at {speed / 1024:0.00} KB/s ");
+						lastPercentage = percentage;
 					}
 				}
 
-				// Unpacking resources
 				Console.WriteLine(@"Unpacking resources...");
 				using (ZipArchive archive = ZipFile.OpenRead(zipPath))
 				{
