@@ -70,7 +70,7 @@ namespace PrepareStella.Scripts.Preparing
 					}
 				}
 
-				Console.WriteLine(@"Unpacking resources...");
+				Console.WriteLine("\nUnpacking resources...");
 				using (ZipArchive archive = ZipFile.OpenRead(zipPath))
 				{
 					foreach (ZipArchiveEntry entry in archive.Entries)

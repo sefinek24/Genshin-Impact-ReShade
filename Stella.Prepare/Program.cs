@@ -142,7 +142,7 @@ namespace PrepareStella
 			// Download and prepare ReShade config
 			if (updateReShadeCfg == 1)
 			{
-				Console.WriteLine(@"Downloading ReShade files...");
+				Console.WriteLine(@"Prepare ReShade...");
 				await UpdateReShadeCfg.RunAsync();
 				TaskbarProgress.SetProgressValue(46);
 			}
@@ -253,7 +253,7 @@ namespace PrepareStella
 
 			int cursorTop2 = Console.CursorTop;
 			int cursorLeft2 = Console.CursorLeft;
-			for (int i = 15; i >= 0; i--)
+			for (int i = 17; i >= 0; i--)
 			{
 				Console.SetCursorPosition(cursorLeft2, cursorTop2);
 				Console.Write(new string(' ', Console.WindowWidth));

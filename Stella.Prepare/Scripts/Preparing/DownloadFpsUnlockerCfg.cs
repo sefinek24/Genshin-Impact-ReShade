@@ -12,16 +12,30 @@ namespace PrepareStella.Scripts.Preparing
 			try
 			{
 				string unlockerFolderPath = Path.Combine(Start.AppPath, "data", "unlocker");
-				Directory.CreateDirectory(unlockerFolderPath);
+				string fpsUnlockerConfigPath = Path.Combine(unlockerFolderPath, "unlocker.config.json");
+
+				Console.Write($@"Downloading {Path.GetFileName(fpsUnlockerConfigPath)} ");
 
 				using (HttpClient httpClient = new HttpClient())
 				{
 					httpClient.DefaultRequestHeaders.Add("User-Agent", Start.UserAgent);
-					string fpsUnlockerConfig = await httpClient.GetStringAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/unlocker.config.json");
+					const string url = "https://cdn.sefinek.net/resources/v3/genshin-stella-mod/unlocker.config.json";
 
-					string fpsUnlockerConfigPath = Path.Combine(unlockerFolderPath, "unlocker.config.json");
-					string gameExePath = Program.SavedGamePath?.Replace("\\", "\\\\");
-					string fpsUnlockerConfigContent = fpsUnlockerConfig.Replace("{GamePath}", gameExePath ?? string.Empty);
+					using (HttpResponseMessage headResponse = await httpClient.SendAsync(new HttpRequestMessage(HttpMethod.Head, url)))
+					{
+						if (headResponse.IsSuccessStatusCode)
+						{
+							long? contentLength = headResponse.Content.Headers.ContentLength;
+							Console.WriteLine($@"({contentLength} bytes)...");
+						}
+						else
+						{
+							Console.WriteLine(@"(Unknown file size)...");
+						}
+					}
+
+					string fpsUnlockerConfig = await httpClient.GetStringAsync(url);
+					string fpsUnlockerConfigContent = fpsUnlockerConfig.Replace("{GamePath}", Program.SavedGamePath?.Replace("\\", "\\\\") ?? string.Empty);
 
 					await WriteToFileAsync(fpsUnlockerConfigPath, fpsUnlockerConfigContent);
 				}

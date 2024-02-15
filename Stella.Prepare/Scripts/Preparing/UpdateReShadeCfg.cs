@@ -39,9 +39,25 @@ namespace PrepareStella.Scripts.Preparing
 
 		private static async Task DownloadFileAsync(string url, string filePath)
 		{
+			Console.Write($@"Downloading {Path.GetFileName(filePath)} ");
+
 			using (HttpClient httpClient = new HttpClient())
 			{
 				httpClient.DefaultRequestHeaders.Add("User-Agent", Start.UserAgent);
+
+				using (HttpResponseMessage headResponse = await httpClient.SendAsync(new HttpRequestMessage(HttpMethod.Head, url)))
+				{
+					if (headResponse.IsSuccessStatusCode)
+					{
+						long? contentLength = headResponse.Content.Headers.ContentLength;
+						Console.WriteLine($@"({contentLength} bytes)...");
+					}
+					else
+					{
+						Console.WriteLine(@"(Unknown file size)...");
+					}
+				}
+
 				using (HttpResponseMessage response = await httpClient.GetAsync(url))
 				{
 					if (response.IsSuccessStatusCode)
