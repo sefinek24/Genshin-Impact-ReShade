@@ -45,7 +45,7 @@ namespace StellaLauncher.Forms.Other
 
 
 				case 1:
-					if (Secret.IsMyPatron)
+					if (Secret.IsStellaPlusSubscriber)
 					{
 						SetToBatchFiles();
 

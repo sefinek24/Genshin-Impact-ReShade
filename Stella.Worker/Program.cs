@@ -32,8 +32,8 @@ namespace GenshinStellaMod
 		public static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
 
 		// API
-		// public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v5" : "https://api.sefinek.net/api/v5";
-		public static readonly string WebApi = "https://api.sefinek.net/api/v5";
+		public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v6" : "https://api.sefinek.net/api/v6";
+		// public static readonly string WebApi = "https://api.sefinek.net/api/v6";
 
 		// Logger
 		public static Logger Logger = LogManager.GetCurrentClassLogger();

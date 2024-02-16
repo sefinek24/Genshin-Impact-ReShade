@@ -45,7 +45,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 				case 35:
 				case 45:
 				case 60:
-					if (!Secret.IsMyPatron) new SupportMe { Icon = Program.Ico }.ShowDialog();
+					if (!Secret.IsStellaPlusSubscriber) new SupportMe { Icon = Program.Ico }.ShowDialog();
 					break;
 
 				// case 15:
@@ -114,7 +114,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 				}
 				case MessageType.StatusLabel:
 				{
-					if (Secret.IsMyPatron)
+					if (Secret.IsStellaPlusSubscriber)
 						Default._status_Label.Text += $"[i] {Resources.Default_ClickStartGameButtonToInjectReShadeFPSUnlockAnd3DMigoto}\n[i] {Resources.LaunchCount_ABigThankYouTouYouForYourWillingnessToSupport}\n";
 					else
 						Default._status_Label.Text += $"[i] {Resources.Default_ClickStartGameButtonToInjectReShadeAndUseFPSUnlock}\n[i] {Resources.LaunchCount_TheSimultaneousOfUseRSFU3DM}\n";
@@ -124,7 +124,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 				}
 				case MessageType.TheSimultaneousOfUse:
 				{
-					if (!Secret.IsMyPatron)
+					if (!Secret.IsStellaPlusSubscriber)
 						Default._status_Label.Text += $"[i] {Resources.LaunchCount_TheSimultaneousOfUseRSFU3DM}\n";
 
 					Program.Logger.Info(Default._status_Label.Text);
@@ -132,7 +132,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 				}
 				case MessageType.ThankYouForYourSupport:
 				{
-					if (Secret.IsMyPatron)
+					if (Secret.IsStellaPlusSubscriber)
 						Default._status_Label.Text += $"[i] {Resources.LaunchCount_ThankYouForYourSupport}\n";
 
 					Program.Logger.Info(Default._status_Label.Text);

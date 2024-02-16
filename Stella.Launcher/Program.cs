@@ -52,8 +52,8 @@ namespace StellaLauncher
 			return httpClient;
 		});
 
-		// public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v5" : "https://api.sefinek.net/api/v5";
-		public static readonly string WebApi = "https://api.sefinek.net/api/v5";
+		public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v6" : "https://api.sefinek.net/api/v6";
+		// public static readonly string WebApi = "https://api.sefinek.net/api/v5";
 
 		// Supported languages
 		private static readonly string[] SupportedLangs = { "en", "pl" };

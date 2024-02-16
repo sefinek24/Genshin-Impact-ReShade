@@ -35,7 +35,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 							.Add(Program.ProductVersion) // 1
 							.Add(Data.ReShadeVer) // 2
 							.Add(Data.UnlockerVer) // 3
-							.Add(Secret.IsMyPatron ? 1 : 6) // 4
+							.Add(Secret.IsStellaPlusSubscriber ? 1 : 6) // 4
 					};
 					break;
 				case "cmd":
@@ -48,8 +48,8 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 							.Add(Program.ProductVersion) // 1
 							.Add(Data.ReShadeVer) // 2
 							.Add(Data.UnlockerVer) // 3
-							.Add(Secret.IsMyPatron ? 1 : 6) // 4
-							.Add(Secret.IsMyPatron ? $"\"{Default.ResourcesPath}\\3DMigoto\"" : "0") // 5 
+							.Add(Secret.IsStellaPlusSubscriber ? 1 : 6) // 4
+							.Add(Secret.IsStellaPlusSubscriber ? $"\"{Default.ResourcesPath}\\3DMigoto\"" : "0") // 5 
 							.Add(await Utils.GetGameVersion()) // 6
 							.Add(Log.CmdLogs) // 7
 							.Add(Program.AppPath) // 8
@@ -148,7 +148,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 
 		public static async Task Migoto()
 		{
-			if (!Secret.IsMyPatron)
+			if (!Secret.IsStellaPlusSubscriber)
 			{
 				DialogResult result = MessageBox.Show(Resources.Default_ThisFeatureIsAvailableOnlyForStellaModPlusSubscribers, Program.AppNameVer, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 				if (result == DialogResult.Yes) Utils.OpenUrl("https://sefinek.net/genshin-impact-reshade/subscription");
@@ -181,7 +181,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 							.Add(Data.ReShadeVer) // 2
 							.Add(Data.UnlockerVer) // 3
 							.Add(5) // 4
-							.Add(Secret.IsMyPatron ? $"\"{Default.ResourcesPath}\\3DMigoto\"" : "0") // 5 
+							.Add(Secret.IsStellaPlusSubscriber ? $"\"{Default.ResourcesPath}\\3DMigoto\"" : "0") // 5 
 							.Add(await Utils.GetGameVersion()) // 6
 							.Add(Log.CmdLogs) // 7
 							.Add(Program.AppPath) // 8

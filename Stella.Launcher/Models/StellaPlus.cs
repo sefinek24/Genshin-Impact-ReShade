@@ -1,29 +1,6 @@
 namespace StellaLauncher.Models
 {
-	public class LauncherData
-	{
-		public string Version { get; set; }
-		public bool Beta { get; set; }
-		public string Size { get; set; }
-		public string ReleaseDate { get; set; }
-	}
-
-	public class StellaApiVersion
-	{
-		public bool Success { get; set; }
-		public int Status { get; set; }
-		public LauncherData Launcher { get; set; }
-	}
-
-	public class StellaResources
-	{
-		public bool Success { get; set; }
-		public int Status { get; set; }
-		public string Message { get; set; }
-		public string Date { get; set; }
-	}
-
-	// Token
+	// Auth
 	public class VerifyToken
 	{
 		public bool Success { get; set; }
@@ -33,10 +10,12 @@ namespace StellaLauncher.Models
 		public bool DeleteTokens { get; set; }
 		public string Token { get; set; }
 		public int TierId { get; set; }
+		public string Username { get; set; }
+		public string AvatarUrl { get; set; }
 	}
 
-	// Benefits
-	public class PatronResources
+	// Stella Mod Plus (remote)
+	public class StellaPlusBenefits
 	{
 		public string Migoto { get; set; }
 		public string Mods { get; set; }
@@ -48,7 +27,7 @@ namespace StellaLauncher.Models
 
 	public class ResourcesData
 	{
-		public PatronResources Resources { get; set; }
+		public StellaPlusBenefits Resources { get; set; }
 	}
 
 	public class BenefitVersions
@@ -56,7 +35,6 @@ namespace StellaLauncher.Models
 		public bool Success { get; set; }
 		public int Status { get; set; }
 		public ResourcesData Message { get; set; }
-		public int Tier { get; set; }
 	}
 
 	public class GetUpdateUrl
@@ -67,12 +45,11 @@ namespace StellaLauncher.Models
 		public string PreparedUrl { get; set; }
 	}
 
-	// Version of benefits
-	public class BenefitsJsonVersion
+	// Stella Mod Plus (local)
+	public class LocalBenefitsVersion
 	{
 		public string Version { get; set; }
-
 		public string Date { get; set; }
-		// public int Tier { get; set; }
+		public int Tier { get; set; }
 	}
 }

@@ -23,7 +23,7 @@ namespace StellaLauncher.Scripts.Patrons
 			if (File.Exists(migotoVerPath))
 			{
 				string migotoJson = File.ReadAllText(migotoVerPath);
-				BenefitsJsonVersion migotoJsonConverted = JsonConvert.DeserializeObject<BenefitsJsonVersion>(migotoJson);
+				LocalBenefitsVersion migotoJsonConverted = JsonConvert.DeserializeObject<LocalBenefitsVersion>(migotoJson);
 
 				if (remoteVersions.Message.Resources.Migoto != migotoJsonConverted.Version)
 				{
@@ -49,7 +49,7 @@ namespace StellaLauncher.Scripts.Patrons
 			if (File.Exists(modsVerPath))
 			{
 				string modsJson = File.ReadAllText(modsVerPath);
-				BenefitsJsonVersion modsJsonConverted = JsonConvert.DeserializeObject<BenefitsJsonVersion>(modsJson);
+				LocalBenefitsVersion modsJsonConverted = JsonConvert.DeserializeObject<LocalBenefitsVersion>(modsJson);
 				if (remoteVersions.Message.Resources.Mods != modsJsonConverted.Version)
 				{
 					Default._version_LinkLabel.Text = $@"v{modsJsonConverted.Version} → v{remoteVersions.Message.Resources.Mods}";
@@ -77,7 +77,7 @@ namespace StellaLauncher.Scripts.Patrons
 			if (File.Exists(addonsVersionPath))
 			{
 				string addonsJson = File.ReadAllText(addonsVersionPath);
-				BenefitsJsonVersion addonsJsonConverted = JsonConvert.DeserializeObject<BenefitsJsonVersion>(addonsJson);
+				LocalBenefitsVersion addonsJsonConverted = JsonConvert.DeserializeObject<LocalBenefitsVersion>(addonsJson);
 				if (remoteVersions.Message.Resources.Addons != addonsJsonConverted.Version)
 				{
 					Default._version_LinkLabel.Text = $@"v{addonsJsonConverted.Version} → v{remoteVersions.Message.Resources.Addons}";
@@ -102,7 +102,7 @@ namespace StellaLauncher.Scripts.Patrons
 			if (File.Exists(presetsVersionPath))
 			{
 				string presetsJson = File.ReadAllText(presetsVersionPath);
-				BenefitsJsonVersion presetsJsonConverted = JsonConvert.DeserializeObject<BenefitsJsonVersion>(presetsJson);
+				LocalBenefitsVersion presetsJsonConverted = JsonConvert.DeserializeObject<LocalBenefitsVersion>(presetsJson);
 				if (remoteVersions.Message.Resources.Presets != presetsJsonConverted.Version)
 				{
 					Default._version_LinkLabel.Text = $@"v{presetsJsonConverted.Version} → v{remoteVersions.Message.Resources.Presets}";
@@ -130,7 +130,7 @@ namespace StellaLauncher.Scripts.Patrons
 			if (File.Exists(shadersVersionPath))
 			{
 				string shadersJson = File.ReadAllText(shadersVersionPath);
-				BenefitsJsonVersion shadersJsonConverted = JsonConvert.DeserializeObject<BenefitsJsonVersion>(shadersJson);
+				LocalBenefitsVersion shadersJsonConverted = JsonConvert.DeserializeObject<LocalBenefitsVersion>(shadersJson);
 				if (remoteVersions.Message.Resources.Shaders != shadersJsonConverted.Version)
 				{
 					Default._version_LinkLabel.Text = $@"v{shadersJsonConverted.Version} → v{remoteVersions.Message.Resources.Shaders}";
@@ -155,7 +155,7 @@ namespace StellaLauncher.Scripts.Patrons
 			if (File.Exists(cmdVersionPath))
 			{
 				string cmdJson = File.ReadAllText(cmdVersionPath);
-				BenefitsJsonVersion cmdJsonConverted = JsonConvert.DeserializeObject<BenefitsJsonVersion>(cmdJson);
+				LocalBenefitsVersion cmdJsonConverted = JsonConvert.DeserializeObject<LocalBenefitsVersion>(cmdJson);
 				if (remoteVersions.Message.Resources.Cmd != cmdJsonConverted.Version)
 				{
 					Default._version_LinkLabel.Text = $@"v{cmdJsonConverted.Version} → v{remoteVersions.Message.Resources.Cmd}";

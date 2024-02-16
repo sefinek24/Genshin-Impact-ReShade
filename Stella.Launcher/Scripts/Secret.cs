@@ -10,7 +10,7 @@ namespace StellaLauncher.Scripts
 	internal static class Secret
 	{
 		public const string RegistryKeyPath = @"Software\Stella Mod Launcher";
-		public static bool IsMyPatron = false;
+		public static bool IsStellaPlusSubscriber = false;
 		public static string BearerToken;
 
 		public static string GetTokenFromRegistry()

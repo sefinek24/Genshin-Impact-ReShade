@@ -24,7 +24,7 @@ namespace StellaLauncher.Scripts.Download
 		private static long _lastBytesReceived;
 		private static DateTime _lastUpdateTime = DateTime.Now;
 
-		public static async void Run(string remoteVersion, DateTime remoteVerDate)
+		public static async void Run(string remoteVersion, DateTime remoteVerDate, bool beta)
 		{
 			// 1
 			Default._version_LinkLabel.Text = $@"v{Program.ProductVersion} → v{remoteVersion}";
@@ -54,7 +54,7 @@ namespace StellaLauncher.Scripts.Download
 
 			// Log
 			Default._status_Label.Text += $"[i] {string.Format(Resources.NormalRelease_NewVersionFrom_IsAvailable, remoteVerDate)}\n";
-			Program.Logger.Info($"New release from {remoteVerDate} is available: v{Program.ProductVersion} → v{remoteVersion}");
+			Program.Logger.Info($"New release from {remoteVerDate} is available: v{Program.ProductVersion} → v{remoteVersion} ({(beta ? "Beta" : "Stable")})");
 
 			// Taskbar
 			TaskbarProgress.SetProgressValue(100);

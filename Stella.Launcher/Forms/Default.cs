@@ -180,7 +180,7 @@ namespace StellaLauncher.Forms
 				string data = await Secret.VerifyToken(registrySecret);
 				if (data == null)
 				{
-					Secret.IsMyPatron = false;
+					Secret.IsStellaPlusSubscriber = false;
 
 					Program.Logger.Info("Received null from the server. Deleting benefits in progress...");
 					DeleteBenefits.Start();
@@ -202,16 +202,30 @@ namespace StellaLauncher.Forms
 					switch (remote.Status)
 					{
 						case 200:
-							Secret.IsMyPatron = true;
+							Secret.IsStellaPlusSubscriber = true;
 							label1.Text = @"Genshin Stella Mod Plus Launcher";
 							madeBySefinek_Label.Text = @"What will we be doing today?";
 
-							Program.Logger.Info($"The user is a subscriber to Stella Mod Plus ({Secret.IsMyPatron}). Benefits have been unlocked.");
+							if (!string.IsNullOrEmpty(remote.AvatarUrl))
+							{
+								Image avatar = await Utils.LoadImageAsync(remote.AvatarUrl);
+								pictureBox4.Visible = true;
+								pictureBox4.Image = avatar;
+							}
+							else
+							{
+								Program.Logger.Warn($"remote.AvatarUrl is null or empty: {remote.AvatarUrl}");
+							}
+
+							label2.Text = string.Format(label2.Text, remote.Username);
+							label2.Visible = true;
+
+							Program.Logger.Info($"The user is a subscriber to Stella Mod Plus ({Secret.IsStellaPlusSubscriber}). Tier {remote.TierId}. Benefits have been unlocked.");
 							Secret.BearerToken = remote.Token;
 							break;
 
 						case 400:
-							Secret.IsMyPatron = false;
+							Secret.IsStellaPlusSubscriber = false;
 							label1.Text = @"Something went wrong /ᐠﹷ ‸ ﹷ ᐟ\ﾉ";
 
 							MessageBox.Show(
@@ -220,7 +234,7 @@ namespace StellaLauncher.Forms
 							break;
 
 						case 500:
-							Secret.IsMyPatron = false;
+							Secret.IsStellaPlusSubscriber = false;
 							label1.Text = @"Fatal server error /ᐠ_ ꞈ _ᐟ\";
 
 							MessageBox.Show(
@@ -229,7 +243,7 @@ namespace StellaLauncher.Forms
 							break;
 
 						default:
-							Secret.IsMyPatron = false;
+							Secret.IsStellaPlusSubscriber = false;
 							label1.Text = @"Oh nooo... Sad cat... ( ̿–ᆺ ̿–)";
 
 							MessageBox.Show(
@@ -241,7 +255,7 @@ namespace StellaLauncher.Forms
 			}
 			else
 			{
-				Secret.IsMyPatron = false;
+				Secret.IsStellaPlusSubscriber = false;
 
 				DeleteBenefits.Start();
 				Delete.RegistryKey("Secret");
@@ -308,7 +322,7 @@ namespace StellaLauncher.Forms
 				case "exe":
 					Run.InjectType = "exe";
 					break;
-				case "cmd" when Secret.IsMyPatron:
+				case "cmd" when Secret.IsStellaPlusSubscriber:
 					Run.InjectType = "cmd";
 					break;
 				default:
@@ -317,7 +331,7 @@ namespace StellaLauncher.Forms
 					Program.Settings.WriteString("Injection", "Method", "exe");
 					Program.Settings.Save();
 
-					if (!Secret.IsMyPatron)
+					if (!Secret.IsStellaPlusSubscriber)
 					{
 						status_Label.Text += @"[x] Batch file usage in Genshin Stella Mod is exclusive to Stella Mod Plus subscribers.";
 						Program.Logger.Error("To utilize batch files, a subscription to Stella Mod Plus is required.");

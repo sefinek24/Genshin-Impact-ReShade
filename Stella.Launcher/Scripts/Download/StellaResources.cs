@@ -26,7 +26,7 @@ namespace StellaLauncher.Scripts.Download
 		private static long _lastBytesReceived;
 		private static DateTime _lastUpdateTime = DateTime.Now;
 
-		public static async void Run(string localResVersion, string remoteResVersion, string remoteResDate)
+		public static async void Run(string localResVersion, string remoteResVersion, DateTime remoteResDate)
 		{
 			// 1
 			Default._version_LinkLabel.Text = $@"v{localResVersion} → v{remoteResVersion}";
@@ -48,14 +48,10 @@ namespace StellaLauncher.Scripts.Download
 			// BalloonTip
 			BalloonTip.Show($"📥 {Resources.NormalRelease_WeFoundNewUpdates}", Resources.NormalRelease_NewReleaseIsAvailableDownloadNow);
 
-
-			// Date
-			DateTime date = DateTime.Parse(remoteResDate, null, DateTimeStyles.RoundtripKind).ToUniversalTime().ToLocalTime();
-
 			// Log
-			Program.Logger.Info($"Found the new update of resources from {date} - {remoteResDate}");
+			Program.Logger.Info($"Found the new update of resources from {remoteResDate} - {remoteResDate}");
 
-			Default._status_Label.Text += $"[i] {string.Format(Resources.StellaResources_NewResourcesUpdateIsAvailable, date)}\n";
+			Default._status_Label.Text += $"[i] {string.Format(Resources.StellaResources_NewResourcesUpdateIsAvailable, remoteResDate)}\n";
 			_stellaResZip = Path.Combine(Default.ResourcesPath, $"Stella resources - v{remoteResVersion}.zip");
 
 

@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Net.Http;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -176,7 +177,7 @@ namespace StellaLauncher.Scripts
 			Default._runFpsUnlocker_LinkLabel.Visible = true;
 			Default._only3DMigoto_LinkLabel.Visible = true;
 			Default._runGiLauncher_LinkLabel.Visible = true;
-			if (!Secret.IsMyPatron) Default._becomeMyPatron_LinkLabel.Visible = true;
+			if (!Secret.IsStellaPlusSubscriber) Default._becomeMyPatron_LinkLabel.Visible = true;
 		}
 
 		public static void HideProgressBar(bool error)
@@ -196,6 +197,20 @@ namespace StellaLauncher.Scripts
 			Default._preparingPleaseWait.Hide();
 
 			Default._progressBar1.Value = 0;
+		}
+
+		public static async Task<Image> LoadImageAsync(string url)
+		{
+			Program.Logger.Info($"Downloading image via LoadImageAsync(): {url}");
+
+			HttpClient httpClient = new HttpClient();
+			httpClient.DefaultRequestHeaders.UserAgent.ParseAdd(Program.UserAgent);
+
+			HttpResponseMessage response = await httpClient.GetAsync(url);
+			byte[] bytes = await response.Content.ReadAsByteArrayAsync();
+
+			MemoryStream ms = new MemoryStream(bytes);
+			return Image.FromStream(ms);
 		}
 	}
 }

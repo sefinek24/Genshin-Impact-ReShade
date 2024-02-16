@@ -26,35 +26,36 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 
 			try
 			{
-				string json = await Program.SefinWebClient.GetStringAsync($"{Program.WebApi}/genshin-stella-mod/version/app/launcher");
+				string json = await Program.SefinWebClient.GetStringAsync($"{Program.WebApi}/genshin-stella-mod/versions");
+				Program.Logger.Info(json);
+
 				StellaApiVersion res = JsonConvert.DeserializeObject<StellaApiVersion>(json);
 
-				string remoteVersion = res.Launcher.Version;
-				DateTime remoteVerDate = DateTime.Parse(res.Launcher.ReleaseDate, null, DateTimeStyles.RoundtripKind).ToUniversalTime().ToLocalTime();
-
+				string remoteDbLauncherVersion = res.Launcher.Release;
+				DateTime remoteLauncherDate = DateTime.Parse(res.Launcher.Date, null, DateTimeStyles.RoundtripKind).ToUniversalTime().ToLocalTime();
 
 				// == Major release ==
-				if (Program.AppVersion[0] != remoteVersion[0])
+				if (Program.AppVersion[0] != remoteDbLauncherVersion[0])
 				{
 					Default.UpdateIsAvailable = true;
 
-					MajorRelease.Run(remoteVersion, remoteVerDate);
+					MajorRelease.Run(remoteDbLauncherVersion, remoteLauncherDate);
 					return 1;
 				}
 
 
 				// == Normal release ==
-				if (Program.AppVersion != remoteVersion)
+				if (Program.AppVersion != remoteDbLauncherVersion)
 				{
 					Default.UpdateIsAvailable = true;
 
-					NormalRelease.Run(remoteVersion, remoteVerDate);
+					NormalRelease.Run(remoteDbLauncherVersion, remoteLauncherDate, res.Launcher.Beta);
 					return 1;
 				}
 
 
 				// == Check new updates of resources ==
-				if (!Secret.IsMyPatron)
+				if (!Secret.IsStellaPlusSubscriber)
 				{
 					string jsonFile = Path.Combine(Default.ResourcesPath, "data.json");
 					if (!File.Exists(jsonFile))
@@ -66,17 +67,18 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 						return -1;
 					}
 
+
 					string jsonContent = File.ReadAllText(jsonFile);
+					Program.Logger.Info($"{jsonFile}: {jsonContent}");
 					LocalResources data = JsonConvert.DeserializeObject<LocalResources>(jsonContent);
 
-					string resJson = await Program.SefinWebClient.GetStringAsync($"{Program.WebApi}/genshin-stella-mod/version/app/launcher/resources");
-					StellaResources resourcesRes = JsonConvert.DeserializeObject<StellaResources>(resJson);
-
-					if (data.Version != resourcesRes.Message)
+					string remoteDbResourcesVersion = res.Resources.Release;
+					if (data.Version != remoteDbResourcesVersion)
 					{
 						Default.UpdateIsAvailable = true;
 
-						DownloadResources.Run(data.Version, resourcesRes.Message, resourcesRes.Date);
+						DateTime remoteResourcesDate = DateTime.Parse(res.Resources.Date, null, DateTimeStyles.RoundtripKind).ToUniversalTime().ToLocalTime();
+						DownloadResources.Run(data.Version, remoteDbResourcesVersion, remoteResourcesDate);
 						return 1;
 					}
 				}
@@ -114,7 +116,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 
 
 				// == For Stella Mod Plus subscribers ==
-				if (Secret.IsMyPatron)
+				if (Secret.IsStellaPlusSubscriber)
 				{
 					int found = await CheckForUpdatesOfBenefits.Analyze();
 					if (found == 1)
