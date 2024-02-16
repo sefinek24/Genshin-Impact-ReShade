@@ -770,13 +770,13 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>None</value>
   </data>
   <data name="clickMe_LinkLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 12pt, style=Bold</value>
+    <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="clickMe_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1043, 585</value>
+    <value>1034, 163</value>
   </data>
   <data name="clickMe_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 20</value>
+    <value>132, 31</value>
   </data>
   <data name="clickMe_LinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>116</value>
@@ -1001,6 +1001,49 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
   </data>
   <data name="&gt;&gt;linkLabel2.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="label2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 15pt</value>
+  </data>
+  <data name="label2.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1001, 436</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 52</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>124</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Logged as
+{0}</value>
+  </data>
+  <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomRight</value>
+  </data>
+  <data name="label2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="toolsIco_PictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1288,7 +1331,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>None</value>
   </data>
   <data name="paimon_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1181, 572</value>
+    <value>1173, 157</value>
   </data>
   <data name="paimon_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 44</value>
@@ -1465,10 +1508,10 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>True</value>
   </data>
   <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1158, 498</value>
+    <value>1100, 493</value>
   </data>
   <data name="pictureBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 68</value>
+    <value>126, 126</value>
   </data>
   <data name="pictureBox4.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -1490,52 +1533,6 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
   </data>
   <data name="&gt;&gt;pictureBox4.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="label2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 15pt</value>
-  </data>
-  <data name="label2.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopRight</value>
-  </data>
-  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>910, 498</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 68</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>124</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Logged as
-{0}</value>
-  </data>
-  <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="label2.ToolTip" xml:space="preserve">
-    <value>&gt;~~&lt;</value>
-  </data>
-  <data name="label2.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

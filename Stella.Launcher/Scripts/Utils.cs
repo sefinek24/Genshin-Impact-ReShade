@@ -2,6 +2,7 @@ using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.IO;
 using System.Net.Http;
 using System.Reflection;
@@ -203,14 +204,42 @@ namespace StellaLauncher.Scripts
 		{
 			Program.Logger.Info($"Downloading image via LoadImageAsync(): {url}");
 
-			HttpClient httpClient = new HttpClient();
-			httpClient.DefaultRequestHeaders.UserAgent.ParseAdd(Program.UserAgent);
+			try
+			{
+				HttpClient httpClient = Program.WbClient.Value;
+				HttpResponseMessage response = await httpClient.GetAsync(url);
+				byte[] bytes = await response.Content.ReadAsByteArrayAsync();
 
-			HttpResponseMessage response = await httpClient.GetAsync(url);
-			byte[] bytes = await response.Content.ReadAsByteArrayAsync();
+				MemoryStream ms = new MemoryStream(bytes);
+				return Image.FromStream(ms);
+			}
+			catch (Exception ex)
+			{
+				BalloonTip.Show(ex.Message, "Something went wrong while attempting to retrieve the image.");
+				Program.Logger.Error(ex);
+				return null;
+			}
+		}
 
-			MemoryStream ms = new MemoryStream(bytes);
-			return Image.FromStream(ms);
+		public static Image RoundCorners(Image startImage, int cornerRadius, Color backgroundColor)
+		{
+			cornerRadius *= 2;
+			Bitmap roundedImage = new Bitmap(startImage.Width, startImage.Height);
+			Graphics g = Graphics.FromImage(roundedImage);
+			g.Clear(backgroundColor);
+			g.SmoothingMode = SmoothingMode.AntiAlias;
+
+			Brush brush = new TextureBrush(startImage);
+			GraphicsPath gp = new GraphicsPath();
+
+			gp.AddArc(0, 0, cornerRadius, cornerRadius, 180, 90);
+			gp.AddArc(0 + roundedImage.Width - cornerRadius, 0, cornerRadius, cornerRadius, 270, 90);
+			gp.AddArc(0 + roundedImage.Width - cornerRadius, 0 + roundedImage.Height - cornerRadius, cornerRadius, cornerRadius, 0, 90);
+			gp.AddArc(0, 0 + roundedImage.Height - cornerRadius, cornerRadius, cornerRadius, 90, 90);
+			gp.CloseFigure();
+
+			g.FillPath(brush, gp);
+			return roundedImage;
 		}
 	}
 }

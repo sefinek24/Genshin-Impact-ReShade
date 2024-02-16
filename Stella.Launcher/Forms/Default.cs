@@ -206,16 +206,20 @@ namespace StellaLauncher.Forms
 							label1.Text = @"Genshin Stella Mod Plus Launcher";
 							madeBySefinek_Label.Text = @"What will we be doing today?";
 
-							if (!string.IsNullOrEmpty(remote.AvatarUrl))
+							Image avatar = null;
+							if (!string.IsNullOrEmpty(remote.AvatarUrl)) avatar = await Utils.LoadImageAsync(remote.AvatarUrl);
+
+							if (avatar == null)
 							{
-								Image avatar = await Utils.LoadImageAsync(remote.AvatarUrl);
-								pictureBox4.Visible = true;
-								pictureBox4.Image = avatar;
+								Program.Logger.Warn($"remote.AvatarUrl is still null or empty: {remote.AvatarUrl}");
+								avatar = await Utils.LoadImageAsync("https://i.pinimg.com/originals/17/e8/90/17e890c5c6bdb755d58b8bf975861198.jpg");
 							}
-							else
-							{
-								Program.Logger.Warn($"remote.AvatarUrl is null or empty: {remote.AvatarUrl}");
-							}
+
+							pictureBox4.Visible = true;
+							pictureBox4.Image = Utils.RoundCorners(avatar, 52, Color.Transparent);
+
+							clickMe_LinkLabel.Location = new Point(1034, 163);
+							paimon_PictureBox.Location = new Point(1173, 157);
 
 							label2.Text = string.Format(label2.Text, remote.Username);
 							label2.Visible = true;

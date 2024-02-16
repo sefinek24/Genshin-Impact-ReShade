@@ -55,6 +55,7 @@ namespace StellaLauncher.Forms
             this.only3DMigoto_LinkLabel = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.label2 = new System.Windows.Forms.Label();
             this.toolsIco_PictureBox = new System.Windows.Forms.PictureBox();
             this.updateIco_PictureBox = new System.Windows.Forms.PictureBox();
             this.versionIco_PictureBox = new System.Windows.Forms.PictureBox();
@@ -73,7 +74,6 @@ namespace StellaLauncher.Forms
             this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.githubIco_Picturebox)).BeginInit();
@@ -274,7 +274,7 @@ namespace StellaLauncher.Forms
             // 
             // version_LinkLabel
             // 
-            this.version_LinkLabel.ActiveLinkColor = System.Drawing.SystemColors.Desktop;
+            this.version_LinkLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             resources.ApplyResources(this.version_LinkLabel, "version_LinkLabel");
             this.version_LinkLabel.BackColor = System.Drawing.Color.Transparent;
             this.version_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
@@ -370,6 +370,13 @@ namespace StellaLauncher.Forms
             this.linkLabel2.TabStop = true;
             this.toolTip1.SetToolTip(this.linkLabel2, resources.GetString("linkLabel2.ToolTip"));
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Settings_LinkClicked);
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.Aqua;
+            this.label2.Name = "label2";
             // 
             // toolsIco_PictureBox
             // 
@@ -524,14 +531,6 @@ namespace StellaLauncher.Forms
             resources.ApplyResources(this.pictureBox4, "pictureBox4");
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.TabStop = false;
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.Color.Azure;
-            this.label2.Name = "label2";
-            this.toolTip1.SetToolTip(this.label2, resources.GetString("label2.ToolTip"));
             // 
             // Default
             // 
