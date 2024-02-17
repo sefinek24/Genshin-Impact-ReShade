@@ -78,9 +78,6 @@
     <Content Include="Resources\Chibi Nahida.ico" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Win32.Registry">
-      <Version>4.7.0</Version>
-    </PackageReference>
     <PackageReference Include="NAudio">
       <Version>2.2.1</Version>
     </PackageReference>
@@ -107,12 +104,6 @@
     </PackageReference>
     <PackageReference Include="NLog">
       <Version>5.2.8</Version>
-    </PackageReference>
-    <PackageReference Include="System.Security.AccessControl">
-      <Version>4.7.0</Version>
-    </PackageReference>
-    <PackageReference Include="System.Security.Principal.Windows">
-      <Version>4.7.0</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
