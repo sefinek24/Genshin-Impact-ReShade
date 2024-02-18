@@ -35,13 +35,9 @@ namespace StellaLauncher.Scripts
 			Telemetry.Error(ex);
 
 			if (showForm)
-			{
 				ThrowError(ex);
-			}
 			else
-			{
 				Program.Logger.Error(ex);
-			}
 
 			Environment.Exit(999991000);
 		}
