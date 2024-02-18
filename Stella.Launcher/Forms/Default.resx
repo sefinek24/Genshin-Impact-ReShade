@@ -845,7 +845,7 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="clickMe_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1034, 163</value>
+    <value>1043, 580</value>
   </data>
   <data name="clickMe_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 31</value>
@@ -1403,7 +1403,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>None</value>
   </data>
   <data name="paimon_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1173, 157</value>
+    <value>1182, 574</value>
   </data>
   <data name="paimon_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 44</value>
