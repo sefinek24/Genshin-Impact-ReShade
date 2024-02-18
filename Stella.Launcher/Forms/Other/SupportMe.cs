@@ -21,7 +21,7 @@ namespace StellaLauncher.Forms.Other
 
 		private void SupportMe_Load(object sender, EventArgs e)
 		{
-			RoundedCorners.Apply(this);
+			RoundedCorners.Form(this);
 		}
 
 		private void MouseDown_Event(object sender, MouseEventArgs e)

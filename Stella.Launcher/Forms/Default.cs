@@ -72,7 +72,7 @@ namespace StellaLauncher.Forms
 			Image newBackground = Background.OnStart(toolTip1, changeBg_LinkLabel);
 			if (newBackground != null) BackgroundImage = newBackground;
 
-			RoundedCorners.Apply(this);
+			RoundedCorners.Form(this);
 		}
 
 		private async void Main_Shown(object sender, EventArgs e)
@@ -216,7 +216,7 @@ namespace StellaLauncher.Forms
 							}
 
 							pictureBox4.Visible = true;
-							pictureBox4.Image = Utils.RoundCorners(avatar, 52, Color.Transparent);
+							pictureBox4.Image = RoundedCorners.Picture(avatar, 52, Color.Transparent);
 
 							clickMe_LinkLabel.Location = new Point(1034, 163);
 							paimon_PictureBox.Location = new Point(1173, 157);
@@ -315,7 +315,11 @@ namespace StellaLauncher.Forms
 			{
 				Program.Settings.WriteInt("Updates", "UpdateAvailable", 0);
 				Program.Settings.Save();
+
 				status_Label.Text += $"[✓] {Resources.Default_Congratulations}\n[i] {string.Format(Resources.Default_SMLSuccessfullyUpdatedToVersion_, Program.AppVersion)}\n";
+
+				pictureBox5.Show();
+				linkLabel3.Show();
 			}
 
 
@@ -405,8 +409,8 @@ namespace StellaLauncher.Forms
 
 		private void MouseDown_Event(object sender, MouseEventArgs e)
 		{
-			_offset.X = e.X;
-			_offset.Y = e.Y;
+			if (e.Button != MouseButtons.Left) return;
+			_offset = new Point(e.X, e.Y);
 			_mouseDown = true;
 		}
 
@@ -585,6 +589,11 @@ namespace StellaLauncher.Forms
 		{
 			status_Label.Visible = !string.IsNullOrEmpty(status_Label.Text);
 			Music.PlaySound("winxp", "balloon");
+		}
+
+		private void ViewChangelog_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Utils.OpenUrl("https://sefinek.net/genshin-impact-reshade/docs?page=changelog_v7");
 		}
 
 		public static class Global

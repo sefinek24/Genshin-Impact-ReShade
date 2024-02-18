@@ -25,7 +25,7 @@ namespace StellaLauncher.Forms
 
 		private void Gameplay_Load(object sender, EventArgs e)
 		{
-			RoundedCorners.Apply(this);
+			RoundedCorners.Form(this);
 		}
 
 		private async void Tutorial_Shown(object sender, EventArgs e)

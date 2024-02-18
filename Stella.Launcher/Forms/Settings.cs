@@ -24,7 +24,7 @@ namespace StellaLauncher.Forms
 
 		private void Tools_Load(object sender, EventArgs e)
 		{
-			RoundedCorners.Apply(this);
+			RoundedCorners.Form(this);
 
 			MusicLabel_Set();
 			RPCLabel_Set();

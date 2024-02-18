@@ -47,7 +47,7 @@ namespace StellaLauncher.Forms
 
 		private void Links_Load(object sender, EventArgs e)
 		{
-			RoundedCorners.Apply(this);
+			RoundedCorners.Form(this);
 		}
 
 		private void Exit_Click(object sender, EventArgs e)
