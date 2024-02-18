@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 namespace PrepareStella.Scripts.Preparing
 {
 	/// <summary>
-	///	Deletes the ReShade cache files and reports the amount of disk space freed.
+	///    Deletes the ReShade cache files and reports the amount of disk space freed.
 	/// </summary>
 	internal static class DeleteReShadeCache
 	{
@@ -13,7 +13,7 @@ namespace PrepareStella.Scripts.Preparing
 		private const long MegabyteInBytes = 1024 * KilobyteInBytes;
 
 		/// <summary>
-		///		Asynchronously runs the operation to delete cache files.
+		///    Asynchronously runs the operation to delete cache files.
 		/// </summary>
 		/// <returns>A task that represents the asynchronous operation.</returns>
 		public static async Task RunAsync()
@@ -52,7 +52,7 @@ namespace PrepareStella.Scripts.Preparing
 		}
 
 		/// <summary>
-		///	Deletes a file asynchronously.
+		///    Deletes a file asynchronously.
 		/// </summary>
 		/// <param name="filePath">The path to the file to be deleted.</param>
 		/// <returns>A task that represents the asynchronous delete operation.</returns>
