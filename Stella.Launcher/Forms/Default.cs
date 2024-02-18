@@ -216,7 +216,7 @@ namespace StellaLauncher.Forms
 							}
 
 							pictureBox4.Visible = true;
-							pictureBox4.Image = RoundedCorners.Picture(avatar, 52, Color.Transparent);
+							pictureBox4.Image = RoundedCorners.Picture(avatar, 22, Color.Transparent);
 
 							clickMe_LinkLabel.Location = new Point(1034, 163);
 							paimon_PictureBox.Location = new Point(1173, 157);
