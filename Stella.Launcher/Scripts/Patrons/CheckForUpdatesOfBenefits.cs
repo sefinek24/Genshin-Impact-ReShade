@@ -198,7 +198,7 @@ namespace StellaLauncher.Scripts.Patrons
 					{
 						string errorResponse = await reader.ReadToEndAsync();
 						MessageBox.Show($@"An error occurred: {errorResponse}", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
-						Log.ErrorAndExit(new Exception(errorResponse));
+						Log.ErrorAndExit(new Exception(errorResponse), false);
 					}
 				}
 				else

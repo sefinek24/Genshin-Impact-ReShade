@@ -30,14 +30,19 @@ namespace StellaLauncher.Scripts
 		///    Logs the provided exception, sends telemetry data, shows an error dialog, and exits the application.
 		/// </summary>
 		/// <param name="ex">The exception to be logged and reported.</param>
-		public static void ErrorAndExit(Exception ex)
+		public static void ErrorAndExit(Exception ex, bool showForm)
 		{
 			Telemetry.Error(ex);
 
-			// Log the exception and show the error dialog
-			ThrowError(ex);
+			if (showForm)
+			{
+				ThrowError(ex);
+			}
+			else
+			{
+				Program.Logger.Error(ex);
+			}
 
-			// Exit the application with a specific exit code
 			Environment.Exit(999991000);
 		}
 	}

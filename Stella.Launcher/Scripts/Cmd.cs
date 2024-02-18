@@ -84,7 +84,7 @@ namespace StellaLauncher.Scripts
 					default:
 					{
 						if (!cliWrapCommand.DownloadingSetup)
-							Log.ErrorAndExit(new Exception($"Command execution failed because the underlying process ({cliWrapCommand.App}) returned a non-zero exit code - {result.ExitCode}.\n\n{info}"));
+							Log.ErrorAndExit(new Exception($"Command execution failed because the underlying process ({cliWrapCommand.App}) returned a non-zero exit code - {result.ExitCode}.\n\n{info}"), true);
 						else
 							Program.Logger.Error(info);
 						return false;

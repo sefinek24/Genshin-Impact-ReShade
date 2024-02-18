@@ -46,7 +46,7 @@ namespace StellaLauncher.Scripts
 			}
 			catch (Exception ex)
 			{
-				Log.ErrorAndExit(new Exception($"An error occurred while deleting registry value '{key}': {ex.Message}"));
+				Log.ErrorAndExit(new Exception($"An error occurred while deleting registry value '{key}': {ex.Message}"), true);
 			}
 		}
 	}

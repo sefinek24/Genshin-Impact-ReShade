@@ -136,7 +136,7 @@ namespace StellaLauncher.Scripts.Forms.MainForm
 				Default._updates_LinkLabel.Text = Resources.Default_CheckForUpdates;
 				Default._updateIco_PictureBox.Image = Resources.icons8_available_updates;
 
-				Default._version_LinkLabel.Text = $@"v{(Program.AppVersion == Program.ProductVersion ? Program.AppVersion : $"{Program.ProductVersion}-dprp")}";
+				Default._version_LinkLabel.Text = $@"v{(Program.AppVersion == Program.ProductVersion ? Program.AppVersion : $"{Program.ProductVersion}-alpha")}";
 
 				Utils.RemoveClickEvent(Default._updates_LinkLabel);
 				Default._updates_LinkLabel.Click += CheckUpdates_Click;
