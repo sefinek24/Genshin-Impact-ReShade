@@ -12,7 +12,7 @@
 - You can download the compiled binary over at [Release](https://github.com/sefinek24/Genshin-FPS-Unlocker/releases) if you don't want to compile it yourself.
 
 ## Usage
-- Make sure you have the [.NET 8.0 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-8.0.0-windows-x64-installer). Usually it should come installed.
+- Make sure you have the [.NET 8.0 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-8.0.2-windows-x64-installer). Usually it should come installed.
 - Run the exe and click `Start game`.
 - If it is your first time running, unlocker will attempt to find your game through the registry. If it fails, then it will ask you to either browse or run the game.
 - Place the compiled exe anywhere you want (except for the game folder).
