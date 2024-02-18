@@ -16,7 +16,7 @@ namespace StellaLauncher.Scripts
 		private static readonly RichPresence Presence = new RichPresence
 		{
 			Details = $"{Resources.Discord_InTheMainWindow} 🏠",
-			State = string.Format(Resources.Discord_Version_, Program.AppVersion),
+			State = string.Format(Resources.Discord_Version_, Program.ProductVersion),
 			Assets = new Assets
 			{
 				LargeImageKey = "main",
