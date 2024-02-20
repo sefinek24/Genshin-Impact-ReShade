@@ -6,6 +6,15 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Company>Sefinek Inc.</Company>
+    <Authors>Sefinek</Authors>
+    <Title>Stella Mod Class Library</Title>
+    <Product>StellaLibrary.NET</Product>
+    <Description>Stella Mod Class Library for .NET 8</Description>
+    <Copyright>Copyright 2024 © by Sefinek. All Rights Reserved.</Copyright>
+    <RepositoryUrl>https://github.com/sefinek24/Genshin-Impact-ReShade</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <AssemblyName>Stella.ClassLibrary</AssemblyName>
   </PropertyGroup>
 
 </Project>
