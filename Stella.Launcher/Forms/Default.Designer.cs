@@ -267,7 +267,7 @@ namespace StellaLauncher.Forms
             resources.ApplyResources(this.supportMe_LinkLabel, "supportMe_LinkLabel");
             this.supportMe_LinkLabel.BackColor = System.Drawing.Color.Transparent;
             this.supportMe_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.supportMe_LinkLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(228)))), ((int)(((byte)(249)))));
+            this.supportMe_LinkLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(237)))), ((int)(((byte)(252)))));
             this.supportMe_LinkLabel.Name = "supportMe_LinkLabel";
             this.supportMe_LinkLabel.TabStop = true;
             this.toolTip1.SetToolTip(this.supportMe_LinkLabel, resources.GetString("supportMe_LinkLabel.ToolTip"));
