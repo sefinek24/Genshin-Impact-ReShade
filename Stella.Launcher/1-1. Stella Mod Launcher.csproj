@@ -559,6 +559,9 @@
     <None Update="data\OLD_CHANGELOG.md">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="data\reshade\LICENSE">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="data\reshade\ReShade GitHub Repository.url">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

@@ -358,6 +358,7 @@
     <None Include="data\OLD_CHANGELOG.md">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="data\reshade\LICENSE" />
     <None Include="data\reshade\ReShade GitHub Repository.url">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
