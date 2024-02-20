@@ -26,10 +26,10 @@ internal static class Secret
 		{
 			List<KeyValuePair<string, string>> postData = new()
 			{
-				new("token", registrySecret),
-				new("motherboardId", ComputerInfo.GetMotherboardSerialNumber()),
-				new("cpuId", ComputerInfo.GetCpuSerialNumber()),
-				new("diskId", ComputerInfo.GetHardDriveSerialNumber())
+				new KeyValuePair<string, string>("token", registrySecret),
+				new KeyValuePair<string, string>("motherboardId", ComputerInfo.GetMotherboardSerialNumber()),
+				new KeyValuePair<string, string>("cpuId", ComputerInfo.GetCpuSerialNumber()),
+				new KeyValuePair<string, string>("diskId", ComputerInfo.GetHardDriveSerialNumber())
 			};
 
 			using (HttpClient httpClient = new())
