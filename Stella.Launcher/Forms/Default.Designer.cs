@@ -1,4 +1,4 @@
-namespace StellaLauncher.Forms
+namespace StellaModLauncher.Forms
 {
     sealed partial class Default
     {
@@ -116,7 +116,7 @@ namespace StellaLauncher.Forms
             resources.ApplyResources(this.pictureBox5, "pictureBox5");
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Image = global::StellaLauncher.Properties.Resources.icons8_edit_property;
+            this.pictureBox5.Image = global::StellaModLauncher.Properties.Resources.icons8_edit_property;
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.TabStop = false;
             // 
@@ -137,7 +137,7 @@ namespace StellaLauncher.Forms
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::StellaLauncher.Properties.Resources.icons8_animated;
+            this.pictureBox2.Image = global::StellaModLauncher.Properties.Resources.icons8_animated;
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 
@@ -195,7 +195,7 @@ namespace StellaLauncher.Forms
             resources.ApplyResources(this.githubIco_Picturebox, "githubIco_Picturebox");
             this.githubIco_Picturebox.BackColor = System.Drawing.Color.Transparent;
             this.githubIco_Picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.githubIco_Picturebox.Image = global::StellaLauncher.Properties.Resources.icons8_github;
+            this.githubIco_Picturebox.Image = global::StellaModLauncher.Properties.Resources.icons8_github;
             this.githubIco_Picturebox.Name = "githubIco_Picturebox";
             this.githubIco_Picturebox.TabStop = false;
             this.toolTip1.SetToolTip(this.githubIco_Picturebox, resources.GetString("githubIco_Picturebox.ToolTip"));
@@ -409,7 +409,7 @@ namespace StellaLauncher.Forms
             resources.ApplyResources(this.toolsIco_PictureBox, "toolsIco_PictureBox");
             this.toolsIco_PictureBox.BackColor = System.Drawing.Color.Transparent;
             this.toolsIco_PictureBox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.toolsIco_PictureBox.Image = global::StellaLauncher.Properties.Resources.flaticon_tools;
+            this.toolsIco_PictureBox.Image = global::StellaModLauncher.Properties.Resources.flaticon_tools;
             this.toolsIco_PictureBox.Name = "toolsIco_PictureBox";
             this.toolsIco_PictureBox.TabStop = false;
             // 
@@ -418,7 +418,7 @@ namespace StellaLauncher.Forms
             resources.ApplyResources(this.updateIco_PictureBox, "updateIco_PictureBox");
             this.updateIco_PictureBox.BackColor = System.Drawing.Color.Transparent;
             this.updateIco_PictureBox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.updateIco_PictureBox.Image = global::StellaLauncher.Properties.Resources.icons8_available_updates;
+            this.updateIco_PictureBox.Image = global::StellaModLauncher.Properties.Resources.icons8_available_updates;
             this.updateIco_PictureBox.Name = "updateIco_PictureBox";
             this.updateIco_PictureBox.TabStop = false;
             // 
@@ -427,7 +427,7 @@ namespace StellaLauncher.Forms
             resources.ApplyResources(this.versionIco_PictureBox, "versionIco_PictureBox");
             this.versionIco_PictureBox.BackColor = System.Drawing.Color.Transparent;
             this.versionIco_PictureBox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.versionIco_PictureBox.Image = global::StellaLauncher.Properties.Resources.icons8_support;
+            this.versionIco_PictureBox.Image = global::StellaModLauncher.Properties.Resources.icons8_support;
             this.versionIco_PictureBox.Name = "versionIco_PictureBox";
             this.versionIco_PictureBox.TabStop = false;
             // 
@@ -447,7 +447,7 @@ namespace StellaLauncher.Forms
             resources.ApplyResources(this.webIco_Picturebox, "webIco_Picturebox");
             this.webIco_Picturebox.BackColor = System.Drawing.Color.Transparent;
             this.webIco_Picturebox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.webIco_Picturebox.Image = global::StellaLauncher.Properties.Resources.web;
+            this.webIco_Picturebox.Image = global::StellaModLauncher.Properties.Resources.web;
             this.webIco_Picturebox.Name = "webIco_Picturebox";
             this.webIco_Picturebox.TabStop = false;
             // 
@@ -456,7 +456,7 @@ namespace StellaLauncher.Forms
             resources.ApplyResources(this.discordServerIco_Picturebox, "discordServerIco_Picturebox");
             this.discordServerIco_Picturebox.BackColor = System.Drawing.Color.Transparent;
             this.discordServerIco_Picturebox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.discordServerIco_Picturebox.Image = global::StellaLauncher.Properties.Resources.icons8_discord;
+            this.discordServerIco_Picturebox.Image = global::StellaModLauncher.Properties.Resources.icons8_discord;
             this.discordServerIco_Picturebox.Name = "discordServerIco_Picturebox";
             this.discordServerIco_Picturebox.TabStop = false;
             // 
@@ -474,7 +474,7 @@ namespace StellaLauncher.Forms
             resources.ApplyResources(this.padIco_PictureBox, "padIco_PictureBox");
             this.padIco_PictureBox.BackColor = System.Drawing.Color.Transparent;
             this.padIco_PictureBox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.padIco_PictureBox.Image = global::StellaLauncher.Properties.Resources.flaticon_controller;
+            this.padIco_PictureBox.Image = global::StellaModLauncher.Properties.Resources.flaticon_controller;
             this.padIco_PictureBox.Name = "padIco_PictureBox";
             this.padIco_PictureBox.TabStop = false;
             // 
@@ -483,7 +483,7 @@ namespace StellaLauncher.Forms
             resources.ApplyResources(this.supportMeIco_PictureBox, "supportMeIco_PictureBox");
             this.supportMeIco_PictureBox.BackColor = System.Drawing.Color.Transparent;
             this.supportMeIco_PictureBox.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.supportMeIco_PictureBox.Image = global::StellaLauncher.Properties.Resources.flaticon_heart;
+            this.supportMeIco_PictureBox.Image = global::StellaModLauncher.Properties.Resources.flaticon_heart;
             this.supportMeIco_PictureBox.Name = "supportMeIco_PictureBox";
             this.supportMeIco_PictureBox.TabStop = false;
             // 
@@ -492,7 +492,7 @@ namespace StellaLauncher.Forms
             resources.ApplyResources(this.shortcutIco_PictureBox, "shortcutIco_PictureBox");
             this.shortcutIco_PictureBox.BackColor = System.Drawing.Color.Transparent;
             this.shortcutIco_PictureBox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.shortcutIco_PictureBox.Image = global::StellaLauncher.Properties.Resources.flaticon_redo;
+            this.shortcutIco_PictureBox.Image = global::StellaModLauncher.Properties.Resources.flaticon_redo;
             this.shortcutIco_PictureBox.Name = "shortcutIco_PictureBox";
             this.shortcutIco_PictureBox.TabStop = false;
             // 
@@ -501,7 +501,7 @@ namespace StellaLauncher.Forms
             resources.ApplyResources(this.paimon_PictureBox, "paimon_PictureBox");
             this.paimon_PictureBox.BackColor = System.Drawing.Color.Transparent;
             this.paimon_PictureBox.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.paimon_PictureBox.Image = global::StellaLauncher.Properties.Resources.paimon_gif;
+            this.paimon_PictureBox.Image = global::StellaModLauncher.Properties.Resources.paimon_gif;
             this.paimon_PictureBox.Name = "paimon_PictureBox";
             this.paimon_PictureBox.TabStop = false;
             this.paimon_PictureBox.Click += new System.EventHandler(this.Paimon_Click);
@@ -523,7 +523,7 @@ namespace StellaLauncher.Forms
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Image = global::StellaLauncher.Properties.Resources.flaticon_open_folder;
+            this.pictureBox1.Image = global::StellaModLauncher.Properties.Resources.flaticon_open_folder;
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
@@ -532,7 +532,7 @@ namespace StellaLauncher.Forms
             resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox3.Image = global::StellaLauncher.Properties.Resources.flaticon_config;
+            this.pictureBox3.Image = global::StellaModLauncher.Properties.Resources.flaticon_config;
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
             // 
@@ -563,7 +563,7 @@ namespace StellaLauncher.Forms
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = global::StellaLauncher.Properties.Resources.bg_main;
+            this.BackgroundImage = global::StellaModLauncher.Properties.Resources.bg_main;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.webView21);

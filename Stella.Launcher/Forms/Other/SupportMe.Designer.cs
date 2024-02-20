@@ -1,4 +1,4 @@
-namespace StellaLauncher.Forms.Other
+namespace StellaModLauncher.Forms.Other
 {
 	sealed partial class SupportMe
     {
@@ -222,7 +222,7 @@ namespace StellaLauncher.Forms.Other
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = global::StellaLauncher.Properties.Resources.bg_support_me;
+            this.BackgroundImage = global::StellaModLauncher.Properties.Resources.bg_support_me;
             this.Controls.Add(this.linkLabel10);
             this.Controls.Add(this.linkLabel9);
             this.Controls.Add(this.label3);

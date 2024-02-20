@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using ClassLibrary;
 using CliWrap;
 using CliWrap.Buffered;
+using StellaPLFNetF;
 
 namespace PrepareStella.Scripts
 {

@@ -1,4 +1,4 @@
-namespace StellaLauncher.Forms.Other
+namespace StellaModLauncher.Forms.Other
 {
     partial class WebView2Shake
     {

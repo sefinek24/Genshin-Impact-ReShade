@@ -6,10 +6,10 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClassLibrary;
 using NLog;
 using NLog.Config;
 using PrepareStella.Scripts;
+using StellaPLFNetF;
 
 namespace PrepareStella
 {

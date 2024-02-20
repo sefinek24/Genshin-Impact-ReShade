@@ -164,9 +164,9 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Stella.ClassLibrary\8. Class Library.csproj">
-      <Project>{329952c4-25ea-4533-8ec0-772d7838c946}</Project>
-      <Name>8. Class Library</Name>
+    <ProjectReference Include="..\Stella.ClassLibrary-2\8-2. StellaPLF .NET Framework.csproj">
+      <Project>{6b09f8c8-2d48-485f-bd17-23d796ba6326}</Project>
+      <Name>8-2. StellaPLF .NET Framework</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

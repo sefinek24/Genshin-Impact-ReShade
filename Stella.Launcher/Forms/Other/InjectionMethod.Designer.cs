@@ -1,4 +1,4 @@
-namespace StellaLauncher.Forms.Other
+namespace StellaModLauncher.Forms.Other
 {
 	sealed partial class InjectionMethod
     {

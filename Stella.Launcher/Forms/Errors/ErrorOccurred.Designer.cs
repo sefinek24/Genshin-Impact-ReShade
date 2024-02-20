@@ -1,4 +1,4 @@
-namespace StellaLauncher.Forms.Errors
+namespace StellaModLauncher.Forms.Errors
 {
 	sealed partial class ErrorOccurred
     {
@@ -79,7 +79,7 @@ namespace StellaLauncher.Forms.Errors
             // 
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::StellaLauncher.Properties.Resources.error;
+            this.pictureBox1.Image = global::StellaModLauncher.Properties.Resources.error;
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 

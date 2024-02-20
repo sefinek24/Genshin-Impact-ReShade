@@ -1,94 +1,89 @@
-using System;
-using System.Drawing;
-using System.Linq;
-using System.Windows.Forms;
-using StellaLauncher.Forms.Other;
-using StellaLauncher.Properties;
-using StellaLauncher.Scripts;
-using StellaLauncher.Scripts.Forms;
+using StellaModLauncher.Forms.Other;
+using StellaModLauncher.Properties;
+using StellaModLauncher.Scripts;
+using StellaModLauncher.Scripts.Forms;
 
-namespace StellaLauncher.Forms
+namespace StellaModLauncher.Forms;
+
+public partial class Gameplay : Form
 {
-	public partial class Gameplay : Form
+	private const string VideoId = "0tPwI7uVRxo";
+
+	private bool _mouseDown;
+	private Point _offset;
+
+	public Gameplay()
 	{
-		private const string VideoId = "0tPwI7uVRxo";
+		InitializeComponent();
 
-		private bool _mouseDown;
-		private Point _offset;
+		DoubleBuffered = true;
+	}
 
-		public Gameplay()
-		{
-			InitializeComponent();
+	private void Gameplay_Load(object sender, EventArgs e)
+	{
+		RoundedCorners.Form(this);
+	}
 
-			DoubleBuffered = true;
-		}
+	private async void Tutorial_Shown(object sender, EventArgs e)
+	{
+		await WebViewHelper.Initialize(webView21, $"https://www.youtube.com/embed/{VideoId}");
 
-		private void Gameplay_Load(object sender, EventArgs e)
-		{
-			RoundedCorners.Form(this);
-		}
+		Discord.SetStatus(Resources.Gameplay_WatchingGameplay);
 
-		private async void Tutorial_Shown(object sender, EventArgs e)
-		{
-			await WebViewHelper.Initialize(webView21, $"https://www.youtube.com/embed/{VideoId}");
+		Program.Logger.Info(string.Format(Resources.Main_LoadedForm_, Text));
+	}
 
-			Discord.SetStatus(Resources.Gameplay_WatchingGameplay);
+	private void MouseDown_Event(object sender, MouseEventArgs e)
+	{
+		_offset.X = e.X;
+		_offset.Y = e.Y;
+		_mouseDown = true;
+	}
 
-			Program.Logger.Info(string.Format(Resources.Main_LoadedForm_, Text));
-		}
+	private void MouseMove_Event(object sender, MouseEventArgs e)
+	{
+		if (!_mouseDown) return;
+		Point currentScreenPos = PointToScreen(e.Location);
+		Location = new Point(currentScreenPos.X - _offset.X, currentScreenPos.Y - _offset.Y);
+	}
 
-		private void MouseDown_Event(object sender, MouseEventArgs e)
-		{
-			_offset.X = e.X;
-			_offset.Y = e.Y;
-			_mouseDown = true;
-		}
+	private void MouseUp_Event(object sender, MouseEventArgs e)
+	{
+		_mouseDown = false;
+	}
 
-		private void MouseMove_Event(object sender, MouseEventArgs e)
-		{
-			if (!_mouseDown) return;
-			Point currentScreenPos = PointToScreen(e.Location);
-			Location = new Point(currentScreenPos.X - _offset.X, currentScreenPos.Y - _offset.Y);
-		}
+	private void Exit_Click(object sender, EventArgs e)
+	{
+		Program.Logger.Info(string.Format(Resources.Main_ClosedForm_, Text));
+		Close();
 
-		private void MouseUp_Event(object sender, MouseEventArgs e)
-		{
-			_mouseDown = false;
-		}
-
-		private void Exit_Click(object sender, EventArgs e)
-		{
-			Program.Logger.Info(string.Format(Resources.Main_ClosedForm_, Text));
-			Close();
-
-			Discord.Home();
-		}
+		Discord.Home();
+	}
 
 
-		// Top
-		private void OpenInBrowser_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			Utils.OpenUrl($"https://www.youtube.com/watch?v={VideoId}");
-		}
+	// Top
+	private void OpenInBrowser_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+	{
+		Utils.OpenUrl($"https://www.youtube.com/watch?v={VideoId}");
+	}
 
 
-		// Bottom
-		private void Videos_LinkLabel(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			if (Application.OpenForms.OfType<WebView2Window>().Any()) return;
-			new WebView2Window { Title = "Videos - sefinek.net", Url = $"{Program.AppWebsiteFull}/videos" }.Show();
-		}
+	// Bottom
+	private void Videos_LinkLabel(object sender, LinkLabelLinkClickedEventArgs e)
+	{
+		if (Application.OpenForms.OfType<WebView2Window>().Any()) return;
+		new WebView2Window { Title = "Videos - sefinek.net", Url = $"{Program.AppWebsiteFull}/videos" }.Show();
+	}
 
-		private void Documentation_LinkLabel(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			if (Application.OpenForms.OfType<WebView2Window>().Any()) return;
-			new WebView2Window { WindowState = FormWindowState.Maximized, Title = "Documentation - sefinek.net", Url = $"{Program.AppWebsiteFull}/docs?page=introduction" }.Show();
-		}
+	private void Documentation_LinkLabel(object sender, LinkLabelLinkClickedEventArgs e)
+	{
+		if (Application.OpenForms.OfType<WebView2Window>().Any()) return;
+		new WebView2Window { WindowState = FormWindowState.Maximized, Title = "Documentation - sefinek.net", Url = $"{Program.AppWebsiteFull}/docs?page=introduction" }.Show();
+	}
 
-		private void Gallery_LinkLabel(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			if (Application.OpenForms.OfType<WebView2Window>().Any()) return;
-			new WebView2Window { WindowState = FormWindowState.Maximized, Title = "Gallery - sefinek.net", Url = $"{Program.AppWebsiteFull}/gallery?page=1" }.Show();
-		}
+	private void Gallery_LinkLabel(object sender, LinkLabelLinkClickedEventArgs e)
+	{
+		if (Application.OpenForms.OfType<WebView2Window>().Any()) return;
+		new WebView2Window { WindowState = FormWindowState.Maximized, Title = "Gallery - sefinek.net", Url = $"{Program.AppWebsiteFull}/gallery?page=1" }.Show();
 	}
 }

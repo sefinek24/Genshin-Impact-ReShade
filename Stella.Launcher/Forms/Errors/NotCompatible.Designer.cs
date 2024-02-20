@@ -1,4 +1,4 @@
-namespace StellaLauncher.Forms.Errors
+namespace StellaModLauncher.Forms.Errors
 {
 	sealed partial class NotCompatible
     {
@@ -41,7 +41,7 @@ namespace StellaLauncher.Forms.Errors
             // pictureBox1
             // 
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Image = global::StellaLauncher.Properties.Resources.new_release;
+            this.pictureBox1.Image = global::StellaModLauncher.Properties.Resources.new_release;
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
@@ -71,7 +71,7 @@ namespace StellaLauncher.Forms.Errors
             // pictureBox2
             // 
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Image = global::StellaLauncher.Properties.Resources.party_popper;
+            this.pictureBox2.Image = global::StellaModLauncher.Properties.Resources.party_popper;
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 

@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 using System.Threading;
-using ClassLibrary;
+using StellaPLFNetF;
 
 namespace PrepareStella.Scripts
 {

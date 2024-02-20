@@ -1,4 +1,4 @@
-namespace StellaLauncher.Forms.Errors
+namespace StellaModLauncher.Forms.Errors
 {
     sealed partial class RussianCunt
 	{
@@ -64,7 +64,7 @@ namespace StellaLauncher.Forms.Errors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackgroundImage = global::StellaLauncher.Properties.Resources.cat;
+            this.BackgroundImage = global::StellaModLauncher.Properties.Resources.cat;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(466, 524);
             this.Controls.Add(this.label2);

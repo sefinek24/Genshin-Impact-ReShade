@@ -26,11 +26,11 @@ Screenshots/*.jpeg
 Screenshots/*.bmp
 
 # Stella Mod Launcher Solution
+Stella.LauncherOldOld/bin
+Stella.LauncherOld/obj
+Stella.LauncherOld/data/cmd/run_patrons.cmd
 Stella.Launcher/bin
 Stella.Launcher/obj
-Stella.Launcher/data/cmd/run_patrons.cmd
-1-2. Stella Mod Launcher/bin
-1-2. Stella Mod Launcher/obj
 
 # Genshin Stella Mod Solution
 Stella.Worker/Action.cs
@@ -65,8 +65,8 @@ Stella.SefinAntiCheat/obj
 # Stella.SefinAntiCheat Soultion
 Stella.ClassLibrary/bin
 Stella.ClassLibrary/obj
-8-2. Class Library/bin
-8-2. Class Library/obj
+Stella.ClassLibrary-1/bin
+Stella.ClassLibrary-1/obj
 
 # Stella Mod Plus
 data/Patrons

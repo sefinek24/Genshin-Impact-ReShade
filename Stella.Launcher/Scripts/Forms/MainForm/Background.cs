@@ -1,105 +1,99 @@
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.IO;
 using System.Runtime.Caching;
-using System.Windows.Forms;
 
-namespace StellaLauncher.Scripts.Forms.MainForm
+namespace StellaModLauncher.Scripts.Forms.MainForm;
+
+internal static class Background
 {
-	internal static class Background
+	private static readonly ObjectCache Cache = MemoryCache.Default;
+	private static readonly string BackgroundImagesPath = Path.Combine(Program.AppPath, "data", "images", "backgrounds", "main");
+	private static readonly string[] Extensions = { "*.png", "*.jpg", "*.jpeg", "*.bmp" };
+
+	private static string[] LoadBackgroundFiles()
 	{
-		private static readonly ObjectCache Cache = MemoryCache.Default;
-		private static readonly string BackgroundImagesPath = Path.Combine(Program.AppPath, "data", "images", "backgrounds", "main");
-		private static readonly string[] Extensions = { "*.png", "*.jpg", "*.jpeg", "*.bmp" };
-
-		private static string[] LoadBackgroundFiles()
+		try
 		{
-			try
+			if (!Directory.Exists(BackgroundImagesPath))
 			{
-				if (!Directory.Exists(BackgroundImagesPath))
-				{
-					MessageBox.Show($@"Background folder does not exist: {BackgroundImagesPath}", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
-					return Array.Empty<string>();
-				}
-
-				List<string> fileList = new List<string>();
-				foreach (string ext in Extensions) fileList.AddRange(Directory.GetFiles(BackgroundImagesPath, ext, SearchOption.AllDirectories));
-
-				return fileList.ToArray();
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show($@"Error occurred while loading background files: {ex.Message}", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show($@"Background folder does not exist: {BackgroundImagesPath}", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return Array.Empty<string>();
 			}
-		}
 
-		public static Image OnStart(ToolTip toolTip, LinkLabel changeBg)
+			List<string> fileList = new();
+			foreach (string ext in Extensions) fileList.AddRange(Directory.GetFiles(BackgroundImagesPath, ext, SearchOption.AllDirectories));
+
+			return fileList.ToArray();
+		}
+		catch (Exception ex)
 		{
-			string[] backgroundFiles = LoadBackgroundFiles();
-			if (backgroundFiles.Length == 0) return null;
-
-			int bgInt = Program.Settings.ReadInt("Launcher", "Background", 0);
-			bgInt = bgInt >= backgroundFiles.Length || bgInt < 0 ? 0 : bgInt;
-
-			return GetCachedOrLoadImage(bgInt, backgroundFiles, toolTip, changeBg);
+			MessageBox.Show($@"Error occurred while loading background files: {ex.Message}", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
+			return Array.Empty<string>();
 		}
+	}
 
-		private static Image GetCachedOrLoadImage(int bgInt, IReadOnlyList<string> backgroundFiles, ToolTip toolTip, Control changeBg)
+	public static Image OnStart(ToolTip toolTip, LinkLabel changeBg)
+	{
+		string[] backgroundFiles = LoadBackgroundFiles();
+		if (backgroundFiles.Length == 0) return null;
+
+		int bgInt = Program.Settings.ReadInt("Launcher", "Background", 0);
+		bgInt = bgInt >= backgroundFiles.Length || bgInt < 0 ? 0 : bgInt;
+
+		return GetCachedOrLoadImage(bgInt, backgroundFiles, toolTip, changeBg);
+	}
+
+	private static Image GetCachedOrLoadImage(int bgInt, IReadOnlyList<string> backgroundFiles, ToolTip toolTip, Control changeBg)
+	{
+		if (backgroundFiles.Count == 0) return null;
+
+		string cacheKey = $"background_{bgInt}";
+		if (Cache.Contains(cacheKey) && Cache.Get(cacheKey) is Bitmap cachedImage)
 		{
-			if (backgroundFiles.Count == 0) return null;
-
-			string cacheKey = $"background_{bgInt}";
-			if (Cache.Contains(cacheKey) && Cache.Get(cacheKey) is Bitmap cachedImage)
-			{
-				toolTip.SetToolTip(changeBg, $"Current background: {Path.GetFileName(backgroundFiles[bgInt])}");
-				return cachedImage;
-			}
-
-			if (!File.Exists(backgroundFiles[bgInt]))
-			{
-				MessageBox.Show($@"Sorry, background {Path.GetFileName(backgroundFiles[bgInt])} was not found.", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-				return null;
-			}
-
-			Bitmap backgroundImage = new Bitmap(backgroundFiles[bgInt]);
-			Cache.Add(cacheKey, backgroundImage, new CacheItemPolicy { AbsoluteExpiration = DateTimeOffset.Now.AddMinutes(20) });
-			SetToolTipForBackground(changeBg, toolTip, backgroundFiles[bgInt]);
-
-			return backgroundImage;
+			toolTip.SetToolTip(changeBg, $"Current background: {Path.GetFileName(backgroundFiles[bgInt])}");
+			return cachedImage;
 		}
 
-		private static void SetToolTipForBackground(Control changeBg, ToolTip toolTip, string filePath)
+		if (!File.Exists(backgroundFiles[bgInt]))
 		{
-			string[] pathParts = filePath.Split(Path.DirectorySeparatorChar);
-			if (pathParts.Length > 3)
-			{
-				string folderNames = $@"{pathParts[pathParts.Length - 3]}\{pathParts[pathParts.Length - 2]}";
-				string fileName = Path.GetFileName(filePath);
-				toolTip.SetToolTip(changeBg, $@"Current background: {folderNames}\{fileName}");
-			}
-			else
-			{
-				toolTip.SetToolTip(changeBg, $"Current background file: {Path.GetFileName(filePath)}");
-			}
+			MessageBox.Show($@"Sorry, background {Path.GetFileName(backgroundFiles[bgInt])} was not found.", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			return null;
 		}
 
-		public static Image Change(ToolTip toolTip, LinkLabel changeBg)
+		Bitmap backgroundImage = new(backgroundFiles[bgInt]);
+		Cache.Add(cacheKey, backgroundImage, new CacheItemPolicy { AbsoluteExpiration = DateTimeOffset.Now.AddMinutes(20) });
+		SetToolTipForBackground(changeBg, toolTip, backgroundFiles[bgInt]);
+
+		return backgroundImage;
+	}
+
+	private static void SetToolTipForBackground(Control changeBg, ToolTip toolTip, string filePath)
+	{
+		string[] pathParts = filePath.Split(Path.DirectorySeparatorChar);
+		if (pathParts.Length > 3)
 		{
-			string[] backgroundFiles = LoadBackgroundFiles();
-			if (backgroundFiles.Length == 0)
-			{
-				MessageBox.Show(@"No background images found.", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
-				return null;
-			}
-
-			int bgInt = Program.Settings.ReadInt("Launcher", "Background", 0);
-			bgInt = (bgInt + 1) % backgroundFiles.Length;
-			Program.Settings.WriteInt("Launcher", "Background", bgInt);
-			Program.Settings.Save();
-
-			return GetCachedOrLoadImage(bgInt, backgroundFiles, toolTip, changeBg);
+			string folderNames = $@"{pathParts[pathParts.Length - 3]}\{pathParts[pathParts.Length - 2]}";
+			string fileName = Path.GetFileName(filePath);
+			toolTip.SetToolTip(changeBg, $@"Current background: {folderNames}\{fileName}");
 		}
+		else
+		{
+			toolTip.SetToolTip(changeBg, $"Current background file: {Path.GetFileName(filePath)}");
+		}
+	}
+
+	public static Image Change(ToolTip toolTip, LinkLabel changeBg)
+	{
+		string[] backgroundFiles = LoadBackgroundFiles();
+		if (backgroundFiles.Length == 0)
+		{
+			MessageBox.Show(@"No background images found.", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
+			return null;
+		}
+
+		int bgInt = Program.Settings.ReadInt("Launcher", "Background", 0);
+		bgInt = (bgInt + 1) % backgroundFiles.Length;
+		Program.Settings.WriteInt("Launcher", "Background", bgInt);
+		Program.Settings.Save();
+
+		return GetCachedOrLoadImage(bgInt, backgroundFiles, toolTip, changeBg);
 	}
 }
