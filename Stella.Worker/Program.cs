@@ -197,7 +197,7 @@ namespace GenshinStellaMod
 			try
 			{
 				const string id = "48793142";
-				string path = Path.Combine(AppPath, "net8.0-windows10.0.18362.0", $"{id}.exe");
+				string path = Path.Combine(AppPath, "net8.0-windows", $"{id}.exe");
 
 				using (RegistryKey key = Registry.CurrentUser.OpenSubKey(Secret.RegistryPath, true))
 				{
@@ -206,7 +206,7 @@ namespace GenshinStellaMod
 					{
 						if (!File.Exists(path))
 						{
-							MessageBox.Show($@"File {path} was not found.", AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+							MessageBox.Show($"File {path} was not found.", AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 							return;
 						}
 

@@ -1,10 +1,10 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using ClassLibrary;
 using StellaLauncher.Forms;
 using StellaLauncher.Forms.Errors;
 using StellaLauncher.Properties;
+using StellaPLFNetF;
 
 namespace StellaLauncher.Scripts.Download
 {

@@ -8,7 +8,7 @@ internal static class Stages
 
 	public static void UpdateStage(int stage, string progressBarText)
 	{
-		if (stage < 1 || stage > AllStages) throw new ArgumentOutOfRangeException(nameof(stage), @"The stage must be between 1 and " + AllStages);
+		if (stage is < 1 or > AllStages) throw new ArgumentOutOfRangeException(nameof(stage), @"The stage must be between 1 and " + AllStages);
 
 		Default._preparingPleaseWait.Text = progressBarText;
 

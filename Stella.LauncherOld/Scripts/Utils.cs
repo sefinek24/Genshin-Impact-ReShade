@@ -7,12 +7,12 @@ using System.Net.Http;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClassLibrary;
 using IWshRuntimeLibrary;
 using Microsoft.Win32;
 using StellaLauncher.Forms;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts.Forms;
+using StellaPLFNetF;
 using File = System.IO.File;
 
 namespace StellaLauncher.Scripts

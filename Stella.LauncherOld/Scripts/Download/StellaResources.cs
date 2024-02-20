@@ -8,10 +8,10 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ByteSizeLib;
-using ClassLibrary;
 using StellaLauncher.Forms;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts.Forms.MainForm;
+using StellaPLFNetF;
 
 namespace StellaLauncher.Scripts.Download
 {

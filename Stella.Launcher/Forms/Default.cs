@@ -263,7 +263,7 @@ public partial class Default : Form
 
 		// Check if all required files exists
 		Stages.UpdateStage(5, "Verifying required files...");
-		await Files.ScanAsync().ConfigureAwait(false);
+		await Files.ScanAsync().ConfigureAwait(true);
 
 		// Delete setup file from Temp directory
 		Stages.UpdateStage(6, "Checking the installation file after the update...");

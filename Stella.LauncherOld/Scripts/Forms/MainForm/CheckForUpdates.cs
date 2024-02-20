@@ -3,13 +3,13 @@ using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Threading.Tasks;
-using ClassLibrary;
 using Newtonsoft.Json;
 using StellaLauncher.Forms;
 using StellaLauncher.Models;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts.Download;
 using StellaLauncher.Scripts.Patrons;
+using StellaPLFNetF;
 
 namespace StellaLauncher.Scripts.Forms.MainForm
 {

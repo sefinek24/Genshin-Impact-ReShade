@@ -6,13 +6,13 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ByteSizeLib;
-using ClassLibrary;
 using Newtonsoft.Json;
 using StellaLauncher.Forms;
 using StellaLauncher.Models;
 using StellaLauncher.Properties;
 using StellaLauncher.Scripts.Download;
 using StellaLauncher.Scripts.Forms.MainForm;
+using StellaPLFNetF;
 
 namespace StellaLauncher.Scripts.Patrons
 {

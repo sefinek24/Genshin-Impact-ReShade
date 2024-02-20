@@ -4,7 +4,6 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using ClassLibrary;
 using Microsoft.Win32;
 using Newtonsoft.Json;
 using NuGet.Versioning;
@@ -16,6 +15,7 @@ using StellaLauncher.Scripts.Download;
 using StellaLauncher.Scripts.Forms;
 using StellaLauncher.Scripts.Forms.MainForm;
 using StellaLauncher.Scripts.Patrons;
+using StellaPLFNetF;
 using Shortcut = StellaLauncher.Scripts.Shortcut;
 
 namespace StellaLauncher.Forms

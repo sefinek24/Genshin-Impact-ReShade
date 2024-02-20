@@ -6,10 +6,10 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ByteSizeLib;
-using ClassLibrary;
 using CliWrap.Builders;
 using StellaLauncher.Forms;
 using StellaLauncher.Properties;
+using StellaPLFNetF;
 
 namespace StellaLauncher.Scripts.Download
 {
