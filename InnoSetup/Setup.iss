@@ -1,5 +1,5 @@
 #define AppName "Genshin Stella Mod"
-#define AppVersion "7.9.7.5"
+#define AppVersion "7.9.7.6"
 #define AppPublisher "Sefinek Inc."
 #define AppURL "https://genshin.sefinek.net"
 #define AppExeName "Stella Mod Launcher.exe"
@@ -82,7 +82,7 @@ Name: "ukrainian"; MessagesFile: "compiler:Languages\Ukrainian.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Check: not InstViaSetup and not InstViaLauncher
 
 [Files]
-Source: "..\Build\Release\{#AppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\Build\Release\net8.0-windows\{#AppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\Build\Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
