@@ -127,6 +127,9 @@
   <metadata name="panel2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="panel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -144,9 +147,6 @@
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>76</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="panel2.ToolTip" xml:space="preserve">
     <value>Close</value>
   </data>
@@ -190,10 +190,7 @@
     <value>None</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 20.25pt, style=Bold</value>
-  </data>
-  <data name="label1.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopRight</value>
+    <value>Comic Sans MS, 24.75pt, style=Bold</value>
   </data>
   <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -202,7 +199,7 @@
     <value>316, 51</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 37</value>
+    <value>600, 45</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>74</value>
@@ -232,7 +229,7 @@
     <value>Comic Sans MS, 15.75pt</value>
   </data>
   <data name="SettingsAndUtils.Location" type="System.Drawing.Point, System.Drawing">
-    <value>414, 88</value>
+    <value>414, 100</value>
   </data>
   <data name="SettingsAndUtils.Size" type="System.Drawing.Size, System.Drawing">
     <value>400, 30</value>
@@ -354,6 +351,9 @@
   <data name="&gt;&gt;Launcher.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="MuteMusicOnStart.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
