@@ -7,6 +7,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <AssemblyName>Build Stella Mod</AssemblyName>
+    <NoWarn>$(NoWarn);CA1303</NoWarn>
   </PropertyGroup>
 
 </Project>
