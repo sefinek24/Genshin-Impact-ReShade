@@ -38,6 +38,11 @@ public static class TaskbarProgress
 	private interface ITaskbarList3
 	{
 		void HrInit();
+		void AddTab(IntPtr hwnd);
+		void DeleteTab(IntPtr hwnd);
+		void ActivateTab(IntPtr hwnd);
+		void SetActiveAlt(IntPtr hwnd);
+		void MarkFullscreenWindow(IntPtr hwnd, [MarshalAs(UnmanagedType.Bool)] bool fFullscreen);
 		void SetProgressValue(IntPtr hwnd, ulong completed, ulong total);
 		void SetProgressState(IntPtr hwnd, Flags tbpFlags);
 	}

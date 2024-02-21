@@ -11,11 +11,11 @@ internal static class CheckForUpdatesOfBenefits
 {
 	public static async Task<int> Analyze()
 	{
-		BenefitVersions remoteVersions = await GetVersions();
+		BenefitVersions? remoteVersions = await GetVersions();
 
 
 		// 3DMigoto
-		string migotoVerPath = Path.Combine(Default.ResourcesPath, "3DMigoto", "3dmigoto-version.json");
+		string migotoVerPath = Path.Combine(Default.ResourcesPath!, "3DMigoto", "3dmigoto-version.json");
 		if (File.Exists(migotoVerPath))
 		{
 			string migotoJson = File.ReadAllText(migotoVerPath);
@@ -41,7 +41,7 @@ internal static class CheckForUpdatesOfBenefits
 
 
 		// Mods for 3DMigoto
-		string modsVerPath = Path.Combine(Default.ResourcesPath, "3DMigoto", "mods-version.json");
+		string modsVerPath = Path.Combine(Default.ResourcesPath!, "3DMigoto", "mods-version.json");
 		if (File.Exists(modsVerPath))
 		{
 			string modsJson = File.ReadAllText(modsVerPath);
@@ -69,7 +69,7 @@ internal static class CheckForUpdatesOfBenefits
 
 
 		// Addons
-		string addonsVersionPath = Path.Combine(Default.ResourcesPath, "ReShade", "Addons", "version.json");
+		string addonsVersionPath = Path.Combine(Default.ResourcesPath!, "ReShade", "Addons", "version.json");
 		if (File.Exists(addonsVersionPath))
 		{
 			string addonsJson = File.ReadAllText(addonsVersionPath);
@@ -94,7 +94,7 @@ internal static class CheckForUpdatesOfBenefits
 
 
 		// Presets
-		string presetsVersionPath = Path.Combine(Default.ResourcesPath, "ReShade", "Presets", "3. Stella Mod Plus", "version.json");
+		string presetsVersionPath = Path.Combine(Default.ResourcesPath!, "ReShade", "Presets", "3. Stella Mod Plus", "version.json");
 		if (File.Exists(presetsVersionPath))
 		{
 			string presetsJson = File.ReadAllText(presetsVersionPath);
@@ -107,7 +107,7 @@ internal static class CheckForUpdatesOfBenefits
 					$"A new version of presets has been detected.\n\nYour version: v{presetsJsonConverted.Version} from {presetsJsonConverted.Date}\nNew version: v{remoteVersions.Message.Resources.Presets}",
 					Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-				string presets = Path.Combine(Default.ResourcesPath, "ReShade", "Presets", "3. Stella Mod Plus");
+				string presets = Path.Combine(Default.ResourcesPath!, "ReShade", "Presets", "3. Stella Mod Plus");
 				if (Directory.Exists(presets)) await DeleteBenefits.DeleteDirectory(presets);
 
 				UpdateBenefits.Download("presets", $"Presets update - v{remoteVersions.Message.Resources.Presets}.zip", Path.GetDirectoryName(presetsVersionPath));
@@ -122,7 +122,7 @@ internal static class CheckForUpdatesOfBenefits
 
 
 		// Shaders
-		string shadersVersionPath = Path.Combine(Default.ResourcesPath, "ReShade", "Shaders", "version.json");
+		string shadersVersionPath = Path.Combine(Default.ResourcesPath!, "ReShade", "Shaders", "version.json");
 		if (File.Exists(shadersVersionPath))
 		{
 			string shadersJson = File.ReadAllText(shadersVersionPath);
@@ -177,7 +177,7 @@ internal static class CheckForUpdatesOfBenefits
 		return 0;
 	}
 
-	private static async Task<BenefitVersions> GetVersions()
+	private static async Task<BenefitVersions?> GetVersions()
 	{
 		try
 		{
@@ -190,12 +190,10 @@ internal static class CheckForUpdatesOfBenefits
 		{
 			if (webEx.Response is HttpWebResponse response)
 			{
-				using (StreamReader reader = new(response.GetResponseStream() ?? throw new InvalidOperationException()))
-				{
-					string errorResponse = await reader.ReadToEndAsync();
-					MessageBox.Show($@"An error occurred: {errorResponse}", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
-					Log.ErrorAndExit(new Exception(errorResponse), false);
-				}
+				using StreamReader reader = new(response.GetResponseStream() ?? throw new InvalidOperationException());
+				string errorResponse = await reader.ReadToEndAsync();
+				MessageBox.Show($@"An error occurred: {errorResponse}", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
+				Log.ErrorAndExit(new Exception(errorResponse), false);
 			}
 			else
 			{

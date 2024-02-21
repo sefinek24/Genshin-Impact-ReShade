@@ -8,7 +8,7 @@ public class VerifyToken
 	public string Message { get; set; }
 	public bool DeleteBenefits { get; set; }
 	public bool DeleteTokens { get; set; }
-	public string Token { get; set; }
+	public string? Token { get; set; }
 	public int TierId { get; set; }
 	public string Username { get; set; }
 	public string AvatarUrl { get; set; }

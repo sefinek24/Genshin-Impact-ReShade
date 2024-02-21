@@ -7,12 +7,12 @@ namespace StellaModLauncher.Scripts.Forms;
 
 internal static class WebViewHelper
 {
-	public static async Task Initialize(WebView2 webView21, string url)
+	public static async Task Initialize(WebView2 webView21, string? url)
 	{
 		try
 		{
 			await webView21.EnsureCoreWebView2Async(await CoreWebView2Environment.CreateAsync(null, Program.AppData, new CoreWebView2EnvironmentOptions()));
-			webView21.CoreWebView2.Settings.UserAgent += $" StellaLauncher/{Program.ProductVersion}";
+			webView21.CoreWebView2.Settings.UserAgent += $" StellaLauncher/{Program.AppFileVersion}";
 
 			Program.Logger.Info("Loaded WebView2 via WebViewHelper.Initialize()");
 

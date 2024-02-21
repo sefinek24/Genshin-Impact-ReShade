@@ -13,16 +13,16 @@ internal static class Music
 	{
 		if (Program.Settings.ReadInt("Launcher", "EnableMusic", 1) == 0 || Debugger.IsAttached) return;
 
-		string wavPath = GetRandomBgWavPath();
+		string? wavPath = GetRandomBgWavPath();
 		if (string.IsNullOrEmpty(wavPath)) return;
 
 		await PlaySoundAsync(wavPath, 0.76f);
 	}
 
-	private static string GetRandomBgWavPath()
+	private static string? GetRandomBgWavPath()
 	{
 		int randomBgNumber = Random.Next(1, 7);
-		string wavPath = Path.Combine(Program.AppPath, "data", "sounds", "bg", $"{randomBgNumber}.wav");
+		string? wavPath = Path.Combine(Program.AppPath, "data", "sounds", "bg", $"{randomBgNumber}.wav");
 		return File.Exists(wavPath) ? wavPath : null;
 	}
 
@@ -30,7 +30,7 @@ internal static class Music
 	{
 		if (Program.Settings.ReadInt("Launcher", "EnableBgSounds", 1) == 0) return;
 
-		string wavPath = Path.Combine(Program.AppPath, "data", "sounds", dir, $"{fileName}.wav");
+		string? wavPath = Path.Combine(Program.AppPath, "data", "sounds", dir, $"{fileName}.wav");
 		if (!File.Exists(wavPath))
 		{
 			Default._status_Label.Text += $"[x] {Resources.Default_TheSoundFileWithMusicWasNotFound}\n";
@@ -42,21 +42,18 @@ internal static class Music
 		PlaySoundAsync(wavPath, volume).ConfigureAwait(false);
 	}
 
-	private static async Task PlaySoundAsync(string wavPath, float volume)
+	private static async Task PlaySoundAsync(string? wavPath, float volume)
 	{
 		try
 		{
-			using (AudioFileReader audioFile = new(wavPath))
-			using (WaveChannel32 volumeStream = new(audioFile))
-			{
-				volumeStream.Volume = volume;
-				using (WaveOutEvent outputDevice = new())
-				{
-					outputDevice.Init(volumeStream);
-					outputDevice.Play();
-					await Task.Delay(TimeSpan.FromSeconds(audioFile.TotalTime.TotalSeconds));
-				}
-			}
+			using AudioFileReader audioFile = new(wavPath);
+			using WaveChannel32 volumeStream = new(audioFile);
+			volumeStream.Volume = volume;
+
+			using WaveOutEvent outputDevice = new();
+			outputDevice.Init(volumeStream);
+			outputDevice.Play();
+			await Task.Delay(TimeSpan.FromSeconds(audioFile.TotalTime.TotalSeconds));
 
 			Program.Logger.Info($"Playing sound file: {wavPath}");
 		}

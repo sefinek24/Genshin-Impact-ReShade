@@ -1541,6 +1541,17 @@ namespace StellaModLauncher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to A critical error occurred during the verification of your subscription. For some reason, your computer was unable to send a request to the API interface located in Warsaw, Poland. Please check your antivirus software or visit the status page at status.sefinek.net.
+        ///
+        ///The application must be closed immediately. Below, you will find error details. If you are unsure about what to do in this situation, please contact the software developer. Subscribers are provided with continuous technical support. Good luck!        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Secret_VerifyToken_Exception {
+            get {
+                return ResourceManager.GetString("Secret_VerifyToken_Exception", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Deleting the previous version of the mod pack....
         /// </summary>
         internal static string StellaResources_DeletingThePreviousVersionOfTheModPack {

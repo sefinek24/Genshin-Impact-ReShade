@@ -1,3 +1,4 @@
+using System.Drawing.Drawing2D;
 using Microsoft.Win32;
 using StellaModLauncher.Forms.Other;
 using StellaModLauncher.Properties;
@@ -21,6 +22,31 @@ public partial class Settings : Form
 	private void Tools_Load(object sender, EventArgs e)
 	{
 		RoundedCorners.Form(this);
+
+		release_Label.Text = string.Format(release_Label.Text, Program.AppVersionFull, Program.AppFileVersion, Program.AppVersion);
+
+		release_Label.Paint += (s, e) =>
+		{
+			int radius = 12;
+			GraphicsPath path = new();
+			Rectangle rect = new(0, 0, release_Label.Width, release_Label.Height);
+
+			path.AddArc(rect.X, rect.Y, radius, radius, 180, 90);
+			path.AddArc(rect.X + rect.Width - radius, rect.Y, radius, radius, 270, 90);
+			path.AddArc(rect.X + rect.Width - radius, rect.Y + rect.Height - radius, radius, radius, 0, 90);
+			path.AddArc(rect.X, rect.Y + rect.Height - radius, radius, radius, 90, 90);
+			path.CloseFigure();
+
+			e.Graphics.SetClip(path);
+			using (Brush brush = new SolidBrush(Color.FromArgb(100, 0, 0, 0)))
+			{
+				e.Graphics.FillRectangle(brush, rect);
+			}
+
+			TextRenderer.DrawText(e.Graphics, release_Label.Text, release_Label.Font, rect, release_Label.ForeColor, Color.Transparent);
+
+			e.Graphics.ResetClip();
+		};
 
 		MusicLabel_Set();
 		RPCLabel_Set();
@@ -75,12 +101,12 @@ public partial class Settings : Form
 			return;
 		}
 
-		using (RegistryKey key = Registry.CurrentUser.OpenSubKey(Program.RegistryPath, true))
+		using (RegistryKey? key = Registry.CurrentUser.OpenSubKey(Program.RegistryPath, true))
 		{
 			key?.SetValue("AppIsConfigured", 0);
 		}
 
-		Cmd.CliWrap cliWrapCommand2 = new()
+		Cmd.CliWrap? cliWrapCommand2 = new()
 		{
 			App = Program.ConfigurationWindow,
 			WorkingDir = Program.AppPath,
@@ -155,7 +181,7 @@ public partial class Settings : Form
 				Program.Settings.WriteInt("Launcher", "DiscordRPC", 0);
 				if (!Discord.IsReady)
 				{
-					Discord.Client.Dispose();
+					Discord.Client!.Dispose();
 					Discord.Username = null;
 				}
 
@@ -168,16 +194,12 @@ public partial class Settings : Form
 	private void RPCLabel_Set()
 	{
 		int iniData = Program.Settings.ReadInt("Launcher", "DiscordRPC", 1);
-		switch (iniData)
+		DisableDiscordRPC.Text = iniData switch
 		{
-			case 0:
-				DisableDiscordRPC.Text = Resources.Tools_EnableDiscordRPC;
-				break;
-
-			case 1:
-				DisableDiscordRPC.Text = Resources.Tools_DisableDiscordRPC;
-				break;
-		}
+			0 => Resources.Tools_EnableDiscordRPC,
+			1 => Resources.Tools_DisableDiscordRPC,
+			_ => DisableDiscordRPC.Text
+		};
 	}
 
 
@@ -190,7 +212,7 @@ public partial class Settings : Form
 	// ---------------------------------- ReShade ----------------------------------
 	private async void ConfReShade_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		string currentPreset = await RsConfig.Prepare();
+		string? currentPreset = await ReShadeIni.Prepare();
 		if (string.IsNullOrEmpty(currentPreset)) return;
 
 		MessageBox.Show(

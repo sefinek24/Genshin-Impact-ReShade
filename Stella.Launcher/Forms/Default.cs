@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Reflection;
 using Microsoft.Win32;
 using Newtonsoft.Json;
 using NuGet.Versioning;
@@ -6,7 +7,6 @@ using StellaModLauncher.Forms.Other;
 using StellaModLauncher.Models;
 using StellaModLauncher.Properties;
 using StellaModLauncher.Scripts;
-using StellaModLauncher.Scripts.Download;
 using StellaModLauncher.Scripts.Forms;
 using StellaModLauncher.Scripts.Forms.MainForm;
 using StellaModLauncher.Scripts.Patrons;
@@ -21,33 +21,33 @@ public partial class Default : Form
 	public static bool UpdateIsAvailable;
 
 	// Main
-	public static Label _status_Label;
-	public static Label _preparingPleaseWait;
-	public static ProgressBar _progressBar1;
+	public static Label? _status_Label;
+	public static Label? _preparingPleaseWait;
+	public static ProgressBar? _progressBar1;
 
 	// Left
-	public static PictureBox _discordServerIco_Picturebox;
-	public static LinkLabel _discordServer_LinkLabel;
-	public static PictureBox _supportMeIco_PictureBox;
-	public static LinkLabel _supportMe_LinkLabel;
-	public static PictureBox _youtubeIco_Picturebox;
-	public static LinkLabel _youTube_LinkLabel;
+	public static PictureBox? _discordServerIco_Picturebox;
+	public static LinkLabel? _discordServer_LinkLabel;
+	public static PictureBox? _supportMeIco_PictureBox;
+	public static LinkLabel? _supportMe_LinkLabel;
+	public static PictureBox? _youtubeIco_Picturebox;
+	public static LinkLabel? _youTube_LinkLabel;
 
 	// Start the game
-	public static LinkLabel _startGame_LinkLabel;
-	public static LinkLabel _injectReShade_LinkLabel;
-	public static LinkLabel _runFpsUnlocker_LinkLabel;
-	public static LinkLabel _only3DMigoto_LinkLabel;
-	public static LinkLabel _runGiLauncher_LinkLabel;
-	public static LinkLabel _becomeMyPatron_LinkLabel;
+	public static LinkLabel? _startGame_LinkLabel;
+	public static LinkLabel? _injectReShade_LinkLabel;
+	public static LinkLabel? _runFpsUnlocker_LinkLabel;
+	public static LinkLabel? _only3DMigoto_LinkLabel;
+	public static LinkLabel? _runGiLauncher_LinkLabel;
+	public static LinkLabel? _becomeMyPatron_LinkLabel;
 
 	// Right
-	public static LinkLabel _version_LinkLabel;
-	public static LinkLabel _updates_LinkLabel;
-	public static PictureBox _updateIco_PictureBox;
+	public static LinkLabel? _version_LinkLabel;
+	public static LinkLabel? _updates_LinkLabel;
+	public static PictureBox? _updateIco_PictureBox;
 
 	// Path
-	public static string ResourcesPath;
+	public static string? ResourcesPath;
 
 	// Window
 	private bool _mouseDown;
@@ -64,7 +64,7 @@ public partial class Default : Form
 	private void Default_Load(object sender, EventArgs e)
 	{
 		// Set background
-		Image newBackground = Background.OnStart(toolTip1, changeBg_LinkLabel);
+		Image? newBackground = Background.OnStart(toolTip1, changeBg_LinkLabel);
 		if (newBackground != null) BackgroundImage = newBackground;
 
 		RoundedCorners.Form(this);
@@ -99,10 +99,11 @@ public partial class Default : Form
 
 		Stages.UpdateStage(1, "Updating `LastRunTime` in the registry...");
 
+
 		// Registry
 		using (RegistryKey key2 = Registry.CurrentUser.CreateSubKey(Program.RegistryPath, true))
 		{
-			key2?.SetValue("LastRunTime", DateTime.Now);
+			key2.SetValue("LastRunTime", DateTime.Now);
 		}
 
 
@@ -136,10 +137,7 @@ public partial class Default : Form
 
 		// App version
 		Stages.UpdateStage(2, "Loading Stella Mod into the Tray...");
-
-
-		// Tray
-		Global.NotifyIconInstance = new NotifyIcon
+		GlobalHelpers.NotifyIconInstance = new NotifyIcon
 		{
 			Icon = Program.Ico,
 			Text = Program.AppNameVer,
@@ -147,8 +145,8 @@ public partial class Default : Form
 			ContextMenuStrip = new ContextMenuStrip()
 		};
 
-		Tray trayHandler = new(Global.NotifyIconInstance, this);
-		Global.NotifyIconInstance.ContextMenuStrip.Items.AddRange(new ToolStripItem[]
+		Tray trayHandler = new(GlobalHelpers.NotifyIconInstance, this);
+		GlobalHelpers.NotifyIconInstance.ContextMenuStrip.Items.AddRange(new ToolStripItem[]
 		{
 			new ToolStripMenuItem("Toggle Minimize/Restore", null, trayHandler.ToggleMinimizeRestore),
 			new ToolStripMenuItem("Reload window", null, trayHandler.ReloadForm),
@@ -164,7 +162,7 @@ public partial class Default : Form
 
 		// Is user my Patron?
 		Stages.UpdateStage(3, "Checking Stella Mod Plus subscription...");
-		string registrySecret = Secret.GetTokenFromRegistry();
+		string? registrySecret = Secret.GetTokenFromRegistry();
 
 		Stages.UpdateStage(4, "Verifying Stella Mod Plus subscription...");
 
@@ -172,7 +170,7 @@ public partial class Default : Form
 		{
 			label1.Text = @"/ᐠ. ｡.ᐟ\ᵐᵉᵒʷˎˊ˗";
 
-			string data = await Secret.VerifyToken(registrySecret).ConfigureAwait(true);
+			string? data = await Secret.VerifyToken(registrySecret).ConfigureAwait(true);
 			if (data == null)
 			{
 				Secret.IsStellaPlusSubscriber = false;
@@ -189,9 +187,9 @@ public partial class Default : Form
 			}
 			else
 			{
-				VerifyToken remote = JsonConvert.DeserializeObject<VerifyToken>(data);
+				VerifyToken? remote = JsonConvert.DeserializeObject<VerifyToken>(data);
 
-				if (remote.DeleteBenefits) DeleteBenefits.Start();
+				if (remote!.DeleteBenefits) DeleteBenefits.Start();
 				if (remote.DeleteTokens) Delete.RegistryKey("Secret");
 
 				switch (remote.Status)
@@ -290,7 +288,7 @@ public partial class Default : Form
 		{
 			MessageBox.Show("This is your hundredth (100th) launch of the program by you on your device.\n\nThank you!", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-			string path = Path.Combine(Program.AppPath, "data", "videos", "theannoyingcat.mp4");
+			string? path = Path.Combine(Program.AppPath, "data", "videos", "theannoyingcat.mp4");
 			if (Utils.CheckFileExists(path)) Utils.OpenUrl(path);
 		}
 
@@ -305,7 +303,7 @@ public partial class Default : Form
 
 		// Updated?
 		int updatedLauncher = Program.Settings.ReadInt("Updates", "UpdateAvailable", 0);
-		string oldVersion = Program.Settings.ReadString("Updates", "OldVersion", null);
+		string? oldVersion = Program.Settings.ReadString("Updates", "OldVersion");
 		if (updatedLauncher == 1 && oldVersion != Program.AppVersion)
 		{
 			Program.Settings.WriteInt("Updates", "UpdateAvailable", 0);
@@ -319,7 +317,7 @@ public partial class Default : Form
 
 
 		// Check InjectType
-		string injectMode = Program.Settings.ReadString("Injection", "Method", "exe");
+		string? injectMode = Program.Settings.ReadString("Injection", "Method", "exe");
 		switch (injectMode)
 		{
 			case "exe":
@@ -356,7 +354,7 @@ public partial class Default : Form
 		if (!File.Exists(Run.GsmPath))
 		{
 			string fileName = Path.GetFileName(Run.GsmPath);
-			string dirPath = Path.GetDirectoryName(Run.GsmPath);
+			string? dirPath = Path.GetDirectoryName(Run.GsmPath);
 
 			Program.Logger.Error($"{fileName} was not found in {Run.GsmPath}");
 			status_Label.Text += $"[x] Not found `{fileName}` in:\n[x] {dirPath}\n";
@@ -390,9 +388,9 @@ public partial class Default : Form
 	{
 		Program.Logger.Info(string.Format(Resources.Main_ClosingForm_, Text));
 
-		if (Global.NotifyIconInstance == null) return;
-		Global.NotifyIconInstance.Visible = false;
-		Global.NotifyIconInstance.Dispose();
+		if (GlobalHelpers.NotifyIconInstance == null) return;
+		GlobalHelpers.NotifyIconInstance.Visible = false;
+		GlobalHelpers.NotifyIconInstance.Dispose();
 		Program.Logger.Info("Disposed NotifyIconInstance");
 	}
 
@@ -422,7 +420,7 @@ public partial class Default : Form
 
 	private void ChangeBg_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		Image newBackground = Background.Change(toolTip1, changeBg_LinkLabel);
+		Image? newBackground = Background.Change(toolTip1, changeBg_LinkLabel);
 		if (newBackground != null) BackgroundImage = newBackground;
 
 		Music.PlaySound("winxp", "menu_command");
@@ -470,7 +468,7 @@ public partial class Default : Form
 
 	private async void OpenGILauncher_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		string giLauncher = await Utils.GetGame("giLauncher").ConfigureAwait(false);
+		string? giLauncher = await Utils.GetGame("giLauncher").ConfigureAwait(false);
 		if (string.IsNullOrEmpty(giLauncher))
 		{
 			MessageBox.Show(Resources.Default_GameLauncherWasNotFound, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -588,10 +586,5 @@ public partial class Default : Form
 	private void ViewChangelog_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
 		Utils.OpenUrl("https://sefinek.net/genshin-impact-reshade/docs?page=changelog_v7");
-	}
-
-	public static class Global
-	{
-		public static NotifyIcon NotifyIconInstance;
 	}
 }

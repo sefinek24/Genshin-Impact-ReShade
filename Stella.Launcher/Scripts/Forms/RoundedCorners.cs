@@ -6,29 +6,23 @@ internal static class RoundedCorners
 {
 	public static void Form(Form form, int radius = 12)
 	{
-		if (form == null) throw new ArgumentNullException(nameof(form));
+		ArgumentNullException.ThrowIfNull(form);
 
-		using (GraphicsPath path = RoundedRectPath(new Rectangle(0, 0, form.Width, form.Height), radius))
-		{
-			form.Region = new Region(path);
-		}
+		using GraphicsPath path = RoundedRectPath(new Rectangle(0, 0, form.Width, form.Height), radius);
+		form.Region = new Region(path);
 	}
 
 	public static Image Picture(Image startImage, int cornerRadius, Color backgroundColor)
 	{
 		cornerRadius *= 2;
 		Bitmap roundedImage = new(startImage.Width, startImage.Height);
-		using (Graphics g = Graphics.FromImage(roundedImage))
-		{
-			g.Clear(backgroundColor);
-			g.SmoothingMode = SmoothingMode.AntiAlias;
+		using Graphics g = Graphics.FromImage(roundedImage);
+		g.Clear(backgroundColor);
+		g.SmoothingMode = SmoothingMode.AntiAlias;
 
-			using (Brush brush = new TextureBrush(startImage))
-			using (GraphicsPath gp = RoundedRectPath(new Rectangle(0, 0, roundedImage.Width, roundedImage.Height), cornerRadius))
-			{
-				g.FillPath(brush, gp);
-			}
-		}
+		using Brush brush = new TextureBrush(startImage);
+		using GraphicsPath gp = RoundedRectPath(new Rectangle(0, 0, roundedImage.Width, roundedImage.Height), cornerRadius);
+		g.FillPath(brush, gp);
 
 		return roundedImage;
 	}

@@ -15,45 +15,38 @@ internal static class Run
 	private static readonly string BatchRunPatrons = Path.Combine(BatchDirPatrons, "run.cmd");
 
 	// Variables
-	public static string InjectType;
+	public static string? InjectType;
 
 	public static async Task StartGame()
 	{
-		Cmd.CliWrap command = null;
-
-		switch (InjectType)
+		Cmd.CliWrap? command = InjectType switch
 		{
-			case "exe":
-				command = new Cmd.CliWrap
-				{
-					App = "wt.exe",
-					Arguments = new ArgumentsBuilder()
-						.Add(GsmPath) // 0
-						.Add(Program.ProductVersion) // 1
-						.Add(Data.ReShadeVer) // 2
-						.Add(Data.UnlockerVer) // 3
-						.Add(Secret.IsStellaPlusSubscriber ? 1 : 6) // 4
-				};
-				break;
-			case "cmd":
-				command = new Cmd.CliWrap
-				{
-					App = "wt.exe",
-					WorkingDir = Program.AppPath,
-					Arguments = new ArgumentsBuilder()
-						.Add(BatchRunPatrons) // 0
-						.Add(Program.ProductVersion) // 1
-						.Add(Data.ReShadeVer) // 2
-						.Add(Data.UnlockerVer) // 3
-						.Add(Secret.IsStellaPlusSubscriber ? 1 : 6) // 4
-						.Add(Secret.IsStellaPlusSubscriber ? $"\"{Default.ResourcesPath}\\3DMigoto\"" : "0") // 5 
-						.Add(await Utils.GetGameVersion()) // 6
-						.Add(Log.CmdLogs) // 7
-						.Add(Program.AppPath) // 8
-						.Add(Path.GetDirectoryName(Program.FpsUnlockerExePath) ?? string.Empty) // 9
-				};
-				break;
-		}
+			"exe" => new Cmd.CliWrap
+			{
+				App = "wt.exe",
+				Arguments = new ArgumentsBuilder().Add(GsmPath) // 0
+					.Add(Program.AppFileVersion) // 1
+					.Add(Data.ReShadeVer) // 2
+					.Add(Data.UnlockerVer) // 3
+					.Add(Secret.IsStellaPlusSubscriber ? 1 : 6) // 4
+			},
+			"cmd" => new Cmd.CliWrap
+			{
+				App = "wt.exe",
+				WorkingDir = Program.AppPath,
+				Arguments = new ArgumentsBuilder().Add(BatchRunPatrons) // 0
+					.Add(Program.AppFileVersion) // 1
+					.Add(Data.ReShadeVer) // 2
+					.Add(Data.UnlockerVer) // 3
+					.Add(Secret.IsStellaPlusSubscriber ? 1 : 6) // 4
+					.Add(Secret.IsStellaPlusSubscriber ? $"\"{Default.ResourcesPath}\\3DMigoto\"" : "0") // 5 
+					.Add(await Utils.GetGameVersion()) // 6
+					.Add(Log.CmdLogs) // 7
+					.Add(Program.AppPath) // 8
+					.Add(Path.GetDirectoryName(Program.FpsUnlockerExePath) ?? string.Empty) // 9
+			},
+			_ => null
+		};
 
 		bool res = await Cmd.Execute(command).ConfigureAwait(false);
 		if (res) Application.Exit();
@@ -61,41 +54,34 @@ internal static class Run
 
 	public static async Task ReShade()
 	{
-		Cmd.CliWrap command = null;
-
-		switch (InjectType)
+		Cmd.CliWrap? command = InjectType switch
 		{
-			case "exe":
-				command = new Cmd.CliWrap
-				{
-					App = "wt.exe",
-					Arguments = new ArgumentsBuilder()
-						.Add(GsmPath) // 0
-						.Add(Program.ProductVersion) // 1
-						.Add(Data.ReShadeVer) // 2
-						.Add(Data.UnlockerVer) // 3
-						.Add(3) // 4
-				};
-				break;
-			case "cmd":
-				command = new Cmd.CliWrap
-				{
-					App = "wt.exe",
-					WorkingDir = Program.AppPath,
-					Arguments = new ArgumentsBuilder()
-						.Add(BatchRunPatrons) // 0
-						.Add(Program.ProductVersion) // 1
-						.Add(Data.ReShadeVer) // 2
-						.Add(Data.UnlockerVer) // 3
-						.Add(3) // 4
-						.Add(0) // 5 
-						.Add(await Utils.GetGameVersion()) // 6
-						.Add(Log.CmdLogs) // 7
-						.Add(Program.AppPath) // 8
-						.Add(Path.GetDirectoryName(Program.FpsUnlockerExePath) ?? string.Empty) // 9
-				};
-				break;
-		}
+			"exe" => new Cmd.CliWrap
+			{
+				App = "wt.exe",
+				Arguments = new ArgumentsBuilder().Add(GsmPath) // 0
+					.Add(Program.AppFileVersion) // 1
+					.Add(Data.ReShadeVer) // 2
+					.Add(Data.UnlockerVer) // 3
+					.Add(3) // 4
+			},
+			"cmd" => new Cmd.CliWrap
+			{
+				App = "wt.exe",
+				WorkingDir = Program.AppPath,
+				Arguments = new ArgumentsBuilder().Add(BatchRunPatrons) // 0
+					.Add(Program.AppFileVersion) // 1
+					.Add(Data.ReShadeVer) // 2
+					.Add(Data.UnlockerVer) // 3
+					.Add(3) // 4
+					.Add(0) // 5 
+					.Add(await Utils.GetGameVersion()) // 6
+					.Add(Log.CmdLogs) // 7
+					.Add(Program.AppPath) // 8
+					.Add(Path.GetDirectoryName(Program.FpsUnlockerExePath) ?? string.Empty) // 9
+			},
+			_ => null
+		};
 
 		bool res = await Cmd.Execute(command).ConfigureAwait(false);
 		if (res) Application.Exit();
@@ -103,41 +89,34 @@ internal static class Run
 
 	public static async Task FpsUnlocker()
 	{
-		Cmd.CliWrap command = null;
-		switch (InjectType)
+		Cmd.CliWrap? command = InjectType switch
 		{
-			case "exe":
-				command = new Cmd.CliWrap
-				{
-					App = "wt.exe",
-					Arguments = new ArgumentsBuilder()
-						.Add(GsmPath) // 0
-						.Add(Program.ProductVersion) // 1
-						.Add(Data.ReShadeVer) // 2
-						.Add(Data.UnlockerVer) // 3
-						.Add(4) // 4
-				};
-				break;
-			case "cmd":
-				command = new Cmd.CliWrap
-				{
-					App = "wt.exe",
-					WorkingDir = Program.AppPath,
-					Arguments = new ArgumentsBuilder()
-						.Add(BatchRunPatrons) // 0
-						.Add(Program.ProductVersion) // 1
-						.Add(Data.ReShadeVer) // 2
-						.Add(Data.UnlockerVer) // 3
-						.Add(4) // 4
-						.Add(0) // 5 
-						.Add(await Utils.GetGameVersion()) // 6
-						.Add(Log.CmdLogs) // 7
-						.Add(Program.AppPath) // 8
-						.Add(Path.GetDirectoryName(Program.FpsUnlockerExePath) ?? string.Empty) // 9
-				};
-				break;
-		}
-
+			"exe" => new Cmd.CliWrap
+			{
+				App = "wt.exe",
+				Arguments = new ArgumentsBuilder().Add(GsmPath) // 0
+					.Add(Program.AppFileVersion) // 1
+					.Add(Data.ReShadeVer) // 2
+					.Add(Data.UnlockerVer) // 3
+					.Add(4) // 4
+			},
+			"cmd" => new Cmd.CliWrap
+			{
+				App = "wt.exe",
+				WorkingDir = Program.AppPath,
+				Arguments = new ArgumentsBuilder().Add(BatchRunPatrons) // 0
+					.Add(Program.AppFileVersion) // 1
+					.Add(Data.ReShadeVer) // 2
+					.Add(Data.UnlockerVer) // 3
+					.Add(4) // 4
+					.Add(0) // 5 
+					.Add(await Utils.GetGameVersion()) // 6
+					.Add(Log.CmdLogs) // 7
+					.Add(Program.AppPath) // 8
+					.Add(Path.GetDirectoryName(Program.FpsUnlockerExePath) ?? string.Empty) // 9
+			},
+			_ => null
+		};
 
 		bool res = await Cmd.Execute(command).ConfigureAwait(false);
 		if (res) Application.Exit();
@@ -152,39 +131,33 @@ internal static class Run
 			return;
 		}
 
-		Cmd.CliWrap command = null;
-		switch (InjectType)
+		Cmd.CliWrap? command = InjectType switch
 		{
-			case "exe":
-				command = new Cmd.CliWrap
-				{
-					App = "wt.exe",
-					Arguments = new ArgumentsBuilder()
-						.Add(GsmPath) // 0
-						.Add(Program.AppVersion) // 1
-						.Add(Data.ReShadeVer) // 2
-						.Add(Data.UnlockerVer) // 3
-						.Add(5) // 4
-				};
-				break;
-			case "cmd":
-				command = new Cmd.CliWrap
-				{
-					App = "wt.exe",
-					WorkingDir = Program.AppPath,
-					Arguments = new ArgumentsBuilder()
-						.Add(BatchRunPatrons) // 0
-						.Add(Program.AppVersion) // 1
-						.Add(Data.ReShadeVer) // 2
-						.Add(Data.UnlockerVer) // 3
-						.Add(5) // 4
-						.Add(Secret.IsStellaPlusSubscriber ? $"\"{Default.ResourcesPath}\\3DMigoto\"" : "0") // 5 
-						.Add(await Utils.GetGameVersion()) // 6
-						.Add(Log.CmdLogs) // 7
-						.Add(Program.AppPath) // 8
-				};
-				break;
-		}
+			"exe" => new Cmd.CliWrap
+			{
+				App = "wt.exe",
+				Arguments = new ArgumentsBuilder().Add(GsmPath) // 0
+					.Add(Program.AppVersion) // 1
+					.Add(Data.ReShadeVer) // 2
+					.Add(Data.UnlockerVer) // 3
+					.Add(5) // 4
+			},
+			"cmd" => new Cmd.CliWrap
+			{
+				App = "wt.exe",
+				WorkingDir = Program.AppPath,
+				Arguments = new ArgumentsBuilder().Add(BatchRunPatrons) // 0
+					.Add(Program.AppVersion) // 1
+					.Add(Data.ReShadeVer) // 2
+					.Add(Data.UnlockerVer) // 3
+					.Add(5) // 4
+					.Add(Secret.IsStellaPlusSubscriber ? $"\"{Default.ResourcesPath}\\3DMigoto\"" : "0") // 5 
+					.Add(await Utils.GetGameVersion()) // 6
+					.Add(Log.CmdLogs) // 7
+					.Add(Program.AppPath) // 8
+			},
+			_ => null
+		};
 
 		// Run file
 		bool res = await Cmd.Execute(command).ConfigureAwait(false);

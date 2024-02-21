@@ -6,7 +6,7 @@ internal static class Background
 {
 	private static readonly ObjectCache Cache = MemoryCache.Default;
 	private static readonly string BackgroundImagesPath = Path.Combine(Program.AppPath, "data", "images", "backgrounds", "main");
-	private static readonly string[] Extensions = { "*.png", "*.jpg", "*.jpeg", "*.bmp" };
+	private static readonly string[] Extensions = ["*.png", "*.jpg", "*.jpeg", "*.bmp"];
 
 	private static string[] LoadBackgroundFiles()
 	{
@@ -15,22 +15,22 @@ internal static class Background
 			if (!Directory.Exists(BackgroundImagesPath))
 			{
 				MessageBox.Show($@"Background folder does not exist: {BackgroundImagesPath}", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
-				return Array.Empty<string>();
+				return [];
 			}
 
-			List<string> fileList = new();
+			List<string> fileList = [];
 			foreach (string ext in Extensions) fileList.AddRange(Directory.GetFiles(BackgroundImagesPath, ext, SearchOption.AllDirectories));
 
-			return fileList.ToArray();
+			return [.. fileList];
 		}
 		catch (Exception ex)
 		{
 			MessageBox.Show($@"Error occurred while loading background files: {ex.Message}", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
-			return Array.Empty<string>();
+			return [];
 		}
 	}
 
-	public static Image OnStart(ToolTip toolTip, LinkLabel changeBg)
+	public static Image? OnStart(ToolTip toolTip, LinkLabel changeBg)
 	{
 		string[] backgroundFiles = LoadBackgroundFiles();
 		if (backgroundFiles.Length == 0) return null;
@@ -41,7 +41,7 @@ internal static class Background
 		return GetCachedOrLoadImage(bgInt, backgroundFiles, toolTip, changeBg);
 	}
 
-	private static Image GetCachedOrLoadImage(int bgInt, IReadOnlyList<string> backgroundFiles, ToolTip toolTip, Control changeBg)
+	private static Bitmap? GetCachedOrLoadImage(int bgInt, IReadOnlyList<string> backgroundFiles, ToolTip toolTip, Control changeBg)
 	{
 		if (backgroundFiles.Count == 0) return null;
 
@@ -70,7 +70,7 @@ internal static class Background
 		string[] pathParts = filePath.Split(Path.DirectorySeparatorChar);
 		if (pathParts.Length > 3)
 		{
-			string folderNames = $@"{pathParts[pathParts.Length - 3]}\{pathParts[pathParts.Length - 2]}";
+			string folderNames = $@"{pathParts[^3]}\{pathParts[^2]}";
 			string fileName = Path.GetFileName(filePath);
 			toolTip.SetToolTip(changeBg, $@"Current background: {folderNames}\{fileName}");
 		}
@@ -80,7 +80,7 @@ internal static class Background
 		}
 	}
 
-	public static Image Change(ToolTip toolTip, LinkLabel changeBg)
+	public static Image? Change(ToolTip toolTip, LinkLabel changeBg)
 	{
 		string[] backgroundFiles = LoadBackgroundFiles();
 		if (backgroundFiles.Length == 0)

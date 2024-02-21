@@ -13,12 +13,12 @@ namespace StellaModLauncher.Scripts;
 
 internal static class Utils
 {
-	public static async Task<string> GetGame(string type)
+	public static async Task<string?> GetGame(string type)
 	{
-		string fullGamePath = null;
-		using (RegistryKey key = Registry.CurrentUser.OpenSubKey(Program.RegistryPath))
+		string? fullGamePath = null;
+		using (RegistryKey? key = Registry.CurrentUser.OpenSubKey(Program.RegistryPath))
 		{
-			if (key != null) fullGamePath = (string)key.GetValue("GamePath");
+			if (key != null) fullGamePath = key.GetValue("GamePath") as string;
 		}
 
 		if (!File.Exists(fullGamePath))
@@ -29,7 +29,7 @@ internal static class Utils
 			if (result != DialogResult.Yes) return string.Empty;
 			using (RegistryKey newKey = Registry.CurrentUser.CreateSubKey(Program.RegistryPath))
 			{
-				newKey?.SetValue("AppIsConfigured", 0);
+				newKey.SetValue("AppIsConfigured", 0);
 			}
 
 			_ = Cmd.Execute(new Cmd.CliWrap { App = Program.ConfigurationWindow });
@@ -43,7 +43,7 @@ internal static class Utils
 		{
 			case "giDir":
 			{
-				string path = Path.GetDirectoryName(Path.GetDirectoryName(fullGamePath));
+				string? path = Path.GetDirectoryName(Path.GetDirectoryName(fullGamePath));
 				Program.Logger.Info($"giDir: {path}");
 
 				return path;
@@ -51,8 +51,8 @@ internal static class Utils
 
 			case "giGameDir":
 			{
-				string path = Path.GetDirectoryName(fullGamePath);
-				string giGameDir = Path.Combine(path);
+				string? path = Path.GetDirectoryName(fullGamePath);
+				string giGameDir = Path.Combine(path!);
 				if (Directory.Exists(giGameDir)) return giGameDir;
 
 				Program.Logger.Info($"giGameDir: {giGameDir}");
@@ -66,9 +66,9 @@ internal static class Utils
 
 			case "giLauncher":
 			{
-				string giDir = await GetGame("giDir").ConfigureAwait(false);
+				string? giDir = await GetGame("giDir").ConfigureAwait(false);
 
-				string genshinImpactExe = Path.Combine(giDir, "launcher.exe");
+				string genshinImpactExe = Path.Combine(giDir!, "launcher.exe");
 				if (!File.Exists(genshinImpactExe))
 				{
 					MessageBox.Show(string.Format(Resources.Utils_LauncherFileDoesNotExist, genshinImpactExe), Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -91,16 +91,16 @@ internal static class Utils
 	public static async Task<string> GetGameVersion()
 	{
 		string gvSfn = Path.Combine(Program.AppData, "game-version.sfn");
-		string exePath = await GetGame("giExe");
-		string exe = Path.GetFileName(exePath);
+		string? exePath = await GetGame("giExe").ConfigureAwait(false);
+		string? exe = Path.GetFileName(exePath);
 
 		string number = exe == "GenshinImpact.exe" ? "1" : "2";
-		if (!File.Exists(gvSfn)) File.WriteAllText(gvSfn, number);
+		if (!File.Exists(gvSfn)) await File.WriteAllTextAsync(gvSfn, number).ConfigureAwait(false);
 
 		return number;
 	}
 
-	public static void OpenUrl(string url)
+	public static void OpenUrl(string? url)
 	{
 		if (string.IsNullOrEmpty(url))
 		{
@@ -129,17 +129,17 @@ internal static class Utils
 
 	public static void RemoveClickEvent(Label button)
 	{
-		FieldInfo eventClickField = typeof(Control).GetField("EventClick", BindingFlags.Static | BindingFlags.NonPublic);
-		object eventHandler = eventClickField?.GetValue(button);
+		FieldInfo? eventClickField = typeof(Control).GetField("EventClick", BindingFlags.Static | BindingFlags.NonPublic);
+		object? eventHandler = eventClickField?.GetValue(button);
 		if (eventHandler == null) return;
 
-		PropertyInfo eventsProperty = button.GetType().GetProperty("Events", BindingFlags.NonPublic | BindingFlags.Instance);
-		EventHandlerList eventHandlerList = (EventHandlerList)eventsProperty?.GetValue(button, null);
+		PropertyInfo? eventsProperty = button.GetType().GetProperty("Events", BindingFlags.NonPublic | BindingFlags.Instance);
+		EventHandlerList eventHandlerList = (EventHandlerList)eventsProperty?.GetValue(button, null)!;
 
-		eventHandlerList?.RemoveHandler(eventHandler, eventHandlerList[eventHandler]);
+		eventHandlerList.RemoveHandler(eventHandler, eventHandlerList[eventHandler]);
 	}
 
-	public static bool CheckFileExists(string fileName)
+	public static bool CheckFileExists(string? fileName)
 	{
 		string filePath = Path.Combine(fileName);
 		bool fileExists = File.Exists(filePath);
@@ -199,7 +199,7 @@ internal static class Utils
 		Default._progressBar1.Value = 0;
 	}
 
-	public static async Task<Image> LoadImageAsync(string url)
+	public static async Task<Image?> LoadImageAsync(string url)
 	{
 		Program.Logger.Info($"Downloading image via LoadImageAsync(): {url}");
 

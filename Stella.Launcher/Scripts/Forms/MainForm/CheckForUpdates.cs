@@ -25,13 +25,13 @@ internal static class CheckForUpdates
 			string json = await Program.SefinWebClient.GetStringAsync($"{Program.WebApi}/genshin-stella-mod/versions").ConfigureAwait(true);
 			Program.Logger.Info(json);
 
-			StellaApiVersion res = JsonConvert.DeserializeObject<StellaApiVersion>(json);
+			StellaApiVersion? res = JsonConvert.DeserializeObject<StellaApiVersion>(json);
 
-			string remoteDbLauncherVersion = res.Launcher.Release;
+			string? remoteDbLauncherVersion = res!.Launcher.Release;
 			DateTime remoteLauncherDate = DateTime.Parse(res.Launcher.Date, null, DateTimeStyles.RoundtripKind).ToUniversalTime().ToLocalTime();
 
 			// == Major release ==
-			if (Program.AppVersion[0] != remoteDbLauncherVersion[0])
+			if (Program.AppVersion![0] != remoteDbLauncherVersion[0])
 			{
 				Default.UpdateIsAvailable = true;
 
@@ -66,15 +66,15 @@ internal static class CheckForUpdates
 
 				string jsonContent = File.ReadAllText(jsonFile);
 				Program.Logger.Info($"{jsonFile}: {jsonContent}");
-				LocalResources data = JsonConvert.DeserializeObject<LocalResources>(jsonContent);
+				LocalResources? data = JsonConvert.DeserializeObject<LocalResources>(jsonContent);
 
-				string remoteDbResourcesVersion = res.Resources.Release;
-				if (data.Version != remoteDbResourcesVersion)
+				string? remoteDbResourcesVersion = res.Resources.Release;
+				if (data?.Version != remoteDbResourcesVersion)
 				{
 					Default.UpdateIsAvailable = true;
 
 					DateTime remoteResourcesDate = DateTime.Parse(res.Resources.Date, null, DateTimeStyles.RoundtripKind).ToUniversalTime().ToLocalTime();
-					DownloadResources.Run(data.Version, remoteDbResourcesVersion, remoteResourcesDate);
+					DownloadResources.Run(data?.Version!, remoteDbResourcesVersion, remoteResourcesDate);
 					return 1;
 				}
 			}
@@ -132,13 +132,13 @@ internal static class CheckForUpdates
 			Default._updates_LinkLabel.Text = Resources.Default_CheckForUpdates;
 			Default._updateIco_PictureBox.Image = Resources.icons8_available_updates;
 
-			Default._version_LinkLabel.Text = $@"v{(Program.AppVersion == Program.ProductVersion ? Program.AppVersion : $"{Program.ProductVersion}-alpha")}";
+			Default._version_LinkLabel.Text = $@"v{(Program.AppVersion == Program.AppFileVersion ? Program.AppVersion : $"{Program.AppFileVersion}-alpha")}";
 
 			// Utils.RemoveClickEvent(Default._updates_LinkLabel);
 			// Default._updates_LinkLabel.Click += CheckUpdates_Click;
 
 			Default.UpdateIsAvailable = false;
-			Program.Logger.Info($"Not found any new updates. AppVersion v{Program.AppVersion}; ProductVersion v{Program.ProductVersion};");
+			Program.Logger.Info($"Not found any new updates. AppVersion v{Program.AppVersion}; ProductVersion v{Program.AppFileVersion};");
 
 			TaskbarProgress.SetProgressState(TaskbarProgress.Flags.NoProgress);
 

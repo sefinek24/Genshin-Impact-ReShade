@@ -10,7 +10,7 @@ namespace StellaModLauncher.Scripts;
 
 internal static class Cmd
 {
-	public static async Task<bool> Execute(CliWrap cliWrapCommand)
+	public static async Task<bool> Execute(CliWrap? cliWrapCommand)
 	{
 		Music.PlaySound("winxp", "information_bar");
 
@@ -28,8 +28,8 @@ internal static class Cmd
 		try
 		{
 			// CliWrap
-			Command action = Cli.Wrap(cliWrapCommand.App)
-				.WithWorkingDirectory(cliWrapCommand.WorkingDir)
+			Command action = Cli.Wrap(cliWrapCommand.App!)
+				.WithWorkingDirectory(cliWrapCommand.WorkingDir!)
 				.WithArguments(commandArguments)
 				.WithValidation(cliWrapCommand.Validation);
 			BufferedCommandResult result = await action.ExecuteBufferedAsync();
@@ -95,7 +95,7 @@ internal static class Cmd
 		}
 	}
 
-	public static void Start(string process)
+	public static void Start(string? process)
 	{
 		ProcessStartInfo psi = new()
 		{
@@ -109,9 +109,9 @@ internal static class Cmd
 
 	public class CliWrap
 	{
-		public string App { get; set; }
-		public string WorkingDir { get; set; }
-		public ArgumentsBuilder Arguments { get; set; }
+		public string? App { get; set; }
+		public string? WorkingDir { get; set; }
+		public ArgumentsBuilder? Arguments { get; set; }
 		public CommandResultValidation Validation { get; set; }
 		public bool BypassUpdates { get; set; }
 		public bool DownloadingSetup { get; set; }

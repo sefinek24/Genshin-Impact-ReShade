@@ -7,26 +7,26 @@ internal static class DeleteBenefits
 	public static async void Start()
 	{
 		// Delete presets
-		string presets = Path.Combine(Default.ResourcesPath, "ReShade", "Presets", "3. Stella Mod Plus");
+		string presets = Path.Combine(Default.ResourcesPath!, "ReShade", "Presets", "3. Stella Mod Plus");
 		if (Directory.Exists(presets)) await DeleteDirectory(presets);
 
 		// Delete addons
-		string addons = Path.Combine(Default.ResourcesPath, "ReShade", "Addons");
+		string addons = Path.Combine(Default.ResourcesPath!, "ReShade", "Addons");
 		if (Directory.Exists(addons))
 		{
-			string[] cmdFilesToDelete = { "ReshadeEffectShaderToggler.addon64", "version.json" };
+			string[] cmdFilesToDelete = ["ReshadeEffectShaderToggler.addon64", "version.json"];
 			DeleteFiles(addons, cmdFilesToDelete);
 		}
 
 		// Delete 3DMigoto files
-		string migotoDir = Path.Combine(Default.ResourcesPath, "3DMigoto");
-		string[] filesToDelete = { "d3d11.dll", "d3dcompiler_46.dll", "loader.exe", "nvapi64.dll", "3dmigoto.dll" };
+		string migotoDir = Path.Combine(Default.ResourcesPath!, "3DMigoto");
+		string[] filesToDelete = ["d3d11.dll", "d3dcompiler_46.dll", "loader.exe", "nvapi64.dll", "3dmigoto.dll"];
 		DeleteFiles(migotoDir, filesToDelete);
 
 		// Delete 3DMigoto default mod pack
-		string migotoCharsMods = Path.Combine(Default.ResourcesPath, "3DMigoto", "Mods", "1. Characters");
+		string migotoCharsMods = Path.Combine(Default.ResourcesPath!, "3DMigoto", "Mods", "1. Characters");
 		if (Directory.Exists(migotoCharsMods)) await DeleteDirectory(migotoCharsMods);
-		string migotoOtherMods = Path.Combine(Default.ResourcesPath, "3DMigoto", "Mods", "2. Other");
+		string migotoOtherMods = Path.Combine(Default.ResourcesPath!, "3DMigoto", "Mods", "2. Other");
 		if (Directory.Exists(migotoOtherMods)) await DeleteDirectory(migotoOtherMods);
 
 		// Delete cmd (batch) files
@@ -35,7 +35,7 @@ internal static class DeleteBenefits
 
 
 		// Update ReShade.ini config
-		await RsConfig.Prepare();
+		await ReShadeIni.Prepare();
 	}
 
 	// Delete specific files in a folder

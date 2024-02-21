@@ -9,25 +9,23 @@ internal static class Delete
 	{
 		try
 		{
-			using (RegistryKey subKey = Registry.CurrentUser.OpenSubKey(Secret.RegistryKeyPath, true))
+			using RegistryKey? subKey = Registry.CurrentUser.OpenSubKey(Secret.RegistryKeyPath, true);
+			if (subKey != null)
 			{
-				if (subKey != null)
+				object? value = subKey.GetValue(key);
+				if (value != null)
 				{
-					object value = subKey.GetValue(key);
-					if (value != null)
-					{
-						subKey.DeleteValue(key);
-						Program.Logger.Info($"Deleted REG_SZ value '{key}' from the registry.");
-					}
-					else
-					{
-						Program.Logger.Info($"REG_SZ value '{key}' not found in the registry.");
-					}
+					subKey.DeleteValue(key);
+					Program.Logger.Info($"Deleted REG_SZ value '{key}' from the registry.");
 				}
 				else
 				{
-					Program.Logger.Info($"Registry key '{key}' not found.");
+					Program.Logger.Info($"REG_SZ value '{key}' not found in the registry.");
 				}
+			}
+			else
+			{
+				Program.Logger.Info($"Registry key '{key}' not found.");
 			}
 		}
 		catch (SecurityException securityEx)

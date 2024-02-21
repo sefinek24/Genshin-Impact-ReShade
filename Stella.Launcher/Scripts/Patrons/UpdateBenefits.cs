@@ -18,13 +18,13 @@ internal static class UpdateBenefits
 	private static long _lastBytesReceived;
 	private static DateTime _lastUpdateTime = DateTime.Now;
 
-	private static string _zipFile;
-	private static string _outputDir;
-	private static string _successfullyUpdated;
+	private static string? _zipFile;
+	private static string? _outputDir;
+	private static string? _successfullyUpdated;
 	private static readonly string BenefitsTempFile = Path.Combine(Default.ResourcesPath, "Temp files");
 
 	// Paths
-	public static async void Download(string benefitName, string zipFilename, string dirPathToUnpack)
+	public static async void Download(string benefitName, string zipFilename, string? dirPathToUnpack)
 	{
 		if (!Directory.Exists(BenefitsTempFile))
 		{
@@ -46,8 +46,8 @@ internal static class UpdateBenefits
 
 		// Get update URL (mirror)
 		string jsonResponse = await Program.SefinWebClient.GetStringAsync($"{Program.WebApi}/genshin-stella-mod/patrons/benefits/update?benefitType={benefitName}");
-		GetUpdateUrl data = JsonConvert.DeserializeObject<GetUpdateUrl>(jsonResponse);
-		Program.Logger.Info($"The download url is ready; {data.PreparedUrl}");
+		GetUpdateUrl? data = JsonConvert.DeserializeObject<GetUpdateUrl>(jsonResponse);
+		Program.Logger.Info($"The download url is ready; {data!.PreparedUrl}");
 
 
 		// Switch info
@@ -85,13 +85,13 @@ internal static class UpdateBenefits
 		// Prepare presets
 		if (benefitName != "presets") return;
 
-		string currentPreset = await RsConfig.Prepare();
+		string? currentPreset = await ReShadeIni.Prepare();
 		if (currentPreset == null) return;
 
 		BalloonTip.Show("ReShade configuration", $"The ReShade configuration file has also been updated, including setting the default preset to {Path.GetFileNameWithoutExtension(currentPreset)}.");
 	}
 
-	private static async Task DownloadFileAsync(string requestUri, string filename)
+	private static async Task DownloadFileAsync(string requestUri, string? filename)
 	{
 		HttpClient client = Program.WbClient.Value;
 
@@ -183,7 +183,7 @@ internal static class UpdateBenefits
 		Program.Logger.Info($"Downloading new update... {bytesReceivedMb:00.00} MB of {totalBytesMb:000.00} MB / {downloadSpeedInMb:00.00} MB/s");
 	}
 
-	private static async void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
+	private static async void Client_DownloadFileCompleted(object? sender, AsyncCompletedEventArgs? e)
 	{
 		// Unpack files
 		Program.Logger.Info($"Unpacking {_zipFile} to {_outputDir}");
@@ -192,7 +192,7 @@ internal static class UpdateBenefits
 		Program.Logger.Info($"Unpacked: {_zipFile}");
 
 		// Delete file
-		File.Delete(_zipFile);
+		File.Delete(_zipFile!);
 
 		// Success
 		Default._progressBar1.Hide();

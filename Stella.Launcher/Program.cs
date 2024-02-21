@@ -12,10 +12,11 @@ namespace StellaModLauncher;
 internal static class Program
 {
 	// App
-	public static readonly string AppVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
-	public static readonly string ProductVersion = Application.ProductVersion;
-	private static readonly string AppName = Assembly.GetExecutingAssembly().GetName().Name;
-	public static readonly string AppNameVer = $"{AppName} • v{ProductVersion}";
+	public static readonly string? AppVersion = Assembly.GetExecutingAssembly().GetName().Version?.ToString();
+	public static readonly string? AppFileVersion = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion;
+	public static readonly string AppVersionFull = Application.ProductVersion;
+	private static readonly string? AppName = Assembly.GetExecutingAssembly().GetName().Name;
+	public static readonly string AppNameVer = $"{AppName} • v{AppFileVersion}";
 
 	// Files and folders
 	public static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
@@ -26,22 +27,22 @@ internal static class Program
 	public static readonly string InjectorPath = Path.Combine(AppPath, "data", "reshade", "inject64.exe");
 	public static readonly string FpsUnlockerExePath = Path.Combine(AppPath, "data", "unlocker", "gen-fps-unlocker.exe");
 	public static readonly string FpsUnlockerCfgPath = Path.Combine(AppPath, "data", "unlocker", "unlocker.config.json");
-	public static readonly Icon Ico = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
+	public static readonly Icon? Ico = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
 
 	// Config
 	public static readonly IniFile Settings = new(Path.Combine(AppData, "settings.ini"));
 
 	// Links
 	private static readonly string AppWebsiteSub = "https://genshin.sefinek.net";
-	public static readonly string AppWebsiteFull = "https://sefinek.net/genshin-impact-reshade";
+	public static readonly string? AppWebsiteFull = "https://sefinek.net/genshin-impact-reshade";
 
 	// WebClient & HttpClient
-	public static readonly string UserAgent = $"Mozilla/5.0 (compatible; StellaLauncher/{ProductVersion}; +{AppWebsiteSub}) WebClient/0.1";
+	public static readonly string UserAgent = $"Mozilla/5.0 (compatible; StellaLauncher/{AppFileVersion}; +{AppWebsiteSub}) WebClient/0.1";
 
 	public static readonly Lazy<HttpClient> WbClient = new(() =>
 	{
 		HttpClient httpClient = new();
-		httpClient.DefaultRequestHeaders.UserAgent.ParseAdd($"Mozilla/5.0 (compatible; StellaLauncher/{ProductVersion}; +{AppWebsiteSub}) HttpClient/0.2");
+		httpClient.DefaultRequestHeaders.UserAgent.ParseAdd($"Mozilla/5.0 (compatible; StellaLauncher/{AppFileVersion}; +{AppWebsiteSub}) HttpClient/0.2");
 
 		return httpClient;
 	});
@@ -50,7 +51,7 @@ internal static class Program
 	public static readonly string WebApi = "https://api.sefinek.net/api/v6";
 
 	// Supported languages
-	private static readonly string[] SupportedLangs = { "en", "pl" };
+	private static readonly string[] SupportedLangs = ["en", "pl"];
 
 	// Registry
 	public static readonly string RegistryPath = @"Software\Stella Mod Launcher";
@@ -73,10 +74,10 @@ internal static class Program
 		Logger = Logger.WithProperty("AppVersion", AppVersion);
 
 		// Set the correct language for WinForms
-		string currentLang = Settings.ReadString("Language", "UI", null);
+		string? currentLang = Settings.ReadString("Language", "UI");
 		if (string.IsNullOrEmpty(currentLang) || !SupportedLangs.Contains(currentLang))
 		{
-			string sysLang = CultureInfo.InstalledUICulture.Name.Substring(0, 2);
+			string sysLang = CultureInfo.InstalledUICulture.Name[..2];
 			currentLang = SupportedLangs.Contains(sysLang) ? sysLang : "en";
 
 			Settings.WriteString("Language", "UI", currentLang);
@@ -126,7 +127,7 @@ internal static class Program
 		// }
 
 		// Has the software been configured on the user's PC?
-		using (RegistryKey key = Registry.CurrentUser.OpenSubKey(RegistryPath, true))
+		using (RegistryKey? key = Registry.CurrentUser.OpenSubKey(RegistryPath, true))
 		{
 			int value = (int)(key?.GetValue("AppIsConfigured") ?? 0);
 			if (value == 0)

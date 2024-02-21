@@ -29,11 +29,11 @@ internal static class FpsUnlockerCfg
 				contentStream.Close();
 
 				// Parse the JSON
-				dynamic config = JsonConvert.DeserializeObject(json);
+				dynamic config = JsonConvert.DeserializeObject(json)!;
 
 				// Replace the placeholder with the actual game path
-				string gamePath = await Utils.GetGame("giExe");
-				config.GamePath = gamePath;
+				string? gamePath = await Utils.GetGame("giExe");
+				config.GamePath = gamePath!;
 
 				// Serialize the updated JSON back to a string
 				string updatedJson = JsonConvert.SerializeObject(config, Formatting.Indented);

@@ -15,6 +15,7 @@
     <ApplicationIcon>data\images\icons\52x52.ico</ApplicationIcon>
     <BaseOutputPath>..\Build\</BaseOutputPath>
     <AssemblyName>Stella Mod Launcher</AssemblyName>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>

@@ -23,7 +23,7 @@ public sealed partial class Language : Form
 	{
 		if (_isInitializing) return;
 
-		string selectedLang;
+		string? selectedLang;
 		switch (comboBox1.SelectedIndex)
 		{
 			case 0:

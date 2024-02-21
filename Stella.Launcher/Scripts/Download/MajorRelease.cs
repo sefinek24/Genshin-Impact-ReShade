@@ -7,7 +7,7 @@ namespace StellaModLauncher.Scripts.Download;
 
 internal static class MajorRelease
 {
-	public static void Run(string remoteVersion, DateTime remoteVerDate)
+	public static void Run(string? remoteVersion, DateTime remoteVerDate)
 	{
 		Default._version_LinkLabel.Text = $@"v{Program.AppVersion} → v{remoteVersion}";
 		Default._updates_LinkLabel.LinkColor = Color.Cyan;

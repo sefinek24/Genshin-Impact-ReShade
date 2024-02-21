@@ -12,7 +12,7 @@ namespace StellaModLauncher.Forms.Other;
 public sealed partial class RandomImages : Form
 {
 	private static Label _poweredBy;
-	private string _sourceUrl;
+	private string? _sourceUrl;
 
 	public RandomImages()
 	{
@@ -107,7 +107,7 @@ public sealed partial class RandomImages : Form
 		webView21.CoreWebView2.Navigate(picUrl);
 
 		string animeName = res.Results[0].Anime_name ?? "N/A";
-		string sourceUrl = res.Results[0].Source_url;
+		string? sourceUrl = res.Results[0].Source_url;
 
 		if (gif)
 		{

@@ -7,27 +7,27 @@ namespace StellaModLauncher.Scripts;
 
 internal abstract class Discord
 {
-	public const string Invitation = "https://discord.com/invite/SVcbaRc7gH";
-	public const string FeedbackChannel = "https://discord.gg/X8bt6mkbu7";
-	public static string Username = "";
+	public const string? Invitation = "https://discord.com/invite/SVcbaRc7gH";
+	public const string? FeedbackChannel = "https://discord.gg/X8bt6mkbu7";
+	public static string? Username = "";
 	public static bool IsReady;
-	public static DiscordRpcClient Client;
+	public static DiscordRpcClient? Client;
 
 	private static readonly RichPresence Presence = new()
 	{
 		Details = $"{Resources.Discord_InTheMainWindow} 🏠",
-		State = string.Format(Resources.Discord_Version_, Program.ProductVersion),
+		State = string.Format(Resources.Discord_Version_, Program.AppFileVersion),
 		Assets = new Assets
 		{
 			LargeImageKey = "main",
 			LargeImageText = Resources.Discord_Desc
 		},
 		Timestamps = Timestamps.Now,
-		Buttons = new[]
-		{
+		Buttons =
+		[
 			new Button { Label = Resources.Discord_OfficialWebsite, Url = Program.AppWebsiteFull },
 			new Button { Label = Resources.Discord_DiscordServer, Url = Invitation }
-		}
+		]
 	};
 
 	public static void InitRpc()
@@ -37,26 +37,26 @@ internal abstract class Discord
 
 		Client = new DiscordRpcClient("1057407191704940575") { Logger = new ConsoleLogger { Level = LogLevel.Warning } };
 
-		Client.OnReady += (sender, msg) =>
+		Client.OnReady += (_, msg) =>
 		{
 			Username = msg.User.Username;
 			Program.Logger.Info($"Discord RPC: Connected to Discord with user {Username}");
 
 			IsReady = true;
 		};
-		Client.OnPresenceUpdate += (sender, msg) => Program.Logger.Info("Discord RPC: Presence has been updated");
-		Client.OnClose += (sender, msg) =>
+		Client.OnPresenceUpdate += (_, _) => Program.Logger.Info("Discord RPC: Presence has been updated");
+		Client.OnClose += (_, _) =>
 		{
 			Program.Logger.Info("Discord RPC: Closed");
 			IsReady = false;
 		};
-		Client.OnUnsubscribe += (sender, msg) =>
+		Client.OnUnsubscribe += (_, _) =>
 		{
 			Program.Logger.Warn("Discord RPC: Unsubscribed");
 			IsReady = false;
 		};
-		Client.OnConnectionEstablished += (sender, msg) => Program.Logger.Info("Discord RPC: Connection successfully");
-		Client.OnError += (sender, msg) =>
+		Client.OnConnectionEstablished += (_, _) => Program.Logger.Info("Discord RPC: Connection successfully");
+		Client.OnError += (_, _) =>
 		{
 			Program.Logger.Error("Discord RPC: An error occurred during the transmission of a message");
 			IsReady = false;
@@ -75,7 +75,7 @@ internal abstract class Discord
 
 		try
 		{
-			Client.SetPresence(Presence);
+			Client!.SetPresence(Presence);
 		}
 		catch (Exception ex)
 		{
@@ -91,7 +91,7 @@ internal abstract class Discord
 			Presence.Details = status;
 			try
 			{
-				Client.SetPresence(Presence);
+				Client!.SetPresence(Presence);
 			}
 			catch (Exception ex)
 			{

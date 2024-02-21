@@ -62,13 +62,13 @@ public partial class Tools : Form
 	// ---------------------------------- Misc ----------------------------------
 	private async void ScanSysFiles_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		Cmd.CliWrap command = new()
+		Cmd.CliWrap? command = new()
 		{
 			App = "wt.exe",
 			WorkingDir = Program.AppPath,
 			Arguments = new ArgumentsBuilder()
 				.Add(Path.Combine(Run.BatchDir, "scan_sys_files.cmd"))
-				.Add(Program.AppVersion)
+				.Add(Program.AppVersion!)
 				.Add(Data.ReShadeVer)
 				.Add(Data.UnlockerVer)
 		};
@@ -79,8 +79,8 @@ public partial class Tools : Form
 	// ------------------------------ Config files ------------------------------
 	private async void ReShadeConfig_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		string gamePath = await Utils.GetGame("giGameDir");
-		string reShadeIni = Path.Combine(gamePath, "ReShade.ini");
+		string? gamePath = await Utils.GetGame("giGameDir");
+		string reShadeIni = Path.Combine(gamePath!, "ReShade.ini");
 
 		if (!File.Exists(reShadeIni))
 		{
@@ -88,7 +88,7 @@ public partial class Tools : Form
 		}
 		else
 		{
-			Cmd.CliWrap command = new()
+			Cmd.CliWrap? command = new()
 			{
 				App = "notepad.exe",
 				WorkingDir = Program.AppPath,
@@ -101,7 +101,7 @@ public partial class Tools : Form
 
 	private async void UnlockerConfig_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		Cmd.CliWrap command = new()
+		Cmd.CliWrap? command = new()
 		{
 			App = "notepad.exe",
 			WorkingDir = Program.AppPath,
@@ -115,20 +115,20 @@ public partial class Tools : Form
 	// --------------------------------- Cache ---------------------------------
 	private async void DeleteCache_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		string gameDir = await Utils.GetGame("giGameDir");
+		string? gameDir = await Utils.GetGame("giGameDir");
 
-		Cmd.CliWrap command = new()
+		Cmd.CliWrap? command = new()
 		{
 			App = "wt.exe",
 			WorkingDir = Program.AppPath,
 			Arguments = new ArgumentsBuilder()
 				.Add(Path.Combine(Run.BatchDir, "delete_cache.cmd")) // 0
-				.Add(Program.AppVersion) // 1
+				.Add(Program.AppVersion!) // 1
 				.Add(Data.ReShadeVer) // 2
 				.Add(Data.UnlockerVer) // 3
 				.Add(Program.AppData) // 4
-				.Add(Default.ResourcesPath) // 5
-				.Add(gameDir) // 6
+				.Add(Default.ResourcesPath!) // 5
+				.Add(gameDir!) // 6
 				.Add(Program.AppData) // 7
 		};
 		await Cmd.Execute(command);
@@ -136,13 +136,13 @@ public partial class Tools : Form
 
 	private async void DeleteWebViewCache_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		Cmd.CliWrap command = new()
+		Cmd.CliWrap? command = new()
 		{
 			App = "wt.exe",
 			WorkingDir = Program.AppPath,
 			Arguments = new ArgumentsBuilder()
 				.Add(Path.Combine(Run.BatchDir, "delete_webview_cache.cmd")) // 0
-				.Add(Program.AppVersion) // 1
+				.Add(Program.AppVersion!) // 1
 				.Add(Data.ReShadeVer) // 2
 				.Add(Data.UnlockerVer) // 3
 				.Add(Program.AppData) // 4
@@ -177,12 +177,12 @@ public partial class Tools : Form
 
 	private async void LauncherLogs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		Cmd.CliWrap command = new()
+		Cmd.CliWrap? command = new()
 		{
 			App = "notepad.exe",
 			WorkingDir = Program.AppPath,
 			Arguments = new ArgumentsBuilder()
-				.Add(Path.Combine(Log.Folder, "launcher.output.log"))
+				.Add(Path.Combine(Log.Folder!, "launcher.output.log"))
 		};
 		await Cmd.Execute(command);
 
@@ -204,8 +204,8 @@ public partial class Tools : Form
 
 	private async void ReShadeLogs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		string gameDir = await Utils.GetGame("giGameDir");
-		string logFile = Path.Combine(gameDir, "ReShade.log");
+		string? gameDir = await Utils.GetGame("giGameDir");
+		string logFile = Path.Combine(gameDir!, "ReShade.log");
 
 		if (!Directory.Exists(gameDir) || !File.Exists(logFile))
 			MessageBox.Show(string.Format(Resources.Tools_ReShadeLogFileWasNotFoundIn_, logFile), Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -225,7 +225,7 @@ public partial class Tools : Form
 	// -------------------------- Nothing special ((: ---------------------------
 	private void Notepad_MouseClick(object sender, MouseEventArgs e)
 	{
-		string path = Path.Combine(Program.AppPath, "data", "videos", "poland-strong.mp4");
+		string? path = Path.Combine(Program.AppPath, "data", "videos", "poland-strong.mp4");
 		if (!Utils.CheckFileExists(path)) return;
 
 		WebView2Shake viewer = new() { DesktopLocation = DesktopLocation, Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) };

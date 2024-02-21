@@ -12,14 +12,15 @@ namespace StellaModLauncher.Scripts.Download;
 internal static class DownloadResources
 {
 	// Files
-	private static string _stellaResZip;
+	private static string? _stellaResZip;
 
 	// Download
 	private static double _downloadSpeed;
 	private static long _lastBytesReceived;
 	private static DateTime _lastUpdateTime = DateTime.Now;
 
-	public static async void Run(string localResVersion, string remoteResVersion, DateTime remoteResDate)
+	[Obsolete("Obsolete")]
+	public static async void Run(string? localResVersion, string? remoteResVersion, DateTime remoteResDate)
 	{
 		// 1
 		Default._version_LinkLabel.Text = $@"v{localResVersion} → v{remoteResVersion}";
@@ -45,7 +46,7 @@ internal static class DownloadResources
 		Program.Logger.Info($"Found the new update of resources from {remoteResDate} - {remoteResDate}");
 
 		Default._status_Label.Text += $"[i] {string.Format(Resources.StellaResources_NewResourcesUpdateIsAvailable, remoteResDate)}\n";
-		_stellaResZip = Path.Combine(Default.ResourcesPath, $"Stella resources - v{remoteResVersion}.zip");
+		_stellaResZip = Path.Combine(Default.ResourcesPath!, $"Stella resources - v{remoteResVersion}.zip");
 
 
 		// Check update size
@@ -53,7 +54,7 @@ internal static class DownloadResources
 		{
 			wc.Headers.Add("User-Agent", Program.UserAgent);
 			await wc.OpenReadTaskAsync("https://github.com/sefinek24/Genshin-Stella-Resources/releases/latest/download/resources.zip");
-			string updateSize = ByteSize.FromBytes(Convert.ToInt64(wc.ResponseHeaders["Content-Length"])).MegaBytes.ToString("00.00");
+			string updateSize = ByteSize.FromBytes(Convert.ToInt64(wc.ResponseHeaders?["Content-Length"])).MegaBytes.ToString("00.00");
 			Default._status_Label.Text += $"[i] {string.Format(Resources.StellaResources_UpdateSize, $"{updateSize} MB")}\n";
 
 			// Final
@@ -65,7 +66,7 @@ internal static class DownloadResources
 		TaskbarProgress.SetProgressValue(100);
 	}
 
-	private static async void Update_Event(object sender, EventArgs e)
+	private static async void Update_Event(object? sender, EventArgs e)
 	{
 		Program.Logger.Info(Resources.NormalRelease_PreparingToDownloadNewUpdate);
 		TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Normal);
@@ -99,6 +100,7 @@ internal static class DownloadResources
 	}
 
 
+	[Obsolete("Obsolete")]
 	private static async Task StartDownload()
 	{
 		if (File.Exists(Default.ResourcesPath)) File.Delete(Default.ResourcesPath);
@@ -106,13 +108,11 @@ internal static class DownloadResources
 		Program.Logger.Info("Downloading in progress...");
 		TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Normal);
 
-		using (WebClient client = new())
-		{
-			client.Headers.Add("User-Agent", Program.UserAgent);
-			client.DownloadProgressChanged += Client_DownloadProgressChanged;
-			client.DownloadFileCompleted += Client_DownloadFileCompleted;
-			await client.DownloadFileTaskAsync(new Uri("https://github.com/sefinek24/Genshin-Stella-Resources/releases/latest/download/resources.zip"), _stellaResZip);
-		}
+		using WebClient client = new();
+		client.Headers.Add("User-Agent", Program.UserAgent);
+		client.DownloadProgressChanged += Client_DownloadProgressChanged;
+		client.DownloadFileCompleted += Client_DownloadFileCompleted;
+		await client.DownloadFileTaskAsync(new Uri("https://github.com/sefinek24/Genshin-Stella-Resources/releases/latest/download/resources.zip"), _stellaResZip);
 	}
 
 	private static void Client_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
@@ -162,7 +162,7 @@ internal static class DownloadResources
 		await CheckForUpdates.Analyze();
 	}
 
-	public static async Task UnzipWithProgress(string zipFilePath, string extractPath)
+	public static async Task UnzipWithProgress(string? zipFilePath, string? extractPath)
 	{
 		FileInfo fileInfo = new(zipFilePath);
 		if (!fileInfo.Exists)
@@ -183,48 +183,44 @@ internal static class DownloadResources
 			Environment.Exit(412412);
 		}
 
-		using (ZipArchive archive = ZipFile.OpenRead(zipFilePath))
+		using ZipArchive archive = ZipFile.OpenRead(zipFilePath);
+		int totalEntries = archive.Entries.Count;
+		int currentEntry = 0;
+		long totalBytes = 0;
+		long totalBytesToExtract = archive.Entries.Sum(entry => entry.Length);
+
+		foreach (ZipArchiveEntry entry in archive.Entries)
 		{
-			int totalEntries = archive.Entries.Count;
-			int currentEntry = 0;
-			long totalBytes = 0;
-			long totalBytesToExtract = archive.Entries.Sum(entry => entry.Length);
+			string entryPath = Path.Combine(extractPath, entry.FullName);
 
-			foreach (ZipArchiveEntry entry in archive.Entries)
+			if (entry.FullName.EndsWith("/"))
 			{
-				string entryPath = Path.Combine(extractPath, entry.FullName);
-
-				if (entry.FullName.EndsWith("/"))
-				{
-					Directory.CreateDirectory(entryPath);
-					continue;
-				}
-
-				Directory.CreateDirectory(Path.GetDirectoryName(entryPath));
-
-				using (Stream source = entry.Open())
-				using (Stream destination = File.Create(entryPath))
-				{
-					byte[] buffer = new byte[8192];
-					int bytesRead;
-
-					while ((bytesRead = await source.ReadAsync(buffer, 0, buffer.Length)) > 0)
-					{
-						await destination.WriteAsync(buffer, 0, bytesRead);
-						totalBytes += bytesRead;
-
-						int progressPercentage = (int)((double)totalBytes / totalBytesToExtract * 100);
-						Default._progressBar1.Value = progressPercentage;
-						TaskbarProgress.SetProgressValue((ulong)progressPercentage);
-					}
-				}
-
-				currentEntry++;
-
-				Default._preparingPleaseWait.Text = string.Format(Resources.StellaResources_UnpackingFiles_From_, currentEntry, totalEntries);
+				Directory.CreateDirectory(entryPath);
+				continue;
 			}
 
-			Program.Logger.Info($"Successfully unpacked; totalEntries {totalEntries}; totalBytes: {totalBytes}; totalBytesToExtract: {totalBytesToExtract};");
+			Directory.CreateDirectory(Path.GetDirectoryName(entryPath));
+
+			using Stream source = entry.Open();
+			using Stream destination = File.Create(entryPath);
+			byte[] buffer = new byte[8192];
+			int bytesRead;
+
+			while ((bytesRead = await source.ReadAsync(buffer, 0, buffer.Length)) > 0)
+			{
+				await destination.WriteAsync(buffer, 0, bytesRead);
+				totalBytes += bytesRead;
+
+				int progressPercentage = (int)((double)totalBytes / totalBytesToExtract * 100);
+				Default._progressBar1.Value = progressPercentage;
+				TaskbarProgress.SetProgressValue((ulong)progressPercentage);
+			}
+
+			currentEntry++;
+
+			Default._preparingPleaseWait.Text = string.Format(Resources.StellaResources_UnpackingFiles_From_, currentEntry, totalEntries);
 		}
+
+		Program.Logger.Info($"Successfully unpacked; totalEntries {totalEntries}; totalBytes: {totalBytes}; totalBytesToExtract: {totalBytesToExtract};");
 	}
 }

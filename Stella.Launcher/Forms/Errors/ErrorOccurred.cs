@@ -54,7 +54,7 @@ public sealed partial class ErrorOccurred : Form
 			WorkingDir = Program.AppPath,
 			Arguments = new ArgumentsBuilder()
 				.Add(Path.Combine(Program.AppPath, "data", "cmd", "scan_sys_files.cmd"))
-				.Add(Program.AppVersion)
+				.Add(Program.AppVersion!)
 				.Add(Data.ReShadeVer)
 				.Add(Data.UnlockerVer)
 		};

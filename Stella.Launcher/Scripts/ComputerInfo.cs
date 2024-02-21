@@ -5,7 +5,7 @@ namespace StellaModLauncher.Scripts;
 
 internal static class ComputerInfo
 {
-	private static string Identifier(string wmiClass, string wmiProperty, string wmiMustBeTrue = null)
+	private static string Identifier(string wmiClass, string wmiProperty, string? wmiMustBeTrue = null)
 	{
 		try
 		{
@@ -16,12 +16,10 @@ internal static class ComputerInfo
 			}
 
 			SelectQuery query = new($"SELECT {wmiProperty} FROM {wmiClass}");
-			using (ManagementObjectSearcher searcher = new(query))
-			{
-				foreach (ManagementObject obj in searcher.Get().Cast<ManagementObject>())
-					if (wmiMustBeTrue == null || obj[wmiMustBeTrue]?.ToString() == "True")
-						return obj[wmiProperty]?.ToString() ?? string.Empty;
-			}
+			using ManagementObjectSearcher searcher = new(query);
+			foreach (ManagementObject obj in searcher.Get().Cast<ManagementObject>())
+				if (wmiMustBeTrue == null || obj[wmiMustBeTrue]?.ToString() == "True")
+					return obj[wmiProperty]?.ToString() ?? string.Empty;
 		}
 		catch (ManagementException ex)
 		{
@@ -39,11 +37,9 @@ internal static class ComputerInfo
 	{
 		try
 		{
-			using (ManagementClass mc = new(className))
-			{
-				mc.GetInstances().Dispose();
-				return true;
-			}
+			using ManagementClass mc = new(className);
+			mc.GetInstances().Dispose();
+			return true;
 		}
 		catch
 		{

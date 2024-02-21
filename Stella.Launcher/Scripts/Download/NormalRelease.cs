@@ -19,10 +19,11 @@ internal static class NormalRelease
 	private static long _lastBytesReceived;
 	private static DateTime _lastUpdateTime = DateTime.Now;
 
-	public static async void Run(string remoteVersion, DateTime remoteVerDate, bool beta)
+	[Obsolete("Obsolete")]
+	public static async void Run(string? remoteVersion, DateTime remoteVerDate, bool beta)
 	{
 		// 1
-		Default._version_LinkLabel.Text = $@"v{Program.ProductVersion} → v{remoteVersion}";
+		Default._version_LinkLabel.Text = $@"v{Program.AppFileVersion} → v{remoteVersion}";
 
 		// 2
 		Default._updates_LinkLabel.LinkColor = Color.Cyan;
@@ -49,26 +50,24 @@ internal static class NormalRelease
 
 		// Log
 		Default._status_Label.Text += $"[i] {string.Format(Resources.NormalRelease_NewVersionFrom_IsAvailable, remoteVerDate)}\n";
-		Program.Logger.Info($"New release from {remoteVerDate} is available: v{Program.ProductVersion} → v{remoteVersion} ({(beta ? "Beta" : "Stable")})");
+		Program.Logger.Info($"New release from {remoteVerDate} is available: v{Program.AppFileVersion} → v{remoteVersion} ({(beta ? "Beta" : "Stable")})");
 
 		// Taskbar
 		TaskbarProgress.SetProgressValue(100);
 
 		// Check update size
-		using (WebClient wc = new())
-		{
-			wc.Headers.Add("User-Agent", Program.UserAgent);
-			await wc.OpenReadTaskAsync(DownloadUrl);
-			string updateSize = ByteSize.FromBytes(Convert.ToInt64(wc.ResponseHeaders["Content-Length"])).MegaBytes.ToString("00.00");
-			Default._status_Label.Text += $"[i] {string.Format(Resources.StellaResources_UpdateSize, $"{updateSize} MB")}\n";
+		using WebClient wc = new();
+		wc.Headers.Add("User-Agent", Program.UserAgent);
+		await wc.OpenReadTaskAsync(DownloadUrl);
+		string updateSize = ByteSize.FromBytes(Convert.ToInt64(wc.ResponseHeaders["Content-Length"])).MegaBytes.ToString("00.00");
+		Default._status_Label.Text += $"[i] {string.Format(Resources.StellaResources_UpdateSize, $"{updateSize} MB")}\n";
 
-			// Final
-			TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Paused);
-			Program.Logger.Info($"Update size: {updateSize} MB");
-		}
+		// Final
+		TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Paused);
+		Program.Logger.Info($"Update size: {updateSize} MB");
 	}
 
-	private static async void Update_Event(object sender, EventArgs e)
+	private static async void Update_Event(object? sender, EventArgs e)
 	{
 		Program.Logger.Info(Resources.NormalRelease_PreparingToDownloadNewUpdate);
 		TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Indeterminate);
@@ -105,6 +104,7 @@ internal static class NormalRelease
 	}
 
 
+	[Obsolete("Obsolete")]
 	private static async Task StartDownload()
 	{
 		if (File.Exists(SetupPathExe))
@@ -117,13 +117,11 @@ internal static class NormalRelease
 		Program.Logger.Info(Resources.NormalRelease_DownloadingInProgress);
 		TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Normal);
 
-		using (WebClient client = new())
-		{
-			client.Headers.Add("User-Agent", Program.UserAgent);
-			client.DownloadProgressChanged += Client_DownloadProgressChanged;
-			client.DownloadFileCompleted += Client_DownloadFileCompleted;
-			await client.DownloadFileTaskAsync(new Uri(DownloadUrl), SetupPathExe);
-		}
+		using WebClient client = new();
+		client.Headers.Add("User-Agent", Program.UserAgent);
+		client.DownloadProgressChanged += Client_DownloadProgressChanged;
+		client.DownloadFileCompleted += Client_DownloadFileCompleted;
+		await client.DownloadFileTaskAsync(new Uri(DownloadUrl), SetupPathExe);
 	}
 
 	private static void Client_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
@@ -155,7 +153,7 @@ internal static class NormalRelease
 
 	private static async void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
 	{
-		string logDir = Path.Combine(Log.Folder, "updates");
+		string logDir = Path.Combine(Log.Folder!, "updates");
 		if (!Directory.Exists(logDir)) Directory.CreateDirectory(logDir);
 
 		// Wait 5 seconds
@@ -179,7 +177,7 @@ internal static class NormalRelease
 
 		// Run setup
 		string logFile = Path.Combine(logDir, $"{DateTime.Now:yyyy-dd-M...HH-mm-ss}.log");
-		Cmd.CliWrap command = new()
+		Cmd.CliWrap? command = new()
 		{
 			App = SetupPathExe,
 			Arguments = new ArgumentsBuilder()
