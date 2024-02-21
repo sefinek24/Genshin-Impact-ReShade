@@ -27,7 +27,7 @@ jobs:
         uses: microsoft/setup-msbuild@v2
 
       - name: Restore NuGet Packages for Stella Mod Launcher
-        run: msbuild -t:restore "Stella.Launcher\1. Stella Mod Launcher.csproj"
+        run: msbuild -t:restore "Stella.Launcher\1-1. Stella Mod Launcher.csproj"
 
       - name: Build Stella Mod Launcher
         run: msbuild "Stella.Launcher\1-1. Stella Mod Launcher.csproj" -p:Configuration=Release -p:Platform="Any CPU" -p:OutputPath=../Build/Release
