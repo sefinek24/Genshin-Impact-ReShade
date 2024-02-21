@@ -115,7 +115,7 @@ namespace StellaModLauncher.Forms
 				// 
 				resources.ApplyResources(pictureBox5, "pictureBox5");
 				pictureBox5.BackColor = Color.Transparent;
-				pictureBox5.Cursor = Cursors.Hand;
+				pictureBox5.Cursor = Cursors.Default;
 				pictureBox5.Image = Properties.Resources.icons8_edit_property;
 				pictureBox5.Name = "pictureBox5";
 				pictureBox5.TabStop = false;
@@ -129,14 +129,13 @@ namespace StellaModLauncher.Forms
 				linkLabel3.LinkColor = Color.DodgerBlue;
 				linkLabel3.Name = "linkLabel3";
 				linkLabel3.TabStop = true;
-				toolTip1.SetToolTip(linkLabel3, resources.GetString("linkLabel3.ToolTip"));
 				linkLabel3.LinkClicked += ViewChangelog_LinkClicked;
 				// 
 				// pictureBox2
 				// 
 				resources.ApplyResources(pictureBox2, "pictureBox2");
 				pictureBox2.BackColor = Color.Transparent;
-				pictureBox2.Cursor = Cursors.Hand;
+				pictureBox2.Cursor = Cursors.Arrow;
 				pictureBox2.Image = Properties.Resources.icons8_animated;
 				pictureBox2.Name = "pictureBox2";
 				pictureBox2.TabStop = false;
