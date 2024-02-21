@@ -33,10 +33,11 @@ Stella.Launcher/bin
 Stella.Launcher/obj
 
 # Genshin Stella Mod Solution
-Stella.Worker/Action.cs
-Stella.Worker/Scripts/Logic.cs
-Stella.Worker/bin
-Stella.Worker/obj
+Stella.Worker
+Stella.WorkerOld/Action.cs
+Stella.WorkerOld/Scripts/Logic.cs
+Stella.WorkerOld/bin
+Stella.WorkerOld/obj
 
 # Stella.ConfigurationOld Window Solution
 Stella.Configuration/bin
