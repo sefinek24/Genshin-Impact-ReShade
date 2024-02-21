@@ -115,7 +115,6 @@ namespace StellaModLauncher.Forms
 				// 
 				resources.ApplyResources(pictureBox5, "pictureBox5");
 				pictureBox5.BackColor = Color.Transparent;
-				pictureBox5.Cursor = Cursors.Default;
 				pictureBox5.Image = Properties.Resources.icons8_edit_property;
 				pictureBox5.Name = "pictureBox5";
 				pictureBox5.TabStop = false;
@@ -135,7 +134,6 @@ namespace StellaModLauncher.Forms
 				// 
 				resources.ApplyResources(pictureBox2, "pictureBox2");
 				pictureBox2.BackColor = Color.Transparent;
-				pictureBox2.Cursor = Cursors.Arrow;
 				pictureBox2.Image = Properties.Resources.icons8_animated;
 				pictureBox2.Name = "pictureBox2";
 				pictureBox2.TabStop = false;
