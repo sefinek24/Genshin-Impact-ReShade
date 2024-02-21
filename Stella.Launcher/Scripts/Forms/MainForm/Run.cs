@@ -7,7 +7,7 @@ namespace StellaModLauncher.Scripts.Forms.MainForm;
 internal static class Run
 {
 	// Exe files
-	public static readonly string GsmPath = Path.Combine(Program.AppPathRoot, "Genshin Stella Mod.exe");
+	public static readonly string GsmPath = Path.Combine(Program.AppPath, "Genshin Stella Mod.exe");
 
 	// Batch files
 	public static readonly string BatchDir = Path.Combine(Program.AppPath, "data", "cmd");

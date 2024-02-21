@@ -16,6 +16,16 @@
     <BaseOutputPath>..\Build\</BaseOutputPath>
     <AssemblyName>Stella Mod Launcher</AssemblyName>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Authors>Sefinek Inc.</Authors>
+    <Copyright>Copyright 2024 © by Sefinek. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>portable</DebugType>
   </PropertyGroup>
 
   <ItemGroup>
