@@ -78,6 +78,9 @@
     <Content Include="Resources\Chibi Nahida.ico" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="CliWrap">
+      <Version>3.6.6</Version>
+    </PackageReference>
     <PackageReference Include="NAudio">
       <Version>2.2.1</Version>
     </PackageReference>
