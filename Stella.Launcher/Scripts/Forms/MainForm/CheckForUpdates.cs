@@ -122,7 +122,7 @@ internal static class CheckForUpdates
 					Default._updates_LinkLabel.LinkColor = Color.Cyan;
 					Default._updates_LinkLabel.Text = Resources.Default_UpdatingBenefits;
 					Default._updateIco_PictureBox.Image = Resources.icons8_download_from_the_cloud;
-					Utils.RemoveClickEvent(Default._updates_LinkLabel);
+					// Utils.RemoveClickEvent(Default._updates_LinkLabel);
 					return found;
 				}
 			}
@@ -159,7 +159,7 @@ internal static class CheckForUpdates
 		}
 	}
 
-	public static async void CheckUpdates_Click()
+	public static async void CheckUpdates_Click(object? sender, LinkLabelLinkClickedEventArgs e)
 	{
 		Music.PlaySound("winxp", "hardware_insert");
 		int update = await Analyze().ConfigureAwait(true);

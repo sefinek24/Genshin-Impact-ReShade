@@ -27,7 +27,7 @@ public partial class WebView2Shake : Form
 
 	private async void WebView2(string? webView)
 	{
-		await WebViewHelper.Initialize(webView21, webView);
+		await WebViewHelper.Initialize(webView21, webView).ConfigureAwait(false);
 	}
 
 	public void Navigate(string? url)

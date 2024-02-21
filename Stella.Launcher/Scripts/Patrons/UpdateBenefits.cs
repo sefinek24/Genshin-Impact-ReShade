@@ -43,49 +43,40 @@ internal static class UpdateBenefits
 
 		Program.Logger.Info($"Found the new version of: {benefitName}");
 
+		Utils.RemoveLinkClickedEventHandler(Default._updates_LinkLabel);
 
 		// Get update URL (mirror)
-		string jsonResponse = await Program.SefinWebClient.GetStringAsync($"{Program.WebApi}/genshin-stella-mod/patrons/benefits/update?benefitType={benefitName}");
+		string jsonResponse = await Program.SefinWebClient.GetStringAsync($"{Program.WebApi}/genshin-stella-mod/patrons/benefits/update?benefitType={benefitName}").ConfigureAwait(true);
 		GetUpdateUrl? data = JsonConvert.DeserializeObject<GetUpdateUrl>(jsonResponse);
 		Program.Logger.Info($"The download url is ready; {data!.PreparedUrl}");
 
 
 		// Switch info
-		switch (benefitName)
+		_successfullyUpdated = benefitName switch
 		{
-			case "3dmigoto":
-				_successfullyUpdated = Resources.UpdateBenefits_SuccessfullyUpdated3DMigoto;
-				break;
-			case "3dmigoto-mods":
-				_successfullyUpdated = Resources.UpdateBenefits_SuccessfullyUpdated3DMigotoMods;
-				break;
-			case "addons":
-				_successfullyUpdated = Resources.UpdateBenefits_SuccessfullyUpdatedAddons;
-				break;
-			case "presets":
-				_successfullyUpdated = Resources.UpdateBenefits_SuccessfullyUpdatedPresets;
-				break;
-			case "shaders":
-				_successfullyUpdated = Resources.UpdateBenefits_SuccessfullyUpdatedShaders;
-				break;
-			case "cmd":
-				_successfullyUpdated = Resources.UpdateBenefits_SuccessfullyUpdatedCmdFiles;
-				break;
-			default:
-				throw new InvalidEnumArgumentException();
-		}
+			"3dmigoto" => Resources.UpdateBenefits_SuccessfullyUpdated3DMigoto,
+			"3dmigoto-mods" => Resources.UpdateBenefits_SuccessfullyUpdated3DMigotoMods,
+			"addons" => Resources.UpdateBenefits_SuccessfullyUpdatedAddons,
+			"presets" => Resources.UpdateBenefits_SuccessfullyUpdatedPresets,
+			"shaders" => Resources.UpdateBenefits_SuccessfullyUpdatedShaders,
+			"cmd" => Resources.UpdateBenefits_SuccessfullyUpdatedCmdFiles,
+			_ => throw new InvalidEnumArgumentException(),
+		};
 
 		Default._progressBar1.Show();
 		Default._preparingPleaseWait.Show();
 
 
 		// Run download
-		await DownloadFileAsync($"{data.PreparedUrl}?benefitType={benefitName}", _zipFile);
+		await DownloadFileAsync($"{data.PreparedUrl}?benefitType={benefitName}", _zipFile).ConfigureAwait(true);
+
+		Utils.AddLinkClickedEventHandler(Default._updates_LinkLabel, CheckForUpdates.CheckUpdates_Click);
+
 
 		// Prepare presets
 		if (benefitName != "presets") return;
 
-		string? currentPreset = await ReShadeIni.Prepare();
+		string? currentPreset = await ReShadeIni.Prepare().ConfigureAwait(false);
 		if (currentPreset == null) return;
 
 		BalloonTip.Show("ReShade configuration", $"The ReShade configuration file has also been updated, including setting the default preset to {Path.GetFileNameWithoutExtension(currentPreset)}.");
@@ -99,7 +90,7 @@ internal static class UpdateBenefits
 		{
 			client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Secret.BearerToken);
 
-			HttpResponseMessage response = await client.GetAsync(requestUri, HttpCompletionOption.ResponseHeadersRead);
+			HttpResponseMessage response = await client.GetAsync(requestUri, HttpCompletionOption.ResponseHeadersRead).ConfigureAwait(true);
 			response.EnsureSuccessStatusCode();
 
 			long totalBytes = response.Content.Headers.ContentLength.GetValueOrDefault(-1L);
@@ -108,28 +99,24 @@ internal static class UpdateBenefits
 			byte[] buffer = new byte[8192];
 			bool isMoreToRead = true;
 
-			using (FileStream fileStream = new(filename, FileMode.Create, FileAccess.Write, FileShare.None, 8192, true))
+			using FileStream fileStream = new(filename, FileMode.Create, FileAccess.Write, FileShare.None, 8192, true);
+			using Stream contentStream = await response.Content.ReadAsStreamAsync().ConfigureAwait(true);
+			do
 			{
-				using (Stream contentStream = await response.Content.ReadAsStreamAsync())
+				int bytesRead = await contentStream.ReadAsync(buffer).ConfigureAwait(true);
+				if (bytesRead == 0)
 				{
-					do
-					{
-						int bytesRead = await contentStream.ReadAsync(buffer, 0, buffer.Length);
-						if (bytesRead == 0)
-						{
-							isMoreToRead = false;
-							continue;
-						}
-
-						await fileStream.WriteAsync(buffer, 0, bytesRead);
-
-						totalBytesRead += bytesRead;
-						readCount += 1;
-
-						if (readCount % 100 == 0) UpdateUi(totalBytesRead, totalBytes);
-					} while (isMoreToRead);
+					isMoreToRead = false;
+					continue;
 				}
-			}
+
+				await fileStream.WriteAsync(buffer.AsMemory(0, bytesRead)).ConfigureAwait(true);
+
+				totalBytesRead += bytesRead;
+				readCount += 1;
+
+				if (readCount % 100 == 0) UpdateUi(totalBytesRead, totalBytes);
+			} while (isMoreToRead);
 
 			if (totalBytesRead != totalBytes) throw new IOException($"Expected {totalBytes} bytes but got {totalBytesRead} bytes.");
 		}
@@ -188,7 +175,7 @@ internal static class UpdateBenefits
 		// Unpack files
 		Program.Logger.Info($"Unpacking {_zipFile} to {_outputDir}");
 		Default._preparingPleaseWait.Text = Resources.StellaResources_UnpackingFiles;
-		await DownloadResources.UnzipWithProgress(_zipFile, _outputDir);
+		await DownloadResources.UnzipWithProgress(_zipFile, _outputDir).ConfigureAwait(true);
 		Program.Logger.Info($"Unpacked: {_zipFile}");
 
 		// Delete file
@@ -201,7 +188,7 @@ internal static class UpdateBenefits
 		Program.Logger.Info(_successfullyUpdated);
 
 		// Check for updates again
-		int foundUpdated = await CheckForUpdates.Analyze();
+		int foundUpdated = await CheckForUpdates.Analyze().ConfigureAwait(true);
 		if (foundUpdated == 0)
 			Labels.ShowStartGameBtns();
 		else

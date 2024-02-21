@@ -11,7 +11,7 @@ namespace StellaModLauncher.Forms.Other;
 
 public sealed partial class RandomImages : Form
 {
-	private static Label _poweredBy;
+	private static Label? _poweredBy;
 	private string? _sourceUrl;
 
 	public RandomImages()
@@ -31,7 +31,7 @@ public sealed partial class RandomImages : Form
 
 	private async void RandomImg_Shown(object sender, EventArgs e)
 	{
-		await WebViewHelper.Initialize(webView21, null);
+		await WebViewHelper.Initialize(webView21, null).ConfigureAwait(false);
 
 		Discord.SetStatus(Resources.RandomImages_GeneratingBeautifulPictures);
 
@@ -44,16 +44,16 @@ public sealed partial class RandomImages : Form
 		Discord.Home();
 	}
 
-	private static async Task<string> GetData(string url)
+	private static async Task<string?> GetData(string url)
 	{
-		if (Uri.TryCreate(url, UriKind.Absolute, out Uri uri))
+		if (Uri.TryCreate(url, UriKind.Absolute, out Uri? uri))
 		{
 			string host = uri.Host;
 
-			int colonIndex = _poweredBy.Text.IndexOf(':');
+			int colonIndex = _poweredBy!.Text.IndexOf(':');
 			if (colonIndex >= 0)
 			{
-				string prefix = _poweredBy.Text.Substring(0, colonIndex + 1);
+				string prefix = _poweredBy.Text[..(colonIndex + 1)];
 				_poweredBy.Text = $@"{prefix} {host}";
 			}
 			else
@@ -66,14 +66,16 @@ public sealed partial class RandomImages : Form
 
 		Music.PlaySound("winxp", "pop-up_blocked");
 
+		Program.Logger.Info($"GET {url}");
+
 		try
 		{
-			string jsonResponse = await Program.SefinWebClient.GetStringAsync(url);
+			string jsonResponse = await Program.SefinWebClient.GetStringAsync(url).ConfigureAwait(false);
 			return jsonResponse;
 		}
 		catch (WebException e)
 		{
-			if (e.Status == WebExceptionStatus.ProtocolError && e.Response is HttpWebResponse response)
+			if (e is { Status: WebExceptionStatus.ProtocolError, Response: HttpWebResponse response })
 				MessageBox.Show(e.Message, Program.AppNameVer, MessageBoxButtons.OK, (int)response.StatusCode >= 500 ? MessageBoxIcon.Warning : MessageBoxIcon.Information);
 			else
 				MessageBox.Show(e.Message, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -85,25 +87,25 @@ public sealed partial class RandomImages : Form
 
 	private async void SefinekApi(string url)
 	{
-		string json = await GetData(url);
+		string? json = await GetData(url).ConfigureAwait(true);
 		if (json == null) return;
 
-		SefinekApi res = JsonConvert.DeserializeObject<SefinekApi>(json);
+		SefinekApi? res = JsonConvert.DeserializeObject<SefinekApi>(json);
 
-		webView21.CoreWebView2.Navigate(res.Message);
+		webView21.CoreWebView2.Navigate(res!.Message);
 		text_Label.Visible = false;
 
-		Program.Logger.Info($"Received data from: {new Uri(url).Host}; Success {res.Success}; Status {res.Status}; Category {res.Info.Category}; Endpoint {res.Info.Endpoint}; Message {res.Message};");
+		Program.Logger.Info($"Received data from: {new Uri(url).Host}; Success {res.Success}; Status {res.Status}; Category {res.Info!.Category}; Endpoint {res.Info.Endpoint}; Message {res.Message};");
 	}
 
 	private async void NekosBest(string url, bool gif) // The best api uwu
 	{
-		string json = await GetData(url);
+		string? json = await GetData(url).ConfigureAwait(true);
 		if (json == null) return;
 
-		NekosBest res = JsonConvert.DeserializeObject<NekosBest>(json);
+		NekosBest? res = JsonConvert.DeserializeObject<NekosBest>(json);
 
-		string picUrl = res.Results[0].Url;
+		string picUrl = res!.Results![0].Url!;
 		webView21.CoreWebView2.Navigate(picUrl);
 
 		string animeName = res.Results[0].Anime_name ?? "N/A";
@@ -111,13 +113,13 @@ public sealed partial class RandomImages : Form
 
 		if (gif)
 		{
-			text_Label.Text = $"{Resources.RandomImages_AnimeName}\n{animeName}";
+			text_Label.Text = $@"{Resources.RandomImages_AnimeName}{Environment.NewLine}{animeName}";
 			text_Label.LinkBehavior = LinkBehavior.NeverUnderline;
 		}
 		else
 		{
 			text_Label.ActiveLinkColor = Color.DodgerBlue;
-			text_Label.Text = $"{Resources.RandomImages_Source}\n{Regex.Replace(sourceUrl, @"(?:https?://|www\.)", "")}";
+			text_Label.Text = $@"{Resources.RandomImages_Source}{Environment.NewLine}{HttpRegex().Replace(sourceUrl!, "")}";
 			text_Label.LinkBehavior = LinkBehavior.HoverUnderline;
 		}
 
@@ -129,12 +131,12 @@ public sealed partial class RandomImages : Form
 
 	private async void PurrBot(string url)
 	{
-		string json = await GetData(url);
+		string? json = await GetData(url).ConfigureAwait(true);
 		if (json == null) return;
 
-		PurrBot res = JsonConvert.DeserializeObject<PurrBot>(json);
+		PurrBot? res = JsonConvert.DeserializeObject<PurrBot>(json);
 
-		webView21.CoreWebView2.Navigate(res.Link);
+		webView21.CoreWebView2.Navigate(res!.Link);
 		_sourceUrl = res.Link;
 		text_Label.Visible = false;
 
@@ -143,12 +145,12 @@ public sealed partial class RandomImages : Form
 
 	private async void NekoBot(string url)
 	{
-		string json = await GetData(url);
-		NekoBot res = JsonConvert.DeserializeObject<NekoBot>(json);
+		string? json = await GetData(url).ConfigureAwait(true);
+		NekoBot? res = JsonConvert.DeserializeObject<NekoBot>(json!);
 
-		webView21.CoreWebView2.Navigate(res.Message);
+		webView21.CoreWebView2.Navigate(res!.Message);
 
-		Color color = ColorTranslator.FromHtml(res.Color);
+		Color color = ColorTranslator.FromHtml(res.Color!);
 		Color rgbColor = Color.FromArgb(Convert.ToInt16(color.R), Convert.ToInt16(color.G), Convert.ToInt16(color.B));
 
 		text_Label.LinkColor = rgbColor;
@@ -402,4 +404,7 @@ public sealed partial class RandomImages : Form
 	{
 		webView21.CoreWebView2.Navigate(Path.Combine(Program.AppPath, "data", "videos", "gengbeng.mp4"));
 	}
+
+	[GeneratedRegex(@"(?:https?://|www\.)")]
+	private static partial Regex HttpRegex();
 }

@@ -26,7 +26,7 @@ public partial class Gameplay : Form
 
 	private async void Tutorial_Shown(object sender, EventArgs e)
 	{
-		await WebViewHelper.Initialize(webView21, $"https://www.youtube.com/embed/{VideoId}");
+		await WebViewHelper.Initialize(webView21, $"https://www.youtube.com/embed/{VideoId}").ConfigureAwait(false);
 
 		Discord.SetStatus(Resources.Gameplay_WatchingGameplay);
 

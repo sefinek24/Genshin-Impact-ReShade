@@ -19,7 +19,6 @@ internal static class NormalRelease
 	private static long _lastBytesReceived;
 	private static DateTime _lastUpdateTime = DateTime.Now;
 
-	[Obsolete("Obsolete")]
 	public static async void Run(string? remoteVersion, DateTime remoteVerDate, bool beta)
 	{
 		// 1
@@ -29,8 +28,9 @@ internal static class NormalRelease
 		Default._updates_LinkLabel.LinkColor = Color.Cyan;
 		Default._updates_LinkLabel.Text = Resources.NormalRelease_ClickHereToUpdate;
 		Default._updateIco_PictureBox.Image = Resources.icons8_download_from_the_cloud;
-		Utils.RemoveClickEvent(Default._updates_LinkLabel);
-		Default._updates_LinkLabel.Click += Update_Event;
+
+		Utils.RemoveLinkClickedEventHandler(Default._updates_LinkLabel);
+		Utils.AddLinkClickedEventHandler(Default._updates_LinkLabel, Update_Event);
 
 		// Hide and show elements
 		Default._progressBar1.Hide();
@@ -58,7 +58,7 @@ internal static class NormalRelease
 		// Check update size
 		using WebClient wc = new();
 		wc.Headers.Add("User-Agent", Program.UserAgent);
-		await wc.OpenReadTaskAsync(DownloadUrl);
+		await wc.OpenReadTaskAsync(DownloadUrl).ConfigureAwait(true);
 		string updateSize = ByteSize.FromBytes(Convert.ToInt64(wc.ResponseHeaders["Content-Length"])).MegaBytes.ToString("00.00");
 		Default._status_Label.Text += $"[i] {string.Format(Resources.StellaResources_UpdateSize, $"{updateSize} MB")}\n";
 
@@ -67,14 +67,13 @@ internal static class NormalRelease
 		Program.Logger.Info($"Update size: {updateSize} MB");
 	}
 
-	private static async void Update_Event(object? sender, EventArgs e)
+	private static async void Update_Event(object? sender, LinkLabelLinkClickedEventArgs e)
 	{
 		Program.Logger.Info(Resources.NormalRelease_PreparingToDownloadNewUpdate);
 		TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Indeterminate);
 
 		Default._updates_LinkLabel.LinkColor = Color.DodgerBlue;
 		Default._updates_LinkLabel.Text = Resources.NormalRelease_UpdatingPleaseWait;
-		Utils.RemoveClickEvent(Default._updates_LinkLabel);
 
 		Default._progressBar1.Show();
 		Default._preparingPleaseWait.Show();
@@ -92,7 +91,7 @@ internal static class NormalRelease
 		try
 		{
 			Program.Logger.Info("Starting...");
-			await StartDownload();
+			await StartDownload().ConfigureAwait(true);
 		}
 		catch (Exception ex)
 		{
@@ -103,10 +102,10 @@ internal static class NormalRelease
 		Program.Logger.Info($"Output: {SetupPathExe}");
 	}
 
-
-	[Obsolete("Obsolete")]
 	private static async Task StartDownload()
 	{
+		Utils.RemoveLinkClickedEventHandler(Default._updates_LinkLabel);
+
 		if (File.Exists(SetupPathExe))
 		{
 			File.Delete(SetupPathExe);
@@ -121,7 +120,7 @@ internal static class NormalRelease
 		client.Headers.Add("User-Agent", Program.UserAgent);
 		client.DownloadProgressChanged += Client_DownloadProgressChanged;
 		client.DownloadFileCompleted += Client_DownloadFileCompleted;
-		await client.DownloadFileTaskAsync(new Uri(DownloadUrl), SetupPathExe);
+		await client.DownloadFileTaskAsync(new Uri(DownloadUrl), SetupPathExe).ConfigureAwait(true);
 	}
 
 	private static void Client_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
@@ -166,13 +165,13 @@ internal static class NormalRelease
 			double progressPercentage = (5 - i) / 5.0 * 100;
 			Default._progressBar1.Value = (int)progressPercentage;
 
-			await Task.Delay(1000);
+			await Task.Delay(1000).ConfigureAwait(true);
 		}
 
 		Default._preparingPleaseWait.Text = Resources.NormalRelease_EverythingIsOkay_StartingSetup;
 		TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Indeterminate);
 
-		await Task.Delay(500);
+		await Task.Delay(500).ConfigureAwait(true);
 
 
 		// Run setup
@@ -201,7 +200,7 @@ internal static class NormalRelease
 		{
 			Default._preparingPleaseWait.Text = string.Format(Resources.NormalRelease_InstallANewVersionInTheWizard_ClosingLauncherIn_, i);
 			Program.Logger.Info($"Closing launcher in {i}s...");
-			await Task.Delay(1000);
+			await Task.Delay(1000).ConfigureAwait(true);
 		}
 
 		Program.Logger.Info("Closing...");

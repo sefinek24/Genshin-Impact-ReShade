@@ -8,7 +8,7 @@ internal static class DeleteBenefits
 	{
 		// Delete presets
 		string presets = Path.Combine(Default.ResourcesPath!, "ReShade", "Presets", "3. Stella Mod Plus");
-		if (Directory.Exists(presets)) await DeleteDirectory(presets);
+		if (Directory.Exists(presets)) await DeleteDirectory(presets).ConfigureAwait(false);
 
 		// Delete addons
 		string addons = Path.Combine(Default.ResourcesPath!, "ReShade", "Addons");
@@ -25,17 +25,17 @@ internal static class DeleteBenefits
 
 		// Delete 3DMigoto default mod pack
 		string migotoCharsMods = Path.Combine(Default.ResourcesPath!, "3DMigoto", "Mods", "1. Characters");
-		if (Directory.Exists(migotoCharsMods)) await DeleteDirectory(migotoCharsMods);
+		if (Directory.Exists(migotoCharsMods)) await DeleteDirectory(migotoCharsMods).ConfigureAwait(false);
 		string migotoOtherMods = Path.Combine(Default.ResourcesPath!, "3DMigoto", "Mods", "2. Other");
-		if (Directory.Exists(migotoOtherMods)) await DeleteDirectory(migotoOtherMods);
+		if (Directory.Exists(migotoOtherMods)) await DeleteDirectory(migotoOtherMods).ConfigureAwait(false);
 
 		// Delete cmd (batch) files
 		string cmdPath = Path.Combine(Program.AppPath, "data", "cmd", "patrons");
-		if (Directory.Exists(cmdPath)) await DeleteDirectory(cmdPath);
+		if (Directory.Exists(cmdPath)) await DeleteDirectory(cmdPath).ConfigureAwait(false);
 
 
 		// Update ReShade.ini config
-		await ReShadeIni.Prepare();
+		await ReShadeIni.Prepare().ConfigureAwait(false);
 	}
 
 	// Delete specific files in a folder
@@ -72,7 +72,7 @@ internal static class DeleteBenefits
 	{
 		try
 		{
-			await Task.Run(() => { Directory.Delete(directoryPath, true); });
+			await Task.Run(() => { Directory.Delete(directoryPath, true); }).ConfigureAwait(false);
 
 			Program.Logger.Info($"Deleted directory: {directoryPath}");
 		}

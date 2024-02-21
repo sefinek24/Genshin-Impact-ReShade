@@ -1,6 +1,7 @@
 using Microsoft.Web.WebView2.Core;
 using StellaModLauncher.Properties;
 using StellaModLauncher.Scripts;
+using StellaModLauncher.Scripts.Forms;
 
 namespace StellaModLauncher.Forms.Other;
 
@@ -27,9 +28,7 @@ public partial class WebView2Window : Form
 
 	private async void InitWebView2()
 	{
-		await webView21.EnsureCoreWebView2Async(await CoreWebView2Environment.CreateAsync(null, Program.AppData, new CoreWebView2EnvironmentOptions()));
-		webView21.CoreWebView2.Settings.UserAgent += $" StellaLauncher/{Program.AppFileVersion}";
-		webView21.CoreWebView2.Navigate(Url);
+		await WebViewHelper.Initialize(webView21, Url).ConfigureAwait(false);
 	}
 
 	private void Gallery_FormClosed(object sender, FormClosedEventArgs e)

@@ -11,6 +11,8 @@ namespace StellaModLauncher.Scripts.Download;
 
 internal static class DownloadResources
 {
+	private const string DownloadUrl = "https://github.com/sefinek24/Genshin-Stella-Resources/releases/latest/download/resources.zip";
+
 	// Files
 	private static string? _stellaResZip;
 
@@ -29,8 +31,9 @@ internal static class DownloadResources
 		Default._updates_LinkLabel.LinkColor = Color.Cyan;
 		Default._updates_LinkLabel.Text = Resources.NormalRelease_ClickHereToUpdate;
 		Default._updateIco_PictureBox.Image = Resources.icons8_download_from_the_cloud;
-		Utils.RemoveClickEvent(Default._updates_LinkLabel);
-		Default._updates_LinkLabel.Click += Update_Event;
+
+		Utils.RemoveLinkClickedEventHandler(Default._updates_LinkLabel);
+		Utils.AddLinkClickedEventHandler(Default._updates_LinkLabel, Update_Event);
 
 		// Hide and show elements
 		Default._progressBar1.Hide();
@@ -50,17 +53,27 @@ internal static class DownloadResources
 
 
 		// Check update size
-		using (WebClient wc = new())
+		try
 		{
-			wc.Headers.Add("User-Agent", Program.UserAgent);
-			await wc.OpenReadTaskAsync("https://github.com/sefinek24/Genshin-Stella-Resources/releases/latest/download/resources.zip");
-			string updateSize = ByteSize.FromBytes(Convert.ToInt64(wc.ResponseHeaders?["Content-Length"])).MegaBytes.ToString("00.00");
-			Default._status_Label.Text += $"[i] {string.Format(Resources.StellaResources_UpdateSize, $"{updateSize} MB")}\n";
+			HttpRequestMessage request = new(HttpMethod.Head, DownloadUrl);
+			HttpResponseMessage response = await Program.WbClient.Value.SendAsync(request).ConfigureAwait(true);
+			response.EnsureSuccessStatusCode();
 
-			// Final
-			TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Paused);
-			Program.Logger.Info(string.Format(Resources.StellaResources_UpdateSize, $"{updateSize} MB"));
+			if (response.Content.Headers.ContentLength.HasValue)
+			{
+				string updateSize = ByteSize.FromBytes(response.Content.Headers.ContentLength.Value).MegaBytes.ToString("00.00");
+
+				Default._status_Label.Text += $"[i] {string.Format(Resources.StellaResources_UpdateSize, $"{updateSize} MB")}\n";
+
+				TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Paused);
+				Program.Logger.Info(string.Format(Resources.StellaResources_UpdateSize, $"{updateSize} MB"));
+			}
 		}
+		catch (Exception ex)
+		{
+			Program.Logger.Error("Error while fetching update size", ex);
+		}
+
 
 		// Taskbar
 		TaskbarProgress.SetProgressValue(100);
@@ -73,7 +86,6 @@ internal static class DownloadResources
 
 		Default._updates_LinkLabel.LinkColor = Color.DodgerBlue;
 		Default._updates_LinkLabel.Text = Resources.NormalRelease_UpdatingPleaseWait;
-		Utils.RemoveClickEvent(Default._updates_LinkLabel);
 
 		Default._progressBar1.Show();
 		Default._preparingPleaseWait.Show();
@@ -88,7 +100,7 @@ internal static class DownloadResources
 		try
 		{
 			Program.Logger.Info("Starting...");
-			await StartDownload();
+			await StartDownload().ConfigureAwait(true);
 		}
 		catch (Exception ex)
 		{
@@ -103,7 +115,9 @@ internal static class DownloadResources
 	[Obsolete("Obsolete")]
 	private static async Task StartDownload()
 	{
-		if (File.Exists(Default.ResourcesPath)) File.Delete(Default.ResourcesPath);
+		Utils.RemoveLinkClickedEventHandler(Default._updates_LinkLabel);
+
+		if (File.Exists(Default.ResourcesPath)) File.Delete(Default.ResourcesPath); // TODO
 
 		Program.Logger.Info("Downloading in progress...");
 		TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Normal);
@@ -112,7 +126,7 @@ internal static class DownloadResources
 		client.Headers.Add("User-Agent", Program.UserAgent);
 		client.DownloadProgressChanged += Client_DownloadProgressChanged;
 		client.DownloadFileCompleted += Client_DownloadFileCompleted;
-		await client.DownloadFileTaskAsync(new Uri("https://github.com/sefinek24/Genshin-Stella-Resources/releases/latest/download/resources.zip"), _stellaResZip);
+		await client.DownloadFileTaskAsync(new Uri(DownloadUrl), _stellaResZip).ConfigureAwait(true);
 	}
 
 	private static void Client_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
@@ -141,11 +155,11 @@ internal static class DownloadResources
 		Program.Logger.Info($"Downloading new update... {bytesReceivedMb:00.00} MB of {bytesReceiveMb:000.00} MB / {downloadSpeedInMb:00.00} MB/s");
 	}
 
-	private static async void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
+	private static async void Client_DownloadFileCompleted(object? sender, AsyncCompletedEventArgs e)
 	{
 		// Unpack new mods
 		Default._preparingPleaseWait.Text = Resources.StellaResources_UnpackingFiles;
-		await UnzipWithProgress(_stellaResZip, Default.ResourcesPath);
+		await UnzipWithProgress(_stellaResZip, Default.ResourcesPath).ConfigureAwait(true);
 
 		// Done!
 		Default._progressBar1.Hide();
@@ -159,7 +173,7 @@ internal static class DownloadResources
 		Default._youTube_LinkLabel.Show();
 
 		Default._status_Label.Text += $"[✓] {Resources.StellaResources_SuccessfullyUpdatedResources}\n";
-		await CheckForUpdates.Analyze();
+		await CheckForUpdates.Analyze().ConfigureAwait(true);
 	}
 
 	public static async Task UnzipWithProgress(string? zipFilePath, string? extractPath)
@@ -206,9 +220,9 @@ internal static class DownloadResources
 			byte[] buffer = new byte[8192];
 			int bytesRead;
 
-			while ((bytesRead = await source.ReadAsync(buffer, 0, buffer.Length)) > 0)
+			while ((bytesRead = await source.ReadAsync(buffer).ConfigureAwait(true)) > 0)
 			{
-				await destination.WriteAsync(buffer, 0, bytesRead);
+				await destination.WriteAsync(buffer.AsMemory(0, bytesRead)).ConfigureAwait(true);
 				totalBytes += bytesRead;
 
 				int progressPercentage = (int)((double)totalBytes / totalBytesToExtract * 100);
@@ -220,6 +234,8 @@ internal static class DownloadResources
 
 			Default._preparingPleaseWait.Text = string.Format(Resources.StellaResources_UnpackingFiles_From_, currentEntry, totalEntries);
 		}
+
+		Utils.AddLinkClickedEventHandler(Default._updates_LinkLabel, CheckForUpdates.CheckUpdates_Click);
 
 		Program.Logger.Info($"Successfully unpacked; totalEntries {totalEntries}; totalBytes: {totalBytes}; totalBytesToExtract: {totalBytesToExtract};");
 	}

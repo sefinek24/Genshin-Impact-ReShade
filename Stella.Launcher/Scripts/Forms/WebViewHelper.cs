@@ -11,7 +11,7 @@ internal static class WebViewHelper
 	{
 		try
 		{
-			await webView21.EnsureCoreWebView2Async(await CoreWebView2Environment.CreateAsync(null, Program.AppData, new CoreWebView2EnvironmentOptions()));
+			await webView21.EnsureCoreWebView2Async(await CoreWebView2Environment.CreateAsync(null, Program.AppData, new CoreWebView2EnvironmentOptions()).ConfigureAwait(false)).ConfigureAwait(true);
 			webView21.CoreWebView2.Settings.UserAgent += $" StellaLauncher/{Program.AppFileVersion}";
 
 			Program.Logger.Info("Loaded WebView2 via WebViewHelper.Initialize()");
@@ -33,7 +33,7 @@ internal static class WebViewHelper
 
 				if (res == DialogResult.Yes)
 				{
-					Process.Start("https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section");
+					Utils.OpenUrl("https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section");
 					MessageBox.Show(Resources.WebView2Handler_ChooseEvergreenStandaloneInstaller, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 				}
 			}

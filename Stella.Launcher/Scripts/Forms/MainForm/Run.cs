@@ -40,7 +40,7 @@ internal static class Run
 					.Add(Data.UnlockerVer) // 3
 					.Add(Secret.IsStellaPlusSubscriber ? 1 : 6) // 4
 					.Add(Secret.IsStellaPlusSubscriber ? $"\"{Default.ResourcesPath}\\3DMigoto\"" : "0") // 5 
-					.Add(await Utils.GetGameVersion()) // 6
+					.Add(await Utils.GetGameVersion().ConfigureAwait(false)) // 6
 					.Add(Log.CmdLogs) // 7
 					.Add(Program.AppPath) // 8
 					.Add(Path.GetDirectoryName(Program.FpsUnlockerExePath) ?? string.Empty) // 9
@@ -75,7 +75,7 @@ internal static class Run
 					.Add(Data.UnlockerVer) // 3
 					.Add(3) // 4
 					.Add(0) // 5 
-					.Add(await Utils.GetGameVersion()) // 6
+					.Add(await Utils.GetGameVersion().ConfigureAwait(false)) // 6
 					.Add(Log.CmdLogs) // 7
 					.Add(Program.AppPath) // 8
 					.Add(Path.GetDirectoryName(Program.FpsUnlockerExePath) ?? string.Empty) // 9
@@ -110,7 +110,7 @@ internal static class Run
 					.Add(Data.UnlockerVer) // 3
 					.Add(4) // 4
 					.Add(0) // 5 
-					.Add(await Utils.GetGameVersion()) // 6
+					.Add(await Utils.GetGameVersion().ConfigureAwait(false)) // 6
 					.Add(Log.CmdLogs) // 7
 					.Add(Program.AppPath) // 8
 					.Add(Path.GetDirectoryName(Program.FpsUnlockerExePath) ?? string.Empty) // 9
@@ -152,7 +152,7 @@ internal static class Run
 					.Add(Data.UnlockerVer) // 3
 					.Add(5) // 4
 					.Add(Secret.IsStellaPlusSubscriber ? $"\"{Default.ResourcesPath}\\3DMigoto\"" : "0") // 5 
-					.Add(await Utils.GetGameVersion()) // 6
+					.Add(await Utils.GetGameVersion().ConfigureAwait(false)) // 6
 					.Add(Log.CmdLogs) // 7
 					.Add(Program.AppPath) // 8
 			},

@@ -13,26 +13,26 @@ internal static class FpsUnlockerCfg
 	{
 		Program.Logger.Info("Downloading config file for FPS Unlocker...");
 
-		await StartDownload();
+		await StartDownload().ConfigureAwait(true);
 	}
 
 	private static async Task StartDownload()
 	{
 		try
 		{
-			HttpResponseMessage response = await Program.SefinWebClient.GetAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/unlocker.config.json");
+			HttpResponseMessage response = await Program.SefinWebClient.GetAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/unlocker.config.json").ConfigureAwait(true);
 			if (response.IsSuccessStatusCode)
 			{
-				Stream contentStream = await response.Content.ReadAsStreamAsync();
+				Stream contentStream = await response.Content.ReadAsStreamAsync().ConfigureAwait(true);
 				StreamReader reader = new(contentStream);
-				string json = await reader.ReadToEndAsync();
+				string json = await reader.ReadToEndAsync().ConfigureAwait(true);
 				contentStream.Close();
 
 				// Parse the JSON
 				dynamic config = JsonConvert.DeserializeObject(json)!;
 
 				// Replace the placeholder with the actual game path
-				string? gamePath = await Utils.GetGame("giExe");
+				string? gamePath = await Utils.GetGame("giExe").ConfigureAwait(true);
 				config.GamePath = gamePath!;
 
 				// Serialize the updated JSON back to a string

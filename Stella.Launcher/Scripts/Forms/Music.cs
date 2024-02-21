@@ -16,13 +16,13 @@ internal static class Music
 		string? wavPath = GetRandomBgWavPath();
 		if (string.IsNullOrEmpty(wavPath)) return;
 
-		await PlaySoundAsync(wavPath, 0.76f);
+		await PlaySoundAsync(wavPath, 0.76f).ConfigureAwait(false);
 	}
 
 	private static string? GetRandomBgWavPath()
 	{
 		int randomBgNumber = Random.Next(1, 7);
-		string? wavPath = Path.Combine(Program.AppPath, "data", "sounds", "bg", $"{randomBgNumber}.wav");
+		string wavPath = Path.Combine(Program.AppPath, "data", "sounds", "bg", $"{randomBgNumber}.wav");
 		return File.Exists(wavPath) ? wavPath : null;
 	}
 
@@ -30,7 +30,7 @@ internal static class Music
 	{
 		if (Program.Settings.ReadInt("Launcher", "EnableBgSounds", 1) == 0) return;
 
-		string? wavPath = Path.Combine(Program.AppPath, "data", "sounds", dir, $"{fileName}.wav");
+		string wavPath = Path.Combine(Program.AppPath, "data", "sounds", dir, $"{fileName}.wav");
 		if (!File.Exists(wavPath))
 		{
 			Default._status_Label.Text += $"[x] {Resources.Default_TheSoundFileWithMusicWasNotFound}\n";
@@ -53,7 +53,7 @@ internal static class Music
 			using WaveOutEvent outputDevice = new();
 			outputDevice.Init(volumeStream);
 			outputDevice.Play();
-			await Task.Delay(TimeSpan.FromSeconds(audioFile.TotalTime.TotalSeconds));
+			await Task.Delay(TimeSpan.FromSeconds(audioFile.TotalTime.TotalSeconds)).ConfigureAwait(false);
 
 			Program.Logger.Info($"Playing sound file: {wavPath}");
 		}

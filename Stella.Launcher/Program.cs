@@ -38,12 +38,12 @@ internal static class Program
 	public static readonly string? AppWebsiteFull = "https://sefinek.net/genshin-impact-reshade";
 
 	// WebClient & HttpClient
-	public static readonly string UserAgent = $"Mozilla/5.0 (compatible; StellaLauncher/{AppFileVersion}; +{AppWebsiteSub}) WebClient/0.1";
+	public static readonly string UserAgent = $"Mozilla/5.0 (compatible; StellaLauncher/{AppFileVersion}; +{AppWebsiteSub}) WebClient/1.0";
 
 	public static readonly Lazy<HttpClient> WbClient = new(() =>
 	{
 		HttpClient httpClient = new();
-		httpClient.DefaultRequestHeaders.UserAgent.ParseAdd($"Mozilla/5.0 (compatible; StellaLauncher/{AppFileVersion}; +{AppWebsiteSub}) HttpClient/0.2");
+		httpClient.DefaultRequestHeaders.UserAgent.ParseAdd($"Mozilla/5.0 (compatible; StellaLauncher/{AppFileVersion}; +{AppWebsiteSub})");
 
 		return httpClient;
 	});

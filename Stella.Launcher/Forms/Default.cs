@@ -42,7 +42,7 @@ public partial class Default : Form
 
 	// Right
 	public static LinkLabel? _version_LinkLabel;
-	public static LinkLabel? _updates_LinkLabel;
+	public static LinkLabel _updates_LinkLabel;
 	public static PictureBox? _updateIco_PictureBox;
 
 	// Path
@@ -132,6 +132,8 @@ public partial class Default : Form
 		}
 
 		ResourcesPath = resourcesPath;
+
+		Utils.AddLinkClickedEventHandler(_updates_LinkLabel, CheckForUpdates.CheckUpdates_Click);
 
 
 		// App version
@@ -542,11 +544,6 @@ public partial class Default : Form
 	{
 		MessageBox.Show(Resources.Default_ItsJustText_WhatMoreDoYouWant, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Question);
 		Utils.OpenUrl("https://www.youtube.com/watch?v=RpDf3XFHVNI");
-	}
-
-	private void CheckUpdates_Worker(object sender, EventArgs e)
-	{
-		CheckForUpdates.CheckUpdates_Click();
 	}
 
 	private void W_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

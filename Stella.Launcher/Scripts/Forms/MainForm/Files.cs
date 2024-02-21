@@ -12,7 +12,7 @@ internal static class Files
 		CheckIfExists(Program.InjectorPath);
 		CheckIfExists(Program.ReShadePath);
 
-		if (!File.Exists(Program.FpsUnlockerCfgPath)) await FpsUnlockerCfg.RunAsync();
+		if (!File.Exists(Program.FpsUnlockerCfgPath)) await FpsUnlockerCfg.RunAsync().ConfigureAwait(false);
 	}
 
 	private static void CheckIfExists(string filePath)

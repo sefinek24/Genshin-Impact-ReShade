@@ -19,10 +19,8 @@ internal static class ReShadeIni
 		{
 			HttpResponseMessage response = await Program.SefinWebClient.GetAsync(UrlCdn).ConfigureAwait(true);
 
-			await using (Stream contentStream = await response.Content.ReadAsStreamAsync(), fileStream = new FileStream(reShadePath, FileMode.Create, FileAccess.Write))
-			{
-				await contentStream.CopyToAsync(fileStream).ConfigureAwait(true);
-			}
+			using Stream contentStream = await response.Content.ReadAsStreamAsync().ConfigureAwait(true), fileStream = new FileStream(reShadePath, FileMode.Create, FileAccess.Write);
+			await contentStream.CopyToAsync(fileStream).ConfigureAwait(true);
 
 			await Prepare().ConfigureAwait(true);
 

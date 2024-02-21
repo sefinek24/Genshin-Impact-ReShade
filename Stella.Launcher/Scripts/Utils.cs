@@ -1,6 +1,4 @@
-using System.ComponentModel;
 using System.Diagnostics;
-using System.Reflection;
 using IWshRuntimeLibrary;
 using Microsoft.Win32;
 using StellaModLauncher.Forms;
@@ -13,6 +11,8 @@ namespace StellaModLauncher.Scripts;
 
 internal static class Utils
 {
+	private static readonly Dictionary<LinkLabel, LinkLabelLinkClickedEventHandler?> LinkClickedHandlers = [];
+
 	public static async Task<string?> GetGame(string type)
 	{
 		string? fullGamePath = null;
@@ -127,21 +127,24 @@ internal static class Utils
 		}
 	}
 
-	public static void RemoveClickEvent(Label button)
+	public static void AddLinkClickedEventHandler(LinkLabel linkLabel, LinkLabelLinkClickedEventHandler? handler)
 	{
-		FieldInfo? eventClickField = typeof(Control).GetField("EventClick", BindingFlags.Static | BindingFlags.NonPublic);
-		object? eventHandler = eventClickField?.GetValue(button);
-		if (eventHandler == null) return;
+		RemoveLinkClickedEventHandler(linkLabel);
+		linkLabel.LinkClicked += handler;
+		LinkClickedHandlers[linkLabel] = handler;
+	}
 
-		PropertyInfo? eventsProperty = button.GetType().GetProperty("Events", BindingFlags.NonPublic | BindingFlags.Instance);
-		EventHandlerList eventHandlerList = (EventHandlerList)eventsProperty?.GetValue(button, null)!;
+	public static void RemoveLinkClickedEventHandler(LinkLabel linkLabel)
+	{
+		if (!LinkClickedHandlers.TryGetValue(linkLabel, out LinkLabelLinkClickedEventHandler? existingHandler)) return;
 
-		eventHandlerList.RemoveHandler(eventHandler, eventHandlerList[eventHandler]);
+		linkLabel.LinkClicked -= existingHandler;
+		LinkClickedHandlers.Remove(linkLabel);
 	}
 
 	public static bool CheckFileExists(string? fileName)
 	{
-		string filePath = Path.Combine(fileName);
+		string filePath = Path.Combine(fileName!);
 		bool fileExists = File.Exists(filePath);
 
 		Program.Logger.Info(fileExists ? $"File '{fileName}' was found at '{filePath}'" : $"File '{fileName}' was not found at '{filePath}'");

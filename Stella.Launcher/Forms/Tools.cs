@@ -62,7 +62,7 @@ public partial class Tools : Form
 	// ---------------------------------- Misc ----------------------------------
 	private async void ScanSysFiles_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		Cmd.CliWrap? command = new()
+		Cmd.CliWrap command = new()
 		{
 			App = "wt.exe",
 			WorkingDir = Program.AppPath,
@@ -72,14 +72,14 @@ public partial class Tools : Form
 				.Add(Data.ReShadeVer)
 				.Add(Data.UnlockerVer)
 		};
-		await Cmd.Execute(command);
+		await Cmd.Execute(command).ConfigureAwait(false);
 	}
 
 
 	// ------------------------------ Config files ------------------------------
 	private async void ReShadeConfig_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		string? gamePath = await Utils.GetGame("giGameDir");
+		string? gamePath = await Utils.GetGame("giGameDir").ConfigureAwait(false);
 		string reShadeIni = Path.Combine(gamePath!, "ReShade.ini");
 
 		if (!File.Exists(reShadeIni))
@@ -88,36 +88,36 @@ public partial class Tools : Form
 		}
 		else
 		{
-			Cmd.CliWrap? command = new()
+			Cmd.CliWrap command = new()
 			{
 				App = "notepad.exe",
 				WorkingDir = Program.AppPath,
 				Arguments = new ArgumentsBuilder()
 					.Add(reShadeIni)
 			};
-			await Cmd.Execute(command);
+			await Cmd.Execute(command).ConfigureAwait(false);
 		}
 	}
 
 	private async void UnlockerConfig_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		Cmd.CliWrap? command = new()
+		Cmd.CliWrap command = new()
 		{
 			App = "notepad.exe",
 			WorkingDir = Program.AppPath,
 			Arguments = new ArgumentsBuilder()
 				.Add(Path.Combine(Program.AppPath, "data", "unlocker", "unlocker.config.json"))
 		};
-		await Cmd.Execute(command);
+		await Cmd.Execute(command).ConfigureAwait(false);
 	}
 
 
 	// --------------------------------- Cache ---------------------------------
 	private async void DeleteCache_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		string? gameDir = await Utils.GetGame("giGameDir");
+		string? gameDir = await Utils.GetGame("giGameDir").ConfigureAwait(false);
 
-		Cmd.CliWrap? command = new()
+		Cmd.CliWrap command = new()
 		{
 			App = "wt.exe",
 			WorkingDir = Program.AppPath,
@@ -131,12 +131,12 @@ public partial class Tools : Form
 				.Add(gameDir!) // 6
 				.Add(Program.AppData) // 7
 		};
-		await Cmd.Execute(command);
+		await Cmd.Execute(command).ConfigureAwait(false);
 	}
 
 	private async void DeleteWebViewCache_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		Cmd.CliWrap? command = new()
+		Cmd.CliWrap command = new()
 		{
 			App = "wt.exe",
 			WorkingDir = Program.AppPath,
@@ -147,7 +147,7 @@ public partial class Tools : Form
 				.Add(Data.UnlockerVer) // 3
 				.Add(Program.AppData) // 4
 		};
-		await Cmd.Execute(command);
+		await Cmd.Execute(command).ConfigureAwait(false);
 	}
 
 
@@ -177,14 +177,14 @@ public partial class Tools : Form
 
 	private async void LauncherLogs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		Cmd.CliWrap? command = new()
+		Cmd.CliWrap command = new()
 		{
 			App = "notepad.exe",
 			WorkingDir = Program.AppPath,
 			Arguments = new ArgumentsBuilder()
 				.Add(Path.Combine(Log.Folder!, "launcher.output.log"))
 		};
-		await Cmd.Execute(command);
+		await Cmd.Execute(command).ConfigureAwait(false);
 
 		LogSharingAlert();
 	}
@@ -196,15 +196,15 @@ public partial class Tools : Form
 			App = "notepad.exe",
 			WorkingDir = Program.AppPath,
 			Arguments = new ArgumentsBuilder()
-				.Add(Path.Combine(Log.Folder, "gsmod.output.log"))
-		});
+				.Add(Path.Combine(Log.Folder!, "gsmod.output.log"))
+		}).ConfigureAwait(false);
 
 		LogSharingAlert();
 	}
 
 	private async void ReShadeLogs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		string? gameDir = await Utils.GetGame("giGameDir");
+		string? gameDir = await Utils.GetGame("giGameDir").ConfigureAwait(false);
 		string logFile = Path.Combine(gameDir!, "ReShade.log");
 
 		if (!Directory.Exists(gameDir) || !File.Exists(logFile))
@@ -216,7 +216,7 @@ public partial class Tools : Form
 				WorkingDir = Program.AppPath,
 				Arguments = new ArgumentsBuilder()
 					.Add(logFile)
-			});
+			}).ConfigureAwait(false);
 
 		LogSharingAlert();
 	}
@@ -225,7 +225,7 @@ public partial class Tools : Form
 	// -------------------------- Nothing special ((: ---------------------------
 	private void Notepad_MouseClick(object sender, MouseEventArgs e)
 	{
-		string? path = Path.Combine(Program.AppPath, "data", "videos", "poland-strong.mp4");
+		string path = Path.Combine(Program.AppPath, "data", "videos", "poland-strong.mp4");
 		if (!Utils.CheckFileExists(path)) return;
 
 		WebView2Shake viewer = new() { DesktopLocation = DesktopLocation, Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) };

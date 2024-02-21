@@ -434,7 +434,6 @@ namespace StellaModLauncher.Forms
 				updates_LinkLabel.LinkColor = Color.White;
 				updates_LinkLabel.Name = "updates_LinkLabel";
 				updates_LinkLabel.TabStop = true;
-				updates_LinkLabel.Click += CheckUpdates_Worker;
 				// 
 				// webIco_Picturebox
 				// 

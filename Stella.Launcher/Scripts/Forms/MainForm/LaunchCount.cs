@@ -70,8 +70,8 @@ internal static class LaunchCountHelper
 		switch (launchCount)
 		{
 			case 1:
-				await ShowMessage(MessageType.MessageBox);
-				await ShowMessage(MessageType.StatusLabel);
+				await ShowMessage(MessageType.MessageBox).ConfigureAwait(false);
+				await ShowMessage(MessageType.StatusLabel).ConfigureAwait(false);
 				break;
 
 			case 2:
@@ -79,19 +79,19 @@ internal static class LaunchCountHelper
 			case 4:
 			case 5:
 			case 6:
-				await ShowMessage(MessageType.StatusLabel);
+				await ShowMessage(MessageType.StatusLabel).ConfigureAwait(false);
 				break;
 
 			case 10:
 			case 15:
-				await ShowMessage(MessageType.TheSimultaneousOfUse);
+				await ShowMessage(MessageType.TheSimultaneousOfUse).ConfigureAwait(false);
 				break;
 
 			case 20:
 			case 30:
 			case 40:
 			case 50:
-				await ShowMessage(MessageType.ThankYouForYourSupport);
+				await ShowMessage(MessageType.ThankYouForYourSupport).ConfigureAwait(false);
 
 				break;
 		}

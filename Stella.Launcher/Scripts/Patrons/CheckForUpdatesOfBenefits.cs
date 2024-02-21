@@ -11,7 +11,7 @@ internal static class CheckForUpdatesOfBenefits
 {
 	public static async Task<int> Analyze()
 	{
-		BenefitVersions? remoteVersions = await GetVersions();
+		BenefitVersions? remoteVersions = await GetVersions().ConfigureAwait(true);
 
 
 		// 3DMigoto
@@ -57,9 +57,9 @@ internal static class CheckForUpdatesOfBenefits
 				// Delete old mods
 				Default._preparingPleaseWait.Text = Resources.StellaResources_DeletingThePreviousVersionOfTheModPack;
 				string migotoCharsMods = Path.Combine(Default.ResourcesPath, "3DMigoto", "Mods", "1. Characters");
-				if (Directory.Exists(migotoCharsMods)) await DeleteBenefits.DeleteDirectory(migotoCharsMods);
+				if (Directory.Exists(migotoCharsMods)) await DeleteBenefits.DeleteDirectory(migotoCharsMods).ConfigureAwait(true);
 				string migotoOtherMods = Path.Combine(Default.ResourcesPath, "3DMigoto", "Mods", "2. Other");
-				if (Directory.Exists(migotoOtherMods)) await DeleteBenefits.DeleteDirectory(migotoOtherMods);
+				if (Directory.Exists(migotoOtherMods)) await DeleteBenefits.DeleteDirectory(migotoOtherMods).ConfigureAwait(true);
 
 				// Update
 				UpdateBenefits.Download("3dmigoto-mods", $"3DMigoto Mods Update - v{remoteVersions.Message.Resources.Mods}.zip", Path.GetDirectoryName(modsVerPath));
@@ -108,7 +108,7 @@ internal static class CheckForUpdatesOfBenefits
 					Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 				string presets = Path.Combine(Default.ResourcesPath!, "ReShade", "Presets", "3. Stella Mod Plus");
-				if (Directory.Exists(presets)) await DeleteBenefits.DeleteDirectory(presets);
+				if (Directory.Exists(presets)) await DeleteBenefits.DeleteDirectory(presets).ConfigureAwait(true);
 
 				UpdateBenefits.Download("presets", $"Presets update - v{remoteVersions.Message.Resources.Presets}.zip", Path.GetDirectoryName(presetsVersionPath));
 				return 1;
@@ -161,7 +161,7 @@ internal static class CheckForUpdatesOfBenefits
 					Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 				string cmdPath = Path.Combine(Program.AppPath, "data", "cmd", "patrons");
-				if (Directory.Exists(cmdPath)) await DeleteBenefits.DeleteDirectory(cmdPath);
+				if (Directory.Exists(cmdPath)) await DeleteBenefits.DeleteDirectory(cmdPath).ConfigureAwait(true);
 
 				UpdateBenefits.Download("cmd", $"Batch files update - {remoteVersions.Message.Resources.Cmd}.zip", Path.GetDirectoryName(cmdVersionPath));
 				return 1;
@@ -183,7 +183,7 @@ internal static class CheckForUpdatesOfBenefits
 		{
 			Program.SefinWebClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Secret.BearerToken);
 
-			string jsonResponse = await Program.SefinWebClient.GetStringAsync($"{Program.WebApi}/genshin-stella-mod/patrons/benefits/version");
+			string jsonResponse = await Program.SefinWebClient.GetStringAsync($"{Program.WebApi}/genshin-stella-mod/patrons/benefits/version").ConfigureAwait(true);
 			return JsonConvert.DeserializeObject<BenefitVersions>(jsonResponse);
 		}
 		catch (WebException webEx)
@@ -191,7 +191,7 @@ internal static class CheckForUpdatesOfBenefits
 			if (webEx.Response is HttpWebResponse response)
 			{
 				using StreamReader reader = new(response.GetResponseStream() ?? throw new InvalidOperationException());
-				string errorResponse = await reader.ReadToEndAsync();
+				string errorResponse = await reader.ReadToEndAsync().ConfigureAwait(true);
 				MessageBox.Show($@"An error occurred: {errorResponse}", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
 				Log.ErrorAndExit(new Exception(errorResponse), false);
 			}

@@ -19,6 +19,7 @@
     <Authors>Sefinek Inc.</Authors>
     <Copyright>Copyright 2024 © by Sefinek. All Rights Reserved.</Copyright>
     <NeutralLanguage>en</NeutralLanguage>
+    <NoWarn>$(NoWarn);CA1303</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
