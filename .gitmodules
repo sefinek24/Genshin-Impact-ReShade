@@ -1,0 +1,3 @@
+[submodule "Genshin-Stella-Mod"]
+	path = Stella.Worker
+	url = https://github.com/sefinek24/Genshin-Stella-Mod
