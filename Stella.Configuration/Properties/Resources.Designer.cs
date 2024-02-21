@@ -81,6 +81,15 @@ namespace ConfigurationNC.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fatal error.
+        /// </summary>
+        internal static string CheckData_FatalError {
+            get {
+                return ResourceManager.GetString("CheckData_FatalError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sorry, but something went wrong. Please report this issue.
         ///
         ///{0}.

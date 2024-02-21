@@ -130,4 +130,7 @@ Zainstaluj ponownie aplikację lub dołącz do naszego serwera Discord.</value>
 
 {0}</value>
   </data>
+  <data name="CheckData_FatalError" xml:space="preserve">
+	  <value>Fatalny błąd</value>
+  </data>
 </root>

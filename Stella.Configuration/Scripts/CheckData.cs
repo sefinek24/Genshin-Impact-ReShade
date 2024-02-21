@@ -35,7 +35,7 @@ internal static class CheckData
 		catch (Exception ex)
 		{
 			Program.Logger.Error(ex);
-			MessageBox.Show(string.Format(Resources.CheckData_SorryButSomethingWentWrong, ex.Message), @"Fatal error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			MessageBox.Show(string.Format(Resources.CheckData_SorryButSomethingWentWrong, ex.Message), Resources.CheckData_FatalError, MessageBoxButtons.OK, MessageBoxIcon.Error);
 		}
 
 		value = null;

@@ -137,4 +137,7 @@ Please reinstall this app or join our Discord server.</value>
 
 {0}</value>
   </data>
+  <data name="CheckData_FatalError" xml:space="preserve">
+	  <value>Fatal error</value>
+  </data>
 </root>
