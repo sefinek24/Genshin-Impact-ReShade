@@ -20,621 +20,609 @@ namespace StellaModLauncher.Forms
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+		  #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Default));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.changeBg_LinkLabel = new System.Windows.Forms.LinkLabel();
-            this.close_Panel = new System.Windows.Forms.Panel();
-            this.githubUrl_LinkLabel = new System.Windows.Forms.LinkLabel();
-            this.madeBySefinek_Label = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.githubIco_Picturebox = new System.Windows.Forms.PictureBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.tools_LinkLabel = new System.Windows.Forms.LinkLabel();
-            this.discordServer_LinkLabel = new System.Windows.Forms.LinkLabel();
-            this.web_LinkLabel = new System.Windows.Forms.LinkLabel();
-            this.startGame_LinkLabel = new System.Windows.Forms.LinkLabel();
-            this.gameplay_LinkLabel = new System.Windows.Forms.LinkLabel();
-            this.supportMe_LinkLabel = new System.Windows.Forms.LinkLabel();
-            this.becomeMyPatron_LinkLabel = new System.Windows.Forms.LinkLabel();
-            this.runGiLauncher_LinkLabel = new System.Windows.Forms.LinkLabel();
-            this.version_LinkLabel = new System.Windows.Forms.LinkLabel();
-            this.links_LinkLabel = new System.Windows.Forms.LinkLabel();
-            this.clickMe_LinkLabel = new System.Windows.Forms.LinkLabel();
-            this.injectReShade_LinkLabel = new System.Windows.Forms.LinkLabel();
-            this.runFpsUnlocker_LinkLabel = new System.Windows.Forms.LinkLabel();
-            this.only3DMigoto_LinkLabel = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.toolsIco_PictureBox = new System.Windows.Forms.PictureBox();
-            this.updateIco_PictureBox = new System.Windows.Forms.PictureBox();
-            this.versionIco_PictureBox = new System.Windows.Forms.PictureBox();
-            this.updates_LinkLabel = new System.Windows.Forms.LinkLabel();
-            this.webIco_Picturebox = new System.Windows.Forms.PictureBox();
-            this.discordServerIco_Picturebox = new System.Windows.Forms.PictureBox();
-            this.status_Label = new System.Windows.Forms.Label();
-            this.padIco_PictureBox = new System.Windows.Forms.PictureBox();
-            this.supportMeIco_PictureBox = new System.Windows.Forms.PictureBox();
-            this.shortcutIco_PictureBox = new System.Windows.Forms.PictureBox();
-            this.paimon_PictureBox = new System.Windows.Forms.PictureBox();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.PreparingPleaseWait = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.githubIco_Picturebox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toolsIco_PictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updateIco_PictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.versionIco_PictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.webIco_Picturebox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.discordServerIco_Picturebox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.padIco_PictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supportMeIco_PictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shortcutIco_PictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paimon_PictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Controls.Add(this.pictureBox5);
-            this.panel1.Controls.Add(this.linkLabel3);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.changeBg_LinkLabel);
-            this.panel1.Controls.Add(this.close_Panel);
-            this.panel1.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.panel1.ForeColor = System.Drawing.Color.Transparent;
-            this.panel1.Name = "panel1";
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDown_Event);
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MouseMove_Event);
-            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MouseUp_Event);
-            // 
-            // pictureBox5
-            // 
-            resources.ApplyResources(this.pictureBox5, "pictureBox5");
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Image = global::StellaModLauncher.Properties.Resources.icons8_edit_property;
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.TabStop = false;
-            // 
-            // linkLabel3
-            // 
-            this.linkLabel3.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.linkLabel3, "linkLabel3");
-            this.linkLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel3.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel3, resources.GetString("linkLabel3.ToolTip"));
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ViewChangelog_LinkClicked);
-            // 
-            // pictureBox2
-            // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::StellaModLauncher.Properties.Resources.icons8_animated;
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
-            // 
-            // changeBg_LinkLabel
-            // 
-            this.changeBg_LinkLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.changeBg_LinkLabel, "changeBg_LinkLabel");
-            this.changeBg_LinkLabel.BackColor = System.Drawing.Color.Transparent;
-            this.changeBg_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.changeBg_LinkLabel.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.changeBg_LinkLabel.Name = "changeBg_LinkLabel";
-            this.changeBg_LinkLabel.TabStop = true;
-            this.toolTip1.SetToolTip(this.changeBg_LinkLabel, resources.GetString("changeBg_LinkLabel.ToolTip"));
-            this.changeBg_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ChangeBg_LinkClicked);
-            // 
-            // close_Panel
-            // 
-            resources.ApplyResources(this.close_Panel, "close_Panel");
-            this.close_Panel.BackColor = System.Drawing.Color.Transparent;
-            this.close_Panel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.close_Panel.Name = "close_Panel";
-            this.toolTip1.SetToolTip(this.close_Panel, resources.GetString("close_Panel.ToolTip"));
-            this.close_Panel.Click += new System.EventHandler(this.Exit_Click);
-            // 
-            // githubUrl_LinkLabel
-            // 
-            this.githubUrl_LinkLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.githubUrl_LinkLabel, "githubUrl_LinkLabel");
-            this.githubUrl_LinkLabel.BackColor = System.Drawing.Color.Transparent;
-            this.githubUrl_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.githubUrl_LinkLabel.LinkColor = System.Drawing.Color.White;
-            this.githubUrl_LinkLabel.Name = "githubUrl_LinkLabel";
-            this.githubUrl_LinkLabel.TabStop = true;
-            this.toolTip1.SetToolTip(this.githubUrl_LinkLabel, resources.GetString("githubUrl_LinkLabel.ToolTip"));
-            this.githubUrl_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.GitHub_LinkClicked);
-            // 
-            // madeBySefinek_Label
-            // 
-            resources.ApplyResources(this.madeBySefinek_Label, "madeBySefinek_Label");
-            this.madeBySefinek_Label.BackColor = System.Drawing.Color.Transparent;
-            this.madeBySefinek_Label.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.madeBySefinek_Label.Name = "madeBySefinek_Label";
-            this.toolTip1.SetToolTip(this.madeBySefinek_Label, resources.GetString("madeBySefinek_Label.ToolTip"));
-            this.madeBySefinek_Label.Click += new System.EventHandler(this.MadeBySefinek_Click);
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Name = "label1";
-            // 
-            // githubIco_Picturebox
-            // 
-            resources.ApplyResources(this.githubIco_Picturebox, "githubIco_Picturebox");
-            this.githubIco_Picturebox.BackColor = System.Drawing.Color.Transparent;
-            this.githubIco_Picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.githubIco_Picturebox.Image = global::StellaModLauncher.Properties.Resources.icons8_github;
-            this.githubIco_Picturebox.Name = "githubIco_Picturebox";
-            this.githubIco_Picturebox.TabStop = false;
-            this.toolTip1.SetToolTip(this.githubIco_Picturebox, resources.GetString("githubIco_Picturebox.ToolTip"));
-            // 
-            // tools_LinkLabel
-            // 
-            this.tools_LinkLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.tools_LinkLabel, "tools_LinkLabel");
-            this.tools_LinkLabel.BackColor = System.Drawing.Color.Transparent;
-            this.tools_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.tools_LinkLabel.LinkColor = System.Drawing.Color.White;
-            this.tools_LinkLabel.Name = "tools_LinkLabel";
-            this.tools_LinkLabel.TabStop = true;
-            this.toolTip1.SetToolTip(this.tools_LinkLabel, resources.GetString("tools_LinkLabel.ToolTip"));
-            this.tools_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Tools_LinkClicked);
-            // 
-            // discordServer_LinkLabel
-            // 
-            this.discordServer_LinkLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.discordServer_LinkLabel, "discordServer_LinkLabel");
-            this.discordServer_LinkLabel.BackColor = System.Drawing.Color.Transparent;
-            this.discordServer_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.discordServer_LinkLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.discordServer_LinkLabel.Name = "discordServer_LinkLabel";
-            this.discordServer_LinkLabel.TabStop = true;
-            this.toolTip1.SetToolTip(this.discordServer_LinkLabel, resources.GetString("discordServer_LinkLabel.ToolTip"));
-            this.discordServer_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.DiscordServer_LinkClicked);
-            // 
-            // web_LinkLabel
-            // 
-            this.web_LinkLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.web_LinkLabel, "web_LinkLabel");
-            this.web_LinkLabel.BackColor = System.Drawing.Color.Transparent;
-            this.web_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.web_LinkLabel.LinkColor = System.Drawing.Color.Cyan;
-            this.web_LinkLabel.Name = "web_LinkLabel";
-            this.web_LinkLabel.TabStop = true;
-            this.toolTip1.SetToolTip(this.web_LinkLabel, resources.GetString("web_LinkLabel.ToolTip"));
-            this.web_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Website_LinkClicked);
-            // 
-            // startGame_LinkLabel
-            // 
-            this.startGame_LinkLabel.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
-            resources.ApplyResources(this.startGame_LinkLabel, "startGame_LinkLabel");
-            this.startGame_LinkLabel.BackColor = System.Drawing.Color.Transparent;
-            this.startGame_LinkLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.startGame_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.startGame_LinkLabel.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.startGame_LinkLabel.Name = "startGame_LinkLabel";
-            this.startGame_LinkLabel.TabStop = true;
-            this.toolTip1.SetToolTip(this.startGame_LinkLabel, resources.GetString("startGame_LinkLabel.ToolTip"));
-            this.startGame_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.StartGame_LinkClicked);
-            // 
-            // gameplay_LinkLabel
-            // 
-            this.gameplay_LinkLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.gameplay_LinkLabel, "gameplay_LinkLabel");
-            this.gameplay_LinkLabel.BackColor = System.Drawing.Color.Transparent;
-            this.gameplay_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.gameplay_LinkLabel.LinkColor = System.Drawing.Color.White;
-            this.gameplay_LinkLabel.Name = "gameplay_LinkLabel";
-            this.gameplay_LinkLabel.TabStop = true;
-            this.toolTip1.SetToolTip(this.gameplay_LinkLabel, resources.GetString("gameplay_LinkLabel.ToolTip"));
-            this.gameplay_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Gameplay_LinkClicked);
-            // 
-            // supportMe_LinkLabel
-            // 
-            this.supportMe_LinkLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.supportMe_LinkLabel, "supportMe_LinkLabel");
-            this.supportMe_LinkLabel.BackColor = System.Drawing.Color.Transparent;
-            this.supportMe_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.supportMe_LinkLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(237)))), ((int)(((byte)(252)))));
-            this.supportMe_LinkLabel.Name = "supportMe_LinkLabel";
-            this.supportMe_LinkLabel.TabStop = true;
-            this.toolTip1.SetToolTip(this.supportMe_LinkLabel, resources.GetString("supportMe_LinkLabel.ToolTip"));
-            this.supportMe_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SupportMe_LinkClicked);
-            // 
-            // becomeMyPatron_LinkLabel
-            // 
-            this.becomeMyPatron_LinkLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.becomeMyPatron_LinkLabel, "becomeMyPatron_LinkLabel");
-            this.becomeMyPatron_LinkLabel.BackColor = System.Drawing.Color.Transparent;
-            this.becomeMyPatron_LinkLabel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.becomeMyPatron_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.becomeMyPatron_LinkLabel.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.becomeMyPatron_LinkLabel.Name = "becomeMyPatron_LinkLabel";
-            this.becomeMyPatron_LinkLabel.TabStop = true;
-            this.toolTip1.SetToolTip(this.becomeMyPatron_LinkLabel, resources.GetString("becomeMyPatron_LinkLabel.ToolTip"));
-            this.becomeMyPatron_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Subscription_LinkClicked);
-            // 
-            // runGiLauncher_LinkLabel
-            // 
-            this.runGiLauncher_LinkLabel.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
-            resources.ApplyResources(this.runGiLauncher_LinkLabel, "runGiLauncher_LinkLabel");
-            this.runGiLauncher_LinkLabel.BackColor = System.Drawing.Color.Transparent;
-            this.runGiLauncher_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.runGiLauncher_LinkLabel.LinkColor = System.Drawing.Color.White;
-            this.runGiLauncher_LinkLabel.Name = "runGiLauncher_LinkLabel";
-            this.runGiLauncher_LinkLabel.TabStop = true;
-            this.toolTip1.SetToolTip(this.runGiLauncher_LinkLabel, resources.GetString("runGiLauncher_LinkLabel.ToolTip"));
-            this.runGiLauncher_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OpenGILauncher_LinkClicked);
-            // 
-            // version_LinkLabel
-            // 
-            this.version_LinkLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.version_LinkLabel, "version_LinkLabel");
-            this.version_LinkLabel.BackColor = System.Drawing.Color.Transparent;
-            this.version_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.version_LinkLabel.LinkColor = System.Drawing.Color.White;
-            this.version_LinkLabel.Name = "version_LinkLabel";
-            this.version_LinkLabel.TabStop = true;
-            this.toolTip1.SetToolTip(this.version_LinkLabel, resources.GetString("version_LinkLabel.ToolTip"));
-            this.version_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Version_LinkClicked);
-            // 
-            // links_LinkLabel
-            // 
-            this.links_LinkLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.links_LinkLabel, "links_LinkLabel");
-            this.links_LinkLabel.BackColor = System.Drawing.Color.Transparent;
-            this.links_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.links_LinkLabel.LinkColor = System.Drawing.Color.White;
-            this.links_LinkLabel.Name = "links_LinkLabel";
-            this.links_LinkLabel.TabStop = true;
-            this.toolTip1.SetToolTip(this.links_LinkLabel, resources.GetString("links_LinkLabel.ToolTip"));
-            this.links_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Links_LinkClicked);
-            // 
-            // clickMe_LinkLabel
-            // 
-            this.clickMe_LinkLabel.ActiveLinkColor = System.Drawing.Color.DeepSkyBlue;
-            resources.ApplyResources(this.clickMe_LinkLabel, "clickMe_LinkLabel");
-            this.clickMe_LinkLabel.AutoEllipsis = true;
-            this.clickMe_LinkLabel.BackColor = System.Drawing.Color.Transparent;
-            this.clickMe_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.clickMe_LinkLabel.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.clickMe_LinkLabel.Name = "clickMe_LinkLabel";
-            this.clickMe_LinkLabel.TabStop = true;
-            this.toolTip1.SetToolTip(this.clickMe_LinkLabel, resources.GetString("clickMe_LinkLabel.ToolTip"));
-            this.clickMe_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.W_LinkClicked);
-            // 
-            // injectReShade_LinkLabel
-            // 
-            this.injectReShade_LinkLabel.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
-            resources.ApplyResources(this.injectReShade_LinkLabel, "injectReShade_LinkLabel");
-            this.injectReShade_LinkLabel.BackColor = System.Drawing.Color.Transparent;
-            this.injectReShade_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.injectReShade_LinkLabel.LinkColor = System.Drawing.Color.White;
-            this.injectReShade_LinkLabel.Name = "injectReShade_LinkLabel";
-            this.injectReShade_LinkLabel.TabStop = true;
-            this.toolTip1.SetToolTip(this.injectReShade_LinkLabel, resources.GetString("injectReShade_LinkLabel.ToolTip"));
-            this.injectReShade_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OnlyReShade_LinkClicked);
-            // 
-            // runFpsUnlocker_LinkLabel
-            // 
-            this.runFpsUnlocker_LinkLabel.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
-            resources.ApplyResources(this.runFpsUnlocker_LinkLabel, "runFpsUnlocker_LinkLabel");
-            this.runFpsUnlocker_LinkLabel.BackColor = System.Drawing.Color.Transparent;
-            this.runFpsUnlocker_LinkLabel.DisabledLinkColor = System.Drawing.Color.Black;
-            this.runFpsUnlocker_LinkLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.runFpsUnlocker_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.runFpsUnlocker_LinkLabel.LinkColor = System.Drawing.Color.White;
-            this.runFpsUnlocker_LinkLabel.Name = "runFpsUnlocker_LinkLabel";
-            this.runFpsUnlocker_LinkLabel.TabStop = true;
-            this.toolTip1.SetToolTip(this.runFpsUnlocker_LinkLabel, resources.GetString("runFpsUnlocker_LinkLabel.ToolTip"));
-            this.runFpsUnlocker_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OnlyUnlocker_LinkClicked);
-            // 
-            // only3DMigoto_LinkLabel
-            // 
-            this.only3DMigoto_LinkLabel.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
-            resources.ApplyResources(this.only3DMigoto_LinkLabel, "only3DMigoto_LinkLabel");
-            this.only3DMigoto_LinkLabel.BackColor = System.Drawing.Color.Transparent;
-            this.only3DMigoto_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.only3DMigoto_LinkLabel.LinkColor = System.Drawing.Color.White;
-            this.only3DMigoto_LinkLabel.Name = "only3DMigoto_LinkLabel";
-            this.only3DMigoto_LinkLabel.TabStop = true;
-            this.toolTip1.SetToolTip(this.only3DMigoto_LinkLabel, resources.GetString("only3DMigoto_LinkLabel.ToolTip"));
-            this.only3DMigoto_LinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Only3DMigoto_LinkClicked);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.linkLabel1, "linkLabel1");
-            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel1, resources.GetString("linkLabel1.ToolTip"));
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ViewResources_LinkClicked);
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.linkLabel2, "linkLabel2");
-            this.linkLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel2.LinkColor = System.Drawing.Color.White;
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.TabStop = true;
-            this.toolTip1.SetToolTip(this.linkLabel2, resources.GetString("linkLabel2.ToolTip"));
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Settings_LinkClicked);
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.Color.Aqua;
-            this.label2.Name = "label2";
-            // 
-            // toolsIco_PictureBox
-            // 
-            resources.ApplyResources(this.toolsIco_PictureBox, "toolsIco_PictureBox");
-            this.toolsIco_PictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.toolsIco_PictureBox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.toolsIco_PictureBox.Image = global::StellaModLauncher.Properties.Resources.flaticon_tools;
-            this.toolsIco_PictureBox.Name = "toolsIco_PictureBox";
-            this.toolsIco_PictureBox.TabStop = false;
-            // 
-            // updateIco_PictureBox
-            // 
-            resources.ApplyResources(this.updateIco_PictureBox, "updateIco_PictureBox");
-            this.updateIco_PictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.updateIco_PictureBox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.updateIco_PictureBox.Image = global::StellaModLauncher.Properties.Resources.icons8_available_updates;
-            this.updateIco_PictureBox.Name = "updateIco_PictureBox";
-            this.updateIco_PictureBox.TabStop = false;
-            // 
-            // versionIco_PictureBox
-            // 
-            resources.ApplyResources(this.versionIco_PictureBox, "versionIco_PictureBox");
-            this.versionIco_PictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.versionIco_PictureBox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.versionIco_PictureBox.Image = global::StellaModLauncher.Properties.Resources.icons8_support;
-            this.versionIco_PictureBox.Name = "versionIco_PictureBox";
-            this.versionIco_PictureBox.TabStop = false;
-            // 
-            // updates_LinkLabel
-            // 
-            this.updates_LinkLabel.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.updates_LinkLabel, "updates_LinkLabel");
-            this.updates_LinkLabel.BackColor = System.Drawing.Color.Transparent;
-            this.updates_LinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.updates_LinkLabel.LinkColor = System.Drawing.Color.White;
-            this.updates_LinkLabel.Name = "updates_LinkLabel";
-            this.updates_LinkLabel.TabStop = true;
-            this.updates_LinkLabel.Click += new System.EventHandler(this.CheckUpdates_Worker);
-            // 
-            // webIco_Picturebox
-            // 
-            resources.ApplyResources(this.webIco_Picturebox, "webIco_Picturebox");
-            this.webIco_Picturebox.BackColor = System.Drawing.Color.Transparent;
-            this.webIco_Picturebox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.webIco_Picturebox.Image = global::StellaModLauncher.Properties.Resources.web;
-            this.webIco_Picturebox.Name = "webIco_Picturebox";
-            this.webIco_Picturebox.TabStop = false;
-            // 
-            // discordServerIco_Picturebox
-            // 
-            resources.ApplyResources(this.discordServerIco_Picturebox, "discordServerIco_Picturebox");
-            this.discordServerIco_Picturebox.BackColor = System.Drawing.Color.Transparent;
-            this.discordServerIco_Picturebox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.discordServerIco_Picturebox.Image = global::StellaModLauncher.Properties.Resources.icons8_discord;
-            this.discordServerIco_Picturebox.Name = "discordServerIco_Picturebox";
-            this.discordServerIco_Picturebox.TabStop = false;
-            // 
-            // status_Label
-            // 
-            resources.ApplyResources(this.status_Label, "status_Label");
-            this.status_Label.BackColor = System.Drawing.Color.Transparent;
-            this.status_Label.Cursor = System.Windows.Forms.Cursors.Default;
-            this.status_Label.ForeColor = System.Drawing.Color.Snow;
-            this.status_Label.Name = "status_Label";
-            this.status_Label.TextChanged += new System.EventHandler(this.StatusLabel_TextChanged);
-            // 
-            // padIco_PictureBox
-            // 
-            resources.ApplyResources(this.padIco_PictureBox, "padIco_PictureBox");
-            this.padIco_PictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.padIco_PictureBox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.padIco_PictureBox.Image = global::StellaModLauncher.Properties.Resources.flaticon_controller;
-            this.padIco_PictureBox.Name = "padIco_PictureBox";
-            this.padIco_PictureBox.TabStop = false;
-            // 
-            // supportMeIco_PictureBox
-            // 
-            resources.ApplyResources(this.supportMeIco_PictureBox, "supportMeIco_PictureBox");
-            this.supportMeIco_PictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.supportMeIco_PictureBox.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.supportMeIco_PictureBox.Image = global::StellaModLauncher.Properties.Resources.flaticon_heart;
-            this.supportMeIco_PictureBox.Name = "supportMeIco_PictureBox";
-            this.supportMeIco_PictureBox.TabStop = false;
-            // 
-            // shortcutIco_PictureBox
-            // 
-            resources.ApplyResources(this.shortcutIco_PictureBox, "shortcutIco_PictureBox");
-            this.shortcutIco_PictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.shortcutIco_PictureBox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.shortcutIco_PictureBox.Image = global::StellaModLauncher.Properties.Resources.flaticon_redo;
-            this.shortcutIco_PictureBox.Name = "shortcutIco_PictureBox";
-            this.shortcutIco_PictureBox.TabStop = false;
-            // 
-            // paimon_PictureBox
-            // 
-            resources.ApplyResources(this.paimon_PictureBox, "paimon_PictureBox");
-            this.paimon_PictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.paimon_PictureBox.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.paimon_PictureBox.Image = global::StellaModLauncher.Properties.Resources.paimon_gif;
-            this.paimon_PictureBox.Name = "paimon_PictureBox";
-            this.paimon_PictureBox.TabStop = false;
-            this.paimon_PictureBox.Click += new System.EventHandler(this.Paimon_Click);
-            // 
-            // progressBar1
-            // 
-            resources.ApplyResources(this.progressBar1, "progressBar1");
-            this.progressBar1.Name = "progressBar1";
-            // 
-            // PreparingPleaseWait
-            // 
-            resources.ApplyResources(this.PreparingPleaseWait, "PreparingPleaseWait");
-            this.PreparingPleaseWait.BackColor = System.Drawing.Color.Transparent;
-            this.PreparingPleaseWait.ForeColor = System.Drawing.Color.White;
-            this.PreparingPleaseWait.Name = "PreparingPleaseWait";
-            // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Image = global::StellaModLauncher.Properties.Resources.flaticon_open_folder;
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            resources.ApplyResources(this.pictureBox3, "pictureBox3");
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox3.Image = global::StellaModLauncher.Properties.Resources.flaticon_config;
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.TabStop = false;
-            // 
-            // webView21
-            // 
-            this.webView21.AllowExternalDrop = true;
-            resources.ApplyResources(this.webView21, "webView21");
-            this.webView21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.webView21.CreationProperties = null;
-            this.webView21.DefaultBackgroundColor = System.Drawing.Color.Transparent;
-            this.webView21.ForeColor = System.Drawing.Color.White;
-            this.webView21.Name = "webView21";
-            this.webView21.ZoomFactor = 1D;
-            // 
-            // notifyIcon1
-            // 
-            resources.ApplyResources(this.notifyIcon1, "notifyIcon1");
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.pictureBox4, "pictureBox4");
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.TabStop = false;
-            // 
-            // Default
-            // 
-            resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = global::StellaModLauncher.Properties.Resources.bg_main;
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.webView21);
-            this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.only3DMigoto_LinkLabel);
-            this.Controls.Add(this.clickMe_LinkLabel);
-            this.Controls.Add(this.PreparingPleaseWait);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.becomeMyPatron_LinkLabel);
-            this.Controls.Add(this.paimon_PictureBox);
-            this.Controls.Add(this.runGiLauncher_LinkLabel);
-            this.Controls.Add(this.shortcutIco_PictureBox);
-            this.Controls.Add(this.links_LinkLabel);
-            this.Controls.Add(this.supportMe_LinkLabel);
-            this.Controls.Add(this.supportMeIco_PictureBox);
-            this.Controls.Add(this.padIco_PictureBox);
-            this.Controls.Add(this.status_Label);
-            this.Controls.Add(this.startGame_LinkLabel);
-            this.Controls.Add(this.runFpsUnlocker_LinkLabel);
-            this.Controls.Add(this.injectReShade_LinkLabel);
-            this.Controls.Add(this.web_LinkLabel);
-            this.Controls.Add(this.discordServer_LinkLabel);
-            this.Controls.Add(this.discordServerIco_Picturebox);
-            this.Controls.Add(this.webIco_Picturebox);
-            this.Controls.Add(this.version_LinkLabel);
-            this.Controls.Add(this.updates_LinkLabel);
-            this.Controls.Add(this.versionIco_PictureBox);
-            this.Controls.Add(this.updateIco_PictureBox);
-            this.Controls.Add(this.toolsIco_PictureBox);
-            this.Controls.Add(this.gameplay_LinkLabel);
-            this.Controls.Add(this.tools_LinkLabel);
-            this.Controls.Add(this.githubIco_Picturebox);
-            this.Controls.Add(this.githubUrl_LinkLabel);
-            this.Controls.Add(this.madeBySefinek_Label);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Default";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Default_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Default_FormClosed);
-            this.Load += new System.EventHandler(this.Default_Load);
-            this.Shown += new System.EventHandler(this.Main_Shown);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.githubIco_Picturebox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toolsIco_PictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updateIco_PictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.versionIco_PictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.webIco_Picturebox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.discordServerIco_Picturebox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.padIco_PictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supportMeIco_PictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shortcutIco_PictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paimon_PictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.webView21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+		  /// <summary>
+		  /// Required method for Designer support - do not modify
+		  /// the contents of this method with the code editor.
+		  /// </summary>
+		  private void InitializeComponent()
+		  {
+				components = new System.ComponentModel.Container();
+				System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Default));
+				panel1 = new Panel();
+				pictureBox5 = new PictureBox();
+				linkLabel3 = new LinkLabel();
+				pictureBox2 = new PictureBox();
+				changeBg_LinkLabel = new LinkLabel();
+				close_Panel = new Panel();
+				githubUrl_LinkLabel = new LinkLabel();
+				madeBySefinek_Label = new Label();
+				label1 = new Label();
+				githubIco_Picturebox = new PictureBox();
+				toolTip1 = new ToolTip(components);
+				tools_LinkLabel = new LinkLabel();
+				discordServer_LinkLabel = new LinkLabel();
+				web_LinkLabel = new LinkLabel();
+				startGame_LinkLabel = new LinkLabel();
+				gameplay_LinkLabel = new LinkLabel();
+				supportMe_LinkLabel = new LinkLabel();
+				becomeMyPatron_LinkLabel = new LinkLabel();
+				runGiLauncher_LinkLabel = new LinkLabel();
+				version_LinkLabel = new LinkLabel();
+				links_LinkLabel = new LinkLabel();
+				clickMe_LinkLabel = new LinkLabel();
+				injectReShade_LinkLabel = new LinkLabel();
+				runFpsUnlocker_LinkLabel = new LinkLabel();
+				only3DMigoto_LinkLabel = new LinkLabel();
+				linkLabel1 = new LinkLabel();
+				linkLabel2 = new LinkLabel();
+				label2 = new Label();
+				toolsIco_PictureBox = new PictureBox();
+				updateIco_PictureBox = new PictureBox();
+				versionIco_PictureBox = new PictureBox();
+				updates_LinkLabel = new LinkLabel();
+				webIco_Picturebox = new PictureBox();
+				discordServerIco_Picturebox = new PictureBox();
+				status_Label = new Label();
+				padIco_PictureBox = new PictureBox();
+				supportMeIco_PictureBox = new PictureBox();
+				shortcutIco_PictureBox = new PictureBox();
+				paimon_PictureBox = new PictureBox();
+				progressBar1 = new ProgressBar();
+				PreparingPleaseWait = new Label();
+				pictureBox1 = new PictureBox();
+				pictureBox3 = new PictureBox();
+				webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
+				notifyIcon1 = new NotifyIcon(components);
+				pictureBox4 = new PictureBox();
+				panel1.SuspendLayout();
+				((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+				((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+				((System.ComponentModel.ISupportInitialize)githubIco_Picturebox).BeginInit();
+				((System.ComponentModel.ISupportInitialize)toolsIco_PictureBox).BeginInit();
+				((System.ComponentModel.ISupportInitialize)updateIco_PictureBox).BeginInit();
+				((System.ComponentModel.ISupportInitialize)versionIco_PictureBox).BeginInit();
+				((System.ComponentModel.ISupportInitialize)webIco_Picturebox).BeginInit();
+				((System.ComponentModel.ISupportInitialize)discordServerIco_Picturebox).BeginInit();
+				((System.ComponentModel.ISupportInitialize)padIco_PictureBox).BeginInit();
+				((System.ComponentModel.ISupportInitialize)supportMeIco_PictureBox).BeginInit();
+				((System.ComponentModel.ISupportInitialize)shortcutIco_PictureBox).BeginInit();
+				((System.ComponentModel.ISupportInitialize)paimon_PictureBox).BeginInit();
+				((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+				((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+				((System.ComponentModel.ISupportInitialize)webView21).BeginInit();
+				((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+				SuspendLayout();
+				// 
+				// panel1
+				// 
+				panel1.BackColor = Color.Transparent;
+				resources.ApplyResources(panel1, "panel1");
+				panel1.Controls.Add(pictureBox5);
+				panel1.Controls.Add(linkLabel3);
+				panel1.Controls.Add(pictureBox2);
+				panel1.Controls.Add(changeBg_LinkLabel);
+				panel1.Controls.Add(close_Panel);
+				panel1.Cursor = Cursors.SizeAll;
+				panel1.ForeColor = Color.Transparent;
+				panel1.Name = "panel1";
+				panel1.MouseDown += MouseDown_Event;
+				panel1.MouseMove += MouseMove_Event;
+				panel1.MouseUp += MouseUp_Event;
+				// 
+				// pictureBox5
+				// 
+				resources.ApplyResources(pictureBox5, "pictureBox5");
+				pictureBox5.BackColor = Color.Transparent;
+				pictureBox5.Cursor = Cursors.Hand;
+				pictureBox5.Image = Properties.Resources.icons8_edit_property;
+				pictureBox5.Name = "pictureBox5";
+				pictureBox5.TabStop = false;
+				// 
+				// linkLabel3
+				// 
+				linkLabel3.ActiveLinkColor = Color.DodgerBlue;
+				resources.ApplyResources(linkLabel3, "linkLabel3");
+				linkLabel3.BackColor = Color.Transparent;
+				linkLabel3.LinkBehavior = LinkBehavior.HoverUnderline;
+				linkLabel3.LinkColor = Color.DodgerBlue;
+				linkLabel3.Name = "linkLabel3";
+				linkLabel3.TabStop = true;
+				toolTip1.SetToolTip(linkLabel3, resources.GetString("linkLabel3.ToolTip"));
+				linkLabel3.LinkClicked += ViewChangelog_LinkClicked;
+				// 
+				// pictureBox2
+				// 
+				resources.ApplyResources(pictureBox2, "pictureBox2");
+				pictureBox2.BackColor = Color.Transparent;
+				pictureBox2.Cursor = Cursors.Hand;
+				pictureBox2.Image = Properties.Resources.icons8_animated;
+				pictureBox2.Name = "pictureBox2";
+				pictureBox2.TabStop = false;
+				// 
+				// changeBg_LinkLabel
+				// 
+				changeBg_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
+				resources.ApplyResources(changeBg_LinkLabel, "changeBg_LinkLabel");
+				changeBg_LinkLabel.BackColor = Color.Transparent;
+				changeBg_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
+				changeBg_LinkLabel.LinkColor = Color.DodgerBlue;
+				changeBg_LinkLabel.Name = "changeBg_LinkLabel";
+				changeBg_LinkLabel.TabStop = true;
+				toolTip1.SetToolTip(changeBg_LinkLabel, resources.GetString("changeBg_LinkLabel.ToolTip"));
+				changeBg_LinkLabel.LinkClicked += ChangeBg_LinkClicked;
+				// 
+				// close_Panel
+				// 
+				resources.ApplyResources(close_Panel, "close_Panel");
+				close_Panel.BackColor = Color.Transparent;
+				close_Panel.Cursor = Cursors.Hand;
+				close_Panel.Name = "close_Panel";
+				toolTip1.SetToolTip(close_Panel, resources.GetString("close_Panel.ToolTip"));
+				close_Panel.Click += Exit_Click;
+				// 
+				// githubUrl_LinkLabel
+				// 
+				githubUrl_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
+				resources.ApplyResources(githubUrl_LinkLabel, "githubUrl_LinkLabel");
+				githubUrl_LinkLabel.BackColor = Color.Transparent;
+				githubUrl_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
+				githubUrl_LinkLabel.LinkColor = Color.White;
+				githubUrl_LinkLabel.Name = "githubUrl_LinkLabel";
+				githubUrl_LinkLabel.TabStop = true;
+				toolTip1.SetToolTip(githubUrl_LinkLabel, resources.GetString("githubUrl_LinkLabel.ToolTip"));
+				githubUrl_LinkLabel.LinkClicked += GitHub_LinkClicked;
+				// 
+				// madeBySefinek_Label
+				// 
+				resources.ApplyResources(madeBySefinek_Label, "madeBySefinek_Label");
+				madeBySefinek_Label.BackColor = Color.Transparent;
+				madeBySefinek_Label.ForeColor = Color.DodgerBlue;
+				madeBySefinek_Label.Name = "madeBySefinek_Label";
+				toolTip1.SetToolTip(madeBySefinek_Label, resources.GetString("madeBySefinek_Label.ToolTip"));
+				madeBySefinek_Label.Click += MadeBySefinek_Click;
+				// 
+				// label1
+				// 
+				resources.ApplyResources(label1, "label1");
+				label1.BackColor = Color.Transparent;
+				label1.ForeColor = Color.DodgerBlue;
+				label1.Name = "label1";
+				// 
+				// githubIco_Picturebox
+				// 
+				resources.ApplyResources(githubIco_Picturebox, "githubIco_Picturebox");
+				githubIco_Picturebox.BackColor = Color.Transparent;
+				githubIco_Picturebox.Cursor = Cursors.Hand;
+				githubIco_Picturebox.Image = Properties.Resources.icons8_github;
+				githubIco_Picturebox.Name = "githubIco_Picturebox";
+				githubIco_Picturebox.TabStop = false;
+				toolTip1.SetToolTip(githubIco_Picturebox, resources.GetString("githubIco_Picturebox.ToolTip"));
+				// 
+				// tools_LinkLabel
+				// 
+				tools_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
+				resources.ApplyResources(tools_LinkLabel, "tools_LinkLabel");
+				tools_LinkLabel.BackColor = Color.Transparent;
+				tools_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
+				tools_LinkLabel.LinkColor = Color.White;
+				tools_LinkLabel.Name = "tools_LinkLabel";
+				tools_LinkLabel.TabStop = true;
+				toolTip1.SetToolTip(tools_LinkLabel, resources.GetString("tools_LinkLabel.ToolTip"));
+				tools_LinkLabel.LinkClicked += Tools_LinkClicked;
+				// 
+				// discordServer_LinkLabel
+				// 
+				discordServer_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
+				resources.ApplyResources(discordServer_LinkLabel, "discordServer_LinkLabel");
+				discordServer_LinkLabel.BackColor = Color.Transparent;
+				discordServer_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
+				discordServer_LinkLabel.LinkColor = Color.FromArgb(140, 158, 255);
+				discordServer_LinkLabel.Name = "discordServer_LinkLabel";
+				discordServer_LinkLabel.TabStop = true;
+				toolTip1.SetToolTip(discordServer_LinkLabel, resources.GetString("discordServer_LinkLabel.ToolTip"));
+				discordServer_LinkLabel.LinkClicked += DiscordServer_LinkClicked;
+				// 
+				// web_LinkLabel
+				// 
+				web_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
+				resources.ApplyResources(web_LinkLabel, "web_LinkLabel");
+				web_LinkLabel.BackColor = Color.Transparent;
+				web_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
+				web_LinkLabel.LinkColor = Color.Cyan;
+				web_LinkLabel.Name = "web_LinkLabel";
+				web_LinkLabel.TabStop = true;
+				toolTip1.SetToolTip(web_LinkLabel, resources.GetString("web_LinkLabel.ToolTip"));
+				web_LinkLabel.LinkClicked += Website_LinkClicked;
+				// 
+				// startGame_LinkLabel
+				// 
+				startGame_LinkLabel.ActiveLinkColor = Color.LightSkyBlue;
+				resources.ApplyResources(startGame_LinkLabel, "startGame_LinkLabel");
+				startGame_LinkLabel.BackColor = Color.Transparent;
+				startGame_LinkLabel.ForeColor = SystemColors.ControlText;
+				startGame_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
+				startGame_LinkLabel.LinkColor = Color.DodgerBlue;
+				startGame_LinkLabel.Name = "startGame_LinkLabel";
+				startGame_LinkLabel.TabStop = true;
+				toolTip1.SetToolTip(startGame_LinkLabel, resources.GetString("startGame_LinkLabel.ToolTip"));
+				startGame_LinkLabel.LinkClicked += StartGame_LinkClicked;
+				// 
+				// gameplay_LinkLabel
+				// 
+				gameplay_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
+				resources.ApplyResources(gameplay_LinkLabel, "gameplay_LinkLabel");
+				gameplay_LinkLabel.BackColor = Color.Transparent;
+				gameplay_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
+				gameplay_LinkLabel.LinkColor = Color.White;
+				gameplay_LinkLabel.Name = "gameplay_LinkLabel";
+				gameplay_LinkLabel.TabStop = true;
+				toolTip1.SetToolTip(gameplay_LinkLabel, resources.GetString("gameplay_LinkLabel.ToolTip"));
+				gameplay_LinkLabel.LinkClicked += Gameplay_LinkClicked;
+				// 
+				// supportMe_LinkLabel
+				// 
+				supportMe_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
+				resources.ApplyResources(supportMe_LinkLabel, "supportMe_LinkLabel");
+				supportMe_LinkLabel.BackColor = Color.Transparent;
+				supportMe_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
+				supportMe_LinkLabel.LinkColor = Color.FromArgb(232, 237, 252);
+				supportMe_LinkLabel.Name = "supportMe_LinkLabel";
+				supportMe_LinkLabel.TabStop = true;
+				toolTip1.SetToolTip(supportMe_LinkLabel, resources.GetString("supportMe_LinkLabel.ToolTip"));
+				supportMe_LinkLabel.LinkClicked += SupportMe_LinkClicked;
+				// 
+				// becomeMyPatron_LinkLabel
+				// 
+				becomeMyPatron_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
+				resources.ApplyResources(becomeMyPatron_LinkLabel, "becomeMyPatron_LinkLabel");
+				becomeMyPatron_LinkLabel.BackColor = Color.Transparent;
+				becomeMyPatron_LinkLabel.ForeColor = Color.DodgerBlue;
+				becomeMyPatron_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
+				becomeMyPatron_LinkLabel.LinkColor = Color.DodgerBlue;
+				becomeMyPatron_LinkLabel.Name = "becomeMyPatron_LinkLabel";
+				becomeMyPatron_LinkLabel.TabStop = true;
+				toolTip1.SetToolTip(becomeMyPatron_LinkLabel, resources.GetString("becomeMyPatron_LinkLabel.ToolTip"));
+				becomeMyPatron_LinkLabel.LinkClicked += Subscription_LinkClicked;
+				// 
+				// runGiLauncher_LinkLabel
+				// 
+				runGiLauncher_LinkLabel.ActiveLinkColor = Color.LightSkyBlue;
+				resources.ApplyResources(runGiLauncher_LinkLabel, "runGiLauncher_LinkLabel");
+				runGiLauncher_LinkLabel.BackColor = Color.Transparent;
+				runGiLauncher_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
+				runGiLauncher_LinkLabel.LinkColor = Color.White;
+				runGiLauncher_LinkLabel.Name = "runGiLauncher_LinkLabel";
+				runGiLauncher_LinkLabel.TabStop = true;
+				toolTip1.SetToolTip(runGiLauncher_LinkLabel, resources.GetString("runGiLauncher_LinkLabel.ToolTip"));
+				runGiLauncher_LinkLabel.LinkClicked += OpenGILauncher_LinkClicked;
+				// 
+				// version_LinkLabel
+				// 
+				version_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
+				resources.ApplyResources(version_LinkLabel, "version_LinkLabel");
+				version_LinkLabel.BackColor = Color.Transparent;
+				version_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
+				version_LinkLabel.LinkColor = Color.White;
+				version_LinkLabel.Name = "version_LinkLabel";
+				version_LinkLabel.TabStop = true;
+				toolTip1.SetToolTip(version_LinkLabel, resources.GetString("version_LinkLabel.ToolTip"));
+				version_LinkLabel.LinkClicked += Version_LinkClicked;
+				// 
+				// links_LinkLabel
+				// 
+				links_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
+				resources.ApplyResources(links_LinkLabel, "links_LinkLabel");
+				links_LinkLabel.BackColor = Color.Transparent;
+				links_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
+				links_LinkLabel.LinkColor = Color.White;
+				links_LinkLabel.Name = "links_LinkLabel";
+				links_LinkLabel.TabStop = true;
+				toolTip1.SetToolTip(links_LinkLabel, resources.GetString("links_LinkLabel.ToolTip"));
+				links_LinkLabel.LinkClicked += Links_LinkClicked;
+				// 
+				// clickMe_LinkLabel
+				// 
+				clickMe_LinkLabel.ActiveLinkColor = Color.DeepSkyBlue;
+				resources.ApplyResources(clickMe_LinkLabel, "clickMe_LinkLabel");
+				clickMe_LinkLabel.AutoEllipsis = true;
+				clickMe_LinkLabel.BackColor = Color.Transparent;
+				clickMe_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
+				clickMe_LinkLabel.LinkColor = Color.DodgerBlue;
+				clickMe_LinkLabel.Name = "clickMe_LinkLabel";
+				clickMe_LinkLabel.TabStop = true;
+				toolTip1.SetToolTip(clickMe_LinkLabel, resources.GetString("clickMe_LinkLabel.ToolTip"));
+				clickMe_LinkLabel.LinkClicked += W_LinkClicked;
+				// 
+				// injectReShade_LinkLabel
+				// 
+				injectReShade_LinkLabel.ActiveLinkColor = Color.LightSkyBlue;
+				resources.ApplyResources(injectReShade_LinkLabel, "injectReShade_LinkLabel");
+				injectReShade_LinkLabel.BackColor = Color.Transparent;
+				injectReShade_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
+				injectReShade_LinkLabel.LinkColor = Color.White;
+				injectReShade_LinkLabel.Name = "injectReShade_LinkLabel";
+				injectReShade_LinkLabel.TabStop = true;
+				toolTip1.SetToolTip(injectReShade_LinkLabel, resources.GetString("injectReShade_LinkLabel.ToolTip"));
+				injectReShade_LinkLabel.LinkClicked += OnlyReShade_LinkClicked;
+				// 
+				// runFpsUnlocker_LinkLabel
+				// 
+				runFpsUnlocker_LinkLabel.ActiveLinkColor = Color.LightSkyBlue;
+				resources.ApplyResources(runFpsUnlocker_LinkLabel, "runFpsUnlocker_LinkLabel");
+				runFpsUnlocker_LinkLabel.BackColor = Color.Transparent;
+				runFpsUnlocker_LinkLabel.DisabledLinkColor = Color.Black;
+				runFpsUnlocker_LinkLabel.ForeColor = SystemColors.ControlText;
+				runFpsUnlocker_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
+				runFpsUnlocker_LinkLabel.LinkColor = Color.White;
+				runFpsUnlocker_LinkLabel.Name = "runFpsUnlocker_LinkLabel";
+				runFpsUnlocker_LinkLabel.TabStop = true;
+				toolTip1.SetToolTip(runFpsUnlocker_LinkLabel, resources.GetString("runFpsUnlocker_LinkLabel.ToolTip"));
+				runFpsUnlocker_LinkLabel.LinkClicked += OnlyUnlocker_LinkClicked;
+				// 
+				// only3DMigoto_LinkLabel
+				// 
+				only3DMigoto_LinkLabel.ActiveLinkColor = Color.LightSkyBlue;
+				resources.ApplyResources(only3DMigoto_LinkLabel, "only3DMigoto_LinkLabel");
+				only3DMigoto_LinkLabel.BackColor = Color.Transparent;
+				only3DMigoto_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
+				only3DMigoto_LinkLabel.LinkColor = Color.White;
+				only3DMigoto_LinkLabel.Name = "only3DMigoto_LinkLabel";
+				only3DMigoto_LinkLabel.TabStop = true;
+				toolTip1.SetToolTip(only3DMigoto_LinkLabel, resources.GetString("only3DMigoto_LinkLabel.ToolTip"));
+				only3DMigoto_LinkLabel.LinkClicked += Only3DMigoto_LinkClicked;
+				// 
+				// linkLabel1
+				// 
+				linkLabel1.ActiveLinkColor = Color.DodgerBlue;
+				resources.ApplyResources(linkLabel1, "linkLabel1");
+				linkLabel1.BackColor = Color.Transparent;
+				linkLabel1.LinkBehavior = LinkBehavior.HoverUnderline;
+				linkLabel1.LinkColor = Color.White;
+				linkLabel1.Name = "linkLabel1";
+				linkLabel1.TabStop = true;
+				toolTip1.SetToolTip(linkLabel1, resources.GetString("linkLabel1.ToolTip"));
+				linkLabel1.LinkClicked += ViewResources_LinkClicked;
+				// 
+				// linkLabel2
+				// 
+				linkLabel2.ActiveLinkColor = Color.DodgerBlue;
+				resources.ApplyResources(linkLabel2, "linkLabel2");
+				linkLabel2.BackColor = Color.Transparent;
+				linkLabel2.LinkBehavior = LinkBehavior.HoverUnderline;
+				linkLabel2.LinkColor = Color.White;
+				linkLabel2.Name = "linkLabel2";
+				linkLabel2.TabStop = true;
+				toolTip1.SetToolTip(linkLabel2, resources.GetString("linkLabel2.ToolTip"));
+				linkLabel2.LinkClicked += Settings_LinkClicked;
+				// 
+				// label2
+				// 
+				resources.ApplyResources(label2, "label2");
+				label2.BackColor = Color.Transparent;
+				label2.ForeColor = Color.Aqua;
+				label2.Name = "label2";
+				// 
+				// toolsIco_PictureBox
+				// 
+				resources.ApplyResources(toolsIco_PictureBox, "toolsIco_PictureBox");
+				toolsIco_PictureBox.BackColor = Color.Transparent;
+				toolsIco_PictureBox.Image = Properties.Resources.flaticon_tools;
+				toolsIco_PictureBox.Name = "toolsIco_PictureBox";
+				toolsIco_PictureBox.TabStop = false;
+				// 
+				// updateIco_PictureBox
+				// 
+				resources.ApplyResources(updateIco_PictureBox, "updateIco_PictureBox");
+				updateIco_PictureBox.BackColor = Color.Transparent;
+				updateIco_PictureBox.Image = Properties.Resources.icons8_available_updates;
+				updateIco_PictureBox.Name = "updateIco_PictureBox";
+				updateIco_PictureBox.TabStop = false;
+				// 
+				// versionIco_PictureBox
+				// 
+				resources.ApplyResources(versionIco_PictureBox, "versionIco_PictureBox");
+				versionIco_PictureBox.BackColor = Color.Transparent;
+				versionIco_PictureBox.Image = Properties.Resources.icons8_support;
+				versionIco_PictureBox.Name = "versionIco_PictureBox";
+				versionIco_PictureBox.TabStop = false;
+				// 
+				// updates_LinkLabel
+				// 
+				updates_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
+				resources.ApplyResources(updates_LinkLabel, "updates_LinkLabel");
+				updates_LinkLabel.BackColor = Color.Transparent;
+				updates_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
+				updates_LinkLabel.LinkColor = Color.White;
+				updates_LinkLabel.Name = "updates_LinkLabel";
+				updates_LinkLabel.TabStop = true;
+				updates_LinkLabel.Click += CheckUpdates_Worker;
+				// 
+				// webIco_Picturebox
+				// 
+				resources.ApplyResources(webIco_Picturebox, "webIco_Picturebox");
+				webIco_Picturebox.BackColor = Color.Transparent;
+				webIco_Picturebox.Image = Properties.Resources.web;
+				webIco_Picturebox.Name = "webIco_Picturebox";
+				webIco_Picturebox.TabStop = false;
+				// 
+				// discordServerIco_Picturebox
+				// 
+				resources.ApplyResources(discordServerIco_Picturebox, "discordServerIco_Picturebox");
+				discordServerIco_Picturebox.BackColor = Color.Transparent;
+				discordServerIco_Picturebox.Image = Properties.Resources.icons8_discord;
+				discordServerIco_Picturebox.Name = "discordServerIco_Picturebox";
+				discordServerIco_Picturebox.TabStop = false;
+				// 
+				// status_Label
+				// 
+				resources.ApplyResources(status_Label, "status_Label");
+				status_Label.BackColor = Color.Transparent;
+				status_Label.ForeColor = Color.Snow;
+				status_Label.Name = "status_Label";
+				status_Label.TextChanged += StatusLabel_TextChanged;
+				// 
+				// padIco_PictureBox
+				// 
+				resources.ApplyResources(padIco_PictureBox, "padIco_PictureBox");
+				padIco_PictureBox.BackColor = Color.Transparent;
+				padIco_PictureBox.Image = Properties.Resources.flaticon_controller;
+				padIco_PictureBox.Name = "padIco_PictureBox";
+				padIco_PictureBox.TabStop = false;
+				// 
+				// supportMeIco_PictureBox
+				// 
+				resources.ApplyResources(supportMeIco_PictureBox, "supportMeIco_PictureBox");
+				supportMeIco_PictureBox.BackColor = Color.Transparent;
+				supportMeIco_PictureBox.Image = Properties.Resources.flaticon_heart;
+				supportMeIco_PictureBox.Name = "supportMeIco_PictureBox";
+				supportMeIco_PictureBox.TabStop = false;
+				// 
+				// shortcutIco_PictureBox
+				// 
+				resources.ApplyResources(shortcutIco_PictureBox, "shortcutIco_PictureBox");
+				shortcutIco_PictureBox.BackColor = Color.Transparent;
+				shortcutIco_PictureBox.Image = Properties.Resources.flaticon_redo;
+				shortcutIco_PictureBox.Name = "shortcutIco_PictureBox";
+				shortcutIco_PictureBox.TabStop = false;
+				// 
+				// paimon_PictureBox
+				// 
+				resources.ApplyResources(paimon_PictureBox, "paimon_PictureBox");
+				paimon_PictureBox.BackColor = Color.Transparent;
+				paimon_PictureBox.Cursor = Cursors.Cross;
+				paimon_PictureBox.Image = Properties.Resources.paimon_gif;
+				paimon_PictureBox.Name = "paimon_PictureBox";
+				paimon_PictureBox.TabStop = false;
+				paimon_PictureBox.Click += Paimon_Click;
+				// 
+				// progressBar1
+				// 
+				resources.ApplyResources(progressBar1, "progressBar1");
+				progressBar1.Name = "progressBar1";
+				// 
+				// PreparingPleaseWait
+				// 
+				resources.ApplyResources(PreparingPleaseWait, "PreparingPleaseWait");
+				PreparingPleaseWait.BackColor = Color.Transparent;
+				PreparingPleaseWait.ForeColor = Color.White;
+				PreparingPleaseWait.Name = "PreparingPleaseWait";
+				// 
+				// pictureBox1
+				// 
+				resources.ApplyResources(pictureBox1, "pictureBox1");
+				pictureBox1.BackColor = Color.Transparent;
+				pictureBox1.Image = Properties.Resources.flaticon_open_folder;
+				pictureBox1.Name = "pictureBox1";
+				pictureBox1.TabStop = false;
+				// 
+				// pictureBox3
+				// 
+				resources.ApplyResources(pictureBox3, "pictureBox3");
+				pictureBox3.BackColor = Color.Transparent;
+				pictureBox3.Image = Properties.Resources.flaticon_config;
+				pictureBox3.Name = "pictureBox3";
+				pictureBox3.TabStop = false;
+				// 
+				// webView21
+				// 
+				webView21.AllowExternalDrop = true;
+				resources.ApplyResources(webView21, "webView21");
+				webView21.BackColor = Color.FromArgb(64, 64, 64);
+				webView21.CreationProperties = null;
+				webView21.DefaultBackgroundColor = Color.Transparent;
+				webView21.ForeColor = Color.White;
+				webView21.Name = "webView21";
+				webView21.ZoomFactor = 1D;
+				// 
+				// notifyIcon1
+				// 
+				resources.ApplyResources(notifyIcon1, "notifyIcon1");
+				// 
+				// pictureBox4
+				// 
+				pictureBox4.BackColor = Color.Transparent;
+				resources.ApplyResources(pictureBox4, "pictureBox4");
+				pictureBox4.Name = "pictureBox4";
+				pictureBox4.TabStop = false;
+				// 
+				// Default
+				// 
+				resources.ApplyResources(this, "$this");
+				AutoScaleMode = AutoScaleMode.Dpi;
+				BackColor = Color.Black;
+				BackgroundImage = Properties.Resources.bg_main;
+				Controls.Add(label2);
+				Controls.Add(pictureBox4);
+				Controls.Add(webView21);
+				Controls.Add(progressBar1);
+				Controls.Add(pictureBox3);
+				Controls.Add(linkLabel2);
+				Controls.Add(only3DMigoto_LinkLabel);
+				Controls.Add(clickMe_LinkLabel);
+				Controls.Add(PreparingPleaseWait);
+				Controls.Add(pictureBox1);
+				Controls.Add(linkLabel1);
+				Controls.Add(becomeMyPatron_LinkLabel);
+				Controls.Add(paimon_PictureBox);
+				Controls.Add(runGiLauncher_LinkLabel);
+				Controls.Add(shortcutIco_PictureBox);
+				Controls.Add(links_LinkLabel);
+				Controls.Add(supportMe_LinkLabel);
+				Controls.Add(supportMeIco_PictureBox);
+				Controls.Add(padIco_PictureBox);
+				Controls.Add(status_Label);
+				Controls.Add(startGame_LinkLabel);
+				Controls.Add(runFpsUnlocker_LinkLabel);
+				Controls.Add(injectReShade_LinkLabel);
+				Controls.Add(web_LinkLabel);
+				Controls.Add(discordServer_LinkLabel);
+				Controls.Add(discordServerIco_Picturebox);
+				Controls.Add(webIco_Picturebox);
+				Controls.Add(version_LinkLabel);
+				Controls.Add(updates_LinkLabel);
+				Controls.Add(versionIco_PictureBox);
+				Controls.Add(updateIco_PictureBox);
+				Controls.Add(toolsIco_PictureBox);
+				Controls.Add(gameplay_LinkLabel);
+				Controls.Add(tools_LinkLabel);
+				Controls.Add(githubIco_Picturebox);
+				Controls.Add(githubUrl_LinkLabel);
+				Controls.Add(madeBySefinek_Label);
+				Controls.Add(label1);
+				Controls.Add(panel1);
+				FormBorderStyle = FormBorderStyle.None;
+				Name = "Default";
+				FormClosing += Default_FormClosing;
+				FormClosed += Default_FormClosed;
+				Load += Default_Load;
+				Shown += Main_Shown;
+				panel1.ResumeLayout(false);
+				panel1.PerformLayout();
+				((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+				((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+				((System.ComponentModel.ISupportInitialize)githubIco_Picturebox).EndInit();
+				((System.ComponentModel.ISupportInitialize)toolsIco_PictureBox).EndInit();
+				((System.ComponentModel.ISupportInitialize)updateIco_PictureBox).EndInit();
+				((System.ComponentModel.ISupportInitialize)versionIco_PictureBox).EndInit();
+				((System.ComponentModel.ISupportInitialize)webIco_Picturebox).EndInit();
+				((System.ComponentModel.ISupportInitialize)discordServerIco_Picturebox).EndInit();
+				((System.ComponentModel.ISupportInitialize)padIco_PictureBox).EndInit();
+				((System.ComponentModel.ISupportInitialize)supportMeIco_PictureBox).EndInit();
+				((System.ComponentModel.ISupportInitialize)shortcutIco_PictureBox).EndInit();
+				((System.ComponentModel.ISupportInitialize)paimon_PictureBox).EndInit();
+				((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+				((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+				((System.ComponentModel.ISupportInitialize)webView21).EndInit();
+				((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+				ResumeLayout(false);
+				PerformLayout();
+		  }
 
-        }
+		  #endregion
 
-        #endregion
-
-        private System.Windows.Forms.Panel panel1;
+		  private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel close_Panel;
         private System.Windows.Forms.LinkLabel githubUrl_LinkLabel;
         private System.Windows.Forms.Label madeBySefinek_Label;

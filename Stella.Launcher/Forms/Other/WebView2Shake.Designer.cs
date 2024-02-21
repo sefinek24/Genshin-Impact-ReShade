@@ -20,44 +20,43 @@ namespace StellaModLauncher.Forms.Other
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+		  #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WebView2Shake));
-            this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
-            ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // webView21
-            // 
-            this.webView21.AllowExternalDrop = true;
-            this.webView21.BackColor = System.Drawing.Color.Black;
-            this.webView21.CreationProperties = null;
-            this.webView21.DefaultBackgroundColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.webView21, "webView21");
-            this.webView21.Name = "webView21";
-            this.webView21.ZoomFactor = 1D;
-            // 
-            // WebView2Shake
-            // 
-            resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.Controls.Add(this.webView21);
-            this.Name = "WebView2Shake";
-            this.Load += new System.EventHandler(this.WebViewWindow_Load);
-            this.Shown += new System.EventHandler(this.WebViewWindow_Shown);
-            ((System.ComponentModel.ISupportInitialize)(this.webView21)).EndInit();
-            this.ResumeLayout(false);
+		  /// <summary>
+		  /// Required method for Designer support - do not modify
+		  /// the contents of this method with the code editor.
+		  /// </summary>
+		  private void InitializeComponent()
+		  {
+				System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WebView2Shake));
+				webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
+				((System.ComponentModel.ISupportInitialize)webView21).BeginInit();
+				SuspendLayout();
+				// 
+				// webView21
+				// 
+				webView21.AllowExternalDrop = true;
+				webView21.BackColor = Color.Black;
+				webView21.CreationProperties = null;
+				webView21.DefaultBackgroundColor = Color.Transparent;
+				resources.ApplyResources(webView21, "webView21");
+				webView21.Name = "webView21";
+				webView21.ZoomFactor = 1D;
+				// 
+				// WebView2Shake
+				// 
+				resources.ApplyResources(this, "$this");
+				AutoScaleMode = AutoScaleMode.Dpi;
+				Controls.Add(webView21);
+				Name = "WebView2Shake";
+				Load += WebViewWindow_Load;
+				Shown += WebViewWindow_Shown;
+				((System.ComponentModel.ISupportInitialize)webView21).EndInit();
+				ResumeLayout(false);
+		  }
 
-        }
+		  #endregion
 
-        #endregion
-
-        private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
+		  private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
     }
 }
