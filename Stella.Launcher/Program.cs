@@ -6,6 +6,7 @@ using NLog;
 using StellaModLauncher.Forms;
 using StellaModLauncher.Properties;
 using StellaModLauncher.Scripts;
+using StellaPLFNet;
 
 namespace StellaModLauncher;
 

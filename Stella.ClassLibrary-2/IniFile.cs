@@ -1,7 +1,7 @@
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace StellaLauncher.Scripts
+namespace StellaPLFNetF
 {
 	public class IniFile
 	{

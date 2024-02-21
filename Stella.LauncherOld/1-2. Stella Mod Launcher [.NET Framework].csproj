@@ -224,7 +224,6 @@
     <Compile Include="Scripts\Forms\MainForm\LaunchCount.cs" />
     <Compile Include="Scripts\Forms\Music.cs" />
     <Compile Include="Scripts\Forms\MainForm\Files.cs" />
-    <Compile Include="Scripts\IniFile.cs" />
     <Compile Include="Scripts\Log.cs" />
     <Compile Include="Scripts\ComputerInfo.cs" />
     <Compile Include="Scripts\Patrons\CheckForUpdatesOfBenefits.cs" />

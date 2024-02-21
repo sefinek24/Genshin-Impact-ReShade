@@ -1,6 +1,7 @@
 using StellaModLauncher.Forms;
 using StellaModLauncher.Properties;
 using StellaModLauncher.Scripts.Forms.MainForm;
+using StellaPLFNet;
 
 namespace StellaModLauncher.Scripts;
 

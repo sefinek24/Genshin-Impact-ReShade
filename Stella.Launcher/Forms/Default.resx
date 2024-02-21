@@ -183,12 +183,12 @@
   <data name="linkLabel3.Text" xml:space="preserve">
     <value>View changelog</value>
   </data>
+  <data name="linkLabel3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="linkLabel3.ToolTip" xml:space="preserve">
-    <value>Change the application background</value>
-  </data>
   <data name="linkLabel3.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -251,6 +251,9 @@
   </data>
   <data name="changeBg_LinkLabel.Text" xml:space="preserve">
     <value>Change background</value>
+  </data>
+  <data name="changeBg_LinkLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="changeBg_LinkLabel.ToolTip" xml:space="preserve">
     <value>Change the application background</value>
@@ -522,6 +525,9 @@
   <data name="discordServer_LinkLabel.Text" xml:space="preserve">
     <value>Discord</value>
   </data>
+  <data name="discordServer_LinkLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
   <data name="discordServer_LinkLabel.ToolTip" xml:space="preserve">
     <value>Join our Discord server if you need help</value>
   </data>
@@ -557,6 +563,9 @@
   </data>
   <data name="web_LinkLabel.Text" xml:space="preserve">
     <value>Website</value>
+  </data>
+  <data name="web_LinkLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="web_LinkLabel.ToolTip" xml:space="preserve">
     <value>Open our official website</value>
@@ -665,6 +674,9 @@
   </data>
   <data name="supportMe_LinkLabel.Text" xml:space="preserve">
     <value>Donate</value>
+  </data>
+  <data name="supportMe_LinkLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="supportMe_LinkLabel.ToolTip" xml:space="preserve">
     <value>Support this project</value>
