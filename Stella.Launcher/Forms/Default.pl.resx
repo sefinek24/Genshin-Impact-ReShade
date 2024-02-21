@@ -257,4 +257,8 @@ Zaleca się kliknięcie przycisku "Rozpocznij grę" u góry, aby jednocześnie k
   <data name="version_LinkLabel.Text" xml:space="preserve">
 	  <value>Oczekiwanie...</value>
   </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Zalogowano jako
+{0}</value>
+  </data>
 </root>
