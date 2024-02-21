@@ -1,4 +1,3 @@
-using Microsoft.Web.WebView2.Core;
 using StellaModLauncher.Properties;
 using StellaModLauncher.Scripts;
 using StellaModLauncher.Scripts.Forms;

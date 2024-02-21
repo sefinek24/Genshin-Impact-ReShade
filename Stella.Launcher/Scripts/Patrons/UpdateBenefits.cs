@@ -60,7 +60,7 @@ internal static class UpdateBenefits
 			"presets" => Resources.UpdateBenefits_SuccessfullyUpdatedPresets,
 			"shaders" => Resources.UpdateBenefits_SuccessfullyUpdatedShaders,
 			"cmd" => Resources.UpdateBenefits_SuccessfullyUpdatedCmdFiles,
-			_ => throw new InvalidEnumArgumentException(),
+			_ => throw new InvalidEnumArgumentException()
 		};
 
 		Default._progressBar1.Show();
