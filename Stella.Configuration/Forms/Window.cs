@@ -9,7 +9,7 @@ public sealed partial class Window : Form
 {
 	public static readonly string? AppName = Assembly.GetExecutingAssembly().GetName().Name;
 	public static readonly string AppVersion = Assembly.GetExecutingAssembly().GetName().Version!.ToString();
-	public static readonly string StellaDirPath = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ".."));
+	private static readonly string StellaDirPath = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ".."));
 	public static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
 	private static readonly string AppData = GetAppData();
 

@@ -132,4 +132,9 @@ Please reinstall this app or join our Discord server.</value>
   <data name="TheStellaResourcesDirWasNotFoundOnYourPC" xml:space="preserve">
     <value>The Stella resources directory was not found on your computer, so you cannot uncheck the checkbox.</value>
   </data>
+  <data name="CheckData_SorryButSomethingWentWrong" xml:space="preserve">
+	  <value>Sorry, but something went wrong. Please report this issue.
+
+{0}</value>
+  </data>
 </root>

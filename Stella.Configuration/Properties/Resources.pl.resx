@@ -125,4 +125,9 @@ Zainstaluj ponownie aplikację lub dołącz do naszego serwera Discord.</value>
   <data name="TheStellaResourcesDirWasNotFoundOnYourPC" xml:space="preserve">
     <value>Katalog zasobów Stella nie został znaleziony na komputerze, więc nie można odznaczyć pola wyboru.</value>
   </data>
+  <data name="CheckData_SorryButSomethingWentWrong" xml:space="preserve">
+	  <value>Przepraszamy, ale coś poszło nie tak. Prosimy o zgłoszenie tego błędu.
+
+{0}</value>
+  </data>
 </root>

@@ -81,6 +81,17 @@ namespace ConfigurationNC.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sorry, but something went wrong. Please report this issue.
+        ///
+        ///{0}.
+        /// </summary>
+        internal static string CheckData_SorryButSomethingWentWrong {
+            get {
+                return ResourceManager.GetString("CheckData_SorryButSomethingWentWrong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Required file &apos;{0}&apos; was not found.
         ///
         ///Please reinstall this app or join our Discord server..

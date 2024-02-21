@@ -7,7 +7,6 @@ namespace ConfigurationNC;
 
 internal static class Program
 {
-	// Logger
 	public static Logger Logger = LogManager.GetCurrentClassLogger();
 
 	/// <summary>
