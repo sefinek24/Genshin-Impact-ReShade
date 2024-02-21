@@ -117,76 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="panel2.ToolTip" xml:space="preserve">
-    <value>Zamknij</value>
+  <data name="RequiredFile_WasNotFound" xml:space="preserve">
+    <value>Nie znaleziono wymaganego pliku "{0}".
+
+Zainstaluj ponownie aplikację lub dołącz do naszego serwera Discord.</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Będąc subskrybentem Stella Mod Plus,
-możesz uzyskać dostęp do różnych ulepszeń gry.
-Takich jak: używanie modów, nowe ustawienia wstępne, kolekcja shaderów i modów,
-i wiele więcej!</value>
-  </data>
-  <data name="linkLabel6.Text" xml:space="preserve">
-    <value>🌌 Może później</value>
-  </data>
-  <data name="linkLabel5.Text" xml:space="preserve">
-    <value>❤ Ok, zrobione</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Jeśli podoba Ci się to oprogramowanie...</value>
-  </data>
-  <data name="linkLabel1.Text" xml:space="preserve">
-    <value>» Wesprzyj moją pracę, klikając tutaj</value>
-  </data>
-  <data name="linkLabel1.ToolTip" xml:space="preserve">
-    <value>Wesprzyj moją pracę - Sefinek</value>
-  </data>
-  <data name="linkLabel3.Text" xml:space="preserve">
-    <value>» Subskrybuj mój kanał YouTube</value>
-  </data>
-  <data name="linkLabel4.Text" xml:space="preserve">
-    <value>» Oznacz gwiazdką repo GitHub</value>
-  </data>
-  <data name="linkLabel4.ToolTip" xml:space="preserve">
-    <value>Repozytoria - Genshin Stella Mod</value>
-  </data>
-  <data name="linkLabel7.Text" xml:space="preserve">
-    <value>» Dołącz na serwer Discord</value>
-  </data>
-  <data name="linkLabel7.ToolTip" xml:space="preserve">
-    <value>Dołącz na nasz serwer Discord</value>
-  </data>
-  <data name="linkLabel8.Text" xml:space="preserve">
-	  <value>» Zostaw opinię na Discordzie</value>
-  </data>
-  <data name="linkLabel8.ToolTip" xml:space="preserve">
-    <value>Zostaw swoją opinię na kanale Discord</value>
-  </data>
-  <data name="linkLabel2.Text" xml:space="preserve">
-    <value>» Wyślij mi swoje bezużyteczne skiny w CS2, jeśli możesz</value>
-  </data>
-  <data name="linkLabel2.ToolTip" xml:space="preserve">
-    <value>Otwórz trade link</value>
-  </data>
-  <data name="linkLabel9.Text" xml:space="preserve">
-    <value>» Utwórz nowe żądanie ściągnięcia w serwisie GitHub</value>
-  </data>
-  <data name="linkLabel9.ToolTip" xml:space="preserve">
-    <value>Żądania ściągnięcia - sefinek24/Genshin-Impact-ReShade</value>
-  </data>
-  <data name="linkLabel10.Text" xml:space="preserve">
-    <value>» Zostaw opinię na Trustpilot.com</value>
-  </data>
-  <data name="linkLabel10.ToolTip" xml:space="preserve">
-    <value>Stella Mod Launcher Reviews | Przeczytaj recenzje obsługi klienta genshin.sefinek.net</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Wybierz poprawną odpowiedź:</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Wsparcie twórcy</value>
-  </data>
-  <data name="linkLabel3.ToolTip" xml:space="preserve">
-    <value>Sefinek - YouTube</value>
+  <data name="TheStellaResourcesDirWasNotFoundOnYourPC" xml:space="preserve">
+    <value>Katalog zasobów Stella nie został znaleziony na komputerze, więc nie można odznaczyć pola wyboru.</value>
   </data>
 </root>

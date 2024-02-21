@@ -252,4 +252,31 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Losowe obrazy i filmy</value>
   </data>
+  <data name="linkLabel35.Text" xml:space="preserve">
+    <value>Shrug</value>
+  </data>
+  <data name="linkLabel33.Text" xml:space="preserve">
+    <value>Pout</value>
+  </data>
+  <data name="linkLabel32.Text" xml:space="preserve">
+    <value>Poke</value>
+  </data>
+  <data name="linkLabel22.Text" xml:space="preserve">
+    <value>Waifu</value>
+  </data>
+  <data name="linkLabel23.Text" xml:space="preserve">
+    <value>Baka</value>
+  </data>
+  <data name="linkLabel41.Text" xml:space="preserve">
+    <value>Yeet</value>
+  </data>
+  <data name="linkLabel42.Text" xml:space="preserve">
+    <value>Holo</value>
+  </data>
+  <data name="linkLabel44.Text" xml:space="preserve">
+    <value>Shiro</value>
+  </data>
+  <data name="linkLabel10.Text" xml:space="preserve">
+    <value>*pat pat*</value>
+  </data>
 </root>

@@ -154,4 +154,7 @@ Dziękuję za korzystanie ze Stelli. Wesprzyj mnie, jeśli uznasz to za pomocne.
   <data name="$this.Text" xml:space="preserve">
     <value>Mini-rozgrywka wideo</value>
   </data>
+  <data name="pictureBox3.ToolTip" xml:space="preserve">
+    <value>English</value>
+  </data>
 </root>

@@ -1460,15 +1460,6 @@ namespace StellaModLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to File size: {0} KB.
-        /// </summary>
-        internal static string ReShadeIniUpdate_FileSize_KB {
-            get {
-                return ResourceManager.GetString("ReShadeIniUpdate_FileSize_KB", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Game path was not found on your PC..
         /// </summary>
         internal static string ReShadeIniUpdate_GamePathWasNotFoundOnYourPC {
@@ -1548,6 +1539,18 @@ namespace StellaModLauncher.Properties {
         internal static string Secret_VerifyToken_Exception {
             get {
                 return ResourceManager.GetString("Secret_VerifyToken_Exception", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successfully updated the ReShade.ini file. Paths to resource locations have been changed to current, and similar changes have been made.
+        ///
+        ///Current preset:
+        ///{0}.
+        /// </summary>
+        internal static string Settings_SuccesfullyUpdatedTheReShadeIniFile {
+            get {
+                return ResourceManager.GetString("Settings_SuccesfullyUpdatedTheReShadeIniFile", resourceCulture);
             }
         }
         
@@ -1716,15 +1719,6 @@ namespace StellaModLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Special background file was not found in &apos;{0}&apos; for Tools window..
-        /// </summary>
-        internal static string Tools_SpecialBackgroundWasNotFoundIn_ForToolsWindow {
-            get {
-                return ResourceManager.GetString("Tools_SpecialBackgroundWasNotFoundIn_ForToolsWindow", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to The shortcut has been successfully created..
         /// </summary>
         internal static string Tools_TheShortcutHasBeenSuccessfullyCreated {
@@ -1756,7 +1750,7 @@ namespace StellaModLauncher.Properties {
         /// </summary>
         internal static string Tools_YoureConnectedAs__HiAndNiceToMeetYou_CheckYourDiscordActivity {
             get {
-                return ResourceManager.GetString("Tools_YoureConnectedAs_.HiAndNiceToMeetYou.CheckYourDiscordActivity", resourceCulture);
+                return ResourceManager.GetString("Tools_YoureConnectedAs__HiAndNiceToMeetYou_CheckYourDiscordActivity", resourceCulture);
             }
         }
         
@@ -1825,64 +1819,6 @@ namespace StellaModLauncher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred while creating the shortcut.
-        ///
-        ///{0}.
-        /// </summary>
-        internal static string Utils_AnErrorOccurredWhileCreatingTheShortcut {
-            get {
-                return ResourceManager.GetString("Utils_AnErrorOccurredWhileCreatingTheShortcut", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to File {0} does not exists..
-        /// </summary>
-        internal static string Utils_File_DoesntNotExists {
-            get {
-                return ResourceManager.GetString("Utils_File_DoesntNotExists", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to File &apos;{0}&apos; was found at &apos;{1}&apos;..
-        /// </summary>
-        internal static string Utils_File_WasFoundAt_ {
-            get {
-                return ResourceManager.GetString("Utils_File_WasFoundAt_", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to File &apos;{0}&apos; was not found at &apos;{1}&apos;..
-        /// </summary>
-        internal static string Utils_File_WasNotFoundAt_ {
-            get {
-                return ResourceManager.GetString("Utils_File_WasNotFoundAt_", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to File does not exist in: {0} [{1}].
-        /// </summary>
-        internal static string Utils_FileDoesNotExistIn {
-            get {
-                return ResourceManager.GetString("Utils_FileDoesNotExistIn", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to File does not exist.
-        ///
-        ///{0}.
-        /// </summary>
-        internal static string Utils_FileDoesntNotExist_ {
-            get {
-                return ResourceManager.GetString("Utils_FileDoesntNotExist_", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to File with game path was not found in:
         ///{0}
         ///
@@ -1891,27 +1827,6 @@ namespace StellaModLauncher.Properties {
         internal static string Utils_FileWithGamePathWasNotFoundIn_DoYouWantToResetAllSMSettings {
             get {
                 return ResourceManager.GetString("Utils_FileWithGamePathWasNotFoundIn_DoYouWantToResetAllSMSettings", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Folder with game path does not exist:
-        ///{0}
-        ///
-        ///Do you want to reconfigure Stella Mod in the configuration window?.
-        /// </summary>
-        internal static string Utils_FolderWithGamePathDoesNotExist_DoYouWantToResetAllSMSettings {
-            get {
-                return ResourceManager.GetString("Utils_FolderWithGamePathDoesNotExist_DoYouWantToResetAllSMSettings", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Found Genshin Impact Exe in: {0} [{1}].
-        /// </summary>
-        internal static string Utils_FoundGiExe {
-            get {
-                return ResourceManager.GetString("Utils_FoundGiExe", resourceCulture);
             }
         }
         
@@ -1941,24 +1856,6 @@ namespace StellaModLauncher.Properties {
         internal static string Utils_RunOfficialLauncherForStellaModMadeBySefinek {
             get {
                 return ResourceManager.GetString("Utils_RunOfficialLauncherForStellaModMadeBySefinek", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to URL is null or empty..
-        /// </summary>
-        internal static string Utils_URLIsNullOrEmpty {
-            get {
-                return ResourceManager.GetString("Utils_URLIsNullOrEmpty", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Wrong parameter..
-        /// </summary>
-        internal static string Utils_WrongParameter {
-            get {
-                return ResourceManager.GetString("Utils_WrongParameter", resourceCulture);
             }
         }
         

@@ -257,4 +257,32 @@ Zaleca się kliknięcie przycisku "Rozpocznij grę" u góry, aby jednocześnie k
   <data name="version_LinkLabel.Text" xml:space="preserve">
 	  <value>Oczekiwanie...</value>
   </data>
+  <data name="linkLabel3.ToolTip" xml:space="preserve">
+    <value>Zmiana tła aplikacji</value>
+  </data>
+  <data name="linkLabel3.Text" xml:space="preserve">
+    <value>Wyświetl dziennik zmian</value>
+  </data>
+  <data name="githubUrl_LinkLabel.Text" xml:space="preserve">
+    <value>github.com/sefinek24/Genshin-Impact-ReShade</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Genshin Stella Mod Launcher 2024</value>
+  </data>
+  <data name="madeBySefinek_Label.ToolTip" xml:space="preserve">
+    <value>&gt;~~&lt;</value>
+  </data>
+  <data name="discordServer_LinkLabel.Text" xml:space="preserve">
+    <value>Discord</value>
+  </data>
+  <data name="runGiLauncher_LinkLabel.Text" xml:space="preserve">
+    <value>Genshin Impact Launcher</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Zalogowano jako
+{0}</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Stella Mod Launcher</value>
+  </data>
 </root>

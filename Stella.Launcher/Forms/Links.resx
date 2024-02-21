@@ -406,13 +406,13 @@
     <value>82, 376</value>
   </data>
   <data name="linkLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>470, 24</value>
+    <value>476, 24</value>
   </data>
   <data name="linkLabel3.TabIndex" type="System.Int32, mscorlib">
     <value>106</value>
   </data>
   <data name="linkLabel3.Text" xml:space="preserve">
-    <value>4.1 Tier List and the Best Characters as of October 2023</value>
+    <value>4.4 Tier List and the Best Characters as of February 2024</value>
   </data>
   <data name="&gt;&gt;linkLabel3.Name" xml:space="preserve">
     <value>linkLabel3</value>

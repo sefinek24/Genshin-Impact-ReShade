@@ -186,4 +186,7 @@ i wiele więcej!</value>
   <data name="$this.Text" xml:space="preserve">
     <value>Wsparcie twórcy</value>
   </data>
+  <data name="linkLabel3.ToolTip" xml:space="preserve">
+    <value>Sefinek - YouTube</value>
+  </data>
 </root>

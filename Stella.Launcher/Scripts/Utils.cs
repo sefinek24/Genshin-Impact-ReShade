@@ -82,7 +82,7 @@ internal static class Utils
 
 			default:
 			{
-				Log.ThrowError(new Exception(Resources.Utils_WrongParameter));
+				Log.ThrowError(new Exception("Wrong parameter."));
 				return string.Empty;
 			}
 		}
@@ -104,7 +104,7 @@ internal static class Utils
 	{
 		if (string.IsNullOrEmpty(url))
 		{
-			Log.ThrowError(new Exception(Resources.Utils_URLIsNullOrEmpty));
+			Log.ThrowError(new Exception("URL is null or empty."));
 			return;
 		}
 

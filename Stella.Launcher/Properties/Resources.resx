@@ -601,9 +601,6 @@ Quit the process with name {0} and try again.</value>
   <data name="ReShadeIniUpdate_FileReShadeIniWasNotFoundInYourGameDir" xml:space="preserve">
     <value>File ReShade.ini was not found in your game directory.</value>
   </data>
-  <data name="ReShadeIniUpdate_FileSize_KB" xml:space="preserve">
-    <value>File size: {0} KB</value>
-  </data>
   <data name="ReShadeIniUpdate_GamePathWasNotFoundOnYourPC" xml:space="preserve">
     <value>Game path was not found on your PC.</value>
   </data>
@@ -684,9 +681,6 @@ Quit the process with name {0} and try again.</value>
     <value>ReShade log file was not found in:
 {0}</value>
   </data>
-  <data name="Tools_SpecialBackgroundWasNotFoundIn_ForToolsWindow" xml:space="preserve">
-    <value>Special background file was not found in '{0}' for Tools window.</value>
-  </data>
   <data name="Tools_TheShortcutHasBeenSuccessfullyCreated" xml:space="preserve">
     <value>The shortcut has been successfully created.</value>
   </data>
@@ -695,9 +689,6 @@ Quit the process with name {0} and try again.</value>
   </data>
   <data name="Tools_WrongEnableMusicValueInTheIniFile" xml:space="preserve">
     <value>Wrong EnableMusic value in the ini file.</value>
-  </data>
-  <data name="Tools_YoureConnectedAs_.HiAndNiceToMeetYou.CheckYourDiscordActivity" xml:space="preserve">
-    <value>You are connected as {0}. Hi and nice to meet you! Check your activity on Discord.</value>
   </data>
   <data name="uk_flag" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\united-kingdom (2)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -720,42 +711,11 @@ Quit the process with name {0} and try again.</value>
   <data name="UpdateBenefits_SuccessfullyUpdatedShaders" xml:space="preserve">
     <value>Successfully updated shaders to the latest version for Stella Mod Plus subscribers.</value>
   </data>
-  <data name="Utils_AnErrorOccurredWhileCreatingTheShortcut" xml:space="preserve">
-    <value>An error occurred while creating the shortcut.
-
-{0}</value>
-  </data>
-  <data name="Utils_FileDoesNotExistIn" xml:space="preserve">
-    <value>File does not exist in: {0} [{1}]</value>
-  </data>
-  <data name="Utils_FileDoesntNotExist_" xml:space="preserve">
-    <value>File does not exist.
-
-{0}</value>
-  </data>
   <data name="Utils_FileWithGamePathWasNotFoundIn_DoYouWantToResetAllSMSettings" xml:space="preserve">
     <value>File with game path was not found in:
 {0}
 
 Do you want to reconfigure Stella Mod in the Configuration Window?</value>
-  </data>
-  <data name="Utils_File_DoesntNotExists" xml:space="preserve">
-    <value>File {0} does not exists.</value>
-  </data>
-  <data name="Utils_File_WasFoundAt_" xml:space="preserve">
-    <value>File '{0}' was found at '{1}'.</value>
-  </data>
-  <data name="Utils_File_WasNotFoundAt_" xml:space="preserve">
-    <value>File '{0}' was not found at '{1}'.</value>
-  </data>
-  <data name="Utils_FolderWithGamePathDoesNotExist_DoYouWantToResetAllSMSettings" xml:space="preserve">
-    <value>Folder with game path does not exist:
-{0}
-
-Do you want to reconfigure Stella Mod in the configuration window?</value>
-  </data>
-  <data name="Utils_FoundGiExe" xml:space="preserve">
-    <value>Found Genshin Impact Exe in: {0} [{1}]</value>
   </data>
   <data name="Utils_LauncherFileDoesNotExist" xml:space="preserve">
     <value>Launcher file does not exist.
@@ -767,12 +727,6 @@ Do you want to reconfigure Stella Mod in the configuration window?</value>
   </data>
   <data name="Utils_RunOfficialLauncherForStellaModMadeBySefinek" xml:space="preserve">
     <value>Run the official launcher for Genshin Impact Stella Mod made by Sefinek.</value>
-  </data>
-  <data name="Utils_URLIsNullOrEmpty" xml:space="preserve">
-    <value>URL is null or empty.</value>
-  </data>
-  <data name="Utils_WrongParameter" xml:space="preserve">
-    <value>Wrong parameter.</value>
   </data>
   <data name="web" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\web1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -793,6 +747,15 @@ Do you want to download this dependency from Microsoft website?</value>
 
 The application must be closed immediately. Below, you will find error details. If you are unsure about what to do in this situation, please contact the software developer. Subscribers are provided with continuous technical support. Good luck!
 
+{0}</value>
+  </data>
+  <data name="Tools_YoureConnectedAs__HiAndNiceToMeetYou_CheckYourDiscordActivity" xml:space="preserve">
+    <value>You are connected as {0}. Hi and nice to meet you! Check your activity on Discord.</value>
+  </data>
+  <data name="Settings_SuccesfullyUpdatedTheReShadeIniFile" xml:space="preserve">
+	  <value>Successfully updated the ReShade.ini file. Paths to resource locations have been changed to current, and similar changes have been made.
+
+Current preset:
 {0}</value>
   </data>
 </root>

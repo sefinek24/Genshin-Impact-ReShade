@@ -25,9 +25,9 @@ public partial class Settings : Form
 
 		release_Label.Text = string.Format(release_Label.Text, Program.AppVersionFull, Program.AppFileVersion, Program.AppVersion);
 
-		release_Label.Paint += (s, e) =>
+		release_Label.Paint += (_, eventArgs) =>
 		{
-			int radius = 12;
+			const int radius = 12;
 			GraphicsPath path = new();
 			Rectangle rect = new(0, 0, release_Label.Width, release_Label.Height);
 
@@ -37,15 +37,15 @@ public partial class Settings : Form
 			path.AddArc(rect.X, rect.Y + rect.Height - radius, radius, radius, 90, 90);
 			path.CloseFigure();
 
-			e.Graphics.SetClip(path);
+			eventArgs.Graphics.SetClip(path);
 			using (Brush brush = new SolidBrush(Color.FromArgb(100, 0, 0, 0)))
 			{
-				e.Graphics.FillRectangle(brush, rect);
+				eventArgs.Graphics.FillRectangle(brush, rect);
 			}
 
-			TextRenderer.DrawText(e.Graphics, release_Label.Text, release_Label.Font, rect, release_Label.ForeColor, Color.Transparent);
+			TextRenderer.DrawText(eventArgs.Graphics, release_Label.Text, release_Label.Font, rect, release_Label.ForeColor, Color.Transparent);
 
-			e.Graphics.ResetClip();
+			eventArgs.Graphics.ResetClip();
 		};
 
 		MusicLabel_Set();
@@ -106,13 +106,13 @@ public partial class Settings : Form
 			key?.SetValue("AppIsConfigured", 0);
 		}
 
-		Cmd.CliWrap? cliWrapCommand2 = new()
+		Cmd.CliWrap cliWrapCommand2 = new()
 		{
 			App = Program.ConfigurationWindow,
 			WorkingDir = Program.AppPath,
 			BypassUpdates = true
 		};
-		await Cmd.Execute(cliWrapCommand2);
+		await Cmd.Execute(cliWrapCommand2).ConfigureAwait(false);
 
 		Application.Exit();
 	}
@@ -212,11 +212,11 @@ public partial class Settings : Form
 	// ---------------------------------- ReShade ----------------------------------
 	private async void ConfReShade_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		string? currentPreset = await ReShadeIni.Prepare();
+		string? currentPreset = await ReShadeIni.Prepare().ConfigureAwait(false);
 		if (string.IsNullOrEmpty(currentPreset)) return;
 
 		MessageBox.Show(
-			$"Successfully updated the ReShade.ini file. Paths to resource locations have been changed to current, and similar changes have been made.\n\nCurrent preset:\n{Path.GetFileNameWithoutExtension(currentPreset).Trim()}",
+			string.Format(Resources.Settings_SuccesfullyUpdatedTheReShadeIniFile, Path.GetFileNameWithoutExtension(currentPreset).Trim()),
 			Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 		Program.Logger.Info($"Updated ReShade config.\nCurrent preset: {currentPreset}");

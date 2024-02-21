@@ -451,9 +451,6 @@ Zamknij proces o nazwie {0} i spróbuj ponownie.</value>
   <data name="ReShadeIniUpdate_FileReShadeIniWasNotFoundInYourGameDir" xml:space="preserve">
     <value>Plik ReShade.ini nie został znaleziony w Twoim katalogu gry.</value>
   </data>
-  <data name="ReShadeIniUpdate_FileSize_KB" xml:space="preserve">
-    <value>Rozmiar pliku: {0} KB</value>
-  </data>
   <data name="ReShadeIniUpdate_GamePathWasNotFoundOnYourPC" xml:space="preserve">
     <value>Nie znaleziono ścieżki gry na Twoim komputerze.</value>
   </data>
@@ -529,54 +526,17 @@ Zamknij proces o nazwie {0} i spróbuj ponownie.</value>
     <value>Plik z dziennikiem zdarzeń (logami) nie został odnaleziony w:
 {0}</value>
   </data>
-  <data name="Tools_SpecialBackgroundWasNotFoundIn_ForToolsWindow" xml:space="preserve">
-    <value>Nie znaleziono specjalnego pliku tła w '{0}' dla okna Narzędzia.</value>
-  </data>
   <data name="Tools_UnmuteMusicOnStart" xml:space="preserve">
     <value>Odcisz muzyke na start</value>
   </data>
   <data name="Tools_WrongEnableMusicValueInTheIniFile" xml:space="preserve">
     <value>Nieprawidłowa wartość EnableMusic w pliku ini.</value>
   </data>
-  <data name="Tools_YoureConnectedAs_.HiAndNiceToMeetYou.CheckYourDiscordActivity" xml:space="preserve">
-    <value>Jesteś połączony jako {0}. Cześć, miło mi ciebie poznać! Sprawdź swoją aktywność na Discordzie.</value>
-  </data>
-  <data name="Utils_AnErrorOccurredWhileCreatingTheShortcut" xml:space="preserve">
-    <value>Wystąpił błąd podczas tworzenia skrótu.
-
-{0}</value>
-  </data>
-  <data name="Utils_FileDoesNotExistIn" xml:space="preserve">
-    <value>Plik nie istnieje w: {0} [{1}]</value>
-  </data>
-  <data name="Utils_FileDoesntNotExist_" xml:space="preserve">
-    <value>Plik nie istnieje.
-
-{0}</value>
-  </data>
   <data name="Utils_FileWithGamePathWasNotFoundIn_DoYouWantToResetAllSMSettings" xml:space="preserve">
     <value>Plik ze ścieżką gry nie został znaleziony w:
 {0}
 
 Czy chcesz ponownie skonfigurować Stella Mod w Oknie Konfiguracji?</value>
-  </data>
-  <data name="Utils_File_DoesntNotExists" xml:space="preserve">
-    <value>Plik {0} nie został odnaleziony.</value>
-  </data>
-  <data name="Utils_File_WasFoundAt_" xml:space="preserve">
-    <value>Plik '{0}' został znaleziony w '{1}'.</value>
-  </data>
-  <data name="Utils_File_WasNotFoundAt_" xml:space="preserve">
-    <value>Plik '{0}' nie został znaleziony w '{1}'.</value>
-  </data>
-  <data name="Utils_FolderWithGamePathDoesNotExist_DoYouWantToResetAllSMSettings" xml:space="preserve">
-    <value>Folder ze ścieżką gry nie istnieje:
-{0}
-
-Czy chcesz ponownie skonfigurować Stella Mod w oknie konfiguracji?</value>
-  </data>
-  <data name="Utils_FoundGiExe" xml:space="preserve">
-    <value>Znaleziono exe Genshin Impact w: {0} [{1}]</value>
   </data>
   <data name="Utils_LauncherFileDoesNotExist" xml:space="preserve">
     <value>Plik programu uruchamiającego nie istnieje.
@@ -585,12 +545,6 @@ Czy chcesz ponownie skonfigurować Stella Mod w oknie konfiguracji?</value>
   </data>
   <data name="Utils_RunOfficialLauncherForStellaModMadeBySefinek" xml:space="preserve">
     <value>Uruchom oficjalny launcher do Genshin Stella Mod autorstwa Sefinka.</value>
-  </data>
-  <data name="Utils_URLIsNullOrEmpty" xml:space="preserve">
-    <value>Adres URL jest pusty lub jest po prostu nullem (zerem).</value>
-  </data>
-  <data name="Utils_WrongParameter" xml:space="preserve">
-    <value>Zły parametr.</value>
   </data>
   <data name="WebView2Handler_ChooseEvergreenStandaloneInstaller" xml:space="preserve">
     <value>Wybierz Evergreen Standalone Installer.</value>
@@ -672,7 +626,23 @@ W nowszych wersjach Stella Mod zapisywanie ścieżek zostało przeniesione do re
   <data name="Default_SuccessfullyDownloadedReShadeCfg" xml:space="preserve">
 	  <value>Pomyślnie pobrano plik ReShade.ini!</value>
   </data>
+  <data name="Secret_VerifyToken_Exception" xml:space="preserve">
+    <value>Podczas weryfikacji subskrypcji wystąpił błąd krytyczny. Z jakiegoś powodu komputer nie mógł wysłać żądania do interfejsu API znajdującego się w Warszawie. Sprawdź oprogramowanie antywirusowe lub odwiedź stronę statusu pod adresem status.sefinek.net.
+
+Aplikacja musi zostać natychmiast zamknięta. Poniżej znajdują się szczegóły błędu. Jeśli nie masz pewności, co zrobić w tej sytuacji, skontaktuj się z twórcą oprogramowania. Subskrybenci mają zapewnioną stałą pomoc techniczną. Powodzenia!
+
+{0}</value>
+  </data>
   <data name="NotCompatible_WeveRenamedYourResourceFolderByAdding__ToTheEnd" xml:space="preserve">
     <value>Zmieniliśmy nazwę folderu zasobów, dodając `{0}` na końcu.</value>
+  </data>
+  <data name="Tools_YoureConnectedAs__HiAndNiceToMeetYou_CheckYourDiscordActivity" xml:space="preserve">
+    <value>Jesteś połączony jako {0}. Cześć i miło cię poznać! Sprawdź swoją aktywność na Discordzie.</value>
+  </data>
+  <data name="Settings_SuccesfullyUpdatedTheReShadeIniFile" xml:space="preserve">
+	  <value>Pomyślnie zaktualizowano plik ReShade.ini. Ścieżki do lokalizacji zasobów zostały zmienione na aktualne oraz wprowadzono podobne zmiany.
+
+Bieżące ustawienie wstępne:
+{0}</value>
   </data>
 </root>

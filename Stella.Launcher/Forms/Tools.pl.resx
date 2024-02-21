@@ -156,4 +156,28 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Narzędzia</value>
   </data>
+  <data name="ScanAndRepairSysFiles.Text" xml:space="preserve">
+    <value>Skanuj i napraw pliki systemowe</value>
+  </data>
+  <data name="SeeFPSUnlockerConfig.ToolTip" xml:space="preserve">
+    <value>unlocker.config.json</value>
+  </data>
+  <data name="SeeFPSUnlockerConfig.Text" xml:space="preserve">
+    <value>FPS Unlocker</value>
+  </data>
+  <data name="SeeReShadeConfig.ToolTip" xml:space="preserve">
+    <value>ReShade.ini</value>
+  </data>
+  <data name="SeeReShadeConfig.Text" xml:space="preserve">
+    <value>ReShade</value>
+  </data>
+  <data name="ReShadeLogs.Text" xml:space="preserve">
+    <value>ReShade.log</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Genshin Stella Mod Launcher 2024</value>
+  </data>
+  <data name="InstallationLogs.Text" xml:space="preserve">
+    <value>Genshin Stella Mod</value>
+  </data>
 </root>
