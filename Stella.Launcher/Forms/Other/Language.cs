@@ -35,7 +35,7 @@ public sealed partial class Language : Form
 				Thread.CurrentThread.CurrentUICulture = new CultureInfo(selectedLang);
 				break;
 			default:
-				selectedLang = CultureInfo.InstalledUICulture.Name.Substring(0, 2);
+				selectedLang = CultureInfo.InstalledUICulture.Name[..2];
 				Thread.CurrentThread.CurrentUICulture = CultureInfo.InstalledUICulture;
 				break;
 		}

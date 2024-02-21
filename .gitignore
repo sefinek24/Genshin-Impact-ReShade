@@ -87,6 +87,10 @@ Win App Packaging Project/obj/x64
 Win App Packaging Project/obj/x86
 Win App Packaging Project/obj/project.nuget
 
+# Build project
+Stella.Build/bin
+Stella.Build/obj
+
 # InnoSetup
 InnoSetup/*.exe
 InnoSetup/Output
