@@ -59,7 +59,7 @@ internal static class Program
 
 	private static bool CompileProject(string solutionFilePath)
 	{
-		string workingDir = Path.GetDirectoryName(solutionFilePath);
+		string? workingDir = Path.GetDirectoryName(solutionFilePath);
 		if (!Directory.Exists(workingDir))
 		{
 			Console.WriteLine($"Directory {workingDir} was not found.");
@@ -83,7 +83,7 @@ internal static class Program
 				EnableRaisingEvents = true
 			};
 
-			buildProcess.OutputDataReceived += (sender, args) =>
+			buildProcess.OutputDataReceived += (_, args) =>
 			{
 				if (!string.IsNullOrEmpty(args.Data)) Console.WriteLine(args.Data);
 			};
@@ -111,10 +111,10 @@ internal static class Program
 
 			foreach (string file in files)
 			{
-				string relativePath = file.Substring(sourceFolderPath.Length + 1);
+				string relativePath = file[(sourceFolderPath.Length + 1)..];
 				string destinationPath1 = Path.Combine(DestinationFolder1, relativePath);
 
-				string dirNameDestinationPath1 = Path.GetDirectoryName(destinationPath1);
+				string? dirNameDestinationPath1 = Path.GetDirectoryName(destinationPath1);
 				if (string.IsNullOrEmpty(dirNameDestinationPath1))
 					Console.WriteLine($"dirNameDestinationPath1 is {dirNameDestinationPath1}");
 				else
