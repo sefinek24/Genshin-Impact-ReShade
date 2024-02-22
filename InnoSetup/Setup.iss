@@ -82,15 +82,14 @@ Name: "ukrainian"; MessagesFile: "compiler:Languages\Ukrainian.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Check: not InstViaSetup and not InstViaLauncher
 
 [Files]
-Source: "..\Build\Release\net8.0-windows\{#AppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\Build\Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
-Name: "{autodesktop}\Stella Mod Launcher"; Filename: "{app}\{#AppExeName}"; Tasks: desktopicon
+Name: "{autodesktop}\Stella Mod Launcher"; Filename: "{app}\net8.0-windows\{#AppExeName}"; Tasks: desktopicon
 Name: "{autoprograms}\Stella Mod Launcher\Uninstall {#AppName}"; Filename: "{uninstallexe}"
 
 [Run]
-Filename: "{app}\{#AppExeName}"; WorkingDir: "{app}"; Description: "{cm:LaunchProgram,{#StringChange(AppName, '&', '&&')}} Launcher"; Flags: nowait postinstall skipifsilent runascurrentuser
+Filename: "{app}\net8.0-windows\{#AppExeName}"; WorkingDir: "{app}"; Description: "{cm:LaunchProgram,{#StringChange(AppName, '&', '&&')}} Launcher"; Flags: nowait postinstall skipifsilent runascurrentuser
 
 [Code]
 { ///////////////////////////////////////////////////////////////////// }

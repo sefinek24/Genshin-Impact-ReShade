@@ -32,8 +32,8 @@ namespace PrepareStella
 		public static readonly string WebApi = "https://api.sefinek.net/api/v5";
 
 		// Dependencies
-		public static readonly string VcLibsAppx = Path.Combine("dependencies", "Microsoft.VCLibs.x64.14.00.Desktop.appx");
-		public static readonly string WtMsixBundle = Path.Combine("dependencies", "Microsoft.WindowsTerminal_1.19.10302.0_8wekyb3d8bbwe.msixbundle");
+		public static readonly string VcLibsAppx = Path.Combine("dependencies", "net8.0-windows", "Microsoft.VCLibs.x64.14.00.Desktop.appx");
+		public static readonly string WtMsixBundle = Path.Combine("dependencies", "net8.0-windows", "Microsoft.WindowsTerminal_1.19.10302.0_8wekyb3d8bbwe.msixbundle");
 
 		// Other
 		public static readonly string Line = "===============================================================================================";
