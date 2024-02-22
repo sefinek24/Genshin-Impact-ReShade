@@ -27,11 +27,11 @@ internal static class CheckForUpdates
 
 			StellaApiVersion? res = JsonConvert.DeserializeObject<StellaApiVersion>(json);
 
-			string? remoteDbLauncherVersion = res!.Launcher.Release;
-			DateTime remoteLauncherDate = DateTime.Parse(res.Launcher.Date, null, DateTimeStyles.RoundtripKind).ToUniversalTime().ToLocalTime();
+			string? remoteDbLauncherVersion = res!.Launcher?.Release;
+			DateTime remoteLauncherDate = DateTime.Parse(res.Launcher?.Date!, null, DateTimeStyles.RoundtripKind).ToUniversalTime().ToLocalTime();
 
 			// == Major release ==
-			if (Program.AppVersion![0] != remoteDbLauncherVersion[0])
+			if (Program.AppVersion![0] != remoteDbLauncherVersion![0])
 			{
 				Default.UpdateIsAvailable = true;
 
@@ -45,7 +45,7 @@ internal static class CheckForUpdates
 			{
 				Default.UpdateIsAvailable = true;
 
-				NormalRelease.Run(remoteDbLauncherVersion, remoteLauncherDate, res.Launcher.Beta);
+				NormalRelease.Run(remoteDbLauncherVersion, remoteLauncherDate, res.Launcher!.Beta);
 				return 1;
 			}
 
@@ -53,13 +53,13 @@ internal static class CheckForUpdates
 			// == Check new updates of resources ==
 			if (!Secret.IsStellaPlusSubscriber)
 			{
-				string jsonFile = Path.Combine(Default.ResourcesPath, "data.json");
+				string jsonFile = Path.Combine(Default.ResourcesPath!, "data.json");
 				if (!File.Exists(jsonFile))
 				{
-					Default._status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, jsonFile)}\n";
+					Default._status_Label!.Text += $"{string.Format(Resources.Default_File_WasNotFound, jsonFile)}\n";
 					Program.Logger.Error($"File {jsonFile} was not found.");
 
-					Utils.HideProgressBar(true);
+					Labels.HideProgressbar(null, true);
 					return -1;
 				}
 
@@ -68,12 +68,12 @@ internal static class CheckForUpdates
 				Program.Logger.Info($"{jsonFile}: {jsonContent}");
 				LocalResources? data = JsonConvert.DeserializeObject<LocalResources>(jsonContent);
 
-				string? remoteDbResourcesVersion = res.Resources.Release;
+				string? remoteDbResourcesVersion = res.Resources!.Release;
 				if (data?.Version != remoteDbResourcesVersion)
 				{
 					Default.UpdateIsAvailable = true;
 
-					DateTime remoteResourcesDate = DateTime.Parse(res.Resources.Date, null, DateTimeStyles.RoundtripKind).ToUniversalTime().ToLocalTime();
+					DateTime remoteResourcesDate = DateTime.Parse(res.Resources.Date!, null, DateTimeStyles.RoundtripKind).ToUniversalTime().ToLocalTime();
 					DownloadResources.Run(data?.Version!, remoteDbResourcesVersion, remoteResourcesDate);
 					return 1;
 				}
@@ -101,7 +101,7 @@ internal static class CheckForUpdates
 			//            Program.Logger.Info("The update of ReShade.ini has been cancelled by the user");
 			//            MessageBox.Show(Resources.Default_ForSomeReasonYouDidNotGiveConsentForTheAutomaticUpdateOfTheReShadeFile, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
-			//            Utils.HideProgressBar(true);
+			//            Labels.HideProgressbar(true);
 			//            return 1;
 			//        }
 
@@ -121,7 +121,7 @@ internal static class CheckForUpdates
 
 					Default._updates_LinkLabel.LinkColor = Color.Cyan;
 					Default._updates_LinkLabel.Text = Resources.Default_UpdatingBenefits;
-					Default._updateIco_PictureBox.Image = Resources.icons8_download_from_the_cloud;
+					Default._updateIco_PictureBox!.Image = Resources.icons8_download_from_the_cloud;
 					// Utils.RemoveClickEvent(Default._updates_LinkLabel);
 					return found;
 				}
@@ -130,9 +130,9 @@ internal static class CheckForUpdates
 
 			// == Not found any new updates ==
 			Default._updates_LinkLabel.Text = Resources.Default_CheckForUpdates;
-			Default._updateIco_PictureBox.Image = Resources.icons8_available_updates;
+			Default._updateIco_PictureBox!.Image = Resources.icons8_available_updates;
 
-			Default._version_LinkLabel.Text = $@"v{(Program.AppVersion == Program.AppFileVersion ? Program.AppVersion : $"{Program.AppFileVersion}-alpha")}";
+			Default._version_LinkLabel!.Text = $@"v{(Program.AppVersion == Program.AppFileVersion ? Program.AppVersion : $"{Program.AppFileVersion}-alpha")}";
 
 			// Utils.RemoveClickEvent(Default._updates_LinkLabel);
 			// Default._updates_LinkLabel.Click += CheckUpdates_Click;
@@ -142,7 +142,7 @@ internal static class CheckForUpdates
 
 			TaskbarProgress.SetProgressState(TaskbarProgress.Flags.NoProgress);
 
-			Utils.ShowStartGameBts();
+			Labels.ShowStartGameBts();
 			return 0;
 		}
 		catch (Exception e)
@@ -151,10 +151,10 @@ internal static class CheckForUpdates
 
 			Default._updates_LinkLabel.LinkColor = Color.Red;
 			Default._updates_LinkLabel.Text = Resources.Default_OhhSomethingWentWrong;
-			Default._status_Label.Text += $"[x] {e.Message}\n";
+			Default._status_Label!.Text += $"[x] {e.Message}\n";
 
 			Program.Logger.Error(string.Format(Resources.Default_SomethingWentWrongWhileCheckingForNewUpdates, e));
-			Utils.HideProgressBar(true);
+			Labels.HideProgressbar(null, true);
 			return -1;
 		}
 	}
@@ -176,6 +176,6 @@ internal static class CheckForUpdates
 
 		Default._updates_LinkLabel.LinkColor = Color.LawnGreen;
 		Default._updates_LinkLabel.Text = Resources.Default_YouHaveTheLatestVersion;
-		Default._updateIco_PictureBox.Image = Resources.icons8_available_updates;
+		Default._updateIco_PictureBox!.Image = Resources.icons8_available_updates;
 	}
 }

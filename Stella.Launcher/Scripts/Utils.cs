@@ -173,35 +173,6 @@ internal static class Utils
 		}
 	}
 
-	public static void ShowStartGameBts()
-	{
-		Default._startGame_LinkLabel.Visible = true;
-		Default._injectReShade_LinkLabel.Visible = true;
-		Default._runFpsUnlocker_LinkLabel.Visible = true;
-		Default._only3DMigoto_LinkLabel.Visible = true;
-		Default._runGiLauncher_LinkLabel.Visible = true;
-		if (!Secret.IsStellaPlusSubscriber) Default._becomeMyPatron_LinkLabel.Visible = true;
-	}
-
-	public static void HideProgressBar(bool error)
-	{
-		if (error)
-		{
-			Default.UpdateIsAvailable = false;
-
-			Default._updates_LinkLabel.LinkColor = Color.Red;
-			Default._updates_LinkLabel.Text = Resources.Utils_OopsAnErrorOccurred;
-
-			TaskbarProgress.SetProgressValue(100);
-			TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Error);
-		}
-
-		Default._progressBar1.Hide();
-		Default._preparingPleaseWait.Hide();
-
-		Default._progressBar1.Value = 0;
-	}
-
 	public static async Task<Image?> LoadImageAsync(string url)
 	{
 		Program.Logger.Info($"Downloading image via LoadImageAsync(): {url}");

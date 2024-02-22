@@ -14,19 +14,19 @@ internal static class DownloadResources
 	public static async void Run(string? localResVersion, string? remoteResVersion, DateTime remoteResDate)
 	{
 		// 1
-		Default._version_LinkLabel.Text = $@"v{localResVersion} → v{remoteResVersion}";
+		Default._version_LinkLabel!.Text = $@"v{localResVersion} → v{remoteResVersion}";
 
 		// 2
 		Default._updates_LinkLabel.LinkColor = Color.Cyan;
 		Default._updates_LinkLabel.Text = Resources.NormalRelease_ClickHereToUpdate;
-		Default._updateIco_PictureBox.Image = Resources.icons8_download_from_the_cloud;
+		Default._updateIco_PictureBox!.Image = Resources.icons8_download_from_the_cloud;
 
 		Utils.RemoveLinkClickedEventHandler(Default._updates_LinkLabel);
 		Utils.AddLinkClickedEventHandler(Default._updates_LinkLabel, Update_Event);
 
 		// Hide and show elements
-		Default._progressBar1.Hide();
-		Default._preparingPleaseWait.Hide();
+		Default._progressBar1!.Hide();
+		Default._preparingPleaseWait!.Hide();
 		Default._preparingPleaseWait.Text = Resources.NormalRelease_Preparing_IfProcessIsStuckReopenLauncher;
 
 		Default._progressBar1.Value = 0;
@@ -37,7 +37,7 @@ internal static class DownloadResources
 		_stellaResZip = Path.Combine(Default.ResourcesPath!, $"Stella resources - v{remoteResVersion}.zip");
 
 		// Log
-		Default._status_Label.Text += $"[i] {string.Format(Resources.StellaResources_NewResourcesUpdateIsAvailable, remoteResDate)}\n";
+		Default._status_Label!.Text += $"[i] {string.Format(Resources.StellaResources_NewResourcesUpdateIsAvailable, remoteResDate)}\n";
 		Program.Logger.Info($"Found the new update of resources from {remoteResDate} - {remoteResDate}");
 
 		// Check update size
@@ -79,15 +79,7 @@ internal static class DownloadResources
 		Default._updates_LinkLabel.LinkColor = Color.DodgerBlue;
 		Default._updates_LinkLabel.Text = Resources.NormalRelease_UpdatingPleaseWait;
 
-		Default._progressBar1.Show();
-		Default._preparingPleaseWait.Show();
-
-		Default._discordServerIco_Picturebox.Hide();
-		Default._discordServer_LinkLabel.Hide();
-		Default._supportMeIco_PictureBox.Hide();
-		Default._supportMe_LinkLabel.Hide();
-		Default._youtubeIco_Picturebox.Hide();
-		Default._youTube_LinkLabel.Hide();
+		Labels.ShowProgressbar();
 
 		try
 		{
@@ -96,7 +88,7 @@ internal static class DownloadResources
 		}
 		catch (Exception ex)
 		{
-			Default._preparingPleaseWait.Text = $@"😥 {Resources.NormalRelease_SomethingWentWrong}";
+			Default._preparingPleaseWait!.Text = $@"): {Resources.NormalRelease_SomethingWentWrong}";
 			Log.ThrowError(ex);
 		}
 
@@ -116,7 +108,7 @@ internal static class DownloadResources
 			DateTime startTime = DateTime.Now;
 
 			using Stream streamToReadFrom = await response.Content.ReadAsStreamAsync().ConfigureAwait(true);
-			using FileStream streamToWriteTo = File.Open(_stellaResZip, FileMode.Create, FileAccess.Write, FileShare.None);
+			using FileStream streamToWriteTo = File.Open(_stellaResZip!, FileMode.Create, FileAccess.Write, FileShare.None);
 			byte[] buffer = new byte[8192];
 			int bytesRead;
 			long totalRead = 0;
@@ -142,15 +134,7 @@ internal static class DownloadResources
 		{
 			await Download.UnzipWithProgress(_stellaResZip, Default.ResourcesPath).ConfigureAwait(true);
 
-			Default._progressBar1.Hide();
-			Default._preparingPleaseWait.Hide();
-			Default._discordServerIco_Picturebox.Show();
-			Default._discordServer_LinkLabel.Show();
-			Default._supportMeIco_PictureBox.Show();
-			Default._supportMe_LinkLabel.Show();
-			Default._youtubeIco_Picturebox.Show();
-			Default._youTube_LinkLabel.Show();
-			Default._status_Label.Text += $"[✓] {Resources.StellaResources_SuccessfullyUpdatedResources}\n";
+			Labels.HideProgressbar(Resources.StellaResources_SuccessfullyUpdatedResources, false);
 
 			await CheckForUpdates.Analyze().ConfigureAwait(true);
 		}

@@ -15,7 +15,7 @@ internal static class Download
 		string receivedText = bytesReceived < 1024 * 1024 ? $"{bytesReceived / 1024:00.00} KB" : $"{bytesReceived / (1024 * 1024):00.00} MB";
 		string totalText = totalBytes < 1024 * 1024 ? $"{totalBytes / 1024:00.00} KB" : $"{totalBytes / (1024 * 1024):00.00} MB";
 
-		Default._progressBar1.Invoke(UpdateUi);
+		Default._progressBar1!.Invoke(UpdateUi);
 
 		if ((DateTime.Now - _lastLogTime).TotalSeconds >= 2)
 		{
@@ -28,14 +28,14 @@ internal static class Download
 
 		void UpdateUi()
 		{
-			Default._progressBar1.Value = value;
-			Default._preparingPleaseWait.Text = $@"{string.Format(progressText, receivedText, totalText)} [{downloadSpeedInMb:00.00} MB/s]";
+			Default._progressBar1!.Value = value;
+			Default._preparingPleaseWait!.Text = $@"{string.Format(progressText, receivedText, totalText)} [{downloadSpeedInMb:00.00} MB/s]";
 		}
 	}
 
 	public static async Task UnzipWithProgress(string? zipFilePath, string? extractPath)
 	{
-		FileInfo fileInfo = new(zipFilePath);
+		FileInfo fileInfo = new(zipFilePath!);
 		if (!fileInfo.Exists || fileInfo.Length == 0)
 		{
 			string msg = !fileInfo.Exists
@@ -52,7 +52,7 @@ internal static class Download
 		Program.Logger.Info($"Destination: {extractPath}");
 
 		// Zip
-		using ZipArchive archive = ZipFile.OpenRead(zipFilePath);
+		using ZipArchive archive = ZipFile.OpenRead(zipFilePath!);
 		int totalEntries = archive.Entries.Count;
 		int currentEntry = 0;
 		long totalBytesToExtract = archive.Entries.Sum(entry => entry.Length);
@@ -60,14 +60,14 @@ internal static class Download
 
 		foreach (ZipArchiveEntry entry in archive.Entries)
 		{
-			string entryPath = Path.Combine(extractPath, entry.FullName);
+			string entryPath = Path.Combine(extractPath!, entry.FullName);
 			if (entry.FullName.EndsWith("/"))
 			{
 				Directory.CreateDirectory(entryPath);
 			}
 			else
 			{
-				Directory.CreateDirectory(Path.GetDirectoryName(entryPath));
+				Directory.CreateDirectory(Path.GetDirectoryName(entryPath)!);
 				using Stream source = entry.Open();
 				using FileStream destination = File.Create(entryPath);
 				byte[] buffer = new byte[8192];
@@ -91,8 +91,8 @@ internal static class Download
 		// Update UI
 		void UpdateProgressUi(int progress)
 		{
-			Default._progressBar1.Value = progress;
-			Default._preparingPleaseWait.Text = string.Format(Resources.StellaResources_UnpackingFiles_From_, currentEntry, totalEntries);
+			Default._progressBar1!.Value = progress;
+			Default._preparingPleaseWait!.Text = string.Format(Resources.StellaResources_UnpackingFiles_From_, currentEntry, totalEntries);
 		}
 	}
 }

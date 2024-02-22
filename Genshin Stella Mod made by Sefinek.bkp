@@ -1,8 +1,20 @@
-﻿Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-2. Configuration .NET Framework", "Stella.ConfigurationOld\3-2. Configuration .NET Framework.csproj", "{91FBB412-D343-4E78-95B5-F18E6EB6001C}"
+﻿Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1-2. Stella Mod Launcher [.NET Framework]", "Stella.LauncherOld\1-2. Stella Mod Launcher [.NET Framework].csproj", "{A9DDC941-CB15-4B3C-8BA1-8F559F70480D}"
 EndProject
 
-Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "Win App Packaging Project", "Win App Packaging Project\Win App Packaging Project.wapproj", "{1D6AC525-A490-4EEE-A83C-C614A9D97C0A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2-2. Genshin Stella Mod [.NET Framework]", "Stella.WorkerOld\2-2. Genshin Stella Mod [.NET Framework].csproj", "{D076A53F-8314-4132-862B-13D76A682CAA}"
+EndProject
+
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4-2. Prepare Stella [.NET Framework]", "Stella.PrepareOld\4-2. Prepare Stella.csproj", "{377E01DA-E164-4E79-A540-23F68FB2CD8B}"
+EndProject
+
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-2. Configuration .NET Framework", "Stella.ConfigurationOld\3-2. Configuration .NET Framework.csproj", "{91FBB412-D343-4E78-95B5-F18E6EB6001C}"
 EndProject
 
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. Sefin Anti Cheat", "Stella.SefinAntiCheat\5. Sefin Anti Cheat.csproj", "{F53B112D-AC37-4FFE-854E-82DEA97FBFB9}"
+EndProject
+
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7-2. StellaPLF .NET Framework", "Stella.ClassLibrary-2\7-2. StellaPLF .NET Framework.csproj", "{6B09F8C8-2D48-485F-BD17-23D796BA6326}"
+EndProject
+
+Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "Win App Packaging Project", "Win App Packaging Project\Win App Packaging Project.wapproj", "{1D6AC525-A490-4EEE-A83C-C614A9D97C0A}"
 EndProject

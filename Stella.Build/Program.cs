@@ -4,131 +4,69 @@ namespace BuildStellaMod;
 
 internal static class Program
 {
-	private static readonly string CurrentDir = Directory.GetCurrentDirectory();
-	private static readonly string SolutionFilePath = Path.Combine(CurrentDir, "..", "..", "Genshin Stella Mod made by Sefinek.sln");
-	private static readonly string SmPlusApp = Path.Combine(CurrentDir, "..", "..", "Stella.ConfigurationOld", "3-2. Configuration .NET Framework.csproj");
-	private static readonly string ReleaseBuildPath = Path.Combine(CurrentDir, "..", "..", "Build", "Release", "net8.0-windows10.0.20348.0");
-	private static readonly string ObjBuildPath = Path.Combine(CurrentDir, "..", "..", "Stella.ConfigurationOld", "obj", "Release");
+	public static readonly string RootPath = Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "..", "..");
+	private static readonly string ReleaseBuildPath = Path.Combine(RootPath, "Build", "Release", "net8.0-windows");
 
-	private static readonly string DestinationFolder1 = @"C:\GitHub\VS\Stella\Genshin-Impact-ReShade\Build\GitHub";
-
-	private static void Main()
+	private static async Task Main()
 	{
-		Console.WriteLine("Current directory: " + CurrentDir);
-		Console.WriteLine("Solution file path: " + SolutionFilePath);
-		Console.WriteLine("Project path: " + SmPlusApp);
-		Console.WriteLine("Release folder path: " + ReleaseBuildPath);
-
+		Console.WriteLine($"Current directory: {Directory.GetCurrentDirectory()}");
+		Console.WriteLine($"Release folder path: {ReleaseBuildPath}");
 		Console.WriteLine();
 
-		DeleteDirectoryIfExists(ReleaseBuildPath);
-		DeleteDirectoryIfExists(ObjBuildPath);
-
-		Console.WriteLine();
-
-		bool compilationSuccess = CompileProject(SolutionFilePath);
-		Console.WriteLine();
-		if (compilationSuccess)
+		foreach (var process in Process.GetProcessesByName("inject64"))
 		{
-			Console.WriteLine("----------------------------- Compilation successful -----------------------------");
-			CopyFiles(ReleaseBuildPath);
+			try
+			{
+				process.Kill();
+				Console.WriteLine($"Process {process.ProcessName} (ID: {process.Id}) has been terminated.");
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine($"Failed to terminate {process.ProcessName} (ID: {process.Id}): {ex.Message}");
+			}
 		}
-		else
-		{
-			Console.WriteLine("----------------------------- Compilation failed! -----------------------------");
-		}
+
+		await Utils.DeleteDirectoryIfExistsAsync(ReleaseBuildPath).ConfigureAwait(false);
+
+		await Utils.RestorePackages().ConfigureAwait(false);
+
+		string[] projects =
+		[
+			@"Stella.Launcher\1-1. Stella Mod Launcher.csproj",
+			@"Stella.Worker\2-1. Genshin Stella Mod.csproj",
+			@"Stella.Configuration\3. Configuration .NET 8.csproj",
+			@"Stella.PrepareOld\4. Prepare Stella.csproj",
+			@"Stella.Info-48793142\5. Information 48793142.csproj",
+			@"Stella.DeviceIdentifier\6. Device Identifier.csproj"
+		];
+
+		foreach (string project in projects) await PrepareCompilationAsync(Path.Combine(RootPath, project)).ConfigureAwait(false);
 
 		Console.WriteLine("\nPress ENTER to exit the program...");
 		Console.ReadLine();
 	}
 
-	private static void DeleteDirectoryIfExists(string directoryPath)
+	private static async Task PrepareCompilationAsync(string projectPath)
 	{
-		if (!Directory.Exists(directoryPath)) return;
+		string binPath = Path.Combine(Path.GetDirectoryName(projectPath)!, "bin");
+		// string objPath = Path.Combine(Path.GetDirectoryName(projectPath)!, "obj");
 
-		Console.WriteLine($"Deleting folder: {directoryPath}");
-		try
+		await Utils.DeleteDirectoryIfExistsAsync(binPath).ConfigureAwait(false);
+		// await Utils.DeleteDirectoryIfExistsAsync(objPath).ConfigureAwait(false);
+
+		Console.WriteLine();
+
+		bool compilationSuccess = Utils.CompileProject(projectPath);
+		Console.WriteLine();
+
+		if (compilationSuccess)
 		{
-			Directory.Delete(directoryPath, true);
+			Console.WriteLine($"----------------------------- COMPILED {Path.GetFileName(projectPath)} -----------------------------");
+			Utils.CopyFiles(ReleaseBuildPath);
 		}
-		catch (Exception ex)
+		else
 		{
-			Console.WriteLine($"Error occurred while deleting folder: {ex.Message}");
-		}
-	}
-
-	private static bool CompileProject(string solutionFilePath)
-	{
-		string? workingDir = Path.GetDirectoryName(solutionFilePath);
-		if (!Directory.Exists(workingDir))
-		{
-			Console.WriteLine($"Directory {workingDir} was not found.");
-			return false;
-		}
-
-		Console.WriteLine("----------------------------- Starting compilation -----------------------------");
-
-		try
-		{
-			Process buildProcess = new()
-			{
-				StartInfo =
-				{
-					FileName = "MSBuild.exe",
-					Arguments = $"\"{SmPlusApp}\" /p:Configuration=Release",
-					UseShellExecute = false,
-					RedirectStandardOutput = true,
-					WorkingDirectory = workingDir
-				},
-				EnableRaisingEvents = true
-			};
-
-			buildProcess.OutputDataReceived += (_, args) =>
-			{
-				if (!string.IsNullOrEmpty(args.Data)) Console.WriteLine(args.Data);
-			};
-
-			buildProcess.Start();
-			buildProcess.BeginOutputReadLine();
-			buildProcess.WaitForExit();
-
-			return buildProcess.ExitCode == 0;
-		}
-		catch (Exception ex)
-		{
-			Console.WriteLine($"----------------------------- Error occurred during compilation -----------------------------\n\n{ex}");
-			return false;
-		}
-	}
-
-	private static void CopyFiles(string sourceFolderPath)
-	{
-		Console.WriteLine("\nCopying files...");
-
-		try
-		{
-			string[] files = Directory.GetFiles(sourceFolderPath, "*.*", SearchOption.AllDirectories);
-
-			foreach (string file in files)
-			{
-				string relativePath = file[(sourceFolderPath.Length + 1)..];
-				string destinationPath1 = Path.Combine(DestinationFolder1, relativePath);
-
-				string? dirNameDestinationPath1 = Path.GetDirectoryName(destinationPath1);
-				if (string.IsNullOrEmpty(dirNameDestinationPath1))
-					Console.WriteLine($"dirNameDestinationPath1 is {dirNameDestinationPath1}");
-				else
-					Directory.CreateDirectory(dirNameDestinationPath1);
-
-				File.Copy(file, destinationPath1, true);
-			}
-
-			Console.WriteLine("Source files have been copied to the specified folders:");
-			Console.WriteLine(DestinationFolder1);
-		}
-		catch (Exception ex)
-		{
-			Console.WriteLine($"Error occurred while copying files: {ex.Message}");
+			Console.WriteLine($"----------------------------- FAILED TO COMPILE {Path.GetFileName(projectPath)} -----------------------------");
 		}
 	}
 }

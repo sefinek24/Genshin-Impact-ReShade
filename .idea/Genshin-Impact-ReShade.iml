@@ -20,14 +20,14 @@
       <excludeFolder url="file://$MODULE_DIR$/Stella.Launcher/obj" />
       <excludeFolder url="file://$MODULE_DIR$/Stella.LauncherOld/.vs" />
       <excludeFolder url="file://$MODULE_DIR$/Stella.LauncherOld/obj" />
-      <excludeFolder url="file://$MODULE_DIR$/Stella.Prepare/.vs" />
-      <excludeFolder url="file://$MODULE_DIR$/Stella.Prepare/obj" />
       <excludeFolder url="file://$MODULE_DIR$/Stella.Worker/obj" />
       <excludeFolder url="file://$MODULE_DIR$/Stella.WorkerOld/.vs" />
       <excludeFolder url="file://$MODULE_DIR$/Stella.WorkerOld/obj" />
       <excludeFolder url="file://$MODULE_DIR$/Win App Packaging Project/bin" />
       <excludeFolder url="file://$MODULE_DIR$/Win App Packaging Project/obj/Debug" />
       <excludeFolder url="file://$MODULE_DIR$/Win App Packaging Project/obj/Release" />
+      <excludeFolder url="file://$MODULE_DIR$/Stella.PrepareOld/.vs" />
+      <excludeFolder url="file://$MODULE_DIR$/Stella.PrepareOld/obj" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

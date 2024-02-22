@@ -2,6 +2,7 @@ using ByteSizeLib;
 using CliWrap.Builders;
 using StellaModLauncher.Forms;
 using StellaModLauncher.Properties;
+using StellaModLauncher.Scripts.Forms.MainForm;
 using StellaPLFNet;
 
 namespace StellaModLauncher.Scripts.Remote;
@@ -14,19 +15,19 @@ internal static class NormalRelease
 	public static async void Run(string? remoteVersion, DateTime remoteVerDate, bool beta)
 	{
 		// 1
-		Default._version_LinkLabel.Text = $@"v{Program.AppFileVersion} → v{remoteVersion}";
+		Default._version_LinkLabel!.Text = $@"v{Program.AppFileVersion} → v{remoteVersion}";
 
 		// 2
 		Default._updates_LinkLabel.LinkColor = Color.Cyan;
 		Default._updates_LinkLabel.Text = Resources.NormalRelease_ClickHereToUpdate;
-		Default._updateIco_PictureBox.Image = Resources.icons8_download_from_the_cloud;
+		Default._updateIco_PictureBox!.Image = Resources.icons8_download_from_the_cloud;
 
 		Utils.RemoveLinkClickedEventHandler(Default._updates_LinkLabel);
 		Utils.AddLinkClickedEventHandler(Default._updates_LinkLabel, Update_Event);
 
 		// Hide and show elements
-		Default._progressBar1.Hide();
-		Default._preparingPleaseWait.Hide();
+		Default._progressBar1!.Hide();
+		Default._preparingPleaseWait!.Hide();
 		Default._preparingPleaseWait.Text = Resources.NormalRelease_Preparing_IfProcessIsStuckReopenLauncher;
 
 		Default._progressBar1.Value = 0;
@@ -35,7 +36,7 @@ internal static class NormalRelease
 		BalloonTip.Show($"📥 {Resources.NormalRelease_WeFoundNewUpdates}", Resources.NormalRelease_NewReleaseIsAvailableDownloadNow);
 
 		// Log
-		Default._status_Label.Text += $"[i] {string.Format(Resources.NormalRelease_NewVersionFrom_IsAvailable, remoteVerDate)}\n";
+		Default._status_Label!.Text += $"[i] {string.Format(Resources.NormalRelease_NewVersionFrom_IsAvailable, remoteVerDate)}\n";
 		Program.Logger.Info($"New release from {remoteVerDate} is available: v{Program.AppFileVersion} → v{remoteVersion} ({(beta ? "Beta" : "Stable")})");
 
 
@@ -78,18 +79,7 @@ internal static class NormalRelease
 		Default._updates_LinkLabel.LinkColor = Color.DodgerBlue;
 		Default._updates_LinkLabel.Text = Resources.NormalRelease_UpdatingPleaseWait;
 
-		Default._progressBar1.Show();
-		Default._preparingPleaseWait.Show();
-
-		Default._progressBar1.Show();
-		Default._preparingPleaseWait.Show();
-
-		Default._discordServerIco_Picturebox.Hide();
-		Default._discordServer_LinkLabel.Hide();
-		Default._supportMeIco_PictureBox.Hide();
-		Default._supportMe_LinkLabel.Hide();
-		Default._youtubeIco_Picturebox.Hide();
-		Default._youTube_LinkLabel.Hide();
+		Labels.ShowProgressbar();
 
 		try
 		{
@@ -98,7 +88,7 @@ internal static class NormalRelease
 		}
 		catch (Exception ex)
 		{
-			Default._preparingPleaseWait.Text = $@"😥 {Resources.NormalRelease_SomethingWentWrong}";
+			Default._preparingPleaseWait!.Text = $@"😥 {Resources.NormalRelease_SomethingWentWrong}";
 			Log.ThrowError(ex);
 		}
 
@@ -112,7 +102,7 @@ internal static class NormalRelease
 		if (File.Exists(SetupPathExe))
 		{
 			File.Delete(SetupPathExe);
-			Default._status_Label.Text += $"[✓] {Resources.NormalRelease_DeletedOldSetupFileFromTempDir}\n";
+			Default._status_Label!.Text += $"[✓] {Resources.NormalRelease_DeletedOldSetupFileFromTempDir}\n";
 			Program.Logger.Info($"Deleted old setup file: {SetupPathExe}");
 		}
 
@@ -163,10 +153,10 @@ internal static class NormalRelease
 		if (!Directory.Exists(logDir)) Directory.CreateDirectory(logDir);
 
 		// Wait 5 seconds
-		Default._progressBar1.Style = ProgressBarStyle.Continuous;
+		Default._progressBar1!.Style = ProgressBarStyle.Continuous;
 		for (int i = 5; i >= 0; i--)
 		{
-			Default._preparingPleaseWait.Text = string.Format(Resources.NormalRelease_JustAMoment_PleaseWait, i);
+			Default._preparingPleaseWait!.Text = string.Format(Resources.NormalRelease_JustAMoment_PleaseWait, i);
 			Program.Logger.Info($"Waiting {i}s...");
 
 			double progressPercentage = (5 - i) / 5.0 * 100;
@@ -175,7 +165,7 @@ internal static class NormalRelease
 			await Task.Delay(1000).ConfigureAwait(true);
 		}
 
-		Default._preparingPleaseWait.Text = Resources.NormalRelease_EverythingIsOkay_StartingSetup;
+		Default._preparingPleaseWait!.Text = Resources.NormalRelease_EverythingIsOkay_StartingSetup;
 		TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Indeterminate);
 
 		await Task.Delay(500).ConfigureAwait(true);

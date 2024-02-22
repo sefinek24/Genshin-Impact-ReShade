@@ -29,7 +29,7 @@ public class IniFile(string path)
 		return WritePrivateProfileString(section, key, value, path) != 0;
 	}
 
-	public string? ReadString(string section, string key, string? defaultValue = null)
+	public string ReadString(string section, string key, string? defaultValue = null)
 	{
 		StringBuilder sb = new(BufferSize);
 		GetPrivateProfileString(section, key, defaultValue, sb, sb.Capacity, path);

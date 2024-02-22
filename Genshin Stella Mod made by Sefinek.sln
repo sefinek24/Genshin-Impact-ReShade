@@ -3,27 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stella Mod Launcher .NET", "Stella.Launcher\1-1. Stella Mod Launcher.csproj", "{B3221007-7FE1-48B7-9FFC-5F3FC9A78170}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1. Stella Mod Launcher", "Stella.Launcher\1-1. Stella Mod Launcher.csproj", "{B3221007-7FE1-48B7-9FFC-5F3FC9A78170}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stella Mod Launcher .NET Framework", "Stella.LauncherOld\1-2. Stella Mod Launcher [.NET Framework].csproj", "{A9DDC941-CB15-4B3C-8BA1-8F559F70480D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2. Genshin Stella Mod", "Stella.Worker\2-1. Genshin Stella Mod.csproj", "{AA6AF66A-8569-40DF-A751-A8209CA254DE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Genshin Stella Mod .NET", "Stella.Worker\2-1. Genshin Stella Mod.csproj", "{AA6AF66A-8569-40DF-A751-A8209CA254DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3. Configuration", "Stella.Configuration\3. Configuration .NET 8.csproj", "{47D8C976-0482-4A63-B0EC-9733961ECC0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genshin Stella Mod .NET Framework", "Stella.WorkerOld\2-2. Genshin Stella Mod [.NET Framework].csproj", "{D076A53F-8314-4132-862B-13D76A682CAA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. Prepare Stella", "Stella.Prepare\4-1. Prepare Stella.csproj", "{29D53164-1AF9-47FF-B441-AF15147F0CCB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Configuration .NET 8", "Stella.Configuration\3. Configuration .NET 8.csproj", "{47D8C976-0482-4A63-B0EC-9733961ECC0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5. Information 48793142", "Stella.Info-48793142\5. Information 48793142.csproj", "{5A9340FA-7E3B-433D-9E37-88D86C48B975}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prepare Stella", "Stella.Prepare\4. Prepare Stella.csproj", "{377E01DA-E164-4E79-A540-23F68FB2CD8B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6. Device Identifier", "Stella.DeviceIdentifier\6. Device Identifier.csproj", "{3440EBBF-9275-4194-A6B4-5BBE140FF3B0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Information 48793142", "Stella.Info-48793142\5. Information 48793142.csproj", "{5A9340FA-7E3B-433D-9E37-88D86C48B975}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "7. StellaPLF .NET", "Stella.ClassLibrary-1\7-1. StellaPLF .NET.csproj", "{329952C4-25EA-4533-8EC0-772D7838C946}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Device Identifier", "Stella.DeviceIdentifier\6. Device Identifier.csproj", "{3440EBBF-9275-4194-A6B4-5BBE140FF3B0}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StellaPLF .NET", "Stella.ClassLibrary-1\7-1. StellaPLF .NET.csproj", "{329952C4-25EA-4533-8EC0-772D7838C946}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StellaPLF .NET Framework", "Stella.ClassLibrary-2\7-2. StellaPLF .NET Framework.csproj", "{6B09F8C8-2D48-485F-BD17-23D796BA6326}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Build Stella Mod", "Stella.Build\9. Build Stella Mod.csproj", "{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "9. Build Stella Mod", "Stella.Build\9. Build Stella Mod.csproj", "{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -259,14 +253,34 @@ Global
 		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Release|x64.Build.0 = Release|Any CPU
 		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Release|x86.ActiveCfg = Release|Any CPU
 		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Release|x86.Build.0 = Release|Any CPU
+		{29D53164-1AF9-47FF-B441-AF15147F0CCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29D53164-1AF9-47FF-B441-AF15147F0CCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29D53164-1AF9-47FF-B441-AF15147F0CCB}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{29D53164-1AF9-47FF-B441-AF15147F0CCB}.Debug|ARM.Build.0 = Debug|Any CPU
+		{29D53164-1AF9-47FF-B441-AF15147F0CCB}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{29D53164-1AF9-47FF-B441-AF15147F0CCB}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{29D53164-1AF9-47FF-B441-AF15147F0CCB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{29D53164-1AF9-47FF-B441-AF15147F0CCB}.Debug|x64.Build.0 = Debug|Any CPU
+		{29D53164-1AF9-47FF-B441-AF15147F0CCB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{29D53164-1AF9-47FF-B441-AF15147F0CCB}.Debug|x86.Build.0 = Debug|Any CPU
+		{29D53164-1AF9-47FF-B441-AF15147F0CCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29D53164-1AF9-47FF-B441-AF15147F0CCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29D53164-1AF9-47FF-B441-AF15147F0CCB}.Release|ARM.ActiveCfg = Release|Any CPU
+		{29D53164-1AF9-47FF-B441-AF15147F0CCB}.Release|ARM.Build.0 = Release|Any CPU
+		{29D53164-1AF9-47FF-B441-AF15147F0CCB}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{29D53164-1AF9-47FF-B441-AF15147F0CCB}.Release|ARM64.Build.0 = Release|Any CPU
+		{29D53164-1AF9-47FF-B441-AF15147F0CCB}.Release|x64.ActiveCfg = Release|Any CPU
+		{29D53164-1AF9-47FF-B441-AF15147F0CCB}.Release|x64.Build.0 = Release|Any CPU
+		{29D53164-1AF9-47FF-B441-AF15147F0CCB}.Release|x86.ActiveCfg = Release|Any CPU
+		{29D53164-1AF9-47FF-B441-AF15147F0CCB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {DDABFAAF-62E1-4807-820C-8A87AAE3C15D}
-		RESX_PrefixTranslations = False
-		RESX_SaveFilesImmediatelyUponChange = True
 		RESX_NeutralResourcesLanguage = en-US
+		RESX_SaveFilesImmediatelyUponChange = True
+		RESX_PrefixTranslations = False
+		SolutionGuid = {DDABFAAF-62E1-4807-820C-8A87AAE3C15D}
 	EndGlobalSection
 EndGlobal

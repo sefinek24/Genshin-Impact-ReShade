@@ -42,18 +42,18 @@ internal static class FpsUnlockerCfg
 				File.WriteAllText(Program.FpsUnlockerCfgPath, updatedJson);
 
 				// Update the status label to indicate successful completion
-				Default._status_Label.Text += $"[✓] {Resources.Default_DownloadedConfigFileForFPSUnlocker}\n";
+				Default._status_Label!.Text += $"[✓] {Resources.Default_DownloadedConfigFileForFPSUnlocker}\n";
 				Program.Logger.Info("Done.");
 			}
 			else
 			{
-				Default._status_Label.Text += $"[x] Download failed: {response.ReasonPhrase}\n";
+				Default._status_Label!.Text += $"[x] Download failed: {response.ReasonPhrase}\n";
 				Program.Logger.Error($"Failed to download {Path.GetFileName(Program.FpsUnlockerCfgPath)} in {Path.GetDirectoryName(Program.FpsUnlockerCfgPath)}.\n\n{response.ReasonPhrase}");
 			}
 		}
 		catch (Exception ex)
 		{
-			Default._status_Label.Text += $"[x] {ex.Message}\n";
+			Default._status_Label!.Text += $"[x] {ex.Message}\n";
 			Program.Logger.Error($"Failed to download {Path.GetFileName(Program.FpsUnlockerCfgPath)} in {Path.GetDirectoryName(Program.FpsUnlockerCfgPath)}.\n\n{ex}");
 		}
 	}

@@ -14,11 +14,11 @@ internal static class Cmd
 	{
 		Music.PlaySound("winxp", "information_bar");
 
-		string commandArguments = cliWrapCommand.Arguments != null ? cliWrapCommand.Arguments.Build() : string.Empty;
+		string commandArguments = cliWrapCommand?.Arguments != null ? cliWrapCommand.Arguments.Build() : string.Empty;
 
-		Program.Logger.Info($"CliWrap: {cliWrapCommand.App} {commandArguments} {cliWrapCommand.WorkingDir}");
+		Program.Logger.Info($"CliWrap: {cliWrapCommand?.App} {commandArguments} {cliWrapCommand?.WorkingDir}");
 
-		if (Default.UpdateIsAvailable && !cliWrapCommand.DownloadingSetup)
+		if (Default.UpdateIsAvailable && !cliWrapCommand!.DownloadingSetup)
 		{
 			MessageBox.Show(Resources.Cmd_UpdateIsRequired, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 			Program.Logger.Info("CliWrap: Command execution failed. An update is required.");
@@ -28,10 +28,10 @@ internal static class Cmd
 		try
 		{
 			// CliWrap
-			Command action = Cli.Wrap(cliWrapCommand.App!)
-				.WithWorkingDirectory(cliWrapCommand.WorkingDir!)
+			Command action = Cli.Wrap(cliWrapCommand?.App!)
+				.WithWorkingDirectory(cliWrapCommand?.WorkingDir!)
 				.WithArguments(commandArguments)
-				.WithValidation(cliWrapCommand.Validation);
+				.WithValidation(cliWrapCommand!.Validation);
 			BufferedCommandResult result = await action.ExecuteBufferedAsync();
 
 			// Variables

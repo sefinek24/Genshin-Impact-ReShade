@@ -1,101 +1,96 @@
-using System;
 using System.Diagnostics;
-using System.IO;
-using System.Threading.Tasks;
 using IWshRuntimeLibrary;
 using File = System.IO.File;
 
-namespace PrepareStella.Scripts.Preparing
+namespace PrepareStella.Scripts.Preparing;
+
+internal static class Terminal
 {
-	internal static class Terminal
+	public static async Task MakeBackup()
 	{
-		public static async Task MakeBackup()
+		string wtAppDataLocal = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Microsoft", "Windows Terminal");
+		if (!Directory.Exists(wtAppDataLocal))
 		{
-			string wtAppDataLocal = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Microsoft", "Windows Terminal");
-			if (!Directory.Exists(wtAppDataLocal))
-			{
-				Console.WriteLine(@"Config folder not found");
-			}
-			else
-			{
-				string wtSettingsJson = Path.Combine(wtAppDataLocal, "settings.json");
-				string wtStateJson = Path.Combine(wtAppDataLocal, "state.json");
-				string readMeTxt = Path.Combine(wtAppDataLocal, "README.txt");
-				Start.Logger.Info($"Files and directories of backup.\n» wtAppDataLocal: {wtAppDataLocal}\n» wtSettingsJson: {wtSettingsJson}\n» wtStateJson: {wtStateJson}\n» readMeTxt: {readMeTxt}");
-
-				string localShortcut = Path.Combine(wtAppDataLocal, "WT Backup Folder.lnk");
-				if (File.Exists(localShortcut)) File.Delete(localShortcut);
-
-				string stellaWtBkp = Path.Combine(Start.AppData, "Windows Terminal");
-				try
-				{
-					using (StreamWriter sw = File.CreateText(readMeTxt))
-					{
-						await sw.WriteAsync(
-							$"⠀   ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⢶⣦⡀\n⠀  ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿\n⠀   ⠀⣿⡄⠀⠀⠀⠈⠀⠀⠀⠀⣾⡿                           Genshin Impact Stella Mod Pack 2024\n   ⠀⠀⠹⣿⣦⡀⠀⠀⠀⠀⢀⣾⣿                                     Made by Sefinek\n⠀   ⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿\n    ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟\n⠀   ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀\n ⠀   ⠀⠀⡟⢦⡀⠇⠀⠀⣀⠞⠀⠀⠘⡀⢀⡠⠚⣉⠤⠂⠀⠀⠀⠈⠙⢦⡀\n  ⠀ ⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆\n    ⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆\n   ⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇\n  ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉⠀⠀⠀⠀⣠⠟\n   ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟\n=========================================================================================\n» Windows Terminal application configuration backup files from {DateTime.Now}.");
-					}
-
-					string zipFile = Path.Combine(Start.AppData, "Windows Terminal", $"wt-config.backup-{DateTime.Now:HHmm_dd.MM.yyyy}.zip");
-					if (!Directory.Exists(stellaWtBkp)) Directory.CreateDirectory(stellaWtBkp);
-					await Zip.CreateAsync(wtAppDataLocal, zipFile);
-
-					Start.Logger.Info($"The Windows Terminal application configuration files have been backed up.\n» Source: {wtAppDataLocal}\n» Backup: {zipFile}");
-				}
-				catch (Exception e)
-				{
-					Log.ThrowError(e, false);
-				}
-
-				if (File.Exists(readMeTxt)) File.Delete(readMeTxt);
-
-				WshShell wshShell = new WshShell();
-				IWshShortcut shBkpWt = (IWshShortcut)wshShell.CreateShortcut(localShortcut);
-				shBkpWt.Description = "View the backup copy of Windows Terminal created by Genshin Stella Mod.";
-				shBkpWt.TargetPath = stellaWtBkp;
-				shBkpWt.Save();
-
-				Start.Logger.Info($@"Created: {Path.Combine(wtAppDataLocal, "Stella WT Backup.lnk")}");
-				Console.WriteLine(@"Saved in Stella AppData.");
-			}
+			Console.WriteLine(@"Config folder not found");
 		}
-
-		public static async Task<Task> Install()
+		else
 		{
-			if (!File.Exists(Start.WtMsixBundle))
-				Log.ErrorAndExit(new Exception($"I can't find a required file: {Start.WtMsixBundle}"), false, false);
+			string wtSettingsJson = Path.Combine(wtAppDataLocal, "settings.json");
+			string wtStateJson = Path.Combine(wtAppDataLocal, "state.json");
+			string readMeTxt = Path.Combine(wtAppDataLocal, "README.txt");
+			Start.Logger.Info($"Files and directories of backup.\n» wtAppDataLocal: {wtAppDataLocal}\n» wtSettingsJson: {wtSettingsJson}\n» wtStateJson: {wtStateJson}\n» readMeTxt: {readMeTxt}");
 
-			Process[] dllHostName = Process.GetProcessesByName("dllhost");
-			if (dllHostName.Length != 0) await Cmd.CliWrap("taskkill", "/F /IM dllhost.exe", null);
-			Process[] wtName = Process.GetProcessesByName("WindowsTerminal");
-			if (wtName.Length != 0) await Cmd.CliWrap("taskkill", "/F /IM WindowsTerminal.exe", null);
+			string localShortcut = Path.Combine(wtAppDataLocal, "WT Backup Folder.lnk");
+			if (File.Exists(localShortcut)) File.Delete(localShortcut);
 
-			// Install
+			string stellaWtBkp = Path.Combine(Start.AppData, "Windows Terminal");
 			try
 			{
-				await Cmd.CliWrap("powershell", $"Add-AppxPackage -Path \"{Start.WtMsixBundle}\"", Start.AppPath);
+				using StreamWriter sw = File.CreateText(readMeTxt);
+				await sw.WriteAsync(
+						$"⠀   ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⢶⣦⡀\n⠀  ⠀⠀⣴⡿⠟⠷⠆⣠⠋⠀⠀⠀⢸⣿\n⠀   ⠀⣿⡄⠀⠀⠀⠈⠀⠀⠀⠀⣾⡿                           Genshin Impact Stella Mod Pack 2024\n   ⠀⠀⠹⣿⣦⡀⠀⠀⠀⠀⢀⣾⣿                                     Made by Sefinek\n⠀   ⠀⠀⠈⠻⣿⣷⣦⣀⣠⣾⡿\n    ⠀⠀⠀⠀⠀⠉⠻⢿⡿⠟\n⠀   ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀\n ⠀   ⠀⠀⡟⢦⡀⠇⠀⠀⣀⠞⠀⠀⠘⡀⢀⡠⠚⣉⠤⠂⠀⠀⠀⠈⠙⢦⡀\n  ⠀ ⠀⠀⠀⡇⠀⠉⠒⠊⠁⠀⠀⠀⠀⠀⠘⢧⠔⣉⠤⠒⠒⠉⠉⠀⠀⠀⠀⠹⣆\n    ⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⣤⠶⠶⢶⡄⠀⠀⠀⠀⢹⡆\n   ⣀⠤⠒⠒⢺⠒⠀⠀⠀⠀⠀⠀⠀⠀⠤⠊⠀⢸⠀⡿⠀⡀⠀⣀⡟⠀⠀⠀⠀⢸⡇\n  ⠈⠀⠀⣠⠴⠚⢯⡀⠐⠒⠚⠉⠀⢶⠂⠀⣀⠜⠀⢿⡀⠉⠚⠉⠀⠀⠀⠀⣠⠟\n   ⠠⠊⠀⠀⠀⠀⠙⠂⣴⠒⠒⣲⢔⠉⠉⣹⣞⣉⣈⠿⢦⣀⣀⣀⣠⡴⠟\n=========================================================================================\n» Windows Terminal application configuration backup files from {DateTime.Now}.")
+					.ConfigureAwait(false);
+
+				string zipFile = Path.Combine(Start.AppData, "Windows Terminal", $"wt-config.backup-{DateTime.Now:HHmm_dd.MM.yyyy}.zip");
+				if (!Directory.Exists(stellaWtBkp)) Directory.CreateDirectory(stellaWtBkp);
+				await Zip.CreateAsync(wtAppDataLocal, zipFile).ConfigureAwait(false);
+
+				Start.Logger.Info($"The Windows Terminal application configuration files have been backed up.\n» Source: {wtAppDataLocal}\n» Backup: {zipFile}");
 			}
-			catch (Exception ex)
+			catch (Exception e)
 			{
-				Log.ThrowError(ex, false);
+				Log.ThrowError(e, false);
 			}
 
-			// Check installed WT
-			Console.WriteLine(@"Checking installed software...");
-			string wtProgramFiles = Utils.GetWtProgramFiles();
-			if (string.IsNullOrEmpty(wtProgramFiles))
-			{
-				Log.ErrorAndExit(new Exception($"Windows Terminal directory was not found in: {Program.WindowsApps}"), false, false);
-			}
-			else
-			{
-				Start.Logger.Info($"Windows Terminal has been successfully installed in {wtProgramFiles}");
+			if (File.Exists(readMeTxt)) File.Delete(readMeTxt);
 
-				if (string.IsNullOrEmpty(Start.AppData))
-					Log.ErrorAndExit(new Exception("Fatal error. Code: 3781780149"), false, true);
-			}
+			WshShell wshShell = new();
+			IWshShortcut shBkpWt = (IWshShortcut)wshShell.CreateShortcut(localShortcut);
+			shBkpWt.Description = "View the backup copy of Windows Terminal created by Genshin Stella Mod.";
+			shBkpWt.TargetPath = stellaWtBkp;
+			shBkpWt.Save();
 
-
-			return Task.CompletedTask;
+			Start.Logger.Info($@"Created: {Path.Combine(wtAppDataLocal, "Stella WT Backup.lnk")}");
+			Console.WriteLine(@"Saved in Stella AppData.");
 		}
+	}
+
+	public static async Task<Task> Install()
+	{
+		if (!File.Exists(Start.WtMsixBundle))
+			Log.ErrorAndExit(new Exception($"I can't find a required file: {Start.WtMsixBundle}"), false, false);
+
+		Process[] dllHostName = Process.GetProcessesByName("dllhost");
+		if (dllHostName.Length != 0) await Cmd.CliWrap("taskkill", "/F /IM dllhost.exe", null).ConfigureAwait(false);
+		Process[] wtName = Process.GetProcessesByName("WindowsTerminal");
+		if (wtName.Length != 0) await Cmd.CliWrap("taskkill", "/F /IM WindowsTerminal.exe", null).ConfigureAwait(false);
+
+		// Install
+		try
+		{
+			await Cmd.CliWrap("powershell", $"Add-AppxPackage -Path \"{Start.WtMsixBundle}\"", Start.AppPath).ConfigureAwait(false);
+		}
+		catch (Exception ex)
+		{
+			Log.ThrowError(ex, false);
+		}
+
+		// Check installed WT
+		Console.WriteLine(@"Checking installed software...");
+		string wtProgramFiles = Utils.GetWtProgramFiles();
+		if (string.IsNullOrEmpty(wtProgramFiles))
+		{
+			Log.ErrorAndExit(new Exception($"Windows Terminal directory was not found in: {Program.WindowsApps}"), false, false);
+		}
+		else
+		{
+			Start.Logger.Info($"Windows Terminal has been successfully installed in {wtProgramFiles}");
+
+			if (string.IsNullOrEmpty(Start.AppData))
+				Log.ErrorAndExit(new Exception("Fatal error. Code: 3781780149"), false, true);
+		}
+
+
+		return Task.CompletedTask;
 	}
 }

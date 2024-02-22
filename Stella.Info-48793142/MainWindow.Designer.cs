@@ -16,7 +16,10 @@ namespace InformationWindow
             if (disposing && (components != null))
             {
                 components.Dispose();
+                _autoCloseTimer.Dispose();
+                _timer.Dispose();
             }
+
             base.Dispose(disposing);
         }
 

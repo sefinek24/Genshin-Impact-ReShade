@@ -49,6 +49,8 @@ Stella.ConfigurationOld/obj
 # Prepare Stella Solution
 Stella.Prepare/bin
 Stella.Prepare/obj
+Stella.PrepareOld/bin
+Stella.PrepareOld/obj
 
 # Information 48793142
 Stella.Info-48793142/bin

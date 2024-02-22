@@ -1,14 +1,11 @@
-using System.Windows.Forms;
+namespace PrepareStella.Forms;
 
-namespace PrepareStella.Forms
+public sealed partial class Help : Form
 {
-	public sealed partial class Help : Form
+	public Help()
 	{
-		public Help()
-		{
-			InitializeComponent();
+		InitializeComponent();
 
-			DoubleBuffered = true;
-		}
+		DoubleBuffered = true;
 	}
 }

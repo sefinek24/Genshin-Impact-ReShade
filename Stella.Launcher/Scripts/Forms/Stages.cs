@@ -1,4 +1,5 @@
 using StellaModLauncher.Forms;
+using StellaModLauncher.Scripts.Forms.MainForm;
 
 namespace StellaModLauncher.Scripts.Forms;
 
@@ -15,6 +16,6 @@ internal static class Stages
 		int progressValue = (int)((double)stage / AllStages * 100);
 		Default._progressBar1!.Value = progressValue > Default._progressBar1.Maximum ? Default._progressBar1.Maximum : progressValue;
 
-		if (AllStages == stage) Utils.HideProgressBar(false);
+		if (AllStages == stage) Labels.HideProgressbar(null, false);
 	}
 }

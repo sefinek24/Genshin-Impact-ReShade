@@ -12,7 +12,7 @@ internal static class RoundedCorners
 		form.Region = new Region(path);
 	}
 
-	public static Image Picture(Image? startImage, int cornerRadius, Color backgroundColor)
+	public static Image Picture(Image startImage, int cornerRadius, Color backgroundColor)
 	{
 		cornerRadius *= 2;
 		Bitmap roundedImage = new(startImage.Width, startImage.Height);

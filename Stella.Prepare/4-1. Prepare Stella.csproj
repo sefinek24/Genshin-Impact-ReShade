@@ -1,0 +1,83 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>PrepareStella</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>Prepare Stella</AssemblyName>
+    <NoWarn>$(NoWarn);CA1303</NoWarn>
+    <Copyright>Copyright 2024 © by Sefinek. All Rights Reserved.</Copyright>
+    <Version>1.0.0</Version>
+    <Authors>Sefinek Inc.</Authors>
+    <RepositoryUrl>https://github.com/sefinek24/Genshin-Impact-ReShade</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://genshin.sefinek.net</PackageProjectUrl>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>0</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>f935dc20-1cf0-11d0-adb9-00c04fd58a0b</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE" Link="LICENSE">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CliWrap" Version="3.6.6" />
+    <PackageReference Include="DotNetZip" Version="1.16.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="NLog" Version="5.2.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Stella.ClassLibrary-1\7-1. StellaPLF .NET.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Forms\GamePath.cs" />
+    <Compile Update="Forms\Help.cs" />
+    <Compile Update="Forms\Resources.cs" />
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="NLog_PS.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

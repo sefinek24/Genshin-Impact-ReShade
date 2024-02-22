@@ -42,7 +42,7 @@ public partial class Default : Form
 
 	// Right
 	public static LinkLabel? _version_LinkLabel;
-	public static LinkLabel _updates_LinkLabel;
+	public static LinkLabel? _updates_LinkLabel;
 	public static PictureBox? _updateIco_PictureBox;
 
 	// Path

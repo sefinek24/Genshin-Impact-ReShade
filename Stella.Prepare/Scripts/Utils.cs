@@ -1,52 +1,49 @@
-using System;
 using System.Diagnostics;
-using System.IO;
 using System.Security.Principal;
 
-namespace PrepareStella.Scripts
+namespace PrepareStella.Scripts;
+
+internal static class Utils
 {
-	internal static class Utils
+	public static bool IsRunAsAdmin()
 	{
-		public static bool IsRunAsAdmin()
+		WindowsIdentity identity = WindowsIdentity.GetCurrent();
+		WindowsPrincipal principal = new(identity);
+		return principal.IsInRole(WindowsBuiltInRole.Administrator);
+	}
+
+	public static void OpenUrl(string url)
+	{
+		if (string.IsNullOrEmpty(url))
 		{
-			WindowsIdentity identity = WindowsIdentity.GetCurrent();
-			WindowsPrincipal principal = new WindowsPrincipal(identity);
-			return principal.IsInRole(WindowsBuiltInRole.Administrator);
+			Log.ThrowError(new Exception("URL is null or empty."), false);
+			return;
 		}
 
-		public static void OpenUrl(string url)
+		try
 		{
-			if (string.IsNullOrEmpty(url))
-			{
-				Log.ThrowError(new Exception("URL is null or empty."), false);
-				return;
-			}
+			Process.Start(url);
+			Start.Logger.Info($"Opened '{url}' in default browser.");
+		}
+		catch (Exception ex)
+		{
+			Log.ThrowError(new Exception($"Failed to open '{url}' in default browser.\n{ex}"), false);
+		}
+	}
 
-			try
-			{
-				Process.Start(url);
-				Start.Logger.Info($"Opened '{url}' in default browser.");
-			}
-			catch (Exception ex)
-			{
-				Log.ThrowError(new Exception($"Failed to open '{url}' in default browser.\n{ex}"), false);
-			}
+	public static string GetWtProgramFiles()
+	{
+		if (!Directory.Exists(Program.WindowsApps))
+		{
+			Start.Logger.Info($"{Program.WindowsApps} was not found.");
+			return null;
 		}
 
-		public static string GetWtProgramFiles()
-		{
-			if (!Directory.Exists(Program.WindowsApps))
-			{
-				Start.Logger.Info($"{Program.WindowsApps} was not found.");
-				return null;
-			}
+		string[] dirs = Directory.GetDirectories(Program.WindowsApps, "Microsoft.WindowsTerminal_*", SearchOption.AllDirectories);
 
-			string[] dirs = Directory.GetDirectories(Program.WindowsApps, "Microsoft.WindowsTerminal_*", SearchOption.AllDirectories);
+		string path = "";
+		foreach (string dir in dirs) path = dir;
 
-			string path = "";
-			foreach (string dir in dirs) path = dir;
-
-			return path;
-		}
+		return path;
 	}
 }

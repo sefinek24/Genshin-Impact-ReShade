@@ -19,11 +19,11 @@ internal static class CheckForUpdatesOfBenefits
 		if (File.Exists(migotoVerPath))
 		{
 			string migotoJson = File.ReadAllText(migotoVerPath);
-			LocalBenefitsVersion migotoJsonConverted = JsonConvert.DeserializeObject<LocalBenefitsVersion>(migotoJson);
+			LocalBenefitsVersion? migotoJsonConverted = JsonConvert.DeserializeObject<LocalBenefitsVersion>(migotoJson);
 
-			if (remoteVersions.Message.Resources.Migoto != migotoJsonConverted.Version)
+			if (remoteVersions!.Message.Resources.Migoto != migotoJsonConverted.Version)
 			{
-				Default._version_LinkLabel.Text = $@"v{migotoJsonConverted.Version} → v{remoteVersions.Message.Resources.Migoto}";
+				Default._version_LinkLabel!.Text = $@"v{migotoJsonConverted.Version} → v{remoteVersions.Message.Resources.Migoto}";
 
 				MessageBox.Show(
 					$"The new update for 3DMigoto has been detected. This update will not affect any downloaded mods.\n\nClick OK to proceed with the update.\n\nYour version: v{migotoJsonConverted.Version} from {migotoJsonConverted.Date}\nNew version: v{remoteVersions.Message.Resources.Migoto}",
@@ -35,7 +35,7 @@ internal static class CheckForUpdatesOfBenefits
 		}
 		else
 		{
-			UpdateBenefits.Start("3dmigoto", $"3DMigoto Software - v{remoteVersions.Message.Resources.Migoto}.zip", Path.GetDirectoryName(migotoVerPath));
+			UpdateBenefits.Start("3dmigoto", $"3DMigoto Software - v{remoteVersions!.Message.Resources.Migoto}.zip", Path.GetDirectoryName(migotoVerPath));
 			return 1;
 		}
 
@@ -45,20 +45,20 @@ internal static class CheckForUpdatesOfBenefits
 		if (File.Exists(modsVerPath))
 		{
 			string modsJson = File.ReadAllText(modsVerPath);
-			LocalBenefitsVersion modsJsonConverted = JsonConvert.DeserializeObject<LocalBenefitsVersion>(modsJson);
-			if (remoteVersions.Message.Resources.Mods != modsJsonConverted.Version)
+			LocalBenefitsVersion? modsJsonConverted = JsonConvert.DeserializeObject<LocalBenefitsVersion>(modsJson);
+			if (remoteVersions.Message.Resources.Mods != modsJsonConverted!.Version)
 			{
-				Default._version_LinkLabel.Text = $@"v{modsJsonConverted.Version} → v{remoteVersions.Message.Resources.Mods}";
+				Default._version_LinkLabel!.Text = $@"v{modsJsonConverted.Version} → v{remoteVersions.Message.Resources.Mods}";
 
 				MessageBox.Show(
 					$"A new version of the default mod pack for Stella Mod Plus subscribers has been detected. Your custom mods will not be deleted, provided they are in folder number 3. The software creator is not responsible for accidental deletion of mods.\nIf character models seem strange after the update, remove the default mod from the package. Each character can have only 1 mod. In any case, if you encounter any problems, visit the Genshin Stella Mod Discord server and ask for help.\n\nClick the OK button to continue.\n\nYour version: v{modsJsonConverted.Version} from {modsJsonConverted.Date}\nNew version: v{remoteVersions.Message.Resources.Mods}",
 					Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 				// Delete old mods
-				Default._preparingPleaseWait.Text = Resources.StellaResources_DeletingThePreviousVersionOfTheModPack;
-				string migotoCharsMods = Path.Combine(Default.ResourcesPath, "3DMigoto", "Mods", "1. Characters");
+				Default._preparingPleaseWait!.Text = Resources.StellaResources_DeletingThePreviousVersionOfTheModPack;
+				string migotoCharsMods = Path.Combine(Default.ResourcesPath!, "3DMigoto", "Mods", "1. Characters");
 				if (Directory.Exists(migotoCharsMods)) await DeleteBenefits.DeleteDirectory(migotoCharsMods).ConfigureAwait(true);
-				string migotoOtherMods = Path.Combine(Default.ResourcesPath, "3DMigoto", "Mods", "2. Other");
+				string migotoOtherMods = Path.Combine(Default.ResourcesPath!, "3DMigoto", "Mods", "2. Other");
 				if (Directory.Exists(migotoOtherMods)) await DeleteBenefits.DeleteDirectory(migotoOtherMods).ConfigureAwait(true);
 
 				// Update
@@ -73,10 +73,10 @@ internal static class CheckForUpdatesOfBenefits
 		if (File.Exists(addonsVersionPath))
 		{
 			string addonsJson = File.ReadAllText(addonsVersionPath);
-			LocalBenefitsVersion addonsJsonConverted = JsonConvert.DeserializeObject<LocalBenefitsVersion>(addonsJson);
-			if (remoteVersions.Message.Resources.Addons != addonsJsonConverted.Version)
+			LocalBenefitsVersion? addonsJsonConverted = JsonConvert.DeserializeObject<LocalBenefitsVersion>(addonsJson);
+			if (remoteVersions.Message.Resources.Addons != addonsJsonConverted!.Version)
 			{
-				Default._version_LinkLabel.Text = $@"v{addonsJsonConverted.Version} → v{remoteVersions.Message.Resources.Addons}";
+				Default._version_LinkLabel!.Text = $@"v{addonsJsonConverted.Version} → v{remoteVersions.Message.Resources.Addons}";
 
 				MessageBox.Show(
 					$"The new update for ReShade addons is available!\n\nClick the OK button to proceed with the update.\n\nYour version: v{addonsJsonConverted.Version} from {addonsJsonConverted.Date}\nNew version: v{remoteVersions.Message.Resources.Addons}",
@@ -98,10 +98,10 @@ internal static class CheckForUpdatesOfBenefits
 		if (File.Exists(presetsVersionPath))
 		{
 			string presetsJson = File.ReadAllText(presetsVersionPath);
-			LocalBenefitsVersion presetsJsonConverted = JsonConvert.DeserializeObject<LocalBenefitsVersion>(presetsJson);
-			if (remoteVersions.Message.Resources.Presets != presetsJsonConverted.Version)
+			LocalBenefitsVersion? presetsJsonConverted = JsonConvert.DeserializeObject<LocalBenefitsVersion>(presetsJson);
+			if (remoteVersions.Message.Resources.Presets != presetsJsonConverted!.Version)
 			{
-				Default._version_LinkLabel.Text = $@"v{presetsJsonConverted.Version} → v{remoteVersions.Message.Resources.Presets}";
+				Default._version_LinkLabel!.Text = $@"v{presetsJsonConverted.Version} → v{remoteVersions.Message.Resources.Presets}";
 
 				MessageBox.Show(
 					$"A new version of presets has been detected.\n\nYour version: v{presetsJsonConverted.Version} from {presetsJsonConverted.Date}\nNew version: v{remoteVersions.Message.Resources.Presets}",
@@ -126,10 +126,10 @@ internal static class CheckForUpdatesOfBenefits
 		if (File.Exists(shadersVersionPath))
 		{
 			string shadersJson = File.ReadAllText(shadersVersionPath);
-			LocalBenefitsVersion shadersJsonConverted = JsonConvert.DeserializeObject<LocalBenefitsVersion>(shadersJson);
-			if (remoteVersions.Message.Resources.Shaders != shadersJsonConverted.Version)
+			LocalBenefitsVersion? shadersJsonConverted = JsonConvert.DeserializeObject<LocalBenefitsVersion>(shadersJson);
+			if (remoteVersions.Message.Resources.Shaders != shadersJsonConverted!.Version)
 			{
-				Default._version_LinkLabel.Text = $@"v{shadersJsonConverted.Version} → v{remoteVersions.Message.Resources.Shaders}";
+				Default._version_LinkLabel!.Text = $@"v{shadersJsonConverted.Version} → v{remoteVersions.Message.Resources.Shaders}";
 
 				MessageBox.Show(
 					$"New version of shaders is available!\n\nYour version: v{shadersJsonConverted.Version} from {shadersJsonConverted.Date}\nNew version: v{remoteVersions.Message.Resources.Shaders}",
@@ -151,10 +151,10 @@ internal static class CheckForUpdatesOfBenefits
 		if (File.Exists(cmdVersionPath))
 		{
 			string cmdJson = File.ReadAllText(cmdVersionPath);
-			LocalBenefitsVersion cmdJsonConverted = JsonConvert.DeserializeObject<LocalBenefitsVersion>(cmdJson);
-			if (remoteVersions.Message.Resources.Cmd != cmdJsonConverted.Version)
+			LocalBenefitsVersion? cmdJsonConverted = JsonConvert.DeserializeObject<LocalBenefitsVersion>(cmdJson);
+			if (remoteVersions.Message.Resources.Cmd != cmdJsonConverted!.Version)
 			{
-				Default._version_LinkLabel.Text = $@"v{cmdJsonConverted.Version} → v{remoteVersions.Message.Resources.Cmd}";
+				Default._version_LinkLabel!.Text = $@"v{cmdJsonConverted.Version} → v{remoteVersions.Message.Resources.Cmd}";
 
 				MessageBox.Show(
 					$"A new version of the CMD files is available!\n\nYour version: v{cmdJsonConverted.Version} from {cmdJsonConverted.Date}\nNew version: v{remoteVersions.Message.Resources.Cmd}",

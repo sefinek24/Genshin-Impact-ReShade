@@ -33,7 +33,7 @@ internal static class Music
 		string wavPath = Path.Combine(Program.AppPath, "data", "sounds", dir, $"{fileName}.wav");
 		if (!File.Exists(wavPath))
 		{
-			Default._status_Label.Text += $"[x] {Resources.Default_TheSoundFileWithMusicWasNotFound}\n";
+			Default._status_Label!.Text += $"[x] {Resources.Default_TheSoundFileWithMusicWasNotFound}\n";
 			Program.Logger.Error($"The sound file with music was not found in the location: {wavPath}");
 			return;
 		}
@@ -59,7 +59,7 @@ internal static class Music
 		}
 		catch (Exception ex)
 		{
-			Default._status_Label.Text += $"[x] {ex.Message}\n";
+			Default._status_Label!.Text += $"[x] {ex.Message}\n";
 			Program.Logger.Error(ex.ToString());
 		}
 	}

@@ -20,6 +20,11 @@
     <Copyright>Copyright 2024 © by Sefinek. All Rights Reserved.</Copyright>
     <NeutralLanguage>en</NeutralLanguage>
     <NoWarn>$(NoWarn);CA1303</NoWarn>
+    <PackageProjectUrl>https://genshin.sefinek.net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/sefinek24/Genshin-Impact-ReShade</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -442,9 +447,13 @@
     </None>
     <None Include="..\LICENSE" Link="LICENSE">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
     </None>
     <None Include="..\README.md" Link="README.md">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
 

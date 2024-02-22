@@ -24,14 +24,14 @@ internal static class ReShadeIni
 
 			await Prepare().ConfigureAwait(true);
 
-			Default._status_Label.Text += $"[✓] {Resources.Default_SuccessfullyDownloadedReShadeCfg}\n";
+			Default._status_Label!.Text += $"[✓] {Resources.Default_SuccessfullyDownloadedReShadeCfg}\n";
 			Program.Logger.Info($"Successfully downloaded ReShade.ini and saved in: {reShadePath}");
 
 			await CheckForUpdates.Analyze().ConfigureAwait(true);
 		}
 		catch (Exception ex)
 		{
-			Default._status_Label.Text += $"[x] {Resources.Default_Meeow_FailedToDownloadReShadeIni_TryAgain}\n";
+			Default._status_Label!.Text += $"[x] {Resources.Default_Meeow_FailedToDownloadReShadeIni_TryAgain}\n";
 			Program.Logger.Error(ex.ToString());
 			if (!File.Exists(reShadePath)) Program.Logger.Info(Resources.Default_TheReShadeIniFileStillDoesNotExist);
 		}
