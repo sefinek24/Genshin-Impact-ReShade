@@ -240,7 +240,7 @@ namespace PrepareStella
 			else
 			{
 				// Run Genshin Stella Mod
-				string stellaLauncher = Path.Combine(Start.AppPath, "Stella Mod Launcher.exe");
+				string stellaLauncher = Path.Combine(Start.AppPath, "net8.0-windows", "Stella Mod Launcher.exe");
 
 				Console.WriteLine($@"Launching {Path.GetFileName(stellaLauncher)}...");
 				_ = Cmd.CliWrap(stellaLauncher, null, null);
