@@ -1,11 +1,11 @@
 using System.ComponentModel;
 using System.Net.Http.Headers;
-using ByteSizeLib;
 using Newtonsoft.Json;
 using StellaModLauncher.Forms;
 using StellaModLauncher.Models;
 using StellaModLauncher.Properties;
 using StellaModLauncher.Scripts.Forms.MainForm;
+using StellaModLauncher.Scripts.Remote;
 using StellaPLFNet;
 
 namespace StellaModLauncher.Scripts.Patrons;
@@ -106,7 +106,7 @@ internal static class UpdateBenefits
 				int progressPercentage = (int)((double)totalRead / totalBytes * 100);
 				double downloadSpeedInMb = totalRead / (1024 * 1024) / (DateTime.Now - startTime).TotalSeconds;
 
-				Remote.Download.UpdateProgressBar(Resources.NormalRelease_DownloadingUpdate_, progressPercentage, totalRead, totalBytes, downloadSpeedInMb);
+				Download.UpdateProgressBar(Resources.NormalRelease_DownloadingUpdate_, progressPercentage, totalRead, totalBytes, downloadSpeedInMb);
 			}
 		}
 		catch (HttpRequestException ex)
@@ -125,7 +125,7 @@ internal static class UpdateBenefits
 		}
 		finally
 		{
-			await Remote.Download.UnzipWithProgress(_zipFile, _outputDir).ConfigureAwait(true);
+			await Download.UnzipWithProgress(_zipFile, _outputDir).ConfigureAwait(true);
 
 			Default._progressBar1.Hide();
 			Default._preparingPleaseWait.Hide();
