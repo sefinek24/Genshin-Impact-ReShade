@@ -13,8 +13,7 @@ internal static class Program
 		Console.WriteLine($"Release folder path: {ReleaseBuildPath}");
 		Console.WriteLine();
 
-		foreach (var process in Process.GetProcessesByName("inject64"))
-		{
+		foreach (Process process in Process.GetProcessesByName("inject64"))
 			try
 			{
 				process.Kill();
@@ -24,7 +23,6 @@ internal static class Program
 			{
 				Console.WriteLine($"Failed to terminate {process.ProcessName} (ID: {process.Id}): {ex.Message}");
 			}
-		}
 
 		await Utils.DeleteDirectoryIfExistsAsync(ReleaseBuildPath).ConfigureAwait(false);
 
@@ -63,12 +61,8 @@ internal static class Program
 		Console.WriteLine();
 
 		if (compilationSuccess)
-		{
 			Console.WriteLine($"----------------------------- COMPILED {Path.GetFileName(projectPath)} -----------------------------");
-		}
 		else
-		{
 			Console.WriteLine($"----------------------------- FAILED TO COMPILE {Path.GetFileName(projectPath)} -----------------------------");
-		}
 	}
 }

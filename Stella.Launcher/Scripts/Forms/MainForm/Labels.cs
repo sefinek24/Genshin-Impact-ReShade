@@ -61,10 +61,7 @@ internal static class Labels
 		Default._youtubeIco_Picturebox!.Show();
 		Default._youTube_LinkLabel!.Show();
 
-		if (!string.IsNullOrEmpty(successText) && !error)
-		{
-			Default._status_Label!.Text += $"[✓] {successText}\n";
-		}
+		if (!string.IsNullOrEmpty(successText) && !error) Default._status_Label!.Text += $"[✓] {successText}\n";
 
 		if (!error) return;
 		Default.UpdateIsAvailable = false;

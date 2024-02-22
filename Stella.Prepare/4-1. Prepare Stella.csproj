@@ -56,7 +56,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Stella.ClassLibrary-1\7-1. StellaPLF .NET.csproj" />
+    <ProjectReference Include="..\Stella.ClassLibrary-1\7-1. StellaPLF .NET 8.csproj" />
   </ItemGroup>
 
   <ItemGroup>
