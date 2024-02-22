@@ -9,7 +9,7 @@ internal static class Delete
 	{
 		try
 		{
-			using RegistryKey? subKey = Registry.CurrentUser.OpenSubKey(Secret.RegistryKeyPath, true);
+			using RegistryKey? subKey = Registry.CurrentUser.OpenSubKey(Program.RegistryPath, true);
 			if (subKey != null)
 			{
 				object? value = subKey.GetValue(key);
@@ -42,7 +42,7 @@ internal static class Delete
 		}
 		catch (Exception ex)
 		{
-			Log.ErrorAndExit(new Exception($"An error occurred while deleting registry value '{key}': {ex.Message}"), true);
+			Log.ErrorAndExit(new Exception($"An error occurred while deleting registry value '{key}': {ex}"), true);
 		}
 	}
 }

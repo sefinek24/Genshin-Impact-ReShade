@@ -228,6 +228,9 @@
   <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="changeBg_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -252,9 +255,6 @@
   <data name="changeBg_LinkLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="changeBg_LinkLabel.ToolTip" xml:space="preserve">
     <value>Change the application background</value>
   </data>
@@ -471,6 +471,9 @@
   <data name="&gt;&gt;githubIco_Picturebox.ZOrder" xml:space="preserve">
     <value>34</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="tools_LinkLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -589,7 +592,7 @@
     <value>Georgia, 54.75pt</value>
   </data>
   <data name="startGame_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 211</value>
+    <value>83, 211</value>
   </data>
   <data name="startGame_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>501, 109</value>
@@ -746,7 +749,7 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>Comic Sans MS, 14.25pt</value>
   </data>
   <data name="runGiLauncher_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>225, 363</value>
+    <value>219, 363</value>
   </data>
   <data name="runGiLauncher_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>232, 26</value>
@@ -899,7 +902,7 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>NoControl</value>
   </data>
   <data name="injectReShade_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>100, 325</value>
+    <value>94, 325</value>
   </data>
   <data name="injectReShade_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>134, 26</value>
@@ -943,7 +946,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>NoControl</value>
   </data>
   <data name="runFpsUnlocker_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>252, 325</value>
+    <value>246, 325</value>
   </data>
   <data name="runFpsUnlocker_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>177, 26</value>
@@ -985,7 +988,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>NoControl</value>
   </data>
   <data name="only3DMigoto_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>447, 325</value>
+    <value>441, 325</value>
   </data>
   <data name="only3DMigoto_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>143, 26</value>

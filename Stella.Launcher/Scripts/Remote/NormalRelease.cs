@@ -1,23 +1,15 @@
-using System.ComponentModel;
-using System.Net;
 using ByteSizeLib;
 using CliWrap.Builders;
 using StellaModLauncher.Forms;
 using StellaModLauncher.Properties;
 using StellaPLFNet;
 
-namespace StellaModLauncher.Scripts.Download;
+namespace StellaModLauncher.Scripts.Remote;
 
 internal static class NormalRelease
 {
-	// Files
 	public static readonly string SetupPathExe = Path.Combine(Path.GetTempPath(), "Stella_Mod_Update.exe");
 	private static readonly string DownloadUrl = "https://github.com/sefinek24/Genshin-Impact-ReShade/releases/latest/download/Stella-Mod-Setup.exe";
-
-	// Download
-	private static double _downloadSpeed;
-	private static long _lastBytesReceived;
-	private static DateTime _lastUpdateTime = DateTime.Now;
 
 	public static async void Run(string? remoteVersion, DateTime remoteVerDate, bool beta)
 	{
@@ -37,12 +29,6 @@ internal static class NormalRelease
 		Default._preparingPleaseWait.Hide();
 		Default._preparingPleaseWait.Text = Resources.NormalRelease_Preparing_IfProcessIsStuckReopenLauncher;
 
-		Default._discordServerIco_Picturebox.Show();
-		Default._discordServer_LinkLabel.Show();
-		Default._supportMeIco_PictureBox.Show();
-		Default._supportMe_LinkLabel.Show();
-		Default._youtubeIco_Picturebox.Show();
-
 		Default._progressBar1.Value = 0;
 
 		// BalloonTip
@@ -52,19 +38,36 @@ internal static class NormalRelease
 		Default._status_Label.Text += $"[i] {string.Format(Resources.NormalRelease_NewVersionFrom_IsAvailable, remoteVerDate)}\n";
 		Program.Logger.Info($"New release from {remoteVerDate} is available: v{Program.AppFileVersion} → v{remoteVersion} ({(beta ? "Beta" : "Stable")})");
 
-		// Taskbar
-		TaskbarProgress.SetProgressValue(100);
 
 		// Check update size
-		using WebClient wc = new();
-		wc.Headers.Add("User-Agent", Program.UserAgent);
-		await wc.OpenReadTaskAsync(DownloadUrl).ConfigureAwait(true);
-		string updateSize = ByteSize.FromBytes(Convert.ToInt64(wc.ResponseHeaders["Content-Length"])).MegaBytes.ToString("00.00");
-		Default._status_Label.Text += $"[i] {string.Format(Resources.StellaResources_UpdateSize, $"{updateSize} MB")}\n";
+		string? updateSize = null;
+		try
+		{
+			HttpRequestMessage request = new(HttpMethod.Head, DownloadUrl);
+			HttpResponseMessage response = await Program.WbClient.Value.SendAsync(request).ConfigureAwait(true);
+			response.EnsureSuccessStatusCode();
 
-		// Final
-		TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Paused);
-		Program.Logger.Info($"Update size: {updateSize} MB");
+			if (response.Content.Headers.ContentLength.HasValue)
+			{
+				updateSize = ByteSize.FromBytes(response.Content.Headers.ContentLength.Value).MegaBytes.ToString("00.00");
+
+				Default._status_Label.Text += $"[i] {string.Format(Resources.NormalRelease_UpdateSize, $"{updateSize} MB")}\n";
+			}
+			else
+			{
+				Default._status_Label.Text += "[i] Unknown file size.\n";
+			}
+		}
+		catch (Exception ex)
+		{
+			Program.Logger.Error("Error while fetching update size", ex);
+		}
+		finally
+		{
+			TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Paused);
+			TaskbarProgress.SetProgressValue(100);
+			Program.Logger.Info($"Update size: {updateSize} MB");
+		}
 	}
 
 	private static async void Update_Event(object? sender, LinkLabelLinkClickedEventArgs e)
@@ -116,41 +119,45 @@ internal static class NormalRelease
 		Program.Logger.Info(Resources.NormalRelease_DownloadingInProgress);
 		TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Normal);
 
-		using WebClient client = new();
-		client.Headers.Add("User-Agent", Program.UserAgent);
-		client.DownloadProgressChanged += Client_DownloadProgressChanged;
-		client.DownloadFileCompleted += Client_DownloadFileCompleted;
-		await client.DownloadFileTaskAsync(new Uri(DownloadUrl), SetupPathExe).ConfigureAwait(true);
+
+		try
+		{
+			HttpResponseMessage response = await Program.WbClient.Value.GetAsync(DownloadUrl, HttpCompletionOption.ResponseHeadersRead).ConfigureAwait(true);
+			response.EnsureSuccessStatusCode();
+
+			long totalBytes = response.Content.Headers.ContentLength ?? 0;
+			DateTime startTime = DateTime.Now;
+
+			using Stream streamToReadFrom = await response.Content.ReadAsStreamAsync().ConfigureAwait(true);
+			using FileStream streamToWriteTo = File.Open(SetupPathExe, FileMode.Create, FileAccess.Write, FileShare.None);
+			byte[] buffer = new byte[8192];
+			int bytesRead;
+			long totalRead = 0;
+
+			TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Normal);
+
+			while ((bytesRead = await streamToReadFrom.ReadAsync(buffer).ConfigureAwait(true)) > 0)
+			{
+				await streamToWriteTo.WriteAsync(buffer.AsMemory(0, bytesRead)).ConfigureAwait(true);
+				totalRead += bytesRead;
+
+				int progressPercentage = (int)((double)totalRead / totalBytes * 100);
+				double downloadSpeedInMb = totalRead / (1024 * 1024) / (DateTime.Now - startTime).TotalSeconds;
+
+				Download.UpdateProgressBar(Resources.StellaResources_DownloadingResources, progressPercentage, totalRead, totalBytes, downloadSpeedInMb);
+			}
+		}
+		catch (Exception ex)
+		{
+			Log.ThrowError(ex);
+		}
+		finally
+		{
+			DownloadFileCompleted();
+		}
 	}
 
-	private static void Client_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
-	{
-		int progress = (int)Math.Floor(e.BytesReceived * 100.0 / e.TotalBytesToReceive);
-		Default._progressBar1.Value = progress;
-
-		TaskbarProgress.SetProgressValue((ulong)progress);
-
-		DateTime currentTime = DateTime.Now;
-		TimeSpan elapsedTime = currentTime - _lastUpdateTime;
-		long bytesReceived = e.BytesReceived - _lastBytesReceived;
-
-		if (!(elapsedTime.TotalMilliseconds > 1000)) return;
-
-		_lastUpdateTime = currentTime;
-		_lastBytesReceived = e.BytesReceived;
-
-		double bytesReceivedMb = ByteSize.FromBytes(e.BytesReceived).MegaBytes;
-		double bytesReceiveMb = ByteSize.FromBytes(e.TotalBytesToReceive).MegaBytes;
-
-		_downloadSpeed = bytesReceived / elapsedTime.TotalSeconds;
-		double downloadSpeedInMb = _downloadSpeed / (1024 * 1024);
-
-		Default._preparingPleaseWait.Text = $@"{string.Format(Resources.NormalRelease_DownloadingUpdate_, $"{bytesReceivedMb:00.00}", $"{bytesReceiveMb:000.00}")} [{downloadSpeedInMb:00.00} MB/s]";
-
-		Program.Logger.Info($"Downloading new update... {bytesReceivedMb:00.00} MB of {bytesReceiveMb:000.00} MB / {downloadSpeedInMb:00.00} MB/s");
-	}
-
-	private static async void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
+	private static async void DownloadFileCompleted()
 	{
 		string logDir = Path.Combine(Log.Folder!, "updates");
 		if (!Directory.Exists(logDir)) Directory.CreateDirectory(logDir);
@@ -176,7 +183,7 @@ internal static class NormalRelease
 
 		// Run setup
 		string logFile = Path.Combine(logDir, $"{DateTime.Now:yyyy-dd-M...HH-mm-ss}.log");
-		Cmd.CliWrap? command = new()
+		Cmd.CliWrap command = new()
 		{
 			App = SetupPathExe,
 			Arguments = new ArgumentsBuilder()

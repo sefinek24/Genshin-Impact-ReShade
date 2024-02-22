@@ -200,7 +200,7 @@ public partial class Default : Form
 						label1.Text = @"Genshin Stella Mod Plus Launcher";
 						madeBySefinek_Label.Text = @"What will we be doing today?";
 
-						Image avatar = null;
+						Image? avatar = null;
 						if (!string.IsNullOrEmpty(remote.AvatarUrl)) avatar = await Utils.LoadImageAsync(remote.AvatarUrl).ConfigureAwait(true);
 
 						if (avatar == null)
@@ -272,14 +272,14 @@ public partial class Default : Form
 		Program.Logger.Info(string.Format(Resources.Main_LoadedForm_, Text));
 
 		// Check ReShade & FPS Unlock version
-		Stages.UpdateStage(6, "Checking ReShade & FPS Unlock version...");
+		Stages.UpdateStage(7, "Checking ReShade & FPS Unlock version...");
 		NuGetVersion reshadeVersion = NuGetVersion.Parse(FileVersionInfo.GetVersionInfo(Program.ReShadePath).ProductVersion);
 		NuGetVersion fpsUnlockVersion = NuGetVersion.Parse(FileVersionInfo.GetVersionInfo(Program.FpsUnlockerExePath).ProductVersion);
 		Data.ReShadeVer = reshadeVersion.ToString();
 		Data.UnlockerVer = fpsUnlockVersion.ToString();
 
 		// Launch count
-		Stages.UpdateStage(7, "Checking `LaunchCount`...");
+		Stages.UpdateStage(8, "Checking `LaunchCount`...");
 
 		int launchCount = await LaunchCountHelper.CheckLaunchCountAndShowMessages().ConfigureAwait(true);
 		await WebViewHelper.Initialize(webView21, $"https://api.sefinek.net/api/v2/moecounter?number={launchCount}&length=7&theme=rule34").ConfigureAwait(true);
@@ -293,7 +293,7 @@ public partial class Default : Form
 			if (Utils.CheckFileExists(path)) Utils.OpenUrl(path);
 		}
 
-		Stages.UpdateStage(8, "Initializing Discord RPC...");
+		Stages.UpdateStage(9, "Initializing Discord RPC...");
 
 		// Telemetry
 		// Telemetry.Opened();
@@ -345,11 +345,11 @@ public partial class Default : Form
 
 
 		// Check for updates
-		Stages.UpdateStage(9, "Checking for updates...");
+		Stages.UpdateStage(10, "Checking for updates...");
 		int found = await CheckForUpdates.Analyze().ConfigureAwait(true);
 		if (found == 1) return;
 
-		Stages.UpdateStage(10, "Checking Genshin Stella Mod.exe and ReShade.ini...");
+		Stages.UpdateStage(11, "Checking Genshin Stella Mod.exe and ReShade.ini...");
 
 		// Check Genshin Stella Mod.exe
 		if (!File.Exists(Run.GsmPath))
@@ -370,7 +370,7 @@ public partial class Default : Form
 		// Check shortcut
 		Shortcut.Check();
 
-		Stages.UpdateStage(11, "Finishing...");
+		Stages.UpdateStage(12, "Finishing...");
 
 		// Music
 		_ = Music.PlayBg();

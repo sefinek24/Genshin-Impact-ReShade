@@ -5,13 +5,12 @@ namespace StellaModLauncher.Scripts;
 
 internal static class Secret
 {
-	public const string RegistryKeyPath = @"Software\Stella Mod Launcher";
 	public static bool IsStellaPlusSubscriber = false;
 	public static string? BearerToken;
 
 	public static string? GetTokenFromRegistry()
 	{
-		using RegistryKey? registryKey = Registry.CurrentUser.OpenSubKey(RegistryKeyPath);
+		using RegistryKey? registryKey = Registry.CurrentUser.OpenSubKey(Program.RegistryPath);
 		object? value = registryKey?.GetValue("Secret");
 		if (value is not string token) return null;
 
@@ -31,11 +30,8 @@ internal static class Secret
 				new KeyValuePair<string, string?>("diskId", ComputerInfo.GetHardDriveSerialNumber())
 			];
 
-			using HttpClient httpClient = new();
-			httpClient.DefaultRequestHeaders.UserAgent.ParseAdd(Program.UserAgent);
-
 			FormUrlEncodedContent content = new(postData);
-			HttpResponseMessage response = await httpClient.PostAsync($"{Program.WebApi}/genshin-stella-mod/access/launcher/verify", content).ConfigureAwait(false);
+			HttpResponseMessage response = await Program.WbClient.Value.PostAsync($"{Program.WebApi}/genshin-stella-mod/access/launcher/verify", content).ConfigureAwait(false);
 
 			string json = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
 

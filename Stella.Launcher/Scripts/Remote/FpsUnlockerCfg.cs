@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 using StellaModLauncher.Forms;
 using StellaModLauncher.Properties;
 
-namespace StellaModLauncher.Scripts.Download;
+namespace StellaModLauncher.Scripts.Remote;
 
 /// <summary>
 ///    Class responsible for downloading and updating the FPS unlocker config file.

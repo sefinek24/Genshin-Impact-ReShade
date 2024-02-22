@@ -1,6 +1,6 @@
 using StellaModLauncher.Forms;
 using StellaModLauncher.Properties;
-using StellaModLauncher.Scripts.Download;
+using StellaModLauncher.Scripts.Remote;
 
 namespace StellaModLauncher.Scripts.Forms.MainForm;
 

@@ -5,7 +5,6 @@ using Newtonsoft.Json;
 using StellaModLauncher.Forms;
 using StellaModLauncher.Models;
 using StellaModLauncher.Properties;
-using StellaModLauncher.Scripts.Download;
 using StellaModLauncher.Scripts.Forms.MainForm;
 using StellaPLFNet;
 
@@ -13,18 +12,13 @@ namespace StellaModLauncher.Scripts.Patrons;
 
 internal static class UpdateBenefits
 {
-	// Download
-	private static double _downloadSpeed;
-	private static long _lastBytesReceived;
-	private static DateTime _lastUpdateTime = DateTime.Now;
-
 	private static string? _zipFile;
 	private static string? _outputDir;
 	private static string? _successfullyUpdated;
-	private static readonly string BenefitsTempFile = Path.Combine(Default.ResourcesPath, "Temp files");
+	private static readonly string BenefitsTempFile = Path.Combine(Default.ResourcesPath!, "Temp files");
 
 	// Paths
-	public static async void Download(string benefitName, string zipFilename, string? dirPathToUnpack)
+	public static async void Start(string benefitName, string zipFilename, string? dirPathToUnpack)
 	{
 		if (!Directory.Exists(BenefitsTempFile))
 		{
@@ -68,7 +62,7 @@ internal static class UpdateBenefits
 
 
 		// Run download
-		await DownloadFileAsync($"{data.PreparedUrl}?benefitType={benefitName}", _zipFile).ConfigureAwait(true);
+		await StartDownload($"{data.PreparedUrl}?benefitType={benefitName}").ConfigureAwait(true);
 
 		Utils.AddLinkClickedEventHandler(Default._updates_LinkLabel, CheckForUpdates.CheckUpdates_Click);
 
@@ -82,7 +76,7 @@ internal static class UpdateBenefits
 		BalloonTip.Show("ReShade configuration", $"The ReShade configuration file has also been updated, including setting the default preset to {Path.GetFileNameWithoutExtension(currentPreset)}.");
 	}
 
-	private static async Task DownloadFileAsync(string requestUri, string? filename)
+	private static async Task StartDownload(string requestUri)
 	{
 		HttpClient client = Program.WbClient.Value;
 
@@ -93,105 +87,57 @@ internal static class UpdateBenefits
 			HttpResponseMessage response = await client.GetAsync(requestUri, HttpCompletionOption.ResponseHeadersRead).ConfigureAwait(true);
 			response.EnsureSuccessStatusCode();
 
-			long totalBytes = response.Content.Headers.ContentLength.GetValueOrDefault(-1L);
-			long totalBytesRead = 0L;
-			long readCount = 0L;
+			long totalBytes = response.Content.Headers.ContentLength ?? 0;
+			DateTime startTime = DateTime.Now;
+
+			using Stream streamToReadFrom = await response.Content.ReadAsStreamAsync().ConfigureAwait(true);
+			using FileStream streamToWriteTo = File.Open(_zipFile, FileMode.Create, FileAccess.Write, FileShare.None);
 			byte[] buffer = new byte[8192];
-			bool isMoreToRead = true;
+			int bytesRead;
+			long totalRead = 0;
 
-			using FileStream fileStream = new(filename, FileMode.Create, FileAccess.Write, FileShare.None, 8192, true);
-			using Stream contentStream = await response.Content.ReadAsStreamAsync().ConfigureAwait(true);
-			do
+			TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Normal);
+
+			while ((bytesRead = await streamToReadFrom.ReadAsync(buffer).ConfigureAwait(true)) > 0)
 			{
-				int bytesRead = await contentStream.ReadAsync(buffer).ConfigureAwait(true);
-				if (bytesRead == 0)
-				{
-					isMoreToRead = false;
-					continue;
-				}
+				await streamToWriteTo.WriteAsync(buffer.AsMemory(0, bytesRead)).ConfigureAwait(true);
+				totalRead += bytesRead;
 
-				await fileStream.WriteAsync(buffer.AsMemory(0, bytesRead)).ConfigureAwait(true);
+				int progressPercentage = (int)((double)totalRead / totalBytes * 100);
+				double downloadSpeedInMb = totalRead / (1024 * 1024) / (DateTime.Now - startTime).TotalSeconds;
 
-				totalBytesRead += bytesRead;
-				readCount += 1;
-
-				if (readCount % 100 == 0) UpdateUi(totalBytesRead, totalBytes);
-			} while (isMoreToRead);
-
-			if (totalBytesRead != totalBytes) throw new IOException($"Expected {totalBytes} bytes but got {totalBytesRead} bytes.");
+				Remote.Download.UpdateProgressBar(Resources.NormalRelease_DownloadingUpdate_, progressPercentage, totalRead, totalBytes, downloadSpeedInMb);
+			}
 		}
 		catch (HttpRequestException ex)
 		{
 			Program.Logger.Error($"HttpRequestException: {ex.Message}");
-			MessageBox.Show($"{ex.Message}\n\nAuthorization server returned a different status code than expected. Please contact the developer.",
-				Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
+			MessageBox.Show($"{ex.Message}\n\nAuthorization server returned a different status code than expected. Please contact the developer.", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 			Environment.Exit(563211);
 		}
 		catch (Exception ex)
 		{
 			Program.Logger.Error($"Exception: {ex.Message}");
-			MessageBox.Show($"An unexpected error occurred {ex.Message}\n\nPlease contact the application developer for assistance.",
-				Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
+			MessageBox.Show($"An unexpected error occurred {ex.Message}\n\nPlease contact the application developer for assistance.", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
 			Environment.Exit(563212);
 		}
 		finally
 		{
-			client.DefaultRequestHeaders.Authorization = null;
+			await Remote.Download.UnzipWithProgress(_zipFile, _outputDir).ConfigureAwait(true);
+
+			Default._progressBar1.Hide();
+			Default._preparingPleaseWait.Hide();
+			Default._discordServerIco_Picturebox.Show();
+			Default._discordServer_LinkLabel.Show();
+			Default._supportMeIco_PictureBox.Show();
+			Default._supportMe_LinkLabel.Show();
+			Default._youtubeIco_Picturebox.Show();
+			Default._youTube_LinkLabel.Show();
+			Default._status_Label.Text += $"[✓] {_successfullyUpdated}\n";
+
+			await CheckForUpdates.Analyze().ConfigureAwait(true);
 		}
-
-
-		Client_DownloadFileCompleted(null, null);
-	}
-
-	private static void UpdateUi(long bytesRead, long totalBytes)
-	{
-		int progress = (int)(bytesRead * 100 / totalBytes);
-		Default._progressBar1.Value = progress;
-
-		TaskbarProgress.SetProgressValue((ulong)progress);
-
-		DateTime currentTime = DateTime.Now;
-		TimeSpan elapsedTime = currentTime - _lastUpdateTime;
-		long bytesReceivedSinceLastUpdate = bytesRead - _lastBytesReceived;
-
-		if (elapsedTime.TotalMilliseconds <= 1000) return;
-
-		_lastUpdateTime = currentTime;
-		_lastBytesReceived = bytesRead;
-
-		double bytesReceivedMb = ByteSize.FromBytes(bytesRead).MegaBytes;
-		double totalBytesMb = ByteSize.FromBytes(totalBytes).MegaBytes;
-
-		_downloadSpeed = bytesReceivedSinceLastUpdate / elapsedTime.TotalSeconds;
-		double downloadSpeedInMb = _downloadSpeed / (1024 * 1024);
-
-		Default._preparingPleaseWait.Text = $@"{string.Format(Resources.NormalRelease_DownloadingUpdate_, $"{bytesReceivedMb:00.00}", $"{totalBytesMb:000.00}")} [{downloadSpeedInMb:00.00} MB/s]";
-		Program.Logger.Info($"Downloading new update... {bytesReceivedMb:00.00} MB of {totalBytesMb:000.00} MB / {downloadSpeedInMb:00.00} MB/s");
-	}
-
-	private static async void Client_DownloadFileCompleted(object? sender, AsyncCompletedEventArgs? e)
-	{
-		// Unpack files
-		Program.Logger.Info($"Unpacking {_zipFile} to {_outputDir}");
-		Default._preparingPleaseWait.Text = Resources.StellaResources_UnpackingFiles;
-		await DownloadResources.UnzipWithProgress(_zipFile, _outputDir).ConfigureAwait(true);
-		Program.Logger.Info($"Unpacked: {_zipFile}");
-
-		// Delete file
-		File.Delete(_zipFile!);
-
-		// Success
-		Default._progressBar1.Hide();
-		Default._preparingPleaseWait.Hide();
-		Default._status_Label.Text += $"[✓] {_successfullyUpdated}\n";
-		Program.Logger.Info(_successfullyUpdated);
-
-		// Check for updates again
-		int foundUpdated = await CheckForUpdates.Analyze().ConfigureAwait(true);
-		if (foundUpdated == 0)
-			Labels.ShowStartGameBtns();
-		else
-			Labels.HideStartGameBtns();
 	}
 }

@@ -21,7 +21,6 @@ internal static class Program
 
 	// Files and folders
 	public static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
-	public static readonly string AppPathRoot = Path.Combine(AppPath, "..");
 	public static readonly string AppData = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
 	public static readonly string ConfigurationWindow = Path.Combine(AppPath, "Configuration Window.exe");
 	public static readonly string ReShadePath = Path.Combine(AppPath, "data", "reshade", "ReShade64.dll");
@@ -37,9 +36,7 @@ internal static class Program
 	private static readonly string AppWebsiteSub = "https://genshin.sefinek.net";
 	public static readonly string? AppWebsiteFull = "https://sefinek.net/genshin-impact-reshade";
 
-	// WebClient & HttpClient
-	public static readonly string UserAgent = $"Mozilla/5.0 (compatible; StellaLauncher/{AppFileVersion}; +{AppWebsiteSub}) WebClient/1.0";
-
+	// HttpClient
 	public static readonly Lazy<HttpClient> WbClient = new(() =>
 	{
 		HttpClient httpClient = new();

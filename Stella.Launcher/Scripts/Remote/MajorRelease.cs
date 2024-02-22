@@ -3,7 +3,7 @@ using StellaModLauncher.Forms.Errors;
 using StellaModLauncher.Properties;
 using StellaPLFNet;
 
-namespace StellaModLauncher.Scripts.Download;
+namespace StellaModLauncher.Scripts.Remote;
 
 internal static class MajorRelease
 {

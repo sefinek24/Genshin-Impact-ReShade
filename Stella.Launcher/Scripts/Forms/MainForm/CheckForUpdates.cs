@@ -3,8 +3,8 @@ using Newtonsoft.Json;
 using StellaModLauncher.Forms;
 using StellaModLauncher.Models;
 using StellaModLauncher.Properties;
-using StellaModLauncher.Scripts.Download;
 using StellaModLauncher.Scripts.Patrons;
+using StellaModLauncher.Scripts.Remote;
 using StellaPLFNet;
 
 namespace StellaModLauncher.Scripts.Forms.MainForm;

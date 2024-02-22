@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -487,7 +487,7 @@ Would you like to visit the official website and subscribe? You'll gain access t
     <value>Downloading new update... {0} MB of {1} MB / {2} MB/s</value>
   </data>
   <data name="NormalRelease_DownloadingUpdate_" xml:space="preserve">
-    <value>Downloading update... {0} MB / {1} MB</value>
+    <value>Downloading update... {0} / {1}</value>
   </data>
   <data name="NormalRelease_EverythingIsOkay_StartingSetup" xml:space="preserve">
     <value>Everything is okay! Starting setup...</value>
@@ -629,7 +629,7 @@ Quit the process with name {0} and try again.</value>
     <value>Deleting the previous version of the mod pack...</value>
   </data>
   <data name="StellaResources_DownloadingResources" xml:space="preserve">
-    <value>Downloading resources... {0} MB / {1} MB</value>
+    <value>Downloading resources... {0} / {1}</value>
   </data>
   <data name="StellaResources_NewResourcesUpdateIsAvailable" xml:space="preserve">
     <value>New update of the resources is available from {0}.</value>

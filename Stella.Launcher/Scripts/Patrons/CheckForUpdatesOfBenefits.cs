@@ -29,13 +29,13 @@ internal static class CheckForUpdatesOfBenefits
 					$"The new update for 3DMigoto has been detected. This update will not affect any downloaded mods.\n\nClick OK to proceed with the update.\n\nYour version: v{migotoJsonConverted.Version} from {migotoJsonConverted.Date}\nNew version: v{remoteVersions.Message.Resources.Migoto}",
 					Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-				UpdateBenefits.Download("3dmigoto", $"3DMigoto Update - v{remoteVersions.Message.Resources.Migoto}.zip", Path.GetDirectoryName(migotoVerPath));
+				UpdateBenefits.Start("3dmigoto", $"3DMigoto Update - v{remoteVersions.Message.Resources.Migoto}.zip", Path.GetDirectoryName(migotoVerPath));
 				return 1;
 			}
 		}
 		else
 		{
-			UpdateBenefits.Download("3dmigoto", $"3DMigoto Software - v{remoteVersions.Message.Resources.Migoto}.zip", Path.GetDirectoryName(migotoVerPath));
+			UpdateBenefits.Start("3dmigoto", $"3DMigoto Software - v{remoteVersions.Message.Resources.Migoto}.zip", Path.GetDirectoryName(migotoVerPath));
 			return 1;
 		}
 
@@ -62,7 +62,7 @@ internal static class CheckForUpdatesOfBenefits
 				if (Directory.Exists(migotoOtherMods)) await DeleteBenefits.DeleteDirectory(migotoOtherMods).ConfigureAwait(true);
 
 				// Update
-				UpdateBenefits.Download("3dmigoto-mods", $"3DMigoto Mods Update - v{remoteVersions.Message.Resources.Mods}.zip", Path.GetDirectoryName(modsVerPath));
+				UpdateBenefits.Start("3dmigoto-mods", $"3DMigoto Mods Update - v{remoteVersions.Message.Resources.Mods}.zip", Path.GetDirectoryName(modsVerPath));
 				return 1;
 			}
 		}
@@ -82,13 +82,13 @@ internal static class CheckForUpdatesOfBenefits
 					$"The new update for ReShade addons is available!\n\nClick the OK button to proceed with the update.\n\nYour version: v{addonsJsonConverted.Version} from {addonsJsonConverted.Date}\nNew version: v{remoteVersions.Message.Resources.Addons}",
 					Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-				UpdateBenefits.Download("addons", $"Addons update - v{remoteVersions.Message.Resources.Addons}.zip", Path.GetDirectoryName(addonsVersionPath));
+				UpdateBenefits.Start("addons", $"Addons update - v{remoteVersions.Message.Resources.Addons}.zip", Path.GetDirectoryName(addonsVersionPath));
 				return 1;
 			}
 		}
 		else
 		{
-			UpdateBenefits.Download("addons", $"Addons - v{remoteVersions.Message.Resources.Addons}.zip", Path.GetDirectoryName(addonsVersionPath));
+			UpdateBenefits.Start("addons", $"Addons - v{remoteVersions.Message.Resources.Addons}.zip", Path.GetDirectoryName(addonsVersionPath));
 			return 1;
 		}
 
@@ -110,13 +110,13 @@ internal static class CheckForUpdatesOfBenefits
 				string presets = Path.Combine(Default.ResourcesPath!, "ReShade", "Presets", "3. Stella Mod Plus");
 				if (Directory.Exists(presets)) await DeleteBenefits.DeleteDirectory(presets).ConfigureAwait(true);
 
-				UpdateBenefits.Download("presets", $"Presets update - v{remoteVersions.Message.Resources.Presets}.zip", Path.GetDirectoryName(presetsVersionPath));
+				UpdateBenefits.Start("presets", $"Presets update - v{remoteVersions.Message.Resources.Presets}.zip", Path.GetDirectoryName(presetsVersionPath));
 				return 1;
 			}
 		}
 		else
 		{
-			UpdateBenefits.Download("presets", $"Presets - v{remoteVersions.Message.Resources.Presets}.zip", Path.GetDirectoryName(presetsVersionPath));
+			UpdateBenefits.Start("presets", $"Presets - v{remoteVersions.Message.Resources.Presets}.zip", Path.GetDirectoryName(presetsVersionPath));
 			return 1;
 		}
 
@@ -135,13 +135,13 @@ internal static class CheckForUpdatesOfBenefits
 					$"New version of shaders is available!\n\nYour version: v{shadersJsonConverted.Version} from {shadersJsonConverted.Date}\nNew version: v{remoteVersions.Message.Resources.Shaders}",
 					Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-				UpdateBenefits.Download("shaders", $"Shaders update - v{remoteVersions.Message.Resources.Shaders}.zip", Path.GetDirectoryName(shadersVersionPath));
+				UpdateBenefits.Start("shaders", $"Shaders update - v{remoteVersions.Message.Resources.Shaders}.zip", Path.GetDirectoryName(shadersVersionPath));
 				return 1;
 			}
 		}
 		else
 		{
-			UpdateBenefits.Download("shaders", $"Shaders - v{remoteVersions.Message.Resources.Shaders}.zip", Path.GetDirectoryName(shadersVersionPath));
+			UpdateBenefits.Start("shaders", $"Shaders - v{remoteVersions.Message.Resources.Shaders}.zip", Path.GetDirectoryName(shadersVersionPath));
 			return 1;
 		}
 
@@ -163,13 +163,13 @@ internal static class CheckForUpdatesOfBenefits
 				string cmdPath = Path.Combine(Program.AppPath, "data", "cmd", "patrons");
 				if (Directory.Exists(cmdPath)) await DeleteBenefits.DeleteDirectory(cmdPath).ConfigureAwait(true);
 
-				UpdateBenefits.Download("cmd", $"Batch files update - {remoteVersions.Message.Resources.Cmd}.zip", Path.GetDirectoryName(cmdVersionPath));
+				UpdateBenefits.Start("cmd", $"Batch files update - {remoteVersions.Message.Resources.Cmd}.zip", Path.GetDirectoryName(cmdVersionPath));
 				return 1;
 			}
 		}
 		else
 		{
-			UpdateBenefits.Download("cmd", $"Batch files - {remoteVersions.Message.Resources.Cmd}.zip", Path.GetDirectoryName(cmdVersionPath));
+			UpdateBenefits.Start("cmd", $"Batch files - {remoteVersions.Message.Resources.Cmd}.zip", Path.GetDirectoryName(cmdVersionPath));
 			return 1;
 		}
 

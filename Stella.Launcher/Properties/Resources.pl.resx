@@ -349,7 +349,7 @@ Czy chciałbyś teraz pobrać ten plik, aby zapobiec przyszłym błędom i ręcz
     <value>Pobieranie nowej aktualizacji... {0} MB z {1} MB / {2} MB/s</value>
   </data>
   <data name="NormalRelease_DownloadingUpdate_" xml:space="preserve">
-    <value>Pobieranie aktualizacji... {0} MB / {1} MB</value>
+    <value>Pobieranie aktualizacji... {0} / {1}</value>
   </data>
   <data name="NormalRelease_EverythingIsOkay_StartingSetup" xml:space="preserve">
     <value>Wszystko jest w porządku! Rozpoczywanie instalacji...</value>
@@ -476,7 +476,7 @@ Zamknij proces o nazwie {0} i spróbuj ponownie.</value>
     <value>[i] Rozmiar aktualizacji: {0} KB</value>
   </data>
   <data name="StellaResources_DownloadingResources" xml:space="preserve">
-    <value>Pobieranie zasobów... {0} MB / {1} MB</value>
+    <value>Pobieranie zasobów... {0} / {1}</value>
   </data>
   <data name="StellaResources_NewResourcesUpdateIsAvailable" xml:space="preserve">
     <value>Nowa aktualizacja zasobów jest dostępna z {0}.</value>
