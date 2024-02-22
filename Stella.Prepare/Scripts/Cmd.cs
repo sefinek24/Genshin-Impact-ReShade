@@ -11,15 +11,15 @@ internal abstract class Cmd
 	public static bool RebootNeeded;
 	private static int _vcLibsAttemptNumber;
 
-	public static async Task CliWrap(string app, string args, string workingDir)
+	public static async Task CliWrap(string app, string? args, string? workingDir)
 	{
 		Start.Logger.Info($"Execute command: {app} {args} {workingDir}");
 
 		try
 		{
 			Command action = Cli.Wrap(app)
-				.WithArguments(args)
-				.WithWorkingDirectory(workingDir)
+				.WithArguments(args!)
+				.WithWorkingDirectory(workingDir!)
 				.WithValidation(CommandResultValidation.None);
 			BufferedCommandResult result = await action.ExecuteBufferedAsync();
 
@@ -125,7 +125,7 @@ internal abstract class Cmd
 					Console.Write(@"» Restart your computer now? This is required. [Yes/no]: ");
 					Console.ResetColor();
 
-					string rebootPc = Console.ReadLine();
+					string? rebootPc = Console.ReadLine();
 					if (Regex.Match(rebootPc ?? string.Empty, "(?:y)", RegexOptions.IgnoreCase | RegexOptions.Singleline).Success)
 					{
 						await CliWrap("shutdown",

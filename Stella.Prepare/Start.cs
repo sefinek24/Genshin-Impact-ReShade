@@ -11,9 +11,9 @@ namespace PrepareStella;
 internal static class Start
 {
 	// App
-	public static readonly string AppName = Assembly.GetExecutingAssembly().GetName().Name;
-	public static readonly string AppVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
-	public static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
+	public static readonly string? AppName = Assembly.GetExecutingAssembly().GetName().Name;
+	public static readonly string? AppVersion = Assembly.GetExecutingAssembly().GetName().Version?.ToString();
+	public static readonly string? AppPath = AppDomain.CurrentDomain.BaseDirectory;
 	public static readonly string AppData = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
 
 	// Links
@@ -27,13 +27,13 @@ internal static class Start
 	public static readonly string WebApi = "https://api.sefinek.net/api/v6";
 
 	// Dependencies
-	public static readonly string VcLibsAppx = Path.Combine("net8.0-windows", "dependencies", "Microsoft.VCLibs.x64.14.00.Desktop.appx");
-	public static readonly string WtMsixBundle = Path.Combine("net8.0-windows", "dependencies", "Microsoft.WindowsTerminal_1.19.10302.0_8wekyb3d8bbwe.msixbundle");
+	public static readonly string VcLibsAppx = Path.Combine("dependencies", "Microsoft.VCLibs.x64.14.00.Desktop.appx");
+	public static readonly string WtMsixBundle = Path.Combine("dependencies", "Microsoft.WindowsTerminal_1.19.10302.0_8wekyb3d8bbwe.msixbundle");
 
 	// Other
 	public static readonly string Line = "===============================================================================================";
-	public static NotifyIcon NotifyIconInstance;
-	public static readonly Icon Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
+	public static NotifyIcon? NotifyIconInstance;
+	public static readonly Icon? Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
 
 	// Logger
 	public static Logger Logger = LogManager.GetCurrentClassLogger();
@@ -90,7 +90,7 @@ internal static class Start
 
 		try
 		{
-			await Program.Run();
+			await Program.Run().ConfigureAwait(false);
 		}
 		catch (Exception ex)
 		{
@@ -98,12 +98,12 @@ internal static class Start
 		}
 	}
 
-	private static void OnProcessExit(object sender, EventArgs e)
+	private static void OnProcessExit(object? sender, EventArgs e)
 	{
 		NotifyIconInstance?.Dispose();
 	}
 
-	private static void OnCancelKeyPress(object sender, ConsoleCancelEventArgs e)
+	private static void OnCancelKeyPress(object? sender, ConsoleCancelEventArgs e)
 	{
 		NotifyIconInstance?.Dispose();
 		NotifyIconInstance = null;

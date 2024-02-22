@@ -8,7 +8,7 @@ internal static class DownloadUpdateResources
 {
 	public static async Task RunAsync()
 	{
-		string resourcesGlobalPath = Program.ResourcesGlobal;
+		string? resourcesGlobalPath = Program.ResourcesGlobal;
 
 		if (!Directory.Exists(resourcesGlobalPath))
 		{

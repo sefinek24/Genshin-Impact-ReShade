@@ -9,7 +9,6 @@ public sealed partial class Window : Form
 {
 	public static readonly string? AppName = Assembly.GetExecutingAssembly().GetName().Name;
 	public static readonly string AppVersion = Assembly.GetExecutingAssembly().GetName().Version!.ToString();
-	private static readonly string StellaDirPath = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ".."));
 	public static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
 	private static readonly string AppData = GetAppData();
 
@@ -153,7 +152,7 @@ public sealed partial class Window : Form
 	{
 		SaveIniData();
 
-		string prepareStellaExe = Path.Combine(StellaDirPath, "Prepare Stella Mod.exe");
+		string prepareStellaExe = Path.Combine(AppPath, "Prepare Stella Mod.exe");
 		if (!File.Exists(prepareStellaExe))
 		{
 			Program.Logger.Error($"File {prepareStellaExe} was not found");
@@ -164,7 +163,7 @@ public sealed partial class Window : Form
 		Process.Start(new ProcessStartInfo
 		{
 			FileName = prepareStellaExe,
-			WorkingDirectory = StellaDirPath,
+			WorkingDirectory = AppPath,
 			Verb = "runas",
 			UseShellExecute = true
 		});

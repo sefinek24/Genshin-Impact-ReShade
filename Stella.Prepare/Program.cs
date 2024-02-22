@@ -7,18 +7,18 @@ using StellaPLFNet;
 
 namespace PrepareStella;
 
-internal static class Program
+internal static partial class Program
 {
 	// Files and folders
 	private static readonly IniFile PrepareIni = new(Path.Combine(Start.AppData, "prepare-stella.ini"));
 	public static readonly string ProgramFiles = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
-	private static readonly string GameGenshinImpact = Path.Combine(ProgramFiles, "Genshin Impact", "Genshin Impact game", "GenshinImpact.exe");
-	private static readonly string GameYuanShen = Path.Combine(ProgramFiles, "Genshin Impact", "Genshin Impact game", "YuanShen.exe");
+	private static readonly string? GameGenshinImpact = Path.Combine(ProgramFiles, "Genshin Impact", "Genshin Impact game", "GenshinImpact.exe");
+	private static readonly string? GameYuanShen = Path.Combine(ProgramFiles, "Genshin Impact", "Genshin Impact game", "YuanShen.exe");
 	public static readonly string WindowsApps = Path.Combine(ProgramFiles, "WindowsApps");
 
 	// Global variables
-	public static string SavedGamePath;
-	public static string ResourcesGlobal;
+	public static string? SavedGamePath;
+	public static string? ResourcesGlobal;
 
 	// Registry
 	public static readonly string RegistryPath = @"Software\Stella Mod Launcher";
@@ -38,9 +38,9 @@ internal static class Program
 
 
 		// Get the game path from the registry
-		using (RegistryKey key = Registry.CurrentUser.OpenSubKey(RegistryPath))
+		using (RegistryKey? key = Registry.CurrentUser.OpenSubKey(RegistryPath))
 		{
-			if (key != null) SavedGamePath = (string)key.GetValue("GamePath");
+			if (key != null) SavedGamePath = key.GetValue("GamePath") as string;
 		}
 
 		// Try to find the game in the default localizations
@@ -69,7 +69,7 @@ internal static class Program
 		{
 			using (RegistryKey key = Registry.CurrentUser.CreateSubKey(RegistryPath))
 			{
-				key?.SetValue("GamePath", SavedGamePath);
+				key.SetValue("GamePath", SavedGamePath);
 			}
 
 			Console.WriteLine(SavedGamePath);
@@ -82,9 +82,9 @@ internal static class Program
 		Console.ResetColor();
 
 		// Get ResourcesPath from the registry
-		using (RegistryKey key = Registry.CurrentUser.OpenSubKey(RegistryPath))
+		using (RegistryKey? key = Registry.CurrentUser.OpenSubKey(RegistryPath))
 		{
-			if (key != null) ResourcesGlobal = (string)key.GetValue("ResourcesPath");
+			if (key != null) ResourcesGlobal = key.GetValue("ResourcesPath") as string;
 		}
 
 		// Path is not valid?
@@ -95,7 +95,7 @@ internal static class Program
 		{
 			using (RegistryKey key = Registry.CurrentUser.CreateSubKey(RegistryPath))
 			{
-				key?.SetValue("ResourcesPath", ResourcesGlobal);
+				key.SetValue("ResourcesPath", ResourcesGlobal!);
 			}
 
 			Console.WriteLine(ResourcesGlobal);
@@ -131,7 +131,7 @@ internal static class Program
 		if (downloadOrUpdateShaders == 1)
 		{
 			Console.WriteLine(@"Checking Stella resources...");
-			await DownloadUpdateResources.RunAsync();
+			await DownloadUpdateResources.RunAsync().ConfigureAwait(false);
 			TaskbarProgress.SetProgressValue(39);
 		}
 
@@ -139,7 +139,7 @@ internal static class Program
 		if (updateReShadeCfg == 1)
 		{
 			Console.WriteLine(@"Prepare ReShade...");
-			await UpdateReShadeCfg.RunAsync();
+			await UpdateReShadeCfg.RunAsync().ConfigureAwait(false);
 			TaskbarProgress.SetProgressValue(46);
 		}
 
@@ -147,7 +147,7 @@ internal static class Program
 		if (delReShadeCache == 1)
 		{
 			Console.WriteLine(@"Deleting ReShade cache...");
-			await DeleteReShadeCache.RunAsync();
+			await DeleteReShadeCache.RunAsync().ConfigureAwait(false);
 			TaskbarProgress.SetProgressValue(57);
 		}
 
@@ -155,7 +155,7 @@ internal static class Program
 		if (updateFpsUnlockerCfg == 1)
 		{
 			Console.WriteLine(@"Downloading FPS Unlocker configuration...");
-			await DownloadFpsUnlockerCfg.RunAsync();
+			await DownloadFpsUnlockerCfg.RunAsync().ConfigureAwait(false);
 			TaskbarProgress.SetProgressValue(68);
 		}
 
@@ -163,11 +163,11 @@ internal static class Program
 		if (installWtUpdate == 1)
 		{
 			Console.Write(@"Backing up the Windows Terminal configuration file in app data... ");
-			await Terminal.MakeBackup();
+			await Terminal.MakeBackup().ConfigureAwait(false);
 			TaskbarProgress.SetProgressValue(72);
 
 			Console.WriteLine(@"Installing the latest Windows Terminal...");
-			await Terminal.Install();
+			await Terminal.Install().ConfigureAwait(false);
 			TaskbarProgress.SetProgressValue(77);
 		}
 
@@ -175,7 +175,7 @@ internal static class Program
 		if (newShortcuts == 1)
 		{
 			Console.WriteLine(@"Creating Desktop shortcut...");
-			await DesktopIcon.RunAsync();
+			await DesktopIcon.RunAsync().ConfigureAwait(false);
 			TaskbarProgress.SetProgressValue(89);
 		}
 
@@ -183,7 +183,7 @@ internal static class Program
 		if (newIntShortcuts == 1)
 		{
 			Console.WriteLine(@"Creating new Internet shortcut...");
-			await InternetShortcuts.RunAsync();
+			await InternetShortcuts.RunAsync().ConfigureAwait(false);
 			TaskbarProgress.SetProgressValue(96);
 		}
 
@@ -195,9 +195,9 @@ internal static class Program
 		// Registry
 		using (RegistryKey key = Registry.CurrentUser.CreateSubKey(RegistryPath))
 		{
-			key?.SetValue("AppIsConfigured", 1);
-			key?.SetValue("ConfugurationDate", DateTime.Now);
-			key?.SetValue("StellaPath", Start.AppPath);
+			key.SetValue("AppIsConfigured", 1);
+			key.SetValue("ConfugurationDate", DateTime.Now);
+			key.SetValue("StellaPath", Start.AppPath!);
 		}
 
 
@@ -211,13 +211,13 @@ internal static class Program
 			Console.Write(@"» Restart your computer now? This is required. [Yes/no]: ");
 			Console.ResetColor();
 
-			string rebootPc = Console.ReadLine();
-			if (Regex.Match(rebootPc ?? string.Empty, "(?:y)", RegexOptions.IgnoreCase | RegexOptions.Singleline).Success)
+			string? rebootPc = Console.ReadLine();
+			if (MyRegex().Match(rebootPc ?? string.Empty).Success)
 			{
 				await Cmd.CliWrap(
 					"shutdown",
 					$"/r /t 30 /c \"{Start.AppName} - scheduled reboot.\n\nThank you for installing. If you need help, add me on Discord: sefinek\n\nGood luck and have fun!\"", null
-				);
+				).ConfigureAwait(false);
 
 				int cursorTop1 = Console.CursorTop;
 				int cursorLeft1 = Console.CursorLeft;
@@ -236,7 +236,7 @@ internal static class Program
 		else
 		{
 			// Run Genshin Stella Mod
-			string stellaLauncher = Path.Combine(Start.AppPath, "net8.0-windows", "Stella Mod Launcher.exe");
+			string stellaLauncher = Path.Combine(Start.AppPath!, "Stella Mod Launcher.exe");
 
 			Console.WriteLine($@"Launching {Path.GetFileName(stellaLauncher)}...");
 			_ = Cmd.CliWrap(stellaLauncher, null, null);
@@ -260,4 +260,7 @@ internal static class Program
 
 		Start.NotifyIconInstance?.Dispose();
 	}
+
+	[GeneratedRegex("(?:y)", RegexOptions.IgnoreCase | RegexOptions.Singleline)]
+	private static partial Regex MyRegex();
 }

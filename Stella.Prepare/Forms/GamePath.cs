@@ -4,9 +4,9 @@ namespace PrepareStella.Forms;
 
 public sealed partial class GamePath : Form
 {
-	private readonly string _inputString;
+	private readonly string? _inputString;
 
-	public GamePath(string inputString)
+	public GamePath(string? inputString)
 	{
 		InitializeComponent();
 
@@ -64,7 +64,7 @@ public sealed partial class GamePath : Form
 
 	private void SaveSettings_Click(object sender, EventArgs e)
 	{
-		string selectedFile = comboBox1.GetItemText(comboBox1.SelectedItem);
+		string? selectedFile = comboBox1.GetItemText(comboBox1.SelectedItem);
 		if (!selectedFile.Contains("GenshinImpact.exe") && !selectedFile.Contains("YuanShen.exe"))
 		{
 			MessageBox.Show("We can't save your settings. Please select the game exe.\n\n* GenshinImpact.exe for OS version (main)\n* YuanShen.exe for CN (Chinese) version", Start.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);

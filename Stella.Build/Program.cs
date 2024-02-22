@@ -5,7 +5,7 @@ namespace BuildStellaMod;
 internal static class Program
 {
 	public static readonly string RootPath = Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "..", "..");
-	private static readonly string ReleaseBuildPath = Path.Combine(RootPath, "Build", "Release", "net8.0-windows");
+	private static readonly string ReleaseBuildPath = Path.Combine(RootPath, "Build", "Release");
 
 	private static async Task Main()
 	{
@@ -35,12 +35,15 @@ internal static class Program
 			@"Stella.Launcher\1-1. Stella Mod Launcher.csproj",
 			@"Stella.Worker\2-1. Genshin Stella Mod.csproj",
 			@"Stella.Configuration\3. Configuration .NET 8.csproj",
-			@"Stella.PrepareOld\4. Prepare Stella.csproj",
+			@"Stella.Prepare\4-1. Prepare Stella.csproj",
 			@"Stella.Info-48793142\5. Information 48793142.csproj",
 			@"Stella.DeviceIdentifier\6. Device Identifier.csproj"
 		];
 
 		foreach (string project in projects) await PrepareCompilationAsync(Path.Combine(RootPath, project)).ConfigureAwait(false);
+
+		Console.WriteLine("----------------------------- COPING FILES -----------------------------");
+		Utils.CopyFiles(ReleaseBuildPath);
 
 		Console.WriteLine("\nPress ENTER to exit the program...");
 		Console.ReadLine();
@@ -62,7 +65,6 @@ internal static class Program
 		if (compilationSuccess)
 		{
 			Console.WriteLine($"----------------------------- COMPILED {Path.GetFileName(projectPath)} -----------------------------");
-			Utils.CopyFiles(ReleaseBuildPath);
 		}
 		else
 		{

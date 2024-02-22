@@ -7,7 +7,7 @@
     <RootNamespace>PrepareStella</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyName>Prepare Stella</AssemblyName>
+    <AssemblyName>Prepare Stella Mod</AssemblyName>
     <NoWarn>$(NoWarn);CA1303</NoWarn>
     <Copyright>Copyright 2024 © by Sefinek. All Rights Reserved.</Copyright>
     <Version>1.0.0</Version>
@@ -18,6 +18,10 @@
     <NeutralLanguage>en</NeutralLanguage>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <BaseOutputPath>..\Build\</BaseOutputPath>
+    <Product>Prepare Stella Mod</Product>
   </PropertyGroup>
 
   <ItemGroup>

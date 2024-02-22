@@ -63,7 +63,7 @@ internal static class UpdateReShadeCfg
 		}
 	}
 
-	private static void ConfigureReShade(string resourcesGlobal)
+	private static void ConfigureReShade(string? resourcesGlobal)
 	{
 		string reshadeIniFilePath = Path.Combine(Path.GetDirectoryName(Program.SavedGamePath), "ReShade.ini");
 		IniFile ini = new(reshadeIniFilePath);
