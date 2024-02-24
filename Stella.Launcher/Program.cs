@@ -72,7 +72,7 @@ internal static class Program
 		Logger = Logger.WithProperty("AppVersion", AppVersion);
 
 		// Set the correct language for WinForms
-		string? currentLang = Settings.ReadString("Language", "UI");
+		string currentLang = Settings.ReadString("Language", "UI");
 		if (string.IsNullOrEmpty(currentLang) || !SupportedLangs.Contains(currentLang))
 		{
 			string sysLang = CultureInfo.InstalledUICulture.Name[..2];
