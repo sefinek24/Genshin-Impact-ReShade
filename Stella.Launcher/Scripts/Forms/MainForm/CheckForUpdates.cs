@@ -13,7 +13,7 @@ internal static class CheckForUpdates
 {
 	public static async Task<int> Analyze()
 	{
-		Default._updates_LinkLabel.LinkColor = Color.White;
+		Default._updates_LinkLabel!.LinkColor = Color.White;
 		Default._updates_LinkLabel.Text = Resources.Default_CheckingForUpdates;
 
 		TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Indeterminate);
@@ -36,7 +36,7 @@ internal static class CheckForUpdates
 				Default.UpdateIsAvailable = true;
 
 				MajorRelease.Run(remoteDbLauncherVersion, remoteLauncherDate);
-				return 1;
+				return 2;
 			}
 
 
@@ -46,7 +46,7 @@ internal static class CheckForUpdates
 				Default.UpdateIsAvailable = true;
 
 				NormalRelease.Run(remoteDbLauncherVersion, remoteLauncherDate, res.Launcher!.Beta);
-				return 1;
+				return 2;
 			}
 
 
@@ -161,7 +161,7 @@ internal static class CheckForUpdates
 
 	public static async void CheckUpdates_Click(object? sender, LinkLabelLinkClickedEventArgs e)
 	{
-		Music.PlaySound("winxp", "hardware_insert");
+		if (Secret.IsStellaPlusSubscriber) Music.PlaySound("winxp", "hardware_insert");
 		int update = await Analyze().ConfigureAwait(true);
 
 		if (update == -1)
@@ -172,9 +172,9 @@ internal static class CheckForUpdates
 
 		if (update != 0) return;
 
-		Music.PlaySound("winxp", "hardware_remove");
+		if (Secret.IsStellaPlusSubscriber) Music.PlaySound("winxp", "hardware_remove");
 
-		Default._updates_LinkLabel.LinkColor = Color.LawnGreen;
+		Default._updates_LinkLabel!.LinkColor = Color.LawnGreen;
 		Default._updates_LinkLabel.Text = Resources.Default_YouHaveTheLatestVersion;
 		Default._updateIco_PictureBox!.Image = Resources.icons8_available_updates;
 	}

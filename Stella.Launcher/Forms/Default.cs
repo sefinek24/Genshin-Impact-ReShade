@@ -171,6 +171,8 @@ public partial class Default : Form
 		{
 			label1.Text = @"/ᐠ. ｡.ᐟ\ᵐᵉᵒʷˎˊ˗";
 
+			Secret.GetDeviceId();
+
 			string? data = await Secret.VerifyToken(registrySecret).ConfigureAwait(true);
 			if (data == null)
 			{
@@ -273,8 +275,8 @@ public partial class Default : Form
 
 		// Check ReShade & FPS Unlock version
 		Stages.UpdateStage(7, "Checking ReShade & FPS Unlock version...");
-		NuGetVersion reshadeVersion = NuGetVersion.Parse(FileVersionInfo.GetVersionInfo(Program.ReShadePath).ProductVersion);
-		NuGetVersion fpsUnlockVersion = NuGetVersion.Parse(FileVersionInfo.GetVersionInfo(Program.FpsUnlockerExePath).ProductVersion);
+		NuGetVersion reshadeVersion = NuGetVersion.Parse(FileVersionInfo.GetVersionInfo(Program.ReShadePath).ProductVersion!);
+		NuGetVersion fpsUnlockVersion = NuGetVersion.Parse(FileVersionInfo.GetVersionInfo(Program.FpsUnlockerExePath).ProductVersion!);
 		Data.ReShadeVer = reshadeVersion.ToString();
 		Data.UnlockerVer = fpsUnlockVersion.ToString();
 
@@ -289,22 +291,21 @@ public partial class Default : Form
 		{
 			MessageBox.Show("This is your hundredth (100th) launch of the program by you on your device.\n\nThank you!", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-			string? path = Path.Combine(Program.AppPath, "data", "videos", "theannoyingcat.mp4");
+			string path = Path.Combine(Program.AppPath, "data", "videos", "theannoyingcat.mp4");
 			if (Utils.CheckFileExists(path)) Utils.OpenUrl(path);
 		}
 
+
+		// Discord RPC
 		Stages.UpdateStage(9, "Initializing Discord RPC...");
+		Discord.InitRpc();
 
 		// Telemetry
 		// Telemetry.Opened();
 
-		// Discord RPC
-		Discord.InitRpc();
-
-
 		// Updated?
 		int updatedLauncher = Program.Settings.ReadInt("Updates", "UpdateAvailable", 0);
-		string? oldVersion = Program.Settings.ReadString("Updates", "OldVersion");
+		string oldVersion = Program.Settings.ReadString("Updates", "OldVersion");
 		if (updatedLauncher == 1 && oldVersion != Program.AppVersion)
 		{
 			Program.Settings.WriteInt("Updates", "UpdateAvailable", 0);
@@ -318,7 +319,7 @@ public partial class Default : Form
 
 
 		// Check InjectType
-		string? injectMode = Program.Settings.ReadString("Injection", "Method", "exe");
+		string injectMode = Program.Settings.ReadString("Injection", "Method", "exe");
 		switch (injectMode)
 		{
 			case "exe":
@@ -347,7 +348,7 @@ public partial class Default : Form
 		// Check for updates
 		Stages.UpdateStage(10, "Checking for updates...");
 		int found = await CheckForUpdates.Analyze().ConfigureAwait(true);
-		if (found == 1) return;
+		if (found == 2) return;
 
 		Stages.UpdateStage(11, "Checking Genshin Stella Mod.exe and ReShade.ini...");
 

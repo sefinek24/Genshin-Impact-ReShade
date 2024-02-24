@@ -1,3 +1,4 @@
+using DeviceId;
 using Microsoft.Win32;
 using StellaModLauncher.Properties;
 
@@ -7,6 +8,7 @@ internal static class Secret
 {
 	public static bool IsStellaPlusSubscriber = false;
 	public static string? BearerToken;
+	private static string? _deviceId;
 
 	public static string? GetTokenFromRegistry()
 	{
@@ -25,6 +27,8 @@ internal static class Secret
 			List<KeyValuePair<string, string?>> postData =
 			[
 				new KeyValuePair<string, string?>("token", registrySecret),
+
+				new KeyValuePair<string, string?>("deviceId", _deviceId),
 				new KeyValuePair<string, string?>("motherboardId", ComputerInfo.GetMotherboardSerialNumber()),
 				new KeyValuePair<string, string?>("cpuId", ComputerInfo.GetCpuSerialNumber()),
 				new KeyValuePair<string, string?>("diskId", ComputerInfo.GetHardDriveSerialNumber())
@@ -46,5 +50,20 @@ internal static class Secret
 			Log.ErrorAndExit(ex, false);
 			return null;
 		}
+	}
+
+	public static void GetDeviceId()
+	{
+		_deviceId = new DeviceIdBuilder()
+			.UseFormatter(DeviceIdFormatters.DefaultV6)
+			.OnWindows(windows => windows
+				.AddProcessorId()
+				.AddMotherboardSerialNumber()
+				.AddSystemDriveSerialNumber()
+				.AddWindowsDeviceId()
+				.AddWindowsProductId()
+				.AddSystemUuid()
+				.AddMachineGuid())
+			.ToString();
 	}
 }
