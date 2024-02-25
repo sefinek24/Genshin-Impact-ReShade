@@ -21,7 +21,7 @@ internal static class CheckForUpdatesOfBenefits
 			string migotoJson = File.ReadAllText(migotoVerPath);
 			LocalBenefitsVersion? migotoJsonConverted = JsonConvert.DeserializeObject<LocalBenefitsVersion>(migotoJson);
 
-			if (remoteVersions!.Message.Resources.Migoto != migotoJsonConverted.Version)
+			if (remoteVersions!.Message.Resources.Migoto != migotoJsonConverted!.Version)
 			{
 				Default._version_LinkLabel!.Text = $@"v{migotoJsonConverted.Version} → v{remoteVersions.Message.Resources.Migoto}";
 
