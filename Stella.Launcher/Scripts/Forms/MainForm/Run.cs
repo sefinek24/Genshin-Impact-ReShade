@@ -25,7 +25,7 @@ internal static class Run
 			{
 				App = "wt.exe",
 				Arguments = new ArgumentsBuilder().Add(GsmPath) // 0
-					.Add(Program.AppFileVersion) // 1
+					.Add(Program.AppFileVersion!) // 1
 					.Add(Data.ReShadeVer) // 2
 					.Add(Data.UnlockerVer) // 3
 					.Add(Secret.IsStellaPlusSubscriber ? 1 : 6) // 4
@@ -35,7 +35,7 @@ internal static class Run
 				App = "wt.exe",
 				WorkingDir = Program.AppPath,
 				Arguments = new ArgumentsBuilder().Add(BatchRunPatrons) // 0
-					.Add(Program.AppFileVersion) // 1
+					.Add(Program.AppFileVersion!) // 1
 					.Add(Data.ReShadeVer) // 2
 					.Add(Data.UnlockerVer) // 3
 					.Add(Secret.IsStellaPlusSubscriber ? 1 : 6) // 4
@@ -48,7 +48,7 @@ internal static class Run
 			_ => null
 		};
 
-		bool res = await Cmd.Execute(command).ConfigureAwait(false);
+		bool res = await Cmd.Execute(command, false).ConfigureAwait(false);
 		if (res) Application.Exit();
 	}
 
@@ -60,7 +60,7 @@ internal static class Run
 			{
 				App = "wt.exe",
 				Arguments = new ArgumentsBuilder().Add(GsmPath) // 0
-					.Add(Program.AppFileVersion) // 1
+					.Add(Program.AppFileVersion!) // 1
 					.Add(Data.ReShadeVer) // 2
 					.Add(Data.UnlockerVer) // 3
 					.Add(3) // 4
@@ -70,7 +70,7 @@ internal static class Run
 				App = "wt.exe",
 				WorkingDir = Program.AppPath,
 				Arguments = new ArgumentsBuilder().Add(BatchRunPatrons) // 0
-					.Add(Program.AppFileVersion) // 1
+					.Add(Program.AppFileVersion!) // 1
 					.Add(Data.ReShadeVer) // 2
 					.Add(Data.UnlockerVer) // 3
 					.Add(3) // 4
@@ -83,7 +83,7 @@ internal static class Run
 			_ => null
 		};
 
-		bool res = await Cmd.Execute(command).ConfigureAwait(false);
+		bool res = await Cmd.Execute(command, false).ConfigureAwait(false);
 		if (res) Application.Exit();
 	}
 
@@ -95,7 +95,7 @@ internal static class Run
 			{
 				App = "wt.exe",
 				Arguments = new ArgumentsBuilder().Add(GsmPath) // 0
-					.Add(Program.AppFileVersion) // 1
+					.Add(Program.AppFileVersion!) // 1
 					.Add(Data.ReShadeVer) // 2
 					.Add(Data.UnlockerVer) // 3
 					.Add(4) // 4
@@ -105,7 +105,7 @@ internal static class Run
 				App = "wt.exe",
 				WorkingDir = Program.AppPath,
 				Arguments = new ArgumentsBuilder().Add(BatchRunPatrons) // 0
-					.Add(Program.AppFileVersion) // 1
+					.Add(Program.AppFileVersion!) // 1
 					.Add(Data.ReShadeVer) // 2
 					.Add(Data.UnlockerVer) // 3
 					.Add(4) // 4
@@ -118,7 +118,7 @@ internal static class Run
 			_ => null
 		};
 
-		bool res = await Cmd.Execute(command).ConfigureAwait(false);
+		bool res = await Cmd.Execute(command, false).ConfigureAwait(false);
 		if (res) Application.Exit();
 	}
 
@@ -137,7 +137,7 @@ internal static class Run
 			{
 				App = "wt.exe",
 				Arguments = new ArgumentsBuilder().Add(GsmPath) // 0
-					.Add(Program.AppVersion) // 1
+					.Add(Program.AppVersion!) // 1
 					.Add(Data.ReShadeVer) // 2
 					.Add(Data.UnlockerVer) // 3
 					.Add(5) // 4
@@ -147,7 +147,7 @@ internal static class Run
 				App = "wt.exe",
 				WorkingDir = Program.AppPath,
 				Arguments = new ArgumentsBuilder().Add(BatchRunPatrons) // 0
-					.Add(Program.AppVersion) // 1
+					.Add(Program.AppVersion!) // 1
 					.Add(Data.ReShadeVer) // 2
 					.Add(Data.UnlockerVer) // 3
 					.Add(5) // 4
@@ -159,8 +159,7 @@ internal static class Run
 			_ => null
 		};
 
-		// Run file
-		bool res = await Cmd.Execute(command).ConfigureAwait(false);
+		bool res = await Cmd.Execute(command, false).ConfigureAwait(false);
 		if (res) Application.Exit();
 	}
 }

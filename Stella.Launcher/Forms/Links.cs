@@ -16,6 +16,12 @@ public sealed partial class Links : Form
 		DoubleBuffered = true;
 	}
 
+	private void Links_Load(object sender, EventArgs e)
+	{
+		RoundedCorners.Form(this);
+		Music.LinkLabelSfx(this);
+	}
+
 	private void URLs_Shown(object sender, EventArgs e)
 	{
 		Discord.SetStatus(Resources.Links_DRPC_OnTheWindowWithLinks);
@@ -40,11 +46,6 @@ public sealed partial class Links : Form
 	private void MouseUp_Event(object sender, MouseEventArgs e)
 	{
 		_mouseDown = false;
-	}
-
-	private void Links_Load(object sender, EventArgs e)
-	{
-		RoundedCorners.Form(this);
 	}
 
 	private void Exit_Click(object sender, EventArgs e)

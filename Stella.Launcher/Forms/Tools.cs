@@ -22,6 +22,7 @@ public partial class Tools : Form
 	private void Tools_Load(object sender, EventArgs e)
 	{
 		RoundedCorners.Form(this);
+		Music.LinkLabelSfx(this);
 	}
 
 	private void Utils_Shown(object sender, EventArgs e)

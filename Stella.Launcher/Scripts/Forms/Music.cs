@@ -26,7 +26,7 @@ internal static class Music
 		return File.Exists(wavPath) ? wavPath : null;
 	}
 
-	public static void PlaySound(string dir, string fileName)
+	public static async void PlaySound(string dir, string fileName, float? volume = 0.55f)
 	{
 		if (Program.Settings.ReadInt("Launcher", "EnableBgSounds", 1) == 0) return;
 
@@ -38,8 +38,7 @@ internal static class Music
 			return;
 		}
 
-		float volume = fileName == "information_bar" ? 0.44f : 0.9f;
-		PlaySoundAsync(wavPath, volume).ConfigureAwait(false);
+		await PlaySoundAsync(wavPath, (float)volume!).ConfigureAwait(false);
 	}
 
 	private static async Task PlaySoundAsync(string? wavPath, float volume)
@@ -62,5 +61,21 @@ internal static class Music
 			Default._status_Label!.Text += $"[x] {ex.Message}\n";
 			Program.Logger.Error(ex.ToString());
 		}
+	}
+
+	public static void LinkLabelSfx(Form form)
+	{
+		foreach (Control ctrl in form.Controls)
+		{
+			if (ctrl is LinkLabel)
+			{
+				ctrl.MouseHover += LinkLabel_MouseHover;
+			}
+		}
+	}
+
+	private static void LinkLabel_MouseHover(object? sender, EventArgs e)
+	{
+		PlaySound("other", "menu-button", 0.25f);
 	}
 }

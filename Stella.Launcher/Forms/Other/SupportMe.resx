@@ -190,19 +190,18 @@
     <value>Yu Gothic UI, 15.75pt, style=Bold</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 390</value>
+    <value>23, 413</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>718, 120</value>
+    <value>718, 99</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Being a subscriber to Stella Mod Plus,
-you can gain access to various game enhancements.
-Such as: using mods, new presets, a collection of shaders and mods,
-and much more!</value>
+    <value>Being a subscriber to Stella Mod Plus, you can gain access to various
+game enhancements. Such as: using mods, new presets, a collection
+of shaders and mods, and much more!</value>
   </data>
   <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -229,7 +228,7 @@ and much more!</value>
     <value>Consolas, 24pt</value>
   </data>
   <data name="linkLabel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 644</value>
+    <value>17, 639</value>
   </data>
   <data name="linkLabel6.Size" type="System.Drawing.Size, System.Drawing">
     <value>270, 37</value>
@@ -262,7 +261,7 @@ and much more!</value>
     <value>Consolas, 24pt</value>
   </data>
   <data name="linkLabel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>974, 644</value>
+    <value>969, 639</value>
   </data>
   <data name="linkLabel5.Size" type="System.Drawing.Size, System.Drawing">
     <value>252, 37</value>
@@ -298,7 +297,7 @@ and much more!</value>
     <value>Consolas, 23.25pt, style=Bold</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 77</value>
+    <value>23, 82</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>629, 37</value>
@@ -334,16 +333,16 @@ and much more!</value>
     <value>Comic Sans MS, 15pt</value>
   </data>
   <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 139</value>
+    <value>25, 144</value>
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>341, 28</value>
+    <value>375, 28</value>
   </data>
   <data name="linkLabel1.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
   <data name="linkLabel1.Text" xml:space="preserve">
-    <value>» Support my work by clicking here</value>
+    <value>» Support this project by clicking here</value>
   </data>
   <data name="linkLabel1.ToolTip" xml:space="preserve">
     <value>Support my work - Sefinek</value>
@@ -370,7 +369,7 @@ and much more!</value>
     <value>Comic Sans MS, 15pt</value>
   </data>
   <data name="linkLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 195</value>
+    <value>25, 200</value>
   </data>
   <data name="linkLabel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>317, 28</value>
@@ -406,7 +405,7 @@ and much more!</value>
     <value>Comic Sans MS, 15pt</value>
   </data>
   <data name="linkLabel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 307</value>
+    <value>25, 312</value>
   </data>
   <data name="linkLabel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>311, 28</value>
@@ -442,7 +441,7 @@ and much more!</value>
     <value>Comic Sans MS, 15pt</value>
   </data>
   <data name="linkLabel7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 279</value>
+    <value>25, 284</value>
   </data>
   <data name="linkLabel7.Size" type="System.Drawing.Size, System.Drawing">
     <value>254, 28</value>
@@ -478,7 +477,7 @@ and much more!</value>
     <value>Comic Sans MS, 15pt</value>
   </data>
   <data name="linkLabel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 251</value>
+    <value>25, 256</value>
   </data>
   <data name="linkLabel8.Size" type="System.Drawing.Size, System.Drawing">
     <value>282, 28</value>
@@ -517,16 +516,16 @@ and much more!</value>
     <value>NoControl</value>
   </data>
   <data name="linkLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 167</value>
+    <value>25, 172</value>
   </data>
   <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>443, 28</value>
+    <value>338, 28</value>
   </data>
   <data name="linkLabel2.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
   </data>
   <data name="linkLabel2.Text" xml:space="preserve">
-    <value>» Send me your useless skins in CS2 if you can</value>
+    <value>» Send me skins for CS2 if you can</value>
   </data>
   <data name="linkLabel2.ToolTip" xml:space="preserve">
     <value>Open trade url</value>
@@ -556,7 +555,7 @@ and much more!</value>
     <value>NoControl</value>
   </data>
   <data name="linkLabel9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 335</value>
+    <value>25, 340</value>
   </data>
   <data name="linkLabel9.Size" type="System.Drawing.Size, System.Drawing">
     <value>362, 28</value>
@@ -595,7 +594,7 @@ and much more!</value>
     <value>NoControl</value>
   </data>
   <data name="linkLabel10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 223</value>
+    <value>25, 228</value>
   </data>
   <data name="linkLabel10.Size" type="System.Drawing.Size, System.Drawing">
     <value>342, 28</value>
@@ -634,16 +633,16 @@ and much more!</value>
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>422, 579</value>
+    <value>397, 590</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>396, 38</value>
+    <value>481, 38</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>Select the correct answer:</value>
+    <value>&gt;&gt; Select the correct answer &lt;&lt;</value>
   </data>
   <data name="label3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>

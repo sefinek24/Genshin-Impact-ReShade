@@ -10,9 +10,9 @@ namespace StellaModLauncher.Scripts;
 
 internal static class Cmd
 {
-	public static async Task<bool> Execute(CliWrap? cliWrapCommand)
+	public static async Task<bool> Execute(CliWrap? cliWrapCommand, bool? playSound = true)
 	{
-		Music.PlaySound("winxp", "information_bar");
+		if ((bool)playSound!) Music.PlaySound("other", "click-button-app", 0.29f);
 
 		string commandArguments = cliWrapCommand?.Arguments != null ? cliWrapCommand.Arguments.Build() : string.Empty;
 

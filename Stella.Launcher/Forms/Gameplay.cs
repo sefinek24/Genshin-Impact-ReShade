@@ -22,6 +22,7 @@ public partial class Gameplay : Form
 	private void Gameplay_Load(object sender, EventArgs e)
 	{
 		RoundedCorners.Form(this);
+		Music.LinkLabelSfx(this);
 	}
 
 	private async void Tutorial_Shown(object sender, EventArgs e)

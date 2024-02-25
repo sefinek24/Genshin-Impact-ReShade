@@ -265,5 +265,5 @@ namespace StellaModLauncher.Forms.Other
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel linkLabel9;
         private System.Windows.Forms.LinkLabel linkLabel10;
-    }
+	 }
 }

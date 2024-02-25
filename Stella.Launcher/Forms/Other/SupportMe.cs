@@ -19,6 +19,8 @@ public sealed partial class SupportMe : Form
 	private void SupportMe_Load(object sender, EventArgs e)
 	{
 		RoundedCorners.Form(this);
+
+		Music.PlaySound("other", "logo-corporate", 0.11f);
 	}
 
 	private void MouseDown_Event(object sender, MouseEventArgs e)

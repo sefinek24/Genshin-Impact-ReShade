@@ -67,6 +67,7 @@ public partial class Default : Form
 		if (newBackground != null) BackgroundImage = newBackground;
 
 		RoundedCorners.Form(this);
+		Music.LinkLabelSfx(this);
 	}
 
 	private async void Main_Shown(object sender, EventArgs e)
@@ -376,6 +377,8 @@ public partial class Default : Form
 		// Music
 		_ = Music.PlayBg();
 
+		if (Secret.IsStellaPlusSubscriber) Music.PlaySound("other", "interface-welcome", 0.11f);
+
 
 		// 2024
 		// status_Label.Text += @"[i] Happy New Year 2024! Thank you all for your trust ~~ Sefinek";
@@ -425,7 +428,7 @@ public partial class Default : Form
 		Image? newBackground = Background.Change(toolTip1, changeBg_LinkLabel);
 		if (newBackground != null) BackgroundImage = newBackground;
 
-		Music.PlaySound("winxp", "menu_command");
+		Music.PlaySound("other", "multi-pop", 0.09f);
 	}
 
 
@@ -485,12 +488,13 @@ public partial class Default : Form
 	// ------- Footer -------
 	private void Subscription_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		Utils.OpenUrl("https://sefinek.net/genshin-impact-reshade/subscription");
+		Utils.OpenUrl("https://sefinek.net/genshin-impact-reshade/subscription?referrer=launcher");
 	}
 
 	private void SupportMe_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		Utils.OpenUrl("https://sefinek.net/support-me");
+		if (Application.OpenForms.OfType<SupportMe>().Any()) return;
+		new SupportMe { DesktopLocation = DesktopLocation, Icon = Program.Ico }.Show();
 	}
 
 	private void DiscordServer_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

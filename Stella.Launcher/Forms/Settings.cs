@@ -22,6 +22,7 @@ public partial class Settings : Form
 	private void Tools_Load(object sender, EventArgs e)
 	{
 		RoundedCorners.Form(this);
+		Music.LinkLabelSfx(this);
 
 		release_Label.Text = string.Format(release_Label.Text, Program.AppVersionFull, Program.AppFileVersion, Program.AppVersion);
 

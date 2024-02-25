@@ -34,7 +34,7 @@ internal static class Program
 
 	// Links
 	private static readonly string AppWebsiteSub = "https://genshin.sefinek.net";
-	public static readonly string? AppWebsiteFull = "https://sefinek.net/genshin-impact-reshade";
+	public static readonly string? AppWebsiteFull = "https://sefinek.net/genshin-impact-reshade?referrer=launcher";
 
 	// HttpClient
 	public static readonly Lazy<HttpClient> WbClient = new(() =>
@@ -130,7 +130,7 @@ internal static class Program
 			int value = (int)(key?.GetValue("AppIsConfigured") ?? 0);
 			if (value == 0)
 			{
-				_ = Cmd.Execute(new Cmd.CliWrap { App = ConfigurationWindow });
+				_ = Cmd.Execute(new Cmd.CliWrap { App = ConfigurationWindow }, false);
 				Environment.Exit(997890421);
 			}
 		}
@@ -140,7 +140,7 @@ internal static class Program
 		// int newUpdate = prepareIni.ReadInt("Launcher", "UserIsMyPatron", 0);
 		// if (newUpdate == 1)
 		// {
-		//     _ = Cmd.Execute(new Cmd.CliWrap { App = PrepareLauncher });
+		//     _ = Cmd.Execute(new Cmd.CliWrap { App = PrepareLauncher }, false);
 		//     Environment.Exit(997890421);
 		// }
 

@@ -121,10 +121,9 @@
     <value>Zamknij</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Będąc subskrybentem Stella Mod Plus,
-możesz uzyskać dostęp do różnych ulepszeń gry.
-Takich jak: używanie modów, nowe ustawienia wstępne, kolekcja shaderów i modów,
-i wiele więcej!</value>
+    <value>Będąc subskrybentem Stella Mod Plus, możesz uzyskać dostęp do różnych
+ulepszeń gry. Takich jak: używanie modów, nowe ustawienia wstępne,
+kolekcja shaderów i modów, i wiele więcej!</value>
   </data>
   <data name="linkLabel6.Text" xml:space="preserve">
     <value>🌌 Może później</value>
@@ -163,7 +162,7 @@ i wiele więcej!</value>
     <value>Zostaw swoją opinię na kanale Discord</value>
   </data>
   <data name="linkLabel2.Text" xml:space="preserve">
-    <value>» Wyślij mi swoje bezużyteczne skiny w CS2, jeśli możesz</value>
+    <value>» Wyślij mi swoje skiny do CS2, jeśli możesz</value>
   </data>
   <data name="linkLabel2.ToolTip" xml:space="preserve">
     <value>Otwórz trade link</value>
@@ -181,7 +180,7 @@ i wiele więcej!</value>
     <value>Stella Mod Launcher Reviews | Przeczytaj recenzje obsługi klienta genshin.sefinek.net</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>Wybierz poprawną odpowiedź:</value>
+    <value>&gt;&gt; Wybierz poprawną odpowiedź &lt;&lt;</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Wsparcie twórcy</value>
