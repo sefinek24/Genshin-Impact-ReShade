@@ -40,7 +40,7 @@ internal static class UpdateBenefits
 		Utils.RemoveLinkClickedEventHandler(Default._updates_LinkLabel!);
 
 		// Get update URL (mirror)
-		string jsonResponse = await Program.SefinWebClient.GetStringAsync($"{Program.WebApi}/genshin-stella-mod/patrons/benefits/update?benefitType={benefitName}").ConfigureAwait(true);
+		string jsonResponse = await Program.SefinWebClient.GetStringAsync($"{Program.WebApi}/stella-mod-plus/benefits/update?benefitType={benefitName}").ConfigureAwait(true);
 		GetUpdateUrl? data = JsonConvert.DeserializeObject<GetUpdateUrl>(jsonResponse);
 		Program.Logger.Info($"The download url is ready; {data!.PreparedUrl}");
 

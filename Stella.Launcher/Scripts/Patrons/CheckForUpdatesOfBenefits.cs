@@ -183,7 +183,7 @@ internal static class CheckForUpdatesOfBenefits
 		{
 			Program.SefinWebClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Secret.BearerToken);
 
-			string jsonResponse = await Program.SefinWebClient.GetStringAsync($"{Program.WebApi}/genshin-stella-mod/patrons/benefits/version").ConfigureAwait(true);
+			string jsonResponse = await Program.SefinWebClient.GetStringAsync($"{Program.WebApi}/stella-mod-plus/benefits/version").ConfigureAwait(true);
 			return JsonConvert.DeserializeObject<BenefitVersions>(jsonResponse);
 		}
 		catch (WebException webEx)
