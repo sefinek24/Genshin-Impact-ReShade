@@ -12,7 +12,7 @@ internal static class DownloadUpdateResources
 
 		if (!Directory.Exists(resourcesGlobalPath))
 		{
-			Directory.CreateDirectory(resourcesGlobalPath);
+			Directory.CreateDirectory(resourcesGlobalPath!);
 			Console.WriteLine($@"Created folder: {resourcesGlobalPath}");
 		}
 		else
@@ -20,16 +20,16 @@ internal static class DownloadUpdateResources
 			Console.WriteLine($@"Found: {resourcesGlobalPath}");
 		}
 
+
 		// Checking current version of resources
-		Console.WriteLine(@"Checking current version of resources...");
+		Console.Write(@"Checking current version of resources... ");
 		using HttpClient httpClient = new();
 		httpClient.DefaultRequestHeaders.Add("User-Agent", Start.UserAgent);
 		string responseContent = await httpClient.GetStringAsync($"{Start.WebApi}/genshin-stella-mod/versions").ConfigureAwait(false);
 		StellaApiVersion? json = JsonConvert.DeserializeObject<StellaApiVersion>(responseContent);
-		Console.WriteLine(@$"Version: v{json!.Resources?.Release} ({(json.Resources!.Beta ? "beta" : "stable")}) from {json.Resources.Date}");
+		Console.WriteLine(@$"v{json!.Resources?.Release} ({(json.Resources!.Beta ? "beta" : "stable")}) from {json.Resources.Date}");
 
-
-		string zipPath = Path.Combine(resourcesGlobalPath, "Temp files", $"Stella Mod Resources - v{json!.Resources?.Release}.zip");
+		string zipPath = Path.Combine(resourcesGlobalPath, "Temp files", $"Stella Mod Resources - v{json.Resources?.Release}.zip");
 		if (!Directory.Exists(Path.GetDirectoryName(zipPath))) Directory.CreateDirectory(Path.GetDirectoryName(zipPath) ?? string.Empty);
 		if (File.Exists(zipPath))
 		{
@@ -37,6 +37,7 @@ internal static class DownloadUpdateResources
 			File.Delete(zipPath);
 			Start.Logger.Info($"Deleted {zipPath}");
 		}
+
 
 		Console.Write(@"Preparing to download resources...");
 
@@ -47,8 +48,8 @@ internal static class DownloadUpdateResources
 		HttpResponseMessage response = await httpClient.GetAsync("https://github.com/sefinek24/Genshin-Stella-Resources/releases/latest/download/resources.zip", HttpCompletionOption.ResponseHeadersRead).ConfigureAwait(false);
 		long? totalBytes = response.Content.Headers.ContentLength;
 
-		using Stream stream = await response.Content.ReadAsStreamAsync().ConfigureAwait(false);
-		using FileStream fs = new(zipPath, FileMode.Create, FileAccess.Write, FileShare.None);
+		Stream stream = await response.Content.ReadAsStreamAsync().ConfigureAwait(false);
+		FileStream fs = new(zipPath, FileMode.Create, FileAccess.Write, FileShare.None);
 		byte[] buffer = new byte[8192];
 		int bytesRead;
 		while ((bytesRead = await stream.ReadAsync(buffer).ConfigureAwait(false)) > 0)
@@ -65,14 +66,20 @@ internal static class DownloadUpdateResources
 			lastPercentage = percentage;
 		}
 
-		Console.WriteLine("\nUnpacking resources...");
+
+		Console.WriteLine("\nWaiting for resources to be disposed...");
+		await stream.DisposeAsync().ConfigureAwait(false);
+		await fs.DisposeAsync().ConfigureAwait(false);
+
+
+		Console.WriteLine(@"Unpacking resources...");
 		using ZipArchive archive = ZipFile.OpenRead(zipPath);
 		foreach (ZipArchiveEntry entry in archive.Entries)
 		{
 			string fullPath = Path.Combine(resourcesGlobalPath, entry.FullName);
 			if (entry.Name == "")
 			{
-				Directory.CreateDirectory(Path.GetDirectoryName(fullPath));
+				Directory.CreateDirectory(Path.GetDirectoryName(fullPath)!);
 				continue;
 			}
 
