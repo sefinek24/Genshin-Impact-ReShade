@@ -21,9 +21,9 @@ internal class Tray(NotifyIcon? trayIcon, Form mainForm)
 
 	private void UpdateToggleButtonText()
 	{
-		ToolStripMenuItem? toggleButton = trayIcon.ContextMenuStrip?.Items[0] as ToolStripMenuItem;
+		ToolStripMenuItem? toggleButton = trayIcon!.ContextMenuStrip?.Items[0] as ToolStripMenuItem;
 
-		toggleButton.Text = mainForm.WindowState is FormWindowState.Normal or FormWindowState.Maximized ? @"Minimize" : @"Restore";
+		toggleButton!.Text = mainForm.WindowState is FormWindowState.Normal or FormWindowState.Maximized ? @"Minimize" : @"Restore";
 	}
 
 
