@@ -478,12 +478,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="System.Management">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8.1\System.Management.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="Forms\Default.cs">
       <SubType>Form</SubType>
     </Compile>
