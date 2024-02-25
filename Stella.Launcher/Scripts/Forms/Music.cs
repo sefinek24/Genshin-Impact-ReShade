@@ -66,12 +66,8 @@ internal static class Music
 	public static void LinkLabelSfx(Form form)
 	{
 		foreach (Control ctrl in form.Controls)
-		{
 			if (ctrl is LinkLabel)
-			{
 				ctrl.MouseHover += LinkLabel_MouseHover;
-			}
-		}
 	}
 
 	private static void LinkLabel_MouseHover(object? sender, EventArgs e)
