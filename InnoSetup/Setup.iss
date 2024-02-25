@@ -25,8 +25,8 @@ DefaultDirName={autopf}\Sefinek\Genshin-Stella-Mod
 DisableDirPage=no
 DisableWelcomePage=no
 ChangesAssociations=no
-InfoBeforeFile=..\Build\Release\net8.0-windows\data\README.txt
-LicenseFile=..\Build\Release\net8.0-windows\LICENSE
+InfoBeforeFile=..\Build\GitHub\net8.0-windows\data\README.txt
+LicenseFile=..\Build\GitHub\net8.0-windows\LICENSE
 PrivilegesRequired=none
 OutputBaseFilename=Stella-Mod-Setup
 WizardStyle=classic
@@ -82,7 +82,7 @@ Name: "ukrainian"; MessagesFile: "compiler:Languages\Ukrainian.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Check: not InstViaSetup and not InstViaLauncher
 
 [Files]
-Source: "..\Build\Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "..\Build\GitHub\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
 Name: "{autodesktop}\Stella Mod Launcher"; Filename: "{app}\net8.0-windows\{#AppExeName}"; Tasks: desktopicon
