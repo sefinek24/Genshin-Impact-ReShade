@@ -18,7 +18,7 @@ internal static class NormalRelease
 		Default._version_LinkLabel!.Text = $@"v{Program.AppFileVersion} → v{remoteVersion}";
 
 		// 2
-		Default._updates_LinkLabel.LinkColor = Color.Cyan;
+		Default._updates_LinkLabel!.LinkColor = Color.Cyan;
 		Default._updates_LinkLabel.Text = Resources.NormalRelease_ClickHereToUpdate;
 		Default._updateIco_PictureBox!.Image = Resources.icons8_download_from_the_cloud;
 
@@ -76,7 +76,7 @@ internal static class NormalRelease
 		Program.Logger.Info(Resources.NormalRelease_PreparingToDownloadNewUpdate);
 		TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Indeterminate);
 
-		Default._updates_LinkLabel.LinkColor = Color.DodgerBlue;
+		Default._updates_LinkLabel!.LinkColor = Color.DodgerBlue;
 		Default._updates_LinkLabel.Text = Resources.NormalRelease_UpdatingPleaseWait;
 
 		Labels.ShowProgressbar();
@@ -97,7 +97,7 @@ internal static class NormalRelease
 
 	private static async Task StartDownload()
 	{
-		Utils.RemoveLinkClickedEventHandler(Default._updates_LinkLabel);
+		Utils.RemoveLinkClickedEventHandler(Default._updates_LinkLabel!);
 
 		if (File.Exists(SetupPathExe))
 		{

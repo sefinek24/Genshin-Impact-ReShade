@@ -37,7 +37,7 @@ internal static class UpdateBenefits
 
 		Program.Logger.Info($"Found the new version of: {benefitName}");
 
-		Utils.RemoveLinkClickedEventHandler(Default._updates_LinkLabel);
+		Utils.RemoveLinkClickedEventHandler(Default._updates_LinkLabel!);
 
 		// Get update URL (mirror)
 		string jsonResponse = await Program.SefinWebClient.GetStringAsync($"{Program.WebApi}/genshin-stella-mod/patrons/benefits/update?benefitType={benefitName}").ConfigureAwait(true);
@@ -57,14 +57,14 @@ internal static class UpdateBenefits
 			_ => throw new InvalidEnumArgumentException()
 		};
 
-		Default._progressBar1.Show();
-		Default._preparingPleaseWait.Show();
+		Default._progressBar1!.Show();
+		Default._preparingPleaseWait!.Show();
 
 
 		// Run download
 		await StartDownload($"{data.PreparedUrl}?benefitType={benefitName}").ConfigureAwait(true);
 
-		Utils.AddLinkClickedEventHandler(Default._updates_LinkLabel, CheckForUpdates.CheckUpdates_Click);
+		Utils.AddLinkClickedEventHandler(Default._updates_LinkLabel!, CheckForUpdates.CheckUpdates_Click);
 
 
 		// Prepare presets
@@ -91,7 +91,7 @@ internal static class UpdateBenefits
 			DateTime startTime = DateTime.Now;
 
 			using Stream streamToReadFrom = await response.Content.ReadAsStreamAsync().ConfigureAwait(true);
-			using FileStream streamToWriteTo = File.Open(_zipFile, FileMode.Create, FileAccess.Write, FileShare.None);
+			using FileStream streamToWriteTo = File.Open(_zipFile!, FileMode.Create, FileAccess.Write, FileShare.None);
 			byte[] buffer = new byte[8192];
 			int bytesRead;
 			long totalRead = 0;
@@ -127,15 +127,7 @@ internal static class UpdateBenefits
 		{
 			await Download.UnzipWithProgress(_zipFile, _outputDir).ConfigureAwait(true);
 
-			Default._progressBar1.Hide();
-			Default._preparingPleaseWait.Hide();
-			Default._discordServerIco_Picturebox.Show();
-			Default._discordServer_LinkLabel.Show();
-			Default._supportMeIco_PictureBox.Show();
-			Default._supportMe_LinkLabel.Show();
-			Default._youtubeIco_Picturebox.Show();
-			Default._youTube_LinkLabel.Show();
-			Default._status_Label.Text += $"[✓] {_successfullyUpdated}\n";
+			Labels.HideProgressbar(_successfullyUpdated, false);
 
 			await CheckForUpdates.Analyze().ConfigureAwait(true);
 		}

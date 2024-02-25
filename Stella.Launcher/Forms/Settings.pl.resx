@@ -173,8 +173,7 @@
   </data>
   <data name="release_Label.Text" xml:space="preserve">
     <value>Pełna kompilacja: {0}
-Wersja pliku: {1}
-Wersja asemblera: {2}</value>
+Wersja pliku: {1} | Wersja asemblera: {2}</value>
   </data>
   <data name="Launcher.Text" xml:space="preserve">
     <value>Launcher</value>

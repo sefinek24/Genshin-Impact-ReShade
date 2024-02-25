@@ -17,7 +17,7 @@ internal static class DownloadResources
 		Default._version_LinkLabel!.Text = $@"v{localResVersion} → v{remoteResVersion}";
 
 		// 2
-		Default._updates_LinkLabel.LinkColor = Color.Cyan;
+		Default._updates_LinkLabel!.LinkColor = Color.Cyan;
 		Default._updates_LinkLabel.Text = Resources.NormalRelease_ClickHereToUpdate;
 		Default._updateIco_PictureBox!.Image = Resources.icons8_download_from_the_cloud;
 
@@ -76,7 +76,7 @@ internal static class DownloadResources
 		Program.Logger.Info(Resources.NormalRelease_PreparingToDownloadNewUpdate);
 		TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Normal);
 
-		Default._updates_LinkLabel.LinkColor = Color.DodgerBlue;
+		Default._updates_LinkLabel!.LinkColor = Color.DodgerBlue;
 		Default._updates_LinkLabel.Text = Resources.NormalRelease_UpdatingPleaseWait;
 
 		Labels.ShowProgressbar();
