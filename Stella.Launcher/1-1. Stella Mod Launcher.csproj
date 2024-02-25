@@ -8,9 +8,9 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
-    <AssemblyVersion>7.9.7.0</AssemblyVersion>
+    <AssemblyVersion>7.9.7.7</AssemblyVersion>
     <FileVersion>7.9.7.6</FileVersion>
-    <Version>7.9.7.6</Version>
+    <Version>7.9.7.7</Version>
     <StartupObject>StellaModLauncher.Program</StartupObject>
     <ApplicationIcon>data\images\icons\52x52.ico</ApplicationIcon>
     <BaseOutputPath>..\Build\</BaseOutputPath>
