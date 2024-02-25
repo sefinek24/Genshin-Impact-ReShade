@@ -161,7 +161,10 @@ internal static class Utils
 			shortcut.TargetPath = Shortcut.ProgramExe;
 			shortcut.Save();
 
-			Program.Logger.Info($"Desktop shortcut has been created in: {Shortcut.ScPath}");
+			Program.Logger.Info("Desktop shortcut has been created");
+			Program.Logger.Info($"CreateShortcut(): {Shortcut.ScPath}");
+			Program.Logger.Info($"WorkingDirectory(): {Shortcut.ScPath}");
+			Program.Logger.Info($"TargetPath(): {Shortcut.ProgramExe}");
 			return true;
 		}
 		catch (Exception ex)

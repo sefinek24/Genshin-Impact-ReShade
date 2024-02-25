@@ -40,10 +40,10 @@ public sealed partial class Window : Form
 	private void Main_Load(object sender, EventArgs e)
 	{
 		// Shortcut
-		if (!File.Exists(PrepareCfgPath))
-			checkBox2.Checked = true;
-		else
-			checkBox3.Checked = _prepareIni.ReadInt("PrepareStella", "InternetShortcutsInStartMenu", 1) != 0;
+		checkBox2.Checked = _prepareIni.ReadInt("PrepareStella", "NewShortcutsOnDesktop", 1) != 0;
+
+		// Web shortcuts
+		if (!File.Exists(PrepareCfgPath)) checkBox3.Checked = _prepareIni.ReadInt("PrepareStella", "InternetShortcutsInStartMenu", 1) != 0;
 
 		// Resources
 		bool foundResources = CheckData.ResourcesPath();

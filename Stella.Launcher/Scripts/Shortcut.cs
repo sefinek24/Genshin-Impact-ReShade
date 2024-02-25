@@ -1,4 +1,3 @@
-using System.Reflection;
 using IWshRuntimeLibrary;
 using StellaModLauncher.Properties;
 using File = System.IO.File;
@@ -7,7 +6,7 @@ namespace StellaModLauncher.Scripts;
 
 internal static class Shortcut
 {
-	public static readonly string ProgramExe = Assembly.GetExecutingAssembly().Location;
+	public static readonly string? ProgramExe = Environment.ProcessPath;
 	private static readonly string DesktopPath = Environment.GetFolderPath(Environment.SpecialFolder.CommonDesktopDirectory);
 	public static readonly string ScPath = Path.Combine(DesktopPath, "Stella Mod Launcher.lnk");
 

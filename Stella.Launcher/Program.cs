@@ -69,7 +69,7 @@ internal static class Program
 	{
 		// Prepare NLog
 		Logger = Logger.WithProperty("AppName", "Launcher");
-		Logger = Logger.WithProperty("AppVersion", AppVersion);
+		Logger = Logger.WithProperty("AppVersion", AppFileVersion);
 
 		// Set the correct language for WinForms
 		string currentLang = Settings.ReadString("Language", "UI");
