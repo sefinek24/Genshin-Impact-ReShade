@@ -4,8 +4,6 @@ namespace BuildStellaMod;
 
 internal static class Utils
 {
-	private const string DestinationFolder1 = @"C:\GitHub\VS\Stella\Genshin-Impact-ReShade\Build\GitHub";
-
 	public static async Task DeleteDirectory(string directoryPath)
 	{
 		if (!Directory.Exists(directoryPath)) return;
@@ -102,37 +100,6 @@ internal static class Utils
 		{
 			Console.WriteLine($"----------------------------- Error occurred during compilation -----------------------------\n\n{ex}");
 			return false;
-		}
-	}
-
-	public static void CopyFiles(string sourceFolderPath)
-	{
-		Console.WriteLine("\nCopying files...");
-
-		try
-		{
-			string[] files = Directory.GetFiles(sourceFolderPath, "*.*", SearchOption.AllDirectories);
-
-			foreach (string file in files)
-			{
-				string relativePath = file[(sourceFolderPath.Length + 1)..];
-				string destinationPath1 = Path.Combine(DestinationFolder1, relativePath);
-
-				string? dirNameDestinationPath1 = Path.GetDirectoryName(destinationPath1);
-				if (string.IsNullOrEmpty(dirNameDestinationPath1))
-					Console.WriteLine($"dirNameDestinationPath1 is {dirNameDestinationPath1}");
-				else
-					Directory.CreateDirectory(dirNameDestinationPath1);
-
-				File.Copy(file, destinationPath1, true);
-			}
-
-			Console.WriteLine("Source files have been copied to the specified folders:");
-			Console.WriteLine(DestinationFolder1);
-		}
-		catch (Exception ex)
-		{
-			Console.WriteLine($"Error occurred while copying files: {ex.Message}");
 		}
 	}
 }
