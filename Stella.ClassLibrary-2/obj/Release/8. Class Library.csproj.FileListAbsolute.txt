@@ -1,6 +1,0 @@
-C:\GitHub\VS\Stella\Genshin-Impact-ReShade\Stella.ClassLibrary\bin\Release\ClassLibrary.dll
-C:\GitHub\VS\Stella\Genshin-Impact-ReShade\Stella.ClassLibrary\bin\Release\ClassLibrary.pdb
-C:\GitHub\VS\Stella\Genshin-Impact-ReShade\Stella.ClassLibrary\obj\Release\8. Class Library.csproj.AssemblyReference.cache
-C:\GitHub\VS\Stella\Genshin-Impact-ReShade\Stella.ClassLibrary\obj\Release\8. Class Library.csproj.CoreCompileInputs.cache
-C:\GitHub\VS\Stella\Genshin-Impact-ReShade\Stella.ClassLibrary\obj\Release\ClassLibrary.dll
-C:\GitHub\VS\Stella\Genshin-Impact-ReShade\Stella.ClassLibrary\obj\Release\ClassLibrary.pdb
