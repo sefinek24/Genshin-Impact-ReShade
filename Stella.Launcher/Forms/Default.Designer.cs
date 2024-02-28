@@ -76,7 +76,6 @@ namespace StellaModLauncher.Forms
 				webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
 				notifyIcon1 = new NotifyIcon(components);
 				pictureBox4 = new PictureBox();
-				domainUpDown1 = new DomainUpDown();
 				panel1.SuspendLayout();
 				((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
 				((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -544,18 +543,12 @@ namespace StellaModLauncher.Forms
 				pictureBox4.Name = "pictureBox4";
 				pictureBox4.TabStop = false;
 				// 
-				// domainUpDown1
-				// 
-				resources.ApplyResources(domainUpDown1, "domainUpDown1");
-				domainUpDown1.Name = "domainUpDown1";
-				// 
 				// Default
 				// 
 				resources.ApplyResources(this, "$this");
 				AutoScaleMode = AutoScaleMode.Dpi;
 				BackColor = Color.Black;
 				BackgroundImage = Properties.Resources.bg_main;
-				Controls.Add(domainUpDown1);
 				Controls.Add(label2);
 				Controls.Add(pictureBox4);
 				Controls.Add(webView21);
@@ -671,7 +664,6 @@ namespace StellaModLauncher.Forms
 		  private System.Windows.Forms.Label label2;
 		  private System.Windows.Forms.PictureBox pictureBox5;
 		  private System.Windows.Forms.LinkLabel viewChangelog_LinkLabel;
-		  private DomainUpDown domainUpDown1;
 	 }
 }
 
