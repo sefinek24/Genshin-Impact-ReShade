@@ -474,8 +474,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Stella.Telemetry\Stella.Telemetry.csproj" />
     <ProjectReference Include="..\Stella.ClassLibrary-1\7-1. StellaPLF .NET 8.csproj" />
+    <ProjectReference Include="..\Stella.Telemetry\8. Stella Telemetry.csproj" />
   </ItemGroup>
 
   <ItemGroup>
