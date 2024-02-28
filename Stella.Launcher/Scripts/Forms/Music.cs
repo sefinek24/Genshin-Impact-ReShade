@@ -1,4 +1,3 @@
-using System.Diagnostics;
 using NAudio.Wave;
 using StellaModLauncher.Forms;
 using StellaModLauncher.Properties;

@@ -45,8 +45,6 @@ internal static class Program
 		return httpClient;
 	});
 
-	public static HttpClient SefinWebClient => HClient.Value;
-
 	// public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v6" : "https://api.sefinek.net/api/v6";
 	public static readonly string WebApi = "https://api.sefinek.net/api/v6";
 
@@ -58,6 +56,8 @@ internal static class Program
 
 	// NLog
 	public static Logger Logger = LogManager.GetCurrentClassLogger();
+
+	public static HttpClient SefinWebClient => HClient.Value;
 
 	// public static void DisposeHttpClient()
 	// {

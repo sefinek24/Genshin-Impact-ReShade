@@ -6,8 +6,8 @@ namespace StellaModLauncher.Scripts.Forms;
 
 internal static class Stages
 {
-	public static int _currentStage;
 	public const int AllStages = 13;
+	public static int _currentStage;
 
 	public static async void UpdateStage(int stage, string progressBarText)
 	{
