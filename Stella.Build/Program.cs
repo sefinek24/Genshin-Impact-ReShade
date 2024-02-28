@@ -30,10 +30,10 @@ internal static class Program
 
 		string[] projects =
 		[
-			@"Stella.Launcher\1-1. Stella Mod Launcher.csproj",
-			@"Stella.Worker\2-1. Genshin Stella Mod.csproj",
+			@"Stella.Launcher\1. Stella Mod Launcher.csproj",
+			@"Stella.Worker\2. Genshin Stella Mod.csproj",
 			@"Stella.Configuration\3. Configuration .NET 8.csproj",
-			@"Stella.Prepare\4-1. Prepare Stella.csproj",
+			@"Stella.Prepare\4. Prepare Stella.csproj",
 			@"Stella.Info-48793142\5. Information 48793142.csproj",
 			@"Stella.DeviceIdentifier\6. Device Identifier.csproj"
 		];

@@ -8,8 +8,6 @@
       <excludeFolder url="file://$MODULE_DIR$/.vs" />
       <excludeFolder url="file://$MODULE_DIR$/Build" />
       <excludeFolder url="file://$MODULE_DIR$/InnoSetup/Output" />
-      <excludeFolder url="file://$MODULE_DIR$/Stella.ClassLibrary-1/bin" />
-      <excludeFolder url="file://$MODULE_DIR$/Stella.ClassLibrary-1/obj" />
       <excludeFolder url="file://$MODULE_DIR$/Stella.ClassLibrary-2/.vs" />
       <excludeFolder url="file://$MODULE_DIR$/Stella.ClassLibrary-2/obj/Debug/TempPE" />
       <excludeFolder url="file://$MODULE_DIR$/Stella.ClassLibrary-2/obj/Release/TempPE" />
@@ -28,6 +26,8 @@
       <excludeFolder url="file://$MODULE_DIR$/Win App Packaging Project/obj/Release" />
       <excludeFolder url="file://$MODULE_DIR$/Stella.PrepareOld/.vs" />
       <excludeFolder url="file://$MODULE_DIR$/Stella.PrepareOld/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/Stella.ClassLibrary/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/Stella.ClassLibrary/obj" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

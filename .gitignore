@@ -44,10 +44,6 @@ Stella.WorkerOld/obj
 Stella.Configuration/bin
 Stella.Configuration/obj
 
-## Configuration Window [Old]
-Stella.ConfigurationOld/bin
-Stella.ConfigurationOld/obj
-
 ## Prepare Stella Mod
 Stella.Prepare/bin
 Stella.Prepare/obj
@@ -62,17 +58,13 @@ Stella.Info-48793142/obj
 Stella.DeviceIdentifier/bin
 Stella.DeviceIdentifier/obj
 
-## Stella.SefinAntiCheat Soultion
+## Sefin Anti Cheat
 Stella.SefinAntiCheat/bin
 Stella.SefinAntiCheat/obj
 
 ## Stella ClassLibrary
-### .NET 8
-Stella.ClassLibrary-1/bin
-Stella.ClassLibrary-1/obj
-### .NET Framework
-Stella.ClassLibrary-2/bin
-Stella.ClassLibrary-2/obj
+Stella.ClassLibrary/bin
+Stella.ClassLibrary/obj
 
 ## Stella Telemetry
 Stella.Telemetry/bin
