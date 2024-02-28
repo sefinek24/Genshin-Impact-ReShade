@@ -32,7 +32,7 @@ namespace StellaModLauncher.Forms
 				System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Default));
 				panel1 = new Panel();
 				pictureBox5 = new PictureBox();
-				linkLabel3 = new LinkLabel();
+				viewChangelog_LinkLabel = new LinkLabel();
 				pictureBox2 = new PictureBox();
 				changeBg_LinkLabel = new LinkLabel();
 				close_Panel = new Panel();
@@ -44,7 +44,6 @@ namespace StellaModLauncher.Forms
 				tools_LinkLabel = new LinkLabel();
 				discordServer_LinkLabel = new LinkLabel();
 				web_LinkLabel = new LinkLabel();
-				startGame_LinkLabel = new LinkLabel();
 				gameplay_LinkLabel = new LinkLabel();
 				supportMe_LinkLabel = new LinkLabel();
 				becomeMyPatron_LinkLabel = new LinkLabel();
@@ -57,11 +56,12 @@ namespace StellaModLauncher.Forms
 				only3DMigoto_LinkLabel = new LinkLabel();
 				linkLabel1 = new LinkLabel();
 				linkLabel2 = new LinkLabel();
+				startGame_LinkLabel = new LinkLabel();
 				label2 = new Label();
 				toolsIco_PictureBox = new PictureBox();
 				updateIco_PictureBox = new PictureBox();
 				versionIco_PictureBox = new PictureBox();
-				updates_LinkLabel = new LinkLabel();
+				checkForUpdates_LinkLabel = new LinkLabel();
 				webIco_Picturebox = new PictureBox();
 				discordServerIco_Picturebox = new PictureBox();
 				status_Label = new Label();
@@ -76,6 +76,7 @@ namespace StellaModLauncher.Forms
 				webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
 				notifyIcon1 = new NotifyIcon(components);
 				pictureBox4 = new PictureBox();
+				domainUpDown1 = new DomainUpDown();
 				panel1.SuspendLayout();
 				((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
 				((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -100,7 +101,7 @@ namespace StellaModLauncher.Forms
 				panel1.BackColor = Color.Transparent;
 				resources.ApplyResources(panel1, "panel1");
 				panel1.Controls.Add(pictureBox5);
-				panel1.Controls.Add(linkLabel3);
+				panel1.Controls.Add(viewChangelog_LinkLabel);
 				panel1.Controls.Add(pictureBox2);
 				panel1.Controls.Add(changeBg_LinkLabel);
 				panel1.Controls.Add(close_Panel);
@@ -119,16 +120,16 @@ namespace StellaModLauncher.Forms
 				pictureBox5.Name = "pictureBox5";
 				pictureBox5.TabStop = false;
 				// 
-				// linkLabel3
+				// viewChangelog_LinkLabel
 				// 
-				linkLabel3.ActiveLinkColor = Color.DodgerBlue;
-				resources.ApplyResources(linkLabel3, "linkLabel3");
-				linkLabel3.BackColor = Color.Transparent;
-				linkLabel3.LinkBehavior = LinkBehavior.HoverUnderline;
-				linkLabel3.LinkColor = Color.DodgerBlue;
-				linkLabel3.Name = "linkLabel3";
-				linkLabel3.TabStop = true;
-				linkLabel3.LinkClicked += ViewChangelog_LinkClicked;
+				viewChangelog_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
+				resources.ApplyResources(viewChangelog_LinkLabel, "viewChangelog_LinkLabel");
+				viewChangelog_LinkLabel.BackColor = Color.Transparent;
+				viewChangelog_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
+				viewChangelog_LinkLabel.LinkColor = Color.DodgerBlue;
+				viewChangelog_LinkLabel.Name = "viewChangelog_LinkLabel";
+				viewChangelog_LinkLabel.TabStop = true;
+				viewChangelog_LinkLabel.LinkClicked += ViewChangelog_LinkClicked;
 				// 
 				// pictureBox2
 				// 
@@ -232,19 +233,6 @@ namespace StellaModLauncher.Forms
 				web_LinkLabel.TabStop = true;
 				toolTip1.SetToolTip(web_LinkLabel, resources.GetString("web_LinkLabel.ToolTip"));
 				web_LinkLabel.LinkClicked += Website_LinkClicked;
-				// 
-				// startGame_LinkLabel
-				// 
-				startGame_LinkLabel.ActiveLinkColor = Color.LightSkyBlue;
-				resources.ApplyResources(startGame_LinkLabel, "startGame_LinkLabel");
-				startGame_LinkLabel.BackColor = Color.Transparent;
-				startGame_LinkLabel.ForeColor = SystemColors.ControlText;
-				startGame_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
-				startGame_LinkLabel.LinkColor = Color.DodgerBlue;
-				startGame_LinkLabel.Name = "startGame_LinkLabel";
-				startGame_LinkLabel.TabStop = true;
-				toolTip1.SetToolTip(startGame_LinkLabel, resources.GetString("startGame_LinkLabel.ToolTip"));
-				startGame_LinkLabel.LinkClicked += StartGame_LinkClicked;
 				// 
 				// gameplay_LinkLabel
 				// 
@@ -394,6 +382,19 @@ namespace StellaModLauncher.Forms
 				toolTip1.SetToolTip(linkLabel2, resources.GetString("linkLabel2.ToolTip"));
 				linkLabel2.LinkClicked += Settings_LinkClicked;
 				// 
+				// startGame_LinkLabel
+				// 
+				startGame_LinkLabel.ActiveLinkColor = Color.LightSkyBlue;
+				resources.ApplyResources(startGame_LinkLabel, "startGame_LinkLabel");
+				startGame_LinkLabel.BackColor = Color.Transparent;
+				startGame_LinkLabel.ForeColor = SystemColors.ControlText;
+				startGame_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
+				startGame_LinkLabel.LinkColor = Color.DodgerBlue;
+				startGame_LinkLabel.Name = "startGame_LinkLabel";
+				startGame_LinkLabel.TabStop = true;
+				toolTip1.SetToolTip(startGame_LinkLabel, resources.GetString("startGame_LinkLabel.ToolTip"));
+				startGame_LinkLabel.LinkClicked += StartGame_LinkClicked;
+				// 
 				// label2
 				// 
 				resources.ApplyResources(label2, "label2");
@@ -425,15 +426,15 @@ namespace StellaModLauncher.Forms
 				versionIco_PictureBox.Name = "versionIco_PictureBox";
 				versionIco_PictureBox.TabStop = false;
 				// 
-				// updates_LinkLabel
+				// checkForUpdates_LinkLabel
 				// 
-				updates_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
-				resources.ApplyResources(updates_LinkLabel, "updates_LinkLabel");
-				updates_LinkLabel.BackColor = Color.Transparent;
-				updates_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
-				updates_LinkLabel.LinkColor = Color.White;
-				updates_LinkLabel.Name = "updates_LinkLabel";
-				updates_LinkLabel.TabStop = true;
+				checkForUpdates_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
+				resources.ApplyResources(checkForUpdates_LinkLabel, "checkForUpdates_LinkLabel");
+				checkForUpdates_LinkLabel.BackColor = Color.Transparent;
+				checkForUpdates_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
+				checkForUpdates_LinkLabel.LinkColor = Color.White;
+				checkForUpdates_LinkLabel.Name = "checkForUpdates_LinkLabel";
+				checkForUpdates_LinkLabel.TabStop = true;
 				// 
 				// webIco_Picturebox
 				// 
@@ -543,12 +544,18 @@ namespace StellaModLauncher.Forms
 				pictureBox4.Name = "pictureBox4";
 				pictureBox4.TabStop = false;
 				// 
+				// domainUpDown1
+				// 
+				resources.ApplyResources(domainUpDown1, "domainUpDown1");
+				domainUpDown1.Name = "domainUpDown1";
+				// 
 				// Default
 				// 
 				resources.ApplyResources(this, "$this");
 				AutoScaleMode = AutoScaleMode.Dpi;
 				BackColor = Color.Black;
 				BackgroundImage = Properties.Resources.bg_main;
+				Controls.Add(domainUpDown1);
 				Controls.Add(label2);
 				Controls.Add(pictureBox4);
 				Controls.Add(webView21);
@@ -577,7 +584,7 @@ namespace StellaModLauncher.Forms
 				Controls.Add(discordServerIco_Picturebox);
 				Controls.Add(webIco_Picturebox);
 				Controls.Add(version_LinkLabel);
-				Controls.Add(updates_LinkLabel);
+				Controls.Add(checkForUpdates_LinkLabel);
 				Controls.Add(versionIco_PictureBox);
 				Controls.Add(updateIco_PictureBox);
 				Controls.Add(toolsIco_PictureBox);
@@ -630,7 +637,7 @@ namespace StellaModLauncher.Forms
         private System.Windows.Forms.PictureBox toolsIco_PictureBox;
         private System.Windows.Forms.PictureBox updateIco_PictureBox;
         private System.Windows.Forms.PictureBox versionIco_PictureBox;
-        private System.Windows.Forms.LinkLabel updates_LinkLabel;
+        private System.Windows.Forms.LinkLabel checkForUpdates_LinkLabel;
         private System.Windows.Forms.LinkLabel version_LinkLabel;
         private System.Windows.Forms.PictureBox webIco_Picturebox;
         private System.Windows.Forms.PictureBox discordServerIco_Picturebox;
@@ -663,7 +670,8 @@ namespace StellaModLauncher.Forms
 		  private System.Windows.Forms.PictureBox pictureBox4;
 		  private System.Windows.Forms.Label label2;
 		  private System.Windows.Forms.PictureBox pictureBox5;
-		  private System.Windows.Forms.LinkLabel linkLabel3;
+		  private System.Windows.Forms.LinkLabel viewChangelog_LinkLabel;
+		  private DomainUpDown domainUpDown1;
 	 }
 }
 

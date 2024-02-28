@@ -65,8 +65,8 @@ internal static class Labels
 
 		if (!error) return;
 		Default.UpdateIsAvailable = false;
-		Default._updates_LinkLabel!.LinkColor = Color.Red;
-		Default._updates_LinkLabel.Text = Resources.Utils_OopsAnErrorOccurred;
+		Default._checkForUpdates_LinkLabel!.LinkColor = Color.Red;
+		Default._checkForUpdates_LinkLabel.Text = Resources.Utils_OopsAnErrorOccurred;
 
 		TaskbarProgress.SetProgressValue(100);
 		TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Error);

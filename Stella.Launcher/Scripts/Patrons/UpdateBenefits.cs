@@ -37,7 +37,7 @@ internal static class UpdateBenefits
 
 		Program.Logger.Info($"Found the new version of: {benefitName}");
 
-		Utils.RemoveLinkClickedEventHandler(Default._updates_LinkLabel!);
+		Utils.RemoveLinkClickedEventHandler(Default._checkForUpdates_LinkLabel!);
 
 		// Get update URL (mirror)
 		string jsonResponse = await Program.SefinWebClient.GetStringAsync($"{Program.WebApi}/stella-mod-plus/benefits/update?benefitType={benefitName}").ConfigureAwait(true);
@@ -64,7 +64,7 @@ internal static class UpdateBenefits
 		// Run download
 		await StartDownload($"{data.PreparedUrl}?benefitType={benefitName}").ConfigureAwait(true);
 
-		Utils.AddLinkClickedEventHandler(Default._updates_LinkLabel!, CheckForUpdates.CheckUpdates_Click);
+		Utils.AddLinkClickedEventHandler(Default._checkForUpdates_LinkLabel!, CheckForUpdates.CheckUpdates_Click);
 
 
 		// Prepare presets
@@ -78,7 +78,7 @@ internal static class UpdateBenefits
 
 	private static async Task StartDownload(string requestUri)
 	{
-		HttpClient client = Program.WbClient.Value;
+		HttpClient client = Program.SefinWebClient;
 
 		try
 		{

@@ -71,16 +71,28 @@ public sealed partial class RandomImages : Form
 		try
 		{
 			string jsonResponse = await Program.SefinWebClient.GetStringAsync(url).ConfigureAwait(false);
+
+			Program.Logger.Info(jsonResponse);
 			return jsonResponse;
 		}
-		catch (WebException e)
+		catch (WebException ex)
 		{
-			if (e is { Status: WebExceptionStatus.ProtocolError, Response: HttpWebResponse response })
-				MessageBox.Show(e.Message, Program.AppNameVer, MessageBoxButtons.OK, (int)response.StatusCode >= 500 ? MessageBoxIcon.Warning : MessageBoxIcon.Information);
-			else
-				MessageBox.Show(e.Message, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
+			Program.Logger.Error($"Error with the API (WebException): {url}");
+			Program.Logger.Error(ex);
 
-			Program.Logger.Error(string.Format(Resources.RandomImages_ErrorWithTheAPI, url, e));
+			if (ex is { Status: WebExceptionStatus.ProtocolError, Response: HttpWebResponse response })
+				MessageBox.Show(ex.Message, Program.AppNameVer, MessageBoxButtons.OK, (int)response.StatusCode >= 500 ? MessageBoxIcon.Warning : MessageBoxIcon.Information);
+			else
+				MessageBox.Show(ex.Message, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+			return null;
+		}
+		catch (Exception ex)
+		{
+			Program.Logger.Error($"Error with the API (Exception): {url}");
+			Program.Logger.Error(ex);
+
+			MessageBox.Show(ex.Message, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
 			return null;
 		}
 	}
@@ -94,8 +106,6 @@ public sealed partial class RandomImages : Form
 
 		webView21.CoreWebView2.Navigate(res!.Message);
 		text_Label.Visible = false;
-
-		Program.Logger.Info($"Received data from: {new Uri(url).Host}; Success {res.Success}; Status {res.Status}; Category {res.Info!.Category}; Endpoint {res.Info.Endpoint}; Message {res.Message};");
 	}
 
 	private async void NekosBest(string url, bool gif) // The best api uwu
@@ -125,8 +135,6 @@ public sealed partial class RandomImages : Form
 
 		text_Label.Visible = true;
 		_sourceUrl = sourceUrl;
-
-		Program.Logger.Info($"Received data from {new Uri(url).Host}; Anime_name {animeName}; Source_url {sourceUrl}; Url {picUrl};");
 	}
 
 	private async void PurrBot(string url)
@@ -139,8 +147,6 @@ public sealed partial class RandomImages : Form
 		webView21.CoreWebView2.Navigate(res!.Link);
 		_sourceUrl = res.Link;
 		text_Label.Visible = false;
-
-		Program.Logger.Info($"Received data from {new Uri(url).Host}; Link {res.Link};");
 	}
 
 	private async void NekoBot(string url)
@@ -160,8 +166,6 @@ public sealed partial class RandomImages : Form
 
 		text_Label.Visible = true;
 		_sourceUrl = res.Message;
-
-		Program.Logger.Info($"Received data from {new Uri(url).Host}; Color {res.Color} rgbColor {rgbColor}; Message {res.Message};");
 	}
 
 	/* Random animals */

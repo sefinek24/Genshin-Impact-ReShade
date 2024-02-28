@@ -13,10 +13,10 @@ internal static class CheckForUpdates
 {
 	public static async Task<int> Analyze()
 	{
-		Default._updates_LinkLabel!.LinkColor = Color.White;
-		Default._updates_LinkLabel.Text = Resources.Default_CheckingForUpdates;
+		Default._checkForUpdates_LinkLabel!.LinkColor = Color.White;
+		Default._checkForUpdates_LinkLabel.Text = Resources.Default_CheckingForUpdates;
 
-		TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Indeterminate);
+		if (Stages._currentStage == Stages.AllStages) TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Indeterminate);
 
 		Program.Logger.Info("Checking for new updates...");
 
@@ -117,30 +117,24 @@ internal static class CheckForUpdates
 				int found = await CheckForUpdatesOfBenefits.Analyze().ConfigureAwait(true);
 				if (found == 1)
 				{
-					Labels.HideStartGameBtns();
-
-					Default._updates_LinkLabel.LinkColor = Color.Cyan;
-					Default._updates_LinkLabel.Text = Resources.Default_UpdatingBenefits;
+					Default._checkForUpdates_LinkLabel.LinkColor = Color.Cyan;
+					Default._checkForUpdates_LinkLabel.Text = Resources.Default_UpdatingBenefits;
 					Default._updateIco_PictureBox!.Image = Resources.icons8_download_from_the_cloud;
-					// Utils.RemoveClickEvent(Default._updates_LinkLabel);
 					return found;
 				}
 			}
 
 
 			// == Not found any new updates ==
-			Default._updates_LinkLabel.Text = Resources.Default_CheckForUpdates;
+			Default._checkForUpdates_LinkLabel.Text = Resources.Default_CheckForUpdates;
 			Default._updateIco_PictureBox!.Image = Resources.icons8_available_updates;
 
 			Default._version_LinkLabel!.Text = $@"v{(Program.AppVersion == Program.AppFileVersion ? Program.AppVersion : $"{Program.AppFileVersion}-alpha")}";
 
-			// Utils.RemoveClickEvent(Default._updates_LinkLabel);
-			// Default._updates_LinkLabel.Click += CheckUpdates_Click;
-
 			Default.UpdateIsAvailable = false;
 			Program.Logger.Info($"Not found any new updates. AppVersion v{Program.AppVersion}; ProductVersion v{Program.AppFileVersion};");
 
-			TaskbarProgress.SetProgressState(TaskbarProgress.Flags.NoProgress);
+			if (Stages._currentStage == Stages.AllStages) TaskbarProgress.SetProgressState(TaskbarProgress.Flags.NoProgress);
 
 			Labels.ShowStartGameBts();
 			return 0;
@@ -149,8 +143,8 @@ internal static class CheckForUpdates
 		{
 			Default.UpdateIsAvailable = false;
 
-			Default._updates_LinkLabel.LinkColor = Color.Red;
-			Default._updates_LinkLabel.Text = Resources.Default_OhhSomethingWentWrong;
+			Default._checkForUpdates_LinkLabel.LinkColor = Color.Red;
+			Default._checkForUpdates_LinkLabel.Text = Resources.Default_OhhSomethingWentWrong;
 			Default._status_Label!.Text += $"[x] {e.Message}\n";
 
 			Program.Logger.Error(string.Format(Resources.Default_SomethingWentWrongWhileCheckingForNewUpdates, e));
@@ -174,8 +168,8 @@ internal static class CheckForUpdates
 
 		if (Secret.IsStellaPlusSubscriber) Music.PlaySound("winxp", "hardware_remove");
 
-		Default._updates_LinkLabel!.LinkColor = Color.LawnGreen;
-		Default._updates_LinkLabel.Text = Resources.Default_YouHaveTheLatestVersion;
+		Default._checkForUpdates_LinkLabel!.LinkColor = Color.LawnGreen;
+		Default._checkForUpdates_LinkLabel.Text = Resources.Default_YouHaveTheLatestVersion;
 		Default._updateIco_PictureBox!.Image = Resources.icons8_available_updates;
 	}
 }

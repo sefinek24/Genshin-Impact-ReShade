@@ -464,7 +464,7 @@
     <PackageReference Include="DeviceId.Windows" Version="6.6.0" />
     <PackageReference Include="DeviceId.Windows.Wmi" Version="6.6.0" />
     <PackageReference Include="DiscordRichPresence" Version="1.2.1.24" />
-    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2277.86" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2365.46" />
     <PackageReference Include="NAudio" Version="2.2.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="NLog" Version="5.2.8" />
@@ -474,6 +474,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Stella.Telemetry\Stella.Telemetry.csproj" />
     <ProjectReference Include="..\Stella.ClassLibrary-1\7-1. StellaPLF .NET 8.csproj" />
   </ItemGroup>
 
@@ -500,9 +501,7 @@
     <Compile Update="Forms\Other\Language.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\Other\RandomImages.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="Forms\Other\RandomImages.cs" />
     <Compile Update="Forms\Other\SupportMe.cs">
       <SubType>Form</SubType>
     </Compile>

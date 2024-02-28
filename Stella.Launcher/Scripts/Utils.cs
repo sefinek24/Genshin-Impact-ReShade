@@ -180,7 +180,7 @@ internal static class Utils
 
 		try
 		{
-			HttpClient httpClient = Program.WbClient.Value;
+			HttpClient httpClient = Program.SefinWebClient;
 			HttpResponseMessage response = await httpClient.GetAsync(url).ConfigureAwait(true);
 			byte[] bytes = await response.Content.ReadAsByteArrayAsync().ConfigureAwait(false);
 

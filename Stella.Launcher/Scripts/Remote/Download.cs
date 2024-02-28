@@ -85,7 +85,7 @@ internal static class Download
 		}
 
 		Program.Logger.Info($"Successfully unpacked; totalEntries {totalEntries}; totalBytesExtracted: {extractedBytes}; totalBytesToExtract: {totalBytesToExtract};");
-		Utils.AddLinkClickedEventHandler(Default._updates_LinkLabel, CheckForUpdates.CheckUpdates_Click);
+		Utils.AddLinkClickedEventHandler(Default._checkForUpdates_LinkLabel, CheckForUpdates.CheckUpdates_Click);
 		return;
 
 		// Update UI

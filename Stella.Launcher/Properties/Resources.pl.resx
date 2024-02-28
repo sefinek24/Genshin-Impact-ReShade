@@ -431,11 +431,6 @@ Zamknij proces o nazwie {0} i spróbuj ponownie.</value>
   <data name="RandomImages_AnimeName" xml:space="preserve">
     <value>Nazwa anime</value>
   </data>
-  <data name="RandomImages_ErrorWithTheAPI" xml:space="preserve">
-    <value>Błąd z API: {0}
-
-{1}</value>
-  </data>
   <data name="RandomImages_GeneratingBeautifulPictures" xml:space="preserve">
     <value>Generowanie pięknych obrazów 😻</value>
   </data>

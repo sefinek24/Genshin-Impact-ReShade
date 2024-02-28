@@ -9,14 +9,14 @@ internal static class Music
 {
 	private static readonly Random Random = new();
 
-	public static async Task PlayBg()
+	public static async void PlayBg()
 	{
-		if (Program.Settings.ReadInt("Launcher", "EnableMusic", 1) == 0 || Debugger.IsAttached) return;
+		if (Program.Settings.ReadInt("Launcher", "EnableMusic", 1) == 0) return;
 
 		string? wavPath = GetRandomBgWavPath();
 		if (string.IsNullOrEmpty(wavPath)) return;
 
-		await PlaySoundAsync(wavPath, 0.76f).ConfigureAwait(false);
+		await PlaySoundAsync(wavPath, 0.73f).ConfigureAwait(false);
 	}
 
 	private static string? GetRandomBgWavPath()

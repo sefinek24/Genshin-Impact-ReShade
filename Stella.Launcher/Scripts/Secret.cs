@@ -7,6 +7,7 @@ namespace StellaModLauncher.Scripts;
 internal static class Secret
 {
 	public static bool IsStellaPlusSubscriber = false;
+	public static string? Username = "";
 	public static string? BearerToken;
 	private static string? _deviceId;
 
@@ -35,7 +36,7 @@ internal static class Secret
 			];
 
 			FormUrlEncodedContent content = new(postData);
-			HttpResponseMessage response = await Program.WbClient.Value.PostAsync($"{Program.WebApi}/stella-mod-plus/launcher/verify", content).ConfigureAwait(false);
+			HttpResponseMessage response = await Program.SefinWebClient.PostAsync($"{Program.WebApi}/stella-mod-plus/launcher/verify", content).ConfigureAwait(false);
 
 			string json = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
 

@@ -6,12 +6,14 @@ namespace StellaModLauncher.Scripts.Forms;
 
 internal static class WebViewHelper
 {
-	public static async Task Initialize(WebView2 webView21, string? url)
+	public static async Task Initialize(WebView2 webView21, string? url, bool? blockMouse = false)
 	{
 		try
 		{
 			await webView21.EnsureCoreWebView2Async(await CoreWebView2Environment.CreateAsync(null, Program.AppData, new CoreWebView2EnvironmentOptions()).ConfigureAwait(false)).ConfigureAwait(true);
 			webView21.CoreWebView2.Settings.UserAgent += $" StellaLauncher/{Program.AppFileVersion}";
+
+			if ((bool)blockMouse!) webView21.CoreWebView2.Settings.AreDefaultContextMenusEnabled = false;
 
 			Program.Logger.Info("Loaded WebView2 via WebViewHelper.Initialize()");
 

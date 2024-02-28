@@ -16,7 +16,7 @@ internal static class Program
 	public static readonly string? AppVersion = Assembly.GetExecutingAssembly().GetName().Version?.ToString();
 	public static readonly string? AppFileVersion = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion;
 	public static readonly string AppVersionFull = Application.ProductVersion;
-	private static readonly string? AppName = Assembly.GetExecutingAssembly().GetName().Name;
+	public static readonly string? AppName = Assembly.GetExecutingAssembly().GetName().Name;
 	public static readonly string AppNameVer = $"{AppName} • v{AppFileVersion}";
 
 	// Files and folders
@@ -37,13 +37,15 @@ internal static class Program
 	public static readonly string? AppWebsiteFull = "https://sefinek.net/genshin-impact-reshade?referrer=launcher";
 
 	// HttpClient
-	public static readonly Lazy<HttpClient> WbClient = new(() =>
+	private static readonly Lazy<HttpClient> HClient = new(() =>
 	{
 		HttpClient httpClient = new();
 		httpClient.DefaultRequestHeaders.UserAgent.ParseAdd($"Mozilla/5.0 (compatible; StellaLauncher/{AppFileVersion}; +{AppWebsiteSub})");
 
 		return httpClient;
 	});
+
+	public static HttpClient SefinWebClient => HClient.Value;
 
 	// public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v6" : "https://api.sefinek.net/api/v6";
 	public static readonly string WebApi = "https://api.sefinek.net/api/v6";
@@ -61,8 +63,6 @@ internal static class Program
 	// {
 	//     if (WbClient.IsValueCreated) WbClient.Value.Dispose();
 	// }
-
-	public static HttpClient SefinWebClient => WbClient.Value;
 
 	[STAThread]
 	private static void Main(string[] args)

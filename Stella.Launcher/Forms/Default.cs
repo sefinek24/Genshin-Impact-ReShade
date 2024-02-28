@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using Microsoft.Web.WebView2.WinForms;
 using Microsoft.Win32;
 using Newtonsoft.Json;
 using NuGet.Versioning;
@@ -11,6 +12,7 @@ using StellaModLauncher.Scripts.Forms.MainForm;
 using StellaModLauncher.Scripts.Patrons;
 using StellaPLFNet;
 using Shortcut = StellaModLauncher.Scripts.Shortcut;
+using Telemetry = StellaTelemetry.Telemetry;
 
 namespace StellaModLauncher.Forms;
 
@@ -42,8 +44,11 @@ public partial class Default : Form
 
 	// Right
 	public static LinkLabel? _version_LinkLabel;
-	public static LinkLabel? _updates_LinkLabel;
+	public static LinkLabel? _checkForUpdates_LinkLabel;
 	public static PictureBox? _updateIco_PictureBox;
+
+	// Bottom
+	public static WebView2? _webView21;
 
 	// Path
 	public static string? ResourcesPath;
@@ -92,22 +97,15 @@ public partial class Default : Form
 		_becomeMyPatron_LinkLabel = becomeMyPatron_LinkLabel;
 
 		_version_LinkLabel = version_LinkLabel;
-		_updates_LinkLabel = updates_LinkLabel;
+		_checkForUpdates_LinkLabel = checkForUpdates_LinkLabel;
 		_updateIco_PictureBox = updateIco_PictureBox;
 
-		TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Indeterminate);
-
-		Stages.UpdateStage(1, "Updating `LastRunTime` in the registry...");
+		_webView21 = webView21;
 
 
 		// Registry
-		using (RegistryKey key2 = Registry.CurrentUser.CreateSubKey(Program.RegistryPath, true))
-		{
-			key2.SetValue("LastRunTime", DateTime.Now);
-		}
+		Stages.UpdateStage(1, "Updating registry...");
 
-
-		// Get resources path
 		string? resourcesPath = null;
 		using (RegistryKey? key = Registry.CurrentUser.OpenSubKey(Program.RegistryPath))
 		{
@@ -134,7 +132,7 @@ public partial class Default : Form
 
 		ResourcesPath = resourcesPath;
 
-		Utils.AddLinkClickedEventHandler(_updates_LinkLabel, CheckForUpdates.CheckUpdates_Click);
+		Utils.AddLinkClickedEventHandler(_checkForUpdates_LinkLabel, CheckForUpdates.CheckUpdates_Click);
 
 
 		// App version
@@ -166,8 +164,8 @@ public partial class Default : Form
 		Stages.UpdateStage(3, "Checking Stella Mod Plus subscription...");
 		string? registrySecret = Secret.GetTokenFromRegistry();
 
-		Stages.UpdateStage(4, "Verifying Stella Mod Plus subscription...");
 
+		Stages.UpdateStage(4, "Verifying Stella Mod Plus subscription...");
 		if (registrySecret != null)
 		{
 			label1.Text = @"/ᐠ. ｡.ᐟ\ᵐᵉᵒʷˎˊ˗";
@@ -220,8 +218,9 @@ public partial class Default : Form
 
 						label2.Text = string.Format(label2.Text, remote.Username);
 						label2.Visible = true;
+						Secret.Username = remote.Username;
 
-						Program.Logger.Info($"The user is a subscriber to Stella Mod Plus ({Secret.IsStellaPlusSubscriber}). Tier {remote.TierId}. Benefits have been unlocked.");
+						Program.Logger.Info($"The user ({Secret.Username}) is a subscriber of Stella Mod Plus ({Secret.IsStellaPlusSubscriber}). Tier {remote.TierId}. Benefits have been unlocked!");
 						Secret.BearerToken = remote.Token;
 						break;
 
@@ -267,6 +266,7 @@ public partial class Default : Form
 		Stages.UpdateStage(5, "Verifying required files...");
 		await Files.ScanAsync().ConfigureAwait(true);
 
+
 		// Delete setup file from Temp directory
 		Stages.UpdateStage(6, "Checking the installation file after the update...");
 		Files.DeleteSetupAsync();
@@ -274,27 +274,13 @@ public partial class Default : Form
 		// Loaded form
 		Program.Logger.Info(string.Format(Resources.Main_LoadedForm_, Text));
 
+
 		// Check ReShade & FPS Unlock version
 		Stages.UpdateStage(7, "Checking ReShade & FPS Unlock version...");
 		NuGetVersion reshadeVersion = NuGetVersion.Parse(FileVersionInfo.GetVersionInfo(Program.ReShadePath).ProductVersion!);
 		NuGetVersion fpsUnlockVersion = NuGetVersion.Parse(FileVersionInfo.GetVersionInfo(Program.FpsUnlockerExePath).ProductVersion!);
 		Data.ReShadeVer = reshadeVersion.ToString();
 		Data.UnlockerVer = fpsUnlockVersion.ToString();
-
-		// Launch count
-		Stages.UpdateStage(8, "Checking `LaunchCount`...");
-
-		int launchCount = await LaunchCountHelper.CheckLaunchCountAndShowMessages().ConfigureAwait(true);
-		await WebViewHelper.Initialize(webView21, $"https://api.sefinek.net/api/v2/moecounter?number={launchCount}&length=7&theme=rule34").ConfigureAwait(true);
-
-
-		if (launchCount == 100)
-		{
-			MessageBox.Show("This is your hundredth (100th) launch of the program by you on your device.\n\nThank you!", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-			string path = Path.Combine(Program.AppPath, "data", "videos", "theannoyingcat.mp4");
-			if (Utils.CheckFileExists(path)) Utils.OpenUrl(path);
-		}
 
 
 		// Discord RPC
@@ -315,7 +301,7 @@ public partial class Default : Form
 			status_Label.Text += $"[✓] {Resources.Default_Congratulations}\n[i] {string.Format(Resources.Default_SMLSuccessfullyUpdatedToVersion_, Program.AppVersion)}\n";
 
 			pictureBox5.Show();
-			linkLabel3.Show();
+			viewChangelog_LinkLabel.Show();
 		}
 
 
@@ -372,12 +358,46 @@ public partial class Default : Form
 		// Check shortcut
 		Shortcut.Check();
 
+
 		Stages.UpdateStage(12, "Finishing...");
 
 		// Music
-		_ = Music.PlayBg();
+		Music.PlayBg();
 
-		if (Secret.IsStellaPlusSubscriber) Music.PlaySound("other", "interface-welcome", 0.11f);
+		// Update LastRunTime
+		using (RegistryKey key2 = Registry.CurrentUser.CreateSubKey(Program.RegistryPath, true))
+		{
+			key2.SetValue("LastRunTime", DateTime.Now);
+		}
+
+
+		// Launch count
+		int launchCount = await LaunchCountHelper.CheckLaunchCountAndShowMessages().ConfigureAwait(true);
+		await WebViewHelper.Initialize(webView21, $"https://api.sefinek.net/api/v2/moecounter?number={launchCount}&length=7&theme=rule34", true).ConfigureAwait(true);
+
+		if (launchCount == 100)
+		{
+			MessageBox.Show("This is your hundredth (100th) launch of the program by you on your device.\n\nThank you!", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+			string path = Path.Combine(Program.AppPath, "data", "videos", "theannoyingcat.mp4");
+			if (Utils.CheckFileExists(path)) Utils.OpenUrl(path);
+		}
+
+		// Stats
+		var telemetryData = new
+		{
+			Program.AppVersion,
+			Program.AppVersionFull,
+			Program.AppName,
+			Program.AppPath,
+			Program.AppData
+		};
+
+		string jsonData = JsonConvert.SerializeObject(telemetryData);
+		await Telemetry.SendStatsAsync(jsonData).ConfigureAwait(true);
+
+		Stages.UpdateStage(13, Secret.IsStellaPlusSubscriber ? $"Welcome {Secret.Username} to the Stella Mod Launcher app!" : "Welcome to the Stella Mod Launcher app!");
+		if (Secret.IsStellaPlusSubscriber) Music.PlaySound("other", "interface-welcome", 0.12f);
 
 
 		// 2024

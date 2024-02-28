@@ -17,12 +17,12 @@ internal static class DownloadResources
 		Default._version_LinkLabel!.Text = $@"v{localResVersion} → v{remoteResVersion}";
 
 		// 2
-		Default._updates_LinkLabel!.LinkColor = Color.Cyan;
-		Default._updates_LinkLabel.Text = Resources.NormalRelease_ClickHereToUpdate;
+		Default._checkForUpdates_LinkLabel!.LinkColor = Color.Cyan;
+		Default._checkForUpdates_LinkLabel.Text = Resources.NormalRelease_ClickHereToUpdate;
 		Default._updateIco_PictureBox!.Image = Resources.icons8_download_from_the_cloud;
 
-		Utils.RemoveLinkClickedEventHandler(Default._updates_LinkLabel);
-		Utils.AddLinkClickedEventHandler(Default._updates_LinkLabel, Update_Event);
+		Utils.RemoveLinkClickedEventHandler(Default._checkForUpdates_LinkLabel);
+		Utils.AddLinkClickedEventHandler(Default._checkForUpdates_LinkLabel, Update_Event);
 
 		// Hide and show elements
 		Default._progressBar1!.Hide();
@@ -45,7 +45,7 @@ internal static class DownloadResources
 		try
 		{
 			HttpRequestMessage request = new(HttpMethod.Head, DownloadUrl);
-			HttpResponseMessage response = await Program.WbClient.Value.SendAsync(request).ConfigureAwait(true);
+			HttpResponseMessage response = await Program.SefinWebClient.SendAsync(request).ConfigureAwait(true);
 			response.EnsureSuccessStatusCode();
 
 			if (response.Content.Headers.ContentLength.HasValue)
@@ -76,8 +76,8 @@ internal static class DownloadResources
 		Program.Logger.Info(Resources.NormalRelease_PreparingToDownloadNewUpdate);
 		TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Normal);
 
-		Default._updates_LinkLabel!.LinkColor = Color.DodgerBlue;
-		Default._updates_LinkLabel.Text = Resources.NormalRelease_UpdatingPleaseWait;
+		Default._checkForUpdates_LinkLabel!.LinkColor = Color.DodgerBlue;
+		Default._checkForUpdates_LinkLabel.Text = Resources.NormalRelease_UpdatingPleaseWait;
 
 		Labels.ShowProgressbar();
 
@@ -101,7 +101,7 @@ internal static class DownloadResources
 
 		try
 		{
-			HttpResponseMessage response = await Program.WbClient.Value.GetAsync(DownloadUrl, HttpCompletionOption.ResponseHeadersRead).ConfigureAwait(true);
+			HttpResponseMessage response = await Program.SefinWebClient.GetAsync(DownloadUrl, HttpCompletionOption.ResponseHeadersRead).ConfigureAwait(true);
 			response.EnsureSuccessStatusCode();
 
 			long totalBytes = response.Content.Headers.ContentLength ?? 0;

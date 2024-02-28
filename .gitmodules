@@ -1,3 +1,7 @@
 [submodule "Genshin-Stella-Mod"]
 	path = Stella.Worker
 	url = https://github.com/sefinek24/Genshin-Stella-Mod
+
+[submodule "Stella.Telemetry"]
+	path = Stella.Telemetry
+	url = https://github.com/sefinek24/Stella-Mod-Telemetry
