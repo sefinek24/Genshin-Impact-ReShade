@@ -14,6 +14,7 @@ internal static class Program
 		Console.WriteLine($"* Current directory: {Directory.GetCurrentDirectory()}");
 		Console.WriteLine($"* Release folder path: {ReleaseBuildPath}\n");
 
+
 		// Kill inject64
 		Utils.KillProcess("inject64");
 
@@ -39,8 +40,10 @@ internal static class Program
 		Console.WriteLine();
 
 		// Compile
-		foreach (string project in projects) await PrepareCompilationAsync(Path.Combine(RootPath, project)).ConfigureAwait(false);
+		foreach (string project in projects) await PrepareCompilation(Path.Combine(RootPath, project)).ConfigureAwait(false);
 
+
+		// Done!
 		Console.Write("Would you like to run InnoSetup? [Yes/no]: ");
 		string? response = Console.ReadLine();
 		if (response!.Equals("Yes", StringComparison.OrdinalIgnoreCase))
@@ -69,7 +72,7 @@ internal static class Program
 		await Utils.DeleteDirectory(objPath).ConfigureAwait(false);
 	}
 
-	private static Task PrepareCompilationAsync(string projectPath)
+	private static Task PrepareCompilation(string projectPath)
 	{
 		bool compilationSuccess = Utils.CompileProject(projectPath);
 		Console.WriteLine();
