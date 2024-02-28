@@ -478,44 +478,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Forms\Default.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Forms\Errors\ErrorOccurred.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Forms\Errors\NotCompatible.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Forms\Errors\RussianCunt.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Forms\Gameplay.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="Forms\Default.cs" />
+    <Compile Update="Forms\Errors\ErrorOccurred.cs" />
+    <Compile Update="Forms\Errors\NotCompatible.cs" />
+    <Compile Update="Forms\Errors\RussianCunt.cs" />
+    <Compile Update="Forms\Gameplay.cs" />
     <Compile Update="Forms\Links.cs" />
-    <Compile Update="Forms\Other\InjectionMethod.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Forms\Other\Language.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="Forms\Other\InjectionMethod.cs" />
+    <Compile Update="Forms\Other\Language.cs" />
     <Compile Update="Forms\Other\RandomImages.cs" />
-    <Compile Update="Forms\Other\SupportMe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Forms\Other\WebView2Shake.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Forms\Other\WebView2Window.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Forms\Settings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Forms\Tools.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="Forms\Other\SupportMe.cs" />
+    <Compile Update="Forms\Other\WebView2Shake.cs" />
+    <Compile Update="Forms\Other\WebView2Window.cs" />
+    <Compile Update="Forms\Settings.cs" />
+    <Compile Update="Forms\Tools.cs" />
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
