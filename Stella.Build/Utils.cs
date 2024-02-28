@@ -4,9 +4,9 @@ namespace BuildStellaMod;
 
 internal static class Utils
 {
-	private static readonly string DestinationFolder1 = @"C:\GitHub\VS\Stella\Genshin-Impact-ReShade\Build\GitHub";
+	private const string DestinationFolder1 = @"C:\GitHub\VS\Stella\Genshin-Impact-ReShade\Build\GitHub";
 
-	public static async Task DeleteDirectoryIfExistsAsync(string directoryPath)
+	public static async Task DeleteDirectory(string directoryPath)
 	{
 		if (!Directory.Exists(directoryPath)) return;
 
@@ -19,6 +19,20 @@ internal static class Utils
 		{
 			Console.WriteLine($"Error occurred while deleting folder: {ex.Message}");
 		}
+	}
+
+	public static void KillProcess(string processName)
+	{
+		foreach (Process process in Process.GetProcessesByName(processName))
+			try
+			{
+				process.Kill();
+				Console.WriteLine($"Process {process.ProcessName} (ID: {process.Id}) has been terminated");
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine($"Failed to terminate {process.ProcessName} (ID: {process.Id}): {ex.Message}");
+			}
 	}
 
 	public static async Task RestorePackages()

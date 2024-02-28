@@ -4,30 +4,23 @@ namespace BuildStellaMod;
 
 internal static class Program
 {
-	public static readonly string RootPath = Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "..", "..");
+	public static readonly string RootPath = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "..", ".."));
+	private static readonly string InnoSetupCompiler = Path.Combine(@"C:\Program Files (x86)\Inno Setup 6\Compil32.exe");
+	private static readonly string InnoSetupPath = Path.GetFullPath(Path.Combine(RootPath, "InnoSetup", "Setup.iss"));
 	private static readonly string ReleaseBuildPath = Path.Combine(RootPath, "Build", "Release");
 
 	private static async Task Main()
 	{
-		Console.WriteLine($"Current directory: {Directory.GetCurrentDirectory()}");
-		Console.WriteLine($"Release folder path: {ReleaseBuildPath}");
-		Console.WriteLine();
+		Console.WriteLine($"* Current directory: {Directory.GetCurrentDirectory()}");
+		Console.WriteLine($"* Release folder path: {ReleaseBuildPath}\n");
 
-		foreach (Process process in Process.GetProcessesByName("inject64"))
-			try
-			{
-				process.Kill();
-				Console.WriteLine($"Process {process.ProcessName} (ID: {process.Id}) has been terminated.");
-			}
-			catch (Exception ex)
-			{
-				Console.WriteLine($"Failed to terminate {process.ProcessName} (ID: {process.Id}): {ex.Message}");
-			}
+		// Kill inject64
+		Utils.KillProcess("inject64");
 
-		await Utils.DeleteDirectoryIfExistsAsync(ReleaseBuildPath).ConfigureAwait(false);
+		// Delete Build\Release
+		await Utils.DeleteDirectory(ReleaseBuildPath).ConfigureAwait(false);
 
-		await Utils.RestorePackages().ConfigureAwait(false);
-
+		// Prepare
 		string[] projects =
 		[
 			@"Stella.Launcher\1. Stella Mod Launcher.csproj",
@@ -38,31 +31,51 @@ internal static class Program
 			@"Stella.DeviceIdentifier\6. Device Identifier.csproj"
 		];
 
+		foreach (string project in projects) await CleanupSolution(Path.Combine(RootPath, project)).ConfigureAwait(false);
+
+		// Restore Nuget packages
+		Console.WriteLine("\nRestore Nuget packages");
+		await Utils.RestorePackages().ConfigureAwait(false);
+		Console.WriteLine();
+
+		// Compile
 		foreach (string project in projects) await PrepareCompilationAsync(Path.Combine(RootPath, project)).ConfigureAwait(false);
 
-		Console.WriteLine("----------------------------- COPING FILES -----------------------------");
-		Utils.CopyFiles(ReleaseBuildPath);
+		Console.Write("Would you like to run InnoSetup? [Yes/no]: ");
+		string? response = Console.ReadLine();
+		if (response!.Equals("Yes", StringComparison.OrdinalIgnoreCase))
+		{
+			if (File.Exists(InnoSetupCompiler) || File.Exists(InnoSetupPath))
+			{
+				Console.WriteLine($"Running {InnoSetupPath}...");
+				Process.Start(InnoSetupCompiler, InnoSetupPath);
+			}
+			else
+			{
+				Console.WriteLine("InnoSetup exe or iss file was not found");
+			}
+		}
 
 		Console.WriteLine("\nPress ENTER to exit the program...");
 		Console.ReadLine();
 	}
 
-	private static async Task PrepareCompilationAsync(string projectPath)
+	private static async Task CleanupSolution(string projectPath)
 	{
 		string binPath = Path.Combine(Path.GetDirectoryName(projectPath)!, "bin");
-		// string objPath = Path.Combine(Path.GetDirectoryName(projectPath)!, "obj");
+		await Utils.DeleteDirectory(binPath).ConfigureAwait(false);
 
-		await Utils.DeleteDirectoryIfExistsAsync(binPath).ConfigureAwait(false);
-		// await Utils.DeleteDirectoryIfExistsAsync(objPath).ConfigureAwait(false);
+		string objPath = Path.Combine(Path.GetDirectoryName(projectPath)!, "obj");
+		await Utils.DeleteDirectory(objPath).ConfigureAwait(false);
+	}
 
-		Console.WriteLine();
-
+	private static Task PrepareCompilationAsync(string projectPath)
+	{
 		bool compilationSuccess = Utils.CompileProject(projectPath);
 		Console.WriteLine();
 
-		if (compilationSuccess)
-			Console.WriteLine($"----------------------------- COMPILED {Path.GetFileName(projectPath)} -----------------------------");
-		else
-			Console.WriteLine($"----------------------------- FAILED TO COMPILE {Path.GetFileName(projectPath)} -----------------------------");
+		if (!compilationSuccess) Console.WriteLine($"----------------------------- FAILED TO COMPILE {Path.GetFileName(projectPath)} -----------------------------\n\n");
+
+		return Task.CompletedTask;
 	}
 }
