@@ -26,6 +26,72 @@ Screenshots/*.jpeg
 Screenshots/*.bmp
 
 
+# Solutions
+## Stella Mod Launcher
+Stella.LauncherOldOld/bin
+Stella.LauncherOld/obj
+Stella.LauncherOld/data/cmd/run_patrons.cmd
+Stella.Launcher/bin
+Stella.Launcher/obj
+
+## Genshin Stella Mod
+Stella.WorkerOld/Action.cs
+Stella.WorkerOld/Scripts/Logic.cs
+Stella.WorkerOld/bin
+Stella.WorkerOld/obj
+
+## Configuration Window
+Stella.Configuration/bin
+Stella.Configuration/obj
+
+## Prepare Stella Mod
+Stella.Prepare/bin
+Stella.Prepare/obj
+Stella.PrepareOld/bin
+Stella.PrepareOld/obj
+
+## Information 48793142
+Stella.Info-48793142/bin
+Stella.Info-48793142/obj
+
+## Device Identifier
+Stella.DeviceIdentifier/bin
+Stella.DeviceIdentifier/obj
+
+## Sefin Anti Cheat
+Stella.SefinAntiCheat/bin
+Stella.SefinAntiCheat/obj
+
+## Stella ClassLibrary
+Stella.ClassLibrary/bin
+Stella.ClassLibrary/obj
+
+## Stella Telemetry
+Stella.Telemetry/bin
+Stella.Telemetry/obj
+
+## Win App Packaging Project
+Win App Packaging Project/AppPackages
+Win App Packaging Project/bin
+Win App Packaging Project/BundleArtifacts
+Win App Packaging Project/obj/Debug
+Win App Packaging Project/obj/Release
+Win App Packaging Project/obj/x64
+Win App Packaging Project/obj/x86
+Win App Packaging Project/obj/project.nuget
+
+## Build project
+Stella.Build/bin
+Stella.Build/obj
+
+# Stella Mod Plus
+data/Patrons
+data/presets/New
+data/presets/Patrons
+data/presets/For Patrons
+data/presets/Other/Previous versions
+data/presets/3. Only for patrons
+data/presets/3. Only for patrons/*.ini
 
 # InnoSetup
 InnoSetup/*.exe
