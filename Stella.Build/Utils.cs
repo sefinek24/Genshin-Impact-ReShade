@@ -4,7 +4,7 @@ namespace BuildStellaMod;
 
 internal static class Utils
 {
-	public static readonly string DestinationFolder1 = @"C:\GitHub\VS\Stella\Genshin-Impact-ReShade\Build\GitHub";
+	private static readonly string DestinationFolder1 = @"C:\GitHub\VS\Stella\Genshin-Impact-ReShade\Build\GitHub";
 
 	public static async Task DeleteDirectoryIfExistsAsync(string directoryPath)
 	{
