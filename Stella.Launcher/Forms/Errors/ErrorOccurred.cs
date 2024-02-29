@@ -2,6 +2,7 @@ using CliWrap.Builders;
 using StellaModLauncher.Properties;
 using StellaModLauncher.Scripts;
 using StellaModLauncher.Scripts.Forms;
+using StellaModLauncher.Scripts.Forms.MainForm;
 
 namespace StellaModLauncher.Forms.Errors;
 
@@ -50,7 +51,7 @@ public sealed partial class ErrorOccurred : Form
 	{
 		Cmd.CliWrap command = new()
 		{
-			App = "wt.exe",
+			App = Run.Terminal,
 			WorkingDir = Program.AppPath,
 			Arguments = new ArgumentsBuilder()
 				.Add(Path.Combine(Program.AppPath, "data", "cmd", "scan_sys_files.cmd"))

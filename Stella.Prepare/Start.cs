@@ -28,7 +28,7 @@ internal static class Start
 
 	// Dependencies
 	public static readonly string VcLibsAppx = Path.Combine("dependencies", "Microsoft.VCLibs.x64.14.00.Desktop.appx");
-	public static readonly string WtMsixBundle = Path.Combine("dependencies", "Microsoft.WindowsTerminal_1.19.10302.0_8wekyb3d8bbwe.msixbundle");
+	public static readonly string WtMsixBundle = Path.Combine("dependencies", "Microsoft.WindowsTerminal_1.19.10573.0_8wekyb3d8bbwe.msixbundle");
 
 	// Other
 	public static readonly string Line = "===============================================================================================";
@@ -45,7 +45,7 @@ internal static class Start
 	{
 		Logger = Logger.WithProperty("AppName", "Prepare Stella");
 		Logger = Logger.WithProperty("AppVersion", AppVersion);
-		LogManager.Configuration = new XmlLoggingConfiguration(Path.Combine(AppPath, "NLog_PS.config"));
+		LogManager.Configuration = new XmlLoggingConfiguration(Path.Combine(AppPath!, "NLog_PS.config"));
 
 		Console.OutputEncoding = Encoding.UTF8;
 

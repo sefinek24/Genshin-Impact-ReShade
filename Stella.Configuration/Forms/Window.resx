@@ -258,6 +258,9 @@
   <data name="checkBox1.Text" xml:space="preserve">
     <value>Install or update Windows Terminal *</value>
   </data>
+  <data name="checkBox1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;checkBox1.Name" xml:space="preserve">
     <value>checkBox1</value>
   </data>

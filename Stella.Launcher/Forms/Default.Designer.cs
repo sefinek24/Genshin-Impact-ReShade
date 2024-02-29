@@ -538,8 +538,8 @@ namespace StellaModLauncher.Forms
 				// 
 				// pictureBox4
 				// 
-				pictureBox4.BackColor = Color.Transparent;
 				resources.ApplyResources(pictureBox4, "pictureBox4");
+				pictureBox4.BackColor = Color.Transparent;
 				pictureBox4.Name = "pictureBox4";
 				pictureBox4.TabStop = false;
 				// 

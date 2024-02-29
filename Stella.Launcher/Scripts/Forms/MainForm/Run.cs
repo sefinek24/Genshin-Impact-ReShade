@@ -8,6 +8,7 @@ internal static class Run
 {
 	// Exe files
 	public static readonly string GsmPath = Path.Combine(Program.AppPath, "Genshin Stella Mod.exe");
+	public static readonly string Terminal = Path.Combine(Program.AppPath, "dependencies", "terminal-1.19.10573.0", "wt.exe");
 
 	// Batch files
 	public static readonly string BatchDir = Path.Combine(Program.AppPath, "data", "cmd");
@@ -23,7 +24,7 @@ internal static class Run
 		{
 			"exe" => new Cmd.CliWrap
 			{
-				App = "wt.exe",
+				App = Terminal,
 				Arguments = new ArgumentsBuilder().Add(GsmPath) // 0
 					.Add(Program.AppFileVersion!) // 1
 					.Add(Data.ReShadeVer) // 2
@@ -32,7 +33,7 @@ internal static class Run
 			},
 			"cmd" => new Cmd.CliWrap
 			{
-				App = "wt.exe",
+				App = Terminal,
 				WorkingDir = Program.AppPath,
 				Arguments = new ArgumentsBuilder().Add(BatchRunPatrons) // 0
 					.Add(Program.AppFileVersion!) // 1
@@ -58,7 +59,7 @@ internal static class Run
 		{
 			"exe" => new Cmd.CliWrap
 			{
-				App = "wt.exe",
+				App = Terminal,
 				Arguments = new ArgumentsBuilder().Add(GsmPath) // 0
 					.Add(Program.AppFileVersion!) // 1
 					.Add(Data.ReShadeVer) // 2
@@ -67,7 +68,7 @@ internal static class Run
 			},
 			"cmd" => new Cmd.CliWrap
 			{
-				App = "wt.exe",
+				App = Terminal,
 				WorkingDir = Program.AppPath,
 				Arguments = new ArgumentsBuilder().Add(BatchRunPatrons) // 0
 					.Add(Program.AppFileVersion!) // 1
@@ -93,7 +94,7 @@ internal static class Run
 		{
 			"exe" => new Cmd.CliWrap
 			{
-				App = "wt.exe",
+				App = Terminal,
 				Arguments = new ArgumentsBuilder().Add(GsmPath) // 0
 					.Add(Program.AppFileVersion!) // 1
 					.Add(Data.ReShadeVer) // 2
@@ -102,7 +103,7 @@ internal static class Run
 			},
 			"cmd" => new Cmd.CliWrap
 			{
-				App = "wt.exe",
+				App = Terminal,
 				WorkingDir = Program.AppPath,
 				Arguments = new ArgumentsBuilder().Add(BatchRunPatrons) // 0
 					.Add(Program.AppFileVersion!) // 1
@@ -135,7 +136,7 @@ internal static class Run
 		{
 			"exe" => new Cmd.CliWrap
 			{
-				App = "wt.exe",
+				App = Terminal,
 				Arguments = new ArgumentsBuilder().Add(GsmPath) // 0
 					.Add(Program.AppVersion!) // 1
 					.Add(Data.ReShadeVer) // 2
@@ -144,7 +145,7 @@ internal static class Run
 			},
 			"cmd" => new Cmd.CliWrap
 			{
-				App = "wt.exe",
+				App = Terminal,
 				WorkingDir = Program.AppPath,
 				Arguments = new ArgumentsBuilder().Add(BatchRunPatrons) // 0
 					.Add(Program.AppVersion!) // 1

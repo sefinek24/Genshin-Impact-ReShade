@@ -1,4 +1,6 @@
 using System.Diagnostics;
+using System.Drawing.Drawing2D;
+using System.Runtime.InteropServices;
 using Microsoft.Web.WebView2.WinForms;
 using Microsoft.Win32;
 using Newtonsoft.Json;
@@ -62,6 +64,7 @@ public partial class Default : Form
 		InitializeComponent();
 
 		DoubleBuffered = true;
+		SetStyle(ControlStyles.UserPaint | ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer, true);
 		TaskbarProgress.MainWinHandle = Handle;
 	}
 
@@ -211,7 +214,7 @@ public partial class Default : Form
 						}
 
 						pictureBox4.Visible = true;
-						pictureBox4.Image = RoundedCorners.Picture(avatar, 22, Color.Transparent);
+						pictureBox4.Image = RoundedCorners.Picture(avatar, 50);
 
 						clickMe_LinkLabel.Location = new Point(1034, 163);
 						paimon_PictureBox.Location = new Point(1173, 157);

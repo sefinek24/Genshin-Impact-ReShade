@@ -65,7 +65,7 @@ public partial class Tools : Form
 	{
 		Cmd.CliWrap command = new()
 		{
-			App = "wt.exe",
+			App = Run.Terminal,
 			WorkingDir = Program.AppPath,
 			Arguments = new ArgumentsBuilder()
 				.Add(Path.Combine(Run.BatchDir, "scan_sys_files.cmd"))
@@ -120,7 +120,7 @@ public partial class Tools : Form
 
 		Cmd.CliWrap command = new()
 		{
-			App = "wt.exe",
+			App = Run.Terminal,
 			WorkingDir = Program.AppPath,
 			Arguments = new ArgumentsBuilder()
 				.Add(Path.Combine(Run.BatchDir, "delete_cache.cmd")) // 0
@@ -139,7 +139,7 @@ public partial class Tools : Form
 	{
 		Cmd.CliWrap command = new()
 		{
-			App = "wt.exe",
+			App = Run.Terminal,
 			WorkingDir = Program.AppPath,
 			Arguments = new ArgumentsBuilder()
 				.Add(Path.Combine(Run.BatchDir, "delete_webview_cache.cmd")) // 0
