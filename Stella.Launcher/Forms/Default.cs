@@ -1,6 +1,4 @@
 using System.Diagnostics;
-using System.Drawing.Drawing2D;
-using System.Runtime.InteropServices;
 using Microsoft.Web.WebView2.WinForms;
 using Microsoft.Win32;
 using Newtonsoft.Json;
