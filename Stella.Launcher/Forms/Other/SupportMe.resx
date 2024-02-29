@@ -633,7 +633,7 @@ of shaders and mods, and much more!</value>
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>397, 590</value>
+    <value>378, 590</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>481, 38</value>
