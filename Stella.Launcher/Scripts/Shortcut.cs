@@ -1,5 +1,5 @@
 using IWshRuntimeLibrary;
-using StellaModLauncher.Properties;
+using Microsoft.Win32;
 using File = System.IO.File;
 
 namespace StellaModLauncher.Scripts;
@@ -15,36 +15,38 @@ internal static class Shortcut
 		try
 		{
 			// Checking if the shortcut exists or needs updating
-			bool createOrUpdateShortcut = false;
-
-			WshShell shell = new();
+			bool updateIsRequired = false;
 
 			if (File.Exists(ScPath))
 			{
+				WshShell shell = new();
 				IWshShortcut existingShortcut = (IWshShortcut)shell.CreateShortcut(ScPath);
-
 				if (existingShortcut.TargetPath == ProgramExe && existingShortcut.WorkingDirectory == Program.AppPath)
 				{
-					Program.Logger.Info("The desktop shortcut is already up to date.");
+					Program.Logger.Info("The desktop shortcut is already up to date");
 				}
 				else
 				{
-					Program.Logger.Info("A desktop shortcut was found, but it has a different path. It will be overwritten.");
-					createOrUpdateShortcut = true;
+					Program.Logger.Info("A desktop shortcut was found, but it has a different path. It will be overwritten");
+					updateIsRequired = true;
 				}
 			}
 
-			// Creating or updating the shortcut
-			if (!createOrUpdateShortcut) return;
-			IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(ScPath);
-			shortcut.Description = Resources.Utils_RunOfficialLauncherForStellaModMadeBySefinek;
-			shortcut.WorkingDirectory = Program.AppPath;
-			shortcut.TargetPath = ProgramExe;
-			shortcut.Save();
+			// Update
+			if (!updateIsRequired) return;
 
-			Program.Logger.Info("Created or updated the desktop shortcut.");
+			// Shortcut
+			Utils.CreateShortcut();
 
-			BalloonTip.Show("Desktop shortcut 🖥️", "The program icon on your desktop has been successfully updated. Other shortcuts may stop working.");
+			// Registry
+			using (RegistryKey key = Registry.CurrentUser.CreateSubKey(Program.RegistryPath))
+			{
+				key.SetValue("StellaPath", Program.AppPath);
+			}
+
+			Program.Logger.Info("The `StellaPath` registry key has been successfully updated");
+
+			BalloonTip.Show("Change of the launcher path", "We have detected a likely change in the location of the Stella Mod Launcher. The necessary paths have been updated, as well as the shortcut on your desktop.");
 		}
 		catch (Exception ex)
 		{
