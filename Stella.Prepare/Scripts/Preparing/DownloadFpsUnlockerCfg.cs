@@ -8,7 +8,7 @@ internal static class DownloadFpsUnlockerCfg
 	{
 		try
 		{
-			string unlockerFolderPath = Path.Combine(Start.AppPath, "data", "unlocker");
+			string unlockerFolderPath = Path.Combine(Start.AppPath!, "data", "unlocker");
 			string fpsUnlockerConfigPath = Path.Combine(unlockerFolderPath, "unlocker.config.json");
 
 			Console.Write($@"Downloading {Path.GetFileName(fpsUnlockerConfigPath)} ");

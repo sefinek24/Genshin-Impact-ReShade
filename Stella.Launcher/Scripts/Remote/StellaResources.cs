@@ -37,7 +37,7 @@ internal static class DownloadResources
 		_stellaResZip = Path.Combine(Default.ResourcesPath!, $"Stella resources - v{remoteResVersion}.zip");
 
 		// Log
-		Default._status_Label!.Text += $"[i] {string.Format(Resources.StellaResources_NewResourcesUpdateIsAvailable, remoteResDate)}\n";
+		Utils.UpdateStatusLabel(string.Format(Resources.StellaResources_NewResourcesUpdateIsAvailable, remoteResDate), Utils.StatusType.Info);
 		Program.Logger.Info($"Found the new update of resources from {remoteResDate} - {remoteResDate}");
 
 		// Check update size
@@ -52,11 +52,11 @@ internal static class DownloadResources
 			{
 				updateSize = ByteSize.FromBytes(response.Content.Headers.ContentLength.Value).MegaBytes.ToString("00.00");
 
-				Default._status_Label.Text += $"[i] {string.Format(Resources.StellaResources_UpdateSize, $"{updateSize} MB")}\n";
+				Utils.UpdateStatusLabel(string.Format(Resources.StellaResources_UpdateSize, $"{updateSize} MB"), Utils.StatusType.Info);
 			}
 			else
 			{
-				Default._status_Label.Text += "[i] Unknown file size.\n";
+				Utils.UpdateStatusLabel("Unknown file size.", Utils.StatusType.Info);
 			}
 		}
 		catch (Exception ex)
@@ -109,7 +109,7 @@ internal static class DownloadResources
 
 			using Stream streamToReadFrom = await response.Content.ReadAsStreamAsync().ConfigureAwait(true);
 			using FileStream streamToWriteTo = File.Open(_stellaResZip!, FileMode.Create, FileAccess.Write, FileShare.None);
-			byte[] buffer = new byte[8192];
+			byte[] buffer = Buffer.Get();
 			int bytesRead;
 			long totalRead = 0;
 

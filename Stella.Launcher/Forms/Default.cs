@@ -10,6 +10,7 @@ using StellaModLauncher.Scripts;
 using StellaModLauncher.Scripts.Forms;
 using StellaModLauncher.Scripts.Forms.MainForm;
 using StellaModLauncher.Scripts.Patrons;
+using StellaModLauncher.Scripts.Remote;
 using StellaPLFNet;
 using Shortcut = StellaModLauncher.Scripts.Shortcut;
 using Telemetry = StellaTelemetry.Telemetry;
@@ -102,6 +103,19 @@ public partial class Default : Form
 		_updateIco_PictureBox = updateIco_PictureBox;
 
 		_webView21 = webView21;
+
+
+		Utils.UpdateStatusLabel("Unknown file size. 1", Utils.StatusType.Info);
+		Utils.UpdateStatusLabel("Unknown file size. 2", Utils.StatusType.Error);
+		Utils.UpdateStatusLabel("Unknown file size. 3", Utils.StatusType.Success);
+		Utils.UpdateStatusLabel("Unknown file size. 4", Utils.StatusType.Success);
+		Utils.UpdateStatusLabel("Unknown file size. 5", Utils.StatusType.Error);
+		Utils.UpdateStatusLabel("Unknown file size. 6", Utils.StatusType.Success);
+		Utils.UpdateStatusLabel("Unknown file size. 7", Utils.StatusType.Error);
+		Utils.UpdateStatusLabel("Unknown file size. 8", Utils.StatusType.Success);
+		Utils.UpdateStatusLabel("Unknown file size. 9", Utils.StatusType.Error);
+		Utils.UpdateStatusLabel("Unknown file size. 10", Utils.StatusType.Success);
+		Utils.UpdateStatusLabel("Unknown file size. 11", Utils.StatusType.Success);
 
 
 		// Registry
@@ -212,7 +226,7 @@ public partial class Default : Form
 						}
 
 						pictureBox4.Visible = true;
-						pictureBox4.Image = RoundedCorners.Picture(avatar, 50);
+						pictureBox4.Image = RoundedCorners.Picture(avatar, 12);
 
 						clickMe_LinkLabel.Location = new Point(1034, 163);
 						paimon_PictureBox.Location = new Point(1173, 157);
@@ -294,12 +308,13 @@ public partial class Default : Form
 		// Updated?
 		int updatedLauncher = Program.Settings.ReadInt("Updates", "UpdateAvailable", 0);
 		string oldVersion = Program.Settings.ReadString("Updates", "OldVersion");
-		if (updatedLauncher == 1 && oldVersion != Program.AppVersion)
+		if (updatedLauncher == 1 && oldVersion != Program.AppFileVersion)
 		{
 			Program.Settings.WriteInt("Updates", "UpdateAvailable", 0);
 			Program.Settings.Save();
 
-			status_Label.Text += $"[✓] {Resources.Default_Congratulations}\n[i] {string.Format(Resources.Default_SMLSuccessfullyUpdatedToVersion_, Program.AppVersion)}\n";
+			Utils.UpdateStatusLabel(Resources.Default_Congratulations, Utils.StatusType.Success, false);
+			Utils.UpdateStatusLabel(string.Format(Resources.Default_SMLSuccessfullyUpdatedToVersion_, Program.AppFileVersion), Utils.StatusType.Info);
 
 			pictureBox5.Show();
 			viewChangelog_LinkLabel.Show();
@@ -324,7 +339,7 @@ public partial class Default : Form
 
 				if (!Secret.IsStellaPlusSubscriber)
 				{
-					status_Label.Text += @"[x] Batch file usage in Genshin Stella Mod is exclusive to Stella Mod Plus subscribers.";
+					Utils.UpdateStatusLabel("Batch file usage in Genshin Stella Mod is exclusive to Stella Mod Plus subscribers.", Utils.StatusType.Error);
 					Program.Logger.Error("To utilize batch files, a subscription to Stella Mod Plus is required.");
 				}
 
@@ -344,10 +359,10 @@ public partial class Default : Form
 		if (!File.Exists(Run.GsmPath))
 		{
 			string fileName = Path.GetFileName(Run.GsmPath);
-			string? dirPath = Path.GetDirectoryName(Run.GsmPath);
 
 			Program.Logger.Error($"{fileName} was not found in {Run.GsmPath}");
-			status_Label.Text += $"[x] Not found `{fileName}` in:\n[x] {dirPath}\n";
+			Utils.UpdateStatusLabel($"Not found `{fileName}` in:", Utils.StatusType.Error, false);
+			Utils.UpdateStatusLabel(Path.GetDirectoryName(Run.GsmPath)!, Utils.StatusType.Error);
 
 			MessageBox.Show($"Required file {fileName} was not found.\n\nReinstalling the application may be necessary.", Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
 			Environment.Exit(89675);
@@ -597,12 +612,6 @@ public partial class Default : Form
 		if (Application.OpenForms.OfType<RandomImages>().Any()) return;
 		new RandomImages { Icon = Program.Ico }.Show();
 		Music.PlaySound("winxp", "navigation_start");
-	}
-
-	private void StatusLabel_TextChanged(object sender, EventArgs e)
-	{
-		status_Label.Visible = !string.IsNullOrEmpty(status_Label.Text);
-		Music.PlaySound("winxp", "balloon");
 	}
 
 	private void ViewChangelog_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

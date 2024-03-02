@@ -3,11 +3,12 @@ using Newtonsoft.Json;
 using StellaModLauncher.Forms;
 using StellaModLauncher.Models;
 using StellaModLauncher.Properties;
+using StellaModLauncher.Scripts.Forms;
+using StellaModLauncher.Scripts.Forms.MainForm;
 using StellaModLauncher.Scripts.Patrons;
-using StellaModLauncher.Scripts.Remote;
 using StellaPLFNet;
 
-namespace StellaModLauncher.Scripts.Forms.MainForm;
+namespace StellaModLauncher.Scripts.Remote;
 
 internal static class CheckForUpdates
 {
@@ -56,7 +57,7 @@ internal static class CheckForUpdates
 				string jsonFile = Path.Combine(Default.ResourcesPath!, "data.json");
 				if (!File.Exists(jsonFile))
 				{
-					Default._status_Label!.Text += $"{string.Format(Resources.Default_File_WasNotFound, jsonFile)}\n";
+					Utils.UpdateStatusLabel(string.Format(Resources.Default_File_WasNotFound, jsonFile), Utils.StatusType.Error);
 					Program.Logger.Error($"File {jsonFile} was not found.");
 
 					Labels.HideProgressbar(null, true);
@@ -145,7 +146,7 @@ internal static class CheckForUpdates
 
 			Default._checkForUpdates_LinkLabel.LinkColor = Color.Red;
 			Default._checkForUpdates_LinkLabel.Text = Resources.Default_OhhSomethingWentWrong;
-			Default._status_Label!.Text += $"[x] {e.Message}\n";
+			Utils.UpdateStatusLabel(e.Message, Utils.StatusType.Error);
 
 			Program.Logger.Error(string.Format(Resources.Default_SomethingWentWrongWhileCheckingForNewUpdates, e));
 			Labels.HideProgressbar(null, true);

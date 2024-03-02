@@ -29,7 +29,7 @@ internal static class DownloadUpdateResources
 		StellaApiVersion? json = JsonConvert.DeserializeObject<StellaApiVersion>(responseContent);
 		Console.WriteLine(@$"v{json!.Resources?.Release} ({(json.Resources!.Beta ? "beta" : "stable")}) from {json.Resources.Date}");
 
-		string zipPath = Path.Combine(resourcesGlobalPath, "Temp files", $"Stella Mod Resources - v{json.Resources?.Release}.zip");
+		string zipPath = Path.Combine(resourcesGlobalPath!, "Temp files", $"Stella Mod Resources - v{json.Resources?.Release}.zip");
 		if (!Directory.Exists(Path.GetDirectoryName(zipPath))) Directory.CreateDirectory(Path.GetDirectoryName(zipPath) ?? string.Empty);
 		if (File.Exists(zipPath))
 		{
@@ -76,7 +76,7 @@ internal static class DownloadUpdateResources
 		using ZipArchive archive = ZipFile.OpenRead(zipPath);
 		foreach (ZipArchiveEntry entry in archive.Entries)
 		{
-			string fullPath = Path.Combine(resourcesGlobalPath, entry.FullName);
+			string fullPath = Path.Combine(resourcesGlobalPath!, entry.FullName);
 			if (entry.Name == "")
 			{
 				Directory.CreateDirectory(Path.GetDirectoryName(fullPath)!);

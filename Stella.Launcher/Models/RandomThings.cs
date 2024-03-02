@@ -1,17 +1,17 @@
 namespace StellaModLauncher.Models;
 
-public class CategoryData
-{
-	public string? Category { get; set; }
-	public string? Endpoint { get; set; }
-}
+// public class CategoryData
+// {
+// 	public string? Category { get; set; }
+// 	public string? Endpoint { get; set; }
+// }
 
 public class SefinekApi
 {
-	public string? Success { get; set; }
-	public string? Status { get; set; }
-	public CategoryData? Info { get; set; }
-	public string? Endpoint { get; set; }
+	// public string? Success { get; set; }
+	// public string? Status { get; set; }
+	// public CategoryData? Info { get; set; }
+	// public string? Endpoint { get; set; }
 	public string? Message { get; set; }
 }
 

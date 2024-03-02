@@ -1,5 +1,4 @@
 using NAudio.Wave;
-using StellaModLauncher.Forms;
 using StellaModLauncher.Properties;
 
 namespace StellaModLauncher.Scripts.Forms;
@@ -32,7 +31,7 @@ internal static class Music
 		string wavPath = Path.Combine(Program.AppPath, "data", "sounds", dir, $"{fileName}.wav");
 		if (!File.Exists(wavPath))
 		{
-			Default._status_Label!.Text += $"[x] {Resources.Default_TheSoundFileWithMusicWasNotFound}\n";
+			Utils.UpdateStatusLabel(Resources.Default_TheSoundFileWithMusicWasNotFound, Utils.StatusType.Error);
 			Program.Logger.Error($"The sound file with music was not found in the location: {wavPath}");
 			return;
 		}
@@ -57,7 +56,7 @@ internal static class Music
 		}
 		catch (Exception ex)
 		{
-			Default._status_Label!.Text += $"[x] {ex.Message}\n";
+			Utils.UpdateStatusLabel(ex.Message, Utils.StatusType.Error);
 			Program.Logger.Error(ex.ToString());
 		}
 	}

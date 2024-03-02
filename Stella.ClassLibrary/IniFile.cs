@@ -11,28 +11,32 @@ public class IniFile(string path)
 	private static extern long WritePrivateProfileString(string? section, string? key, string? val, string filePath);
 
 	[DllImport("kernel32.dll", CharSet = CharSet.Unicode)]
-	private static extern int GetPrivateProfileString(string section, string key, string? def, StringBuilder retVal, int size, string filePath);
+	private static extern int GetPrivateProfileString(string? section, string? key, string? def, StringBuilder retVal, int size, string filePath);
 
-	public bool WriteInt(string section, string key, int value)
+	public void WriteInt(string? section, string? key, int value)
 	{
-		return WriteString(section, key, value.ToString());
+		WriteString(section, key, value.ToString());
 	}
 
-	public int ReadInt(string section, string key, int defaultValue)
+	public int ReadInt(string? section, string? key, int defaultValue)
 	{
-		string result = ReadString(section, key, defaultValue.ToString());
-		return int.TryParse(result, out int value) ? value : defaultValue;
+		string result = ReadString(section, key);
+		if (!string.IsNullOrEmpty(result)) return int.TryParse(result, out int value) ? value : defaultValue;
+
+		WriteString(section, key, defaultValue.ToString());
+		return defaultValue;
 	}
 
-	public bool WriteString(string section, string key, string? value)
+	public bool WriteString(string? section, string? key, string? value)
 	{
 		return WritePrivateProfileString(section, key, value, path) != 0;
 	}
 
-	public string ReadString(string section, string key, string? defaultValue = null)
+	public string ReadString(string? section, string? key, string? defaultValue = null)
 	{
 		StringBuilder sb = new(BufferSize);
 		GetPrivateProfileString(section, key, defaultValue, sb, sb.Capacity, path);
+
 		return sb.ToString();
 	}
 

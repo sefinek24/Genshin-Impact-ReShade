@@ -457,7 +457,6 @@ namespace StellaModLauncher.Forms
 				status_Label.BackColor = Color.Transparent;
 				status_Label.ForeColor = Color.Snow;
 				status_Label.Name = "status_Label";
-				status_Label.TextChanged += StatusLabel_TextChanged;
 				// 
 				// padIco_PictureBox
 				// 

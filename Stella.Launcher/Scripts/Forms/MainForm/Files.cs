@@ -1,4 +1,3 @@
-using StellaModLauncher.Forms;
 using StellaModLauncher.Properties;
 using StellaModLauncher.Scripts.Remote;
 
@@ -17,7 +16,7 @@ internal static class Files
 
 	private static void CheckIfExists(string filePath)
 	{
-		if (!File.Exists(filePath)) Default._status_Label.Text += $"{string.Format(Resources.Default_File_WasNotFound, filePath)}\n";
+		if (!File.Exists(filePath)) Utils.UpdateStatusLabel(string.Format(Resources.Default_File_WasNotFound, filePath), Utils.StatusType.Error);
 	}
 
 	public static void DeleteSetupAsync()
@@ -27,12 +26,12 @@ internal static class Files
 		try
 		{
 			File.Delete(NormalRelease.SetupPathExe);
-			Default._status_Label.Text += $"{Resources.Default_DeletedOldSetupFromTempDirectory}\n";
+			Utils.UpdateStatusLabel(Resources.Default_DeletedOldSetupFromTempDirectory, Utils.StatusType.Info);
 			Program.Logger.Info($"Deleted old setup file from temp folder: {NormalRelease.SetupPathExe}");
 		}
 		catch (Exception ex)
 		{
-			Default._status_Label.Text += $"[x] {ex.Message}\n";
+			Utils.UpdateStatusLabel(ex.Message, Utils.StatusType.Error);
 			Program.Logger.Error(ex.ToString());
 		}
 	}

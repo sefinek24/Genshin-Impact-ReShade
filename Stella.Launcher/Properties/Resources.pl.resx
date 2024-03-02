@@ -207,7 +207,7 @@ Ta czynność spowoduje utratę wszelkich niestandardowych konfiguracji, jakie d
     <value>Plik nie został znaleziony.</value>
   </data>
   <data name="Default_File_WasNotFound" xml:space="preserve">
-    <value>[x] Nie znaleziono pliku {0}.</value>
+    <value>Nie znaleziono pliku {0}.</value>
   </data>
   <data name="Default_ForSomeReasonYouDidNotGiveConsentForTheAutomaticUpdateOfTheReShadeFile" xml:space="preserve">
     <value>Z jakiegoś powodu nie wyraziłeś zgody na automatyczną aktualizację pliku ReShade. Należy pamiętać, że starsze wersje tego pliku mogą nie być kompatybilne z nowszymi wersjami modyfikacji Stella Mod. Mam nadzieję, że wiesz, co robisz.</value>
@@ -382,7 +382,7 @@ Czy chciałbyś teraz pobrać ten plik, aby zapobiec przyszłym błędom i ręcz
     <value>Coś poszło nie tak???</value>
   </data>
   <data name="NormalRelease_UpdateSize" xml:space="preserve">
-    <value>Rozmiar aktualizacji: {0} MB</value>
+    <value>Rozmiar aktualizacji: {0}</value>
   </data>
   <data name="NormalRelease_UpdatingPleaseWait" xml:space="preserve">
     <value>Trwa aktualizowanie...</value>
@@ -418,7 +418,7 @@ Czy chciałbyś teraz pobrać ten plik, aby zapobiec przyszłym błędom i ręcz
 Chcesz zobaczyć te pliki?</value>
   </data>
   <data name="Program_RequiredFileFisrtAppLaunchExeWasNotFound_" xml:space="preserve">
-    <value>Nie znaleziono wymaganego pliku "ConfigurationWindow.exe". Proszę ponownie zainstalować tę aplikację lub dołączyć do naszego serwera Discord, aby uzyskać pomoc.</value>
+    <value>Nie znaleziono wymaganego pliku "Configuration Window.exe". Proszę ponownie zainstalować tę aplikację lub dołączyć do naszego serwera Discord, aby uzyskać pomoc.</value>
   </data>
   <data name="Program_SorryOneInstanceIsCurrentlyOpen_" xml:space="preserve">
     <value>Przepraszam, obecnie jest uruchomiona jedna instancja.
@@ -468,7 +468,7 @@ Zamknij proces o nazwie {0} i spróbuj ponownie.</value>
     <value>Zaktualizuj konfigurację ReShade</value>
   </data>
   <data name="ReShadeIniUpdate_UpdateSize_KB" xml:space="preserve">
-    <value>[i] Rozmiar aktualizacji: {0} KB</value>
+    <value>Rozmiar aktualizacji: {0} KB</value>
   </data>
   <data name="StellaResources_DownloadingResources" xml:space="preserve">
     <value>Pobieranie zasobów... {0} / {1}</value>

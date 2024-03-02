@@ -9,8 +9,10 @@ namespace StellaModLauncher.Scripts.Remote;
 
 internal static class NormalRelease
 {
-	public static readonly string SetupPathExe = Path.Combine(Path.GetTempPath(), "Stella_Mod_Update.exe");
-	private static readonly string DownloadUrl = "https://github.com/sefinek24/Genshin-Impact-ReShade/releases/latest/download/Stella-Mod-Setup.exe";
+	public static readonly string SetupPathExe = Path.Combine(Path.GetTempPath(), "Stella-Mod-Update.exe");
+
+	// private static readonly string DownloadUrl = "https://github.com/sefinek24/Genshin-Impact-ReShade/releases/latest/download/Stella-Mod-Setup.exe";
+	private static readonly string DownloadUrl = "http://127.0.0.1:5180/Stella-Mod-Setup.exe";
 
 	public static async void Run(string? remoteVersion, DateTime remoteVerDate, bool beta)
 	{
@@ -36,7 +38,7 @@ internal static class NormalRelease
 		BalloonTip.Show($"📥 {Resources.NormalRelease_WeFoundNewUpdates}", Resources.NormalRelease_NewReleaseIsAvailableDownloadNow);
 
 		// Log
-		Default._status_Label!.Text += $"[i] {string.Format(Resources.NormalRelease_NewVersionFrom_IsAvailable, remoteVerDate)}\n";
+		Utils.UpdateStatusLabel(string.Format(Resources.NormalRelease_NewVersionFrom_IsAvailable, remoteVerDate), Utils.StatusType.Info);
 		Program.Logger.Info($"New release from {remoteVerDate} is available: v{Program.AppFileVersion} → v{remoteVersion} ({(beta ? "Beta" : "Stable")})");
 
 
@@ -52,11 +54,11 @@ internal static class NormalRelease
 			{
 				updateSize = ByteSize.FromBytes(response.Content.Headers.ContentLength.Value).MegaBytes.ToString("00.00");
 
-				Default._status_Label.Text += $"[i] {string.Format(Resources.NormalRelease_UpdateSize, $"{updateSize} MB")}\n";
+				Utils.UpdateStatusLabel(string.Format(Resources.NormalRelease_UpdateSize, $"{updateSize} MB"), Utils.StatusType.Info);
 			}
 			else
 			{
-				Default._status_Label.Text += "[i] Unknown file size.\n";
+				Utils.UpdateStatusLabel("Unknown file size.", Utils.StatusType.Info);
 			}
 		}
 		catch (Exception ex)
@@ -102,7 +104,7 @@ internal static class NormalRelease
 		if (File.Exists(SetupPathExe))
 		{
 			File.Delete(SetupPathExe);
-			Default._status_Label!.Text += $"[✓] {Resources.NormalRelease_DeletedOldSetupFileFromTempDir}\n";
+			Utils.UpdateStatusLabel(Resources.NormalRelease_DeletedOldSetupFileFromTempDir, Utils.StatusType.Success);
 			Program.Logger.Info($"Deleted old setup file: {SetupPathExe}");
 		}
 
@@ -120,7 +122,8 @@ internal static class NormalRelease
 
 			using Stream streamToReadFrom = await response.Content.ReadAsStreamAsync().ConfigureAwait(true);
 			using FileStream streamToWriteTo = File.Open(SetupPathExe, FileMode.Create, FileAccess.Write, FileShare.None);
-			byte[] buffer = new byte[8192];
+
+			byte[] buffer = Buffer.Get();
 			int bytesRead;
 			long totalRead = 0;
 
@@ -152,9 +155,9 @@ internal static class NormalRelease
 		string logDir = Path.Combine(Log.Folder!, "updates");
 		if (!Directory.Exists(logDir)) Directory.CreateDirectory(logDir);
 
-		// Wait 5 seconds
+		// Wait 3 seconds
 		Default._progressBar1!.Style = ProgressBarStyle.Continuous;
-		for (int i = 5; i >= 0; i--)
+		for (int i = 4; i >= 0; i--)
 		{
 			Default._preparingPleaseWait!.Text = string.Format(Resources.NormalRelease_JustAMoment_PleaseWait, i);
 			Program.Logger.Info($"Waiting {i}s...");
@@ -168,8 +171,6 @@ internal static class NormalRelease
 		Default._preparingPleaseWait!.Text = Resources.NormalRelease_EverythingIsOkay_StartingSetup;
 		TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Indeterminate);
 
-		await Task.Delay(500).ConfigureAwait(true);
-
 
 		// Run setup
 		string logFile = Path.Combine(logDir, $"{DateTime.Now:yyyy-dd-M...HH-mm-ss}.log");
@@ -179,28 +180,19 @@ internal static class NormalRelease
 			Arguments = new ArgumentsBuilder()
 				.Add("/UPDATE")
 				.Add($"/LOG={logFile}")
-				.Add("/NORESTART"),
+				.Add("/NORESTART")
+				.Add("/SILENT"),
 			DownloadingSetup = true
 		};
 		_ = Cmd.Execute(command);
+		Program.Logger.Info($"Log file: {logFile}");
 
 
 		// Save settings
 		Program.Settings.WriteInt("Updates", "UpdateAvailable", 1);
-		Program.Settings.WriteString("Updates", "OldVersion", Program.AppVersion);
+		Program.Settings.WriteString("Updates", "OldVersion", Program.AppFileVersion);
 		Program.Settings.Save();
 
-
-		// Wait 16 seconds and close launcher
-		Default._progressBar1.Style = ProgressBarStyle.Marquee;
-		for (int i = 16; i >= 0; i--)
-		{
-			Default._preparingPleaseWait.Text = string.Format(Resources.NormalRelease_InstallANewVersionInTheWizard_ClosingLauncherIn_, i);
-			Program.Logger.Info($"Closing launcher in {i}s...");
-			await Task.Delay(1000).ConfigureAwait(true);
-		}
-
-		Program.Logger.Info("Closing...");
 		Application.Exit();
 	}
 }

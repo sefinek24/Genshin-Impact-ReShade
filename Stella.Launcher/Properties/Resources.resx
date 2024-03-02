@@ -212,7 +212,7 @@ This action will result in the loss of any custom configurations you have made. 
     <value>Current background: Default</value>
   </data>
   <data name="Default_DeletedOldSetupFromTempDirectory" xml:space="preserve">
-    <value>[i] Deleted old setup file from temp directory.</value>
+    <value>Deleted old setup file from temp directory.</value>
   </data>
   <data name="Default_Directory_WasNotFound" xml:space="preserve">
     <value>Directory {0} was not found.</value>
@@ -237,7 +237,7 @@ This action will result in the loss of any custom configurations you have made. 
     <value>File was not found.</value>
   </data>
   <data name="Default_File_WasNotFound" xml:space="preserve">
-    <value>[i] File {0} was not found.</value>
+    <value>File {0} was not found.</value>
   </data>
   <data name="Default_ForSomeReasonYouDidNotGiveConsentForTheAutomaticUpdateOfTheReShadeFile" xml:space="preserve">
     <value>For some reason, you did not give consent for the automatic update of the ReShade file. Please note that older versions of this file may not be compatible with newer versions of Stella Mod. I hope you know what you're doing.</value>
@@ -520,7 +520,7 @@ Would you like to visit the official website and subscribe? You'll gain access t
     <value>Something went wrong???</value>
   </data>
   <data name="NormalRelease_UpdateSize" xml:space="preserve">
-    <value>Update size: {0} MB</value>
+    <value>Update size: {0}</value>
   </data>
   <data name="NormalRelease_UpdatingPleaseWait" xml:space="preserve">
     <value>Updating. Please wait...</value>
@@ -568,7 +568,7 @@ Would you like to visit the official website and subscribe? You'll gain access t
 Do you want to see these files?</value>
   </data>
   <data name="Program_RequiredFileFisrtAppLaunchExeWasNotFound_" xml:space="preserve">
-    <value>Required file 'ConfigurationWindow.exe' was not found. Please reinstall this app or join our Discord server for help.</value>
+    <value>Required file 'Configuration Window.exe' was not found. Please reinstall this app or join our Discord server for help.</value>
   </data>
   <data name="Program_SorryOneInstanceIsCurrentlyOpen_" xml:space="preserve">
     <value>Sorry, one instance is currently open.
@@ -618,7 +618,7 @@ Quit the process with name {0} and try again.</value>
     <value>Update ReShade config</value>
   </data>
   <data name="ReShadeIniUpdate_UpdateSize_KB" xml:space="preserve">
-    <value>[i] Update size: {0} KB</value>
+    <value>Update size: {0} KB</value>
   </data>
   <data name="StellaResources_DeletingThePreviousVersionOfTheModPack" xml:space="preserve">
     <value>Deleting the previous version of the mod pack...</value>

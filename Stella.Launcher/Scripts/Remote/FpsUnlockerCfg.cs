@@ -1,5 +1,4 @@
 using Newtonsoft.Json;
-using StellaModLauncher.Forms;
 using StellaModLauncher.Properties;
 
 namespace StellaModLauncher.Scripts.Remote;
@@ -42,18 +41,18 @@ internal static class FpsUnlockerCfg
 				File.WriteAllText(Program.FpsUnlockerCfgPath, updatedJson);
 
 				// Update the status label to indicate successful completion
-				Default._status_Label!.Text += $"[✓] {Resources.Default_DownloadedConfigFileForFPSUnlocker}\n";
+				Utils.UpdateStatusLabel(Resources.Default_DownloadedConfigFileForFPSUnlocker, Utils.StatusType.Success);
 				Program.Logger.Info("Done.");
 			}
 			else
 			{
-				Default._status_Label!.Text += $"[x] Download failed: {response.ReasonPhrase}\n";
+				Utils.UpdateStatusLabel($"Download failed: {response.ReasonPhrase}", Utils.StatusType.Error);
 				Program.Logger.Error($"Failed to download {Path.GetFileName(Program.FpsUnlockerCfgPath)} in {Path.GetDirectoryName(Program.FpsUnlockerCfgPath)}.\n\n{response.ReasonPhrase}");
 			}
 		}
 		catch (Exception ex)
 		{
-			Default._status_Label!.Text += $"[x] {ex.Message}\n";
+			Utils.UpdateStatusLabel(ex.Message, Utils.StatusType.Error);
 			Program.Logger.Error($"Failed to download {Path.GetFileName(Program.FpsUnlockerCfgPath)} in {Path.GetDirectoryName(Program.FpsUnlockerCfgPath)}.\n\n{ex}");
 		}
 	}

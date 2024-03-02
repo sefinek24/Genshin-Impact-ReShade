@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using IWshRuntimeLibrary;
 using Microsoft.Win32;
+using StellaModLauncher.Forms;
 using StellaModLauncher.Properties;
 using StellaModLauncher.Scripts.Forms;
 using File = System.IO.File;
@@ -9,6 +10,13 @@ namespace StellaModLauncher.Scripts;
 
 internal static class Utils
 {
+	public enum StatusType
+	{
+		Info,
+		Success,
+		Error
+	}
+
 	private static readonly Dictionary<LinkLabel, LinkLabelLinkClickedEventHandler?> LinkClickedHandlers = [];
 
 	public static async Task<string?> GetGame(string type)
@@ -174,7 +182,7 @@ internal static class Utils
 		}
 	}
 
-	public static async Task<Image?> LoadImageAsync(string url)
+	public static async Task<Image?> LoadImageAsync(string? url)
 	{
 		Program.Logger.Info($"Downloading image via LoadImageAsync(): {url}");
 
@@ -193,5 +201,30 @@ internal static class Utils
 			Program.Logger.Error(ex);
 			return null;
 		}
+	}
+
+	public static void UpdateStatusLabel(string text, StatusType status, bool playSound = true)
+	{
+		string prefix = status switch
+		{
+			StatusType.Info => "[i]",
+			StatusType.Success => "[✓]",
+			StatusType.Error => "[X]",
+			_ => "[-]"
+		};
+
+		Default._status_Label!.Text += @$"{prefix} {text}{Environment.NewLine}";
+
+		Action<string> action = status switch
+		{
+			StatusType.Error => Program.Logger.Error,
+			_ => Program.Logger.Info
+		};
+		action(text);
+
+		string[] lines = Default._status_Label.Text.Split('\n');
+		if (lines.Length > 10) Default._status_Label.Text = string.Join("\n", lines.Skip(lines.Length - 10));
+
+		if (playSound) Music.PlaySound("winxp", "balloon");
 	}
 }

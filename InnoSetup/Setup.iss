@@ -6,7 +6,7 @@
 #define AppCopyright "Copyright 2024 © by Sefinek. All Rights Reserved."
 #define AppId "5D6E44F3-2141-4EA4-89E3-6C3018583FF7"
 #define public Dependency_Path_NetCoreCheck "Data\Dependencies\"
-#include "Data\Dependencies\DependencyInstaller.iss"
+#include "Data\Dependencies\CodeDependencies.iss"
 
 [Setup]
 AppCopyright={#AppCopyright}
@@ -79,24 +79,28 @@ Name: "turkish"; MessagesFile: "compiler:Languages\Turkish.isl"
 Name: "ukrainian"; MessagesFile: "compiler:Languages\Ukrainian.isl"
 
 [Tasks]
-Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Check: not InstViaSetup and not InstViaLauncher
+Name: "CreateDesktopIcon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Check: not IsUpdating
 
 [Files]
 Source: "..\Build\Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
-Name: "{autodesktop}\Stella Mod Launcher"; Filename: "{app}\net8.0-windows\{#AppExeName}"; Tasks: desktopicon
+Name: "{autodesktop}\Stella Mod Launcher"; Filename: "{app}\net8.0-windows\{#AppExeName}"; Tasks: CreateDesktopIcon
 Name: "{autoprograms}\Stella Mod Launcher\Uninstall {#AppName}"; Filename: "{uninstallexe}"
 
+[Registry]
+Root: HKCU; Subkey: "SOFTWARE\Stella Mod Launcher"; ValueType: string; ValueName: "StellaPath"; ValueData: "{app}\net8.0-windows\";
+Root: HKCU; Subkey: "SOFTWARE\Stella Mod Launcher"; ValueType: string; ValueName: "InstallationDate"; ValueData: "{code:GetCurrentDateTime}"; Check: not IsUpdating
+Root: HKCU; Subkey: "SOFTWARE\Stella Mod Launcher"; ValueType: string; ValueName: "LastUpdateDate"; ValueData: "{code:GetCurrentDateTime}"; Check: IsUpdating
+
 [Run]
-Filename: "{app}\net8.0-windows\{#AppExeName}"; WorkingDir: "{app}"; Description: "{cm:LaunchProgram,{#StringChange(AppName, '&', '&&')}} Launcher"; Flags: nowait postinstall skipifsilent runascurrentuser
+Filename: "{app}\net8.0-windows\{#AppExeName}"; WorkingDir: "{app}"; Description: "{cm:LaunchProgram,{#StringChange(AppName, '&', '&&')}} Launcher"; Flags: nowait postinstall skipifsilent runascurrentuser; Check: not IsUpdating
+Filename: "{app}\net8.0-windows\{#AppExeName}"; WorkingDir: "{app}"; Description: "{cm:LaunchProgram,{#StringChange(AppName, '&', '&&')}} Launcher"; Flags: nowait postinstall runascurrentuser; Check: IsUpdating
 
 [Code]
-{ ///////////////////////////////////////////////////////////////////// }
+{ ///////////////////////////////////////////////////////////////////// } 
 function InitializeSetup: Boolean;
 begin
-  Dependency_AddWebView2;
-
   Dependency_AddDotNet48;
   Dependency_AddDotNet80;
 
@@ -105,14 +109,41 @@ begin
   Dependency_ForceX86 := False;
   Dependency_AddVC2015To2022;
 
+  Dependency_AddWebView2;
+
   Result := True;
 end;
 
+function NeedRestart: Boolean;
+begin
+  Result := Dependency_NeedRestart;
+end;
+
+
+function InitializeUninstall(): Boolean;
+var
+  ErrorCode: Integer;
+begin
+  if CheckForMutexes('{#AppId}') then
+  begin
+    if MsgBox('Uninstall has detected that {#AppName} is currently running.' + #13#10#13#10 + 'Would you like to close it?', mbError, MB_YESNO) = IDYES then
+    begin
+      Exec('taskkill.exe', '/f /im {#AppExeName}', '', SW_HIDE, ewWaitUntilTerminated, ErrorCode);
+    end
+    else
+    begin
+      Result := False;
+      Exit;
+    end;
+  end;
+
+  Result := True;
+end;
 
 { ///////////////////////////////////////////////////////////////////// }
 function CmdLineParamExists(const value: string): Boolean;
 var
-  i: Integer;
+  i: Integer;  
 begin
   Result := False;
   for i := 1 to ParamCount do
@@ -123,16 +154,15 @@ begin
     end;
 end;
 
-function InstViaSetup(): Boolean;
-begin
-  Result := CmdLineParamExists('/SETUP');
-end;
-
-function InstViaLauncher(): Boolean;
+function IsUpdating(): Boolean;
 begin
   Result := CmdLineParamExists('/UPDATE');
 end;
 
+function GetCurrentDateTime(Param: String): String;
+begin
+  Result := GetDateTimeString('dd.mm.yyyy hh:nn:ss', #0, #0);
+end;
 
 { ///////////////////////////////////////////////////////////////////// }
 function GetUninstallString(): String;

@@ -15,7 +15,7 @@ internal static class DeleteReShadeCache
 	{
 		int deletedFilesCount = 0;
 		long savedSpace = 0;
-		string cacheDirectoryPath = Path.Combine(Program.ResourcesGlobal, "ReShade", "Cache");
+		string cacheDirectoryPath = Path.Combine(Program.ResourcesGlobal!, "ReShade", "Cache");
 
 		if (Directory.Exists(cacheDirectoryPath))
 		{

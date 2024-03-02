@@ -55,7 +55,7 @@ internal static class DesktopIcon
 				IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(shortcutLocation);
 				shortcut.Description = Resources.Utils_RunOfficialLauncherForStellaModMadeBySefinek;
 				shortcut.WorkingDirectory = Start.AppPath;
-				shortcut.TargetPath = Path.Combine(Start.AppPath, "Stella Mod Launcher.exe");
+				shortcut.TargetPath = Path.Combine(Start.AppPath!, "Stella Mod Launcher.exe");
 				shortcut.Save();
 			}
 			catch (Exception e)

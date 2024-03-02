@@ -1,6 +1,6 @@
 using StellaModLauncher.Forms;
 using StellaModLauncher.Properties;
-using StellaModLauncher.Scripts.Forms.MainForm;
+using StellaModLauncher.Scripts.Remote;
 using StellaPLFNet;
 
 namespace StellaModLauncher.Scripts;
@@ -24,14 +24,14 @@ internal static class ReShadeIni
 
 			await Prepare().ConfigureAwait(true);
 
-			Default._status_Label!.Text += $"[✓] {Resources.Default_SuccessfullyDownloadedReShadeCfg}\n";
+			Utils.UpdateStatusLabel(Resources.Default_SuccessfullyDownloadedReShadeCfg, Utils.StatusType.Success);
 			Program.Logger.Info($"Successfully downloaded ReShade.ini and saved in: {reShadePath}");
 
 			await CheckForUpdates.Analyze().ConfigureAwait(true);
 		}
 		catch (Exception ex)
 		{
-			Default._status_Label!.Text += $"[x] {Resources.Default_Meeow_FailedToDownloadReShadeIni_TryAgain}\n";
+			Utils.UpdateStatusLabel(Resources.Default_Meeow_FailedToDownloadReShadeIni_TryAgain, Utils.StatusType.Error);
 			Program.Logger.Error(ex.ToString());
 			if (!File.Exists(reShadePath)) Program.Logger.Info(Resources.Default_TheReShadeIniFileStillDoesNotExist);
 		}
@@ -50,10 +50,10 @@ internal static class ReShadeIni
 		if (!File.Exists(reShadePath)) return null;
 
 		// Presets
-		string defaultPreset = Path.Combine(Default.ResourcesPath, "ReShade", "Presets", "1. Default preset - Medium settings.ini");
+		string? defaultPreset = Path.Combine(Default.ResourcesPath, "ReShade", "Presets", "1. Default preset - Medium settings.ini");
 
 		// Dirs
-		string screenshots = Path.Combine(Default.ResourcesPath, "Screenshots");
+		string? screenshots = Path.Combine(Default.ResourcesPath, "Screenshots");
 
 		IniFile ini = new(reShadePath);
 		ini.WriteString("ADDON", "AddonPath", $"{Path.Combine(Default.ResourcesPath, "ReShade", "Addons")}");

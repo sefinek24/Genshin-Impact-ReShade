@@ -6,9 +6,9 @@ internal static class UpdateReShadeCfg
 {
 	public static async Task RunAsync()
 	{
-		string giGame = Path.GetDirectoryName(Program.SavedGamePath);
-		string reshadeIniPath = Path.Combine(giGame, "ReShade.ini");
-		string reshadeLogPath = Path.Combine(giGame, "ReShade.log");
+		string? giGame = Path.GetDirectoryName(Program.SavedGamePath);
+		string reshadeIniPath = Path.Combine(giGame!, "ReShade.ini");
+		string reshadeLogPath = Path.Combine(giGame!, "ReShade.log");
 
 		if (!Directory.Exists(giGame))
 		{
@@ -23,7 +23,7 @@ internal static class UpdateReShadeCfg
 
 		Start.Logger.Info($"{Path.GetFileName(reshadeIniPath)} and {Path.GetFileName(reshadeLogPath)} were successfully downloaded.");
 
-		string cache = Path.Combine(Program.ResourcesGlobal, "ReShade", "Cache");
+		string cache = Path.Combine(Program.ResourcesGlobal!, "ReShade", "Cache");
 		if (!Directory.Exists(cache))
 		{
 			Console.WriteLine(@"Creating cache folder...");
@@ -65,16 +65,16 @@ internal static class UpdateReShadeCfg
 
 	private static void ConfigureReShade(string? resourcesGlobal)
 	{
-		string reshadeIniFilePath = Path.Combine(Path.GetDirectoryName(Program.SavedGamePath), "ReShade.ini");
+		string reshadeIniFilePath = Path.Combine(Path.GetDirectoryName(Program.SavedGamePath)!, "ReShade.ini");
 		IniFile ini = new(reshadeIniFilePath);
 
-		string addonsPath = Path.Combine(resourcesGlobal, "ReShade", "Addons");
-		string effectsPath = Path.Combine(resourcesGlobal, "ReShade", "Shaders", "Effects");
-		string cachePath = Path.Combine(resourcesGlobal, "ReShade", "Cache");
-		string presetsPath = Path.Combine(resourcesGlobal, "ReShade", "Presets", "1. Default preset - Medium settings.ini");
-		string texturesPath = Path.Combine(resourcesGlobal, "ReShade", "Shaders", "Textures");
-		string screenshotsPath = Path.Combine(resourcesGlobal, "Screenshots");
-		string soundPath = Path.Combine(Start.AppPath, "data", "sounds", "screenshot.wav");
+		string addonsPath = Path.Combine(resourcesGlobal!, "ReShade", "Addons");
+		string effectsPath = Path.Combine(resourcesGlobal!, "ReShade", "Shaders", "Effects");
+		string cachePath = Path.Combine(resourcesGlobal!, "ReShade", "Cache");
+		string presetsPath = Path.Combine(resourcesGlobal!, "ReShade", "Presets", "1. Default preset - Medium settings.ini");
+		string texturesPath = Path.Combine(resourcesGlobal!, "ReShade", "Shaders", "Textures");
+		string screenshotsPath = Path.Combine(resourcesGlobal!, "Screenshots");
+		string soundPath = Path.Combine(Start.AppPath!, "data", "sounds", "screenshot.wav");
 
 		ini.WriteString("ADDON", "AddonPath", addonsPath);
 		ini.WriteString("GENERAL", "EffectSearchPaths", effectsPath);

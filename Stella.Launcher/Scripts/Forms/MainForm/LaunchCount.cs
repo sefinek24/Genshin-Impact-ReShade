@@ -1,5 +1,4 @@
 using Microsoft.Win32;
-using StellaModLauncher.Forms;
 using StellaModLauncher.Forms.Other;
 using StellaModLauncher.Properties;
 
@@ -112,27 +111,27 @@ internal static class LaunchCountHelper
 			case MessageType.StatusLabel:
 			{
 				if (Secret.IsStellaPlusSubscriber)
-					Default._status_Label.Text += $"[i] {Resources.Default_ClickStartGameButtonToInjectReShadeFPSUnlockAnd3DMigoto}\n[i] {Resources.LaunchCount_ABigThankYouTouYouForYourWillingnessToSupport}\n";
+				{
+					Utils.UpdateStatusLabel(Resources.Default_ClickStartGameButtonToInjectReShadeFPSUnlockAnd3DMigoto, Utils.StatusType.Info);
+					Utils.UpdateStatusLabel(Resources.LaunchCount_ABigThankYouTouYouForYourWillingnessToSupport, Utils.StatusType.Info);
+				}
 				else
-					Default._status_Label.Text += $"[i] {Resources.Default_ClickStartGameButtonToInjectReShadeAndUseFPSUnlock}\n[i] {Resources.LaunchCount_TheSimultaneousOfUseRSFU3DM}\n";
+				{
+					Utils.UpdateStatusLabel(Resources.Default_ClickStartGameButtonToInjectReShadeAndUseFPSUnlock, Utils.StatusType.Info);
+					Utils.UpdateStatusLabel(Resources.LaunchCount_TheSimultaneousOfUseRSFU3DM, Utils.StatusType.Info);
+				}
 
-				Program.Logger.Info(Default._status_Label.Text);
 				break;
 			}
 			case MessageType.TheSimultaneousOfUse:
 			{
-				if (!Secret.IsStellaPlusSubscriber)
-					Default._status_Label.Text += $"[i] {Resources.LaunchCount_TheSimultaneousOfUseRSFU3DM}\n";
+				if (!Secret.IsStellaPlusSubscriber) Utils.UpdateStatusLabel(Resources.LaunchCount_TheSimultaneousOfUseRSFU3DM, Utils.StatusType.Info);
 
-				Program.Logger.Info(Default._status_Label.Text);
 				break;
 			}
 			case MessageType.ThankYouForYourSupport:
 			{
-				if (Secret.IsStellaPlusSubscriber)
-					Default._status_Label.Text += $"[i] {Resources.LaunchCount_ThankYouForYourSupport}\n";
-
-				Program.Logger.Info(Default._status_Label.Text);
+				if (Secret.IsStellaPlusSubscriber) Utils.UpdateStatusLabel(Resources.LaunchCount_ThankYouForYourSupport, Utils.StatusType.Info);
 				break;
 			}
 			default:

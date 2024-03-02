@@ -1,7 +1,6 @@
 using System.IO.Compression;
 using StellaModLauncher.Forms;
 using StellaModLauncher.Properties;
-using StellaModLauncher.Scripts.Forms.MainForm;
 using StellaPLFNet;
 
 namespace StellaModLauncher.Scripts.Remote;
@@ -85,7 +84,7 @@ internal static class Download
 		}
 
 		Program.Logger.Info($"Successfully unpacked; totalEntries {totalEntries}; totalBytesExtracted: {extractedBytes}; totalBytesToExtract: {totalBytesToExtract};");
-		Utils.AddLinkClickedEventHandler(Default._checkForUpdates_LinkLabel, CheckForUpdates.CheckUpdates_Click);
+		Utils.AddLinkClickedEventHandler(Default._checkForUpdates_LinkLabel!, CheckForUpdates.CheckUpdates_Click);
 		return;
 
 		// Update UI

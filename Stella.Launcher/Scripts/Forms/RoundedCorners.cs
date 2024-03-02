@@ -1,6 +1,4 @@
-﻿using System.Drawing.Drawing2D;
-using System.Drawing.Imaging;
-using SkiaSharp;
+using System.Drawing.Drawing2D;
 
 namespace StellaModLauncher.Scripts.Forms;
 
@@ -14,61 +12,19 @@ internal static class RoundedCorners
 		form.Region = new Region(path);
 	}
 
-	public static Bitmap Picture(Image? inputImage, int cornerRadius, int shadowOffsetX = 0, int shadowOffsetY = 0, int shadowRadius = 9)
+	public static Image Picture(Image? startImage, int cornerRadius)
 	{
-		SKBitmap skBitmap = ConvertToSkBitmap(inputImage);
+		cornerRadius *= 2;
+		Bitmap roundedImage = new(startImage!.Width, startImage.Height);
+		using Graphics g = Graphics.FromImage(roundedImage);
+		g.Clear(Color.Transparent);
+		g.SmoothingMode = SmoothingMode.AntiAlias;
 
-		// Rozmiar cienia może wpłynąć na końcowy rozmiar obrazu, dlatego dodajemy przesunięcie/margines dla cienia
-		SKBitmap outputBitmap = new(skBitmap.Width + shadowOffsetX + shadowRadius, skBitmap.Height + shadowOffsetY + shadowRadius);
-		using (SKCanvas canvas = new(outputBitmap))
-		{
-			canvas.Clear(SKColors.Transparent);
+		using Brush brush = new TextureBrush(startImage);
+		using GraphicsPath gp = RoundedRectPath(new Rectangle(0, 0, roundedImage.Width, roundedImage.Height), cornerRadius);
+		g.FillPath(brush, gp);
 
-			SKRect rect = new(0, 0, skBitmap.Width, skBitmap.Height);
-			SKRoundRect roundRect = new(rect, cornerRadius, cornerRadius);
-
-			SKPaint shadowPaint = new()
-			{
-				IsAntialias = true,
-				Color = SKColors.Black.WithAlpha(100),
-				ImageFilter = SKImageFilter.CreateDropShadow(shadowOffsetX, shadowOffsetY, shadowRadius, shadowRadius, SKColors.Black),
-				FilterQuality = SKFilterQuality.High
-			};
-
-			canvas.DrawRoundRect(roundRect, shadowPaint);
-
-			rect.Offset(shadowOffsetX, shadowOffsetY);
-
-			SKPaint imagePaint = new()
-			{
-				IsAntialias = true,
-				FilterQuality = SKFilterQuality.High
-			};
-
-			SKPath path = new();
-			path.AddRoundRect(rect, cornerRadius, cornerRadius);
-			canvas.ClipPath(path);
-
-			canvas.DrawBitmap(skBitmap, shadowOffsetX, shadowOffsetY, imagePaint);
-		}
-
-		return ConvertToBitmap(outputBitmap);
-	}
-
-	private static SKBitmap ConvertToSkBitmap(Image? image)
-	{
-		using MemoryStream stream = new();
-		image.Save(stream, ImageFormat.Png);
-		stream.Seek(0, SeekOrigin.Begin);
-		return SKBitmap.Decode(stream);
-	}
-
-	private static Bitmap ConvertToBitmap(SKBitmap skBitmap)
-	{
-		using SKImage skImage = SKImage.FromBitmap(skBitmap);
-		using SKData data = skImage.Encode();
-		using MemoryStream stream = new(data.ToArray());
-		return new Bitmap(stream);
+		return roundedImage;
 	}
 
 	private static GraphicsPath RoundedRectPath(Rectangle bounds, int radius)
