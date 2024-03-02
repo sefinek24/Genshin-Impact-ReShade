@@ -105,19 +105,6 @@ public partial class Default : Form
 		_webView21 = webView21;
 
 
-		Utils.UpdateStatusLabel("Unknown file size. 1", Utils.StatusType.Info);
-		Utils.UpdateStatusLabel("Unknown file size. 2", Utils.StatusType.Error);
-		Utils.UpdateStatusLabel("Unknown file size. 3", Utils.StatusType.Success);
-		Utils.UpdateStatusLabel("Unknown file size. 4", Utils.StatusType.Success);
-		Utils.UpdateStatusLabel("Unknown file size. 5", Utils.StatusType.Error);
-		Utils.UpdateStatusLabel("Unknown file size. 6", Utils.StatusType.Success);
-		Utils.UpdateStatusLabel("Unknown file size. 7", Utils.StatusType.Error);
-		Utils.UpdateStatusLabel("Unknown file size. 8", Utils.StatusType.Success);
-		Utils.UpdateStatusLabel("Unknown file size. 9", Utils.StatusType.Error);
-		Utils.UpdateStatusLabel("Unknown file size. 10", Utils.StatusType.Success);
-		Utils.UpdateStatusLabel("Unknown file size. 11", Utils.StatusType.Success);
-
-
 		// Registry
 		Stages.UpdateStage(1, "Updating registry...");
 
