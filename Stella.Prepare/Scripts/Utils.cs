@@ -31,7 +31,7 @@ internal static class Utils
 		}
 	}
 
-	public static string GetWtProgramFiles()
+	public static string? GetWtProgramFiles()
 	{
 		if (!Directory.Exists(Program.WindowsApps))
 		{

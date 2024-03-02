@@ -48,7 +48,7 @@ internal abstract class Log
 			BalloonTip.Show("Failed 😿", "🎶 Sad song... Could you please try again?");
 
 			Console.ForegroundColor = ConsoleColor.Red;
-			Console.WriteLine($"{log.Message}\n");
+			Console.WriteLine($@"{log.Message}{Environment.NewLine}");
 
 			if (reportIssue)
 			{
@@ -67,7 +67,7 @@ internal abstract class Log
 				Console.Write("\n» Would you like to join our Discord server? [Yes/no]: ");
 				Console.ResetColor();
 
-				string joinDiscord = Console.ReadLine()?.ToLower();
+				string? joinDiscord = Console.ReadLine()?.ToLower();
 				switch (joinDiscord)
 				{
 					case "y":

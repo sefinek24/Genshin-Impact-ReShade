@@ -77,7 +77,7 @@ internal static class Terminal
 
 		// Check installed WT
 		Console.WriteLine(@"Checking installed software...");
-		string wtProgramFiles = Utils.GetWtProgramFiles();
+		string? wtProgramFiles = Utils.GetWtProgramFiles();
 		if (string.IsNullOrEmpty(wtProgramFiles))
 		{
 			Log.ErrorAndExit(new Exception($"Windows Terminal directory was not found in: {Program.WindowsApps}"), false, false);

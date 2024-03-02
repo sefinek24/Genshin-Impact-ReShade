@@ -248,9 +248,6 @@ Zaleca się kliknięcie przycisku "Rozpocznij grę" u góry, aby jednocześnie k
   <data name="linkLabel2.ToolTip" xml:space="preserve">
     <value>Otwórz ustawienia</value>
   </data>
-  <data name="updates_LinkLabel.Text" xml:space="preserve">
-    <value>Ładowanie danych...</value>
-  </data>
   <data name="PreparingPleaseWait.Text" xml:space="preserve">
     <value>Oczekiwanie na stabilizację interfejsu użytkownika...</value>
   </data>
@@ -260,9 +257,6 @@ Zaleca się kliknięcie przycisku "Rozpocznij grę" u góry, aby jednocześnie k
   <data name="label2.Text" xml:space="preserve">
     <value>Zalogowano jako
 {0}</value>
-  </data>
-  <data name="linkLabel3.Text" xml:space="preserve">
-    <value>Wyświetl dziennik zmian</value>
   </data>
   <data name="madeBySefinek_Label.ToolTip" xml:space="preserve">
     <value>&gt;~~&lt;</value>
@@ -281,5 +275,11 @@ Zaleca się kliknięcie przycisku "Rozpocznij grę" u góry, aby jednocześnie k
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Stella Mod Launcher</value>
+  </data>
+  <data name="viewChangelog_LinkLabel.Text" xml:space="preserve">
+    <value>Wyświetl listę zmian</value>
+  </data>
+  <data name="checkForUpdates_LinkLabel.Text" xml:space="preserve">
+    <value>Ładowanie danych...</value>
   </data>
 </root>

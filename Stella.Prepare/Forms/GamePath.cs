@@ -25,31 +25,29 @@ public sealed partial class GamePath : Form
 
 		Thread t = new(() =>
 		{
-			using (OpenFileDialog dialog = new())
+			using OpenFileDialog dialog = new();
+			dialog.InitialDirectory = Program.ProgramFiles;
+			dialog.Filter = @"Process (*.exe)|*.exe";
+			dialog.FilterIndex = 0;
+			dialog.RestoreDirectory = true;
+
+			if (dialog.ShowDialog() != DialogResult.OK) return;
+			string selectedFile = dialog.FileName;
+
+			if (!selectedFile.Contains("GenshinImpact.exe") && !selectedFile.Contains("YuanShen.exe"))
 			{
-				dialog.InitialDirectory = Program.ProgramFiles;
-				dialog.Filter = @"Process (*.exe)|*.exe";
-				dialog.FilterIndex = 0;
-				dialog.RestoreDirectory = true;
-
-				if (dialog.ShowDialog() != DialogResult.OK) return;
-				string selectedFile = dialog.FileName;
-
-				if (!selectedFile.Contains("GenshinImpact.exe") && !selectedFile.Contains("YuanShen.exe"))
-				{
-					MessageBox.Show("Please select the game exe.\n\n* GenshinImpact.exe for OS version\n* YuanShen.exe for CN version", Start.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-					return;
-				}
-
-				string directory = Path.GetDirectoryName(selectedFile);
-				if (!File.Exists(Path.Combine(directory, "UnityPlayer.dll")))
-				{
-					MessageBox.Show($"That's not the right place.\n\nSelected path:\n{directory}", Start.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-					return;
-				}
-
-				filePath = selectedFile;
+				MessageBox.Show("Please select the game exe.\n\n* GenshinImpact.exe for OS version\n* YuanShen.exe for CN version", Start.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+				return;
 			}
+
+			string? directory = Path.GetDirectoryName(selectedFile);
+			if (!File.Exists(Path.Combine(directory!, "UnityPlayer.dll")))
+			{
+				MessageBox.Show($"That's not the right place.\n\nSelected path:\n{directory}", Start.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				return;
+			}
+
+			filePath = selectedFile;
 		});
 
 		t.SetApartmentState(ApartmentState.STA);
@@ -65,14 +63,14 @@ public sealed partial class GamePath : Form
 	private void SaveSettings_Click(object sender, EventArgs e)
 	{
 		string? selectedFile = comboBox1.GetItemText(comboBox1.SelectedItem);
-		if (!selectedFile.Contains("GenshinImpact.exe") && !selectedFile.Contains("YuanShen.exe"))
+		if (!selectedFile!.Contains("GenshinImpact.exe") && !selectedFile.Contains("YuanShen.exe"))
 		{
 			MessageBox.Show("We can't save your settings. Please select the game exe.\n\n* GenshinImpact.exe for OS version (main)\n* YuanShen.exe for CN (Chinese) version", Start.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 			return;
 		}
 
-		string directory = Path.GetDirectoryName(selectedFile);
-		if (!File.Exists(Path.Combine(directory, "UnityPlayer.dll")))
+		string? directory = Path.GetDirectoryName(selectedFile);
+		if (!File.Exists(Path.Combine(directory!, "UnityPlayer.dll")))
 		{
 			MessageBox.Show(@"That's not the right place. UnityPlayer.dll file was not found.", Start.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
 			return;
@@ -80,7 +78,7 @@ public sealed partial class GamePath : Form
 
 		using (RegistryKey key = Registry.CurrentUser.CreateSubKey(Program.RegistryPath))
 		{
-			key?.SetValue("GameVersion", Path.GetFileName(selectedFile) == "GenshinImpact.exe" ? "1" : "2");
+			key.SetValue("GameVersion", Path.GetFileName(selectedFile) == "GenshinImpact.exe" ? "1" : "2");
 		}
 
 		Program.SavedGamePath = selectedFile;
