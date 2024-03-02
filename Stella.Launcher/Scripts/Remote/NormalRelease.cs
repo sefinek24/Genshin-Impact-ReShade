@@ -57,12 +57,12 @@ internal static class NormalRelease
 			}
 			else
 			{
-				Utils.UpdateStatusLabel("Unknown file size.", Utils.StatusType.Info);
+				Utils.UpdateStatusLabel("Unknown file size", Utils.StatusType.Info);
 			}
 		}
 		catch (Exception ex)
 		{
-			Program.Logger.Error("Error while fetching update size", ex);
+			Program.Logger.Error($"Error while fetching update size: {ex}");
 		}
 		finally
 		{
