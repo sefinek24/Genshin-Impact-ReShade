@@ -74,8 +74,8 @@ namespace StellaModLauncher.Forms
 				pictureBox1 = new PictureBox();
 				pictureBox3 = new PictureBox();
 				webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
-				notifyIcon1 = new NotifyIcon(components);
 				pictureBox4 = new PictureBox();
+				notifyIcon1 = new NotifyIcon(components);
 				panel1.SuspendLayout();
 				((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
 				((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -97,8 +97,8 @@ namespace StellaModLauncher.Forms
 				// 
 				// panel1
 				// 
-				panel1.BackColor = Color.Transparent;
 				resources.ApplyResources(panel1, "panel1");
+				panel1.BackColor = Color.Transparent;
 				panel1.Controls.Add(pictureBox5);
 				panel1.Controls.Add(viewChangelog_LinkLabel);
 				panel1.Controls.Add(pictureBox2);
@@ -107,6 +107,7 @@ namespace StellaModLauncher.Forms
 				panel1.Cursor = Cursors.SizeAll;
 				panel1.ForeColor = Color.Transparent;
 				panel1.Name = "panel1";
+				toolTip1.SetToolTip(panel1, resources.GetString("panel1.ToolTip"));
 				panel1.MouseDown += MouseDown_Event;
 				panel1.MouseMove += MouseMove_Event;
 				panel1.MouseUp += MouseUp_Event;
@@ -118,16 +119,18 @@ namespace StellaModLauncher.Forms
 				pictureBox5.Image = Properties.Resources.icons8_edit_property;
 				pictureBox5.Name = "pictureBox5";
 				pictureBox5.TabStop = false;
+				toolTip1.SetToolTip(pictureBox5, resources.GetString("pictureBox5.ToolTip"));
 				// 
 				// viewChangelog_LinkLabel
 				// 
-				viewChangelog_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
 				resources.ApplyResources(viewChangelog_LinkLabel, "viewChangelog_LinkLabel");
+				viewChangelog_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
 				viewChangelog_LinkLabel.BackColor = Color.Transparent;
 				viewChangelog_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
 				viewChangelog_LinkLabel.LinkColor = Color.DodgerBlue;
 				viewChangelog_LinkLabel.Name = "viewChangelog_LinkLabel";
 				viewChangelog_LinkLabel.TabStop = true;
+				toolTip1.SetToolTip(viewChangelog_LinkLabel, resources.GetString("viewChangelog_LinkLabel.ToolTip"));
 				viewChangelog_LinkLabel.LinkClicked += ViewChangelog_LinkClicked;
 				// 
 				// pictureBox2
@@ -137,11 +140,12 @@ namespace StellaModLauncher.Forms
 				pictureBox2.Image = Properties.Resources.icons8_animated;
 				pictureBox2.Name = "pictureBox2";
 				pictureBox2.TabStop = false;
+				toolTip1.SetToolTip(pictureBox2, resources.GetString("pictureBox2.ToolTip"));
 				// 
 				// changeBg_LinkLabel
 				// 
-				changeBg_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
 				resources.ApplyResources(changeBg_LinkLabel, "changeBg_LinkLabel");
+				changeBg_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
 				changeBg_LinkLabel.BackColor = Color.Transparent;
 				changeBg_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
 				changeBg_LinkLabel.LinkColor = Color.DodgerBlue;
@@ -161,8 +165,8 @@ namespace StellaModLauncher.Forms
 				// 
 				// githubUrl_LinkLabel
 				// 
-				githubUrl_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
 				resources.ApplyResources(githubUrl_LinkLabel, "githubUrl_LinkLabel");
+				githubUrl_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
 				githubUrl_LinkLabel.BackColor = Color.Transparent;
 				githubUrl_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
 				githubUrl_LinkLabel.LinkColor = Color.White;
@@ -186,6 +190,7 @@ namespace StellaModLauncher.Forms
 				label1.BackColor = Color.Transparent;
 				label1.ForeColor = Color.DodgerBlue;
 				label1.Name = "label1";
+				toolTip1.SetToolTip(label1, resources.GetString("label1.ToolTip"));
 				// 
 				// githubIco_Picturebox
 				// 
@@ -199,8 +204,8 @@ namespace StellaModLauncher.Forms
 				// 
 				// tools_LinkLabel
 				// 
-				tools_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
 				resources.ApplyResources(tools_LinkLabel, "tools_LinkLabel");
+				tools_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
 				tools_LinkLabel.BackColor = Color.Transparent;
 				tools_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
 				tools_LinkLabel.LinkColor = Color.White;
@@ -211,8 +216,8 @@ namespace StellaModLauncher.Forms
 				// 
 				// discordServer_LinkLabel
 				// 
-				discordServer_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
 				resources.ApplyResources(discordServer_LinkLabel, "discordServer_LinkLabel");
+				discordServer_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
 				discordServer_LinkLabel.BackColor = Color.Transparent;
 				discordServer_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
 				discordServer_LinkLabel.LinkColor = Color.FromArgb(140, 158, 255);
@@ -223,8 +228,8 @@ namespace StellaModLauncher.Forms
 				// 
 				// web_LinkLabel
 				// 
-				web_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
 				resources.ApplyResources(web_LinkLabel, "web_LinkLabel");
+				web_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
 				web_LinkLabel.BackColor = Color.Transparent;
 				web_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
 				web_LinkLabel.LinkColor = Color.Cyan;
@@ -235,8 +240,8 @@ namespace StellaModLauncher.Forms
 				// 
 				// gameplay_LinkLabel
 				// 
-				gameplay_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
 				resources.ApplyResources(gameplay_LinkLabel, "gameplay_LinkLabel");
+				gameplay_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
 				gameplay_LinkLabel.BackColor = Color.Transparent;
 				gameplay_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
 				gameplay_LinkLabel.LinkColor = Color.White;
@@ -247,8 +252,8 @@ namespace StellaModLauncher.Forms
 				// 
 				// supportMe_LinkLabel
 				// 
-				supportMe_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
 				resources.ApplyResources(supportMe_LinkLabel, "supportMe_LinkLabel");
+				supportMe_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
 				supportMe_LinkLabel.BackColor = Color.Transparent;
 				supportMe_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
 				supportMe_LinkLabel.LinkColor = Color.FromArgb(232, 237, 252);
@@ -259,8 +264,8 @@ namespace StellaModLauncher.Forms
 				// 
 				// becomeMyPatron_LinkLabel
 				// 
-				becomeMyPatron_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
 				resources.ApplyResources(becomeMyPatron_LinkLabel, "becomeMyPatron_LinkLabel");
+				becomeMyPatron_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
 				becomeMyPatron_LinkLabel.BackColor = Color.Transparent;
 				becomeMyPatron_LinkLabel.ForeColor = Color.DodgerBlue;
 				becomeMyPatron_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
@@ -272,8 +277,8 @@ namespace StellaModLauncher.Forms
 				// 
 				// runGiLauncher_LinkLabel
 				// 
-				runGiLauncher_LinkLabel.ActiveLinkColor = Color.LightSkyBlue;
 				resources.ApplyResources(runGiLauncher_LinkLabel, "runGiLauncher_LinkLabel");
+				runGiLauncher_LinkLabel.ActiveLinkColor = Color.LightSkyBlue;
 				runGiLauncher_LinkLabel.BackColor = Color.Transparent;
 				runGiLauncher_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
 				runGiLauncher_LinkLabel.LinkColor = Color.White;
@@ -284,8 +289,8 @@ namespace StellaModLauncher.Forms
 				// 
 				// version_LinkLabel
 				// 
-				version_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
 				resources.ApplyResources(version_LinkLabel, "version_LinkLabel");
+				version_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
 				version_LinkLabel.BackColor = Color.Transparent;
 				version_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
 				version_LinkLabel.LinkColor = Color.White;
@@ -296,8 +301,8 @@ namespace StellaModLauncher.Forms
 				// 
 				// links_LinkLabel
 				// 
-				links_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
 				resources.ApplyResources(links_LinkLabel, "links_LinkLabel");
+				links_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
 				links_LinkLabel.BackColor = Color.Transparent;
 				links_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
 				links_LinkLabel.LinkColor = Color.White;
@@ -308,8 +313,8 @@ namespace StellaModLauncher.Forms
 				// 
 				// clickMe_LinkLabel
 				// 
-				clickMe_LinkLabel.ActiveLinkColor = Color.DeepSkyBlue;
 				resources.ApplyResources(clickMe_LinkLabel, "clickMe_LinkLabel");
+				clickMe_LinkLabel.ActiveLinkColor = Color.DeepSkyBlue;
 				clickMe_LinkLabel.AutoEllipsis = true;
 				clickMe_LinkLabel.BackColor = Color.Transparent;
 				clickMe_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
@@ -321,8 +326,8 @@ namespace StellaModLauncher.Forms
 				// 
 				// injectReShade_LinkLabel
 				// 
-				injectReShade_LinkLabel.ActiveLinkColor = Color.LightSkyBlue;
 				resources.ApplyResources(injectReShade_LinkLabel, "injectReShade_LinkLabel");
+				injectReShade_LinkLabel.ActiveLinkColor = Color.LightSkyBlue;
 				injectReShade_LinkLabel.BackColor = Color.Transparent;
 				injectReShade_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
 				injectReShade_LinkLabel.LinkColor = Color.White;
@@ -333,8 +338,8 @@ namespace StellaModLauncher.Forms
 				// 
 				// runFpsUnlocker_LinkLabel
 				// 
-				runFpsUnlocker_LinkLabel.ActiveLinkColor = Color.LightSkyBlue;
 				resources.ApplyResources(runFpsUnlocker_LinkLabel, "runFpsUnlocker_LinkLabel");
+				runFpsUnlocker_LinkLabel.ActiveLinkColor = Color.LightSkyBlue;
 				runFpsUnlocker_LinkLabel.BackColor = Color.Transparent;
 				runFpsUnlocker_LinkLabel.DisabledLinkColor = Color.Black;
 				runFpsUnlocker_LinkLabel.ForeColor = SystemColors.ControlText;
@@ -347,8 +352,8 @@ namespace StellaModLauncher.Forms
 				// 
 				// only3DMigoto_LinkLabel
 				// 
-				only3DMigoto_LinkLabel.ActiveLinkColor = Color.LightSkyBlue;
 				resources.ApplyResources(only3DMigoto_LinkLabel, "only3DMigoto_LinkLabel");
+				only3DMigoto_LinkLabel.ActiveLinkColor = Color.LightSkyBlue;
 				only3DMigoto_LinkLabel.BackColor = Color.Transparent;
 				only3DMigoto_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
 				only3DMigoto_LinkLabel.LinkColor = Color.White;
@@ -359,8 +364,8 @@ namespace StellaModLauncher.Forms
 				// 
 				// linkLabel1
 				// 
-				linkLabel1.ActiveLinkColor = Color.DodgerBlue;
 				resources.ApplyResources(linkLabel1, "linkLabel1");
+				linkLabel1.ActiveLinkColor = Color.DodgerBlue;
 				linkLabel1.BackColor = Color.Transparent;
 				linkLabel1.LinkBehavior = LinkBehavior.HoverUnderline;
 				linkLabel1.LinkColor = Color.White;
@@ -371,8 +376,8 @@ namespace StellaModLauncher.Forms
 				// 
 				// linkLabel2
 				// 
-				linkLabel2.ActiveLinkColor = Color.DodgerBlue;
 				resources.ApplyResources(linkLabel2, "linkLabel2");
+				linkLabel2.ActiveLinkColor = Color.DodgerBlue;
 				linkLabel2.BackColor = Color.Transparent;
 				linkLabel2.LinkBehavior = LinkBehavior.HoverUnderline;
 				linkLabel2.LinkColor = Color.White;
@@ -383,8 +388,8 @@ namespace StellaModLauncher.Forms
 				// 
 				// startGame_LinkLabel
 				// 
-				startGame_LinkLabel.ActiveLinkColor = Color.LightSkyBlue;
 				resources.ApplyResources(startGame_LinkLabel, "startGame_LinkLabel");
+				startGame_LinkLabel.ActiveLinkColor = Color.LightSkyBlue;
 				startGame_LinkLabel.BackColor = Color.Transparent;
 				startGame_LinkLabel.ForeColor = SystemColors.ControlText;
 				startGame_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
@@ -400,6 +405,7 @@ namespace StellaModLauncher.Forms
 				label2.BackColor = Color.Transparent;
 				label2.ForeColor = Color.Aqua;
 				label2.Name = "label2";
+				toolTip1.SetToolTip(label2, resources.GetString("label2.ToolTip"));
 				// 
 				// toolsIco_PictureBox
 				// 
@@ -408,6 +414,7 @@ namespace StellaModLauncher.Forms
 				toolsIco_PictureBox.Image = Properties.Resources.flaticon_tools;
 				toolsIco_PictureBox.Name = "toolsIco_PictureBox";
 				toolsIco_PictureBox.TabStop = false;
+				toolTip1.SetToolTip(toolsIco_PictureBox, resources.GetString("toolsIco_PictureBox.ToolTip"));
 				// 
 				// updateIco_PictureBox
 				// 
@@ -416,6 +423,7 @@ namespace StellaModLauncher.Forms
 				updateIco_PictureBox.Image = Properties.Resources.icons8_available_updates;
 				updateIco_PictureBox.Name = "updateIco_PictureBox";
 				updateIco_PictureBox.TabStop = false;
+				toolTip1.SetToolTip(updateIco_PictureBox, resources.GetString("updateIco_PictureBox.ToolTip"));
 				// 
 				// versionIco_PictureBox
 				// 
@@ -424,16 +432,18 @@ namespace StellaModLauncher.Forms
 				versionIco_PictureBox.Image = Properties.Resources.icons8_support;
 				versionIco_PictureBox.Name = "versionIco_PictureBox";
 				versionIco_PictureBox.TabStop = false;
+				toolTip1.SetToolTip(versionIco_PictureBox, resources.GetString("versionIco_PictureBox.ToolTip"));
 				// 
 				// checkForUpdates_LinkLabel
 				// 
-				checkForUpdates_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
 				resources.ApplyResources(checkForUpdates_LinkLabel, "checkForUpdates_LinkLabel");
+				checkForUpdates_LinkLabel.ActiveLinkColor = Color.DodgerBlue;
 				checkForUpdates_LinkLabel.BackColor = Color.Transparent;
 				checkForUpdates_LinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
 				checkForUpdates_LinkLabel.LinkColor = Color.White;
 				checkForUpdates_LinkLabel.Name = "checkForUpdates_LinkLabel";
 				checkForUpdates_LinkLabel.TabStop = true;
+				toolTip1.SetToolTip(checkForUpdates_LinkLabel, resources.GetString("checkForUpdates_LinkLabel.ToolTip"));
 				// 
 				// webIco_Picturebox
 				// 
@@ -442,6 +452,7 @@ namespace StellaModLauncher.Forms
 				webIco_Picturebox.Image = Properties.Resources.web;
 				webIco_Picturebox.Name = "webIco_Picturebox";
 				webIco_Picturebox.TabStop = false;
+				toolTip1.SetToolTip(webIco_Picturebox, resources.GetString("webIco_Picturebox.ToolTip"));
 				// 
 				// discordServerIco_Picturebox
 				// 
@@ -450,6 +461,7 @@ namespace StellaModLauncher.Forms
 				discordServerIco_Picturebox.Image = Properties.Resources.icons8_discord;
 				discordServerIco_Picturebox.Name = "discordServerIco_Picturebox";
 				discordServerIco_Picturebox.TabStop = false;
+				toolTip1.SetToolTip(discordServerIco_Picturebox, resources.GetString("discordServerIco_Picturebox.ToolTip"));
 				// 
 				// status_Label
 				// 
@@ -457,6 +469,7 @@ namespace StellaModLauncher.Forms
 				status_Label.BackColor = Color.Transparent;
 				status_Label.ForeColor = Color.Snow;
 				status_Label.Name = "status_Label";
+				toolTip1.SetToolTip(status_Label, resources.GetString("status_Label.ToolTip"));
 				// 
 				// padIco_PictureBox
 				// 
@@ -465,6 +478,7 @@ namespace StellaModLauncher.Forms
 				padIco_PictureBox.Image = Properties.Resources.flaticon_controller;
 				padIco_PictureBox.Name = "padIco_PictureBox";
 				padIco_PictureBox.TabStop = false;
+				toolTip1.SetToolTip(padIco_PictureBox, resources.GetString("padIco_PictureBox.ToolTip"));
 				// 
 				// supportMeIco_PictureBox
 				// 
@@ -473,6 +487,7 @@ namespace StellaModLauncher.Forms
 				supportMeIco_PictureBox.Image = Properties.Resources.flaticon_heart;
 				supportMeIco_PictureBox.Name = "supportMeIco_PictureBox";
 				supportMeIco_PictureBox.TabStop = false;
+				toolTip1.SetToolTip(supportMeIco_PictureBox, resources.GetString("supportMeIco_PictureBox.ToolTip"));
 				// 
 				// shortcutIco_PictureBox
 				// 
@@ -481,6 +496,7 @@ namespace StellaModLauncher.Forms
 				shortcutIco_PictureBox.Image = Properties.Resources.flaticon_redo;
 				shortcutIco_PictureBox.Name = "shortcutIco_PictureBox";
 				shortcutIco_PictureBox.TabStop = false;
+				toolTip1.SetToolTip(shortcutIco_PictureBox, resources.GetString("shortcutIco_PictureBox.ToolTip"));
 				// 
 				// paimon_PictureBox
 				// 
@@ -490,12 +506,14 @@ namespace StellaModLauncher.Forms
 				paimon_PictureBox.Image = Properties.Resources.paimon_gif;
 				paimon_PictureBox.Name = "paimon_PictureBox";
 				paimon_PictureBox.TabStop = false;
+				toolTip1.SetToolTip(paimon_PictureBox, resources.GetString("paimon_PictureBox.ToolTip"));
 				paimon_PictureBox.Click += Paimon_Click;
 				// 
 				// progressBar1
 				// 
 				resources.ApplyResources(progressBar1, "progressBar1");
 				progressBar1.Name = "progressBar1";
+				toolTip1.SetToolTip(progressBar1, resources.GetString("progressBar1.ToolTip"));
 				// 
 				// PreparingPleaseWait
 				// 
@@ -503,6 +521,7 @@ namespace StellaModLauncher.Forms
 				PreparingPleaseWait.BackColor = Color.Transparent;
 				PreparingPleaseWait.ForeColor = Color.White;
 				PreparingPleaseWait.Name = "PreparingPleaseWait";
+				toolTip1.SetToolTip(PreparingPleaseWait, resources.GetString("PreparingPleaseWait.ToolTip"));
 				// 
 				// pictureBox1
 				// 
@@ -511,6 +530,7 @@ namespace StellaModLauncher.Forms
 				pictureBox1.Image = Properties.Resources.flaticon_open_folder;
 				pictureBox1.Name = "pictureBox1";
 				pictureBox1.TabStop = false;
+				toolTip1.SetToolTip(pictureBox1, resources.GetString("pictureBox1.ToolTip"));
 				// 
 				// pictureBox3
 				// 
@@ -519,21 +539,19 @@ namespace StellaModLauncher.Forms
 				pictureBox3.Image = Properties.Resources.flaticon_config;
 				pictureBox3.Name = "pictureBox3";
 				pictureBox3.TabStop = false;
+				toolTip1.SetToolTip(pictureBox3, resources.GetString("pictureBox3.ToolTip"));
 				// 
 				// webView21
 				// 
-				webView21.AllowExternalDrop = true;
 				resources.ApplyResources(webView21, "webView21");
+				webView21.AllowExternalDrop = true;
 				webView21.BackColor = Color.FromArgb(64, 64, 64);
 				webView21.CreationProperties = null;
 				webView21.DefaultBackgroundColor = Color.Transparent;
 				webView21.ForeColor = Color.White;
 				webView21.Name = "webView21";
+				toolTip1.SetToolTip(webView21, resources.GetString("webView21.ToolTip"));
 				webView21.ZoomFactor = 1D;
-				// 
-				// notifyIcon1
-				// 
-				resources.ApplyResources(notifyIcon1, "notifyIcon1");
 				// 
 				// pictureBox4
 				// 
@@ -541,6 +559,11 @@ namespace StellaModLauncher.Forms
 				pictureBox4.BackColor = Color.Transparent;
 				pictureBox4.Name = "pictureBox4";
 				pictureBox4.TabStop = false;
+				toolTip1.SetToolTip(pictureBox4, resources.GetString("pictureBox4.ToolTip"));
+				// 
+				// notifyIcon1
+				// 
+				resources.ApplyResources(notifyIcon1, "notifyIcon1");
 				// 
 				// Default
 				// 
@@ -589,6 +612,7 @@ namespace StellaModLauncher.Forms
 				Controls.Add(panel1);
 				FormBorderStyle = FormBorderStyle.None;
 				Name = "Default";
+				toolTip1.SetToolTip(this, resources.GetString("$this.ToolTip"));
 				FormClosing += Default_FormClosing;
 				FormClosed += Default_FormClosed;
 				Load += Default_Load;

@@ -40,37 +40,10 @@ public sealed partial class Language : Form
 				break;
 		}
 
-		ReloadOpenForms();
 		Program.Settings.WriteString("Language", "UI", selectedLang);
 		Program.Settings.WriteString("Language", "ID", comboBox1.SelectedIndex.ToString());
-	}
 
-
-	private void ReloadOpenForms()
-	{
-		Version.Text = @"Status: Please wait...";
-		foreach (Form form in Application.OpenForms)
-		{
-			form.SuspendLayout();
-
-			ComponentResourceManager resources = new(form.GetType());
-			resources.ApplyResources(form, "$this");
-
-			UpdateControlLanguage(resources, form.Controls);
-
-			form.ResumeLayout(false);
-			form.PerformLayout();
-		}
-
-		Version.Text = $@"Status: Changed to {comboBox1.SelectedItem}. Restart is optional.";
-	}
-
-	private static void UpdateControlLanguage(ComponentResourceManager resources, Control.ControlCollection controls)
-	{
-		foreach (Control control in controls)
-		{
-			resources.ApplyResources(control, control.Name);
-			if (control.Controls.Count > 0) UpdateControlLanguage(resources, control.Controls);
-		}
+		Application.Restart();
+		Environment.Exit(0);
 	}
 }

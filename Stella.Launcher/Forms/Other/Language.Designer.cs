@@ -30,7 +30,6 @@ namespace StellaModLauncher.Forms.Other
 		  {
 				comboBox1 = new ComboBox();
 				ChangeAppLang = new Label();
-				Version = new Label();
 				SuspendLayout();
 				// 
 				// comboBox1
@@ -41,9 +40,9 @@ namespace StellaModLauncher.Forms.Other
 				comboBox1.ForeColor = Color.White;
 				comboBox1.FormattingEnabled = true;
 				comboBox1.Items.AddRange(new object[] { "English (default)", "Polski" });
-				comboBox1.Location = new Point(52, 47);
+				comboBox1.Location = new Point(45, 58);
 				comboBox1.Name = "comboBox1";
-				comboBox1.Size = new Size(264, 23);
+				comboBox1.Size = new Size(282, 23);
 				comboBox1.TabIndex = 0;
 				comboBox1.SelectedIndexChanged += Lang_SelectedIndexChanged;
 				// 
@@ -52,25 +51,12 @@ namespace StellaModLauncher.Forms.Other
 				ChangeAppLang.Anchor = AnchorStyles.None;
 				ChangeAppLang.Font = new Font("Arial", 12F);
 				ChangeAppLang.ForeColor = Color.White;
-				ChangeAppLang.Location = new Point(12, 16);
+				ChangeAppLang.Location = new Point(12, 28);
 				ChangeAppLang.Name = "ChangeAppLang";
 				ChangeAppLang.Size = new Size(345, 22);
 				ChangeAppLang.TabIndex = 1;
 				ChangeAppLang.Text = "Change the application language";
 				ChangeAppLang.TextAlign = ContentAlignment.MiddleCenter;
-				// 
-				// Version
-				// 
-				Version.Anchor = AnchorStyles.None;
-				Version.Font = new Font("Arial", 9F);
-				Version.ForeColor = Color.White;
-				Version.ImeMode = ImeMode.NoControl;
-				Version.Location = new Point(12, 84);
-				Version.Name = "Version";
-				Version.Size = new Size(345, 17);
-				Version.TabIndex = 2;
-				Version.Text = "Status: Waiting...";
-				Version.TextAlign = ContentAlignment.MiddleCenter;
 				// 
 				// Language
 				// 
@@ -78,7 +64,6 @@ namespace StellaModLauncher.Forms.Other
 				AutoScaleMode = AutoScaleMode.Dpi;
 				BackColor = Color.FromArgb(26, 26, 26);
 				ClientSize = new Size(369, 110);
-				Controls.Add(Version);
 				Controls.Add(ChangeAppLang);
 				Controls.Add(comboBox1);
 				FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -93,6 +78,5 @@ namespace StellaModLauncher.Forms.Other
 
 		  private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label ChangeAppLang;
-        private System.Windows.Forms.Label Version;
     }
 }
