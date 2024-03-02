@@ -170,8 +170,6 @@ public partial class Default : Form
 		Stages.UpdateStage(4, "Verifying Stella Mod Plus subscription...");
 		if (registrySecret != null)
 		{
-			label1.Text = @"/ᐠ. ｡.ᐟ\ᵐᵉᵒʷˎˊ˗";
-
 			Secret.GetDeviceId();
 
 			string? data = await Secret.VerifyToken(registrySecret).ConfigureAwait(true);
@@ -186,8 +184,6 @@ public partial class Default : Form
 				MessageBox.Show(
 					"The customer received zero data. Your subscription cannot be verified for some reason. No further details are available. Please contact the software creator for more information.\n\nThe launcher will be started without the benefits of a subscription.",
 					Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-				label1.Text = @"null :c";
 			}
 			else
 			{
