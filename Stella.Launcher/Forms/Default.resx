@@ -129,7 +129,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 13</value>
+    <value>210, 12</value>
   </data>
   <data name="pictureBox5.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -169,7 +169,7 @@
     <value>NoControl</value>
   </data>
   <data name="viewChangelog_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>238, 14</value>
+    <value>238, 13</value>
   </data>
   <data name="viewChangelog_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 20</value>
@@ -202,7 +202,7 @@
     <value>None</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 13</value>
+    <value>12, 12</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -235,7 +235,7 @@
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="changeBg_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 14</value>
+    <value>40, 13</value>
   </data>
   <data name="changeBg_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>153, 20</value>
@@ -274,7 +274,7 @@
     <value>None</value>
   </data>
   <data name="close_Panel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1175, 19</value>
+    <value>1225, 19</value>
   </data>
   <data name="close_Panel.Size" type="System.Drawing.Size, System.Drawing">
     <value>26, 29</value>
@@ -304,7 +304,7 @@
     <value>0, 0</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1238, 48</value>
+    <value>1290, 48</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -331,7 +331,7 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="githubUrl_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>825, 123</value>
+    <value>877, 129</value>
   </data>
   <data name="githubUrl_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>396, 24</value>
@@ -367,7 +367,7 @@
     <value>TopRight</value>
   </data>
   <data name="madeBySefinek_Label.Location" type="System.Drawing.Point, System.Drawing">
-    <value>749, 91</value>
+    <value>801, 97</value>
   </data>
   <data name="madeBySefinek_Label.Size" type="System.Drawing.Size, System.Drawing">
     <value>474, 31</value>
@@ -409,7 +409,7 @@
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>631, 51</value>
+    <value>683, 57</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>595, 39</value>
@@ -439,7 +439,7 @@
     <value>None</value>
   </data>
   <data name="githubIco_Picturebox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>791, 123</value>
+    <value>843, 129</value>
   </data>
   <data name="githubIco_Picturebox.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 29</value>
@@ -472,7 +472,7 @@
     <value>Comic Sans MS, 14.25pt</value>
   </data>
   <data name="tools_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>42, 653</value>
+    <value>43, 682</value>
   </data>
   <data name="tools_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 25</value>
@@ -508,7 +508,7 @@
     <value>Corbel, 14.25pt, style=Bold</value>
   </data>
   <data name="discordServer_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 622</value>
+    <value>41, 651</value>
   </data>
   <data name="discordServer_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 23</value>
@@ -550,7 +550,7 @@
     <value>Corbel, 14.25pt, style=Bold</value>
   </data>
   <data name="web_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 567</value>
+    <value>41, 596</value>
   </data>
   <data name="web_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 23</value>
@@ -589,7 +589,7 @@
     <value>Comic Sans MS, 14.25pt</value>
   </data>
   <data name="gameplay_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>473, 653</value>
+    <value>474, 682</value>
   </data>
   <data name="gameplay_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 25</value>
@@ -625,7 +625,7 @@
     <value>Corbel, 14.25pt, style=Bold</value>
   </data>
   <data name="supportMe_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 594</value>
+    <value>41, 623</value>
   </data>
   <data name="supportMe_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 23</value>
@@ -667,7 +667,7 @@
     <value>Yu Gothic UI, 15.75pt, style=Bold</value>
   </data>
   <data name="becomeMyPatron_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>62, 436</value>
+    <value>57, 425</value>
   </data>
   <data name="becomeMyPatron_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>576, 60</value>
@@ -710,7 +710,7 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>Comic Sans MS, 14.25pt</value>
   </data>
   <data name="runGiLauncher_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>219, 376</value>
+    <value>214, 365</value>
   </data>
   <data name="runGiLauncher_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>232, 26</value>
@@ -749,7 +749,7 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>Comic Sans MS, 14.25pt</value>
   </data>
   <data name="version_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>941, 626</value>
+    <value>993, 654</value>
   </data>
   <data name="version_LinkLabel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
@@ -788,7 +788,7 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>Comic Sans MS, 14.25pt</value>
   </data>
   <data name="links_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>317, 653</value>
+    <value>318, 682</value>
   </data>
   <data name="links_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 25</value>
@@ -821,7 +821,7 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="clickMe_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1043, 580</value>
+    <value>1095, 608</value>
   </data>
   <data name="clickMe_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 31</value>
@@ -863,7 +863,7 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>NoControl</value>
   </data>
   <data name="injectReShade_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>94, 338</value>
+    <value>89, 327</value>
   </data>
   <data name="injectReShade_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>134, 26</value>
@@ -907,7 +907,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>NoControl</value>
   </data>
   <data name="runFpsUnlocker_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>246, 338</value>
+    <value>241, 327</value>
   </data>
   <data name="runFpsUnlocker_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>177, 26</value>
@@ -949,7 +949,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>NoControl</value>
   </data>
   <data name="only3DMigoto_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>441, 338</value>
+    <value>436, 327</value>
   </data>
   <data name="only3DMigoto_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>143, 26</value>
@@ -988,7 +988,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>NoControl</value>
   </data>
   <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>619, 652</value>
+    <value>620, 681</value>
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 25</value>
@@ -1024,7 +1024,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>NoControl</value>
   </data>
   <data name="linkLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>175, 653</value>
+    <value>176, 682</value>
   </data>
   <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 25</value>
@@ -1057,7 +1057,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>Georgia, 54.75pt</value>
   </data>
   <data name="startGame_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 224</value>
+    <value>78, 213</value>
   </data>
   <data name="startGame_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>501, 109</value>
@@ -1102,7 +1102,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1001, 422</value>
+    <value>1053, 450</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>223, 52</value>
@@ -1136,7 +1136,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>None</value>
   </data>
   <data name="toolsIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 654</value>
+    <value>12, 683</value>
   </data>
   <data name="toolsIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 25</value>
@@ -1163,7 +1163,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>None</value>
   </data>
   <data name="updateIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1201, 655</value>
+    <value>1253, 683</value>
   </data>
   <data name="updateIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 25</value>
@@ -1190,7 +1190,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>None</value>
   </data>
   <data name="versionIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1201, 626</value>
+    <value>1253, 654</value>
   </data>
   <data name="versionIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 25</value>
@@ -1220,7 +1220,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>Comic Sans MS, 14.25pt</value>
   </data>
   <data name="checkForUpdates_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>936, 655</value>
+    <value>988, 683</value>
   </data>
   <data name="checkForUpdates_LinkLabel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
@@ -1253,7 +1253,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>None</value>
   </data>
   <data name="webIco_Picturebox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 565</value>
+    <value>13, 594</value>
   </data>
   <data name="webIco_Picturebox.Size" type="System.Drawing.Size, System.Drawing">
     <value>26, 26</value>
@@ -1283,7 +1283,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>None</value>
   </data>
   <data name="discordServerIco_Picturebox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 621</value>
+    <value>12, 650</value>
   </data>
   <data name="discordServerIco_Picturebox.Size" type="System.Drawing.Size, System.Drawing">
     <value>26, 26</value>
@@ -1316,7 +1316,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>Consolas, 9.75pt</value>
   </data>
   <data name="status_Label.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 51</value>
+    <value>12, 54</value>
   </data>
   <data name="status_Label.Size" type="System.Drawing.Size, System.Drawing">
     <value>638, 159</value>
@@ -1340,7 +1340,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>None</value>
   </data>
   <data name="padIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>442, 654</value>
+    <value>443, 683</value>
   </data>
   <data name="padIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 25</value>
@@ -1367,7 +1367,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>None</value>
   </data>
   <data name="supportMeIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 593</value>
+    <value>12, 622</value>
   </data>
   <data name="supportMeIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>26, 26</value>
@@ -1397,7 +1397,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>None</value>
   </data>
   <data name="shortcutIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 654</value>
+    <value>289, 683</value>
   </data>
   <data name="shortcutIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 25</value>
@@ -1424,7 +1424,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>None</value>
   </data>
   <data name="paimon_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1182, 574</value>
+    <value>1234, 602</value>
   </data>
   <data name="paimon_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 44</value>
@@ -1454,7 +1454,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>NoControl</value>
   </data>
   <data name="progressBar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 654</value>
+    <value>12, 683</value>
   </data>
   <data name="progressBar1.Size" type="System.Drawing.Size, System.Drawing">
     <value>919, 26</value>
@@ -1481,7 +1481,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>Calibri, 14.25pt</value>
   </data>
   <data name="PreparingPleaseWait.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 627</value>
+    <value>177, 656</value>
   </data>
   <data name="PreparingPleaseWait.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
@@ -1514,7 +1514,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>NoControl</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>588, 654</value>
+    <value>589, 683</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 25</value>
@@ -1544,7 +1544,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>NoControl</value>
   </data>
   <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 654</value>
+    <value>145, 683</value>
   </data>
   <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 25</value>
@@ -1571,7 +1571,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>None</value>
   </data>
   <data name="webView21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>235, 547</value>
+    <value>236, 576</value>
   </data>
   <data name="webView21.Size" type="System.Drawing.Size, System.Drawing">
     <value>321, 104</value>
@@ -1594,17 +1594,11 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
   <data name="&gt;&gt;webView21.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="notifyIcon1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>114, 17</value>
-  </metadata>
-  <data name="notifyIcon1.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="pictureBox4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1086, 478</value>
+    <value>1138, 506</value>
   </data>
   <data name="pictureBox4.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 140</value>
@@ -1630,11 +1624,17 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
   <data name="&gt;&gt;pictureBox4.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="notifyIcon1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>114, 17</value>
+  </metadata>
+  <data name="notifyIcon1.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>54</value>
+    <value>25</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>96, 96</value>
@@ -1643,7 +1643,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1238, 690</value>
+    <value>1290, 720</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
