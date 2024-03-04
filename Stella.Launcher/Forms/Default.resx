@@ -331,7 +331,7 @@
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="githubUrl_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>877, 126</value>
+    <value>877, 129</value>
   </data>
   <data name="githubUrl_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>396, 24</value>
@@ -367,7 +367,7 @@
     <value>TopRight</value>
   </data>
   <data name="madeBySefinek_Label.Location" type="System.Drawing.Point, System.Drawing">
-    <value>801, 94</value>
+    <value>801, 97</value>
   </data>
   <data name="madeBySefinek_Label.Size" type="System.Drawing.Size, System.Drawing">
     <value>474, 31</value>
@@ -409,7 +409,7 @@
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>683, 54</value>
+    <value>683, 57</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>595, 39</value>
@@ -439,7 +439,7 @@
     <value>None</value>
   </data>
   <data name="githubIco_Picturebox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>843, 126</value>
+    <value>843, 129</value>
   </data>
   <data name="githubIco_Picturebox.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 29</value>
@@ -508,7 +508,7 @@
     <value>Corbel, 14.25pt, style=Bold</value>
   </data>
   <data name="discordServer_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 649</value>
+    <value>41, 651</value>
   </data>
   <data name="discordServer_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 23</value>
@@ -550,7 +550,7 @@
     <value>Corbel, 14.25pt, style=Bold</value>
   </data>
   <data name="web_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 594</value>
+    <value>41, 596</value>
   </data>
   <data name="web_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 23</value>
@@ -625,7 +625,7 @@
     <value>Corbel, 14.25pt, style=Bold</value>
   </data>
   <data name="supportMe_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 621</value>
+    <value>41, 623</value>
   </data>
   <data name="supportMe_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 23</value>
@@ -821,7 +821,7 @@ These include: Ray Tracing, mods, and much more!</value>
     <value>Comic Sans MS, 12.75pt</value>
   </data>
   <data name="clickMe_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1096, 602</value>
+    <value>1095, 608</value>
   </data>
   <data name="clickMe_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 31</value>
@@ -1253,7 +1253,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>None</value>
   </data>
   <data name="webIco_Picturebox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 592</value>
+    <value>13, 594</value>
   </data>
   <data name="webIco_Picturebox.Size" type="System.Drawing.Size, System.Drawing">
     <value>26, 26</value>
@@ -1283,7 +1283,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>None</value>
   </data>
   <data name="discordServerIco_Picturebox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 648</value>
+    <value>12, 650</value>
   </data>
   <data name="discordServerIco_Picturebox.Size" type="System.Drawing.Size, System.Drawing">
     <value>26, 26</value>
@@ -1367,7 +1367,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>None</value>
   </data>
   <data name="supportMeIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 620</value>
+    <value>12, 622</value>
   </data>
   <data name="supportMeIco_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>26, 26</value>
@@ -1424,7 +1424,7 @@ It is recommended to click the 'Start game' button at the top to simultaneously 
     <value>None</value>
   </data>
   <data name="paimon_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1234, 596</value>
+    <value>1234, 602</value>
   </data>
   <data name="paimon_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 44</value>
