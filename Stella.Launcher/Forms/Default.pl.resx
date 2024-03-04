@@ -117,12 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="pictureBox5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="viewChangelog_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 20</value>
   </data>
   <data name="viewChangelog_LinkLabel.Text" xml:space="preserve">
     <value>Wyświetl listę zmian</value>
+  </data>
+  <data name="viewChangelog_LinkLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox2.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="changeBg_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>134, 20</value>
@@ -136,11 +145,17 @@
   <data name="close_Panel.ToolTip" xml:space="preserve">
     <value>Wyjdź z programu</value>
   </data>
+  <data name="panel1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="githubUrl_LinkLabel.ToolTip" xml:space="preserve">
     <value>Główne repozytorium GitHub. Oznacz je gwiazdką, jeśli podoba Ci się to oprogramowanie.</value>
   </data>
   <data name="madeBySefinek_Label.Text" xml:space="preserve">
     <value>autorstwa Sefinek</value>
+  </data>
+  <data name="label1.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="githubIco_Picturebox.ToolTip" xml:space="preserve">
     <value>Ikona GitHub</value>
@@ -148,6 +163,9 @@
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tools_LinkLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="tools_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>43, 654</value>
   </data>
   <data name="tools_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 26</value>
@@ -158,14 +176,8 @@
   <data name="tools_LinkLabel.ToolTip" xml:space="preserve">
     <value>Wyświetl narzędzia oraz logi</value>
   </data>
-  <data name="discordServer_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 652</value>
-  </data>
   <data name="discordServer_LinkLabel.ToolTip" xml:space="preserve">
     <value>Dołącz na nasz serwer Discord jeśli potrzebujesz pomocy</value>
-  </data>
-  <data name="web_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 597</value>
   </data>
   <data name="web_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 23</value>
@@ -184,7 +196,7 @@
     <value>NoControl</value>
   </data>
   <data name="gameplay_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>473, 682</value>
+    <value>473, 654</value>
   </data>
   <data name="gameplay_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>108, 26</value>
@@ -194,9 +206,6 @@
   </data>
   <data name="gameplay_LinkLabel.ToolTip" xml:space="preserve">
     <value>Obejrzyj rozgrywkę</value>
-  </data>
-  <data name="supportMe_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 624</value>
   </data>
   <data name="supportMe_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>84, 23</value>
@@ -230,7 +239,7 @@ Obejmują one: Ray Tracing, mody i wiele więcej!</value>
     <value>True</value>
   </data>
   <data name="links_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>361, 682</value>
+    <value>361, 654</value>
   </data>
   <data name="links_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 26</value>
@@ -280,7 +289,7 @@ Zaleca się kliknięcie przycisku "Rozpocznij grę" u góry, aby jednocześnie k
     <value>True</value>
   </data>
   <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>633, 682</value>
+    <value>633, 654</value>
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 26</value>
@@ -295,7 +304,7 @@ Zaleca się kliknięcie przycisku "Rozpocznij grę" u góry, aby jednocześnie k
     <value>True</value>
   </data>
   <data name="linkLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>199, 682</value>
+    <value>199, 654</value>
   </data>
   <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>105, 26</value>
@@ -316,40 +325,85 @@ Zaleca się kliknięcie przycisku "Rozpocznij grę" u góry, aby jednocześnie k
     <value>Zalogowano jako
 {0}</value>
   </data>
+  <data name="label2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="toolsIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 655</value>
+  </data>
+  <data name="toolsIco_PictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="updateIco_PictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="versionIco_PictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="checkForUpdates_LinkLabel.Text" xml:space="preserve">
     <value>Ładowanie danych...</value>
   </data>
-  <data name="webIco_Picturebox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 595</value>
+  <data name="checkForUpdates_LinkLabel.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="discordServerIco_Picturebox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 651</value>
+  <data name="webIco_Picturebox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="discordServerIco_Picturebox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="status_Label.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="padIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>442, 683</value>
+    <value>442, 655</value>
   </data>
-  <data name="supportMeIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 623</value>
+  <data name="padIco_PictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="supportMeIco_PictureBox.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="shortcutIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>330, 683</value>
+    <value>330, 655</value>
+  </data>
+  <data name="shortcutIco_PictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="paimon_PictureBox.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="progressBar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 683</value>
+    <value>11, 655</value>
   </data>
-  <data name="PreparingPleaseWait.Location" type="System.Drawing.Point, System.Drawing">
-    <value>168, 658</value>
+  <data name="progressBar1.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="PreparingPleaseWait.Text" xml:space="preserve">
     <value>Oczekiwanie na stabilizację interfejsu użytkownika...</value>
   </data>
+  <data name="PreparingPleaseWait.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>602, 683</value>
+    <value>602, 655</value>
+  </data>
+  <data name="pictureBox1.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>168, 683</value>
+    <value>168, 655</value>
   </data>
-  <data name="webView21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>257, 577</value>
+  <data name="pictureBox3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="webView21.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
   </data>
 </root>
