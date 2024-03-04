@@ -124,9 +124,6 @@
   <data name="bg_links" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\links.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bg_main" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\main.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="bg_settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\settings.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -738,7 +735,7 @@ Do you want to download this dependency from Microsoft website?</value>
     <value>Sorry. Something went wrong with WebView2.</value>
   </data>
   <data name="Secret_VerifyToken_Exception" xml:space="preserve">
-	  <value>A critical error occurred during the verification of your subscription. For some reason, your computer was unable to send a request to the API interface located in Warsaw, Poland. Please check your antivirus software or visit the status page at status.sefinek.net.
+    <value>A critical error occurred during the verification of your subscription. For some reason, your computer was unable to send a request to the API interface located in Warsaw, Poland. Please check your antivirus software or visit the status page at status.sefinek.net.
 
 The application must be closed immediately. Below, you will find error details. If you are unsure about what to do in this situation, please contact the software developer. Subscribers are provided with continuous technical support. Good luck!
 
@@ -748,7 +745,7 @@ The application must be closed immediately. Below, you will find error details. 
     <value>You are connected as {0}. Hi and nice to meet you! Check your activity on Discord.</value>
   </data>
   <data name="Settings_SuccesfullyUpdatedTheReShadeIniFile" xml:space="preserve">
-	  <value>Successfully updated the ReShade.ini file. Paths to resource locations have been changed to current, and similar changes have been made.
+    <value>Successfully updated the ReShade.ini file. Paths to resource locations have been changed to current, and similar changes have been made.
 
 Current preset:
 {0}</value>
