@@ -211,8 +211,8 @@ public partial class Default : Form
 						pictureBox4.Visible = true;
 						pictureBox4.Image = RoundedCorners.Picture(avatar, 12);
 
-						clickMe_LinkLabel.Location = new Point(1034, 163);
-						paimon_PictureBox.Location = new Point(1173, 157);
+						clickMe_LinkLabel.Location = new Point(1087, 168);
+						paimon_PictureBox.Location = new Point(1225, 162);
 
 						label2.Text = string.Format(label2.Text, remote.Username);
 						label2.Visible = true;
@@ -513,7 +513,7 @@ public partial class Default : Form
 	private void SupportMe_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
 		if (Application.OpenForms.OfType<SupportMe>().Any()) return;
-		new SupportMe { DesktopLocation = DesktopLocation, Icon = Program.Ico }.Show();
+		new SupportMe { Icon = Program.Ico }.Show();
 	}
 
 	private void DiscordServer_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -529,14 +529,14 @@ public partial class Default : Form
 	private void Tools_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
 		if (Application.OpenForms.OfType<Tools>().Any()) return;
-		new Tools { DesktopLocation = DesktopLocation, Icon = Program.Ico }.Show();
+		new Tools { Icon = Program.Ico }.Show();
 		Music.PlaySound("winxp", "navigation_start");
 	}
 
 	private void Settings_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
 		if (Application.OpenForms.OfType<Settings>().Any()) return;
-		new Settings { DesktopLocation = DesktopLocation, Icon = Program.Ico }.Show();
+		new Settings { Icon = Program.Ico }.Show();
 		Music.PlaySound("winxp", "navigation_start");
 	}
 
@@ -548,14 +548,14 @@ public partial class Default : Form
 	private void Gameplay_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
 		if (Application.OpenForms.OfType<Gameplay>().Any()) return;
-		new Gameplay { DesktopLocation = DesktopLocation, Icon = Program.Ico }.Show();
+		new Gameplay { Icon = Program.Ico }.Show();
 		Music.PlaySound("winxp", "navigation_start");
 	}
 
 	private void Links_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
 		if (Application.OpenForms.OfType<Links>().Any()) return;
-		new Links { DesktopLocation = DesktopLocation, Icon = Program.Ico }.Show();
+		new Links { Icon = Program.Ico }.Show();
 		Music.PlaySound("winxp", "navigation_start");
 	}
 
