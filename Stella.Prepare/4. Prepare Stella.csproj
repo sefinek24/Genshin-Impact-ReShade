@@ -21,7 +21,7 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
     <BaseOutputPath>..\Build\</BaseOutputPath>
     <Product>Prepare Stella Mod</Product>
-    <ApplicationIcon>terminal.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\terminal.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
