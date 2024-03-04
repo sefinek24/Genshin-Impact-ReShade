@@ -115,7 +115,7 @@ internal static partial class Program
 		Console.WriteLine(@"Starting...");
 
 		// Save AppData path
-		File.WriteAllText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "stella-appdata.sfn"), Start.AppData);
+		await File.WriteAllTextAsync(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "stella-appdata.sfn"), Start.AppData).ConfigureAwait(false);
 
 		// Load cfg
 		int downloadOrUpdateShaders = PrepareIni.ReadInt("PrepareStella", "DownloadOrUpdateShaders", 1);

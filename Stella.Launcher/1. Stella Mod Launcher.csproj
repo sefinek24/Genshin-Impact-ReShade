@@ -12,7 +12,7 @@
     <FileVersion>7.9.7.8</FileVersion>
     <Version>7.9.7.8</Version>
     <StartupObject>StellaModLauncher.Program</StartupObject>
-    <ApplicationIcon>data\images\icons\52x52.ico</ApplicationIcon>
+    <ApplicationIcon>data\images\icons\nahida.ico</ApplicationIcon>
     <BaseOutputPath>..\Build\</BaseOutputPath>
     <AssemblyName>Stella Mod Launcher</AssemblyName>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -69,11 +69,6 @@
     <None Remove="data\images\backgrounds\main\yoimiya\5.png" />
     <None Remove="data\images\backgrounds\main\yoimiya\6.png" />
     <None Remove="data\images\backgrounds\main\yoimiya\7.png" />
-    <None Remove="data\images\icons\128x128.ico" />
-    <None Remove="data\images\icons\240x240.ico" />
-    <None Remove="data\images\icons\48x48.ico" />
-    <None Remove="data\images\icons\52x52.ico" />
-    <None Remove="data\images\icons\README.txt" />
     <None Remove="data\README.txt" />
     <None Remove="data\reshade\inject64.exe" />
     <None Remove="data\reshade\ReShade64.dll" />
@@ -255,19 +250,7 @@
     <Content Include="data\images\backgrounds\main\yoimiya\7.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\images\icons\128x128.ico">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\images\icons\240x240.ico">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\images\icons\48x48.ico">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\images\icons\52x52.ico">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\images\icons\README.txt">
+    <Content Include="data\images\icons\nahida.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="data\README.txt">
@@ -535,21 +518,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="data\images\backgrounds\forms\compressed\gameplay.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\images\icons\128x128.xcf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\images\icons\240x240.xcf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\images\icons\48x48.xcf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\images\icons\52x52.xcf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\images\icons\Source.url">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="data\OLD_CHANGELOG.md">
