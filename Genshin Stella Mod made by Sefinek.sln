@@ -3,23 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stella Mod Launcher", "Stella.Launcher\1. Stella Mod Launcher.csproj", "{B3221007-7FE1-48B7-9FFC-5F3FC9A78170}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1. Stella Mod Launcher", "Stella.Launcher\1. Stella Mod Launcher.csproj", "{B3221007-7FE1-48B7-9FFC-5F3FC9A78170}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Genshin Stella Mod", "Stella.Worker\2. Genshin Stella Mod.csproj", "{AA6AF66A-8569-40DF-A751-A8209CA254DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2. Genshin Stella Mod", "Stella.Worker\2. Genshin Stella Mod.csproj", "{AA6AF66A-8569-40DF-A751-A8209CA254DE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Configuration .NET 8", "Stella.Configuration\3. Configuration .NET 8.csproj", "{47D8C976-0482-4A63-B0EC-9733961ECC0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3. Configuration .NET 8", "Stella.Configuration\3. Configuration .NET 8.csproj", "{47D8C976-0482-4A63-B0EC-9733961ECC0C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prepare Stella", "Stella.Prepare\4. Prepare Stella.csproj", "{29D53164-1AF9-47FF-B441-AF15147F0CCB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4. Prepare Stella", "Stella.Prepare\4. Prepare Stella.csproj", "{29D53164-1AF9-47FF-B441-AF15147F0CCB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Information 48793142", "Stella.Info-48793142\5. Information 48793142.csproj", "{5A9340FA-7E3B-433D-9E37-88D86C48B975}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5. Information 48793142", "Stella.Info-48793142\5. Information 48793142.csproj", "{5A9340FA-7E3B-433D-9E37-88D86C48B975}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Device Identifier", "Stella.DeviceIdentifier\6. Device Identifier.csproj", "{3440EBBF-9275-4194-A6B4-5BBE140FF3B0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6. Device Identifier", "Stella.DeviceIdentifier\6. Device Identifier.csproj", "{3440EBBF-9275-4194-A6B4-5BBE140FF3B0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary .NET 8", "Stella.ClassLibrary\7. ClassLibrary.csproj", "{329952C4-25EA-4533-8EC0-772D7838C946}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "7. ClassLibrary", "Stella.ClassLibrary\7. ClassLibrary.csproj", "{329952C4-25EA-4533-8EC0-772D7838C946}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stella.Telemetry", "Stella.Telemetry\8. Stella Telemetry.csproj", "{32DA3988-3857-44D0-A9C7-CCF3822CA49E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "8. Stella Telemetry", "Stella.Telemetry\8. Stella Telemetry.csproj", "{32DA3988-3857-44D0-A9C7-CCF3822CA49E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Build Stella Mod", "Stella.Build\9. Build Stella Mod.csproj", "{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "9. Build Stella Mod", "Stella.Build\9. Build Stella Mod.csproj", "{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -175,26 +175,6 @@ Global
 		{329952C4-25EA-4533-8EC0-772D7838C946}.Release|x64.Build.0 = Release|Any CPU
 		{329952C4-25EA-4533-8EC0-772D7838C946}.Release|x86.ActiveCfg = Release|Any CPU
 		{329952C4-25EA-4533-8EC0-772D7838C946}.Release|x86.Build.0 = Release|Any CPU
-		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Debug|ARM.Build.0 = Debug|Any CPU
-		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Debug|ARM64.ActiveCfg = Debug|Any CPU
-		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Debug|ARM64.Build.0 = Debug|Any CPU
-		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Debug|x64.Build.0 = Debug|Any CPU
-		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Debug|x86.Build.0 = Debug|Any CPU
-		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Release|ARM.ActiveCfg = Release|Any CPU
-		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Release|ARM.Build.0 = Release|Any CPU
-		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Release|ARM64.ActiveCfg = Release|Any CPU
-		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Release|ARM64.Build.0 = Release|Any CPU
-		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Release|x64.ActiveCfg = Release|Any CPU
-		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Release|x64.Build.0 = Release|Any CPU
-		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Release|x86.ActiveCfg = Release|Any CPU
-		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Release|x86.Build.0 = Release|Any CPU
 		{32DA3988-3857-44D0-A9C7-CCF3822CA49E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{32DA3988-3857-44D0-A9C7-CCF3822CA49E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32DA3988-3857-44D0-A9C7-CCF3822CA49E}.Debug|ARM.ActiveCfg = Debug|Any CPU
@@ -215,14 +195,34 @@ Global
 		{32DA3988-3857-44D0-A9C7-CCF3822CA49E}.Release|x64.Build.0 = Release|Any CPU
 		{32DA3988-3857-44D0-A9C7-CCF3822CA49E}.Release|x86.ActiveCfg = Release|Any CPU
 		{32DA3988-3857-44D0-A9C7-CCF3822CA49E}.Release|x86.Build.0 = Release|Any CPU
+		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Debug|ARM.Build.0 = Debug|Any CPU
+		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Debug|x64.Build.0 = Debug|Any CPU
+		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Debug|x86.Build.0 = Debug|Any CPU
+		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Release|ARM.ActiveCfg = Release|Any CPU
+		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Release|ARM.Build.0 = Release|Any CPU
+		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Release|ARM64.Build.0 = Release|Any CPU
+		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Release|x64.ActiveCfg = Release|Any CPU
+		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Release|x64.Build.0 = Release|Any CPU
+		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Release|x86.ActiveCfg = Release|Any CPU
+		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {DDABFAAF-62E1-4807-820C-8A87AAE3C15D}
-		RESX_PrefixTranslations = False
-		RESX_SaveFilesImmediatelyUponChange = True
 		RESX_NeutralResourcesLanguage = en-US
+		RESX_SaveFilesImmediatelyUponChange = True
+		RESX_PrefixTranslations = False
+		SolutionGuid = {DDABFAAF-62E1-4807-820C-8A87AAE3C15D}
 	EndGlobalSection
 EndGlobal

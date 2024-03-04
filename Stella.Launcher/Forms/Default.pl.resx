@@ -117,21 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="pictureBox5.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="viewChangelog_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 20</value>
   </data>
   <data name="viewChangelog_LinkLabel.Text" xml:space="preserve">
     <value>Wyświetl listę zmian</value>
-  </data>
-  <data name="viewChangelog_LinkLabel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pictureBox2.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="changeBg_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>134, 20</value>
@@ -145,17 +136,11 @@
   <data name="close_Panel.ToolTip" xml:space="preserve">
     <value>Wyjdź z programu</value>
   </data>
-  <data name="panel1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="githubUrl_LinkLabel.ToolTip" xml:space="preserve">
     <value>Główne repozytorium GitHub. Oznacz je gwiazdką, jeśli podoba Ci się to oprogramowanie.</value>
   </data>
   <data name="madeBySefinek_Label.Text" xml:space="preserve">
     <value>autorstwa Sefinek</value>
-  </data>
-  <data name="label1.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="githubIco_Picturebox.ToolTip" xml:space="preserve">
     <value>Ikona GitHub</value>
@@ -325,85 +310,46 @@ Zaleca się kliknięcie przycisku "Rozpocznij grę" u góry, aby jednocześnie k
     <value>Zalogowano jako
 {0}</value>
   </data>
-  <data name="label2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="toolsIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 655</value>
-  </data>
-  <data name="toolsIco_PictureBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="updateIco_PictureBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="versionIco_PictureBox.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="checkForUpdates_LinkLabel.Text" xml:space="preserve">
     <value>Ładowanie danych...</value>
   </data>
-  <data name="checkForUpdates_LinkLabel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="webIco_Picturebox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="discordServerIco_Picturebox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="status_Label.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="padIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>442, 655</value>
-  </data>
-  <data name="padIco_PictureBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="supportMeIco_PictureBox.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="shortcutIco_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>330, 655</value>
   </data>
-  <data name="shortcutIco_PictureBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="paimon_PictureBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="progressBar1.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 655</value>
-  </data>
-  <data name="progressBar1.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="PreparingPleaseWait.Text" xml:space="preserve">
     <value>Oczekiwanie na stabilizację interfejsu użytkownika...</value>
   </data>
-  <data name="PreparingPleaseWait.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>602, 655</value>
-  </data>
-  <data name="pictureBox1.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>168, 655</value>
   </data>
-  <data name="pictureBox3.ToolTip" xml:space="preserve">
-    <value />
+  <data name="$this.Text" xml:space="preserve">
+    <value>Stella Mod Launcher</value>
   </data>
-  <data name="webView21.ToolTip" xml:space="preserve">
-    <value />
+  <data name="githubUrl_LinkLabel.Text" xml:space="preserve">
+    <value>github.com/sefinek24/Genshin-Impact-ReShade</value>
   </data>
-  <data name="pictureBox4.ToolTip" xml:space="preserve">
-    <value />
+  <data name="madeBySefinek_Label.ToolTip" xml:space="preserve">
+    <value>&gt;.&lt;</value>
   </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value />
+  <data name="label1.Text" xml:space="preserve">
+    <value>Genshin Stella Mod Launcher 2024</value>
+  </data>
+  <data name="discordServer_LinkLabel.Text" xml:space="preserve">
+    <value>Discord</value>
+  </data>
+  <data name="runGiLauncher_LinkLabel.Text" xml:space="preserve">
+    <value>Genshin Impact Launcher</value>
   </data>
 </root>

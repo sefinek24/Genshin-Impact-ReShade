@@ -1,10 +1,10 @@
+using System.Diagnostics;
 using ByteSizeLib;
 using CliWrap.Builders;
 using StellaModLauncher.Forms;
 using StellaModLauncher.Properties;
 using StellaModLauncher.Scripts.Forms.MainForm;
 using StellaPLFNet;
-using System.Diagnostics;
 
 namespace StellaModLauncher.Scripts.Remote;
 
