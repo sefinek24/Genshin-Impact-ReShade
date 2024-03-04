@@ -21,6 +21,7 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
     <BaseOutputPath>..\Build\</BaseOutputPath>
     <Product>Prepare Stella Mod</Product>
+    <ApplicationIcon>terminal.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -33,6 +34,10 @@
       <Isolated>false</Isolated>
       <EmbedInteropTypes>true</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\terminal.ico" />
   </ItemGroup>
 
   <ItemGroup>
