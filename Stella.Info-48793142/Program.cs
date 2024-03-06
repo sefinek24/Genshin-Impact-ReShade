@@ -1,4 +1,5 @@
 using InformationWindow.Forms;
+using InformationWindow.Properties;
 
 namespace InformationWindow;
 
@@ -23,7 +24,7 @@ internal static class Program
 		}
 		catch (Exception ex)
 		{
-			MessageBox.Show(ex.Message, @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			MessageBox.Show(ex.Message, Resources.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
 		}
 	}
 }

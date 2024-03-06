@@ -127,6 +127,9 @@
   <data name="Closing" xml:space="preserve">
     <value>Closing...</value>
   </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
   <data name="PleaseWait" xml:space="preserve">
     <value>Please wait {0}s...</value>
   </data>
