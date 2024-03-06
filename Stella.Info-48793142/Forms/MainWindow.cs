@@ -4,7 +4,7 @@ using InformationWindow.Properties;
 using NAudio.Wave;
 using Timer = System.Windows.Forms.Timer;
 
-namespace InformationWindow;
+namespace InformationWindow.Forms;
 
 public sealed partial class MainWindow : Form
 {

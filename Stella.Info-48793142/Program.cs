@@ -1,3 +1,5 @@
+using InformationWindow.Forms;
+
 namespace InformationWindow;
 
 internal static class Program

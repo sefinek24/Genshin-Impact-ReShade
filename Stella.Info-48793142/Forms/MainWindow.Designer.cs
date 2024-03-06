@@ -1,4 +1,4 @@
-namespace InformationWindow
+namespace InformationWindow.Forms
 {
 	sealed partial class MainWindow
     {
