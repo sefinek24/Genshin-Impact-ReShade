@@ -5,10 +5,11 @@ using StellaModLauncher.Forms;
 using StellaModLauncher.Models;
 using StellaModLauncher.Properties;
 using StellaModLauncher.Scripts.Forms.MainForm;
+using StellaModLauncher.Scripts.Misc;
 using StellaModLauncher.Scripts.Remote;
 using StellaPLFNet;
 
-namespace StellaModLauncher.Scripts.Patrons;
+namespace StellaModLauncher.Scripts.StellaPlus;
 
 internal static class UpdateBenefits
 {
@@ -70,7 +71,7 @@ internal static class UpdateBenefits
 		// Prepare presets
 		if (benefitName != "presets") return;
 
-		string? currentPreset = await ReShadeIni.Prepare().ConfigureAwait(false);
+		string? currentPreset = await ReShadeFile.Prepare().ConfigureAwait(false);
 		if (currentPreset == null) return;
 
 		BalloonTip.Show("ReShade configuration", $"The ReShade configuration file has also been updated, including setting the default preset to {Path.GetFileNameWithoutExtension(currentPreset)}.");

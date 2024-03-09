@@ -214,7 +214,7 @@ public partial class Settings : Form
 	// ---------------------------------- ReShade ----------------------------------
 	private async void ConfReShade_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		string? currentPreset = await ReShadeIni.Prepare().ConfigureAwait(false);
+		string? currentPreset = await ReShadeFile.Prepare().ConfigureAwait(false);
 		if (string.IsNullOrEmpty(currentPreset)) return;
 
 		MessageBox.Show(

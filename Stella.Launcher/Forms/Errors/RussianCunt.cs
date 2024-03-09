@@ -1,7 +1,7 @@
 using System.Diagnostics;
 using System.Media;
 using StellaModLauncher.Properties;
-using StellaModLauncher.Scripts;
+using StellaModLauncher.Scripts.Misc;
 using Timer = System.Windows.Forms.Timer;
 
 namespace StellaModLauncher.Forms.Errors;

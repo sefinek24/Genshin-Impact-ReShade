@@ -9,8 +9,9 @@ using StellaModLauncher.Properties;
 using StellaModLauncher.Scripts;
 using StellaModLauncher.Scripts.Forms;
 using StellaModLauncher.Scripts.Forms.MainForm;
-using StellaModLauncher.Scripts.Patrons;
+using StellaModLauncher.Scripts.Misc;
 using StellaModLauncher.Scripts.Remote;
+using StellaModLauncher.Scripts.StellaPlus;
 using StellaPLFNet;
 using Shortcut = StellaModLauncher.Scripts.Shortcut;
 using Telemetry = StellaTelemetry.Telemetry;
@@ -352,7 +353,7 @@ public partial class Default : Form
 		}
 
 		// Check if ReShade.ini exists
-		await ReShadeIni.CheckIfExists().ConfigureAwait(true);
+		await ReShadeFile.CheckIfExists().ConfigureAwait(true);
 
 		// Check shortcut
 		Shortcut.Check();
@@ -571,7 +572,7 @@ public partial class Default : Form
 	{
 		Music.PlaySound("winxp", "pop-up_blocked");
 
-		if (ComputerInfo.GetSystemRegion() == "PL")
+		if (MachineInfo.GetSystemRegion() == "PL")
 		{
 			WebView2Shake viewer = new() { DesktopLocation = DesktopLocation, Icon = Program.Ico };
 			viewer.Navigate("https://www.youtube.com/embed/2F2DdXUNyaQ?autoplay=1");

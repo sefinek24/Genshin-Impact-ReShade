@@ -1,5 +1,5 @@
-using StellaModLauncher.Scripts;
 using StellaModLauncher.Scripts.Forms.MainForm;
+using StellaModLauncher.Scripts.StellaPlus;
 
 namespace StellaModLauncher.Forms.Other;
 

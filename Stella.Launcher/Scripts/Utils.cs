@@ -4,19 +4,13 @@ using Microsoft.Win32;
 using StellaModLauncher.Forms;
 using StellaModLauncher.Properties;
 using StellaModLauncher.Scripts.Forms;
+using StellaModLauncher.Scripts.Misc;
 using File = System.IO.File;
 
 namespace StellaModLauncher.Scripts;
 
 internal static class Utils
 {
-	public enum StatusType
-	{
-		Info,
-		Success,
-		Error
-	}
-
 	private static readonly Dictionary<LinkLabel, LinkLabelLinkClickedEventHandler?> LinkClickedHandlers = [];
 
 	public static async Task<string?> GetGame(string type)
@@ -226,5 +220,12 @@ internal static class Utils
 		if (lines.Length > 10) Default._status_Label.Text = string.Join("\n", lines.Skip(lines.Length - 10));
 
 		if (playSound) Music.PlaySound("winxp", "balloon");
+	}
+
+	public enum StatusType
+	{
+		Info,
+		Success,
+		Error
 	}
 }

@@ -5,7 +5,7 @@ using StellaModLauncher.Forms;
 using StellaModLauncher.Models;
 using StellaModLauncher.Properties;
 
-namespace StellaModLauncher.Scripts.Patrons;
+namespace StellaModLauncher.Scripts.StellaPlus;
 
 internal static class CheckForUpdatesOfBenefits
 {

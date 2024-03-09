@@ -5,7 +5,7 @@ using StellaModLauncher.Models;
 using StellaModLauncher.Properties;
 using StellaModLauncher.Scripts.Forms;
 using StellaModLauncher.Scripts.Forms.MainForm;
-using StellaModLauncher.Scripts.Patrons;
+using StellaModLauncher.Scripts.StellaPlus;
 using StellaPLFNet;
 
 namespace StellaModLauncher.Scripts.Remote;
@@ -137,7 +137,7 @@ internal static class CheckForUpdates
 
 			if (Stages._currentStage == Stages.AllStages) TaskbarProgress.SetProgressState(TaskbarProgress.Flags.NoProgress);
 
-			Labels.ShowStartGameBts();
+			Labels.ShowStartGameBtns();
 			return 0;
 		}
 		catch (Exception e)

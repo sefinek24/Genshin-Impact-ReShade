@@ -5,7 +5,7 @@ using StellaPLFNet;
 
 namespace StellaModLauncher.Scripts;
 
-internal static class ReShadeIni
+internal static class ReShadeFile
 {
 	private const string UrlCdn = "https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini";
 

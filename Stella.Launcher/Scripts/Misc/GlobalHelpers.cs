@@ -1,4 +1,4 @@
-﻿namespace StellaModLauncher.Scripts;
+namespace StellaModLauncher.Scripts.Misc;
 
 internal static class GlobalHelpers
 {

@@ -1,6 +1,7 @@
 using Microsoft.Win32;
 using StellaModLauncher.Forms.Other;
 using StellaModLauncher.Properties;
+using StellaModLauncher.Scripts.StellaPlus;
 
 namespace StellaModLauncher.Scripts.Forms.MainForm;
 

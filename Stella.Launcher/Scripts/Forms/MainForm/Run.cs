@@ -1,6 +1,7 @@
 using CliWrap.Builders;
 using StellaModLauncher.Forms;
 using StellaModLauncher.Properties;
+using StellaModLauncher.Scripts.StellaPlus;
 
 namespace StellaModLauncher.Scripts.Forms.MainForm;
 

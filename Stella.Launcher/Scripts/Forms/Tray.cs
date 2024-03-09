@@ -1,4 +1,4 @@
-namespace StellaModLauncher.Scripts.Forms.MainForm;
+namespace StellaModLauncher.Scripts.Forms;
 
 internal class Tray(NotifyIcon? trayIcon, Form mainForm)
 {

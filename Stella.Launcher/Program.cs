@@ -92,7 +92,7 @@ internal static class Program
 			$"* AppData: {AppData}\n" +
 			$"* Language: {currentLang}");
 
-		if (Debugger.IsAttached) Logger.Debug($"* CPU Serial Number {ComputerInfo.GetCpuSerialNumber()}");
+		if (Debugger.IsAttached) Logger.Debug($"* CPU Serial Number {MachineInfo.GetCpuSerialNumber()}");
 
 		// Check the number of running instances of Stella Mod Launcher. Only allow 1 process
 		if (Process.GetProcessesByName(AppName).Length > 1)

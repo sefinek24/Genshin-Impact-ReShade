@@ -2,7 +2,7 @@ using DeviceId;
 using Microsoft.Win32;
 using StellaModLauncher.Properties;
 
-namespace StellaModLauncher.Scripts;
+namespace StellaModLauncher.Scripts.StellaPlus;
 
 internal static class Secret
 {
@@ -30,9 +30,9 @@ internal static class Secret
 				new KeyValuePair<string, string?>("token", registrySecret),
 
 				new KeyValuePair<string, string?>("deviceId", _deviceId),
-				new KeyValuePair<string, string?>("motherboardId", ComputerInfo.GetMotherboardSerialNumber()),
-				new KeyValuePair<string, string?>("cpuId", ComputerInfo.GetCpuSerialNumber()),
-				new KeyValuePair<string, string?>("diskId", ComputerInfo.GetHardDriveSerialNumber())
+				new KeyValuePair<string, string?>("motherboardId", MachineInfo.GetMotherboardSerialNumber()),
+				new KeyValuePair<string, string?>("cpuId", MachineInfo.GetCpuSerialNumber()),
+				new KeyValuePair<string, string?>("diskId", MachineInfo.GetHardDriveSerialNumber())
 			];
 
 			FormUrlEncodedContent content = new(postData);

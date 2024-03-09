@@ -1,5 +1,6 @@
 using IWshRuntimeLibrary;
 using Microsoft.Win32;
+using StellaModLauncher.Scripts.Misc;
 using File = System.IO.File;
 
 namespace StellaModLauncher.Scripts;

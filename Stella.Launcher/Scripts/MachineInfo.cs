@@ -3,7 +3,7 @@ using System.Management;
 
 namespace StellaModLauncher.Scripts;
 
-internal static class ComputerInfo
+internal static class MachineInfo
 {
 	private static string Identifier(string wmiClass, string wmiProperty, string? wmiMustBeTrue = null)
 	{

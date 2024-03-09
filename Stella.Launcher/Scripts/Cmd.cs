@@ -5,6 +5,7 @@ using CliWrap.Builders;
 using StellaModLauncher.Forms;
 using StellaModLauncher.Properties;
 using StellaModLauncher.Scripts.Forms;
+using StellaModLauncher.Scripts.Misc;
 
 namespace StellaModLauncher.Scripts;
 

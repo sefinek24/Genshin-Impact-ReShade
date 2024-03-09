@@ -102,7 +102,7 @@ public sealed partial class Links : Form
 	// --------------------------- Nothing special ((: ----------------------------
 	private void Flower_MouseClick(object sender, MouseEventArgs e)
 	{
-		if (ComputerInfo.GetSystemRegion() != "PL") return;
+		if (MachineInfo.GetSystemRegion() != "PL") return;
 
 		Utils.OpenUrl("https://www.youtube.com/watch?v=zSeosXivzG4");
 		MessageBox.Show(

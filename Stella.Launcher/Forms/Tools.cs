@@ -4,6 +4,7 @@ using StellaModLauncher.Properties;
 using StellaModLauncher.Scripts;
 using StellaModLauncher.Scripts.Forms;
 using StellaModLauncher.Scripts.Forms.MainForm;
+using StellaModLauncher.Scripts.Misc;
 
 namespace StellaModLauncher.Forms;
 

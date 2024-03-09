@@ -1,6 +1,6 @@
 using StellaModLauncher.Forms;
 
-namespace StellaModLauncher.Scripts.Patrons;
+namespace StellaModLauncher.Scripts.StellaPlus;
 
 internal static class DeleteBenefits
 {
@@ -35,7 +35,7 @@ internal static class DeleteBenefits
 
 
 		// Update ReShade.ini config
-		await ReShadeIni.Prepare().ConfigureAwait(false);
+		await ReShadeFile.Prepare().ConfigureAwait(false);
 	}
 
 	// Delete specific files in a folder
