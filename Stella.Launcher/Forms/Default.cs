@@ -9,7 +9,7 @@ using StellaModLauncher.Properties;
 using StellaModLauncher.Scripts;
 using StellaModLauncher.Scripts.Forms;
 using StellaModLauncher.Scripts.Forms.MainForm;
-using StellaModLauncher.Scripts.Misc;
+using StellaModLauncher.Scripts.Helpers;
 using StellaModLauncher.Scripts.Remote;
 using StellaModLauncher.Scripts.StellaPlus;
 using StellaPLFNet;
@@ -140,7 +140,7 @@ public partial class Default : Form
 
 		// App version
 		Stages.UpdateStage(2, "Loading Stella Mod into the Tray...");
-		GlobalHelpers.NotifyIconInstance = new NotifyIcon
+		Global.NotifyIconInstance = new NotifyIcon
 		{
 			Icon = Program.Ico,
 			Text = Program.AppNameVer,
@@ -148,8 +148,8 @@ public partial class Default : Form
 			ContextMenuStrip = new ContextMenuStrip()
 		};
 
-		Tray trayHandler = new(GlobalHelpers.NotifyIconInstance, this);
-		GlobalHelpers.NotifyIconInstance.ContextMenuStrip.Items.AddRange(new ToolStripItem[]
+		Tray trayHandler = new(Global.NotifyIconInstance, this);
+		Global.NotifyIconInstance.ContextMenuStrip.Items.AddRange(new ToolStripItem[]
 		{
 			new ToolStripMenuItem("Toggle Minimize/Restore", null, trayHandler.ToggleMinimizeRestore),
 			new ToolStripMenuItem("Reload window", null, trayHandler.ReloadForm),
@@ -410,9 +410,9 @@ public partial class Default : Form
 	{
 		Program.Logger.Info(string.Format(Resources.Main_ClosingForm_, Text));
 
-		if (GlobalHelpers.NotifyIconInstance == null) return;
-		GlobalHelpers.NotifyIconInstance.Visible = false;
-		GlobalHelpers.NotifyIconInstance.Dispose();
+		if (Global.NotifyIconInstance == null) return;
+		Global.NotifyIconInstance.Visible = false;
+		Global.NotifyIconInstance.Dispose();
 		Program.Logger.Info("Disposed NotifyIconInstance");
 	}
 

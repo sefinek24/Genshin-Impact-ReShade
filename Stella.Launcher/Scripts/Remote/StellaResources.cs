@@ -2,7 +2,7 @@ using ByteSizeLib;
 using StellaModLauncher.Forms;
 using StellaModLauncher.Properties;
 using StellaModLauncher.Scripts.Forms.MainForm;
-using StellaModLauncher.Scripts.Misc;
+using StellaModLauncher.Scripts.Helpers;
 using StellaPLFNet;
 
 namespace StellaModLauncher.Scripts.Remote;
@@ -110,7 +110,7 @@ internal static class DownloadResources
 
 			using Stream streamToReadFrom = await response.Content.ReadAsStreamAsync().ConfigureAwait(true);
 			using FileStream streamToWriteTo = File.Open(_stellaResZip!, FileMode.Create, FileAccess.Write, FileShare.None);
-			byte[] buffer = Buffer.Get();
+			byte[] buffer = BufferHelper.Get();
 			int bytesRead;
 			long totalRead = 0;
 

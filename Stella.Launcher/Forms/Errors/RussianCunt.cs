@@ -1,7 +1,7 @@
 using System.Diagnostics;
 using System.Media;
 using StellaModLauncher.Properties;
-using StellaModLauncher.Scripts.Misc;
+using StellaModLauncher.Scripts.Helpers;
 using Timer = System.Windows.Forms.Timer;
 
 namespace StellaModLauncher.Forms.Errors;
@@ -34,7 +34,7 @@ public partial class RussianCunt : Form
 		randomSizeTimer.Start();
 
 		Timer closeAppTimer = new() { Interval = 34300 };
-		closeAppTimer.Tick += (sender1, e1) =>
+		closeAppTimer.Tick += (_, _) =>
 		{
 			string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 			string filePath = Path.Combine(desktopPath, "hello uwu.txt");

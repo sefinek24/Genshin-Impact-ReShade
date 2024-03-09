@@ -4,7 +4,7 @@ using Microsoft.Win32;
 using StellaModLauncher.Forms;
 using StellaModLauncher.Properties;
 using StellaModLauncher.Scripts.Forms;
-using StellaModLauncher.Scripts.Misc;
+using StellaModLauncher.Scripts.Helpers;
 using File = System.IO.File;
 
 namespace StellaModLauncher.Scripts;

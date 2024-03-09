@@ -18,7 +18,7 @@ internal static class CheckForUpdatesOfBenefits
 		string migotoVerPath = Path.Combine(Default.ResourcesPath!, "3DMigoto", "3dmigoto-version.json");
 		if (File.Exists(migotoVerPath))
 		{
-			string migotoJson = File.ReadAllText(migotoVerPath);
+			string migotoJson = await File.ReadAllTextAsync(migotoVerPath).ConfigureAwait(true);
 			LocalBenefitsVersion? migotoJsonConverted = JsonConvert.DeserializeObject<LocalBenefitsVersion>(migotoJson);
 
 			if (remoteVersions!.Message!.Resources!.Migoto != migotoJsonConverted!.Version)
@@ -44,7 +44,7 @@ internal static class CheckForUpdatesOfBenefits
 		string modsVerPath = Path.Combine(Default.ResourcesPath!, "3DMigoto", "mods-version.json");
 		if (File.Exists(modsVerPath))
 		{
-			string modsJson = File.ReadAllText(modsVerPath);
+			string modsJson = await File.ReadAllTextAsync(modsVerPath).ConfigureAwait(true);
 			LocalBenefitsVersion? modsJsonConverted = JsonConvert.DeserializeObject<LocalBenefitsVersion>(modsJson);
 			if (remoteVersions.Message.Resources.Mods != modsJsonConverted!.Version)
 			{
@@ -72,7 +72,7 @@ internal static class CheckForUpdatesOfBenefits
 		string addonsVersionPath = Path.Combine(Default.ResourcesPath!, "ReShade", "Addons", "version.json");
 		if (File.Exists(addonsVersionPath))
 		{
-			string addonsJson = File.ReadAllText(addonsVersionPath);
+			string addonsJson = await File.ReadAllTextAsync(addonsVersionPath).ConfigureAwait(true);
 			LocalBenefitsVersion? addonsJsonConverted = JsonConvert.DeserializeObject<LocalBenefitsVersion>(addonsJson);
 			if (remoteVersions.Message.Resources.Addons != addonsJsonConverted!.Version)
 			{
@@ -97,7 +97,7 @@ internal static class CheckForUpdatesOfBenefits
 		string presetsVersionPath = Path.Combine(Default.ResourcesPath!, "ReShade", "Presets", "3. Stella Mod Plus", "version.json");
 		if (File.Exists(presetsVersionPath))
 		{
-			string presetsJson = File.ReadAllText(presetsVersionPath);
+			string presetsJson = await File.ReadAllTextAsync(presetsVersionPath).ConfigureAwait(true);
 			LocalBenefitsVersion? presetsJsonConverted = JsonConvert.DeserializeObject<LocalBenefitsVersion>(presetsJson);
 			if (remoteVersions.Message.Resources.Presets != presetsJsonConverted!.Version)
 			{
@@ -125,7 +125,7 @@ internal static class CheckForUpdatesOfBenefits
 		string shadersVersionPath = Path.Combine(Default.ResourcesPath!, "ReShade", "Shaders", "version.json");
 		if (File.Exists(shadersVersionPath))
 		{
-			string shadersJson = File.ReadAllText(shadersVersionPath);
+			string shadersJson = await File.ReadAllTextAsync(shadersVersionPath).ConfigureAwait(true);
 			LocalBenefitsVersion? shadersJsonConverted = JsonConvert.DeserializeObject<LocalBenefitsVersion>(shadersJson);
 			if (remoteVersions.Message.Resources.Shaders != shadersJsonConverted!.Version)
 			{
@@ -150,7 +150,7 @@ internal static class CheckForUpdatesOfBenefits
 		string cmdVersionPath = Path.Combine(Program.AppPath, "data", "cmd", "patrons", "version.json");
 		if (File.Exists(cmdVersionPath))
 		{
-			string cmdJson = File.ReadAllText(cmdVersionPath);
+			string cmdJson = await File.ReadAllTextAsync(cmdVersionPath).ConfigureAwait(true);
 			LocalBenefitsVersion? cmdJsonConverted = JsonConvert.DeserializeObject<LocalBenefitsVersion>(cmdJson);
 			if (remoteVersions.Message.Resources.Cmd != cmdJsonConverted!.Version)
 			{

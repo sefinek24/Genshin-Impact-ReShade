@@ -38,7 +38,7 @@ internal static class FpsUnlockerCfg
 				string updatedJson = JsonConvert.SerializeObject(config, Formatting.Indented);
 
 				// Write the updated JSON to the config file
-				File.WriteAllText(Program.FpsUnlockerCfgPath, updatedJson);
+				await File.WriteAllTextAsync(Program.FpsUnlockerCfgPath, updatedJson).ConfigureAwait(true);
 
 				// Update the status label to indicate successful completion
 				Utils.UpdateStatusLabel(Resources.Default_DownloadedConfigFileForFPSUnlocker, Utils.StatusType.Success);

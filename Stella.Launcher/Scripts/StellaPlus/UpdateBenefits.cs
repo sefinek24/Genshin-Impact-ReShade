@@ -5,7 +5,7 @@ using StellaModLauncher.Forms;
 using StellaModLauncher.Models;
 using StellaModLauncher.Properties;
 using StellaModLauncher.Scripts.Forms.MainForm;
-using StellaModLauncher.Scripts.Misc;
+using StellaModLauncher.Scripts.Helpers;
 using StellaModLauncher.Scripts.Remote;
 using StellaPLFNet;
 

@@ -65,7 +65,7 @@ internal static class CheckForUpdates
 				}
 
 
-				string jsonContent = File.ReadAllText(jsonFile);
+				string jsonContent = await File.ReadAllTextAsync(jsonFile).ConfigureAwait(true);
 				Program.Logger.Info($"{jsonFile}: {jsonContent}");
 				LocalResources? data = JsonConvert.DeserializeObject<LocalResources>(jsonContent);
 
