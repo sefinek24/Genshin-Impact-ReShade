@@ -23,6 +23,10 @@ public partial class Default : Form
 	// New update?
 	public static bool UpdateIsAvailable;
 
+	// Top
+	public static PictureBox? _pictureBox2;
+	public static LinkLabel? _changeBg_LinkLabel;
+
 	// Main
 	public static Label? _status_Label;
 	public static Label? _preparingPleaseWait;
@@ -80,8 +84,9 @@ public partial class Default : Form
 
 	private async void Main_Shown(object sender, EventArgs e)
 	{
-		// First
-		_status_Label = status_Label;
+		_pictureBox2 = pictureBox2;
+		_changeBg_LinkLabel = changeBg_LinkLabel;
+
 		_preparingPleaseWait = PreparingPleaseWait;
 		_progressBar1 = progressBar1;
 
@@ -445,7 +450,7 @@ public partial class Default : Form
 		Image? newBackground = Background.Change(toolTip1, changeBg_LinkLabel);
 		if (newBackground != null) BackgroundImage = newBackground;
 
-		Music.PlaySound("other", "multi-pop", 0.09f);
+		Music.PlaySound("other", "multi-pop", 0.21f);
 	}
 
 

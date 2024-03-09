@@ -13,7 +13,7 @@ internal static class Cmd
 {
 	public static async Task<bool> Execute(CliWrap? cliWrapCommand, bool? playSound = true)
 	{
-		if ((bool)playSound!) Music.PlaySound("other", "click-button-app", 0.29f);
+		if ((bool)playSound!) Music.PlaySound("other", "click-button-app", 0.49f);
 
 		string commandArguments = cliWrapCommand?.Arguments != null ? cliWrapCommand.Arguments.Build() : string.Empty;
 
