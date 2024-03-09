@@ -133,9 +133,6 @@
   <data name="Closing" xml:space="preserve">
     <value>Closing...</value>
   </data>
-  <data name="angry-paimon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\angry-paimon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="partycat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\partycat.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -144,5 +141,8 @@
   </data>
   <data name="bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PaimonShock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PaimonShock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -71,7 +71,7 @@ namespace InformationWindow.Forms
 				// 
 				resources.ApplyResources(pictureBox1, "pictureBox1");
 				pictureBox1.BackColor = Color.Transparent;
-				pictureBox1.Image = Properties.Resources.angry_paimon;
+				pictureBox1.Image = Properties.Resources.PaimonShock;
 				pictureBox1.Name = "pictureBox1";
 				pictureBox1.TabStop = false;
 				// 
@@ -121,9 +121,10 @@ namespace InformationWindow.Forms
 				resources.ApplyResources(linkLabel2, "linkLabel2");
 				linkLabel2.BackColor = Color.Transparent;
 				linkLabel2.LinkBehavior = LinkBehavior.HoverUnderline;
-				linkLabel2.LinkColor = Color.Cyan;
+				linkLabel2.LinkColor = Color.LightPink;
 				linkLabel2.Name = "linkLabel2";
 				linkLabel2.TabStop = true;
+				toolTip1.SetToolTip(linkLabel2, resources.GetString("linkLabel2.ToolTip"));
 				linkLabel2.LinkClicked += MeowButton_LinkClicked;
 				// 
 				// pictureBox3

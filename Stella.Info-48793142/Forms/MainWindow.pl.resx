@@ -134,17 +134,14 @@
     <value>1017, 195</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>GRA WKRÓTCE ZOSTANIE URUCHOMIONA. UPEWNIJ SIĘ, ŻE KORZYSTASZ Z OPROGRAMOWANIA STELLA MOD W SPOSÓB ODPOWIEDZIALNY, ŚCIŚLE PRZESTRZEGAJĄC JEGO WYTYCZNYCH UŻYTKOWANIA. SZANUJ INTEGRALNOŚĆ GRY I ZASADY HOYOVERSE. INFORMUJEMY, ŻE WSZELKIE DZIAŁANIA MAJĄCE NA CELU ZASZKODZENIE GRZE ZA POŚREDNICTWEM OPROGRAMOWANIA STELLA MOD BĘDĄ ZGŁASZANE FIRMIE HOYOVERSE.
+    <value>Gra wkrótce zostanie uruchomiona. Prosimy o odpowiedzialne korzystanie z oprogramowania Stella Mod, ściśle przestrzegając jego wytycznych użytkowania. Szanuj integralność gry oraz zasady Hoyoverse. Należy być świadomym, że wszelkie działania mające na celu szkodzenie grze zostaną zgłoszone do firmy Hoyoverse.
 
-Najważniejsze zasady to: nie cheatować, nie szkodzić, nie angażować się w działania zabronione przez prawo.
+Najważniejsze zasady to: nie oszukiwać, nie wyrządzać szkody oraz nie podejmować działań zabronionych przez prawo.
 
-Przestrzegając tych zasad, możesz mieć pewność, że Twoje konto pozostanie bezpieczne, a Ty unikniesz ryzyka bana w grze podczas korzystania ze Stella Mod (:</value>
+Przestrzegając tych zasad z należytą starannością, możesz być pewny, że Twoje konto pozostanie bezpieczne i unikniesz ryzyka zostania zbanowanym z gry podczas korzystania z modyfikacji Stella Mod.</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 79</value>
-  </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>Kliknij, jeśli lubisz koty</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>804, 546</value>
@@ -357,5 +354,23 @@ Witryna sefinek.net została uruchomiona w domyślnej przeglądarce.</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>Proszę czekać...</value>
+  </data>
+  <data name="linkLabel1.ToolTip" xml:space="preserve">
+    <value>Otwórz oficjalną stronę sefinek.net</value>
+  </data>
+  <data name="linkLabel2.Text" xml:space="preserve">
+    <value>Uwielbiasz śliczne kotki?</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Genshin Stella Mod v8</value>
+  </data>
+  <data name="linkLabel2.ToolTip" xml:space="preserve">
+    <value>Kliknij tutaj, jeśli lubisz koty</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Korzystając z tego oprogramowania, zgadzasz się przestrzegać wyżej wymienionych zasad.</value>
+  </data>
+  <data name="linkLabel3.Text" xml:space="preserve">
+    <value>Kliknij tutaj, aby zobaczyć dokumentację i zapoznać się z bardziej szczegółowymi informacjami &gt;&gt;</value>
   </data>
 </root>

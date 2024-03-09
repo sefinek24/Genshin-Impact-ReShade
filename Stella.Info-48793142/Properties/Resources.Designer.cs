@@ -61,16 +61,6 @@ namespace InformationWindow.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap angry_paimon {
-            get {
-                object obj = ResourceManager.GetObject("angry-paimon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon angry_paimon_ico {
@@ -124,6 +114,16 @@ namespace InformationWindow.Properties {
         internal static System.Drawing.Bitmap paimonpeek {
             get {
                 object obj = ResourceManager.GetObject("paimonpeek", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PaimonShock {
+            get {
+                object obj = ResourceManager.GetObject("PaimonShock", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
