@@ -10,7 +10,8 @@ public sealed partial class Language : Form
 	{
 		InitializeComponent();
 
-		DoubleBuffered = true;
+		SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.DoubleBuffer, true);
+		UpdateStyles();
 
 		_isInitializing = true;
 		int selected = Program.Settings.ReadInt("Language", "ID", 0);

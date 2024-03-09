@@ -12,7 +12,8 @@ public sealed partial class ErrorOccurred : Form
 	{
 		InitializeComponent();
 
-		DoubleBuffered = true;
+		SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.DoubleBuffer, true);
+		UpdateStyles();
 	}
 
 	private void ErrorOccurred_Load(object sender, EventArgs e)

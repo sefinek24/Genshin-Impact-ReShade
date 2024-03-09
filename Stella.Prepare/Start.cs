@@ -69,8 +69,7 @@ internal static class Start
 		}
 
 		// WinForms
-		Application.EnableVisualStyles();
-		Application.SetCompatibleTextRenderingDefault(false);
+		ApplicationConfiguration.Initialize();
 
 		// Tray
 		NotifyIconInstance = new NotifyIcon

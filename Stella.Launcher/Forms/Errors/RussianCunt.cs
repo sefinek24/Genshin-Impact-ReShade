@@ -14,7 +14,8 @@ public partial class RussianCunt : Form
 	{
 		InitializeComponent();
 
-		DoubleBuffered = true;
+		SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.DoubleBuffer, true);
+		UpdateStyles();
 	}
 
 	private void WrongCountry_Shown(object sender, EventArgs e)

@@ -8,26 +8,22 @@ namespace InformationWindow.Forms;
 
 public sealed partial class MainWindow : Form
 {
-	private const int HwndTopmost = -1;
 	private const uint SwpNoSize = 0x0001;
 	private const uint SwpNoMove = 0x0002;
 
 	private readonly Timer _autoCloseTimer;
 	private readonly Timer _timer;
 	private int _displayCount;
-	private bool _openedUrl;
-	private int _remainingSeconds = 23;
+	private bool _openedDocs;
+	private bool _openedOfficialWebsite;
+	private int _remainingSeconds = 20;
 
 	public MainWindow()
 	{
 		InitializeComponent();
 
-		DoubleBuffered = true;
-
-		FormBorderStyle = FormBorderStyle.None;
-		WindowState = FormWindowState.Maximized;
-		TopMost = true;
-		ShowInTaskbar = false;
+		SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.DoubleBuffer, true);
+		UpdateStyles();
 
 		_timer = new Timer { Interval = 1000 };
 		_timer.Tick += Timer_Tick;
@@ -38,12 +34,11 @@ public sealed partial class MainWindow : Form
 		_autoCloseTimer.Start();
 
 		TimeSpan time = TimeSpan.FromSeconds(_remainingSeconds);
-		label4.Text = string.Format(Resources.PleaseWait, $"{time.Seconds:D2}");
+		label4.Text = string.Format(Resources.ThisWindowWillCloseIn, $"{time.Seconds:D2}");
 	}
 
 	[LibraryImport("user32.dll")]
-	[return: MarshalAs(UnmanagedType.Bool)]
-	private static partial void SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int X, int Y, int cx, int cy, uint uFlags);
+	private static partial void SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int x, int y, int cx, int cy, uint uFlags);
 
 	private void Timer_Tick(object? sender, EventArgs e)
 	{
@@ -64,12 +59,13 @@ public sealed partial class MainWindow : Form
 		if (_remainingSeconds >= 0)
 		{
 			TimeSpan time = TimeSpan.FromSeconds(_remainingSeconds);
-			label4.Text = string.Format(Resources.PleaseWait, $"{time.Seconds:D2}");
+			label4.Text = string.Format(Resources.ThisWindowWillCloseIn, $"{time.Seconds:D2}");
 		}
 		else
 		{
-			_autoCloseTimer.Stop();
 			label4.Text = Resources.Closing;
+			_autoCloseTimer.Stop();
+
 			Application.Exit();
 		}
 	}
@@ -78,20 +74,21 @@ public sealed partial class MainWindow : Form
 	{
 		base.OnLoad(e);
 
-		SetWindowPos(Handle, HwndTopmost, 0, 0, 0, 0, SwpNoMove | SwpNoSize);
+		SetWindowPos(Handle, -1, 0, 0, 0, 0, SwpNoMove | SwpNoSize);
 	}
 
 	// Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=47485">Pixabay</a>
-	private async void MeowButton_Click(object sender, EventArgs e)
+	private async void MeowButton_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
 		Random random = new();
 		string mp3FilePath = Path.Combine(Directory.GetCurrentDirectory(), "sound", $"meow{random.Next(1, 5)}.mp3");
+
+		if (!File.Exists(mp3FilePath)) return;
 
 		try
 		{
 			using AudioFileReader audioFile = new(mp3FilePath);
 			using WaveChannel32 volumeStream = new(audioFile);
-			volumeStream.Volume = 0.82f;
 			using WaveOutEvent outputDevice = new();
 			outputDevice.Init(volumeStream);
 			outputDevice.Play();
@@ -106,11 +103,19 @@ public sealed partial class MainWindow : Form
 
 	private void Copyright_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		if (_openedUrl) return;
-
+		if (_openedOfficialWebsite) return;
 		Process.Start(new ProcessStartInfo("https://sefinek.net") { UseShellExecute = true });
-		label3.Visible = true;
 
-		_openedUrl = true;
+		label3.Visible = true;
+		_openedOfficialWebsite = true;
+	}
+
+	private void ViewDocs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+	{
+		if (_openedDocs) return;
+		Process.Start(new ProcessStartInfo("https://sefinek.net/genshin-impact-reshade/docs?page=terms-of-use") { UseShellExecute = true });
+
+		label3.Visible = true;
+		_openedDocs = true;
 	}
 }

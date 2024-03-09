@@ -28,7 +28,9 @@ public sealed partial class Window : Form
 		InitializeComponent();
 
 		_prepareIni = new IniFile(PrepareCfgPath);
-		DoubleBuffered = true;
+
+		SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.DoubleBuffer, true);
+		UpdateStyles();
 	}
 
 	private static string GetAppData()

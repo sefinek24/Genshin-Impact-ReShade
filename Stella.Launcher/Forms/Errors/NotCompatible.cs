@@ -11,7 +11,8 @@ public sealed partial class NotCompatible : Form
 	{
 		InitializeComponent();
 
-		DoubleBuffered = true;
+		SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.DoubleBuffer, true);
+		UpdateStyles();
 	}
 
 	private void NotCompatible_Shown(object sender, EventArgs e)

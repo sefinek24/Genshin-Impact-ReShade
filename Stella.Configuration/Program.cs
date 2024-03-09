@@ -19,8 +19,7 @@ internal static class Program
 		Logger = Logger.WithProperty("AppVersion", Window.AppVersion);
 		LogManager.Configuration = new XmlLoggingConfiguration(Path.Combine(Window.AppPath, "NLog_CW.config"));
 
-		Application.EnableVisualStyles();
-		Application.SetCompatibleTextRenderingDefault(false);
+		ApplicationConfiguration.Initialize();
 
 		try
 		{

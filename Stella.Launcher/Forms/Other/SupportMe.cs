@@ -13,7 +13,8 @@ public sealed partial class SupportMe : Form
 	{
 		InitializeComponent();
 
-		DoubleBuffered = true;
+		SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.DoubleBuffer, true);
+		UpdateStyles();
 	}
 
 	private void SupportMe_Load(object sender, EventArgs e)

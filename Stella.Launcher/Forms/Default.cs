@@ -62,8 +62,8 @@ public partial class Default : Form
 	{
 		InitializeComponent();
 
-		DoubleBuffered = true;
-		SetStyle(ControlStyles.UserPaint | ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer, true);
+		SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.DoubleBuffer, true);
+		UpdateStyles();
 		TaskbarProgress.MainWinHandle = Handle;
 	}
 

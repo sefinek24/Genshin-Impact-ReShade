@@ -81,6 +81,16 @@ namespace InformationWindow.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bg {
+            get {
+                object obj = ResourceManager.GetObject("bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Closing....
         /// </summary>
         internal static string Closing {
@@ -99,11 +109,41 @@ namespace InformationWindow.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please wait {0}s....
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static string PleaseWait {
+        internal static System.Drawing.Bitmap info {
             get {
-                return ResourceManager.GetString("PleaseWait", resourceCulture);
+                object obj = ResourceManager.GetObject("info", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap paimonpeek {
+            get {
+                object obj = ResourceManager.GetObject("paimonpeek", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap partycat {
+            get {
+                object obj = ResourceManager.GetObject("partycat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This window will close in {0}s....
+        /// </summary>
+        internal static string ThisWindowWillCloseIn {
+            get {
+                return ResourceManager.GetString("ThisWindowWillCloseIn", resourceCulture);
             }
         }
     }

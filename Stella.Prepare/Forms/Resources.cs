@@ -6,7 +6,8 @@ public sealed partial class Resources : Form
 	{
 		InitializeComponent();
 
-		DoubleBuffered = true;
+		SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.DoubleBuffer, true);
+		UpdateStyles();
 	}
 
 	private void SelectShadersPath_Load(object sender, EventArgs e)

@@ -11,7 +11,8 @@ public sealed partial class InjectionMethod : Form
 	{
 		InitializeComponent();
 
-		DoubleBuffered = true;
+		SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.DoubleBuffer, true);
+		UpdateStyles();
 	}
 
 	private void InjectionMethod_Load(object sender, EventArgs e)

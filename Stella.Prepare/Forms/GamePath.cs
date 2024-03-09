@@ -10,7 +10,9 @@ public sealed partial class GamePath : Form
 	{
 		InitializeComponent();
 
-		DoubleBuffered = true;
+		SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.DoubleBuffer, true);
+		UpdateStyles();
+
 		_inputString += inputString;
 	}
 

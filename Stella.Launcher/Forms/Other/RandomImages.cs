@@ -18,7 +18,8 @@ public sealed partial class RandomImages : Form
 	{
 		InitializeComponent();
 
-		DoubleBuffered = true;
+		SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.DoubleBuffer, true);
+		UpdateStyles();
 
 		if (RegionInfo.CurrentRegion.Name == "PL") linkLabel46.Visible = true;
 	}

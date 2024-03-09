@@ -104,8 +104,7 @@ internal static class Program
 		}
 
 		// Execute the necessary functions for WinForms
-		Application.EnableVisualStyles();
-		Application.SetCompatibleTextRenderingDefault(false);
+		ApplicationConfiguration.Initialize();
 
 		// Used exclusively for GitHub Actions. Currently, it is useless See https://github.com/sefinek24/Genshin-Impact-ReShade/blob/main/.github/workflows/build.yml
 		foreach (string arg in args)
