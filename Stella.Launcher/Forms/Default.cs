@@ -382,21 +382,18 @@ public partial class Default : Form
 			if (Utils.CheckFileExists(path)) Utils.OpenUrl(path);
 		}
 
+
 		// Stats
-		var telemetryData = new
+		if (!Debugger.IsAttached)
 		{
-			Program.AppVersion,
-			Program.AppVersionFull,
-			Program.AppName,
-			Program.AppPath,
-			Program.AppData
-		};
+			string jsonData = JsonConvert.SerializeObject(new { Program.AppVersion, Program.AppVersionFull, Program.AppName, Program.AppPath, Program.AppData });
+			string? data = await Telemetry.SendStatsAsync(jsonData).ConfigureAwait(true);
+			if (!string.IsNullOrEmpty(data)) Program.Logger.Error(data);
+		}
 
-		string jsonData = JsonConvert.SerializeObject(telemetryData);
-		await Telemetry.SendStatsAsync(jsonData).ConfigureAwait(true);
-
+		// Final
 		Stages.UpdateStage(13, Secret.IsStellaPlusSubscriber ? $"Welcome {Secret.Username} to the Stella Mod Launcher app!" : "Welcome to the Stella Mod Launcher app!");
-		if (Secret.IsStellaPlusSubscriber) Music.PlaySound("other", "interface-welcome", 0.12f);
+		if (Secret.IsStellaPlusSubscriber) Music.PlaySound("other", "interface-welcome", 0.26f);
 
 
 		// 2024
