@@ -9,8 +9,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
     <AssemblyVersion>7.9.7.0</AssemblyVersion>
-    <FileVersion>7.9.7.9</FileVersion>
-    <Version>7.9.7.9</Version>
+    <FileVersion>7.9.7.10</FileVersion>
+    <Version>7.9.7.10</Version>
     <StartupObject>StellaModLauncher.Program</StartupObject>
     <ApplicationIcon>data\images\icons\nahida.ico</ApplicationIcon>
     <BaseOutputPath>..\Build\</BaseOutputPath>
