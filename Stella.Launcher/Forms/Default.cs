@@ -124,13 +124,13 @@ public partial class Default : Form
 
 		if (string.IsNullOrEmpty(resourcesPath))
 		{
-			Program.Logger.Error("Path of the resources was not found. Is null or empty.");
+			Program.Logger.Error("Path of the resources was not found. Is null or empty");
 			MessageBox.Show(Resources.Default_ResourceDirNotFound, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Warning);
 		}
 
 		if (!Directory.Exists(resourcesPath))
 		{
-			Program.Logger.Error($"Directory with the resources '{resourcesPath}' was not found.");
+			Program.Logger.Error($"Directory with the resources '{resourcesPath}' was not found");
 			MessageBox.Show(string.Format(Resources.Default_Directory_WasNotFound, resourcesPath), Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
 		}
 
@@ -170,16 +170,15 @@ public partial class Default : Form
 		});
 
 
-		// Is user my Patron?
+		// Is the user a Stella Mod Plus subscriber?
 		Stages.UpdateStage(3, "Checking Stella Mod Plus subscription...");
-		string? registrySecret = Secret.GetTokenFromRegistry();
+		Secret.GetDeviceId();
 
+		string? registrySecret = Secret.GetTokenFromRegistry();
 
 		Stages.UpdateStage(4, "Verifying Stella Mod Plus subscription...");
 		if (registrySecret != null)
 		{
-			Secret.GetDeviceId();
-
 			string? data = await Secret.VerifyToken(registrySecret).ConfigureAwait(true);
 			if (data == null)
 			{
@@ -390,12 +389,9 @@ public partial class Default : Form
 
 
 		// Stats
-		if (!Debugger.IsAttached)
-		{
-			string jsonData = JsonConvert.SerializeObject(new { Program.AppVersion, Program.AppVersionFull, Program.AppName, Program.AppPath, Program.AppData });
-			string? data = await Telemetry.SendOpenRequest(jsonData).ConfigureAwait(true);
-			if (!string.IsNullOrEmpty(data)) Program.Logger.Error(data);
-		}
+		string jsonData = JsonConvert.SerializeObject(new { Program.AppVersion, Program.AppVersionFull, Program.AppName, Program.AppPath, Program.AppData, DeviceId = Secret._deviceId });
+		string? status = await Telemetry.SendOpenRequest(jsonData).ConfigureAwait(true);
+		if (!string.IsNullOrEmpty(status)) Program.Logger.Error(status);
 
 		// Final
 		Stages.UpdateStage(13, Secret.IsStellaPlusSubscriber ? $"Welcome {Secret.Username} to the Stella Mod Launcher app!" : "Welcome to the Stella Mod Launcher app!");
