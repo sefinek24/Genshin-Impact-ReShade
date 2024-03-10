@@ -87,6 +87,8 @@ public partial class Default : Form
 		_pictureBox2 = pictureBox2;
 		_changeBg_LinkLabel = changeBg_LinkLabel;
 
+		_status_Label = status_Label;
+
 		_preparingPleaseWait = PreparingPleaseWait;
 		_progressBar1 = progressBar1;
 
@@ -345,7 +347,7 @@ public partial class Default : Form
 		Stages.UpdateStage(11, "Checking Genshin Stella Mod.exe and ReShade.ini...");
 
 		// Check Genshin Stella Mod.exe
-		if (!File.Exists(Run.GsmPath))
+		if (!File.Exists(Run.GsmPath) && !Debugger.IsAttached)
 		{
 			string fileName = Path.GetFileName(Run.GsmPath);
 
