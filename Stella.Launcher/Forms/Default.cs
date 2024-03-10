@@ -350,8 +350,6 @@ public partial class Default : Form
 		if (!File.Exists(Run.GsmPath) && !Debugger.IsAttached)
 		{
 			string fileName = Path.GetFileName(Run.GsmPath);
-
-			Program.Logger.Error($"{fileName} was not found in {Run.GsmPath}");
 			Utils.UpdateStatusLabel($"Not found `{fileName}` in:", Utils.StatusType.Error, false);
 			Utils.UpdateStatusLabel(Path.GetDirectoryName(Run.GsmPath)!, Utils.StatusType.Error);
 
