@@ -1,5 +1,4 @@
 using System.Diagnostics;
-using IWshRuntimeLibrary;
 using Microsoft.Win32;
 using StellaModLauncher.Forms;
 using StellaModLauncher.Properties;
@@ -157,30 +156,6 @@ internal static class Utils
 		Program.Logger.Info(fileExists ? $"File '{fileName}' was found at '{filePath}'" : $"File '{fileName}' was not found at '{filePath}'");
 
 		return fileExists;
-	}
-
-	public static bool CreateShortcut()
-	{
-		try
-		{
-			WshShell shell = new();
-			IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(Shortcut.ScPath);
-			shortcut.Description = Resources.Utils_RunOfficialLauncherForStellaModMadeBySefinek;
-			shortcut.WorkingDirectory = Program.AppPath;
-			shortcut.TargetPath = Shortcut.ProgramExe;
-			shortcut.Save();
-
-			Program.Logger.Info("Desktop shortcut has been created");
-			Program.Logger.Info($"CreateShortcut(): {Shortcut.ScPath}");
-			Program.Logger.Info($"WorkingDirectory(): {Shortcut.ScPath}");
-			Program.Logger.Info($"TargetPath(): {Shortcut.ProgramExe}");
-			return true;
-		}
-		catch (Exception ex)
-		{
-			Log.ThrowError(new Exception($"An error occurred while creating the shortcut.\n\n{ex}"));
-			return false;
-		}
 	}
 
 	public static async Task<Image?> LoadImageAsync(string? url)

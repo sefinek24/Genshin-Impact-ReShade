@@ -1,4 +1,5 @@
 using System.Globalization;
+using Shortcut = StellaModLauncher.Scripts.Shortcut;
 
 namespace StellaModLauncher.Forms.Other;
 
@@ -42,6 +43,8 @@ public sealed partial class Language : Form
 
 		Program.Settings.WriteString("Language", "UI", selectedLang);
 		Program.Settings.WriteString("Language", "ID", comboBox1.SelectedIndex.ToString());
+
+		Shortcut.CreateOrUpdate();
 
 		Application.Restart();
 		Environment.Exit(0);

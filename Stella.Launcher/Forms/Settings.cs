@@ -4,6 +4,7 @@ using StellaModLauncher.Forms.Other;
 using StellaModLauncher.Properties;
 using StellaModLauncher.Scripts;
 using StellaModLauncher.Scripts.Forms;
+using Shortcut = StellaModLauncher.Scripts.Shortcut;
 
 namespace StellaModLauncher.Forms;
 
@@ -121,7 +122,7 @@ public partial class Settings : Form
 
 	private void CreateShortcut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		bool success = Utils.CreateShortcut();
+		bool success = Shortcut.CreateOrUpdate();
 		if (success) MessageBox.Show(Resources.Tools_TheShortcutHasBeenSuccessfullyCreated, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Information);
 	}
 

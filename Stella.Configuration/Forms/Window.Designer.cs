@@ -85,6 +85,8 @@ namespace ConfigurationNC.Forms
 				// 
 				resources.ApplyResources(checkBox2, "checkBox2");
 				checkBox2.BackColor = Color.Transparent;
+				checkBox2.Checked = true;
+				checkBox2.CheckState = CheckState.Checked;
 				checkBox2.Cursor = Cursors.Hand;
 				checkBox2.ForeColor = Color.WhiteSmoke;
 				checkBox2.Name = "checkBox2";
@@ -95,6 +97,8 @@ namespace ConfigurationNC.Forms
 				// 
 				resources.ApplyResources(checkBox3, "checkBox3");
 				checkBox3.BackColor = Color.Transparent;
+				checkBox3.Checked = true;
+				checkBox3.CheckState = CheckState.Checked;
 				checkBox3.Cursor = Cursors.Hand;
 				checkBox3.ForeColor = Color.WhiteSmoke;
 				checkBox3.Name = "checkBox3";
@@ -105,6 +109,8 @@ namespace ConfigurationNC.Forms
 				// 
 				resources.ApplyResources(checkBox4, "checkBox4");
 				checkBox4.BackColor = Color.Transparent;
+				checkBox4.Checked = true;
+				checkBox4.CheckState = CheckState.Checked;
 				checkBox4.Cursor = Cursors.Hand;
 				checkBox4.ForeColor = Color.WhiteSmoke;
 				checkBox4.Name = "checkBox4";
@@ -115,6 +121,8 @@ namespace ConfigurationNC.Forms
 				// 
 				resources.ApplyResources(checkBox5, "checkBox5");
 				checkBox5.BackColor = Color.Transparent;
+				checkBox5.Checked = true;
+				checkBox5.CheckState = CheckState.Checked;
 				checkBox5.Cursor = Cursors.Hand;
 				checkBox5.ForeColor = Color.WhiteSmoke;
 				checkBox5.Name = "checkBox5";
@@ -125,6 +133,8 @@ namespace ConfigurationNC.Forms
 				// 
 				resources.ApplyResources(checkBox6, "checkBox6");
 				checkBox6.BackColor = Color.Transparent;
+				checkBox6.Checked = true;
+				checkBox6.CheckState = CheckState.Checked;
 				checkBox6.Cursor = Cursors.Hand;
 				checkBox6.ForeColor = Color.WhiteSmoke;
 				checkBox6.Name = "checkBox6";
@@ -149,6 +159,8 @@ namespace ConfigurationNC.Forms
 				// 
 				resources.ApplyResources(checkBox7, "checkBox7");
 				checkBox7.BackColor = Color.Transparent;
+				checkBox7.Checked = true;
+				checkBox7.CheckState = CheckState.Checked;
 				checkBox7.Cursor = Cursors.Hand;
 				checkBox7.ForeColor = Color.WhiteSmoke;
 				checkBox7.Name = "checkBox7";

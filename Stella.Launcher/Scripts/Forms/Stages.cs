@@ -20,6 +20,7 @@ internal static class Stages
 		Default._progressBar1!.Value = progressValue > Default._progressBar1.Maximum ? Default._progressBar1.Maximum : progressValue;
 
 		_currentStage = stage;
+		Program.Logger.Debug($"{stage}; {progressValue}; {progressBarText}");
 
 		// Finish
 		if (AllStages != stage) return;

@@ -9,7 +9,7 @@ internal static class Secret
 	public static bool IsStellaPlusSubscriber = false;
 	public static string? Username = "";
 	public static string? BearerToken;
-	private static string? _deviceId;
+	public static string? _deviceId;
 
 	public static string? GetTokenFromRegistry()
 	{

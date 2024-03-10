@@ -5,12 +5,15 @@ namespace PrepareStella.Scripts.Preparing;
 
 internal static class DesktopIcon
 {
+	private static readonly string LnkFileName = "Stella Mod Launcher.lnk";
+	private static readonly string ExeFileName = "Stella Mod Launcher.exe";
+
 	public static async Task RunAsync()
 	{
 		try
 		{
 			string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.CommonDesktopDirectory);
-			string shortcutPath = Path.Combine(desktopPath, "Stella Mod Launcher.lnk");
+			string shortcutPath = Path.Combine(desktopPath, LnkFileName);
 			await CreateShortcutAsync(shortcutPath).ConfigureAwait(false);
 
 			string appStartMenuPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonStartMenu), "Programs", "Stella Mod Launcher");
@@ -33,13 +36,13 @@ internal static class DesktopIcon
 				IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(shortcutPath);
 				shortcut.Description = Resources.Utils_RunOfficialLauncherForStellaModMadeBySefinek;
 				shortcut.WorkingDirectory = Start.AppPath;
-				shortcut.TargetPath = Path.Combine(Start.AppPath!, "Stella Mod Launcher.exe");
+				shortcut.TargetPath = Path.Combine(Start.AppPath!, ExeFileName);
 
 				shortcut.Save();
 			}
-			catch (Exception e)
+			catch (Exception err)
 			{
-				Console.WriteLine(e.Message);
+				Console.WriteLine(err.Message);
 			}
 		}).ConfigureAwait(false);
 	}
@@ -51,16 +54,16 @@ internal static class DesktopIcon
 			try
 			{
 				WshShell shell = new();
-				string shortcutLocation = Path.Combine(appStartMenuPath, "Stella Mod Launcher.lnk");
+				string shortcutLocation = Path.Combine(appStartMenuPath, LnkFileName);
 				IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(shortcutLocation);
 				shortcut.Description = Resources.Utils_RunOfficialLauncherForStellaModMadeBySefinek;
 				shortcut.WorkingDirectory = Start.AppPath;
-				shortcut.TargetPath = Path.Combine(Start.AppPath!, "Stella Mod Launcher.exe");
+				shortcut.TargetPath = Path.Combine(Start.AppPath!, ExeFileName);
 				shortcut.Save();
 			}
-			catch (Exception e)
+			catch (Exception err)
 			{
-				Log.ThrowError(e, false);
+				Log.ThrowError(err, false);
 			}
 		}).ConfigureAwait(false);
 	}

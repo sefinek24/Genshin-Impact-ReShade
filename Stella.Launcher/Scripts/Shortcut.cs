@@ -1,5 +1,6 @@
 using IWshRuntimeLibrary;
 using Microsoft.Win32;
+using StellaModLauncher.Properties;
 using StellaModLauncher.Scripts.Helpers;
 using File = System.IO.File;
 
@@ -7,9 +8,9 @@ namespace StellaModLauncher.Scripts;
 
 internal static class Shortcut
 {
-	public static readonly string? ProgramExe = Environment.ProcessPath;
+	private static readonly string? ProgramExe = Environment.ProcessPath;
 	private static readonly string DesktopPath = Environment.GetFolderPath(Environment.SpecialFolder.CommonDesktopDirectory);
-	public static readonly string ScPath = Path.Combine(DesktopPath, "Stella Mod Launcher.lnk");
+	private static readonly string ScPath = Path.Combine(DesktopPath, "Stella Mod Launcher.lnk");
 
 	public static void Check()
 	{
@@ -37,7 +38,7 @@ internal static class Shortcut
 			if (!updateIsRequired) return;
 
 			// Shortcut
-			Utils.CreateShortcut();
+			CreateOrUpdate();
 
 			// Registry
 			using (RegistryKey key = Registry.CurrentUser.CreateSubKey(Program.RegistryPath))
@@ -52,6 +53,46 @@ internal static class Shortcut
 		catch (Exception ex)
 		{
 			Program.Logger.Error("An error occurred while checking desktop shortcut: " + ex.Message);
+		}
+	}
+
+	public static bool CreateOrUpdate()
+	{
+		try
+		{
+			// Desktop shortcut
+			WshShell shell1 = new();
+			IWshShortcut desktop = (IWshShortcut)shell1.CreateShortcut(ScPath);
+			desktop.Description = Resources.Utils_RunOfficialLauncherForStellaModMadeBySefinek;
+			desktop.WorkingDirectory = Program.AppPath;
+			desktop.TargetPath = ProgramExe;
+			desktop.Save();
+
+			Program.Logger.Info("Desktop shortcut has been created");
+
+			// Start menu shortcut
+			string shortcutLocation = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonStartMenu), "Programs", "Stella Mod Launcher", Path.GetFileName(ScPath));
+
+			IWshShortcut menuStart = (IWshShortcut)shell1.CreateShortcut(shortcutLocation);
+			menuStart.Description = Resources.Utils_RunOfficialLauncherForStellaModMadeBySefinek;
+			menuStart.WorkingDirectory = Program.AppPath;
+			menuStart.TargetPath = ProgramExe;
+			menuStart.Save();
+
+			Program.Logger.Info("Start menu shortcut shortcut has been created");
+
+			// Done
+			Program.Logger.Info($"Desktop shortcut: {ScPath}");
+			Program.Logger.Info($"Start menu shortcut: {shortcutLocation}");
+			Program.Logger.Info($"Working directory: {ScPath}");
+			Program.Logger.Info($"Target path: {ProgramExe}");
+
+			return true;
+		}
+		catch (Exception ex)
+		{
+			Log.ThrowError(new Exception($"An error occurred while creating the shortcut.\n\n{ex}"));
+			return false;
 		}
 	}
 }
