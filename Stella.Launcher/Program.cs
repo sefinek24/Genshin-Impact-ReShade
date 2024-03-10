@@ -94,7 +94,7 @@ internal static class Program
 
 		if (Debugger.IsAttached) Logger.Debug($"* CPU Serial Number {MachineInfo.GetCpuSerialNumber()}");
 
-		// Check the number of running instances of Stella Mod Launcher. Only allow 1 process
+		// Check the number of running instances of Stella Mod Launcher. Only allow 1 process.
 		if (Process.GetProcessesByName(AppName).Length > 1)
 		{
 			Logger.Info("One instance is currently open");
@@ -106,7 +106,7 @@ internal static class Program
 		// Execute the necessary functions for WinForms
 		ApplicationConfiguration.Initialize();
 
-		// Used exclusively for GitHub Actions. Currently, it is useless See https://github.com/sefinek24/Genshin-Impact-ReShade/blob/main/.github/workflows/build.yml
+		// Used exclusively for GitHub Actions. Currently, it is useless. See https://github.com/sefinek24/Genshin-Impact-ReShade/blob/main/.github/workflows/build.yml
 		foreach (string arg in args)
 		{
 			if (arg != "--gh-actions") continue;
