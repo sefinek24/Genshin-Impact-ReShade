@@ -2,7 +2,6 @@ using System.Diagnostics;
 using Microsoft.Web.WebView2.WinForms;
 using Microsoft.Win32;
 using Newtonsoft.Json;
-using NuGet.Versioning;
 using StellaModLauncher.Forms.Other;
 using StellaModLauncher.Models;
 using StellaModLauncher.Properties;
@@ -282,11 +281,11 @@ public partial class Default : Form
 
 		// Check ReShade & FPS Unlock version
 		Stages.UpdateStage(7, "Checking ReShade & FPS Unlock version...");
-		NuGetVersion reshadeVersion = NuGetVersion.Parse(FileVersionInfo.GetVersionInfo(Program.ReShadePath).ProductVersion!);
-		NuGetVersion fpsUnlockVersion = NuGetVersion.Parse(FileVersionInfo.GetVersionInfo(Program.FpsUnlockerExePath).ProductVersion!);
-		Data.ReShadeVer = reshadeVersion.ToString();
-		Data.UnlockerVer = fpsUnlockVersion.ToString();
+		Data.ReShadeVer = StellaVersion.Parse(FileVersionInfo.GetVersionInfo(Program.ReShadePath).ProductVersion!);
+		Data.UnlockerVer = StellaVersion.Parse(FileVersionInfo.GetVersionInfo(Program.FpsUnlockerExePath).ProductVersion!);
+		Data.GenshinStellaModVer = StellaVersion.Parse(FileVersionInfo.GetVersionInfo(Run.GsmPath).ProductVersion!);
 
+		Program.Logger.Debug(FileVersionInfo.GetVersionInfo(Run.GsmPath).ProductVersion);
 
 		// Discord RPC
 		Stages.UpdateStage(9, "Initializing Discord RPC...");

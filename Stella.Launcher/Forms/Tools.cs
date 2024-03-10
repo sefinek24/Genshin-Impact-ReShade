@@ -72,8 +72,8 @@ public partial class Tools : Form
 			Arguments = new ArgumentsBuilder()
 				.Add(Path.Combine(Run.BatchDir, "scan_sys_files.cmd"))
 				.Add(Program.AppVersion!)
-				.Add(Data.ReShadeVer)
-				.Add(Data.UnlockerVer)
+				.Add(Data.ReShadeVer!)
+				.Add(Data.UnlockerVer!)
 		};
 		await Cmd.Execute(command).ConfigureAwait(false);
 	}
@@ -127,8 +127,8 @@ public partial class Tools : Form
 			Arguments = new ArgumentsBuilder()
 				.Add(Path.Combine(Run.BatchDir, "delete_cache.cmd")) // 0
 				.Add(Program.AppVersion!) // 1
-				.Add(Data.ReShadeVer) // 2
-				.Add(Data.UnlockerVer) // 3
+				.Add(Data.ReShadeVer!) // 2
+				.Add(Data.UnlockerVer!) // 3
 				.Add(Program.AppData) // 4
 				.Add(Default.ResourcesPath!) // 5
 				.Add(gameDir!) // 6
@@ -146,8 +146,8 @@ public partial class Tools : Form
 			Arguments = new ArgumentsBuilder()
 				.Add(Path.Combine(Run.BatchDir, "delete_webview_cache.cmd")) // 0
 				.Add(Program.AppVersion!) // 1
-				.Add(Data.ReShadeVer) // 2
-				.Add(Data.UnlockerVer) // 3
+				.Add(Data.ReShadeVer!) // 2
+				.Add(Data.UnlockerVer!) // 3
 				.Add(Program.AppData) // 4
 		};
 		await Cmd.Execute(command).ConfigureAwait(false);
@@ -185,7 +185,7 @@ public partial class Tools : Form
 			App = "notepad.exe",
 			WorkingDir = Program.AppPath,
 			Arguments = new ArgumentsBuilder()
-				.Add(Path.Combine(Log.Folder!, "launcher.output.log"))
+				.Add(Path.Combine(Log.Folder!, "Launcher", $"{Program.AppFileVersion}.log"))
 		};
 		await Cmd.Execute(command).ConfigureAwait(false);
 
@@ -199,7 +199,7 @@ public partial class Tools : Form
 			App = "notepad.exe",
 			WorkingDir = Program.AppPath,
 			Arguments = new ArgumentsBuilder()
-				.Add(Path.Combine(Log.Folder!, "gsmod.output.log"))
+				.Add(Path.Combine(Log.Folder!, "Genshin Stella Mod", $"{Data.GenshinStellaModVer}.log"))
 		}).ConfigureAwait(false);
 
 		LogSharingAlert();

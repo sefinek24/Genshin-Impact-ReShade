@@ -450,7 +450,6 @@
     <PackageReference Include="NAudio" Version="2.2.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="NLog" Version="5.2.8" />
-    <PackageReference Include="NuGet.Versioning" Version="6.9.1" />
     <PackageReference Include="System.Management" Version="8.0.0" />
     <PackageReference Include="System.Runtime.Caching" Version="8.0.0" />
   </ItemGroup>

@@ -839,7 +839,7 @@
   </data>
   <data name="release_Label.Text" xml:space="preserve">
     <value>Full build: {0}
-File version: {1} | Assembly version: {2}</value>
+File version: v{1} | Assembly version: v{2}</value>
   </data>
   <data name="release_Label.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
