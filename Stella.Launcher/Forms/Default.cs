@@ -393,7 +393,7 @@ public partial class Default : Form
 		if (!Debugger.IsAttached)
 		{
 			string jsonData = JsonConvert.SerializeObject(new { Program.AppVersion, Program.AppVersionFull, Program.AppName, Program.AppPath, Program.AppData });
-			string? data = await Telemetry.SendStatsAsync(jsonData).ConfigureAwait(true);
+			string? data = await Telemetry.SendOpenRequest(jsonData).ConfigureAwait(true);
 			if (!string.IsNullOrEmpty(data)) Program.Logger.Error(data);
 		}
 
