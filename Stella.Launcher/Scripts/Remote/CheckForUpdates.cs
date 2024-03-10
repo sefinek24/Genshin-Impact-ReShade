@@ -23,7 +23,7 @@ internal static class CheckForUpdates
 
 		try
 		{
-			string json = await Program.SefinWebClient.GetStringAsync($"{Program.WebApi}/genshin-stella-mod/versions").ConfigureAwait(true);
+			string json = await Program.SefinWebClient.GetStringAsync($"{Program.WebApi}/genshin-stella-mod/version").ConfigureAwait(true);
 			Program.Logger.Info(json);
 
 			StellaApiVersion? res = JsonConvert.DeserializeObject<StellaApiVersion>(json);

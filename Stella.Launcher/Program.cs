@@ -85,9 +85,7 @@ internal static class Program
 
 		// First log
 		Logger.Info(
-			"==============================================================================================================\n" +
-			"A request to start the program has been received.\n" +
-			$"* Debugger.IsAttached: {Debugger.IsAttached}\n" +
+			$"=========================================== {AppVersionFull} {(Debugger.IsAttached ? "(debug mode)" : "")} ===========================================\n" +
 			$"* AppPath: {AppPath}\n" +
 			$"* AppData: {AppData}\n" +
 			$"* Language: {currentLang}");
