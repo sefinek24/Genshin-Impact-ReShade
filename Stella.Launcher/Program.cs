@@ -45,8 +45,8 @@ internal static class Program
 		return httpClient;
 	});
 
-	// public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v6" : "https://api.sefinek.net/api/v6";
-	public static readonly string WebApi = "https://api.sefinek.net/api/v6";
+	public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v6" : "https://api.sefinek.net/api/v6";
+	// public static readonly string WebApi = "https://api.sefinek.net/api/v6";
 
 	// Supported languages
 	private static readonly string[] SupportedLangs = ["en", "pl"];
@@ -112,14 +112,6 @@ internal static class Program
 			Logger.Info("Application closed due to detection of the `--gh-actions` parameter.");
 			Application.Exit();
 		}
-
-		// Block the software in Russia
-		// if (RegionInfo.CurrentRegion.Name == "RU")
-		// {
-		//     Music.PlaySound("winxp", "battery-critical");
-		//     new RussianCunt { Icon = Ico }.ShowDialog();
-		//     Environment.Exit(999222999);
-		// }
 
 		// Has the software been configured on the user's PC?
 		using (RegistryKey? key = Registry.CurrentUser.OpenSubKey(RegistryPath, true))

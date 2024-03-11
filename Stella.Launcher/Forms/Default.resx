@@ -673,7 +673,7 @@
     <value>Yu Gothic UI, 15.75pt, style=Bold</value>
   </data>
   <data name="becomeMyPatron_LinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>62, 436</value>
+    <value>63, 436</value>
   </data>
   <data name="becomeMyPatron_LinkLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>576, 60</value>

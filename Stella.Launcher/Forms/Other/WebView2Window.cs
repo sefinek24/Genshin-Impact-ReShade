@@ -16,7 +16,7 @@ public partial class WebView2Window : Form
 
 	private void Gallery_Load(object sender, EventArgs e)
 	{
-		Text = Title;
+		if (!string.IsNullOrEmpty(Title)) Text = Title;
 		Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
 
 		InitWebView2();

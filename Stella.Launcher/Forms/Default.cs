@@ -1,7 +1,10 @@
 using System.Diagnostics;
+using System.Globalization;
+using LibVLCSharp.Shared;
 using Microsoft.Web.WebView2.WinForms;
 using Microsoft.Win32;
 using Newtonsoft.Json;
+using StellaModLauncher.Forms.Errors;
 using StellaModLauncher.Forms.Other;
 using StellaModLauncher.Models;
 using StellaModLauncher.Properties;
@@ -169,12 +172,14 @@ public partial class Default : Form
 		});
 
 
-		// Is the user a Stella Mod Plus subscriber?
-		Stages.UpdateStage(3, "Checking Stella Mod Plus subscription...");
+		// Get device ID
+		Stages.UpdateStage(3, "Generating device ID...");
 		Secret.GetDeviceId();
+		Program.SefinWebClient.DefaultRequestHeaders.Add("X-Device-ID", Secret._deviceId);
 
+
+		// Is the user a Stella Mod Plus subscriber?
 		string? registrySecret = Secret.GetTokenFromRegistry();
-
 		Stages.UpdateStage(4, "Verifying Stella Mod Plus subscription...");
 		if (registrySecret != null)
 		{
@@ -267,48 +272,19 @@ public partial class Default : Form
 
 
 		// Check if all required files exists
-		Stages.UpdateStage(5, "Verifying required files...");
+		Stages.UpdateStage(5, "Verifying required data and files...");
 		await Files.ScanAsync().ConfigureAwait(true);
 
-
-		// Delete setup file from Temp directory
-		Stages.UpdateStage(6, "Checking the installation file after the update...");
-		Files.DeleteSetupAsync();
-
-		// Loaded form
-		Program.Logger.Info(string.Format(Resources.Main_LoadedForm_, Text));
-
-
-		// Check ReShade & FPS Unlock version
-		Stages.UpdateStage(7, "Checking ReShade & FPS Unlock version...");
-		Data.ReShadeVer = StellaVersion.Parse(FileVersionInfo.GetVersionInfo(Program.ReShadePath).ProductVersion!);
-		Data.UnlockerVer = StellaVersion.Parse(FileVersionInfo.GetVersionInfo(Program.FpsUnlockerExePath).ProductVersion!);
-		Data.GenshinStellaModVer = StellaVersion.Parse(FileVersionInfo.GetVersionInfo(Run.GsmPath).ProductVersion!);
-
-		Program.Logger.Debug(FileVersionInfo.GetVersionInfo(Run.GsmPath).ProductVersion);
-
-		// Discord RPC
-		Stages.UpdateStage(9, "Initializing Discord RPC...");
-		Discord.InitRpc();
+		// Block the software in Russia
+		if (MachineInfo.GetSystemRegion() == "RU")
+		{
+			Music.PlaySound("winxp", "battery-critical");
+			new RussianCunt { Icon = Program.Ico }.ShowDialog();
+			// Environment.Exit(999222999);
+		}
 
 		// Telemetry
 		// Telemetry.Opened();
-
-		// Updated?
-		int updatedLauncher = Program.Settings.ReadInt("Updates", "UpdateAvailable", 0);
-		string oldVersion = Program.Settings.ReadString("Updates", "OldVersion");
-		if (updatedLauncher == 1 && oldVersion != Program.AppFileVersion)
-		{
-			Program.Settings.WriteInt("Updates", "UpdateAvailable", 0);
-			Program.Settings.Save();
-
-			Utils.UpdateStatusLabel(Resources.Default_Congratulations, Utils.StatusType.Success, false);
-			Utils.UpdateStatusLabel(string.Format(Resources.Default_SMLSuccessfullyUpdatedToVersion_, Program.AppFileVersion), Utils.StatusType.Info);
-
-			pictureBox5.Show();
-			viewChangelog_LinkLabel.Show();
-		}
-
 
 		// Check InjectType
 		string injectMode = Program.Settings.ReadString("Injection", "Method", "exe");
@@ -337,10 +313,55 @@ public partial class Default : Form
 		}
 
 
+		// Delete setup file from Temp directory
+		Stages.UpdateStage(6, "Checking the installation file after the update...");
+		Files.DeleteSetupAsync();
+
+		// Loaded form
+		Program.Logger.Info(string.Format(Resources.Main_LoadedForm_, Text));
+
+
+		// Check ReShade & FPS Unlock version
+		Stages.UpdateStage(7, "Checking ReShade & FPS Unlock version...");
+		Data.ReShadeVer = StellaVersion.Parse(FileVersionInfo.GetVersionInfo(Program.ReShadePath).ProductVersion!);
+		Data.UnlockerVer = StellaVersion.Parse(FileVersionInfo.GetVersionInfo(Program.FpsUnlockerExePath).ProductVersion!);
+		Data.GenshinStellaModVer = StellaVersion.Parse(FileVersionInfo.GetVersionInfo(Run.GsmPath).ProductVersion!);
+
+		Program.Logger.Debug(FileVersionInfo.GetVersionInfo(Run.GsmPath).ProductVersion);
+
+
+		// Discord RPC
+		Stages.UpdateStage(9, "Initializing Discord RPC...");
+		Discord.InitRpc();
+
+
 		// Check for updates
 		Stages.UpdateStage(10, "Checking for updates...");
 		int found = await CheckForUpdates.Analyze().ConfigureAwait(true);
-		if (found == 2) return;
+		switch (found)
+		{
+			case 2:
+				return;
+			case 666:
+				WindowState = FormWindowState.Minimized;
+				return;
+		}
+
+		// Updated?
+		int updatedLauncher = Program.Settings.ReadInt("Updates", "UpdateAvailable", 0);
+		string oldVersion = Program.Settings.ReadString("Updates", "OldVersion");
+		if (updatedLauncher == 1 && oldVersion != Program.AppFileVersion)
+		{
+			Program.Settings.WriteInt("Updates", "UpdateAvailable", 0);
+			Program.Settings.Save();
+
+			Utils.UpdateStatusLabel(Resources.Default_Congratulations, Utils.StatusType.Success, false);
+			Utils.UpdateStatusLabel(string.Format(Resources.Default_SMLSuccessfullyUpdatedToVersion_, Program.AppFileVersion), Utils.StatusType.Info);
+
+			pictureBox5.Show();
+			viewChangelog_LinkLabel.Show();
+		}
+
 
 		Stages.UpdateStage(11, "Checking Genshin Stella Mod.exe and ReShade.ini...");
 
@@ -574,17 +595,21 @@ public partial class Default : Form
 
 		if (MachineInfo.GetSystemRegion() == "PL")
 		{
-			WebView2Shake viewer = new() { DesktopLocation = DesktopLocation, Icon = Program.Ico };
-			viewer.Navigate("https://www.youtube.com/embed/2F2DdXUNyaQ?autoplay=1");
-			viewer.Show();
+			string path = Path.Combine(Program.AppPath, "data", "videos", "legends-never-die.mp4");
+			bool isExists = Utils.CheckFileExists(path);
 
-			MessageBox.Show(@"Pamiętaj by nie grać w lola, gdyż to grzech ciężki.", @"kurwa");
+			if (isExists)
+			{
+				VideoShake viewer = new() { DesktopLocation = DesktopLocation, Icon = Program.Ico };
+				viewer.Navigate(path, FromType.FromPath);
+				viewer.Show();
+			}
+
+			MessageBox.Show(@"Pamiętaj by nie grać w lola, gdyż to grzech ciężki", @"kurwa");
 		}
 		else
 		{
-			WebView2Shake viewer = new() { DesktopLocation = DesktopLocation, Icon = Program.Ico };
-			viewer.Navigate("https://www.youtube.com/embed/L3ky4gZU5gY?autoplay=1");
-			viewer.Show();
+			new WebView2Window { WindowState = FormWindowState.Maximized, Url = $"https://www.youtube.com/embed/rQg2qngyIZM?autoplay=1" }.Show();
 		}
 	}
 

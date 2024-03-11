@@ -1,6 +1,7 @@
 using System.Globalization;
 using Newtonsoft.Json;
 using StellaModLauncher.Forms;
+using StellaModLauncher.Forms.Errors;
 using StellaModLauncher.Models;
 using StellaModLauncher.Properties;
 using StellaModLauncher.Scripts.Forms;
@@ -123,6 +124,23 @@ internal static class CheckForUpdates
 					Default._updateIco_PictureBox!.Image = Resources.icons8_download_from_the_cloud;
 					return found;
 				}
+			}
+
+
+			// == Banned? ==
+			if (res!.IsBanned)
+			{
+				Default._version_LinkLabel!.Text = @"v-.-.-.-";
+				Default._checkForUpdates_LinkLabel!.Text = @"---";
+				Default._progressBar1!.Value = 100;
+				Default._preparingPleaseWait!.Text = @"Canceled.";
+
+				TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Paused);
+				TaskbarProgress.SetProgressValue(100);
+
+				new Banned().Show();
+
+				return 666;
 			}
 
 

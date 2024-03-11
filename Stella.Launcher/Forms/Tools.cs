@@ -1,4 +1,5 @@
 using CliWrap.Builders;
+using LibVLCSharp.Shared;
 using StellaModLauncher.Forms.Other;
 using StellaModLauncher.Properties;
 using StellaModLauncher.Scripts;
@@ -228,11 +229,11 @@ public partial class Tools : Form
 	// -------------------------- Nothing special ((: ---------------------------
 	private void Notepad_MouseClick(object sender, MouseEventArgs e)
 	{
-		string path = Path.Combine(Program.AppPath, "data", "videos", "poland-strong.mp4");
+		string path = Path.Combine(Program.AppPath, "data", "videos", "legends-never-die.mp4");
 		if (!Utils.CheckFileExists(path)) return;
 
-		WebView2Shake viewer = new() { DesktopLocation = DesktopLocation, Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) };
-		viewer.Navigate(path);
+		VideoShake viewer = new() { DesktopLocation = DesktopLocation, Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) };
+		viewer.Navigate(path, FromType.FromPath);
 		viewer.Show();
 	}
 }

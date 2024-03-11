@@ -446,12 +446,15 @@
     <PackageReference Include="DeviceId.Windows" Version="6.6.0" />
     <PackageReference Include="DeviceId.Windows.Wmi" Version="6.6.0" />
     <PackageReference Include="DiscordRichPresence" Version="1.2.1.24" />
+    <PackageReference Include="LibVLCSharp" Version="3.8.2" />
+    <PackageReference Include="LibVLCSharp.WinForms" Version="3.8.2" />
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2365.46" />
     <PackageReference Include="NAudio" Version="2.2.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="NLog" Version="5.2.8" />
     <PackageReference Include="System.Management" Version="8.0.0" />
     <PackageReference Include="System.Runtime.Caching" Version="8.0.0" />
+    <PackageReference Include="VideoLAN.LibVLC.Windows" Version="3.0.20" />
   </ItemGroup>
 
   <ItemGroup>
@@ -470,7 +473,7 @@
     <Compile Update="Forms\Other\Language.cs" />
     <Compile Update="Forms\Other\RandomImages.cs" />
     <Compile Update="Forms\Other\SupportMe.cs" />
-    <Compile Update="Forms\Other\WebView2Shake.cs" />
+    <Compile Update="Forms\Other\VideoShake.cs" />
     <Compile Update="Forms\Other\WebView2Window.cs" />
     <Compile Update="Forms\Settings.cs" />
     <Compile Update="Forms\Tools.cs" />
@@ -537,6 +540,9 @@
     <None Update="data\sounds\other\interface-welcome.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="data\sounds\other\kurwa.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="data\sounds\other\logo-corporate.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -560,6 +566,12 @@
     </None>
     <None Update="data\unlocker\unlocker.config.default.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="data\videos\banned.mov">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="data\videos\legends-never-die.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="dependencies\Microsoft.VCLibs.x64.14.00.Desktop.appx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
