@@ -65,7 +65,6 @@ internal static class Program
 		if (response2 is "yes" or "y")
 		{
 			string? dir = Path.GetDirectoryName(InnoSetupPath);
-
 			if (Directory.Exists(dir))
 				Process.Start("explorer.exe", dir);
 			else
