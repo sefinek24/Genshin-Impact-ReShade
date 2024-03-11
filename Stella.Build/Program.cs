@@ -45,17 +45,34 @@ internal static class Program
 
 		// Done!
 		Console.Write("Would you like to run InnoSetup? [Yes/no]: ");
-		string? response = Console.ReadLine();
-		if (response!.Equals("Yes", StringComparison.OrdinalIgnoreCase))
+		string? response1 = Console.ReadLine()?.ToLower();
+		if (response1 is "yes" or "y")
 		{
 			if (File.Exists(InnoSetupCompiler) || File.Exists(InnoSetupPath))
 			{
 				Console.WriteLine($"Running {InnoSetupPath}...");
 				Process.Start(InnoSetupCompiler, InnoSetupPath);
+				Console.WriteLine();
 			}
 			else
 			{
 				Console.WriteLine("InnoSetup exe or iss file was not found");
+			}
+		}
+
+		Console.Write("Would you like to open InnoSetup directory? [Yes/no]: ");
+		string? response2 = Console.ReadLine()?.ToLower();
+		if (response2 is "yes" or "y")
+		{
+			string? dir = Path.GetDirectoryName(InnoSetupPath);
+
+			if (Directory.Exists(dir))
+			{
+				Process.Start("explorer.exe", dir);
+			}
+			else
+			{
+				Console.WriteLine($"InnoSetup path directory was not found: {dir}");
 			}
 		}
 

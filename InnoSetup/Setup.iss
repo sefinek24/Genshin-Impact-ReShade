@@ -28,7 +28,7 @@ ChangesAssociations=no
 InfoBeforeFile=..\Build\Release\net8.0-windows\data\README.txt
 LicenseFile=..\Build\Release\net8.0-windows\LICENSE
 PrivilegesRequired=none
-OutputBaseFilename=Stella-Mod-Setup
+OutputBaseFilename=Stella-Mod-Setup_{#AppVersion}
 WizardStyle=classic
 
 DirExistsWarning=no
