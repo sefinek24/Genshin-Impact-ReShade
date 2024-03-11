@@ -67,13 +67,9 @@ internal static class Program
 			string? dir = Path.GetDirectoryName(InnoSetupPath);
 
 			if (Directory.Exists(dir))
-			{
 				Process.Start("explorer.exe", dir);
-			}
 			else
-			{
 				Console.WriteLine($"InnoSetup path directory was not found: {dir}");
-			}
 		}
 
 		Console.WriteLine("\nPress ENTER to exit the program...");
