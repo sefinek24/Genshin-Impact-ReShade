@@ -1,5 +1,4 @@
 using System.Diagnostics;
-using System.Globalization;
 using LibVLCSharp.Shared;
 using Microsoft.Web.WebView2.WinForms;
 using Microsoft.Win32;
@@ -609,7 +608,7 @@ public partial class Default : Form
 		}
 		else
 		{
-			new WebView2Window { WindowState = FormWindowState.Maximized, Url = $"https://www.youtube.com/embed/rQg2qngyIZM?autoplay=1" }.Show();
+			new WebView2Window { WindowState = FormWindowState.Maximized, Url = "https://www.youtube.com/embed/rQg2qngyIZM?autoplay=1" }.Show();
 		}
 	}
 

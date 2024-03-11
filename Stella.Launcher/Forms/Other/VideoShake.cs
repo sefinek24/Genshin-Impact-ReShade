@@ -15,7 +15,7 @@ public partial class VideoShake : Form
 	{
 		InitializeComponent();
 
-		_libVlc = new LibVLC(enableDebugLogs: true);
+		_libVlc = new LibVLC(true);
 		_libVlc.Log += (_, args) => Program.Logger.Debug(args.Message);
 		_mp = new MediaPlayer(_libVlc);
 		videoView1.MediaPlayer = _mp;
