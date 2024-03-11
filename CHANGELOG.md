@@ -9,8 +9,8 @@
    [<a href="https://semver.org/lang/ko">KO</a>]
 </div>
 
-## 📥 Changelog for v7.x.x
-https://sefinek.net/genshin-impact-reshade/docs?page=changelog_v7
+## 📥 Changelog for v8.x.x
+https://sefinek.net/genshin-impact-reshade/docs?page=changelog_v8
 
 ## 🗑️ Deprecated releases
 https://sefinek.net/genshin-impact-reshade/docs?page=deprecated-releases

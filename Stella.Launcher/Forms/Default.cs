@@ -579,7 +579,7 @@ public partial class Default : Form
 
 	private void Version_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		Utils.OpenUrl("https://sefinek.net/genshin-impact-reshade/docs?page=changelog_v7");
+		Utils.OpenUrl("https://sefinek.net/genshin-impact-reshade/docs?page=changelog_v8");
 	}
 
 	private void MadeBySefinek_Click(object sender, EventArgs e)
@@ -621,6 +621,6 @@ public partial class Default : Form
 
 	private void ViewChangelog_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		Utils.OpenUrl("https://sefinek.net/genshin-impact-reshade/docs?page=changelog_v7");
+		Utils.OpenUrl("https://sefinek.net/genshin-impact-reshade/docs?page=changelog_v8");
 	}
 }

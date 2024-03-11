@@ -37,7 +37,7 @@
 - [📥 Installation](https://sefinek.net/genshin-impact-reshade/docs?page=installation)
 - [🔧 Compilation](https://sefinek.net/genshin-impact-reshade/docs?page=compilation)
 - [📷 Gallery](https://sefinek.net/genshin-impact-reshade/gallery?page=1)
-- [📃 Changelogs](https://sefinek.net/genshin-impact-reshade/docs?page=changelog_v7)
+- [📃 Changelogs](https://sefinek.net/genshin-impact-reshade/docs?page=changelog_v8)
 - [🧀 Legend](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend)
 - [🧶 Credits](https://sefinek.net/genshin-impact-reshade/docs?page=credits)
 - [💙 Contributors](https://sefinek.net/genshin-impact-reshade/docs?page=contributors)
