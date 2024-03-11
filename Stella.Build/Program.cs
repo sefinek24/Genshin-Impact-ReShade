@@ -35,7 +35,7 @@ internal static class Program
 		foreach (string project in projects) await CleanupSolution(Path.Combine(RootPath, project)).ConfigureAwait(false);
 
 		// Restore Nuget packages
-		Console.WriteLine("\nRestore Nuget packages");
+		Console.WriteLine("\nRestore Nuget packages...");
 		await Utils.RestorePackages().ConfigureAwait(false);
 		Console.WriteLine();
 
