@@ -52,7 +52,6 @@ internal static class Program
 			{
 				Console.WriteLine($"Running {InnoSetupPath}...");
 				Process.Start(InnoSetupCompiler, InnoSetupPath);
-				Console.WriteLine();
 			}
 			else
 			{
@@ -60,7 +59,7 @@ internal static class Program
 			}
 		}
 
-		Console.Write("Would you like to open InnoSetup directory? [Yes/no]: ");
+		Console.Write("\nWould you like to open InnoSetup directory? [Yes/no]: ");
 		string? response2 = Console.ReadLine()?.ToLower();
 		if (response2 is "yes" or "y")
 		{
