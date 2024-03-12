@@ -6,7 +6,6 @@ namespace ConfigurationNC.Scripts;
 internal static class CheckData
 {
 	private const string RegistryPath = @"Software\Stella Mod Launcher";
-	private const string WtRegistry = @"SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\wt.exe";
 
 	public static bool IsAStellaPlusSubscriber()
 	{
@@ -40,15 +39,5 @@ internal static class CheckData
 
 		value = null;
 		return false;
-	}
-
-	public static bool IsWindowsTerminalInstalled()
-	{
-		using RegistryKey? key = Registry.LocalMachine.OpenSubKey(WtRegistry);
-
-		bool isInstalled = key != null;
-		Program.Logger.Info($"WT is installed: {isInstalled}");
-
-		return isInstalled;
 	}
 }

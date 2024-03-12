@@ -45,8 +45,8 @@ internal static class Program
 		return httpClient;
 	});
 
-	public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v6" : "https://api.sefinek.net/api/v6";
-	// public static readonly string WebApi = "https://api.sefinek.net/api/v6";
+	// public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v6" : "https://api.sefinek.net/api/v6";
+	public static readonly string WebApi = "https://api.sefinek.net/api/v6";
 
 	// Supported languages
 	private static readonly string[] SupportedLangs = ["en", "pl"];

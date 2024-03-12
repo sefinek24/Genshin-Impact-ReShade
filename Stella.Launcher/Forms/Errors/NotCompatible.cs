@@ -39,9 +39,17 @@ public sealed partial class NotCompatible : Form
 			string newFolderPath = resourcesPath + bkpSuffix;
 			if (Directory.Exists(resourcesPath))
 			{
-				Directory.Move(resourcesPath, newFolderPath);
-				label1.Text += string.Format($@"{Environment.NewLine}{Resources.NotCompatible_WeveRenamedYourResourceFolderByAdding__ToTheEnd}", bkpSuffix);
-				Program.Logger.Info($"Renamed {resourcesPath} to {newFolderPath}");
+				try
+				{
+					Directory.Move(resourcesPath, newFolderPath);
+
+					label1.Text += string.Format($@"{Environment.NewLine}{Resources.NotCompatible_WeveRenamedYourResourceFolderByAdding__ToTheEnd}", bkpSuffix);
+					Program.Logger.Info($"Renamed {resourcesPath} to {newFolderPath}");
+				}
+				catch (Exception ex)
+				{
+					Program.Logger.Error(ex);
+				}
 			}
 			else
 			{

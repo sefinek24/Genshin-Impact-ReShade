@@ -114,40 +114,8 @@ public partial class Default : Form
 		_webView21 = webView21;
 
 
-		// Registry
-		Stages.UpdateStage(1, "Updating registry...");
-
-		string? resourcesPath = null;
-		using (RegistryKey? key = Registry.CurrentUser.OpenSubKey(Program.RegistryPath))
-		{
-			if (key != null) resourcesPath = key.GetValue("ResourcesPath") as string;
-		}
-
-		if (string.IsNullOrEmpty(resourcesPath))
-		{
-			Program.Logger.Error("Path of the resources was not found. Is null or empty");
-			MessageBox.Show(Resources.Default_ResourceDirNotFound, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-		}
-
-		if (!Directory.Exists(resourcesPath))
-		{
-			Program.Logger.Error($"Directory with the resources '{resourcesPath}' was not found");
-			MessageBox.Show(string.Format(Resources.Default_Directory_WasNotFound, resourcesPath), Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
-		}
-
-		if (string.IsNullOrEmpty(resourcesPath) || !Directory.Exists(resourcesPath))
-		{
-			_ = Cmd.Execute(new Cmd.CliWrap { App = Program.ConfigurationWindow });
-			Application.Exit();
-		}
-
-		ResourcesPath = resourcesPath;
-
-		Utils.AddLinkClickedEventHandler(_checkForUpdates_LinkLabel, CheckForUpdates.CheckUpdates_Click);
-
-
-		// App version
-		Stages.UpdateStage(2, "Loading Stella Mod into the Tray...");
+		// Tray
+		Stages.UpdateStage(1, "Loading Stella Mod Launcher and getting required data...");
 		Global.NotifyIconInstance = new NotifyIcon
 		{
 			Icon = Program.Ico,
@@ -171,15 +139,18 @@ public partial class Default : Form
 		});
 
 
+		// I don't remember >:
+		Utils.AddLinkClickedEventHandler(_checkForUpdates_LinkLabel, CheckForUpdates.CheckUpdates_Click);
+
+
 		// Get device ID
-		Stages.UpdateStage(3, "Generating device ID...");
 		Secret.GetDeviceId();
 		Program.SefinWebClient.DefaultRequestHeaders.Add("X-Device-ID", Secret._deviceId);
 
 
 		// Is the user a Stella Mod Plus subscriber?
 		string? registrySecret = Secret.GetTokenFromRegistry();
-		Stages.UpdateStage(4, "Verifying Stella Mod Plus subscription...");
+		Stages.UpdateStage(2, "Verifying Stella Mod Plus subscription...");
 		if (registrySecret != null)
 		{
 			string? data = await Secret.VerifyToken(registrySecret).ConfigureAwait(true);
@@ -271,7 +242,7 @@ public partial class Default : Form
 
 
 		// Check if all required files exists
-		Stages.UpdateStage(5, "Verifying required data and files...");
+		Stages.UpdateStage(3, "Verifying required data and files...");
 		await Files.ScanAsync().ConfigureAwait(true);
 
 		// Block the software in Russia
@@ -313,7 +284,7 @@ public partial class Default : Form
 
 
 		// Delete setup file from Temp directory
-		Stages.UpdateStage(6, "Checking the installation file after the update...");
+		Stages.UpdateStage(4, "Checking the installation file after the update...");
 		Files.DeleteSetupAsync();
 
 		// Loaded form
@@ -321,7 +292,7 @@ public partial class Default : Form
 
 
 		// Check ReShade & FPS Unlock version
-		Stages.UpdateStage(7, "Checking ReShade & FPS Unlock version...");
+		Stages.UpdateStage(5, "Checking ReShade & FPS Unlock version...");
 		Data.ReShadeVer = StellaVersion.Parse(FileVersionInfo.GetVersionInfo(Program.ReShadePath).ProductVersion!);
 		Data.UnlockerVer = StellaVersion.Parse(FileVersionInfo.GetVersionInfo(Program.FpsUnlockerExePath).ProductVersion!);
 		Data.GenshinStellaModVer = StellaVersion.Parse(FileVersionInfo.GetVersionInfo(Run.GsmPath).ProductVersion!);
@@ -330,12 +301,12 @@ public partial class Default : Form
 
 
 		// Discord RPC
-		Stages.UpdateStage(9, "Initializing Discord RPC...");
+		Stages.UpdateStage(6, "Initializing Discord RPC...");
 		Discord.InitRpc();
 
 
 		// Check for updates
-		Stages.UpdateStage(10, "Checking for updates...");
+		Stages.UpdateStage(7, "Checking for updates...");
 		int found = await CheckForUpdates.Analyze().ConfigureAwait(true);
 		switch (found)
 		{
@@ -362,7 +333,32 @@ public partial class Default : Form
 		}
 
 
-		Stages.UpdateStage(11, "Checking Genshin Stella Mod.exe and ReShade.ini...");
+		Stages.UpdateStage(8, "Checking required data...");
+		string? resourcesPath = null;
+		using (RegistryKey? key = Registry.CurrentUser.OpenSubKey(Program.RegistryPath))
+		{
+			if (key != null) resourcesPath = key.GetValue("ResourcesPath") as string;
+		}
+
+		if (string.IsNullOrEmpty(resourcesPath))
+		{
+			Program.Logger.Error("Path of the resources was not found. Is null or empty");
+			MessageBox.Show(Resources.Default_ResourceDirNotFound, Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+		}
+
+		if (!Directory.Exists(resourcesPath))
+		{
+			Program.Logger.Error($"Directory with the resources '{resourcesPath}' was not found");
+			MessageBox.Show(string.Format(Resources.Default_Directory_WasNotFound, resourcesPath), Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
+		}
+
+		if (string.IsNullOrEmpty(resourcesPath) || !Directory.Exists(resourcesPath))
+		{
+			_ = Cmd.Execute(new Cmd.CliWrap { App = Program.ConfigurationWindow });
+			Application.Exit();
+		}
+
+		ResourcesPath = resourcesPath;
 
 		// Check Genshin Stella Mod.exe
 		if (!File.Exists(Run.GsmPath) && !Debugger.IsAttached)
@@ -382,7 +378,7 @@ public partial class Default : Form
 		Shortcut.Check();
 
 
-		Stages.UpdateStage(12, "Finishing...");
+		Stages.UpdateStage(9, "Finishing...");
 
 		// Music
 		Music.PlayBg();
@@ -413,7 +409,7 @@ public partial class Default : Form
 		if (!string.IsNullOrEmpty(status)) Program.Logger.Error(status);
 
 		// Final
-		Stages.UpdateStage(13, Secret.IsStellaPlusSubscriber ? $"Welcome {Secret.Username} to the Stella Mod Launcher app!" : "Welcome to the Stella Mod Launcher app!");
+		Stages.UpdateStage(10, Secret.IsStellaPlusSubscriber ? $"Welcome {Secret.Username} to the Stella Mod Launcher app!" : "Welcome to the Stella Mod Launcher app!");
 		if (Secret.IsStellaPlusSubscriber) Music.PlaySound("other", "interface-welcome", 0.26f);
 
 

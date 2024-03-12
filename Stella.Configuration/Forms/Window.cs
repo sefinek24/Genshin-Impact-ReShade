@@ -10,7 +10,7 @@ public sealed partial class Window : Form
 	public static readonly string? AppName = Assembly.GetExecutingAssembly().GetName().Name;
 	public static readonly string AppVersion = Assembly.GetExecutingAssembly().GetName().Version!.ToString();
 	public static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
-	private static readonly string AppData = GetAppData();
+	private static readonly string AppData = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
 
 	private static readonly string PrepareCfgPath = Path.Combine(AppData, "prepare-stella.ini");
 	private static IniFile _prepareIni = null!;
@@ -33,19 +33,13 @@ public sealed partial class Window : Form
 		UpdateStyles();
 	}
 
-	private static string GetAppData()
-	{
-		return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
-	}
-
-
 	private void Main_Load(object sender, EventArgs e)
 	{
 		// Shortcut
 		checkBox2.Checked = _prepareIni.ReadInt("PrepareStella", "NewShortcutsOnDesktop", 1) != 0;
 
 		// Web shortcuts
-		if (!File.Exists(PrepareCfgPath)) checkBox3.Checked = _prepareIni.ReadInt("PrepareStella", "InternetShortcutsInStartMenu", 1) != 0;
+		checkBox3.Checked = _prepareIni.ReadInt("PrepareStella", "InternetShortcutsInStartMenu", 1) != 0;
 
 		// Resources
 		bool foundResources = CheckData.ResourcesPath();
@@ -56,8 +50,8 @@ public sealed partial class Window : Form
 		}
 		else
 		{
-			bool isMyPatron = CheckData.IsAStellaPlusSubscriber();
-			if (isMyPatron)
+			bool stellaModPlusSubscriber = CheckData.IsAStellaPlusSubscriber();
+			if (stellaModPlusSubscriber)
 			{
 				checkBox7.Checked = false;
 				checkBox7.Enabled = false;
@@ -73,16 +67,7 @@ public sealed partial class Window : Form
 		checkBox6.Checked = _prepareIni.ReadInt("PrepareStella", "DeleteReShadeCache", 1) != 0;
 
 		// Windows Terminal
-		bool wtIsInstalled = CheckData.IsWindowsTerminalInstalled();
-		if (!wtIsInstalled)
-		{
-			checkBox1.Checked = true;
-			checkBox1.Enabled = false;
-		}
-		else
-		{
-			checkBox1.Checked = _prepareIni.ReadInt("PrepareStella", "InstOrUpdWT", 1) != 0;
-		}
+		checkBox1.Checked = _prepareIni.ReadInt("PrepareStella", "InstOrUpdWT", 0) != 0;
 
 		SaveIniData();
 	}

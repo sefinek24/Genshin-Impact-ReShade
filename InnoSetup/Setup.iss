@@ -18,6 +18,18 @@ AppVerName={#AppName}
 AppPublisher={#AppPublisher}
 AppPublisherURL={#AppURL}
 AppContact=contact@sefinek.net
+AppSupportURL=https://genshin.sefinek.net/support
+AppUpdatesURL=https://genshin.sefinek.net/docs?page=changelog_v7
+VersionInfoCompany={#AppPublisher}
+VersionInfoProductName=Stella Mod Setup
+VersionInfoProductTextVersion={#AppVersion}
+VersionInfoDescription={#AppName + " v" + AppVersion + " Setup"}
+VersionInfoVersion={#AppVersion}
+VersionInfoProductVersion={#AppVersion}
+VersionInfoTextVersion={#AppVersion}
+VersionInfoCopyright={#AppCopyright}
+VersionInfoOriginalFileName=Genshin Stella Mod
+AppComments=Official installer for Stella Mod Launcher and Genshin Stella Mod.
 
 ArchitecturesInstallIn64BitMode=x64
 DefaultDirName={autopf}\Sefinek\Genshin-Stella-Mod
@@ -33,19 +45,6 @@ DirExistsWarning=no
 DisableProgramGroupPage=yes
 AlwaysShowGroupOnReadyPage=True
 AlwaysShowDirOnReadyPage=True
-
-AppSupportURL=https://genshin.sefinek.net/support
-AppUpdatesURL=https://genshin.sefinek.net/docs?page=changelog_v7
-VersionInfoCompany={#AppPublisher}
-VersionInfoProductName=Stella Mod Setup
-VersionInfoProductTextVersion={#AppVersion}
-VersionInfoDescription={#AppName + " v" + AppVersion + " Setup"}
-VersionInfoVersion={#AppVersion}
-VersionInfoProductVersion={#AppVersion}
-VersionInfoTextVersion={#AppVersion}
-VersionInfoCopyright={#AppCopyright}
-VersionInfoOriginalFileName=Genshin Stella Mod
-AppComments=Official installer for Stella Mod Launcher and Genshin Stella Mod.
 
 SetupIconFile="..\Assets\Images\InnoSetup\setup.ico"
 UninstallDisplayIcon="{app}\uninstall.ico"
