@@ -13,6 +13,8 @@ namespace StellaModLauncher.Scripts.Remote;
 
 internal static class CheckForUpdates
 {
+	public static int FoundUpdates = 0;
+
 	public static async Task<int> Analyze()
 	{
 		Default._checkForUpdates_LinkLabel!.LinkColor = Color.White;
@@ -47,7 +49,7 @@ internal static class CheckForUpdates
 			{
 				Default.UpdateIsAvailable = true;
 
-				NormalRelease.Run(remoteDbLauncherVersion, remoteLauncherDate, res.Launcher!.Beta);
+				await NormalRelease.Run(remoteDbLauncherVersion, remoteLauncherDate, res.Launcher!.Beta).ConfigureAwait(true);
 				return 2;
 			}
 
@@ -76,7 +78,7 @@ internal static class CheckForUpdates
 					Default.UpdateIsAvailable = true;
 
 					DateTime remoteResourcesDate = DateTime.Parse(res.Resources.Date!, null, DateTimeStyles.RoundtripKind).ToUniversalTime().ToLocalTime();
-					DownloadResources.Run(data?.Version!, remoteDbResourcesVersion, remoteResourcesDate);
+					await DownloadResources.Run(data?.Version!, remoteDbResourcesVersion, remoteResourcesDate).ConfigureAwait(true);
 					return 1;
 				}
 			}
@@ -117,12 +119,17 @@ internal static class CheckForUpdates
 			if (Secret.IsStellaPlusSubscriber)
 			{
 				int found = await CheckForUpdatesOfBenefits.Analyze().ConfigureAwait(true);
-				if (found == 1)
+				MessageBox.Show($@"CheckForUpdatesOfBenefits: {found}");
+				switch (found)
 				{
-					Default._checkForUpdates_LinkLabel.LinkColor = Color.Cyan;
-					Default._checkForUpdates_LinkLabel.Text = Resources.Default_UpdatingBenefits;
-					Default._updateIco_PictureBox!.Image = Resources.icons8_download_from_the_cloud;
-					return found;
+					case 1:
+						Default._checkForUpdates_LinkLabel.LinkColor = Color.Cyan;
+						Default._checkForUpdates_LinkLabel.Text = Resources.Default_UpdatingBenefits;
+						Default._updateIco_PictureBox!.Image = Resources.icons8_download_from_the_cloud;
+						return found;
+					case 666:
+						Labels.FailedToLoad();
+						return 666;
 				}
 			}
 
@@ -130,13 +137,7 @@ internal static class CheckForUpdates
 			// == Banned? ==
 			if (res!.IsBanned)
 			{
-				Default._version_LinkLabel!.Text = @"v-.-.-.-";
-				Default._checkForUpdates_LinkLabel!.Text = @"---";
-				Default._progressBar1!.Value = 100;
-				Default._preparingPleaseWait!.Text = @"Canceled.";
-
-				TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Paused);
-				TaskbarProgress.SetProgressValue(100);
+				Labels.FailedToLoad();
 
 				new Banned().Show();
 

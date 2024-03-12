@@ -69,4 +69,15 @@ internal static class Labels
 		TaskbarProgress.SetProgressValue(100);
 		TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Error);
 	}
+
+	public static void FailedToLoad()
+	{
+		Default._version_LinkLabel!.Text = @"v-.-.-.-";
+		Default._checkForUpdates_LinkLabel!.Text = @"---";
+		Default._progressBar1!.Value = 100;
+		Default._preparingPleaseWait!.Text = @"Canceled.";
+
+		TaskbarProgress.SetProgressState(TaskbarProgress.Flags.Paused);
+		TaskbarProgress.SetProgressValue(100);
+	}
 }
