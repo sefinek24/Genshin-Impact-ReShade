@@ -307,8 +307,33 @@ public partial class Default : Form
 
 		// Check for updates
 		Stages.UpdateStage(7, "Checking for updates...");
+		int found = await CheckForUpdates.Analyze().ConfigureAwait(true);
+		switch (found)
+		{
+			case 2:
+				return;
+			case 666:
+				WindowState = FormWindowState.Minimized;
+				return;
+		}
 
-		// Detect resource path
+		// Updated?
+		int updatedLauncher = Program.Settings.ReadInt("Updates", "UpdateAvailable", 0);
+		string oldVersion = Program.Settings.ReadString("Updates", "OldVersion");
+		if (updatedLauncher == 1 && oldVersion != Program.AppFileVersion)
+		{
+			Program.Settings.WriteInt("Updates", "UpdateAvailable", 0);
+			Program.Settings.Save();
+
+			Utils.UpdateStatusLabel(Resources.Default_Congratulations, Utils.StatusType.Success, false);
+			Utils.UpdateStatusLabel(string.Format(Resources.Default_SMLSuccessfullyUpdatedToVersion_, Program.AppFileVersion), Utils.StatusType.Info);
+
+			pictureBox5.Show();
+			viewChangelog_LinkLabel.Show();
+		}
+
+
+		Stages.UpdateStage(8, "Checking required data...");
 		string? resourcesPath = null;
 		using (RegistryKey? key = Registry.CurrentUser.OpenSubKey(Program.RegistryPath))
 		{
@@ -334,38 +359,6 @@ public partial class Default : Form
 		}
 
 		ResourcesPath = resourcesPath;
-
-		// Updates
-		int found = await CheckForUpdates.Analyze().ConfigureAwait(true);
-		switch (found)
-		{
-			case 2:
-				return;
-			case 666:
-				WindowState = FormWindowState.Minimized;
-				return;
-		}
-
-		MessageBox.Show($@"OK: {found}");
-
-
-		// Updated?
-		int updatedLauncher = Program.Settings.ReadInt("Updates", "UpdateAvailable", 0);
-		string oldVersion = Program.Settings.ReadString("Updates", "OldVersion");
-		if (updatedLauncher == 1 && oldVersion != Program.AppFileVersion)
-		{
-			Program.Settings.WriteInt("Updates", "UpdateAvailable", 0);
-			Program.Settings.Save();
-
-			Utils.UpdateStatusLabel(Resources.Default_Congratulations, Utils.StatusType.Success, false);
-			Utils.UpdateStatusLabel(string.Format(Resources.Default_SMLSuccessfullyUpdatedToVersion_, Program.AppFileVersion), Utils.StatusType.Info);
-
-			pictureBox5.Show();
-			viewChangelog_LinkLabel.Show();
-		}
-
-
-		Stages.UpdateStage(8, "Checking required data...");
 
 		// Check Genshin Stella Mod.exe
 		if (!File.Exists(Run.GsmPath) && !Debugger.IsAttached)

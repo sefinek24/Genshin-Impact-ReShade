@@ -11,20 +11,11 @@ internal static class CheckForUpdatesOfBenefits
 {
 	public static async Task<int> Analyze()
 	{
-		if (!Directory.Exists(Default.ResourcesPath))
-		{
-			Program.Logger.Error($"Default.ResourcesPath not exists: {Default.ResourcesPath}");
-
-			MessageBox.Show("The resources folder was not found. It probably does not exist, or the program encountered some issue in locating it.\n\nContact the developer if you need assistance.",
-				Program.AppNameVer, MessageBoxButtons.OK, MessageBoxIcon.Error);
-			return 666;
-		}
-
 		BenefitVersions? remoteVersions = await GetVersions().ConfigureAwait(true);
+
 
 		// 3DMigoto
 		string migotoVerPath = Path.Combine(Default.ResourcesPath!, "3DMigoto", "3dmigoto-version.json");
-		Program.Logger.Info($"Checking: {migotoVerPath}");
 		if (File.Exists(migotoVerPath))
 		{
 			string migotoJson = await File.ReadAllTextAsync(migotoVerPath).ConfigureAwait(true);
@@ -51,7 +42,6 @@ internal static class CheckForUpdatesOfBenefits
 
 		// Mods for 3DMigoto
 		string modsVerPath = Path.Combine(Default.ResourcesPath!, "3DMigoto", "mods-version.json");
-		Program.Logger.Info($"Checking: {modsVerPath}");
 		if (File.Exists(modsVerPath))
 		{
 			string modsJson = await File.ReadAllTextAsync(modsVerPath).ConfigureAwait(true);
@@ -80,7 +70,6 @@ internal static class CheckForUpdatesOfBenefits
 
 		// Addons
 		string addonsVersionPath = Path.Combine(Default.ResourcesPath!, "ReShade", "Addons", "version.json");
-		Program.Logger.Info($"Checking: {addonsVersionPath}");
 		if (File.Exists(addonsVersionPath))
 		{
 			string addonsJson = await File.ReadAllTextAsync(addonsVersionPath).ConfigureAwait(true);
@@ -106,7 +95,6 @@ internal static class CheckForUpdatesOfBenefits
 
 		// Presets
 		string presetsVersionPath = Path.Combine(Default.ResourcesPath!, "ReShade", "Presets", "3. Stella Mod Plus", "version.json");
-		Program.Logger.Info($"Checking: {presetsVersionPath}");
 		if (File.Exists(presetsVersionPath))
 		{
 			string presetsJson = await File.ReadAllTextAsync(presetsVersionPath).ConfigureAwait(true);
@@ -135,7 +123,6 @@ internal static class CheckForUpdatesOfBenefits
 
 		// Shaders
 		string shadersVersionPath = Path.Combine(Default.ResourcesPath!, "ReShade", "Shaders", "version.json");
-		Program.Logger.Info($"Checking: {shadersVersionPath}");
 		if (File.Exists(shadersVersionPath))
 		{
 			string shadersJson = await File.ReadAllTextAsync(shadersVersionPath).ConfigureAwait(true);
@@ -161,7 +148,6 @@ internal static class CheckForUpdatesOfBenefits
 
 		// Cmd files
 		string cmdVersionPath = Path.Combine(Program.AppPath, "data", "cmd", "patrons", "version.json");
-		Program.Logger.Info($"Checking: {cmdVersionPath}");
 		if (File.Exists(cmdVersionPath))
 		{
 			string cmdJson = await File.ReadAllTextAsync(cmdVersionPath).ConfigureAwait(true);

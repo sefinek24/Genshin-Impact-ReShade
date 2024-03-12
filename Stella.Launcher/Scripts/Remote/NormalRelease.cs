@@ -14,7 +14,7 @@ internal static class NormalRelease
 	public static readonly string SetupPathExe = Path.Combine(Path.GetTempPath(), "Stella-Mod-Update.exe");
 	private static readonly string DownloadUrl = Debugger.IsAttached ? "http://127.0.0.1:5180/Stella-Mod-Setup.exe" : "https://github.com/sefinek24/Genshin-Impact-ReShade/releases/latest/download/Stella-Mod-Setup.exe";
 
-	public static async Task Run(string? remoteVersion, DateTime remoteVerDate, bool beta)
+	public static async void Run(string? remoteVersion, DateTime remoteVerDate, bool beta)
 	{
 		// 1
 		Default._version_LinkLabel!.Text = $@"v{Program.AppFileVersion} → v{remoteVersion}";
