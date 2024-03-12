@@ -12,7 +12,7 @@ internal static class DownloadResources
 	private const string DownloadUrl = "https://github.com/sefinek24/Genshin-Stella-Resources/releases/latest/download/resources.zip";
 	private static string? _stellaResZip;
 
-	public static async void Run(string? localResVersion, string? remoteResVersion, DateTime remoteResDate)
+	public static async Task Run(string? localResVersion, string? remoteResVersion, DateTime remoteResDate)
 	{
 		// 1
 		Default._version_LinkLabel!.Text = $@"v{localResVersion} → v{remoteResVersion}";
