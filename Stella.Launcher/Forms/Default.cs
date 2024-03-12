@@ -339,14 +339,15 @@ public partial class Default : Form
 		int found = await CheckForUpdates.Analyze().ConfigureAwait(true);
 		switch (found)
 		{
-			case 2:
-				return;
 			case 666:
 				WindowState = FormWindowState.Minimized;
 				return;
 		}
 
-		MessageBox.Show($@"OK: {found}");
+		await Task.Run(() =>
+		{
+			while (UpdateIsAvailable) Task.Delay(1000).Wait();
+		}).ConfigureAwait(true);
 
 
 		// Updated?

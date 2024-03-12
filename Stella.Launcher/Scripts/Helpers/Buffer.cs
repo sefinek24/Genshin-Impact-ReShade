@@ -9,7 +9,7 @@ internal static class BufferHelper
 	 */
 	public static byte[] Get()
 	{
-		int bufferCfg = Program.Settings.ReadInt("Launcher", "BufferValue", 65536);
+		int bufferCfg = Program.Settings.ReadInt("Launcher", "BufferValue", 1048576);
 		return new byte[bufferCfg];
 	}
 }

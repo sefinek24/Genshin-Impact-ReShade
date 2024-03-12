@@ -13,8 +13,6 @@ namespace StellaModLauncher.Scripts.Remote;
 
 internal static class CheckForUpdates
 {
-	public static int FoundUpdates = 0;
-
 	public static async Task<int> Analyze()
 	{
 		Default._checkForUpdates_LinkLabel!.LinkColor = Color.White;
@@ -81,6 +79,8 @@ internal static class CheckForUpdates
 					await DownloadResources.Run(data?.Version!, remoteDbResourcesVersion, remoteResourcesDate).ConfigureAwait(true);
 					return 1;
 				}
+
+				Default.UpdateIsAvailable = false;
 			}
 
 
@@ -119,10 +119,14 @@ internal static class CheckForUpdates
 			if (Secret.IsStellaPlusSubscriber)
 			{
 				int found = await CheckForUpdatesOfBenefits.Analyze().ConfigureAwait(true);
-				MessageBox.Show($@"CheckForUpdatesOfBenefits: {found}");
 				switch (found)
 				{
+					case 0:
+						Default.UpdateIsAvailable = false;
+						break;
 					case 1:
+						Default.UpdateIsAvailable = true;
+
 						Default._checkForUpdates_LinkLabel.LinkColor = Color.Cyan;
 						Default._checkForUpdates_LinkLabel.Text = Resources.Default_UpdatingBenefits;
 						Default._updateIco_PictureBox!.Image = Resources.icons8_download_from_the_cloud;
@@ -150,7 +154,7 @@ internal static class CheckForUpdates
 			Default._updateIco_PictureBox!.Image = Resources.icons8_available_updates;
 
 			Default._version_LinkLabel!.Text = $@"v{(Program.AppVersion == Program.AppFileVersion ? Program.AppVersion : $"{Program.AppFileVersion}-alpha")}";
-
+			// if (actionOnClick) Default._webView21!.Visible = true;
 			Default.UpdateIsAvailable = false;
 			Program.Logger.Info($"Not found any new updates. AppVersion v{Program.AppVersion}; ProductVersion v{Program.AppFileVersion};");
 
@@ -159,15 +163,15 @@ internal static class CheckForUpdates
 			Labels.ShowStartGameBtns();
 			return 0;
 		}
-		catch (Exception e)
+		catch (Exception ex)
 		{
 			Default.UpdateIsAvailable = false;
 
 			Default._checkForUpdates_LinkLabel.LinkColor = Color.Red;
 			Default._checkForUpdates_LinkLabel.Text = Resources.Default_OhhSomethingWentWrong;
-			Utils.UpdateStatusLabel(e.Message, Utils.StatusType.Error);
+			Utils.UpdateStatusLabel(ex.Message, Utils.StatusType.Error);
 
-			Program.Logger.Error(string.Format(Resources.Default_SomethingWentWrongWhileCheckingForNewUpdates, e));
+			Program.Logger.Error(string.Format(Resources.Default_SomethingWentWrongWhileCheckingForNewUpdates, ex));
 			Labels.HideProgressbar(null, true);
 			return -1;
 		}
@@ -176,16 +180,22 @@ internal static class CheckForUpdates
 	public static async void CheckUpdates_Click(object? sender, LinkLabelLinkClickedEventArgs e)
 	{
 		if (Secret.IsStellaPlusSubscriber) Music.PlaySound("winxp", "hardware_insert");
+		Default._webView21!.Visible = false;
+
 		int update = await Analyze().ConfigureAwait(true);
 
-		if (update == -1)
+		switch (update)
 		{
-			Music.PlaySound("winxp", "hardware_fail");
-			return;
+			case -1:
+				Default._webView21!.Visible = false;
+				Music.PlaySound("winxp", "hardware_fail");
+				return;
+			case 0:
+				Default._webView21!.Visible = true;
+				break;
 		}
 
 		if (update != 0) return;
-
 		if (Secret.IsStellaPlusSubscriber) Music.PlaySound("winxp", "hardware_remove");
 
 		Default._checkForUpdates_LinkLabel!.LinkColor = Color.LawnGreen;

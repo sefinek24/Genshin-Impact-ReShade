@@ -29,6 +29,8 @@ internal static class Labels
 
 	public static void ShowProgressbar()
 	{
+		// Default._webView21!.Visible = false;
+
 		Default._progressBar1!.Show();
 		Default._preparingPleaseWait!.Show();
 
@@ -45,6 +47,8 @@ internal static class Labels
 
 	public static void HideProgressbar(string? successText, bool error)
 	{
+		// Default._webView21!.Visible = true;
+
 		Default._progressBar1!.Hide();
 		Default._progressBar1.Value = 0;
 		Default._preparingPleaseWait!.Hide();
@@ -72,6 +76,8 @@ internal static class Labels
 
 	public static void FailedToLoad()
 	{
+		// Default._webView21!.Visible = false;
+
 		Default._version_LinkLabel!.Text = @"v-.-.-.-";
 		Default._checkForUpdates_LinkLabel!.Text = @"---";
 		Default._progressBar1!.Value = 100;

@@ -1,4 +1,3 @@
-using System.Diagnostics;
 using ByteSizeLib;
 using CliWrap.Builders;
 using StellaModLauncher.Forms;
@@ -12,7 +11,9 @@ namespace StellaModLauncher.Scripts.Remote;
 internal static class NormalRelease
 {
 	public static readonly string SetupPathExe = Path.Combine(Path.GetTempPath(), "Stella-Mod-Update.exe");
-	private static readonly string DownloadUrl = Debugger.IsAttached ? "http://127.0.0.1:5180/Stella-Mod-Setup.exe" : "https://github.com/sefinek24/Genshin-Impact-ReShade/releases/latest/download/Stella-Mod-Setup.exe";
+
+	// private static readonly string DownloadUrl = Debugger.IsAttached ? "http://127.0.0.1:5180/Stella-Mod-Setup.exe" : "https://github.com/sefinek24/Genshin-Impact-ReShade/releases/latest/download/Stella-Mod-Setup.exe";
+	private static readonly string DownloadUrl = "https://github.com/sefinek24/Genshin-Impact-ReShade/releases/latest/download/Stella-Mod-Setup.exe";
 
 	public static async Task Run(string? remoteVersion, DateTime remoteVerDate, bool beta)
 	{
