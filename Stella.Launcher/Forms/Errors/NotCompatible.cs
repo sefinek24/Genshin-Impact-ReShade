@@ -38,7 +38,6 @@ public sealed partial class NotCompatible : Form
 
 			string newFolderPath = resourcesPath + bkpSuffix;
 			if (Directory.Exists(resourcesPath))
-			{
 				try
 				{
 					Directory.Move(resourcesPath, newFolderPath);
@@ -50,11 +49,8 @@ public sealed partial class NotCompatible : Form
 				{
 					Program.Logger.Error(ex);
 				}
-			}
 			else
-			{
 				Program.Logger.Info($"Resource path {resourcesPath} not found. Unable to rename folder to {newFolderPath}");
-			}
 		}
 
 		using (RegistryKey key = Registry.CurrentUser.CreateSubKey(Program.RegistryPath))
