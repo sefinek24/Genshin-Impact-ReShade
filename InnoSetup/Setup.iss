@@ -20,7 +20,6 @@ AppPublisherURL={#AppURL}
 AppContact=contact@sefinek.net
 
 ArchitecturesInstallIn64BitMode=x64
-ArchitecturesAllowed=x64
 DefaultDirName={autopf}\Sefinek\Genshin-Stella-Mod
 DisableDirPage=no
 DisableWelcomePage=no
@@ -32,6 +31,8 @@ OutputBaseFilename=Stella-Mod-Setup_{#AppVersion}
 WizardStyle=classic
 DirExistsWarning=no
 DisableProgramGroupPage=yes
+AlwaysShowGroupOnReadyPage=True
+AlwaysShowDirOnReadyPage=True
 
 AppSupportURL=https://genshin.sefinek.net/support
 AppUpdatesURL=https://genshin.sefinek.net/docs?page=changelog_v7
@@ -43,9 +44,11 @@ VersionInfoVersion={#AppVersion}
 VersionInfoProductVersion={#AppVersion}
 VersionInfoTextVersion={#AppVersion}
 VersionInfoCopyright={#AppCopyright}
+VersionInfoOriginalFileName=Genshin Stella Mod
+AppComments=Official installer for Stella Mod Launcher and Genshin Stella Mod.
 
 SetupIconFile="..\Assets\Images\InnoSetup\setup.ico"
-UninstallDisplayIcon="..\Assets\Images\InnoSetup\uninstall.ico"
+UninstallDisplayIcon="{app}\uninstall.ico"
 WizardImageFile="..\Assets\Images\InnoSetup\WizardImageFile.bmp"
 WizardSmallImageFile="..\Assets\Images\InnoSetup\WizardSmallImageFile.bmp"
 
@@ -82,6 +85,7 @@ Name: "CreateDesktopIcon"; Description: "{cm:CreateDesktopIcon}"; GroupDescripti
 
 [Files]
 Source: "..\Build\Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "..\Assets\Images\InnoSetup\uninstall.ico"; DestDir: "{app}";
 Source: "Data\music.mp3"; Flags: dontcopy
 Source: "Data\Dependencies\bass\bass.dll"; Flags: dontcopy
 
@@ -256,7 +260,6 @@ begin
     Result := 1;
 end;
 
-{ ///////////////////////////////////////////////////////////////////// }
 procedure CurStepChanged(CurStep: TSetupStep);
 begin
   if (CurStep=ssInstall) then
