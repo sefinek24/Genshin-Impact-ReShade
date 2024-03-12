@@ -30,10 +30,8 @@ LicenseFile=..\Build\Release\net8.0-windows\LICENSE
 PrivilegesRequired=none
 OutputBaseFilename=Stella-Mod-Setup_{#AppVersion}
 WizardStyle=classic
-
 DirExistsWarning=no
 DisableProgramGroupPage=yes
-UninstallDisplayIcon="..\Assets\Images\Icons\setup\52x52.ico"
 
 AppSupportURL=https://genshin.sefinek.net/support
 AppUpdatesURL=https://genshin.sefinek.net/docs?page=changelog_v7
@@ -46,9 +44,10 @@ VersionInfoProductVersion={#AppVersion}
 VersionInfoTextVersion={#AppVersion}
 VersionInfoCopyright={#AppCopyright}
 
+SetupIconFile="..\Assets\Images\InnoSetup\setup.ico"
+UninstallDisplayIcon="..\Assets\Images\InnoSetup\uninstall.ico"
 WizardImageFile="..\Assets\Images\InnoSetup\WizardImageFile.bmp"
 WizardSmallImageFile="..\Assets\Images\InnoSetup\WizardSmallImageFile.bmp"
-SetupIconFile="..\Assets\Images\Icons\setup\52x52.ico"
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
@@ -83,6 +82,8 @@ Name: "CreateDesktopIcon"; Description: "{cm:CreateDesktopIcon}"; GroupDescripti
 
 [Files]
 Source: "..\Build\Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "Data\music.mp3"; Flags: dontcopy
+Source: "Data\Dependencies\bass\bass.dll"; Flags: dontcopy
 
 [Icons]
 Name: "{autodesktop}\Stella Mod Launcher"; Filename: "{app}\net8.0-windows\{#AppExeName}"; Tasks: CreateDesktopIcon
@@ -98,6 +99,50 @@ Filename: "{app}\net8.0-windows\{#AppExeName}"; WorkingDir: "{app}"; Description
 Filename: "{app}\net8.0-windows\{#AppExeName}"; WorkingDir: "{app}"; Description: "{cm:LaunchProgram,{#StringChange(AppName, '&', '&&')}} Launcher"; Flags: nowait postinstall runascurrentuser; Check: IsUpdating
 
 [Code]
+const  
+  BASS_SAMPLE_LOOP = 0;
+  BASS_UNICODE = $80000000;
+  BASS_CONFIG_GVOL_STREAM = 5;
+const
+  #ifndef UNICODE
+    EncodingFlag = 0;
+  #else
+    EncodingFlag = BASS_UNICODE;
+  #endif
+type
+  HSTREAM = DWORD;
+
+function BASS_Init(device: LongInt; freq, flags: DWORD; 
+  win: HWND; clsid: Cardinal): BOOL;
+  external 'BASS_Init@files:bass.dll stdcall';
+function BASS_StreamCreateFile(mem: BOOL; f: string; offset1: DWORD; 
+  offset2: DWORD; length1: DWORD; length2: DWORD; flags: DWORD): HSTREAM;
+  external 'BASS_StreamCreateFile@files:bass.dll stdcall';
+function BASS_ChannelPlay(handle: DWORD; restart: BOOL): BOOL; 
+  external 'BASS_ChannelPlay@files:bass.dll stdcall';
+function BASS_SetConfig(option: DWORD; value: DWORD ): BOOL;
+  external 'BASS_SetConfig@files:bass.dll stdcall';
+function BASS_Free: BOOL;
+  external 'BASS_Free@files:bass.dll stdcall';
+
+procedure InitializeWizard;
+var
+  StreamHandle: HSTREAM;
+begin
+  ExtractTemporaryFile('music.mp3');
+  if BASS_Init(-1, 44100, 0, 0, 0) then
+  begin
+    StreamHandle := BASS_StreamCreateFile(False, ExpandConstant('{tmp}\music.mp3'), 0, 0, 0, 0, EncodingFlag or BASS_SAMPLE_LOOP);
+    BASS_SetConfig(BASS_CONFIG_GVOL_STREAM, 2500);
+    BASS_ChannelPlay(StreamHandle, False);
+  end;
+end;
+
+procedure DeinitializeSetup;
+begin
+  BASS_Free;
+end;
+
 { ///////////////////////////////////////////////////////////////////// } 
 function InitializeSetup: Boolean;
 begin
