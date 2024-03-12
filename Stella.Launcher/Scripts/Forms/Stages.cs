@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using StellaModLauncher.Forms;
 using StellaModLauncher.Scripts.Forms.MainForm;
 using StellaPLFNet;
@@ -24,7 +25,7 @@ internal static class Stages
 
 		// Finish
 		if (AllStages != stage) return;
-		await Task.Delay(1300).ConfigureAwait(true);
+		if (!Debugger.IsAttached) await Task.Delay(1200).ConfigureAwait(true);
 
 		Labels.HideProgressbar(null, false);
 		Default._webView21!.Visible = true;

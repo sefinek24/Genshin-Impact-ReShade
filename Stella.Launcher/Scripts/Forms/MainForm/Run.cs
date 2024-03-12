@@ -28,8 +28,8 @@ internal static class Run
 				App = Terminal,
 				Arguments = new ArgumentsBuilder().Add(GsmPath) // 0
 					.Add(Program.AppFileVersion!) // 1
-					.Add(Data.ReShadeVer) // 2
-					.Add(Data.UnlockerVer) // 3
+					.Add(Data.ReShadeVer!) // 2
+					.Add(Data.UnlockerVer!) // 3
 					.Add(Secret.IsStellaPlusSubscriber ? 1 : 6) // 4
 			},
 			"cmd" => new Cmd.CliWrap
@@ -38,8 +38,8 @@ internal static class Run
 				WorkingDir = Program.AppPath,
 				Arguments = new ArgumentsBuilder().Add(BatchRunPatrons) // 0
 					.Add(Program.AppFileVersion!) // 1
-					.Add(Data.ReShadeVer) // 2
-					.Add(Data.UnlockerVer) // 3
+					.Add(Data.ReShadeVer!) // 2
+					.Add(Data.UnlockerVer!) // 3
 					.Add(Secret.IsStellaPlusSubscriber ? 1 : 6) // 4
 					.Add(Secret.IsStellaPlusSubscriber ? $"\"{Default.ResourcesPath}\\3DMigoto\"" : "0") // 5 
 					.Add(await Utils.GetGameVersion().ConfigureAwait(false)) // 6
@@ -63,8 +63,8 @@ internal static class Run
 				App = Terminal,
 				Arguments = new ArgumentsBuilder().Add(GsmPath) // 0
 					.Add(Program.AppFileVersion!) // 1
-					.Add(Data.ReShadeVer) // 2
-					.Add(Data.UnlockerVer) // 3
+					.Add(Data.ReShadeVer!) // 2
+					.Add(Data.UnlockerVer!) // 3
 					.Add(3) // 4
 			},
 			"cmd" => new Cmd.CliWrap
@@ -73,8 +73,8 @@ internal static class Run
 				WorkingDir = Program.AppPath,
 				Arguments = new ArgumentsBuilder().Add(BatchRunPatrons) // 0
 					.Add(Program.AppFileVersion!) // 1
-					.Add(Data.ReShadeVer) // 2
-					.Add(Data.UnlockerVer) // 3
+					.Add(Data.ReShadeVer!) // 2
+					.Add(Data.UnlockerVer!) // 3
 					.Add(3) // 4
 					.Add(0) // 5 
 					.Add(await Utils.GetGameVersion().ConfigureAwait(false)) // 6
@@ -98,8 +98,8 @@ internal static class Run
 				App = Terminal,
 				Arguments = new ArgumentsBuilder().Add(GsmPath) // 0
 					.Add(Program.AppFileVersion!) // 1
-					.Add(Data.ReShadeVer) // 2
-					.Add(Data.UnlockerVer) // 3
+					.Add(Data.ReShadeVer!) // 2
+					.Add(Data.UnlockerVer!) // 3
 					.Add(4) // 4
 			},
 			"cmd" => new Cmd.CliWrap
@@ -108,8 +108,8 @@ internal static class Run
 				WorkingDir = Program.AppPath,
 				Arguments = new ArgumentsBuilder().Add(BatchRunPatrons) // 0
 					.Add(Program.AppFileVersion!) // 1
-					.Add(Data.ReShadeVer) // 2
-					.Add(Data.UnlockerVer) // 3
+					.Add(Data.ReShadeVer!) // 2
+					.Add(Data.UnlockerVer!) // 3
 					.Add(4) // 4
 					.Add(0) // 5 
 					.Add(await Utils.GetGameVersion().ConfigureAwait(false)) // 6
@@ -140,8 +140,8 @@ internal static class Run
 				App = Terminal,
 				Arguments = new ArgumentsBuilder().Add(GsmPath) // 0
 					.Add(Program.AppVersion!) // 1
-					.Add(Data.ReShadeVer) // 2
-					.Add(Data.UnlockerVer) // 3
+					.Add(Data.ReShadeVer!) // 2
+					.Add(Data.UnlockerVer!) // 3
 					.Add(5) // 4
 			},
 			"cmd" => new Cmd.CliWrap
@@ -150,8 +150,8 @@ internal static class Run
 				WorkingDir = Program.AppPath,
 				Arguments = new ArgumentsBuilder().Add(BatchRunPatrons) // 0
 					.Add(Program.AppVersion!) // 1
-					.Add(Data.ReShadeVer) // 2
-					.Add(Data.UnlockerVer) // 3
+					.Add(Data.ReShadeVer!) // 2
+					.Add(Data.UnlockerVer!) // 3
 					.Add(5) // 4
 					.Add(Secret.IsStellaPlusSubscriber ? $"\"{Default.ResourcesPath}\\3DMigoto\"" : "0") // 5 
 					.Add(await Utils.GetGameVersion().ConfigureAwait(false)) // 6

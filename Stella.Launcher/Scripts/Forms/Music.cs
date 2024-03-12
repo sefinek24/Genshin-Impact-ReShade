@@ -24,7 +24,7 @@ internal static class Music
 		return File.Exists(wavPath) ? wavPath : null;
 	}
 
-	public static async void PlaySound(string dir, string fileName, float? volume = 0.58f)
+	public static async void PlaySound(string dir, string fileName, float? volume = 0.59f)
 	{
 		if (Program.Settings.ReadInt("Launcher", "EnableBgSounds", 1) == 0) return;
 
