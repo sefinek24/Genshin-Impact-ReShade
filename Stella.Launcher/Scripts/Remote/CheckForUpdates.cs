@@ -47,7 +47,7 @@ internal static class CheckForUpdates
 			{
 				Default.UpdateIsAvailable = true;
 
-				await NormalRelease.Run(remoteDbLauncherVersion, remoteLauncherDate, res.Launcher!.Beta).ConfigureAwait(true);
+				await NormalRelease.Run(remoteDbLauncherVersion, remoteLauncherDate, res.Launcher!.Beta, res.UpdateUrl).ConfigureAwait(true);
 				return 2;
 			}
 

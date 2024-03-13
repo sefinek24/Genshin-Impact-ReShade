@@ -34,8 +34,8 @@ internal static class Labels
 		Default._progressBar1!.Show();
 		Default._preparingPleaseWait!.Show();
 
-		Default._pictureBox2!.Hide();
-		Default._changeBg_LinkLabel!.Hide();
+		// Default._pictureBox2!.Hide();
+		// Default._changeBg_LinkLabel!.Hide();
 
 		Default._discordServerIco_Picturebox!.Hide();
 		Default._discordServer_LinkLabel!.Hide();
@@ -53,8 +53,8 @@ internal static class Labels
 		Default._progressBar1.Value = 0;
 		Default._preparingPleaseWait!.Hide();
 
-		Default._pictureBox2!.Show();
-		Default._changeBg_LinkLabel!.Show();
+		// Default._pictureBox2!.Show();
+		// Default._changeBg_LinkLabel!.Show();
 
 		Default._discordServerIco_Picturebox!.Show();
 		Default._discordServer_LinkLabel!.Show();

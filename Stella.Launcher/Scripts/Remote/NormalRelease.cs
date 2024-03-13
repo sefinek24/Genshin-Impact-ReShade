@@ -11,11 +11,9 @@ namespace StellaModLauncher.Scripts.Remote;
 internal static class NormalRelease
 {
 	public static readonly string SetupPathExe = Path.Combine(Path.GetTempPath(), "Stella-Mod-Update.exe");
+	private static string _downloadUrl = "https://github.com/sefinek24/Genshin-Impact-ReShade/releases/latest/download/Stella-Mod-Setup.exe";
 
-	// private static readonly string DownloadUrl = Debugger.IsAttached ? "http://127.0.0.1:5180/Stella-Mod-Setup.exe" : "https://github.com/sefinek24/Genshin-Impact-ReShade/releases/latest/download/Stella-Mod-Setup.exe";
-	private static readonly string DownloadUrl = "https://github.com/sefinek24/Genshin-Impact-ReShade/releases/latest/download/Stella-Mod-Setup.exe";
-
-	public static async Task Run(string? remoteVersion, DateTime remoteVerDate, bool beta)
+	public static async Task Run(string? remoteVersion, DateTime remoteVerDate, bool beta, string downloadUrl)
 	{
 		// 1
 		Default._version_LinkLabel!.Text = $@"v{Program.AppFileVersion} → v{remoteVersion}";
@@ -42,12 +40,13 @@ internal static class NormalRelease
 		Utils.UpdateStatusLabel(string.Format(Resources.NormalRelease_NewVersionFrom_IsAvailable, remoteVerDate), Utils.StatusType.Info);
 		Program.Logger.Info($"New release from {remoteVerDate} is available: v{Program.AppFileVersion} → v{remoteVersion} ({(beta ? "Beta" : "Stable")})");
 
+		_downloadUrl = downloadUrl;
 
 		// Check update size
 		string? updateSize = null;
 		try
 		{
-			HttpRequestMessage request = new(HttpMethod.Head, DownloadUrl);
+			HttpRequestMessage request = new(HttpMethod.Head, downloadUrl);
 			HttpResponseMessage response = await Program.SefinWebClient.SendAsync(request).ConfigureAwait(true);
 			response.EnsureSuccessStatusCode();
 
@@ -115,7 +114,7 @@ internal static class NormalRelease
 
 		try
 		{
-			HttpResponseMessage response = await Program.SefinWebClient.GetAsync(DownloadUrl, HttpCompletionOption.ResponseHeadersRead).ConfigureAwait(true);
+			HttpResponseMessage response = await Program.SefinWebClient.GetAsync(_downloadUrl, HttpCompletionOption.ResponseHeadersRead).ConfigureAwait(true);
 			response.EnsureSuccessStatusCode();
 
 			long totalBytes = response.Content.Headers.ContentLength ?? 0;

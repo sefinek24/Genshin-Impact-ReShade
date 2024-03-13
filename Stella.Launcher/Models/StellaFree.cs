@@ -20,6 +20,7 @@ public class StellaApiVersion
 	public bool Success { get; set; }
 	public int Status { get; set; }
 	public LauncherData? Launcher { get; set; }
+	public string UpdateUrl { get; set; }
 	public PublicResourcesData? Resources { get; set; }
 	public bool IsBanned { get; set; }
 }
