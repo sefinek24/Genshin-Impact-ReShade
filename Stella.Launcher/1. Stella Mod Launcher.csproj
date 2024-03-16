@@ -718,7 +718,7 @@
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
 		<None Update="NLog.config">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
 		<None Update="www\LICENSE">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
