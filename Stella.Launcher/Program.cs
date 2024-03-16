@@ -34,7 +34,7 @@ internal static class Program
 
 	// Links
 	private static readonly string AppWebsiteSub = "https://genshin.sefinek.net";
-	public static readonly string? AppWebsiteFull = "https://sefinek.net/genshin-impact-reshade?referrer=launcher";
+	public static readonly string? AppWebsiteFull = "https://sefinek.net/genshin-impact-reshade";
 
 	// HttpClient
 	private static readonly Lazy<HttpClient> HClient = new(() =>
@@ -45,8 +45,8 @@ internal static class Program
 		return httpClient;
 	});
 
-	// public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v6" : "https://api.sefinek.net/api/v6";
-	public static readonly string WebApi = "https://api.sefinek.net/api/v6";
+	public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v6" : "https://api.sefinek.net/api/v6";
+	// public static readonly string WebApi = "https://api.sefinek.net/api/v6";
 
 	// Supported languages
 	private static readonly string[] SupportedLangs = ["en", "pl"];
