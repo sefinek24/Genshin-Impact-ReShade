@@ -10,7 +10,7 @@
     <br>
     <a href="https://github.com/sefinek24/Genshin-Impact-ReShade" title="Repository size"><img src="https://img.shields.io/github/repo-size/sefinek24/Genshin-Impact-ReShade?label=Repo%20size" alt="Repo size"></a>
     <a href="https://github.com/sefinek24/Genshin-Impact-ReShade/commits/main" title="Commit activity"><img src="https://img.shields.io/github/commit-activity/w/sefinek24/Genshin-Impact-ReShade?label=Commit%20activity" alt="Commit activity"></a>
-    <a href="https://discord.com/invite/SVcbaRc7gH" title="Official Discord server"><img src="https://img.shields.io/discord/1044713077125435492?label=Discord%20server" alt="Our Discord server"></a>
+    <a href="https://discord.com/invite/k2wfGRq4dT" title="Official Discord server"><img src="https://img.shields.io/discord/1044713077125435492?label=Discord%20server" alt="Our Discord server"></a>
     <h3>
         🌠 » To enjoy the enhanced version (mods & 3DMigoto), subscribe to <a href="https://sefinek.net/genshin-impact-reshade/subscription" title="Subscription: Unlock more benefits - Genshin Stella Mod">Stella Mod Plus</a> « 🌠<br>
         ⭐ » Star the repository if you like it. Have a pleasant day or night! « ⭐
@@ -46,7 +46,7 @@
     <a href="https://sefinek.net/genshin-impact-reshade/download?referrer=stella_readme&time=undefined" title="Download stable release"><img src="https://sefinek.net/images/stella/mafumafu/download.png" alt="Download" height="144px"></a>
     <br>
     <a href="https://genshin.sefinek.net" title="Official website"><img src="https://sefinek.net/images/stella/mafumafu/website.png" alt="Website" height="138px"></a>
-    <a href="https://discord.com/invite/SVcbaRc7gH" title="Our Discord server"><img src="https://sefinek.net/images/stella/mafumafu/discord.png" alt="Discord" height="138px"></a>
+    <a href="https://discord.com/invite/k2wfGRq4dT" title="Our Discord server"><img src="https://sefinek.net/images/stella/mafumafu/discord.png" alt="Discord" height="138px"></a>
 </div>
 <br>
 
