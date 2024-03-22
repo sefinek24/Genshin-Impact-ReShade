@@ -63,15 +63,9 @@ If you have any questions or need assistance, please don't hesitate to reach out
 
 Thank you! 🌟
 
-## 📷 〢 Outdated screenshots (see the latest [here](https://sefinek.net/genshin-impact-reshade/gallery?page=1))
+## 📷 〢 Screenshot (see more [here](https://sefinek.net/genshin-impact-reshade/gallery?page=1))
 <div id="images">
-    <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Stella.Launcher/data/images/backgrounds/main/nahida/1.png" title="See preview [1.png]">
-        <img src="Stella.Launcher/data/images/backgrounds/main/nahida/1.png" alt="Screenshot number 1">
-    </a>
-    <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Stella.Launcher/data/images/backgrounds/main/hutao/4.png" title="See preview [4.png]">
-        <img src="Stella.Launcher/data/images/backgrounds/main/hutao/4.png" alt="Screenshot number 2">
-    </a>
-    <a href="https://raw.githubusercontent.com/sefinek24/Genshin-Impact-ReShade/main/Stella.Launcher/data/images/backgrounds/main/yaoyao/2.png" title="See preview [2.png]">
-        <img src="Stella.Launcher/data/images/backgrounds/main/yaoyao/2.png" alt="Screenshot number 3">
+    <a href="https://sefinek.net/images/stella/gallery/v7.9.7/1-2.png" title="See preview">
+        <img src="https://sefinek.net/images/stella/gallery/v7.9.7/1-2.png" alt="Screenshot number 1">
     </a>
 </div>
