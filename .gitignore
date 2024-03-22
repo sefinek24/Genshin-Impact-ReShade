@@ -27,19 +27,6 @@ Screenshots/*.bmp
 
 
 # Solutions
-## Stella Mod Launcher
-Stella.LauncherOldOld/bin
-Stella.LauncherOld/obj
-Stella.LauncherOld/data/cmd/run_patrons.cmd
-Stella.Launcher/bin
-Stella.Launcher/obj
-
-## Genshin Stella Mod
-Stella.WorkerOld/Action.cs
-Stella.WorkerOld/Scripts/Logic.cs
-Stella.WorkerOld/bin
-Stella.WorkerOld/obj
-
 ## Configuration Window
 Stella.Configuration/bin
 Stella.Configuration/obj
@@ -47,8 +34,6 @@ Stella.Configuration/obj
 ## Prepare Stella Mod
 Stella.Prepare/bin
 Stella.Prepare/obj
-Stella.PrepareOld/bin
-Stella.PrepareOld/obj
 
 ## Information 48793142
 Stella.Info-48793142/bin
