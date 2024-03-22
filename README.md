@@ -59,7 +59,7 @@ To access the documentation, please visit our [official website](https://sefinek
 We've ensured that the documentation is comprehensive and easy to navigate, allowing you to find everything you need quickly.
 
 We appreciate your understanding and hope you find the new documentation helpful.
-If you have any questions or need assistance, please don't hesitate to reach out to us on our Discord server.
+If you have any questions or need assistance, please don't hesitate to reach out to us on our [Discord server](https://discord.com/invite/k2wfGRq4dT).
 
 Thank you! 🌟
 
