@@ -28,7 +28,7 @@ internal static class Start
 
 	// Dependencies
 	public static readonly string VcLibsAppx = Path.Combine("dependencies", "Microsoft.VCLibs.x64.14.00.Desktop.appx");
-	public static readonly string WtMsixBundle = Path.Combine("dependencies", "Microsoft.WindowsTerminal_1.19.10573.0_8wekyb3d8bbwe.msixbundle");
+	public static readonly string WtMsixBundle = Path.Combine("dependencies", "Microsoft.WindowsTerminal_1.19.10821.0_8wekyb3d8bbwe.msixbundle");
 
 	// Other
 	public static readonly string Line = "===============================================================================================";
