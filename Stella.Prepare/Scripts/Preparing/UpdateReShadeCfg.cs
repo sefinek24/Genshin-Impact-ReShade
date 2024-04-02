@@ -19,7 +19,7 @@ internal static class UpdateReShadeCfg
 		await DownloadFileAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.ini", reshadeIniPath).ConfigureAwait(false);
 		await DownloadFileAsync("https://cdn.sefinek.net/resources/v3/genshin-stella-mod/reshade/ReShade.log", reshadeLogPath).ConfigureAwait(false);
 
-		if (!File.Exists(reshadeIniPath) || !File.Exists(reshadeLogPath)) Log.ErrorAndExit(new Exception($"Something went wrong. Config or log file for ReShade was not found in: {giGame}"), false, false);
+		if (!File.Exists(reshadeIniPath) || !File.Exists(reshadeLogPath)) Log.ErrorAndExit(new Exception($"Something went wrong. Config or log file for ReShade was not found in: {giGame}"));
 
 		Start.Logger.Info($"{Path.GetFileName(reshadeIniPath)} and {Path.GetFileName(reshadeLogPath)} were successfully downloaded.");
 

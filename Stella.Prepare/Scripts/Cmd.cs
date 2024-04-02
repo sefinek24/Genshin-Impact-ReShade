@@ -107,7 +107,7 @@ internal abstract class Cmd
 					Console.WriteLine(@"Installing Microsoft Visual C++ 2015 UWP Desktop Package...");
 
 					if (!File.Exists(Start.VcLibsAppx))
-						Log.ErrorAndExit(new Exception($"I can't find a required file. Please unpack downloaded zip archive.\nNot found: {Start.VcLibsAppx}"), false, false);
+						Log.ErrorAndExit(new Exception($"I can't find a required file. Please unpack downloaded zip archive.\nNot found: {Start.VcLibsAppx}"));
 
 					Start.Logger.Info("Installing missing dependency VCLibs...");
 					await CliWrap("powershell", $"Add-AppxPackage -Path {Start.VcLibsAppx}", null).ConfigureAwait(false);
@@ -158,8 +158,7 @@ internal abstract class Cmd
 					case 5:
 						Log.ErrorAndExit(
 							new Exception(
-								$"Software was denied access to a location for the purposes of saving, copying, opening, or loading files.\nRestart your computer or suspend antivirus program and try again.{info}"),
-							false, false);
+								$"Software was denied access to a location for the purposes of saving, copying, opening, or loading files.\nRestart your computer or suspend antivirus program and try again.{info}"));
 						return;
 
 					default:

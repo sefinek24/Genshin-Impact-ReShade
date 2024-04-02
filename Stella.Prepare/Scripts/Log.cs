@@ -39,7 +39,7 @@ internal abstract class Log
 		TryAgain(tryAgain);
 	}
 
-	public static void ErrorAndExit(Exception log, bool hideError, bool reportIssue)
+	public static void ErrorAndExit(Exception log, bool hideError = false, bool reportIssue = false)
 	{
 		Start.Logger.Error(log);
 

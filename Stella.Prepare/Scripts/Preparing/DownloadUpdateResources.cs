@@ -62,7 +62,7 @@ internal static class DownloadUpdateResources
 
 			if (percentage == lastPercentage) continue;
 			Console.SetCursorPosition(0, Console.CursorTop);
-			Console.Write($"\rDownloading Stella Mod resources... {totalBytes}.{receivedBytes} bytes ({percentage}%) at {speed / 1024:0.00} KB/s ");
+			Console.Write($"\rDownloading Stella Mod resources... {receivedBytes}/{totalBytes} bytes ({percentage}%) at {speed / 1024:0.00} KB/s ");
 			lastPercentage = percentage;
 		}
 

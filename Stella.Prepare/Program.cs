@@ -61,7 +61,7 @@ internal static partial class Program
 		if (string.IsNullOrEmpty(SavedGamePath) || !File.Exists(SavedGamePath))
 		{
 			string errorMessage = SavedGamePath != null ? $"File was not found: {SavedGamePath}" : "Full game path was not found";
-			Log.ErrorAndExit(new Exception($"{errorMessage}\n\nYou must provide the specific location where the game is installed.\nThis program will not modify ANY game files."), false, false);
+			Log.ErrorAndExit(new Exception($"{errorMessage}\n\nYou must provide the specific location where the game is installed.\nThis program will not modify ANY game files."));
 		}
 
 		// If the variable is not empty, save the data
@@ -102,7 +102,7 @@ internal static partial class Program
 		}
 		else
 		{
-			Log.ErrorAndExit(new Exception("Unknown\n\nSorry. Directory with the resources was not found.\nIn the resources directory, files such as your shaders, presets, screenshots, and custom mods are stored."), false, false);
+			Log.ErrorAndExit(new Exception("Unknown\n\nSorry. Directory with the resources was not found.\nIn the resources directory, files such as your shaders, presets, screenshots, and custom mods are stored."));
 		}
 
 		TaskbarProgress.SetProgressValue(26);

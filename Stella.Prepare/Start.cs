@@ -64,7 +64,7 @@ internal static class Start
 		if (!Utils.IsRunAsAdmin())
 		{
 			TaskbarProgress.SetProgressValue(100);
-			Log.ErrorAndExit(new Exception("» This application requires administrator privileges to run."), false, false);
+			Log.ErrorAndExit(new Exception("» This application requires administrator privileges to run."));
 			return;
 		}
 
@@ -93,7 +93,7 @@ internal static class Start
 		}
 		catch (Exception ex)
 		{
-			Log.ErrorAndExit(ex, false, false);
+			Log.ErrorAndExit(ex);
 		}
 	}
 

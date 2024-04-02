@@ -58,7 +58,7 @@ internal static class Terminal
 	public static async Task<Task> Install()
 	{
 		if (!File.Exists(Start.WtMsixBundle))
-			Log.ErrorAndExit(new Exception($"I can't find a required file: {Start.WtMsixBundle}"), false, false);
+			Log.ErrorAndExit(new Exception($"I can't find a required file: {Start.WtMsixBundle}"));
 
 		Process[] dllHostName = Process.GetProcessesByName("dllhost");
 		if (dllHostName.Length != 0) await Cmd.CliWrap("taskkill", "/F /IM dllhost.exe", null).ConfigureAwait(false);
@@ -80,7 +80,7 @@ internal static class Terminal
 		string? wtProgramFiles = Utils.GetWtProgramFiles();
 		if (string.IsNullOrEmpty(wtProgramFiles))
 		{
-			Log.ErrorAndExit(new Exception($"Windows Terminal directory was not found in: {Program.WindowsApps}"), false, false);
+			Log.ErrorAndExit(new Exception($"Windows Terminal directory was not found in: {Program.WindowsApps}"));
 		}
 		else
 		{
