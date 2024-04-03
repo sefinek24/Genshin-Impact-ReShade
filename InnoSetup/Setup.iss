@@ -19,7 +19,7 @@ AppPublisher={#AppPublisher}
 AppPublisherURL={#AppURL}
 AppContact=contact@sefinek.net
 AppSupportURL=https://genshin.sefinek.net/support
-AppUpdatesURL=https://genshin.sefinek.net/docs?page=changelog_v7
+AppUpdatesURL=https://genshin.sefinek.net/docs?page=changelog_v8
 VersionInfoCompany={#AppPublisher}
 VersionInfoProductName=Stella Mod Setup
 VersionInfoProductTextVersion={#AppVersion}
@@ -46,10 +46,10 @@ DisableProgramGroupPage=yes
 AlwaysShowGroupOnReadyPage=True
 AlwaysShowDirOnReadyPage=True
 
-SetupIconFile="..\Assets\Images\InnoSetup\setup.ico"
+SetupIconFile="Data\Images\setup.ico"
 UninstallDisplayIcon="{app}\uninstall.ico"
-WizardImageFile="..\Assets\Images\InnoSetup\WizardImageFile.bmp"
-WizardSmallImageFile="..\Assets\Images\InnoSetup\WizardSmallImageFile.bmp"
+WizardImageFile="Data\Images\WizardImageFile.bmp"
+WizardSmallImageFile="Data\Images\WizardSmallImageFile.bmp"
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
@@ -84,7 +84,7 @@ Name: "CreateDesktopIcon"; Description: "{cm:CreateDesktopIcon}"; GroupDescripti
 
 [Files]
 Source: "..\Build\Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "..\Assets\Images\InnoSetup\uninstall.ico"; DestDir: "{app}";
+Source: "Data\Images\uninstall.ico"; DestDir: "{app}";
 Source: "Data\music.mp3"; Flags: dontcopy
 Source: "Data\Dependencies\bass\bass.dll"; Flags: dontcopy
 
