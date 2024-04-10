@@ -15,11 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5. Information 48793142", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6. Device Identifier", "Stella.DeviceIdentifier\6. Device Identifier.csproj", "{3440EBBF-9275-4194-A6B4-5BBE140FF3B0}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "7. Stella Utils", "Stella.Scripts\7. Stella Utils.csproj", "{71CA6589-B194-4698-BDC4-0CFD421CA159}"
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "8. Stella Telemetry", "Stella.Telemetry\8. Stella Telemetry.csproj", "{32DA3988-3857-44D0-A9C7-CCF3822CA49E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "9. Build Stella Mod", "Stella.Build\9. Build Stella Mod.csproj", "{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "7. Stella Utils", "Stella.Scripts\7. Stella Utils.csproj", "{71CA6589-B194-4698-BDC4-0CFD421CA159}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
