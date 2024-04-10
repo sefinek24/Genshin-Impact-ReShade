@@ -48,8 +48,8 @@ Stella.SefinAntiCheat/bin
 Stella.SefinAntiCheat/obj
 
 ## Stella ClassLibrary
-Stella.ClassLibrary/bin
-Stella.ClassLibrary/obj
+Stella.Scripts/bin
+Stella.Scripts/obj
 
 ## Stella Telemetry
 Stella.Telemetry/bin

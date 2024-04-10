@@ -37,6 +37,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Stella.Scripts\7. Stella Utils.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Forms\Window.cs" />
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>

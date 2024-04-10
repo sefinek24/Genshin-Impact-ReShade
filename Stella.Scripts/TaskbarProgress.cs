@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices;
 
-namespace StellaPLFNet;
+namespace StellaUtils;
 
 public static class TaskbarProgress
 {

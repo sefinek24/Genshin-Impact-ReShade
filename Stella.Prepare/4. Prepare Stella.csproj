@@ -56,7 +56,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Stella.ClassLibrary\7. ClassLibrary.csproj" />
+    <ProjectReference Include="..\Stella.Scripts\7. Stella Utils.csproj" />
   </ItemGroup>
 
   <ItemGroup>

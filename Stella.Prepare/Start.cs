@@ -2,9 +2,8 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using NLog;
-using NLog.Config;
 using PrepareStella.Scripts;
-using StellaPLFNet;
+using StellaUtils;
 
 namespace PrepareStella;
 
@@ -36,19 +35,19 @@ internal static class Start
 	public static readonly Icon? Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
 
 	// Logger
-	public static Logger Logger = LogManager.GetCurrentClassLogger();
+	public static Logger Logger = null!;
 
 	[DllImport("kernel32.dll")]
 	private static extern IntPtr GetConsoleWindow();
 
 	private static async Task Main()
 	{
-		Logger = Logger.WithProperty("AppName", "Prepare Stella");
-		Logger = Logger.WithProperty("AppVersion", AppVersion);
-		LogManager.Configuration = new XmlLoggingConfiguration(Path.Combine(AppPath!, "NLog_PS.config"));
+		// Prepare NLog
+		LogManagerHelper.Initialize(Path.Combine(AppPath!, "NLog_PS.config"), "Prepare Stella", AppVersion);
+		Logger = LogManagerHelper.GetLogger();
 
+		// Start
 		Console.OutputEncoding = Encoding.UTF8;
-
 		Console.ForegroundColor = ConsoleColor.Green;
 		Console.WriteLine(@"                               Genshin Impact Stella Mod - Prepare");
 		Console.WriteLine($"                                        Version: v{AppVersion}\n");

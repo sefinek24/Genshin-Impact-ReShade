@@ -2,7 +2,7 @@ using System.Diagnostics;
 using System.Text.RegularExpressions;
 using CliWrap;
 using CliWrap.Buffered;
-using StellaPLFNet;
+using StellaUtils;
 
 namespace PrepareStella.Scripts;
 
@@ -73,7 +73,6 @@ internal abstract class Cmd
 					Start.Logger.Info("Restarting session...");
 					Console.ResetColor();
 					await Program.Run().ConfigureAwait(false);
-					;
 					return;
 				}
 
@@ -98,10 +97,8 @@ internal abstract class Cmd
 					// Close apps
 					Process[] dllHostProcess = Process.GetProcessesByName("dllhost");
 					if (dllHostProcess.Length != 0) await CliWrap("taskkill", "/F /IM dllhost.exe", null).ConfigureAwait(false);
-					;
 					Process[] wtProcess2 = Process.GetProcessesByName("WindowsTerminal");
 					if (wtProcess2.Length != 0) await CliWrap("taskkill", "/F /IM WindowsTerminal.exe", null).ConfigureAwait(false);
-					;
 
 					// Installing...
 					Console.WriteLine(@"Installing Microsoft Visual C++ 2015 UWP Desktop Package...");
@@ -111,7 +108,6 @@ internal abstract class Cmd
 
 					Start.Logger.Info("Installing missing dependency VCLibs...");
 					await CliWrap("powershell", $"Add-AppxPackage -Path {Start.VcLibsAppx}", null).ConfigureAwait(false);
-					;
 
 					// Throw info
 					BalloonTip.Show("First part was finished 🎉", "VCLibs has been successfully installed, but now we need to restart your computer.");
@@ -131,7 +127,6 @@ internal abstract class Cmd
 						await CliWrap("shutdown",
 							$"/r /t 25 /c \"{Start.AppName} - scheduled reboot, version {Start.AppVersion}.\n\nAfter restarting, run the installer again. If you need help, add me on Discord Sefinek#0001.\n\nGood luck!\"",
 							null).ConfigureAwait(false);
-						;
 
 						Console.WriteLine("Your computer will restart in 25 seconds. Save your work!\nAfter restarting, run the installer again.");
 						Start.Logger.Info("PC reboot was scheduled. Installed VCLibs.");

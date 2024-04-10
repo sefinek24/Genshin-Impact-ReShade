@@ -1,13 +1,13 @@
 using ConfigurationNC.Forms;
 using ConfigurationNC.Properties;
 using NLog;
-using NLog.Config;
+using StellaUtils;
 
 namespace ConfigurationNC;
 
 internal static class Program
 {
-	public static Logger Logger = LogManager.GetCurrentClassLogger();
+	public static Logger Logger = null!;
 
 	/// <summary>
 	///    The main entry point for the application.
@@ -15,16 +15,16 @@ internal static class Program
 	[STAThread]
 	private static void Main()
 	{
-		Logger = Logger.WithProperty("AppName", "Configuration window");
-		Logger = Logger.WithProperty("AppVersion", Window.AppVersion);
-		LogManager.Configuration = new XmlLoggingConfiguration(Path.Combine(Window.AppPath, "NLog_CW.config"));
-
-		ApplicationConfiguration.Initialize();
+		// Prepare NLog
+		LogManagerHelper.Initialize(Path.Combine(Window.AppPath, "NLog_CW.config"), "Configuration window", Window.AppVersion);
+		Logger = LogManagerHelper.GetLogger();
 
 		try
 		{
+			ApplicationConfiguration.Initialize();
 			Application.Run(new Window { Icon = Resources.cat_white_52x52 });
-			Logger.Info("Application Run: Window");
+
+			Logger.Info("Application.Run(): new Window");
 		}
 		catch (Exception ex)
 		{
