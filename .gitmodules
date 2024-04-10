@@ -10,6 +10,6 @@
 	path = Stella.Telemetry
 	url = https://github.com/sefinek24/Stella-Mod-Telemetry
 
-[submodule "Stella.Scripts"]
+[submodule "Stella-Mod-Scripts"]
 	path = Stella.Scripts
 	url = https://github.com/sefinek24/Stella-Mod-Scripts.git
