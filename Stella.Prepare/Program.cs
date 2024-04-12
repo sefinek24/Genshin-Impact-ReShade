@@ -122,7 +122,7 @@ internal static partial class Program
 		int updateReShadeCfg = PrepareIni.ReadInt("PrepareStella", "UpdateReShadeConfig", 1);
 		int updateFpsUnlockerCfg = PrepareIni.ReadInt("PrepareStella", "UpdateFpsUnlockerConfig", 1);
 		int delReShadeCache = PrepareIni.ReadInt("PrepareStella", "DeleteReShadeCache", 1);
-		int installWtUpdate = PrepareIni.ReadInt("PrepareStella", "InstOrUpdWT", 1);
+		int installWtUpdate = PrepareIni.ReadInt("PrepareStella", "InstOrUpdWT", 0);
 		int newShortcuts = PrepareIni.ReadInt("PrepareStella", "NewShortcutsOnDesktop", 1);
 		int newIntShortcuts = PrepareIni.ReadInt("PrepareStella", "InternetShortcutsInStartMenu", 1);
 
