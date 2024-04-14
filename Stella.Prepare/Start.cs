@@ -22,8 +22,8 @@ internal static class Start
 	// Web
 	public static readonly string UserAgent = $"Mozilla/5.0 (compatible; PrepareStella/{AppVersion}; +{AppWebsite})";
 
-	// public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v6" : "https://api.sefinek.net/api/v6";
-	public static readonly string WebApi = "https://api.sefinek.net/api/v6";
+	// public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v7" : "https://api.sefinek.net/api/v7";
+	public static readonly string WebApi = "https://api.sefinek.net/api/v7";
 
 	// Dependencies
 	public static readonly string VcLibsAppx = Path.Combine("dependencies", "Microsoft.VCLibs.x64.14.00.Desktop.appx");
