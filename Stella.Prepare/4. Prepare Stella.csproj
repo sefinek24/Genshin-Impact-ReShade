@@ -22,6 +22,15 @@
     <BaseOutputPath>..\Build\</BaseOutputPath>
     <Product>Prepare Stella Mod</Product>
     <ApplicationIcon>Resources\terminal.ico</ApplicationIcon>
+    <Title>$(AssemblyName)</Title>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <IsPublishable>False</IsPublishable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <IsPublishable>False</IsPublishable>
   </PropertyGroup>
 
   <ItemGroup>
