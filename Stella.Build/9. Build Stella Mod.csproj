@@ -8,6 +8,21 @@
     <Nullable>enable</Nullable>
     <AssemblyName>Build Stella Mod</AssemblyName>
     <NoWarn>$(NoWarn);CA1303</NoWarn>
+    <Title>$(AssemblyName)</Title>
+    <NeutralLanguage>en</NeutralLanguage>
+    <Copyright>Copyright 2024 © by Sefinek. All Rights Reserved.</Copyright>
+    <PackageProjectUrl>https://genshin.sefinek.net</PackageProjectUrl>
+    <RepositoryType>https://github.com/sefinek24/Genshin-Impact-ReShade</RepositoryType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>none</DebugType>
+    <IsPublishable>False</IsPublishable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+    <IsPublishable>False</IsPublishable>
   </PropertyGroup>
 
 </Project>
