@@ -13,3 +13,7 @@
 [submodule "Stella-Mod-Scripts"]
 	path = Stella.Scripts
 	url = https://github.com/sefinek24/Stella-Mod-Scripts.git
+
+[submodule "Stella-Mod-Build"]
+	path = Stella.Build
+	url = https://github.com/sefinek24/Stella-Mod-Build.git
