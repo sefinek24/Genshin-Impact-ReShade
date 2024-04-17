@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("Copyright 2024 © by Sefinek. All Rights Reserved.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64a436a5eb62ae064e2fd8240074b1b8ac6bd39e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c7f4f9a302d18e49868fc62366482bf273aa451")]
 [assembly: System.Reflection.AssemblyProductAttribute("Build Stella Mod")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Build Stella Mod")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
