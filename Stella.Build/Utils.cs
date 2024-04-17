@@ -72,34 +72,40 @@ internal static class Utils
 
 		try
 		{
-			Process buildProcess = new()
-			{
-				StartInfo =
-				{
-					FileName = "MSBuild.exe",
-					Arguments = $"\"{solutionFilePath}\" /p:Configuration=Release",
-					UseShellExecute = false,
-					RedirectStandardOutput = true,
-					WorkingDirectory = workingDir
-				},
-				EnableRaisingEvents = true
-			};
-
-			buildProcess.OutputDataReceived += (_, args) =>
-			{
-				if (!string.IsNullOrEmpty(args.Data)) Console.WriteLine(args.Data);
-			};
-
-			buildProcess.Start();
-			buildProcess.BeginOutputReadLine();
-			buildProcess.WaitForExit();
-
-			return buildProcess.ExitCode == 0;
+			bool exitCode = ExecuteCmd("MSBuild.exe", $"\"{solutionFilePath}\" /p:Configuration=Release", workingDir);
+			return exitCode;
 		}
 		catch (Exception ex)
 		{
 			Console.WriteLine($"----------------------------- Error occurred during compilation -----------------------------\n\n{ex}");
 			return false;
 		}
+	}
+
+	public static bool ExecuteCmd(string file, string arguments, string? workingDir = null)
+	{
+		Process buildProcess = new()
+		{
+			StartInfo =
+			{
+				FileName = file,
+				Arguments = arguments,
+				UseShellExecute = false,
+				RedirectStandardOutput = true,
+				WorkingDirectory = workingDir
+			},
+			EnableRaisingEvents = true
+		};
+
+		buildProcess.OutputDataReceived += (_, args) =>
+		{
+			if (!string.IsNullOrEmpty(args.Data)) Console.WriteLine(args.Data);
+		};
+
+		buildProcess.Start();
+		buildProcess.BeginOutputReadLine();
+		buildProcess.WaitForExit();
+
+		return buildProcess.ExitCode == 0;
 	}
 }
