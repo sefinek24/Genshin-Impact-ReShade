@@ -17,3 +17,7 @@
 [submodule "Stella-Mod-Build"]
 	path = Stella.Build
 	url = https://github.com/sefinek24/Stella-Mod-Build.git
+
+[submodule "Stella-Mod-DeviceIdentifier"]
+	path = Stella.DeviceIdentifier
+	url = https://github.com/sefinek24/Stella-Mod-DeviceIdentifier
