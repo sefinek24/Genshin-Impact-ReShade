@@ -14,7 +14,7 @@
     <Authors>Sefinek Inc.</Authors>
     <RepositoryUrl>https://github.com/sefinek24/Genshin-Impact-ReShade</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageProjectUrl>https://genshin.sefinek.net</PackageProjectUrl>
+    <PackageProjectUrl>https://stella.sefinek.net</PackageProjectUrl>
     <NeutralLanguage>en</NeutralLanguage>
     <PackageLicenseFile>../LICENSE</PackageLicenseFile>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>

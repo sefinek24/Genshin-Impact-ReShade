@@ -45,12 +45,12 @@
 <div align="center">
     <a href="https://sefinek.net/genshin-impact-reshade/download?referrer=stella_readme&time=undefined" title="Download stable release"><img src="https://sefinek.net/images/stella/mafumafu/download.png" alt="Download" height="144px"></a>
     <br>
-    <a href="https://genshin.sefinek.net" title="Official website"><img src="https://sefinek.net/images/stella/mafumafu/website.png" alt="Website" height="138px"></a>
+    <a href="https://stella.sefinek.net" title="Official website"><img src="https://sefinek.net/images/stella/mafumafu/website.png" alt="Website" height="138px"></a>
     <a href="https://discord.com/invite/k2wfGRq4dT" title="Our Discord server"><img src="https://sefinek.net/images/stella/mafumafu/discord.png" alt="Discord" height="138px"></a>
 </div>
 <br>
 
-Welcome to the official GitHub repository for [Genshin Stella Mod](https://genshin.sefinek.net)! We've made some important updates to how we host our documentation.
+Welcome to the official GitHub repository for [Genshin Stella Mod](https://stella.sefinek.net)! We've made some important updates to how we host our documentation.
 
 The entire documentation for Stella Mod has now been transferred to our official website.
 This move allows us to provide you with the most up-to-date information, guides, and resources in a more organized and accessible manner.

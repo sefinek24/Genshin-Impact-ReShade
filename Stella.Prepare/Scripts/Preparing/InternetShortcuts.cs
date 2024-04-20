@@ -26,7 +26,7 @@ internal static class InternetShortcuts
 			{
 				Dictionary<string, string> urls = new()
 				{
-					{ "Official website", "https://genshin.sefinek.net" },
+					{ "Official website", "https://stella.sefinek.net" },
 					{ "Donate", "https://sefinek.net/support-me" },
 					{ "Gallery", "https://sefinek.net/genshin-impact-reshade/gallery?page=1" },
 					{ "Support", "https://sefinek.net/genshin-impact-reshade/support" },

@@ -16,7 +16,7 @@ internal static class Start
 	public static readonly string AppData = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
 
 	// Links
-	private static readonly string AppWebsite = "https://genshin.sefinek.net";
+	private static readonly string AppWebsite = "https://stella.sefinek.net";
 	public static readonly string DiscordUrl = "https://discord.gg/k2wfGRq4dT";
 
 	// Web
