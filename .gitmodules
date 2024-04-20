@@ -21,3 +21,6 @@
 [submodule "Stella-Mod-DeviceIdentifier"]
 	path = Stella.DeviceIdentifier
 	url = https://github.com/sefinek24/Stella-Mod-DeviceIdentifier
+[submodule "InnoSetup"]
+	path = InnoSetup
+	url = https://github.com/sefinek24/Stella-Mod-InnoSetup
