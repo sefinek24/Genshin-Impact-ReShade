@@ -11,9 +11,6 @@
 *.stellamodplus
 *.user
 
-# Editor-based HTTP Client requests
-.idea/httpRequests/
-
 # Build
 Build
 packages
