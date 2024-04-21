@@ -32,7 +32,6 @@ namespace ConfigurationNC.Forms
 				linkLabel1 = new LinkLabel();
 				MadeBySefinek = new Label();
 				label1 = new Label();
-				checkBox1 = new CheckBox();
 				checkBox2 = new CheckBox();
 				checkBox3 = new CheckBox();
 				checkBox4 = new CheckBox();
@@ -70,16 +69,6 @@ namespace ConfigurationNC.Forms
 				label1.BackColor = Color.Transparent;
 				label1.ForeColor = Color.FromArgb(0, 83, 167);
 				label1.Name = "label1";
-				// 
-				// checkBox1
-				// 
-				resources.ApplyResources(checkBox1, "checkBox1");
-				checkBox1.BackColor = Color.Transparent;
-				checkBox1.Cursor = Cursors.Hand;
-				checkBox1.ForeColor = Color.WhiteSmoke;
-				checkBox1.Name = "checkBox1";
-				checkBox1.UseVisualStyleBackColor = false;
-				checkBox1.CheckedChanged += InstOrUpdWT_CheckedChanged;
 				// 
 				// checkBox2
 				// 
@@ -184,7 +173,6 @@ namespace ConfigurationNC.Forms
 				Controls.Add(checkBox4);
 				Controls.Add(checkBox3);
 				Controls.Add(checkBox2);
-				Controls.Add(checkBox1);
 				Controls.Add(MadeBySefinek);
 				Controls.Add(label1);
 				Controls.Add(linkLabel1);
@@ -204,7 +192,6 @@ namespace ConfigurationNC.Forms
 		  private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label MadeBySefinek;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox4;

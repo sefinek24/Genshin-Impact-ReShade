@@ -21,7 +21,6 @@ public sealed partial class Window : Form
 	private static int _updateReShadeConfig;
 	private static int _updateFpsUnlockerConfig;
 	private static int _deleteReShadeCache;
-	private static int _instOrUpdWt;
 
 	public Window()
 	{
@@ -65,9 +64,6 @@ public sealed partial class Window : Form
 		checkBox4.Checked = _prepareIni.ReadInt("PrepareStella", "UpdateReShadeConfig", 1) != 0;
 		checkBox5.Checked = _prepareIni.ReadInt("PrepareStella", "UpdateFpsUnlockerConfig", 1) != 0;
 		checkBox6.Checked = _prepareIni.ReadInt("PrepareStella", "DeleteReShadeCache", 1) != 0;
-
-		// Windows Terminal
-		checkBox1.Checked = _prepareIni.ReadInt("PrepareStella", "InstOrUpdWT", 0) != 0;
 
 		SaveIniData();
 	}
@@ -117,11 +113,6 @@ public sealed partial class Window : Form
 		_deleteReShadeCache = checkBox6.Checked ? 1 : 0;
 	}
 
-	private void InstOrUpdWT_CheckedChanged(object sender, EventArgs e)
-	{
-		_instOrUpdWt = checkBox1.Checked ? 1 : 0;
-	}
-
 	private static void SaveIniData()
 	{
 		_prepareIni.WriteInt("PrepareStella", "NewShortcutsOnDesktop", _newShortcutsOnDesktop);
@@ -130,7 +121,6 @@ public sealed partial class Window : Form
 		_prepareIni.WriteInt("PrepareStella", "UpdateReShadeConfig", _updateReShadeConfig);
 		_prepareIni.WriteInt("PrepareStella", "UpdateFpsUnlockerConfig", _updateFpsUnlockerConfig);
 		_prepareIni.WriteInt("PrepareStella", "DeleteReShadeCache", _deleteReShadeCache);
-		_prepareIni.WriteInt("PrepareStella", "InstOrUpdWT", _instOrUpdWt);
 
 		Program.Logger.Info("Saved ini config");
 	}

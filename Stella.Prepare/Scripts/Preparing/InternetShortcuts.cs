@@ -17,7 +17,6 @@ internal static class InternetShortcuts
 		}
 	}
 
-
 	private static async Task CreateInternetShortcutsAsync(string appStartMenuPath)
 	{
 		await Task.Run(() =>

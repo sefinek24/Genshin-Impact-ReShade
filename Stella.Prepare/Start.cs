@@ -25,10 +25,6 @@ internal static class Start
 	// public static readonly string WebApi = Debugger.IsAttached ? "http://127.0.0.1:4010/api/v7" : "https://api.sefinek.net/api/v7";
 	public static readonly string WebApi = "https://api.sefinek.net/api/v7";
 
-	// Dependencies
-	public static readonly string VcLibsAppx = Path.Combine("dependencies", "Microsoft.VCLibs.x64.14.00.Desktop.appx");
-	public static readonly string WtMsixBundle = Path.Combine("dependencies", "Microsoft.WindowsTerminal_1.19.10821.0_8wekyb3d8bbwe.msixbundle");
-
 	// Other
 	public static readonly string Line = "===============================================================================================";
 	public static NotifyIcon? NotifyIconInstance;

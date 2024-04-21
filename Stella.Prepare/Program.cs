@@ -122,7 +122,6 @@ internal static partial class Program
 		int updateReShadeCfg = PrepareIni.ReadInt("PrepareStella", "UpdateReShadeConfig", 1);
 		int updateFpsUnlockerCfg = PrepareIni.ReadInt("PrepareStella", "UpdateFpsUnlockerConfig", 1);
 		int delReShadeCache = PrepareIni.ReadInt("PrepareStella", "DeleteReShadeCache", 1);
-		int installWtUpdate = PrepareIni.ReadInt("PrepareStella", "InstOrUpdWT", 0);
 		int newShortcuts = PrepareIni.ReadInt("PrepareStella", "NewShortcutsOnDesktop", 1);
 		int newIntShortcuts = PrepareIni.ReadInt("PrepareStella", "InternetShortcutsInStartMenu", 1);
 
@@ -157,18 +156,6 @@ internal static partial class Program
 			Console.WriteLine(@"Downloading FPS Unlocker configuration...");
 			await DownloadFpsUnlockerCfg.RunAsync().ConfigureAwait(false);
 			TaskbarProgress.SetProgressValue(68);
-		}
-
-		// Windows Terminal installation
-		if (installWtUpdate == 1)
-		{
-			Console.Write(@"Backing up the Windows Terminal configuration file in app data... ");
-			await Terminal.MakeBackup().ConfigureAwait(false);
-			TaskbarProgress.SetProgressValue(72);
-
-			Console.WriteLine(@"Installing the latest Windows Terminal...");
-			await Terminal.Install().ConfigureAwait(false);
-			TaskbarProgress.SetProgressValue(77);
 		}
 
 		// Create or update Desktop icon

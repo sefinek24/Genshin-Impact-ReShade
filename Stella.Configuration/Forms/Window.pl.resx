@@ -133,9 +133,6 @@
   <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>364, 24</value>
   </data>
-  <data name="checkBox1.Text" xml:space="preserve">
-    <value>Zainstaluj lub zaktualizuj Windows Terminal *</value>
-  </data>
   <data name="checkBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>271, 24</value>
   </data>

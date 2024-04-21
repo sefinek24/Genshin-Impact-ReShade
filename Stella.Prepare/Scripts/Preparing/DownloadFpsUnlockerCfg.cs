@@ -13,28 +13,26 @@ internal static class DownloadFpsUnlockerCfg
 
 			Console.Write($@"Downloading {Path.GetFileName(fpsUnlockerConfigPath)} ");
 
-			using (HttpClient httpClient = new())
+			using HttpClient httpClient = new();
+			httpClient.DefaultRequestHeaders.Add("User-Agent", Start.UserAgent);
+
+			using (HttpResponseMessage headResponse = await httpClient.SendAsync(new HttpRequestMessage(HttpMethod.Head, JsonFileUrl)).ConfigureAwait(false))
 			{
-				httpClient.DefaultRequestHeaders.Add("User-Agent", Start.UserAgent);
-
-				using (HttpResponseMessage headResponse = await httpClient.SendAsync(new HttpRequestMessage(HttpMethod.Head, JsonFileUrl)).ConfigureAwait(false))
+				if (headResponse.IsSuccessStatusCode)
 				{
-					if (headResponse.IsSuccessStatusCode)
-					{
-						long? contentLength = headResponse.Content.Headers.ContentLength;
-						Console.WriteLine($@"({contentLength} bytes)...");
-					}
-					else
-					{
-						Console.WriteLine(@"(Unknown file size)...");
-					}
+					long? contentLength = headResponse.Content.Headers.ContentLength;
+					Console.WriteLine($@"({contentLength} bytes)...");
 				}
-
-				string fpsUnlockerConfig = await httpClient.GetStringAsync(JsonFileUrl).ConfigureAwait(false);
-				string fpsUnlockerConfigContent = fpsUnlockerConfig.Replace("{GamePath}", Program.SavedGamePath?.Replace("\\", "\\\\") ?? string.Empty);
-
-				await WriteToFileAsync(fpsUnlockerConfigPath, fpsUnlockerConfigContent).ConfigureAwait(false);
+				else
+				{
+					Console.WriteLine(@"(Unknown file size)...");
+				}
 			}
+
+			string fpsUnlockerConfig = await httpClient.GetStringAsync(JsonFileUrl).ConfigureAwait(false);
+			string fpsUnlockerConfigContent = fpsUnlockerConfig.Replace("{GamePath}", Program.SavedGamePath?.Replace("\\", "\\\\") ?? string.Empty);
+
+			await WriteToFileAsync(fpsUnlockerConfigPath, fpsUnlockerConfigContent).ConfigureAwait(false);
 		}
 		catch (Exception e)
 		{
@@ -44,9 +42,7 @@ internal static class DownloadFpsUnlockerCfg
 
 	private static async Task WriteToFileAsync(string filePath, string content)
 	{
-		using (StreamWriter writer = new(filePath))
-		{
-			await writer.WriteAsync(content).ConfigureAwait(false);
-		}
+		using StreamWriter writer = new(filePath);
+		await writer.WriteAsync(content).ConfigureAwait(false);
 	}
 }
