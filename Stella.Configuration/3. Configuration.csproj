@@ -48,6 +48,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Stella.Scripts\7. Stella Utils.csproj" />
+    <ProjectReference Include="..\Stella.Telemetry\8. Stella Telemetry.csproj" />
   </ItemGroup>
 
   <ItemGroup>

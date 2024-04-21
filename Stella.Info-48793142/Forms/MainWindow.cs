@@ -2,6 +2,7 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 using InformationWindow.Properties;
 using NAudio.Wave;
+using StellaTelemetry;
 using Timer = System.Windows.Forms.Timer;
 
 namespace InformationWindow.Forms;
@@ -113,7 +114,7 @@ public sealed partial class MainWindow : Form
 	private void ViewDocs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
 		if (_openedDocs) return;
-		Process.Start(new ProcessStartInfo("https://sefinek.net/genshin-impact-reshade/docs?page=terms-of-use") { UseShellExecute = true });
+		Process.Start(new ProcessStartInfo($"{Data.AppWebsiteFull}/docs?page=terms-of-use") { UseShellExecute = true });
 
 		label3.Visible = true;
 		_openedDocs = true;

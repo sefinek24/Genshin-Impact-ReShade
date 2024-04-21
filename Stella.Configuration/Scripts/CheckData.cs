@@ -5,8 +5,6 @@ namespace ConfigurationNC.Scripts;
 
 internal static class CheckData
 {
-	private const string RegistryPath = @"Software\Stella Mod Launcher";
-
 	public static bool IsAStellaPlusSubscriber()
 	{
 		return TryGetRegistryValue("Secret", out string? data) && !string.IsNullOrEmpty(data);
@@ -21,7 +19,7 @@ internal static class CheckData
 	{
 		try
 		{
-			using RegistryKey? key = Registry.CurrentUser.OpenSubKey(RegistryPath);
+			using RegistryKey? key = Registry.CurrentUser.OpenSubKey(StellaTelemetry.Data.RegistryPath);
 			if (key is not null)
 			{
 				value = key.GetValue(keyName) as string;
