@@ -52,6 +52,10 @@ Stella.Scripts/obj
 Stella.Telemetry/bin
 Stella.Telemetry/obj
 
+## Genshin test file
+Test.Genshin/bin
+Test.Genshin/obj
+
 ## Win App Packaging Project
 Win App Packaging Project/AppPackages
 Win App Packaging Project/bin

@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "8. Stella Telemetry", "Stel
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "9. Build Stella Mod", "Stella.Build\9. Build Stella Mod.csproj", "{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Genshin", "Test.Genshin\Genshin Test.csproj", "{53CB19ED-DA08-4CF4-B376-7B26132201BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -215,14 +217,34 @@ Global
 		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Release|x64.Build.0 = Release|Any CPU
 		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Release|x86.ActiveCfg = Release|Any CPU
 		{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}.Release|x86.Build.0 = Release|Any CPU
+		{53CB19ED-DA08-4CF4-B376-7B26132201BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53CB19ED-DA08-4CF4-B376-7B26132201BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53CB19ED-DA08-4CF4-B376-7B26132201BE}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{53CB19ED-DA08-4CF4-B376-7B26132201BE}.Debug|ARM.Build.0 = Debug|Any CPU
+		{53CB19ED-DA08-4CF4-B376-7B26132201BE}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{53CB19ED-DA08-4CF4-B376-7B26132201BE}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{53CB19ED-DA08-4CF4-B376-7B26132201BE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{53CB19ED-DA08-4CF4-B376-7B26132201BE}.Debug|x64.Build.0 = Debug|Any CPU
+		{53CB19ED-DA08-4CF4-B376-7B26132201BE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{53CB19ED-DA08-4CF4-B376-7B26132201BE}.Debug|x86.Build.0 = Debug|Any CPU
+		{53CB19ED-DA08-4CF4-B376-7B26132201BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53CB19ED-DA08-4CF4-B376-7B26132201BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53CB19ED-DA08-4CF4-B376-7B26132201BE}.Release|ARM.ActiveCfg = Release|Any CPU
+		{53CB19ED-DA08-4CF4-B376-7B26132201BE}.Release|ARM.Build.0 = Release|Any CPU
+		{53CB19ED-DA08-4CF4-B376-7B26132201BE}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{53CB19ED-DA08-4CF4-B376-7B26132201BE}.Release|ARM64.Build.0 = Release|Any CPU
+		{53CB19ED-DA08-4CF4-B376-7B26132201BE}.Release|x64.ActiveCfg = Release|Any CPU
+		{53CB19ED-DA08-4CF4-B376-7B26132201BE}.Release|x64.Build.0 = Release|Any CPU
+		{53CB19ED-DA08-4CF4-B376-7B26132201BE}.Release|x86.ActiveCfg = Release|Any CPU
+		{53CB19ED-DA08-4CF4-B376-7B26132201BE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		RESX_NeutralResourcesLanguage = en-US
-		RESX_SaveFilesImmediatelyUponChange = True
-		RESX_PrefixTranslations = False
 		SolutionGuid = {DDABFAAF-62E1-4807-820C-8A87AAE3C15D}
+		RESX_PrefixTranslations = False
+		RESX_SaveFilesImmediatelyUponChange = True
+		RESX_NeutralResourcesLanguage = en-US
 	EndGlobalSection
 EndGlobal
