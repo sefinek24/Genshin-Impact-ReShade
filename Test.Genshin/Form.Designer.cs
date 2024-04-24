@@ -40,7 +40,7 @@ namespace GenshinTest
 				label1.ForeColor = Color.Navy;
 				label1.Location = new Point(12, 4);
 				label1.Name = "label1";
-				label1.Size = new Size(362, 50);
+				label1.Size = new Size(356, 50);
 				label1.TabIndex = 129;
 				label1.Text = "This app is solely for testing the Genshin Stella Mod. It has no other functionality. However, enjoy the cute anime cat girl at the bottom :)";
 				label1.TextAlign = ContentAlignment.TopCenter;
@@ -52,7 +52,7 @@ namespace GenshinTest
 				BackColor = Color.Black;
 				BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
 				BackgroundImageLayout = ImageLayout.Stretch;
-				ClientSize = new Size(386, 565);
+				ClientSize = new Size(380, 565);
 				Controls.Add(label1);
 				Cursor = Cursors.Cross;
 				DoubleBuffered = true;
