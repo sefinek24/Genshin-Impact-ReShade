@@ -28,38 +28,45 @@ namespace GenshinTest
 		  /// </summary>
 		  private void InitializeComponent()
 		  {
-				pictureBox6 = new PictureBox();
-				((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+				System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form));
+				label1 = new Label();
 				SuspendLayout();
 				// 
-				// pictureBox6
+				// label1
 				// 
-				pictureBox6.BackColor = Color.Transparent;
-				pictureBox6.Dock = DockStyle.Fill;
-				pictureBox6.Image = Properties.Resources.e062a85fbaf7f4db50d2918a99ba919aae3b0badd001d115c832860791adbc05;
-				pictureBox6.ImeMode = ImeMode.NoControl;
-				pictureBox6.Location = new Point(0, 0);
-				pictureBox6.Name = "pictureBox6";
-				pictureBox6.Size = new Size(441, 675);
-				pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
-				pictureBox6.TabIndex = 127;
-				pictureBox6.TabStop = false;
+				label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+				label1.BackColor = Color.Transparent;
+				label1.Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+				label1.ForeColor = Color.Navy;
+				label1.Location = new Point(12, 4);
+				label1.Name = "label1";
+				label1.Size = new Size(362, 50);
+				label1.TabIndex = 129;
+				label1.Text = "This app is solely for testing the Genshin Stella Mod. It has no other functionality. However, enjoy the cute anime cat girl at the bottom :)";
+				label1.TextAlign = ContentAlignment.TopCenter;
 				// 
 				// Form
 				// 
-				AutoScaleDimensions = new SizeF(7F, 15F);
-				AutoScaleMode = AutoScaleMode.Font;
-				ClientSize = new Size(441, 675);
-				Controls.Add(pictureBox6);
+				AutoScaleDimensions = new SizeF(96F, 96F);
+				AutoScaleMode = AutoScaleMode.Dpi;
+				BackColor = Color.Black;
+				BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+				BackgroundImageLayout = ImageLayout.Stretch;
+				ClientSize = new Size(386, 565);
+				Controls.Add(label1);
+				Cursor = Cursors.Cross;
 				DoubleBuffered = true;
+				ForeColor = Color.White;
+				MaximizeBox = false;
 				Name = "Form";
+				ShowIcon = false;
+				StartPosition = FormStartPosition.Manual;
 				Text = "Genshin Impact test file";
-				((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+				Load += Form_Load;
 				ResumeLayout(false);
 		  }
 
 		  #endregion
-
-		  private PictureBox pictureBox6;
+		  private Label label1;
 	 }
 }

@@ -59,15 +59,5 @@ namespace GenshinTest.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap e062a85fbaf7f4db50d2918a99ba919aae3b0badd001d115c832860791adbc05 {
-            get {
-                object obj = ResourceManager.GetObject("e062a85fbaf7f4db50d2918a99ba919aae3b0badd001d115c832860791adbc05", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }
