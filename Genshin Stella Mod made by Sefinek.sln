@@ -15,13 +15,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5. Information 48793142", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6. Device Identifier", "Stella.DeviceIdentifier\6. Device Identifier.csproj", "{0342DB1D-9DF9-4D0B-95E1-748A7FFB1335}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "7. Stella Utils", "Stella.Scripts\7. Stella Utils.csproj", "{71CA6589-B194-4698-BDC4-0CFD421CA159}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "7. Utils", "Stella.Scripts\7. Utils.csproj", "{71CA6589-B194-4698-BDC4-0CFD421CA159}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "8. Stella Telemetry", "Stella.Telemetry\8. Stella Telemetry.csproj", "{32DA3988-3857-44D0-A9C7-CCF3822CA49E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "8. Telemetry", "Stella.Telemetry\8. Telemetry.csproj", "{32DA3988-3857-44D0-A9C7-CCF3822CA49E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "9. Build Stella Mod", "Stella.Build\9. Build Stella Mod.csproj", "{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stella.Build", "Stella.Build\Stella.Build.csproj", "{816A792E-E9C9-4FA0-AA0A-8502F65A0F9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Genshin", "Test.Genshin\Genshin Test.csproj", "{53CB19ED-DA08-4CF4-B376-7B26132201BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stella.Test", "Test.Genshin\Stella.Test.csproj", "{53CB19ED-DA08-4CF4-B376-7B26132201BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stella.Injector", "Stella.Injector\Stella.Injector.csproj", "{5EEB8DEE-127E-4E86-B144-2E501D19EECB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -237,14 +239,34 @@ Global
 		{53CB19ED-DA08-4CF4-B376-7B26132201BE}.Release|x64.Build.0 = Release|Any CPU
 		{53CB19ED-DA08-4CF4-B376-7B26132201BE}.Release|x86.ActiveCfg = Release|Any CPU
 		{53CB19ED-DA08-4CF4-B376-7B26132201BE}.Release|x86.Build.0 = Release|Any CPU
+		{5EEB8DEE-127E-4E86-B144-2E501D19EECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EEB8DEE-127E-4E86-B144-2E501D19EECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EEB8DEE-127E-4E86-B144-2E501D19EECB}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{5EEB8DEE-127E-4E86-B144-2E501D19EECB}.Debug|ARM.Build.0 = Debug|Any CPU
+		{5EEB8DEE-127E-4E86-B144-2E501D19EECB}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{5EEB8DEE-127E-4E86-B144-2E501D19EECB}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{5EEB8DEE-127E-4E86-B144-2E501D19EECB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5EEB8DEE-127E-4E86-B144-2E501D19EECB}.Debug|x64.Build.0 = Debug|Any CPU
+		{5EEB8DEE-127E-4E86-B144-2E501D19EECB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5EEB8DEE-127E-4E86-B144-2E501D19EECB}.Debug|x86.Build.0 = Debug|Any CPU
+		{5EEB8DEE-127E-4E86-B144-2E501D19EECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EEB8DEE-127E-4E86-B144-2E501D19EECB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EEB8DEE-127E-4E86-B144-2E501D19EECB}.Release|ARM.ActiveCfg = Release|Any CPU
+		{5EEB8DEE-127E-4E86-B144-2E501D19EECB}.Release|ARM.Build.0 = Release|Any CPU
+		{5EEB8DEE-127E-4E86-B144-2E501D19EECB}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{5EEB8DEE-127E-4E86-B144-2E501D19EECB}.Release|ARM64.Build.0 = Release|Any CPU
+		{5EEB8DEE-127E-4E86-B144-2E501D19EECB}.Release|x64.ActiveCfg = Release|Any CPU
+		{5EEB8DEE-127E-4E86-B144-2E501D19EECB}.Release|x64.Build.0 = Release|Any CPU
+		{5EEB8DEE-127E-4E86-B144-2E501D19EECB}.Release|x86.ActiveCfg = Release|Any CPU
+		{5EEB8DEE-127E-4E86-B144-2E501D19EECB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {DDABFAAF-62E1-4807-820C-8A87AAE3C15D}
-		RESX_PrefixTranslations = False
-		RESX_SaveFilesImmediatelyUponChange = True
 		RESX_NeutralResourcesLanguage = en-US
+		RESX_SaveFilesImmediatelyUponChange = True
+		RESX_PrefixTranslations = False
+		SolutionGuid = {DDABFAAF-62E1-4807-820C-8A87AAE3C15D}
 	EndGlobalSection
 EndGlobal

@@ -63,8 +63,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Stella.Scripts\7. Stella Utils.csproj" />
-    <ProjectReference Include="..\Stella.Telemetry\8. Stella Telemetry.csproj" />
+    <ProjectReference Include="..\Stella.Scripts\7. Utils.csproj" />
+    <ProjectReference Include="..\Stella.Telemetry\8. Telemetry.csproj" />
   </ItemGroup>
 
   <ItemGroup>
