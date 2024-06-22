@@ -17,6 +17,12 @@ Screenshots/*.jpg
 Screenshots/*.jpeg
 Screenshots/*.bmp
 
+# InnoSetup
+InnoSetup/*.exe
+InnoSetup/Output
+
+# Configs
+.eslintrc.js
 
 # Solutions
 ## Configuration Window
@@ -64,20 +70,3 @@ Win App Packaging Project/obj/project.nuget
 ## Build project
 Stella.Build/bin
 Stella.Build/obj
-
-
-# Stella Mod Plus
-data/Patrons
-data/presets/New
-data/presets/Patrons
-data/presets/For Patrons
-data/presets/Other/Previous versions
-data/presets/3. Only for patrons
-data/presets/3. Only for patrons/*.ini
-
-# InnoSetup
-InnoSetup/*.exe
-InnoSetup/Output
-
-# Configs
-.eslintrc.js
