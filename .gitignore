@@ -1,15 +1,10 @@
-# Default
+# Workspace
 .vs
 .idea
-.idea/shelf/
-.idea/workspace.xml
-*.wapproj.user
-*.assets.cache
 *.cache
 *.bin
-*.patrons
-*.stellamodplus
 *.user
+*.csproj.user
 
 # Build
 Build
