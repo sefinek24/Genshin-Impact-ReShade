@@ -69,3 +69,7 @@ Thank you! 🌟
         <img src="https://sefinek.net/images/stella/gallery/v7.9.7/1-2.png" alt="Screenshot number 1">
     </a>
 </div>
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsefinek24%2FGenshin-Impact-ReShade.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsefinek24%2FGenshin-Impact-ReShade?ref=badge_large)
