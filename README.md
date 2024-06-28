@@ -6,6 +6,7 @@
     </p>
     <a href="https://sefinek.net" title="sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=Website&up_message=Online&url=https%3A%2F%2Fsefinek.net" alt="Status page"></a>
     <a href="https://api.sefinek.net" title="api.sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=API&up_message=Online&url=https%3A%2F%2Fapi.sefinek.net" alt="Status page"></a>
+<a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fsefinek24%2FGenshin-Impact-ReShade?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsefinek24%2FGenshin-Impact-ReShade.svg?type=shield"/></a>
     <a href="https://cdn.sefinek.net" title="cdn.sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=CDN&up_message=Online&url=https%3A%2F%2Fcdn.sefinek.net" alt="Status page"></a>
     <br>
     <a href="https://github.com/sefinek24/Genshin-Impact-ReShade" title="Repository size"><img src="https://img.shields.io/github/repo-size/sefinek24/Genshin-Impact-ReShade?label=Repo%20size" alt="Repo size"></a>
@@ -69,3 +70,7 @@ Thank you! 🌟
         <img src="https://sefinek.net/images/stella/gallery/v7.9.7/1-2.png" alt="Screenshot number 1">
     </a>
 </div>
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsefinek24%2FGenshin-Impact-ReShade.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsefinek24%2FGenshin-Impact-ReShade?ref=badge_large)
