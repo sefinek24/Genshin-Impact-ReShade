@@ -43,7 +43,7 @@
 - [💙 Contributors](https://sefinek.net/genshin-impact-reshade/docs?page=contributors)
 
 <div align="center">
-    <a href="https://sefinek.net/genshin-impact-reshade/download?referrer=stella_readme&time=undefined" title="Download stable release"><img src="https://sefinek.net/images/stella/mafumafu/download.png" alt="Download" height="144px"></a>
+    <a href="https://sefinek.net/genshin-impact-reshade?download=true&referrer=github_readme" title="Download stable release"><img src="https://sefinek.net/images/stella/mafumafu/download.png" alt="Download" height="144px"></a>
     <br>
     <a href="https://stella.sefinek.net" title="Official website"><img src="https://sefinek.net/images/stella/mafumafu/website.png" alt="Website" height="138px"></a>
     <a href="https://discord.com/invite/k2wfGRq4dT" title="Our Discord server"><img src="https://sefinek.net/images/stella/mafumafu/discord.png" alt="Discord" height="138px"></a>
