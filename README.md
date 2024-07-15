@@ -12,7 +12,7 @@
     <a href="https://github.com/sefinek24/Genshin-Impact-ReShade/commits/main" title="Commit activity"><img src="https://img.shields.io/github/commit-activity/w/sefinek24/Genshin-Impact-ReShade?label=Commit%20activity" alt="Commit activity"></a>
     <a href="https://discord.com/invite/k2wfGRq4dT" title="Official Discord server"><img src="https://img.shields.io/discord/1044713077125435492?label=Discord%20server" alt="Our Discord server"></a>
     <h3>
-        🌠 » To enjoy the enhanced version (mods & 3DMigoto), subscribe to <a href="https://sefinek.net/genshin-impact-reshade/subscription" title="Subscription: Unlock more benefits - Genshin Stella Mod">Stella Mod Plus</a> « 🌠<br>
+        🌠 » To enjoy the enhanced version (mods & 3DMigoto), subscribe to <a href="https://sefinek.net/genshin-stella-mod/subscription" title="Subscription: Unlock more benefits - Genshin Stella Mod">Stella Mod Plus</a> « 🌠<br>
         ⭐ » Star the repository if you like it. Have a pleasant day or night! « ⭐
     </h3>
     <img src="https://api.sefinek.net/api/v2/moecounter/@Genshin-Stella-Mod-Repo?theme=rule34" alt="Views" title="README.md views - starts from Jun 15, 2023, 12:26 PM GMT+2">
@@ -23,27 +23,27 @@
 
 
 ## 📋 〢 Documentation
-- [👋 Introduction](https://sefinek.net/genshin-impact-reshade/docs?page=introduction)
-- [📂 Includes](https://sefinek.net/genshin-impact-reshade/docs?page=requirements#includes)
-- [✨ Requirements](https://sefinek.net/genshin-impact-reshade/docs?page=requirements#requirements)
-- [🔧 Supported systems](https://sefinek.net/genshin-impact-reshade/docs?page=requirements#supported-os)
-- [⚙️ Recommended settings for game](https://sefinek.net/genshin-impact-reshade/docs?page=requirements#recommended-settings-for-game)
-- [🛠️ Tested game versions](https://sefinek.net/genshin-impact-reshade/docs?page=requirements#tested-game-versions)
-- [🐈 What is ReShade and FPS Unlock?](https://sefinek.net/genshin-impact-reshade/docs?page=what-is)
-- [🤔 FAQ](https://sefinek.net/genshin-impact-reshade/docs?page=faq)
-- [🐕‍🦺 Support](https://sefinek.net/genshin-impact-reshade/docs?page=support)
-- [🚨 Terms of use](https://sefinek.net/genshin-impact-reshade/docs?page=terms-of-use)
-- [🔒 Privacy policy](https://sefinek.net/genshin-impact-reshade/docs?page=privacy-policy)
-- [📥 Installation](https://sefinek.net/genshin-impact-reshade/docs?page=installation)
-- [🔧 Compilation](https://sefinek.net/genshin-impact-reshade/docs?page=compilation)
-- [📷 Gallery](https://sefinek.net/genshin-impact-reshade/gallery?page=1)
-- [📃 Changelogs](https://sefinek.net/genshin-impact-reshade/docs?page=changelog_v8)
-- [🧀 Legend](https://sefinek.net/genshin-impact-reshade/docs?page=introduction#emoji-legend)
-- [🧶 Credits](https://sefinek.net/genshin-impact-reshade/docs?page=credits)
-- [💙 Contributors](https://sefinek.net/genshin-impact-reshade/docs?page=contributors)
+- [👋 Introduction](https://sefinek.net/genshin-stella-mod/docs?page=introduction)
+- [📂 Includes](https://sefinek.net/genshin-stella-mod/docs?page=requirements#includes)
+- [✨ Requirements](https://sefinek.net/genshin-stella-mod/docs?page=requirements#requirements)
+- [🔧 Supported systems](https://sefinek.net/genshin-stella-mod/docs?page=requirements#supported-os)
+- [⚙️ Recommended settings for game](https://sefinek.net/genshin-stella-mod/docs?page=requirements#recommended-settings-for-game)
+- [🛠️ Tested game versions](https://sefinek.net/genshin-stella-mod/docs?page=requirements#tested-game-versions)
+- [🐈 What is ReShade and FPS Unlock?](https://sefinek.net/genshin-stella-mod/docs?page=what-is)
+- [🤔 FAQ](https://sefinek.net/genshin-stella-mod/docs?page=faq)
+- [🐕‍🦺 Support](https://sefinek.net/genshin-stella-mod/docs?page=support)
+- [🚨 Terms of use](https://sefinek.net/genshin-stella-mod/docs?page=terms-of-use)
+- [🔒 Privacy policy](https://sefinek.net/genshin-stella-mod/docs?page=privacy-policy)
+- [📥 Installation](https://sefinek.net/genshin-stella-mod/docs?page=installation)
+- [🔧 Compilation](https://sefinek.net/genshin-stella-mod/docs?page=compilation)
+- [📷 Gallery](https://sefinek.net/genshin-stella-mod/gallery?page=1)
+- [📃 Changelogs](https://sefinek.net/genshin-stella-mod/docs?page=changelog_v8)
+- [🧀 Legend](https://sefinek.net/genshin-stella-mod/docs?page=introduction#emoji-legend)
+- [🧶 Credits](https://sefinek.net/genshin-stella-mod/docs?page=credits)
+- [💙 Contributors](https://sefinek.net/genshin-stella-mod/docs?page=contributors)
 
 <div align="center">
-    <a href="https://sefinek.net/genshin-impact-reshade?download=true&referrer=github_readme" title="Download stable release"><img src="https://sefinek.net/images/stella/mafumafu/download.png" alt="Download" height="144px"></a>
+    <a href="https://sefinek.net/genshin-stella-mod?download=true&referrer=github_readme" title="Download stable release"><img src="https://sefinek.net/images/stella/mafumafu/download.png" alt="Download" height="144px"></a>
     <br>
     <a href="https://stella.sefinek.net" title="Official website"><img src="https://sefinek.net/images/stella/mafumafu/website.png" alt="Website" height="138px"></a>
     <a href="https://discord.com/invite/k2wfGRq4dT" title="Our Discord server"><img src="https://sefinek.net/images/stella/mafumafu/discord.png" alt="Discord" height="138px"></a>
@@ -55,7 +55,7 @@ Welcome to the official GitHub repository for [Genshin Stella Mod](https://stell
 The entire documentation for Stella Mod has now been transferred to our official website.
 This move allows us to provide you with the most up-to-date information, guides, and resources in a more organized and accessible manner.
 
-To access the documentation, please visit our [official website](https://sefinek.net/genshin-impact-reshade/docs).
+To access the documentation, please visit our [official website](https://sefinek.net/genshin-stella-mod/docs).
 We've ensured that the documentation is comprehensive and easy to navigate, allowing you to find everything you need quickly.
 
 We appreciate your understanding and hope you find the new documentation helpful.
@@ -63,7 +63,7 @@ If you have any questions or need assistance, please don't hesitate to reach out
 
 Thank you! 🌟
 
-## 📷 〢 Screenshot (see more [here](https://sefinek.net/genshin-impact-reshade/gallery?page=1))
+## 📷 〢 Screenshot (see more [here](https://sefinek.net/genshin-stella-mod/gallery?page=1))
 <div id="images">
     <a href="https://sefinek.net/images/stella/gallery/v7.9.7/1-2.png" title="See preview">
         <img src="https://sefinek.net/images/stella/gallery/v7.9.7/1-2.png" alt="Screenshot number 1">
