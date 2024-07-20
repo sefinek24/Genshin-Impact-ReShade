@@ -220,17 +220,20 @@ By diligently following these rules, you can be confident that your account will
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="linkLabel1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="linkLabel1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>141, 84</value>
+    <value>153, 85</value>
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>398, 17</value>
+    <value>398, 22</value>
   </data>
   <data name="linkLabel1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -241,9 +244,6 @@ By diligently following these rules, you can be confident that your account will
   <data name="linkLabel1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="linkLabel1.ToolTip" xml:space="preserve">
     <value>Open the official website sefinek.net</value>
   </data>
@@ -259,14 +259,17 @@ By diligently following these rules, you can be confident that your account will
   <data name="&gt;&gt;linkLabel1.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 128</value>
+    <value>7, 137</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>531, 34</value>
+    <value>449, 40</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -369,7 +372,7 @@ The sefinek.net website has been launched in your default browser.</value>
     <value>NoControl</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>631, 716</value>
+    <value>638, 716</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 42</value>
@@ -402,7 +405,7 @@ The sefinek.net website has been launched in your default browser.</value>
     <value>NoControl</value>
   </data>
   <data name="linkLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>679, 716</value>
+    <value>686, 716</value>
   </data>
   <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>305, 42</value>
@@ -431,6 +434,9 @@ The sefinek.net website has been launched in your default browser.</value>
   <data name="&gt;&gt;linkLabel2.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="pictureBox3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top</value>
   </data>
@@ -468,7 +474,7 @@ The sefinek.net website has been launched in your default browser.</value>
     <value>12, 9</value>
   </data>
   <data name="pictureBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 115</value>
+    <value>125, 125</value>
   </data>
   <data name="pictureBox4.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -498,7 +504,7 @@ The sefinek.net website has been launched in your default browser.</value>
     <value>NoControl</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>133, 27</value>
+    <value>146, 33</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>406, 52</value>

@@ -88,8 +88,8 @@ namespace InformationWindow.Forms
 				// 
 				// label3
 				// 
-				label3.BackColor = Color.Transparent;
 				resources.ApplyResources(label3, "label3");
+				label3.BackColor = Color.Transparent;
 				label3.ForeColor = Color.White;
 				label3.Name = "label3";
 				// 

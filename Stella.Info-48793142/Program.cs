@@ -13,7 +13,7 @@ internal static class Program
 	private static readonly string? AppPath = AppDomain.CurrentDomain.BaseDirectory;
 
 	// Logger
-	private static Logger Logger = null!;
+	private static Logger _logger = null!;
 
 	/// <summary>
 	///    The main entry point for the application.
@@ -23,18 +23,18 @@ internal static class Program
 	{
 		// Prepare NLog
 		LogManagerHelper.Initialize(Path.Combine(AppPath!, "NLog_INF4842.config"), "Info 4842", AppVersion);
-		Logger = LogManagerHelper.GetLogger();
+		_logger = LogManagerHelper.GetLogger();
 
 		try
 		{
 			ApplicationConfiguration.Initialize();
 			Application.Run(new MainWindow());
 
-			Logger.Info("Application.Run(): new MainWindow");
+			_logger.Info("Application.Run(): new MainWindow");
 		}
 		catch (Exception ex)
 		{
-			Logger.Error(ex);
+			_logger.Error(ex);
 
 			MessageBox.Show(ex.Message, Resources.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
 		}
