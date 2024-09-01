@@ -6,6 +6,6 @@ set "vs_path=C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE
 
 echo Running Genshin Stella Mod made by Sefinek.sln file as administrator... && echo.
 
-powershell -Command "Start-Process -FilePath '%vs_path%' -ArgumentList '\"%file_path%\"' -Verb RunAs"
+powershell.exe -Command "Start-Process -FilePath '%vs_path%' -ArgumentList '\"%file_path%\"' -Verb RunAs"
 
 endlocal
