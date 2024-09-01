@@ -70,6 +70,10 @@ Thank you! 🌟
     </a>
 </div>
 
+## 📥 〢 Cloning
+```bash
+git clone --recurse-submodules https://github.com/sefinek24/Genshin-Impact-ReShade.git
+```
 
-## License
+## 🔖 〢 License
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsefinek24%2FGenshin-Impact-ReShade.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsefinek24%2FGenshin-Impact-ReShade?ref=badge_large)
