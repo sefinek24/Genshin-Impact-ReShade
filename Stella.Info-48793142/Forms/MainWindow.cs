@@ -94,7 +94,7 @@ public sealed partial class MainWindow : Form
 			outputDevice.Init(volumeStream);
 			outputDevice.Play();
 
-			await Task.Delay(TimeSpan.FromSeconds(audioFile.TotalTime.TotalSeconds)).ConfigureAwait(false);
+			await Task.Delay(TimeSpan.FromSeconds(audioFile.TotalTime.TotalSeconds));
 		}
 		catch (Exception ex)
 		{
