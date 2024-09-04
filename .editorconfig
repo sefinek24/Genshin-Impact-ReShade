@@ -140,9 +140,7 @@ resharper_suggest_var_or_type_simple_types_highlighting = hint
 # Code analysis settings for C#
 [*.cs]
 dotnet_diagnostic.ca1062.severity = error
-dotnet_diagnostic.ca1303.severity = error
 dotnet_diagnostic.ca1822.severity = error
-dotnet_diagnostic.ca2007.severity = error
 dotnet_diagnostic.ca2208.severity = error
 dotnet_diagnostic.ca2213.severity = error
 
