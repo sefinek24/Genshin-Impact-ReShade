@@ -46,5 +46,5 @@ foreach ($file in $fileList) {
     }
 }
 
-$hashData | ConvertTo-Json -Depth 10 | ForEach-Object { $_ -replace '":\s{2,}', '": ' } | Set-Content -Path "$desktopPath\file_hashes.json"
-Write-Host "Hash calculation completed. Results saved to $desktopPath\file_hashes.json"
+$hashData | ConvertTo-Json -Depth 10 | ForEach-Object { $_ -replace '":\s{2,}', '": ' } | Set-Content -Path "$desktopPath\checksums.json"
+Write-Host "Hash calculation completed. Results saved to $desktopPath\checksums.json"
