@@ -137,13 +137,6 @@ resharper_suggest_var_or_type_built_in_types_highlighting = hint
 resharper_suggest_var_or_type_elsewhere_highlighting = hint
 resharper_suggest_var_or_type_simple_types_highlighting = hint
 
-# Code analysis settings for C#
-[*.cs]
-dotnet_diagnostic.ca1062.severity = error
-dotnet_diagnostic.ca1822.severity = error
-dotnet_diagnostic.ca2208.severity = error
-dotnet_diagnostic.ca2213.severity = error
-
 # XML Configuration Files
 [*.{xml,props,targets,nuspec,resx,ruleset,vsixmanifest,vsct}]
 indent_size = 2
