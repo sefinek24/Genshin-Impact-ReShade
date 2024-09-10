@@ -31,6 +31,7 @@
     <Authors>Sefinek</Authors>
     <PackageId>Information Window 48793142</PackageId>
     <PackageLicenseFile>../LICENSE</PackageLicenseFile>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
