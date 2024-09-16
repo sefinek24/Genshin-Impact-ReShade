@@ -5,11 +5,11 @@ using ConfigurationNC.Scripts;
 
 namespace ConfigurationNC.Forms;
 
-public sealed partial class Window : Form
+internal partial class Window : Form
 {
-	public static readonly string? AppName = Assembly.GetExecutingAssembly().GetName().Name;
-	public static readonly string AppVersion = Assembly.GetExecutingAssembly().GetName().Version!.ToString();
-	public static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
+	internal static readonly string? AppName = Assembly.GetExecutingAssembly().GetName().Name;
+	internal static readonly string AppVersion = Assembly.GetExecutingAssembly().GetName().Version!.ToString();
+	internal static readonly string AppPath = AppDomain.CurrentDomain.BaseDirectory;
 	private static readonly string AppData = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Stella Mod Launcher");
 
 	private static readonly string PrepareCfgPath = Path.Combine(AppData, "prepare-stella.ini");
@@ -22,7 +22,7 @@ public sealed partial class Window : Form
 	private static int _updateFpsUnlockerConfig;
 	private static int _deleteReShadeCache;
 
-	public Window()
+	internal Window()
 	{
 		InitializeComponent();
 

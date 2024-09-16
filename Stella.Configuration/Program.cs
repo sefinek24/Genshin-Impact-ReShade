@@ -7,7 +7,7 @@ namespace ConfigurationNC;
 
 internal static class Program
 {
-	public static Logger Logger = null!;
+	internal static Logger Logger = null!;
 
 	[STAThread]
 	private static void Main()
