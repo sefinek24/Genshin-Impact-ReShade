@@ -7,7 +7,7 @@ using Timer = System.Windows.Forms.Timer;
 
 namespace InformationWindow.Forms;
 
-public sealed partial class MainWindow : Form
+public partial class MainWindow : Form
 {
 	private const uint SwpNoSize = 0x0001;
 	private const uint SwpNoMove = 0x0002;
@@ -19,7 +19,7 @@ public sealed partial class MainWindow : Form
 	private bool _openedOfficialWebsite;
 	private int _remainingSeconds = 20;
 
-	public MainWindow()
+	internal MainWindow()
 	{
 		InitializeComponent();
 
@@ -88,8 +88,8 @@ public sealed partial class MainWindow : Form
 
 		try
 		{
-			using AudioFileReader audioFile = new(mp3FilePath);
-			using WaveChannel32 volumeStream = new(audioFile);
+			await using AudioFileReader audioFile = new(mp3FilePath);
+			await using WaveChannel32 volumeStream = new(audioFile);
 			using WaveOutEvent outputDevice = new();
 			outputDevice.Init(volumeStream);
 			outputDevice.Play();
