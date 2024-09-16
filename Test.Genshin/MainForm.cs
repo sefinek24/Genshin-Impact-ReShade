@@ -1,8 +1,8 @@
 namespace GenshinTest;
 
-public partial class Form : System.Windows.Forms.Form
+internal partial class MainForm : Form
 {
-	public Form()
+	internal MainForm()
 	{
 		InitializeComponent();
 		StartPosition = FormStartPosition.Manual;

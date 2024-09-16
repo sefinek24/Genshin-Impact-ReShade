@@ -1,6 +1,6 @@
 namespace InformationWindow.Forms
 {
-	sealed partial class MainWindow
+	sealed partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -32,7 +32,7 @@ namespace InformationWindow.Forms
 		  private void InitializeComponent()
 		  {
 				components = new System.ComponentModel.Container();
-				System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
+				System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 				label1 = new Label();
 				label2 = new Label();
 				pictureBox1 = new PictureBox();

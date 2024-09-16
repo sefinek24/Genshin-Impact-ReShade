@@ -1,6 +1,6 @@
 namespace GenshinTest
 {
-	 partial class Form
+	 partial class MainForm
 	 {
 		  /// <summary>
 		  ///  Required designer variable.
@@ -28,7 +28,7 @@ namespace GenshinTest
 		  /// </summary>
 		  private void InitializeComponent()
 		  {
-				System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form));
+				System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 				label1 = new Label();
 				SuspendLayout();
 				// 

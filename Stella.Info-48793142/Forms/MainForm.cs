@@ -7,7 +7,7 @@ using Timer = System.Windows.Forms.Timer;
 
 namespace InformationWindow.Forms;
 
-public partial class MainWindow : Form
+internal partial class MainForm : Form
 {
 	private const uint SwpNoSize = 0x0001;
 	private const uint SwpNoMove = 0x0002;
@@ -19,7 +19,7 @@ public partial class MainWindow : Form
 	private bool _openedOfficialWebsite;
 	private int _remainingSeconds = 20;
 
-	internal MainWindow()
+	internal MainForm()
 	{
 		InitializeComponent();
 

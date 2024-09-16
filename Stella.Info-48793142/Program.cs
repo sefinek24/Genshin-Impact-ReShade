@@ -28,7 +28,7 @@ internal static class Program
 		try
 		{
 			ApplicationConfiguration.Initialize();
-			Application.Run(new MainWindow());
+			Application.Run(new MainForm());
 
 			_logger.Info("Application.Run(): new MainWindow");
 		}
