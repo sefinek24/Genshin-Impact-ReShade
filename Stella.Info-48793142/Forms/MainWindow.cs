@@ -79,11 +79,10 @@ public partial class MainWindow : Form
 	}
 
 	// Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=47485">Pixabay</a>
-	private async void MeowButton_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+	private async void Meow_Click(object sender, EventArgs e)
 	{
 		Random random = new();
 		string mp3FilePath = Path.Combine(Directory.GetCurrentDirectory(), "sound", $"meow{random.Next(1, 5)}.mp3");
-
 		if (!File.Exists(mp3FilePath)) return;
 
 		try

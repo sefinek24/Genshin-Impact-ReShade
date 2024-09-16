@@ -41,7 +41,6 @@ namespace InformationWindow.Forms
 				label4 = new Label();
 				label5 = new Label();
 				pictureBox2 = new PictureBox();
-				linkLabel2 = new LinkLabel();
 				toolTip1 = new ToolTip(components);
 				pictureBox3 = new PictureBox();
 				pictureBox4 = new PictureBox();
@@ -111,21 +110,11 @@ namespace InformationWindow.Forms
 				// 
 				resources.ApplyResources(pictureBox2, "pictureBox2");
 				pictureBox2.BackColor = Color.Transparent;
+				pictureBox2.Cursor = Cursors.Hand;
 				pictureBox2.Image = Properties.Resources.partycat;
 				pictureBox2.Name = "pictureBox2";
 				pictureBox2.TabStop = false;
-				// 
-				// linkLabel2
-				// 
-				linkLabel2.ActiveLinkColor = Color.DeepSkyBlue;
-				resources.ApplyResources(linkLabel2, "linkLabel2");
-				linkLabel2.BackColor = Color.Transparent;
-				linkLabel2.LinkBehavior = LinkBehavior.HoverUnderline;
-				linkLabel2.LinkColor = Color.LightPink;
-				linkLabel2.Name = "linkLabel2";
-				linkLabel2.TabStop = true;
-				toolTip1.SetToolTip(linkLabel2, resources.GetString("linkLabel2.ToolTip"));
-				linkLabel2.LinkClicked += MeowButton_LinkClicked;
+				pictureBox2.Click += Meow_Click;
 				// 
 				// pictureBox3
 				// 
@@ -171,7 +160,6 @@ namespace InformationWindow.Forms
 				Controls.Add(label6);
 				Controls.Add(pictureBox4);
 				Controls.Add(pictureBox3);
-				Controls.Add(linkLabel2);
 				Controls.Add(pictureBox2);
 				Controls.Add(label5);
 				Controls.Add(label4);
@@ -204,7 +192,6 @@ namespace InformationWindow.Forms
         private Label label4;
 		  private Label label5;
 		  private PictureBox pictureBox2;
-		  private LinkLabel linkLabel2;
 		  private ToolTip toolTip1;
 		  private PictureBox pictureBox3;
 		  private PictureBox pictureBox4;
