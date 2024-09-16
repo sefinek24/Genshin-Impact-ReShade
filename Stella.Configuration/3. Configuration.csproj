@@ -68,9 +68,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="NLog_CW.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="Resources\cat-original-black.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>

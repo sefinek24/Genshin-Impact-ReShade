@@ -22,7 +22,7 @@ internal static class Program
 	private static void Main()
 	{
 		// Prepare NLog
-		LogManagerHelper.Initialize(Path.Combine(AppPath!, "NLog_INF4842.config"), "Info 4842", AppVersion);
+		LogManagerHelper.Initialize(Path.Combine(AppPath!, "NLog.config"), "Info 4842", AppVersion);
 		_logger = LogManagerHelper.GetLogger();
 
 		try

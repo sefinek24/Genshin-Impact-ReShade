@@ -84,9 +84,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="NLog_INF4842.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="sound\meow1.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

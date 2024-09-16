@@ -13,7 +13,7 @@ internal static class Program
 	private static void Main()
 	{
 		// Prepare NLog
-		LogManagerHelper.Initialize(Path.Combine(Window.AppPath, "NLog_CW.config"), "Configuration window", Window.AppVersion);
+		LogManagerHelper.Initialize(Path.Combine(Window.AppPath, "NLog.config"), "Configuration window", Window.AppVersion);
 		Logger = LogManagerHelper.GetLogger();
 
 		try
