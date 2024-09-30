@@ -25,9 +25,13 @@ internal static class Program
 		LogManagerHelper.Initialize(Path.Combine(AppPath!, "NLog.config"), "Info 4842", AppVersion);
 		_logger = LogManagerHelper.GetLogger();
 
+		Application.SetHighDpiMode(HighDpiMode.PerMonitorV2);
+		ApplicationConfiguration.Initialize();
+		Application.ThreadException += (_, e) => _logger.Error($"ThreadException: {e.Exception.Message}");
+		AppDomain.CurrentDomain.UnhandledException += (_, e) => _logger.Error($"UnhandledException: {((Exception)e.ExceptionObject).Message}");
+
 		try
 		{
-			ApplicationConfiguration.Initialize();
 			Application.Run(new MainForm());
 
 			_logger.Info("Application.Run(): new MainWindow");
