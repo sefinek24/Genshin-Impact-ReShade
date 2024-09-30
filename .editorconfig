@@ -92,7 +92,7 @@ resharper_suggest_var_or_type_simple_types_highlighting = hint
 
 # C# properties
 [*.cs]
-csharp_language_version = 7.3
+indent_style = tab
 csharp_style_prefer_expression_bodied_methods = true
 csharp_style_prefer_expression_bodied_constructors = true
 csharp_style_prefer_expression_bodied_operators = true
@@ -119,11 +119,6 @@ dotnet_style_qualification_for_method = false
 dotnet_style_qualification_for_property = false
 dotnet_style_require_accessibility_modifiers = for_non_interface_members
 
-# C++ properties
-[*.cpp]
-indent_style = tab
-indent_size = 3
-
 # ReSharper inspection severities for C#
 [*.cs]
 resharper_arrange_redundant_parentheses_highlighting = hint
@@ -136,38 +131,6 @@ resharper_redundant_base_qualifier_highlighting = warning
 resharper_suggest_var_or_type_built_in_types_highlighting = hint
 resharper_suggest_var_or_type_elsewhere_highlighting = hint
 resharper_suggest_var_or_type_simple_types_highlighting = hint
-
-# XML Configuration Files
-[*.{xml,props,targets,nuspec,resx,ruleset,vsixmanifest,vsct}]
-indent_size = 2
-
-[*.config]
-max_line_length = off
-trim_trailing_whitespace = false
-insert_final_newline = false
-
-# JSON Files
-[*.{json,json5,webmanifest}]
-indent_style = tab
-indent_size = 2
-
-# YAML Files
-[*.{yml,yaml}]
-indent_size = 2
-
-# Markdown Files
-[*.{md,mdx}]
-trim_trailing_whitespace = false
-
-[*.{appxmanifest,asax,ascx,aspx,axaml,axml,build,c,c++,c++m,cc,ccm,cginc,compute,config,cp,cpp,cppm,cs,cshtml,csproj,cu,cuh,cxx,cxxm,dbml,discomap,dtd,fx,fxh,h,hh,hlsl,hlsli,hlslinc,hpp,htm,html,hxx,inc,inl,ino,ipp,ixx,jsproj,lsproj,master,mpp,mq4,mq5,mqh,mxx,njsproj,nuspec,paml,proj,props,razor,resw,resx,skin,StyleCop,targets,tasks,tpp,usf,ush,vb,vbproj,xaml,xamlx,xml,xoml,xsd}]
-indent_style = tab
-indent_size = tab
-tab_width = 3
-
-[*.{appxmanifest,axaml,axml,build,config,csproj,dbml,discomap,dtd,jsproj,lsproj,njsproj,nuspec,paml,proj,props,StyleCop,targets,tasks,vbproj,xaml,xamlx,xml,xoml,xsd}]
-indent_style = tab
-indent_size = tab
-tab_width = 3
 
 # Bash
 [*.sh]
