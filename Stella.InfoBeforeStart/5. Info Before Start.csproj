@@ -20,7 +20,6 @@
     <AssemblyName>InfoBeforeStart</AssemblyName>
     <RootNamespace>InfoBeforeStart</RootNamespace>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
-    <PackageIcon></PackageIcon>
     <ApplicationIcon>Resources\angry-paimon.ico</ApplicationIcon>
     <PackageOutputPath>$(OutputPath)</PackageOutputPath>
     <AssemblyVersion>2.0.1.0</AssemblyVersion>
