@@ -33,9 +33,9 @@ Stella.Configuration/obj
 Stella.Prepare/bin
 Stella.Prepare/obj
 
-## Information 48793142
-Stella.Info-48793142/bin
-Stella.Info-48793142/obj
+## Info Before Start
+Stella.InfoBeforeStart/bin
+Stella.InfoBeforeStart/obj
 
 ## Device Identifier
 Stella.DeviceIdentifier/bin

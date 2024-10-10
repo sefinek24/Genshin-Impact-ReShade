@@ -1,11 +1,11 @@
 using System.Diagnostics;
 using System.Runtime.InteropServices;
-using InformationWindow.Properties;
+using InfoBeforeStart.Properties;
 using NAudio.Wave;
 using StellaTelemetry;
 using Timer = System.Windows.Forms.Timer;
 
-namespace InformationWindow.Forms;
+namespace InfoBeforeStart.Forms;
 
 internal partial class MainForm : Form
 {

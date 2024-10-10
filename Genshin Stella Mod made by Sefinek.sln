@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3. Configuration", "Stella.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4. Prepare Stella", "Stella.Prepare\4. Prepare Stella.csproj", "{29D53164-1AF9-47FF-B441-AF15147F0CCB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5. Information 48793142", "Stella.Info-48793142\5. Information 48793142.csproj", "{5A9340FA-7E3B-433D-9E37-88D86C48B975}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5. Info Before Start", "Stella.InfoBeforeStart\5. Info Before Start.csproj", "{5A9340FA-7E3B-433D-9E37-88D86C48B975}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6. Device Identifier", "Stella.DeviceIdentifier\6. Device Identifier.csproj", "{0342DB1D-9DF9-4D0B-95E1-748A7FFB1335}"
 EndProject

@@ -1,10 +1,10 @@
 using System.Reflection;
-using InformationWindow.Forms;
-using InformationWindow.Properties;
+using InfoBeforeStart.Forms;
+using InfoBeforeStart.Properties;
 using NLog;
 using StellaUtils;
 
-namespace InformationWindow;
+namespace InfoBeforeStart;
 
 internal static class Program
 {

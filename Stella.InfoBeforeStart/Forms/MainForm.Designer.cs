@@ -1,4 +1,4 @@
-namespace InformationWindow.Forms
+namespace InfoBeforeStart.Forms
 {
 	sealed partial class MainForm
     {
