@@ -45,10 +45,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <AdditionalFiles Remove="app.manifest" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Include="Resources\angry-paimon.ico" />
   </ItemGroup>
 
