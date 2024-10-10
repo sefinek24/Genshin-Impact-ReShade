@@ -17,7 +17,7 @@
     <RepositoryType>git</RepositoryType>
     <NeutralLanguage>en</NeutralLanguage>
     <UseWPF>False</UseWPF>
-    <AssemblyName>48793142</AssemblyName>
+    <AssemblyName>InfoBeforeStart</AssemblyName>
     <RootNamespace>InfoBeforeStart</RootNamespace>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
     <PackageIcon></PackageIcon>
