@@ -21,7 +21,7 @@
     <PackageProjectUrl>https://stella.sefinek.net</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
     <Product>Configuration Window</Product>
-    <RepositoryUrl>https://github.com/sefinek24/Genshin-Impact-ReShade</RepositoryUrl>
+    <RepositoryUrl>https://github.com/sefinek/Genshin-Impact-ReShade</RepositoryUrl>
     <AssemblyName>Configuration Window</AssemblyName>
     <StartupObject>ConfigurationNC.Program</StartupObject>
     <ApplicationIcon>Resources\cat-black_52x52.ico</ApplicationIcon>

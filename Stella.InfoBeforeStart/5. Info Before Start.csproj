@@ -13,7 +13,7 @@
     <Product>Stella Mod Information</Product>
     <Copyright>Copyright 2024 © by Sefinek. All Rights Reserved.</Copyright>
     <PackageProjectUrl>https://stella.sefinek.net</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/sefinek24/Genshin-Impact-ReShade</RepositoryUrl>
+    <RepositoryUrl>https://github.com/sefinek/Genshin-Impact-ReShade</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <NeutralLanguage>en</NeutralLanguage>
     <UseWPF>False</UseWPF>

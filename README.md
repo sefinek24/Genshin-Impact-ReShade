@@ -8,8 +8,8 @@
     <a href="https://api.sefinek.net" title="api.sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=API&up_message=Online&url=https%3A%2F%2Fapi.sefinek.net" alt="Status page"></a>
     <a href="https://cdn.sefinek.net" title="cdn.sefinek.net status"><img src="https://img.shields.io/website?down_message=Offline&label=CDN&up_message=Online&url=https%3A%2F%2Fcdn.sefinek.net" alt="Status page"></a>
     <br>
-    <a href="https://github.com/sefinek24/Genshin-Impact-ReShade" title="Repository size"><img src="https://img.shields.io/github/repo-size/sefinek24/Genshin-Impact-ReShade?label=Repo%20size" alt="Repo size"></a>
-    <a href="https://github.com/sefinek24/Genshin-Impact-ReShade/commits/main" title="Commit activity"><img src="https://img.shields.io/github/commit-activity/w/sefinek24/Genshin-Impact-ReShade?label=Commit%20activity" alt="Commit activity"></a>
+    <a href="https://github.com/sefinek/Genshin-Impact-ReShade" title="Repository size"><img src="https://img.shields.io/github/repo-size/sefinek/Genshin-Impact-ReShade?label=Repo%20size" alt="Repo size"></a>
+    <a href="https://github.com/sefinek/Genshin-Impact-ReShade/commits/main" title="Commit activity"><img src="https://img.shields.io/github/commit-activity/w/sefinek/Genshin-Impact-ReShade?label=Commit%20activity" alt="Commit activity"></a>
     <a href="https://discord.com/invite/k2wfGRq4dT" title="Official Discord server"><img src="https://img.shields.io/discord/1044713077125435492?label=Discord%20server" alt="Our Discord server"></a>
     <h3>
         🌠 » To enjoy the enhanced version (mods & 3DMigoto), subscribe to <a href="https://sefinek.net/genshin-stella-mod/subscription" title="Subscription: Unlock more benefits - Genshin Stella Mod">Stella Mod Plus</a> « 🌠<br>
@@ -72,8 +72,8 @@ Thank you! 🌟
 
 ## 📥 〢 Cloning
 ```bash
-git clone --recurse-submodules https://github.com/sefinek24/Genshin-Impact-ReShade.git
+git clone --recurse-submodules https://github.com/sefinek/Genshin-Impact-ReShade.git
 ```
 
 ## 🔖 〢 License
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsefinek24%2FGenshin-Impact-ReShade.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsefinek24%2FGenshin-Impact-ReShade?ref=badge_large)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsefinek%2FGenshin-Impact-ReShade.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsefinek%2FGenshin-Impact-ReShade?ref=badge_large)
